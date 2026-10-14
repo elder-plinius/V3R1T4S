@@ -1,0 +1,12 @@
+# RECEIPTS
+
+```
+object sha256 88255d2d000d027818f81d6b3eb6a3d6206bc8788f6d1ab7010decbbcb1e195c
+points 777
+energy 289900.7785339097136184849989119
+claimed 289900.778533909713618485  |diff| 1.088e-21
+table_min 289900.8082430  margin 2.970909e-02
+tangent_grad_2norm 1.932e-27
+PASS
+```
+exit 0
