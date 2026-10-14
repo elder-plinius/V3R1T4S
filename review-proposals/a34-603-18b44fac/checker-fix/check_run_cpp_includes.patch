@@ -1,0 +1,68 @@
+--- a/kit/check_run.py
++++ b/kit/check_run.py
+@@ -229,6 +229,53 @@
+     return good and beats in ("yes", "true")
+ 
+ 
++
++# Standard headers are exempt only as operands of real C++ include directives.
++# Keep comments, literals and every other scanner input unchanged.
++CPP_SOURCE_EXT = {".cpp", ".hpp", ".h"}
++CPP_STANDARD_HEADERS = set("""
++algorithm any array atomic barrier bit bitset cassert cctype cerrno cfenv
++cfloat charconv chrono cinttypes ciso646 climits clocale cmath codecvt compare
++complex concepts condition_variable coroutine csetjmp csignal cstdarg cstdbool
++cstddef cstdint cstdio cstdlib cstring ctgmath ctime cuchar cwchar cwctype deque
++exception execution expected filesystem flat_map flat_set format forward_list
++fstream functional future generator initializer_list iomanip ios iosfwd iostream
++istream iterator latch limits list locale map mdspan memory memory_resource mutex
++new numbers numeric optional ostream print queue random ranges ratio regex
++scoped_allocator semaphore set shared_mutex source_location span spanstream
++sstream stack stacktrace stdexcept stdfloat stop_token streambuf string
++string_view strstream syncstream system_error thread tuple type_traits typeindex
++typeinfo unordered_map unordered_set utility valarray variant vector version
++""".split())
++CPP_NONCODE_RE = re.compile(
++    # Consume preprocessing numbers before apostrophes can start char literals.
++    r"\b[0-9](?:[eEpP][+-]|[A-Za-z0-9_'.])*|"
++    r'//(?:\\\r?\n|[^\n])*|/\*[\s\S]*?(?:\*/|\Z)|'
++    r'(?:u8|u|U|L)?R"(?P<delimiter>[^ ()\\\t\r\n]{0,16})\('
++    r'[\s\S]*?\)(?P=delimiter)"|'
++    r'"(?:\\[\s\S]|[^"\\])*(?:"|\Z)|'
++    r"'(?:\\[\s\S]|[^'\\])*(?:'|\Z)"
++)
++CPP_INCLUDE_RE = re.compile(
++    r'^[ \t]*#[ \t]*include[ \t]*<(?P<header>[A-Za-z_][A-Za-z_0-9]*)>', re.M
++)
++
++
++def placeholder_text(text, path):
++    """Exclude known C++ include operands, without excluding entire source files."""
++    if os.path.splitext(path)[1].lower() not in CPP_SOURCE_EXT:
++        return text
++    # Equal-length masking locates directives outside comments and literals.
++    # Placeholder and leak checks still inspect those comments and literals.
++    code = CPP_NONCODE_RE.sub(lambda m: re.sub(r"[^\r\n]", " ", m.group(0)), text)
++    result = list(text)
++    for match in CPP_INCLUDE_RE.finditer(code):
++        if match.group("header") in CPP_STANDARD_HEADERS:
++            start, end = match.span("header")
++            result[start - 1:end + 1] = " " * (end - start + 2)
++    return "".join(result)
++
++
+ def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
+     user = os.environ.get("USER") or os.environ.get("USERNAME") or ""
+     for p in walk(root):
+@@ -246,8 +293,9 @@
+                 break
+         if workdir and workdir in t:
+             c.fail("%s: the workspace's absolute path appears in %s" % (label, r))
+-        if not (skip_prompt and r.split(os.sep)[0] == "prompt") and PLACEHOLDER_RE.search(t) and not r.endswith((".py", ".sh")):
+-            c.fail("%s: unfilled placeholder %s in %s" % (label, PLACEHOLDER_RE.search(t).group(0), r))
++        placeholder = PLACEHOLDER_RE.search(placeholder_text(t, r))
++        if not (skip_prompt and r.split(os.sep)[0] == "prompt") and placeholder and not r.endswith((".py", ".sh")):
++            c.fail("%s: unfilled placeholder %s in %s" % (label, placeholder.group(0), r))
+         low = t.lower()
+         for e in never_publish:
+             if e.lower() in low:

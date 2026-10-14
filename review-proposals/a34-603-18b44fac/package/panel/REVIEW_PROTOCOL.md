@@ -1,0 +1,5 @@
+# Independent panel protocol
+
+This staging package deliberately does not imitate panel completion. Before writing each role's report, start three genuinely separate new model contexts, each with *only* claim_only/ and the exact role instruction under reviewer_protocols/. No previous verdicts, research notes, or shared scratchpad. The REPRODUCE reviewer must implement a new checker from the mathematical definition before reading any supplied verification code. NOVELTY must fetch the live source once and search 24 months of literature and open PRs; inability to read the table means `pass: false`. CRITERION must compare against the exact bank success criterion, including mirror-cell and upper-bound checks.
+
+Each reviewer must identify its invocation in a `context:` line, include sources, commands, output and independent verdict, and end with exactly `pass: true` or `pass: false`. Only passing authentic reviews can replace placeholders. The main session may then perform the honesty gate and run the unchanged `kit/check_run.py --package` against the complete package. Until that happens the staging path MUST NOT be treated as confirmed.

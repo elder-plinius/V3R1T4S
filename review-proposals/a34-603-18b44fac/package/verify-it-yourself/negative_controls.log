@@ -1,0 +1,2 @@
+NEGATIVE_CONTROLS {'bad_length': True, 'nonbinary': True, 'weight': True, 'duplicate': True, 'short': True}
+PASS

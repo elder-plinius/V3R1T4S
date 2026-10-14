@@ -1,0 +1,32 @@
+{
+  "contract": "Only standard C++ include header operands are exempt; real placeholders and leak scans remain active.",
+  "old_rejects_new_accepts": "unordered_map_cpp",
+  "weak_accepts_new_rejects": "cpp_comment_placeholder",
+  "cases": [
+    {"id":"unordered_map_cpp","file":"main.cpp","text":"#include <unordered_map>\nint main() { return 0; }\n","accept":true,"original_accept":false},
+    {"id":"unordered_set_hpp","file":"table.hpp","text":"#include <unordered_set>\n","accept":true,"original_accept":false},
+    {"id":"whitespace_type_traits","file":"traits.cpp","text":"  #  include\t<type_traits> // ordinary explanation\n","accept":true,"original_accept":false},
+    {"id":"memory_resource","file":"allocator.hpp","text":"#include <memory_resource>\n","accept":true,"original_accept":false},
+    {"id":"ordinary_vector","file":"main.cpp","text":"#include <vector>\n","accept":true,"original_accept":true},
+    {"id":"two_good_includes","file":"main.cpp","text":"#include <unordered_map>\n#include <unordered_set>\n","accept":true,"original_accept":false},
+    {"id":"cpp_comment_placeholder","file":"main.cpp","text":"// Destination: <WORKDIR>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"trailing_line_comment","file":"main.cpp","text":"#include <unordered_map> // configure <path>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"trailing_block_comment","file":"main.cpp","text":"#include <unordered_set> /* set <name> */\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"later_placeholder","file":"main.cpp","text":"#include <unordered_map>\n// owner: <credit>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"cpp_string_placeholder","file":"main.cpp","text":"const char* destination = \"<path>\";\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"non_include_header_token","file":"main.cpp","text":"// Use <unordered_map> here\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"commented_include","file":"main.cpp","text":"// #include <unordered_set>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"block_commented_include","file":"main.cpp","text":"/*\n#include <unordered_map>\n*/\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"raw_string_include","file":"main.cpp","text":"const char* text = R\"tag(\n#include <unordered_map>\n)tag\";\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"markdown_include","file":"README.md","text":"```cpp\n#include <unordered_map>\n```\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"plain_text_include","file":"notes.txt","text":"#include <unordered_set>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"nonstandard_operand","file":"main.cpp","text":"#include <project-header>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"placeholder_operand","file":"main.cpp","text":"#include <path>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"quoted_placeholder_operand","file":"main.cpp","text":"#include \"<name>\"\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"similar_directive","file":"main.cpp","text":"#include_next <unordered_map>\n","accept":false,"original_accept":false,"required_fail":"unfilled placeholder"},
+    {"id":"include_github_token","file":"main.cpp","text":"#include <unordered_map> // ghp_ABCDEFGHIJKLMNOPQRSTUVWXYZ123456\n","accept":false,"original_accept":false,"required_fail":"GitHub token"},
+    {"id":"include_api_key","file":"main.cpp","text":"#include <unordered_set> // sk-ABCDEFGHIJKLMNOPQRSTUVWXYZ123456\n","accept":false,"original_accept":false,"required_fail":"API key"},
+    {"id":"include_home_path","file":"main.cpp","text":"#include <unordered_map> // /home/exampleuser/source.cpp\n","accept":false,"original_accept":false,"required_fail":"absolute Linux home path"},
+    {"id":"include_email","file":"main.cpp","text":"#include <unordered_set> // developer@private.invalid\n","accept":false,"original_accept":false,"required_fail":"email address"}
+  ]
+}

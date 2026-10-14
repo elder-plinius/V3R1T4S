@@ -1,0 +1,29 @@
+# Captured verification outputs
+
+Run date (UTC): 2026-10-14T02:29:20Z.
+
+## Complete mathematical and upstream verification
+
+```text
+count=603 pair_checks=181503 min_distance=8 four_subsets=21105 collisions=0
+histogram={"8": 32695, "10": 44893, "12": 76073, "14": 27842}
+delta remove=38 add=39 reconstructed_sha256=18b44fac5d5ff1d4895fd9de1240669eb71543b3e15599f7f864e090aa1491ad
+PASS
+file=A34_8_7_603.txt sha256=18b44fac5d5ff1d4895fd9de1240669eb71543b3e15599f7f864e090aa1491ad
+F format: lines=603 claimed_M=603 bad_lines=0
+W weight/distinct: bad_weight=0 distinct=603
+A all-pairs: words=603 pairs=181503 expected=181503 min_distance=8 need>=8 histogram={8: 32695, 10: 44893, 12: 76073, 14: 27842}
+B packing: t=4 subsets=21105 distinct=21105 collisions=0
+H sha256 matches expected: True
+VERDICT: VALID  A(34,8,7) >= 603
+PASS
+```
+
+## Fixed negative controls
+
+```text
+NEGATIVE_CONTROLS {'bad_length': True, 'nonbinary': True, 'weight': True, 'duplicate': True, 'short': True}
+PASS
+```
+
+The result is a mathematical validation receipt only. It cannot substitute for the separately required three-skeptic panel. The `upstream_cwcheck.py` file matches Git blob `baf9430775d73e2221928693a0177488d620cd65`.

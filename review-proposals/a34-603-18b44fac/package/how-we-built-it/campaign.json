@@ -1,0 +1,75 @@
+{
+  "fixed_before_target_search": true,
+  "total_search_seconds_limit": 900,
+  "stages": [
+    {
+      "id": 1,
+      "mechanism": "exhaustive blocker census",
+      "actual_seconds": 1.63928
+    },
+    {
+      "id": 2,
+      "mechanism": "blocker-neighborhood exact search without plateau",
+      "cap": 4,
+      "max_remove": 12,
+      "rng": 101,
+      "rounds": 1,
+      "seconds": 40
+    },
+    {
+      "id": 3,
+      "mechanism": "same search plus neutral transport",
+      "cap": 4,
+      "max_remove": 12,
+      "rng": 101,
+      "rounds": 50,
+      "seconds": 150
+    },
+    {
+      "id": 4,
+      "mechanism": "independent restart, deeper pool",
+      "cap": 5,
+      "max_remove": 12,
+      "rng": 202,
+      "rounds": 50,
+      "seconds": 150
+    },
+    {
+      "id": 5,
+      "mechanism": "independent restart, deeper pool",
+      "cap": 6,
+      "max_remove": 16,
+      "rng": 303,
+      "rounds": 50,
+      "seconds": 150
+    },
+    {
+      "id": 6,
+      "mechanism": "warm restart, deeper pool",
+      "cap": 6,
+      "max_remove": 18,
+      "rng": 404,
+      "rounds": 50,
+      "seconds": 150
+    },
+    {
+      "id": 7,
+      "mechanism": "independent neutral trajectory",
+      "cap": 4,
+      "max_remove": 12,
+      "rng": 505,
+      "rounds": 50,
+      "seconds": 120
+    },
+    {
+      "id": 8,
+      "mechanism": "warm restart",
+      "cap": 5,
+      "max_remove": 16,
+      "rng": 606,
+      "rounds": 50,
+      "seconds": 120
+    }
+  ],
+  "checker_sha256": "52f641ab0b183f5d5bad85b819dc0414736f59e061977631d3659340e412a61e"
+}

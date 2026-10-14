@@ -1,0 +1,10 @@
+{
+  "task": "Improve compendium record 26, A(34,8,7), from the reported 602-word seed",
+  "acceptance": {"n":34,"w":7,"d_min":8,"min_words":603,"binary_only":true,"duplicates_allowed":false,"checker":"check_code.py"},
+  "seed_acceptance": {"n":34,"w":7,"d_min":8,"exact_words":602},
+  "claim_scope": "A verified improvement over the supplied 602-word seed; a current record requires a separate source comparison",
+  "limits": {"search_wall_seconds":900,"max_search_stages":8,"max_engine_repairs":3,"max_acquisition_routes":5,"stop_on_accepted_candidate":true},
+  "checker_enlargement": false,
+  "checker_policy": "Keep mathematical acceptance fixed. Search-representation changes do not change the checker. No meta-contract enlargement attempted.",
+  "terminal_failure": "Save the best valid incumbent, search evidence, and residual.json; do not claim success or global infeasibility."
+}
