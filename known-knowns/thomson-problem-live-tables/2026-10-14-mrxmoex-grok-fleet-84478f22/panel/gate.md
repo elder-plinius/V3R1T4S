@@ -1,0 +1,6 @@
+# Honesty gate (main session)
+panel: reproduce.md pass: true; novelty.md pass: true; criterion.md pass: true. All three are fresh executor contexts.
+Table fetch age: novelty re-fetched at 08:56Z, under 6h old.
+Downgrade checks: no hedging on A; reproduction exact; strictly below the live table by 6.174e-3; criterion read literally; scope matches the evidence. The Hessian is NUMERICAL (float64 plus an error bound), which the criterion's own wording permits; noted. Three objects: A is the solution claim; B and C are separate p1 findings listed in the same scope sentence.
+status: CONFIRMED_SOLUTION
+confirmed_scope: The 1382-point configuration in claim/A_1382/cand_1382.txt has mpmath energy 926576.0968589705 — 6.174e-3 below the lowest live-table value for N = 1382 (CCD Riesz s=1, 926576.1030330), with tangent gradient 5.8e-32, all 2761 non-rotational Hessian eigenvalues numerically positive (float64 with explicit error bound), and a basin distinct from both posted N = 1382 files — and, separately, the live CCD posted energies for Riesz s=1 N = 3552 (1.50e-5 above its polished coordinates) and Thomson2 N = 550 (9.00e-5 below what its coordinates reach) are not reproduced by their own coordinates (p1).

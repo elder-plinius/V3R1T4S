@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+thomson-problem-live-tables,N=1382 (CCD Riesz s=1),926576.0968589705350586982,926576.1030330,2026-10-14T07:28:29Z,object/cand_1382.txt,84478f227719968b370a72c37f1189cf5f618436411f1127fcae99e464a01ce2
