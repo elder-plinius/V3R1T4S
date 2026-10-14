@@ -1,0 +1,8 @@
+{
+  "duplicate": "REJECT: duplicate",
+  "wrong_weight": "REJECT: wrong weight",
+  "wrong_length": "REJECT: nonbinary or wrong length",
+  "nonbinary": "REJECT: nonbinary or wrong length",
+  "distance_two": "REJECT: distance below six",
+  "utc": "2026-10-14T02:48:26.131338+00:00"
+}

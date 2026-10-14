@@ -1,0 +1,39 @@
+{
+  "header": [
+    "n\\w",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "12",
+    "13",
+    "14"
+  ],
+  "row": [
+    "27",
+    "54",
+    "262Bo-280",
+    "1170s",
+    "3510s",
+    "4828E-10027",
+    "8324Ga-23673",
+    "12987g-43529",
+    "19305Dz-66078KKT",
+    "24453Dz-84573KKT",
+    "27600JX-91079KKT"
+  ],
+  "cell": "12987g-43529",
+  "lower": 12987,
+  "upper": 43529,
+  "claim": 13026,
+  "improvement": 39,
+  "mirror_weight": 17,
+  "separate_mirror_column": false,
+  "trophy_matches": [],
+  "trophy_sha256": "b4f3ad52f6587e5aefdc3b555db200d99543e6b500c805012226f2042cdcc412",
+  "repo_commit": "7aca3835635e5323b48cdf3b5b59fcde502cab28"
+}

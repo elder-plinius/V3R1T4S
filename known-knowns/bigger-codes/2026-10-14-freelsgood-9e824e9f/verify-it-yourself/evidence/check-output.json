@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "sha256": "9e824e9f8a92e74226231152fc8e8a972be5ba79549e2a10e512fe63a3934f49",
+  "size_bytes": 364728,
+  "words": 13026,
+  "length": 27,
+  "weight": 10,
+  "distance_at_least": 6,
+  "subsets_examined": 586170,
+  "unique_subsets": 586170,
+  "check": "all eight-element support subsets are distinct"
+}

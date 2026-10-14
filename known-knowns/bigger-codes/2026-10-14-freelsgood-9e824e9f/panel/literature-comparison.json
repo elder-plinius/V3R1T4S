@@ -1,0 +1,78 @@
+{
+  "window": "2024-10-14 through 2026-10-14",
+  "sources": [
+    {
+      "arxiv": "2607.19550",
+      "authors": "Christian Lysenst\u00f8en",
+      "url": "https://arxiv.org/pdf/2607.19550",
+      "fetch_utc": "2026-10-14T02:51:13.351792+00:00",
+      "sha256": "68db592694b9eea0717d1b56909539b760b4da52fff0dfca69c1e693142c52fa",
+      "http_status": 200,
+      "comparison": "Four finite improvements at lengths 23 and 24; no target-cell improvement. Main result and results section inspected."
+    },
+    {
+      "arxiv": "2608.13906",
+      "authors": "William Echols",
+      "url": "https://arxiv.org/pdf/2608.13906",
+      "fetch_utc": "2026-10-14T02:51:13.352341+00:00",
+      "sha256": "915cfa5ebbcdb1cda97bd7c9bb2038a9bc42188538ffd0a4eca409f13c7fcf50",
+      "http_status": 200,
+      "comparison": "All 124 Table 1 rows extracted and inspected; no (27,6,10) or (27,6,17). The distance-6 rows have weights 5, 6, or 8."
+    },
+    {
+      "arxiv": "2603.00174",
+      "authors": "Christopher D. Rosin",
+      "url": "https://arxiv.org/pdf/2603.00174",
+      "fetch_utc": "2026-10-14T02:51:13.353218+00:00",
+      "sha256": "2747ba758b981ac1206d642ae0ff8b69a747c2a2568d0914fd3e7b407cacd79f",
+      "http_status": 200,
+      "comparison": "Table 1 has 24 improvements, none at target; closest same length/weight uses distance 8 and size 1704."
+    },
+    {
+      "arxiv": "2609.35051",
+      "authors": "Shuxing Yang et al.",
+      "url": "https://arxiv.org/pdf/2609.35051",
+      "fetch_utc": "2026-10-14T02:51:13.352764+00:00",
+      "sha256": "bcb3a6941b472b6e0b1172dec3de6142e10ea5fedceedce66bfe9fd550303439",
+      "http_status": 200,
+      "comparison": "Theorem 5.4 improves A(n,8,8) for n=33,34,37,38,39; no target-cell improvement."
+    },
+    {
+      "arxiv": "2610.10973",
+      "authors": "Yeow Meng Chee",
+      "url": "https://arxiv.org/pdf/2610.10973",
+      "fetch_utc": "2026-10-14T02:51:13.354239+00:00",
+      "sha256": "d1355b3573bb107c7f81167b914e6e916472546d29a23432aa4e6677ebefab94",
+      "http_status": 200,
+      "comparison": "Asymptotic invariant packing theorem as length tends to infinity; no explicit finite lower bound for this cell."
+    },
+    {
+      "arxiv": "2411.16028",
+      "authors": "Patrick Bennett",
+      "url": "https://arxiv.org/pdf/2411.16028",
+      "fetch_utc": "2026-10-14T02:53:01.307776+00:00",
+      "sha256": "fcdd3d231518989852bfebf2e973a1ddc0e1cd746f9eb1a7131585f8a43ddfff",
+      "http_status": 200,
+      "comparison": "Asymptotic constant-weight-code estimate for fixed weight and distance as length tends to infinity; does not establish target finite bound."
+    },
+    {
+      "arxiv": "2609.23869",
+      "authors": "Artur Akhiiarov, Peter Boyvalenkov, Danila Cherkashin and Andrei Raigorodskii",
+      "url": "https://arxiv.org/pdf/2609.23869",
+      "fetch_utc": "2026-10-14T02:53:01.308360+00:00",
+      "sha256": "38eaa40fe9e8d716d223a16df5d2deeb82f8606f084a09bd836773e259eded57",
+      "http_status": 200,
+      "comparison": "Version 2 concerns asymptotic upper-bound envelopes, not an improved explicit target lower bound."
+    },
+    {
+      "arxiv": "2610.11609",
+      "authors": "Kazuki Ota, Takayuki Osa and Tatsuya Harada",
+      "url": "https://arxiv.org/pdf/2610.11609",
+      "fetch_utc": "2026-10-14T02:53:01.308804+00:00",
+      "sha256": "3d5e0d874da3467b22f4564f638675d8eb87617cbd4d3b7ed9734bae44daf4c3",
+      "http_status": 200,
+      "comparison": "Three general binary-code bounds at (n,d)=(22,9),(24,9),(25,11); no target-cell bound."
+    }
+  ],
+  "limitations": "Targeted search and inspected sources, not proof of exhaustive absence across all literature. No author construction source was inspected."
+}

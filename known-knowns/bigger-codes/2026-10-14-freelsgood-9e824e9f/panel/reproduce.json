@@ -1,0 +1,10 @@
+{
+  "role": "REPRODUCE",
+  "status": "PASS",
+  "fresh_context": true,
+  "context": "subagent (fresh fork_turns none)",
+  "identity": "reproduce_fresh",
+  "confirmed_scope": "The saved witness is an explicit binary constant-weight code of length 27, weight 10, cardinality 13026 and minimum Hamming distance 6, proving A(27,6,10) >= 13026.",
+  "pairs_checked": 84831825,
+  "witness_sha256": "9e824e9f8a92e74226231152fc8e8a972be5ba79549e2a10e512fe63a3934f49"
+}

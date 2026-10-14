@@ -1,0 +1,15 @@
+{
+  "role": "NOVELTY",
+  "status": "PASS",
+  "pass": true,
+  "fresh_context": true,
+  "context": "subagent (fork_turns none)",
+  "claim": "A(27,6,10) >= 13026",
+  "completed_utc": "2026-10-14T02:54:25.610808+00:00",
+  "table_lower": 12987,
+  "table_upper": 43529,
+  "improvement": 39,
+  "table_sha256": "0f1b51bf71c0ca91aef82eef740cb0dd9f6be6c4014983213d0eefe0eb631cee",
+  "scope": "Strictly exceeds the live Brouwer lower bound and all target-cell values found in the specified papers, newer papers and repository sources checked; no universal priority or optimum claim.",
+  "source_report": "literature-comparison.md"
+}

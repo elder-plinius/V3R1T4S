@@ -1,0 +1,24 @@
+{
+  "role": "CRITERION",
+  "context": "subagent; fresh task context, claim evidence and upstream rules only",
+  "status": "PASS",
+  "pass": true,
+  "mathematical_feasibility": "PASS",
+  "confirmed_scope": "The supplied explicit list of 13026 distinct binary words of length 27 and Hamming weight 10 has pairwise Hamming distance at least 6, proving A(27,6,10) >= 13026.",
+  "unmet_gates": [],
+  "excluded_claims": [
+    "optimality",
+    "upper bounds",
+    "method novelty",
+    "world record",
+    "historical preregistration compliance"
+  ],
+  "upstream_commit": "7aca3835635e5323b48cdf3b5b59fcde502cab28",
+  "witness_sha256": "9e824e9f8a92e74226231152fc8e8a972be5ba79549e2a10e512fe63a3934f49",
+  "submission_gates_remaining": [
+    "Main session honesty gate, complete package and unmodified workspace/package check_run.py PASS; not certified by this role."
+  ],
+  "source_comparison": "source-comparison.json",
+  "preregistration_limitation": "Historical author preregistration not established; reviewing existing deterministic certificate only.",
+  "fresh_context": true
+}

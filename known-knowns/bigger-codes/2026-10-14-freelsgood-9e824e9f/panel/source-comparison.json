@@ -1,0 +1,15 @@
+{
+  "table_url": "https://aeb.win.tue.nl/codes/Andw.html",
+  "table_fetched_utc": "2026-10-14T02:50:22.728485+00:00",
+  "page_sha256": "0f1b51bf71c0ca91aef82eef740cb0dd9f6be6c4014983213d0eefe0eb631cee",
+  "cell": "A(27,6,10)",
+  "lower": 12987,
+  "upper": 43529,
+  "candidate": 13026,
+  "improvement": 39,
+  "strictly_greater": true,
+  "not_above_upper": true,
+  "complement_cell": "A(27,6,17)",
+  "complement_note": "Not separately listed. Bitwise complement is a bijection of length-27 binary words, changes weight 10 to 17 and preserves all pairwise distances, so bounds apply to the same equivalence class.",
+  "receipt_note": "Final receipt comes from independent fresh-context one-request urllib source collection. Earlier multi-access collection is diagnostic only."
+}
