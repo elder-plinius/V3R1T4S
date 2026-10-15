@@ -1,0 +1,10 @@
+[
+  {
+    "book": "repair19",
+    "count": 935662,
+    "cutoff": 73275,
+    "seed": 165519,
+    "temp": "0.005",
+    "input": "seed_initial.prefs"
+  }
+]
