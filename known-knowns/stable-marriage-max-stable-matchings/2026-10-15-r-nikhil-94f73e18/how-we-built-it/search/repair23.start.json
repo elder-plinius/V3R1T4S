@@ -1,0 +1,8 @@
+{
+  "start_epoch": 1792084123.9669209,
+  "utc": "2026-10-15T17:08:43.968546+00:00",
+  "temperature": "0.003",
+  "cap": 915,
+  "rngseed": 170823,
+  "input": "seed_initial.prefs"
+}
