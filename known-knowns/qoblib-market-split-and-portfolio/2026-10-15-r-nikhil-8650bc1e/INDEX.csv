@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+qoblib-market-split-and-portfolio,a200_t10_s00_b050_l1e-02,-644342,"-401535 (best posted value: open QOBLIB PR #87; no official table row)",2026-10-15T09:01:05Z,object/a200_t10_s00_b050_l1e-02_solution.sol,8650bc1e720ff19bd4f17cedefb5b4021dbcd1a3315c8a79abd6d79cf82efe62
