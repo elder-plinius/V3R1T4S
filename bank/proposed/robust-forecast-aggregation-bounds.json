@@ -1,40 +1,42 @@
 {
- "id": "robust-forecast-aggregation-bounds",
- "name": "Robust forecast aggregation with two conditionally independent experts: tighten the minimax regret bounds (unknown state values [31/1326, 0.025512]; binary state [(5√5 - 11)/8, 0.022599])",
- "kind": "standard",
- "tractability": 2.5,
- "compute_profile": "laptop-hours to laptop-days (searches over aggregators and information structures, then interval-arithmetic certification of the worst case over a reduced parameter domain)",
- "statement": "Two experts receive signals about a random state, and their signals are conditionally independent given the state. An aggregator maps the two reported forecasts (posteriors) to one forecast; its regret on an information structure is its expected squared loss minus that of the omniscient aggregator, who knows both signals (additive regret). The minimax regret is the infimum over aggregators of the supremum over information structures in the class. Arieli, Babichenko and Smorodinsky ('Robust forecast aggregation', PNAS 115(52), 2018) introduced the problem for a known binary state space {0, 1} and proved the lower bound (5√5 - 11)/8 ≈ 0.022542; Guo, Hartline, Huang, Kong, Shah and Yu ('Algorithmic robust forecast aggregation', EC 2025, arXiv:2401.17743) gave an algorithmic upper bound of about 0.0226. Chen, Peng and Tang ('Prior-agnostic robust forecast aggregation', arXiv:2604.24517, v2 of 2026-05-23) study the variant in which the state values are unknown: their closed-form log-odds aggregator has worst-case regret 0.025512 (Theorem 3.2), no aggregator can do better than 31/1326 ≈ 0.023379 (Theorem 3.4), and the same family achieves 0.022599 in the known binary-state setting (Proposition 3.5). Their Table 1 summarises these bounds, and their upper bounds are numerical maximisations (a global heuristic search followed by a grid refinement with step 1e-5), not certified values. Both gaps, about 2.1e-3 for unknown state values and 5.7e-5 for the binary state, are open.",
- "success_criterion": "CONFIRMED by one of the following, with the setting, the loss (squared), the benchmark (omniscient aggregator, additive regret) and the class of information structures (conditionally independent signals) copied from arXiv:2604.24517 Sections 2-3, and every bound certified by exact or interval arithmetic in a checker that shares no code with the search. (a) Unknown state values, upper bound: an explicit aggregator (closed form, or a finite piecewise description with rational parameters) whose worst-case regret over the whole class is certified to be at most 0.025502 (0.025512 - 1e-5), with the reduction of the worst case to a finite-dimensional parameter domain written out in full. (b) Unknown state values, lower bound: an explicit finite mixture of information structures whose Bayes-optimal aggregator, computed exactly, has expected regret at least 31/1326 + 1e-5, which lower-bounds the minimax regret. (c) Known binary state, either side: a certified upper bound at most 0.022599 - 1e-6, or a certified lower bound at least (5√5 - 11)/8 + 1e-6, in the same way. Direction: narrow the gap. Each claim must beat every bound published at verification time, including papers citing arXiv:2604.24517. The margins exceed the published numerical tolerance (grid step 1e-5).",
- "partial_wins": [
-  {
-   "id": "p1",
-   "statement": "A certified worst case for a published aggregator: an interval branch-and-bound proof that Chen-Peng-Tang's log-odds aggregator, with the parameter they specify, has worst-case regret at most 0.025512 in the unknown-state setting (or at most 0.022599 in the binary setting), turning their numerical maximisation into a theorem; or a certified information structure showing that its worst case exceeds the published value."
-  },
-  {
-   "id": "p2",
-   "statement": "The same kind of certified improvement in the paper's third setting (unknown state values with a known marginal predictive distribution; Table 1 bounds (5√5 - 11)/8 and 0.022763)."
-  }
- ],
- "verification_method": "Re-implement the regret of an aggregator on an information structure from the definition: two conditionally independent signals, the omniscient benchmark is the posterior given both signals, squared loss, additive regret. For an upper bound, re-derive the reduction of the worst case to a finite-dimensional domain from the source, then run an independent interval branch-and-bound over that domain that bounds the maximum regret from above, and check that every leaf is covered. For a lower bound, recompute the Bayes-optimal aggregator against the stated mixture exactly and its expected regret. Calibrate on the published values first: Arieli et al.'s (5√5 - 11)/8 construction, Chen-Peng-Tang's 31/1326 construction (Theorem 3.4) and the numerical 0.025512 of their aggregator.",
- "primary_sources": [
-  "https://arxiv.org/abs/2604.24517",
-  "https://arxiv.org/pdf/2604.24517",
-  "https://arxiv.org/abs/2401.17743"
- ],
- "status_source": "https://arxiv.org/abs/2604.24517",
- "status_checked": "2026-10-15",
- "disclosure": "open",
- "angles": [
-  "Certify before you search: the published upper bounds are numerical maximisations, so an interval branch-and-bound over the reduced domain either confirms them (p1) or finds a worse instance, and the same certifier then scores every new candidate.",
-  "Upper side: search richer aggregators than the one-parameter log-odds pool (piecewise logit pools, pools with corrections near forecasts of 0 and 1), scored by certified worst case, and feed the worst-case structures each round back in as the adversary set (an alternating minimax search).",
-  "Lower side: mix several information structures and compute the Bayes-optimal aggregator against the mixture exactly; an LP over a grid of candidate structures suggests weights, which are then certified exactly.",
-  "The unknown-state gap (about 2.1e-3) is about 40 times wider than the binary-state gap (about 5.7e-5); start there."
- ],
- "pitfalls": [
-  "Settings differ: known binary state, unknown state values, and unknown state values with a known marginal predictive distribution; conditionally independent, Blackwell-ordered and general structures (Table 1 of arXiv:2604.24517). Compare like with like.",
-  "The benchmark is additive regret against the omniscient aggregator under squared loss; other losses, ratio benchmarks and the Neyman-Roughgarden benchmark are different problems.",
-  "Published upper bounds are numerical: an 'improvement' smaller than about 1e-5 is inside their tolerance, hence the margins in the success criterion.",
-  "A lower bound needs a mixture whose Bayes-optimal aggregator is computed exactly; showing that one particular aggregator does badly proves nothing about the minimax regret."
- ]
+  "id": "robust-forecast-aggregation-bounds",
+  "name": "Robust forecast aggregation with two conditionally independent experts: tighten the minimax regret bounds (unknown state values [31/1326, 0.025512]; binary state [(5√5 - 11)/8, 0.022599])",
+  "category": "record-tables",
+  "kind": "standard",
+  "tractability": 2.5,
+  "compute_profile": "laptop-hours to laptop-days (searches over aggregators and information structures, then interval-arithmetic certification of the worst case over a reduced parameter domain)",
+  "statement": "Two experts receive signals about a random state, and their signals are conditionally independent given the state. An aggregator maps the two reported forecasts (posteriors) to one forecast; its regret on an information structure is its expected squared loss minus that of the omniscient aggregator, who knows both signals (additive regret). The minimax regret is the infimum over aggregators of the supremum over information structures in the class. Arieli, Babichenko and Smorodinsky ('Robust forecast aggregation', PNAS 115(52), 2018) introduced the problem for a known binary state space {0, 1} and proved the lower bound (5√5 - 11)/8 ≈ 0.022542; Guo, Hartline, Huang, Kong, Shah and Yu ('Algorithmic robust forecast aggregation', EC 2025, arXiv:2401.17743) gave an algorithmic upper bound of about 0.0226. Chen, Peng and Tang ('Prior-agnostic robust forecast aggregation', arXiv:2604.24517, v2 of 2026-05-23) study the variant in which the state values are unknown: their closed-form log-odds aggregator has worst-case regret 0.025512 (Theorem 3.2), no aggregator can do better than 31/1326 ≈ 0.023379 (Theorem 3.4), and the same family achieves 0.022599 in the known binary-state setting (Proposition 3.5). Their Table 1 summarises these bounds, and their upper bounds are numerical maximisations (a global heuristic search followed by a grid refinement with step 1e-5), not certified values. Both gaps, about 2.1e-3 for unknown state values and 5.7e-5 for the binary state, are open.",
+  "success_criterion": "CONFIRMED by one of the following, with the setting, the loss (squared), the benchmark (omniscient aggregator, additive regret) and the class of information structures (conditionally independent signals) copied from arXiv:2604.24517 Sections 2-3, and every bound certified by exact or interval arithmetic in a checker that shares no code with the search. (a) Unknown state values, upper bound: an explicit aggregator (closed form, or a finite piecewise description with rational parameters) whose worst-case regret over the whole class is certified to be at most 0.025502 (0.025512 - 1e-5), with the reduction of the worst case to a finite-dimensional parameter domain written out in full. (b) Unknown state values, lower bound: an explicit finite mixture of information structures whose Bayes-optimal aggregator has expected regret strictly greater than the current best lower bound, which lower-bounds the minimax regret: proved with an exact rational certificate, any strict improvement counts; with a floating-point (interval) certificate, the margin must be at least 1e-5. The current best lower bound is 1652448303171916717080006468042849/70681471350112364987160770000000000 (about 0.02337880), V3R1T4S PR #160 (2026-10-15), above the paper's 31/1326. (c) Known binary state, either side: a certified upper bound at most 0.022599 - 1e-6, or a lower bound strictly greater than (5√5 - 11)/8 with an exact certificate (at least (5√5 - 11)/8 + 1e-6 with a floating-point one), in the same way. Direction: narrow the gap. Each claim must beat every bound published at verification time, including papers citing arXiv:2604.24517. The 1e-5 and 1e-6 margins apply to numerically computed bounds and floating-point certificates, because the paper's numerical bounds come from a grid with step 1e-5; an exact rational certificate against an exact published bound needs no margin.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A certified worst case for a published aggregator: an interval branch-and-bound proof that Chen-Peng-Tang's log-odds aggregator, with the parameter they specify, has worst-case regret at most 0.025512 in the unknown-state setting (or at most 0.022599 in the binary setting), turning their numerical maximisation into a theorem; or a certified information structure showing that its worst case exceeds the published value."
+    },
+    {
+      "id": "p2",
+      "statement": "The same kind of certified improvement in the paper's third setting (unknown state values with a known marginal predictive distribution; Table 1 bounds (5√5 - 11)/8 and 0.022763)."
+    }
+  ],
+  "verification_method": "Re-implement the regret of an aggregator on an information structure from the definition: two conditionally independent signals, the omniscient benchmark is the posterior given both signals, squared loss, additive regret. For an upper bound, re-derive the reduction of the worst case to a finite-dimensional domain from the source, then run an independent interval branch-and-bound over that domain that bounds the maximum regret from above, and check that every leaf is covered. For a lower bound, recompute the Bayes-optimal aggregator against the stated mixture exactly and its expected regret. Calibrate on the published values first: Arieli et al.'s (5√5 - 11)/8 construction, Chen-Peng-Tang's 31/1326 construction (Theorem 3.4) and the numerical 0.025512 of their aggregator.",
+  "primary_sources": [
+    "https://arxiv.org/abs/2604.24517",
+    "https://arxiv.org/pdf/2604.24517",
+    "https://arxiv.org/abs/2401.17743"
+  ],
+  "status_source": "https://arxiv.org/abs/2604.24517",
+  "status_checked": "2026-10-15",
+  "disclosure": "open",
+  "angles": [
+    "Certify before you search: the published upper bounds are numerical maximisations, so an interval branch-and-bound over the reduced domain either confirms them (p1) or finds a worse instance, and the same certifier then scores every new candidate.",
+    "Upper side: search richer aggregators than the one-parameter log-odds pool (piecewise logit pools, pools with corrections near forecasts of 0 and 1), scored by certified worst case, and feed the worst-case structures each round back in as the adversary set (an alternating minimax search).",
+    "Lower side: mix several information structures and compute the Bayes-optimal aggregator against the mixture exactly; an LP over a grid of candidate structures suggests weights, which are then certified exactly.",
+    "The unknown-state gap (about 2.1e-3) is about 40 times wider than the binary-state gap (about 5.7e-5); start there."
+  ],
+  "pitfalls": [
+    "Settings differ: known binary state, unknown state values, and unknown state values with a known marginal predictive distribution; conditionally independent, Blackwell-ordered and general structures (Table 1 of arXiv:2604.24517). Compare like with like.",
+    "The benchmark is additive regret against the omniscient aggregator under squared loss; other losses, ratio benchmarks and the Neyman-Roughgarden benchmark are different problems.",
+    "Published upper bounds are numerical: an 'improvement' smaller than about 1e-5 is inside their tolerance, hence the margins in the success criterion.",
+    "A lower bound needs a mixture whose Bayes-optimal aggregator is computed exactly; showing that one particular aggregator does badly proves nothing about the minimax regret.",
+    "The opening sentence of the paper's Section 3.2 mentions 'a regret lower bound of 0.02344' for the unknown-state cell. No construction or proof for it appears in v1 or v2 (a reviewer traced it to a draft formula in the LaTeX source); Table 1, Theorem 3.4, Figure 1 and the introduction all give 31/1326. A certificate reaching 0.02344 would be a large improvement, not the status quo."
+  ]
 }
