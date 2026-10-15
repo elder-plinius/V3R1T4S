@@ -1,0 +1,3 @@
+The comparison is a full proof of the open Conjecture 9, not a numerical table record. The primary source is Angel Y. He and Mark Holmes, All In: Give me your money!, https://arxiv.org/abs/2410.15329, Section 5.3. Theorem 1 proves a different swapping inequality.
+
+The current author main repository is https://github.com/7angel4/betting-game-proof/tree/4dd1840d129f2b327f0417a14dd16457db57e17c . Its YYZ expression caches and depth-5 LP are not a completed proof; the verification notebook stores the failed sufficient margin -967/38880. Fresh NOVELTY findings and access limits are in panel/novelty.md. Raw third-party pages, PDFs and notebooks are not redistributed.

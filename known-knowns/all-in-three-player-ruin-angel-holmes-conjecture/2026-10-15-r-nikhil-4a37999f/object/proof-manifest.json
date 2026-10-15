@@ -1,0 +1,9 @@
+{
+  "CLAIM.md": "fbf6ff87b647c4434c3b2e099e919a6327adcb5dab6a1aa13b05bbfbbf84651e",
+  "GAME.md": "4a07a3ed1e68c6de521e10d692d9a7209e6e933d2850b1c799386988b1d2dd61",
+  "PROOF.md": "b4b59ccd0f70f13ec500f0f845ef1d9172720ce703e31196c0d472fcb7d227c2",
+  "target.md": "da19ad5b18bd78da48eedf41bd10e4f06b75126000b2ab9bf99a103d5c747913",
+  "certificates/leader.json": "1a6e25af54dae3b5f6e79000f7cbb0af171395a71a340db67be6455379aaabd6",
+  "certificates/middle.json": "39ada68fac20203f0ab1a524772a9e3f2a53a006be8fcca6b94fabd55f681ffb",
+  "certificates/shortest.json": "cfc15abf7d490e9bd3905a2d120e62fc3a51ddf8b2f536fcfd14a8662d3a0753"
+}
