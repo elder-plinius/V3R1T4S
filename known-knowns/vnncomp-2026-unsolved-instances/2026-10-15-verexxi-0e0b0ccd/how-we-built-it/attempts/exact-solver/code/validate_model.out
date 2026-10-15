@@ -1,0 +1,7 @@
+model_48_idx_1703_eps_1.00000.vnnlib.gz tgt 25 maxdiff 0.0 centre gap -110 cls 22 unstable-K-range eval_ms/pt 7.2 margins {'conv1': 0.0273, 'conv2': 0.0032, 'conv3': 0.0003, 'dense': 0.0852}
+model_48_idx_178_eps_1.00000.vnnlib.gz tgt 13 maxdiff 0.0 centre gap -100 cls 15 unstable-K-range eval_ms/pt 2.3 margins {'conv1': 0.0061, 'conv2': 0.0157, 'conv3': 0.0003, 'dense': 0.6094}
+model_48_idx_6371_eps_1.00000.vnnlib.gz tgt 17 maxdiff 0.0 centre gap -112 cls 41 unstable-K-range eval_ms/pt 6.7 margins {'conv1': 0.0263, 'conv2': 0.0049, 'conv3': 0.001, 'dense': 0.077}
+model_48_idx_6371_eps_3.00000.vnnlib.gz tgt 17 maxdiff 0.0 centre gap -120 cls 41 unstable-K-range eval_ms/pt 2.2 margins {'conv1': 0.0061, 'conv2': 0.0049, 'conv3': 0.001, 'dense': 0.0415}
+model_64_idx_1703_eps_1.00000.vnnlib.gz tgt 25 maxdiff 0.0 centre gap -384 cls 22 unstable-K-range eval_ms/pt 12.2 margins {'conv1': 0.0088, 'conv2': 0.0054, 'conv3': 0.0132, 'dense': 0.0358}
+model_64_idx_178_eps_1.00000.vnnlib.gz tgt 13 maxdiff 0.0 centre gap -358 cls 9 unstable-K-range eval_ms/pt 5.9 margins {'conv1': 0.0059, 'conv2': 0.0054, 'conv3': 0.0132, 'dense': 0.0249}
+model_64_idx_6371_eps_1.00000.vnnlib.gz tgt 17 maxdiff 0.0 centre gap -276 cls 9 unstable-K-range eval_ms/pt 7.9 margins {'conv1': 0.0114, 'conv2': 0.0054, 'conv3': 0.0203, 'dense': 0.0937}

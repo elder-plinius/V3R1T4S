@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+vnncomp-2026-unsolved-instance-counterexample,3_48_48_QConv_32_5_MP_2_BN_QConv_64_5_MP_2_BN_QConv_64_3_BN_Dense_256_BN_Dense_43_ep_30+model_48_idx_6371_eps_3.00000,correct (Y9-Y17=0.7615941),timeout|timeout|timeout,2026-10-15T00:58:03Z,object/witness_plain.txt,0e0b0ccd9d6b0ab02dc47489bc114da3dad9f88460cd498b9b87cf7a0d82cbe7

@@ -1,0 +1,14 @@
+optima with G >= -6: 14 G values [-6, -6, -6, -6, -6, -2, -2, -2, -2, -2, -2, -2, -2, -2]
+units with dw != 0: 107 | always right: 47 | always wrong: 52 | vary: 8
+varying units (index: fraction right): {26: 0.86, 74: 0.86, 101: 0.5, 109: 0.71, 116: 0.79, 147: 0.86, 150: 0.93, 209: 0.14}
+most anti-correlated pairs among varying units: [(-1.0, 147, 209), (-0.65, 109, 209), (-0.63, 101, 109), (-0.52, 101, 116), (-0.41, 26, 101)]
+per optimum with G = -2: varying-unit status (R/W) and signed distance to the helpful side (u units)
+  26:R+8 74:R+0 101:W-38 109:R+0 116:R+2 147:R+4 150:R+0 209:W-30 | r-first-local-search/out/int/s2/model_48_idx_6371_eps_3.json
+  26:R+20 74:R+0 101:R+6 109:W-56 116:R+10 147:W-44 150:R+4 209:R+2 | odel_48_idx_6371_eps_3/r3001/ls/model_48_idx_6371_eps_3.json
+  26:R+14 74:R+6 101:W-44 109:R+2 116:R+20 147:R+10 150:R+10 209:W-84 | odel_48_idx_6371_eps_3/r3010/ls/model_48_idx_6371_eps_3.json
+  26:R+20 74:R+0 101:R+6 109:W-56 116:R+10 147:W-44 150:R+4 209:R+2 | -local-search/out/meme/gen1/ls0/model_48_idx_6371_eps_3.json
+  26:R+8 74:R+0 101:W-38 109:R+0 116:R+2 147:R+4 150:R+0 209:W-30 | -local-search/out/meme/gen1/ls1/model_48_idx_6371_eps_3.json
+  26:R+8 74:R+0 101:W-38 109:R+0 116:R+2 147:R+4 150:R+0 209:W-30 | -local-search/out/meme/gen1/ls2/model_48_idx_6371_eps_3.json
+  26:R+8 74:R+0 101:W-38 109:R+0 116:R+2 147:R+4 150:R+0 209:W-30 | -local-search/out/meme/gen3/ls0/model_48_idx_6371_eps_3.json
+  26:R+8 74:R+0 101:W-38 109:R+0 116:R+2 147:R+4 150:R+0 209:W-30 | -local-search/out/meme/gen2/ls0/model_48_idx_6371_eps_3.json
+  26:R+8 74:R+0 101:W-38 109:R+0 116:R+2 147:R+4 150:R+0 209:W-30 | -local-search/out/meme/gen2/ls2/model_48_idx_6371_eps_3.json
