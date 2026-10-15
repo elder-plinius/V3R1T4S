@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+all-in-three-player-ruin-angel-holmes-conjecture,Conjecture 9 full real domain,"f(x,y,z)>f(y,y,z) for x<y and x,y,z>0",open in source Section 5.3,2026-10-15T16:12:59.555801+00:00,object/proof-manifest.json,4a37999f4a1781aff33fdaf75b6e00981fd7b1faaafabe389b0446f6e27606ec

@@ -1,0 +1,28 @@
+{
+  "certificates": [
+    {
+      "file": "certificates/leader.json",
+      "sha256": "1a6e25af54dae3b5f6e79000f7cbb0af171395a71a340db67be6455379aaabd6",
+      "nodes": 128,
+      "leaves": 86,
+      "minimum": "181/1399680",
+      "full_transcript_sha256": "96049f290ff3deab6c90888f789b5e9d57a8a6ca48b796f794da61098064ce17"
+    },
+    {
+      "file": "certificates/middle.json",
+      "sha256": "39ada68fac20203f0ab1a524772a9e3f2a53a006be8fcca6b94fabd55f681ffb",
+      "nodes": 7,
+      "leaves": 5,
+      "minimum": "1/135",
+      "full_transcript_sha256": "a55d13a191648012f45a6b7c2f816c42235bfb0bf1a0deab10ba91807a124bba"
+    },
+    {
+      "file": "certificates/shortest.json",
+      "sha256": "cfc15abf7d490e9bd3905a2d120e62fc3a51ddf8b2f536fcfd14a8662d3a0753",
+      "nodes": 9704,
+      "leaves": 6470,
+      "minimum": "379/1813985280",
+      "full_transcript_sha256": "ab5e9d30038855c2a3e033701b01530d369db5e4e4e4fe26a98c793eef613ce9"
+    }
+  ]
+}
