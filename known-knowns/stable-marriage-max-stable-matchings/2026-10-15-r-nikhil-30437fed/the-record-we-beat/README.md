@@ -1,0 +1,3 @@
+OEIS A357271, n13:6720. URL https://oeis.org/A357271/b357271.txt; HTTP200; UTC 2026-10-15T16:49:49.350346+00:00; SHA256 0d0e95042f30b2f8be60174047a5a03ea45bf70203d39e40b1665d0085b32b4a. The upstream b-file labels itself synthesized from the sequence entry.
+
+The operative threshold is the stronger local n13 profile with 9796 stable matchings, supplied as prior_n13.prefs. The final object has 9836, a strict gain of 40. The independent NOVELTY panel documents its own fresh source, recent-literature and repository checks, including any access limitations. No third-party page is copied into this package.
