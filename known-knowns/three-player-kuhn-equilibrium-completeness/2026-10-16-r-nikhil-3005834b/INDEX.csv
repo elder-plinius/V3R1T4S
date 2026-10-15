@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+three-player-kuhn-equilibrium-completeness,completeness (on-path),SGS family contains every Nash equilibrium on its path of play,open (AAMAS 2013; Wikipedia 2026-07-10),2026-10-15,object/terminal_family_certificate.json,3005834b7ae7bd0709bcae9acd36af7e9ebc420ec4c412d9a24983791751c7f4
