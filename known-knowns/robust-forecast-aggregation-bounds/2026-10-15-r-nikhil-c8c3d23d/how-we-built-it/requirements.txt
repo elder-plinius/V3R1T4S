@@ -1,0 +1,3 @@
+numpy==2.0.2
+# Python 3.9.6. Only how-we-built-it/code/mix_opt.py needs NumPy; build_symmetric.py and every checker in
+# verify-it-yourself/ use the Python standard library only.
