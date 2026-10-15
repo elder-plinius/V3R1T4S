@@ -1,0 +1,4 @@
+numpy==2.0.2
+highspy==1.15.1
+python-flint==0.6.0
+# Python 3.9.6; the checkers in verify-it-yourself/ need only the standard library
