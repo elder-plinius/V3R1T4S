@@ -1,0 +1,3 @@
+chunks=1001 first_A=0 last_B=1000000000 gaps=[] bad=[]
+total (n,i) cases=16738476359 enumerated_j=57772274007
+COVERAGE_COMPLETE_4_TO_1e9

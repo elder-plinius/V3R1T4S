@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+erdos-699-binomial-gcd,p3 (exhaustive verification n <= 10^9),no counterexample for all 4 <= n <= 10^9,exhaustive n <= 10^7 (Cong; forum thread),2026-10-15T00:13:42Z,object/seg699_chunk_summaries.txt,88947ad767b723a613498d4fba50d3bb725cc950025ca62828958156319d7382
