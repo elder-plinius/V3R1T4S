@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+card-guessing-yes-no-feedback-exact,"partial win p1: exact P+_{2,n} for n=11,12,13 (m=2, yes/no feedback)","n=11 137912544707079557/45735706696680000; n=12 228254911260131056513/75738330289702080000; n=13 3901622163101296907981/1295524070744904000000","none published (tables end at n=10)",2026-10-15T13:16:53Z,object/values.json,c6c093c29439e54a3f475c3ef71b274cf402e1d417512bb26c3abc24b678bdf2
