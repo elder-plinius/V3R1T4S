@@ -1,0 +1,4 @@
+source	L	printed_E	printed_F	smallest_E_consistent_with_printed_value	E_of_printed_sequence	decoding	source_url	fetched_utc	http
+knauer2004	232	3752		3752	3752	runs-full	https://raw.githubusercontent.com/borkob/git_labs/1aa123407636e48630174e0bf122037e369c1d68/results-2016/2004-Knauer-original.html	2026-10-16T17:04:54Z	200
+2206.12070	232		8.05748502994	3340	3340	hex-full	https://arxiv.org/src/2206.12070	2026-10-16T17:00:24Z	200
+2206.12070-oldMF	232		7.1727	3752		no sequence printed	https://arxiv.org/src/2206.12070	2026-10-16T17:00:24Z	200
