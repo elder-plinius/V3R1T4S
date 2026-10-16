@@ -1,0 +1,22 @@
+{
+ "original_sha256": {
+  "decide.py": "b2a35e292e1b993c0833b614ef4debe589ec1a01b16235b7d782f95227a171e9",
+  "draw_v3.py": "a58fe2e841177bc9398fc464a50ba8be885dd59013a8d41494852ec5db83247c",
+  "fetch_lcs_v3.py": "b511612ccfed3fccbc8dddfa2cf1face55ff35e5ce2bdcdd67cde1fbf7de1dc0",
+  "fetch_v3.py": "9ab91d8b44824e5cf96b4fb324b245df25b3df435fa2673b6bf6d1ffa10a2834",
+  "params.py": "3493a309a204bee305a4cde8d5ca1a03a92dea99068a90db57f56b405135358f",
+  "period_check.py": "4663077cb8c9ec96ae710ed917501776ab1782417d7cf262f8583d0cf685950b",
+  "pipeline.py": "5a282bcfc275c5e021ad7984ff3f637bdb21139aafe3bb904065f7e4db2a3692",
+  "run_many.py": "8822324f1aaa65fa5b5d15efec7e3057d03fa90e12f7679326049fdf880c8807"
+ },
+ "packaged_sha256": {
+  "decide.py": "1d32afae5cdf8e20909b5a72bd2fe6f903c3c94e4804edc5fedf09043fd0c3ab",
+  "draw_v3.py": "71d707b39c6330c1229c6f52a9b245ba9f15c6065a4e2b24875af97c23740d65",
+  "fetch_lcs_v3.py": "b511612ccfed3fccbc8dddfa2cf1face55ff35e5ce2bdcdd67cde1fbf7de1dc0",
+  "fetch_v3.py": "9ab91d8b44824e5cf96b4fb324b245df25b3df435fa2673b6bf6d1ffa10a2834",
+  "params.py": "3493a309a204bee305a4cde8d5ca1a03a92dea99068a90db57f56b405135358f",
+  "period_check.py": "4663077cb8c9ec96ae710ed917501776ab1782417d7cf262f8583d0cf685950b",
+  "pipeline.py": "5a282bcfc275c5e021ad7984ff3f637bdb21139aafe3bb904065f7e4db2a3692",
+  "run_many.py": "8822324f1aaa65fa5b5d15efec7e3057d03fa90e12f7679326049fdf880c8807"
+ }
+}
