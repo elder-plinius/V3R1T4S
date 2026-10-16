@@ -1,0 +1,9 @@
+{
+  "start_epoch": 1792083071.650683,
+  "timeout": 25,
+  "rngseed": 165185,
+  "temp": "0.03",
+  "square_rate": 15,
+  "first85_proposal": 34618,
+  "first85_evaluation": 3437
+}
