@@ -1,0 +1,11 @@
+{
+ "N": 83,
+ "table_value": "0.116285160418976515059766617287",
+ "margin": "1e-9",
+ "kind": "short",
+ "posted_copy": "the-record-we-beat/scu83-posted.txt",
+ "posted_sha256": "cc08dcaf1f88de0ff8107525047ffa110f0d39ef5aa06172c30b691809d41c62",
+ "object": "object/scu83_refined.txt",
+ "object_sha256": "7d47b6743b44dbc43db4eb30485052b2702e3f210ec008288cde135425034c4e",
+ "object_rstar_prefix": "0.11628444376835894297"
+}
