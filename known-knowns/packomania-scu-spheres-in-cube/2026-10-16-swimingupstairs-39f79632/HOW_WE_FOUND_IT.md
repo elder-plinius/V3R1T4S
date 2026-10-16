@@ -1,0 +1,2 @@
+# How we found it (contributor text, unverified)
+A V3R1T4S run audited Packomania's scu coordinate files and found rows just above plateaus where Lu Peng's posted N-1 packing has free holes. Starting from Lu Peng's posted scu618.txt, one sphere was inserted into the largest hole and the packing was re-relaxed. It passed a three-skeptic panel after two paperwork repair rounds.
