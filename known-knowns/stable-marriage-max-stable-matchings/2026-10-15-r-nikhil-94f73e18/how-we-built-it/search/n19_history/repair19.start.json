@@ -1,0 +1,7 @@
+{
+  "start_epoch": 1792083340.5697658,
+  "temperature": "0.005",
+  "cap": 315,
+  "rngseed": 165519,
+  "input": "seed_initial.prefs"
+}
