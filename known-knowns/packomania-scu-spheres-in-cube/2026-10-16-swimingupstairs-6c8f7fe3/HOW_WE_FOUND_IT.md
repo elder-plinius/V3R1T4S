@@ -1,0 +1,2 @@
+# How we found it (contributor text, unverified)
+A V3R1T4S run audited Packomania's scu coordinate files and found many rows just above plateaus where a posted packing has free holes. Starting from Lu Peng's posted scu880.txt, spheres were inserted into the largest holes and the packing was re-inflated with a penalty / sparse-LP method. Most chain steps beyond 886 fell below the table or behind Moki & Julio's queued values; 884, 883, 882 and 886 beat both and passed a three-skeptic panel (after a paperwork repair round).
