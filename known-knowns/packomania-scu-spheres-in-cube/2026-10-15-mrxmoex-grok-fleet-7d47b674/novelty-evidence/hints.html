@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//DE">
+<HTML>
+<HEAD>
+<TITLE>Hints for formatting the coordinates</TITLE>
+<META NAME="description" CONTENT="Packing of circles and spheres in various containers,52C17">
+<META NAME="keywords" CONTENT="packing,circles,spheres,52C17">
+<META NAME="resource-type" CONTENT="document">
+<META NAME="distribution" CONTENT="global">
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+</HEAD>
+<BODY BACKGROUND="bkg.jpg">
+<BR>
+<HR>
+<H3><FONT COLOR="purple">Hints for formatting the data of your submitted packings</FONT></H3>
+To ensure that all your submitted packings will be published at packomania as soon as possible
+(and to minimize the overhead of renaming and editing the files) I like to request you for
+sending all packings in a specified format.
+<br />
+<ol>
+<li>
+The radii, author name(s) and coordinates of each packing should be put in an
+<strong>extra file</strong> named with the extension <strong>.pck</strong> as follows.
+For example,
+<br /><br />
+"ccin34.pck" (for Circles in a CIrcle with r_i = i and N=34),
+<br />
+"ccis23.pck" (for Circles in a CIrcle with r_i = i^(-1/2) and N=23),
+<br />
+"scu12.pck"  (for equal Spheres in a CUbe with N=12), and so on.
+<br /><br />
+The prefixes are the same as the names of the subdirectories of packomania.
+<br /><br />
+
+<li>
+It would be great if you can write the coordinates of each packing in the following format
+(data in brackets are optional except the radii in the last column if there are <em>unequal</em>
+objects in the packing; in this case the radii are mandatory):
+<br /><br />
+<code>
+radius
+<br />
+your name(s) here
+<br />
+-0.86316710103267 &nbsp;&nbsp;  0.406124264223147 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_1]
+<br />
+0.566009599820516 &nbsp;&nbsp; 0.7058690726472174 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_2]
+<br />
+-0.63521679012343 &nbsp;&nbsp;  -0.582420752358981 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_3]
+<br />
+0.640421565501216 &nbsp;&nbsp; -0.5058241354410553 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_4]
+<br />
+-0.05910602881140 &nbsp;&nbsp;  0.1526797786896851 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_5]
+<br />
+-0.44254559148916 &nbsp;&nbsp;  0.5771329999083729 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_6]
+<br />
+0.141487900344812 &nbsp;&nbsp; 0.66697902042574066 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_7]
+<br />
+-0.63569636970639 &nbsp;&nbsp;  -0.029203828101066 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_8]
+<br />
+0.584039910169077 &nbsp;&nbsp; 0.08986199788658343 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_9]
+<br />
+-0.00095887178982 &nbsp;&nbsp;  -0.545457690476027 &nbsp;&nbsp; [z_coordinate_in_3D] &nbsp;&nbsp; [radius_10]
+</code>
+<br /><br />
+
+<ul>
+<li>
+Write the radius of the circle or sphere (for equal objects) or
+the radius of the <strong>largest</strong> objects (for unequal objects)
+&mdash; according to the given size distribution &mdash; in the first line.
+Do not include letters or an equal sign. 
+<br />
+Please note that the size of the container is always fixed here:
+<br /><br />
+circular container:  radius = 1, center at (0,0)
+<br />
+spherical container: radius = 1, center at (0,0,0)
+<br />
+square container:    side length = 1, center at (0,0)
+<br />
+cube container:      edge length = 1, center at (0,0,0).
+<br /><br />
+Therefore, the coordinates of the objects must be <strong>rescaled</strong> such that they
+fit properly into the container.
+<br /><br />
+
+<li>
+Enter your name in the second line; if there is more than one author separate the names by commas.
+<br /><br />
+
+<li>
+The coordinates section starts with the third line.
+<br />
+Please sort all coordinate lines by <strong>increasing radii</strong> (only for unequal objects),
+i.e. the first coordinate line contains the smallest object and the last line is for the largest object.
+<br />
+Separate the columns of each line by white spaces or tabs.
+<br />
+Always provide as many decimal places as possible.
+</ul>
+<br /><br />
+
+<li>
+All files may be zipped into an archive file.
+<br /><br />
+
+<li>
+<font color="red">Note on 'csqv' packings (variable-sized circles in a square with maximized sum of radii):</font>
+<br />
+Please assure in your submissions that there is the correct number of contacts in each packing: If you have <i>N</i>
+circles, then it must be at least 3<i>N</i> contacts at all. This means that not only must the circles not overlap,
+but they must also be large enough to get in contact with a tolerance smaller than 3e-12.
+</ol>
+
+Thank you very much for your cooperation!
+<BR>
+<BR>
+<HR>
+<div class="footer">
+<a href="https://www.ovgu.de/datenschutzerklaerung.html" target="_blank"><strong>Datenschutzerkl&auml;rung der Otto-von-Guericke-Universit&auml;t Magdeburg nach DSGVO</strong></a><br /><br />
+&copy;&nbsp;&nbsp;<i><a href="mailto:eckard.specht@physik.uni-magdeburg.de">E. Specht</a></i>&nbsp;&nbsp;&nbsp; 21-Jun-2018
+</div>
+<BR>
+</BODY>
+</HTML>

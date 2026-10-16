@@ -1,0 +1,11 @@
+{
+ "N": 507,
+ "table_value": "0.065932119200351706079281328718",
+ "margin": "1e-9",
+ "kind": "short",
+ "posted_copy": "the-record-we-beat/scu507-posted.txt",
+ "posted_sha256": "a62939a8714f09726efa31ce3193cb609845ec36c739c9276f4caad2ae338a04",
+ "object": "object/scu507_refined.txt",
+ "object_sha256": "5718dbe13ad14876665fd9a66ad86848ddc43fc5ef9aff96aa6a228f755a2c61",
+ "object_rstar_prefix": "0.06592848603610355706"
+}
