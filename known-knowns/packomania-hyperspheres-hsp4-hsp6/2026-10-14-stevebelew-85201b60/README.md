@@ -32,6 +32,8 @@ packing above the table value and also prints PASS; SHA256SUMS pins the exact fi
 
 ## Not claimed
 
+> **Contributor note (2026-10-16): overtaken by the pending Packomania bundle.** The 26-Sep-2026 "Moki & Julio *many* 4666 candidates" bundle on https://packomania.com/pending-requests.html (public manifest: GitHub repository `moki-julio-circle-packing`, Zenodo 10.5281/zenodo.22981305; `MANIFEST.csv` fetched 2026-10-16 21:32:52 UTC, sha256 b7a042ef6a29ce8b219660691212111262e4091c14b941721dd1d3f491eec568) lists N = 69 at radius 0.261918994140592; this object is 2.18e-6 below it (ours minus bundle = -2.18e-6, r* recomputed at 50 digits). This cell will not stand once Packomania posts the bundle. On 2026-10-16 this object still strictly exceeds the posted table value cited under "Compared to" (radius.txt unchanged since 06-Jul-2025), so that statement stands as written; it does not beat everything known. The bundle values are its authors' claims; their coordinate archives were not verified by the contributor. See issue #286.
+
 Not optimality, not a "record" in any sense beyond strictly exceeding the posted value in this table on this date, nothing
 about any other N or about hsp5/hsp6. Packomania has not been contacted; whether this packing is listed is the table
 owner's decision. This is one of 15 hsp4 rows improved in the same search; each is its own package (one cell per claim).
