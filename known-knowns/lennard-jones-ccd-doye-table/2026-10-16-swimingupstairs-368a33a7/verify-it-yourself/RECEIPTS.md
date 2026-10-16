@@ -1,0 +1,8 @@
+# Receipts (real output of sh verify-it-yourself/run_checks.sh, 2026-10-16)
+```
+N=662
+E=-4581.205775329242058388545669185821859506
+grad_norm=7.173e-27
+table=-4581.204895 margin=0.000880329242058388545669185821859506
+PASS
+```
