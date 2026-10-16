@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "experiment_id": "replace-with-stable-id",
+  "source": {"repository": "https://example.org/project", "revision": "full-commit-sha", "runner_version": "version-or-commit", "runtime": "name and version"},
+  "model": {"identifier": "model-name-and-revision", "artifact_sha256": null, "already_available_locally": true},
+  "environment": {"hardware": "CPU/GPU and relevant memory", "os": "OS and version", "software": "driver and library versions"},
+  "workload": {"request_set_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "request_count": 1, "order": "fixed", "concurrency": 1, "warmup_requests": 0, "decoding": "temperature, seed, max output tokens, and other settings", "quality_rubric": "predeclared scoring method and threshold"},
+  "arms": {"baseline": {"name": "baseline", "command": "exact command", "configuration_sha256": "sha256:replace-with-64-hex-digits"}, "intervention": {"name": "intervention", "command": "exact command", "configuration_sha256": "sha256:replace-with-64-hex-digits"}},
+  "measurements": {"raw_results_path_or_public_safe_uri": "path or URI", "raw_results_sha256": "sha256:0000000000000000000000000000000000000000000000000000000000000000", "latency_units": "milliseconds", "ttft_units": "milliseconds", "throughput_units": "output_tokens_per_second", "record_per_request": true, "includes_queueing_in_end_to_end": true},
+  "quality_gate": {"threshold": "predeclared numeric or categorical threshold", "baseline_passed": false, "intervention_passed": false},
+  "deviations": [],
+  "limitations": ["No performance claim until matched raw results and quality gate are verified"]
+}
