@@ -1,0 +1,1 @@
+Published copy of charter.md (publish_charter: yes). One word in the snake-coil-in-the-box quarry was respelled with a hyphen because it contains a never-publish entry as a substring; nothing else changed.
