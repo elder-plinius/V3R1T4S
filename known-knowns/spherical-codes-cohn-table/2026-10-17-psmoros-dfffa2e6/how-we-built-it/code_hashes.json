@@ -1,0 +1,52 @@
+{
+ "h3sweep.py": {
+  "original_sha256": "5764a88707aeffc17b4970a336e874055d72789d6b21ceed14f378e95e832d7c",
+  "packaged_sha256": "258596dde14dc48432a05f05143cc51ea895c846f35ddacac1519f76964df067",
+  "paths_replaced": true
+ },
+ "bsopt.py": {
+  "original_sha256": "9c73a22ef5d47da09a763858ba8d71e77dd44fd78069b1041668a17faf8ff238",
+  "packaged_sha256": "9c73a22ef5d47da09a763858ba8d71e77dd44fd78069b1041668a17faf8ff238",
+  "paths_replaced": false
+ },
+ "bsprec.py": {
+  "original_sha256": "4ecac8ab16e6ee9dc9e94429d60dad6c37754ebae434fbcb8eb172efdf68811b",
+  "packaged_sha256": "4ecac8ab16e6ee9dc9e94429d60dad6c37754ebae434fbcb8eb172efdf68811b",
+  "paths_replaced": false
+ },
+ "lse.c": {
+  "original_sha256": "23cf51e135ac2543eb64d5fd0314aa216e5e0c9be3df8751e25d277c92f5fcf7",
+  "packaged_sha256": "23cf51e135ac2543eb64d5fd0314aa216e5e0c9be3df8751e25d277c92f5fcf7",
+  "paths_replaced": false
+ },
+ "lse2.c": {
+  "original_sha256": "be30b63990678286ce2e8fb5f64cae2340fd6030fe6e6ed1e299a1003feac05f",
+  "packaged_sha256": "be30b63990678286ce2e8fb5f64cae2340fd6030fe6e6ed1e299a1003feac05f",
+  "paths_replaced": false
+ },
+ "lse3.c": {
+  "original_sha256": "abb74b1a3f02e1144ed942e6231418dd695cb87ea7a3dcd07ceca3e42f7ca8da",
+  "packaged_sha256": "abb74b1a3f02e1144ed942e6231418dd695cb87ea7a3dcd07ceca3e42f7ca8da",
+  "paths_replaced": false
+ },
+ "finalize.py": {
+  "original_sha256": "7136ab6bb70953948be16ae36d4c9cb14faa0135dbdab0d5fdd5270479ca57b5",
+  "packaged_sha256": "069c1598bf111c9c77f10860f3fedce3f9bca472b7ca17fd6fc37f4e9dac1d73",
+  "paths_replaced": true
+ },
+ "bs_check.py": {
+  "original_sha256": "8fce7968c3c94761c6b55759e765aadb0052c88b260b22d9cb9d796cbbdf5a03",
+  "packaged_sha256": "8fce7968c3c94761c6b55759e765aadb0052c88b260b22d9cb9d796cbbdf5a03",
+  "paths_replaced": false
+ },
+ "verify_all.py": {
+  "original_sha256": "61b7e291daa2b232f051c304eef094cac601649298d6476c65eefb576fb8fc61",
+  "packaged_sha256": "61b7e291daa2b232f051c304eef094cac601649298d6476c65eefb576fb8fc61",
+  "paths_replaced": false
+ },
+ "h3cands.py": {
+  "original_sha256": "48e8672d34159083ddb7f91b31adb60b13109bdfb8244f7c826265a3c102bd6c",
+  "packaged_sha256": "021f2da570156554544b747de4563c221c5242e6720de89570ad5b60296705f9",
+  "paths_replaced": true
+ }
+}

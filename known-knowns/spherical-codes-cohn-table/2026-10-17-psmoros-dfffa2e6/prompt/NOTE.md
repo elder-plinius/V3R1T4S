@@ -1,0 +1,1 @@
+prompt/ comes from run 2026-10-16-0024, which produced the first code (PR #231). This object is that code re-polished in run 2026-10-16-0758 (pre-registration: how-we-built-it/PREREG_run0758.md). Run 0758 itself made no V3R1T4S claim; this package was assembled on 2026-10-17 at the V3R1T4S maintainer's request in PR #231.
