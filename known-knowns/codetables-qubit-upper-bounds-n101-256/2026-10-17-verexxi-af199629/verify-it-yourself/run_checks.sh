@@ -5,4 +5,4 @@ for f in object/cert_219_2_73_sh.json; do
   python3 -I verify-it-yourself/check_cert.py "$f" || ok=0
   python3 -I verify-it-yourself/check2_recurrence.py "$f" || ok=0
 done
-if [ $ok = 1 ]; then echo PASS; else echo FAIL; fi
+if [ $ok = 1 ]; then echo PASS; else echo FAIL; exit 1; fi
