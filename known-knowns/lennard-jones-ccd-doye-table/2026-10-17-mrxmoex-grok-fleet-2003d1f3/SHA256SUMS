@@ -1,0 +1,12 @@
+e7ef81c1efc76d0cee8935ebbb9f8034cd4990cf262d6b2235c3ec7d1ba22aa6  ./HOW_WE_FOUND_IT.md
+f668e70152d25eef08df9a5f7d86bcff65ecb0a32a6e6fbd4f6184ebe3c81458  ./PLACEMENT.md
+5f31ae2ca686e2c8a7d317aa0107bdd472eb57d51849a354e9ea8a82627d8884  ./PR_BODY.md
+5f31ae2ca686e2c8a7d317aa0107bdd472eb57d51849a354e9ea8a82627d8884  ./README.md
+9d777efa0cf86a3c8bcc483a98e50b18b94260ffffd41118c075974f22d8b4bb  ./RUN_IT_YOURSELF.md
+2003d1f33d585a2be623c5a0af0193275b44a7368376103898d78292cf6cccb2  ./SOURCES.csv
+c0489b1ef315f4942c2c1d0ebd19f24693a6cc9c37fb4382abf3931dd8663296  ./how-we-built-it/morse_63c_adjudication_2026-10-17.txt
+98a11b2df31fab6a4866461784cdebb00a5987702e0cdd36d0df7732a8cc9ee1  ./how-we-built-it/repro_output_2026-10-17.txt
+276c7d6df0994ea710e52774faf974681e8976a214ae411a8091162fd50bcc2b  ./how-we-built-it/tight_polish_2026-10-17.txt
+faca91786ed318bc4853c30a229702877a7a1b6f82a2dbc43e4975d48ea8c64c  ./verify-it-yourself/repro_ccd_lj_errata.py
+f0e6c8e9c2eca1926b2278a208ea51c87199194ebe2195ebca9f7ffc79660bb6  ./verify-it-yourself/repro_ccd_morse_63c.py
+cd3f3c531fbf39ebbd82b7666d4e53977e72a32f1dfa0cca9d9c6c72ce8b8ed7  ./verify-it-yourself/run_checks.sh

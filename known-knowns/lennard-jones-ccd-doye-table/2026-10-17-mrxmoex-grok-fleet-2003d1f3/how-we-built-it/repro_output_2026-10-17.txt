@@ -1,0 +1,70 @@
+== (A) Lennard-Jones tables: N = 602, 486, 487, 813, 899
+1. CCD tables
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ310-561.html
+    20933 B  sha256 3e8d5141e2e731600337cdab88a435b44467130a840190d6b7a1e615f41847f4  Last-Modified Thu, 25 Jul 2024 14:44:28 GMT  sha256 matches SOURCES.csv
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ562-1000.html
+    34601 B  sha256 5afa46bfc46fad0d78f24617dacb48864de565406a31f533c85d9ec70fb75967  Last-Modified Thu, 25 Jul 2024 14:44:28 GMT  sha256 matches SOURCES.csv
+  row N=601: href=LJ562-1000/601.TXT  E_table=-4127.726727
+  row N=602: href=LJ562-1000/601.TXT  E_table=-4134.979952
+  row N=486: href=LJ310-561/486.TXT  E_table=-3278.642178
+  row N=487: href=LJ310-561/487.TXT  E_table=-3285.926242
+  row N=813: href=LJ562-1000/813.TXT  E_table=-5712.249964
+  row N=899: href=LJ562-1000/899.TXT  E_table=-6371.011413
+2. N=602 link
+  [ok] row 602 links to LJ562-1000/601.TXT
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ562-1000/601.TXT
+    24040 B  sha256 b0bb11e9d42d83b6cdc5ec92e20b978227b8cf1c9f6f029b81c7481152f48dd9  Last-Modified Thu, 25 Jul 2024 14:44:20 GMT  sha256 matches SOURCES.csv
+  linked file: 601 atoms, E = -4127.726727  (row 601 table -4127.726727, row 602 table -4134.979952)
+  [ok] linked file has 601 atoms and the N=601 energy
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ562-1000/602.TXT
+    24080 B  sha256 9c7b80219a96e1552d2bf8521f2cdd98b1eb45939a5011dc1b74195bb9858043  Last-Modified Thu, 25 Jul 2024 14:44:13 GMT  sha256 matches SOURCES.csv
+  unlinked CCD 602.TXT: 602 atoms, E = -4134.979952
+  [ok] CCD 602.TXT has 602 atoms and matches the 602 table value
+3. table value above the posted file's own energy
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ310-561/486.TXT
+    19440 B  sha256 9c5a587086f2e244f5cecda6b6714b1dea7cb8b1bd727e44016704e14d96b2dc  Last-Modified Thu, 25 Jul 2024 14:44:34 GMT  sha256 matches SOURCES.csv
+  N=486: 486 atoms  table -3278.642178  file -3278.672947  file-table -0.0307688  (Barron 2005: -3278.672947)
+  [ok] N=486: 486 atoms, file below table by -0.0308 (+/-2%)
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ310-561/487.TXT
+    19480 B  sha256 15b077fb30922f31fdc1808c630766ed7af0e20f6bc2f40fc34d5d6de02f573c  Last-Modified Thu, 25 Jul 2024 14:44:33 GMT  sha256 matches SOURCES.csv
+  N=487: 487 atoms  table -3285.926242  file -3285.966242  file-table -0.0400002  (Barron 2005: -3285.966242)
+  [ok] N=487: 487 atoms, file below table by -0.04 (+/-2%)
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ562-1000/813.TXT
+    37399 B  sha256 51f22dc726c20976b326bb0904d69cf1548c31b4acd131732423086442b05119  Last-Modified Thu, 25 Jul 2024 14:44:16 GMT  sha256 matches SOURCES.csv
+  N=813: 813 atoms  table -5712.249964  file -5712.250652  file-table -0.000688104  (Barron 2005: -5712.251749)
+  [ok] N=813: 813 atoms, file below table by -0.000688 (+/-2%)
+  https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/LJ/LJ562-1000/899.TXT
+    37758 B  sha256 00b63b42e176f49aaffa4d055498d71ed798e04c2c76b23bcefd32b61f7d77d8  Last-Modified Thu, 25 Jul 2024 14:44:17 GMT  sha256 matches SOURCES.csv
+  N=899: 899 atoms  table -6371.011413  file -6371.011483  file-table -6.96032e-05  (Barron 2005: -6371.011483)
+  [ok] N=899: 899 atoms, file below table by -6.96e-05 (+/-2%)
+4. original authors' 2004 archive and Barron 2005 (hash checks)
+  https://chinfo.nankai.edu.cn/chmm/pubmats/LJ/LJ562-1000.tar.gz
+    4619619 B  sha256 f8b6dabd5b57ca7476ca405cbd927072e739049904e630c28a2d70387d47b958  Last-Modified Thu, 25 May 2023 09:22:15 GMT  sha256 matches SOURCES.csv
+  [ok] Nankai 602.TXT: 602 atoms, energy = table 602, byte-identical to CCD 602.TXT
+  https://academicos.azc.uam.mx/cbr/PDF/MSSEMSCO_CBR_tables.pdf
+    231785 B  sha256 7316df2d8f584609e2cf3480db7ced69dfbb33354d8a5af6985684c5edc7adb8  Last-Modified Mon, 09 May 2005 21:38:15 GMT  sha256 matches SOURCES.csv
+  Barron values are read from Tables 18-27 ('minimum' column), (`pdftotext -layout`, then find the row 'N  1  <initial>  <minimum> ...').
+PASS
+== (B) Morse table: 63C, rho0 = 3
+1. CCD Morse table
+  https://www-wales.ch.cam.ac.uk/~jon/structures/Morse/tables.html
+    173673 B  sha256 fe78ecc8ffd9a85dba2968d34c3a2d726ffdd429cfe77d643ab00bfa838f475b  Last-Modified Mon, 26 Feb 2018 16:56:59 GMT  sha256 matches SOURCES.csv
+  rho0 column headers (ALT text, in page order): [3.0, 6.0, 10.0, 14.0]
+  row 63C (cells for rho0 = 3, 6, 10, 14): ['495.356854[1]', '-285.141958', '-262.030007', '-258.620607']
+  [ok] column headers are rho0 = 3, 6, 10, 14
+  [ok] 63C rho0=3 cell reads '495.356854[1]': positive value, saddle index bracket [1]
+  positive energy cells in the whole table: [('63C', '495.356854[1]')]
+  [ok] 63C rho0=3 is the only positive energy cell in the table
+2. posted points file 63C at its own header rho0 (calibration)
+  https://www-wales.ch.cam.ac.uk/~jon/structures/Morse/points/63C
+    3928 B  sha256 30d9aaabfa6b985ac40d5e4227df9bdd276df748061c024411a2d41382d94a27  Last-Modified Mon, 04 Nov 1996 16:55:27 GMT  sha256 matches SOURCES.csv
+  header rho0 = 6.0, 63 atoms, E = -285.141957629, max|grad| = 2.3e-13  (table rho0=6 cell -285.141958)
+  [ok] file: header rho0 = 6, 63 atoms, stationary, E matches the rho0=6 cell to 1e-6
+3. posted file relaxed at rho0 = 3
+  stationary point: E = -495.356853771, max|grad| = 3.8e-14, Hessian index = 1 (smallest |LDL pivot| 7.71)
+  table cell 495.356854[1]  ->  E_file + E_table = +2.29e-07  (same magnitude, opposite sign)
+  [ok] stationary to 1e-8
+  [ok] E_file = -(table value) to 1e-6, i.e. the table's sign is wrong
+  [ok] Hessian index of that stationary point = 1 = the table's own [1] bracket
+PASS
+PASS
