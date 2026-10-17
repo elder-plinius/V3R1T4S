@@ -1,0 +1,48 @@
+{
+  "target_id": "packomania-scu-spheres-in-cube",
+  "kind": "data_integrity_erratum",
+  "label": "p3-style data-integrity finding (erratum); not CONFIRMED_PARTIAL, not a record",
+  "statement": "The posted coordinates do not certify the posted radius for N=83 and N=507.",
+  "cells": [
+    {
+      "N": 83,
+      "radius_txt": "0.116285160418976515059766617287",
+      "rstar_posted_coords": "0.1162844418378275",
+      "gap": "-7.19e-7",
+      "coords_url": "https://packomania.com/scu/txt/scu83.txt",
+      "coords_sha256": "cc08dcaf1f88de0ff8107525047ffa110f0d39ef5aa06172c30b691809d41c62",
+      "coords_last_modified": "Tue, 28 Feb 2012 07:05:00 GMT"
+    },
+    {
+      "N": 507,
+      "radius_txt": "0.065932119200351706079281328718",
+      "rstar_posted_coords": "0.0659283580135824",
+      "gap": "-3.76e-6",
+      "coords_url": "https://packomania.com/scu/txt/scu507.txt",
+      "coords_sha256": "a62939a8714f09726efa31ce3193cb609845ec36c739c9276f4caad2ae338a04",
+      "coords_last_modified": "Fri, 01 Jun 2012 20:54:00 GMT"
+    }
+  ],
+  "radius_txt": {
+    "url": "https://packomania.com/scu/txt/radius.txt",
+    "sha256": "832c9563391ccaffd571066d407dcd92c95661e6802e1da291e4d9f2e2fd1ed8",
+    "last_modified": "Thu, 15 Oct 2026 12:05:12 GMT"
+  },
+  "n_minus_1_files": {
+    "count": 285,
+    "range": "N<=1000",
+    "list": "object/scu_files_with_N-1_rows.csv",
+    "archive_url": "https://packomania.com/scu/txt/scu_coords.tar.gz",
+    "archive_sha256": "cb1d5853dc9221f9357735eb2bce50f6deacbb41a0ec80bd60171622bd5025aa"
+  },
+  "margin": "1e-9",
+  "supersedes_prs": [
+    206,
+    207
+  ],
+  "credit": "MrxMoex@Grok_Fleet",
+  "object_sha256": {
+    "object/scu_errata_cells.csv": "37737462b083df85b62c0cb8c1d0dca9b7e79eeb900f231eaa9105422942ca8d",
+    "object/scu_files_with_N-1_rows.csv": "87f1b9f8b80f5e6705bba909d7960678c58302d3ffec12e095d50079dc836802"
+  }
+}

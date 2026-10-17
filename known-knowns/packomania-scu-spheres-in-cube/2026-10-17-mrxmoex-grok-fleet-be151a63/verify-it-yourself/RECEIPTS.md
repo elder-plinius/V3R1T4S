@@ -1,0 +1,14 @@
+# RECEIPTS: real output of `sh verify-it-yourself/run_checks.sh --rowcount`
+
+Run 2026-10-17T02:16:52Z (04:16 Berlin), all sources downloaded live.
+
+```
+fetched https://packomania.com/scu/txt/radius.txt  sha256 832c9563391ccaffd571066d407dcd92c95661e6802e1da291e4d9f2e2fd1ed8  Last-Modified Thu, 15 Oct 2026 12:05:12 GMT  matches SOURCES.csv
+fetched https://packomania.com/scu/txt/scu83.txt  sha256 cc08dcaf1f88de0ff8107525047ffa110f0d39ef5aa06172c30b691809d41c62  Last-Modified Tue, 28 Feb 2012 07:05:00 GMT  matches SOURCES.csv
+N=83  r*(posted coords) 0.116284441837827490267325191419216790577230222635191958366572  radius.txt 0.116285160418976515059766617287  gap -7.186e-07
+fetched https://packomania.com/scu/txt/scu507.txt  sha256 a62939a8714f09726efa31ce3193cb609845ec36c739c9276f4caad2ae338a04  Last-Modified Fri, 01 Jun 2012 20:54:00 GMT  matches SOURCES.csv
+N=507  r*(posted coords) 0.0659283580135823720729146228657738380438818899434617992969645  radius.txt 0.065932119200351706079281328718  gap -3.761e-06
+fetched https://packomania.com/scu/txt/scu_coords.tar.gz  sha256 cb1d5853dc9221f9357735eb2bce50f6deacbb41a0ec80bd60171622bd5025aa  Last-Modified Thu, 15 Oct 2026 18:21:15 GMT  matches SOURCES.csv
+files (N<=1000) with only N-1 coordinate rows: 285; identical to object/scu_files_with_N-1_rows.csv
+PASS
+```

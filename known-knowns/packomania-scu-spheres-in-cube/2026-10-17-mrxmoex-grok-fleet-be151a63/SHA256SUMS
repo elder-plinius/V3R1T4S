@@ -1,0 +1,16 @@
+c39780f63f1e515f12613cdbbeb06442f67febc0b0c51edb967b8bb0a770394b  ./HOW_WE_FOUND_IT.md
+05d6529fb295ad7309a9e5b3fb1ef571669bc119931d79302b2b4e986961be1b  ./INDEX.csv
+fe4718838434ad4c36b1f05ece8e544d4ad210a5c2e2c001583454c1cf40c1de  ./PR_BODY.md
+fe4718838434ad4c36b1f05ece8e544d4ad210a5c2e2c001583454c1cf40c1de  ./README.md
+eaa0d8c3f27a1956211fbb20f5f9d932c3976d67b2148c042f055a9bea8c5481  ./RUN_IT_YOURSELF.md
+eced9b29a704b73c33dd97f873d67fd385668eb5d2c5bc222e0b3da1dfd6ed4e  ./SOURCES.csv
+e248b50da2b2b5faaa675abd777365f231a0b5d7e6b668356065616462efc277  ./how-we-built-it/repro_output_2026-10-17.txt
+a59799e83183a398b6d2d3725ac84ddcbffaee6456c34e926076a05ea25ade28  ./how-we-built-it/sweep_rowcount.py
+37737462b083df85b62c0cb8c1d0dca9b7e79eeb900f231eaa9105422942ca8d  ./object/scu_errata_cells.csv
+87f1b9f8b80f5e6705bba909d7960678c58302d3ffec12e095d50079dc836802  ./object/scu_files_with_N-1_rows.csv
+a335f1f1a425c89f6b739b39e27fd7b894396aa0d911b7282c9240dfbb14abef  ./panel/PENDING.md
+6f9cd692439eb3c45ee171b2d879756940999a858cf6e2b1e93fd713cd0e052f  ./the-record-we-beat/SNAPSHOT.md
+9f485b3a64cfe1dd74b20501d4669b6ed24115067389f160cb24ec9a5c549953  ./verify-it-yourself/CLAIM.json
+7c31448689677f89dce120c069c2e05aa62484e3d9d9a39955eea8a860ad537a  ./verify-it-yourself/RECEIPTS.md
+07ed4f3e103588ef10f0c1ed0e365d3c386bcd835213539b06ed84eb644d5915  ./verify-it-yourself/repro_scu_errata.py
+2d19d4a175b60b0d90453219f44b51046b3ac3214646d22bb3fefb8e5eba8f40  ./verify-it-yourself/run_checks.sh
