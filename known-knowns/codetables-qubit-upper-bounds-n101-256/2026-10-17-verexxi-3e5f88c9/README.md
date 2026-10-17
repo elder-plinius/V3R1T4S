@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[225,2]] (225 physical qubits encoding 2 logical qubits) had an
 upper bound of 75 on the distance. This package proves that no such code has distance 75 or more, so the
 upper bound is at most 74. The proof is one exact certificate for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> The exact integer Farkas certificate result/cert_225_2_75_sh.json (quantum weight-enumerator LP with MacWilliams links, A_j = B_j for 1<=j<=74, A_j <= B_j for j>=75, and Rains shadow nonnegativity) verifies in the standard-library checker, proving no qubit stabilizer code [[225,2,75]] exists, so the [[225,2]] upper bound is at most 74 versus the 75 recorded on the claim-time page, and that bound is not obtained by propagation from the other cells of the saved full table.
+> The exact integer Farkas certificate object/cert_225_2_75_sh.json (quantum weight-enumerator LP with MacWilliams links, A_j = B_j for 1<=j<=74, A_j <= B_j for j>=75, and Rains shadow nonnegativity) verifies in the standard-library checker, proving no qubit stabilizer code [[225,2,75]] exists, so the [[225,2]] upper bound is at most 74 versus the 75 recorded on the claim-time page, and that bound is not obtained by propagation from the other cells of the saved full table.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -40,3 +42,8 @@ page sha256 e7790e91af4cc9b264e7d2211744d741aaff4435417e790eb03bd09aede35759; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> The exact integer Farkas certificate result/cert_225_2_75_sh.json (quantum weight-enumerator LP with MacWilliams links, A_j = B_j for 1<=j<=74, A_j <= B_j for j>=75, and Rains shadow nonnegativity) verifies in the standard-library checker, proving no qubit stabilizer code [[225,2,75]] exists, so the [[225,2]] upper bound is at most 74 versus the 75 recorded on the claim-time page, and that bound is not obtained by propagation from the other cells of the saved full table.
