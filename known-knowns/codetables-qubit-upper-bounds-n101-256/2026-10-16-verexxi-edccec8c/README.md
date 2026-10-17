@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[230,3]] (230 physical qubits encoding 3 logical qubits) had an
 upper bound of 77 on the distance. This package proves that no such code has distance 75 or more, so the
 upper bound is at most 74. The proof is 2 exact certificates (at d = 75 and 77) for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> Given the saved table record (data/QECC_q4_n230_k3_claimtime.html: [[230,3]] upper bound 77, lower 44, unchanged by the R1/R2/R3 closure over the saved full table), result/cert_230_3_77_sh.json and result/cert_230_3_75_sh.json are exact integer Farkas certificates of the qubit weight-enumerator LP with Rains shadow constraints that pass check/check_cert.py, so no [[230,3,d]] stabilizer code exists for d >= 75 and the upper bound on [[230,3]] is at most 74; this is not a proof about anything beyond that cell, and "live at claim time" rests on the saved record only.
+> Given the saved table record (data/QECC_q4_n230_k3_claimtime.html: [[230,3]] upper bound 77, lower 44, unchanged by the R1/R2/R3 closure over the saved full table), object/cert_230_3_77_sh.json and object/cert_230_3_75_sh.json are exact integer Farkas certificates of the qubit weight-enumerator LP with Rains shadow constraints that pass verify-it-yourself/check_cert.py, so no [[230,3,d]] stabilizer code exists for d >= 75 and the upper bound on [[230,3]] is at most 74; this is not a proof about anything beyond that cell, and "live at claim time" rests on the saved record only.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -35,3 +37,8 @@ page sha256 ac4e69556df8a90aafeb48b2131844e601841034c3127372a23300b7238480c3; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> Given the saved table record (data/QECC_q4_n230_k3_claimtime.html: [[230,3]] upper bound 77, lower 44, unchanged by the R1/R2/R3 closure over the saved full table), result/cert_230_3_77_sh.json and result/cert_230_3_75_sh.json are exact integer Farkas certificates of the qubit weight-enumerator LP with Rains shadow constraints that pass check/check_cert.py, so no [[230,3,d]] stabilizer code exists for d >= 75 and the upper bound on [[230,3]] is at most 74; this is not a proof about anything beyond that cell, and "live at claim time" rests on the saved record only.
