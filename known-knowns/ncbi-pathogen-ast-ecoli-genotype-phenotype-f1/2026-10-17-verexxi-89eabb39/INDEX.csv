@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ncbi-pathogen-ast-ecoli-genotype-phenotype-f1,ceftriaxone F1 (cluster-held-out),97.66,94.6,2026-10-17T00:27:32Z,object/test_predictions_ceftriaxone.csv,89eabb391ad14ed90c3a4092923eb720d3cc7a870aed165011fe24aa9a193bc3
