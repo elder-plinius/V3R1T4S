@@ -1,0 +1,15 @@
+usable variables scored: 80 (target 80); usable controls scored: 400 (target 400)
+recovered: 77/80; recovered AND detected (S > best_control): 77
+  provenance ZTF-derived (ZTF name): recovered 62/63, recovered&detected 62
+  provenance other/unknown (non-ZTF name): recovered 15/17, recovered&detected 15
+FAR at T=54.0: 0/400 controls with S > T
+  FAR cst: 0/67
+  FAR gaia: 0/333
+variables with S > T: 75/80; recovered with S > T: 73
+stage B complete: yes
+PREREG decision: real_count=77 -> PASS
+controls: 400
+best_control: 21.103452698344363
+real: 130.01362711367162
+real_beats_all_controls: yes
+command: cd [workspace]/runs/2026-10-15-1643/attempts/calibrator-v2 && [workspace]/venv/bin/python -I code/decide.py
