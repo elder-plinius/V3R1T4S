@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[200,2]] (200 physical qubits encoding 2 logical qubits) had an
 upper bound of 67 on the distance. This package proves that no such code has distance 66 or more, so the
 upper bound is at most 65. The proof is 2 exact certificates (at d = 66 and 67) for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> The exact-integer Farkas certificate result/cert_200_2_66_sh.json (verified by check/check_cert.py) proves that no qubit stabilizer code [[200,2,d]] with d >= 66 exists, so the [[200,2]] upper bound (67 in data/QECC_q4_n200_k2_claimtime.html) is lowered to at most 65, and the closure of the rules R1-R3 over data/qubit_table_full_n1-256.html at (200,2) is 67, so this is not implied by neighbouring cells.
+> The exact-integer Farkas certificate object/cert_200_2_66_sh.json (verified by verify-it-yourself/check_cert.py) proves that no qubit stabilizer code [[200,2,d]] with d >= 66 exists, so the [[200,2]] upper bound (67 in data/QECC_q4_n200_k2_claimtime.html) is lowered to at most 65, and the closure of the rules R1-R3 over data/qubit_table_full_n1-256.html at (200,2) is 67, so this is not implied by neighbouring cells.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -40,3 +42,8 @@ page sha256 83407f406126a7bb6b725add67b0ec7128d170f6fd189103a79b419875fd60b8; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> The exact-integer Farkas certificate result/cert_200_2_66_sh.json (verified by check/check_cert.py) proves that no qubit stabilizer code [[200,2,d]] with d >= 66 exists, so the [[200,2]] upper bound (67 in data/QECC_q4_n200_k2_claimtime.html) is lowered to at most 65, and the closure of the rules R1-R3 over data/qubit_table_full_n1-256.html at (200,2) is 67, so this is not implied by neighbouring cells.
