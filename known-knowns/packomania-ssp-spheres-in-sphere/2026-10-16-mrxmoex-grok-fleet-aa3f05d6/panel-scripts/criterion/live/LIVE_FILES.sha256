@@ -1,0 +1,8 @@
+# Live copies used by the criterion check. Large blobs dropped from the package (kit: files <= 1 MB, no third-party datasets).
+# sha256sum format; then: size_bytes  source_url  fetched_utc (file mtime, end of download)
+c077c79ef6c767e7d14d73942beed2f4be1bd15286073ef1548475f230c3e5f3  ssp_coords.tar.gz
+# ssp_coords.tar.gz  136657424 bytes  https://packomania.com/ssp/txt/ssp_coords.tar.gz  2026-10-17T02:56:44Z  [DROPPED from package; re-fetch to rerun check_criterion.py]
+9a4d7b62c61ac3aad69c11f238c76707c51ee824f163bee44a2b345a04b39fe3  radius.txt
+# radius.txt  22020 bytes  https://packomania.com/ssp/txt/radius.txt  2026-10-17T03:04:23Z  [kept, < 1 MB]
+e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd  ssp.html
+# ssp.html  318654 bytes  https://packomania.com/ssp/ssp.html  2026-10-17T03:04:23Z  [kept, < 1 MB]
