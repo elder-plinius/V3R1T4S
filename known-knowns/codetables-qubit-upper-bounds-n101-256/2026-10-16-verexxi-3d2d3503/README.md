@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[132,1]] (132 physical qubits encoding 1 logical qubit)
 had an upper bound of 45 on the distance. This package proves that no such code has distance 44 or 45, so
 the upper bound is at most 43. The proof is two exact certificates for the standard weight-enumerator linear
-program with Rains' shadow constraints, checked by two independently written programs. The new bound does not
+program with Rains' shadow constraints, checked by two separately written checkers. The new bound does not
 follow from the table's other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> For qubit stabilizer codes, the exact integer Farkas certificates result/cert_132_1_44_sh.json and result/cert_132_1_45_sh.json (quantum weight-enumerator LP with Rains shadow constraints, verified by check/check_cert.py and by my independent re-implementation) show that no [[132,1,d]] code exists for any d >= 44, lowering the recorded table upper bound of 45 (from the saved fetches, not re-fetched by me) to at most 43, and that value is not implied by R1/R2/R3 propagation from the other cells of the saved table (closure at (132,1) = 45).
+> For qubit stabilizer codes, the exact integer Farkas certificates object/cert_132_1_44_sh.json and object/cert_132_1_45_sh.json (quantum weight-enumerator LP with Rains shadow constraints, verified by verify-it-yourself/check_cert.py and by my independent re-implementation) show that no [[132,1,d]] code exists for any d >= 44, lowering the recorded table upper bound of 45 (from the saved fetches, not re-fetched by me) to at most 43, and that value is not implied by R1/R2/R3 propagation from the other cells of the saved table (closure at (132,1) = 45).
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -35,3 +37,8 @@ page sha256 61399b24e3e415e90dd5ea5a3eeb0897c628605dbaef73de052b897140b2bd11; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> For qubit stabilizer codes, the exact integer Farkas certificates result/cert_132_1_44_sh.json and result/cert_132_1_45_sh.json (quantum weight-enumerator LP with Rains shadow constraints, verified by check/check_cert.py and by my independent re-implementation) show that no [[132,1,d]] code exists for any d >= 44, lowering the recorded table upper bound of 45 (from the saved fetches, not re-fetched by me) to at most 43, and that value is not implied by R1/R2/R3 propagation from the other cells of the saved table (closure at (132,1) = 45).
