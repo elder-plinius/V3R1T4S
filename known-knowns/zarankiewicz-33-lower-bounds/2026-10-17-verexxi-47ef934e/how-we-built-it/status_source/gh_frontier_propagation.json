@@ -1,0 +1,236 @@
+{
+  "status": "PASS",
+  "new_seed_bounds": {
+    "13,17": 110,
+    "13,18": 116,
+    "14,17": 118,
+    "14,18": 124,
+    "15,17": 126,
+    "15,18": 132,
+    "16,17": 133
+  },
+  "improved_cells": [
+    {
+      "m": 13,
+      "n": 17,
+      "old_upper": 112,
+      "new_upper": 110,
+      "improvement": 2,
+      "source": "proved here"
+    },
+    {
+      "m": 13,
+      "n": 18,
+      "old_upper": 118,
+      "new_upper": 116,
+      "improvement": 2,
+      "source": "proved here"
+    },
+    {
+      "m": 13,
+      "n": 19,
+      "old_upper": 124,
+      "new_upper": 122,
+      "improvement": 2,
+      "source": "column deletion from (13,18)<=116"
+    },
+    {
+      "m": 13,
+      "n": 20,
+      "old_upper": 130,
+      "new_upper": 128,
+      "improvement": 2,
+      "source": "column deletion from (13,19)<=122"
+    },
+    {
+      "m": 13,
+      "n": 21,
+      "old_upper": 135,
+      "new_upper": 134,
+      "improvement": 1,
+      "source": "column deletion from (13,20)<=128"
+    },
+    {
+      "m": 14,
+      "n": 17,
+      "old_upper": 120,
+      "new_upper": 118,
+      "improvement": 2,
+      "source": "proved here"
+    },
+    {
+      "m": 14,
+      "n": 18,
+      "old_upper": 127,
+      "new_upper": 124,
+      "improvement": 3,
+      "source": "proved here"
+    },
+    {
+      "m": 14,
+      "n": 19,
+      "old_upper": 133,
+      "new_upper": 130,
+      "improvement": 3,
+      "source": "column deletion from (14,18)<=124"
+    },
+    {
+      "m": 14,
+      "n": 20,
+      "old_upper": 140,
+      "new_upper": 136,
+      "improvement": 4,
+      "source": "column deletion from (14,19)<=130"
+    },
+    {
+      "m": 14,
+      "n": 21,
+      "old_upper": 145,
+      "new_upper": 142,
+      "improvement": 3,
+      "source": "column deletion from (14,20)<=136"
+    },
+    {
+      "m": 14,
+      "n": 22,
+      "old_upper": 150,
+      "new_upper": 148,
+      "improvement": 2,
+      "source": "column deletion from (14,21)<=142"
+    },
+    {
+      "m": 14,
+      "n": 23,
+      "old_upper": 155,
+      "new_upper": 154,
+      "improvement": 1,
+      "source": "column deletion from (14,22)<=148"
+    },
+    {
+      "m": 15,
+      "n": 17,
+      "old_upper": 128,
+      "new_upper": 126,
+      "improvement": 2,
+      "source": "proved here"
+    },
+    {
+      "m": 15,
+      "n": 18,
+      "old_upper": 135,
+      "new_upper": 132,
+      "improvement": 3,
+      "source": "proved here"
+    },
+    {
+      "m": 15,
+      "n": 19,
+      "old_upper": 142,
+      "new_upper": 139,
+      "improvement": 3,
+      "source": "column deletion from (15,18)<=132"
+    },
+    {
+      "m": 15,
+      "n": 20,
+      "old_upper": 149,
+      "new_upper": 145,
+      "improvement": 4,
+      "source": "row deletion from (14,20)<=136"
+    },
+    {
+      "m": 15,
+      "n": 21,
+      "old_upper": 154,
+      "new_upper": 152,
+      "improvement": 2,
+      "source": "row deletion from (14,21)<=142"
+    },
+    {
+      "m": 15,
+      "n": 22,
+      "old_upper": 160,
+      "new_upper": 158,
+      "improvement": 2,
+      "source": "row deletion from (14,22)<=148"
+    },
+    {
+      "m": 16,
+      "n": 17,
+      "old_upper": 136,
+      "new_upper": 133,
+      "improvement": 3,
+      "source": "proved here"
+    },
+    {
+      "m": 16,
+      "n": 18,
+      "old_upper": 144,
+      "new_upper": 140,
+      "improvement": 4,
+      "source": "row deletion from (15,18)<=132"
+    },
+    {
+      "m": 16,
+      "n": 19,
+      "old_upper": 151,
+      "new_upper": 147,
+      "improvement": 4,
+      "source": "column deletion from (16,18)<=140"
+    },
+    {
+      "m": 16,
+      "n": 20,
+      "old_upper": 158,
+      "new_upper": 154,
+      "improvement": 4,
+      "source": "column deletion from (16,19)<=147"
+    },
+    {
+      "m": 16,
+      "n": 21,
+      "old_upper": 164,
+      "new_upper": 161,
+      "improvement": 3,
+      "source": "column deletion from (16,20)<=154"
+    },
+    {
+      "m": 16,
+      "n": 22,
+      "old_upper": 169,
+      "new_upper": 168,
+      "improvement": 1,
+      "source": "column deletion from (16,21)<=161"
+    }
+  ],
+  "closed_upper_table": {
+    "13,17": 110,
+    "13,18": 116,
+    "13,19": 122,
+    "13,20": 128,
+    "13,21": 134,
+    "13,22": 140,
+    "13,23": 144,
+    "14,17": 118,
+    "14,18": 124,
+    "14,19": 130,
+    "14,20": 136,
+    "14,21": 142,
+    "14,22": 148,
+    "14,23": 154,
+    "15,17": 126,
+    "15,18": 132,
+    "15,19": 139,
+    "15,20": 145,
+    "15,21": 152,
+    "15,22": 158,
+    "15,23": 165,
+    "16,17": 133,
+    "16,18": 140,
+    "16,19": 147,
+    "16,20": 154,
+    "16,21": 161,
+    "16,22": 168,
+    "16,23": 175
+  }
+}

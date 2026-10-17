@@ -1,0 +1,28 @@
+target 16 x 19, 4000 runs per base, seed 2, cap 1500 s
+  base Afr 12x19 (114)    12x19 ones 114 K33-free True
+  base Afr 12x22 (132)    12x22 ones 132 K33-free True
+  base Afr 13x18 (116)    13x18 ones 116 K33-free True
+  base Afr 13x22 (137)    13x22 ones 137 K33-free True
+  base Afr 14x17 (118)    14x17 ones 118 K33-free True
+  base Afr 14x18 (124)    14x18 ones 124 K33-free True
+  base Afr 15x17 (126)    15x17 ones 126 K33-free True
+  base Afr 15x18 (132)    15x18 ones 132 K33-free True
+  base Afr 16x17 (132)    16x17 ones 132 K33-free True
+  base Sau 13x19 (118)    13x19 ones 118 K33-free True
+  base Sau 14x19 (126)    14x19 ones 126 K33-free True
+  base Sau 16x18 (136)    16x18 ones 136 K33-free True
+  base Afr 12x19 (114)    runs  4000 best 134
+  base Afr 12x22 (132)    runs  4000 best 134
+  base Afr 13x18 (116)    runs  4000 best 141
+  base Afr 13x22 (137)    runs  4000 best 134
+  base Afr 14x17 (118)    runs  4000 best 141
+  base Afr 14x18 (124)    runs  4000 best 141
+  base Afr 15x17 (126)    runs  4000 best 141
+  base Afr 15x18 (132)    runs  4000 best 141
+  base Afr 16x17 (132)    runs  4000 best 140
+  base Sau 13x19 (118)    runs  4000 best 138
+  base Sau 14x19 (126)    runs  4000 best 140
+  base Sau 16x18 (136)    runs  4000 best 140
+histogram of ones (top 5): [(137, 182), (138, 3818), (139, 268), (140, 15055), (141, 16677)]
+total runs 48000, wall 428 s, capped False
+BEST 141 from [Afr 13x18 (116)] (re-verified K33-free: True)

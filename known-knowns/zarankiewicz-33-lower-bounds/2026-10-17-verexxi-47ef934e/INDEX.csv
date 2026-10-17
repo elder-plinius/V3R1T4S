@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+zarankiewicz-33-lower-bounds,"z(16,19;3,3) lower bound (ones in a 16 x 19 K33-free 0/1 matrix)",142,136,2026-10-17T12:28:33Z,object/z_16x19_142.txt,47ef934e67f7931526d0f9b57fbd617a7ea8100c4efdeccf765c4f29286f3fa8

@@ -1,0 +1,7 @@
+claimed matrix: ones 142, row weights [8, 8, 8, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 9, 10]
+z_16x19_142_seed101.txt    ones 142  same weight signature as claim: True   isomorphic to claim: False
+z_16x19_142_seed102.txt    ones 142  same weight signature as claim: False  isomorphic to claim: False
+z_16x19_142_seed103.txt    ones 142  same weight signature as claim: True   isomorphic to claim: False
+z_16x19_142_seed104.txt    ones 142  same weight signature as claim: True   isomorphic to claim: True
+z_16x19_142_seed105.txt    ones 142  same weight signature as claim: True   isomorphic to claim: False
+z_16x19_142_seed106.txt    ones 142  same weight signature as claim: True   isomorphic to claim: False
