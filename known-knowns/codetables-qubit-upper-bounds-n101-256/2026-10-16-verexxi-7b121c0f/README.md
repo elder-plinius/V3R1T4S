@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[200,5]] (200 physical qubits encoding 5 logical qubits) had an
 upper bound of 67 on the distance. This package proves that no such code has distance 65 or more, so the
 upper bound is at most 64. The proof is 2 exact certificates (at d = 65 and 67) for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> Per the claim-time table record (upper bound 67 for [[200,5]]), the exact integer Farkas certificates result/cert_200_5_67_sh.json and result/cert_200_5_65_sh.json (quantum weight-enumerator LP with MacWilliams and Rains shadow rows) show no qubit stabilizer code [[200,5,d]] exists for d >= 65 (so the upper bound is at most 64), and that bound is not implied by the propagation closure (67) of the saved complete table.
+> Per the claim-time table record (upper bound 67 for [[200,5]]), the exact integer Farkas certificates object/cert_200_5_67_sh.json and object/cert_200_5_65_sh.json (quantum weight-enumerator LP with MacWilliams and Rains shadow rows) show no qubit stabilizer code [[200,5,d]] exists for d >= 65 (so the upper bound is at most 64), and that bound is not implied by the propagation closure (67) of the saved complete table.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -35,3 +37,8 @@ page sha256 c008b56351f8c2ba53448ceb2f0e6e6e18aaf80a7496764410ed4aab889c0aab; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> Per the claim-time table record (upper bound 67 for [[200,5]]), the exact integer Farkas certificates result/cert_200_5_67_sh.json and result/cert_200_5_65_sh.json (quantum weight-enumerator LP with MacWilliams and Rains shadow rows) show no qubit stabilizer code [[200,5,d]] exists for d >= 65 (so the upper bound is at most 64), and that bound is not implied by the propagation closure (67) of the saved complete table.
