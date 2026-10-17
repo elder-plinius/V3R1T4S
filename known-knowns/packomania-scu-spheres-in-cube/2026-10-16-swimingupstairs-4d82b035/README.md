@@ -2,7 +2,7 @@
 
 ## What
 
-The 884 centres in claim/scu884_candidate.txt (sha256 below) have feasible radius r* = 0.05564391090930143058 in the cube [-1/2,1/2]^3. That exceeds the live Packomania scu radius.txt value 0.055518673263 for N=884 (re-fetched 2026-10-16T16:20:40Z, unchanged) by 1.25e-4, and the configuration is not isometric to the posted scu884.txt. This holds subject to a re-check once the category-unspecified Moki confirmed_scope: The 883 centres in claim_883/scu883_candidate.txt have feasible radius r* = 0.05564404058613009463 in the cube [-1/2,1/2]^3. That exceeds the live Packomania scu radius.txt value 0.055542517155 for N=884 (re-fetched 2026-10-16T16:20:40Z) by 1.02e-4. The posted scu883.txt has 882 rows, so it is not the same configuration. This holds subject to the unresolved Moki & Julio bundle caveat. Julio 4666-candidate bundle leaves the pending list.
+The 884 centres in object/scu884.txt (sha256 below) have feasible radius r* = 0.05564391090930143058 in the cube [-1/2,1/2]^3. That exceeds the live Packomania scu radius.txt value 0.055518673263 for N=884 (re-fetched 2026-10-16T16:20:40Z, unchanged) by 1.25e-4, and the configuration is not isometric to the posted scu884.txt. This holds subject to a re-check once the category-unspecified Moki & Julio 4666-candidate bundle leaves the pending list.
 
 ## Check it yourself
 
@@ -17,6 +17,10 @@ Expected last line: `PASS`. Under a few seconds on a laptop. Checks the number o
 ## Compared to
 
 Packomania "spheres in a cube" (scu) table by Eckard Specht, https://packomania.com/scu/txt/radius.txt, cell N = 884, value 0.055518673263 (row author: Lu Peng), fetched 2026-10-16T15:47:57Z (HTTP 200), unchanged at 2026-10-16T16:20:40Z. Margin 1.252376e-4. Moki & Julio's Zenodo v2.7 manifest value for N=884 is 0.05551867320477953249122448. Details in the-record-we-beat/.
+
+## Also implies N=881-883 (secondary note, at the maintainer's request)
+
+Deleting any 1, 2 or 3 spheres from object/scu884.txt cannot shrink any centre distance or wall gap, so the remaining 883, 882 or 881 centres still have r* >= 0.05564391090930143058. That beats the live table values for N=883 (0.055542517155), N=882 (0.055592641354) and N=881 (0.055610202148) by plain deletion. The N=883 and N=882 packages were previously submitted separately as #236 and #237 (deletion-plus-relax of this object; re-relaxing gains only about 1e-7) and are folded in here. N=881 was submitted separately as #263 with its own chain packing.
 
 ## Not claimed
 
