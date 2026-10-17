@@ -12,7 +12,7 @@ for l in fetch('https://packomania.com/ssp/txt/radius.txt').decode().splitlines(
 H={}
 for m in re.finditer(r'name="ssp(\d+)"[^>]*>.*?</a>\s*</td>\s*<td>([^<]*)</td>',fetch('https://packomania.com/ssp/ssp.html').decode('latin-1')):
     H[int(m.group(1))]=m.group(2).replace('&nbsp;','').strip()
-NS=[int(x) for x in open(K+'/claim/N_LIST.txt').read().split()]
+NS=[int(l.split(',')[0]) for l in open(K+'/object/ssp_radiustxt_errata.csv').read().split()[1:]]  # single N list: the errata CSV
 tb=open(K+'/data/ssp_coords.tar.gz','rb').read(); print('# tarball',hashlib.sha256(tb).hexdigest())
 want={f'ssp{n}.txt' for n in NS}; files={}
 with tarfile.open(fileobj=io.BytesIO(tb)) as t:

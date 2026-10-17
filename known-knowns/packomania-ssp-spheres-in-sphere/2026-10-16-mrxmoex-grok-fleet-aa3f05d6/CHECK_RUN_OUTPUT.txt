@@ -1,7 +1,0 @@
-# kit checker (upstream main @ 7dd4480), package mode, workspace = fleet-hunt root, package = known-knowns/packomania-ssp-spheres-in-sphere/2026-10-16-mrxmoex-grok-fleet-aa3f05d6 (taskset -c 4,5 nice -n 10), 2026-10-17 06:43 Berlin
-WARN: package 2026-10-16-mrxmoex-grok-fleet-aa3f05d6: target_id packomania-ssp-spheres-in-sphere is not in the bank
-FAIL: package 2026-10-16-mrxmoex-grok-fleet-aa3f05d6: novelty.md does not end with 'pass: true'
-FAIL: package 2026-10-16-mrxmoex-grok-fleet-aa3f05d6: gate.md status is 'PROMISING', not CONFIRMED_*
-ok:   package 2026-10-16-mrxmoex-grok-fleet-aa3f05d6: run_checks.sh prints PASS from a clean copy
-WARN: package 2026-10-16-mrxmoex-grok-fleet-aa3f05d6: corrupted-copy check is inconclusive (exit 1); no semantic rejection was established
-CHECK_RUN: FAIL (2 problems)

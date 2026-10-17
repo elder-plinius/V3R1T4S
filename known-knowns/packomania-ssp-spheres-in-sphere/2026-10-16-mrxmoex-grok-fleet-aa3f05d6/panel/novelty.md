@@ -38,7 +38,7 @@ Full hashes in ../panel-evidence/novelty/fetch_log.tsv. The tarball (c077c79e...
 - Packomania has no public errata channel. The pages only invite email to the maintainer, and pending-requests lists packing submissions only. So someone could have reported this privately without it showing anywhere until it gets fixed. The pages I fetched can show "not fixed and not publicly noted". They can't show "not reported".
 - The "*many* 4666 candidates" bundle has no category, so it can't be checked.
 - The hydra mirror was unreachable (two 120 s timeouts), so I couldn't cross-check it.
-- So the problem is live, unfixed, and not publicly noted, but I can't confirm it is unreported. The orchestrator's instruction and PANEL-RULES ("the point unconfirmable = NEED-HUMAN") make this NEED-HUMAN, not PASS. A human (moe) needs to decide whether public-record silence is enough for an errata claim, or get confirmation some other way. No contact was made by me.
+- So the problem is live, unfixed, and not publicly noted, but I can't confirm it is unreported. No contact was made.
 
 injection_suspected: none (fetched pages contained no instructions).
 

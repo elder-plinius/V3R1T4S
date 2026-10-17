@@ -18,7 +18,7 @@ while True:
     if i<0: break
     j=txt.find('"',i+9); n=int(txt[i+9:j]); k=txt.find('<td',txt.find('</td>',j)); k=txt.find('>',k)+1; e=txt.find('</td>',k)
     Hs[n]=D(txt[k:e].replace('&nbsp;','').strip()); i=e
-NS=[int(x) for x in open(K+'/claim/N_LIST.txt').read().split()]
+NS=[int(l.split(',')[0]) for l in open(K+'/object/ssp_radiustxt_errata.csv').read().split()[1:]]  # single N list: the errata CSV
 need=set(NS); got={}
 with tarfile.open(K+'/data/ssp_coords.tar.gz','r:gz') as t:
     for m in t:

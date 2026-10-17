@@ -12,7 +12,7 @@ for row in html.split('<tr>'):
     if m:
         cells=re.findall(r'<td[^>]*>(.*?)</td>',row,re.S)
         ht[int(m.group(1))]=re.sub(r'<[^>]+>|&nbsp;','',cells[1]).strip()
-NS=list(map(int,open(K+'/claim/N_LIST.txt').read().split()))
+NS=[int(l.split(',')[0]) for l in open(K+'/object/ssp_radiustxt_errata.csv').read().split()[1:]]  # single N list: the errata CSV
 tf=tarfile.open(K+'/data/ssp_coords.tar.gz'); names={m.name.split('/')[-1]:m for m in tf.getmembers()}
 lo=mp.mpf('1e-10'); good=0
 for n in NS:

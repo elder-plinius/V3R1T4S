@@ -1,8 +1,8 @@
-# Spheres in a sphere: Packomania ssp radius.txt lists 90 radii (N = 1055 … 50000) that the posted data do not support (data-integrity erratum)
+# Spheres in a sphere: Packomania ssp radius.txt 90 radius.txt values (N = 1055 … 50000) are not certified by the posted coordinates or ssp.html (data-integrity erratum)
 
 | | |
 |---|---|
-| **Claim** | Packomania ssp txt/radius.txt gives, for 90 rows N = 1055 … 50000, a radius larger than both the ssp.html value and the feasible radius r* of the posted coordinate files. ssp.html and coordinate r* agree within 2.8e-12. Gaps run from 6.09e-9 (N = 1601) to 6.48e-5 (N = 20000). No radius.txt row is below the coordinates. |
+| **Claim** | Packomania ssp txt/radius.txt gives, for 90 rows N = 1055 … 50000, a radius larger than both the ssp.html value and the feasible radius r* of the posted coordinate files. ssp.html and coordinate r* agree within 2.8e-12. Gaps run from 6.09e-9 (N = 1601) to 6.48e-5 (N = 20000). No radius.txt row is below the coordinates. For these 90 N, the posted coordinates (and ssp.html) do not certify the radius.txt value. The N list is the N column of object/ssp_radiustxt_errata.csv. |
 | **One-command repro** | `sh verify-it-yourself/run_checks.sh`. Python 3 standard library only (Decimal, 60 digits). Everything is re-downloaded from packomania.com at run time (set SSP_TARBALL to use a local ssp_coords.tar.gz). Expected last line: `PASS`. |
 | **Not claimed** | No record and no new packing. Not a coordinate error. No claim about why radius.txt diverged. **Not claimed to be unreported to Packomania.** |
 | **Confidence** | Numerical result: high (three independent cross-checks; live files re-hashed unchanged 2026-10-17 04:30 UTC; N = 1157, 1601, 20000 spot-checked against live per-N files). Novelty: the error is live and unfixed, but we cannot prove it is unreported (Packomania accepts reports only by private email and has no public report log; public silence is not proof of non-report). |
@@ -11,7 +11,7 @@ Labelled as a data-integrity finding (erratum), not a record claim.
 
 ## What
 
-Live Packomania ssp radius.txt (sha256 9a4d7b62c61ac3aad69c11f238c76707c51ee824f163bee44a2b345a04b39fe3) exceeds ssp.html (sha256 e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd) by more than 1e-9 in exactly 90 rows, N=1055..50000, with gaps from 6.09e-9 (N=1601) to 6.48e-5 (N=20000), no ties and no row below; in all 14 rows recomputed at 50 digits from ssp_coords.tar.gz (sha256 c077c79ef6c767e7d14d73942beed2f4be1bd15286073ef1548475f230c3e5f3), ssp.html equals coordinate r* within 1.75e-12.
+Live Packomania ssp radius.txt (sha256 9a4d7b62c61ac3aad69c11f238c76707c51ee824f163bee44a2b345a04b39fe3) exceeds ssp.html (sha256 e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd) by more than 1e-9 in exactly 90 rows, N=1055..50000, with gaps from 6.09e-9 (N=1601) to 6.48e-5 (N=20000), no ties and no row below; in all 90 rows recomputed from ssp_coords.tar.gz (sha256 c077c79ef6c767e7d14d73942beed2f4be1bd15286073ef1548475f230c3e5f3), ssp.html equals coordinate r* within 2.8e-12. (The 14-row sample in panel/criterion.md, max 1.75e-12, lies inside this bound.) So, for these 90 N, the posted coordinates (and ssp.html) do not certify the radius.txt value.
 
 This package contains one object only: object/ssp_radiustxt_errata.csv (90 rows); the skeptic-facing claim text is how-we-built-it/CLAIM.md.
 

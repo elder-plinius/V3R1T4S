@@ -4,4 +4,3 @@
 - raw/radius_root.txt in the log was saved as raw/radius_root_404.html (404 page for /ssp/radius.txt).
 - raw/ssp20000.txt (1130016 bytes, > 1 MB) was not kept; its hash is in the log. spotcheck_novelty.py needs it re-fetched to rerun N=20000.
 - hydra.nat.uni-magdeburg.de mirror: both requests timed out after 120 s (HTTP 000, curl error 28); nothing saved. Tarball not fetched (per-N files used instead).
-- ssp_updates_section.txt: tag-stripped Updates section of live ssp.html (no emails).
