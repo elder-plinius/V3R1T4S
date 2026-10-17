@@ -9,7 +9,7 @@ other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> Within the weight-enumerator LP with Rains shadow constraints, the integer Farkas certificate object/cert_110_2_37_sh.json is exactly verified to rule out any [[110,2,d]] qubit stabilizer code with d >= 37, so the codetables.de upper bound 37 (as saved at claim time in data/QECC_q4_n110_k2_claimtime.html) can be lowered to 36, and 36 is not implied by the propagation rules R1-R3 applied to the saved full table.
+> Within the weight-enumerator LP with Rains shadow constraints, the integer Farkas certificate object/cert_110_2_37_sh.json is exactly verified to rule out any [[110,2,d]] qubit stabilizer code with d >= 37, so the codetables.de upper bound 37 (as saved at claim time; see the-record-we-beat/record.md) can be lowered to 36, and 36 is not implied by the propagation rules R1-R3 applied to the saved full table.
 >
 > (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
