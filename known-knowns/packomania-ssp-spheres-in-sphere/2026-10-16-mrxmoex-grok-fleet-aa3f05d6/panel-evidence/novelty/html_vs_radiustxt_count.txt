@@ -1,0 +1,5 @@
+rows in radius.txt: 1153 rows in ssp.html table: 111
+rows with |radius.txt - ssp.html| > 1e-10: 90
+all radius.txt > html: True minN: 1055 maxN: 50000
+min diff: (1601, Decimal('6.093E-9')) max diff: (20000, Decimal('0.000064763783'))
+any N<1055 differing: []
