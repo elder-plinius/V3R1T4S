@@ -9,7 +9,7 @@ other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> Within the weight-enumerator LP with Rains shadow constraints (A_0=1, sum A_i=2^(n-k), A_j=B_j for 1<=j<=44, A_j<=B_j for j>=45, shadow>=0, A>=0), the exact integer Farkas certificate object/cert_135_1_45_sh.json passes verify-it-yourself/check_cert.py, so no [[135,1,45]] qubit stabilizer code exists and the upper bound for the [[135,1]] cell (45 in the claim-time page data/QECC_q4_n135_k1_claimtime.html) drops to at most 44, not implied by propagation from the other live cells in the saved table.
+> Within the weight-enumerator LP with Rains shadow constraints (A_0=1, sum A_i=2^(n-k), A_j=B_j for 1<=j<=44, A_j<=B_j for j>=45, shadow>=0, A>=0), the exact integer Farkas certificate object/cert_135_1_45_sh.json passes verify-it-yourself/check_cert.py, so no [[135,1,45]] qubit stabilizer code exists and the upper bound for the [[135,1]] cell (45 in the claim-time page recorded in the-record-we-beat/record.md) drops to at most 44, not implied by propagation from the other live cells in the saved table.
 >
 > (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
