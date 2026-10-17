@@ -1,6 +1,6 @@
 # RECEIPTS: real output of `sh verify-it-yourself/run_checks.sh --rowcount`
 
-Run 2026-10-17T02:16:52Z (04:16 Berlin), all sources downloaded live.
+Run 2026-10-17T02:16:52Z (04:16 Berlin), all sources downloaded live. Dated: this output is from the original files, which Packomania replaced later on 17 Oct 2026; a fresh run now ends `REPLACED UPSTREAM (N=83, 507)`.
 
 ```
 fetched https://packomania.com/scu/txt/radius.txt  sha256 832c9563391ccaffd571066d407dcd92c95661e6802e1da291e4d9f2e2fd1ed8  Last-Modified Thu, 15 Oct 2026 12:05:12 GMT  matches SOURCES.csv

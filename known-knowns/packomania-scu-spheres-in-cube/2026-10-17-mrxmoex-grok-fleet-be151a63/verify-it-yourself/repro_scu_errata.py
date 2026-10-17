@@ -9,7 +9,12 @@ with Decimal (60 digits).
   python3 verify-it-yourself/repro_scu_errata.py            # N=83 and N=507 (~3 small files)
   python3 verify-it-yourself/repro_scu_errata.py --rowcount # also re-derive the N-1 row list
                                                             # (downloads scu_coords.tar.gz, ~182 MB)
-Exit 0 and last line 'PASS' when both N are short of radius.txt by > 1e-9.
+The N=83/N=507 finding is a dated observation on the files served until at least
+2026-10-17 02:15 UTC (sha256 in SOURCES.csv). Packomania replaced scu83.txt and scu507.txt
+later that day. If a downloaded file's sha256 differs from SOURCES.csv, the cell is reported
+as 'replaced upstream' (not PASS/FAIL): the original file is no longer served, so it cannot
+be re-checked live. Last line: PASS (originals still served and short of radius.txt by
+> 1e-9), REPLACED UPSTREAM (originals no longer served), or FAIL.
 """
 import csv, json, hashlib, io, itertools, os, sys, tarfile, urllib.request
 from decimal import Decimal as D, getcontext
@@ -34,7 +39,7 @@ def fetch(url):
     note = "" if rec is None else ("matches SOURCES.csv" if rec["sha256"] == h else
            "DIFFERS from SOURCES.csv (%s): Packomania has changed this file since packaging" % rec["sha256"][:12])
     print("fetched %s  sha256 %s  Last-Modified %s  %s" % (url, h, lm, note))
-    return b
+    return b, (rec is not None and rec["sha256"] != h)
 
 def centres(text):
     out = []
@@ -48,12 +53,16 @@ def rstar(P):
     d2 = min(sum((a - b) ** 2 for a, b in zip(P[i], P[j])) for i, j in itertools.combinations(range(len(P)), 2))
     return min(d2.sqrt() / 2, w)
 
-tab = {}
-for line in fetch(BASE + "radius.txt").decode().splitlines():
+tab = {}; replaced = []
+for line in fetch(BASE + "radius.txt")[0].decode().splitlines():
     s = line.split()
     if len(s) >= 2 and s[0].isdigit(): tab[int(s[0])] = s[1]
 for N in (83, 507):
-    P = centres(fetch(BASE + "scu%d.txt" % N).decode())
+    b, changed = fetch(BASE + "scu%d.txt" % N)
+    if changed:
+        print("N=%d: replaced upstream. The original file (sha256 %s...) is no longer served; the finding stands as a dated observation (see README)." % (N, REC[BASE + "scu%d.txt" % N]["sha256"][:12]))
+        replaced.append(N); continue
+    P = centres(b.decode())
     if len(P) != N: print("N=%d: file has %d rows, expected %d" % (N, len(P), N)); ok = False; continue
     r = rstar(P); cell = D(tab[N]); gap = r - cell
     if tab[N] != CELLS[N]["radius_txt"]: print("N=%d: live radius.txt %s differs from packaged %s" % (N, tab[N], CELLS[N]["radius_txt"])); ok = False
@@ -62,7 +71,8 @@ for N in (83, 507):
     if not gap < -MARGIN: print("N=%d: posted coordinates now certify the posted radius (gap >= -1e-9)" % N); ok = False
 
 if "--rowcount" in sys.argv:
-    tf = tarfile.open(fileobj=io.BytesIO(fetch(BASE + "scu_coords.tar.gz")), mode="r:gz")
+    ab, achanged = fetch(BASE + "scu_coords.tar.gz")
+    tf = tarfile.open(fileobj=io.BytesIO(ab), mode="r:gz")
     short = []
     for m in tf.getmembers():
         b = os.path.basename(m.name)
@@ -76,6 +86,7 @@ if "--rowcount" in sys.argv:
     ref = [int(r["N"]) for r in csv.DictReader(open(os.path.join(PKG, "object", "scu_files_with_N-1_rows.csv")))]
     print("files (N<=1000) with only N-1 coordinate rows: %d; %s object/scu_files_with_N-1_rows.csv"
           % (len(short), "identical to" if short == ref else "DIFFERENT from"))
-    if short != ref: ok = False
-print("PASS" if ok else "FAIL")
+    if achanged: print("archive replaced upstream: the 285-file list is a dated snapshot of the archive in SOURCES.csv")
+    elif short != ref: ok = False
+print("FAIL" if not ok else ("REPLACED UPSTREAM (N=%s)" % ", ".join(map(str, replaced)) if replaced else "PASS"))
 sys.exit(0 if ok else 1)
