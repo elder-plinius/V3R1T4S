@@ -1,0 +1,17 @@
+start v=61 k=25 t=3 b=27 NT=35990 init_blocks=0 uncovered=6400 tenure=10 seed=1
+t=10s steps=29696 rate=2946/s wbumps=21908 cur=435 best=216
+t=21s steps=65536 rate=3158/s wbumps=48952 cur=381 best=139
+t=32s steps=105472 rate=3309/s wbumps=79119 cur=377 best=61
+t=43s steps=143360 rate=3364/s wbumps=107912 cur=293 best=61
+t=53s steps=174080 rate=3271/s wbumps=131104 cur=229 best=61
+t=64s steps=202752 rate=3190/s wbumps=152994 cur=281 best=61
+t=77s steps=236544 rate=3092/s wbumps=178787 cur=253 best=61
+t=88s steps=272384 rate=3098/s wbumps=206088 cur=190 best=61
+t=99s steps=310272 rate=3148/s wbumps=234866 cur=186 best=61
+t=109s steps=338944 rate=3115/s wbumps=256755 cur=102 best=53
+t=120s steps=370688 rate=3091/s wbumps=280857 cur=131 best=33
+t=131s steps=407552 rate=3108/s wbumps=309007 cur=208 best=33
+t=142s steps=445440 rate=3142/s wbumps=338328 cur=79 best=10
+t=153s steps=478208 rate=3128/s wbumps=363847 cur=139 best=10
+end t=156.7s steps=487885 rate=3114/s best=0
+FOUND covering with 27 blocks -> screen2_cells\C61_25_3\found_b27.txt
