@@ -46,15 +46,22 @@ history; see the-record-we-beat/README.md). The panel found no published bond va
 - The error bar is convergence-based, not a rigorous bound: PREREG rule 4 (window shift and a second accelerator),
   widened by PREREG.v2 (written after the results existed; it only widens). The CRITERION skeptic judged the central
   value probably about 1e-8 high, still inside the bar.
-- Not a refutation of the table. The difference is larger than the table's stated error bar (2.39 times) but within
-  3 combined sigma, so the run's frozen rule 9 reads it as "confirms"; p2 allows either reading.
-- The 7th rounded digit is borderline, as the CRITERION skeptic noted: the value rounds to 0.4452871, but estimates
-  below 0.44528705 would round to 0.4452870. "7 digits" is read as a stated sigma of at most 5e-8 (frozen PREREG
-  rule 9).
+- Agreement, stated plainly (wording revised after review, 2026-10-17): this value agrees with the table's to 6 digits
+  (0.445287) and differs from 0.44528611(40) by +9.55e-7, which is 2.4 times the table's stated error bar (2.385
+  combined sigma). It does not confirm the table value. The frozen PREREG's rule 9 names any difference within 3
+  combined sigma "confirms", and the checker still prints that rule name, but the label is not a claim that the table
+  value is right.
+- Width 11 (added after review, 2026-10-17): our own transfer-matrix root at W = 11 is p(11) = 0.44528707914717824
+  (run 2026-10-16-0731, extender lens; how-we-built-it/data/TSS_bond_W11_analysis.txt). With W = 2..11 the rule-4
+  estimate E1 moves from 0.445287065 to 0.445287060 (-5.5e-9, inside the stated bar), and the downward drift has not
+  stopped. The 7th rounded digit is therefore borderline: both values round to 0.4452871, but an estimate below
+  0.44528705 would round to 0.4452870. "7 digits" is read as a stated sigma of at most 5e-8 (frozen PREREG rule 9).
 - No site threshold. The row's site value 0.5648(2) and the bank's full win (site thresholds) are not addressed here.
 - One cell only. how-we-built-it/data also holds roots for other lattices (the elongated triangular and kagome
   calibrations, and rows TSSS, TTS, TTTS); none of them is claimed here.
-- Nothing was submitted to or edited on Wikipedia, and nobody was contacted.
+- Nothing was submitted to or edited on Wikipedia. After this package was built, the human emailed R. M. Ziff
+  (2026-10-16), whose unpublished 2007 value with H. Gu the table row cites, describing this independent value; there
+  has been no reply, and nobody else was contacted.
 
 ## Credits
 

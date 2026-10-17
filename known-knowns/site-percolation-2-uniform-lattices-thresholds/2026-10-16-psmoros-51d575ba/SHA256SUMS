@@ -1,6 +1,6 @@
 e0958d92f42d7667c9ca1af019def3bfda961b3de7303f1ed5f7c4d741625d52  HOW_WE_FOUND_IT.md
 f8127c804c1d646570cd90bcd8bfe26ba46df45c2c46c4e014923eee821211a7  INDEX.csv
-af0759520e73cf8e8289d7e1f22a5a9712da578a81265b328933812014a4bbaf  README.md
+87aac36d27a432b8fad4d82f9cdc6c7cdd75a17120020d3683c782ca27ea4d75  README.md
 3255b2970e5ded85d774748e06887bd683c2ac44252c1d0e4c9046dcfa1c30f7  RUN_IT_YOURSELF.md
 a22c03a5c0c78fa56acef099b627b4381b6d3c9cbb48f628804c0e52a34a71df  how-we-built-it/COMMANDS.md
 234af827c556abc5830a0939d0ba964956465001ae933584b8c4bb80a15262a9  how-we-built-it/PREREG.md
@@ -12,6 +12,7 @@ bf341b3e70b52326b81a768270a1f19ba5c45927201bd893182362507072ce12  how-we-built-i
 5f1bc2322b032ad3e2880ec6541bc653b707d2cfe101b1a613831139851c694f  how-we-built-it/code/eig/mkgraph.py
 39a614f173c43037adb07e55fe9edc6838721335dfc210c382ad4a05f6f728fd  how-we-built-it/code/tm/extrap.py
 13aa395550db03374911940eddc4c5b54f6f3777c64828200354cc28b6a6bf5a  how-we-built-it/code/tm/tm.cpp
+6b318d6cdf70e50c2ba145baa4280cb5dc6a98848ed64fb8a2c0ec436b90e4f1  how-we-built-it/data/TSS_bond_W11_analysis.txt
 fa778c636e45f480c7e3be4f9725acf21fd0cd45d859bd3ac78f7f7238e9078a  how-we-built-it/data/eig/bond.tsv
 a6aab22f8a4a36f2168936adcdbbb067074e33a942eb895d4d21038b1ac7e22b  how-we-built-it/data/eig/kagome_bond.tsv
 8e83b278ed4367c8b2a08cd55c032e5aec8030f9eed973dc86eddaa2e178de80  how-we-built-it/data/eigT/TSS_T_bond_m1.out
