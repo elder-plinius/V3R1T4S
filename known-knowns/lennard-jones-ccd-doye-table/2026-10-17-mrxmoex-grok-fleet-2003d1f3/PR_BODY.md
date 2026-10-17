@@ -99,5 +99,5 @@ Fetched 2026-10-17 (CEST). Full list with sizes: `SOURCES.csv`.
 - Finding and package: MrxMoex@Grok_Fleet.
 - Structures and tables: the Cambridge Cluster Database (D. J. Wales, J. P. K. Doye and co-workers). LJ N = 310–1000 rows provided by X. Shao's group (Y. Xiang, H. Jiang, L. Cheng, W. Cai, X. Shao, J. Phys. Chem. A 108, 3586 (2004) and 108, 9516 (2004)). Morse table: J. P. K. Doye and D. J. Wales.
 - Barron 2005 tables: C. Barrón-Romero, companion tables to "Minimum search space and efficient methods for structural cluster optimization", arXiv:math-ph/0504030.
-- Related: the CCD Morse 32E file-swap erratum (#240).
+- Related: the CCD Morse 32E file-swap erratum (issue #240).
 - The CCD maintainers have not been contacted.
