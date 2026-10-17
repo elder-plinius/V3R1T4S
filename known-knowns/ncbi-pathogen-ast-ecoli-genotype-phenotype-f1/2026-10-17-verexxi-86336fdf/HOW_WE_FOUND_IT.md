@@ -1,7 +1,8 @@
 # How we found it (contributor text, unverified)
 First reproduced the paper exactly: eligibility, phenotype parsing and the genotype rule match its supplementary tables row for row.
-The rule calls resistance whenever a mapped determinant is present; for beta-lactam/inhibitor and fluoroquinolone phenotypes that
-over-calls (TEM-1 alone, single QRDR mutations). A gradient-boosted model over the same exported annotations (gene and point-mutation
-calls with their status, a few counts, the rule outputs, year, species and isolation type), trained on whole SNP clusters with the
-threshold chosen by grouped cross-validation inside training, learns which determinants matter (for amoxicillin-clavulanic acid:
-blaCMY-2, ampC promoter mutations, blaOXA-1). A random split gives almost the same numbers, as does the paper's own June snapshot.
+Then one gradient-boosted model per antibiotic over the same exported annotations (gene and point-mutation calls with their status, a few
+counts, the rule outputs, year, species and isolation type), trained on whole SNP clusters with the threshold chosen by grouped
+cross-validation inside training. All eight antibiotics went through the same pre-registered job; README lists every TEST result.
+
+For ampicillin: The rule misses resistant isolates: on TEST it has 88 false negatives against the model's 13. Most of the model's weight is on the number of acquired beta-lactamase genes.
+Top features by gain in the released model: the number of acquired beta-lactamase genes (70.2%); the published rule's own call for ampicillin (6.9%); blaHER-3 (6.5%); ampC_C-42T (2.7%); blaCMY (partial hit) (2.5%); the published rule's own call for amoxicillin-clavulanic acid (2.3%).
