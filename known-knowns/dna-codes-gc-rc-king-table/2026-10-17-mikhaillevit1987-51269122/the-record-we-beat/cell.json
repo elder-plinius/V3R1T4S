@@ -1,0 +1,11 @@
+{
+  "url": "https://rambutan.umassmed.edu/king/dnacodes.html",
+  "table": "A_4^GC,RC(n,d,w)",
+  "n": 20,
+  "d": 15,
+  "value": 15,
+  "label": "15 v",
+  "optimal_marked": false,
+  "fetched_utc": "2026-10-17T22:36:36.846803+00:00",
+  "sha256": "25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5"
+}
