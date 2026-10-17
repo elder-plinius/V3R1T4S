@@ -1,0 +1,22 @@
+Morse 63C, rho0 = 3: adjudication extract (contributor run, 2026-10-17 CEST; numpy/scipy, independent of the stdlib repro).
+Sources: table tables.html sha256 fe78ecc8...475b (captured 2026-10-17 10:40 CEST, byte-identical to the fresh re-download), points/63C sha256 30d9aaab...4a27.
+Potential: E = sum_{i<j} exp(rho (1 - r)) (exp(rho (1 - r)) - 2).
+
+Method note (honest provenance). The first sweep's parser dropped the [n] saddle-index brackets and ignored the rho0 header line
+of each points file (same class of bug as the LJ "index x y z" 4-column parser issue). The adjudication pass fixed both. 63C is
+the only cell where the fixed pipeline shows a clean data-integrity erratum.
+
+Table row 63C:  rho0=3  495.356854[1]   rho0=6  -285.141958   rho0=10  -262.030007 (bold)   rho0=14  -258.620607 (bold)
+File header rho0 = 6.0000000000; rho* scan 6.000000036 (max|grad| 7.2e-08); scale test s = 1.000000.
+At rho0 = 6 the file is stationary: E = -285.141957629, max|grad| 2.3e-13, index 0 (matches the rho0=6 cell).
+
+Seeds at rho0 = 3 (each refined by Newton to max|grad| < 1e-12; index = number of negative Hessian eigenvalues, numpy eigvalsh):
+  seed                              E               max|grad|  index
+  raw file                          -491.089300158  5.0e-14    6
+  file scaled (s = 0.8561)          -491.174388216  4.2e-14    6
+  Newton continuation 6 -> 3        tracking lost at rho0 = 3.49
+  L-BFGS continuation 6 -> 3        -496.554126415  1.5e-13    0    (a different, lower minimum; not the tabulated point)
+  L-BFGS from file at rho0 = 3      -495.356853771  1.2e-13    1    <- |table| with the table's own index [1]
+
+Verdict: sign typo. Table +495.356854[1]; posted file gives an index-1 stationary point at -495.356853771 (table + file = +2.3e-7).
+Fresh stdlib-only re-derivation (verify-it-yourself/repro_ccd_morse_63c.py, 2026-10-17): E = -495.356853771, max|grad| 3.8e-14, index 1.

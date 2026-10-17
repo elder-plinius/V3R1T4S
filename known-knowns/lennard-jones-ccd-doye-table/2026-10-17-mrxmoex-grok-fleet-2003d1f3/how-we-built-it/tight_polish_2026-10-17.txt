@@ -1,0 +1,13 @@
+Tight local polish of the posted coordinates (contributor run, Fedora, 2026-10-17 CEST).
+Same code as our overnight verifier: numpy LJ energy+gradient, scipy L-BFGS-B, gtol 1e-10, ftol 1e-16, maxiter 20000.
+Each file was downloaded 3 times, 5 s apart: HTTP 200 every time, byte-identical every time.
+
+N    file                      atoms  E_table        E_file(as posted)   E_polished          polished-table   max|grad| after
+602  LJ562-1000/601.TXT (link)  601   -4134.979952   -4127.726727386     -4127.726727410     +7.253225        6.4e-06
+602  LJ562-1000/602.TXT (unl.)  602   -4134.979952   -4134.979952207     -4134.979952230     -2.3e-07         -
+486  LJ310-561/486.TXT          486   -3278.642178   -3278.672946792     -3278.672946810     -0.030769        2.9e-06
+487  LJ310-561/487.TXT          487   -3285.926242   -3285.966242203     -3285.966242223     -0.040000        3.4e-06
+813  LJ562-1000/813.TXT         813   -5712.249964   -5712.250652104     -5712.250652108     -6.881e-04       5.3e-06
+899  LJ562-1000/899.TXT         899   -6371.011413   -6371.011482603     -6371.011482640     -6.964e-05       1.5e-05
+
+The polish moves each energy by < 4e-8, so the as-posted energies (what the stdlib repro computes) carry the finding.
