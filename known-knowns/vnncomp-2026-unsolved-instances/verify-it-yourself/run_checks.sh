@@ -7,6 +7,8 @@
 set -u
 HERE=$(cd "$(dirname "$0")/.." && pwd)
 SECTION=known-knowns/vnncomp-2026-unsolved-instances
+CONTRACT="$HERE/../check_harness_contract.py"
+[ -f "$CONTRACT" ] || { echo "missing known-knowns/check_harness_contract.py (keep the shared helper with this family)"; exit 2; }
 PY=${PYTHON:-python3}
 for o in witnesses/model_30_idx_1703_eps_1/witness_plain.txt witnesses/model_30_idx_1703_eps_1/witness_v2.txt \
          witnesses/model_30_idx_178_eps_1/witness_plain.txt witnesses/model_30_idx_178_eps_1/witness_v2.txt; do
@@ -26,14 +28,20 @@ echo "== standalone checker"
 $PY "$HERE/verify-it-yourself/vnncheck.py" --cache "$TMP/cache" || fail=1
 echo "== negative controls (each must FAIL)"
 for i in 1703 178; do
-  $PY "$HERE/verify-it-yourself/mutate.py" \
+  if ! $PY "$HERE/verify-it-yourself/mutate.py" \
       "$TMP/cache/benchmarks/traffic_signs_recognition_2023/2.0/vnnlib/model_30_idx_${i}_eps_1.00000.vnnlib.gz" \
-      "$HERE/witnesses/model_30_idx_${i}_eps_1/witness_plain.txt" "$TMP/mut$i" >/dev/null || fail=1
+      "$HERE/witnesses/model_30_idx_${i}_eps_1/witness_plain.txt" "$TMP/mut$i" >/dev/null; then
+    echo "negative-control mutation failed for idx_$i"; fail=1; continue
+  fi
   for m in on_bound outside centre; do
-    if $PY "$HERE/verify-it-yourself/vnncheck.py" --cache "$TMP/cache" --instance $i --witness "$TMP/mut$i/$m.txt" > "$TMP/$i.$m.out" 2>&1; then
-      echo "control idx_$i $m: PASSED (BAD)"; fail=1
+    if [ ! -s "$TMP/mut$i/$m.txt" ]; then echo "control idx_$i $m: missing or empty mutant"; fail=1; continue; fi
+    rc=0
+    $PY "$HERE/verify-it-yourself/vnncheck.py" --cache "$TMP/cache" --instance $i --witness "$TMP/mut$i/$m.txt" > "$TMP/$i.$m.out" 2> "$TMP/$i.$m.err" || rc=$?
+    if $PY "$CONTRACT" vnn --file "$TMP/mut$i/$m.txt" --instance "$i" --mode "$m" \
+        --stdout "$TMP/$i.$m.out" --stderr "$TMP/$i.$m.err" --exit-code "$rc"; then
+      echo "control idx_$i $m: expected semantic rejection"
     else
-      echo "control idx_$i $m: $(grep -E 'strict:|zero tolerance' "$TMP/$i.$m.out" | grep -c False) failed check(s), $(tail -1 "$TMP/$i.$m.out" | cut -c1-13) (expected)"
+      echo "control idx_$i $m: unexpected result (exit $rc)"; fail=1
     fi
   done
 done

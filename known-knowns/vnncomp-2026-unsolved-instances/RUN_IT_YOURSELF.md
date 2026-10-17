@@ -72,3 +72,26 @@ python3 -I how-we-built-it/cpsat_bnn30.py --cls 22 --pw 10 --time 900 --workers 
   --vnnlib downloads/benchmarks/traffic_signs_recognition_2023/2.0/vnnlib/model_30_idx_1703_eps_1.00000.vnnlib.gz \
   --hint how-we-built-it/checkpoints/hint_idx_1703_cls22.json --out ckpt_1703.json
 ```
+
+## Wrapper contract dependency
+
+`verify-it-yourself/run_checks.sh` requires the standard-library helper
+`../check_harness_contract.py`, relative to this family directory. Keep the normal
+repository layout, or copy `known-knowns/check_harness_contract.py` beside any
+standalone family copy. A missing helper fails explicitly with exit 2. The helper
+validates completed negative-control evidence and/or indexed inventory; it does
+not replace the scientific checker or independently prove its result.
+
+For lightweight orchestration regressions from the repository root (Python 3.9+,
+no scientific dependencies, downloads, or compiler):
+
+```sh
+python3 known-knowns/tests/harness_contracts/run_regressions.py --output /tmp/veritas-harness-results
+```
+
+These tests mock scientific commands and execute only the standard-library
+contract helper. Root `SHA256SUMS` edits remain a maintainer-only step. Before merging, maintainers
+must refresh entries for the changed wrappers/documents and add the helper and
+regression files. The pinned 91419e28 manifest already has stale kit entries;
+regenerate and verify the manifest against the final complete tree, rather than
+assuming unchanged entries are current.

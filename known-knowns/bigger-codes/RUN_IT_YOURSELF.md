@@ -63,3 +63,31 @@ cd delsarte && for c in "31 12 10" "31 12 11" "32 12 10" "32 12 15" "32 12 16"; 
 ```
 `how-we-built-it/SMOKE.md` has the output of this run. To see how far each code is from its seed, compare its word
 set with the converted seed file; our own measurement is quoted in the README (1 %–17 % of the words changed).
+
+## Wrapper contract dependency
+
+`verify-it-yourself/run_checks.sh` requires the standard-library helper
+`../check_harness_contract.py`, relative to this family directory. Keep the normal
+repository layout, or copy `known-knowns/check_harness_contract.py` beside any
+standalone family copy. A missing helper fails explicitly with exit 2. The helper
+validates completed negative-control evidence and/or indexed inventory; it does
+not replace the scientific checker or independently prove its result.
+
+For lightweight orchestration regressions from the repository root (Python 3.9+,
+no scientific dependencies, downloads, or compiler):
+
+```sh
+python3 known-knowns/tests/harness_contracts/run_regressions.py --output /tmp/veritas-harness-results
+```
+
+These tests mock scientific commands and execute only the standard-library
+contract helper. Root `SHA256SUMS` edits remain a maintainer-only step. Before merging, maintainers
+must refresh entries for the changed wrappers/documents and add the helper and
+regression files. The pinned 91419e28 manifest already has stale kit entries;
+regenerate and verify the manifest against the final complete tree, rather than
+assuming unchanged entries are current.
+
+The inventory preflight covers the original 30 codes in `codes/` and five
+certificates in `certificates/`, with their root indexes. Sibling contributed
+packages, including `2026-10-14-freelsgood-9e824e9f/`, are outside this
+wrapper’s scope and must be checked with their own instructions.
