@@ -4,7 +4,7 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[213,2]] (213 physical qubits encoding 2 logical qubits) had an
 upper bound of 71 on the distance. This package proves that no such code has distance 71 or more, so the
 upper bound is at most 70. The proof is one exact certificate for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
