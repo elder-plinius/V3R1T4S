@@ -1,0 +1,2 @@
+permuted copy isomorphic (expect True): True
+perturbed copy isomorphic (expect False): False

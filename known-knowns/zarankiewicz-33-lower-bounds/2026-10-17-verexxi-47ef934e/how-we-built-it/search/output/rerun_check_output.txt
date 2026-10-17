@@ -1,0 +1,24 @@
+== search/output/z_16x19_142_seed101.txt
+shape 16 x 19, ones 142
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== search/output/z_16x19_142_seed102.txt
+shape 16 x 19, ones 142
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== search/output/z_16x19_142_seed103.txt
+shape 16 x 19, ones 142
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== search/output/z_16x19_142_seed104.txt
+shape 16 x 19, ones 142
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== search/output/z_16x19_142_seed105.txt
+shape 16 x 19, ones 142
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== search/output/z_16x19_142_seed106.txt
+shape 16 x 19, ones 142
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
