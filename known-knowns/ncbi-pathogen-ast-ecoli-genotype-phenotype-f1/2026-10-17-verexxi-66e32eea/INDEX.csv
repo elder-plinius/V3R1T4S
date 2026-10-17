@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ncbi-pathogen-ast-ecoli-genotype-phenotype-f1,ciprofloxacin F1 (cluster-held-out),96.13,77.2,2026-10-17T00:27:32Z,object/test_predictions_ciprofloxacin.csv,66e32eea192baad34c9e892bc9fc82eb32a87668791890db310c345b5961052f
