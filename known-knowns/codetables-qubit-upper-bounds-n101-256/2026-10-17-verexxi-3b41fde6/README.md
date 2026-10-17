@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[123,2]] (123 physical qubits encoding 2 logical qubits) had an
 upper bound of 41 on the distance. This package proves that no such code has distance 41 or more, so the
 upper bound is at most 40. The proof is one exact certificate for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> The exact integer Farkas certificate result/cert_123_2_41_sh.json (weight-enumerator LP with MacWilliams linking, A_i<=B_i, A_i=B_i for 0<i<41, nonnegativity and shadow nonnegativity) proves that no [[123,2,41]] qubit stabilizer code exists, so the [[123,2]] distance upper bound is at most 40 versus the claim-time table value 41, and this value is not implied by propagation from other cells of the saved claim-time table.
+> The exact integer Farkas certificate object/cert_123_2_41_sh.json (weight-enumerator LP with MacWilliams linking, A_i<=B_i, A_i=B_i for 0<i<41, nonnegativity and shadow nonnegativity) proves that no [[123,2,41]] qubit stabilizer code exists, so the [[123,2]] distance upper bound is at most 40 versus the claim-time table value 41, and this value is not implied by propagation from other cells of the saved claim-time table.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -40,3 +42,8 @@ page sha256 e9456087a9727b8bab30fb2a7349a1e6ff783a93202a8e43134974101282116b; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> The exact integer Farkas certificate result/cert_123_2_41_sh.json (weight-enumerator LP with MacWilliams linking, A_i<=B_i, A_i=B_i for 0<i<41, nonnegativity and shadow nonnegativity) proves that no [[123,2,41]] qubit stabilizer code exists, so the [[123,2]] distance upper bound is at most 40 versus the claim-time table value 41, and this value is not implied by propagation from other cells of the saved claim-time table.
