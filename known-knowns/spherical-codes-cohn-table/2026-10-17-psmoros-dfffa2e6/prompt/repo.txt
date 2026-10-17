@@ -1,0 +1,4 @@
+repo_tag: none
+repo_commit at run start (2026-10-16T00:24Z): 41ff532b74be742afa614fa057fd5c10cee0f3e6
+repo_commit at packaging: ab114dcb1aad5cc1b2a53c58bc3ad3fcacd1107c (moved during the run by the human's own setup session; upstream diff 41ff532b..ab114dc in kit/ touches check_run.py and its tests only)
+charter: v3.1 tables lane (the charter this run followed; the workspace moved to v4 during the run)
