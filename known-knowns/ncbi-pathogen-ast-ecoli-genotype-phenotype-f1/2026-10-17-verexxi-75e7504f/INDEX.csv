@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ncbi-pathogen-ast-ecoli-genotype-phenotype-f1,gentamicin F1 (cluster-held-out),96.28,92.4,2026-10-17T00:27:32Z,object/test_predictions_gentamicin.csv,75e7504f005731e2bf48b7bf8484b44a98afecd30fa4c58fbe7041eb9fb48d28
