@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[110,2]] (110 physical qubits encoding 2 logical qubits) had an
 upper bound of 37 on the distance. This package proves that no such code has distance 37 or more, so the
 upper bound is at most 36. The proof is one exact certificate for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> Within the weight-enumerator LP with Rains shadow constraints, the integer Farkas certificate result/cert_110_2_37_sh.json is exactly verified to rule out any [[110,2,d]] qubit stabilizer code with d >= 37, so the codetables.de upper bound 37 (as saved at claim time in data/QECC_q4_n110_k2_claimtime.html) can be lowered to 36, and 36 is not implied by the propagation rules R1-R3 applied to the saved full table.
+> Within the weight-enumerator LP with Rains shadow constraints, the integer Farkas certificate object/cert_110_2_37_sh.json is exactly verified to rule out any [[110,2,d]] qubit stabilizer code with d >= 37, so the codetables.de upper bound 37 (as saved at claim time in data/QECC_q4_n110_k2_claimtime.html) can be lowered to 36, and 36 is not implied by the propagation rules R1-R3 applied to the saved full table.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -35,3 +37,8 @@ page sha256 9366ddf82bcfd8cba8025060d03f553dd6a312f0bd3dd6a767cf6349119c2034; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> Within the weight-enumerator LP with Rains shadow constraints, the integer Farkas certificate result/cert_110_2_37_sh.json is exactly verified to rule out any [[110,2,d]] qubit stabilizer code with d >= 37, so the codetables.de upper bound 37 (as saved at claim time in data/QECC_q4_n110_k2_claimtime.html) can be lowered to 36, and 36 is not implied by the propagation rules R1-R3 applied to the saved full table.
