@@ -1,0 +1,17 @@
+{
+ "target_id": "site-percolation-2-uniform-lattices-thresholds",
+ "table": "Wikipedia, Percolation threshold, section 2-uniform lattices",
+ "row": 22,
+ "column": "bond",
+ "lattice": "(2/3)(3^3,4^2) + (1/3)(4^4)",
+ "cell_text": "0.44528611(40) [citation needed]",
+ "table_value": "0.44528611(40)",
+ "row_text": "22 ( 2 ⁄ 3 )(3 3 ,4 2 ) + ( 1 ⁄ 3 )(4 4 ) 5,4 4 2 ⁄ 3 0.5648(2) [ 74 ] 0.44528611(40) [ citation needed ]",
+ "url": "https://en.wikipedia.org/wiki/Percolation_threshold",
+ "fetched_utc": "2026-10-16T07:52:05Z",
+ "http_status": 200,
+ "bytes": 2514902,
+ "sha256": "2f44ce4065839fa2baf1c1655cdcf5aa40e21fcdb7cdabf69287093e0fd27e95",
+ "response_headers": "not recorded by the fetch helper",
+ "provenance": "bond value 0.44529(5) from revision 190337879 (2008-02-10), 0.44528611(40) from revision 302924272 (2009-07-19), citing Hang Gu and R. M. Ziff, Percolation thresholds of 2-uniform lattice, to be published, 2007 (unpublished); reference no longer on the page, cell tagged citation needed (June 2019)"
+}

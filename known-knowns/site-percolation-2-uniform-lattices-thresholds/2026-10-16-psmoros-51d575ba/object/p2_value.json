@@ -1,0 +1,63 @@
+{
+ "target": "site-percolation-2-uniform-lattices-thresholds",
+ "partial_win": "p2",
+ "kind": "p2",
+ "table_num": 22,
+ "lattice": "(2/3)(3^3,4^2) + (1/3)(4^4)",
+ "row_word": "TSS",
+ "quantity": "bond percolation threshold",
+ "bond": {
+  "value": 0.445287065459697,
+  "sigma": 2.093e-08,
+  "sigma_rule4": 7.293e-09,
+  "sigma_v2": 2.093e-08,
+  "method": "E1 of PREREG rule 4 on W x infinity cylinder roots W=8,9,10 (eigenvalue form of the Jacobsen-Scullard critical polynomial); sigma by PREREG.v2"
+ },
+ "table_value": "0.44528611(40) citation needed",
+ "calibration_same_pipeline": {
+  "TS_bond": {
+   "value": 0.419640362745204,
+   "reference": "0.41964035886369(2) Scullard-Jacobsen 2020",
+   "delta": 3.882e-09
+  },
+  "kagome_bond_n1_6": "equal to Scullard-Jacobsen 2020 Table II to <= 2.5e-15"
+ },
+ "sequence_tm": [
+  {
+   "W": 2,
+   "p": "0.44528826191126109"
+  },
+  {
+   "W": 3,
+   "p": "0.44529702219858214"
+  },
+  {
+   "W": 4,
+   "p": "0.44529105331797153"
+  },
+  {
+   "W": 5,
+   "p": "0.44528839219117405"
+  },
+  {
+   "W": 6,
+   "p": "0.4452875204759385"
+  },
+  {
+   "W": 7,
+   "p": "0.44528724327564689"
+  },
+  {
+   "W": 8,
+   "p": "0.44528714744907383"
+  },
+  {
+   "W": 9,
+   "p": "0.44528710866737609"
+  },
+  {
+   "W": 10,
+   "p": "0.44528708982128296"
+  }
+ ]
+}
