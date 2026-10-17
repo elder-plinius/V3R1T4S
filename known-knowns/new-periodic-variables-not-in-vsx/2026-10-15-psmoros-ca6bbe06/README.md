@@ -4,6 +4,8 @@
 
 The hash-pinned pipeline in code/, which never reads a catalog period, recovered the B/vsx (2026-10-05) period within 0.1% or at a 2x alias for 77 of 80 seeded-random VSX EW/EA/RRAB/DSCT stars with >= 50 ZTF epochs within 1.5 arcsec (70 of those 77 VSX periods being identical to Chen+2020 ZTF periods per results/variables.csv, so this is mainly a ZTF re-derivation, not independent-survey confirmation), and the identical pipeline on 67 VSX CST stars and 333 Gaia DR3 non-variables reports a false-alarm rate of 0/67 (CST) and 0/400 (all) at the pre-frozen threshold S > 54.0, saved per star in results/vsx_reproduce_known_table.csv and results/controls_table.csv.
 
+**Path note (added after review, 2026-10-17):** the sentence above is quoted verbatim from panel/gate.md, which is not edited after the gate, so it uses the run folder's paths. In this package those tables are object/variables.csv, object/vsx_reproduce_known_table.csv and object/controls_table.csv (byte-identical to the run's results/ files; see SHA256SUMS).
+
 This is the bank partial win `vsx-reproduce-known` of the target `new-periodic-variables-not-in-vsx`, a
 calibration gate. It finds no new variable star and claims none.
 
