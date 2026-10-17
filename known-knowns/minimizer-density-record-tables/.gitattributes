@@ -1,0 +1,3 @@
+# Keep this contributed package byte-identical on every platform.
+# The package ships SHA256SUMS; line-ending conversion would break it.
+* -text
