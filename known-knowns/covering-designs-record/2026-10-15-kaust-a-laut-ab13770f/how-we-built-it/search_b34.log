@@ -1,0 +1,6 @@
+start v=53 k=20 t=3 b=34 NT=23426 init_blocks=0 uncovered=4524 tenure=10 seed=1
+t=10s steps=41984 rate=4152/s wbumps=29712 cur=67 best=26
+t=20s steps=86016 rate=4199/s wbumps=62014 cur=87 best=23
+t=31s steps=132096 rate=4301/s wbumps=95816 cur=51 best=5
+end t=33.3s steps=142760 rate=4285/s best=0
+FOUND covering with 34 blocks -> screen3_cells\C53_20_3\found_b34.txt
