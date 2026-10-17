@@ -1,0 +1,17 @@
+{
+ "antibiotic": "amoxicillin-clavulanic acid",
+ "predictions_file": "test_predictions_amoxicillin-clavulanic_acid.csv",
+ "object_sha256": {
+  "test_predictions_amoxicillin-clavulanic_acid.csv": "8061f657782b5db74aa785e903651d2ecc3beed5c5d5c1ee9e0ad304f8044625"
+ },
+ "metadata_url": "https://ftp.ncbi.nlm.nih.gov/pathogen/Results/Escherichia_coli_Shigella/PDG000000004.6366/Metadata/PDG000000004.6366.metadata.tsv",
+ "metadata_sha256": "7eb4639d4aa7c621927d0a55e6d185801f4af77401c270f7ad14f3c9ce6d101b",
+ "clusters_url": "https://ftp.ncbi.nlm.nih.gov/pathogen/Results/Escherichia_coli_Shigella/PDG000000004.6366/Clusters/PDG000000004.6366.reference_target.cluster_list.tsv",
+ "clusters_sha256": "58c22fd5c39d083dae3963d332c5ec25ac22c39a4f42675b37e1bb7ca954a7c8",
+ "threshold": 0.602,
+ "published_F1": 44.5,
+ "published_accuracy": 73.6,
+ "claimed_F1": 0.9197080291970803,
+ "claimed_accuracy": 0.9767932489451476,
+ "bootstrap_reps": 2000
+}

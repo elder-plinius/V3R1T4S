@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ncbi-pathogen-ast-ecoli-genotype-phenotype-f1,amoxicillin-clavulanic acid F1 (cluster-held-out),91.97,44.5,2026-10-17T00:27:32Z,object/test_predictions_amoxicillin-clavulanic_acid.csv,8061f657782b5db74aa785e903651d2ecc3beed5c5d5c1ee9e0ad304f8044625
