@@ -4,12 +4,14 @@
 In M. Grassl's table of qubit stabilizer codes, the cell [[135,1]] (135 physical qubits encoding 1 logical qubit) had an
 upper bound of 45 on the distance. This package proves that no such code has distance 45 or more, so the
 upper bound is at most 44. The proof is one exact certificate for the standard weight-enumerator linear program with Rains'
-shadow constraints, checked by two independently written programs. The new bound does not follow from the table's
+shadow constraints, checked by two separately written checkers. The new bound does not follow from the table's
 other entries.
 
 The exact scope, as signed off by the three reviewers:
 
-> Within the weight-enumerator LP with Rains shadow constraints (A_0=1, sum A_i=2^(n-k), A_j=B_j for 1<=j<=44, A_j<=B_j for j>=45, shadow>=0, A>=0), the exact integer Farkas certificate result/cert_135_1_45_sh.json passes check/check_cert.py, so no [[135,1,45]] qubit stabilizer code exists and the upper bound for the [[135,1]] cell (45 in the claim-time page data/QECC_q4_n135_k1_claimtime.html) drops to at most 44, not implied by propagation from the other live cells in the saved table.
+> Within the weight-enumerator LP with Rains shadow constraints (A_0=1, sum A_i=2^(n-k), A_j=B_j for 1<=j<=44, A_j<=B_j for j>=45, shadow>=0, A>=0), the exact integer Farkas certificate object/cert_135_1_45_sh.json passes verify-it-yourself/check_cert.py, so no [[135,1,45]] qubit stabilizer code exists and the upper bound for the [[135,1]] cell (45 in the claim-time page data/QECC_q4_n135_k1_claimtime.html) drops to at most 44, not implied by propagation from the other live cells in the saved table.
+>
+> (File paths as in this package. The reviewers' original sentence, which names the claim-folder paths, is under Review record.)
 
 ## Check it yourself
 From this folder: `sh verify-it-yourself/run_checks.sh` (Python 3.8 or newer, standard library only). It ends with
@@ -35,3 +37,8 @@ page sha256 2a04a91c8a2b060c19f079102e24e85b231f1a8587404c1248cb81a3dff26d77; re
 - P. Shor and R. Laflamme, quantum MacWilliams identities; A. Ashikhmin and S. Litsyn, upper bounds for quantum codes.
 - FLINT / python-flint (arb multiprecision arithmetic) used by the search code.
 - Found by verexxi; the search and the three independent reviews were run with Claude (Anthropic).
+
+## Review record
+The reviewers' scope sentence exactly as signed off in panel/gate.md:
+
+> Within the weight-enumerator LP with Rains shadow constraints (A_0=1, sum A_i=2^(n-k), A_j=B_j for 1<=j<=44, A_j<=B_j for j>=45, shadow>=0, A>=0), the exact integer Farkas certificate result/cert_135_1_45_sh.json passes check/check_cert.py, so no [[135,1,45]] qubit stabilizer code exists and the upper bound for the [[135,1]] cell (45 in the claim-time page data/QECC_q4_n135_k1_claimtime.html) drops to at most 44, not implied by propagation from the other live cells in the saved table.
