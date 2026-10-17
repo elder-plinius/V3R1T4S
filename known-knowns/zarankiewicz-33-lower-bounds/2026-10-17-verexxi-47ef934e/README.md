@@ -38,9 +38,9 @@ and 969 column triples). Expected last line: `PASS` (exit status 0); on any prob
 - Found by verexxi. Search and verification code were written with help from Claude (Anthropic).
 - Saurabh, arXiv:2608.26603 (stated lower bounds, and three witness matrices used as bases for the baseline).
 - Bhan, Nobili, Langer et al., arXiv:2605.01120 (earlier lower bounds, Figure 2).
-- Afrasyab, arXiv:2608.08154, repository https://github.com/KAVentures/z1322-exact (upper-bound table and witness matrices used as bases).
+- Afrasyab, arXiv:2608.08154, repository https://github.com/KAVentures/z1322-exact (upper-bound table and witness matrices used as bases; referenced by URL and sha256 in how-we-built-it/third_party_sources.md, not copied).
 - Hou, arXiv:2608.08549, repository https://github.com/ShengtengHou/finite-zarankiewicz-seven-values (the 13 x 18 core).
 - Collins, Riasanovsky, Wallace, Radziszowski, arXiv:1604.01257 (Table 4 upper bounds).
 - Davies, Gill, Horsley, arXiv:2411.18842 (improved upper bounds).
 - Tan, arXiv:2203.02283 (SAT attack on Zarankiewicz numbers).
-- dfield, https://github.com/dfield/finite-zarankiewicz-closures (propagated table; copies of its data are in how-we-built-it/status_source/).
+- dfield, https://github.com/dfield/finite-zarankiewicz-closures (propagated table; its data files are referenced by URL and sha256 in how-we-built-it/third_party_sources.md, not copied).

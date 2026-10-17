@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Trivial-derivation baseline for z(m,n;3,3): what do cheap edits of PUBLIC witness matrices give?
 
-For a target shape m x n and each public base matrix (wit/):
+For a target shape m x n and each public base matrix (wit/, not shipped: run
+`python fetch_third_party.py` in the parent folder first; it checks sha256 of every file):
   1. delete minimum-weight rows / columns until the shape is at most m x n (ties broken at random),
   2. greedily add every 1 that keeps the matrix K33-free (random order),
   3. add missing rows / columns one at a time, each the exact maximum-weight admissible line (branch and bound),
@@ -180,6 +181,8 @@ BASE_FILES = [
 
 
 def bases():
+    if not os.path.isdir(W):
+        sys.exit("wit/ is missing: run 'python fetch_third_party.py' in the parent folder first (see third_party_sources.md)")
     return {name: ld(os.path.join(W, fn)) for name, fn, ld in BASE_FILES}
 
 

@@ -120,7 +120,9 @@ Reading: four of our five values sit exactly on the plateau of the public 13x18 
 
 ## 6. Evidence files
 In this folder (status_source/): closure.py and its output closure_output.txt (upper-bound closure), lb_closure.py and
-lb_closure_output.txt (lower-bound closure), gh_frontier_propagation.json (Afrasyab table), df_new_bounds.json and
-df_extended.json (dfield repo data). The public witness matrices and the surgery baseline script are in ../baseline/
-(surgery_baseline.py replaces the scout's surgery.py / surgery2.py / surg_main.py, which read a local copy of the
-Saurabh paper; the three Saurabh matrices are stored as ../baseline/wit/sau_*.txt).
+lb_closure_output.txt (lower-bound closure). The third-party data the scout used (gh_frontier_propagation.json from the
+Afrasyab table repository, df_new_bounds.json and df_extended.json from the dfield repository, the public witness matrices and
+Saurabh's three matrices) is NOT in this package: ../third_party_sources.md lists each file with its URL and sha256, and
+../fetch_third_party.py downloads and checks them (into this folder and ../baseline/wit/). The surgery baseline script is in
+../baseline/ (surgery_baseline.py replaces the scout's surgery.py / surgery2.py / surg_main.py, which read a local copy of the
+Saurabh paper).

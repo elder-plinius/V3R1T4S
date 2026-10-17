@@ -16,4 +16,4 @@ Second status source (same reviewer, same minute)
 Value compared: 142 (object/z_16x19_142.txt) is 6 above the best explicitly stated lower bound 136 and 5 below the best upper bound 147.
 Derivable baseline: 141, the best of 192000 saved trivial-surgery runs on the 12 public witness matrices (how-we-built-it/baseline/output/).
 The saved scout behind these numbers is how-we-built-it/status_source/scout_record.md (written 2026-10-17 before the reviewers' fetches).
-The reviewers' working copies of the fetched pages are not included here (no third-party pages are copied into the package).
+The reviewers' working copies of the fetched pages are not included here. No third-party pages or data files are copied into this package: the third-party files our scripts use (witness matrices, table data, Saurabh's printed matrices) are listed with URL and sha256 in how-we-built-it/third_party_sources.md and downloaded by how-we-built-it/fetch_third_party.py.
