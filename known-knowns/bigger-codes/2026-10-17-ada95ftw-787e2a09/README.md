@@ -3,6 +3,8 @@
 ## What
 An exact rational Delsarte-LP dual certificate (Delsarte inequalities k=1,2 for J(31,7) plus the elementary constraint a_7 <= A(24,10,7) <= 24, the latter proved independently via the Agrell–Vardy–Zeger/Rankin spherical-code bound) proves A(31,10,7) <= 106, strictly below the upper bound 109 printed for this cell in Brouwer's Andw.html as fetched 2026-10-17 08:44 UTC.
 
+**Correction (2026-10-18, at the maintainer's request):** the sentence above, quoted verbatim from the gate, overstates the input. It should read: using the published bound A(24,10,7) <= 24 (Agrell–Vardy–Zeger 2000, printed as 24 in Brouwer's table). The panel could not re-derive that bound independently (it reached 27); see "Not claimed" below.
+
 ## Check it yourself
 ```sh
 sh verify-it-yourself/run_checks.sh
