@@ -1,0 +1,33 @@
+{
+ "cell": "SIGTYP 2022 surprise data, aggregate A_BLEU = (S(0.10)+S(0.20)+S(0.30)+S(0.40)+S(0.50))/5 (S(P) = mean BLEU over the 10 surprise families at proportion P, official scorer; sums left to right; higher is better)",
+ "bar_holder": "Mockingbird-I1 (Kirov, Sproat and Gutkin 2022), best official system on this cell",
+ "mockingbird_i1": 0.6015772270938825,
+ "mockingbird_i1_totals_by_proportion": {
+  "0.10": 0.6633184488563897,
+  "0.20": 0.632633947442519,
+  "0.30": 0.6058548112827981,
+  "0.40": 0.5723601982335171,
+  "0.50": 0.5337187296541888
+ },
+ "mockingbird_i1_sources": {
+  "0.10": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.10.json",
+  "0.20": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.20.json",
+  "0.30": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.30.json",
+  "0.40": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.40.json",
+  "0.50": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.50.json"
+ },
+ "mockingbird_i1_json_sha256": {
+  "0.10": "e00f22badafe95729d8a079f0563175528fa63248c62bf7a41de2f43029f4c75",
+  "0.20": "80f2b01eb4e6f6c2130749f7eff149dc95fd4c59044ec9b8b22836b74dbbf519",
+  "0.30": "cca55c5fffa730c29ef578f022741f3a0378ca333e5a20493e23e2d400792563",
+  "0.40": "699aacbc94cb6d8289bb2685ac73f87e2cf72a1df22cee89a6cf8b7e1501ee86",
+  "0.50": "3a8e79f9e686a4835f6bd0948529838b4ebb38ef2f02e05d39dfa73389a014f3"
+ },
+ "fetched_utc": "2026-10-18T22:11:14Z (the cell's NOVELTY skeptic: raw results-surprise-P.json on the main branch, byte-identical to the pinned commit)",
+ "status_page": "https://github.com/sigtyp/ST2022",
+ "status_page_fetched_utc": "2026-10-18T18:07:41Z",
+ "status_page_http": 200,
+ "status_page_sha256": "fec88fad967728c78c42ddd0b95a19a6bb6be63f7e8c9b4fd6ef77d314cc1012",
+ "status_head": "03094435cba4293ce0eea383036cab78499ad50d (2022-05-27T07:58:23Z)",
+ "this_object": 0.6729772402356671
+}

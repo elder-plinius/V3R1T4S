@@ -1,0 +1,11 @@
+2026-10-18T21:20:10Z test 0.20 train rc=0 203s
+2026-10-18T21:20:12Z test 0.20 bantubvd             ok 434 rows 2s
+2026-10-18T21:20:19Z test 0.20 beidazihui           ok 1976 rows 9s
+2026-10-18T21:20:19Z test 0.20 birchallchapacuran   ok 336 rows 2s
+2026-10-18T21:20:19Z test 0.20 bodtkhobwa           ok 1464 rows 5s
+2026-10-18T21:20:20Z test 0.20 bremerberta          ok 164 rows 1s
+2026-10-18T21:20:22Z test 0.20 deepadungpalaung     ok 624 rows 3s
+2026-10-18T21:20:23Z test 0.20 hillburmish          ok 778 rows 4s
+2026-10-18T21:20:23Z test 0.20 kesslersignificance  ok 183 rows 1s
+2026-10-18T21:20:26Z test 0.20 luangthongkumkaren   ok 608 rows 3s
+2026-10-18T21:20:30Z test 0.20 wangbai              ok 1320 rows 6s
