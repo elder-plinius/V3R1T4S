@@ -1,0 +1,21 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/results/addition_reduced_ZT/5x5x5_m93_cr383_fv160_cn843_ZT_reduced.json",
+  "utc": "2026-10-14T14:57:00.148971+00:00",
+  "http_status": 200,
+  "headers": {},
+  "sha256": "808285b8fb393d2e950ecff4ffe9881a209b6d3eff0d787e34d801a3f22293da",
+  "cell": "(5, 5, 5), rank93, ternary ZT",
+  "reference_additions": 383,
+  "candidate_additions": 354,
+  "reference_stages": [
+    103,
+    105,
+    175
+  ],
+  "candidate_stages": [
+    93,
+    96,
+    165
+  ],
+  "source_commit": "f0efd4f67f6ff09bf0418af75c2a209c8cf814b3"
+}

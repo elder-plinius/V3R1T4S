@@ -1,0 +1,162 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 264,
+          "identities_verified": 9216,
+          "rank": 73,
+          "valid": true
+        },
+        "seconds": 0.051392334047704935
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 17282,
+      "fixture_sha256": "f9d7fde512f38c0a28930a898cee5ae0577e76a5e2ab2e0a51697718eede9f2d",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "active_products": 73,
+          "backward_references_only": true,
+          "basis_output_values_checked": 9216,
+          "basis_pairs_checked": 384,
+          "cost": 264,
+          "distinct_products_up_to_sign": 73,
+          "final_factors_ternary": true,
+          "hidden_arithmetic": false,
+          "integer_coefficients_checked": 9216,
+          "literal_unit_signs_only": true,
+          "naive_cost": 540,
+          "passed": true,
+          "rank": 73
+        },
+        "seconds": 0.07009383384138346
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.0002602911554276943,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 17283,
+      "fixture_sha256": "5378dcd12d68b893481883dc7f120039294c2aa06f0aeda0be11cd56e6dbc96d",
+      "independent": {
+        "accepted": false,
+        "error": "integer tensor mismatch: [{\"a\": 0, \"b\": 0, \"output\": 0, \"actual\": -1, \"expected\": 1}, {\"a\": 1, \"b\": 6, \"output\": 0, \"actual\": -1, \"expected\": 1}, {\"a\": 2, \"b\": 12, \"output\": 0, \"actual\": -1, \"expected\": 1}, {\"a\": 3, \"b\": 18, \"output\": 0, \"actual\": -1, \"expected\": 1}]",
+        "exception": "Invalid",
+        "seconds": 0.04325966699980199,
+        "unexpected_exception": false
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.0002721250057220459,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 17283,
+      "fixture_sha256": "5378dcd12d68b893481883dc7f120039294c2aa06f0aeda0be11cd56e6dbc96d",
+      "independent": {
+        "accepted": false,
+        "error": "integer tensor mismatch: [{\"a\": 0, \"b\": 0, \"output\": 0, \"actual\": -1, \"expected\": 1}, {\"a\": 1, \"b\": 6, \"output\": 0, \"actual\": -1, \"expected\": 1}, {\"a\": 2, \"b\": 12, \"output\": 0, \"actual\": -1, \"expected\": 1}, {\"a\": 3, \"b\": 18, \"output\": 0, \"actual\": -1, \"expected\": 1}]",
+        "exception": "Invalid",
+        "seconds": 0.04508554213680327,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 17282,
+      "fixture_sha256": "9e2ecd9506dc8b8381dc2f309ce872f7b958aab3786f2482dedec8f660fab4af",
+      "independent": {
+        "accepted": false,
+        "error": "reduced metadata mismatch",
+        "exception": "Invalid",
+        "seconds": 0.006938125006854534,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 17282,
+      "fixture_sha256": "557d70d1e118d0fb73628d9f2e003bff2c605a736f8de2c5e2451166f922f3a1",
+      "independent": {
+        "accepted": false,
+        "error": "u[0]: forward or invalid reference",
+        "exception": "Invalid",
+        "seconds": 0.0003740421961992979,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 17281,
+      "fixture_sha256": "64402839371ca6dae9dfcb301c28fead4eb0ece4b4efccf5ee43fd9e000f4f9c",
+      "independent": {
+        "accepted": false,
+        "error": "integer ring required, z2 must be false",
+        "exception": "Invalid",
+        "seconds": 5.250098183751106e-06,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 17257,
+      "fixture_sha256": "0b7885d9c0b18bfd4f31f968654fca85f8648c00ab06e7d68afc26fc253ed205",
+      "independent": {
+        "accepted": false,
+        "error": "u: wrong final form count",
+        "exception": "Invalid",
+        "seconds": 5.624955520033836e-06,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    4,
+    4,
+    6
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "733891ac541bd4c85da049a68dfcafd680d7fa5f006718668d1e8d38f7478900",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "8c3c3dafc211510456d14702dc472a3f3372bde4cf54ff88d245d040539400f3"
+  },
+  "original_sha256": "733891ac541bd4c85da049a68dfcafd680d7fa5f006718668d1e8d38f7478900",
+  "pass": true,
+  "rank": 73,
+  "raw_v1_aggregate_pass": true,
+  "raw_v1_receipt_sha256": "dd378da220d5970afc7ab389bc090aac69ee0511463a2589c83cda8c2bcac265",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.23211291688494384
+}

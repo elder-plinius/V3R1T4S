@@ -1,0 +1,160 @@
+{
+  "pass": true,
+  "positive_controls": 2,
+  "negative_controls": 15,
+  "controls": [
+    {
+      "control": "public153",
+      "expected_acceptance": true,
+      "actual_acceptance": true,
+      "exit_code": 0,
+      "expected_error": null,
+      "actual_error": null,
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "positive_signed_alias",
+      "expected_acceptance": true,
+      "actual_acceptance": true,
+      "exit_code": 0,
+      "expected_error": null,
+      "actual_error": null,
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_product_sign",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "integer tensor mismatch",
+      "actual_error": "integer tensor mismatch: [{\"c_transposed_index\": 1, \"a_row_major_index\": 5, \"b_row_major_index\": 1, \"actual\": -2, \"expected\": 0}, {\"c_transposed_index\": 1, \"a_row_major_index\": 5, \"b_row_major_index\": 6, \"actual\": -2, \"expected\": 0}, {\"c_transposed_index\": 3, \"a_row_major_index\": 5, \"b_row_major_index\": 1, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 3, \"a_row_major_index\": 5, \"b_row_major_index\": 6, \"actual\": -2, \"expected\": 0}]",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_output_order",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "integer tensor mismatch",
+      "actual_error": "integer tensor mismatch: [{\"c_transposed_index\": 0, \"a_row_major_index\": 0, \"b_row_major_index\": 0, \"actual\": 0, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 1, \"b_row_major_index\": 5, \"actual\": 0, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 2, \"b_row_major_index\": 10, \"actual\": 0, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 3, \"b_row_major_index\": 15, \"actual\": 0, \"expected\": 1}]",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_input_order",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "integer tensor mismatch",
+      "actual_error": "integer tensor mismatch: [{\"c_transposed_index\": 0, \"a_row_major_index\": 0, \"b_row_major_index\": 0, \"actual\": 0, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 0, \"b_row_major_index\": 5, \"actual\": 1, \"expected\": 0}, {\"c_transposed_index\": 0, \"a_row_major_index\": 1, \"b_row_major_index\": 0, \"actual\": 1, \"expected\": 0}, {\"c_transposed_index\": 0, \"a_row_major_index\": 1, \"b_row_major_index\": 5, \"actual\": 0, \"expected\": 1}]",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_forward_reference",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "illegal or forward reference",
+      "actual_error": "u_fresh[0].term[0]: illegal or forward reference",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_forbidden_scalar",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "scalar is not +/-1",
+      "actual_error": "v[0].term[0]: scalar is not +/-1",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_expanded_nonternary",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "expanded coefficients not ternary",
+      "actual_error": "u[0]: expanded coefficients not ternary",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_inactive_product",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "inactive product 0",
+      "actual_error": "inactive product 0",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_cost",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "declared reduced cost is wrong",
+      "actual_error": "declared reduced cost is wrong: actual 148",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_naive_cost",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "declared expanded naive cost is wrong",
+      "actual_error": "declared expanded naive cost is wrong: actual 283",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_duplicate_reference",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "repeated sparse index",
+      "actual_error": "u[0].term[1]: repeated sparse index",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_missing_output",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "final-form count disagrees",
+      "actual_error": "w final-form count disagrees with dimensions/rank",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_field",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "integer, not Z2, semantics required",
+      "actual_error": "integer, not Z2, semantics required",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_boolean_scalar",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "scalar is not +/-1",
+      "actual_error": "u[0].term[0]: scalar is not +/-1",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_rank",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "rank must be 40",
+      "actual_error": "rank must be 40",
+      "control_behaved_as_expected": true
+    },
+    {
+      "control": "negative_wrong_format",
+      "expected_acceptance": false,
+      "actual_acceptance": false,
+      "exit_code": 1,
+      "expected_error": "format must be (2,5,5)",
+      "actual_error": "format must be (2,5,5)",
+      "control_behaved_as_expected": true
+    }
+  ]
+}

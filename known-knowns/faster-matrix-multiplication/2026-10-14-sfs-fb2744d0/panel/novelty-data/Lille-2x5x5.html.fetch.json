@@ -1,0 +1,16 @@
+{
+  "url": "https://fmm.univ-lille.fr/2x5x5.html",
+  "utc": "2026-10-14T11:58:21.495217+00:00",
+  "started_utc": "2026-10-14T11:58:20.104188+00:00",
+  "http_status": 200,
+  "sha256": "b1284cd181e11906ca3da9dbf7af7bc64f00eabc5a1b807111a8968c7608bcc4",
+  "bytes": 5224,
+  "file": "Lille-2x5x5.html",
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 11:58:21 GMT",
+    "Content-Type": "text/html",
+    "Content-Length": "5224",
+    "Last-Modified": "Fri, 29 May 2026 18:37:12 GMT",
+    "ETag": "\"1468-652f92218eff7\""
+  }
+}

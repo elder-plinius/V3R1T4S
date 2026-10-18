@@ -1,0 +1,15 @@
+{
+  "url": "https://arxiv.org/abs/2609.32388",
+  "utc": "2026-10-14T12:06:29.281493+00:00",
+  "started_utc": "2026-10-14T12:06:29.136856+00:00",
+  "http_status": 200,
+  "sha256": "97948d766566a3d9807b2cfe1bcce3b80dd9b8a60d6b8c5feb71551d7e46ad71",
+  "bytes": 39477,
+  "file": "arxiv-2609.32388-abs.html",
+  "headers": {
+    "Content-Length": "39477",
+    "last-modified": "Tue, 29 Sep 2026 00:38:11 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "Date": "Wed, 14 Oct 2026 12:06:29 GMT"
+  }
+}

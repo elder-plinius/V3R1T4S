@@ -1,0 +1,21 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/results/addition_reduced_ZT/4x5x8_m118_cr513_fv249_cn1521_ZT_reduced.json",
+  "utc": "2026-10-14T16:05:54.796009+00:00",
+  "http_status": 200,
+  "headers": {},
+  "sha256": "7a273fbb34339b6123e5e9253fb088af12c8f11362e46cfe0789b2c3bd9e3860",
+  "cell": "(4, 5, 8), rank118, ternary ZT",
+  "reference_additions": 513,
+  "candidate_additions": 486,
+  "reference_stages": [
+    111,
+    166,
+    236
+  ],
+  "candidate_stages": [
+    101,
+    159,
+    226
+  ],
+  "source_commit": "f0efd4f67f6ff09bf0418af75c2a209c8cf814b3"
+}

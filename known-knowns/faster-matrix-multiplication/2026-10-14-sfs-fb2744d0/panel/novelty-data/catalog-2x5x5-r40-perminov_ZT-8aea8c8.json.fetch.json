@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/known/section5/2x5x5-r40-perminov_ZT-8aea8c8.json",
+  "utc": "2026-10-14T11:59:44.637069+00:00",
+  "started_utc": "2026-10-14T11:59:44.182117+00:00",
+  "http_status": 200,
+  "sha256": "0e6424fadeaaee6609a9995e04f051069c9afa97607ee5e7cc01a0838a440037",
+  "bytes": 16217,
+  "file": "catalog-2x5x5-r40-perminov_ZT-8aea8c8.json",
+  "headers": {
+    "Content-Length": "16217",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"3c08778f862ae9a37c441b678ba8ddc87bb4286be47971ad2fa7ca9d50c1cfcd\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "url": "https://fmm.univ-lille.fr/2x5x5_tensor.mpl.bz2",
+  "utc": "2026-10-14T11:59:45.552655+00:00",
+  "started_utc": "2026-10-14T11:59:44.212619+00:00",
+  "http_status": 200,
+  "sha256": "605bca27017ee33d0bcf1fe85a02d7262f51ac5231576b0069704afe82dde441",
+  "bytes": 762,
+  "file": "Lille-2x5x5-tensor.mpl.bz2",
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 11:59:45 GMT",
+    "Content-Type": "application/x-bzip2",
+    "Content-Length": "762",
+    "Last-Modified": "Fri, 29 May 2026 18:37:13 GMT",
+    "ETag": "\"2fa-652f9222a0715\""
+  }
+}

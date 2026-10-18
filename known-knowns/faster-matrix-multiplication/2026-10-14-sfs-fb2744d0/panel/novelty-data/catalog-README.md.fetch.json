@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/README.md",
+  "utc": "2026-10-14T11:59:44.964457+00:00",
+  "started_utc": "2026-10-14T11:59:44.581426+00:00",
+  "http_status": 200,
+  "sha256": "b9542c1e2307619809725f2df92f3444f4039340e4348c5722c68039d5d8d541",
+  "bytes": 14399,
+  "file": "catalog-README.md",
+  "headers": {
+    "Content-Length": "14399",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"80c4deb94140d310a4f217d2905b67256d0b7aa3e0f2278318758aafa9543050\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

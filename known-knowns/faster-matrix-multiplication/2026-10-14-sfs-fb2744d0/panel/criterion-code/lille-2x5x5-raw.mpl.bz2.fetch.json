@@ -1,0 +1,14 @@
+{
+  "url": "https://fmm.univ-lille.fr/2x5x5_raw.mpl.bz2",
+  "started_utc": "2026-10-14T12:00:56.624777+00:00",
+  "http_status": 200,
+  "sha256": "e2ff2fb2e2e3f05e5a502a176b11d19a1ec8ea898c46ca482ae6d6c195389dd0",
+  "bytes": 741,
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 12:00:57 GMT",
+    "Content-Type": "application/x-bzip2",
+    "Content-Length": "741",
+    "Last-Modified": "Fri, 25 Jul 2025 14:33:46 GMT",
+    "ETag": "\"2e5-63ac1d4675d4e\""
+  }
+}

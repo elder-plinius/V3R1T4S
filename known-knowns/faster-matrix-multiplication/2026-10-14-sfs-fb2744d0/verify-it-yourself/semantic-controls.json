@@ -1,0 +1,164 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 148,
+          "identities_verified": 2500,
+          "rank": 40,
+          "valid": true
+        },
+        "seconds": 0.015298250131309032
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 8461,
+      "fixture_sha256": "895243617b0601febaa942bd53b46ab1d0bd3692f6fd3dcc97a67dca672977c0",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "active_products": 40,
+          "actual_nonzero_coefficients": 50,
+          "additions": 148,
+          "checked_basis_pairs": 250,
+          "checked_scalar_output_values": 2500,
+          "checked_tensor_coefficients": 2500,
+          "expanded_final_coefficients_ternary": true,
+          "expanded_scheme_digest": "65a453e1db66f57aee3c7d9a2c2de6e62cc3b7b6601d92067e79215675314adb",
+          "expected_nonzero_coefficients": 50,
+          "multiplications": 40,
+          "naive_expanded_additions": 283,
+          "output_order": "C[i,j] -> j*2+i",
+          "pass": true,
+          "sequential_references_and_liveness_checked": true,
+          "tensor_digest": "0b46b3e202602c62a9b4202c0724d6abb467cbca10e8e7b21572a0d7854f466d"
+        },
+        "seconds": 0.027336332947015762
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.00014070793986320496,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 8462,
+      "fixture_sha256": "ba7bceb450910de5492b9cbe1893152db6401f8bf32b6a6c18ed7f0f9c76456b",
+      "independent": {
+        "accepted": false,
+        "error": "integer tensor mismatch: [{\"c_transposed_index\": 0, \"a_row_major_index\": 0, \"b_row_major_index\": 0, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 1, \"b_row_major_index\": 5, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 2, \"b_row_major_index\": 10, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 3, \"b_row_major_index\": 15, \"actual\": -1, \"expected\": 1}]",
+        "exception": "Invalid",
+        "seconds": 0.016862875083461404,
+        "unexpected_exception": false
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.00013483408838510513,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 8462,
+      "fixture_sha256": "ba7bceb450910de5492b9cbe1893152db6401f8bf32b6a6c18ed7f0f9c76456b",
+      "independent": {
+        "accepted": false,
+        "error": "integer tensor mismatch: [{\"c_transposed_index\": 0, \"a_row_major_index\": 0, \"b_row_major_index\": 0, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 1, \"b_row_major_index\": 5, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 2, \"b_row_major_index\": 10, \"actual\": -1, \"expected\": 1}, {\"c_transposed_index\": 0, \"a_row_major_index\": 3, \"b_row_major_index\": 15, \"actual\": -1, \"expected\": 1}]",
+        "exception": "Invalid",
+        "seconds": 0.01703833299688995,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 8461,
+      "fixture_sha256": "8399e93a0b86870a366e5204581457d3bf617309c7205cbd6cfc4d065be34b42",
+      "independent": {
+        "accepted": false,
+        "error": "declared reduced cost is wrong: actual 148",
+        "exception": "Invalid",
+        "seconds": 0.0011594169773161411,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 8462,
+      "fixture_sha256": "a1a668e00d6e786a7740fe57f9295dec28eef09fcf960e4fe9e55f1fe58b85c2",
+      "independent": {
+        "accepted": false,
+        "error": "u[0].term[0]: illegal or forward reference",
+        "exception": "Invalid",
+        "seconds": 0.00013258284889161587,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 8460,
+      "fixture_sha256": "152c780bbeb3a9869d7d1bd4ee1a603d570840ce4d166cb0d099e7b3e2a20262",
+      "independent": {
+        "accepted": false,
+        "error": "integer, not Z2, semantics required",
+        "exception": "Invalid",
+        "seconds": 5.2908435463905334e-06,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 8437,
+      "fixture_sha256": "93a65c76242980d0c1713f9e73ca055630b05c25191e1fdf02f56053d40d0f75",
+      "independent": {
+        "accepted": false,
+        "error": "u final-form count disagrees with dimensions/rank",
+        "exception": "Invalid",
+        "seconds": 6.749993190169334e-06,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    2,
+    5,
+    5
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "fb2744d037444d6e5f84f56628cf97a01ad2650e374421fbe4961bfafefd7ca2",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "55b24118a4b73df0277ecf2fc8352a83b6aa35ebbd4cd31589e608cbe0947d7d"
+  },
+  "original_sha256": "fb2744d037444d6e5f84f56628cf97a01ad2650e374421fbe4961bfafefd7ca2",
+  "pass": true,
+  "rank": 40,
+  "raw_v1_aggregate_pass": true,
+  "raw_v1_receipt_sha256": "2f543450654ab34393be02eb93ae0b756c4d34497e7b2801335b1d94ddf70b1e",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.08853983297012746
+}

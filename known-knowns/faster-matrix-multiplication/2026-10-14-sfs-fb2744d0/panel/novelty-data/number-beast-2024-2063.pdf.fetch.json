@@ -1,0 +1,14 @@
+{
+  "url": "https://eprint.iacr.org/2024/2063.pdf",
+  "utc": "2026-10-14T12:01:02.072754+00:00",
+  "started_utc": "2026-10-14T12:01:01.876979+00:00",
+  "http_status": 403,
+  "sha256": "3425638bb7e3957db7c5217909fa2f9073d81da9832792d8efca728fa4d2e59c",
+  "bytes": 5498,
+  "file": "number-beast-2024-2063.pdf",
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 12:01:02 GMT",
+    "Content-Type": "text/html; charset=UTF-8",
+    "Content-Length": "5498"
+  }
+}

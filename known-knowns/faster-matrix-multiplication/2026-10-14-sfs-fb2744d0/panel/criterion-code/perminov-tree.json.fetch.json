@@ -1,0 +1,14 @@
+{
+  "url": "https://api.github.com/repos/dronperminov/FastMatrixMultiplication/git/trees/master?recursive=1",
+  "started_utc": "2026-10-14T11:59:21.601812+00:00",
+  "http_status": 200,
+  "sha256": "0cb3669d76a7e34604a34d2a204c0bf4e27525ba5348675bea6605d7e7032fab",
+  "bytes": 1818813,
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 11:59:23 GMT",
+    "Last-Modified": "Tue, 13 Oct 2026 14:55:15 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"0cb3669d76a7e34604a34d2a204c0bf4e27525ba5348675bea6605d7e7032fab\"",
+    "Content-Length": "1818813"
+  }
+}

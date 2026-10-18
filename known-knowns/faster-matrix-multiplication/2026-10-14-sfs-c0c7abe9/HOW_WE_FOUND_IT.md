@@ -1,0 +1,3 @@
+Contributor text, unverified.
+
+Bounded signed-grammar dependency reconstruction, cancellation dictionaries and saved warm probes reduced the public383-addition source to354, stages93+96+165, preserving all93 products and expanded factors. The archive includes actual selected events, search records, predecessor circuits and recorded code hashes. Three fresh independent reviewers verify the exact object and current source comparisons, including the actual378-addition public submission. Selected constructive decisions replay deterministically; full search-history replay and global optimality are unclaimed.

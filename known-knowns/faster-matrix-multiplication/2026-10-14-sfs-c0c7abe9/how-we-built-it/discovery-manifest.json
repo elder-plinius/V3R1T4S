@@ -1,0 +1,372 @@
+{
+  "dependencies.json": {
+    "utc": "2026-10-14T12:44:54.754861+00:00",
+    "borrowed_from": "runs/2026-10-14-1036/attempts/cancellation/code",
+    "files": {
+      "synth.py": "eddf2a1af1f3d09d9ee8789ceb593cba89799c90d4a30e596dc10ccc9aaa3cf0",
+      "dag_search.py": "a832bc11c64ffd7b64994e3d41f1e3b0eace44c5a41b962e36332a6cb82d4436"
+    },
+    "dependencies": [
+      "tools/exact_check.py",
+      "tools/basis_check.py",
+      "runs/2026-10-14-1241/data/selected-sources.json",
+      "runs/2026-10-14-1241/data/segment.json",
+      "sources/strongest-addition-bars.json"
+    ],
+    "dependency_sha256": {
+      "tools/exact_check.py": "7e0e506f5c1e30164296aa59fda541ee2de350f418875870b0d4a8f1569446f8",
+      "tools/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+      "runs/2026-10-14-1241/data/selected-sources.json": "09763964f91c933d9e32fa35df82928257bef22de0fde779852964374393943e",
+      "runs/2026-10-14-1241/data/segment.json": "576a64484de2b43184329998e5124f7854c63b1d57a866baba73faff7d041021",
+      "sources/strongest-addition-bars.json": "7d618f02c655dec497026333192414904c01272e9bb91329405cd5cd35753889"
+    },
+    "current_program_sha256": {
+      "code/synth.py": "eddf2a1af1f3d09d9ee8789ceb593cba89799c90d4a30e596dc10ccc9aaa3cf0",
+      "code/milp_search.py": "82639eb530b312b62895646f3d9f06108b1c17e97458ae856fa4149f9151a1cc",
+      "code/run_large.py": "f06920bdf1966d18307bcc58412a64294dabf34d2bacbcc5deab30fc912ac10f",
+      "code/verify_saved.py": "431b9d1176dec8d6aa7cb819da395c841e5e42a4eecb5c59936c39a3479c5c36",
+      "code/dag_search.py": "a832bc11c64ffd7b64994e3d41f1e3b0eace44c5a41b962e36332a6cb82d4436",
+      "code/composition_probe.py": "944519ceb14d8ebc3bb2b9a7d8f87232fd76a41ef87498459f54ab1d191381b3",
+      "code/calibrate_milp.py": "fe703a7e26865eb5503fd547e71df4ef4a5741ed81453b3de55a507452ec0198",
+      "code/union_search.py": "7db0863c0f42aca27762303585cadb163016c1ecff9afe263fc3658b2537d804",
+      "code/calibrate.py": "ab12ca44bfdf723ccdda3b120a39458358c2df1ea0150c60195e183479f74cb2"
+    },
+    "final_program_sha256": {
+      "code/synth.py": "eddf2a1af1f3d09d9ee8789ceb593cba89799c90d4a30e596dc10ccc9aaa3cf0",
+      "code/milp_search.py": "82639eb530b312b62895646f3d9f06108b1c17e97458ae856fa4149f9151a1cc",
+      "code/deadline_runner.py": "bdf025ef22a319337dd15b1e99c2cbc0e2e04061380e80aaf980b3098b6b3ba3",
+      "code/run_large.py": "0ead57a36397443ffd71909c19b044ecdc5cc02afba6eb7f54851c0dd0682974",
+      "code/verify_saved.py": "f1517d464887909375238972d88f24d995f724e021552904b194d2f2bdb68ccf",
+      "code/dag_search.py": "a832bc11c64ffd7b64994e3d41f1e3b0eace44c5a41b962e36332a6cb82d4436",
+      "code/composition_probe.py": "944519ceb14d8ebc3bb2b9a7d8f87232fd76a41ef87498459f54ab1d191381b3",
+      "code/calibrate_milp.py": "fe703a7e26865eb5503fd547e71df4ef4a5741ed81453b3de55a507452ec0198",
+      "code/union_search.py": "33965c89bacd7391f4fd0214e64caceaef2f1160f45001a31d4b862bb7b8df36",
+      "code/calibrate.py": "ab12ca44bfdf723ccdda3b120a39458358c2df1ea0150c60195e183479f74cb2"
+    }
+  },
+  "summary.json": {
+    "generated_utc": "2026-10-14T13:31:45.816891+00:00",
+    "jobs": [
+      {
+        "file": "probe-low_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 540,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 142.15677087499998,
+        "partial": false
+      },
+      {
+        "file": "bounded-bridge_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 216,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 98.72546075,
+        "partial": false
+      },
+      {
+        "file": "bounded-bridge-v2_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 216,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 103.218700166,
+        "partial": false
+      },
+      {
+        "file": "grammar-20_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 1440,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 74.122146666,
+        "partial": false
+      },
+      {
+        "file": "prefix-probe_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 360,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 73.329059833,
+        "partial": false
+      },
+      {
+        "file": "magnitude2-probe_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 216,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 112.541711959,
+        "partial": false
+      },
+      {
+        "file": "transpose-cycles_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 864,
+        "completed_milp_subproblems": 0,
+        "milp_status_counts": {},
+        "elapsed_seconds": 6.531282,
+        "partial": false
+      },
+      {
+        "file": "milp-source_results.json",
+        "records": 12,
+        "completed_records": 12,
+        "reconstruction_trials": 0,
+        "completed_milp_subproblems": 72,
+        "milp_status_counts": {
+          "2": 64,
+          "0": 2,
+          "1": 6
+        },
+        "elapsed_seconds": 84.63199141599999,
+        "partial": false
+      },
+      {
+        "file": "composition-probe_results.json",
+        "records": 3,
+        "completed_records": 3,
+        "reconstruction_trials": 480,
+        "completed_milp_subproblems": 24,
+        "milp_status_counts": {
+          "1": 8,
+          "2": 16
+        },
+        "elapsed_seconds": 100.072298541,
+        "partial": false
+      },
+      {
+        "file": "union-probe_stopped.json",
+        "records": 12,
+        "completed_records": 11,
+        "reconstruction_trials": 576,
+        "completed_milp_subproblems": 71,
+        "milp_status_counts": {
+          "2": 42,
+          "1": 27,
+          "0": 2
+        },
+        "elapsed_seconds": 659.74128675,
+        "partial": true
+      },
+      {
+        "file": "warm-union_results.json",
+        "records": 5,
+        "completed_records": 5,
+        "reconstruction_trials": 180,
+        "completed_milp_subproblems": 30,
+        "milp_status_counts": {
+          "2": 8,
+          "1": 21,
+          "0": 1
+        },
+        "elapsed_seconds": 221.59614050000002,
+        "partial": false
+      }
+    ],
+    "reconstruction_trials_in_accounted_jobs": 5088,
+    "completed_milp_subproblems_in_accounted_jobs": 197,
+    "artifact_count": 13,
+    "artifacts": [
+      {
+        "file": "best_2x8x8_m100_cr424_cn608_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_2x8x8_m100_cr424_cn608_ZT_reduced.json",
+        "sha256": "4116562eadf7bc8537c3d672f0788a870f03b22478cbddf7d0f2fc95f29ac42d",
+        "format": [
+          2,
+          8,
+          8
+        ],
+        "rank": 100,
+        "additions": 418,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_3x5x5_m58_cr221_cn357_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_3x5x5_m58_cr221_cn357_ZT_reduced.json",
+        "sha256": "04997c5844e0968c43b347b7e911059ac1464c5da653b29bd3838a489723df7c",
+        "format": [
+          3,
+          5,
+          5
+        ],
+        "rank": 58,
+        "additions": 214,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x4x5_m61_cr233_fv93_cn452_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x4x5_m61_cr233_fv93_cn452_ZT_reduced.json",
+        "sha256": "bf96d9428a966194c808f5fd0b3008ff78d74292a58dc89341c5b7b57abe133b",
+        "format": [
+          4,
+          4,
+          5
+        ],
+        "rank": 61,
+        "additions": 232,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x4x6_m73_cr280_cn540_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x4x6_m73_cr280_cn540_ZT_reduced.json",
+        "sha256": "733891ac541bd4c85da049a68dfcafd680d7fa5f006718668d1e8d38f7478900",
+        "format": [
+          4,
+          4,
+          6
+        ],
+        "rank": 73,
+        "additions": 264,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x4x7_m85_cr319_fv119_cn631_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x4x7_m85_cr319_fv119_cn631_ZT_reduced.json",
+        "sha256": "3b54b468b3bd06533e0c549638d20b8a7a582e05f16412d482a84b02ec718a52",
+        "format": [
+          4,
+          4,
+          7
+        ],
+        "rank": 85,
+        "additions": 302,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x5x5_m76_cr299_fv112_cn530_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x5x5_m76_cr299_fv112_cn530_ZT_reduced.json",
+        "sha256": "6ca50e230c6fa4b2fa692545e58866c4df2c0bab3b2cac331aa02ec140daa2f1",
+        "format": [
+          4,
+          5,
+          5
+        ],
+        "rank": 76,
+        "additions": 288,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x5x6_m90_cr380_fv180_cn1023_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x5x6_m90_cr380_fv180_cn1023_ZT_reduced.json",
+        "sha256": "782b5a59ea9aa91d4430f8820d4f4ca7bae43484f2f954ea840898e15b201d5e",
+        "format": [
+          4,
+          5,
+          6
+        ],
+        "rank": 90,
+        "additions": 359,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x5x7_m104_cr400_fv163_cn931_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x5x7_m104_cr400_fv163_cn931_ZT_reduced.json",
+        "sha256": "75a7f5ef78dda6d229e987ad22a44e5d44dbdcca36e5420ccc40132f8ad45373",
+        "format": [
+          4,
+          5,
+          7
+        ],
+        "rank": 104,
+        "additions": 381,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x5x8_m118_cr513_fv249_cn1521_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x5x8_m118_cr513_fv249_cn1521_ZT_reduced.json",
+        "sha256": "61917376617f1db0a75f5e9f5efd8bbd748713896418760b469126ea042ae5ee",
+        "format": [
+          4,
+          5,
+          8
+        ],
+        "rank": 118,
+        "additions": 486,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_4x6x6_m105_cr430_fv243_cn894_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_4x6x6_m105_cr430_fv243_cn894_ZT_reduced.json",
+        "sha256": "0509b2d644cc5d186ae55434751edb039c720f12a44b61f423098fca68add1d3",
+        "format": [
+          4,
+          6,
+          6
+        ],
+        "rank": 105,
+        "additions": 412,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_5x5x5_m93_cr383_fv160_cn843_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_5x5x5_m93_cr383_fv160_cn843_ZT_reduced.json",
+        "sha256": "c0c7abe9136e5f773d01c5c276cb1f6c3f565afab183499fdda63ac67947e02e",
+        "format": [
+          5,
+          5,
+          5
+        ],
+        "rank": 93,
+        "additions": 354,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "best_5x5x6_m110_cr460_fv204_cn1215_ZT_reduced.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/best_5x5x6_m110_cr460_fv204_cn1215_ZT_reduced.json",
+        "sha256": "1ff5af1925220885e62bcd1fa61ffec5359507e0da1ab611849506a60353fe37",
+        "format": [
+          5,
+          5,
+          6
+        ],
+        "rank": 110,
+        "additions": 433,
+        "status": "PROMISING, single-context, unpanelled"
+      },
+      {
+        "file": "composition_optimized_4x6x6_rank105.json",
+        "relative_path": "runs/2026-10-14-1241/attempts/large-circuits/result/composition_optimized_4x6x6_rank105.json",
+        "sha256": "590480ca61479780c06452c4fef7c8fc52b2c4870668d8c406367241de6258c0",
+        "format": [
+          4,
+          6,
+          6
+        ],
+        "rank": 105,
+        "additions": 376,
+        "status": "PROMISING, single-context, unpanelled"
+      }
+    ],
+    "early_terminated_jobs_not_in_trial_total": [
+      "probe_pid.json niceness0, stopped exact PID40154",
+      "bridge-probe_pid.json broad graph, stopped exact PID41078"
+    ],
+    "guard_4x6x6_additions": 376,
+    "search_finished_utc": "2026-10-14T13:28:57.123215+00:00",
+    "search_finished_before_line_cutoff": true
+  },
+  "archived_code_sha256": {
+    "basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "calibrate.py": "ab12ca44bfdf723ccdda3b120a39458358c2df1ea0150c60195e183479f74cb2",
+    "calibrate_milp.py": "fe703a7e26865eb5503fd547e71df4ef4a5741ed81453b3de55a507452ec0198",
+    "composition_probe.py": "944519ceb14d8ebc3bb2b9a7d8f87232fd76a41ef87498459f54ab1d191381b3",
+    "dag_search.py": "a832bc11c64ffd7b64994e3d41f1e3b0eace44c5a41b962e36332a6cb82d4436",
+    "deadline_runner.py": "bdf025ef22a319337dd15b1e99c2cbc0e2e04061380e80aaf980b3098b6b3ba3",
+    "exact_check.py": "7e0e506f5c1e30164296aa59fda541ee2de350f418875870b0d4a8f1569446f8",
+    "milp_search.py": "82639eb530b312b62895646f3d9f06108b1c17e97458ae856fa4149f9151a1cc",
+    "run_large.py": "0ead57a36397443ffd71909c19b044ecdc5cc02afba6eb7f54851c0dd0682974",
+    "synth.py": "eddf2a1af1f3d09d9ee8789ceb593cba89799c90d4a30e596dc10ccc9aaa3cf0",
+    "union_search.py": "33965c89bacd7391f4fd0214e64caceaef2f1160f45001a31d4b862bb7b8df36",
+    "verify_saved.py": "f1517d464887909375238972d88f24d995f724e021552904b194d2f2bdb68ccf"
+  }
+}

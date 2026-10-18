@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/bud-bases/section5/2x5x5-r40-perminov_serbase_ZT-dc66eaf.json",
+  "utc": "2026-10-14T11:59:44.181026+00:00",
+  "started_utc": "2026-10-14T11:59:43.572708+00:00",
+  "http_status": 200,
+  "sha256": "74b857c937372e2630593912ec2eea9bda356c974d57de9ddca35c6617eeb9be",
+  "bytes": 7198,
+  "file": "catalog-2x5x5-r40-perminov_serbase_ZT-dc66eaf.json",
+  "headers": {
+    "Content-Length": "7198",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"64fd77e10149162fce84304ca2127193e4c0b8217360d437735cb9984c33c46f\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

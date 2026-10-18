@@ -1,0 +1,269 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 214,
+          "identities_verified": 5625,
+          "rank": 58,
+          "valid": true
+        },
+        "seconds": 0.03940145787782967
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 13807,
+      "fixture_sha256": "c07e428dd28e623fd8ce53c27b4a83e341603329b66f206f5abe8e16bc73b185",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "active_distinct_products": 58,
+          "basis_failures": 0,
+          "basis_pairs_checked": 375,
+          "basis_witness": null,
+          "exact_integer_identity": true,
+          "integer_tensor_witness": null,
+          "mod2_tensor_failures": 0,
+          "naive_cost": 357,
+          "rank": 58,
+          "reduced_cost": 214,
+          "tensor_coefficients_checked": 5625,
+          "tensor_failures": 0
+        },
+        "seconds": 0.05014050006866455
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.0002613749820739031,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 13808,
+      "fixture_sha256": "2dc3d6b073925db4645b5143edfdf6172208e7c8006364aa510baaca2e51e022",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "active_distinct_products": 58,
+          "basis_failures": 5,
+          "basis_pairs_checked": 375,
+          "basis_witness": {
+            "a": 0,
+            "actual": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "b": 0,
+            "expected": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "exact_integer_identity": false,
+          "integer_tensor_witness": {
+            "a": 0,
+            "actual": -1,
+            "b": 0,
+            "c": 0,
+            "expected": 1
+          },
+          "mod2_tensor_failures": 0,
+          "naive_cost": 357,
+          "rank": 58,
+          "reduced_cost": 214,
+          "tensor_coefficients_checked": 5625,
+          "tensor_failures": 5
+        },
+        "seconds": 0.04967216704972088
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.0002113750670105219,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 13808,
+      "fixture_sha256": "2dc3d6b073925db4645b5143edfdf6172208e7c8006364aa510baaca2e51e022",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "active_distinct_products": 58,
+          "basis_failures": 5,
+          "basis_pairs_checked": 375,
+          "basis_witness": {
+            "a": 0,
+            "actual": [
+              -1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "b": 0,
+            "expected": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "exact_integer_identity": false,
+          "integer_tensor_witness": {
+            "a": 0,
+            "actual": -1,
+            "b": 0,
+            "c": 0,
+            "expected": 1
+          },
+          "mod2_tensor_failures": 0,
+          "naive_cost": 357,
+          "rank": 58,
+          "reduced_cost": 214,
+          "tensor_coefficients_checked": 5625,
+          "tensor_failures": 5
+        },
+        "seconds": 0.04961524996906519
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 13807,
+      "fixture_sha256": "cf46bffbb898511a13308055129c1576e7f9f3d0657d66b1065fa70cf72272cd",
+      "independent": {
+        "accepted": false,
+        "error": "reduced cost metadata mismatch",
+        "exception": "Invalid",
+        "seconds": 0.004347125068306923,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 13807,
+      "fixture_sha256": "6b634604aa6e7d5001f24d955ccebc01759abcba24000afbec5a494e20ff92c9",
+      "independent": {
+        "accepted": false,
+        "error": "U output 0: unavailable/forward reference",
+        "exception": "Invalid",
+        "seconds": 0.0003535829018801451,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 13806,
+      "fixture_sha256": "d3e1f2a2b1ee2bb32b5aa6f7d7d87f1d8cf6a7701b896fcd074d1457070ba135",
+      "independent": {
+        "accepted": false,
+        "error": "integer claim must have z2=false",
+        "exception": "Invalid",
+        "seconds": 8.167000487446785e-06,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 13782,
+      "fixture_sha256": "cc8ae9e7443ac821f87f51d702cfa977e0b315abef06031d34b87fa280fbc4f0",
+      "independent": {
+        "accepted": false,
+        "error": "wrong number of factors/outputs",
+        "exception": "Invalid",
+        "seconds": 9.499955922365189e-06,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    3,
+    5,
+    5
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "04997c5844e0968c43b347b7e911059ac1464c5da653b29bd3838a489723df7c",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "444e8e1fb2ecbf2749a1efb6286f11327361c11ab6a6ba45d559d666d4caa980"
+  },
+  "original_sha256": "04997c5844e0968c43b347b7e911059ac1464c5da653b29bd3838a489723df7c",
+  "pass": true,
+  "rank": 58,
+  "raw_v1_aggregate_pass": true,
+  "raw_v1_receipt_sha256": "1b2f9466f0a361ae67de6d46d27f56b338d2fb12cd439e7e6a02c1a7f22e0e63",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.2128712919075042
+}

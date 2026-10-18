@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/bud-bases/section5/fmm-lille_2x5x5_r40_a208.json",
+  "utc": "2026-10-14T12:01:01.973380+00:00",
+  "started_utc": "2026-10-14T12:01:01.346206+00:00",
+  "http_status": 200,
+  "sha256": "7c3343466e1449ead5e9181d81fb11da4911fe09147c3496e1efc7ff17aa3547",
+  "bytes": 3754,
+  "file": "catalog-Lille-2x5x5-r40-a208.json",
+  "headers": {
+    "Content-Length": "3754",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"d6622baedb6aa0976dc7d332e2128a6735081d132d4b53570aeabb1cd46c8768\"",
+    "Date": "Wed, 14 Oct 2026 12:01:02 GMT"
+  }
+}

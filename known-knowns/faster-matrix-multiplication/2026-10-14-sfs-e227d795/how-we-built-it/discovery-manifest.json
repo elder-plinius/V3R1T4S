@@ -1,0 +1,51 @@
+{
+  "created_utc": "2026-10-14T13:05:07.154969+00:00",
+  "numpy_observed": "1.24.3",
+  "scipy_observed": "1.11.4",
+  "highs_discovery_log": "HiGHS1.2.0",
+  "historical_code_note": "The discovery Circuit/materialize/prune implementation is unchanged and archived with the later naive-metadata line removed. Full model scripts are post-discovery snapshots, with limited historical restoration for156. Runtime source hashes and full dictionary snapshots were not recorded; exact whole-search replay is unavailable. Selected constructive decisions are complete certificates, replayed using the unchanged discovery circuit implementation.",
+  "public_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/results/addition_reduced_ZT/3x4x5_m47_cr161_cn277_ZT_reduced.json",
+      "utc": "2026-10-14T10:40:32.878137+00:00",
+      "http_status": 200,
+      "sha256": "d1248a3a32dd03bf5d9216edfdaf6b01be95987d7cefee03f5f9f9645271319a",
+      "bytes": 10825,
+      "file": "3x4x5_m47_cr161_cn277_ZT_reduced.json"
+    }
+  ],
+  "predecessors": [
+    {
+      "file": "candidate_3x4x5_rank47_adds158.json",
+      "sha256": "039cdb0bafcf82f615b1e5fc937cedc595f30305485d753605fd6d4df300f51c"
+    },
+    {
+      "file": "candidate_3x4x5_rank47_adds157_bridges_seed61_mag1_warm.json",
+      "sha256": "4d6794f37412d116362fd47184b4763984453933c05b115a5b38aac0b91b74fc"
+    }
+  ],
+  "discoveries": {
+    "156": {
+      "artifact": "candidate_3x4x5_rank47_adds156_bridges_seed71_mag2_warm.json",
+      "sha256": "e227d795fa1418070e30f21b18eac6a55d7426e51cfc8f8ef99c57b831d021f2",
+      "command_record": "followup.py --stagebridges --seed71 --limit320 --mag2 --seconds300 --trials48 --warm",
+      "actual_args": {
+        "stage": "bridges",
+        "seconds": 300,
+        "seed": 71,
+        "trials": 48,
+        "limit": 320,
+        "mag": 2,
+        "shared": false,
+        "warm": true
+      },
+      "observed_outer_source_order": [
+        "3x4x5",
+        "2x5x6",
+        "2x4x8"
+      ],
+      "dictionary_scope": "selected constructive certificate is complete; entire discovery dictionary was not snapshotted and is not claimed replayable byte-for-byte"
+    }
+  },
+  "normalized_discovery_command": "python3 followup.py --stage bridges --seed 71 --limit 320 --mag 2 --seconds 300 --trials 48 --warm"
+}

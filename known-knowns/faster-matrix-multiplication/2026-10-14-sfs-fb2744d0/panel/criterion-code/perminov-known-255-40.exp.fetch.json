@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/known/fmm_add_reduction/Moosbauer-255-40-mod0.exp",
+  "started_utc": "2026-10-14T12:03:37.652713+00:00",
+  "http_status": 200,
+  "sha256": "1ebf846a14f8116cecc08f6fdea438149d75df523a096eff4746047c9adb602a",
+  "bytes": 3682,
+  "headers": {
+    "Content-Length": "3682",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"06e36f62d4c52a2bbd564424fb456e6cba23759ac3b8f5367551598b13be0c74\"",
+    "Date": "Wed, 14 Oct 2026 12:03:38 GMT"
+  }
+}

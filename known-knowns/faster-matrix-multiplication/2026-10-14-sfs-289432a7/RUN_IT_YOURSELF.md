@@ -1,0 +1,3 @@
+From the package root run `sh verify-it-yourself/run_checks.sh`. Requires Python3.8+ and a POSIX shell, no packages or network. Expected last line: PASS. The exact frozen hash, full integer tensor and literal operation count are checked. Corrupted object bytes are rejected.
+
+To replay the recorded construction, change into how-we-built-it and run `python3 rebuild.py`. Expected last line: REBUILD PASS. It reconstructs the selected operations as an exact 182-addition circuit without network, NumPy, SciPy or a solver. Exact whole-search replay is unavailable because entire original dictionaries and runtime code hashes were not recorded. This limitation does not weaken the exact object verification.

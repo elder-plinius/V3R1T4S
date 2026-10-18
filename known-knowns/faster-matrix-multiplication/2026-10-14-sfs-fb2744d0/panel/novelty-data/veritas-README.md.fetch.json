@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/README.md",
+  "utc": "2026-10-14T11:58:20.964059+00:00",
+  "started_utc": "2026-10-14T11:58:20.580379+00:00",
+  "http_status": 200,
+  "sha256": "98a0359bac0b4a4dfb267eb00508df757c0eca5e24c95df928448e83e85a8895",
+  "bytes": 13158,
+  "file": "veritas-README.md",
+  "headers": {
+    "Content-Length": "13158",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"b25f621cdb91265318329de45318b51644b421514701530cedd544fc64f5ed3e\"",
+    "Date": "Wed, 14 Oct 2026 11:58:21 GMT"
+  }
+}

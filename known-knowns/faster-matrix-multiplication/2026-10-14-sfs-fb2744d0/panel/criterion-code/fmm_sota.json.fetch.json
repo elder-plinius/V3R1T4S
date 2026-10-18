@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json",
+  "started_utc": "2026-10-14T11:59:21.601701+00:00",
+  "http_status": 200,
+  "sha256": "d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1",
+  "bytes": 343798,
+  "headers": {
+    "Content-Length": "343798",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"12bf7cfe96e0309ab7e00ec072570d8c6df597f835ae3e878d5f6446ff6c4410\"",
+    "Date": "Wed, 14 Oct 2026 11:59:21 GMT"
+  }
+}

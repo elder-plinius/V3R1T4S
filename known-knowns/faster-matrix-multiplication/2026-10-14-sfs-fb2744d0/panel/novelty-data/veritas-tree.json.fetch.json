@@ -1,0 +1,15 @@
+{
+  "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/git/trees/main?recursive=1",
+  "utc": "2026-10-14T11:58:21.083710+00:00",
+  "started_utc": "2026-10-14T11:58:20.548922+00:00",
+  "http_status": 200,
+  "sha256": "72219143417cfb71fabaceb3a80cad5c97e2e26d28a0da67068bce082dc0dc25",
+  "bytes": 166125,
+  "file": "veritas-tree.json",
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 11:58:20 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"72219143417cfb71fabaceb3a80cad5c97e2e26d28a0da67068bce082dc0dc25\"",
+    "Last-Modified": "Wed, 14 Oct 2026 11:43:40 GMT"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "pass": true,
+  "primitive_instructions": 255,
+  "additions": 148,
+  "multiplications": 40,
+  "free_alias_or_sign_instructions": 67,
+  "basis_pairs": 250,
+  "output_values_checked": 2500,
+  "primitive_instructions_executed": 63750,
+  "all_references_sequential": true
+}

@@ -1,0 +1,158 @@
+[
+  {
+    "source": "Lille-2x5x5-raw.mpl",
+    "output": "shared-Lille-2x5x5-raw.json",
+    "counts": {
+      "u": 36,
+      "v": 54,
+      "w": 65
+    },
+    "total": 155,
+    "verification_with_claim_checker": {
+      "valid": true,
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "addition_counts": {
+        "u": 36,
+        "v": 54,
+        "w": 65
+      },
+      "additions": 155,
+      "identities_verified": 2500
+    }
+  },
+  {
+    "source": "catalog-2x5x5-r40-alphatensor_Z-67f5fb7.json",
+    "output": "shared-catalog-2x5x5-r40-alphatensor_Z-67f5fb7.json",
+    "counts": {
+      "u": 37,
+      "v": 55,
+      "w": 64
+    },
+    "total": 156,
+    "verification_with_claim_checker": {
+      "valid": true,
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "addition_counts": {
+        "u": 37,
+        "v": 55,
+        "w": 64
+      },
+      "additions": 156,
+      "identities_verified": 2500
+    }
+  },
+  {
+    "source": "catalog-2x5x5-r40-perminov_serbase_ZT-221c79e.json",
+    "output": "shared-catalog-2x5x5-r40-perminov_serbase_ZT-221c79e.json",
+    "counts": {
+      "u": 34,
+      "v": 64,
+      "w": 68
+    },
+    "total": 166,
+    "verification_with_claim_checker": {
+      "valid": true,
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "addition_counts": {
+        "u": 34,
+        "v": 64,
+        "w": 68
+      },
+      "additions": 166,
+      "identities_verified": 2500
+    }
+  },
+  {
+    "source": "catalog-2x5x5-r40-perminov_ZT-8aea8c8.json",
+    "output": "shared-catalog-2x5x5-r40-perminov_ZT-8aea8c8.json",
+    "counts": {
+      "u": 32,
+      "v": 68,
+      "w": 63
+    },
+    "total": 163,
+    "verification_with_claim_checker": {
+      "valid": true,
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "addition_counts": {
+        "u": 32,
+        "v": 68,
+        "w": 63
+      },
+      "additions": 163,
+      "identities_verified": 2500
+    }
+  },
+  {
+    "source": "catalog-2x5x5-r40-perminov_serbase_ZT-dc66eaf.json",
+    "output": "shared-catalog-2x5x5-r40-perminov_serbase_ZT-dc66eaf.json",
+    "counts": {
+      "u": 32,
+      "v": 70,
+      "w": 66
+    },
+    "total": 168,
+    "verification_with_claim_checker": {
+      "valid": true,
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "addition_counts": {
+        "u": 32,
+        "v": 70,
+        "w": 66
+      },
+      "additions": 168,
+      "identities_verified": 2500
+    }
+  },
+  {
+    "source": "catalog-2x5x5-r40-hk71-5e3b69e.json",
+    "output": "shared-catalog-2x5x5-r40-hk71-5e3b69e.json",
+    "counts": {
+      "u": 37,
+      "v": 54,
+      "w": 64
+    },
+    "total": 155,
+    "verification_with_claim_checker": {
+      "valid": true,
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "addition_counts": {
+        "u": 37,
+        "v": 54,
+        "w": 64
+      },
+      "additions": 155,
+      "identities_verified": 2500
+    }
+  }
+]

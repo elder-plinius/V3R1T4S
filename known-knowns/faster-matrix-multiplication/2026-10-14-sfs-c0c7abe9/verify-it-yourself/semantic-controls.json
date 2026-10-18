@@ -1,0 +1,226 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 354,
+          "identities_verified": 15625,
+          "rank": 93,
+          "valid": true
+        },
+        "seconds": 0.106476916000247
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 22824,
+      "fixture_sha256": "8da93f913de197ecfec0eb886760120b9b4834ac0038f94a413ad9e396fb001f",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "binary_additions": 354,
+          "distinct_signed_summands": 93,
+          "distinct_summands_up_to_sign": 93,
+          "expanded_naive_additions": 843,
+          "failures": [],
+          "final_ternary": true,
+          "integer_tensor_mismatches": 0,
+          "literal_basis_pairs": 625,
+          "literal_binary_operations_total": 221250,
+          "literal_output_coefficients_checked": 15625,
+          "literal_output_mismatches": 0,
+          "max_abs_final_coefficient": 1,
+          "metadata_naive_matches": true,
+          "metadata_reduced_matches": true,
+          "mod2_tensor_mismatches": 0,
+          "multiplications": 93,
+          "pass": true,
+          "tensor_coefficients_checked": 15625
+        },
+        "seconds": 0.07391791604459286
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.0003243749961256981,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 22825,
+      "fixture_sha256": "0de7166569e1959262fceb736e47608c9676bff0cb05f8dccfeeb3140756c641",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "binary_additions": 354,
+          "distinct_signed_summands": 93,
+          "distinct_summands_up_to_sign": 93,
+          "expanded_naive_additions": 843,
+          "failures": [
+            "integer tensor mismatch",
+            "literal execution mismatch"
+          ],
+          "final_ternary": true,
+          "integer_tensor_mismatches": 5,
+          "literal_basis_pairs": 625,
+          "literal_binary_operations_total": 221250,
+          "literal_output_coefficients_checked": 15625,
+          "literal_output_mismatches": 5,
+          "max_abs_final_coefficient": 1,
+          "metadata_naive_matches": true,
+          "metadata_reduced_matches": true,
+          "mod2_tensor_mismatches": 0,
+          "multiplications": 93,
+          "pass": false,
+          "tensor_coefficients_checked": 15625
+        },
+        "seconds": 0.0762089160270989
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.000303083099424839,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 22825,
+      "fixture_sha256": "0de7166569e1959262fceb736e47608c9676bff0cb05f8dccfeeb3140756c641",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "binary_additions": 354,
+          "distinct_signed_summands": 93,
+          "distinct_summands_up_to_sign": 93,
+          "expanded_naive_additions": 843,
+          "failures": [
+            "integer tensor mismatch",
+            "literal execution mismatch"
+          ],
+          "final_ternary": true,
+          "integer_tensor_mismatches": 5,
+          "literal_basis_pairs": 625,
+          "literal_binary_operations_total": 221250,
+          "literal_output_coefficients_checked": 15625,
+          "literal_output_mismatches": 5,
+          "max_abs_final_coefficient": 1,
+          "metadata_naive_matches": true,
+          "metadata_reduced_matches": true,
+          "mod2_tensor_mismatches": 0,
+          "multiplications": 93,
+          "pass": false,
+          "tensor_coefficients_checked": 15625
+        },
+        "seconds": 0.07329454110004008
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 22824,
+      "fixture_sha256": "157e070b830c2fa703406c8f16c5750121335d91f829bb0d7212687b32df0a97",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "binary_additions": 354,
+          "distinct_signed_summands": 93,
+          "distinct_summands_up_to_sign": 93,
+          "expanded_naive_additions": 843,
+          "failures": [
+            "reduced cost metadata mismatch"
+          ],
+          "final_ternary": true,
+          "integer_tensor_mismatches": 0,
+          "literal_basis_pairs": 625,
+          "literal_binary_operations_total": 221250,
+          "literal_output_coefficients_checked": 15625,
+          "literal_output_mismatches": 0,
+          "max_abs_final_coefficient": 1,
+          "metadata_naive_matches": true,
+          "metadata_reduced_matches": false,
+          "mod2_tensor_mismatches": 0,
+          "multiplications": 93,
+          "pass": false,
+          "tensor_coefficients_checked": 15625
+        },
+        "seconds": 0.07410883298143744
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 22825,
+      "fixture_sha256": "384a74cb0c1205b1412479e3e36fab44afbfa3c8ebeeb895d4e56b945d7a0fbd",
+      "independent": {
+        "accepted": false,
+        "error": "u reference is noninteger, negative or not backward/available",
+        "exception": "Invalid",
+        "seconds": 0.00010724994353950024,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 22823,
+      "fixture_sha256": "ac4c2da63cc74047c23dd924a6243ba48d8bf41d21882957ecd8dcbf26f72485",
+      "independent": {
+        "accepted": false,
+        "error": "integer computation requires z2 false",
+        "exception": "Invalid",
+        "seconds": 1.5625031664967537e-05,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 22799,
+      "fixture_sha256": "d32e89737899d3c00b93f15afb97cf4affaf2e6bb8801c0aea7348fdeb466567",
+      "independent": {
+        "accepted": false,
+        "error": "u wrong final vector count",
+        "exception": "Invalid",
+        "seconds": 0.00015300000086426735,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    5,
+    5,
+    5
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "c0c7abe9136e5f773d01c5c276cb1f6c3f565afab183499fdda63ac67947e02e",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "b182637d54e75757c6204525a8e987a482eee5475351a9d2585fb0921181044a"
+  },
+  "original_sha256": "c0c7abe9136e5f773d01c5c276cb1f6c3f565afab183499fdda63ac67947e02e",
+  "pass": true,
+  "rank": 93,
+  "raw_v1_aggregate_pass": true,
+  "raw_v1_receipt_sha256": "d91e7c28cc664af926820bb05542c18195a31903d4d75779ee028d116db8d065",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.4244749580975622
+}

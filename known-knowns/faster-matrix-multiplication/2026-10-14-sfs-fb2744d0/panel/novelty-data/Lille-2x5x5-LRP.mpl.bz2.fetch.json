@@ -1,0 +1,16 @@
+{
+  "url": "https://fmm.univ-lille.fr/2x5x5_LRP.mpl.bz2",
+  "utc": "2026-10-14T11:59:45.553393+00:00",
+  "started_utc": "2026-10-14T11:59:44.204107+00:00",
+  "http_status": 200,
+  "sha256": "187070363ee79f698ad069166f12da7c73770046a205eab58127b783d961f52f",
+  "bytes": 602,
+  "file": "Lille-2x5x5-LRP.mpl.bz2",
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 11:59:45 GMT",
+    "Content-Type": "application/x-bzip2",
+    "Content-Length": "602",
+    "Last-Modified": "Fri, 29 May 2026 18:37:13 GMT",
+    "ETag": "\"25a-652f9221e9d21\""
+  }
+}

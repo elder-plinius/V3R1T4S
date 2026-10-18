@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-14T13:05:07.154969+00:00",
+  "numpy_observed": "1.24.3",
+  "scipy_observed": "1.11.4",
+  "highs_discovery_log": "HiGHS1.2.0",
+  "historical_code_note": "Unchanged Circuit/materialize/prune primitives and the selected constructive certificate are archived. Full model scripts are post-discovery snapshots. Runtime model-script hashes and the entire original dictionary were not recorded; exact whole-search replay is unavailable.",
+  "public_sources": [
+    {
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/results/addition_reduced_ZT/2x4x8_m51_cr188_cn354_ZT_reduced.json",
+      "utc": "2026-10-14T10:36:39.047527+00:00",
+      "http_status": 200,
+      "sha256": "b68445935df00311217280a30d628395594619584691d8264723045b2b62131a",
+      "bytes": 11951,
+      "file": "2x4x8_m51_cr188_cn354_ZT_reduced.json"
+    }
+  ],
+  "predecessors": [
+    {
+      "file": "candidate_2x4x8_rank51_adds185.json",
+      "sha256": "7e005b8459987ffc67bda1519c028ca750ab57832e57c11b01314bdf13f008d8"
+    },
+    {
+      "file": "candidate_2x4x8_rank51_adds184_bridges_seed41_mag1.json",
+      "sha256": "ea4eec825d30e184e3361a96d327c6d5015dbac2aeaa68a30042040328e90df6"
+    },
+    {
+      "file": "candidate_2x4x8_rank51_adds184_bridges_seed53_mag2_shared.json",
+      "sha256": "247e6338b8708ede549bedcf42f08633f3cca8ce6ea6b275c7782f1293fb3e32"
+    },
+    {
+      "file": "candidate_2x4x8_rank51_adds183_bridges_seed53_mag2_shared.json",
+      "sha256": "562627a1e59e13ba4b3608b7a5bc3096b4e121a96c3134fa3fd85a21cf08c126"
+    }
+  ],
+  "discoveries": {
+    "182": {
+      "artifact": "candidate_2x4x8_rank51_adds182_milp_2x4x8_v_seed101.json",
+      "sha256": "289432a72c0f86a04925e6475d31d4ff86d92a65fb8d57f4b57f918c3866d654",
+      "command_record": "milp_search.py --format2x4x8 --mapv --seed101 --limit180 --mag2 --seconds90",
+      "actual_args": {
+        "format": "2x4x8",
+        "map": "v",
+        "seed": 101,
+        "limit": 180,
+        "mag": 2,
+        "seconds": 90
+      },
+      "observed_outer_source_order": [
+        "input185",
+        "result184_seed41",
+        "result184_seed53",
+        "result183_seed53",
+        "public188"
+      ],
+      "dictionary_scope": "selected constructive certificate is complete; entire discovery dictionary was not snapshotted and is not claimed replayable byte-for-byte"
+    }
+  },
+  "normalized_discovery_command": "python3 milp_search.py --format 2x4x8 --map v --seed 101 --limit 180 --mag 2 --seconds 90"
+}

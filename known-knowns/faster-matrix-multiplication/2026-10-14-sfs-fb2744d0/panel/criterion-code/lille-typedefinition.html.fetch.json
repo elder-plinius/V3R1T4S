@@ -1,0 +1,14 @@
+{
+  "url": "https://fmm.univ-lille.fr/typedefinition.html",
+  "started_utc": "2026-10-14T12:00:56.625383+00:00",
+  "http_status": 200,
+  "sha256": "041e4ed178769eda698a7a47194f84752862927c9359ddd494d0fb9174b64a0c",
+  "bytes": 2114,
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 12:00:57 GMT",
+    "Content-Type": "text/html",
+    "Content-Length": "2114",
+    "Last-Modified": "Sat, 15 Aug 2026 15:35:00 GMT",
+    "ETag": "\"842-65917ae153307\""
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/known/section5/2x5x5-r40-flips_mod0-a8a2ad2.json",
+  "utc": "2026-10-14T11:59:44.579627+00:00",
+  "started_utc": "2026-10-14T11:59:44.175919+00:00",
+  "http_status": 200,
+  "sha256": "6a4668cf5fd1a979e238397ffb08c0663b3110263cdd03a6e2e6fe14b87cef98",
+  "bytes": 6915,
+  "file": "catalog-2x5x5-r40-flips_mod0-a8a2ad2.json",
+  "headers": {
+    "Content-Length": "6915",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"8d65ae3e1265fe79a84c34deafecc547c59a1a62e555ca3cf366e1520e4bc852\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

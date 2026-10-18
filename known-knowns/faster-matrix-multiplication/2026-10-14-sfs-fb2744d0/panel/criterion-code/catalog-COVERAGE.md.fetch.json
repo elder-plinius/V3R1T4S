@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md",
+  "started_utc": "2026-10-14T11:59:21.602880+00:00",
+  "http_status": 200,
+  "sha256": "c2a9bd929b477acb44d4f92aa8055a0c26eab3c33121c0734be650c5c86254b7",
+  "bytes": 94842,
+  "headers": {
+    "Content-Length": "94842",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"bb1e611b4c47333b5940aacc1ac3bfaf1e8f277acbb54be030a89e1f94b029f8\"",
+    "Date": "Wed, 14 Oct 2026 11:59:21 GMT"
+  }
+}

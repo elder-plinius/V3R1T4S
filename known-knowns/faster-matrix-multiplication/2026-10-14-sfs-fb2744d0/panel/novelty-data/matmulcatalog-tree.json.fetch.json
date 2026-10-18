@@ -1,0 +1,15 @@
+{
+  "url": "https://api.github.com/repos/solven-eu/matmulcatalog/git/trees/master?recursive=1",
+  "utc": "2026-10-14T11:58:22.999538+00:00",
+  "started_utc": "2026-10-14T11:58:20.104718+00:00",
+  "http_status": 200,
+  "sha256": "8ce439a454388156fe1032180eb64f86f73140d43d6d38a7882d87944902a82d",
+  "bytes": 4153297,
+  "file": "matmulcatalog-tree.json",
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 11:58:22 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "ETag": "W/\"8ce439a454388156fe1032180eb64f86f73140d43d6d38a7882d87944902a82d\"",
+    "Last-Modified": "Wed, 14 Oct 2026 02:59:22 GMT"
+  }
+}

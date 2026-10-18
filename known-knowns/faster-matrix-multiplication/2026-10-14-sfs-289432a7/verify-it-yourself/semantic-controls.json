@@ -1,0 +1,311 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 182,
+          "identities_verified": 4096,
+          "rank": 51,
+          "valid": true
+        },
+        "seconds": 0.02443812508136034
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 11930,
+      "fixture_sha256": "72e2d9e06fb702a3a15ecb5a7cec16d9f9eb67947fd32bc22cb302586c3f1d6b",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "active_distinct_products": 51,
+          "basis_pairs_checked": 256,
+          "direct_mismatches": 0,
+          "direct_output_values_checked": 4096,
+          "exact_Z_product": true,
+          "first_direct_mismatches": [],
+          "first_tensor_mismatches": [],
+          "input_order": "A i*m+h; B h*p+j",
+          "mod2_tensor_mismatches": 0,
+          "naive_additions": 354,
+          "output_order": "j*n+i",
+          "products": 51,
+          "tensor_coefficients_checked": 4096,
+          "tensor_mismatches": 0,
+          "total_additions": 182,
+          "zero_hidden_scalar_operations": true
+        },
+        "seconds": 0.024585707811638713
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.00018062512390315533,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 11931,
+      "fixture_sha256": "5ea150c96403b27f0d92d509fbd7be2a2674c20e7b730c2a7707832060cf518a",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "active_distinct_products": 51,
+          "basis_pairs_checked": 256,
+          "direct_mismatches": 4,
+          "direct_output_values_checked": 4096,
+          "exact_Z_product": false,
+          "first_direct_mismatches": [
+            {
+              "A": 0,
+              "B": 0,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 1,
+              "B": 8,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 2,
+              "B": 16,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 3,
+              "B": 24,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            }
+          ],
+          "first_tensor_mismatches": [
+            {
+              "A": 0,
+              "B": 0,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 1,
+              "B": 8,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 2,
+              "B": 16,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 3,
+              "B": 24,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            }
+          ],
+          "input_order": "A i*m+h; B h*p+j",
+          "mod2_tensor_mismatches": 0,
+          "naive_additions": 354,
+          "output_order": "j*n+i",
+          "products": 51,
+          "tensor_coefficients_checked": 4096,
+          "tensor_mismatches": 4,
+          "total_additions": 182,
+          "zero_hidden_scalar_operations": true
+        },
+        "seconds": 0.023844124982133508
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.000186417018994689,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 11931,
+      "fixture_sha256": "5ea150c96403b27f0d92d509fbd7be2a2674c20e7b730c2a7707832060cf518a",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "active_distinct_products": 51,
+          "basis_pairs_checked": 256,
+          "direct_mismatches": 4,
+          "direct_output_values_checked": 4096,
+          "exact_Z_product": false,
+          "first_direct_mismatches": [
+            {
+              "A": 0,
+              "B": 0,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 1,
+              "B": 8,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 2,
+              "B": 16,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 3,
+              "B": 24,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            }
+          ],
+          "first_tensor_mismatches": [
+            {
+              "A": 0,
+              "B": 0,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 1,
+              "B": 8,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 2,
+              "B": 16,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            },
+            {
+              "A": 3,
+              "B": 24,
+              "actual": -1,
+              "expected": 1,
+              "output": 0
+            }
+          ],
+          "input_order": "A i*m+h; B h*p+j",
+          "mod2_tensor_mismatches": 0,
+          "naive_additions": 354,
+          "output_order": "j*n+i",
+          "products": 51,
+          "tensor_coefficients_checked": 4096,
+          "tensor_mismatches": 4,
+          "total_additions": 182,
+          "zero_hidden_scalar_operations": true
+        },
+        "seconds": 0.023497208021581173
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 11930,
+      "fixture_sha256": "66b43d432ac9421785865c16fceb9bf045b171f3d114946927b3ebaa890f6911",
+      "independent": {
+        "accepted": false,
+        "error": "complexity metadata mismatch",
+        "exception": "Invalid",
+        "seconds": 0.022841957863420248,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 11930,
+      "fixture_sha256": "60355a40c8dcc21df221adb92617b63e375335f8d8583ade3b904fe05cf7f191",
+      "independent": {
+        "accepted": false,
+        "error": "u_terminal[0] forward/out-of-range reference",
+        "exception": "Invalid",
+        "seconds": 0.0001839171163737774,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 11929,
+      "fixture_sha256": "b25517e5f4efc38ec4c02d572180e990efdcedb56740e27c359ff89bd03866f8",
+      "independent": {
+        "accepted": false,
+        "error": "integer flag must be false",
+        "exception": "Invalid",
+        "seconds": 6.749993190169334e-06,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 11905,
+      "fixture_sha256": "2012ea64d524f765ec7a262ffcd75193ecc681403abb5b1805a49623976cbd8f",
+      "independent": {
+        "accepted": false,
+        "error": "u wrong terminal count",
+        "exception": "Invalid",
+        "seconds": 0.00017716619186103344,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    2,
+    4,
+    8
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "289432a72c0f86a04925e6475d31d4ff86d92a65fb8d57f4b57f918c3866d654",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "3a95eb30b089964bbbb2e26f95256be00e8f3646f5a65bd7b85a396d99258f79"
+  },
+  "original_sha256": "289432a72c0f86a04925e6475d31d4ff86d92a65fb8d57f4b57f918c3866d654",
+  "pass": true,
+  "rank": 51,
+  "raw_v1_aggregate_pass": true,
+  "raw_v1_receipt_sha256": "834e64847ece4944d678ddeb560664a3569c73d3809179a0c82358d5277cc516",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.13357375003397465
+}

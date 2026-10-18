@@ -1,0 +1,36 @@
+{
+  "candidate_sha256": "fb2744d037444d6e5f84f56628cf97a01ad2650e374421fbe4961bfafefd7ca2",
+  "expanded_factors_identical_to_live_perminov": true,
+  "candidate": {
+    "valid": true,
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "addition_counts": {
+      "u": 31,
+      "v": 55,
+      "w": 62
+    },
+    "additions": 148,
+    "identities_verified": 2500
+  },
+  "live_perminov": {
+    "valid": true,
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "addition_counts": {
+      "u": 34,
+      "v": 55,
+      "w": 64
+    },
+    "additions": 153,
+    "identities_verified": 2500
+  }
+}

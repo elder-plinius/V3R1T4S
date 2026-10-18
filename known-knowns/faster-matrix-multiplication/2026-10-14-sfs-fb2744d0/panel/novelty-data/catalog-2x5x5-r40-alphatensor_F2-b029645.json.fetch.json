@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/known/section5/2x5x5-r40-alphatensor_F2-b029645.json",
+  "utc": "2026-10-14T11:59:44.200354+00:00",
+  "started_utc": "2026-10-14T11:59:43.573594+00:00",
+  "http_status": 200,
+  "sha256": "99a289fc610eeb9ede805822a056f0b60065b2683cb5019532157aee2e643e42",
+  "bytes": 11160,
+  "file": "catalog-2x5x5-r40-alphatensor_F2-b029645.json",
+  "headers": {
+    "Content-Length": "11160",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"5a6c60b4b4fe6a2b744081667ec1d76fa29ed466b322d2663068d27d0b697fd0\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

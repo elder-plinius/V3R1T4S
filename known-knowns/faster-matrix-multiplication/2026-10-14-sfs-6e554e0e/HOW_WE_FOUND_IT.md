@@ -1,0 +1,3 @@
+Contributor text, unverified.
+
+The search built signed-vector dependency graphs from public source linear circuits. Randomized reconstructions chose alternative sums and cancellations and compared direct schedules with schedules obtained through transposition and reverse accumulation. The selected A preprocessing map uses 38 additions rather than 40, preserving all expanded factors. B remains 65 and output reconstruction 76. Exact symbolic and full basis-pair verification, followed by three independent fresh reviewers, checked the schedule and current comparison sources. This account claims no new factorization or optimality.

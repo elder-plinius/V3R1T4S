@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/ternary_addition_reducer/master/README.md",
+  "started_utc": "2026-10-14T12:00:56.625666+00:00",
+  "http_status": 200,
+  "sha256": "4728b21b3a942f8327dbf286687b83e3f9d5a1aaa6197d3561042a0763ff5112",
+  "bytes": 9750,
+  "headers": {
+    "Content-Length": "9750",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"2a52b5f2db406f2b9224cacae1ce2df19666fdd71a9b5e184b1a419feb7829e9\"",
+    "Date": "Wed, 14 Oct 2026 12:00:57 GMT"
+  }
+}
