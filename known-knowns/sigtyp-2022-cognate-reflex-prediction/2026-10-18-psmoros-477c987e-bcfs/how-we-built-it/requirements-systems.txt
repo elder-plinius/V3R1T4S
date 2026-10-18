@@ -1,0 +1,7 @@
+# Python 3.13.2; environment that trained and ran the system
+lingpy==2.6.13
+lingrex==1.4.2
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+torch==2.14.1
