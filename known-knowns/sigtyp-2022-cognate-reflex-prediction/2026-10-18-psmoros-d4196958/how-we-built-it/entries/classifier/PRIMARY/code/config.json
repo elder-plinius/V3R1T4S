@@ -1,0 +1,2 @@
+{"rank": 1, "maxiter": 100, "temp": 2.0, "pool": 1, "pool_opts": {"eqr": 1}, "kappa": 20.0, "prune": 0.01,
+ "ens": [{"m": "lr", "copy": 0, "w": 1.0}, {"m": "lr", "copy": 1, "w": 1.0}, {"m": "ll", "w": 2.0}]}

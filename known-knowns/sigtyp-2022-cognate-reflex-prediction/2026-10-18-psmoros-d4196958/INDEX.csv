@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+sigtyp-2022-cognate-reflex-prediction,surprise proportion 0.30 mean BLEU over 10 families (charter quarry private-quarry-B),0.6874377388475998,0.6839233380559118,2026-10-18T12:55:22Z,object/predictions-0.30.tsv,d41969587a292559621e464ce633d497a249e9c5c72f61341da3ea75764c7e5d

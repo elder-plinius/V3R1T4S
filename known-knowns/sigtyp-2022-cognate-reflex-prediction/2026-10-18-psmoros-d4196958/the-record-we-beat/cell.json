@@ -1,0 +1,15 @@
+{
+ "cell": "SIGTYP 2022 surprise data, proportion 0.30, mean BLEU over the 10 surprise families (official scorer)",
+ "bar_highest_known": 0.6839233380559118,
+ "bar_source": "our own earlier mean-NED object (package 2026-10-18-psmoros-634f2c35, object/predictions-0.30.tsv; copy in the-record-we-beat/earlier_object_predictions-0.30.tsv)",
+ "fevet_published_rescored": 0.6356571184958077,
+ "fevet_source": "https://github.com/TGH-2020/FeVeT at 31898c53bfffeef87265efa8a780b7be740162d1, results/predictions/reflex/FAMILY/s2s_reflex_0.30_predictions.tsv",
+ "mockingbird_i1_official": 0.6058548112827981,
+ "mockingbird_i1_source": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.30.json",
+ "mockingbird_i1_json_sha256": "cca55c5fffa730c29ef578f022741f3a0378ca333e5a20493e23e2d400792563",
+ "status_page": "https://github.com/sigtyp/ST2022",
+ "status_page_fetched_utc": "2026-10-18T12:55:22Z (NOVELTY skeptic)",
+ "status_page_http": 200,
+ "status_head": "03094435cba4293ce0eea383036cab78499ad50d (2022-05-27T07:58:23Z)",
+ "this_object": 0.6874377388475998
+}

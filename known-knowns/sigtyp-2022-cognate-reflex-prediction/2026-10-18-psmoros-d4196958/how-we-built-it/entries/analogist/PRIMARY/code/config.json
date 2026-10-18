@@ -1,0 +1,2 @@
+{"guide": "global", "w_init": 1.0, "learn_w": 1, "a_id": 1.0, "psv_D": 0.75,
+ "mix": 1.0, "psv_rel": "learn", "pool_fb": 0, "nbest": 20, "mbr": 1, "mbr_temp": 2.0}
