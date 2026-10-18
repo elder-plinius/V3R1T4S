@@ -1,0 +1,42 @@
+[
+ {
+  "name": "broker/PRIMARY",
+  "dir": "attempts/broker/frozen/PRIMARY",
+  "weight_at_0.50": 1
+ },
+ {
+  "name": "classifier/SECONDARY",
+  "dir": "attempts/classifier/frozen/SECONDARY",
+  "weight_at_0.50": 2
+ },
+ {
+  "name": "broker/SECONDARY",
+  "dir": "attempts/broker/frozen/SECONDARY",
+  "weight_at_0.50": 3
+ },
+ {
+  "name": "r0202-broker/PRIMARY",
+  "dir": "attempts/r0202-broker/frozen/PRIMARY",
+  "weight_at_0.50": 2
+ },
+ {
+  "name": "classifier/PRIMARY",
+  "dir": "attempts/classifier/frozen/PRIMARY",
+  "weight_at_0.50": 2
+ },
+ {
+  "name": "analogist/PRIMARY",
+  "dir": "attempts/analogist/frozen/PRIMARY",
+  "weight_at_0.50": 1
+ },
+ {
+  "name": "phylo/PRIMARY",
+  "dir": "attempts/phylo/frozen/PRIMARY",
+  "weight_at_0.50": 0
+ },
+ {
+  "name": "r0202-analogist/SECONDARY",
+  "dir": "attempts/r0202-analogist/frozen/SECONDARY",
+  "weight_at_0.50": 2
+ }
+]
