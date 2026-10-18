@@ -1,0 +1,7 @@
+# How we found it (contributor text, unverified)
+
+Run 2026-10-18-0202 of a V3R1T4S workspace. A previous run had confirmed proportion 0.10 but had tuned its systems on validation splits that lie inside the test sets of higher proportions (the organisers' splits are nested), so this run started a clean protocol: every development choice was made on validation data cut from training-0.50, which is disjoint from the test set at every proportion. Six lenses (correspondence tables with a reranker, graphone transducers, analogical voting, a latent-tree phylogenetic model, per-column classifiers, and a 'broker' model of language pairs) each froze one or two systems in about two and a half hours. A pre-registered stage-2 rule combined the six best by validation score (per-item minimum Bayes risk under the scorer's own NED, integer weights fit on validation splits cut from training-0.10), and the candidate for this cell was fixed by validation score before any test answer was read.
+
+What failed: target-language n-gram priors (biased towards short strings in every lens), learned rerankers that did not transfer from sparse training rows to dense test rows, and composing correspondences through intermediate languages as a general back-off (it helps only where direct pairs are rare).
+
+What the panel caught: the combiner's per-item choice can pick a string proposed by a weight-0 entry (4 items here); the first package left those entries' code out. The repaired package includes every entry, all of them sealed-checked.

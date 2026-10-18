@@ -1,0 +1,10 @@
+{
+ "add_src": 0.01,
+ "beta": 2.0,
+ "glob": 2,
+ "prior_w": -0.5,
+ "rerank": 1,
+ "rr_dev": 1,
+ "rr_l2": 0.0001,
+ "wsum": 2.0
+}

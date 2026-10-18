@@ -1,0 +1,51 @@
+2026-10-18T04:46:45Z SEALED 0.10 start: 4 components, 4029 test rows in memory (parent), jobs 2, strict profiles, python WORKDIR/venvs/q15ml/bin/python
+2026-10-18T04:47:35Z SEALED 0.10 analogist__SECONDARY train ok 49s (sandboxed, strict profile)
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY bantubvd             ok partitions 10 rows 248 items identical 248/248 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY beidazihui           ok partitions 19 rows 988 items identical 988/988 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY birchallchapacuran   ok partitions 10 rows 184 items identical 184/184 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY bodtkhobwa           ok partitions 8 rows 736 items identical 736/736 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY bremerberta          ok partitions 4 rows 80 items identical 80/80 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY deepadungpalaung     ok partitions 16 rows 320 items identical 320/320 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY hillburmish          ok partitions 9 rows 410 items identical 410/410 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY kesslersignificance  ok partitions 5 rows 99 items identical 99/99 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY luangthongkumkaren   ok partitions 8 rows 304 items identical 304/304 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY wangbai              ok partitions 10 rows 660 items identical 660/660 bytes IDENTICAL
+2026-10-18T04:47:49Z SEALED 0.10 analogist__SECONDARY predict: 99 sealed processes, 14s
+2026-10-18T04:50:02Z SEALED 0.10 broker__PRIMARY train ok 133s (sandboxed, strict profile)
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY bantubvd             ok partitions 10 rows 248 items identical 248/248 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY beidazihui           ok partitions 19 rows 988 items identical 988/988 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY birchallchapacuran   ok partitions 10 rows 184 items identical 184/184 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY bodtkhobwa           ok partitions 8 rows 736 items identical 736/736 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY bremerberta          ok partitions 4 rows 80 items identical 80/80 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY deepadungpalaung     ok partitions 16 rows 320 items identical 320/320 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY hillburmish          ok partitions 9 rows 410 items identical 410/410 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY kesslersignificance  ok partitions 5 rows 99 items identical 99/99 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY luangthongkumkaren   ok partitions 8 rows 304 items identical 304/304 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY wangbai              ok partitions 10 rows 660 items identical 660/660 bytes IDENTICAL
+2026-10-18T04:51:18Z SEALED 0.10 broker__PRIMARY predict: 99 sealed processes, 76s
+2026-10-18T04:51:34Z SEALED 0.10 phylo__PRIMARY train ok 16s (sandboxed, strict profile)
+2026-10-18T04:53:34Z SEALED 0.10 classifier__PRIMARY train ok 409s (sandboxed, strict profile)
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY bantubvd             ok partitions 10 rows 248 items identical 248/248 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY beidazihui           ok partitions 19 rows 988 items identical 988/988 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY birchallchapacuran   ok partitions 10 rows 184 items identical 184/184 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY bodtkhobwa           ok partitions 8 rows 736 items identical 736/736 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY bremerberta          ok partitions 4 rows 80 items identical 80/80 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY deepadungpalaung     ok partitions 16 rows 320 items identical 320/320 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY hillburmish          ok partitions 9 rows 410 items identical 410/410 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY kesslersignificance  ok partitions 5 rows 99 items identical 99/99 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY luangthongkumkaren   ok partitions 8 rows 304 items identical 304/304 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY wangbai              ok partitions 10 rows 660 items identical 660/660 bytes IDENTICAL
+2026-10-18T04:54:19Z SEALED 0.10 classifier__PRIMARY predict: 99 sealed processes, 45s
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY bantubvd             ok partitions 10 rows 248 items identical 248/248 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY beidazihui           ok partitions 19 rows 988 items identical 988/988 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY birchallchapacuran   ok partitions 10 rows 184 items identical 184/184 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY bodtkhobwa           ok partitions 8 rows 736 items identical 736/736 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY bremerberta          ok partitions 4 rows 80 items identical 80/80 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY deepadungpalaung     ok partitions 16 rows 320 items identical 320/320 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY hillburmish          ok partitions 9 rows 410 items identical 410/410 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY kesslersignificance  ok partitions 5 rows 99 items identical 99/99 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY luangthongkumkaren   ok partitions 8 rows 304 items identical 304/304 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY wangbai              ok partitions 10 rows 660 items identical 660/660 bytes IDENTICAL
+2026-10-18T05:10:00Z SEALED 0.10 phylo__PRIMARY predict: 99 sealed processes, 1105s
+2026-10-18T05:10:00Z SEALED 0.10 done in 1394s
+SEALED_CHECK 0.10 PASS

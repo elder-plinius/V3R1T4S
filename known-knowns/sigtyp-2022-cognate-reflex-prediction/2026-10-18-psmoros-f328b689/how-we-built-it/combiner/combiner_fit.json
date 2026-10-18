@@ -1,0 +1,209 @@
+{
+ "0.10": {
+  "weights_all10": [
+   3,
+   3,
+   1,
+   2,
+   1,
+   0,
+   1
+  ],
+  "insample_mean_all10": 0.20729435188692796,
+  "lofo_val_mean": 0.21131035771832854,
+  "lofo_weights": {
+   "bantubvd": [
+    3,
+    3,
+    1,
+    2,
+    1,
+    0,
+    1
+   ],
+   "beidazihui": [
+    3,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "birchallchapacuran": [
+    3,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "bodtkhobwa": [
+    3,
+    3,
+    1,
+    2,
+    1,
+    0,
+    1
+   ],
+   "bremerberta": [
+    2,
+    2,
+    0,
+    2,
+    1,
+    1,
+    1
+   ],
+   "deepadungpalaung": [
+    3,
+    2,
+    1,
+    2,
+    1,
+    1,
+    1
+   ],
+   "hillburmish": [
+    3,
+    3,
+    1,
+    2,
+    1,
+    0,
+    1
+   ],
+   "kesslersignificance": [
+    2,
+    1,
+    1,
+    3,
+    1,
+    0,
+    2
+   ],
+   "luangthongkumkaren": [
+    3,
+    3,
+    1,
+    2,
+    1,
+    0,
+    1
+   ],
+   "wangbai": [
+    3,
+    3,
+    1,
+    2,
+    1,
+    0,
+    1
+   ]
+  },
+  "single_entry_val_mean": {
+   "r1806:smuggler/PRIMARY": 0.22023538945342008,
+   "r1806:correspondence/PRIMARY": 0.22025254057594204,
+   "analogist/SECONDARY": 0.2203592301767939,
+   "classifier/PRIMARY": 0.22761637745145086,
+   "broker/PRIMARY": 0.2287562378795247,
+   "correspondence/PRIMARY": 0.22982300593995916,
+   "phylo/PRIMARY": 0.23015112156991338
+  },
+  "entries": [
+   "r1806:smuggler/PRIMARY",
+   "r1806:correspondence/PRIMARY",
+   "analogist/SECONDARY",
+   "classifier/PRIMARY",
+   "broker/PRIMARY",
+   "correspondence/PRIMARY",
+   "phylo/PRIMARY"
+  ],
+  "entry_dirs": [
+   "WORKDIR/runs/2026-10-17-1806/attempts/smuggler/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-17-1806/attempts/correspondence/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/classifier/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/correspondence/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/phylo/frozen/PRIMARY"
+  ],
+  "lofo_val_scorer_total": [
+   0.8677404632625572,
+   0.21131035771832854,
+   0.7892528037224105,
+   0.6954432862327626
+  ],
+  "lofo_val_scorer_families": {
+   "bantubvd": [
+    0.9227323923981479,
+    0.22529845428036133,
+    0.7989415215826956,
+    0.6815930047406671
+   ],
+   "beidazihui": [
+    0.3774436090225564,
+    0.10656641604010025,
+    0.8643636714311541,
+    0.8394503809685159
+   ],
+   "birchallchapacuran": [
+    1.542839463612919,
+    0.2637442660825456,
+    0.7119643944825425,
+    0.5838214671653079
+   ],
+   "bodtkhobwa": [
+    0.23373983739837398,
+    0.1016260162601626,
+    0.8731852928461433,
+    0.8650060077258663
+   ],
+   "bremerberta": [
+    1.3125,
+    0.24401573129251702,
+    0.7309850134993843,
+    0.6397308117721058
+   ],
+   "deepadungpalaung": [
+    0.4447115384615385,
+    0.14819711538461539,
+    0.8867263498734803,
+    0.7903211462256052
+   ],
+   "hillburmish": [
+    0.7937426923343591,
+    0.21311825772590984,
+    0.7615832503237774,
+    0.7056690766249883
+   ],
+   "kesslersignificance": [
+    2.10022385022385,
+    0.5434140550807218,
+    0.5909183584811519,
+    0.25062865922738764
+   ],
+   "luangthongkumkaren": [
+    0.3382352941176471,
+    0.08995098039215686,
+    0.8970903821988826,
+    0.85937138732529
+   ],
+   "wangbai": [
+    0.6112359550561798,
+    0.17717228464419474,
+    0.7767698025048929,
+    0.7388409205518924
+   ]
+  },
+  "guard_recomputed_tuple_family_pairs": 0,
+  "verify_reference": null,
+  "seconds": {
+   "matrices": 0.6082248687744141,
+   "search": 2.324493646621704,
+   "total_this_prop": 4.8488171100616455
+  }
+ }
+}
