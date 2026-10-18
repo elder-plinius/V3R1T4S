@@ -11,7 +11,7 @@ Labelled as a data-integrity finding (erratum), not a record claim.
 
 ## What
 
-Live Packomania ssp radius.txt (sha256 9a4d7b62c61ac3aad69c11f238c76707c51ee824f163bee44a2b345a04b39fe3) exceeds ssp.html (sha256 e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd) by more than 1e-9 in exactly 90 rows, N=1055..50000, with gaps from 6.09e-9 (N=1601) to 6.48e-5 (N=20000), no ties and no row below; in all 90 rows recomputed from ssp_coords.tar.gz (sha256 c077c79ef6c767e7d14d73942beed2f4be1bd15286073ef1548475f230c3e5f3), ssp.html equals coordinate r* within 2.8e-12. (The 14-row sample in panel/criterion.md, max 1.75e-12, lies inside this bound.) So, for these 90 N, the posted coordinates (and ssp.html) do not certify the radius.txt value.
+Live Packomania ssp radius.txt (sha256 9a4d7b62c61ac3aad69c11f238c76707c51ee824f163bee44a2b345a04b39fe3) exceeds ssp.html (sha256 e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd) by more than 1e-9 in exactly 90 rows, N=1055..50000, with gaps from 6.09e-9 (N=1601) to 6.48e-5 (N=20000), no ties and no row below; in all 90 rows recomputed from ssp_coords.tar.gz (sha256 c077c79ef6c767e7d14d73942beed2f4be1bd15286073ef1548475f230c3e5f3), ssp.html equals coordinate r* within 2.8e-12. (An earlier 14-row sample check, max 1.75e-12, lies inside this bound.) So, for these 90 N, the posted coordinates (and ssp.html) do not certify the radius.txt value.
 
 This package contains one object only: object/ssp_radiustxt_errata.csv (90 rows); the skeptic-facing claim text is how-we-built-it/CLAIM.md.
 
