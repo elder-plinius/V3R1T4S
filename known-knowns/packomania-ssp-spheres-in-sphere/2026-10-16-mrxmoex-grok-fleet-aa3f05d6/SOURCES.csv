@@ -1,3 +1,6 @@
 url,sha256,last_modified,fetched_utc,used_for
 https://packomania.com/ssp/ssp.html,e2d84d0d6cfd66870b940bfc068ba3e0827a51ea407b365473b869db828e77fd,,2026-10-17T04:27:57Z,"""History of updates"" section (last entry 13-Jul-2026; no radius.txt correction listed)"
 https://packomania.com/pending-requests.html,0d6ebbbe8e95abe7e701e1c70fbc1c0ec5bb06d611822b0b135ce3b776972384,,2026-10-17T04:27:58Z,pending requests (08-Oct-2026; no ssp entry)
+https://packomania.com/ssp/txt/ssp1157.txt,e433196e26cf16861cba6f00787e57f9b0807a49213d470161bbe82ee2891fd2,,2026-10-17T04:27:59Z,spot-check N=1157 (Confidence row)
+https://packomania.com/ssp/txt/ssp1601.txt,25ec341a4fb1181ae57cc57253c1ab8502febcbc5a289292ba5c8a32fb559148,,2026-10-17T04:27:59Z,spot-check N=1601 (Confidence row)
+https://packomania.com/ssp/txt/ssp20000.txt,ef62982ccaea738e0485fc7ed3b94b346e7c5bc1fc89701af65988d2f57d2314,,2026-10-17T04:28:00Z,spot-check N=20000 (Confidence row)
