@@ -1,0 +1,58 @@
+
+## frozen 2026-10-18T10:18:47Z
+ROLE=PRIMARY lens=classifier code=attempts/classifier/frozen/PRIMARY/code out=attempts/classifier/frozen/PRIMARY
+code_tree_sha256=014f4baa8694bafe11ed20497657a4e55ee196e0ac0ed46d56b9df18d6a7cf98
+results_tree_sha256=06a6cbb6ee5f5f88173deb45ec4ebb325bddd02d0c0f20ca38c3297ef306224d
+### code files
+81233e0cde3eed424686b77b16e6df18e3735ad1c7f4edfd7eea2627adcb2e07  config.json
+9206a506d7793ae2eb346edb7df25556843459230ab7a317ccd94c89efc8ffd4  system.py
+### result files
+22c9cc934bdbc1ef54cb04e248220bd2ce38dd73dc45dc1d55bc0af9b4ba238f  test/0.50/bantubvd/result-0.50.tsv
+ecf4c073905910222387ad1c91d7d897ebdd28704a899e594af8adb45d8bcc88  test/0.50/beidazihui/result-0.50.tsv
+4b74fc5fc5203893f91aa07199797bc115ab716f10a34e6a9de51d710b020878  test/0.50/birchallchapacuran/result-0.50.tsv
+8a5617bf50f7f3b39732d193975a40f49bb1df029e84bfed9f660b2659f69db5  test/0.50/bodtkhobwa/result-0.50.tsv
+43ab226c9cc94941009ecaec3e1025eb81f917d923cdbce033b550464504b5bb  test/0.50/bremerberta/result-0.50.tsv
+6d6dad031fd229929cfb26b05925d18ae8374bc9dd03314867bca5a9bbf21772  test/0.50/deepadungpalaung/result-0.50.tsv
+63e5eb21b934bc2c77673755597e8a5f435f6f882aa30b06ec07f366697d3b7f  test/0.50/hillburmish/result-0.50.tsv
+178c52512cfa0621356cc6709f34ca45fcd836bd31f59b7b125043d977792cba  test/0.50/kesslersignificance/result-0.50.tsv
+c198a82b831c2113986fbeeb28bddab994f190ac3756da8ac5a5fe46615d7b91  test/0.50/luangthongkumkaren/result-0.50.tsv
+1b88b2b835958ed2465d0799a86202b46a0f48f49a728f0d986d77d7564cbdca  test/0.50/wangbai/result-0.50.tsv
+efba3ac92c28b0833ce7c5ad7d1613485f190491a4385c8d850893a39fd7430c  val/0.50/bantubvd/result-0.50.tsv
+67cea2eff575e35855dae507683d7486e155418e5d881f76a09fc0c32d349688  val/0.50/beidazihui/result-0.50.tsv
+ec214dfc7e357754c0e9b4c7417bd152c85358b9979917266c05720e1c471803  val/0.50/birchallchapacuran/result-0.50.tsv
+dd5ecfc09d35e2e61e593f58be91125cb1c9ab4d95e7f9c71c572d5805c96f47  val/0.50/bodtkhobwa/result-0.50.tsv
+8dd62221b211ff8ba7b248c5c9316ac8550404ac18a403611538357615b39885  val/0.50/bremerberta/result-0.50.tsv
+a5c84e828b37026766f041976c74c2081815d2d34f9c582a585b1f8266923544  val/0.50/deepadungpalaung/result-0.50.tsv
+66734db13fde9c10c5b2bad1b49858cf88b2e8c26fc36f2f08d43b642f9653d9  val/0.50/hillburmish/result-0.50.tsv
+c19c20d4cf6326ae37e27d1712b8c431bf67b1a2ee4b706b6bd96cf165b0a76c  val/0.50/kesslersignificance/result-0.50.tsv
+d60d6b0bf445ea27301600b9c923890979416c0be37ddd0735442b36fab8da54  val/0.50/luangthongkumkaren/result-0.50.tsv
+0aa4cddfe6b412f35cb761928eb67a065df488bd22199b0e53e66d5fea606b2a  val/0.50/wangbai/result-0.50.tsv
+
+## frozen 2026-10-18T10:39:38Z
+ROLE=SECONDARY lens=classifier code=attempts/classifier/frozen/SECONDARY/code out=attempts/classifier/frozen/SECONDARY
+code_tree_sha256=6cc33b903ae1097c34cc03987a96abd9634590245e446317cbd25b4d7477a249
+results_tree_sha256=ce586c78592a07ba4448cf663fd07dfa6a023b4bbc8d0ddbd715019522430681
+### code files
+d524f03ad5092437e71e66386bf3f11b5e3fd1c68db6403c9a6f922175c2723d  config.json
+9206a506d7793ae2eb346edb7df25556843459230ab7a317ccd94c89efc8ffd4  system.py
+### result files
+272f873480ce9fb7a00a092401c66d5f545d31572aa114e8c2c6f388d77d4453  test/0.50/bantubvd/result-0.50.tsv
+b4c414d767cba3e755e0d35c9b11ceab64b11c15330ccf906c328cacacefcc6f  test/0.50/beidazihui/result-0.50.tsv
+b37a454a99d913ba14a39d4d2142f167a4e041a5232784c70f8464b8a6e70f6e  test/0.50/birchallchapacuran/result-0.50.tsv
+f7e73c79b3dbb5f13acaf0a4488d1fa557208a5e41560a92417cf96096374c61  test/0.50/bodtkhobwa/result-0.50.tsv
+fea31b8f94af54ef1e419708c81635e85cc7dc8799489bc2111d047f560d31f5  test/0.50/bremerberta/result-0.50.tsv
+c27f946106c7a9ccf3b1a6454162b357bad65e2e340b8b01bddd1ac723e3c788  test/0.50/deepadungpalaung/result-0.50.tsv
+80ac8572d92ad41e255de3896a89b72932284d56297824c73e1af81d24151ace  test/0.50/hillburmish/result-0.50.tsv
+c457d74a40ad10db2501071e2da31f2bef1c06abbb422872e43167adbdd49392  test/0.50/kesslersignificance/result-0.50.tsv
+627c7f665bf2436b93b8ac6debdf193d417349f430bdd5116687b52fc9b0d33e  test/0.50/luangthongkumkaren/result-0.50.tsv
+aeda2cd3186fa1e3aedbb38cdea82cc33d6eedc6a9ff00a6d88e23d74f4b8dac  test/0.50/wangbai/result-0.50.tsv
+2fb9d04eff0eca06c6f254621ecc4a4f9417244ef3473def4a3e691667c25831  val/0.50/bantubvd/result-0.50.tsv
+b4f3cf5599a80374091f14252ff225f38589c99670597e2b0861d77cb924c8c1  val/0.50/beidazihui/result-0.50.tsv
+00cb9a4f65060c3b23d1b09d4821b1dca7b544eff7c86301100775245ab9e9e5  val/0.50/birchallchapacuran/result-0.50.tsv
+da138b5ea464d9fb752446073b86c9646aa827e4b6850f15337b066840f8f1ae  val/0.50/bodtkhobwa/result-0.50.tsv
+1b6ea3e3601501ba9dec49588642a1cb7944b81ae373c1b394d679e52a01314a  val/0.50/bremerberta/result-0.50.tsv
+b5334769030ded817834f2cdd1857f59e5e6fd42a5b8b1fb5673cc9e72db0791  val/0.50/deepadungpalaung/result-0.50.tsv
+2ad34f805e6d660bbc91295f178241f8392afeec30cbfda5726d7bc128a79b14  val/0.50/hillburmish/result-0.50.tsv
+f2651efaca9fdcf9fba5b4b8362b770445c70dc20f3f1f3fa1c1cc65beda4f66  val/0.50/kesslersignificance/result-0.50.tsv
+1a45f9938ad160e9cba3be84b39d920f53d09d0404e4dad3c2154e8541d29e6d  val/0.50/luangthongkumkaren/result-0.50.tsv
+b1a5e9c2a46dde7d61e8ce55b97d1a7dbddbb6338a447ce7bd20fec901b79fe1  val/0.50/wangbai/result-0.50.tsv
