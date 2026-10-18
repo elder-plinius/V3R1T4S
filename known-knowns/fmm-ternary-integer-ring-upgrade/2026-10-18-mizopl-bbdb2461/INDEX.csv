@@ -1,0 +1,2 @@
+submission_id,date,credit,github,target_id,category,status,claim_type,summary,object_sha256,previous_record,new_value,checker_command
+2026-10-18-mizopl-bbdb2461,2026-10-18,mizopl,mizopl,fmm-ternary-integer-ring-upgrade,algorithms,CONFIRMED_SOLUTION,solution_claim,"Explicit rank-1894 ternary (ZT = {-1, 0, 1}) fast matrix multiplication scheme for format 14x15x15 (vs live ZT rank 1905 and Z rank 1895 in Perminov table, -11 ZT / -1 Z multiplications)",bbdb24611006dbe7d8c3549701f177f8cf1b56090e6a928dd7ca961cd62979bb,1905,1894,sh verify-it-yourself/run_checks.sh
