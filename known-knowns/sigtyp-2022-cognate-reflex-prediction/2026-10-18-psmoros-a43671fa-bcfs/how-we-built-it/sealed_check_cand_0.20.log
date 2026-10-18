@@ -1,0 +1,15 @@
+2026-10-18T21:30:36Z SEALED 0.20 start: 1 components, 7887 test rows in memory (parent), jobs 4, strict profiles, python WORKDIR/venvs/q15ml/bin/python
+2026-10-18T21:34:03Z SEALED 0.20 newent__classifier-PRIMARY train ok 206s (sandboxed, strict profile)
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY bantubvd             ok partitions 10 rows 434 items identical 434/434 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY beidazihui           ok partitions 19 rows 1976 items identical 1976/1976 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY birchallchapacuran   ok partitions 10 rows 336 items identical 336/336 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY bodtkhobwa           ok partitions 8 rows 1464 items identical 1464/1464 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY bremerberta          ok partitions 4 rows 164 items identical 164/164 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY deepadungpalaung     ok partitions 16 rows 624 items identical 624/624 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY hillburmish          ok partitions 9 rows 778 items identical 778/778 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY kesslersignificance  ok partitions 5 rows 183 items identical 183/183 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY luangthongkumkaren   ok partitions 8 rows 608 items identical 608/608 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY wangbai              ok partitions 10 rows 1320 items identical 1320/1320 bytes IDENTICAL
+2026-10-18T21:34:18Z SEALED 0.20 newent__classifier-PRIMARY predict: 99 sealed processes, 15s
+2026-10-18T21:34:18Z SEALED 0.20 done in 221s
+SEALED_CHECK 0.20 PASS
