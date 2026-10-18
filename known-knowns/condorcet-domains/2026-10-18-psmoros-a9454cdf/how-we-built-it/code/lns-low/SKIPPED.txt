@@ -1,0 +1,25 @@
+Files of the lens's code folder left out because they hold local machine paths (drivers and queue scripts):
+dossier23.sh
+make_result.sh
+queueA.sh
+queueA10.sh
+queueA11.sh
+queueA12.sh
+queueA2.sh
+queueA3.sh
+queueA4.sh
+queueA5.sh
+queueA6.sh
+queueA7.sh
+queueA8.sh
+queueA9.sh
+queueB.sh
+queueB2.sh
+queueB3.sh
+queueB4.sh
+queueB5.sh
+queueB6.sh
+queueB7.sh
+queueB8.sh
+queueB9.sh
+validate_star.py
