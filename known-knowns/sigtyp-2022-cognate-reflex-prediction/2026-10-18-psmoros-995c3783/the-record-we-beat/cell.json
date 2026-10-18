@@ -1,0 +1,15 @@
+{
+ "cell": "SIGTYP 2022 surprise data, proportion 0.20, mean NED over the 10 surprise families (official scorer)",
+ "mockingbird_i1_official": 0.2648052468982754,
+ "mockingbird_i1_source": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.20.json",
+ "mockingbird_i1_json_sha256": "80f2b01eb4e6f6c2130749f7eff149dc95fd4c59044ec9b8b22836b74dbbf519",
+ "fetched_utc": "2026-10-18T04:57:26Z (NOVELTY skeptic, raw results-surprise-0.20.json at 03094435)",
+ "status_page": "https://github.com/sigtyp/ST2022",
+ "status_page_fetched_utc": "2026-10-18T02:07:46Z",
+ "status_page_http": 200,
+ "status_page_sha256": "027feb551a25a1957c657cc0830731c9c3eef78a6e181a660e67b8d590eeff1e",
+ "status_head": "03094435cba4293ce0eea383036cab78499ad50d (2022-05-27T07:58:23Z)",
+ "fevet_published_rescored": null,
+ "fevet_source": "FeVeT published no predictions at 0.20",
+ "this_object": 0.20345235544710852
+}

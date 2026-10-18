@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+sigtyp-2022-cognate-reflex-prediction,surprise proportion 0.20 mean NED over 10 families (charter quarry private-quarry-B),0.20345235544710852,0.2648052468982754,2026-10-18T04:57:26Z,object/predictions-0.20.tsv,995c3783d5cee0e5330a7b6de260d820bef048eead0d18e3f0e4fab4ada04733
