@@ -1,0 +1,581 @@
+{
+ "0.10": {
+  "weights_all10": [
+   0,
+   2,
+   0,
+   3,
+   1,
+   3
+  ],
+  "insample_mean_all10": 0.21164505158004462,
+  "lofo_val_mean": 0.21766634729481002,
+  "lofo_weights": {
+   "bantubvd": [
+    2,
+    3,
+    1,
+    2,
+    0,
+    3
+   ],
+   "beidazihui": [
+    0,
+    2,
+    0,
+    3,
+    1,
+    3
+   ],
+   "birchallchapacuran": [
+    0,
+    2,
+    0,
+    3,
+    1,
+    3
+   ],
+   "bodtkhobwa": [
+    2,
+    3,
+    1,
+    2,
+    0,
+    3
+   ],
+   "bremerberta": [
+    1,
+    2,
+    0,
+    2,
+    0,
+    3
+   ],
+   "deepadungpalaung": [
+    3,
+    3,
+    1,
+    2,
+    1,
+    3
+   ],
+   "hillburmish": [
+    0,
+    2,
+    0,
+    3,
+    1,
+    3
+   ],
+   "kesslersignificance": [
+    2,
+    1,
+    0,
+    2,
+    0,
+    3
+   ],
+   "luangthongkumkaren": [
+    2,
+    3,
+    1,
+    2,
+    0,
+    3
+   ],
+   "wangbai": [
+    0,
+    2,
+    0,
+    3,
+    1,
+    3
+   ]
+  },
+  "single_entry_val_mean": {
+   "broker/PRIMARY": 0.2287562378795247,
+   "analogist/SECONDARY": 0.2203592301767939,
+   "broker/SECONDARY": 0.23207995365680198,
+   "phylo/PRIMARY": 0.23015112156991338,
+   "analogist/PRIMARY": 0.2316766037936539,
+   "classifier/PRIMARY": 0.22761637745145086
+  },
+  "entries": [
+   "broker/PRIMARY",
+   "analogist/SECONDARY",
+   "broker/SECONDARY",
+   "phylo/PRIMARY",
+   "analogist/PRIMARY",
+   "classifier/PRIMARY"
+  ],
+  "entry_dirs": [
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/phylo/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/classifier/frozen/PRIMARY"
+  ],
+  "lofo_val_scorer_total": [
+   0.8993756806065812,
+   0.21766634729481,
+   0.784931358389578,
+   0.6854103382280333
+  ],
+  "lofo_val_scorer_families": {
+   "bantubvd": [
+    0.9372095495096863,
+    0.2321114324758192,
+    0.7985016112970187,
+    0.674584144640058
+   ],
+   "beidazihui": [
+    0.3879699248120301,
+    0.10951127819548871,
+    0.8620590041007544,
+    0.8325804267278102
+   ],
+   "birchallchapacuran": [
+    1.6063389567462791,
+    0.27385894976877767,
+    0.6964091047398604,
+    0.561190035825469
+   ],
+   "bodtkhobwa": [
+    0.23882113821138212,
+    0.10416666666666666,
+    0.8703822120767927,
+    0.861191241377667
+   ],
+   "bremerberta": [
+    1.375,
+    0.2546060090702948,
+    0.7226718177022698,
+    0.6158081478928001
+   ],
+   "deepadungpalaung": [
+    0.46875,
+    0.1563301282051282,
+    0.8844679082164457,
+    0.7770489047514045
+   ],
+   "hillburmish": [
+    0.819610500176493,
+    0.21965393338203706,
+    0.7597630382701902,
+    0.6969255101087987
+   ],
+   "kesslersignificance": [
+    2.21007326007326,
+    0.5563631121964455,
+    0.5748416693787612,
+    0.24141173675426394
+   ],
+   "luangthongkumkaren": [
+    0.33088235294117646,
+    0.08835784313725491,
+    0.9019605683293535,
+    0.8626269396888967
+   ],
+   "wangbai": [
+    0.6191011235955056,
+    0.18170411985018725,
+    0.7782566497843326,
+    0.7307362945131656
+   ]
+  },
+  "guard_recomputed_tuple_family_pairs": 0,
+  "verify_reference": null,
+  "seconds": {
+   "matrices": 0.5790407657623291,
+   "search": 0.5455889701843262,
+   "total_this_prop": 1.4084770679473877
+  }
+ },
+ "0.20": {
+  "weights_all10": [
+   2,
+   3,
+   2,
+   1,
+   0,
+   3
+  ],
+  "insample_mean_all10": 0.22885384278781323,
+  "lofo_val_mean": 0.23429616596915276,
+  "lofo_weights": {
+   "bantubvd": [
+    2,
+    1,
+    0,
+    2,
+    0,
+    1
+   ],
+   "beidazihui": [
+    2,
+    3,
+    2,
+    1,
+    0,
+    3
+   ],
+   "birchallchapacuran": [
+    1,
+    2,
+    2,
+    2,
+    1,
+    3
+   ],
+   "bodtkhobwa": [
+    2,
+    3,
+    2,
+    1,
+    0,
+    3
+   ],
+   "bremerberta": [
+    2,
+    3,
+    2,
+    1,
+    0,
+    3
+   ],
+   "deepadungpalaung": [
+    2,
+    2,
+    2,
+    1,
+    1,
+    3
+   ],
+   "hillburmish": [
+    2,
+    3,
+    2,
+    1,
+    0,
+    3
+   ],
+   "kesslersignificance": [
+    1,
+    3,
+    3,
+    2,
+    1,
+    3
+   ],
+   "luangthongkumkaren": [
+    2,
+    3,
+    2,
+    1,
+    0,
+    3
+   ],
+   "wangbai": [
+    2,
+    3,
+    2,
+    1,
+    0,
+    3
+   ]
+  },
+  "single_entry_val_mean": {
+   "broker/PRIMARY": 0.24198975917528148,
+   "analogist/SECONDARY": 0.24502147837249036,
+   "broker/SECONDARY": 0.24895311839150375,
+   "phylo/PRIMARY": 0.24974815834059724,
+   "analogist/PRIMARY": 0.2525175339013857,
+   "classifier/PRIMARY": 0.24871086023517264
+  },
+  "entries": [
+   "broker/PRIMARY",
+   "analogist/SECONDARY",
+   "broker/SECONDARY",
+   "phylo/PRIMARY",
+   "analogist/PRIMARY",
+   "classifier/PRIMARY"
+  ],
+  "entry_dirs": [
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/phylo/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/classifier/frozen/PRIMARY"
+  ],
+  "lofo_val_scorer_total": [
+   1.002959544666826,
+   0.2342961659691527,
+   0.7869639560388485,
+   0.6735923893677556
+  ],
+  "lofo_val_scorer_families": {
+   "bantubvd": [
+    1.240590565041366,
+    0.2783315479333786,
+    0.8065216847452416,
+    0.6102973022157618
+   ],
+   "beidazihui": [
+    0.3157894736842105,
+    0.09093095642331635,
+    0.8859049417021977,
+    0.8607109634061768
+   ],
+   "birchallchapacuran": [
+    1.7468869142553352,
+    0.26429905105558726,
+    0.7109741802975611,
+    0.5710081281273922
+   ],
+   "bodtkhobwa": [
+    0.2602272727272727,
+    0.11126893939393939,
+    0.8716695984901734,
+    0.8485430216731247
+   ],
+   "bremerberta": [
+    1.5533126293995858,
+    0.29666745184020027,
+    0.7088081740078933,
+    0.5900308760797749
+   ],
+   "deepadungpalaung": [
+    0.5078042654808959,
+    0.17564812527448395,
+    0.8671547907120563,
+    0.7580430547849824
+   ],
+   "hillburmish": [
+    1.0128191009412526,
+    0.27179054281984566,
+    0.7206601481334336,
+    0.6301371079377418
+   ],
+   "kesslersignificance": [
+    2.5397316821465425,
+    0.610797722597811,
+    0.5836711977790039,
+    0.22683743850996776
+   ],
+   "luangthongkumkaren": [
+    0.2559181935635424,
+    0.06717333915008333,
+    0.9252918849479399,
+    0.897219358697427
+   ],
+   "wangbai": [
+    0.5965153494282575,
+    0.1760539832028812,
+    0.7889829595729845,
+    0.7430966422452063
+   ]
+  },
+  "guard_recomputed_tuple_family_pairs": 0,
+  "verify_reference": null,
+  "seconds": {
+   "matrices": 1.5517911911010742,
+   "search": 0.47448086738586426,
+   "total_this_prop": 2.273948907852173
+  }
+ },
+ "0.30": {
+  "weights_all10": [
+   2,
+   2,
+   0,
+   3,
+   0,
+   3
+  ],
+  "insample_mean_all10": 0.22955708447727688,
+  "lofo_val_mean": 0.23436296736916745,
+  "lofo_weights": {
+   "bantubvd": [
+    3,
+    1,
+    0,
+    1,
+    1,
+    2
+   ],
+   "beidazihui": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "birchallchapacuran": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "bodtkhobwa": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "bremerberta": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "deepadungpalaung": [
+    3,
+    2,
+    0,
+    1,
+    0,
+    2
+   ],
+   "hillburmish": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "kesslersignificance": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "luangthongkumkaren": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ],
+   "wangbai": [
+    2,
+    2,
+    0,
+    3,
+    0,
+    3
+   ]
+  },
+  "single_entry_val_mean": {
+   "broker/PRIMARY": 0.23967180679011307,
+   "analogist/SECONDARY": 0.2505703630644813,
+   "broker/SECONDARY": 0.2522261711928647,
+   "phylo/PRIMARY": 0.24967751264760177,
+   "analogist/PRIMARY": 0.25854207036628124,
+   "classifier/PRIMARY": 0.2510380609772471
+  },
+  "entries": [
+   "broker/PRIMARY",
+   "analogist/SECONDARY",
+   "broker/SECONDARY",
+   "phylo/PRIMARY",
+   "analogist/PRIMARY",
+   "classifier/PRIMARY"
+  ],
+  "entry_dirs": [
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/broker/frozen/SECONDARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/phylo/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/analogist/frozen/PRIMARY",
+   "WORKDIR/runs/2026-10-18-0202/attempts/classifier/frozen/PRIMARY"
+  ],
+  "lofo_val_scorer_total": [
+   1.0127549662781983,
+   0.23436296736916745,
+   0.7836453170339749,
+   0.6533748239514129
+  ],
+  "lofo_val_scorer_families": {
+   "bantubvd": [
+    1.0016117317641708,
+    0.24401363287796216,
+    0.754981383517297,
+    0.5194170111746792
+   ],
+   "beidazihui": [
+    0.3567251461988304,
+    0.09564652371669916,
+    0.8881347771527223,
+    0.8520788673718309
+   ],
+   "birchallchapacuran": [
+    1.7520619658119656,
+    0.2516466172716173,
+    0.7296287865562449,
+    0.5837676267815779
+   ],
+   "bodtkhobwa": [
+    0.36736763369958064,
+    0.1583042654250268,
+    0.8151011827448237,
+    0.7893004083134203
+   ],
+   "bremerberta": [
+    1.6204800101858925,
+    0.28500271320649473,
+    0.739593261116932,
+    0.5608647515668557
+   ],
+   "deepadungpalaung": [
+    0.47609940906187037,
+    0.17295307304208232,
+    0.9080182474406797,
+    0.7598627634362795
+   ],
+   "hillburmish": [
+    1.0970016698105105,
+    0.28612203578446915,
+    0.7277881692618416,
+    0.6237672977063082
+   ],
+   "kesslersignificance": [
+    2.4565367965367964,
+    0.5669191919191919,
+    0.5787758960992155,
+    0.26746210719230945
+   ],
+   "luangthongkumkaren": [
+    0.3291363047676715,
+    0.08574852380295929,
+    0.9111956250886359,
+    0.8666059718657542
+   ],
+   "wangbai": [
+    0.6705289949446948,
+    0.19727309664517173,
+    0.7832358413613566,
+    0.7106214341051134
+   ]
+  },
+  "guard_recomputed_tuple_family_pairs": 0,
+  "verify_reference": null,
+  "seconds": {
+   "matrices": 6.937644958496094,
+   "search": 0.3989219665527344,
+   "total_this_prop": 7.5601770877838135
+  }
+ }
+}
