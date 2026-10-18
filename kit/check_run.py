@@ -9,6 +9,8 @@ a PASS means the paperwork is honest and complete, not that the result is true.
   python3 check_run.py WORKDIR --setup         end of setup (after the dry run)
   python3 check_run.py WORKDIR --run RUN_DIR   a specific run folder instead of the latest
   python3 check_run.py --package DIR [--workdir WORKDIR] [--no-exec]   one outbox package or sealed envelope
+  python3 check_run.py --package DIR --errata [...]   a data-integrity erratum (no record panel gate; runs
+                                               kit/errata_lint.py). Auto-detected; --record forces record mode.
 
 Last line: "CHECK_RUN: PASS" or "CHECK_RUN: FAIL (<n> problems)". Exit status 0 or 1.
 """
@@ -246,18 +248,19 @@ def check_null(c, path, label):
     return good and beats in ("yes", "true")
 
 
-def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
+def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True, patterns=True):
+    """patterns=False skips the token/path/email patterns (errata mode: kit/errata_lint.py reports those)."""
     user = os.environ.get("USER") or os.environ.get("USERNAME") or ""
     for p in walk(root):
         r = rel(p, root)
         if not is_text(p):
             continue
         t = read(p)
-        for rx, what in LEAK_RES:
+        for rx, what in (LEAK_RES if patterns else []):
             m = rx.search(t)
             if m:
                 c.fail("%s: %s in %s (line %d)" % (label, what, r, t[:m.start()].count("\n") + 1))
-        for m in EMAIL_RE.finditer(t):
+        for m in (EMAIL_RE.finditer(t) if patterns else []):
             if not EMAIL_OK.search(m.group(0)):
                 c.fail("%s: email address in %s (line %d)" % (label, r, t[:m.start()].count("\n") + 1))
                 break
@@ -336,7 +339,81 @@ def find_confirmed_gate(workdir, target):
 
 # ---------- package ----------
 
-def check_package(c, pkg, workdir=None, execute=True, timeout=900):
+def looks_like_erratum(pkg):
+    """An erratum package: README.md / PR_BODY.md title (or CLAIM.json) says erratum/errata, and no panel gate
+    says CONFIRMED_*. Errata do not go through the record panel or CONFIRMED gate."""
+    if CONFIRMED_RE.search(kv(read(os.path.join(pkg, "panel", "gate.md"))).get("status", "")):
+        return False
+    for f in ("README.md", "PR_BODY.md"):
+        first = [l for l in read(os.path.join(pkg, f), 20000).splitlines() if l.strip()][:1]
+        if first and re.search(r"(?i)\berrat", first[0]):
+            return True
+    return bool(re.search(r'(?i)"label"\s*:\s*"[^"]*\berrat', read(os.path.join(pkg, "verify-it-yourself", "CLAIM.json"))))
+
+
+LEAN_BODY = [   # (what, heading or bold table label) the lean errata body carries (kit/ERRATA-LINT.md)
+    ("Claim", r"claim"),
+    ("One-command repro", r"(?:one-command repro|repro|check it yourself)"),
+    ("Not claimed", r"not claimed"),
+    ("Confidence", r"confidence"),
+]
+
+
+def check_errata_package(c, pkg, workdir=None, execute=True, timeout=900):
+    label = "erratum %s" % os.path.basename(pkg)
+    c.ok("%s: errata mode: record panel, gate and INDEX checks skipped (errata are not panel-gated)" % label)
+    here = os.path.dirname(os.path.abspath(__file__))
+    if here not in sys.path:
+        sys.path.insert(0, here)
+    import errata_lint
+    probs = errata_lint.lint_package(errata_lint.from_dir(pkg))
+    for path, why in probs:
+        c.fail("%s: errata lint: %s: %s" % (label, path, why))
+    if not probs:
+        c.ok("%s: errata whitelist lint passes" % label)
+    readme = read(os.path.join(pkg, "README.md"))
+    if not readme:
+        c.fail("%s: README.md (the erratum note) missing" % label)
+    else:
+        for what, rx in LEAN_BODY:
+            if what == "Not claimed" and os.path.isfile(os.path.join(pkg, "NOT_CLAIMED.md")):
+                continue
+            if not re.search(r"(?im)^\s*(?:#+\s*|\|\s*\*\*)%s\b" % rx, readme):
+                c.fail("%s: README.md lacks a '%s' heading or table row (lean errata body)" % (label, what))
+    for f in ("SHA256SUMS", "verify-it-yourself/run_checks.sh"):
+        if not os.path.isfile(os.path.join(pkg, f)):
+            c.fail("%s: required file %s missing" % (label, f))
+    src = read(os.path.join(pkg, "SOURCES.csv")) + " ".join(
+        read(p) for p in walk(os.path.join(pkg, "the-record-we-beat")) if is_text(p))
+    if not (re.search(r"https?://", src) and re.search(r"\b[0-9a-f]{64}\b", src) and re.search(r"\d{4}-\d\d-\d\d", src)):
+        c.fail("%s: needs SOURCES.csv (or the-record-we-beat/) with source URLs, sha256 and fetch dates" % label)
+    hw = os.path.join(pkg, "HOW_WE_FOUND_IT.md")
+    if os.path.isfile(hw) and "unverified" not in read(hw).lower():
+        if "contributor text" in read(hw).lower():
+            c.warn("%s: HOW_WE_FOUND_IT.md says 'contributor text' but not 'unverified'" % label)
+        else:
+            c.fail("%s: HOW_WE_FOUND_IT.md must be marked 'contributor text, unverified'" % label)
+    leak_scan(c, pkg, label, never_publish_list(workdir), workdir, patterns=False)
+    if execute and os.path.isfile(os.path.join(pkg, "verify-it-yourself", "run_checks.sh")):
+        tmp = tempfile.mkdtemp(prefix="v3r1t4s_check_")
+        try:
+            clean = os.path.join(tmp, "clean")
+            shutil.copytree(pkg, clean)
+            rc, out = _run_checks(clean, timeout)
+            last = last_nonempty(out or "")
+            if rc is None:
+                c.warn("%s: no sh found; could not run run_checks.sh" % label)
+            elif re.search(r"\bREPLACED UPSTREAM\b", last) and not re.search(r"\bFAIL\b", last):
+                c.warn("%s: repro says '%s': a dated observation, the original files are no longer served" % (label, last[:80]))
+            elif rc != 0 or not re.search(r"\bPASS\b", last) or re.search(r"\bFAIL\b", last):
+                c.fail("%s: its repro did not pass from a clean copy (exit %s, last line: %s)" % (label, rc, last[:80]))
+            else:
+                c.ok("%s: run_checks.sh prints PASS from a clean copy" % label)
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+
+
+def check_package(c, pkg, workdir=None, execute=True, timeout=900, mode="auto"):
     pkg = os.path.abspath(pkg)
     label = "package %s" % os.path.basename(pkg)
     settings = kv(read(os.path.join(workdir, "settings.md"))) if workdir else {}
@@ -351,6 +428,10 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
         return
     if not os.path.isdir(pkg):
         c.fail("%s: not found" % label)
+        return
+    if mode == "errata" or (mode == "auto" and not os.path.isfile(os.path.join(pkg, "envelope.md"))
+                            and looks_like_erratum(pkg)):
+        check_errata_package(c, pkg, workdir, execute, timeout)
         return
     if os.path.isfile(os.path.join(pkg, "envelope.md")):
         extra = [rel(p, pkg) for p in walk(pkg) if os.path.basename(p) != "envelope.md"]
@@ -863,11 +944,17 @@ def main(argv=None):
     ap.add_argument("--workdir", dest="workdir2", help="workspace for --package (bank, never-publish list, panels)")
     ap.add_argument("--no-exec", action="store_true", help="do not run the package's own checker")
     ap.add_argument("--timeout", type=int, default=900, help="seconds allowed for run_checks.sh")
+    g = ap.add_mutually_exclusive_group()
+    g.add_argument("--errata", action="store_true", help="--package is a data-integrity erratum: errata checks and "
+                   "kit/errata_lint.py, no record panel gate (auto-detected from the README title)")
+    g.add_argument("--record", action="store_true", help="--package is a record claim: never use errata mode")
     a = ap.parse_args(argv)
     c = Checker()
     if a.package:
         wd = a.workdir2 or a.workdir
-        check_package(c, a.package, os.path.abspath(wd) if wd else None, execute=not a.no_exec, timeout=a.timeout)
+        mode = "errata" if a.errata else "record" if a.record else "auto"
+        check_package(c, a.package, os.path.abspath(wd) if wd else None, execute=not a.no_exec, timeout=a.timeout,
+                      mode=mode)
     elif a.workdir:
         check_workspace(c, a.workdir, a.run, a.setup, execute=not a.no_exec, timeout=a.timeout)
     else:
