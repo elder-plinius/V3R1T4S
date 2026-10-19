@@ -4,7 +4,7 @@
 
 ## The problem
 
-Is there a 5-colouring of the edges of K_26 in which every 6-vertex set sees all 5 colours? Equivalently: can E(K_26) be partitioned into 5 graphs G_1..G_5, each with independence number alpha(G_c) <= 5? Erdos-Gyarfas conjecture that for every r >= 3 no balanced r-colouring of K_{r^2+1} exists. Per erdosproblems.com/617 (last edited 2026-04-01): proved for r = 3 and r = 4 (credited there to Erdos-Gyarfas); false for r = 2. On r^2 vertices balanced colourings exist for infinitely many r (affine planes). r = 5 is the first open case; the forum (42things, 2026-07-15) says r = 5 'appears to be open' and reports no computational results.
+Is there a 5-colouring of the edges of K_26 in which every 6-vertex set sees all 5 colours? Equivalently: can E(K_26) be partitioned into 5 graphs G_1..G_5, each with independence number alpha(G_c) <= 5? Erdos-Gyarfas conjecture that for every r >= 3 no balanced r-colouring of K_{r^2+1} exists. Per erdosproblems.com/617 (last edited 2026-04-01): proved for r = 3 and r = 4 (credited there to Erdos-Gyarfas); false for r = 2. On r^2 vertices balanced colourings exist for infinitely many r (affine planes). On 2026-07-15 the forum (42things) said r = 5 'appears to be open'. Status as of 2026-10-16: r = 5 is no longer open. The forum's proof-claims page lists four independent proof claims for r = 5: Rob Sneiderman (2026-07-18; Kang-Pikhurko bounds force every colour class to exactly 65 edges), Conner Silverstein (2026-07-21; a 66-edge lemma plus twelve UNSAT formulas checked with drat-trim), Anthony Rose (2026-07-25; least-colour stripping plus 458 DRAT-checked SAT leaves) and Nick Winter (2026-07-31; vertex-deletion argument, formalised in Lean). RamazanKara/erdos-617-r5-formal-verification (last pushed 2026-10-09) reports an unconditional Lean theorem for r = 5, formalising Sneiderman's argument. None of these has completed independent expert review. The general conjecture stays open; Sneiderman also claims r = 6 (K_37), r = 7 (K_50), r = 8 (K_65) and r = 9 (K_82), none of them formalised.
 
 ## What counts as a win
 
@@ -29,6 +29,7 @@ Check the status page before you start and again before you claim anything; tabl
 
 - <https://www.erdosproblems.com/617>
 - <https://www.erdosproblems.com/forum/thread/617>
+- <https://www.erdosproblems.com/forum/thread/617/proof-claims>
 - <https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/617.lean>
 - <https://github.com/RamazanKara/erdos-617-r5-formal-verification>
 
@@ -52,6 +53,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Estimating alpha heuristically instead of exactly.
 - Attributions: the problem page credits r=3,4 to Erdos-Gyarfas; do not cite Chung-Liu without opening the source.
 - Restricted-family UNSAT (e.g. no Z_26-Cayley colouring works) says nothing about general colourings.
+- The r = 5 case was settled by proof claims posted in July 2026 (see statement): a new r = 5 impossibility proof is a reproduction, not a first. The problem page itself shows no status change; read the forum's proof-claims page and the formalisation repository before attacking.
 
 ## Point your agent at it
 
