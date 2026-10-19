@@ -1,0 +1,4 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+polaris-moleculeace-activity-cliff-mse,moleculeace-chembl287-ki/overall_mse,0.40802135,0.50318131,2026-10-19T15:07:54Z,object/CHEMBL287_Ki_test_predictions.csv,05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c
+polaris-moleculeace-activity-cliff-mse,moleculeace-chembl287-ki/cliff_mse_p2,0.50213600,0.61875106,2026-10-19T15:07:54Z,object/CHEMBL287_Ki_manifest.json,5d7e9e04e787fb7c746f422bc530aad8d3d00561244f4d7c94562640f1be90b4
+polaris-moleculeace-activity-cliff-mse,moleculeace-30-benchmark-sweep/p3_wins_and_macro_cliff_rmse,29_of_30_wins_21_of_30_full_gate_cliff_rmse_0.7211,0.7511_SVM_ECFP_0.737_Monroe,2026-10-19T15:07:54Z,object/moleculeace_30_sweep_manifest.json,42c12361b8406c2530934bbed45a1acf701e4e03b50514a44f1dd056c17405e8
