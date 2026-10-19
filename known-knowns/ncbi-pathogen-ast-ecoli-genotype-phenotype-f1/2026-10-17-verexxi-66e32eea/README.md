@@ -58,4 +58,6 @@ the interval's lower end is below the published F1.
 ## Review record
 The reviewers' scope sentence exactly as signed off in panel/gate.md:
 
+Path note: the quote below uses the claim-folder paths the panel reviewed. In this package, CLAIM.md is README.md and verify-it-yourself/expected.json; result/split.csv and result/scores_ciprofloxacin.json are in how-we-built-it/.
+
 > On the 10,836 eligible isolates of NCBI Pathogen Detection export PDG000000004.6366 (hash-pinned in CLAIM.md) with the whole-PDS-cluster split in result/split.csv (sha256 68a7e3585874da61bcab5a8f2157bd8f4cbfb0f1156a69289cb62959f0577dca), a LightGBM predictor over exported AMR-genotype tokens plus collection year, species label and epi_type scores ciprofloxacin resistant-class F1 96.13% (95% cluster-bootstrap interval 93.65% to 97.84%) and accuracy 98.35% (TP 348, FP 12, TN 1317, FN 16) on 1693 isolate comparisons in 1246 held-out clusters, against 80.36% F1 and 89.72% accuracy (TP 356, FP 166, TN 1163, FN 8) for the reimplemented published genotype-field rule on the same rows (paired F1 difference 95% interval 11.09 to 21.88 points) and 77.2% F1 and 89.9% accuracy published in Table 3 of PMC13513162, as a single-split database-concordance result for ciprofloxacin only with no clinical or treatment meaning.
