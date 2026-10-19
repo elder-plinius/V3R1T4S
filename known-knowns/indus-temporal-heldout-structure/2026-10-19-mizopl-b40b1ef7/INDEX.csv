@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+indus-temporal-heldout-structure,M77_frozen_to_post1977_heldout_masked_sign_top1_and_p3_telescoping,0.200482_Mode1_0.226749_Mode2_and_30_shared_frames,0.147146_KN3_Left_0.093809_SIGIL_and_7.6427_null_frames,2026-10-19T20:27:50Z,object/m77_frozen_structural_model.json,b40b1ef7b100e944aa1d86efa3b8f7dbdfbcd15885ab785e25e7e7454b1451a3
