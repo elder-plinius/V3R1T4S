@@ -1,0 +1,7 @@
+# How We Built It (`immrep22-tcr-epitope-microauc`)
+
+All training, baseline reproduction, and negative-source audit scripts used to produce `object/` are included in this directory:
+
+1. `how-we-built-it/run_clss_immrep22.py`: Standalone, deterministic CPU training and prediction script implementing the Multi-Chain ($\alpha/\beta/\alpha\beta$) OOB + Analytical LOO + CSLS Hubness-Corrected CLSS Ensemble across all 17 IMMREP22 epitopes (`training_data/{epitope}.txt` -> `test_set/{epitope}.txt` and `test_set/testSet_Global.txt`). Every test TCR prediction is strictly pointwise inductive (`|diff| <= 4.66e-15` between single-row and batch evaluation) and runs end-to-end in ~22 seconds on CPU.
+2. `how-we-built-it/reproduce_tcrex_and_audit.py`: Lens 1 reproduction of the published `tcrexab` (`0.846619` vs `0.847347`, `|diff| = 0.000728`), `tcrexb` (`0.831443` vs `0.833841`, `|diff| = 0.002398`), and `tcrexa` (`0.785032` vs `0.784839`, `|diff| = 0.000193`) physicochemical + V/J random forest baselines.
+3. `how-we-built-it/audit_immrep22_p3_and_leakage.py`: Complete 17-epitope negative-source provenance audit (`p3`: `all_neg` vs `swapped_only` vs `control_only` across `clss_tcr`, `tcrexab`, `tcrexb`, `tcrexa`), control-repertoire overlap audit (`0 / 17`), Levenshtein $d_{\text{Lev}}(\text{CDR3}\alpha) + d_{\text{Lev}}(\text{CDR3}\beta) \ge 2$ evaluation (`0.868783` vs `0.831030`), and purged-retraining checks.
