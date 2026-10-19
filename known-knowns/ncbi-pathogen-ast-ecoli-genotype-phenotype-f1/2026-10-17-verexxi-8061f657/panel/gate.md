@@ -3,6 +3,8 @@
 status: CONFIRMED_SOLUTION
 confirmed_scope: On the cluster-held-out TEST partition in result/split.csv (sha256 68a7e358...577dca) of NCBI export PDG000000004.6366 as the claimant describes it, the LightGBM model's predictions in result/test_predictions_amoxicillin-clavulanic_acid.csv score F1 91.97% and accuracy 97.68% (TP 189, FP 7, TN 1200, FN 26), against 44.78% and 69.48% for the code-reimplemented Table 3 genotype rule on the same 1422 rows and 44.5% and 73.6% published, with the model's cluster-bootstrap F1 interval lying above both baselines, for amoxicillin-clavulanic acid only and for database concordance only.
 
+Path note (added 2026-10-19, matching the maintainer's request on pull request 344): the confirmed_scope sentence above uses the claim-folder paths the panel reviewed. In this package, result/split.csv is how-we-built-it/split.csv and result/test_predictions_amoxicillin-clavulanic_acid.csv is object/test_predictions_amoxicillin-clavulanic_acid.csv.
+
 Panel results:
 - reproduce: pass: true; context: subagent (same VM)
 - novelty: pass: true; context: subagent (Claude Code on the owner's PC, fresh context, Sonnet); novelty: PASS - live Table 3 (HTTP 200, 2026-10-17T00:24:41Z) gives amoxicillin-clavulanic acid F1 44.5% and accuracy 73.6%; the claim's F1 91.97% and accuracy 97.68% strictly beat both (+47.47 and +24.08 points); Front Microbiol
