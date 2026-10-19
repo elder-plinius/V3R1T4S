@@ -58,4 +58,6 @@ the interval's lower end is below the published F1.
 ## Review record
 The reviewers' scope sentence exactly as signed off in panel/gate.md:
 
+Path note: the quote below uses the claim-folder paths the panel reviewed. In this package, result/test_predictions_ceftriaxone.csv is object/test_predictions_ceftriaxone.csv.
+
 > On the hash-defined test partition of NCBI Pathogen Detection export PDG000000004.6366 (1531 ceftriaxone comparisons in 1114 groups, of which 337 are PDS SNP clusters holding 754 rows and 777 are unclustered isolates treated as one-isolate groups), the LightGBM predictions saved in result/test_predictions_ceftriaxone.csv score F1 97.66% (95% cluster-bootstrap CI 96.32% to 98.69%) and accuracy 98.76% with TP 396, FP 10, TN 1116, FN 9, which is 3.06 points above the published 94.6% F1 (published accuracy 97.9%) and 3.15 points above the published genotype rule recomputed on the same rows (F1 94.51%, accuracy 97.19%, paired-difference CI 1.21 to 5.44 points), for ceftriaxone only, as a database-concordance result with no clinical interpretation, and with the margin over the 3-point bar only 0.06 points (one more test error would put it below the bar).
