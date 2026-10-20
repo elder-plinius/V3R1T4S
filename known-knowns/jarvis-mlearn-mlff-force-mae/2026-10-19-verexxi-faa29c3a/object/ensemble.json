@@ -1,0 +1,13 @@
+{
+ "element": "Mo",
+ "ensemble": "mean of the 3 seeds (float64 inference)",
+ "ch": 32,
+ "rmax": 4.5,
+ "epochs": 150,
+ "num_interactions": 2,
+ "max_ell": 2,
+ "correlation": 3,
+ "batch_size": 3,
+ "lr": 0.005,
+ "listed_model": "snap_mlearn"
+}

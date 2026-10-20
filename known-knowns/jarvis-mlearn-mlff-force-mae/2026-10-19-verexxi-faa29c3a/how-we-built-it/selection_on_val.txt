@@ -1,0 +1,1 @@
+Mo selection: C(16ch)=0.105369 D(32ch)=0.104830 val MAE -> D wins (frozen rule); B(bs10)=0.108916
