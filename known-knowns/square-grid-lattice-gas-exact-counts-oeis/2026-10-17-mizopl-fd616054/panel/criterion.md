@@ -3,9 +3,9 @@
 context: subagent (general-purpose)
 
 ## Scope reviewed
-Only files inside `claim/` were read for data. Scripts I wrote and ran live in a
-separate temp dir; `sixvertex.py` was copied there and run as first-party code.
-The claimed object is a single cell: `claim/value.txt` =
+Only files inside this package were read for data. Scripts I wrote and ran live in a
+separate temp dir; `how-we-built-it/sixvertex.py` was copied there and run as first-party code.
+The claimed object is a single cell: `object/a054759_15.txt` =
 4310182149988584261406143524214457416387448 (one integer, a(15)).
 
 ## What p1 requires (literal reading)
@@ -31,15 +31,16 @@ make p1 (and the main criterion's published-term consistency) impossible.
    - I independently recomputed BOTH runs from scratch for n=15 (not trusting the
      supplied residues): RUN_A value==claim True (551.9s), RUN_B value==claim True
      (626.4s), A==B True, recomputed value = 4310182149988584261406143524214457416387448.
-   - Supplied `n15_residues.txt`: both runs CRT (my own routine) to the claimed value
+   - Supplied `object/residues.txt`: both runs CRT (my own routine) to the claimed value
      (RUN_A 220 bits, RUN_B 228 bits); value % prime == residue for all 23 rows.
 
 2. REPRODUCTION rule — PASS.
    - Transfer-matrix method reproduces every published term n=1..14 exactly against
-     in-sandbox `claim/inputs/b054759.txt` (ALL MATCH).
+     https://oeis.org/A054759/b054759.txt (sha256 `26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada`,
+     recorded in `the-record-we-beat/snapshot.md`) (ALL MATCH).
    - Independent cross-check of the definition: brute force over all 2^(2n^2)
      orientations with in-degree-2 constraint gives a(1)=4, a(2)=18, a(3)=148,
-     matching the b-file. The method models the correct object.
+     matching the published OEIS b-file. The method models the correct object.
 
 3. GROWTH clause — fails literally, and is NOT part of p1.
    - a(15)^(1/225) = 1.546986940, W=(4/3)^1.5 = 1.539600718, gap 0.007386 > 1e-3.

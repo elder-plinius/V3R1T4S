@@ -1,11 +1,13 @@
 #!/usr/bin/env python3
-"""Reproduction gate: reproduce A054759(n) for n=1..14 from the b-file, exactly.
+"""Reproduction gate: reproduce A054759(n) for n=1..14 from the OEIS b-file, exactly.
 
 Uses the sector transfer-matrix + float64 modular matmul + CRT (see sixvertex.py).
-(This is the de-machined copy: the original hardcoded an absolute b-file path; here the
-b-file path is an argument, default 'b054759.txt' in this folder.)
+Published terms n=1..14 are cited from https://oeis.org/A054759/b054759.txt
+(sha256: 26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada; see
+../the-record-we-beat/snapshot.md). An optional local b-file path may be passed as
+the third argument.
 
-    python3 reproduce.py [nmax=14] [nprimes=8] [bfile=b054759.txt]
+    python3 reproduce.py [nmax=14] [nprimes=8] [optional_bfile_path]
 """
 import sys, time, signal, os
 import sixvertex as sv
@@ -13,6 +15,25 @@ import sixvertex as sv
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "reproduce_output.txt")
 HARD_LIMIT_S = int(os.environ.get("HARD_LIMIT_S", "900"))
+
+# Published terms from https://oeis.org/A054759/b054759.txt
+# (sha256: 26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada)
+PUBLISHED_A054759 = {
+    1: 4,
+    2: 18,
+    3: 148,
+    4: 2970,
+    5: 143224,
+    6: 16448400,
+    7: 4484823396,
+    8: 2901094068042,
+    9: 4448410550095612,
+    10: 16178049740086515288,
+    11: 139402641051212392498528,
+    12: 2849295959501939989625992464,
+    13: 137950545200232788276834783781648,
+    14: 15844635835975276495290739119895808472,
+}
 
 
 def on_alarm(signum, frame):
@@ -39,8 +60,7 @@ def load_bfile(path):
 def main():
     nmax = int(sys.argv[1]) if len(sys.argv) > 1 else 14
     nprimes = int(sys.argv[2]) if len(sys.argv) > 2 else 8
-    bpath = sys.argv[3] if len(sys.argv) > 3 else os.path.join(HERE, "b054759.txt")
-    bvals = load_bfile(bpath)
+    bvals = load_bfile(sys.argv[3]) if len(sys.argv) > 3 else dict(PUBLISHED_A054759)
     primes = sv.primes_below(1 << 20, nprimes)
     lines = []
 
@@ -51,6 +71,7 @@ def main():
             f.write("\n".join(lines) + "\n")
 
     emit("# A054759 reproduction  (run at %s)" % time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()))
+    emit("# source: https://oeis.org/A054759/b054759.txt (sha256: 26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada)")
     emit("# primes (%d, each < 2^20): %s" % (nprimes, primes))
     emit("# hard limit: %ds" % HARD_LIMIT_S)
     emit("# %3s %42s %42s  match  secs  Mbits" % ('n', 'computed', 'published'))

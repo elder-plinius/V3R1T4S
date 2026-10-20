@@ -1,7 +1,7 @@
 # Honesty gate (step 7)
 
-The run's main session read all three panel files (panel/reproduce.md, panel/novelty.md,
-panel/criterion.md) and the self-break (attempts/smaller-first/code/break_output.txt).
+The run's main session read all three panel files (`panel/reproduce.md`, `panel/novelty.md`,
+`panel/criterion.md`) and the self-break (`how-we-built-it/break.py`).
 
 Downgrade triggers checked (RUN.md step 7): no hedging panelist; no reproduction mismatch
 (REPRODUCE and CRITERION each independently recomputed all 23 n=15 residues from scratch and

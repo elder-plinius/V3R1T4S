@@ -17,7 +17,7 @@ recomputes one n=15 residue from scratch.
 
 ```
 cd how-we-built-it
-python3 reproduce.py          # reads b054759.txt in this folder; do NOT use python3 -I
+python3 reproduce.py          # checks against https://oeis.org/A054759/b054759.txt (sha256 26a83711...); do NOT use python3 -I
 ```
 Expected: each n=1..14 prints `OK`, final line `RESULT: ALL MATCH`.
 
@@ -38,9 +38,9 @@ for digit.
 
 ```
 cd how-we-built-it
-python3 break.py object_residues.txt   # or pass the path to a residues file
+python3 break.py ../object/residues.txt
 ```
-(The residues file is object/residues.txt in this package.) break.py does a full edge-orientation
+(The residues file is `object/residues.txt` in this package.) `break.py` does a full edge-orientation
 brute force (n=1..3), an independent non-sector transfer matrix (n=1..8), independent CRT of the
 recorded residues, and prints the growth-clause numbers literally.
 

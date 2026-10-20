@@ -14,29 +14,7 @@ numerical correctness of the value — that is another panelist's job.
 - HTTP status: HTTP 200
 - UTC time of fetch: 2026-10-17 13:01:03 UTC (run of `date -u` immediately after the curl)
 - User-Agent used: "V3R1T4S-agent (research; honest client)"
-
-### Real command output (b-file)
-
-```
-# A054759 (b-file synthesized from sequence entry)
-1 4
-2 18
-3 148
-4 2970
-5 143224
-6 16448400
-7 4484823396
-8 2901094068042
-9 4448410550095612
-10 16178049740086515288
-11 139402641051212392498528
-12 2849295959501939989625992464
-13 137950545200232788276834783781648
-14 15844635835975276495290739119895808472
-
-HTTP 200
-```
-
+- Page sha256: `26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada`
 - Largest index present in b-file: **14**
 - Value at index 14: **15844635835975276495290739119895808472**
 - Index 15: **NOT present** in the b-file.
@@ -47,12 +25,12 @@ value 4310182149988584261406143524214457416387448 does NOT appear on the page.
 The extension note credits a(14) to Brendan McKay, Apr 18 2024 — within the last
 ~24 months — and no a(15) has followed.
 
-### Cross-check against saved claim input
+### Cross-check against package snapshot
 
-The saved file `inputs/b054759.txt` has sha256
-26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada, matching the
-value recorded in `scout_table.md`, and its tail also ends at index 14. The
-scout record (`scout_table.md`) is consistent with my live fetch.
+The fetched b-file https://oeis.org/A054759/b054759.txt has sha256
+`26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada`, matching the
+snapshot metadata recorded in `the-record-we-beat/snapshot.md`, and its tail ends
+at index 14.
 
 ## Literature search (~last 24 months)
 

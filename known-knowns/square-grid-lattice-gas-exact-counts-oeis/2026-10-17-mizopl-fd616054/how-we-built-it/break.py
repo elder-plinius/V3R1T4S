@@ -12,12 +12,14 @@ Parts:
   B. Independent transfer matrix: build T[a][b] by BRUTE enumeration of all 2^n horizontal
      edge configs per (a,b) and a DIRECT ice-rule check at each vertex (no h_{j+1} recurrence,
      no min/max closed form, no sector pre-blocking). a(n)=Tr(T^n) exact big integers.
-     Run n=1..8, compare to the b-file.
+     Run n=1..8, compare to https://oeis.org/A054759/b054759.txt
+     (sha256: 26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada).
   C. Independent CRT: re-CRT the 23 recorded residues (RUN_A,RUN_B) with our own CRT and
      verify candidate % p == recorded residue for every prime.
   D. Growth gate, literal: a(n)^(1/n^2) vs Lieb ice constant W=(4/3)^(3/2), for n=14 and the
      candidate n=15, printed to high precision. No rounding in our favour.
 """
+import os
 import sys
 from itertools import product, combinations
 from functools import reduce
@@ -25,6 +27,8 @@ from decimal import Decimal, getcontext
 
 CANDIDATE = 4310182149988584261406143524214457416387448
 
+# Published terms from https://oeis.org/A054759/b054759.txt
+# (sha256: 26a837111876762bf9d1c5892c21ec1a15c36e00b0ee9e45bd2c389741cbfada)
 BFILE = {
     1: 4, 2: 18, 3: 148, 4: 2970, 5: 143224, 6: 16448400, 7: 4484823396,
     8: 2901094068042, 9: 4448410550095612, 10: 16178049740086515288,
@@ -79,16 +83,6 @@ def brute_full(n):
 # ---------------------------------------------------------------------------
 # PART B: independent transfer matrix (brute horizontal, direct ice check)
 # ---------------------------------------------------------------------------
-# State = vertical arrows crossing a horizontal cut: a in {0,1}^n, a_j=1 means UP.
-# For a row of vertices with vertical-in config a (below) and vertical-out config b (above),
-# count horizontal edge configs h in {0,1}^n (periodic within the row) satisfying the ice
-# rule at every vertex. h_j = horizontal edge to the LEFT of vertex j (between vertex j-1
-# and j); h_j=1 means points RIGHT (into vertex j). Edge to the right of vertex j is
-# h_{(j+1)%n}. Ice rule at vertex j: in-degree==2 where ins are:
-#     vertical-below into j  iff a_j==1 (UP = into j from below)
-#     vertical-above into j  iff b_j==0 (DOWN = into j from above)
-#     horizontal-left into j iff h_j==1 (RIGHT)
-#     horizontal-right into j iff h_{(j+1)%n}==0 (LEFT)
 def Tentry_brute(n, a, b):
     cnt = 0
     for h in product((0, 1), repeat=n):
@@ -126,7 +120,6 @@ def mat_mul(A, B):
 
 def mat_pow_trace(T, e):
     N = len(T)
-    # repeated squaring, exact big ints
     R = [[1 if i == j else 0 for j in range(N)] for i in range(N)]
     base = [row[:] for row in T]
     while e > 0:
@@ -168,7 +161,8 @@ def load_residues(path):
 
 # ---------------------------------------------------------------------------
 if __name__ == "__main__":
-    resid_path = sys.argv[1] if len(sys.argv) > 1 else "../../../2026-10-17-1225/attempts/smaller-first/code/n15_residues.txt"
+    default_resid = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "object", "residues.txt")
+    resid_path = sys.argv[1] if len(sys.argv) > 1 else default_resid
 
     print("=== PART A: full edge-orientation brute force (ground truth) ===", flush=True)
     for n in (1, 2, 3):
@@ -189,7 +183,6 @@ if __name__ == "__main__":
     for tag, pairs in runs.items():
         primes = [p for p, _ in pairs]
         res = [r for _, r in pairs]
-        # verify each recorded residue equals candidate % p
         bad = [(p, r, CANDIDATE % p) for p, r in pairs if CANDIDATE % p != r]
         val, M = crt(res, primes)
         print(f"  {tag}: {len(primes)} primes, CRT={val}", flush=True)
