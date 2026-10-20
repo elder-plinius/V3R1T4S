@@ -1,0 +1,21 @@
+{
+ "fixture": "ragged_rows.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  2
+ ],
+ "found_columns": 2,
+ "expected_columns": [
+  3,
+  4
+ ],
+ "must_not": [
+  "drop line 2 silently and return N=2",
+  "pad line 2",
+  "return any coords"
+ ]
+}
