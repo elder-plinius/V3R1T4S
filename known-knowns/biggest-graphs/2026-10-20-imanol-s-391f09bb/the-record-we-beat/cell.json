@@ -1,0 +1,26 @@
+{
+  "table": "Table of the largest known (Delta,D)-graphs",
+  "maintainer": "Francesc Comellas",
+  "url": "https://web.mat.upc.edu/francesc.comellas/delta-d/table_degree_diameter.html",
+  "fetched_utc": "2026-10-20T19:06:44Z",
+  "http_status": 200,
+  "request": "one plain curl GET, User-Agent V3R1T4S/1.0 (research; contact via repo)",
+  "page_sha256": "69486132bac2b05e2f911cc290382eb79c282c219b6d1e70176fafd44ed8804f",
+  "page_bytes": 47382,
+  "cell": {
+    "row_delta": 13,
+    "column_D": 4,
+    "value_text": "6 615",
+    "value_integer": 6615,
+    "boldface": false,
+    "cayley_star": false,
+    "description_link": "desc_g/desc_g4.html#134"
+  },
+  "row_html_excerpt": "<TH align=left>13</TH> ... <TD style=\"border: 1px solid black;\" bgColor=#99EF99><A href=\"desc_g/desc_g4.html#134\" target=\"_blank\">6 615</A> </TD> ...",
+  "repo_baseline": {
+    "path": "known-knowns/biggest-graphs/graphs/G_13_4_n6630.edges",
+    "vertices": 6630,
+    "edges": 43086,
+    "table_value_at_its_publication": 6615
+  }
+}
