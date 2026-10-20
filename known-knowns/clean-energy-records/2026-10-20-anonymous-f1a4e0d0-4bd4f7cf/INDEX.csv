@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+clean-energy-records,IEA37 case study 1 16 turbines (radius 1300 m) AEP MWh,424131.9503,421561.89715,2026-10-20T02:24:14Z,object/iea37-v3r1t4s-opt16.yaml,4bd4f7cfd20a985765850bbb68212cf0bfb1823d8b65e0a27cd7aec2a4e98f4c
