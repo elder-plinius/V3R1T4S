@@ -3,6 +3,8 @@
 ## What
 Recomputed from the saved per-isolate file, on the hash-selected 20 percent test partition of NCBI Pathogen Detection export PDG000000004.6366 (1715 ampicillin R/S rows, one per isolate, in 1257 groups made of 365 whole PDS SNP clusters holding 823 rows plus 892 isolates with no PDS accession each kept as its own group), the saved LightGBM predictor scores F1 98.80% and accuracy 98.78% (TP 867, FP 8, TN 827, FN 13) against 94.40% F1 and 94.52% accuracy (TP 792, FP 6, TN 829, FN 88) for the reimplemented published genotype rule on the same rows and the 93.9% F1 and 94.5% accuracy in Table 3 of the saved status-source copy, with a paired 95% cluster-bootstrap interval of 3.06 to 5.88 F1 points for model minus rule, as a database-concordance result for ampicillin only (no other antibiotic, no other export, no clinical or treatment meaning).
 
+The "saved status-source copy" named in the sentence above is Table 3 of PMC13513162 (Europe PMC full text, fetched 2026-10-17T00:27:32Z). The sentence itself is quoted word for word from panel/gate.md, which is why its wording is unchanged.
+
 ## Check it yourself
 `sh verify-it-yourself/run_checks.sh` from this folder (Python 3 standard library only). It downloads the sha256-pinned NCBI export
 (551 MB) and cluster list, recomputes eligibility, phenotypes, the cluster split and the published rule, scores object/test_predictions_ampicillin.csv, runs a
@@ -45,6 +47,9 @@ the interval's lower end is below the published F1.
   that did not change the model (details in how-we-built-it/).
 - The published rule was reimplemented from its summaries and calibrated to reproduce the paper's per-comparison table exactly; for
   alleles absent from the paper's data the regexes are our reading of the summaries.
+
+## Path note for the panel files
+Path note: the quote below uses the claim-folder paths the panel reviewed. In this package, CLAIM.md is README.md and verify-it-yourself/expected.json; REPRODUCE.md is RUN_IT_YOURSELF.md; result/split.csv, result/model_ampicillin.txt and result/scores_ampicillin.json are in how-we-built-it/; result/test_predictions_ampicillin.csv is object/test_predictions_ampicillin.csv; status_source/ is the-record-we-beat/; target.md and the work*/ folders are not shipped.
 
 ## Credits
 - Abdullateef Abdullah Alshehri, "Antibiotic-Specific Genotype-Phenotype Concordance and Cross-Database Interoperability in Public
