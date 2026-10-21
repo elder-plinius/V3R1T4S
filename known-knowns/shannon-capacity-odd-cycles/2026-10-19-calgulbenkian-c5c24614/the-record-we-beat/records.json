@@ -1,0 +1,20 @@
+{
+ "cycle": "C11",
+ "note": "Values the claim is compared against. The exact integers are re-derived or copied as data from the sources named in table-record/README.md.",
+ "records": [
+  {
+   "id": "bpz_lean",
+   "kind": "exact",
+   "M": "705688158939417766083006128695703821080101605304173623991920300506716846627203440324635068341693109509608786929844839653207121849017872676157797788816",
+   "d": 207,
+   "headline": true,
+   "label": "BPZ Lean repository CertC11.lean at aa21eeb12b75 (d=207)"
+  },
+  {
+   "id": "9a_bpz_comment",
+   "kind": "decimal",
+   "value": "5.294502522149",
+   "label": "9a.md comment, BPZ C11"
+  }
+ ]
+}
