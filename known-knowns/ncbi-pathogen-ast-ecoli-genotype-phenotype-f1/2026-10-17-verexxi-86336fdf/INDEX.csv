@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ncbi-pathogen-ast-ecoli-genotype-phenotype-f1,ampicillin F1 (cluster-held-out),98.80,93.9,2026-10-17T00:27:32Z,object/test_predictions_ampicillin.csv,86336fdf54be424be5bf2de469e1d3453f64547a10b1f7b98e678a52b46e3379
