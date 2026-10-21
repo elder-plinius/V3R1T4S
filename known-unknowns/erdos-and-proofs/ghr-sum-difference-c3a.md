@@ -1,10 +1,10 @@
 # Gyarmati-Hennecart-Ruzsa sum-difference constant C_3a: beat 1.19519192 (finite-certified record 1.19102809)
 
-✏️ **Erdős problems and proofs** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-03
+✏️ **Erdős problems and proofs** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-C_3a is the largest constant such that there are arbitrarily large integer sets A, B with |A+B| << |A| and |A-B| >> |A+B|^{C_3a}. Upper bound 4/3 (GHR 2007). Per the teorth 3a page, a finite set U of nonnegative integers containing 0 gives C_3a >= 1 + log(|U-U|/|U+U|)/log(2·max(U)+1). Lower-bound records rose fast in 2025-2026: Gerbicz 1.173050, Griego 1.1740744, Mosaic 1.1835129324, Numaro 1.18733* (limit), Kleinwaks 1.19102809 (finite-certified, base 34065 masked digits), Kleinwaks 2026b 1.19519192* (Lean-formalised limit construction, base 27022).
+C_3a is the largest constant such that there are arbitrarily large integer sets A, B with |A+B| << |A| and |A-B| >> |A+B|^{C_3a}. Upper bound 4/3 (GHR 2007), lowered on the 3a page to (13524e-7359)/(9451e-3286) = 1.3123733* (Kleinwaks 2026c; asterisked because its Lean formalisation is self-hosted and not independently replayed). Per the teorth 3a page, a finite set U of nonnegative integers containing 0 gives C_3a >= 1 + log(|U-U|/|U+U|)/log(2·max(U)+1). Lower-bound records rose fast in 2025-2026: Gerbicz 1.173050, Griego 1.1740744, Mosaic 1.1835129324, Numaro 1.18733* (limit), Kleinwaks 1.19102809 (base 34065 masked digits; asterisked as a limit in the K2026 row, listed as a Lean-formalised explicit finite construction in the K2026b row; the page's notes name 1.1835129324 [MI2026] as the largest value certified by exact finite counting), Kleinwaks 2026b 1.19519192* (Lean-formalised limit construction, base 27022).
 
 ## What counts as a win
 

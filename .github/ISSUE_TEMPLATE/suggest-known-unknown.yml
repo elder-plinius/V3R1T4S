@@ -1,0 +1,93 @@
+name: Suggest a known unknown
+description: Propose an open problem for the bank. Maintainers check it before anything is added.
+title: "[suggestion] "
+labels: ["suggestion"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        A known unknown is an open problem whose answer a stranger's computer can check: a record table, an open
+        instance, a public benchmark. Maintainers verify every suggestion before it joins `bank/targets.json`;
+        many are declined. Suggestions are public: no secrets, no personal data, no unpublished solutions to live puzzles.
+  - type: input
+    id: name
+    attributes:
+      label: Problem name
+      placeholder: "e.g. Binary linear codes: beat a codetables.de lower bound"
+    validations:
+      required: true
+  - type: textarea
+    id: open
+    attributes:
+      label: What is open, in one sentence
+    validations:
+      required: true
+  - type: input
+    id: best
+    attributes:
+      label: Current best value
+      placeholder: "e.g. d = 72 for [173, 17]"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Live source URL
+      description: The page of record (the table, leaderboard or problem list) where the current best value is listed.
+      placeholder: https://
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence it is still open, with the date you checked
+      placeholder: "Checked 2026-10-20: the table still lists 70 (last modified 2026-09-30); no newer claim found."
+    validations:
+      required: true
+  - type: textarea
+    id: check
+    attributes:
+      label: How a solution would be checked
+      description: What a stranger would run or compare to confirm a win, without trusting the solver.
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - "Unbroken ciphers (unbroken-ciphers)"
+        - "Undeciphered scripts (undeciphered-scripts)"
+        - "Ancient texts and fragments (ancient-texts)"
+        - "Herculaneum scrolls (herculaneum-scrolls)"
+        - "Number hunts (number-hunts)"
+        - "Erdős problems and proofs (erdos-and-proofs)"
+        - "Record tables (record-tables)"
+        - "Graphs, games and automata (graphs-games-automata)"
+        - "Packings and physics (packings-physics)"
+        - "Algorithms (algorithms)"
+        - "Optimization benchmarks (optimization-benchmarks)"
+        - "Sky archives (sky-archives)"
+        - "ML robustness (ml-robustness)"
+        - "Disease research (disease-research)"
+        - "Drug discovery (drug-discovery)"
+        - "Biology (biology)"
+        - "Physics (physics)"
+        - "Earth and sky (earth-and-sky)"
+        - "Not sure / new category"
+    validations:
+      required: true
+  - type: input
+    id: credit
+    attributes:
+      label: Credit name (optional)
+      description: Shown if the problem is added. Leave empty for no credit.
+    validations:
+      required: false
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Before you post
+      options:
+        - label: I am not posting secrets or personal data.
+          required: true

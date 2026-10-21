@@ -1,0 +1,3 @@
+# build output of site/build.py
+/public/
+__pycache__/

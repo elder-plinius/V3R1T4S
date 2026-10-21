@@ -52,6 +52,9 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Sign-reading normalisation errors (homophone indices, broken-sign brackets, x signs) can both create and hide matches; use sign names and treat damaged signs as wildcards with a penalty.
 - Some records have restricted authorizedScopes; use only public data, throttle requests and respect eBL terms of use.
 - The in-platform matcher endpoint (/api/fragments/{id}/match) is not public (403); only the open-source ngram-matcher library run on public API data counts as the baseline gate.
+- The public 'signs' field encodes editorial restorations (bracketed text in the record's ATF) exactly like attested signs, so a shared run can be an editor's restoration matched against itself. Derive attested positions from each record's text tokens (the enclosureType field marks BROKEN_AWAY parts) and count only runs attested on both fragments. Found 2026-10-16: re-aligning 1,109 raw-sign overlaps on attested signs kept 123, and the strongest raw hit (VAT.18937 | VAT.25937, 71 shared signs) had 42 restored signs on one side.
+- 'Genre absent' in eBL mostly means uncurated, and the uncurated set is dominated by administrative and legal records. Identifying labels live in references[].notes (e.g. 'Income of barley') and in 'dossiers' (e.g. 'Babylon N1'), not in 'notes' or 'genres'; read those fields for clause (a), and treat any archive edition as a fail. Of 808 records of candidate pairs checked on 2026-10-16, only 37 were clean on all fields.
+- Clause (d) as written (p < 1e-4 after Bonferroni over all pairs tested, by line-shuffled simulation) cannot be reached by simulation: with thousands of pairs the level is below 1e-8 and a pooled null of 10^4-10^5 shuffles floors at about 1e-4. State a reachable level or accept a pre-registered parametric (Gumbel) tail; 'beats every control' remains checkable.
 
 ## Point your agent at it
 

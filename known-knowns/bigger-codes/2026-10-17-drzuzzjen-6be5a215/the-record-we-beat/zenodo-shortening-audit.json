@@ -1,0 +1,64 @@
+{
+  "utc": "2026-10-17T14:19:29.849663+00:00",
+  "url": "https://zenodo.org/api/records/23075336/files/constant-weight-codes-n29-d6.zip/content",
+  "http_status": 200,
+  "bytes": 167950,
+  "sha256": "fae5981ccc3177682a2e796160d0693bca3e0fe1965997fa6531ec47e4ddcac0",
+  "zenodo_checksum": "md5:0c75997b79bcedec66eb4e20cd055658",
+  "members": [
+    "A-29-6-9-14313.txt",
+    "A-29-6-10-25896.txt",
+    "verify.py",
+    "README.md",
+    "SHA256SUMS.txt"
+  ],
+  "results": [
+    {
+      "source_file": "A-29-6-9-14313.txt",
+      "source_sha256": "888567821393e3908154d03c5ff4278dffb4539e6bdc5f1c18527c2d8209db25",
+      "n": 29,
+      "d": 6,
+      "w": 9,
+      "M": 14313,
+      "fixed_ones": 0,
+      "fixed_zeros": 3,
+      "all_patterns_checked": 3654,
+      "maximum_target_code_size": 4517,
+      "coordinates": [
+        [],
+        [
+          0,
+          1,
+          2
+        ]
+      ],
+      "checksum_sumcounts": 16316820,
+      "checksum_pass": true,
+      "target_competitor_at_least5997": false
+    },
+    {
+      "source_file": "A-29-6-10-25896.txt",
+      "source_sha256": "9800279b7587b99bbd52ae1b6e911a63e0196f77eee29ffaa7e222a0db844410",
+      "n": 29,
+      "d": 6,
+      "w": 10,
+      "M": 25896,
+      "fixed_ones": 1,
+      "fixed_zeros": 2,
+      "all_patterns_checked": 10962,
+      "maximum_target_code_size": 4290,
+      "coordinates": [
+        [
+          28
+        ],
+        [
+          0,
+          27
+        ]
+      ],
+      "checksum_sumcounts": 44282160,
+      "checksum_pass": true,
+      "target_competitor_at_least5997": false
+    }
+  ]
+}

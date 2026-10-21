@@ -592,7 +592,12 @@ def secret_windows(workdir, public_texts, bank=None):
     if not os.path.isdir(priv):
         return secrets
     public = set()
+    # Short exclusions require an exact complete line, never normalized substrings.
+    # LF is the line boundary; Unicode separators are ordinary text. read() already
+    # folds CRLF. Replacement characters cannot establish exact decoded identity.
+    public_lines = set()
     for t in public_texts:
+        public_lines.update(line for line in t.split("\n") if "\ufffd" not in line)
         n = norm(t)
         for i in range(0, max(0, len(n) - W + 1)):
             public.add(n[i:i + W])
@@ -603,11 +608,17 @@ def secret_windows(workdir, public_texts, bank=None):
         for p in walk(d, skip_dirs=("panel", "claim")):
             if os.path.splitext(p)[1].lower() in CODE_EXT or not is_text(p):
                 continue
-            n = norm(read(p, 200_000))
+            text = read(p, 200_000)
+            n = norm(text)
             if len(n) < 8:
                 continue
             if len(n) < W:
-                if n not in public:
+                line = text[:-1] if text.endswith("\n") else text
+                try:
+                    complete = os.path.getsize(p) <= 200_000
+                except OSError:
+                    complete = False
+                if not complete or "\n" in line or "\ufffd" in line or line not in public_lines:
                     secrets.setdefault(n, (tid, rel(p, workdir)))
                 continue
             for i in range(0, len(n) - W + 1, 4):

@@ -1,0 +1,182 @@
+{
+  "started_utc": "2026-10-17T14:15:18.133087+00:00",
+  "finished_utc": "2026-10-17T14:15:18.783251+00:00",
+  "definition": {
+    "n": 26,
+    "w": 9,
+    "d_at_least": 6,
+    "M": 5997
+  },
+  "object_relative_path": "../claim/object/A26_6_9_5997.txt",
+  "object_bytes": 161919,
+  "object_sha256": "6be5a215f0b662497e21330c98db83b5128095af52e4a45a8484ba60ff524de8",
+  "expected_sha256": "6be5a215f0b662497e21330c98db83b5128095af52e4a45a8484ba60ff524de8",
+  "sha256_matches": true,
+  "expected_pairs": 17979006,
+  "calibration": [
+    {
+      "name": "positive",
+      "words": [
+        "110000",
+        "001100",
+        "000011"
+      ],
+      "expected_errors": [],
+      "calibration_pass": true,
+      "actual": {
+        "pass": true,
+        "errors": [],
+        "count": 3,
+        "distinct_count": 3,
+        "pairs_checked": 3,
+        "minimum_distance": 4,
+        "first_distance_violation": null
+      }
+    },
+    {
+      "name": "duplicate",
+      "words": [
+        "110000",
+        "110000"
+      ],
+      "expected_errors": [
+        "duplicate",
+        "distance"
+      ],
+      "calibration_pass": true,
+      "actual": {
+        "pass": false,
+        "errors": [
+          "duplicate",
+          "distance"
+        ],
+        "count": 2,
+        "distinct_count": 1,
+        "pairs_checked": 1,
+        "minimum_distance": 0,
+        "first_distance_violation": {
+          "i": 0,
+          "j": 1,
+          "distance": 0
+        }
+      }
+    },
+    {
+      "name": "wrong_weight",
+      "words": [
+        "111000"
+      ],
+      "expected_errors": [
+        "weight"
+      ],
+      "calibration_pass": true,
+      "actual": {
+        "pass": false,
+        "errors": [
+          "weight"
+        ],
+        "count": 1,
+        "distinct_count": 1,
+        "pairs_checked": 0,
+        "minimum_distance": null,
+        "first_distance_violation": null
+      }
+    },
+    {
+      "name": "wrong_length",
+      "words": [
+        "11000"
+      ],
+      "expected_errors": [
+        "length"
+      ],
+      "calibration_pass": true,
+      "actual": {
+        "pass": false,
+        "errors": [
+          "length"
+        ],
+        "count": 1,
+        "pairs_checked": 0,
+        "minimum_distance": null
+      }
+    },
+    {
+      "name": "inadequate_distance",
+      "words": [
+        "110000",
+        "101000"
+      ],
+      "expected_errors": [
+        "distance"
+      ],
+      "calibration_pass": true,
+      "actual": {
+        "pass": false,
+        "errors": [
+          "distance"
+        ],
+        "count": 2,
+        "distinct_count": 2,
+        "pairs_checked": 1,
+        "minimum_distance": 2,
+        "first_distance_violation": {
+          "i": 0,
+          "j": 1,
+          "distance": 2
+        }
+      }
+    },
+    {
+      "name": "wrong_count",
+      "words": [
+        "110000"
+      ],
+      "expected_errors": [
+        "count"
+      ],
+      "calibration_pass": true,
+      "actual": {
+        "pass": false,
+        "errors": [
+          "count"
+        ],
+        "count": 1,
+        "distinct_count": 1,
+        "pairs_checked": 0,
+        "minimum_distance": null,
+        "first_distance_violation": null
+      }
+    },
+    {
+      "name": "nonbinary",
+      "words": [
+        "11000x"
+      ],
+      "expected_errors": [
+        "alphabet"
+      ],
+      "calibration_pass": true,
+      "actual": {
+        "pass": false,
+        "errors": [
+          "alphabet"
+        ],
+        "count": 1,
+        "pairs_checked": 0,
+        "minimum_distance": null
+      }
+    }
+  ],
+  "object_result": {
+    "pass": true,
+    "errors": [],
+    "count": 5997,
+    "distinct_count": 5997,
+    "pairs_checked": 17979006,
+    "minimum_distance": 6,
+    "first_distance_violation": null
+  },
+  "pass": true,
+  "exit_code": 0
+}

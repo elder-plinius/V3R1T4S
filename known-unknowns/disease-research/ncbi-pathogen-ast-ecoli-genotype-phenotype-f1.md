@@ -1,10 +1,10 @@
 # NCBI Pathogen Detection AST: beat the published antibiotic-specific genotype-phenotype F1 for Escherichia coli/Shigella
 
-🧬 **Disease research** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-15
+🧬 **Disease research** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-NCBI Pathogen Detection publishes, with no login, a single metadata table per organism group that links assembly accessions, AMRFinderPlus resistance-gene annotations and laboratory antimicrobial susceptibility (AST) results (ftp.ncbi.nlm.nih.gov/pathogen/Results/Escherichia_coli_Shigella/latest_snps/Metadata/, PDG000000004.6364.metadata.tsv, 525 MB, refreshed 2026-10-15). Abdullateef Abdullah Alshehri's 2026 study in Int J Mol Sci (PMC13513162, NCBI export of 2026-06-11, AMRFinderPlus 4.2.7) froze such an export, kept 10,201 records meeting prespecified eligibility and scored 56,141 genotype-phenotype comparisons across eight priority antibiotics: concordance is high for tetracycline (accuracy 98.4%, F1 98.1%) and ceftriaxone (97.9%, 94.6%) but collapses for amoxicillin-clavulanic acid (73.6%, 44.5%). The gap between a gene-presence lookup and the measured phenotype for beta-lactam/inhibitor combinations is a real, open diagnostics problem, and the whole benchmark is one tab-separated file plus public assemblies.
+NCBI Pathogen Detection publishes, with no login, a single metadata table per organism group that links assembly accessions, AMRFinderPlus resistance-gene annotations and laboratory antimicrobial susceptibility (AST) results (ftp.ncbi.nlm.nih.gov/pathogen/Results/Escherichia_coli_Shigella/latest_snps/Metadata/, PDG000000004.6375.metadata.tsv, 527 MB, refreshed 2026-10-20; the file name changes with each refresh). Abdullateef Abdullah Alshehri's 2026 study in Int J Mol Sci (PMC13513162, NCBI export of 2026-06-11, AMRFinderPlus 4.2.7) froze such an export, kept 10,201 records meeting prespecified eligibility and scored 56,141 genotype-phenotype comparisons across eight priority antibiotics: concordance is high for tetracycline (accuracy 98.4%, F1 98.1%) and ceftriaxone (97.9%, 94.6%) but collapses for amoxicillin-clavulanic acid (73.6%, 44.5%). The gap between a gene-presence lookup and the measured phenotype for beta-lactam/inhibitor combinations is a real, open diagnostics problem, and the whole benchmark is one tab-separated file plus public assemblies.
 
 ## What counts as a win
 

@@ -1,0 +1,141 @@
+{
+  "observed_utc": "2026-10-17T14:15:45.300041+00:00",
+  "total_PR_metadata": 343,
+  "family_candidates_title_or_body": 19,
+  "reviewed_file_lists": [
+    {
+      "number": 351,
+      "head_sha": "af469e93a75035ef810abeaaeb969b21ac393dbb",
+      "title": "[claim] constant-weight-codes: A(31,10,7) <= 106 (Delsarte LP certificate, partial win)",
+      "files": 32,
+      "target_filename_matches": []
+    },
+    {
+      "number": 350,
+      "head_sha": "12d0c5f8ceac0d7036394ab6f067fa0b11c4efaf",
+      "title": "[claim] constant-weight-codes: A(34,10,8) <= 618 (Delsarte LP certificate, partial win)",
+      "files": 32,
+      "target_filename_matches": []
+    },
+    {
+      "number": 349,
+      "head_sha": "4a4d76b051405bc44233680dd87bc3cd430c2d77",
+      "title": "[claim] constant-weight-codes: A(33,10,7) <= 145 (Delsarte LP certificate, partial win)",
+      "files": 32,
+      "target_filename_matches": []
+    },
+    {
+      "number": 348,
+      "head_sha": "617335b899a0ff3906aa2a909b6954fa6863e9dd",
+      "title": "[claim] constant-weight-codes: A(32,10,7) <= 131 (Delsarte LP certificate, partial win)",
+      "files": 32,
+      "target_filename_matches": []
+    },
+    {
+      "number": 211,
+      "head_sha": "f64465c76a4c7af52b71c68054ea2a94db591cd8",
+      "title": "[claim] covering-designs-record: C(41, 12, 5) <= 2207 (previously 2244)",
+      "files": 20,
+      "target_filename_matches": []
+    },
+    {
+      "number": 212,
+      "head_sha": "2a23c5f00d7c4960fa0ad75eda602b95c4094c55",
+      "title": "[claim] covering-designs-record: C(53, 20, 3) <= 34 (previously 35)",
+      "files": 21,
+      "target_filename_matches": []
+    },
+    {
+      "number": 209,
+      "head_sha": "0b0b82c1647519b903b9bcc4dbc91fc54b817f00",
+      "title": "[claim] covering-designs-record: C(85, 24, 3) <= 76 (previously 77)",
+      "files": 19,
+      "target_filename_matches": []
+    },
+    {
+      "number": 208,
+      "head_sha": "98905368c935723a7c7f552511a6b43c122f88bf",
+      "title": "[claim] covering-designs-record: C(61, 25, 3) <= 27 (previously 28)",
+      "files": 22,
+      "target_filename_matches": []
+    },
+    {
+      "number": 9,
+      "head_sha": "22e2dadd2c8289f0af1493fb5111c326c523e0ef",
+      "title": "fix: validate verifier control verdicts and release inventory",
+      "files": 22,
+      "target_filename_matches": []
+    },
+    {
+      "number": 8,
+      "head_sha": "eb9d15e25464fd854a18f3151be7c7db05bb83c2",
+      "title": "[review] A(34,8,7) \u2265 603: certificate, provenance and checker review",
+      "files": 43,
+      "target_filename_matches": []
+    },
+    {
+      "number": 28,
+      "head_sha": "b139a28ec67c0f0a947bc8e26705dff36bb87cba",
+      "title": "[claim] constant-weight-codes: A(27,6,10) \u2265 13026 (+39) \u2014 Freelsgood",
+      "files": 44,
+      "target_filename_matches": []
+    },
+    {
+      "number": 52,
+      "head_sha": "2aaee7f6db50ba13ba8991e5bac7297f8f184946",
+      "title": "[claim] constant-weight-codes: A(54, 8, 7) >= 4204 (beats 4193 by +11, Andw.html 4173 by +31)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 53,
+      "head_sha": "9760d0cf93a6f3d60779d765a3e04c6e72ddc0da",
+      "title": "[claim] constant-weight-codes: A(56, 8, 7) >= 4691 (beats 4685 by +6, Andw.html 4674 by +17)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 54,
+      "head_sha": "d6e56087a01ceafa9ad085b1eddb8e5a1f71d01a",
+      "title": "[claim] constant-weight-codes: A(53, 8, 7) >= 3992 (beats 3987 by +5, Andw.html 3980 by +12)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 55,
+      "head_sha": "ae22237c90fc291781c5eee10db6faac664bde40",
+      "title": "[claim] constant-weight-codes: A(55, 8, 7) >= 4431 (beats 4426 by +5, Andw.html 4417 by +14)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 56,
+      "head_sha": "ccdb02744752827cb0ab3e375f88b35f7b730471",
+      "title": "[claim] constant-weight-codes: A(52, 8, 7) >= 3802 (beats 3799 by +3, Andw.html 3797 by +5)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 57,
+      "head_sha": "b2d2a51a0670d60c599a004f1f75e371585d031f",
+      "title": "[claim] constant-weight-codes: A(27, 8, 10) >= 1740 (beats 1737 by +3, Andw.html 1728 by +12)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 58,
+      "head_sha": "7ce0d0ebcf54d7f6a50dcbbdb554baede437ad7b",
+      "title": "[claim] constant-weight-codes: A(45, 8, 7) >= 1910 (beats 1907 by +3, Andw.html 1904 by +6)",
+      "files": 23,
+      "target_filename_matches": []
+    },
+    {
+      "number": 59,
+      "head_sha": "25be36e17aefd7ba3cb4709e291d45ea112c7927",
+      "title": "[claim] constant-weight-codes: A(35, 6, 6) >= 2218 (beats 2217 by +1, Andw.html 2209 by +9)",
+      "files": 23,
+      "target_filename_matches": []
+    }
+  ],
+  "scope": "all paginated PR titles/bodies then file paths of CWC/cell-notation matches; target row content from main separately checked; not a search of every unrelated PR comment"
+}

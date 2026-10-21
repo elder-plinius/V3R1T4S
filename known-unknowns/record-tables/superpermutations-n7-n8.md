@@ -1,19 +1,19 @@
-# Shorter superpermutations for n=7 (below 5905) or n=8 (below 46204)
+# Shorter superpermutations for n=7 (below 5905) or n=8 (below 46188)
 
-📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Find a string over {1..n} containing all n! permutations as contiguous substrings that is shorter than the best known. For n=7 the record is 5905 (Teodorescu, 17 Aug 2026) with lower bound 5884. For n=8 it is 46204 (Uku Raudvere, 26 Jul 2026). For n=9 it is 408965 and for n=10 it is 4037046 (Echols, Jul 2026, GPT-5.6-Sol), and Raudvere also posted n=11..13.
+Find a string over {1..n} containing all n! permutations as contiguous substrings that is shorter than the best known. For n=7 the record is 5905 (Teodorescu, 17 Aug 2026); the lower bound is 5884, and Lean-checked lower bounds of 5898 (group thread, Aug 2026) and 5899 (Jakub Halfar, 8 Oct 2026) have been posted to the superpermutators group. For n=8 it is 46188 (superpermutators/superperm PR #56 by rumstd, merged 2026-10-01). For n=9 it is 408947 (Theo H., posted to the group 2026-10-01) and for n=10 it is 4034855 (Jay Pantone, posted 2026-10-06, improving 4034873); n=11..14 words have also been posted (n=12: 522,737,174 on 2026-10-19).
 
 ## What counts as a win
 
-Success means a string over the alphabet {1..n} (n in 7..10) in which all n! permutations occur as length-n substrings, verified exhaustively, whose length is STRICTLY SMALLER (direction: min) than the best length at verification time on https://en.wikipedia.org/wiki/Superpermutation and the superpermutators group (context on 2026-10-03: 5905 for n=7, 46204 for n=8, 408965 for n=9, 4037046 for n=10). For n=7 the length must also be >= 5884; anything shorter means a bug.
+Success means a string over the alphabet {1..n} (n in 7..10) in which all n! permutations occur as length-n substrings, verified exhaustively, whose length is STRICTLY SMALLER (direction: min) than the best length at verification time on https://en.wikipedia.org/wiki/Superpermutation and the superpermutators group (context on 2026-10-20: 5905 for n=7, 46188 for n=8, 408947 for n=9, 4034855 for n=10). For n=7 the length must also be >= 5884; anything shorter means a bug.
 
 ## Partial wins
 
-- **p1:** A superpermutation for n in 11..13, verified exhaustively, strictly shorter than Raudvere's live record for that n (context: 43,948,807 / 522,910,088 / 6,749,568,009).
-- **p2:** A lower bound for n=7 strictly above 5884, delivered as a re-runnable computer-assisted proof (exact ILP or exhaustive search with certificate) that the skeptic re-executes, after confirming no stronger lower bound is published.
+- **p1:** A superpermutation for n in 11..13, verified exhaustively, strictly shorter than the live record for that n (context: Raudvere 43,948,807 / 522,910,088 / 6,749,568,009, but an n=12 word of 522,737,174 was posted to the group on 2026-10-19; re-check the group).
+- **p2:** A lower bound for n=7 strictly above 5899 (the Lean-checked bound posted 2026-10-08), delivered as a re-runnable computer-assisted proof (exact ILP or exhaustive search with certificate) that the skeptic re-executes, after confirming no stronger lower bound is published.
 
 ## How a win is checked
 

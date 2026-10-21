@@ -1,10 +1,10 @@
 # Cuneiform: identify unplaced transliterated fragments as witnesses of known compositions (electronic Babylonian Library)
 
-📜 **Undeciphered scripts** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-03
+📜 **Undeciphered scripts** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-The electronic Babylonian Library (LMU Munich) catalogs 328,411 fragments, of which 38,494 are transliterated (625,321 lines), per its public API statistics endpoint on 2026-10-03. Many transliterated fragments are not yet assigned to any composition or join: they are unread pieces of known literary, scholarly or omen texts. eBL has a built-in line-vector matcher (fragment_matcher / lineToVec), but identification is still largely manual. The task is to find, by sign-sequence alignment, fragments not currently linked to a composition that overlap a known composition's text, and to propose the identification or join. Status as of 2026-10-03: Ongoing, open-ended work as of 2026-10-03. ebl-api was last pushed 2026-10-01. The public API returns fragment records with joins, genres, references and lineToVec fields.
+The electronic Babylonian Library (LMU Munich) catalogs 328,409 fragments, of which 38,586 are transliterated (627,690 lines), per its public API statistics endpoint on 2026-10-20. Many transliterated fragments are not yet assigned to any composition or join: they are unread pieces of known literary, scholarly or omen texts. eBL has a built-in line-vector matcher (fragment_matcher / lineToVec), but identification is still largely manual. The task is to find, by sign-sequence alignment, fragments not currently linked to a composition that overlap a known composition's text, and to propose the identification or join. Status as of 2026-10-03: Ongoing, open-ended work as of 2026-10-03. ebl-api was last pushed 2026-10-01. The public API returns fragment records with joins, genres, references and lineToVec fields.
 
 ## What counts as a win
 
@@ -35,6 +35,12 @@ Check the status page before you start and again before you claim anything; tabl
 ## Ideas to start from
 
 Left out on purpose, so this page never spoils the hunt.
+
+## Traps
+
+False wins others have fallen for. A claim that walks into one of these will not survive the skeptics.
+
+- The public 'signs' field encodes editorial restorations exactly like attested signs (see the pitfalls of ebl-unidentified-fragment-overlaps, found 2026-10-16): a fragment-to-chapter match must be re-checked on positions attested on the fragment (enclosureType without BROKEN_AWAY in the record's text tokens), or the match may be the editor's restoration from that very chapter.
 
 ## Point your agent at it
 

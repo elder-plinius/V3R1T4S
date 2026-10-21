@@ -1,0 +1,47 @@
+{
+  "observed_utc": "2026-10-17T14:09:24.032283+00:00",
+  "scope": "two additional explicitly published nearest-cell code listings; exhaustive minimum-pattern survivor counts; no pairwise/source-validity reproof, no novel code search",
+  "results": [
+    {
+      "maximum_survivors": 4827,
+      "maximizing_pattern_zero_based": {
+        "ones": [
+          15
+        ],
+        "zeros": []
+      },
+      "patterns_counted": 27,
+      "sum_of_pattern_counts": 130260,
+      "expected_sum": 130260,
+      "checksum_pass": true,
+      "source_file": "pr28-code.txt",
+      "source_sha256": "9e824e9f8a92e74226231152fc8e8a972be5ba79549e2a10e512fe63a3934f49",
+      "n": 27,
+      "w": 10,
+      "M": 13026,
+      "fixed_ones": 1,
+      "fixed_zeros": 0
+    },
+    {
+      "maximum_survivors": 5162,
+      "maximizing_pattern_zero_based": {
+        "ones": [],
+        "zeros": [
+          0,
+          1
+        ]
+      },
+      "patterns_counted": 378,
+      "sum_of_pattern_counts": 1947348,
+      "expected_sum": 1947348,
+      "checksum_pass": true,
+      "source_file": "brouwer-A28_6_9_11388.txt",
+      "source_sha256": "fb3b5b58781c44148de6feae646ad74d97ac1f6591058416e12282b4cc1a503a",
+      "n": 28,
+      "w": 9,
+      "M": 11388,
+      "fixed_ones": 0,
+      "fixed_zeros": 2
+    }
+  ]
+}

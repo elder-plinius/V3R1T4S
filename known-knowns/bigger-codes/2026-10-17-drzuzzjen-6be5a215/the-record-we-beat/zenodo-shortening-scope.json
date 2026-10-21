@@ -1,0 +1,15 @@
+{
+  "utc": "2026-10-17T14:19:29.409302+00:00",
+  "scope": "Published Gippini n29d6 codes only, all minimal coordinate-fixing patterns to target26,6,9; optional complement. No candidate construction, no source-code execution, no further run.",
+  "planned_patterns": {
+    "w9": [
+      0,
+      3
+    ],
+    "w10": [
+      1,
+      2
+    ]
+  },
+  "checksum": "sumcounts=M*C(w,e)*C(n-w,z)"
+}

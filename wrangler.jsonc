@@ -1,0 +1,11 @@
+// Cloudflare Workers Builds: deploys the V3R1T4S website (v3r1t4s.org) as static assets only.
+// There is no Worker script. Build command: python3 site/build.py (writes site/public/). Deploy: npx wrangler deploy.
+// site/public/_headers (copied from site/src/_headers) sets the CSP and other headers. See site/README.md.
+{
+  "name": "v3r1t4s",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./site/public",
+    "not_found_handling": "404-page"
+  }
+}

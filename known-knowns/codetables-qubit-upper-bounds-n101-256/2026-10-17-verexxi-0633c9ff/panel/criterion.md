@@ -1,0 +1,15 @@
+context: subagent (Claude Code headless on the owner's PC, fresh context)
+confirmed_scope: Within the weight-enumerator LP with Rains shadow constraints, the integer Farkas certificate result/cert_110_2_37_sh.json is exactly verified to rule out any [[110,2,d]] qubit stabilizer code with d >= 37, so the codetables.de upper bound 37 (as saved at claim time in data/QECC_q4_n110_k2_claimtime.html) can be lowered to 36, and 36 is not implied by the propagation rules R1-R3 applied to the saved full table.
+
+What I ran:
+- python -I check/check_cert.py result/cert_110_2_37_sh.json printed "VERIFIED [[110,2,37]] shadow=True: value=673 digits, max column coefficient <= 0, 36+2+35 multipliers", exit code 0 (matches check/checker_output.txt).
+- I read check/check_cert.py in full. It uses only integers; the LP rows (A_0=1, sum A_i = 2^(n-k), A_j=B_j for 1<=j<=d-1, A_j<=B_j for j>=d, shadow >= 0) are the standard Calderbank-Rains-Shor-Sloane / Rains constraints. The code enforces nonnegative multipliers on inequalities and checks every column coefficient <= 0 with positive value, so the Farkas argument is sound. The constraints hold for any d >= 37 code (equalities below 37 still apply), so the certificate excludes all d >= 37, not just d = 37.
+- I re-ran check/parse_table.py and check/propagate.py on data/qubit_table_full_n1-256.html. They ran without error and printed the table summary. My own follow-up one-liner failed because I guessed the wrong output path for closure.json. I therefore rely on check/propagation_check.txt, which reports: live (110,2) = [24, 37], closure at (110,2) = 37, neighbours R1 (110,1) [25,37], R2 (111,2) [25,37], R3 (109,3) [23,37]. Every neighbour's upper bound is at least 37, so 36 is not implied.
+- I grepped data/QECC_q4_n110_k2_claimtime.html and found "lower bound: 24 ... upper bound: 37". Its sha256 is 9366ddf8...c2034, which matches CLAIM.md.
+
+Reasoning and hidden-quantifier hunt:
+- The criterion needs: (a) a cell with 101<=n<=256 (110,2 qualifies); (b) a proof of non-existence at d equal to the live upper bound (37 equals it); (c) an exact Farkas certificate with shadow, checked in integer arithmetic by an independent script (yes); (d) not implied by R1-R3 on other live cells (checked, closure 37).
+- Caveats. The "live" table is the claim-time snapshot, and I did no live re-fetch because I had no web access. The propagation check was only partially reproduced: the closure value comes from the provided output file, but I did see that the neighbour bounds are all 37. The checker is by the same team as the certificate, but it is short, self-contained and I audited it by reading. The saved table has 1075 cells where the live bound exceeds the propagation closure, so the table is not propagation-closed. That does not affect (110,2) because its neighbours are all at 37 or higher. Dependence on the neighbours' own bounds being the live values is as the criterion states.
+- No stretched definition found. This is a one-cell, d-37-exclusion win, which is exactly the named success.
+
+pass: true

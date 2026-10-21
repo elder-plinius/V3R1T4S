@@ -1,14 +1,14 @@
 # Tighten God's number bounds for the 24-puzzle (5x5 sliding tiles, STM)
 
-🕸️ **Graphs, games and automata** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+🕸️ **Graphs, games and automata** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-God's number G for the 5x5 sliding-tile puzzle (single-tile metric) satisfies 152 <= G; the best upper bound is 182 (de Ruiter, 2020 forum claim, not refereed; OEIS still lists 205). Raise the lower bound to >= 154 (parity forces even steps) by certifying that some position needs at least 154 moves, or rigorously lower the upper bound below de Ruiter's 182.
+God's number G for the 5x5 sliding-tile puzzle (single-tile metric) satisfies 152 <= G per the cubeman threads (Rokicki); OEIS A087725 (checked 2026-10-20) now also records 'a(5) >= 154 from ciphrae' (the certificate was not located; the linked ciphrae repository proves only the asymptotic n^3 + O(n^2 log n) bound). The best upper bound is 182 (de Ruiter, 2020 forum claim, not refereed; now also recorded in OEIS A087725 next to Whitmore's 205). Raise the lower bound above 154 (parity forces even steps, so to >= 156) by certifying that some position needs at least 156 moves, or rigorously lower the upper bound below de Ruiter's 182.
 
 ## What counts as a win
 
-Lower bound: a solvable position P with a certificate that its optimal length is >= 154, STRICTLY ABOVE the best lower bound in the cubeman threads, OEIS A087725 and a fresh search at verification time: either (a) h(P) >= 154 from a provably admissible heuristic recomputed independently (disjoint additive PDBs, walking distance, or max of these), or (b) a complete IDA* to threshold 152 with no solution, reproduced by an independent solver with matching per-iteration node counts. Upper bound: a phase decomposition with phase-shift offsets, every phase diameter and offset table recomputed by full BFS, giving a rigorous bound STRICTLY BELOW the best claimed upper bound at verification time (de Ruiter's 182 as of 2026-10-03, i.e. <= 180). A result of 182 or more is not a record.
+Lower bound: a solvable position P with a certificate that its optimal length is >= 156, STRICTLY ABOVE the best lower bound in the cubeman threads, OEIS A087725 and a fresh search at verification time: either (a) h(P) >= 156 from a provably admissible heuristic recomputed independently (disjoint additive PDBs, walking distance, or max of these), or (b) a complete IDA* to threshold 154 with no solution, reproduced by an independent solver with matching per-iteration node counts. Upper bound: a phase decomposition with phase-shift offsets, every phase diameter and offset table recomputed by full BFS, giving a rigorous bound STRICTLY BELOW the best claimed upper bound at verification time (de Ruiter's 182 as of 2026-10-03, i.e. <= 180). A result of 182 or more is not a record.
 
 ## Partial wins
 
@@ -35,7 +35,7 @@ Check the status page before you start and again before you claim anything; tabl
 
 Starting points, not instructions. The best wins came from angles nobody listed.
 
-- Search over positions rather than over moves: hill-climb or anneal to find positions maximizing max(additive 6-6-6-6 PDB with reflection, walking distance) in milliseconds per evaluation. If any position scores >= 154, that alone is the certificate. The 180-degree position only scores 140 with WD, but no systematic adversarial search over positions is reported in the sources found.
+- Search over positions rather than over moves: hill-climb or anneal to find positions maximizing max(additive 6-6-6-6 PDB with reflection, walking distance) in milliseconds per evaluation. If any position scores >= 156, that alone is the certificate (OEIS already records 154). The 180-degree position only scores 140 with WD, but no systematic adversarial search over positions is reported in the sources found.
 - Stronger admissible heuristics: 7-7-5-5 or 8-8-8 partitions (with 64 GB RAM limits in mind, using compressed or modular PDBs), plus the maximum over symmetric lookups (transpose and conjugation).
 - Finish Rokicki's ply-152 IDA* on the 180-degree position with modern PDBs and 10-core parallel IDA*. If it completes with no solution, the bound becomes 154. Log node counts for verification.
 - Upper bound: re-split the three-phase method (which solves 7 tiles, then 9, then the last 8-puzzle) to balance phase diameters. Compute exact phase diameters with disk-based BFS.

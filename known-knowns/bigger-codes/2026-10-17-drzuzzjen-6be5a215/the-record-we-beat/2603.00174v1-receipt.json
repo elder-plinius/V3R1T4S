@@ -1,0 +1,11 @@
+{
+  "url": "https://arxiv.org/html/2603.00174v1",
+  "utc": "2026-10-17T14:22:26.301321+00:00",
+  "request": "one honest named client request; no retry",
+  "paper": "2603.00174v1",
+  "http_status": 200,
+  "final_url": "https://arxiv.org/html/2603.00174v1",
+  "bytes": 303156,
+  "sha256": "8d99461f7d1d081ed6c2a18342a642783db09b4ec16a93f59ad6e574abb7b829",
+  "text_sha256": "8a7d48ff0875e1313271fc2aa1aa2157ca8f85c7d868a58d7dd84463ac77bb3f"
+}

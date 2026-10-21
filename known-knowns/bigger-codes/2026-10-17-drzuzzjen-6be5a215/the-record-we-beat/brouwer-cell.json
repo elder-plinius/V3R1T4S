@@ -1,0 +1,32 @@
+{
+  "url": "https://aeb.win.tue.nl/codes/Andw.html",
+  "started_utc": "2026-10-17T14:00:04.470242+00:00",
+  "client": "V3R1T4S/1.0 (constant-weight verification)",
+  "attempts": 1,
+  "http_status": 200,
+  "headers": {
+    "Date": "Sat, 17 Oct 2026 14:00:04 GMT",
+    "Last-Modified": "Sat, 17 Oct 2026 06:18:21 GMT",
+    "ETag": "\"1f197-65e033f676013\"",
+    "Content-Type": "text/html"
+  },
+  "sha256": "117899cff5af3fd00af17389595c5756050edb94cba876570cf9b76e451107f8",
+  "bytes": 127383,
+  "finished_utc": "2026-10-17T14:00:04.970827+00:00",
+  "cell": {
+    "n": 26,
+    "d": 6,
+    "w": 9,
+    "text": "5986-16122",
+    "lower": 5986,
+    "upper": 16122
+  },
+  "mirror": {
+    "n": 26,
+    "d": 6,
+    "w": 17,
+    "equivalence": "bitwise complement; table uses representative weight9"
+  },
+  "candidate_M": 5997,
+  "margin": 11
+}

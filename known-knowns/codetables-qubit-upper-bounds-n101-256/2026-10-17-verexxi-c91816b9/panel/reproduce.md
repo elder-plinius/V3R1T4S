@@ -1,0 +1,15 @@
+context: subagent (Claude Code headless on the owner's PC, fresh context)
+
+# REPRODUCE skeptic verdict for [[120,2,40]] nonexistence (claim q120-2)
+
+## What I did
+1. Read CLAIM.md and REPRODUCE.md. Opened result/cert_120_2_40_sh.json only to see its structure (keys n,k,d,shadow,u_E0,u_E1,u_Q,v_G,v_H), before reading any author code.
+2. Wrote my own checker from the definition (the quaternary MacWilliams/Krawtchouk LP with Rains shadow): K_j(i) = sum_s (-1)^s 3^(j-s) C(i,s) C(n-i,j-s); rows E0: A_0=1; E1: sum A_i = 2^(n-k); Q_j (1<=j<=d-1): sum_i K_j(i)A_i - 2^(n-k)A_j = 0; G_j (j>=d): same expression >= 0; H_j: sum_i (-1)^i K_j(i)A_i >= 0. My first attempt used wrong sign conventions and failed (an error of mine, not of the certificate). I then read check/check_cert.py, re-derived the Farkas argument myself and confirmed it is sound: for any feasible A>=0, the combination equals u_E0 + u_E1*2^(n-k) + sum vG*G + sum vH*H >= value > 0, while it also equals sum c_i A_i <= 0 when all column coefficients c_i <= 0; that is a contradiction. The Q rows are valid because A_j=B_j for j<d. The shadow inequalities hold for every additive code.
+3. Reran my corrected independent checker (separate from the author's code, own Krawtchouk implementation, big-integer arithmetic): index sets u_Q = 1..39, v_G = {42,43}, v_H = 37 indices in 0..40; all v_G and v_H are >= 0; value u_E0 + u_E1*2^118 > 0 (815 digits); all 121 column coefficients c_i <= 0 (assertion passed for every i; the maximum column coefficient is 0). Result: certificate valid.
+4. Ran python3 -I check/check_cert.py result/cert_120_2_40_sh.json. Output: "VERIFIED [[120,2,40]] shadow=True: value=815 digits, max column coefficient <= 0, 39+2+37 multipliers", exit code 0, identical to check/checker_output.txt, and the output is deterministic (exact integer arithmetic, no floats or randomness).
+5. Table record: sha256sum of data/QECC_q4_n120_k2_claimtime.html = 992696ad...c04a9 and of data/qubit_table_full_n1-256.html = 26245491...4b6 both match the claimed hashes. The saved page text reads "Bounds on [[120,2]] lower bound: 25 upper bound: 40". I reran check/parse_table.py and check/propagate.py on the full table: output "live (120,2): [25, 40]  closure of the live table at (120,2): 40  neighbours R1 (n,k-1): [25, 40]  R2 (n+1,k): [25, 41]  R3 (n-1,k+1): [25, 39]". Via R3, d(119,3)<=39 gives only 40 for (120,2), so 39 is not implied by propagation. I read the parsed neighbours directly: (120,1)=[25,40], (121,2)=[25,41], (119,3)=[25,39].
+
+## Reasoning
+The exact Farkas certificate checks out under both my independently written checker and the author's, the LP is a correct set of necessary conditions for a [[120,2,40]] stabilizer code, the live upper bound at the claim time was 40, and the new bound of 39 is not implied by propagation from other live cells (reproduced). The claimed hashes match the saved files. Limitation: I made no live web request (not permitted), so the table state is as saved at claim time; I did not re-audit the HTML parser beyond spot-reading the cell values for the four neighbours, which agree with the closure.
+
+pass: true

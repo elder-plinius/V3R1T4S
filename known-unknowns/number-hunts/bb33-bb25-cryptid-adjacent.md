@@ -1,10 +1,10 @@
 # BB(3,3) non-Bigfoot holdouts and BB(2,5) non-Hydra holdouts
 
-🔢 **Number hunts** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+🔢 **Number hunts** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-BB(3,3) has 6 holdouts (4 up to equivalence): Bigfoot, #397 ('similar to Wily Coyote'), the equivalent pair #153/#758 (flagged as a potential Cryptid) and the Wily Coyote pair #531/#532 (BB(3,3) page last edited 2026-09-17; the three Rocq formalizations of 2026-03-15, machines 650, 412, 279, are not among the 6). BB(2,5) has 60 formal holdouts after mxdys' Rocq deciders (2026-09-08) and an informal list of 38 (2026-10-02), including Hydra 1RB3RB---3LA1RA_2LA3RA4LB0LB0LA and the Bonus Cryptid 1RB3RB---3LA1RA_2LA3RA4LB0LB1LB; the 22-machine difference is covered by pending, not yet independently verified GPT6/Aristotle Lean proofs. Target: decide a non-Bigfoot BB(3,3) holdout or a BB(2,5) machine on the 38-list other than Hydra and the Bonus Cryptid, with a formal or independently checked certificate.
+BB(3,3) has 6 holdouts (4 up to equivalence): Bigfoot, #397 ('similar to Wily Coyote'), the equivalent pair #153/#758 (flagged as a potential Cryptid) and the Wily Coyote pair #531/#532 (BB(3,3) page last edited 2026-09-17; the three Rocq formalizations of 2026-03-15, machines 650, 412, 279, are not among the 6). BB(2,5) has 59 formal holdouts (60 after mxdys' Rocq deciders of 2026-09-08; on 2026-10-09 prurq showed 1RB3LA1LA2RB2LB_1LB2RA4RA0RB--- halts using a Rocq-certified longitudinal simulator) and an informal list of 37 (2026-10-09; BB(2,5) page last edited 2026-10-17), including Hydra 1RB3RB---3LA1RA_2LA3RA4LB0LB0LA and the Bonus Cryptid 1RB3RB---3LA1RA_2LA3RA4LB0LB1LB; the 22-machine difference is covered by pending, not yet independently verified GPT6/Aristotle Lean proofs. Target: decide a non-Bigfoot BB(3,3) holdout or a BB(2,5) machine on the 37-list other than Hydra and the Bonus Cryptid, with a formal or independently checked certificate.
 
 ## What counts as a win
 

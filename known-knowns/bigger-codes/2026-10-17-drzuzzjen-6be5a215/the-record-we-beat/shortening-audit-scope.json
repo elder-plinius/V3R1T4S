@@ -1,0 +1,15 @@
+{
+  "frozen_utc": "2026-10-17T14:07:37.725591+00:00",
+  "purpose": "finite verification of standard derived competitors from already published immutable main INDEX; not construction research",
+  "source_commit": "7dd4480512cc47fe0f897164844432a2738fe649",
+  "target": [
+    26,
+    6,
+    9,
+    5997
+  ],
+  "rule": "shorten by fixing coordinates, optionally complement and append constant coordinates; min ones=max(0,w-9),min zeros=max(0,n-w-17); any further fixing only decreases size. Skip source counts<5997; packing bound eliminates impossible cases; count remaining patterns with at most3fixed coordinates and report higher-dimensional pending cases.",
+  "script_sha256": "7b747a0c542fd04f58c11cb5eeb973401697c32adf1a113f4afaff0ef4883303",
+  "controls": "exhaustive six weight2words length4; patterns(1,1)=2,(2,0)=1,(0,2)=1,(0,0)=6; checksum sumcounts=M*C(w,e)*C(n-w,z)",
+  "limits": "only listed main codewords; source format/hash checked; no heuristic search or full literature-wide exclusion; no API listing requests"
+}

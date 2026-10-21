@@ -1,12 +1,12 @@
 # CryptoCellar 'Ultimate Enigma Challenge' (5 Sept 1941 messages, possibly non-standard machine)
 
-🔐 **Unbroken ciphers** · moonshot (famous, long odds) · tractability ★☆☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+🔐 **Unbroken ciphers** · moonshot (famous, long odds) · tractability ★☆☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 > 🔒 **Live puzzle with a living setter.** Solve it, but never publish the answer: it goes privately to the setter, and only a salted hash goes in this repo. See [DONT_SPOIL_THE_HUNT.md](../../DONT_SPOIL_THE_HUNT.md).
 
 ## The problem
 
-Five messages with Enigma-style indicators but unusual operators, comments and very low radio frequencies: QTXMA and SZAEJ (29.09.1941) and BYQMZ, FKQLZ and XFEDT (30.09.1941). The ultimate-enigma.html page gives raw character counts including headers (280/129/308/198/226); the unbroken overview gives cipher letters for the 30.09 messages only (BYQMZ 167, FKQLZ 107, XFEDT 97); cipher-letter counts for QTXMA and SZAEJ are unverified. Weierud suspects a police network (Ordnungspolizei) and possibly a machine with different wheel wiring. Every attack since 2003-2004 has failed. Break any of them.
+Five messages with Enigma-style indicators but unusual operators, comments and very low radio frequencies: QTXMA and SZAEJ (29.09.1941) and BYQMZ, FKQLZ and XFEDT (30.09.1941). The ultimate-enigma.html page (updated 27 July 2026) gives header letter counts 160/56/172/112/102; the master 1941 list (https://www.cryptocellar.org/bgac/1941-msg-list.html, status 20 October 2026) gives total/cipher letters QTXMA 160/155, SZAEJ 56/51, BYQMZ 172/167, FKQLZ 112/107 and XFEDT 102/97, all still highlighted as unbroken. Weierud suspects a police network (Ordnungspolizei) and possibly a machine with different wheel wiring. Every attack since 2003-2004 has failed. Break any of them.
 
 ## What counts as a win
 
@@ -30,6 +30,7 @@ Check the status page before you start and again before you claim anything; tabl
 ## Sources
 
 - <https://www.cryptocellar.org/bgac/ultimate-enigma.html>
+- <https://www.cryptocellar.org/bgac/1941-msg-list.html>
 
 ## Ideas to start from
 

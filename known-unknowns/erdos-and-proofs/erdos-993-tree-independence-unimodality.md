@@ -1,10 +1,10 @@
 # Erdos #993: a tree (or forest) with non-unimodal independent-set sequence
 
-✏️ **Erdős problems and proofs** · standard · tractability ★☆☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+✏️ **Erdős problems and proofs** · standard · tractability ★☆☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-For every tree or forest T, is the sequence i_k(T) (number of independent sets of size k) unimodal? This is the Alavi-Malde-Schwenk-Erdos conjecture. It is false for general graphs. Log-concavity fails for trees from n = 26 (Kadrawi-Levit 2023). The n = 32 check covered all 109,972,410,221 trees (forum 2026-08-09) and the 3-branch-vertex lemma has a Lean formalisation (BrettRey2, 2026-08-21).
+For every tree or forest T, is the sequence i_k(T) (number of independent sets of size k) unimodal? This is the Alavi-Malde-Schwenk-Erdos conjecture. It is false for general graphs. Log-concavity fails for trees from n = 26 (Kadrawi-Levit 2023). The n = 32 check covered all 109,972,410,221 trees (forum 2026-08-09) and the 3-branch-vertex lemma has a Lean formalisation (BrettRey2, 2026-08-21). Two unverified proof claims are now posted (forum proof-claims page, checked 2026-10-20): Ethan X. Fang, Junwei Lu, Eran Nevo, Yuan Yao and Hailun Zheng (arXiv:2609.20961, submitted 2026-09-21, with a Lean link) claim unimodality for every forest with at least N_0 vertices for some absolute N_0; Tong Zhang (doi 10.5281/zenodo.22999166, submitted 2026-09-27, with a Lean link) claims a full proof. If either holds, a counterexample must be below N_0 or cannot exist. Read both claims before searching.
 
 ## What counts as a win
 
@@ -32,6 +32,9 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://zenodo.org/records/19100781>
 - <https://arxiv.org/abs/2603.03025>
 - <https://arxiv.org/abs/2604.18824>
+- <https://www.erdosproblems.com/forum/thread/993/proof-claims>
+- <https://arxiv.org/abs/2609.20961>
+- <https://doi.org/10.5281/zenodo.22999166>
 
 ## Ideas to start from
 

@@ -19,6 +19,11 @@ linear-programming dual certificates proving upper bounds in five cells for whic
 Johnson bound. Everything else (kissing-number corollaries, an A(32,8,8) code of size 1676 that only ties a published
 value) is **not** claimed.
 
+**Update 2026-10-17.** A. E. Brouwer now lists 27 of the 30 codes in his table, credited as
+[Pl] (Andw.html, Last-Modified Sat, 17 Oct 2026 16:06:01 GMT). The other three were overtaken in his table first: A(34,8,7) by [Fr] (603, 14 Oct 2026) and A(29,6,10)
+and A(29,6,11) by [Dz] (27183 and 42042, 15 Oct 2026). In this repository A(26,6,9) has since been improved to 5997 by a
+contributor (pull request #352). The status paragraph below is kept as written at release.
+
 **Status.** Found by agents (see `READ_BEFORE_CITING.md` at the repository root), verified only internally, and **not yet sent to
 A. E. Brouwer** at the time of this release; until he lists them, the correct description is "exceeds the printed
 lower bound in the 10 Oct 2026 version of the table". Every code is a *polish* of somebody else's code: the seed of

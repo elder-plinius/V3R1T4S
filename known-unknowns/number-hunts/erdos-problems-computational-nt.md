@@ -1,10 +1,10 @@
 # Computationally decidable open number-theory Erdős problems (erdosproblems.com)
 
-🔢 **Number hunts** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+🔢 **Number hunts** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-erdosproblems.com lists about 652 open problems. Some number-theoretic ones are decidable by a finite certificate: an explicit counterexample, a finite exceptional set, or an explicit construction disproving a quantitative conjecture. FrontierMath Erdős (Adamczewski-Bloom, arXiv 2609.25050, 2026-09-06) selected 68 open problems, on which the best model (GPT-6 Astra) scored 3%. The teorth/erdosproblems wiki tracks AI contributions (e.g. #396, #513, #650 in Feb-Apr 2026). Target: pick an open problem whose resolution, or a clearly stated sub-question, is a finite checkable object, and produce it.
+erdosproblems.com lists 1221 problems; the teorth/erdosproblems data file (2026-10-20) gives 588 'open' and 5 'open (Lean)' plus 49 in other open-type states (falsifiable 25, decidable 8, verifiable 7, not disprovable 6, not provable 3), about 642 in all. The site has a blog post titled 'Erdős problems in the OpenAI proofs' (08 Oct 2026), so re-check each problem's status on the day. Some number-theoretic ones are decidable by a finite certificate: an explicit counterexample, a finite exceptional set, or an explicit construction disproving a quantitative conjecture. FrontierMath Erdős (Adamczewski-Bloom, arXiv 2609.25050, 2026-09-06) selected 68 open problems, on which the best model (GPT-6 Astra) scored 3%. The teorth/erdosproblems wiki tracks AI contributions (e.g. #396, #513, #650 in Feb-Apr 2026). Target: pick an open problem whose resolution, or a clearly stated sub-question, is a finite checkable object, and produce it.
 
 ## What counts as a win
 

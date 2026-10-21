@@ -1,12 +1,12 @@
 # Noita Eye Messages (designed game cipher, developer-confirmed real)
 
-🔐 **Unbroken ciphers** · moonshot (famous, long odds) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+🔐 **Unbroken ciphers** · moonshot (famous, long odds) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 > 🔒 **Live puzzle with a living setter.** Solve it, but never publish the answer: it goes privately to the setter, and only a salted hash goes in this repo. See [DONT_SPOIL_THE_HUNT.md](../../DONT_SPOIL_THE_HUNT.md).
 
 ## The problem
 
-Nine messages of eye glyphs in five orientations (5 East, 4 West) in the game Noita (2020). Read as trigrams in base 5, they give an 83-symbol alphabet with values 0-82 and no gaps. Known structure includes no immediately doubled trigrams, shared aligned sections and isomorphs across messages, and a distinct first character per message. The developers say the messages contain a real message. The leading model is a deck or group-autokey style polyalphabetic cipher over S_83. Recover the plaintext and method. The developers' 'real message' confirmation is older; wiki.gg (updated May 2026) shows no new developer statement.
+Nine messages of eye glyphs in five orientations (5 East, 4 West) in the game Noita (2020). Read as trigrams in base 5, they give an 83-symbol alphabet with values 0-82 and no gaps. Known structure includes no immediately doubled trigrams, shared aligned sections and isomorphs across messages, and a distinct first character per message. The developers say the messages contain a real message. The leading model is a deck or group-autokey style polyalphabetic cipher over S_83. Recover the plaintext and method. The developers' 'real message' confirmation is older; wiki.gg (last edited 9 Oct 2026) shows no new developer statement and still lists the messages as unsolved.
 
 ## What counts as a win
 

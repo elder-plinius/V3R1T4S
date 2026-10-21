@@ -1,0 +1,3 @@
+start n=14 m=62 cost=23
+it=200000 cost=9 best=1 t=11
+end it=315404 cost=0 best=0 t=17 FOUND

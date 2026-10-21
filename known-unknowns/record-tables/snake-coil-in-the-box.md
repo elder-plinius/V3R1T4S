@@ -1,6 +1,6 @@
 # Snake-in-the-box / coil-in-the-box records in dimensions 9-13
 
-📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-03
+📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
@@ -8,7 +8,7 @@ Find longer induced paths (snakes) or induced cycles (coils) in the n-dimensiona
 
 ## What counts as a win
 
-Success means a valid induced path (snake) or induced cycle (coil) in Q_n, 9 <= n <= 13, verified exhaustively (single-bit steps, distinct vertices, popcount(v_i ^ v_j) >= 2 for non-consecutive pairs, closing edge induced for coils), whose edge length is STRICTLY GREATER (direction: max) than the maximum, at verification time, of: the live primary table https://www.minortriad.com/snake/, the Math-AI-Caltech/Snake-in-the-Box README 'subsequent bounds by others' lists (https://github.com/Math-AI-Caltech/Snake-in-the-Box), the latest arXiv:2607.15270 version, the EinsteinArena value (13D snake) and any newer source from a fresh search, for that dimension and type (context on 2026-10-03: snakes Q9-Q13 191/379/750/1480/2938, coils 192/374/740/1468/2930). The verifier's checker must reproduce the exact length of at least one downloaded record file of the same n and type (length-convention calibration); without that calibration the claim is not a record.
+Success means a valid induced path (snake) or induced cycle (coil) in Q_n, 9 <= n <= 13, verified exhaustively (single-bit steps, distinct vertices, popcount(v_i ^ v_j) >= 2 for non-consecutive pairs, closing edge induced for coils), whose edge length is STRICTLY GREATER (direction: max) than the maximum, at verification time, of: the live primary table https://www.minortriad.com/snake/, the Math-AI-Caltech/Snake-in-the-Box README 'subsequent bounds by others' lists (https://github.com/Math-AI-Caltech/Snake-in-the-Box), the latest arXiv:2607.15270 version, the EinsteinArena value (13D snake) and any newer source from a fresh search, for that dimension and type (context on 2026-10-20: snakes Q9-Q13 191/379/750/1480/2946, coils 192/374/740/1468/2930). The verifier's checker must reproduce the exact length of at least one downloaded record file of the same n and type (length-convention calibration); without that calibration the claim is not a record.
 
 ## Partial wins
 

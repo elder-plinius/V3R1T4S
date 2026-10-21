@@ -58,7 +58,7 @@ It asks six short questions, schedules nothing until you type **go** (setup only
 | ⚡ Matrix multiplication, 5 shapes | ⟨15,16,16⟩: 2,180 vs 2,223 | 🧪 Exact over ℚ |
 | 🛡️ VNN-COMP 2026: 2 unresolved instances | no tool resolved them in time | 🧪 Validator: `correct` |
 | 🎯 RobustBench CIFAR-100, one RN18 model | 27.57 % vs 27.67 % listed | 🧪 Verified internally |
-| 📡 30 constant-weight codes + 5 LP bounds | Brouwer's table, most by under 1 % | 🧪 Verified internally |
+| 📡 27 constant-weight codes (+ 5 LP bounds) | Brouwer's table, most by under 1 % | ✅ [Listed in Brouwer's table](https://aeb.win.tue.nl/codes/Andw.html) as [Pl] (3 more overtaken first) |
 
 🧪 = checked by independent reviewer agents, each with its own code, plus the checkers shipped here. Not yet listed by the table owner. **53 results** in all: 46 checkable results, 5 linear-programming bounds and 2 sealed cipher solves. Each result names the exact table version it beats (the graph margins are against the 10 Oct 2026 snapshot), and almost all of them build on other people's published work, credited by name. Full detail → [TROPHY_CASE.md](TROPHY_CASE.md)
 

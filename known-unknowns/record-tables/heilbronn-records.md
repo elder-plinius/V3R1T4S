@@ -1,10 +1,10 @@
 # Heilbronn triangle problem: new best configurations (square, triangle, convex region)
 
-📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Place n points in a container (unit square, unit-area triangle, or an optimal convex region) to maximize the minimum area of a triangle formed by three of the points. Optimality is proven only for small n (square up to n=9; triangle up to n=8 per arXiv:2607.15021). Best known configurations for n up to 36 are tracked on Tej Stead's leaderboard. Optimality proofs: triangle n <= 8 (arXiv:2607.15021), square n <= 9 (arXiv:2603.11107). Rob Gardiner (renidrag) set square n = 21, 23, 25, 35 and triangle n = 20 records through Oct 2026; Lackovic (codrAlex) set convex n = 31 and 33 in late Sep 2026. Records change daily.
+Place n points in a container (unit square, unit-area triangle, or an optimal convex region) to maximize the minimum area of a triangle formed by three of the points. Optimality is proven only for small n (square up to n=9; triangle up to n=8 per arXiv:2607.15021). Best known configurations for n up to 36 are tracked on Tej Stead's leaderboard. Optimality proofs: triangle n <= 8 (arXiv:2607.15021), square n <= 9 (arXiv:2603.11107). Rob Gardiner (renidrag) set square n = 21, 23, 25, 35 and triangle n = 20 records through Oct 2026; Lackovic (codrAlex) set convex n = 31 and 33 in late Sep 2026; Nathan Sudermann-Merx set the ten newest records on 18-19 Oct 2026 (square n = 24, 25, 27, 36; triangle n = 31, 32, 33; convex n = 34), so square n = 25 is no longer Gardiner's. Records change daily.
 
 ## What counts as a win
 

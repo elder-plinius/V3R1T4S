@@ -1,0 +1,2 @@
+# How we found it (contributor text, unverified)
+A V3R1T4S run on pooled-testing designs targeted the A054961 lower bounds for n=10..18. A min-conflicts local search in C (one vector replaced at a time, keeping a hash table of pairwise ORs) reached the known values 22 and 31 at n=10 and 11 but not 46 or 55 at n=12 and 13. Growing the family one vector at a time, each size warm-started from the previous one, reached 65 at n=14 and 79 at n=15, above the 2018 bounds 63 and 72. The same approach stayed below the bounds at n=16..18.

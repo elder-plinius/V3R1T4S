@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-10-17T13:57:37.237990+00:00",
+  "url": "https://export.arxiv.org/api/query?search_query=all%3A%22constant-weight%22&start=0&max_results=500&sortBy=lastUpdatedDate&sortOrder=descending",
+  "attempts": 1,
+  "client": "V3R1T4S/1.0 (bounded metadata verification)",
+  "novelty_verdict": "not assessed",
+  "prior_block_history_preserved": true,
+  "http_status": 200,
+  "response_headers": {
+    "Date": "Sat, 17 Oct 2026 13:57:38 GMT",
+    "Content-Type": "application/atom+xml; charset=utf-8"
+  },
+  "total_results": 309,
+  "returned": 309,
+  "coverage_complete_for_query": true,
+  "coverage_scope": "this exact query only; no literature-wide novelty conclusion",
+  "finished_utc": "2026-10-17T13:57:38.766403+00:00",
+  "body_sha256": "e907b66fba36c878ea5744310c2643d4e574d2f5b4654ef88915a15227758c6a",
+  "body_bytes": 586721
+}

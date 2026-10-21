@@ -1,0 +1,20 @@
+{
+  "started_utc": "2026-10-17T13:59:40.259235+00:00",
+  "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22binary+codes%22+AND+%28all%3A%22lower+bounds%22+OR+all%3A%22constructions%22%29%29+AND+submittedDate%3A%5B202501010000+TO+202610172359%5D&start=0&max_results=500&sortBy=lastUpdatedDate&sortOrder=descending",
+  "attempts": 1,
+  "client": "V3R1T4S/1.0 (bounded metadata verification)",
+  "novelty_verdict": "not assessed",
+  "prior_block_history_preserved": true,
+  "http_status": 200,
+  "response_headers": {
+    "Date": "Sat, 17 Oct 2026 13:59:41 GMT",
+    "Content-Type": "application/atom+xml; charset=utf-8"
+  },
+  "total_results": 70,
+  "returned": 70,
+  "coverage_complete_for_query": true,
+  "coverage_scope": "this exact query only; no literature-wide novelty conclusion",
+  "finished_utc": "2026-10-17T13:59:41.406824+00:00",
+  "body_sha256": "d8200f44692b8d5f9048f34993177a84458d3fa74a644c81dce67847bc4131f5",
+  "body_bytes": 143773
+}

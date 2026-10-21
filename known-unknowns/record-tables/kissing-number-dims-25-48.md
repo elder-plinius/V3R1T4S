@@ -1,10 +1,10 @@
 # Kissing number lower bounds in dimensions 25-48 (beat the max over ALL sources, not Cohn's table)
 
-📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-08
+📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Find K nonzero vectors of equal norm in R^d, 25 <= d <= 48, with every pairwise angle >= 60 degrees, so that K exceeds the best known kissing configuration for that d. WARNING: Cohn's table https://cohn.mit.edu/kissing-numbers is badly STALE for almost every d in 25..47 (checked live 2026-10-08 21:30Z). The records are spread over arXiv papers AND public GitHub repositories. Vetter's snapshot on 2026-10-08 (orientation only; NEVER use these as the bar, re-derive live): d25 197580 (Yang); d26 199806, d28 204896, d29 209968, d30 221012, d31 238662 (Kravatskiy repo RESULTS.md); d27 201567 (Yang); d32 347584, d33 363968, d34 384196, d35 409676, d36 484760, d37 498024, d38 591900, d39 763668, d43 2553792, d45 7380090 (Yang, arXiv:2609.35051 Table 1); d40 1092000, d41 1324472, d42 1792386, d44 4153600, d46 12309600, d47 23766960 (Dorofeev-Sun-Wang arXiv:2607.20359 / wcgbg sphere-packing repo / Boyvalenkov-Cherkashin arXiv:2312.05121); d48 52416000 (P48). Takhanov-Yun arXiv:2609.21591 (d25-31) and Echols arXiv:2608.13906 (d32-34, d37) are below these. For d=32..35 Yang's values equal exactly the modified Edel-Rains-Sloane bound tau_d >= 2^17 + 2^7*A(d,8,8) + 2d(d-1) with A = 1676/1803/1960/2158 (Brouwer's live Andw.html cells are lower: 1674/1800/1949/2157). For d36 the same bound needs A(36,8,8) >= 2744 to pass 484760. Yang's d36-39 values do not follow from his listed codes, so other constructions are involved there. The machine-verified V3R1T4S codes A(33,8,8) >= 1809 and A(34,8,8) >= 1965 (constant-weight-codes/ in this repository) would give tau33 >= 364736 and tau34 >= 384836 by the formula. This is [HEURISTIC] until an explicit configuration is built and checked.
+Find K nonzero vectors of equal norm in R^d, 25 <= d <= 48, with every pairwise angle >= 60 degrees, so that K exceeds the best known kissing configuration for that d. Cohn's table https://cohn.mit.edu/kissing-numbers was updated after 2026-10-08 and on 2026-10-20 meets or exceeds the 2026-10-08 vetter snapshot below in every d in 25..48; still re-derive B(d) from ALL sources. Cohn 2026-10-20 (orientation only): d25 197583, d26 199868, d27 201589 (Takhanov-Yun, github.com/k-nic/kissing_d25-31); d28 205172, d29 210495, d30 222073, d31 241079 (K. Li, github.com/Felpix-Studios/kissing-number); d33 364736, d34 384836 (the V3R1T4S codes A(33,8,8) >= 1809 and A(34,8,8) >= 1965 with Edel-Rains-Sloane); d32 and d35..48 equal the snapshot. The records are spread over arXiv papers AND public GitHub repositories. Vetter's snapshot on 2026-10-08 (orientation only; NEVER use these as the bar, re-derive live): d25 197580 (Yang); d26 199806, d28 204896, d29 209968, d30 221012, d31 238662 (Kravatskiy repo RESULTS.md); d27 201567 (Yang); d32 347584, d33 363968, d34 384196, d35 409676, d36 484760, d37 498024, d38 591900, d39 763668, d43 2553792, d45 7380090 (Yang, arXiv:2609.35051 Table 1); d40 1092000, d41 1324472, d42 1792386, d44 4153600, d46 12309600, d47 23766960 (Dorofeev-Sun-Wang arXiv:2607.20359 / wcgbg sphere-packing repo / Boyvalenkov-Cherkashin arXiv:2312.05121); d48 52416000 (P48). Takhanov-Yun arXiv:2609.21591 (d25-31) and Echols arXiv:2608.13906 (d32-34, d37) are below these. For d=32..35 Yang's values equal exactly the modified Edel-Rains-Sloane bound tau_d >= 2^17 + 2^7*A(d,8,8) + 2d(d-1) with A = 1676/1803/1960/2158 (Brouwer's live Andw.html cells are lower: 1674/1800/1949/2157). For d36 the same bound needs A(36,8,8) >= 2744 to pass 484760. Yang's d36-39 values do not follow from his listed codes, so other constructions are involved there. The machine-verified V3R1T4S codes A(33,8,8) >= 1809 and A(34,8,8) >= 1965 (constant-weight-codes/ in this repository) would give tau33 >= 364736 and tau34 >= 384836 by the formula; Cohn's table now lists exactly these values for d33 and d34, citing those codes. Our own success criterion still requires explicit vectors.
 
 ## What counts as a win
 
@@ -28,7 +28,7 @@ Use an independent script.
 
 Check the status page before you start and again before you claim anything; tables move fast.
 
-- <https://cohn.mit.edu/kissing-numbers>
+- <https://cohn.mit.edu/kissing-numbers/>
 
 ## Sources
 
@@ -44,6 +44,8 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://github.com/wcgbg/sphere-packing>
 - <https://github.com/CDM1619/PackingStar>
 - <https://aeb.win.tue.nl/codes/Andw.html>
+- <https://github.com/k-nic/kissing_d25-31>
+- <https://github.com/Felpix-Studios/kissing-number>
 
 ## Ideas to start from
 

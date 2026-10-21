@@ -1,0 +1,11 @@
+start n=14 m=63 cost=18
+it=200000 cost=8 best=1 t=10
+it=400000 cost=5 best=1 t=20
+it=600000 cost=6 best=1 t=31
+it=800000 cost=9 best=1 t=41
+it=1000000 cost=7 best=1 t=52
+it=1200000 cost=1 best=1 t=62
+it=1400000 cost=2 best=1 t=73
+it=1600000 cost=1 best=1 t=83
+it=1800000 cost=1 best=1 t=93
+end it=1944767 cost=0 best=0 t=101 FOUND

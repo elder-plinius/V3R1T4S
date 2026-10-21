@@ -1,0 +1,15 @@
+start n=15 m=79 cost=16
+it=200000 cost=3 best=2 t=16
+it=400000 cost=7 best=2 t=31
+it=600000 cost=7 best=2 t=45
+it=800000 cost=11 best=2 t=60
+it=1000000 cost=11 best=2 t=74
+it=1200000 cost=3 best=2 t=88
+it=1400000 cost=7 best=2 t=101
+it=1600000 cost=6 best=1 t=115
+it=1800000 cost=5 best=1 t=128
+it=2000000 cost=12 best=1 t=141
+it=2200000 cost=10 best=1 t=155
+it=2400000 cost=2 best=1 t=169
+it=2600000 cost=2 best=1 t=183
+end it=2643738 cost=0 best=0 t=186 FOUND

@@ -1,10 +1,10 @@
 # Erdos #617 (Erdos-Gyarfas): balanced 5-colouring of K_26
 
-✏️ **Erdős problems and proofs** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+✏️ **Erdős problems and proofs** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Is there a 5-colouring of the edges of K_26 in which every 6-vertex set sees all 5 colours? Equivalently: can E(K_26) be partitioned into 5 graphs G_1..G_5, each with independence number alpha(G_c) <= 5? Erdos-Gyarfas conjecture that for every r >= 3 no balanced r-colouring of K_{r^2+1} exists. Per erdosproblems.com/617 (last edited 2026-04-01): proved for r = 3 and r = 4 (credited there to Erdos-Gyarfas); false for r = 2. On r^2 vertices balanced colourings exist for infinitely many r (affine planes). r = 5 is the first open case; the forum (42things, 2026-07-15) says r = 5 'appears to be open' and reports no computational results.
+⚠️ Likely solved: check the July 2026 proof claims before spending compute. Is there a 5-colouring of the edges of K_26 in which every 6-vertex set sees all 5 colours? Equivalently: can E(K_26) be partitioned into 5 graphs G_1..G_5, each with independence number alpha(G_c) <= 5? Erdos-Gyarfas conjecture that for every r >= 3 no balanced r-colouring of K_{r^2+1} exists. Per erdosproblems.com/617 (last edited 2026-04-01): proved for r = 3 and r = 4 (credited there to Erdos-Gyarfas); false for r = 2. On r^2 vertices balanced colourings exist for infinitely many r (affine planes). r = 5 was the first open case. LIKELY SOLVED (claimed, not refereed): erdosproblems.com/forum/thread/617/proof-claims (checked 2026-10-20) lists four independent computer-assisted impossibility proofs for r = 5 from July 2026 (Sneiderman 2026-07-18; Silverstein 2026-07-21, drat-trim-checked UNSAT; Rose 2026-07-25, 458 DRAT-verified SAT leaves; Winter 2026-07-31, with a Lean formalisation at github.com/nwinter/erdos-617-r5), plus fixed-case claims for r = 6..9; none is refereed and the general conjecture stays open.
 
 ## What counts as a win
 
@@ -23,7 +23,7 @@ Is there a 5-colouring of the edges of K_26 in which every 6-vertex set sees all
 
 Check the status page before you start and again before you claim anything; tables move fast.
 
-- <https://www.erdosproblems.com/617>
+- <https://www.erdosproblems.com/forum/thread/617/proof-claims>
 
 ## Sources
 
@@ -31,6 +31,8 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://www.erdosproblems.com/forum/thread/617>
 - <https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/617.lean>
 - <https://github.com/RamazanKara/erdos-617-r5-formal-verification>
+- <https://www.erdosproblems.com/forum/thread/617/proof-claims>
+- <https://github.com/nwinter/erdos-617-r5>
 
 ## Ideas to start from
 

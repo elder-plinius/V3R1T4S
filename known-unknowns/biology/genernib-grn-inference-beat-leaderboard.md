@@ -1,10 +1,10 @@
 # geneRNIB: beat the best listed gene-regulatory-network inference scores on a perturbation dataset
 
-🦠 **Biology** · standard · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-15
+🦠 **Biology** · standard · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-geneRNIB (Open Problems gene regulatory network inference benchmark, bioRxiv 2025.02.25.640181) is a living benchmark in which a method outputs a weighted transcription-factor-to-target network from single-cell data, and the network is scored against held-out perturbation data and curated transcription-factor binding evidence. The public raw score table (all_scores.csv linked from the leaderboard page, 120 rows covering 11 datasets including Norman and Replogle CRISPR screens in K562, Xaira CRISPRi in HEK293T and HCT116, 300BCG, Nakatake and two multiome datasets) shows modest absolute values: on 300BCG the best listed gs_f1 is 0.570 (Geneformer) while a plain Pearson-correlation baseline reaches 0.469 and the negative control 0.034, and transcription-factor-binding F1 values sit near 0.11-0.13 for every method. Several metrics do not separate deep methods from correlation baselines at all. Inputs are public h5ad files on the openproblems-data S3 bucket and the evaluation runs from the repository without Docker for the baseline path.
+geneRNIB (Open Problems gene regulatory network inference benchmark, bioRxiv 2025.02.25.640181) is a living benchmark in which a method outputs a weighted transcription-factor-to-target network from single-cell data, and the network is scored against held-out perturbation data and curated transcription-factor binding evidence. The public raw score table (all_scores.csv linked from the leaderboard page, 120 rows covering 11 datasets including Norman and Replogle CRISPR screens in K562, Xaira CRISPRi in HEK293T and HCT116, 300BCG, Nakatake and two multiome datasets) shows modest absolute values: on 300BCG the best listed gs_f1 is 0.718 (scGPT; then scPRINT 0.681, PORTIA 0.619, Geneformer 0.570) while a plain Pearson-correlation baseline reaches 0.469 and the negative control 0.034, and transcription-factor-binding F1 tops out at 0.128 (Geneformer), with most methods at 0.10-0.12 and scGPT (0.038), scPRINT (0.0) and ppcor (0.0) far below. Several metrics do not separate deep methods from correlation baselines at all. Inputs are public h5ad files on the openproblems-data S3 bucket and the evaluation runs from the repository without Docker for the baseline path.
 
 ## What counts as a win
 

@@ -1,14 +1,14 @@
 # Small two-color Ramsey numbers: new lower bounds via explicit graphs
 
-📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Exhibit a graph on N vertices with no K_s and no independent set of size t, proving R(s,t) >= N+1 and beating the current best lower bound for some (s,t), or the analogous multicolor result. Very active as of 2026-10-03. Latest: Yu (arXiv:2608.18169 v2, 24 Aug 2026) and Coniglio-Furini-Ljubic-San Segundo-Thuerauf-Traversi (arXiv:2608.18769, 19 Aug 2026). An arXiv API scan of Ramsey papers from Sep 2026 showed no further small-cell lower-bound papers. AlphaEvolve (arXiv:2603.09172 v5) also moved R(4,16) 170->174, R(4,18) 205->209, R(4,19) 213->219 and R(4,20) 234->237 (since superseded by Yu's 252); exact circulant Ramsey numbers R_C(3,n) for n=13..20 were computed in arXiv:2608.18769, so plain circulant search there is exhausted.
+Exhibit a graph on N vertices with no K_s and no independent set of size t, proving R(s,t) >= N+1 and beating the current best lower bound for some (s,t), or the analogous multicolor result. Very active as of 2026-10-03. Latest: Yu (arXiv:2608.18169 v2, 24 Aug 2026) and Coniglio-Furini-Ljubic-San Segundo-Thuerauf-Traversi (arXiv:2608.18769, 19 Aug 2026). An arXiv API scan of Ramsey papers from Sep 2026 showed no further small-cell lower-bound papers; since then Fritz Cremer (arXiv:2610.12122, 8 Oct 2026) proved R(6,8) >= 135 and R(8,10) >= 345, improving the 134 and 343 of the April 2026 DS1 revision. AlphaEvolve (arXiv:2603.09172 v5) also moved R(4,16) 170->174, R(4,18) 205->209, R(4,19) 213->219 and R(4,20) 234->237 (since superseded by Yu's 252); exact circulant Ramsey numbers R_C(3,n) for n=13..20 were computed in arXiv:2608.18769, so plain circulant search there is exhausted.
 
 ## What counts as a win
 
-Success means an adjacency matrix of a graph G on N vertices, symmetric with zero diagonal, such that omega(G) < s and alpha(G) < t are certified exactly by two independent methods (exhaustive B&B and an UNSAT proof). N+1 must be STRICTLY GREATER (direction: max) than the best lower bound for R(s,t) at verification time, taken as the maximum over Radziszowski's dynamic survey DS1 (latest revision) and every 2026 paper or repository found by a fresh search (at minimum arXiv:2603.09172 v5, ScaleAutoResearch-Ramsey, arXiv:2608.18169 v2, arXiv:2608.18769). Off-by-one: a graph on N vertices proves R(s,t) >= N+1.
+Success means an adjacency matrix of a graph G on N vertices, symmetric with zero diagonal, such that omega(G) < s and alpha(G) < t are certified exactly by two independent methods (exhaustive B&B and an UNSAT proof). N+1 must be STRICTLY GREATER (direction: max) than the best lower bound for R(s,t) at verification time, taken as the maximum over Radziszowski's dynamic survey DS1 (latest revision) and every 2026 paper or repository found by a fresh search (at minimum arXiv:2603.09172 v5, ScaleAutoResearch-Ramsey, arXiv:2608.18169 v2, arXiv:2608.18769, arXiv:2610.12122). Off-by-one: a graph on N vertices proves R(s,t) >= N+1.
 
 ## Partial wins
 
@@ -23,7 +23,7 @@ Run two independent exact clique solvers on G and on its complement. One is a cu
 
 Check the status page before you start and again before you claim anything; tables move fast.
 
-- <https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1 (Radziszowski dynamic survey; not opened this session)>
+- <https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1>
 
 ## Sources
 
@@ -32,6 +32,7 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://github.com/ypwang61/ScaleAutoResearch-Ramsey>
 - <https://arxiv.org/abs/2608.18769>
 - <https://arxiv.org/abs/2608.18169>
+- <https://arxiv.org/abs/2610.12122>
 
 ## Ideas to start from
 

@@ -1,10 +1,10 @@
 # Spherical codes (Tammes problem and higher dimensions): beat an entry in Cohn's spherical-codes.org table
 
-⚪ **Packings and physics** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours · open as of 2026-10-08
+⚪ **Packings and physics** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Henry Cohn's table at spherical-codes.org lists the best known spherical codes (maximize the minimal angle between N unit vectors) for dimensions 3..32 (plus one entry each in 52 and 64) and N up to 1024: 16,446 entries on the HTML index (checked 2026-10-08), each with the cosine of the minimal angle to 12 decimals, a coordinates file /data/<d>/<N> (16-17 digits per coordinate, one point per line), references, a '*' (HTML entity &ast;) after N for proven-optimal cases, and in 11,996 entries the per-row reference text 'needs more optimization' (dims 4..32; none in dim 3), meaning the posted code has not converged. A plain CSV is at /plain (16,356 rows: d,N,cos[,minimal polynomial]; it carries NO star marks and no labels). Dimension 3 is the Tammes problem (/plain lists N = 7..1024; proven only for small N and N = 24). The table is actively maintained (entries dated 'Henry Cohn, 2026', 'Antoine Jay, 2026'; Numaro records cited). Sloane's original tables (neilsloane.com/packings) return HTTP 403 to curl and are superseded. EinsteinArena's Tammes N=50 leaderboard (checked 2026-10-08) tops out at 0.51347176 rad, consistent with the table's cos 0.868173209127 (= 0.5134721 rad); never use that leaderboard as a record source.
+Henry Cohn's table at spherical-codes.org lists the best known spherical codes (maximize the minimal angle between N unit vectors) for dimensions 3..32 (plus one entry each in 52 and 64) and N up to 1024: 15,985 entries on the HTML index (checked 2026-10-20; 16,446 on 2026-10-08), each with the cosine of the minimal angle to 12 decimals, a coordinates file /data/<d>/<N> (16-17 digits per coordinate, one point per line), references, a '*' (HTML entity &ast;) after N for proven-optimal cases, and in 4,859 entries (2026-10-20; 11,996 on 2026-10-08) the per-row reference text 'needs more optimization' (dims 3..32; in dim 3 only N = 842, 893, 907 and 952), meaning the posted code has not converged. A plain CSV is at /plain (15,894 rows on 2026-10-20: d,N,cos[,minimal polynomial]; it carries NO star marks and no labels). Dimension 3 is the Tammes problem (/plain lists N = 7..1024; proven only for small N and N = 24). The table is actively maintained (entries dated 'Henry Cohn, 2026', 'Antoine Jay, 2026'; Numaro records cited). Sloane's original tables (neilsloane.com/packings) return HTTP 403 to curl and are superseded. EinsteinArena's Tammes N=50 leaderboard (checked 2026-10-08) tops out at 0.51347176 rad, consistent with the table's cos 0.868173209127 (= 0.5134721 rad); never use that leaderboard as a record source.
 
 ## What counts as a win
 
@@ -12,7 +12,7 @@ Success means N vectors in R^d for a (d, N) row present in the live https://sphe
 
 ## Partial wins
 
-- **p1:** A certified improvement (same rule, margin 1e-10, no star, no 'needs more optimization' label) in dimension 3 (Tammes problem) for an N listed in /plain; 3D entries carry no 'needs more optimization' label, so this is the hardest sub-case.
+- **p1:** A certified improvement (same rule, margin 1e-10, no star, no 'needs more optimization' label) in dimension 3 (Tammes problem) for an N listed in /plain; only four 3D entries (N = 842, 893, 907, 952) carry the 'needs more optimization' label and they do not count here, so this is the hardest sub-case.
 - **p2:** A batch of at least 20 certified improvements (margin 1e-10 each) to rows labeled 'needs more optimization' in one dimension d in 4..32, delivered as one file set with the largest improvement reported; these rows are flagged unconverged by the table, so the batch is a partial win, never a claim.
 - **p3:** An exact-angle certificate for an unstarred, unlabeled row that has no minimal polynomial listed: a configuration whose minimal-angle cosine is shown (mpmath findpoly/PSLQ at 60 digits, confirmed at 100 digits) to be an algebraic number matching the table value to 1e-12, with the contact structure verified rigid; adds a polynomial the table lacks.
 
@@ -39,7 +39,7 @@ Check the status page before you start and again before you claim anything; tabl
 
 Starting points, not instructions. The best wins came from angles nobody listed.
 
-- Harvest the 11,995 'needs more optimization' entries: for each (d, N) download /data/<d>/<N>, run a smooth-max (log-sum-exp of inner products with increasing sharpness) L-BFGS descent followed by an active-set SLSQP on the true min-angle objective, then mpmath polish; 10 cores can sweep thousands of entries in hours. Prioritize dims 5..12 where N is moderate and gains are typically 1e-6..1e-3.
+- Harvest the 4,859 'needs more optimization' entries (2026-10-20 count; the table is being re-optimized quickly): for each (d, N) download /data/<d>/<N>, run a smooth-max (log-sum-exp of inner products with increasing sharpness) L-BFGS descent followed by an active-set SLSQP on the true min-angle objective, then mpmath polish; 10 cores can sweep thousands of entries in hours. Prioritize dims 5..12 where N is moderate and gains are typically 1e-6..1e-3.
 - Structured codes: for d = 4..8 use orbits of finite reflection groups (W(F4), W(E6), W(E7), W(E8)) and their subgroups; union-of-orbits codes with one continuous parameter per orbit often beat unstructured numerical codes at N near 100..1024.
 - Lifting/projection: good codes in dimension d+1 projected or sliced to d, and codes in d lifted by adding a small coordinate, give fresh basins; also antipodal doubling (N -> 2N) of a good code in d.
 - 3D Tammes (p1): seed with Hars' N <= 60 point sets and Deeter-style symmetric (D_n, T, O, I subgroup) starts, run 10^5 restarts per N in 60..150, polish active contacts to 30 digits; the 2025 N = 60 gain (6e-9) shows tiny improvements still exist.

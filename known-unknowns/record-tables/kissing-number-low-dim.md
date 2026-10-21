@@ -1,10 +1,10 @@
 # Kissing number lower bounds in dimensions 9-23
 
-📊 **Record tables** · moonshot (famous, long odds) · tractability ★☆☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+📊 **Record tables** · moonshot (famous, long odds) · tractability ★☆☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Find more unit spheres touching a central unit sphere without overlapping, i.e. a set of nonzero vectors of equal norm with pairwise angle >= 60 degrees, in dimensions 9-23. Cohn's table (2026): d9 306, d10 510, d11 604, d12 841, d13 1154, d14 1932, d15 2564, d16 4320, d17 5730, d18 7654, d19 11948, d20 19448, d21 29768, d22 49896, d23 93150. Attributions: d11 592 (Ganzhinov 2025) -> 593 (AlphaEvolve) -> 604 (Bianchi-Kwon-Pappu-Zou, arXiv:2606.10402, EinsteinArena, 'recently solved, certified'); d12 840 -> 841 (Takhanov-Assylbekov-Yun, arXiv:2606.18984); d14 1932 (Ganzhinov 2025); d19 11948 (Ho, arXiv:2603.10425). Sep 2026 work (arXiv:2609.35051, 2609.21591) only improved d >= 25.
+Find more unit spheres touching a central unit sphere without overlapping, i.e. a set of nonzero vectors of equal norm with pairwise angle >= 60 degrees, in dimensions 9-23. Cohn's table (checked 2026-10-20): d9 306, d10 510, d11 604, d12 841, d13 1154, d14 1932, d15 2564, d16 4320, d17 5730, d18 8358, d19 12460, d20 19448, d21 31560, d22 49896, d23 93150. Attributions: d11 592 (Ganzhinov 2025) -> 593 (AlphaEvolve) -> 604 (Bianchi-Kwon-Pappu-Zou, arXiv:2606.10402, EinsteinArena, 'recently solved, certified'); d12 840 -> 841 (Takhanov-Assylbekov-Yun, arXiv:2606.18984); d14 1932 (Ganzhinov 2025); d18 7654 -> 8358 (A. Kravatskiy 2026, github.com/alexlegeartis/KissingNumbers); d19 11948 (Ho, arXiv:2603.10425) -> 12460 and d21 29768 -> 31560 (K. Li 2026, 'Improved kissing numbers in nineteen and twenty-one dimensions', preprint, listed by Cohn as 'hexagon: 2610.00248'). Sep 2026 work (arXiv:2609.35051, 2609.21591) only improved d >= 25; the d18, d19 and d21 gains reached Cohn's table after 2026-10-03.
 
 ## What counts as a win
 
@@ -33,6 +33,7 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://arxiv.org/abs/2606.10402>
 - <https://arxiv.org/abs/2606.18984>
 - <https://arxiv.org/abs/2603.10425>
+- <https://github.com/alexlegeartis/KissingNumbers>
 
 ## Ideas to start from
 

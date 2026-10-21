@@ -1,0 +1,48 @@
+{
+ "cell": {
+  "n": 32,
+  "d": 10,
+  "w": 7
+ },
+ "variables": "a_x for Johnson distance x = 5..7 (Hamming distance 2x); a_0 = 1",
+ "constraints": [
+  {
+   "tag": "D1",
+   "coeffs": {
+    "5": "-93/35",
+    "6": "527/175",
+    "7": "217/25"
+   },
+   "rhs": "31",
+   "dual": "7/71"
+  },
+  {
+   "tag": "D2",
+   "coeffs": {
+    "5": "232/15",
+    "6": "1508/175",
+    "7": "-812/25"
+   },
+   "rhs": "464",
+   "dual": "168/2059"
+  },
+  {
+   "tag": "R7",
+   "coeffs": {
+    "5": "0",
+    "6": "0",
+    "7": "1"
+   },
+   "rhs": "32",
+   "dual": "992/355"
+  }
+ ],
+ "table_inputs": {
+  "A(25,10,7)": 32
+ },
+ "table_inputs_as_printed": {
+  "A(25,10,7)": "28-32"
+ },
+ "claimed_bound": 131,
+ "certified_value": "46624/355"
+}

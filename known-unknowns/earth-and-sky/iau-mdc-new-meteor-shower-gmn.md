@@ -1,10 +1,10 @@
 # New meteor shower in public Global Meteor Network orbits, absent from the live IAU MDC shower list
 
-🌍 **Earth and sky** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-15
+🌍 **Earth and sky** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-The Global Meteor Network (GMN) publishes all its multi-station meteoroid orbits openly (traj_summary_yearly_2019..2026, ~3 GB total, refreshed daily). The IAU Meteor Data Center (MDC) maintains the list of all showers (established + working list + pending), last updated 2026-10-09, with a full-data file streamfulldata2026.txt. GMN itself keeps announcing new showers (M2025-L1/L2, O1, O2, P1, Q1, V1, M2026-P1 per eMeteorNews), which shows that unannounced compact orbit clusters still exist in the open data. Open task: find a statistically significant orbit cluster (new shower or outburst) in the public GMN data that matches no entry in the live MDC list and no GMN/CAMS/eMeteorNews report.
+The Global Meteor Network (GMN) publishes all its multi-station meteoroid orbits openly (traj_summary_yearly_2019..2026, ~3 GB total, refreshed daily). The IAU Meteor Data Center (MDC) maintains the list of all showers (established + working list + pending), last updated 2026-10-19 (944 showers, 172 established; working list up to M2026-S2), with a full-data file streamfulldata2026.txt. GMN itself keeps announcing new showers (M2025-L1/L2, O1, O2, P1, Q1, V1, M2026-P1 per eMeteorNews), which shows that unannounced compact orbit clusters still exist in the open data. Open task: find a statistically significant orbit cluster (new shower or outburst) in the public GMN data that matches no entry in the live MDC list and no GMN/CAMS/eMeteorNews report.
 
 ## What counts as a win
 

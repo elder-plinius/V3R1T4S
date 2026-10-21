@@ -1,14 +1,14 @@
-# Unbroken German Army Truppenschlüssel (TS) hand-cipher messages, 1941 (CryptoCellar)
+# The last 7 unbroken German Army Truppenschlüssel (TS) hand-cipher messages, 1941 (CryptoCellar)
 
-🔐 **Unbroken ciphers** · harvest (many cells or partial wins within reach) · tractability ★★★☆☆ · compute: laptop-hours · open as of 2026-10-03
+🔐 **Unbroken ciphers** · standard · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Frode Weierud's CryptoCellar (g-army-ts-messages.html, updated 27 Jul 2026) lists about 40 German Army Truppenschlüssel (TS) messages from June to September 1941. TS is a hand substitution cipher using two 5x5 squares (25-letter alphabet, J written as II), described in Ostwald and Weierud's Cryptologia article 'Modern Cryptanalysis of the Truppenschlüssel'. 11 are marked broken (10 on 22.01.2022, TUNYA on 26.01.2022); about 29 carry no 'Broken' marker, e.g. YSGSS (28.06.1941, 13 letters), FCVHR/HKMZI/FBOIQ (03.07; FBOIQ 38), KVLIG/SGOXX/UBYVQ/HFEYY/LICUD/DSZPZ/DEZPS/TKYKJ (04.07; TKYKJ 35), SSKFV/HOHOX (06.07), IABZV/EHNPZ/IASRZ (08.07; IASRZ appears twice, 90 and 52 letters), XWFEC (12.07), AFUVO (13.07, 14), DOLHA, CPUDN (32), NEUEM, LSSLG, CFQIB, VHRNE, ZUBZE, MZXNX, AAXYN, AOXST. The page publishes NO keys or plaintexts for the broken messages and attributes the failures to unfavourable plaintext, garbles or ciphering errors, and short messages. Break any one qualifying unbroken message: recover its key and plaintext. Context: TS plaintexts for 10-11 July 1941 were supplied privately by Olaf Ostwald (requested by Sean Harrington) for the Sept 2026 AWTZK/ZNLZT Enigma attack; none of the Sept 2026 breaks touched TS.
+Frode Weierud's CryptoCellar keeps the master status of the 1941 Heeresgruppe Nord traffic on 1941-msg-list.html (status 20 Oct 2026). TS (Truppenschlüssel) is a hand substitution cipher using two 5x5 squares (25-letter alphabet, J written as II), described in Ostwald and Weierud's Cryptologia article 'Modern Cryptanalysis of the Truppenschlüssel'. Of the 137 TS rows on that list, all but 7 are now marked Broken: most of the July 1941 TS messages fell in September 2026 (Norbert Paefgen from 17 Sep, then several AI-assisted solvers credited on the page). The older TS-only page g-army-ts-messages.html still shows its 27 Jul 2026 state, so do not use it for status. The 7 still-unbroken TS messages (green on the master list) are: EHNPZ (08.07.1941, Nr. 123, 87 letters), AFUVO (13.07, Nr. 26, 14), ZUBZE (10.08, Nr. 8, 62), MZXNX (17.08, Nr. 21, 88), BCUCC (05.09, Nr. 20 NF, 64), AAXYN (05.09, Nr. 31, 72) and AOXST (23.09, Nr. 91, 152). These are the ones that resisted everyone, so expect garbles, short or unfavourable plaintext, or ciphering errors. Break any one qualifying message: recover its key and plaintext. (Status corrected on 2026-10-20 after a contributor's report.)
 
 ## What counts as a win
 
-Target message must still carry no 'Broken' marker on https://www.cryptocellar.org/bgac/g-army-ts-messages.html at verification time (otherwise the result is reported as a non-first re-break). CONFIRMED only if ALL of the following hold. (1) The full key (both 5x5 squares) and the exact TS procedure are given, with the procedure cited to Ostwald and Weierud's Cryptologia article 'Modern Cryptanalysis of the Truppenschlüssel' (section and page). (2) Deterministic decryption of the CryptoCellar transcription (re-extracted fresh) gives connected German military text, with at least 85% of letters inside German words or standard Wehrmacht abbreviations. (3) A garble list is declared BEFORE scoring: at most 8% of letters, each Morse-plausible, with red J positions treated as unknown symbols. (4) Length gate: only messages of at least 80 cipher letters qualify alone. A shorter message qualifies only if the SAME key also decrypts another same-date message to German meeting (2), AND the Cryptologia description confirms that same-day messages share a key. Messages under 40 letters are never CONFIRMED. (5) A shuffled-ciphertext null: 200 shuffles, same pipeline and budget, best score at least 5 SD below the claim. (6) Historical coherence with June to September 1941 traffic of the same net. A custodian 'Broken' marker counts as final external confirmation.
+Target message must be one of the 7 listed above and must still be listed as unbroken (green, no 'Broken' marker) on https://www.cryptocellar.org/bgac/1941-msg-list.html at verification time (otherwise the result is reported as a non-first re-break). CONFIRMED only if ALL of the following hold. (1) The full key (both 5x5 squares) and the exact TS procedure are given, with the procedure cited to Ostwald and Weierud's Cryptologia article 'Modern Cryptanalysis of the Truppenschlüssel' (section and page). (2) Deterministic decryption of the CryptoCellar transcription (re-extracted fresh) gives connected German military text, with at least 85% of letters inside German words or standard Wehrmacht abbreviations. (3) A garble list is declared BEFORE scoring: at most 8% of letters, each Morse-plausible, with red J positions treated as unknown symbols. (4) Length gate: only messages of at least 80 cipher letters qualify alone. A shorter message qualifies only if the SAME key also decrypts another same-date message to German meeting (2), AND the Cryptologia description confirms that same-day messages share a key. Messages under 40 letters are never CONFIRMED. (5) A shuffled-ciphertext null: 200 shuffles, same pipeline and budget, best score at least 5 SD below the claim. (6) Historical coherence with June to September 1941 traffic of the same net. A custodian 'Broken' marker counts as final external confirmation.
 
 ## Partial wins
 
@@ -24,12 +24,12 @@ Implement TS from the Cryptologia paper's description and worked example. No bro
 
 Check the status page before you start and again before you claim anything; tables move fast.
 
-- <https://www.cryptocellar.org/bgac/g-army-ts-messages.html>
+- <https://www.cryptocellar.org/bgac/1941-msg-list.html>
 
 ## Sources
 
-- <https://www.cryptocellar.org/bgac/g-army-ts-messages.html>
 - <https://www.cryptocellar.org/bgac/1941-msg-list.html>
+- <https://www.cryptocellar.org/bgac/g-army-ts-messages.html>
 - <https://www.cryptocellar.org/bgac/the-fmngi-break.html>
 - <https://www.cryptocellar.org/bgac/>
 - <https://www.cryptocellar.org/bgac/the-awtzk-znlzt-breaks.html>

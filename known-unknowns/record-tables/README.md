@@ -18,7 +18,7 @@ Codes, designs, packings and constructions measured against public tables.
 | ★★☆☆☆ | [Heilbronn triangle problem: new best configurations (square, triangle, convex region)](heilbronn-records.md) | harvest | laptop-hours |
 | ★★☆☆☆ | [Low-autocorrelation binary sequences: best-known merit factors for lengths 67-600](labs-merit-factor-records.md) | harvest | laptop-hours |
 | ★★☆☆☆ | [Shannon capacity of odd cycles: larger independent sets in strong powers](shannon-capacity-odd-cycles.md) | harvest | laptop-hours |
-| ★★☆☆☆ | [Shorter superpermutations for n=7 (below 5905) or n=8 (below 46204)](superpermutations-n7-n8.md) | harvest | laptop-hours |
+| ★★☆☆☆ | [Shorter superpermutations for n=7 (below 5905) or n=8 (below 46188)](superpermutations-n7-n8.md) | harvest | laptop-hours |
 | ★★☆☆☆ | [Small two-color Ramsey numbers: new lower bounds via explicit graphs](small-ramsey-lower-bounds.md) | harvest | laptop-hours |
 | ★☆☆☆☆ | [AlphaEvolve-family analytic constants: autocorrelation inequalities and Erdos minimum ove…](alphaevolve-analytic-constants.md) | standard | laptop-hours |
 | ★☆☆☆☆ | [Kissing number lower bounds in dimensions 9-23](kissing-number-low-dim.md) | moonshot | laptop-hours |

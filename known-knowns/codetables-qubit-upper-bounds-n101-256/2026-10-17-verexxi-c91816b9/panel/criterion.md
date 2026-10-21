@@ -1,0 +1,17 @@
+context: subagent (Claude Code headless on the owner's PC, fresh context)
+confirmed_scope: The exact Farkas certificate result/cert_120_2_40_sh.json passes the integer checker check/check_cert.py (quantum weight-enumerator LP with A_j=B_j for 1<=j<=39, A_j<=B_j for j>=40 and Rains shadow nonnegativity), proving no [[120,2,40]] qubit stabilizer code exists, which lowers the upper bound of the saved claim-time codetables.de cell (120,2) from 40 to at most 39 without that value being implied by the propagation rules applied to the saved full qubit table.
+
+What I did (real output):
+- Ran `python3 -I check/check_cert.py result/cert_120_2_40_sh.json`: printed "VERIFIED [[120,2,40]] shadow=True: value=815 digits, max column coefficient <= 0, 39+2+37 multipliers", exit code 0. Matches check/checker_output.txt.
+- Read the checker docstring and code: the LP is the standard one (A_0=1, sum A_i=2^(n-k), MacWilliams via quaternary Krawtchouk, equalities below d, inequalities from d up, shadow rows), integer arithmetic only, multiplier signs enforced (inequality multipliers nonnegative, indices in range). The Farkas argument stated is correct.
+- Null/tamper tests by importing the checker: the same certificate with k=1 d=40 fails ("certificate value is not positive"); with k=3 d=40 fails (positive column coefficient); with d=25 or 39 fails (index range); with the shadow multipliers removed and shadow false it fails (positive column coefficient). So the certificate is specific to (120,2,40) and genuinely needs the shadow constraints; the checker does not accept everything.
+- Re-ran check/parse_table.py and check/propagate.py on data/qubit_table_full_n1-256.html. Output: neighbours at (120,2): R1 (120,1) [25,40]; R2 (121,2) [25,41]; R3 (119,3) [25,39] so R3 gives 39+1=40. Closure of the live table at (120,2) is 40, so a bound of 39 is not implied by other cells. Matches check/propagation_check.txt.
+- Checked data/QECC_q4_n120_k2_claimtime.html: "lower bound: 25, upper bound: 40" for [[120,2]], matching the claim.
+
+Reasoning:
+- Criterion: n=120 is in 101..256; the proof is an exact rational (integer) Farkas certificate of the weight-enumerator LP with shadow constraints, checked by an independent standard-library script; the bound at the live upper bound d=40 is eliminated, lowering the upper bound by 1; the new value 39 is not implied by R1/R2/R3 over the saved table. All elements are met.
+- No hidden quantifier found: the claim is for one cell and d=40 only, and the certificate is not reused for other parameters. The checker is "independent" in the sense of being a separate script from the certificate generator, but I only had the checker, not the generator.
+- Caveats that bound the scope: (1) "live" status is the saved claim-time page (fetched 2026-10-17T00:28:52Z per CLAIM.md); I made no live request and cannot confirm the table is unchanged. (2) The propagation test uses the saved table and the three stated rules only; the table itself may have stronger unstated bounds elsewhere. (3) I did not independently re-derive the LP's correctness beyond reading the docstring and the code; the Rains shadow inequality and the A_j=B_j for j<d (impure codes allowed) conditions are the standard ones from the cited sources. (4) The result is a bound on stabilizer (additive) codes, which is what the table covers.
+- This is the full success criterion, not a partial win.
+
+pass: true

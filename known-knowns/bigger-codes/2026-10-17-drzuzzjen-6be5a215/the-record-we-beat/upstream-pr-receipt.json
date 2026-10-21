@@ -1,0 +1,111 @@
+{
+  "observed_utc": "2026-10-17T14:00:49.463892+00:00",
+  "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&sort=updated&direction=desc",
+  "pull_requests_received": 343,
+  "open": 111,
+  "closed": 232,
+  "sha256": "8c00b22a912b93f049ac86930e44b7650f5e1040ef5b1b2189fb939ac16dd468",
+  "coverage": "titles and bodies of all paginated open/closed PRs; matched contributions require head files/diffs/comments review; no claim about private/unposted submissions",
+  "screening_correction": "Tight cell-aware pattern replaces preliminary broad numeric pattern that also matched dates/hashes.",
+  "family_candidates": [
+    {
+      "number": 351,
+      "state": "open",
+      "title": "[claim] constant-weight-codes: A(31,10,7) <= 106 (Delsarte LP certificate, partial win)",
+      "head_sha": "af469e93a75035ef810abeaaeb969b21ac393dbb",
+      "head_repo": "rstevens70/V3R1T4S"
+    },
+    {
+      "number": 350,
+      "state": "open",
+      "title": "[claim] constant-weight-codes: A(34,10,8) <= 618 (Delsarte LP certificate, partial win)",
+      "head_sha": "12d0c5f8ceac0d7036394ab6f067fa0b11c4efaf",
+      "head_repo": "rstevens70/V3R1T4S"
+    },
+    {
+      "number": 349,
+      "state": "open",
+      "title": "[claim] constant-weight-codes: A(33,10,7) <= 145 (Delsarte LP certificate, partial win)",
+      "head_sha": "4a4d76b051405bc44233680dd87bc3cd430c2d77",
+      "head_repo": "rstevens70/V3R1T4S"
+    },
+    {
+      "number": 348,
+      "state": "open",
+      "title": "[claim] constant-weight-codes: A(32,10,7) <= 131 (Delsarte LP certificate, partial win)",
+      "head_sha": "617335b899a0ff3906aa2a909b6954fa6863e9dd",
+      "head_repo": "rstevens70/V3R1T4S"
+    },
+    {
+      "number": 8,
+      "state": "closed",
+      "title": "[review] A(34,8,7) \u2265 603: certificate, provenance and checker review",
+      "head_sha": "eb9d15e25464fd854a18f3151be7c7db05bb83c2",
+      "head_repo": "rfreel/V3R1T4S"
+    },
+    {
+      "number": 28,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(27,6,10) \u2265 13026 (+39) \u2014 Freelsgood",
+      "head_sha": "b139a28ec67c0f0a947bc8e26705dff36bb87cba",
+      "head_repo": "rfreel/V3R1T4S"
+    },
+    {
+      "number": 52,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(54, 8, 7) >= 4204 (beats 4193 by +11, Andw.html 4173 by +31)",
+      "head_sha": "2aaee7f6db50ba13ba8991e5bac7297f8f184946",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 53,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(56, 8, 7) >= 4691 (beats 4685 by +6, Andw.html 4674 by +17)",
+      "head_sha": "9760d0cf93a6f3d60779d765a3e04c6e72ddc0da",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 54,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(53, 8, 7) >= 3992 (beats 3987 by +5, Andw.html 3980 by +12)",
+      "head_sha": "d6e56087a01ceafa9ad085b1eddb8e5a1f71d01a",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 55,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(55, 8, 7) >= 4431 (beats 4426 by +5, Andw.html 4417 by +14)",
+      "head_sha": "ae22237c90fc291781c5eee10db6faac664bde40",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 56,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(52, 8, 7) >= 3802 (beats 3799 by +3, Andw.html 3797 by +5)",
+      "head_sha": "ccdb02744752827cb0ab3e375f88b35f7b730471",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 57,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(27, 8, 10) >= 1740 (beats 1737 by +3, Andw.html 1728 by +12)",
+      "head_sha": "b2d2a51a0670d60c599a004f1f75e371585d031f",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 58,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(45, 8, 7) >= 1910 (beats 1907 by +3, Andw.html 1904 by +6)",
+      "head_sha": "7ce0d0ebcf54d7f6a50dcbbdb554baede437ad7b",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    },
+    {
+      "number": 59,
+      "state": "closed",
+      "title": "[claim] constant-weight-codes: A(35, 6, 6) >= 2218 (beats 2217 by +1, Andw.html 2209 by +9)",
+      "head_sha": "25be36e17aefd7ba3cb4709e291d45ea112c7927",
+      "head_repo": "calgulbenkian/V3R1T4S"
+    }
+  ],
+  "target_matches": []
+}

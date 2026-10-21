@@ -1,0 +1,464 @@
+{
+  "started_utc": "2026-10-17T14:07:37.809702+00:00",
+  "finished_utc": "2026-10-17T14:07:41.163462+00:00",
+  "source_commit": "7dd4480512cc47fe0f897164844432a2738fe649",
+  "source_index_sha256": "e7ed745ea3299877231732acb040b97d5e7953c04ef7a76f228856d3b92e2ff7",
+  "target": {
+    "n": 26,
+    "d": 6,
+    "w": 9,
+    "M": 5997
+  },
+  "calibration_cases_passed": 4,
+  "results": [
+    {
+      "cell": "A(25,6,11)",
+      "source_M": 8718,
+      "source_sha256": "fb5145c3b40d3ac0a67a539bce0fa075f6a2d98f9c635932bc7309ee78d1d7ae",
+      "cases": [
+        {
+          "orientation_w": 11,
+          "minimum_fixed_ones": 2,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 23,
+          "remaining_w": 9,
+          "packing_upper_bound": 6809,
+          "maximum_survivors": 1641,
+          "maximizing_pattern_zero_based": {
+            "ones": [
+              0,
+              10
+            ],
+            "zeros": []
+          },
+          "patterns_counted": 300,
+          "sum_of_pattern_counts": 479490,
+          "expected_sum": 479490,
+          "checksum_pass": true,
+          "disposition": "all minimum patterns too small; any additional fixed coordinates only reduce count"
+        },
+        {
+          "orientation_w": 14,
+          "minimum_fixed_ones": 5,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 20,
+          "remaining_w": 9,
+          "packing_upper_bound": 2153,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(25,6,12)",
+      "source_M": 9895,
+      "source_sha256": "b2631ed9296e9a0622a535edaba582a715520fe06af36de4d51cd1cf18698519",
+      "cases": [
+        {
+          "orientation_w": 12,
+          "minimum_fixed_ones": 3,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 22,
+          "remaining_w": 9,
+          "packing_upper_bound": 4737,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        },
+        {
+          "orientation_w": 13,
+          "minimum_fixed_ones": 4,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 21,
+          "remaining_w": 9,
+          "packing_upper_bound": 3230,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(26,6,8)",
+      "source_M": 3603,
+      "source_sha256": "bd239ef369bb94ca6af15162cf2790b7848640adf01ffae05a4a099d7ae7b509",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(26,6,9)",
+      "source_M": 5986,
+      "source_sha256": "b09c1c5d9772aae336ca2ba29e4c3e25c6346299aabcd677008d08f0749308cf",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(26,6,11)",
+      "source_M": 12222,
+      "source_sha256": "0637a3a3ee1fa65d5230bacbf14fb7a88c56a047fc5a24db614ccd795e488961",
+      "cases": [
+        {
+          "orientation_w": 11,
+          "minimum_fixed_ones": 2,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 24,
+          "remaining_w": 9,
+          "packing_upper_bound": 9614,
+          "maximum_survivors": 2393,
+          "maximizing_pattern_zero_based": {
+            "ones": [
+              0,
+              19
+            ],
+            "zeros": []
+          },
+          "patterns_counted": 325,
+          "sum_of_pattern_counts": 672210,
+          "expected_sum": 672210,
+          "checksum_pass": true,
+          "disposition": "all minimum patterns too small; any additional fixed coordinates only reduce count"
+        },
+        {
+          "orientation_w": 15,
+          "minimum_fixed_ones": 6,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 20,
+          "remaining_w": 9,
+          "packing_upper_bound": 2153,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(26,6,13)",
+      "source_M": 16225,
+      "source_sha256": "be7b1c9464c67bc9cac8c175214c607291cb427e127534b30994b29eff4f274e",
+      "cases": [
+        {
+          "orientation_w": 13,
+          "minimum_fixed_ones": 4,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 22,
+          "remaining_w": 9,
+          "packing_upper_bound": 4737,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(27,6,9)",
+      "source_M": 8325,
+      "source_sha256": "d6b278e96ded45c784f351c80dff216c65dba8173d63bb4d2e96b1602c33df3e",
+      "cases": [
+        {
+          "orientation_w": 9,
+          "minimum_fixed_ones": 0,
+          "minimum_fixed_zeros": 1,
+          "remaining_n": 26,
+          "remaining_w": 9,
+          "packing_upper_bound": 18272,
+          "maximum_survivors": 5555,
+          "maximizing_pattern_zero_based": {
+            "ones": [],
+            "zeros": [
+              26
+            ]
+          },
+          "patterns_counted": 27,
+          "sum_of_pattern_counts": 149850,
+          "expected_sum": 149850,
+          "checksum_pass": true,
+          "disposition": "all minimum patterns too small; any additional fixed coordinates only reduce count"
+        },
+        {
+          "orientation_w": 18,
+          "minimum_fixed_ones": 9,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 18,
+          "remaining_w": 9,
+          "packing_upper_bound": 884,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(27,8,10)",
+      "source_M": 1737,
+      "source_sha256": "5a9ef07f5d958179ac069f546c43914147ac041f0c10e80a2229ea3d1287a05f",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(27,8,11)",
+      "source_M": 2421,
+      "source_sha256": "79e63d441921eda3444f3a4fe0601672c97c8df1f9f2a974fa5909f762afaf3a",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(28,8,9)",
+      "source_M": 1406,
+      "source_sha256": "4912b21d4eed029dc861a85506f7a4bc10189106ae95793eaada8c1654d316cb",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(28,8,11)",
+      "source_M": 3785,
+      "source_sha256": "c3160db5f409d2700e974d77503ac3806ac535ef052fb94f8558c92829c9fb91",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(28,8,12)",
+      "source_M": 4962,
+      "source_sha256": "02553ea43f9584446414c23dc611e751cbfb6a8f037e0c115d30aae43e6c5341",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(28,8,14)",
+      "source_M": 6359,
+      "source_sha256": "a4a88d0575c275884d3d34a25156a980f418a5ffd56bf0e188ecbe4a758a7d22",
+      "cases": [
+        {
+          "orientation_w": 14,
+          "minimum_fixed_ones": 5,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 23,
+          "remaining_w": 9,
+          "packing_upper_bound": 1201,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(29,6,10)",
+      "source_M": 25974,
+      "source_sha256": "5551204c40538f6b11e53e60414e417d5ff7d8c8c59b40a8185ddd59a9de9cd3",
+      "cases": [
+        {
+          "orientation_w": 10,
+          "minimum_fixed_ones": 1,
+          "minimum_fixed_zeros": 2,
+          "remaining_n": 26,
+          "remaining_w": 9,
+          "packing_upper_bound": 18272,
+          "maximum_survivors": 4476,
+          "maximizing_pattern_zero_based": {
+            "ones": [
+              0
+            ],
+            "zeros": [
+              1,
+              14
+            ]
+          },
+          "patterns_counted": 10962,
+          "sum_of_pattern_counts": 44415540,
+          "expected_sum": 44415540,
+          "checksum_pass": true,
+          "disposition": "all minimum patterns too small; any additional fixed coordinates only reduce count"
+        },
+        {
+          "orientation_w": 19,
+          "minimum_fixed_ones": 10,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 19,
+          "remaining_w": 9,
+          "packing_upper_bound": 1399,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(29,6,11)",
+      "source_M": 41219,
+      "source_sha256": "505ba4d63b0faab9bf8a4e470cebb3111f5622a40985d3324a34a0b994ebee25",
+      "cases": [
+        {
+          "orientation_w": 11,
+          "minimum_fixed_ones": 2,
+          "minimum_fixed_zeros": 1,
+          "remaining_n": 26,
+          "remaining_w": 9,
+          "packing_upper_bound": 18272,
+          "maximum_survivors": 3760,
+          "maximizing_pattern_zero_based": {
+            "ones": [
+              8,
+              10
+            ],
+            "zeros": [
+              22
+            ]
+          },
+          "patterns_counted": 10962,
+          "sum_of_pattern_counts": 40806810,
+          "expected_sum": 40806810,
+          "checksum_pass": true,
+          "disposition": "all minimum patterns too small; any additional fixed coordinates only reduce count"
+        },
+        {
+          "orientation_w": 18,
+          "minimum_fixed_ones": 9,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 20,
+          "remaining_w": 9,
+          "packing_upper_bound": 2153,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(29,6,12)",
+      "source_M": 61823,
+      "source_sha256": "d467400b0827c8db81a1c9348317ca1d645c049d6cb54fdf5b927964490e4d2f",
+      "cases": [
+        {
+          "orientation_w": 12,
+          "minimum_fixed_ones": 3,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 26,
+          "remaining_w": 9,
+          "packing_upper_bound": 18272,
+          "maximum_survivors": 3756,
+          "maximizing_pattern_zero_based": {
+            "ones": [
+              2,
+              6,
+              20
+            ],
+            "zeros": []
+          },
+          "patterns_counted": 3654,
+          "sum_of_pattern_counts": 13601060,
+          "expected_sum": 13601060,
+          "checksum_pass": true,
+          "disposition": "all minimum patterns too small; any additional fixed coordinates only reduce count"
+        },
+        {
+          "orientation_w": 17,
+          "minimum_fixed_ones": 8,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 21,
+          "remaining_w": 9,
+          "packing_upper_bound": 3230,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(30,8,8)",
+      "source_M": 1166,
+      "source_sha256": "b4d9fdacd8a4d441b3025389d37026d77627a2ff234d76496a14b94ee11ef742",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(33,8,8)",
+      "source_M": 1809,
+      "source_sha256": "0a8e9c53dc656f46c45a5e2a50149612644132789219501aa3a32592643ee139",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(34,8,7)",
+      "source_M": 602,
+      "source_sha256": "1a1d0958047e78b8d29752ccb0210518b170663b6862f84d57669c7b0c02d81e",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(34,8,8)",
+      "source_M": 1965,
+      "source_sha256": "125083e27d7b04aee88f0c271af7a8946cba376bb87948705f89a2edc6f95eb4",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(35,6,6)",
+      "source_M": 2217,
+      "source_sha256": "3bc77f117eb9ead8b3d35b6e9a610b8fd2cc183e14d71c2f42a7abe244371459",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(45,8,7)",
+      "source_M": 1907,
+      "source_sha256": "3572d00c548890628259491cbcd330950c5ad79d2797b3b14a1bbe224750fd6e",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(51,6,5)",
+      "source_M": 1785,
+      "source_sha256": "9871c29974fe58c7d181433671fa8d0cda3e3fc95b551549ddb7170167c67123",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(51,6,6)",
+      "source_M": 11184,
+      "source_sha256": "2e6f09bcacc16fa3f0a3bddb450567e52cd405afbb48dadb91f605c2a0701955",
+      "cases": [
+        {
+          "orientation_w": 6,
+          "minimum_fixed_ones": 0,
+          "minimum_fixed_zeros": 28,
+          "remaining_n": 23,
+          "remaining_w": 6,
+          "packing_upper_bound": 590,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        },
+        {
+          "orientation_w": 45,
+          "minimum_fixed_ones": 36,
+          "minimum_fixed_zeros": 0,
+          "remaining_n": 15,
+          "remaining_w": 9,
+          "packing_upper_bound": 178,
+          "disposition": "packing upper bound excludes every further shortening/constant extension in this orientation"
+        }
+      ]
+    },
+    {
+      "cell": "A(52,8,7)",
+      "source_M": 3799,
+      "source_sha256": "d2b02baf300e96e2332afeaeab049f5d3231e891bd2de7a3598aa1eb67d2e12e",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(53,8,7)",
+      "source_M": 3987,
+      "source_sha256": "23f6622b2679419869372031dbeafba85d80c256dfb28434aed8ba01b4df6417",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(54,8,7)",
+      "source_M": 4193,
+      "source_sha256": "a5109255714dd876f6fc80f2b7323b5d63570e25a4e104e260b75309ea321118",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(55,8,7)",
+      "source_M": 4426,
+      "source_sha256": "90be7c1e30354c0f3460b78f295518af0db360b61b02732439c6f63716b26049",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(56,8,7)",
+      "source_M": 4685,
+      "source_sha256": "8c1381b23af4e23adba3332069530f1a929dfd59d454c9f8d5ddc8de087e2fb5",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    },
+    {
+      "cell": "A(58,6,5)",
+      "source_M": 2684,
+      "source_sha256": "9bf9102dbf2921f83d5e0d8c64c0d6d300239e8d3fe7f9c5cc82f48221596d4e",
+      "cases": [],
+      "disposition": "source count below target or distance insufficient; no size-increasing operation considered"
+    }
+  ],
+  "scope": "existing immutable main INDEX listings, complements, arbitrary shortening followed by constant-zero/one extension; excludes unions, new constructions, and sources not in this INDEX. Source minimum distances assumed from publication; no pairwise recheck needed to exclude undersized subcodes."
+}

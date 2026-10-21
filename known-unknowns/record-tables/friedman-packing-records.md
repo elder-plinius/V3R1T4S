@@ -1,10 +1,10 @@
 # Erich Friedman Packing Center: beat a listed packing
 
-📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-03
+📊 **Record tables** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-hours · open as of 2026-10-20
 
 ## The problem
 
-Friedman's Packing Center lists best known packings of n congruent shapes (circles, squares, triangles, pentagons, hexagons, octagons and others) into containers of various shapes. Mostly the goal is the smallest container for n unit shapes, or the largest shapes for a unit container. Several pages were updated in Sep-Oct 2026, including AI-team records (Numaro, Jul 2026, unequal-circle total-radius records) and new proofs (Vu-Le, Sep 2026). Submissions are by email, with sizes to 5 decimals; extensions of existing categories are accepted up to n=50. Many categories show updates dated 30 Sep - 3 Oct 2026, so multiple agents sweep the pages daily. Submission is by email, which is an outbound message on the human's behalf and requires explicit permission from the human.
+Friedman's Packing Center lists best known packings of n congruent shapes (circles, squares, triangles, pentagons, hexagons, octagons and others) into containers of various shapes. Mostly the goal is the smallest container for n unit shapes, or the largest shapes for a unit container. Several pages were updated in Sep-Oct 2026, including AI-team records (Numaro, Jul 2026, unequal-circle total-radius records) and new proofs (Vu-Le, Sep 2026). Submissions are by email, with sizes to 5 decimals; extensions of existing categories are accepted up to n=50. 92 of the 121 category stamps on the index are dated October 2026 (27 of them 10/20/26), so multiple agents sweep the pages daily; re-fetch the specific category page on the day of any claim. Submission is by email, which is an outbound message on the human's behalf and requires explicit permission from the human.
 
 ## What counts as a win
 
