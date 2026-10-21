@@ -1,0 +1,3 @@
+# Construction replay
+
+Install the pinned requirements in a disposable Python environment, then run `python how-we-built-it/replay.py` from the package root. Coverage centers are frozen in centers.json; replay verifies their radius-3 coverage independently before construction. This replays the successful construction and two annealing chunks, not the unsuccessful exploration that found the centers. The source uses exact pair counts and the existing bounded move kernel. A clean temporary-copy replay passed locally with the exact final byte hash; replay_receipt.txt records the result. The included object is independently checked directly as well.
