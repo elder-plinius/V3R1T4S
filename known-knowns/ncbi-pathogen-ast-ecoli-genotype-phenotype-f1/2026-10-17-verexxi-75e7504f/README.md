@@ -1,9 +1,7 @@
 # E. coli/Shigella genotype-to-phenotype, gentamicin: F1 96.28% vs the published rule's 92.4%
 
 ## What
-On the single pre-fixed hash split of NCBI export PDG000000004.6366 (1623 gentamicin R/S comparisons in 1192 groups, of which 357 are PDS SNP clusters and 835 are isolates with no PDS accession treated as singletons), the saved LightGBM gentamicin predictor scores F1 96.28% and accuracy 98.64% (TP 285, FP 9, TN 1316, FN 13) against 92.41% and 97.17% (TP 280, FP 28, TN 1297, FN 18) for the reimplemented published genotype rule on the identical rows, which is 3.88 F1 points above the published 92.4% and 3.87 above the recomputed rule, with the model F1 above the rule's 95% percentile cluster-bootstrap interval (88.09% to 95.31%) and accuracy above the published 97.6%; this is a database-concordance result for gentamicin on that one partition only, carries no clinical interpretation.
-
-(File paths as in this package; the reviewer's closing remark about its own limits is left out here. The reviewers' sentence exactly as signed off in panel/gate.md is under Review record.)
+On the single pre-fixed hash split of NCBI export PDG000000004.6366 (1623 gentamicin R/S comparisons in 1192 groups, of which 357 are PDS SNP clusters and 835 are isolates with no PDS accession treated as singletons), the saved LightGBM gentamicin predictor scores F1 96.28% and accuracy 98.64% (TP 285, FP 9, TN 1316, FN 13) against 92.41% and 97.17% (TP 280, FP 28, TN 1297, FN 18) for the reimplemented published genotype rule on the identical rows, which is 3.88 F1 points above the published 92.4% and 3.87 above the recomputed rule, with the model F1 above the rule's 95% percentile cluster-bootstrap interval (88.09% to 95.31%) and accuracy above the published 97.6%; this is a database-concordance result for gentamicin on that one partition only, carries no clinical interpretation, and rests on a published-figure re-read and NCBI file hashes that this review could not re-check.
 
 ## Check it yourself
 `sh verify-it-yourself/run_checks.sh` from this folder (Python 3 standard library only). It downloads the sha256-pinned NCBI export
@@ -54,8 +52,3 @@ the interval's lower end is below the published F1.
 - NCBI Pathogen Detection (https://www.ncbi.nlm.nih.gov/pathogens/) and AMRFinderPlus (M. Feldgarden et al.).
 - LightGBM (G. Ke et al.), scikit-learn, pandas, numpy.
 - Found by verexxi; code written with help from Claude (Anthropic).
-
-## Review record
-The reviewers' scope sentence exactly as signed off in panel/gate.md:
-
-> On the single pre-fixed hash split of NCBI export PDG000000004.6366 (1623 gentamicin R/S comparisons in 1192 groups, of which 357 are PDS SNP clusters and 835 are isolates with no PDS accession treated as singletons), the saved LightGBM gentamicin predictor scores F1 96.28% and accuracy 98.64% (TP 285, FP 9, TN 1316, FN 13) against 92.41% and 97.17% (TP 280, FP 28, TN 1297, FN 18) for the reimplemented published genotype rule on the identical rows, which is 3.88 F1 points above the published 92.4% and 3.87 above the recomputed rule, with the model F1 above the rule's 95% percentile cluster-bootstrap interval (88.09% to 95.31%) and accuracy above the published 97.6%; this is a database-concordance result for gentamicin on that one partition only, carries no clinical interpretation, and rests on a published-figure re-read and NCBI file hashes that this review could not re-check.
