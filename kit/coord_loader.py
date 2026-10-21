@@ -4,20 +4,27 @@
 
 Contract and rationale: kit/COORD-LOADER.md. Tests: kit/tests/test_coord_loader.py.
   - XYZ element-label rows ('Ar 0.1 0.2 0.3') are data: label stripped, row counted in N.
-  - XYZ 2-line header (line 1 = a single integer count, line 2 = comment) is detected and both lines
-    skipped; the parsed N must equal the declared count, else CoordAnomaly(count_mismatch).
+  - XYZ 2-line header (line 1 = a single integer count, line 2 = a comment that is blank or does not parse as a
+    data row) is detected and both lines skipped; the parsed N must equal the declared count, else
+    CoordAnomaly(count_mismatch). If line 2 parses as a data row, line 1 is not a count line and is treated as
+    data (so a width-1 row raises dimension_mismatch); a real data row is never consumed as a comment.
+  - trailing_radius=True (opt-in, off by default) reads the Packomania scu/ssp layout: the first data line holds a
+    single radius value R and every coordinate row ends in a radius column equal to R. Both are stripped only then;
+    a missing radius line, a radius column != R, or a lone trailing index line (e.g. a blank last sphere) raises.
   - NaN/Inf tokens raise CoordAnomaly(non_finite); an index run must span >= 3 rows, else
     CoordAnomaly(ambiguous_small_file); lines whose first non-blank character is '#' are comments.
 
 Public API (standard library only):
     class CoordAnomaly(Exception)   attributes: kind, lines, found_columns, expected_columns
-    load_coords(path, dim, allow_index=True) -> list of N rows, each `dim` decimal.Decimal values
+    load_coords(path, dim, allow_index=True, trailing_radius=False) -> list of N rows, each `dim` decimal.Decimal values
 
-Values are decimal.Decimal parsed from the original token strings, so they are lossless
-(str(value) reproduces the token's digits). Convert with float() only after loading if needed.
+Values are decimal.Decimal parsed from the original token strings, so they are lossless: value and exponent are
+kept exactly. Note str() may switch to scientific notation (Decimal('0.000000000000') prints as '0E-12');
+format(value, 'f') gives the fixed-point digits of a plain decimal token back unchanged, and the CLI uses that.
+Convert with float() only after loading if needed.
 
-CLI:  python3 kit/coord_loader.py FILE --dim D [--no-index]
-      prints N rows (exact decimal strings) or the anomaly; exit 0 = clean, 3 = CoordAnomaly.
+CLI:  python3 kit/coord_loader.py FILE --dim D [--no-index] [--trailing-radius]
+      prints N rows (fixed-point decimal strings, format 'f') or the anomaly; exit 0 = clean, 3 = CoordAnomaly.
 """
 import re
 import sys
@@ -86,8 +93,22 @@ def _fmt_lines(lines, cap=8):
     return s + (", ..." if len(lines) > cap else "")
 
 
-def load_coords(path, dim, allow_index=True):
+def _looks_like_data_row(line):
+    """True if `line` would parse as a numeric data row (all tokens numeric after at most one leading label)."""
+    toks = line.split()
+    if not toks or toks[0].startswith("#"):
+        return False
+    isnum = [bool(_NUM.match(t)) for t in toks]
+    if not isnum[0]:
+        isnum = isnum[1:]
+    return bool(isnum) and all(isnum)
+
+
+def load_coords(path, dim, allow_index=True, trailing_radius=False):
     """Return N rows of exactly `dim` coordinates (list of lists of Decimal).
+
+    trailing_radius: opt-in for the Packomania scu/ssp layout (first data line = radius R alone, each row ends in
+    a radius column equal to R). Off by default; when off, such files raise dimension_mismatch.
 
     Raises CoordAnomaly on any mismatch. Never pads, truncates, reorders or guesses.
     """
@@ -107,14 +128,16 @@ def load_coords(path, dim, allow_index=True):
                            expected_columns=expected)
     raw_lines = text.splitlines()
 
-    # XYZ 2-line header. Line 1 is exactly one non-negative integer token, and line 2
-    # (any content, may be blank or contain numbers) is the comment line. Not applied for dim == 1,
-    # where a single integer on line 1 is a legitimate 1-D data row.
+    # XYZ 2-line header. Line 1 is exactly one non-negative integer token, and line 2 is the comment line:
+    # blank, or anything that does not parse as a numeric data row. If line 2 looks like data, line 1 is NOT a
+    # count line (it stays a data row and is judged by the width rules), so no data row is ever eaten as a comment.
+    # Not applied for dim == 1 (a single integer is a legitimate 1-D row) or with trailing_radius.
     declared_count = None
     start = 0
-    if dim > 1 and raw_lines:
+    if dim > 1 and raw_lines and not trailing_radius:
         first = raw_lines[0].split()
-        if len(first) == 1 and _INT.match(first[0]):
+        second = raw_lines[1] if len(raw_lines) > 1 else ""
+        if len(first) == 1 and _INT.match(first[0]) and not _looks_like_data_row(second):
             declared_count = int(first[0])
             start = min(2, len(raw_lines))
 
@@ -145,6 +168,30 @@ def load_coords(path, dim, allow_index=True):
     # Rule 8: no data rows -> empty.
     if not rows:
         raise CoordAnomaly("empty", "no data rows in %s" % (path,), expected_columns=expected)
+
+    # Opt-in Packomania layout: radius line + constant trailing radius column. Checked before the width rules,
+    # so every row must carry the radius; a lone trailing index line (no radius) raises here.
+    if trailing_radius:
+        r_line, r_vals = rows[0]
+        if len(r_vals) != 1:
+            raise CoordAnomaly("dimension_mismatch",
+                               "trailing_radius=True: first data line %d must hold the radius alone, found %d "
+                               "numeric columns" % (r_line, len(r_vals)),
+                               lines=[r_line], found_columns=len(r_vals), expected_columns=[1])
+        radius = r_vals[0]
+        rows = rows[1:]
+        if not rows:
+            raise CoordAnomaly("empty", "trailing_radius=True: radius line but no coordinate rows in %s" % (path,),
+                               expected_columns=expected)
+        bad = [ln for ln, v in rows if len(v) < 2 or v[-1] != radius]
+        if bad:
+            widths = sorted({len(v) for ln, v in rows if ln in set(bad)})
+            raise CoordAnomaly("dimension_mismatch",
+                               "trailing_radius=True: %d row(s) do not end in the radius column %s (line %d), "
+                               "lines %s" % (len(bad), radius, r_line, _fmt_lines(bad)),
+                               lines=bad, found_columns=widths[0] if len(widths) == 1 else widths,
+                               expected_columns=[w + 1 for w in expected])
+        rows = [(ln, v[:-1]) for ln, v in rows]
 
     # Rule 3: every row width must be dim or dim+1 ...
     bad = [(ln, len(v)) for ln, v in rows if len(v) not in (dim, dim + 1)]
@@ -216,16 +263,18 @@ def _main(argv):
     ap.add_argument("path")
     ap.add_argument("--dim", type=int, required=True, help="declared dimension (never inferred)")
     ap.add_argument("--no-index", action="store_true", help="allow_index=False")
+    ap.add_argument("--trailing-radius", action="store_true",
+                    help="trailing_radius=True (Packomania radius line + radius column)")
     a = ap.parse_args(argv)
     try:
-        rows = load_coords(a.path, a.dim, allow_index=not a.no_index)
+        rows = load_coords(a.path, a.dim, allow_index=not a.no_index, trailing_radius=a.trailing_radius)
     except CoordAnomaly as ex:
         print("CoordAnomaly kind=%s lines=%s found_columns=%s expected_columns=%s\n  %s"
               % (ex.kind, ex.lines, ex.found_columns, ex.expected_columns, ex.message))
         return 3
     print("# N=%d dim=%d" % (len(rows), a.dim))
     for r in rows:
-        print("  ".join(str(x) for x in r))
+        print("  ".join(format(x, "f") for x in r))
     return 0
 
 

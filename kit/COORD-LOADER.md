@@ -20,12 +20,12 @@ except CoordAnomaly as ex:
 ```
 
 ```sh
-python3 kit/coord_loader.py FILE --dim D [--no-index]   # exit 0 = clean (rows printed), 3 = CoordAnomaly
+python3 kit/coord_loader.py FILE --dim D [--no-index] [--trailing-radius]   # exit 0 = clean, 3 = CoordAnomaly
 ```
 
 ## Contract
 
-`load_coords(path, dim, allow_index=True)`. `dim` is required and declared by the caller, never inferred
+`load_coords(path, dim, allow_index=True, trailing_radius=False)`. `dim` is required and declared by the caller, never inferred
 (`dim=None` raises `ValueError`).
 
 1. **Dimension-aware.** Every accepted row yields exactly `dim` coordinates.
@@ -41,11 +41,18 @@ python3 kit/coord_loader.py FILE --dim D [--no-index]   # exit 0 = clean (rows p
    `dim - 1` coordinates, a truncated file: `index_in_dim_columns`. It is never stripped to `dim - 1`.
 6. **File-wide.** The index decision is made once for the whole file, not per row.
 7. **Lossless.** Values are `decimal.Decimal` built from the original token strings (30-decimal values survive).
-   Call `float()` yourself after loading if you need floats.
+   `str()` of a Decimal may use exponent form (`0.000000000000` -> `0E-12`); `format(v, "f")` returns the
+   fixed-point digits, and the CLI prints that way. Call `float()` yourself after loading if you need floats.
 8. **Empty.** A missing file or a file with no data rows raises `empty`; an empty list is never returned.
 
-XYZ: a line 1 holding a single non-negative integer and a line 2 comment are both skipped; the parsed row count must
-equal that integer.
+XYZ: a line 1 holding a single non-negative integer is a count line only when line 2 is blank or does not parse as a
+data row. Then both lines are skipped and the parsed row count must equal that integer. If line 2 looks like data,
+line 1 stays an ordinary row (and a width-1 row raises), so a real data row is never eaten as a comment.
+
+Packomania scu/ssp layout (opt-in): `trailing_radius=True` expects the first data line to be the radius R alone and
+every row to end in a radius column equal to R; both are stripped, then the rules above apply. A missing radius line,
+a radius column that differs from R, or a lone trailing index line (a blank last sphere) raises
+`dimension_mismatch`. The default is strict: without the option such files raise.
 
 ### Anomaly kinds
 
@@ -78,13 +85,15 @@ allow_index, and either the exact rows or the anomaly kind, lines and columns), 
 The tests run four layers, all stdlib `unittest`:
 
 - **Pack integrity:** every fixture matches `SHA256SUMS`, and every `expected.json` is self-consistent.
-- **Pack cases:** 16 cases (15 fixtures plus the `allow_index=False` variant of `hsp4_indexed_5col`). Clean cases are
+- **Pack cases:** 21 cases (20 fixtures plus the `allow_index=False` variant of `hsp4_indexed_5col`). Clean cases are
   compared value by value as `Decimal`; the 30-decimal fixture must match exactly.
 - **Negative control:** a naive "last 3 numeric columns" loader is run over the same pack and must fail the
-  discriminating fixtures (true 4-D data, indexed 5-column, index + 4 coords at dim 5 and 6, ragged rows). This
+  discriminating fixtures (true 4-D data, indexed 5-column, index + 4 coords at dim 5 and 6, ragged rows, a lone trailing index line,
+  the Packomania radius layout). It fails 14 of 21. This
   proves the fixtures can tell a correct loader from the common bug.
 - **Behaviour checks:** anomaly attributes against each fixture, XYZ count and label handling, comments, NaN/Inf,
-  empty and missing files, gapped or reordered indexes, tiny-file guard, mixed widths, and a 38-row
-  `index x y z` file (52 checks in total).
+  empty and missing files, gapped or reordered indexes, tiny-file guard, mixed widths, a 38-row `index x y z` file,
+  the count-line regression, the `trailing_radius` option and CLI output (70 checks in total).
 
-All fixture values are synthetic.
+Fixture values are synthetic except `scu30_real_*`, which hold published Packomania scu30 data (file as of
+2026-10-17, whose last sphere is a lone index line).

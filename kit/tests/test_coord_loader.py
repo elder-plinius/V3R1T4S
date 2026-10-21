@@ -7,7 +7,7 @@ Each fixtures/<name>.txt has a sibling <name>.expected.json (dim, allow_index, a
 anomaly kind, rows, found_columns, expected_columns). A naive "last 3 numeric columns" loader is run as a negative
 control: the pack must catch it.
 """
-import glob, hashlib, json, os, sys, tempfile, unittest
+import contextlib, glob, hashlib, io, json, os, sys, tempfile, unittest
 from decimal import Decimal as D, InvalidOperation
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -16,9 +16,10 @@ sys.path.insert(0, os.path.dirname(HERE))
 import coord_loader  # noqa: E402
 from coord_loader import CoordAnomaly, load_coords  # noqa: E402
 
-PACK_CASES = 16  # 15 fixtures + the allow_index=False variant of hsp4_indexed_5col
+PACK_CASES = 21  # 20 fixtures + the allow_index=False variant of hsp4_indexed_5col
 MUST_CATCH = {"hsp4_true4d.txt", "hsp4_indexed_5col.txt", "hsp6_anomaly_4col.txt", "hsp5_index_plus4_5col.txt",
-              "ragged_rows.txt"}
+              "ragged_rows.txt", "scu_trailing_index_only.txt", "scu_trailing_index_only_noindex.txt",
+              "scu30_real_trailing_index.txt", "scu30_real_packomania.txt", "packomania_radius_layout.txt"}
 
 
 def cases():
@@ -197,10 +198,23 @@ class BehaviourTests(unittest.TestCase):
         p = tmp("2\ncomment\nAr 0.1 0.2 0.3\nAr 0.4 0.5 0.6\nAr 0.7 0.8 0.9\n")
         ex = anomaly(p, 3)
         check("xyz count too small -> count_mismatch", ex is not None and ex.kind == "count_mismatch", ex)
-        # count line with no comment line: first data row is consumed as comment -> count mismatch, flagged
+        # count line with no comment line: line 2 looks like data, so line 1 is not a count line; the lone integer
+        # is a width-1 row and is flagged. No data row is consumed as a comment.
         p = tmp("3\n0.1 0.2 0.3\n0.4 0.5 0.6\n0.7 0.8 0.9\n")
         ex = anomaly(p, 3)
-        check("count line without comment line -> count_mismatch, not silent", ex is not None and ex.kind == "count_mismatch", ex)
+        check("count line without comment line -> dimension_mismatch on line 1, not silent",
+              ex is not None and ex.kind == "dimension_mismatch" and ex.lines == [1], ex)
+        # regression: integer on line 1 equal to the remaining row count must not eat data row 2
+        p = tmp("2\n0.1 0.2 0.3\n0.4 0.5 0.6\n0.7 0.8 0.9\n")
+        ex = anomaly(p, 3)
+        check("line-1 integer == remaining rows: line 2 is not eaten (raises, no N=2)",
+              ex is not None and ex.kind == "dimension_mismatch" and ex.lines == [1], ex)
+        p = tmp("1\n0.1 0.2 0.3\n0.4 0.5 0.6\n")
+        ex = anomaly(p, 3)
+        check("line-1 '1' + 2 data rows: no silent N=1", ex is not None and ex.kind == "dimension_mismatch", ex)
+        p = tmp("2\nAr 0.1 0.2 0.3\nAr 0.4 0.5 0.6\n")
+        ex = anomaly(p, 3)
+        check("label row on line 2 is data, not an XYZ comment", ex is not None and ex.lines == [1], ex)
         # multi-frame XYZ: second count line is a width-1 row -> flagged
         p = tmp("1\nf1\nAr 0 0 0\n1\nf2\nAr 1 1 1\n")
         ex = anomaly(p, 3)
@@ -297,7 +311,41 @@ class BehaviourTests(unittest.TestCase):
         except ValueError:
             check("dim=None rejected", True)
 
-        self.assertEqual(len(results), 45)  # + 7 anomaly-attribute cases in PackTests = 52
+        # opt-in trailing_radius (Packomania scu/ssp layout)
+        pk = os.path.join(FX, "packomania_radius_layout.txt")
+        r = load_coords(pk, 3, trailing_radius=True)
+        check("trailing_radius=True: synthetic Packomania layout -> N=4, radius and index stripped, lossless",
+              len(r) == 4 and all(len(x) == 3 for x in r) and format(r[0][0], "f") == "0.250000000000", r)
+        ex = anomaly(pk, 3)
+        check("trailing_radius default off: Packomania layout raises", ex is not None and ex.kind == "dimension_mismatch", ex)
+        ex = anomaly(os.path.join(FX, "scu30_real_packomania.txt"), 3, trailing_radius=True)
+        check("trailing_radius=True: real scu30 lone '30' line still raises",
+              ex is not None and ex.kind == "dimension_mismatch" and ex.lines == [36], ex)
+        ex = anomaly(tmp("0.25\n1 0.1 0.2 0.3 0.25\n2 0.4 0.5 0.6 0.25\n3 0.7 0.8 0.9 0.25\n4\n"), 3, trailing_radius=True)
+        check("trailing_radius=True: synthetic lone trailing index raises", ex is not None and ex.kind == "dimension_mismatch" and ex.lines == [5], ex)
+        ex = anomaly(tmp("0.25\n0.1 0.2 0.3 0.25\n0.4 0.5 0.6 0.25\n0.7 0.8 0.9 0.25\n4\n"), 3, trailing_radius=True)
+        check("trailing_radius=True: lone integer after unindexed rows raises", ex is not None and ex.lines == [5], ex)
+        ex = anomaly(tmp("0.25\n1 0.1 0.2 0.3 0.25\n2 0.4 0.5 0.6 0.26\n3 0.7 0.8 0.9 0.25\n"), 3, trailing_radius=True)
+        check("trailing_radius=True: radius column != radius line raises", ex is not None and ex.lines == [3], ex)
+        ex = anomaly(tmp("1 0.1 0.2 0.3 0.25\n2 0.4 0.5 0.6 0.25\n3 0.7 0.8 0.9 0.25\n"), 3, trailing_radius=True)
+        check("trailing_radius=True: missing radius line raises", ex is not None and ex.lines == [1], ex)
+        ex = anomaly(tmp("0.25\n1 0.1 0.2 0.3\n2 0.4 0.5 0.6\n3 0.7 0.8 0.9\n"), 3, trailing_radius=True)
+        check("trailing_radius=True: rows without a radius column raise (never drop a coordinate)",
+              ex is not None and ex.kind == "dimension_mismatch", ex)
+
+        # CLI prints fixed-point digits, not '0E-12'
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = coord_loader._main([os.path.join(FX, "hsp4_true4d.txt"), "--dim", "4"])
+        out = buf.getvalue()
+        check("CLI keeps fixed-point digits (0.000000000000, no 0E-12)",
+              rc == 0 and "0.000000000000" in out and "E-" not in out, out)
+        buf = io.StringIO()
+        with contextlib.redirect_stdout(buf):
+            rc = coord_loader._main([pk, "--dim", "3", "--trailing-radius"])
+        check("CLI --trailing-radius", rc == 0 and buf.getvalue().startswith("# N=4 dim=3"), buf.getvalue())
+
+        self.assertEqual(len(results), 58)  # + 12 anomaly-attribute cases in PackTests = 70
 
 
 if __name__ == "__main__":

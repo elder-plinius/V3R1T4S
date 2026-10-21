@@ -1,0 +1,29 @@
+{
+ "fixture": "scu30_real_trailing_index.txt",
+ "synthetic": false,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  30
+ ],
+ "found_columns": 1,
+ "expected_columns": [
+  3,
+  4
+ ],
+ "with_trailing_radius": {
+  "status": "anomaly",
+  "anomaly": "dimension_mismatch",
+  "rows": [
+   1
+  ]
+ },
+ "must_not": [
+  "drop the lone last line and return N-1 rows",
+  "pad the last row",
+  "return any coords"
+ ],
+ "note": "real Packomania scu30 rows 1-29 reduced to 'index x y z' (radius line and column removed), keeping the real lone '30' last line (blank sphere 30, 2026-10-17); must raise, not return N=29"
+}
