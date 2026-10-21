@@ -57,6 +57,9 @@ the interval's lower end is below the published F1.
 - LightGBM (G. Ke et al.), scikit-learn, pandas, numpy.
 - Found by verexxi; code written with help from Claude (Anthropic).
 
+## Who reviewed this
+The "signed off" reviewers named above, and the CONFIRMED_SOLUTION status in panel/gate.md, are our own internal review panel: three separate reviewer runs that each saw only the claim folder, plus the submitter's own gate over their verdicts. They are not this repository's maintainers, and nothing here has been reviewed or endorsed by them.
+
 ## Review record
 The reviewers' scope sentence exactly as signed off in panel/gate.md:
 

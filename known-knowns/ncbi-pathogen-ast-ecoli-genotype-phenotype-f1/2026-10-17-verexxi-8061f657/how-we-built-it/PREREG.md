@@ -1,3 +1,5 @@
+Path note (added 2026-10-20 at the maintainer's request): this file quotes the claim-folder paths the panel reviewed. In this package, CLAIM.md is README.md together with verify-it-yourself/expected.json; REPRODUCE.md is RUN_IT_YOURSELF.md; the result/ files are in how-we-built-it/ (split.csv, the model and the scores json) and object/ (the per-isolate predictions); status_source/ is the-record-we-beat/; target.md is not shipped. The work*/ folders named in this file are the working tree of the run and are not shipped either.
+
 # PREREG (frozen 2026-10-16T17:48:10Z, before any model is fitted or scored)
 
 criterion: verbatim in target.md. One antibiotic per claim. Antibiotics attempted (all eight): ciprofloxacin, ampicillin,
