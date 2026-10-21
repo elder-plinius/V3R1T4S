@@ -1,0 +1,9 @@
+pass 0: chunks 4096/4096 COMPLETE masks 171811304 CAP 171811304 UNCAP 0 OOB 0
+pass 1: chunks 4096/4096 COMPLETE masks 171799105 CAP 171799105 UNCAP 0 OOB 0
+pass 2: chunks 4096/4096 COMPLETE masks 171809455 CAP 171809455 UNCAP 0 OOB 0
+pass 3: chunks 4096/4096 COMPLETE masks 171814149 CAP 171814149 UNCAP 0 OOB 0
+TOTAL sampled masks checked 687234013 (of 2^36 = 68719476736; fraction 1.000057%) CAP 687234013 UNCAP 0 OOB 0
+simulated steps 3603604512896, mean steps/mask 5243.6, mean tcap 4476.4
+max sampled tcap 271692 at mask 61493184540
+units with sample maxtcap > user's chunk maxtcap: 0
+noncap files: 0
