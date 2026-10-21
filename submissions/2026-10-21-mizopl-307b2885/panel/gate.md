@@ -1,0 +1,8 @@
+# Skeptic Panel Gate (`cryptocellar-truppenschluessel-1941`)
+
+status: CONFIRMED_PARTIAL
+target: cryptocellar-truppenschluessel-1941
+reproduce_pass: true
+novelty_pass: true
+criterion_pass: true
+confirmed_scope: Named partial win p1 (blind garble-tolerance benchmark) on cryptocellar-truppenschluessel-1941: using the Truppenschluessel Two-Square procedure of Ostwald and Weierud (2021, Cryptologia 45(3):235-249, Section 2 pp. 236-238, validated 100% across all 9 worked examples / 410 characters in Section 9 Appendix pp. 247-248), the blind C solver claim/p1_blind_garble_solver.c (sha256 68340440b31f162135863c90915e1de0d3725f6fc591bd9079a4de9a765d60d0) given 3 period-style 1941 German military ciphertexts of lengths 80, 76, and 76 letters (232 letters total) enciphered with random 5x5 squares and 19/232 (8.19%) injected Morse-Levenshtein-1 garbles (18/232 = 7.76% outside the opening crib) recovers 50/50 (100.0%) of both 5x5 key squares up to exact S5_row x C5_col_K1 x C5_col_K2 gauge equivalence (claim/p1_benchmark_certificate.json, sha256 307b2885211621dbc21f5d46bc3ef1cee905576be48e3371a868905529e43945) and recovers 96.25% (77/80), 97.37% (74/76), and 100.00% (76/76) of the plaintext letters under greedy Morse-Levenshtein-1 error correction (227/232 = 97.84% overall, all three >= 95%) and 98.75% (79/80), 97.37% (74/76), and 100.00% (76/76) under bottleneck-Viterbi Morse-Levenshtein-1 error correction (229/232 = 98.71% overall, all three >= 95%), with 200 shuffled-ciphertext null controls scoring +9.27 SD below the claim mean and +6.42 SD (>= 5.0 SD) below the claim from the best shuffle.
