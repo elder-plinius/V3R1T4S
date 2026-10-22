@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+constant-weight-codes,"A(29,6,14) upper bound",322266,328162,2026-10-18T17:39:47Z,object/cert_A29_6_14.json,476121c35ae7940812cb385b77eb7deb27e15263db71db60d36927cc0d10e18f
