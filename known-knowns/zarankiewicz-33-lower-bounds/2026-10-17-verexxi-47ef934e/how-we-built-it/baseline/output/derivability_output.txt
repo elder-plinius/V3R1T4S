@@ -1,0 +1,14 @@
+Afr 12x19 (114)    12x19  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Afr 12x22 (132)    12x22  skipped (larger than the claimed matrix in some dimension)
+Afr 13x18 (116)    13x18  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Afr 13x22 (137)    13x22  skipped (larger than the claimed matrix in some dimension)
+Afr 14x17 (118)    14x17  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Afr 14x18 (124)    14x18  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Afr 15x17 (126)    15x17  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Afr 15x18 (132)    15x18  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Afr 16x17 (132)    16x17  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Sau 13x19 (118)    13x19  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Sau 14x19 (126)    14x19  sub-matrices with equal weight signature     0, isomorphic to the base 0
+Sau 16x18 (136)    16x18  sub-matrices with equal weight signature     0, isomorphic to the base 0
+bases checked: 10
+EXACT_SUBMATRIX_COPIES: 0

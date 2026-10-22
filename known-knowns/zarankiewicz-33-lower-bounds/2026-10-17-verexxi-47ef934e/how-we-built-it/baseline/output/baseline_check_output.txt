@@ -1,0 +1,16 @@
+== baseline/output/best_seed1.txt
+shape 16 x 19, ones 141
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== baseline/output/best_seed2.txt
+shape 16 x 19, ones 141
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== baseline/output/best_seed3.txt
+shape 16 x 19, ones 141
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS
+== baseline/output/best_seed4.txt
+shape 16 x 19, ones 141
+no all-ones 3x3 submatrix (methods A and B agree; 560 row triples x 969 column triples)
+PASS

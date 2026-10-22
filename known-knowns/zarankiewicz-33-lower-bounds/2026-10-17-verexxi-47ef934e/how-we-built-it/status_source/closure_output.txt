@@ -1,0 +1,13 @@
+cell  DGH-table  Collins-only-closure  +Hou/Afrasyab-closure  ours
+(13, 19) 125 None | 122 122 | DGH-incl closure 122 | ours 119
+(14, 19) 135 None | 130 130 | DGH-incl closure 130 | ours 127
+(16, 18) 146 140 | 140 140 | DGH-incl closure 140 | ours 137
+(14, 20) 140 None | 136 136 | DGH-incl closure 136 | ours 131
+(16, 19) 152 None | 147 147 | DGH-incl closure 147 | ours 142
+
+window of closure B (+Hou/Afrasyab):
+12 [103, 108, 114, 120, 126, 132]
+13 [110, 116, 122, 128, 134, 137]
+14 [118, 124, 130, 136, 142, 147]
+15 [126, 132, 139, 145, 152, 157]
+16 [133, 140, 147, 154, 161, 167]
