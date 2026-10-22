@@ -1,0 +1,37 @@
+[
+ {
+  "name": "r1806:smuggler/PRIMARY",
+  "dir": "attempts/r1806-smuggler/frozen/PRIMARY",
+  "weight_at_0.10": 3
+ },
+ {
+  "name": "r1806:correspondence/PRIMARY",
+  "dir": "attempts/r1806-correspondence/frozen/PRIMARY",
+  "weight_at_0.10": 3
+ },
+ {
+  "name": "analogist/SECONDARY",
+  "dir": "attempts/analogist/frozen/SECONDARY",
+  "weight_at_0.10": 1
+ },
+ {
+  "name": "classifier/PRIMARY",
+  "dir": "attempts/classifier/frozen/PRIMARY",
+  "weight_at_0.10": 2
+ },
+ {
+  "name": "broker/PRIMARY",
+  "dir": "attempts/broker/frozen/PRIMARY",
+  "weight_at_0.10": 1
+ },
+ {
+  "name": "correspondence/PRIMARY",
+  "dir": "attempts/correspondence/frozen/PRIMARY",
+  "weight_at_0.10": 0
+ },
+ {
+  "name": "phylo/PRIMARY",
+  "dir": "attempts/phylo/frozen/PRIMARY",
+  "weight_at_0.10": 1
+ }
+]

@@ -1,0 +1,21 @@
+{
+ "cell": "SIGTYP 2022 surprise data, proportion 0.10, mean NED over the 10 surprise families (official scorer)",
+ "mockingbird_i1_official": 0.2431316340782435,
+ "mockingbird_i1_source": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.10.json",
+ "mockingbird_i1_json_sha256": "e00f22badafe95729d8a079f0563175528fa63248c62bf7a41de2f43029f4c75",
+ "fetched_utc": "2026-10-18T05:08:54Z (NOVELTY skeptic, raw results-surprise-0.10.json at 03094435)",
+ "status_page": "https://github.com/sigtyp/ST2022",
+ "status_page_fetched_utc": "2026-10-18T02:07:46Z",
+ "status_page_http": 200,
+ "status_page_sha256": "027feb551a25a1957c657cc0830731c9c3eef78a6e181a660e67b8d590eeff1e",
+ "status_head": "03094435cba4293ce0eea383036cab78499ad50d (2022-05-27T07:58:23Z)",
+ "fevet_published_rescored": 0.2296925777970808,
+ "fevet_source": "https://github.com/TGH-2020/FeVeT at 31898c53bfffeef87265efa8a780b7be740162d1, results/predictions/reflex/FAMILY/s2s_reflex_0.10_predictions.tsv",
+ "this_object": 0.18916240713560675,
+ "earlier_system_of_this_workspace": {
+  "value": 0.19710919181751296,
+  "file": "the-record-we-beat/previous-0.10-predictions.tsv",
+  "sha256": "81bf53655884c95714180a8bdcea79cfcbbf5759c6b9ecae2de354362b56518a",
+  "package": "2026-10-18-psmoros-81bf5365 (confirmed, not submitted)"
+ }
+}
