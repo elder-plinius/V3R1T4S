@@ -1,0 +1,5 @@
+### n=10 d=7 table=34 ub=999999 m=5 start 16:29:42Z
+n=10 m=5 b=2 d=7 w=5 words_visited=258048 self_compatible_orbits=36648 size1:8 size5:36640
+compatible_pairs=136278580
+max_weight_clique=44 orbits=12 bb_nodes=233570304 (TIMEOUT: lower bound only, not exhaustive)
+exit=0 end 16:42:02Z
