@@ -1,4 +1,4 @@
-# helpers copied verbatim from runs/2026-10-19-1303/attempts/structured/code/msum_resume.py (lines 1-65)
+# helpers copied verbatim from an earlier search script, msum_resume.py (lines 1-65)
 #!/usr/bin/env python3
 """Lens structured: intransitive G-sets (disjoint unions of coset actions G/H) for G in {A5, S5, PSL(2,7)}.
 For each G-set of size v (10..32, <=3 orbits) and each open snapshot cell (v,k,t), 3<=t<=5, solve the exact
