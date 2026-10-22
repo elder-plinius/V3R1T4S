@@ -1,0 +1,4 @@
+rule,n,k,live_lower,live_upper,offset
+"add one qubit: [[n-1,k,d]] gives [[n,k,d]]",22,9,4,5,0
+"drop one logical qubit: [[n,k+1,d]] gives [[n,k,d]]",23,10,4,5,0
+"pure puncture: pure [[n+1,k-1,d+1]] gives [[n,k,d]]",24,8,5,6,1
