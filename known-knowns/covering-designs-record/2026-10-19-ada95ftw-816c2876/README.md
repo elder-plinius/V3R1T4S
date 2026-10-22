@@ -1,7 +1,7 @@
 # C(29,5,3) <= 399 (explicit covering design), covering-designs-record
 
 ## What
-The file claim/C29_5_3_399blocks.txt (sha256 816c287640bc50f50a87d27707aaae2c77ff99c1580a07336a594d3b94a56bbb) is a valid (29,5,3) covering design with 399 blocks, verified exhaustively over all 3654 triples, so C(29,5,3) <= 399, which is 14 fewer than the value 413 shown on 2026-10-19 by the dmgordo/LJCR GitHub data, the Zenodo LJCR v1.2 dataset and the operator's hand read of the live coveringrepository.com plain-coverings row.
+The file claim/C29_5_3_399blocks.txt (sha256 816c287640bc50f50a87d27707aaae2c77ff99c1580a07336a594d3b94a56bbb) is a valid (29,5,3) covering design with 399 blocks, verified exhaustively over all 3654 triples, so C(29,5,3) <= 399, which is 14 fewer than the value 413 shown on 2026-10-19 by the dmgordo/LJCR GitHub data, the Zenodo LJCR v1.2 dataset and our own browser read (as submitters) of the live coveringrepository.com plain-coverings row.
 
 (In this package the file is object/C29_5_3_399blocks.txt; it is byte-identical to the panel's claim/C29_5_3_399blocks.txt.)
 
