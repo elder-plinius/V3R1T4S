@@ -1,9 +1,7 @@
 # C(38,6,3) <= 469 (explicit covering design), covering-designs-record
 
 ## What
-The file claim/C38_6_3_469blocks.txt (sha256 09d52bad9c72663e43634c83520d60931a47aa3f3bf45f5947018c18ef79345b) is a (38,6,3) covering design with 469 blocks, checked exhaustively over all 8436 triples, so C(38,6,3) <= 469, which is strictly below the value 510 shown on 2026-10-20 by the live coveringrepository.com plain table (read with a rule-5-compliant client), the LJCR GitHub data and the LJCR Zenodo v1.2 record.
-
-(In this package the file is object/C38_6_3_469blocks.txt; it is byte-identical to the panel's claim/C38_6_3_469blocks.txt.)
+The file object/C38_6_3_469blocks.txt (sha256 09d52bad9c72663e43634c83520d60931a47aa3f3bf45f5947018c18ef79345b) is a (38,6,3) covering design with 469 blocks, checked exhaustively over all 8436 triples, so C(38,6,3) <= 469, which is strictly below the value 510 shown on 2026-10-20 by the live coveringrepository.com plain table (read with a rule-5-compliant client), the LJCR GitHub data and the LJCR Zenodo v1.2 record.
 
 ## Check it yourself
 ```sh
