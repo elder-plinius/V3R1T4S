@@ -1,0 +1,7 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=4&n=153&k=7 (fetched 2026-10-19T04:35:50Z, HTTP 200, page sha256 71f001d419d57ec63a8fb4c51b7c7d9a5fa891abd59bc50c841e896c614c7ccb)
+Bounds on linear codes [153,7] over GF(4): lower bound 107, upper bound 111
+Table lines about this cell (copied from the page):
+Lb(153,7) = 106 is found by truncation of:
+Lb(155,7) = 108 Koh
+Ub(153,7) = 111 follows by a one-step Griesmer bound from:
+Ub(41,6) = 27 Da 
