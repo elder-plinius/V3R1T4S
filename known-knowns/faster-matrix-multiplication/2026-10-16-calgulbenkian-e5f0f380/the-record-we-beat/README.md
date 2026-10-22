@@ -23,7 +23,7 @@ The reference count comes from Perminov's file https://raw.githubusercontent.com
 | Source | What it says for 2x4x8 at rank 51 | Our value |
 |---|---|---|
 | Perminov, arXiv:2512.13365 Table 1 | 188 (same convention) | 181 |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 248-51       354         197        190      0.38, 0.01, 0.15         - / 248-51         354       190       183     171   48.3    0.34, 0.1, 0.15 | 181 |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | lowest count listed for 248-51: 190 over Z (Table 3.3); 183 over Z2 (Table 3.6, not comparable; below the reference 188, above our 181); author's reading of a hand-downloaded PDF | 181 |
 | V3R1T4S open pull requests on this target | none | 181 |
 | V3R1T4S TROPHY_CASE.md | no row for this target | 181 |
 

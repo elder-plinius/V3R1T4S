@@ -27,7 +27,7 @@ The PDF refuses automated download (Cloudflare challenge). The operator download
 | Source | What it says for 2x5x5 at rank 40 | Our value |
 |---|---|---|
 | Perminov, arXiv:2512.13365 Table 1 | 153 (same convention) | 147 |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 255-40       283         156        154          0.29, 0, 0         156 / 255-40        682        323         313      369    54.1       0.1, 0.12, 0.06 / 255-40     546            226       218      328     60.1    0.135, 0.005, 0.055 / 255-40          256      148       144     112   43.8    0.28, 0, 0.01 | 147 |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | lowest count listed for 255-40: 154 over Z (Table 3.3); 144 over Z2 (Table 3.6, a scheme with naive count 256, not comparable; below the reference 153 and below our 147, which is over Z); author's reading of a hand-downloaded PDF | 147 |
 | V3R1T4S open pull requests on this target | none | 147 |
 | V3R1T4S TROPHY_CASE.md | no row for this target | 147 |
 
