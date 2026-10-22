@@ -1,0 +1,7 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=4&n=157&k=10 (fetched 2026-10-19T04:35:39Z, HTTP 200, page sha256 16ce6e96ca31a9d96ed62987ebcb5d13214280eac6c5a1a432d65c997266fe21)
+Bounds on linear codes [157,10] over GF(4): lower bound 101, upper bound 110
+Table lines about this cell (copied from the page):
+Lb(157,10) = 101 is found by truncation of:
+Lb(164,10) = 108 Da 
+Ub(157,10) = 110 is found by considering truncation to:
+Ub(156,10) = 109 Da1

@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+codetables-binary-linear,"[157,10,102]_4 linear code over GF(4)",102,lower 101 upper 110,2026-10-19T04:35:39Z,object/new_win_q4_n157_k10_d102.json,40b6f0180e9248f1b86c69053b8c5e200f01156b917179cc619c63f659469d81
