@@ -1,0 +1,21 @@
+{
+  "certificate": "eaqecc_33_3_23_24.json",
+  "parameters": "[[33, 3, 23; 24]]_3",
+  "n": 33,
+  "k": 3,
+  "c": 24,
+  "s": 54,
+  "m_dual_dim": 12,
+  "r_isotropic_dim": 6,
+  "vectors_enumerated": 531440,
+  "non_isotropic_vectors_enumerated": 530712,
+  "d_pure": 23,
+  "d_ea": 23,
+  "d_claimed": 23,
+  "table_d_lower": 22,
+  "table_d_upper": 30,
+  "table_previous_entry": "[[33,3,22-30;24]]_3 (subcode of [[33,5,22;24]] quantum shortening of [[34,4,23;24]] from arXiv:2207.05647)",
+  "improvement": 1,
+  "verified": true,
+  "elapsed_seconds": 0.3821
+}

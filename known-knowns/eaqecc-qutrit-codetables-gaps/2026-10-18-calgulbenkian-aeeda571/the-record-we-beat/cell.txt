@@ -1,0 +1,3 @@
+TD element (HTML markup written out as fields)
+title attribute: subcode of [[33,5,22;24]] quantum shortening of [[34,4,23;24]] from arXiv:2207.05647
+text: [[33,3,22-30;24]]_3
