@@ -1,0 +1,36 @@
+# reproduce report, md-digits-36
+
+context: Claude Code subagent, fresh context [claude-sonnet-5-5]
+
+Scope: package folder checked against the contributor's hash list (64 of 64 files OK), copied to a private location, all work there. No network. My own code (not shipped in this package) was written and run BEFORE I read how-we-built-it/ or verify-it-yourself/. Judged: reproduction of the numbers and counts only (not novelty, not whether the criterion clauses are met in substance; the independence of A and B3 and the post-hoc elements belong to the criterion role).
+
+## Definition (quoted)
+Claim: "h2 = 0.662798972833745915155196234397725566 (36 decimals, natural log, per site; the next digits are 09...), on which two independent methods agree: a corner transfer matrix on the monomer-dimer vertex model (method A) and open-boundary strip transfer matrices with Wynn extrapolation under the recipe of object/PREREG_B3.md (method B3)."
+Strip definition I implemented (from the model, not from the author): open row of m sites; A_m[s,t] = 0 if s and t intersect, otherwise the number of matchings of the path induced on the sites outside s u t; ln alpha(m) = ln of the largest eigenvalue; h2 is the natural-log growth rate of the number of matchings per site.
+Recipe quoted from PREREG_B3.md: "Sequence: r_m = L_m - L_{m-1}, m = 5, 6, ..., mmax ... Extrapolation: Wynn epsilon algorithm at 70 digits on r_5..r_mmax; E3(mmax) = last entry of the highest even-index column. Nothing else selected. ... Headline D_B3 = number of leading decimals common to E3 for the last four consecutive mmax."
+
+## 1. Open-strip eigenvalues, my own code
+- My own Python script (exact integers, matrix-free site-by-site transfer; arbitrary precision; double-precision start, then Rayleigh quotient iteration of exact-integer power steps at 230 bits). Self-test: its apply equals y = A x from a brute-force A built by enumerating edge subsets of the path, for m = 3 to 7 (self-test output, not shipped). Widths reached: 3 to 22 (outputs not shipped). Internal convergence diff about 1e-86.
+- Comparison with the shipped values (comparison outputs, not shipped): widths 3 to 5 agree to about 50 decimals, 6 to 14 about 48 to 49, 15 to 17 about 47, 18 to 21 about 46, 22 about 45 decimals (|difference| from 5.7e-52 at m = 3 growing to 1.5e-46 at m = 22). The shipped files carry about 70 printed digits but only about 45 to 51 are correct, as the disclosures say; their error is larger than their own diff_last2 by a factor of about 4 at m = 22 (1.5e-46 versus 3.6e-47). Extrapolating the observed growth (about 1.8x per width) the error at m = 29 would be near 1e-44, far below the 36 decimals claimed.
+- A C program of mine (unsigned 128-bit fixed point, 45 power iterations, threads): widths 18, 20, 22, 23, 24, 25, 26. Agreement with shipped values: 24 decimals for 18 to 25 and 25 decimals for 26 (comparison output, not shipped); this is limited by my fixed-point precision and iteration count, not by the shipped values.
+So: my own code confirms the strip eigenvalues for widths 3 to 22 to 45 to 51 decimals and for 23 to 26 to 24 to 25 decimals. I did not recompute width 27, 28 or 29 with my own code.
+
+## 2. Author's open-strip program rerun
+Compiled the shipped mdtm.c (exact and double modes; "count 4 0 4" printed 10012). Ran hprun.py with P = 0 for widths 15 to 28 in a scratch copy: the resulting hp_P0_m15.json to hp_P0_m28.json are byte-for-byte identical (cmp) to object/open_strips for every width 15 to 28 (14 files). Width 29 was NOT rerun: it needs about 26 GB and the shared machine had about 20 GB unused at the time (load average about 20). Width 28 (13 GB, 124 s) did run alone. So shipped width 29 is not independently recomputed by me. It is corroborated indirectly: E3(29) built from it agrees with the CTM value A to 43 decimals (a wrong width-29 value would break that), but that is not a recomputation.
+
+## 3. Wynn epsilon, my own code, recipe of PREREG_B3.md, applied to the shipped list
+My own Wynn script (mpmath, 200 digits, standard epsilon recurrence, last entry of the highest even column). Output: for every mmax from 12 to 29 my E equals the shipped E in B3_result.txt to all 48 printed decimals, with the same term counts and column indices (e.g. mmax 29: 25 terms, eps_24). Four-successive windows reproduce exactly: [23..26] 33, [24..27] 35, [25..28] 35, [26..29] 36 decimals (and every earlier window listed in B3_result.txt). E(29) = 0.662798972833745915155196234397725566093293124667861602659671 (60 digits). The 36 shared decimals of E(26), E(27), E(28), E(29): 0.662798972833745915155196234397725566 (the 37th digits are 1, 0, 0, 0). Agreement with CTM A (chi = 48) at mmax 26, 27, 28, 29: 36, 40, 40, 43 decimals (diffs 7.41e-39, -6.07e-41, -3.4e-42, -1.15e-44), as claimed.
+Robustness: running the same recipe on MY (more accurate) eigenvalues for widths up to 22 gives E(mmax) agreeing with the shipped-data E to 45 to 48 decimals for mmax 12 to 22. a noise test with random perturbations of every L_m of size 1e-45 (and 1e-44) move E(26..29) by at most 4e-45 (4e-44), an amplification of about 4; so input noise of the size actually present (about 1e-44 at worst) cannot disturb the 36 claimed decimals.
+
+## 4. CTM, author's program
+Copied ctm_md.py, ctmchain.py, ctmchain_ext.py to a scratch folder, ran ctmchain.py (chi = 12 to 28, stop rule met at 28) then ctmchain_ext.py (chi = 32 to 48), 20 s in all. ctm_ladder.json and ctm_ladder_ext.json are byte-for-byte identical (cmp) to the shipped ones. Printed: chi = 36, 40, 44, 48 share 43 decimals; chi = 16, 20, 24, 28 share 30; chi = 48 value 0.66279897283374591515519623439772556609329313618052. I did not write my own CTM. The programs contain no hard-coded copy of the h2 value (searched for 66279897 and 0.6627 in how-we-built-it/). The CTM is checked indirectly by the independent strip method: two unrelated computations agree to 43 decimals.
+
+## 5. Author's checker, run after mine
+Command: sh verify-it-yourself/run_checks.sh. Output ended "failed checks: 0" and "PASS" (its output is not shipped separately): sha256 of all object files, 80-digit Wynn recomputation, 36 / 30 / 43 decimal counts, A versus B3 {26: 36, 27: 40, 28: 40, 29: 43}, Kong bracket and 12-decimal rounding, and matching counts of n x n grids n up to 6 against A028420 (1, 7, 131, 10012, 2810694, 2989126727). I independently confirmed the definition on small cases: my brute-force strip matrices are symmetric and the shipped value ln alpha(4) etc. match. No mismatch anywhere.
+
+## Limits of this reproduction
+- Not recomputed by me: shipped width 29 (and width 27 and 28 with my own code; the author's program reproduced 27 and 28 byte for byte). My own code reaches width 22 at high precision and width 26 at 24 decimals.
+- No independent CTM of my own; the author's CTM was rerun and reproduced exactly.
+- Whether the digits are right rests on agreement of two computations; nothing here is a proof. Whether the two methods count as independent, and the effect of the disclosed post-hoc elements (B3 recipe shape borrowed from B2 after seeing data and A's value; A extended past its pre-registered stop), is for the criterion role; with the pre-registered A ladder alone the A count is 30, and the Wynn estimates E(26..29) agree with each other to 36 decimals.
+
+pass: true

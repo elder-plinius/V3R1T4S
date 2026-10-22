@@ -1,0 +1,6 @@
+E3(26) vs A(chi=48): 36 common decimals, diff 7.41e-39
+E3(27) vs A(chi=48): 40 common decimals, diff -6.068e-41
+E3(28) vs A(chi=48): 40 common decimals, diff -3.4e-42
+E3(29) vs A(chi=48): 43 common decimals, diff -1.151e-44
+A = 0.66279897283374591515519623439772556609329313618052
+E3(29)= 0.66279897283374591515519623439772556609329312466786
