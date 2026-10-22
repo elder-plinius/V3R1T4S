@@ -1,0 +1,5 @@
+Excerpt of the live codetables.de QECC page for q=2 (qubit) [[39,28]], text extracted from the fetch with markup removed; the stabilizer matrix of the table's own d=3 code is omitted.
+
+Bounds on [[39,28]] 2 lower bound: 3 upper bound: 4
+Construction of a [[39,28,3]] quantum code
+last modified: 2006-04-07
