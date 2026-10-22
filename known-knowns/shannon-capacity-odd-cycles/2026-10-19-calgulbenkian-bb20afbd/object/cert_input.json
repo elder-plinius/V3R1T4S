@@ -1,0 +1,8 @@
+{"description": "Inputs to the certificate derivation that are not part of G5: Tandon's automorphism T and the eight exchanges of Appendix B.1, copied from arXiv:2608.30273 (eqs 149 and 152). A 10-dimensional word is an ordered pair of base-7 codes of 5-dimensional words (eq. 148).",
+ "T": "T(w0,w1,w2,w3,w4) = (2-w1, w3, w0, 2-w2, w4) mod 7",
+ "exchanges": [[[3660,6494],[6110,4092]],[[16388,6494],[16046,4092]],[[6494,3660],[6494,6110]],[[15643,3660],[15643,6110]],[[3660,15643],[6110,15685]],[[16388,15643],[16046,15685]],[[6494,16388],[6494,16046]],[[15643,16388],[15643,16046]]],
+ "paper_values": {"C1": 27488, "C1_before_exchanges": 27480, "C2": 12839823, "C3": 14045805, "C4": 841760069965664,
+   "table6a_sizes": {"X10": [134689,105709,14490,14490], "X15het": [49433743,35275258,6703815,7454670], "X15Ahet_neutral": 35303606, "X15X_neutral": 35342398},
+   "I30pp": 2455726444728097, "X30_0L": 1446768903083453,
+   "table5": {"B15xB15": [2208101357412721, 827599599610592], "R15xX15^0": [88350975590928, 6686131598464], "P15^HxX15^H": [16790482310040, 194829147616], "P15^VxX15^V": [18671085756720, 194829147616], "X15^0xR15": [88350975590928, 6694533241984], "X15^HxP15^V": [16790482310040, 195073609696], "X15^VxP15^H": [18671085756720, 195073609696]}},
+ "tandon_script_output": "Tandon's own script (verify_certificates.py, repository head c753408492dd) derives C1 = 27488, C2 = 12839823, C3 = 14045805, C4 = 841760069965664 (run by the orchestrator's triage, about 42 s); cited here for comparison only, never used."}

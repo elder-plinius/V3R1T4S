@@ -1,0 +1,542 @@
+{
+ "kind": "tandon_gadget",
+ "cycle": "C7",
+ "m": 7,
+ "base_degree": 5,
+ "argon_key": "new_record_best",
+ "description": "S3b(Phi(P0), Phi(P1), Phi(P2)) then K4a on four copies; P0,P1,P2 have dimensions 40, 60, 40; d = 4 x 140 = 560",
+ "tables_used": [
+  "S3b",
+  "S3a",
+  "S2a"
+ ],
+ "codes_used": [
+  "K4a"
+ ],
+ "gadgets": {
+  "G5": {
+   "profile": [
+    367,
+    8,
+    367,
+    322,
+    26,
+    19
+   ],
+   "dim": 5
+  }
+ },
+ "certificates": {
+  "C1": 27488,
+  "C2": 12839823,
+  "C3": 14045805,
+  "C4": 841760069965664
+ },
+ "steps": [
+  {
+   "name": "sG5",
+   "op": "sigma",
+   "of": "G5"
+  },
+  {
+   "name": "G10",
+   "op": "gao",
+   "left": "G5",
+   "right": "G5",
+   "expect_profile": [
+    134753,
+    5152,
+    134689,
+    105709,
+    14490,
+    14490
+   ]
+  },
+  {
+   "name": "G10A",
+   "op": "gao",
+   "left": "sG5",
+   "right": "G5",
+   "expect_profile": [
+    134753,
+    5152,
+    134689,
+    105709,
+    12236,
+    16744
+   ]
+  },
+  {
+   "name": "G10D",
+   "op": "gao",
+   "left": "G5",
+   "right": "sG5",
+   "expect_profile": [
+    134753,
+    5152,
+    134689,
+    105709,
+    16744,
+    12236
+   ]
+  },
+  {
+   "name": "G15X",
+   "op": "gao",
+   "left": "G10",
+   "right": "G5",
+   "expect_profile": [
+    49495055,
+    2504616,
+    49430863,
+    35342398,
+    6674251,
+    7414214
+   ]
+  },
+  {
+   "name": "G15h",
+   "op": "hetgao",
+   "left": "G10",
+   "right": "G5",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G10"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C1",
+    "size_from_a_of": "G10"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C1",
+    "size_from_a_of": "G10"
+   },
+   "expect_profile": [
+    49495055,
+    2504616,
+    49433743,
+    35275258,
+    6703815,
+    7454670
+   ]
+  },
+  {
+   "name": "G15AX",
+   "op": "gao",
+   "left": "G10A",
+   "right": "G5",
+   "expect_profile": [
+    49495055,
+    2504616,
+    49430863,
+    35342398,
+    5948463,
+    8140002
+   ]
+  },
+  {
+   "name": "G15Ah",
+   "op": "hetgao",
+   "left": "G10A",
+   "right": "G5",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G10A"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C1",
+    "size_from_a_of": "G10"
+   },
+   "JV": {
+    "kind": "own_of",
+    "gadget": "G10A"
+   },
+   "expect_profile": [
+    49495055,
+    2504616,
+    49432527,
+    35303606,
+    5948463,
+    8180458
+   ]
+  },
+  {
+   "name": "G15DX",
+   "op": "gao",
+   "left": "G10D",
+   "right": "sG5",
+   "expect_profile": [
+    49495055,
+    2504616,
+    49430863,
+    35342398,
+    8140002,
+    5948463
+   ]
+  },
+  {
+   "name": "G15Dh",
+   "op": "hetgao",
+   "left": "G10D",
+   "right": "sG5",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G10D"
+   },
+   "JH": {
+    "kind": "own_of",
+    "gadget": "G10D"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C1",
+    "size_from_a_of": "G10"
+   },
+   "expect_profile": [
+    49495055,
+    2504616,
+    49432527,
+    35303606,
+    8180458,
+    5948463
+   ],
+   "expect_sigma_of": "G15Ah"
+  },
+  {
+   "name": "G30_6",
+   "op": "hetgao",
+   "left": "G15X",
+   "right": "G15h",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G15h"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "expect_profile": [
+    2455719231434017,
+    176870111100096,
+    2444563032022369,
+    1426136268314719,
+    509731462042710,
+    508695301664940
+   ]
+  },
+  {
+   "name": "G25_8",
+   "op": "hetgao",
+   "left": "G15AX",
+   "right": "G10D",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G15Ah"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "expect_profile": [
+    6682019915439,
+    446844487240,
+    6659829690543,
+    4104006957194,
+    1077319494019,
+    1478503239330
+   ]
+  },
+  {
+   "name": "G40_8",
+   "op": "hetgao",
+   "left": "G15DX",
+   "right": "G25_8",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G15Dh"
+   },
+   "JH": {
+    "kind": "cert_s",
+    "cert": "C3",
+    "size_from_s_of": "G15h"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "expect_profile": [
+    331761855244358723969,
+    26071517201241409024,
+    329305968864222045505,
+    179001784071649220449,
+    87767535795425989412,
+    62536648997146835644
+   ]
+  },
+  {
+   "name": "sG15Ah",
+   "op": "sigma",
+   "of": "G15Ah"
+  },
+  {
+   "name": "G30L",
+   "op": "gao",
+   "left": "G15AX",
+   "right": "sG15Ah",
+   "expect_profile": [
+    2455716185820961,
+    176941111954464,
+    2443492469880801,
+    1446768903083453,
+    420235140891852,
+    576488425905496
+   ]
+  },
+  {
+   "name": "Gh30",
+   "op": "hetgao",
+   "left": "G15AX",
+   "right": "sG15Ah",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G15Ah"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "JV": {
+    "kind": "own_of",
+    "gadget": "G15X"
+   },
+   "expect_profile": [
+    2455716185820961,
+    176941111954464,
+    2444076335041121,
+    1435184942161465,
+    420235140891852,
+    588656251987804
+   ]
+  },
+  {
+   "name": "Gh25",
+   "op": "hetgao",
+   "left": "G15AX",
+   "right": "G10D",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G15Ah"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "JV": {
+    "kind": "cert_s",
+    "cert": "C3",
+    "size_from_s_of": "G15h"
+   },
+   "expect_profile": [
+    6682019915439,
+    446844487240,
+    6659079476911,
+    4118763352946,
+    1061812884635,
+    1478503239330
+   ]
+  },
+  {
+   "name": "G25R",
+   "op": "sigma",
+   "of": "Gh25"
+  },
+  {
+   "name": "Gpp30",
+   "op": "gao",
+   "left": "G15h",
+   "right": "G15h"
+  },
+  {
+   "name": "G55",
+   "op": "hetgao",
+   "left": "G30L",
+   "right": "G25R",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "Gh30"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   },
+   "expect_profile": [
+    16478688413981213775272008847,
+    1375259276200664518625890664,
+    16304893524159967980117037071,
+    8049523822718249447032963650,
+    3444579390015851502852512947,
+    4810790311425867030231560474
+   ]
+  },
+  {
+   "name": "P0",
+   "op": "hetgao",
+   "left": "G30L",
+   "right": "G10",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "Gh30"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   }
+  },
+  {
+   "name": "R30h",
+   "op": "hetgao",
+   "left": "G15AX",
+   "right": "G15Dh",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "G15Ah"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C2",
+    "size_from_a_of": "G15X"
+   }
+  },
+  {
+   "name": "R30",
+   "op": "sigma",
+   "of": "R30h"
+  },
+  {
+   "name": "P1h",
+   "op": "hetgao",
+   "left": "G30L",
+   "right": "R30",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "Gh30"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   }
+  },
+  {
+   "name": "P1",
+   "op": "sigma",
+   "of": "P1h"
+  },
+  {
+   "name": "P2h",
+   "op": "hetgao",
+   "left": "G30L",
+   "right": "G10D",
+   "J0": {
+    "kind": "neutral_of",
+    "gadget": "Gh30"
+   },
+   "JH": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   },
+   "JV": {
+    "kind": "cert",
+    "cert": "C4",
+    "size_from_a_of": "Gpp30"
+   }
+  },
+  {
+   "name": "P2",
+   "op": "sigma",
+   "of": "P2h"
+  }
+ ],
+ "tandon_known_answer": {
+  "n6": [
+   2278849120333921,
+   1426136268314719,
+   508695301664940,
+   509731462042710,
+   176870111100096,
+   176870111100096,
+   176870111100096
+  ],
+  "n8": [
+   305690338043117314945,
+   179001784071649220449,
+   62536648997146835644,
+   87767535795425989412,
+   26071517201241409024,
+   26071517201241409024,
+   26071517201241409024
+  ],
+  "n11": [
+   15103429137780549256646118183,
+   8049523822718249447032963650,
+   3444579390015851502852512947,
+   4810790311425867030231560474,
+   1375259276200664518625890664,
+   1375259276200664518625890664,
+   1375259276200664518625890664
+  ],
+  "M500": "33964672918117456943408517573718333225317390754651100605971152590324909277046876400440353958428359262989621520394737276681196655776758386330470832773308559159990317076102131413374061066595834823529274560988950698158729501949866486079791784996498585401881281",
+  "bound_prefix": "3.2588326203532663091215390518104754376053875943219",
+  "source": "arXiv:2608.30273 v1, eqs (119),(127),(142) and Theorem 2 eq (106)"
+ },
+ "top": {
+  "rule": "S3b",
+  "code": "K4a",
+  "children": [
+   "P0",
+   "P1",
+   "P2"
+  ]
+ }
+}

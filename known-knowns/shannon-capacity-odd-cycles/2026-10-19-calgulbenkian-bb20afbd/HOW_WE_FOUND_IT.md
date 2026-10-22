@@ -1,0 +1,5 @@
+# How we found it (contributor text, unverified)
+
+The contributor's search agent (Gemini, called Argon) was asked to beat the 2026 lower bounds on the Shannon capacity of odd cycles. The search steps are not recorded in the snapshot. The result builds on Tandon's published gadget calculus (his 30-dimensional left gadget and the S3b top-level rule). The schedule in object/schedule.json uses Tandon's 30-dimensional left gadget in all three branches of S3b instead of one, giving branches of dimensions 40, 60 and 40 and a final degree of 560 with an integer M of 288 digits.
+
+What is not shipped or not reliable: the contributor's write-up (how-we-built-it/RESULTS.md) has errors in its prose (wrong paper titles and dates, wrong codebook sizes, wrong decimals from about digit 42 for some values, and a verifier path on the contributor's machine). The checkers in verify-it-yourself/ were written by the panel from the definitions, not from the contributor's script. The search code that found the schedule is not in the contributor's snapshot.
