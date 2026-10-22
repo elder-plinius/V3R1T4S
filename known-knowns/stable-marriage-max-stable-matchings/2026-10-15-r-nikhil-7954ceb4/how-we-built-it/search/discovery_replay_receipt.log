@@ -1,0 +1,55 @@
+start pid=45975 n=21 current=5382608 best=5382608 wordlen=182 temp=0.003 evals=0 proposed=0 valid=0
+NEWBEST count=5383528 lattice=-1 wordlen=183 evals=7874 proposed=32439
+checkpoint elapsed=10.0 current=5341888 best=5383528 wordlen=180 evals=21549 proposed=88275 valid=21549
+checkpoint elapsed=20.0 current=5380088 best=5383528 wordlen=182 evals=42590 proposed=173483 valid=42590
+checkpoint elapsed=30.0 current=5350688 best=5383528 wordlen=181 evals=63839 proposed=260129 valid=63839
+NEWBEST count=5396800 lattice=-1 wordlen=183 evals=72450 proposed=295015
+NEWBEST count=5399044 lattice=-1 wordlen=183 evals=73678 proposed=299904
+checkpoint elapsed=40.0 current=5347768 best=5399044 wordlen=181 evals=81920 proposed=333339 valid=81920
+NEWBEST count=5399924 lattice=-1 wordlen=184 evals=89906 proposed=366054
+checkpoint elapsed=50.0 current=5362088 best=5399924 wordlen=183 evals=101967 proposed=415839 valid=101967
+NEWBEST count=5400616 lattice=-1 wordlen=185 evals=104248 proposed=425061
+end elapsed=51.22 current=5400616 best=5400616 wordlen=185 evals=104248 proposed=425061 valid=104248 delta_evals=104248 delta_proposed=425061 delta_valid=104248
+phase exact repair21 5400616 425061
+start pid=46099 n=7 current=1 best=1 wordlen=0 temp=0.03 evals=0 proposed=0 valid=0
+NEWBEST count=2 lattice=2 wordlen=1 evals=1 proposed=1
+NEWBEST count=3 lattice=3 wordlen=2 evals=2 proposed=2
+NEWBEST count=5 lattice=5 wordlen=3 evals=53 proposed=53
+NEWBEST count=8 lattice=8 wordlen=4 evals=55 proposed=57
+NEWBEST count=10 lattice=10 wordlen=5 evals=56 proposed=59
+NEWBEST count=12 lattice=12 wordlen=6 evals=57 proposed=60
+NEWBEST count=15 lattice=15 wordlen=6 evals=58 proposed=65
+NEWBEST count=20 lattice=20 wordlen=7 evals=69 proposed=89
+NEWBEST count=23 lattice=23 wordlen=8 evals=74 proposed=99
+NEWBEST count=25 lattice=25 wordlen=8 evals=80 proposed=117
+NEWBEST count=26 lattice=26 wordlen=10 evals=149 proposed=310
+NEWBEST count=29 lattice=29 wordlen=11 evals=154 proposed=323
+NEWBEST count=30 lattice=30 wordlen=11 evals=160 proposed=341
+NEWBEST count=34 lattice=34 wordlen=11 evals=201 proposed=514
+NEWBEST count=35 lattice=35 wordlen=11 evals=205 proposed=523
+NEWBEST count=36 lattice=36 wordlen=11 evals=209 proposed=531
+NEWBEST count=37 lattice=37 wordlen=12 evals=237 proposed=631
+NEWBEST count=38 lattice=38 wordlen=12 evals=238 proposed=633
+NEWBEST count=39 lattice=39 wordlen=12 evals=242 proposed=647
+NEWBEST count=41 lattice=41 wordlen=12 evals=267 proposed=743
+NEWBEST count=42 lattice=42 wordlen=12 evals=278 proposed=787
+NEWBEST count=44 lattice=44 wordlen=12 evals=280 proposed=790
+NEWBEST count=45 lattice=45 wordlen=13 evals=330 proposed=1044
+NEWBEST count=48 lattice=48 wordlen=13 evals=341 proposed=1098
+NEWBEST count=51 lattice=51 wordlen=14 evals=366 proposed=1250
+NEWBEST count=54 lattice=54 wordlen=14 evals=369 proposed=1265
+NEWBEST count=56 lattice=56 wordlen=14 evals=372 proposed=1276
+NEWBEST count=58 lattice=58 wordlen=15 evals=382 proposed=1350
+NEWBEST count=60 lattice=60 wordlen=15 evals=383 proposed=1352
+NEWBEST count=62 lattice=62 wordlen=16 evals=440 proposed=1676
+NEWBEST count=64 lattice=64 wordlen=17 evals=453 proposed=1719
+NEWBEST count=65 lattice=65 wordlen=16 evals=534 proposed=2428
+NEWBEST count=67 lattice=67 wordlen=17 evals=702 proposed=4238
+NEWBEST count=71 lattice=71 wordlen=18 evals=723 proposed=4527
+NEWBEST count=73 lattice=73 wordlen=17 evals=1284 proposed=10738
+NEWBEST count=78 lattice=78 wordlen=18 evals=1298 proposed=10826
+NEWBEST count=81 lattice=81 wordlen=18 evals=1816 proposed=16840
+NEWBEST count=85 lattice=85 wordlen=20 evals=3437 proposed=34618
+end elapsed=0.05 current=85 best=85 wordlen=20 evals=3437 proposed=34618 valid=3437 delta_evals=3437 delta_proposed=34618 delta_valid=3437
+calibration exact 85
+PASS
