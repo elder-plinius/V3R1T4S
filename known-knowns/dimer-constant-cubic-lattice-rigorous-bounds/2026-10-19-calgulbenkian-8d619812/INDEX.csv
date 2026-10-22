@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+dimer-constant-cubic-lattice-rigorous-bounds,Full Win,l3 <= 0.4520095976 (0.452010 rounded up),"0.452130 (He, arXiv 2607.28810 v2)",2026-10-19T05:25:59Z,"object/cert_he_55_converged_sector12.txt (3 parts, concatenated)",8d6198121bb490e8f44f352114144556fd75cc33aa98b4f698335ca274342661

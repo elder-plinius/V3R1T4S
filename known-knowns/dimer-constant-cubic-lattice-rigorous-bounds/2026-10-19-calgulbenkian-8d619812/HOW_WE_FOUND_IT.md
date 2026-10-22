@@ -1,0 +1,5 @@
+contributor text, unverified
+
+# How it was found
+
+The brief was to beat He's published bound on the cubic-lattice dimer constant. He (arXiv 2607.28810) had stopped at iteration p = 2 for the (5,5) cross-section because his Java code took about 16.5 hours. The contributor's team rewrote the computation in C with exact integer arithmetic (a better ordering of the permanent search, pruning of branches that cannot match, and early stopping of the smaller sectors), which brought the (5,5) run down to under a minute, and kept iterating until the ratio converged. The converged integer vector for the largest sector (12) is the shipped object. The builder of this package added exact test vectors for the 12 smaller sectors so that all 13 sectors are checked, and a written derivation of why the ratio bounds l3. What failed or was weaker: nothing new was needed in the method; the result is only a deeper iterate of He's own inequality. The 16.5 hour versus under-a-minute comparison is the contributor's account and is not checked here.

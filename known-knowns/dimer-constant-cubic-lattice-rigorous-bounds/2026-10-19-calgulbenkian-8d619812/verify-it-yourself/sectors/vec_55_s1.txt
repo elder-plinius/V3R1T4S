@@ -1,0 +1,3 @@
+# builder-generated test vector, (m,n)=(5,5), sector i=1, 30 long-double power steps from the all-ones vector, rounded up to integers with max about 2^40
+# Format: orbit_id canonical_mask x_u
+0 1 1099511627776
