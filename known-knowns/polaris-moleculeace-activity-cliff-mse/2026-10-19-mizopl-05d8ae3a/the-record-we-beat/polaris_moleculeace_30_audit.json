@@ -1,0 +1,576 @@
+[
+  {
+    "dataset": "CHEMBL1862_Ki",
+    "slug": "moleculeace-chembl1862-ki",
+    "n_train": 633,
+    "n_test": 161,
+    "n_test_cliff": 67,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.5454429626742988
+    ],
+    "best_lb_mse": 0.5454429626742988,
+    "paper_best_mse": 0.5797469241160996,
+    "paper_best_alg": "LSTM+SMILES(aug=10)",
+    "paper_best_cliff_mse": 0.45418040352178823,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "22fcde6002e3c81888f64974c1c23731717be1c803d64db34ff491f53e0e00b7",
+    "lb_sha256": "c52437c1a3396c71282dd6737a2834aee233a1c7b5869cf5825a614a51c8daf2",
+    "csv_sha256": "c69adcbb021591ba2c564df1e9eb55d465b3c51e78d0237ec0527942eb20cfdb"
+  },
+  {
+    "dataset": "CHEMBL1871_Ki",
+    "slug": "moleculeace-chembl1871-ki",
+    "n_train": 525,
+    "n_test": 134,
+    "n_test_cliff": 32,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4322657009137384
+    ],
+    "best_lb_mse": 0.4322657009137384,
+    "paper_best_mse": 0.42222708048824076,
+    "paper_best_alg": "KNN+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.6674983285385927,
+    "paper_best_cliff_alg": "KNN+ECFP(aug=0)",
+    "api_sha256": "9b77e9dc7db1693a8cc8c1fc6402b229d72c1bb612892008fe031ec2a0246a50",
+    "lb_sha256": "cc8ee3f88a1f753d0cedb8af494b579ecf5bc1044faae78da02c284ce3b9c6ac",
+    "csv_sha256": "49d7f824fdbbc1c87fc69e239934558ac7e8612ca4c7e034314600b0b7c51821"
+  },
+  {
+    "dataset": "CHEMBL2034_Ki",
+    "slug": "moleculeace-chembl2034-ki",
+    "n_train": 598,
+    "n_test": 152,
+    "n_test_cliff": 52,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.45246539712551825
+    ],
+    "best_lb_mse": 0.45246539712551825,
+    "paper_best_mse": 0.4539278594541225,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.6607376697121674,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "8972fee02c88c4994775caa9da3378c670eef81b81fdf4bff6c90674e016e8a3",
+    "lb_sha256": "03a02a34259f68fad4cad60c806f05da14395999d771456e9f3a974988e6af06",
+    "csv_sha256": "9b9f4cca381cfd9e240603b0af24d9de742e421b984daf08c7c2458132eb3e4b"
+  },
+  {
+    "dataset": "CHEMBL2047_EC50",
+    "slug": "moleculeace-chembl2047-ec50",
+    "n_train": 503,
+    "n_test": 128,
+    "n_test_cliff": 50,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.3528461678569036
+    ],
+    "best_lb_mse": 0.3528461678569036,
+    "paper_best_mse": 0.36238557903409,
+    "paper_best_alg": "GBM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4090683582236304,
+    "paper_best_cliff_alg": "GBM+ECFP(aug=0)",
+    "api_sha256": "3ab31edfd5e06ad5422abbd8e37133cf62ad7df77352d55961d711f7fc393e7c",
+    "lb_sha256": "dd947d5a57280d3a24157e08683c56cd845266cc64a4d7b00c9333a3056cbe95",
+    "csv_sha256": "db8946f3daa245ad3e03576aca1e6ea44eda560abd9f730090762a6b68cc8c39"
+  },
+  {
+    "dataset": "CHEMBL204_Ki",
+    "slug": "moleculeace-chembl204-ki",
+    "n_train": 2201,
+    "n_test": 553,
+    "n_test_cliff": 220,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.48515433936939145
+    ],
+    "best_lb_mse": 0.48515433936939145,
+    "paper_best_mse": 0.5229182652707891,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.7375591557766455,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "14762e6b13e668c3ada9ee29e2749eab5fd1a42770fe2f9acc59f8c3950182b7",
+    "lb_sha256": "b849672f2d696dbff283a18ae545977c0b248313bbeb4995e0da6737eb63d7c8",
+    "csv_sha256": "54da2410087fb6a7d39e327e06af9b63044121bffbae9e3a8b61589217544e05"
+  },
+  {
+    "dataset": "CHEMBL2147_Ki",
+    "slug": "moleculeace-chembl2147-ki",
+    "n_train": 1162,
+    "n_test": 294,
+    "n_test_cliff": 116,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.31117332862773545
+    ],
+    "best_lb_mse": 0.31117332862773545,
+    "paper_best_mse": 0.3320172461427281,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.33590354322214705,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "43c2e433f18b47a5cd43d5681c4959ac347b26e6306877ac82738379a78f170b",
+    "lb_sha256": "a8f9973404cf020041246d1fcfe0819bfec2270b5309d16ba0fde8258fd86eab",
+    "csv_sha256": "33a1ff7d4b2a9ca684550b74148a2e0674e0810b48a7d8deacf44881b00d2b2a"
+  },
+  {
+    "dataset": "CHEMBL214_Ki",
+    "slug": "moleculeace-chembl214-ki",
+    "n_train": 2651,
+    "n_test": 666,
+    "n_test_cliff": 245,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.3979010525687447
+    ],
+    "best_lb_mse": 0.3979010525687447,
+    "paper_best_mse": 0.402540132404855,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.5239221760629986,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "011e01065c552e4c74776e18fe0137e3da377f4f0901689864680c8f35910f1e",
+    "lb_sha256": "97ec737a27c725bd312f42b7c4e8a2ff225768e9a4f30f001ec01f6b70f5d5e1",
+    "csv_sha256": "6d412099986b7b9769d878a6fd9a6cf137f257455a87610a4f35b00daa86758f"
+  },
+  {
+    "dataset": "CHEMBL218_EC50",
+    "slug": "moleculeace-chembl218-ec50",
+    "n_train": 823,
+    "n_test": 208,
+    "n_test_cliff": 76,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.46391738811641553
+    ],
+    "best_lb_mse": 0.46391738811641553,
+    "paper_best_mse": 0.4473188801761223,
+    "paper_best_alg": "RF+MACCS(aug=0)",
+    "paper_best_cliff_mse": 0.5074490063304116,
+    "paper_best_cliff_alg": "RF+MACCS(aug=0)",
+    "api_sha256": "29ef72c71869c4bf50fa13d84fe88f397c8c7434d43157115cb6cab384533025",
+    "lb_sha256": "6dd49c48b9c7a2fba9979bfea2462ea6c1add135365f45c53103e19b7a9f227e",
+    "csv_sha256": "2cad0b9bde956e6ce9b0cff150f674270bebf4c52afce7aaa74abdaaccc192c2"
+  },
+  {
+    "dataset": "CHEMBL219_Ki",
+    "slug": "moleculeace-chembl219-ki",
+    "n_train": 1491,
+    "n_test": 374,
+    "n_test_cliff": 148,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4687070545630029
+    ],
+    "best_lb_mse": 0.4687070545630029,
+    "paper_best_mse": 0.5035497837798066,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.5846508951481049,
+    "paper_best_cliff_alg": "GBM+ECFP(aug=0)",
+    "api_sha256": "889b0902b83127a429b28a0ab6fcb8f7e4cbf181a4a6eb679cbb729f0d251c84",
+    "lb_sha256": "85ec63857d69812056f49a1c379334cebada7d6bed908a76c4b31c61b39b9148",
+    "csv_sha256": "12bdaa25aff44ec4abef3b09199338405074ef39677843b7f46a006b8938f307"
+  },
+  {
+    "dataset": "CHEMBL228_Ki",
+    "slug": "moleculeace-chembl228-ki",
+    "n_train": 1362,
+    "n_test": 342,
+    "n_test_cliff": 127,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4119946490787207
+    ],
+    "best_lb_mse": 0.4119946490787207,
+    "paper_best_mse": 0.43834202252458887,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4568749408838615,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "26544037c6945caf5b36f8b033607d9a6fbf52ca3e62e76c9b603dd88f693300",
+    "lb_sha256": "ca893d41dd5649e9a3feeeabeb7e4c4b168bc31845e119d30c22b3d32907d2fc",
+    "csv_sha256": "7251c50e7eb40080edb762b3ee5bd37e10046ea121a52ff8e0e9eb0a7a0b76c2"
+  },
+  {
+    "dataset": "CHEMBL231_Ki",
+    "slug": "moleculeace-chembl231-ki",
+    "n_train": 776,
+    "n_test": 197,
+    "n_test_cliff": 48,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.5295428491665827
+    ],
+    "best_lb_mse": 0.5295428491665827,
+    "paper_best_mse": 0.5454869270582735,
+    "paper_best_alg": "RF+MACCS(aug=0)",
+    "paper_best_cliff_mse": 0.5360027180598642,
+    "paper_best_cliff_alg": "RF+PHYSCHEM(aug=0)",
+    "api_sha256": "93c372de12f6109e43df66f7ffa7c6b7b9d4d38dc26f1fb5e2fee8417aff0d19",
+    "lb_sha256": "6803d2d8ed7b838393cde803cbecda99f09cd14c585abc7bbdef81e0e0f33410",
+    "csv_sha256": "878adc58fce97794d5df1352c2f17631906007d8228c7f7f132360e49e811260"
+  },
+  {
+    "dataset": "CHEMBL233_Ki",
+    "slug": "moleculeace-chembl233-ki",
+    "n_train": 2512,
+    "n_test": 630,
+    "n_test_cliff": 259,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.5761167035832597
+    ],
+    "best_lb_mse": 0.5761167035832597,
+    "paper_best_mse": 0.5994255166084169,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.7379959902196249,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "ee6dc51efc9cb5a5109489081423bae012fa761b56c1f7f486b1d6fa9dc86ea9",
+    "lb_sha256": "ec6462b4b82e2877d1f89be452b1c804c4600e7f57be8198fbc6278d9bbe5caf",
+    "csv_sha256": "1bcbc97887a9dbffd51088fd3a77bd66b65ff9d050046a4dfc0003bae85b5670"
+  },
+  {
+    "dataset": "CHEMBL234_Ki",
+    "slug": "moleculeace-chembl234-ki",
+    "n_train": 2924,
+    "n_test": 733,
+    "n_test_cliff": 320,
+    "lb_entries": 3,
+    "lb_mses": [
+      0.37022063353143536,
+      0.40363769296273044,
+      0.49614280994488874
+    ],
+    "best_lb_mse": 0.37022063353143536,
+    "paper_best_mse": 0.38646354775138175,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.3992018184419916,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "b1c0f292a0ccd8264bb24289ae31a079cf3ac65e11a840d8a8f20bd793e26a92",
+    "lb_sha256": "13e0dfe23c083aeff15054fd99118779dbcd7863dc0490358b6abcffa8262951",
+    "csv_sha256": "447d38f659b86c7177f022b16f028db6828ab09c80051e74dad420168970f657"
+  },
+  {
+    "dataset": "CHEMBL235_EC50",
+    "slug": "moleculeace-chembl235-ec50",
+    "n_train": 1877,
+    "n_test": 472,
+    "n_test_cliff": 178,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.3913328211381722
+    ],
+    "best_lb_mse": 0.3913328211381722,
+    "paper_best_mse": 0.4076667818457248,
+    "paper_best_alg": "RF+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.5843609441396325,
+    "paper_best_cliff_alg": "RF+ECFP(aug=0)",
+    "api_sha256": "0599bb09b71f3a093cde37c8b84949042aa4cedef2ed6c3853d2a5e22ea410c0",
+    "lb_sha256": "d4738f89a5fb44da4f906c4f1c554c1bc9995e9e2e26d84c6a0eb27b90eabf16",
+    "csv_sha256": "48f9eae7eea5e1241fbd2bb8d936a323a93562275c4d4de746d644d76dadb66e"
+  },
+  {
+    "dataset": "CHEMBL236_Ki",
+    "slug": "moleculeace-chembl236-ki",
+    "n_train": 2077,
+    "n_test": 521,
+    "n_test_cliff": 204,
+    "lb_entries": 3,
+    "lb_mses": [
+      0.4496849288681984,
+      0.4703740102898284,
+      0.7274940482755294
+    ],
+    "best_lb_mse": 0.4496849288681984,
+    "paper_best_mse": 0.4847153596433206,
+    "paper_best_alg": "GBM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.627496227970094,
+    "paper_best_cliff_alg": "RF+ECFP(aug=0)",
+    "api_sha256": "cac4aa8e31438dc13cb75a04dc6c6ae59cbde551dcc04cb7293e2559ae6df65e",
+    "lb_sha256": "8cd205bf128122c70be6393439a834a363584b795f04397af52076853b0a3162",
+    "csv_sha256": "c40c6e987e6caf5019faf7aa19eee82ec9b500d51650d031bab473c6425601ee"
+  },
+  {
+    "dataset": "CHEMBL237_EC50",
+    "slug": "moleculeace-chembl237-ec50",
+    "n_train": 762,
+    "n_test": 193,
+    "n_test_cliff": 91,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.49730881992064935
+    ],
+    "best_lb_mse": 0.49730881992064935,
+    "paper_best_mse": 0.5184474966078783,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.6108609859393773,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "b289733b0f684839e030f90c5bb6d80821fbbbc85651ce0f7c9ab63aae5aab90",
+    "lb_sha256": "2ca7d57e7b1f9230cb60323aadd7871a4819ad1310ee2628d07339dfcbf782c1",
+    "csv_sha256": "dd5ef9a0cf3157f337b520d271d18ffd58bd4df2436203e4ccb1b241cfa6c9e7"
+  },
+  {
+    "dataset": "CHEMBL237_Ki",
+    "slug": "moleculeace-chembl237-ki",
+    "n_train": 2081,
+    "n_test": 522,
+    "n_test_cliff": 223,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4494080166287889
+    ],
+    "best_lb_mse": 0.4494080166287889,
+    "paper_best_mse": 0.4585195790591846,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.5402473545212528,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "e642eaeeb8d50e0ced1f864f0f08b6a9895b6c0a596159d57fa32a80ab4edc68",
+    "lb_sha256": "331faad9df7fdea8dc9ba8d5cf7ba694b2a9784a2622274d8c743d1a3f8dedca",
+    "csv_sha256": "20474e12e78596d28cd238cfde693dd476d29797c54efcb60ff0276c345592f1"
+  },
+  {
+    "dataset": "CHEMBL238_Ki",
+    "slug": "moleculeace-chembl238-ki",
+    "n_train": 839,
+    "n_test": 213,
+    "n_test_cliff": 55,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.35750990473072836
+    ],
+    "best_lb_mse": 0.35750990473072836,
+    "paper_best_mse": 0.37217714825841225,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4066483103577713,
+    "paper_best_cliff_alg": "GBM+ECFP(aug=0)",
+    "api_sha256": "873d467ef41e730ac598112581753f21cddd3f57ed6040f4ab4a2c4b519b4619",
+    "lb_sha256": "148833a9ff31e2fe40121390a7c657cb9fd4ccc6bb9620106ebd3c84862b299b",
+    "csv_sha256": "305d33df171e112c1cd75855c12377b0096e4e3726b910339169b1ab982a2c05"
+  },
+  {
+    "dataset": "CHEMBL239_EC50",
+    "slug": "moleculeace-chembl239-ec50",
+    "n_train": 1374,
+    "n_test": 347,
+    "n_test_cliff": 141,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4348712238033065
+    ],
+    "best_lb_mse": 0.4348712238033065,
+    "paper_best_mse": 0.4591697154911144,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.670932026290404,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "4ba55ba6571cb5ab6b9da3c83b47ce08c05d8082d1d0f75e4644c58b3e8f280e",
+    "lb_sha256": "77c3bef01eea67dda64804290bd278ebf86739e6806bfaa2d192c9957ec0ed1f",
+    "csv_sha256": "bbba9d4fdbd8cda84eb66a4fdc07af989454ff85a9f182a86d14fa94543cae41"
+  },
+  {
+    "dataset": "CHEMBL244_Ki",
+    "slug": "moleculeace-chembl244-ki",
+    "n_train": 2476,
+    "n_test": 621,
+    "n_test_cliff": 296,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4749981512616306
+    ],
+    "best_lb_mse": 0.4749981512616306,
+    "paper_best_mse": 0.5114489653841864,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.6345738319052334,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "b6033c566694d36e7d5b9f584deef7cea892f98a3b327f63b010debbcf82ace9",
+    "lb_sha256": "f115e5271f551fddabd39efe49b4e0c7f2d468790d5d537be39ddd45834cd6c2",
+    "csv_sha256": "b296c5956c9b3659fa039f057ebcb617919acd759c9255ed72bee917d99b4ef2"
+  },
+  {
+    "dataset": "CHEMBL262_Ki",
+    "slug": "moleculeace-chembl262-ki",
+    "n_train": 683,
+    "n_test": 173,
+    "n_test_cliff": 32,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.4752839393908519
+    ],
+    "best_lb_mse": 0.4752839393908519,
+    "paper_best_mse": 0.5201304439108845,
+    "paper_best_alg": "RF+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4298277029521512,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "639e1dce5d020da5e2f05683b80c0e46b5161b1d10912b92ed3a4dbb744858e9",
+    "lb_sha256": "4766616cdca3186f9142f94a0945500617d8120cb449b697238272d67ad47d26",
+    "csv_sha256": "8b6df9f67a87855d4fda89d1bd977cf2f3b71327387d2e0ba6c8673640fb94dd"
+  },
+  {
+    "dataset": "CHEMBL264_Ki",
+    "slug": "moleculeace-chembl264-ki",
+    "n_train": 2288,
+    "n_test": 574,
+    "n_test_cliff": 239,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.3420474211936379
+    ],
+    "best_lb_mse": 0.3420474211936379,
+    "paper_best_mse": 0.37818387114816676,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4543844395905936,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "3bfb7df6095ad4bfb5d15acb66ead7955858ee257962fa1d93a2c89034d33a75",
+    "lb_sha256": "1c742415f7f565e078036f0dabe46c135bd06e37d7769035f04d5082841fe12f",
+    "csv_sha256": "4c70fb8a6292a07ab4d65c805d967ac14a38b730bc9422ac0f133af33d899bcb"
+  },
+  {
+    "dataset": "CHEMBL2835_Ki",
+    "slug": "moleculeace-chembl2835-ki",
+    "n_train": 489,
+    "n_test": 126,
+    "n_test_cliff": 13,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.16617421498738597
+    ],
+    "best_lb_mse": 0.16617421498738597,
+    "paper_best_mse": 0.15020559752874155,
+    "paper_best_alg": "RF+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4093740612460185,
+    "paper_best_cliff_alg": "SVM+PHYSCHEM(aug=0)",
+    "api_sha256": "47646cbff0845d45fc20bd22983590adf22615434f1dae9a867ff5fd27eb06ca",
+    "lb_sha256": "aaaefa4e3c48744277f89004f04c7432ccd30a324e1555b1c66a16cbcbd226ea",
+    "csv_sha256": "0c2226e533a9aad3ce59c48f90fca3b13910764dbc030ae4cdcb2f656cad5ec6"
+  },
+  {
+    "dataset": "CHEMBL287_Ki",
+    "slug": "moleculeace-chembl287-ki",
+    "n_train": 1061,
+    "n_test": 267,
+    "n_test_cliff": 103,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.5031813063290076
+    ],
+    "best_lb_mse": 0.5031813063290076,
+    "paper_best_mse": 0.5100969897018766,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.618751060145436,
+    "paper_best_cliff_alg": "RF+PHYSCHEM(aug=0)",
+    "api_sha256": "444c87a326f4a92621fd7fad88704f11c6a8a64e8e747a1f263e899390054593",
+    "lb_sha256": "1742d5b06c1deaa03b9a50281d6e3916219a4e6d2580a4975bc73702e1452e27",
+    "csv_sha256": "e857875848bb64dc6e327e6c42fe9fd36526bbee1b976de4521b55c4c6629894"
+  },
+  {
+    "dataset": "CHEMBL2971_Ki",
+    "slug": "moleculeace-chembl2971-ki",
+    "n_train": 779,
+    "n_test": 197,
+    "n_test_cliff": 34,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.35546784590238667
+    ],
+    "best_lb_mse": 0.35546784590238667,
+    "paper_best_mse": 0.36606742624934385,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.41316633794630653,
+    "paper_best_cliff_alg": "RF+ECFP(aug=0)",
+    "api_sha256": "03b28b7179528f37ffd8504baca1f96511b9a977cc7da8c26a757a7b7cc2f689",
+    "lb_sha256": "bd60320ff08b6fdf27d38765f0d656e009372aebeda3d9711f68c2d3c05a7edc",
+    "csv_sha256": "4c83bb693523b6e4e1187482d603a4392c9299a2a21b031ddae85a9bb89d2e02"
+  },
+  {
+    "dataset": "CHEMBL3979_EC50",
+    "slug": "moleculeace-chembl3979-ec50",
+    "n_train": 899,
+    "n_test": 226,
+    "n_test_cliff": 94,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.3826503096442296
+    ],
+    "best_lb_mse": 0.3826503096442296,
+    "paper_best_mse": 0.39623928298201244,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.4538854874808576,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "20cf8f55e37d3d279f6299b4207dabb9050ebc753579f518404bad11ba56ed20",
+    "lb_sha256": "5bbe0c117a98f14038cf8850bbdd9f4e27ded511edb2003abb4fb3829b154e16",
+    "csv_sha256": "c351194eefbac48e0d4315cce44ff6731fc0b6a9a4d851e7b47cf9a81fd8cced"
+  },
+  {
+    "dataset": "CHEMBL4005_Ki",
+    "slug": "moleculeace-chembl4005-ki",
+    "n_train": 767,
+    "n_test": 193,
+    "n_test_cliff": 81,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.39271788373991834
+    ],
+    "best_lb_mse": 0.39271788373991834,
+    "paper_best_mse": 0.41751220033538566,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.5359540623316572,
+    "paper_best_cliff_alg": "RF+ECFP(aug=0)",
+    "api_sha256": "569b5c9f1b7fd8a83e99223b6a44dc17b2ab6b5ea188d0e3760ef2c9a691963b",
+    "lb_sha256": "f1c129d7aa4e179f802ce66391c4e77c76da8d1001d292f98efd814e83acd12c",
+    "csv_sha256": "1483dad125d5d37719c5524d6b63bac93be6e7114f892a0d131ebc35f72632f7"
+  },
+  {
+    "dataset": "CHEMBL4203_Ki",
+    "slug": "moleculeace-chembl4203-ki",
+    "n_train": 582,
+    "n_test": 149,
+    "n_test_cliff": 13,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.73206608538837
+    ],
+    "best_lb_mse": 0.73206608538837,
+    "paper_best_mse": 0.7740376654331629,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 1.0028672743742775,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "fea9b2f743b0353a8c99d0813fa5435d78c31224c891fff4c710b21610cc26b4",
+    "lb_sha256": "af8889b7d3ee3b7284fc11af085457dc258c5547decc08a1f29a9ce514456b19",
+    "csv_sha256": "f056efe7d24b98b789281ec07adb7a0118683ba5d8833c9fa296ddf8b438e3b2"
+  },
+  {
+    "dataset": "CHEMBL4616_EC50",
+    "slug": "moleculeace-chembl4616-ec50",
+    "n_train": 543,
+    "n_test": 139,
+    "n_test_cliff": 73,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.41890851788606653
+    ],
+    "best_lb_mse": 0.41890851788606653,
+    "paper_best_mse": 0.4035651497650573,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.47945935613982144,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "d5139ba79bf8f79539dc98b9a106795ef705d7d3fb2b9b2d1d6afb476d7151ae",
+    "lb_sha256": "b310b9102fb5b531d33cd106ad1bda13878cdeb9c7bbfd0e1b450b4d08b04221",
+    "csv_sha256": "d3690225e5a2000a4e34b5958be55674c892f0d7d8a6a3bc13a8ebb10c46b6a3"
+  },
+  {
+    "dataset": "CHEMBL4792_Ki",
+    "slug": "moleculeace-chembl4792-ki",
+    "n_train": 1174,
+    "n_test": 297,
+    "n_test_cliff": 160,
+    "lb_entries": 1,
+    "lb_mses": [
+      0.38743026880651993
+    ],
+    "best_lb_mse": 0.38743026880651993,
+    "paper_best_mse": 0.40118922349142,
+    "paper_best_alg": "SVM+ECFP(aug=0)",
+    "paper_best_cliff_mse": 0.407223993313692,
+    "paper_best_cliff_alg": "SVM+ECFP(aug=0)",
+    "api_sha256": "623a0f2bcd64291cbbab956783d54a285dafa5ebf7cd879b37b873e8a3adab0c",
+    "lb_sha256": "9857fa56f31e44ace2b90457f591c264bf613ce9b3b7c440766c32db617892a1",
+    "csv_sha256": "7fca442ad925803a72f9285b01d28a7b32372466a61183a0d5f2cdc4be90eb5e"
+  }
+]
