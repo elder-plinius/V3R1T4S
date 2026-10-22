@@ -1,0 +1,6 @@
+Excerpt of the live codetables.de QECC page for q=2 (qubit) [[89,71]], text extracted from the fetch with markup removed; the stabilizer matrix of the table's own d=4 code and its construction details are omitted.
+
+Bounds on [[89,71]] 2 lower bound: 4 upper bound: 6
+Construction of a [[89,71,4]] quantum code
+Last change: 10.06.2024
+last modified: 2006-04-03
