@@ -4,7 +4,7 @@
 
 ## The problem
 
-Find longer induced paths (snakes) or induced cycles (coils) in the n-dimensional hypercube Q_n. Maxima are proven for snakes in n <= 8 (98 at n=8). In dimension 9 and up, only lower bounds are known. The live minortriad.com/snake table (dimensions 1-13; snakes, coils and symmetric coils) is ahead of the paper tables of Orland-Fagan et al. (arXiv:2607.15270 v3, 30 Sep 2026) in Q11-Q13. EinsteinArena's 13D snake problem lists 2934.
+Find longer induced paths (snakes) or induced cycles (coils) in the n-dimensional hypercube Q_n. Maxima are proven for snakes in n <= 8 (98 at n=8). In dimension 9 and up, only lower bounds are known. The live minortriad.com/snake table (dimensions 1-13; snakes, coils and symmetric coils) is ahead of the paper tables of Orland-Fagan et al. (arXiv:2607.15270 v3, 30 Sep 2026) in Q11-Q13. EinsteinArena's 13D snake problem lists 2934. On 2026-10-18 the minortriad Q13 snake value is 2946 (William Toner, added 11 Oct 2026; the same sequence is q13_2946.txt in github.com/williamtoner/SnakeBox), up from 2938 (Tom Taylor, arXiv:2609.27483, added 2 Oct 2026). Q14 is not on minortriad: Toner's repository has a 5850-edge Q14 snake (q14_5850.txt, 12 Oct 2026), and its README names 5844 (Taylor) as the previous best; Taylor's abstract reports longer snakes in dimensions 13 to 20. arXiv:2607.15270 v3 (Table 2) and the Math-AI-Caltech repository (record_symmetric_coils.csv) give a Q11 symmetric coil of length 734, longer than the minortriad value 730; its transition sequence repeats after half the cycle (translation by 7), which is the symmetry the minortriad checker tests.
 
 ## What counts as a win
 
@@ -57,13 +57,13 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Length conventions: edges vs vertices, and whether a coil counts edges in the cycle. Calibrate on a known record.
 - Snakes vs coils vs symmetric coils are separate tables.
 - Values for Q10-Q13 come from 2607.15270's tables. Confirm the live minortriad value before claiming.
-- Paper tables lag the minortriad table. In Q11-Q13 minortriad is already 2-14 edges longer (snakes +4/+4/+14, coils +6/+2/+14).
+- Paper tables lag the minortriad table. In Q11-Q13 minortriad is already 2-22 edges longer (snakes +4/+4/+22, coils +6/+2/+14 on 2026-10-18).
 - Length conventions differ between sources (vertices vs edges, closed vs open).
 - Records changed in July-September 2026. Read the latest arXiv version and the repository.
 - A path that is only distance-preserving (no chords checked) is not induced.
 - The README 'subsequent bounds' already beat the paper at n=11, 12 and 13. Do not use the paper table alone.
 - Coil records may have moved after publication, so search for the newest values before claiming a coil.
-- Older bank copies list stale values (snake Q13 2934; coils Q11 734, Q12 1466, Q13 2916). The live values on 2026-10-03 were snake Q13 2938 and coils 740/1468/2930.
+- Older bank copies list stale values (snake Q13 2934; coils Q11 734, Q12 1466, Q13 2916). The live values on 2026-10-03 were snake Q13 2938 and coils 740/1468/2930; on 2026-10-18 the snake Q13 value was 2946.
 
 ## Point your agent at it
 
