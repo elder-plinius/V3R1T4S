@@ -1,0 +1,31 @@
+start v=85 k=24 t=3 b=76 NT=98770 init_blocks=0 uncovered=21017 tenure=10 seed=11
+t=10s steps=28672 rate=2821/s wbumps=20216 cur=10785 best=10419
+t=21s steps=60416 rate=2935/s wbumps=43375 cur=10839 best=10419
+t=31s steps=91136 rate=2972/s wbumps=65855 cur=10869 best=10419
+t=41s steps=121856 rate=2995/s wbumps=88564 cur=10832 best=10419
+t=52s steps=152576 rate=2952/s wbumps=111230 cur=10722 best=10419
+t=62s steps=183296 rate=2963/s wbumps=133978 cur=10710 best=10419
+t=72s steps=214016 rate=2971/s wbumps=156904 cur=10664 best=10419
+t=83s steps=246784 rate=2976/s wbumps=181274 cur=10243 best=10186
+t=93s steps=277504 rate=2975/s wbumps=203976 cur=8645 best=8637
+t=105s steps=310272 rate=2950/s wbumps=228099 cur=3319 best=3319
+t=116s steps=338944 rate=2912/s wbumps=249119 cur=456 best=420
+t=127s steps=363520 rate=2863/s wbumps=267520 cur=154 best=136
+t=140s steps=394240 rate=2807/s wbumps=290937 cur=181 best=94
+t=151s steps=415744 rate=2757/s wbumps=307332 cur=139 best=94
+t=161s steps=433152 rate=2692/s wbumps=320546 cur=103 best=72
+t=173s steps=450560 rate=2600/s wbumps=333804 cur=113 best=69
+t=184s steps=472064 rate=2565/s wbumps=350243 cur=61 best=32
+t=194s steps=491520 rate=2529/s wbumps=365264 cur=69 best=32
+t=206s steps=515072 rate=2500/s wbumps=383397 cur=71 best=30
+t=218s steps=538624 rate=2475/s wbumps=401393 cur=197 best=30
+t=229s steps=561152 rate=2448/s wbumps=418582 cur=102 best=30
+t=239s steps=581632 rate=2431/s wbumps=434222 cur=114 best=30
+t=249s steps=602112 rate=2415/s wbumps=449866 cur=67 best=30
+t=259s steps=623616 rate=2404/s wbumps=466513 cur=10 best=3
+t=270s steps=644096 rate=2384/s wbumps=482301 cur=72 best=3
+t=280s steps=662528 rate=2363/s wbumps=496565 cur=47 best=3
+t=291s steps=678912 rate=2333/s wbumps=509209 cur=72 best=3
+t=301s steps=700416 rate=2324/s wbumps=525918 cur=40 best=3
+end t=302.1s steps=701893 rate=2323/s best=0
+FOUND covering with 76 blocks -> runs/C85_24_3_b76\C85_24_3_b76_s11_pn0.2.found.txt
