@@ -4,7 +4,7 @@
 
 ## The problem
 
-Packomania's 'circles in a square' table (csq) lists the best known radius r(N) of N equal circles in the unit square for N = 1..1000 and selected N up to 10000 (3150 rows, 12-decimal radius.txt, per-N coordinates at csq/txt/csq<N>.txt). Proven optimal only for N <= 30 and a few special N (36 etc.). Last update 10-Sep-2026 (two candidates N = 3000 and 9996 by ZeroThesis); the big 2022 wave by Lai-Hao-Xiao-Glover improved ~250 values of N in 106..400. IMPORTANT: the pending-requests page (17-Oct-2026) lists 557 csq candidates in 401..1000 and 250 in 1015..9996 (Zeeshan Tariq, Sept 2026) and 1813 in 501..9984 (Vidit Patankar, 15-Oct-2026), none processed yet, so the live table for N > 400 is probably about to move.
+Packomania's 'circles in a square' table (csq) lists the best known radius r(N) of N equal circles in the unit square for N = 1..1000 except 49 N in 786..1000 (no row on csq.html or in txt/radius.txt, 2026-10-18) and selected N up to 10000 (3147 rows, 12-decimal radius.txt, per-N coordinates at csq/txt/csq<N>.txt). Proven optimal only for N <= 30 and a few special N (36 etc.). Last update 10-Sep-2026 (two candidates N = 3000 and 9996 by ZeroThesis); the big 2022 wave by Lai-Hao-Xiao-Glover improved ~250 values of N in 106..400. IMPORTANT: the pending-requests page (17-Oct-2026) lists 557 csq candidates in 401..1000 and 250 in 1015..9996 (Zeeshan Tariq, Sept 2026) and 1813 in 501..9984 (Vidit Patankar, 15-Oct-2026), none processed yet, so the live table for N > 400 is probably about to move.
 
 ## What counts as a win
 
@@ -50,10 +50,12 @@ Starting points, not instructions. The best wins came from angles nobody listed.
 
 False wins others have fallen for. A claim that walks into one of these will not survive the skeptics.
 
-- Queue-stale table: 807 csq candidates are pending (N > 400). A 'record' for N in those ranges may already be in Specht's inbox; the criterion forces N <= 400 or an explicit queue check.
+- Queue-stale table: 2620 csq candidates are pending (N > 400): the 807 listed on 2026-10-08 and 1813 more on the 17-Oct-2026 list. A 'record' for N in those ranges may already be in Specht's inbox; the criterion forces N <= 400 or an explicit queue check.
 - 12-decimal table: an apparent improvement in the 12th decimal can be the table's own rounding (Packomania truncates to 12 decimals on csq); require the 1e-11 margin against the exact posted value and prefer re-deriving the table radius from the posted coordinates (csq<N>.txt) in mpmath.
 - Coordinate convention: Packomania files are centered at the origin with side length 1 (coordinates in [-0.5, 0.5]); do not test containment against [0, 1] without shifting.
 - Submission is by email and asked to pause in October 2026; do not count a submission as a claim.
+- The 26-Sep-2026 'Moki & Julio *many* 4666 candidates' bundle matches their public release v2.2 (github.com/Hashirama1337s/moki-julio-circle-packing, commit 855d8f6838e9, 2026-09-25T22:41Z, '4,666 records in 15 tables'). Its csq shelf has 2,345 records at N from 385 to 9996, and the only one at N <= 400 is N = 385, so for a claim at N <= 400 the bundle can matter only at N = 385 (the N list is in RESULTS_TABLE.md at that commit; the count and the timing agree, but the queued zip is not public; checked 2026-10-19).
+- Free cells (2026-10-20): 1813 rows, N in 501..9984, lie below the row of a larger N by at least 1e-10 (largest 8.35e-4, N = 992 below 1003); deleting circles from the posted N' file reaches them with no search (N = 992 from csq1003.txt: r* = 0.0167080057180 against the row 0.015873015873). They match, in count and range, the 15-Oct-2026 Vidit Patankar entry on pending-requests.html (1813 csq candidates, 501..9984), so they are covered by the queue rule, not open. The sibling tables csc, crt and ccq (partial win p2) have no free cell. Compare a claim with B(N) = max over listed N' >= N (kit/propagated_bar.py, PR #573).
 
 ## Point your agent at it
 
