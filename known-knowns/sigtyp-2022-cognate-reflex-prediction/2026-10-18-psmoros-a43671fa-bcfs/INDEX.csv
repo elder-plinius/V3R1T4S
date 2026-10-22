@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+sigtyp-2022-cognate-reflex-prediction,surprise aggregate A_BCFS over proportions 0.10-0.50 (10 families) (charter quarry private-quarry-B),0.7422025452564412,0.6797616040522236,2026-10-18T22:11:30Z,object/predictions-0.10.tsv..object/predictions-0.50.tsv (sha256 of the five files concatenated in P order),a43671fa6567b32a07ac0601515997d23f6d654547c90b369505bee134ed86ff
