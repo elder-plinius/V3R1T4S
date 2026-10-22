@@ -1,0 +1,31 @@
+{
+ "fixture": "lj_indexed_4col.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "ok",
+ "anomaly": null,
+ "N": 3,
+ "columns": 3,
+ "index_stripped": true,
+ "index_base": 1,
+ "coords": [
+  [
+   "0.000000",
+   "0.000000",
+   "0.000000"
+  ],
+  [
+   "1.122462",
+   "0.000000",
+   "0.000000"
+  ],
+  [
+   "0.561231",
+   "0.972081",
+   "0.000000"
+  ]
+ ],
+ "compare": "exact decimal string",
+ "naive_last3_loader": "PASSES here (last 3 of 4 = x y z). Not discriminating on its own; pair with hsp4_true4d.txt"
+}

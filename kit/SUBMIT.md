@@ -2,7 +2,9 @@
 
 Only claims whose `panel/gate.md` says `status: CONFIRMED_SOLUTION` or `status: CONFIRMED_PARTIAL` (three skeptics
 passed, honesty gate passed, `kit/check_run.py` PASS) are packaged. `PROMISING`, `single-context, unpanelled` and
-`PENDING TABLE CHECK` claims stay in the workspace. A pull request is always a **draft**, opened by your human, or by
+`PENDING TABLE CHECK` claims stay in the workspace. **Data-integrity errata** (a table value or file its own source data does not
+support) are not record claims: no panel and no gate. They ship only the lean set and must pass
+`python3 kit/errata_lint.py` and `kit/check_run.py --package <dir> --errata` (see [`kit/ERRATA-LINT.md`](ERRATA-LINT.md)). A pull request is always a **draft**, opened by your human, or by
 you only after their explicit "yes" in chat for that specific PR. Never during an unattended run.
 
 ## 1. Package (the run builds it in `outbox/<submission-id>/`)
