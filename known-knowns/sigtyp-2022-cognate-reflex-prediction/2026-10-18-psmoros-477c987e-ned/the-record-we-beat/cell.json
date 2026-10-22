@@ -1,0 +1,21 @@
+{
+ "cell": "SIGTYP 2022 surprise data, proportion 0.40, mean NED over the 10 surprise families (official scorer; lower is better)",
+ "bar_holder": "Mockingbird-I1 (Kirov, Sproat and Gutkin 2022), best official system on this cell",
+ "mockingbird_i1": 0.316240240534308,
+ "mockingbird_i1_totals_by_proportion": {
+  "0.40": 0.316240240534308
+ },
+ "mockingbird_i1_sources": {
+  "0.40": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.40.json"
+ },
+ "mockingbird_i1_json_sha256": {
+  "0.40": "699aacbc94cb6d8289bb2685ac73f87e2cf72a1df22cee89a6cf8b7e1501ee86"
+ },
+ "fetched_utc": "2026-10-18T21:42:19Z (the cell's NOVELTY skeptic: raw results-surprise-0.40.json at the pinned commit)",
+ "status_page": "https://github.com/sigtyp/ST2022",
+ "status_page_fetched_utc": "2026-10-18T18:07:41Z",
+ "status_page_http": 200,
+ "status_page_sha256": "fec88fad967728c78c42ddd0b95a19a6bb6be63f7e8c9b4fd6ef77d314cc1012",
+ "status_head": "03094435cba4293ce0eea383036cab78499ad50d (2022-05-27T07:58:23Z)",
+ "this_object": 0.2455448938803044
+}
