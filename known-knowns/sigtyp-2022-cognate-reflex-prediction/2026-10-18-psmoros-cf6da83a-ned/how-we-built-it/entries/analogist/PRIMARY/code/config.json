@@ -1,0 +1,31 @@
+{
+ "a_id": 1.0,
+ "cv_rho": 0.3,
+ "fit_kappa": 2.0,
+ "gamma": 0.25,
+ "gamma_grid": [
+  0.25
+ ],
+ "gamma_multi": 1,
+ "guide": "global",
+ "jk": 1,
+ "learn_w": 1,
+ "mbr": 1,
+ "mbr_temp": 3.0,
+ "mix": 1.0,
+ "nbest": 20,
+ "pool_fb": 0,
+ "psv_D": 0.75,
+ "psv_rel": "learn",
+ "rr": 1,
+ "rr_alt": 1,
+ "rr_bandmode": "interleave",
+ "rr_bands": 3,
+ "rr_chan": 1,
+ "rr_mbr": 1,
+ "rr_obj": "ce",
+ "rr_ratio": 0.15,
+ "rr_reg": 0.01,
+ "rr_tau": 0.05,
+ "w_init": 1.0
+}

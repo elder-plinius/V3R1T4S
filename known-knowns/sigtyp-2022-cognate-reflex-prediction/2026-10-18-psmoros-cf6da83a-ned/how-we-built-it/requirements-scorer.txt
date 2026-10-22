@@ -1,0 +1,10 @@
+# Python 3.13.2; environment of the official scorer (validation scoring, the stage-2 combiner, score_test_050.py)
+# plus the scorer module src/sigtypst2022.py of github.com/sigtyp/ST2022 at
+# 03094435cba4293ce0eea383036cab78499ad50d (sha256 9cde59bb9d042aeb06016806c749cd9147230caa9899e1f43c62d88fc0f5b23a)
+lingpy==2.6.9
+lingrex==1.2.0
+networkx==2.6.3
+tabulate==0.8.9
+GitPython
+tqdm
+numpy
