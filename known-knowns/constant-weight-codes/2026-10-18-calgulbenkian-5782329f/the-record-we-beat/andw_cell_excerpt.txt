@@ -1,0 +1,26 @@
+Excerpt of https://aeb.win.tue.nl/codes/Andw.html as fetched 2026-10-18T17:39:47Z (page sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349). HTML tags are shown in square brackets. Cell (n=35, d=14, w=14).
+
+Lower-bound listing table for A(n,14,14) (the page prints lower bounds only here):
+[h3]Lower bounds for A(n,14,14)[/h3]
+[p]
+
+[table border="1"]
+[tr]
+[td]32[/td][td]33[/td][td]34[/td][td]35[/td][td]36[/td]
+[td]37[/td][td]38[/td][td]39[/td][td]40[/td][td]41[/td]
+[td]42[/td]
+[/tr]
+[tr]
+[td][a href="cwc/d14/i32.14"]96[/a][sup]g[/sup][/td]
+[td][a href="cwc/d14/i33.14"]112[/a][sup]g[/sup][/td]
+[td][a href="cwc/d14/a34.14.14.132H"]132[/a][sup]E[/sup][/td]
+[td][a href="cwc/d14/a35.14.14.163H"]163[/a][/td]
+[td][a href="cwc/d14/a36.14.14.218H"]218[/a][/td][comment:  i36.14_216 + 2 wds ]
+[td][a href="cwc/d14/a37.14.14.271H"]271[/a][/td][comment:  i37.14_270 + 1 wd ]
+[td][a href="cwc/d14/a38.14.14.343H"]343[/a][sup]E[/sup][/td]
+[td][a href="cwc/d14/a39.14.14.457H"]457[/a][/td]
+[td][a href="cwc/d14/a40.14.14.492H"]492[/a][/td]
+[td][a href="cwc/d14/i41.14"]615[/a][sup]g[/sup][/td]
+[td][a href="cwc/d14/i42.14"]820[/a][sup]g[/sup][/td]
+[/tr]
+[/table]
