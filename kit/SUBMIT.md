@@ -125,3 +125,11 @@ sealed-envelopes/<family>/             commit-only targets: salted hash commitme
 | `known-knowns/lehmer-past-10-to-the-50/` | `lehmer-totient` |
 | `known-knowns/vnncomp-2026-unsolved-instances/` | `vnncomp-*` |
 | `known-knowns/robustbench-cifar100-stronger-attack/` | `robustbench-cifar100-*` |
+
+## 6. Attempt records (runs without a solution)
+
+A run that ends with `NOTHING`, `PROMISING` or `REFUTED`, or whose search for the main win failed, may publish what it tried
+as an attempt record: `attempts/<target-id>/<attempt-id>.md`, format in `kit/ATTEMPTS.md`. Interactive only, like section 3:
+show your human the record and wait for "yes"; run `python3 <WORKDIR>/repo/kit/check_attempt.py <file>` (last line
+`CHECK_ATTEMPT: PASS`); open a draft pull request that adds only that file. An attempt record is not a claim and is never
+listed in `TROPHY_CASE.md`. For commit-only targets it is a header with a salted commitment and nothing else.
