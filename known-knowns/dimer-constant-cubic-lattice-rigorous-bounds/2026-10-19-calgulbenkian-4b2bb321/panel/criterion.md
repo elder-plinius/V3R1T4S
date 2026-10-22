@@ -1,0 +1,21 @@
+context: Claude Code subagent, fresh context [claude-sonnet-5-5]
+
+role: criterion. Cell: cubic-dimer-he-table2. Win: p1. The files were checked against the contributor's hash list (all files match, after normalising the double-space separators).
+Live fetches (the saved pages and the log are not shipped in this package): arxiv.org/abs/2607.28810 on 2026-10-19T07:13Z, HTTP 200, sha256 9d7fdac30892...ecafdd1f1, identical to the folder's earlier fetch (still v1 30 Jul 2026 and v2 11 Aug 2026 only); arxiv.org search for "dimer constant" sorted newest first, 2026-10-19T07:16Z, HTTP 200 (only He's paper is recent; no newer or citing bound on l3 shown); arxiv.org/abs/math/0402009 and math/0603001 on 2026-10-19T07:18Z, HTTP 200 (abstract pages only). The arXiv export API answered HTTP 429 on four attempts (three at 07:13 to 07:14, one after a 60 s back-off), so that route is unresolved. No citation-graph service was reachable, so "citations of 2607.28810" was checked only through the arXiv search.
+Own mechanical checks (four small scripts of mine, not shipped in this package): outward rounding of each exact ratio; the trace identity tr(T^4) = 306305 at (2,2,4) against a brute-force count of all matchings of the 16-vertex quotient graph (simple, 6-regular); per-cell checks are listed below.
+
+Criterion (bank text, quoted verbatim): a rigorous bound strictly better than the best published bound re-fetched live, by at least 1e-6, with (i) an explicit nonnegative integer or rational test vector, (ii) the transfer-layer definition, (iii) an exact-integer cross-multiplied Collatz-Wielandt ratio giving the claimed bound rounded outward, (iv) a written derivation or exact citation of why the ratio bounds the constant.
+
+Partial win p1 (verbatim): "Independent reimplementation that reproduces He's 0.452130 at (m, n) = (5, 5) and every smaller entry of his Table 2 to six decimals (rounded upward) with exact arithmetic; reproduction only, but it validates the method for the main attempt."
+
+Clauses.
+1. The "strictly better" and 1e-6 parts of the success criterion do not apply to p1, which is reproduction only. This cell is not an improvement and is not a record.
+2. "Every entry of his Table 2": the source excerpt lists 12 entries (2,2), (3,2), (3,3), (4,2), (4,3), (4,4), (5,2), (5,3), (5,4), (5,5), (6,2), (6,3); RESULTS.md section 1 lists these 12 (and an extra (6,4) He did not compute). Coverage met.
+3. Six decimals, rounded upward: I wrote my own exact-integer iterated Collatz-Wielandt (full matrices, all-ones start, p = 4, cross-multiplied ratios, no symmetry compression) and obtained, rounded up: (2,2) 0.486478, (3,2) 0.471408, (3,3) 0.458558, (4,2) 0.465970, (5,2) 0.463401, (6,2) 0.462010, (4,3) 0.457380. All seven equal He's Table 2. The other five, (4,4), (5,3), (5,4), (6,3) and (5,5) at p = 2, I did not recompute (too large for my pure-Python path); they rest on the folder's records and the reproduce skeptic. Open question 2: the (5,5) entry is by the C program with 128-bit integers and overflow detection; it is exact only if that guard is sound, which I cannot decide in this role.
+4. Exact arithmetic: met in the folder's method (integers, cross-multiplied) and in my own check.
+5. Open question 1: the ten-digit figures in RESULTS.md for (5,4) (0.4533648604) and (6,3) (0.4546179726) differ from the exact values (0.4533641368, 0.4546174279) from the seventh decimal. The claim concerns six decimals rounded upward, where both agree (0.453365, 0.454618), so the claim stands, but RESULTS.md must not be cited for those two ten-digit figures. Open question 4: he_55_64_out.txt covers three of the twelve cases; the other nine rest on RESULTS.md, check_table2.py and the receipts, which the reproduce skeptic re-runs. Open question 3: p1 is a reproduction; it is a named partial win in the bank text and is met on its own text; it is not a new bound.
+6. "Independent": met in the sense that it is not He's Java code; it is by the claimant's own team, so it is not independent of the claimant.
+
+confirmed_scope: The folder reproduces all 12 entries of He's Table 2, (2,2) to (6,3) at p = 4 and (5,5) at p = 2, rounded up to six decimals by exact integer arithmetic (seven confirmed by my own exact-integer recomputation, the rest by the folder's records), and it is a reproduction only, not a new bound.
+
+pass: true

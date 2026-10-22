@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+dimer-constant-cubic-lattice-rigorous-bounds,p1,12 entries reproduced (see CLAIM in panel/ and README.md),He Table 2 (12 entries),2026-10-19T05:25:59Z,object/he_55_64_out.txt and object/RESULTS.md,4b2bb321c9c6d3452a2a38cdfeb508eb0edfa8ced432cfa8ce5e641249431e03
