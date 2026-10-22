@@ -1,0 +1,90 @@
+{
+ "cell": "Q10 coil equal-record witness",
+ "n": 10,
+ "kind": "coil",
+ "table_value": 374,
+ "table_value_source": "minortriad coil column, dimension 10 (page https://www.minortriad.com/snake/, fetched 2026-10-19T04:32:30Z)",
+ "calibration": [
+  {
+   "id": "minortriad sample co10",
+   "n": 10,
+   "kind": "coil",
+   "table_length": 374,
+   "ts": "12065362512041062104153726025420140628562064506204126956026532602140132014065462046541321456026412602710260136026146206540620142065362512041062104157851401260140215263560241026045602641620631062047065126024102604513620542651456045310260134514973210620412062541036026186206730620140265126024102601361406546204654016452063760251204106210456402648064127102601360261462065406204"
+  }
+ ],
+ "published_classes": [
+  {
+   "source": "minortriad page sample co10 (Fagan2026)",
+   "length": 374,
+   "canon": "4b6907cdfc78b603"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 2 (n=10, length 374)",
+   "length": 374,
+   "canon": "4b6907cdfc78b603"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 3 (n=10, length 374)",
+   "length": 374,
+   "canon": "1a05aab0b4f43236"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 4 (n=10, length 374)",
+   "length": 374,
+   "canon": "324d332a0299772d"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 5 (n=10, length 374)",
+   "length": 374,
+   "canon": "3594393e661143e4"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 6 (n=10, length 374)",
+   "length": 374,
+   "canon": "d296dd369d4059e8"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 7 (n=10, length 374)",
+   "length": 374,
+   "canon": "4c6b19ff06fbcd28"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 8 (n=10, length 374)",
+   "length": 374,
+   "canon": "542e350a04d60bcc"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 9 (n=10, length 374)",
+   "length": 374,
+   "canon": "4481e0cb88488cca"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 10 (n=10, length 374)",
+   "length": 374,
+   "canon": "09c4d899bce2947f"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 11 (n=10, length 374)",
+   "length": 374,
+   "canon": "57e93d9d33aba480"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 12 (n=10, length 374)",
+   "length": 374,
+   "canon": "9fce7d760fe4e894"
+  },
+  {
+   "source": "Math-AI-Caltech/Snake-in-the-Box record_coils.csv data row 13 (n=10, length 374)",
+   "length": 374,
+   "canon": "1f1cff91d226e468"
+  },
+  {
+   "source": "the author's own closed PR #83 object (canonical hash from the triage log)",
+   "length": 374,
+   "canon": "303e36ad34660551"
+  }
+ ],
+ "other_published_values": [],
+ "note": ""
+}
