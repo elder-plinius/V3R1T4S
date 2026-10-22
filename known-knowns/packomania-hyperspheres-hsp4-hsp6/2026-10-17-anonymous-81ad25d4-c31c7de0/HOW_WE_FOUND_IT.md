@@ -1,0 +1,3 @@
+# Contributor text, unverified
+
+A source audit found complete four-dimensional input coordinates but incomplete five- and six-dimensional archive data. The construction search used the complete HSP4 rows, excluded known competing claims, and scanned N=76 through N=120. Radial rescaling found no gain. Sparse sequential linear programming followed by seeded perturbation and re-jamming produced the saved N=119 object. Independent checkers evaluated its saved decimal coordinates, and three separate contexts assessed reproduction, novelty, and the literal criterion. This account does not claim optimality or algorithmic superiority.
