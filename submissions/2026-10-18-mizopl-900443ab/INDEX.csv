@@ -1,0 +1,2 @@
+submission_id,date_utc,credit,github,target_id,category,title,claim_level,claimed_value,previous_best,object_path,object_sha256
+2026-10-18-mizopl-900443ab,2026-10-18T14:45:00Z,mizopl,mizopl,ihtp-ihtc2024-upper-bounds,optimization-benchmarks,Integrated Healthcare Timetabling Competition 2024 upper bounds on i01-i30 and m01-m30,CONFIRMED_SOLUTION,i27 Total cost = 50063 (Total violations = 0),i27 Total cost = 50976,object/sol_i27.json,900443ab5205ab28d6ad4713b0023593f931007812ecf0e3410a4e49e1006cf7
