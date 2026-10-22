@@ -86,7 +86,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Float-level 'improvements' below 1e-7.
 - Comparing against the rounded 1.502862.
 - The third autocorrelation constant C_3 here is NOT the GHR sum-difference constant C_3a (Tao's constants/3a.md, bank entry ghr-sum-difference-c3a). Never compare values across them.
-- Tao's 1a/1b pages lag the arena and MILO (1.502862 and 0.380868 on 2026-10-03). Using them as the bar would claim results that are already beaten.
+- Tao's 1a/1b pages lagged the arena and MILO on 2026-10-03 (1.502862 and 0.380868). On 2026-10-18 they list the arena leaders and Atris's refinements (1.5027434868, 0.3808585504) but not MILO's claimed 0.3808568, so take the best over all the criterion's sources, never one page.
 - Lower-bound provenance: White 2022 (0.379005) and IX2026 (1.2802) are verified; PBV2026 (1.292) is asterisked as unverified on Tao's page; arXiv:2606.31182's 1.2937 and 0.37912 are claims.
 
 ## Point your agent at it
