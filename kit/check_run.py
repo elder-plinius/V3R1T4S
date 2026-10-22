@@ -12,7 +12,7 @@ a PASS means the paperwork is honest and complete, not that the result is true.
 
 Last line: "CHECK_RUN: PASS" or "CHECK_RUN: FAIL (<n> problems)". Exit status 0 or 1.
 """
-import argparse, calendar, csv, hashlib, io, json, os, re, shutil, subprocess, sys, tempfile
+import argparse, calendar, csv, hashlib, io, json, os, re, shutil, stat, subprocess, sys, tempfile
 
 TEXT_EXT = {".md", ".txt", ".json", ".csv", ".log", ".tsv", ".yaml", ".yml", ""}
 CODE_EXT = {".py", ".sh", ".c", ".h", ".js", ".ipynb", ".rs", ".go", ".java", ".jl", ".r", ".cpp", ".hpp"}
@@ -22,6 +22,8 @@ SETTINGS_KEYS = ["credit", "github", "curious_about", "effort", "schedule", "pub
 PANEL = ["reproduce", "novelty", "criterion"]
 NULL_CATEGORIES = {"unbroken-ciphers", "undeciphered-scripts"}
 CONFIRMED_RE = re.compile(r"CONFIRMED_(SOLUTION|PARTIAL)")
+CONFIRMED_STATUSES = {"CONFIRMED_SOLUTION", "CONFIRMED_PARTIAL"}
+PENDING_CHECK_RE = re.compile(r"\bPENDING\s+(?:STATUS|TABLE)\s+CHECK\b", re.IGNORECASE)
 NEGATION_RE = re.compile(r"(?i)\b(not|no|never|without|nor|cannot|can't|isn't|aren't|wasn't|unless|until|only|may|"
                          r"would|could|should|requires?|if|before|instead|neither|none|nothing|downgraded|zero)\b|n't\b")
 PLACEHOLDER_RE = re.compile(r"<(WORKDIR|[A-Za-z]+(?:[-_][A-Za-z]+)+|YYYY[^>]{0,20}|date|time|tag|id|lens|credit|"
@@ -98,9 +100,9 @@ def read(path, limit=MAX_SCAN):
         return ""
 
 
-def is_text(path):
+def is_text(path, require_known_extension=True):
     ext = os.path.splitext(path)[1].lower()
-    if ext not in TEXT_EXT and ext not in CODE_EXT:
+    if require_known_extension and ext not in TEXT_EXT and ext not in CODE_EXT:
         return False
     try:
         with open(path, "rb") as f:
@@ -114,6 +116,14 @@ def walk(root, skip_dirs=()):
         dirs[:] = sorted(x for x in dirs if x not in skip_dirs and not x.startswith(".git"))
         for f in sorted(files):
             yield os.path.join(d, f)
+
+
+def regular_file_no_follow(path):
+    """True for a regular file, judged by lstat (a symbolic link is never a regular file here)."""
+    try:
+        return stat.S_ISREG(os.lstat(path).st_mode)
+    except OSError:
+        return False
 
 
 def rel(path, base):
@@ -135,6 +145,38 @@ def kv(text):
 def last_nonempty(text):
     lines = [l.strip() for l in text.splitlines() if l.strip()]
     return lines[-1] if lines else ""
+
+
+def critical_kv(c, text, label, keys):
+    """Retain ordinary metadata parsing, but reject repeated decision fields."""
+    seen = set()
+    for line in text.splitlines():
+        for key in kv(line):
+            if key in keys:
+                if key in seen:
+                    c.fail("%s: duplicate critical field '%s'" % (label, key))
+                seen.add(key)
+    return kv(text)
+
+
+def successful_http_status(text):
+    """Read explicit HTTP evidence, never incidental numbers elsewhere in a scout.
+
+    http_status/http_code fields take precedence: when present, a generic 'status:' field
+    (often the target's own status, such as 'open') is not read as HTTP evidence."""
+    explicit, generic = [], []
+    for line in text.splitlines():
+        d = kv(line)
+        explicit.extend(d[k] for k in ("http_status", "http_code") if k in d)
+        if "status" in d:
+            generic.append(d["status"])
+    named = explicit or generic
+    if named:
+        codes = [re.fullmatch(r"([0-9]{3})(?:\s+[A-Za-z][A-Za-z -]*)?", value) for value in named]
+        return all(m and 200 <= int(m.group(1)) < 300 for m in codes)
+    codes = re.findall(r"\bHTTP(?:/[0-9.]+)?\s+(?:(?:status|code)\s*:\s*)?([0-9]{3})\b",
+                       text, re.IGNORECASE)
+    return bool(codes) and all(200 <= int(code) < 300 for code in codes)
 
 
 def load_bank(workdir, settings, errors=None):
@@ -174,6 +216,23 @@ def confirmed_mentions(path):
     return hits
 
 
+def check_panel_scope(c, panel_dir, gate_path, label):
+    """Bind the chosen CRITERION scope to the authoritative gate's parsed value."""
+    before = len(c.fails)
+    source = critical_kv(c, read(os.path.join(panel_dir, "criterion.md")),
+                         "%s: criterion.md" % label, {"confirmed_scope"})
+    gate = critical_kv(c, read(gate_path), "%s: gate.md" % label, {"confirmed_scope"})
+    expected = source.get("confirmed_scope", "")
+    actual = gate.get("confirmed_scope", "")
+    if not expected:
+        c.fail("%s: criterion.md has no nonempty confirmed_scope" % label)
+    if not actual:
+        c.fail("%s: gate.md has no nonempty confirmed_scope" % label)
+    if expected and actual and expected != actual:
+        c.fail("%s: gate.md confirmed_scope differs from criterion.md" % label)
+    return len(c.fails) == before
+
+
 def check_panel(c, panel_dir, label, require_confirmed=True):
     """Three panel files with context and pass: true, plus gate.md. Returns True if all good."""
     good = True
@@ -187,10 +246,19 @@ def check_panel(c, panel_dir, label, require_confirmed=True):
             continue
         t = read(p)
         texts.append(t)
+        before = len(c.fails)
+        # The verdict is the file's final line alone (checked below). Earlier "pass:" lines, such as
+        # transcripts in code blocks or prose like "Pass: the object meets ...", are not decisions.
+        fields = critical_kv(c, t, "%s: %s.md" % (label, role), {"context", "novelty"})
+        if len(c.fails) != before:
+            good = False
         if last_nonempty(t).lower().replace(" ", "") != "pass:true":
             c.fail("%s: %s.md does not end with 'pass: true'" % (label, role))
             good = False
-        ctx = kv(t).get("context", "")
+        ctx = fields.get("context", "")
+        if role == "novelty" and PENDING_CHECK_RE.search(fields.get("novelty", "")):
+            c.fail("%s: novelty.md reports a pending status/table check" % label)
+            good = False
         if not ctx:
             c.fail("%s: %s.md has no 'context:' line saying how this fresh skeptic was started" % (label, role))
             good = False
@@ -202,16 +270,21 @@ def check_panel(c, panel_dir, label, require_confirmed=True):
         good = False
     gate = os.path.join(panel_dir, "gate.md")
     if require_confirmed:
-        g = kv(read(gate)) if os.path.isfile(gate) else {}
+        before = len(c.fails)
+        g = critical_kv(c, read(gate), "%s: gate.md" % label, {"status", "confirmed_scope"}) if os.path.isfile(gate) else {}
+        if len(c.fails) != before:
+            good = False
         st = g.get("status", "")
         if not os.path.isfile(gate):
             c.fail("%s: gate.md missing" % label)
             good = False
-        elif not CONFIRMED_RE.search(st):
+        elif st not in CONFIRMED_STATUSES:
             c.fail("%s: gate.md status is '%s', not CONFIRMED_*" % (label, st[:40]))
             good = False
         elif not g.get("confirmed_scope"):
             c.fail("%s: gate.md has no confirmed_scope line" % label)
+            good = False
+        if not check_panel_scope(c, panel_dir, gate, label):
             good = False
     return good
 
@@ -220,7 +293,9 @@ def check_null(c, path, label):
     if not os.path.isfile(path):
         c.fail("%s: null test required but %s is missing (>= 400 controls through the same pipeline)" % (label, os.path.basename(path)))
         return False
-    d = kv(read(path))
+    before = len(c.fails)
+    d = critical_kv(c, read(path), "%s: null_test.md" % label,
+                    {"controls", "best_control", "real", "real_beats_all_controls", "command"})
     controls = d.get("controls", "")
     try:
         if not re.fullmatch(r"[0-9]+", controls):
@@ -229,7 +304,7 @@ def check_null(c, path, label):
     except ValueError:
         c.fail("%s: null_test.md controls must be an unsigned decimal integer" % label)
         n = None
-    good = True
+    good = len(c.fails) == before
     if n is None:
         good = False
     elif n < 400:
@@ -246,11 +321,12 @@ def check_null(c, path, label):
     return good and beats in ("yes", "true")
 
 
-def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
+def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True, files=None):
     user = os.environ.get("USER") or os.environ.get("USERNAME") or ""
-    for p in walk(root):
+    for p in walk(root) if files is None else files:
         r = rel(p, root)
-        if not is_text(p):
+        # Publication scans inspect text by content, including .pem and unknown suffixes.
+        if not is_text(p, require_known_extension=False):
             continue
         t = read(p)
         for rx, what in LEAK_RES:
@@ -282,7 +358,7 @@ def never_publish_list(workdir):
 
 # ---------- envelope ----------
 
-def check_envelope(c, path, workdir=None, bank=None):
+def check_envelope(c, path, workdir=None, bank=None, files=None):
     label = "envelope %s" % os.path.basename(os.path.dirname(path)) if os.path.basename(path) == "envelope.md" else "envelope %s" % os.path.basename(path)
     t = read(path)
     rows, target, problem, title = 0, None, None, 0
@@ -313,22 +389,27 @@ def check_envelope(c, path, workdir=None, bank=None):
     if workdir and target:
         if not find_confirmed_gate(workdir, target):
             c.fail("%s: no run in this workspace has a panel-confirmed gate for %s" % (label, target))
-    leak_scan(c, os.path.dirname(path), label, never_publish_list(workdir), workdir)
+    leak_scan(c, os.path.dirname(path), label, never_publish_list(workdir), workdir, files=files)
     return target
 
 
 def find_confirmed_gate(workdir, target):
     for run in sorted(os.listdir(os.path.join(workdir, "runs"))) if os.path.isdir(os.path.join(workdir, "runs")) else []:
         rd = os.path.join(workdir, "runs", run)
-        tid = kv(read(os.path.join(rd, "target.md"))).get("id", "")
-        if tid != target:
+        target_check = Checker(quiet=True)
+        tid = critical_kv(target_check, read(os.path.join(rd, "target.md")),
+                          "target.md", {"id"}).get("id", "")
+        if target_check.fails or tid != target:
             continue
         gate = os.path.join(rd, "panel", "gate.md")
-        if CONFIRMED_RE.search(kv(read(gate)).get("status", "")):
+        gate_check = Checker(quiet=True)
+        fields = critical_kv(gate_check, read(gate), "gate.md", {"status", "confirmed_scope"})
+        if not gate_check.fails and fields.get("status", "") in CONFIRMED_STATUSES:
             for pd in (os.path.join(rd, "panel"), os.path.join(workdir, "private", target, "panel")):
                 if all(os.path.isfile(os.path.join(pd, r + ".md")) for r in PANEL):
                     sub = Checker(quiet=True)
                     check_panel(sub, pd, "x", require_confirmed=False)
+                    check_panel_scope(sub, pd, gate, "x")
                     if not sub.fails:
                         return True
     return False
@@ -336,9 +417,52 @@ def find_confirmed_gate(workdir, target):
 
 # ---------- package ----------
 
+def package_inventory(c, root, label):
+    """Inventory every entry without following links, before opening any package file.
+
+    Packages contain only directories and regular files. This static preflight is not
+    a sandbox or protection against concurrent filesystem changes or checker code.
+    """
+    files, dirs, pending = {}, set(), [root]
+    invalid = False
+    while pending:
+        p = pending.pop()
+        try:
+            st = os.lstat(p)
+        except OSError as e:
+            c.fail("%s: cannot inspect %s (%s)" % (label, rel(p, root), e.strerror))
+            invalid = True
+            continue
+        if stat.S_ISLNK(st.st_mode):
+            c.fail("%s: symbolic links are not allowed: %s" % (label, rel(p, root)))
+            invalid = True
+        elif stat.S_ISREG(st.st_mode):
+            files[p] = st.st_size
+        elif stat.S_ISDIR(st.st_mode):
+            dirs.add(p)
+            try:
+                with os.scandir(p) as entries:
+                    pending.extend(sorted((entry.path for entry in entries), reverse=True))
+            except OSError as e:
+                c.fail("%s: cannot inspect directory %s (%s)" % (label, rel(p, root), e.strerror))
+                invalid = True
+        else:
+            c.fail("%s: unsupported file type: %s (regular files and directories only)" % (label, rel(p, root)))
+            invalid = True
+    return (None, None) if invalid else (dict(sorted(files.items())), dirs)
+
+
 def check_package(c, pkg, workdir=None, execute=True, timeout=900):
     pkg = os.path.abspath(pkg)
     label = "package %s" % os.path.basename(pkg)
+    files, dirs = package_inventory(c, pkg, label)
+    if files is None:
+        return False
+    for p, size in files.items():
+        if size > 1_000_000:
+            c.fail("%s: %s is larger than 1 MB (kit/SUBMIT.md section 1)" % (label, rel(p, pkg)))
+    if sum(files.values()) > 50_000_000:
+        c.fail("%s: package larger than 50 MB" % label)
     settings = kv(read(os.path.join(workdir, "settings.md"))) if workdir else {}
     bank_errors = []
     bank, _ = load_bank(workdir, settings, bank_errors)
@@ -346,30 +470,30 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
         c.fail("could not read the bank %s" % e)
     if not bank:
         c.warn("could not load the bank (settings.md 'bank:', repo/bank/targets.json or kit/../bank/targets.json); bank-based guards were skipped")
-    if os.path.isfile(pkg) and pkg.endswith(".md"):
-        check_envelope(c, pkg, workdir, bank)
+    if pkg in files and pkg.endswith(".md"):
+        check_envelope(c, pkg, workdir, bank, files=files)
         return
-    if not os.path.isdir(pkg):
-        c.fail("%s: not found" % label)
+    if pkg not in dirs:
+        c.fail("%s: not a package directory or envelope .md" % label)
         return
-    if os.path.isfile(os.path.join(pkg, "envelope.md")):
-        extra = [rel(p, pkg) for p in walk(pkg) if os.path.basename(p) != "envelope.md"]
+    if os.path.join(pkg, "envelope.md") in files:
+        extra = [rel(p, pkg) for p in files if rel(p, pkg) != "envelope.md"]
         if extra:
             c.fail("%s: a sealed-envelope package holds envelope.md only; found %s" % (label, ", ".join(extra[:5])))
-        check_envelope(c, os.path.join(pkg, "envelope.md"), workdir, bank)
+        check_envelope(c, os.path.join(pkg, "envelope.md"), workdir, bank, files=files)
         return
     need_files = ["README.md", "RUN_IT_YOURSELF.md", "INDEX.csv", "HOW_WE_FOUND_IT.md", "SHA256SUMS",
                   "verify-it-yourself/run_checks.sh", "verify-it-yourself/RECEIPTS.md"]
     need_dirs = ["object", "verify-it-yourself", "how-we-built-it", "the-record-we-beat", "panel"]
     for f in need_files:
-        if not os.path.isfile(os.path.join(pkg, f)):
+        if os.path.join(pkg, f) not in files:
             c.fail("%s: required file %s missing (kit/SUBMIT.md section 1)" % (label, f))
     for d in need_dirs:
         dp = os.path.join(pkg, d)
-        if not os.path.isdir(dp) or not any(True for _ in walk(dp)):
+        if dp not in dirs or not any(p.startswith(dp + os.sep) for p in files):
             c.fail("%s: required folder %s/ missing or empty" % (label, d))
     vd = os.path.join(pkg, "verify-it-yourself")
-    if os.path.isdir(vd) and len([p for p in walk(vd) if os.path.basename(p) not in ("run_checks.sh", "RECEIPTS.md")]) < 1:
+    if vd in dirs and not any(p.startswith(vd + os.sep) and os.path.basename(p) not in ("run_checks.sh", "RECEIPTS.md") for p in files):
         c.fail("%s: verify-it-yourself/ has no checker besides run_checks.sh" % label)
     readme = read(os.path.join(pkg, "README.md"))
     for h in ("what", "check it yourself", "compared to", "not claimed", "credits"):
@@ -390,7 +514,8 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
             target = rows[1][rows[0].index("target_id")].strip()
     except (csv.Error, IndexError):
         c.fail("%s: INDEX.csv is not valid CSV" % label)
-    rec = " ".join(read(p) for p in walk(os.path.join(pkg, "the-record-we-beat")) if is_text(p))
+    rec_dir = os.path.join(pkg, "the-record-we-beat") + os.sep
+    rec = " ".join(read(p) for p in files if p.startswith(rec_dir) and is_text(p))
     if not (re.search(r"https?://", rec) and re.search(r"\b[0-9a-f]{64}\b", rec) and re.search(r"\d{4}-\d\d-\d\dT\d\d:\d\d", rec)):
         c.fail("%s: the-record-we-beat/ needs the table URL, a UTC fetch time and the page's sha256" % label)
     if target and bank:
@@ -400,42 +525,82 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
         elif t.get("disclosure") == "commit-only":
             c.fail("%s: %s is commit-only; it may leave the machine only as a sealed envelope" % (label, target))
         if t and (t.get("category") in NULL_CATEGORIES):
-            nulls = [p for p in walk(pkg) if os.path.basename(p) == "null_test.md"]
+            nulls = [p for p in files if os.path.basename(p) == "null_test.md"]
             if not nulls:
                 c.fail("%s: a %s claim needs null_test.md (>= 400 controls) in the package" % (label, t.get("category")))
             else:
-                check_null(c, nulls[0], label)
+                if not check_null(c, nulls[0], label):
+                    c.fail("%s: a confirmed package requires a passing null test" % label)
     if os.path.isdir(os.path.join(pkg, "panel")):
         check_panel(c, os.path.join(pkg, "panel"), label)
     # sha256sums
-    sums = read(os.path.join(pkg, "SHA256SUMS"))
+    try:
+        # Use the filesystem's lossless filename decoding, not read()'s UTF-8
+        # replacement: distinct raw names must not collapse onto U+FFFD.
+        with open(os.path.join(pkg, "SHA256SUMS"), "rb") as manifest:
+            raw_sums = manifest.read(MAX_SCAN + 1)
+        if len(raw_sums) > MAX_SCAN:
+            c.fail("%s: SHA256SUMS exceeds the scan limit" % label)
+            sums = ""
+        else:
+            sums = os.fsdecode(raw_sums)
+    except OSError as e:
+        c.fail("%s: cannot read SHA256SUMS (%s)" % (label, e.strerror))
+        sums = ""
     listed = {}
-    for line in sums.splitlines():
-        m = re.match(r"^([0-9a-f]{64})\s+\*?(.+)$", line.strip())
-        if m:
-            listed[os.path.normpath(m.group(2).lstrip("./"))] = m.group(1)
-    for p in walk(pkg):
+    # Read physical records, not splitlines(): filenames can contain VT/FF or
+    # Unicode separators. Preserve filename whitespace and GNU name escapes.
+    for number, line in enumerate(sums.split("\n"), 1):
+        line = line[:-1] if line.endswith("\r") else line
+        if not line or line.startswith("#"):
+            continue
+        m = re.fullmatch(r"(\\?)([0-9a-fA-F]{64}) ([ *])(.+)", line)
+        if not m:
+            c.fail("%s: malformed SHA256SUMS record on line %d" % (label, number))
+            continue
+        name = m.group(4)
+        if m.group(1):
+            if not re.fullmatch(r"(?:[^\\]|\\[\\nr])*", name):
+                c.fail("%s: invalid SHA256SUMS filename escape on line %d" % (label, number))
+                continue
+            name = re.sub(r"\\([\\nr])", lambda x: {"\\": "\\", "n": "\n", "r": "\r"}[x.group(1)], name)
+        if "\0" in name:
+            c.fail("%s: NUL in SHA256SUMS filename on line %d" % (label, number))
+            continue
+        if name == "-":
+            c.fail("%s: SHA256SUMS '-' means stdin; use './-' for that filename" % label)
+            continue
+        r = os.path.normpath(name)
+        if os.path.isabs(r) or r == os.pardir or r.startswith(os.pardir + os.sep):
+            c.fail("%s: SHA256SUMS path leaves the package: %s" % (label, r))
+        elif r == "SHA256SUMS":
+            c.fail("%s: SHA256SUMS must not list itself" % label)
+        elif r in listed:
+            c.fail("%s: duplicate SHA256SUMS path: %s" % (label, r))
+        else:
+            # Preflight already rejected symlinks. Do not let normalization
+            # invent a path such as missing/../README.md or README.md/.
+            if not os.path.isfile(os.path.join(pkg, name)):
+                c.fail("%s: SHA256SUMS filename does not resolve to a regular file: %s" % (label, name))
+            listed[r] = m.group(2).lower()
+    for p in files:
         r = os.path.normpath(rel(p, pkg))
         if r == "SHA256SUMS":
             continue
-        h = hashlib.sha256(rbytes(p)).hexdigest()
+        try:
+            h = hashlib.sha256(rbytes(p)).hexdigest()
+        except OSError as e:
+            c.fail("%s: cannot read %s (%s)" % (label, r, e.strerror))
+            continue
         if r not in listed:
             c.fail("%s: %s is not listed in SHA256SUMS" % (label, r))
         elif listed[r] != h:
             c.fail("%s: SHA256SUMS mismatch for %s" % (label, r))
     for r in listed:
-        if not os.path.isfile(os.path.join(pkg, r)):
+        if os.path.join(pkg, r) not in files:
             c.fail("%s: SHA256SUMS lists missing file %s" % (label, r))
-    total = 0
-    for p in walk(pkg):
-        s = os.path.getsize(p)
-        total += s
-        if s > 1_000_000:
-            c.fail("%s: %s is larger than 1 MB (kit/SUBMIT.md section 1)" % (label, rel(p, pkg)))
-    if total > 50_000_000:
-        c.fail("%s: package larger than 50 MB" % label)
-    leak_scan(c, pkg, label, never_publish_list(workdir), workdir)
-    if execute and os.path.isfile(os.path.join(pkg, "verify-it-yourself", "run_checks.sh")):
+    leak_scan(c, pkg, label, never_publish_list(workdir), workdir, files=files)
+    if execute and os.path.join(pkg, "verify-it-yourself", "run_checks.sh") in files:
         run_own_checker(c, pkg, label, timeout)
 
 
@@ -463,7 +628,7 @@ def run_own_checker(c, pkg, label, timeout):
             c.warn("%s: no sh found; could not run run_checks.sh" % label)
             return
         last = last_nonempty(out)
-        if rc != 0 or not re.search(r"\bPASS\b", last) or re.search(r"\bFAIL\b", last):
+        if rc != 0 or last != "PASS":
             c.fail("%s: its own checker did not pass from a clean copy (exit %s, last line: %s)" % (label, rc, last[:80]))
             return
         c.ok("%s: run_checks.sh prints PASS from a clean copy" % label)
@@ -485,7 +650,7 @@ def run_own_checker(c, pkg, label, timeout):
             c.warn("%s: could not build a corrupted copy of object/ to test the checker" % label)
             return
         rc2, out2 = _run_checks(bad, timeout)
-        if rc2 == 0 and re.search(r"\bPASS\b", last_nonempty(out2)):
+        if rc2 == 0 and last_nonempty(out2) == "PASS":
             c.warn("%s: the checker still printed PASS after one digit of the object was changed; make sure it really checks the object" % label)
         elif rc2 is not None and rc2 > 0 and last_nonempty(out2) == "FAIL":
             # SUBMIT.md defines terminal PASS/FAIL. Negative statuses are
@@ -625,7 +790,12 @@ def packaged(workdir, tid):
     ob = os.path.join(workdir, "outbox")
     if not os.path.isdir(ob):
         return False
-    for p in walk(ob):
+    # The confirmation check reaches outbox before check_package does. Do not
+    # open its INDEX/envelope files until a no-follow inventory is safe.
+    files, _ = package_inventory(Checker(quiet=True), ob, "outbox")
+    if files is None:
+        return False
+    for p in files:
         b = os.path.basename(p)
         if b == "envelope.md" and re.search(r"(?m)^target: %s\s*$" % re.escape(tid), read(p)):
             return True
@@ -669,12 +839,14 @@ def check_run_dir(c, workdir, run, bank, dry):
         else:
             c.fail("%s: target %s is neither in the bank nor a quarry of charter.md" % (label, tid))
     scout = read(os.path.join(run, "scout.md"))
-    pending = bool(re.search(r"PENDING (STATUS|TABLE) CHECK", scout))
-    if scout and not pending and not (
-            re.search(r"https?://", scout) and re.search(r"\b[1-5]\d\d\b", scout) and re.search(r"\b[0-9a-f]{64}\b", scout)):
+    pending = bool(PENDING_CHECK_RE.search(scout))
+    completed_status = bool(scout.strip() and not pending and
+                            re.search(r"https?://", scout) and successful_http_status(scout) and
+                            re.search(r"\b[0-9a-f]{64}\b", scout))
+    if not pending and not completed_status:
         c.fail("%s: scout.md needs the status source's URL, HTTP status and page sha256 (from command output), "
                "or 'PENDING STATUS CHECK'" % label)
-    elif scout and not pending:
+    elif completed_status:
         hashes = set(re.findall(r"\b[0-9a-f]{64}\b", scout))
         data = os.path.join(run, "data")
         have = {hashlib.sha256(rbytes(p)).hexdigest() for p in walk(data)} if os.path.isdir(data) else set()
@@ -741,13 +913,18 @@ def check_run_dir(c, workdir, run, bank, dry):
     pre = os.path.join(run, "PREREG.md")
     if lenses and not os.path.isfile(pre):
         c.fail("%s: PREREG.md missing; freeze criterion, statistic, thresholds and null design before measuring" % label)
-    prereg = kv(read(pre))
+    prereg = critical_kv(c, read(pre), "%s: PREREG.md" % label, {"null_test"})
     nt = prereg.get("null_test", "").lower()
     if lenses and os.path.isfile(pre) and not (nt.startswith("required") or nt.startswith("not needed because")):
         c.fail("%s: PREREG.md needs 'null_test: required' or 'null_test: not needed because <reason>'" % label)
     priv_panel = os.path.join(workdir, "private", tid, "panel") if tid else None
     panel_dir = os.path.join(run, "panel")
-    gate = kv(read(os.path.join(panel_dir, "gate.md")))
+    gate = critical_kv(c, read(os.path.join(panel_dir, "gate.md")),
+                       "%s: gate.md" % label, {"status", "confirmed_scope"})
+    gate_status = gate.get("status", "")
+    if re.search(r"(?i)CONFIRMED_", gate_status) and gate_status not in CONFIRMED_STATUSES:
+        c.warn("%s: panel/gate.md status '%s' is not exactly CONFIRMED_SOLUTION or CONFIRMED_PARTIAL, "
+               "so the run is not treated as confirmed" % (label, gate_status[:60]))
     has_claim = any(x in ("partial_win_claim", "solution_claim") for x in claim_levels) or \
         os.path.isdir(os.path.join(run, "claim")) or bool(gate) or \
         (tid and os.path.isdir(os.path.join(workdir, "private", tid, "claim")))
@@ -778,8 +955,11 @@ def check_run_dir(c, workdir, run, bank, dry):
     log = [l for l in read(os.path.join(workdir, "LOG.md")).splitlines() if l.strip()]
     if log and CONFIRMED_RE.search(log[-1]) and not NEGATION_RE.search(log[-1].split("CONFIRMED_")[0]):
         mentions.append("LOG.md (last line)")
-    confirmed = bool(mentions) or bool(CONFIRMED_RE.search(gate.get("status", "")))
+    confirmed = bool(mentions) or gate.get("status", "") in CONFIRMED_STATUSES
     if confirmed:
+        critical_kv(c, read(os.path.join(run, "target.md")), label + ": target.md", {"id"})
+        if not completed_status:
+            c.fail("%s: CONFIRMED_* requires a completed status/table check" % label)
         where = [d for d in (panel_dir, priv_panel) if d and all(os.path.isfile(os.path.join(d, r + ".md")) for r in PANEL)]
         pd = where[0] if where else panel_dir
         ok = True
@@ -790,7 +970,8 @@ def check_run_dir(c, workdir, run, bank, dry):
                 ok = False
         if ok:
             check_panel(c, pd, label, require_confirmed=False)
-            if not CONFIRMED_RE.search(gate.get("status", "")):
+            check_panel_scope(c, pd, os.path.join(panel_dir, "gate.md"), label)
+            if gate.get("status", "") not in CONFIRMED_STATUSES:
                 c.fail("%s: CONFIRMED_* written (%s) but panel/gate.md does not say status: CONFIRMED_*" % (label, ", ".join(mentions[:3])))
             elif not gate.get("confirmed_scope"):
                 c.fail("%s: panel/gate.md lacks confirmed_scope" % label)
@@ -798,7 +979,7 @@ def check_run_dir(c, workdir, run, bank, dry):
             c.fail("%s: CONFIRMED_* without a passing null test" % label)
         if len(c.fails) == sub_fails:
             c.ok("%s: CONFIRMED status backed by three panel files and gate.md" % label)
-        if CONFIRMED_RE.search(gate.get("status", "")) and tid and not packaged(workdir, tid):
+        if gate.get("status", "") in CONFIRMED_STATUSES and tid and not packaged(workdir, tid):
             kind = "a sealed envelope outbox/<submission-id>/envelope.md" if (entry or {}).get("disclosure") == "commit-only" \
                 else "a package outbox/<submission-id>/ whose INDEX.csv names it"
             c.fail("%s: %s is CONFIRMED but outbox/ has no package for it; build %s (kit/SUBMIT.md)" % (label, tid, kind))
@@ -828,15 +1009,18 @@ def check_workspace(c, workdir, run=None, setup_only=False, execute=True, timeou
         check_run_dir(c, workdir, run, bank, setup_only)
     # outbox: only confirmed, valid packages
     ob = os.path.join(workdir, "outbox")
+    unsafe_packages = []
     if os.path.isdir(ob):
         for d in sorted(os.listdir(ob)):
             p = os.path.join(ob, d)
-            if d.startswith("."):
-                continue
+            if d.startswith(".") and regular_file_no_follow(p):
+                continue  # e.g. .DS_Store: not a package; the secret scan below still reads text files
             if os.path.isdir(p) or p.endswith(".md"):
-                check_package(c, p, workdir, execute=execute, timeout=timeout)
+                if check_package(c, p, workdir, execute=execute, timeout=timeout) is False:
+                    unsafe_packages.append(p)
             else:
                 c.fail("outbox/%s: outbox holds only package folders (confirmed claims)" % d)
+                unsafe_packages.append(p)
     # commit-only secrets must not leave private/
     public_texts = []
     for root in [bank_dir] + [os.path.join(workdir, "runs", r, "data") for r in (os.listdir(os.path.join(workdir, "runs")) if os.path.isdir(os.path.join(workdir, "runs")) else [])]:
@@ -852,6 +1036,8 @@ def check_workspace(c, workdir, run=None, setup_only=False, execute=True, timeou
             if os.path.isdir(os.path.join(workdir, sub)):
                 targets += list(walk(os.path.join(workdir, sub), skip_dirs=("data",)))
         for p in targets:
+            if any(p == root or p.startswith(root + os.sep) for root in unsafe_packages):
+                continue  # Already failed inventory; never read unsafe package entries.
             if not os.path.isfile(p) or not is_text(p) or os.path.splitext(p)[1].lower() in CODE_EXT:
                 continue
             n = norm(read(p))
