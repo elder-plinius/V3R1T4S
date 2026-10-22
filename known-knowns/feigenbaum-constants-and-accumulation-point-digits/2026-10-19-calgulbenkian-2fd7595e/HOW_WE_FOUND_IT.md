@@ -1,0 +1,3 @@
+# How we found it (contributor text, unverified)
+
+An AI search agent (Gemini, working for the contributor) wrote a solver for the quartic (z = 4) Feigenbaum fixed point: a Chebyshev collocation in the variable x^4, solved by Newton iteration with most of the work in double precision and the residuals evaluated in high-precision MPFR arithmetic. It solved the system at two resolutions, 1070 and 1100 coefficients (2.8 percent apart), and compared the two answers. The first run agreed to 936 decimals; a second script then ran more refinement steps and raised the agreement to the 1085 and 1082 decimals claimed. The file with all coefficients is the object. The command lines are not recorded.

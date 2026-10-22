@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+feigenbaum-constants-and-accumulation-point-digits,z=4 alpha_4 and delta_4 (p2),alpha_4 1085 and delta_4 1082 agreeing decimals,OEIS A195102 49 digits; Thurlby 331 and 325 digits,2026-10-19T04:47:07Z,object/feigenbaum_z4_certificates.json (whole file; parts in object/),2fd7595e5467256b137eb202bfcfe1ddbae3bc843bb6df1a8b601ea40ecd1ca6

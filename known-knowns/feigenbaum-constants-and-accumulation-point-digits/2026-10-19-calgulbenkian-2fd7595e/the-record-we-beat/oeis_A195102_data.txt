@@ -1,0 +1,4 @@
+OEIS A195102 (https://oeis.org/search?q=id:A195102&fmt=json)
+name: Decimal expansion of the reduction parameter for the biquadratic solution of the Feigenbaum-Cvitanovic equation.
+offset: 1,2
+data: 1,6,9,0,3,0,2,9,7,1,4,0,5,2,4,4,8,5,3,3,4,3,7,8,0,1,5,0,3,2,4,1,6,1,3,4,8,2,2,8,2,7,8,0,5,9,7,0,9
