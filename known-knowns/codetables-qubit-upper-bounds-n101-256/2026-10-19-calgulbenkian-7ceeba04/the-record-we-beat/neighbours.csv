@@ -1,0 +1,4 @@
+rule,n,k,live_lower,live_upper,offset
+"R1: U(n,k) <= U(n,k-1), k >= 2",104,1,23,35,0
+"R2: U(n,k) <= U(n+1,k)",105,2,22,35,0
+"R3: U(n,k) <= U(n-1,k+1) + 1",103,3,21,35,1
