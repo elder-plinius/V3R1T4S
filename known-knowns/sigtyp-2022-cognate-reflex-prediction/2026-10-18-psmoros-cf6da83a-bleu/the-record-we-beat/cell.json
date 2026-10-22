@@ -1,0 +1,17 @@
+{
+ "cell": "SIGTYP 2022 surprise data, proportion 0.50, mean BLEU over the 10 surprise families (official scorer; higher is better)",
+ "bar_holder": "FeVeT (Wientzek 2025), published per-item predictions rescored with the official scorer",
+ "fevet_published_rescored": 0.5768215755932388,
+ "fevet_source": "https://github.com/TGH-2020/FeVeT at 31898c53bfffeef87265efa8a780b7be740162d1, results/predictions/reflex/FAMILY/s2s_reflex_0.50_predictions.tsv",
+ "fevet_fetched_utc": "2026-10-18T11:47:19Z-11:47:22Z (NOVELTY skeptic of B50; sha256 equal to the packaged files)",
+ "mockingbird_i1_official": 0.5337187296541888,
+ "mockingbird_i1_source": "https://raw.githubusercontent.com/sigtyp/ST2022/03094435cba4293ce0eea383036cab78499ad50d/results/results-surprise-0.50.json",
+ "mockingbird_i1_json_sha256": "3a8e79f9e686a4835f6bd0948529838b4ebb38ef2f02e05d39dfa73389a014f3",
+ "fetched_utc": "2026-10-18T11:45:21Z (NOVELTY skeptic)",
+ "status_page": "https://github.com/sigtyp/ST2022",
+ "status_page_fetched_utc": "2026-10-18T08:45:11Z",
+ "status_page_http": 200,
+ "status_page_sha256": "baad0553fa5c8bd1b35f9ffeda8cc3ca4dc27aff7f5b75d2b17bf8eae60034c6",
+ "status_head": "03094435cba4293ce0eea383036cab78499ad50d (2022-05-27T07:58:23Z)",
+ "this_object": 0.6520222200978466
+}

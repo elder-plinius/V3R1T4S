@@ -1,0 +1,12 @@
+analogist/PRIMARY          freeze 2026-10-18T02:43:13Z code_tree 882c47d5932fce92 MATCH val-0.50 files 10
+broker/PRIMARY             freeze 2026-10-18T03:14:07Z code_tree e0e12da3febeabfd MATCH val-0.50 files 10
+phylo/PRIMARY              freeze 2026-10-18T03:19:07Z code_tree 44443f3fa1ff9988 MATCH val-0.50 files 10
+analogist/SECONDARY        freeze 2026-10-18T03:23:18Z code_tree 476c111d7f481d91 MATCH val-0.50 files 10
+correspondence/PRIMARY     freeze 2026-10-18T03:40:38Z code_tree f1c806cc74906bab MATCH val-0.50 files 10
+transducer/PRIMARY         freeze 2026-10-18T03:50:45Z code_tree 6cf8824ab916832a MATCH val-0.50 files 10
+broker/SECONDARY           freeze 2026-10-18T04:00:49Z code_tree 96d1d5ea264bb4c2 MATCH val-0.50 files 10
+classifier/PRIMARY         freeze 2026-10-18T04:03:30Z code_tree 8d95d9842152c233 MATCH val-0.50 files 10
+correspondence/SECONDARY   freeze 2026-10-18T04:20:28Z code_tree 0788be8ed979d565 MATCH val-0.50 files 10
+transducer/SECONDARY       freeze 2026-10-18T04:24:24Z code_tree 1980684d029bcefd MATCH val-0.50 files 10
+classifier/SECONDARY       freeze 2026-10-18T04:36:18Z code_tree d59888c03c7bcf83 MATCH val-0.50 files 10
+CARRY_SETUP PASS

@@ -1,0 +1,3 @@
+{"guide": "global", "w_init": 1.0, "learn_w": 1, "a_id": 1.0, "psv_D": 0.75,
+ "gamma_multi": 1, "gamma_grid": [0.25], "gamma": 0.25, "fit_kappa": 2.0, "jk": 1, "cv_rho": 0.3,
+ "mix": 1.0, "psv_rel": "learn", "pool_fb": 0, "nbest": 20, "mbr": 1, "mbr_temp": 3.0}
