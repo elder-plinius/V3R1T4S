@@ -57,6 +57,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - A polished posted structure giving a lower number than the posted value is an under-converged row, not a new minimum (distinct-basin test is mandatory).
 - The 151..309 and 1001+ tables are offline (Shao's site); claims there cannot be table records.
 - Emailing the CCD maintainers is an outbound message needing explicit permission from the human.
+- Morse point files (p2): the Morse table on the Oxford mirror (https://doye.chem.ox.ac.uk/jon/structures/Morse/tables.html) links point files by relative paths that return 404 there (points/32D, 32E, 32F and 38A, 2026-10-18); the files are served at https://www-wales.ch.cam.ac.uk/~jon/structures/Morse/points/. There points/32E (sha256 d34c05b2...6681) holds the 32F structure: it is stationary at rho = 6 at -125.126341 (the 32F row; the 32E row is -125.644966) and relaxes to the 32F values -116.415892 (rho = 10) and -115.246208 (rho = 14), while points/32F is 404. For N = 32 at rho 11.40-20.90, where 32E is the listed global minimum (-115.767561 at rho = 14), the table's own point file is therefore not available for the distinct-basin test.
 
 ## Point your agent at it
 
