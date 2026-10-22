@@ -1,0 +1,28 @@
+# Criterion report: sortnet-n57-s458-d20
+
+context: Claude Code subagent, fresh context [claude-sonnet-5-5]
+
+Method. I read the package and wrote my own checker, a C++ program that proves sorting exactly by reachable-set propagation: it keeps, for each group of wires that no comparator has yet joined, the exact set of 0-1 vectors reachable at those wires (groups are independent, so the set for a joined group is the comparator applied to the product of the two sets), and at the end requires the set to be exactly the n+1 sorted vectors. This is a complete method (no sampling). Calibration: it passes the listed networks N38 (250, 17), N38 (254, 16) and N51 (389, 20) from the live table, reproducing their sizes and greedy depths, and a negative control (the listed N38 network with one comparator deleted) is correctly reported as not sorting. I fetched the live table once: https://bertdobbelaere.github.io/sorting_networks_extended.html (2026-10-19T05:32:58Z, HTTP 200, sha256 5515e5d7862caaf31058225ff215850c1987704f6bcd9b5920590e2478d41a53, same hash as in the-record-we-beat/README.md; page says updated Oct 13 2026), and parsed all 122 networks on it (sizes and greedy depths all match their labels). The open pull requests in a snapshot of all V3R1T4S pull requests (fetched 2026-10-19T04:30:31Z, used instead of the API pages) contain no sorting-network submission; PR #393 is a bank-values note, not a network. My outputs are not shipped in this package.
+
+Win text, literally. Target sorting-network-size-records. The success criterion covers 13 <= n <= 32, so n = 57 cannot satisfy the main criterion. The enumerated partial win claimed is p1: 'A Pareto (size, depth) improvement for some n in 33..64 on Dobbelaere's extended table at verification time, verified exhaustively by the 0-1 principle (bit-sliced over 2^n inputs, or by an exact prefix/output-set method the skeptic re-runs).'
+
+Clauses:
+1. n in 33..64: MET (n = 57).
+2. Comparators (i, j) with i < j < n, min to the lower wire: MET (checked while parsing).
+3. Sorts all 2^57 binary inputs, exactly: MET. My run: n=57 comparators=458 depth(greedy ASAP)=20 connected=1 final_distinct_outputs=58 (all sorted: 1, expected 58) max_set=8830665 max_product=9267269; RESULT: SORTS.
+4. Size and greedy depth as claimed (458, 20): MET (size 458; ASAP layering depth 20, from the same run).
+5. Listed pairs for n = 57 on the live page: [(454, 21), (461, 20)]. The new pair (458, 20) is not dominated by any of them (no listed pair has both size <= 458 and depth <= 20), and it dominates the pair (461, 20) (same depth, three comparators fewer).
+6. 'Pareto improvement': MET in the sense that the new pair is non-dominated and itself dominates a listed pair, so the table's Pareto front for n = 57 would change. It does not improve the smallest size or the smallest depth of the row.
+7. Not implied by propagation (maintainer ruling on PR #350): MET for the reductions I tried. I took every listed network with n' > n (up to 64 channels) and applied wire-fixing reductions: all splits of n' - n deletions into top wires fixed to 0 and bottom wires fixed to 1, plus every choice of any wire and either value for up to two deletions (with untangling to standard form; I checked that reduced networks sort), then removed comparators that never act on the reachable set. Candidate count line from my run: 'n 57 claimed (458, 20) candidate reductions (size<=claimed+2, depth<=claimed+1): 599'; all verified as sorters. Result: reductions with size<= claimed and depth<= claimed: [] closest reduction after pruning: size 457, depth 21 (from the listed network for n = 58 with size 465, depth 21). So no reduction I generated equals or dominates the claimed pair. Not tried: three or more general (non top/bottom) deletions, removal of comparators that act but are dispensable, and any rule not about wire deletion; the claim cannot be called propagation-proof beyond those.
+8. Object is a different network, not a pruned listed one: the most similar listed network at this n shares fewer than all of its comparators, and the object is not a sub-list of any listed network of the same n.
+
+Hidden quantifiers and null models. The main criterion's range (13..32) excludes n = 57; only p1 applies, and its phrase 'Pareto improvement' is read as a new non-dominated pair that dominates a listed pair. Verification time is fixed to the page I fetched; I cannot see later updates (novelty role).
+
+Open questions in the claim record (not shipped) that concern this role.
+- Is a non-dominated pair that matches one listed coordinate while improving the other a p1 improvement? Answer: yes. It is non-dominated, dominates a listed pair, and extends the Pareto front; criterion (c) for the main target uses the same non-domination test.
+- Is the triage's propagation test sufficient? Answer: my own, independent test (above) agrees with its conclusion within the limits listed; it is not a proof against every possible derivation.
+- Is the Oct 13 2026 table state the one to compare with? Answer: it is the state I fetched; I saw no newer state.
+
+confirmed_scope: A standard-form network on 57 channels with 458 comparators and greedy depth 20 that sorts all 2^57 binary inputs (proved by exact reachable-set propagation), whose pair (458, 20) is non-dominated by the pairs [(454, 21), (461, 20)] on the Oct 13 2026 table and dominates the listed pair (461, 20), and is not obtained by the wire-deletion reductions I tried; this is the partial win p1 only, outside the 13..32 range of the main criterion.
+
+pass: true
