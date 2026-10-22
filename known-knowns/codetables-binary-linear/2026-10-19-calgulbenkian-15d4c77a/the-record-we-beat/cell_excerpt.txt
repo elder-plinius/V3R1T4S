@@ -1,0 +1,7 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=8&n=67&k=5 (fetched 2026-10-19T04:35:44Z, HTTP 200, page sha256 fe307b0a8236ee9bf99090c81052f9423778bbcd056fd79328ca71fa3ff7ec38)
+Bounds on linear codes [67,5] over GF(8): lower bound 54, upper bound 56
+Table lines about this cell (copied from the page):
+Lb(67,5) = 53 is found by shortening of:
+Lb(68,6) = 53 is found by truncation of:
+Lb(73,6) = 58 DaH
+Ub(67,5) = 56 follows by the Griesmer bound.

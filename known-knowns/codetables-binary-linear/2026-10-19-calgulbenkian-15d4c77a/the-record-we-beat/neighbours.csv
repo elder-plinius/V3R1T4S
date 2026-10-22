@@ -1,0 +1,5 @@
+rule,q,n,k,lower,upper,offset,url,fetched_utc,http,sha256
+"shorten: [n,k,d] gives [n-1,k-1,d]",8,66,4,56,56,0,http://www.codetables.de/BKLC/BKLC.php?q=8&n=66&k=4,2026-10-19T04:37:33Z,200,2f574c7389c265dd667feb0cf86368fb7bc4d01c9a90a5300e73e591b5ce19cb
+"puncture: [n,k,d] gives [n-1,k,d-1]",8,66,5,53,55,1,http://www.codetables.de/BKLC/BKLC.php?q=8&n=66&k=5,2026-10-19T04:37:35Z,200,db499fdc2f23e7733b9d8ea4ab9f4bdda21f58157ca3666ad33b91e679a8ab1b
+"subcode: [n,k,d] gives [n,k-1,>=d]",8,67,4,56,56,0,http://www.codetables.de/BKLC/BKLC.php?q=8&n=67&k=4,2026-10-19T04:37:36Z,200,5e7789fe755bf5da2c9bd87c45305f7d9a24bb2673c0e626a665bf8ff4483a68
+"pad with a zero column: [n,k,d] gives [n+1,k,>=d]",8,68,5,55,56,0,http://www.codetables.de/BKLC/BKLC.php?q=8&n=68&k=5,2026-10-19T04:37:38Z,200,0aae8d5984d0ecc7cbde1e1bfd7b9a2b122c5eba6a6cf458f50b6bbdcb102608
