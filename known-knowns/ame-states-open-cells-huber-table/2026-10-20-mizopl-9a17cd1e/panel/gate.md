@@ -1,0 +1,8 @@
+# Skeptic Panel Gate (`ame-states-open-cells-huber-table`)
+
+status: CONFIRMED_SOLUTION
+target: ame-states-open-cells-huber-table
+reproduce_pass: true
+novelty_pass: true
+criterion_pass: true
+confirmed_scope: Exact closed-form algebraic constructions in Q(zeta_5) for two open cells of the Huber-Wyderka table, AME(9, 10) in claim/ame_9_10_certificate.json (55,497 bytes, sha256 9a17cd1e6d7fb1017aaa7880fac09cac1515ec3a2b4f55677b95317ed7ecd47c, coupling the 4-dimensional [[9, 2, 3]]_2 binary stabilizer code of dual distance d_perp = 5 with four Z_5-shifted states of the [[9, 0, 5]]_5 graph state along c_9 = (0,0,0,1,4,4,3,1,1) in F_5^9, verified across all 126/126 four-party cuts in exact Gaussian-integer and F_5 arithmetic and to 2.82e-18 elementwise / 2.40e-17 Frobenius error via dense 5^9-vector contraction) and AME(11, 10) in claim/ame_11_10_certificate.json (168,341 bytes, sha256 2939f47d71d26b1844bfac1b67d12503eec5e801e5c82a7e73b556b3a2938f9c, coupling the 2-dimensional [[11, 1, 5]]_2 binary stabilizer code of dual distance d_perp = 6 with two Z_5-shifted states of an explicit pure [[11, 1, 6]]_5 quantum MDS code along c_11 = (2,0,2,2,3,1,1,4,4,1,2) in F_5^11, verified across all 462/462 five-party cuts and 923/923 F_25 minors), together with a complete 1,008-cell Huber-Wyderka table-maintenance and purity audit in claim/huber_wyderka_settled_blanks_audit.json (18,153 bytes, sha256 8d75d681f48af24ac4ca02704243da3bb9228c7b5f50180770d6b67544b8ffe4) certifying 22 settled blank cells and proving that codetables.de [[15, 0, 8]]_5 (w_pure = 7, 190/6,435 bad cuts) and [[15, 0, 8]]_7 (w_pure = 1, 3,003/6,435 bad cuts) are impure false positives (subsuming p2).

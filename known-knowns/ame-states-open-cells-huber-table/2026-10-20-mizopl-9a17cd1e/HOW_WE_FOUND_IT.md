@@ -1,0 +1,9 @@
+# How We Found It (`contributor text, unverified`)
+
+*Note: contributor text, unverified.*
+
+1. **Purity Audit of `codetables.de` $k=0$ Bounds**: While auditing all `1,008` cells of the live Huber–Wyderka table against `codetables.de`, we discovered that two $k=0$ codes with listed distance $d = \lfloor n/2 \rfloor + 1 = 8$ — namely `[[15, 0, 8]]_5` and `[[15, 0, 8]]_7` — are **impure** ($w_{\text{pure}} = 7$ and $w_{\text{pure}} = 1$, failing on `190` and `3,003` of the `6,435` seven-party cuts), correcting an error in Fig. 1 of `arXiv:2609.11796`.
+2. **Stabilizer-MDS Entangled Coupling Theorem**: Observing that `arXiv:2608.01011` coupled the 2-dimensional (`r = 1`) Steane code `[[7, 1, 3]]_2` ($d^\perp = 4$) with two shifted graph states for `AME(7, 6)` and `AME(7, 10)`, we proved that any $2^r$-dimensional binary stabilizer code `[[n, r, d]]_2` with dual distance $d^\perp \ge k + 1$ can be coupled with $2^r \le q$ shifted states $Z_q(\alpha c)\lvert G_q^{(n)}\rangle$ of an $\operatorname{AME}(n, q)$ graph state whenever $\begin{pmatrix} (\Gamma_n)_{S^c, S} & c_{S^c} \end{pmatrix}$ has full rank $k + 1$ over $\mathbb{F}_q$.
+3. **Solving `AME(9, 10)` and `AME(11, 10)`**:
+   - For $n = 9, k = 4$, no `[[9, 1, d]]_2` stabilizer code has dual distance $d^\perp = 5$, but increasing the logical dimension to $r = 2$ ($2^2 = 4 < 5$) yields `[[9, 2, 3]]_2` with dual distance $d^\perp = 5$, and our search over $\mathbb{F}_5^9$ found $c_9 = (0, 0, 0, 1, 4, 4, 3, 1, 1)$ with $\det_{\mathbb{F}_5} \neq 0$ across **all `126 / 126` cuts**.
+   - For $n = 11, k = 5$, `[[11, 1, 5]]_2` has $r = 1$ and dual distance $d^\perp = 6$, and puncturing the `[12, 6, 7]_{25}` Hermitian self-dual MDS code yields a pure `[[11, 1, 6]]_5` quantum MDS code with $\Gamma_{11}$ and $c_{11} = (2, 0, 2, 2, 3, 1, 1, 4, 4, 1, 2)$ having $\det_{\mathbb{F}_5} \neq 0$ across **all `462 / 462` cuts**.
