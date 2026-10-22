@@ -1,0 +1,21 @@
+{
+  "kind": "lp_upper_bound_p2",
+  "q": 4,
+  "n": 148,
+  "k": 7,
+  "d_lo_codetables": 103,
+  "d_ub_codetables": 107,
+  "d_ub_ruled_out": 107,
+  "d_ub_new": 106,
+  "gap_closed": false,
+  "degree": 3,
+  "y_multipliers_rational": [
+    "34941/172087",
+    "12535417/912838248",
+    "75570119/77042999880"
+  ],
+  "P_at_0_rational": "258051632794969/16695880740",
+  "q_to_k_integer": "16384",
+  "P_at_0_over_q_to_k": 0.9433597408535728,
+  "max_P_on_d_to_n_rational": "-3314519539249/6629049360174780"
+}
