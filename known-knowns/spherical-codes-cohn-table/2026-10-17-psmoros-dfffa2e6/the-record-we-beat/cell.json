@@ -1,0 +1,16 @@
+{
+ "target_id": "spherical-codes-cohn-table",
+ "d": 6,
+ "N": 526,
+ "file": "object/d6_N526.txt",
+ "sha256": "dfffa2e676f24cbecc11657a119d33fd2169f06963446dbde15c10e6455c8eb8",
+ "table_cosine": "0.786636400242",
+ "table_url": "https://spherical-codes.org/plain",
+ "table_fetched_utc": "2026-10-16T05:12:04Z",
+ "index_url": "https://spherical-codes.org/",
+ "index_fetched_utc": "2026-10-16T05:12:06Z",
+ "index_row": "6 | 526 | 0.786636400242 | Ilmari Vahteristo, New spherical codes by tuning an annealing solver, preprint, 2026, arXiv:2610.19988. (no star, no 'needs more optimization')",
+ "comparison": "pre-upload table value, as the V3R1T4S maintainer asked in PR #231; the live table now lists this code itself",
+ "live_index_fetched_utc": "2026-10-17T21:47:47Z",
+ "live_index_row": "6 | 526 | 0.786427532331 | Pavlos Moros, 2026."
+}
