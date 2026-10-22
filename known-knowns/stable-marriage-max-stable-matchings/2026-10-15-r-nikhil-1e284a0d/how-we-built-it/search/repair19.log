@@ -1,0 +1,48 @@
+start pid=35567 n=19 current=896068 best=896068 wordlen=151 temp=0.005 evals=0 proposed=0 valid=0
+NEWBEST count=898548 lattice=-1 wordlen=152 evals=28 proposed=105
+NEWBEST count=898960 lattice=-1 wordlen=153 evals=427 proposed=1716
+NEWBEST count=900816 lattice=-1 wordlen=154 evals=449 proposed=1837
+checkpoint elapsed=10.0 current=871272 best=900816 wordlen=154 evals=12002 proposed=48461 valid=12002
+NEWBEST count=906486 lattice=-1 wordlen=157 evals=12978 proposed=52248
+NEWBEST count=907340 lattice=-1 wordlen=158 evals=13058 proposed=52568
+NEWBEST count=909423 lattice=-1 wordlen=158 evals=13081 proposed=52642
+NEWBEST count=909625 lattice=-1 wordlen=159 evals=13099 proposed=52725
+NEWBEST count=926269 lattice=-1 wordlen=159 evals=13118 proposed=52802
+NEWBEST count=926373 lattice=-1 wordlen=160 evals=13145 proposed=52896
+NEWBEST count=926706 lattice=-1 wordlen=161 evals=13247 proposed=53239
+NEWBEST count=928886 lattice=-1 wordlen=162 evals=13389 proposed=53803
+NEWBEST count=930047 lattice=-1 wordlen=159 evals=13786 proposed=55478
+NEWBEST count=930382 lattice=-1 wordlen=160 evals=13820 proposed=55610
+NEWBEST count=932362 lattice=-1 wordlen=161 evals=13835 proposed=55669
+NEWBEST count=935175 lattice=-1 wordlen=160 evals=14247 proposed=57330
+NEWBEST count=935279 lattice=-1 wordlen=161 evals=14289 proposed=57519
+NEWBEST count=935662 lattice=-1 wordlen=162 evals=18199 proposed=73275
+checkpoint elapsed=20.0 current=912590 best=935662 wordlen=159 evals=20967 proposed=84575 valid=20967
+checkpoint elapsed=30.0 current=894344 best=935662 wordlen=157 evals=30345 proposed=122509 valid=30345
+checkpoint elapsed=40.0 current=895848 best=935662 wordlen=157 evals=43054 proposed=174101 valid=43054
+checkpoint elapsed=50.0 current=877696 best=935662 wordlen=156 evals=56992 proposed=230771 valid=56992
+checkpoint elapsed=60.0 current=876684 best=935662 wordlen=159 evals=68406 proposed=277000 valid=68406
+checkpoint elapsed=70.0 current=860192 best=935662 wordlen=157 evals=80452 proposed=326107 valid=80452
+checkpoint elapsed=80.0 current=878964 best=935662 wordlen=157 evals=95242 proposed=385262 valid=95242
+checkpoint elapsed=90.0 current=839690 best=935662 wordlen=159 evals=108544 proposed=439455 valid=108544
+checkpoint elapsed=100.0 current=805476 best=935662 wordlen=158 evals=121786 proposed=493839 valid=121786
+checkpoint elapsed=110.0 current=812009 best=935662 wordlen=160 evals=133178 proposed=540025 valid=133178
+checkpoint elapsed=120.0 current=808698 best=935662 wordlen=159 evals=145645 proposed=591224 valid=145645
+checkpoint elapsed=130.0 current=845666 best=935662 wordlen=156 evals=162051 proposed=658085 valid=162051
+checkpoint elapsed=140.0 current=853054 best=935662 wordlen=161 evals=180093 proposed=731498 valid=180093
+checkpoint elapsed=150.0 current=796054 best=935662 wordlen=163 evals=198156 proposed=806483 valid=198156
+checkpoint elapsed=160.0 current=778993 best=935662 wordlen=159 evals=214709 proposed=874071 valid=214709
+checkpoint elapsed=170.0 current=777812 best=935662 wordlen=161 evals=231388 proposed=941909 valid=231388
+checkpoint elapsed=180.0 current=801653 best=935662 wordlen=162 evals=248147 proposed=1010877 valid=248147
+checkpoint elapsed=190.0 current=784765 best=935662 wordlen=162 evals=263199 proposed=1072628 valid=263199
+checkpoint elapsed=200.0 current=795061 best=935662 wordlen=156 evals=278766 proposed=1136693 valid=278766
+checkpoint elapsed=210.0 current=790031 best=935662 wordlen=164 evals=293552 proposed=1197322 valid=293552
+checkpoint elapsed=220.0 current=793581 best=935662 wordlen=163 evals=310414 proposed=1265498 valid=310414
+checkpoint elapsed=230.0 current=782237 best=935662 wordlen=160 evals=327014 proposed=1333231 valid=327014
+checkpoint elapsed=240.0 current=779340 best=935662 wordlen=162 evals=343032 proposed=1399124 valid=343032
+checkpoint elapsed=250.0 current=787464 best=935662 wordlen=162 evals=360399 proposed=1469768 valid=360399
+checkpoint elapsed=260.0 current=782367 best=935662 wordlen=164 evals=374320 proposed=1527501 valid=374320
+checkpoint elapsed=270.0 current=778843 best=935662 wordlen=161 evals=391219 proposed=1596628 valid=391219
+checkpoint elapsed=280.1 current=751778 best=935662 wordlen=161 evals=404511 proposed=1651968 valid=404511
+checkpoint elapsed=290.1 current=746346 best=935662 wordlen=158 evals=420502 proposed=1718174 valid=420502
+end elapsed=300.00 current=757222 best=935662 wordlen=160 evals=434108 proposed=1773546 valid=434108 delta_evals=434108 delta_proposed=1773546 delta_valid=434108
