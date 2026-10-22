@@ -1,0 +1,1 @@
+PART A PASS: 300 configs, 79201 tree paths, 148198 forced-closed sites, 58802 pair candidates, 102078 children checked
