@@ -1,9 +1,7 @@
 # C(35,5,3) <= 713 (explicit covering design), covering-designs-record
 
 ## What
-The file claim/C35_5_3_713blocks.txt (sha256 a19e372c3611962126c615fd73a79e8c023e2f7369b38aa29f12ca00e2181149) is a (35,5,3) covering design with 713 blocks, verified exhaustively over all 6545 triples, which is strictly smaller than the live coveringrepository.com plain value 732 (read honestly at 2026-10-20T16:39:42Z), the LJCR Zenodo v1.2 value 732 and the dmgordo/LJCR GitHub value 733, with no smaller (35,5,3) value found in an unauthenticated GitHub repository and arXiv search covering the last six months.
-
-(In this package the file is object/C35_5_3_713blocks.txt; it is byte-identical to the panel's claim/C35_5_3_713blocks.txt.)
+The file object/C35_5_3_713blocks.txt (sha256 a19e372c3611962126c615fd73a79e8c023e2f7369b38aa29f12ca00e2181149) is a (35,5,3) covering design with 713 blocks, verified exhaustively over all 6545 triples, which is strictly smaller than the live coveringrepository.com plain value 732 (read honestly at 2026-10-20T16:39:42Z), the LJCR Zenodo v1.2 value 732 and the dmgordo/LJCR GitHub value 733, with no smaller (35,5,3) value found in an unauthenticated GitHub repository and arXiv search covering the last six months.
 
 ## Check it yourself
 ```sh
