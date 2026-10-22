@@ -1,0 +1,9 @@
+{
+ "records": [
+  {
+   "source": "Orrick MaxDet archive (Archive-It copy of indiana.edu/~maxdet, page 3), order 117, listed as 'not proved'",
+   "value": "7.231499425E85"
+  }
+ ],
+ "note": "Values are the normalised determinant |det| / 2^(n-1). The Math-AI-Caltech CSV (fetched, sha256 below) has no row for this order."
+}
