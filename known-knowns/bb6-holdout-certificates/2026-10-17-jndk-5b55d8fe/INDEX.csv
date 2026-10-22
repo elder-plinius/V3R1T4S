@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+bb6-holdout-certificates,p1 macro-rule reduction for BB6_holdouts_663.txt line 523 (1RB1LC_1LC0RD_0LE1LA_0RF1RA_1LA0LA_---0RB),7 parametric rules proved for all parameters; 8365935/8365935 applications to 1e8 match naive simulation,undecided holdout with no accelerated rule set in the wiki/holdout notes,2026-10-17T17:10:25Z,object/rules.json,5b55d8fed05e9bcfed64305bf20e0460b9f4fb34c61f485cb5a26deca1e1d49e
