@@ -1,0 +1,2 @@
+# Contributor text, unverified
+We resumed the published 2218-word seed with its existing exact cluster-exchange engine and a fresh documented RNG seed. Direct addition and one-for-two exchanges were exhausted without progress on that seed; larger exchanges reached 2225. A 289-round local replay reproduced the same bytes. Independent checkers validate the saved object regardless of the search narrative. The separate strengthened-LP lens generated no claim in this package.

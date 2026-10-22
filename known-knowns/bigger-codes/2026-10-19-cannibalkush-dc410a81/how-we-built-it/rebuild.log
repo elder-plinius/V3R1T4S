@@ -1,0 +1,66 @@
+START cell=A(35,6,6) M0=2218 C(n,w)=1623160 C(n,t)=52360 KB=4 rmax=12 clusters=8000 max4=40000 pf=0.60 seed=202610190616 max_s=60
+  round   0: M=2218 best=2218 gain=0 applied=64 low=35716 [0:0,1:98,2:1184,3:7149] R=43486 imp=0 pla=10041
+  round   5: M=2218 best=2218 gain=0 applied=69 low=35187 [0:0,1:105,2:1150,3:6934] R=42961 imp=0 pla=11266
+  round  10: M=2218 best=2218 gain=0 applied=67 low=35486 [0:0,1:117,2:1133,3:6958] R=43268 imp=0 pla=12081
+  round  15: M=2218 best=2218 gain=0 applied=68 low=34452 [0:0,1:120,2:1107,3:6755] R=42240 imp=0 pla=12262
+  [NEW RECORD!] round 19: A(35,6,6) >= 2219 (gain=+1, low=35716, R=43491, imp=32, pla=11709)
+  round  20: M=2219 best=2219 gain=0 applied=70 low=35524 [0:0,1:107,2:1189,3:6974] R=43296 imp=0 pla=11276
+  round  25: M=2219 best=2219 gain=0 applied=70 low=35030 [0:0,1:109,2:1126,3:6790] R=42803 imp=0 pla=11599
+  round  30: M=2219 best=2219 gain=0 applied=64 low=35793 [0:0,1:114,2:1207,3:7113] R=43547 imp=0 pla=10921
+  round  35: M=2219 best=2219 gain=0 applied=64 low=35831 [0:0,1:104,2:1166,3:7088] R=43622 imp=0 pla=10714
+  round  40: M=2219 best=2219 gain=0 applied=76 low=35354 [0:0,1:113,2:1150,3:6924] R=43132 imp=0 pla=11310
+  [NEW RECORD!] round 44: A(35,6,6) >= 2220 (gain=+1, low=34590, R=42381, imp=215, pla=12071)
+  round  45: M=2220 best=2220 gain=0 applied=77 low=34226 [0:0,1:111,2:1053,3:6647] R=42029 imp=0 pla=11277
+  round  50: M=2220 best=2220 gain=0 applied=75 low=34733 [0:0,1:118,2:1120,3:6758] R=42542 imp=0 pla=11844
+  round  55: M=2220 best=2220 gain=0 applied=74 low=34432 [0:0,1:117,2:1066,3:6754] R=42242 imp=0 pla=11650
+  round  60: M=2220 best=2220 gain=0 applied=78 low=34038 [0:0,1:108,2:1079,3:6492] R=41843 imp=0 pla=11212
+  round  65: M=2220 best=2220 gain=0 applied=77 low=35143 [0:0,1:120,2:1130,3:6925] R=42939 imp=0 pla=12085
+  round  70: M=2220 best=2220 gain=0 applied=74 low=34866 [0:0,1:114,2:1125,3:6878] R=42655 imp=0 pla=11676
+  [NEW RECORD!] round 73: A(35,6,6) >= 2221 (gain=+1, low=34906, R=42688, imp=1, pla=12219)
+  round  75: M=2221 best=2221 gain=0 applied=73 low=34391 [0:0,1:114,2:1074,3:6739] R=42187 imp=0 pla=11875
+  round  80: M=2221 best=2221 gain=0 applied=70 low=34128 [0:0,1:113,2:1037,3:6660] R=41945 imp=0 pla=10745
+  round  85: M=2221 best=2221 gain=0 applied=67 low=34122 [0:0,1:103,2:1083,3:6695] R=41902 imp=0 pla=10956
+  round  90: M=2221 best=2221 gain=0 applied=65 low=35148 [0:0,1:116,2:1142,3:6989] R=42922 imp=0 pla=11025
+  round  95: M=2221 best=2221 gain=0 applied=71 low=33871 [0:0,1:108,2:1081,3:6580] R=41661 imp=0 pla=11336
+  round 100: M=2221 best=2221 gain=0 applied=67 low=35255 [0:0,1:112,2:1137,3:6961] R=43023 imp=0 pla=11033
+  round 105: M=2221 best=2221 gain=0 applied=68 low=33533 [0:0,1:110,2:1001,3:6578] R=41325 imp=0 pla=11208
+  round 110: M=2221 best=2221 gain=0 applied=73 low=35065 [0:0,1:121,2:1139,3:6943] R=42826 imp=0 pla=11830
+  round 115: M=2221 best=2221 gain=0 applied=71 low=34225 [0:0,1:113,2:1071,3:6739] R=42021 imp=0 pla=11713
+  [NEW RECORD!] round 119: A(35,6,6) >= 2222 (gain=+1, low=34450, R=42239, imp=65, pla=11775)
+  round 120: M=2222 best=2222 gain=0 applied=69 low=34038 [0:0,1:110,2:1033,3:6714] R=41840 imp=0 pla=11457
+  round 125: M=2222 best=2222 gain=0 applied=73 low=34248 [0:0,1:111,2:1116,3:6736] R=42034 imp=0 pla=11020
+  [NEW RECORD!] round 130: A(35,6,6) >= 2223 (gain=+1, low=34795, R=42580, imp=5, pla=10843)
+  round 135: M=2223 best=2223 gain=0 applied=63 low=34266 [0:0,1:97,2:1112,3:6807] R=42056 imp=0 pla=9317
+  round 140: M=2223 best=2223 gain=0 applied=66 low=33344 [0:0,1:96,2:1055,3:6512] R=41135 imp=0 pla=10008
+  round 145: M=2223 best=2223 gain=0 applied=60 low=34117 [0:0,1:97,2:1095,3:6759] R=41924 imp=0 pla=9770
+  round 150: M=2223 best=2223 gain=0 applied=67 low=33368 [0:0,1:90,2:1082,3:6514] R=41172 imp=0 pla=9846
+  round 155: M=2223 best=2223 gain=0 applied=65 low=33039 [0:0,1:100,2:1016,3:6458] R=40847 imp=0 pla=9478
+  round 160: M=2223 best=2223 gain=0 applied=62 low=33556 [0:0,1:90,2:1052,3:6628] R=41348 imp=0 pla=9504
+  round 165: M=2223 best=2223 gain=0 applied=63 low=34018 [0:0,1:100,2:1121,3:6654] R=41807 imp=0 pla=9445
+  round 170: M=2223 best=2223 gain=0 applied=67 low=33648 [0:0,1:100,2:1066,3:6590] R=41450 imp=0 pla=10557
+  round 175: M=2223 best=2223 gain=0 applied=65 low=33751 [0:0,1:94,2:1110,3:6615] R=41559 imp=0 pla=9385
+  round 180: M=2223 best=2223 gain=0 applied=62 low=33501 [0:0,1:94,2:1075,3:6586] R=41295 imp=0 pla=10158
+  [NEW RECORD!] round 182: A(35,6,6) >= 2224 (gain=+1, low=33552, R=41346, imp=1, pla=10117)
+  round 185: M=2224 best=2224 gain=0 applied=63 low=32352 [0:0,1:81,2:1008,3:6315] R=40168 imp=0 pla=8470
+  round 190: M=2224 best=2224 gain=0 applied=59 low=33351 [0:0,1:91,2:1046,3:6518] R=41175 imp=0 pla=9364
+  round 195: M=2224 best=2224 gain=0 applied=58 low=32349 [0:0,1:88,2:983,3:6228] R=40163 imp=0 pla=8521
+  round 200: M=2224 best=2224 gain=0 applied=57 low=32920 [0:0,1:94,2:1013,3:6473] R=40731 imp=0 pla=8973
+  round 205: M=2224 best=2224 gain=0 applied=57 low=32783 [0:0,1:80,2:990,3:6441] R=40578 imp=0 pla=8512
+  round 210: M=2224 best=2224 gain=0 applied=59 low=32485 [0:0,1:88,2:982,3:6244] R=40305 imp=0 pla=8650
+  round 215: M=2224 best=2224 gain=0 applied=60 low=33357 [0:0,1:89,2:1051,3:6557] R=41146 imp=0 pla=8787
+  round 220: M=2224 best=2224 gain=0 applied=59 low=32709 [0:0,1:77,2:990,3:6359] R=40530 imp=0 pla=8179
+  round 225: M=2224 best=2224 gain=0 applied=58 low=33694 [0:0,1:91,2:1066,3:6613] R=41490 imp=0 pla=8861
+  round 230: M=2224 best=2224 gain=0 applied=58 low=33114 [0:0,1:81,2:1016,3:6450] R=40923 imp=0 pla=8503
+  round 235: M=2224 best=2224 gain=0 applied=58 low=34153 [0:0,1:92,2:1104,3:6649] R=41947 imp=0 pla=8763
+  round 240: M=2224 best=2224 gain=0 applied=58 low=32762 [0:0,1:88,2:1002,3:6332] R=40589 imp=0 pla=9317
+  round 245: M=2224 best=2224 gain=0 applied=57 low=33196 [0:0,1:91,2:1032,3:6452] R=40995 imp=0 pla=9115
+  round 250: M=2224 best=2224 gain=0 applied=59 low=32559 [0:0,1:83,2:985,3:6314] R=40371 imp=0 pla=8368
+  round 255: M=2224 best=2224 gain=0 applied=59 low=32619 [0:0,1:87,2:1036,3:6242] R=40429 imp=0 pla=8657
+  round 260: M=2224 best=2224 gain=0 applied=56 low=32518 [0:0,1:87,2:993,3:6345] R=40337 imp=0 pla=8668
+  round 265: M=2224 best=2224 gain=0 applied=61 low=32786 [0:0,1:92,2:1002,3:6350] R=40603 imp=0 pla=9147
+  round 270: M=2224 best=2224 gain=0 applied=60 low=33009 [0:0,1:91,2:1018,3:6454] R=40822 imp=0 pla=8949
+  round 275: M=2224 best=2224 gain=0 applied=58 low=32398 [0:0,1:82,2:991,3:6301] R=40212 imp=0 pla=8172
+  round 280: M=2224 best=2224 gain=0 applied=59 low=33721 [0:0,1:101,2:1095,3:6605] R=41511 imp=0 pla=9164
+  round 285: M=2224 best=2224 gain=0 applied=58 low=32709 [0:0,1:83,2:998,3:6368] R=40519 imp=0 pla=8487
+  [NEW RECORD!] round 288: A(35,6,6) >= 2225 (gain=+1, low=33553, R=41349, imp=3, pla=9157)
+DONE cell=A(35,6,6) best_M=2225
