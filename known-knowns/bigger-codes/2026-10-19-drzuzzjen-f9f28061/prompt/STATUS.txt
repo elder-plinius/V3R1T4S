@@ -1,0 +1,1 @@
+Original construction purpose and budget are recorded in ../how-we-built-it/BRIEF.md, target.md and PREREG.md (exact original files). These define the approved bounded code mission; no unrelated sphere-packing charter is substituted. See repo.txt for pinned framework identity.

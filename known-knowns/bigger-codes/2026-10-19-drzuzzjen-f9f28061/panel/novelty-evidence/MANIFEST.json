@@ -1,0 +1,45 @@
+{
+  "cached_paper_bodies": [
+    {
+      "id": "2603.00174v1",
+      "url": "https://arxiv.org/html/2603.00174v1",
+      "bytes": 303156,
+      "sha256": "8d99461f7d1d081ed6c2a18342a642783db09b4ec16a93f59ad6e574abb7b829",
+      "version_revalidated_by_live_abstract": true
+    },
+    {
+      "id": "1008.1610v1",
+      "url": "https://arxiv.org/html/1008.1610v1",
+      "bytes": 197390,
+      "sha256": "09570e9ea01c6bc82ac945b9cdcd1c5212be7de96466953078b402128c4c1e16",
+      "version_revalidated_by_live_abstract": true
+    },
+    {
+      "id": "2609.35051v1",
+      "url": "https://arxiv.org/html/2609.35051v1",
+      "bytes": 1202235,
+      "sha256": "4f198ce63a12587570c5630f18a5d5b1119d4e97a190d66bb2e0ec7f361b9ed1",
+      "version_revalidated_by_live_abstract": true
+    },
+    {
+      "id": "2610.10973v1",
+      "url": "https://arxiv.org/html/2610.10973v1",
+      "bytes": 625569,
+      "sha256": "61abd61e8c4205d7e08b66b81bc4347f5c1502738980842cf5a766a16df58d11",
+      "version_revalidated_by_live_abstract": true
+    },
+    {
+      "id": "2610.11609v1",
+      "url": "https://arxiv.org/html/2610.11609v1",
+      "bytes": 72337,
+      "sha256": "e832cec72ef0cf0313d9e7daf47f4468879d2daf6e43dea5301063ec45017cab",
+      "version_revalidated_by_live_abstract": true
+    }
+  ],
+  "main_index_git_blob_match": {
+    "computed": "a9116526aef533c26eb7bfb5417bcf55a6e4fee1",
+    "tree": "a9116526aef533c26eb7bfb5417bcf55a6e4fee1",
+    "pass": true
+  },
+  "note": "Public evidence extract; private local paths omitted; numerical results and source receipt metadata unchanged."
+}

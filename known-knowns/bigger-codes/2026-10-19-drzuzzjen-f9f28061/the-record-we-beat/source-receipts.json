@@ -1,0 +1,207 @@
+{
+  "sources": [
+    {
+      "number": 1,
+      "name": "brouwer",
+      "url": "https://aeb.win.tue.nl/codes/Andw.html",
+      "status": 200,
+      "response_utc": "2026-10-19T11:22:35.492936+00:00",
+      "bytes": 127454,
+      "sha256": "13c8fdd428059d82986d63cdba9beeaf5a436464c7ec18ced8b17bf0ec6c0851",
+      "body_file": "01-brouwer.body"
+    },
+    {
+      "number": 2,
+      "name": "upstream-prs-1",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=1&sort=updated&direction=desc",
+      "status": 200,
+      "response_utc": "2026-10-19T11:22:48.962759+00:00",
+      "bytes": 2132958,
+      "sha256": "c2eae7b435e96673fbf78e7db5853e67e768a4655b8fb8fb1105fdc23d3dcf84",
+      "body_file": "02-upstream-prs-1.body"
+    },
+    {
+      "number": 3,
+      "name": "upstream-prs-2",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=2&sort=updated&direction=desc",
+      "status": 200,
+      "response_utc": "2026-10-19T11:22:59.310259+00:00",
+      "bytes": 2125641,
+      "sha256": "4b86c7b49d912f052f2cabdac6aadc7380f0d2e8b5d347650abe6ab77c6cb6a5",
+      "body_file": "03-upstream-prs-2.body"
+    },
+    {
+      "number": 4,
+      "name": "upstream-prs-3",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=3&sort=updated&direction=desc",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:00.452253+00:00",
+      "bytes": 1854882,
+      "sha256": "fbafff7175cc9bc9fb85091f9eb84d3b019ee29d91246d3ae06a1635d4b874ec",
+      "body_file": "04-upstream-prs-3.body"
+    },
+    {
+      "number": 5,
+      "name": "upstream-prs-4",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=4&sort=updated&direction=desc",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:01.558676+00:00",
+      "bytes": 1934111,
+      "sha256": "2f519f0ae18f68c5a0569eee4b95e7f754bf2c2995f0639f41da9e9a21015d62",
+      "body_file": "05-upstream-prs-4.body"
+    },
+    {
+      "number": 6,
+      "name": "upstream-prs-5",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=5&sort=updated&direction=desc",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:02.675551+00:00",
+      "bytes": 1934812,
+      "sha256": "bf454d11f745d5696c2edc53ecb8bf1cc940b9978449013ec3a9a6e1a30a666e",
+      "body_file": "06-upstream-prs-5.body"
+    },
+    {
+      "number": 7,
+      "name": "upstream-prs-6",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=all&per_page=100&page=6&sort=updated&direction=desc",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:03.633987+00:00",
+      "bytes": 927008,
+      "sha256": "6aa1f9a35c5b924fda1daf14567723fda817ba64ba8319fac9e00a2ef7b189fc",
+      "body_file": "07-upstream-prs-6.body"
+    },
+    {
+      "number": 8,
+      "name": "upstream-tree",
+      "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/git/trees/main?recursive=1",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:22.263065+00:00",
+      "bytes": 1572801,
+      "sha256": "74e28ac7f4827deaff1fef045da5fde5635ea2bb04a067f333e44c4d186375b8",
+      "body_file": "08-upstream-tree.body"
+    },
+    {
+      "number": 9,
+      "name": "echols-abs",
+      "url": "https://arxiv.org/abs/2608.13906",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:22.806006+00:00",
+      "bytes": 39274,
+      "sha256": "cc9f1406799ec21ab93ca205599958f354524ca478d2a87e1d38921088027dd9",
+      "body_file": "09-echols-abs.body"
+    },
+    {
+      "number": 10,
+      "name": "lysen-abs",
+      "url": "https://arxiv.org/abs/2607.19550",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:23.025829+00:00",
+      "bytes": 43887,
+      "sha256": "6aa83d5b31b4443688dc57e54e000d5272f744fd918b6b115f6636d5291344f1",
+      "body_file": "10-lysen-abs.body"
+    },
+    {
+      "number": 11,
+      "name": "upstream-index",
+      "url": "https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/known-knowns/bigger-codes/INDEX.csv",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:45.219938+00:00",
+      "bytes": 7579,
+      "sha256": "e7ed745ea3299877231732acb040b97d5e7953c04ef7a76f228856d3b92e2ff7",
+      "body_file": "11-upstream-index.body"
+    },
+    {
+      "number": 12,
+      "name": "echols-html",
+      "url": "https://arxiv.org/html/2608.13906v1",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:45.426316+00:00",
+      "bytes": 226322,
+      "sha256": "57b3e5fd6679385eb244a7a1171631204b0aa48cc61c68a37d6421ec2fe742a4",
+      "body_file": "12-echols-html.body"
+    },
+    {
+      "number": 13,
+      "name": "lysen-html",
+      "url": "https://arxiv.org/html/2607.19550v1",
+      "status": 200,
+      "response_utc": "2026-10-19T11:23:45.597830+00:00",
+      "bytes": 149273,
+      "sha256": "138e693dab62b9ce51829de318209faa0986ba167778ebbe5d2b9aa259cd190c",
+      "body_file": "13-lysen-html.body"
+    },
+    {
+      "number": 14,
+      "name": "rosin-abs",
+      "url": "https://arxiv.org/abs/2603.00174",
+      "status": 200,
+      "response_utc": "2026-10-19T11:26:52.578928+00:00",
+      "bytes": 40123,
+      "sha256": "1e66da3a946247d00e3cd33497d108c47014108ab4ab0e44b475824eef4203d6",
+      "body_file": "14-rosin-abs.body"
+    },
+    {
+      "number": 15,
+      "name": "propagation-abs",
+      "url": "https://arxiv.org/abs/1008.1610",
+      "status": 200,
+      "response_utc": "2026-10-19T11:26:53.494611+00:00",
+      "bytes": 40448,
+      "sha256": "3d26bb4254b72942f9a57d04af95ac732f06a9a97711bf488cb10a4db96ff0d0",
+      "body_file": "15-propagation-abs.body"
+    },
+    {
+      "number": 16,
+      "name": "yang-abs",
+      "url": "https://arxiv.org/abs/2609.35051",
+      "status": 200,
+      "response_utc": "2026-10-19T11:27:47.026671+00:00",
+      "bytes": 45098,
+      "sha256": "d4458556ab8b83608bcea941a33a7b410f6054550dfe61adc0b423102cb5832c",
+      "body_file": "16-yang-abs.body"
+    },
+    {
+      "number": 17,
+      "name": "invariant-abs",
+      "url": "https://arxiv.org/abs/2610.10973",
+      "status": 200,
+      "response_utc": "2026-10-19T11:27:47.236854+00:00",
+      "bytes": 42157,
+      "sha256": "0d45a4971e5c9cf1daa01c29174802690bdc523316416020529184f3e2229f0e",
+      "body_file": "17-invariant-abs.body"
+    },
+    {
+      "number": 18,
+      "name": "binary-lower-abs",
+      "url": "https://arxiv.org/abs/2610.11609",
+      "status": 200,
+      "response_utc": "2026-10-19T11:27:47.462767+00:00",
+      "bytes": 43476,
+      "sha256": "4e6fefc1ca07acdf9ebf90d9e501d2f17f9d3847b524a6ab1ce7908c7c15ca23",
+      "body_file": "18-binary-lower-abs.body"
+    },
+    {
+      "number": 19,
+      "name": "neighbor-A26_6_12",
+      "url": "https://aeb.win.tue.nl/codes/cwc/d6/a26.6.12.14854H",
+      "status": 200,
+      "response_utc": "2026-10-19T11:28:20.822706+00:00",
+      "bytes": 118841,
+      "sha256": "cde1edf846a27f1eb3d65aab7df65f0759ff0707b00b309b3b025fd2037b0e97",
+      "body_file": "19-neighbor-A26_6_12.body"
+    },
+    {
+      "number": 20,
+      "name": "neighbor-A27_6_11",
+      "url": "https://aeb.win.tue.nl/codes/cwc/d6/a27.6.11.19344H",
+      "status": 403,
+      "response_utc": "2026-10-19T11:28:21.353363+00:00",
+      "bytes": 795,
+      "sha256": "57559551c35735c4acd1ede5a7d3df31a3f9b55acc087fdbb0811813b13d63d3",
+      "body_file": "20-neighbor-A27_6_11.body"
+    }
+  ],
+  "review_report_sha256": "4685be451e8ddaa93e2ee3a53d350d5f34c06c5933f19c01b88468615eb9c087",
+  "source_ledger_sha256": "638090dd8edb81a422abb7eb403c54c4035469e00194c086fe56e682c00244fd",
+  "comparison_status": "bounded-only; read intact novelty report"
+}

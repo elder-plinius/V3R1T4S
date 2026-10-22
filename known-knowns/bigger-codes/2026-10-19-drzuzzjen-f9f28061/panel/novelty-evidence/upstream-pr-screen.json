@@ -1,0 +1,298 @@
+[
+  {
+    "number": 507,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(35,6,6) >= 2225 (+7)",
+    "head_sha": "698c61d908f9f5a6fe23329fccc3478686d8c7bd",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/507"
+  },
+  {
+    "number": 456,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(36,12,12) <= 3613 (Delsarte LP; table-implied 4275)",
+    "head_sha": "18f82835ff0ecae4181d5cdff1009def900bf89f",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/456"
+  },
+  {
+    "number": 441,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(35,6,6) >= 2218 (table 2217)",
+    "head_sha": "1d90d76f7c9ec29b50ba091078422b1c82008486",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/441"
+  },
+  {
+    "number": 455,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(35,14,14) <= 837 (Delsarte LP; table-implied 1143)",
+    "head_sha": "fad056289159d882015059d5cdc79c3f94f2d9f4",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/455"
+  },
+  {
+    "number": 454,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(35,12,12) <= 2777 (Delsarte LP; table-implied 3161)",
+    "head_sha": "804ea53914faa5a060002e7342623b0b60707ca0",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/454"
+  },
+  {
+    "number": 453,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(33,14,14) <= 348 (Delsarte LP; table-implied 404)",
+    "head_sha": "89a04d67abbc72401fe085ebcd2ce0dce64227fd",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/453"
+  },
+  {
+    "number": 452,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(29,6,14) <= 322266 (Delsarte LP; table-implied 328162)",
+    "head_sha": "d20d39624c98d87354c9d60e8a65a6a2f20dee47",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/452"
+  },
+  {
+    "number": 451,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(29,6,13) <= 289604 (Delsarte LP; table-implied 297646)",
+    "head_sha": "9487b6940e1940ebc440e1a500c8079e66164aca",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/451"
+  },
+  {
+    "number": 450,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(29,6,12) <= 228441 (Delsarte LP; table-implied 242434)",
+    "head_sha": "084ffc40a36ca9664bfadea14c46d0ea4880f10e",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/450"
+  },
+  {
+    "number": 449,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes (p2): A(29,6,11) <= 164749 (Delsarte LP; table-implied 167926)",
+    "head_sha": "22f54dba2ddea67256859804111fdf7ce578ae61",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/449"
+  },
+  {
+    "number": 448,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(56,8,7) >= 4691 (table 4685)",
+    "head_sha": "bac0012417d541dfb017ff2c4dc53ec623a48c78",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/448"
+  },
+  {
+    "number": 447,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(55,8,7) >= 4432 (table 4426)",
+    "head_sha": "b960d40eedd0173b5dc46ca66c2e3fa1ab9bc752",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/447"
+  },
+  {
+    "number": 446,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(54,8,7) >= 4205 (table 4193)",
+    "head_sha": "5e0efe79a74a59d60cd0db7f82d49358d5e32c90",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/446"
+  },
+  {
+    "number": 445,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(53,8,7) >= 3992 (table 3987)",
+    "head_sha": "fce03544f40798f095db682493df2bc879dc2fdf",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/445"
+  },
+  {
+    "number": 444,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(52,8,7) >= 3802 (table 3799)",
+    "head_sha": "ca105a0bcc79c948686e9bb67bf78fd56c8d7eb5",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/444"
+  },
+  {
+    "number": 443,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(51,6,6) >= 11187 (table 11184)",
+    "head_sha": "e252e03694c9781b1d45b9737ed0159d9077a4ee",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/443"
+  },
+  {
+    "number": 442,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(45,8,7) >= 1913 (table 1907)",
+    "head_sha": "1c1800c05befe68cb1b9aa439cc95d716615337c",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/442"
+  },
+  {
+    "number": 440,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(28,8,11) >= 3802 (table 3785)",
+    "head_sha": "16b68eb7907be56d471bd728b4e50a5a69d25071",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/440"
+  },
+  {
+    "number": 439,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(27,8,11) >= 2422 (table 2421)",
+    "head_sha": "b7f00296547975568918459893b1f83ced595e07",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/439"
+  },
+  {
+    "number": 438,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(27,8,10) >= 1740 (table 1737)",
+    "head_sha": "58e60039e22fc64126896cca03f7f7329a2f311f",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/438"
+  },
+  {
+    "number": 437,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(25,6,11) >= 8720 (table 8718)",
+    "head_sha": "a458b26c0836125cea54f7e327be110631421d46",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/437"
+  },
+  {
+    "number": 393,
+    "state": "open",
+    "merged_at": null,
+    "title": "bank: live values as of 2026-10-18 (kissing numbers, constant-weight codes, snake-in-the-box, MTC3, CryptoCellar, covering designs)",
+    "head_sha": "bfc275fa6e3c427a2cc0816b489b72ea79b9e25b",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/393"
+  },
+  {
+    "number": 351,
+    "state": "open",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(31,10,7) <= 106 (Delsarte LP certificate, partial win)",
+    "head_sha": "c4b86fb75401363041b913dd57ac93af7ffd9b4c",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/351"
+  },
+  {
+    "number": 9,
+    "state": "open",
+    "merged_at": null,
+    "title": "fix: validate verifier control verdicts and release inventory",
+    "head_sha": "3f5897d02c88878e8cb4e04f2ce6d7f281d5bfca",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/9"
+  },
+  {
+    "number": 350,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(34,10,8) <= 618 (Delsarte LP certificate, partial win)",
+    "head_sha": "12d0c5f8ceac0d7036394ab6f067fa0b11c4efaf",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/350"
+  },
+  {
+    "number": 352,
+    "state": "closed",
+    "merged_at": "2026-10-17T16:12:01Z",
+    "title": "[claim] constant-weight-codes: A(26,6,9) >= 5997 (+11)",
+    "head_sha": "7a90fdea8202ed399cf646ba7975222b27d00326",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/352"
+  },
+  {
+    "number": 349,
+    "state": "closed",
+    "merged_at": "2026-10-17T16:11:54Z",
+    "title": "[claim] constant-weight-codes: A(33,10,7) <= 145 (Delsarte LP certificate, partial win)",
+    "head_sha": "4a4d76b051405bc44233680dd87bc3cd430c2d77",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/349"
+  },
+  {
+    "number": 348,
+    "state": "closed",
+    "merged_at": "2026-10-17T16:11:49Z",
+    "title": "[claim] constant-weight-codes: A(32,10,7) <= 131 (Delsarte LP certificate, partial win)",
+    "head_sha": "617335b899a0ff3906aa2a909b6954fa6863e9dd",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/348"
+  },
+  {
+    "number": 28,
+    "state": "closed",
+    "merged_at": "2026-10-15T18:03:26Z",
+    "title": "[claim] constant-weight-codes: A(27,6,10) \u2265 13026 (+39) \u2014 Freelsgood",
+    "head_sha": "b139a28ec67c0f0a947bc8e26705dff36bb87cba",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/28"
+  },
+  {
+    "number": 52,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(54, 8, 7) >= 4204 (beats 4193 by +11, Andw.html 4173 by +31)",
+    "head_sha": "2aaee7f6db50ba13ba8991e5bac7297f8f184946",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/52"
+  },
+  {
+    "number": 53,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(56, 8, 7) >= 4691 (beats 4685 by +6, Andw.html 4674 by +17)",
+    "head_sha": "9760d0cf93a6f3d60779d765a3e04c6e72ddc0da",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/53"
+  },
+  {
+    "number": 54,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(53, 8, 7) >= 3992 (beats 3987 by +5, Andw.html 3980 by +12)",
+    "head_sha": "d6e56087a01ceafa9ad085b1eddb8e5a1f71d01a",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/54"
+  },
+  {
+    "number": 55,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(55, 8, 7) >= 4431 (beats 4426 by +5, Andw.html 4417 by +14)",
+    "head_sha": "ae22237c90fc291781c5eee10db6faac664bde40",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/55"
+  },
+  {
+    "number": 56,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(52, 8, 7) >= 3802 (beats 3799 by +3, Andw.html 3797 by +5)",
+    "head_sha": "ccdb02744752827cb0ab3e375f88b35f7b730471",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/56"
+  },
+  {
+    "number": 57,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(27, 8, 10) >= 1740 (beats 1737 by +3, Andw.html 1728 by +12)",
+    "head_sha": "b2d2a51a0670d60c599a004f1f75e371585d031f",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/57"
+  },
+  {
+    "number": 58,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(45, 8, 7) >= 1910 (beats 1907 by +3, Andw.html 1904 by +6)",
+    "head_sha": "7ce0d0ebcf54d7f6a50dcbbdb554baede437ad7b",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/58"
+  },
+  {
+    "number": 59,
+    "state": "closed",
+    "merged_at": null,
+    "title": "[claim] constant-weight-codes: A(35, 6, 6) >= 2218 (beats 2217 by +1, Andw.html 2209 by +9)",
+    "head_sha": "25be36e17aefd7ba3cb4709e291d45ea112c7927",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/59"
+  }
+]

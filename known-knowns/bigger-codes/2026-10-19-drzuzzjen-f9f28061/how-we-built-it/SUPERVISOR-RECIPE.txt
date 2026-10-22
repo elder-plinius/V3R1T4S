@@ -1,0 +1,7 @@
+Historical launch configuration, reviewed derivative; not an executable script.
+Original launch_K.sh and jobs_K.json remain in the private acquisition archive with original Git blob/SHA256 identities. Absolute machine paths are removed from this review bundle.
+Supervisor parameters: mem-gib8, job-rss-gib4, sys-floor-gib12, checkpoint-min1, threads-cap4, deadline-utc2026-10-19T11:06:19Z. Original separate pte-eval supervisor and Windows job-object wrapper versions must be supplied if exact supervision is to be rebuilt. Jobs were sequential, one at a time. Historical deadlines are expired: this file does not authorize or start new jobs.
+Original jobs also use seed_8698.npy for retained-seed-fraction provenance. This additional provenance seed is not currently supplied and must not be confused with the acquired input_8732.npy that starts the engine.
+The engine arguments and original preregistered deviations are retained elsewhere. No launch script was executed.
+
+In jobs_K.portable-review.json, cwd is normalised to dot relative to the historical caller workspace. This is a review derivative, not an assertion that the archived job paths are runnable in the curated layout.

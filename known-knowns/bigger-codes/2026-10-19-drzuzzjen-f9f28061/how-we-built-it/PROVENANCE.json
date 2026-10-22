@@ -1,0 +1,118 @@
+{
+  "files": [
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/INDEX.md",
+      "destination": "how-we-built-it/INDEX.md",
+      "sha256": "110df4b4a1a8b6549f94c3b86a7d8f465833f6ef13416784bf0f5514c9382b4c",
+      "git_blob": "73a4b341eba1ec0700565de32d78df2fe71a3242",
+      "bytes": 6428,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/owner_recheck/code/cwcheck_int.py",
+      "destination": "how-we-built-it/attempts/owner_recheck/code/cwcheck_int.py",
+      "sha256": "3b4840b7c213daa721c5e9e7f8018f563e48f099c2e3436fa799ad0f494d34b8",
+      "git_blob": "fa5950d4c8a527be53bcd37b792153a8c75a19b0",
+      "bytes": 2666,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/owner_recheck/code/cwcheck_set.py",
+      "destination": "how-we-built-it/attempts/owner_recheck/code/cwcheck_set.py",
+      "sha256": "7160f9b4fc252b34a0d1e0f3e56c06dc4e4475e7d20d2b6f972e3c318526e028",
+      "git_blob": "2e5b2e846a2f23dfece0e757e229af8cf8a083e3",
+      "bytes": 2693,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/engine/gslib.py",
+      "destination": "how-we-built-it/attempts/seeds/code/engine/gslib.py",
+      "sha256": "56603baad2b6d993d451b18f1995fde0b9afa8d1bb0a6be0260372f040d962ac",
+      "git_blob": "289d3e16e1f028773c2a3c2cb2d0e69e7f23e5a4",
+      "bytes": 8092,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/engine/lb_lns_gen.py",
+      "destination": "how-we-built-it/attempts/seeds/code/engine/lb_lns_gen.py",
+      "sha256": "abf23696f619face9cfd911c6e47970a126471af5e4db12d48393cf58fe4364a",
+      "git_blob": "98f45efbb66514a97a2397b100406ef7e5f30def",
+      "bytes": 15349,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/engine/lns6.py",
+      "destination": "how-we-built-it/attempts/seeds/code/engine/lns6.py",
+      "sha256": "66f9a7465748ed17f1ba0bc6186f6fa1f788b73d2b26c2bf783cc1f8f1704617",
+      "git_blob": "bc9d4d3b12f09e67f7ab0ed383aeb6cbf6820d76",
+      "bytes": 7899,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/post_check.py",
+      "destination": "how-we-built-it/attempts/seeds/code/post_check.py",
+      "sha256": "fa563fea64ae503319e86ac7966ff43891d4c1e839d5dd6a29654547961a36a1",
+      "git_blob": "3506cc28c239a16497eca0936065c562384a49e5",
+      "bytes": 2891,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/output/input_8732.npy",
+      "destination": "how-we-built-it/attempts/seeds/output/input_8732.npy",
+      "sha256": "0f9c84b89764187cd6780bf7fe234b8de08d7f48e5156d157ca2b3145b2c4868",
+      "git_blob": "df9550f590ee31adcd0b04f7037a16eee02feaa2",
+      "bytes": 69984,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/owner_recheck/code/cwio.py",
+      "destination": "how-we-built-it/attempts/owner_recheck/code/cwio.py",
+      "sha256": "4fb218c9ad0eea782059de6b70a4eba00c70f2d28576df0608452aee264a812b",
+      "git_blob": "aabd9a097a455f73241bd6bbebf6f32059454a0d",
+      "bytes": 2311,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/jobs_K.json",
+      "destination": "how-we-built-it/attempts/seeds/code/jobs_K.json",
+      "sha256": "978dea58dcc19e60caf55bed562a896e983be62479af517d1decde7a5993704c",
+      "git_blob": "3afcd34db0a79f8ebfb079bd318896c879c67864",
+      "bytes": 5169,
+      "Publisher_verified_SHA256_and_git_blob": true
+    },
+    {
+      "source_commit": "b7fbd25dde5b5d9b181d76341296555b938e7308",
+      "source_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/launch_K.sh",
+      "destination": "how-we-built-it/attempts/seeds/code/launch_K.sh",
+      "sha256": "9136aa6427290648c0127303003569a027b759710e68c1addbe8a55dd7eff24f",
+      "git_blob": "9f5be2770778500e137c022e1a5b21021f6aad8b",
+      "bytes": 787,
+      "Publisher_verified_SHA256_and_git_blob": true
+    }
+  ],
+  "engine_licence_reference": "Existing AGPL-3.0 notice from byte-identical public source. Exact source acquired from stageK, not replaced from older result. Wrapper/checker authorship and notices still require confirmation.",
+  "derived_files": [
+    {
+      "original_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/jobs_K.json",
+      "original_sha256": "978dea58dcc19e60caf55bed562a896e983be62479af517d1decde7a5993704c",
+      "derivative": "how-we-built-it/attempts/seeds/code/jobs_K.portable-review.json",
+      "change": "Machine-specific launch paths replaced by relative cwd dot / non-executable historical recipe; raw original privately preserved."
+    },
+    {
+      "original_git_path": "briefs/windows-selection-20261017/cwc-k-2026-10-19-0953/attempts/seeds/code/launch_K.sh",
+      "original_sha256": "9136aa6427290648c0127303003569a027b759710e68c1addbe8a55dd7eff24f",
+      "derivative": "how-we-built-it/SUPERVISOR-RECIPE.txt",
+      "change": "Machine-specific launch paths replaced by relative cwd dot / non-executable historical recipe; raw original privately preserved."
+    }
+  ]
+}

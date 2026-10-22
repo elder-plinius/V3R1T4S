@@ -1,0 +1,41 @@
+{
+  "source_sha256": "f9f280613ee2a5c500220a9f022d35d83264a14f96d940c9a517a15cebdf6fde",
+  "controls": {
+    "valid": {
+      "ok": true,
+      "minimum": 6,
+      "pairs": 3,
+      "count": 3
+    },
+    "duplicate": {
+      "ok": false,
+      "reason": "duplicate"
+    },
+    "weight": {
+      "ok": false,
+      "reason": "weight"
+    },
+    "distance": {
+      "ok": false,
+      "reason": "distance",
+      "distance": 2
+    },
+    "format": {
+      "ok": false,
+      "reason": "format"
+    },
+    "count": {
+      "ok": false,
+      "reason": "count"
+    }
+  },
+  "result": {
+    "ok": true,
+    "minimum": 6,
+    "pairs": 38137011,
+    "count": 8734
+  },
+  "wall_seconds": 2.3991287919925526,
+  "max_rss_bytes": 22560768,
+  "threads": 1
+}

@@ -1,0 +1,7 @@
+# Windows installed-now versions printed19Oct2026 12:15UTC after engines stopped.
+# NOT proof of stageK imports. Python3.12.6 observed; original K package versions not captured.
+# Verification of the explicit object requires only Python3.10+ standard library, no packages.
+numpy==2.5.4
+numba==0.68.0
+llvmlite==0.50.0
+psutil==7.2.2
