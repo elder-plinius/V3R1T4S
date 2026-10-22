@@ -1,0 +1,5 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+immrep22-tcr-epitope-microauc,17-epitope/_Average_MicroAUC_and_Rank,0.882173_MicroAUC_2.859120_Rank,0.847347_MicroAUC_3.284289_Rank,2026-10-19T17:58:01Z,object/clss_tcr_stats.txt,3c17d9f39dc9b72c93441d4cc5d4b9fae9d986fe09f8abf3b27fe971d0212090
+immrep22-tcr-epitope-microauc,SPRWYFYYL/MicroAUC_p1,0.877874,0.837823,2026-10-19T17:58:01Z,object/clss_tcr_scores/SPRWYFYYL.txt,3313dcb9c20f839a32a16cfc4a2633e89137354f26501c18e0ea92966093f23c
+immrep22-tcr-epitope-microauc,testSet_Global/Average_Rank_p2,2.859120,3.284289,2026-10-19T17:58:35Z,object/clss_tcr_scores/testSet_Global.txt,7b67dfa02719ef08e73884a6f451356b586875575a11af393c915e1665827177
+immrep22-tcr-epitope-microauc,17-epitope/p3_and_levenshtein_audit,0.868783_min_lev_ge_2,0.831030_tcrexab_min_lev_ge_2,2026-10-19T17:58:01Z,object/immrep22_audit_manifest.json,84eaaa159f0f802d4080c1b2de2fc7a42edab71a0f7a56ca14f505413d4d2c9b
