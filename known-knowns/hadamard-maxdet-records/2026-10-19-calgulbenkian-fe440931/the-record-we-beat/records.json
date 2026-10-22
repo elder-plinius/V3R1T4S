@@ -1,0 +1,13 @@
+{
+ "records": [
+  {
+   "source": "Orrick MaxDet archive (Archive-It copy of indiana.edu/~maxdet, page 3), order 109, listed as 'not proved'",
+   "value": "1.877483842E78"
+  },
+  {
+   "source": "merged V3R1T4S package (PR #155, known-knowns 0108345c)",
+   "value": "2119202655125403624550373680790052808829003860176536932438843923020304438454497"
+  }
+ ],
+ "note": "Values are the normalised determinant |det| / 2^(n-1). The Math-AI-Caltech CSV (fetched, sha256 below) has no row for this order."
+}
