@@ -1,0 +1,3 @@
+# How we found it (contributor text, unverified)
+
+The packing for N = 733 spheres in the unit cube was found by an AI search agent (Gemini, working for the contributor). The live Packomania row for N = 733 (0.0585310646) sits below the rows for some larger N (after the table's reorganization of 17-Oct-2026), so a 733-sphere packing of the larger radius already follows by deleting spheres from the posted N = 734 packing. The agent started from that posted packing, removed 1 sphere, and let the rest relax with a penalty-based L-BFGS followed by step-wise inflation, which raised the radius above the posted N = 734 value. The exact commands of that run are not recorded in the snapshot.
