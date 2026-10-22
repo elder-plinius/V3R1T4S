@@ -1,0 +1,5 @@
+# How we found it (contributor text, unverified)
+
+The contributor's search agent (Gemini, called Argon) was asked to beat the 2026 lower bounds on the Shannon capacity of odd cycles. For C13 it kept the base seven-family vector from the BPZ Lean data and searched over new schedules (which substitution rule, in which order, with which terminal code) inside the same BPZ grammar, scoring each schedule by the exact integer it produces. The schedule in object/schedule.json is the best one it found for this cycle: degree 522, an integer M with 418 digits.
+
+What is not shipped or not reliable: the contributor's write-up (how-we-built-it/RESULTS.md) has errors in its prose (wrong paper titles and dates, wrong C7 codebook sizes, wrong decimals from about digit 42 for some values, and a verifier path on the contributor's machine). The orchestrator's triage found the shipped JSON correct and listed the prose errors; see README.md and how-we-built-it/README.md. The checker in verify-it-yourself/ was written from the definitions, not from the contributor's script.
