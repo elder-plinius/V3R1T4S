@@ -730,7 +730,10 @@
    "pitfalls": [
     "Self-constraint: Hamming(x, rc(x)) >= d is required; omitting it inflates sizes and is the most common false positive.",
     "Some authors use the 'Watson-Crick complement' (without reversal) distance instead; that is a different table (Chee-Ling).",
-    "Table is from 2010; novelty must be checked against later literature.",
+    "Table is from 2010 (footer 'Last updated June 23, 2010'; unlike the GC table, the GC,RC table has no 'x' [SAMP] entries); novelty must be checked against later literature.",
+    "Later values (checked 2026-10-18): N. A. Aboluion's thesis (Glamorgan 2011, Tables 10.71-10.72, https://pure.southwales.ac.uk/ws/portalfiles/portal/991721/PhD_thesis_Niema.pdf), the basis of Aboluion-Smith-Perkins, Discrete Math. 312 (2012) 1062-1075, is larger than this table in 32 unmarked cells with n <= 20 and smaller in none: (10,4) 860, (10,5) 210, (12,3) 59136, (12,4) 14784, (12,5) 1848, (14,3) 768768, (14,6) 3712, (14,7) 796, (14,8) 208, (14,10) 21, (15,6) 6648, (15,8) 410, (16,6) 55424, (16,7) 13856, (16,8) 3776, (16,11) 68, (17,5) 97520, (18,3) 44933184, (18,4) 11266112, (18,5) 699624, (18,6) 699624, (18,7) 43632, (18,8) 10908, (18,9) 2691, (19,5) 1477796, (19,6) 738772, (19,7) 92252, (19,8) 11542, (20,4) 189432064, (20,5) 11822368, (20,7) 369008, (20,16) 8. Issue #368 reads the same 32 values in the paper's Tables 8-9, plus (17,11) 68 where the thesis has 62. These are maxima over w (the thesis notes that the maximum often, but not always, occurs at w = floor(n/2)), so whether a value holds at w = floor(n/2) must be checked per cell.",
+    "Closed cells: (15,12), (16,13) and (20,16) carry no '.' or ':' but cannot give a win. Upper bounds A <= 6, 5 and 8 hold for every GC content (issue #368: a counting argument on C and rc(C), with Lean 4 proofs at https://gist.github.com/MikhailLevit1987/f80776c00af60f6cf376b93b5b3e5f18); 6 and 5 are the table values, and for (20,16) the thesis value 8 and an explicit 8-word code with GC 10 in the same gist reach the bound.",
+    "Survey trap: arXiv:1607.00266 (v1) Table XIII gives 20 for (15,12), where this table, the 2011 thesis and the upper bound give 6; take values from primary sources.",
     "Some large-n results in recent papers (n=48..160) are outside this table and not comparable."
    ],
    "primary_sources": [
