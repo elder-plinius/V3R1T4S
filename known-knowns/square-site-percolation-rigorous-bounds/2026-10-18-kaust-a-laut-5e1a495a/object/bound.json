@@ -1,0 +1,91 @@
+{
+ "claim": "p_c^site(Z^2) >= 1 - p",
+ "p": "4433/10000",
+ "bound": "5567/10000",
+ "bound_float": 0.5567,
+ "window_py_sha256": "4813b5ddf7068311e918346a678a96f9adaf7ffcb170f780ee3ef1c02d1b0f0b",
+ "grid": "2^40 outward rounding (window.round_out)",
+ "levels": [
+  {
+   "depth": 0,
+   "worst_margin": "-102029606807757393/84504255500000000000",
+   "worst_margin_float": -0.0012073901628274495,
+   "passes": false,
+   "worst_case": {
+    "b2_orientation": "max",
+    "c_parent_side": "min"
+   },
+   "cone_sizes": {
+    "U": {
+     "max": 2,
+     "min": 2
+    },
+    "D": {
+     "max": 2,
+     "min": 2
+    }
+   }
+  },
+  {
+   "depth": 1,
+   "worst_margin": "-1310705851782094453810335687814411235470133425897009941/29137621790360211507000771265116875401099345000000000000000",
+   "worst_margin_float": -4.498328179329048e-05,
+   "passes": false,
+   "worst_case": {
+    "b2_orientation": "max",
+    "c_parent_side": "min"
+   },
+   "cone_sizes": {
+    "U": {
+     "max": 5,
+     "min": 5
+    },
+    "D": {
+     "max": 5,
+     "min": 5
+    }
+   }
+  },
+  {
+   "depth": 2,
+   "worst_margin": "3916416102164959615033078212363452594229396652276109379/28749563165564955983328920932710447636542335000000000000000",
+   "worst_margin_float": 0.00013622523861009066,
+   "passes": true,
+   "worst_case": {
+    "b2_orientation": "max",
+    "c_parent_side": "min"
+   },
+   "cone_sizes": {
+    "U": {
+     "max": 5,
+     "min": 5
+    },
+    "D": {
+     "max": 5,
+     "min": 5
+    }
+   }
+  },
+  {
+   "depth": 3,
+   "worst_margin": "89570362705996726074800294811231054880127063827551/540059545733611697802615340066295263611188800000000000",
+   "worst_margin_float": 0.00016585275348540541,
+   "passes": true,
+   "worst_case": {
+    "b2_orientation": "max",
+    "c_parent_side": "min"
+   },
+   "cone_sizes": {
+    "U": {
+     "max": 5,
+     "min": 5
+    },
+    "D": {
+     "max": 5,
+     "min": 5
+    }
+   }
+  }
+ ],
+ "certified": true
+}

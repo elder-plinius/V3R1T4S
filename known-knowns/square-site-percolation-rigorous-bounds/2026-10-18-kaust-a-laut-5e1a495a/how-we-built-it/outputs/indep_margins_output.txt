@@ -1,0 +1,5 @@
+increasing events of {0,1}^3: 18
+depth 0 at p=4433/10000: exact worst margin -1.207390163e-03  (b2 dir (1, 0), case root) |U| [2, 2, 2, 2] |D| [2, 2, 2, 2]
+depth 1 at p=4433/10000: exact worst margin -4.498328172e-05  (b2 dir (1, 0), case root) |U| [2, 2, 2, 2] |D| [2, 2, 2, 2]
+depth 2 at p=4433/10000: exact worst margin 1.362252387e-04  (b2 dir (1, 0), case root) |U| [2, 2, 2, 2] |D| [2, 2, 2, 2]
+depth 3 at p=4433/10000: exact worst margin 1.658527536e-04  (b2 dir (1, 0), case root) |U| [2, 2, 2, 2] |D| [2, 2, 2, 2]

@@ -1,0 +1,3 @@
+root step at p = 4433/10000: 166 increasing events of {0,1}^4, worst margin 1.470119e-02; root open 1.333851e-01 above 1-p
+window.py depth 3 worst-case margin at p: 1.658528e-04
+random explicit trees: worst direct margin 1.740252e-03 >= cone margin 1.658528e-04: OK
