@@ -1,0 +1,128 @@
+{
+ "ljcr_github": {
+  "size": 110,
+  "low_bd": 90,
+  "imps": [
+   [
+    "110",
+    "Private tools",
+    "Jan de Heer and Steve Muir",
+    "2013-09-05 10:22:56"
+   ],
+   [
+    "117",
+    "Private Tools",
+    "Jan de Heer and Steve Muir",
+    "2011-10-11 00:59:10"
+   ],
+   [
+    "128",
+    "Private tools",
+    "Jan de Heer and Steve Muir",
+    "2011-02-27 01:52:06"
+   ],
+   [
+    "131",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2010-12-20 16:46:49"
+   ],
+   [
+    "132",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2009-08-11 14:25:54"
+   ],
+   [
+    "133",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2009-08-10 14:10:23"
+   ],
+   [
+    "134",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2009-01-21 19:15:03"
+   ],
+   [
+    "136",
+    "Dynamic programming construction",
+    "LJCR",
+    "2009-01-10 23:28:50"
+   ],
+   [
+    "147",
+    "Simple construction: combined (56,14,3) and  (56,13,2)",
+    "LJCR",
+    "2009-01-10 10:07:30"
+   ]
+  ]
+ },
+ "zenodo_v1_2": {
+  "size": 109,
+  "low_bd": 90,
+  "imps": [
+   [
+    "109",
+    "Local Search",
+    "Franco Atzeni",
+    "2025-02-14 09:31:41"
+   ],
+   [
+    "110",
+    "Private tools",
+    "Jan de Heer and Steve Muir",
+    "2013-09-05 10:22:56"
+   ],
+   [
+    "117",
+    "Private Tools",
+    "Jan de Heer and Steve Muir",
+    "2011-10-11 00:59:10"
+   ],
+   [
+    "128",
+    "Private tools",
+    "Jan de Heer and Steve Muir",
+    "2011-02-27 01:52:06"
+   ],
+   [
+    "131",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2010-12-20 16:46:49"
+   ],
+   [
+    "132",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2009-08-11 14:25:54"
+   ],
+   [
+    "133",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2009-08-10 14:10:23"
+   ],
+   [
+    "134",
+    "Simple construction from (58,14,3)",
+    "LJCR",
+    "2009-01-21 19:15:03"
+   ],
+   [
+    "136",
+    "Dynamic programming construction",
+    "LJCR",
+    "2009-01-10 23:28:50"
+   ],
+   [
+    "147",
+    "Simple construction: combined (56,14,3) and  (56,13,2)",
+    "LJCR",
+    "2009-01-10 10:07:30"
+   ]
+  ]
+ }
+}

@@ -1,0 +1,4 @@
+Rows of RECORDS.md (Wynand van Staden) with v = 57. There is no row with k = 14, t = 3.
+| 57 | 9 | 3 | 398 | 395 | 3 | v1 |
+| 57 | 12 | 3 | 185 | 183 | 2 | v1 |
+| 57 | 16 | 3 | 79 | 77 | 2 | v1 |
