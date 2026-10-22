@@ -1,0 +1,3 @@
+contributor text, unverified
+
+The original search tested rational stacks, then used exact affine enclosures on three normalized domains. Shallow fixed partitions did not separate the infinite-horizon tails. Adaptive splits concentrated work where pairwise stack comparisons were unresolved; two depths were used for the difficult shortest-stack ordering. The saved partition and exact bounds were checked by an independently written forward evaluator. Later fresh reviewers constructed separate exact geometry and game recurrences. This continuation audited unchanged certificates, source novelty and portable reproduction; it did not discover a different theorem or strengthen the bound.
