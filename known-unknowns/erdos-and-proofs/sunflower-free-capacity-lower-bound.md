@@ -52,7 +52,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Floating-point rounding when comparing |F|^{1/n}.
 - Confusing this with odd-sunflowers (FPP2024) or with k-sunflowers for k > 3.
 - Off-by-one in the threshold: compute ceil(1.5545^n + tiny) with exact integers, do not hand-copy.
-- Comparing against 1.551 when the unpublished 1.554 is the real bar for novelty.
+- Comparing against 1.551 or the unpublished 1.554: on 2026-10-18 the 49a page lists unverified bounds up to 1.5666969 (Cla2026), and by the criterion's rule a listed bound above 1.5545 becomes the bar.
 
 ## Point your agent at it
 
