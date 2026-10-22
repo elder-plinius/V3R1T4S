@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+dimer-constant-cubic-lattice-rigorous-bounds,p3,l4 <= 0.5840147694 (0.584015 rounded up),"0.66278769 = ln(8!)/16 (Butera, Federbush, Pernici table of rigorous bounds)",2026-10-19T05:30:57Z,object/cert_4d_332.txt,f7f22efe7790df5f1edfa1868d03cf17d2d5079d77c7754c0fda2e06e666b1ed
