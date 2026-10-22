@@ -1,0 +1,6 @@
+dims 3 3 3 p 0.47 : f(p) = 0.51972 at entry (0, 1)
+dims 3 3 3 p 0.49 : f(p) = 0.57471 at entry (0, 1)
+dims 3 3 3 p 0.51 : f(p) = 0.62751 at entry (0, 1)
+dims 3 3 3 p 0.53 : f(p) = 0.67728 at entry (0, 1)
+dims 3 3 3 p 0.55 : f(p) = 0.72340 at entry (0, 1)
+dims 3 3 3 p 0.57 : f(p) = 0.76544 at entry (0, 1)

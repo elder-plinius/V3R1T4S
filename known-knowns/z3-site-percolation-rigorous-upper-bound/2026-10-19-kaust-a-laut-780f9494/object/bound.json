@@ -1,0 +1,18 @@
+{
+  "claim": "p_c^site(Z^3) <= 4427/10000",
+  "bound": "4427/10000",
+  "base": "p_c^site(Z^3) <= 1/2 (Campanino and Russo, Ann. Probab. 13 (1985) 478-491), used as theta(501/1000) > 0",
+  "block": [3, 3, 3],
+  "rule": "G = largest open component; ties: larger sum over faces of face-site counts, then first found in site order; empty if fewer than 6 sites",
+  "chain": [
+    {"p": "2317/5000", "q": "501/1000", "worst_margin": 1.939266e-04},
+    {"p": "9/20", "q": "2317/5000", "worst_margin": 1.116371e-04},
+    {"p": "1781/4000", "q": "9/20", "worst_margin": 1.136700e-04},
+    {"p": "1109/2500", "q": "1781/4000", "worst_margin": 2.035065e-04},
+    {"p": "443/1000", "q": "1109/2500", "worst_margin": 1.655116e-04},
+    {"p": "1107/2500", "q": "443/1000", "worst_margin": 1.993285e-04},
+    {"p": "4427/10000", "q": "1107/2500", "worst_margin": 1.231418e-04}
+  ],
+  "checks_per_link": "root: r_f(full face) >= q for 6 faces; 3066 entry laws (6 faces x 511 nonempty entry sets) x 7579 nontrivial up-sets of {0,1}^5, exact integer comparison after outward-rounded interval sums",
+  "credit": "Kaust-a-laut; Claude Code (Anthropic) running claude-opus-5-5"
+}

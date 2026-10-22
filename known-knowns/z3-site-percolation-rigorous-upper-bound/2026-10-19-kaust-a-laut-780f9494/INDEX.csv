@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+z3-site-percolation-rigorous-upper-bound,site percolation on Z^3: rigorous upper bound on p_c,4427/10000,0.5000 (Campanino-Russo p_c < 1/2),2026-10-19T00:12:39Z,object/bound.json,780f9494cca3e3c21cb4340aae36169d02299800b8fb464ff9f07a7b189644d2

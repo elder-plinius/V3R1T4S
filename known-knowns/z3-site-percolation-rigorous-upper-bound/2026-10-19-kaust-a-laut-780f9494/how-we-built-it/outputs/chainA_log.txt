@@ -1,0 +1,70 @@
+$ python code/cert.py intervals out/counts_b333_s6.txt 463 1000 out/chain/link1_p463_1000_intervals.txt
+intervals written: out/chain/link1_p463_1000_intervals.txt
+(8 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link1_p463_1000_intervals.txt out/chain/link1_p463_1000_laws.txt
+(72 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link1_p463_1000_laws.txt 463 1000 1 2
+root: min r_f(full face) = 0.759983187155 (needs >= q = 1/2)
+checked 3066 entry laws x 7579 up-sets; worst margin 1.030124e-04 at entry face 0 U=0b1 up-set (1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 463/1000, q = 1/2)
+(10 s, exit 0)
+$ python code/cert.py intervals out/counts_b333_s6.txt 4499 10000 out/chain/link2_p4499_10000_intervals.txt
+intervals written: out/chain/link2_p4499_10000_intervals.txt
+(10 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link2_p4499_10000_intervals.txt out/chain/link2_p4499_10000_laws.txt
+(72 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link2_p4499_10000_laws.txt 4499 10000 463 1000
+root: min r_f(full face) = 0.727186168354 (needs >= q = 463/1000)
+checked 3066 entry laws x 7579 up-sets; worst margin 2.136602e-04 at entry face 4 U=0b1 up-set (2, 3, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 4499/10000, q = 463/1000)
+(12 s, exit 0)
+$ python code/cert.py intervals out/counts_b333_s6.txt 1781 4000 out/chain/link3_p1781_4000_intervals.txt
+intervals written: out/chain/link3_p1781_4000_intervals.txt
+(9 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link3_p1781_4000_intervals.txt out/chain/link3_p1781_4000_laws.txt
+(72 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link3_p1781_4000_laws.txt 1781 4000 4499 10000
+root: min r_f(full face) = 0.715002681960 (needs >= q = 4499/10000)
+checked 3066 entry laws x 7579 up-sets; worst margin 2.044365e-04 at entry face 0 U=0b1 up-set (1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 1781/4000, q = 4499/10000)
+(11 s, exit 0)
+$ python code/cert.py intervals out/counts_b333_s6.txt 1109 2500 out/chain/link4_p1109_2500_intervals.txt
+intervals written: out/chain/link4_p1109_2500_intervals.txt
+(8 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link4_p1109_2500_intervals.txt out/chain/link4_p1109_2500_laws.txt
+(75 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link4_p1109_2500_laws.txt 1109 2500 1781 4000
+root: min r_f(full face) = 0.710613795471 (needs >= q = 1781/4000)
+checked 3066 entry laws x 7579 up-sets; worst margin 2.035065e-04 at entry face 0 U=0b1 up-set (1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 1109/2500, q = 1781/4000)
+(11 s, exit 0)
+$ python code/cert.py intervals out/counts_b333_s6.txt 443 1000 out/chain/link5_p443_1000_intervals.txt
+intervals written: out/chain/link5_p443_1000_intervals.txt
+(8 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link5_p443_1000_intervals.txt out/chain/link5_p443_1000_laws.txt
+(72 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link5_p443_1000_laws.txt 443 1000 1109 2500
+root: min r_f(full face) = 0.709009433102 (needs >= q = 1109/2500)
+checked 3066 entry laws x 7579 up-sets; worst margin 1.655116e-04 at entry face 0 U=0b1 up-set (1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 443/1000, q = 1109/2500)
+(10 s, exit 0)
+$ python code/cert.py intervals out/counts_b333_s6.txt 1107 2500 out/chain/link6_p1107_2500_intervals.txt
+intervals written: out/chain/link6_p1107_2500_intervals.txt
+(8 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link6_p1107_2500_intervals.txt out/chain/link6_p1107_2500_laws.txt
+(73 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link6_p1107_2500_laws.txt 1107 2500 443 1000
+root: min r_f(full face) = 0.708473655366 (needs >= q = 443/1000)
+checked 3066 entry laws x 7579 up-sets; worst margin 1.993285e-04 at entry face 0 U=0b1 up-set (1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 1107/2500, q = 443/1000)
+(11 s, exit 0)
+$ python code/cert.py intervals out/counts_b333_s6.txt 4427 10000 out/chain/link7_p4427_10000_intervals.txt
+intervals written: out/chain/link7_p4427_10000_intervals.txt
+(10 s, exit 0)
+$ code/cert/cert.exe 3 3 3 6 6 laws out/chain/link7_p4427_10000_intervals.txt out/chain/link7_p4427_10000_laws.txt
+(72 s, exit 0)
+$ python code/cert.py check out/counts_b333_s6.txt out/chain/link7_p4427_10000_laws.txt 4427 10000 1107 2500
+root: min r_f(full face) = 0.708205581220 (needs >= q = 1107/2500)
+checked 3066 entry laws x 7579 up-sets; worst margin 1.231418e-04 at entry face 0 U=0b1 up-set (1, 3, 4, 5, 6, 7, 9, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31)
+CERTIFICATE: PASS (p = 4427/10000, q = 1107/2500)
+(12 s, exit 0)
