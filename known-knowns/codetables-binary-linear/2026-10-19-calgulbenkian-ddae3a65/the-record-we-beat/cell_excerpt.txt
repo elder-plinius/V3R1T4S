@@ -1,0 +1,10 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=2&n=163&k=18 (fetched 2026-10-19T04:35:55Z, HTTP 200, page sha256 b747a81b223550784bf9fe377782c47d03c2f1ccbb98f4f8c71f5f8ae744e02a)
+Bounds on linear codes [163,18] over GF(2): lower bound 64, upper bound 72
+Table lines about this cell (copied from the page):
+Lb(163,18) = 64 is found by taking a subcode of:
+Lb(163,19) = 64 is found by lengthening of:
+Lb(160,19) = 64 GW2
+Ub(163,18) = 72 follows by a one-step Griesmer bound from:
+Ub(90,17) = 36 follows by a one-step Griesmer bound from:
+Ub(53,16) = 18 is found by considering shortening to:
+Ub(51,14) = 18 Ja 
