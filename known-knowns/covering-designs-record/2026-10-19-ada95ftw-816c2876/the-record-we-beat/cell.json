@@ -1,6 +1,6 @@
 {
  "cell": "C(29,5,3)",
- "live_coveringrepository_com": {"value": 413, "read": "hand read by the operator in a browser", "read_utc": "2026-10-19T23:43:00Z", "credited_to": "Anastasios Tampakis", "method": "Wheel Generator", "date": "31/03/2011"},
+ "live_coveringrepository_com": {"value": 413, "read": "our own browser read as submitters (not the Covering Repository maintainer's table check)", "read_utc": "2026-10-19T23:43:00Z", "credited_to": "Anastasios Tampakis", "method": "Wheel Generator", "date": "31/03/2011"},
  "ljcr_github": {"url": "https://raw.githubusercontent.com/dmgordo/LJCR/main/coverings/coverdata.json", "size": 413, "low_bd": 366, "fetched_utc": ["2026-10-19T23:02:23Z", "2026-10-19T23:45:26Z", "2026-10-19T23:49:50Z", "2026-10-19T23:50:05Z"], "http_status": 200, "sha256": "0984bb8b4c89fe07268569b9814794e3c8852302d075f0794140f202e83d7fef"},
  "zenodo_ljcr_v1_2": {"url": "https://zenodo.org/api/records/19735294/files/coverdata.json/content", "size": 413, "low_bd": 366, "fetched_utc": "2026-10-19T23:06:16Z", "http_status": 200, "sha256": "9e7da3710921066b10234fdc95379a18df3a7d3ae0f8a08ae188ea6bbca92f87"},
  "schonheim_lower_bound": 366
