@@ -1,0 +1,2 @@
+# Keep every file byte-identical to the panelled package (sha256 values are of these exact bytes).
+* -text

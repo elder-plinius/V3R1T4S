@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+proteingym-cancer-dms-zero-shot,PTEN_HUMAN_Matreyek_2021 Spearman (DMS-level),0.5658,0.516,2026-10-18T18:46:05Z,object/PTEN_HUMAN_Matreyek_2021.M1.csv,1aecf9c14a0746b6b434b38acebfdfe8ddeefec98bedb322d6ea53b1ee7760db
