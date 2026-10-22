@@ -1,0 +1,3 @@
+contributor text, unverified
+
+The contributor's AI search agent (Gemini, called Argon) worked on the two DNA-code tables on Oliver King's page (constant GC content, and constant GC content with the reverse-complement rule) on 2026-10-18 and 2026-10-19. It wrote a pre-registration, then ran a C local-search program together with orbit constructions (words grouped by a symmetry that keeps the reverse-complement distances), and kept every code that a standalone verifier accepted. Its own notes list the method for each cell; for this cell see how-we-built-it/RESULTS.md (n=9, d=5). The command lines for the individual runs were not recorded. The orchestrator's triage and the panel then re-checked the file with their own checkers; the panel files are in panel/.
