@@ -1,0 +1,7 @@
+designs read 9482  bounds computed 10801  beats live 1  ties 2456
+BEAT ((41, 12, 5), 2207, 2244, 'R7 derived of C(42,13,6) (8735 blocks)')
+tie ((4, 3, 2), 3, 3, 'R7 derived of C(5,4,3) (4 blocks)')
+tie ((5, 3, 2), 4, 4, 'R7 derived of C(6,4,3) (6 blocks)')
+tie ((6, 3, 2), 6, 6, 'R7 derived of C(7,4,3) (12 blocks)')
+tie ((7, 3, 2), 7, 7, 'R7 derived of C(8,4,3) (14 blocks)')
+tie ((8, 3, 2), 11, 11, 'R7 derived of C(9,4,3) (25 blocks)')
