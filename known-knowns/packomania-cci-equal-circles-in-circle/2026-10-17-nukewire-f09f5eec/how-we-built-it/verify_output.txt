@@ -1,0 +1,8 @@
+our candidate: 3307 centres (expected 3307)
+OUR r* (decimal 60, from strings) = 0.0163193001009681407709767792724368962804100804902253419885095
+  binding pairs 9711, binding norms 4
+table row 3307                      = 0.016314899796158766989004378524
+margin = 0.0000044003048093737819724007484368962804100804902253419885095  (threshold 1e-11)
+POSTED cci3307 r* (string-exact)     = 0.0163148997961587669890043785231854694816539674187529533223136  diff vs own row = -8.145e-31
+isometry: max|multiset diff| = 2.181e-02, fraction>1e-9 = 1.0000 -> NON-ISOMETRIC
+VERIFY: PASS
