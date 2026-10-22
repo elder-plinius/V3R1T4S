@@ -1,0 +1,18 @@
+Excerpt of https://aeb.win.tue.nl/codes/Andw.html as fetched 2026-10-18T17:39:47Z (page sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349). HTML tags are shown in square brackets. Cell (n=36, d=12, w=12).
+
+Lower-bound listing table for A(n,12,12) (the page prints lower bounds only here):
+[h3]Lower bounds for A(n,12,12)[/h3]
+[p]
+
+[table border="1"]
+[tr]
+[td]32[/td][td]33[/td][td]34[/td][td]35[/td][td]36[/td]
+[/tr]
+[tr]
+[td][a href="cwc/d12/a32.12.12.496H"]496[/a][sup]BCH[/sup][/td]
+[td][a href="cwc/d12/a33.12.12.497H"]497[/a][sup]Bo[/sup][/td]
+[td][a href="cwc/d12/a34.12.12.552H"]552[/a][/td]
+[td][a href="cwc/d12/a35.12.12.664H"]664[/a][/td]
+[td][a href="cwc/d12/a36.12.12.836H"]836[/a][/td]
+[/tr]
+[/table]
