@@ -1,0 +1,41 @@
+{
+  "id": "stable-marriage-max-stable-matchings",
+  "name": "Stable marriage: an instance of size n with more stable matchings than the best known (OEIS A357271 and the Ong et al. 2025 instances)",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours (exact counting through the rotation poset is fast at these sizes; the search is local search over preference lists, embarrassingly parallel)",
+  "statement": "An instance of the stable marriage problem of size n consists of complete strict preference lists for n men and n women; a perfect matching is stable if no man and woman prefer each other to their partners. How many stable matchings can an instance of size n have? Finding the maximum f(n) is a research problem posed by Knuth (Mariages Stables, 1976) and repeated by Gusfield and Irving (The Stable Marriage Problem: Structure and Algorithms, 1989, Open Problem 1). OEIS A357269 lists exact values for n <= 5 (1, 2, 3, 10, 16; a(5) = 16 by Eilers with a MiniZinc model); M. Jo (Zenodo, 2026-10-13, https://doi.org/10.5281/zenodo.23329599, not peer reviewed) claims a computer-assisted proof that f(7) = 85, building on a preprint claiming f(6) = 48, so the exactly known range may extend to n = 7, and Thurber (Discrete Mathematics 248, 2002) proved f(n) strictly increasing; the best general upper bound is Palmer and Pálvölgyi's 3.55^n (arXiv:2011.00915). OEIS A357271 (Dan Eilers, 2022) lists lower bounds for n = 1..28 from Thurber's composition constructions (Appendix C of his 2002 paper): 1, 2, 3, 10, 16, 48, 71, 268, 330, 1000, 1231, 6472, 6720, 20176, 25011, 195472, 200832, 456300, 637336, 3419680, 3506880, 11221136, 15481956, 126112960, 127885440, 262860800, 384418176, 2000043808; a(6), a(8), a(10), a(12) and a(16) are conjectured exact. A file linked from A357271 (Ong, Ang, Ho, Eilers, Marks and Buzi, IFoRE 2024 poster 'Improved Hill Climbing for the Stable Marriage Problem'; the file is dated 2024-11-01 and OEIS labels the link 2025) gives explicit instances that raise the bounds for odd n: 81 (n = 7), 365 (n = 9), 1690 (n = 11), 7123 (n = 13) and 27059 (n = 15). Those gains of 6% to 37% came from plain hill climbing, which suggests that the composition bounds for the other cells are soft. Results for this target may also appear as claims in this repository (known-knowns/ and open claim pull requests); they count as published values for the comparison.",
+  "success_criterion": "Success means explicit preference lists for some n >= 6 (n men and n women, each list a permutation of the other side) whose number of stable matchings, counted exactly by two independent methods that agree, is STRICTLY GREATER (direction: max) than the best known value for that n at verification time. The best known value is the composition closure, not the A357271 data line (which is stale: its odd terms predate the Ong et al. file and its even terms predate composing those instances): the largest count over every instance published for that n (the A357271 data line and its linked file a357271_1.txt, any other OEIS entry or b-file, any paper or preprint, J. Jo's order-7 instance) or merged into this repository (known-knowns/, TROPHY_CASE.md), AND over every composition of such instances (doubling, i.e. the lexicographic product with Knuth's order-2 instance, other products, and Thurber's compositions). The claim must say whether its object is a composition and name its parts; a composition of known instances alone is not a claim. Values in unmerged pull requests are not bars, since they can move without anything being published. One cell per claim. A count above a value conjectured exact on A357271 (n = 6, 8, 10, 12, 16) would refute that conjecture and needs an extra independent recount. Submitting a new value to OEIS is an action for a human.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A certified exact maximum for n = 6 (extending A357269): a proof that no instance of size 6 has more stable matchings than the best known value, given as a proof object accepted by a formally verified checker (for example an LRAT proof checked by cake_lpr, or a VeriPB proof) for a constraint model whose correctness is argued in a short note, with symmetry breaking proved sound."
+    }
+  ],
+  "verification_method": "Parse the 2n preference lists (or the ranking-table format of the A357271 instance file) and check that each list is a permutation. Count stable matchings with two programs that share no code: (1) the Irving-Leather method, i.e. compute the man-optimal stable matching, its rotations and the rotation poset, and count the closed subsets (down-sets) of the poset; (2) an independent enumeration, for example Gusfield's breakmarriage recursion, or brute force over perfect matchings with a stability check for n <= 10. Calibrate both on A357269 (n <= 5), on the published Ong et al. instances (81, 365, 1690, 7123 and 27059 must be reproduced exactly) and on random instances. Re-fetch A357271, its linked file and the repository before claiming.",
+  "primary_sources": [
+    "https://oeis.org/A357271",
+    "https://oeis.org/A357271/a357271_1.txt",
+    "https://oeis.org/A357269",
+    "https://arxiv.org/abs/2011.00915",
+    "https://arxiv.org/abs/2201.00645",
+    "https://doi.org/10.5281/zenodo.23329599"
+  ],
+  "status_source": "https://oeis.org/A357271",
+  "status_checked": "2026-10-15",
+  "disclosure": "open",
+  "angles": [
+    "Hill climbing with exact recounting: the count is a function of the rotation poset, so a move that swaps two entries of one preference list can be re-scored quickly by recomputing rotations; run many diversified restarts in parallel, as the Ong et al. gains suggest.",
+    "Grow structure instead of searching blind: Thurber's compositions combine smaller instances (that is where A357271 comes from), but a product does not simply multiply counts (doubling J. Jo's order-7 instance with 85 stable matchings gives 24,992 at n = 14, not 85 x 85 or 2 x 85 squared); compute the composed count exactly, and Latin-marriage constructions give many stable matchings; seed local search with compositions of the best small instances and with Latin-square-based instances, then perturb.",
+    "Search the rotation poset directly: many down-sets need wide, shallow posets with few comparabilities; look for preference structures that realise such posets for the target n, then repair them into valid complete preference lists.",
+    "Aim at cells where the table value is a plain composition bound (odd n above 15, n >= 17) rather than at the cells conjectured exact."
+  ],
+  "pitfalls": [
+    "Count exactly: sampling or estimating the number of stable matchings is not a check, and the two counters must share no code.",
+    "Instances must be complete strict preference lists with equal numbers of men and women; ties, incomplete lists and the roommates problem are different records.",
+    "The A357271 data line is not the whole table: the linked Ong et al. file holds larger values for n = 7, 9, 11, 13, 15, and other entries (for example A371810) or newer papers may hold more; compare against every source.",
+    "A count above a value conjectured exact (n = 6, 8, 10, 12, 16) is more likely a counting bug than a refutation; recount independently before claiming.",
+    "Beating the A357271 data line is not enough: doubling or composing published instances already beats it at n = 14, 18, 22 and 28 with no search. Compute the composition closure for your n first and beat that."
+  ]
+}
