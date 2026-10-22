@@ -1,0 +1,10 @@
+# Honesty Gate — `ccd-gupta-murrell-mottram-metal-clusters`
+
+status: CONFIRMED_SOLUTION
+confirmed_scope: Explicit 3D Cartesian coordinate sets in object/gupta_zn_cd_5_records_and_780_audit.json for 5 Gupta metal nanoclusters (Zn_106, Cd_71, Cd_84, Cd_94, and Cd_106) achieve strict local-minimum energies under the exact calibrated Cleri-Rosato Gupta parameter sets (Zn_106: -141.9309047390 vs -141.928489 eV, -0.002416 eV; Cd_71: -82.3022257380 vs -82.302019 eV, -0.000207 eV; Cd_84: -97.4196981104 vs -97.415006 eV, -0.004692 eV; Cd_94: -109.0494558230 vs -109.048698 eV, -0.000758 eV; and Cd_106: -123.0018760970 vs -123.000416 eV, -0.001460 eV), verified in both float64 (gradient norm <= 2.43e-14) and 55-digit Decimal arithmetic (gradient norm <= 6.58e-35) with 6 near-zero rigid-body Hessian modes and 3N - 6 strictly positive vibrational eigenvalues, alongside a full parameter calibration and reproduction audit of all 780 posted Zn, Cd, Pb, Pb_Gupta.rar, and Na_Gupta point files (p1, p3).
+
+## Gate Audit Summary
+- **REPRODUCE (`panel/reproduce.md`)**: `pass: true` (fresh subagent invocation; independent verifier written from mathematical definition of the Gupta potential; calibrated on 48 posted point files across Zn, Cd, Pb, and Na_Gupta to `< 5e-7 eV < 1e-5 eV`; verified all 5 records in `float64` and 55-digit Decimal arithmetic, distinct-basin polished CCD energies, 6 zero Hessian modes, and `3N - 6` positive eigenvalues).
+- **NOVELTY (`panel/novelty.md`)**: `pass: true` (fresh subagent invocation; single honest HTTP 200 fetches with zero retries across `Gupta.html`, `Zn/zn.html`, `Cd/cd.html`, `Pb/pb.html`, `Na_Gupta/na_gupta.html`, `arXiv:2505.05989`, `TROPHY_CASE.md`, and all open/merged pull requests).
+- **CRITERION (`panel/criterion.md`)**: `pass: true` (fresh subagent invocation; literal verification against `bank/targets.json` full `success_criterion` and partial wins `p1` and `p3`).
+- **Downgrade Checks**: Zero hedging panelists, zero reproduction mismatches, zero stretched criteria, zero path or secret leaks. Final status is `CONFIRMED_SOLUTION`.
