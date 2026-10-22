@@ -1,0 +1,3 @@
+repo_tag: none
+repo_commit: ab114dcb1aad5cc1b2a53c58bc3ad3fcacd1107c (from the workspace settings.md at build time)
+charter: v4 humanities and structures lane, as amended to v4.5 (2026-10-17); published part = charter.md without the sections of the four private quarries (numbered 14 to 17) and without their changelog lines
