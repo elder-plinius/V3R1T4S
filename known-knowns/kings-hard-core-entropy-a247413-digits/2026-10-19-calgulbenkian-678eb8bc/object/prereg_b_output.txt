@@ -1,0 +1,36 @@
+PREREG_B execution. widths 2..40
+mmax=22 order=9 E=1.34264395112460129787765813116753306397251491  common_with_siteCTM=19
+mmax=23 order=10 E=1.34264395112460129784811704720751778430533399  common_with_siteCTM=19
+mmax=24 order=10 E=1.34264395112460129785109232907651652714008040  common_with_siteCTM=21
+mmax=25 order=11 E=1.34264395112460129785170598918579206219067540  common_with_siteCTM=22
+mmax=26 order=11 E=1.34264395112460129785172666018176010434403913  common_with_siteCTM=22
+mmax=27 order=12 E=1.34264395112460129785172991048945136325238610  common_with_siteCTM=22
+mmax=28 order=12 E=1.34264395112460129785173019206472231951499595  common_with_siteCTM=25
+mmax=29 order=13 E=1.34264395112460129785173015924254573282321495  common_with_siteCTM=25
+mmax=30 order=13 E=1.34264395112460129785173016106942700315804325  common_with_siteCTM=27
+mmax=31 order=14 E=1.34264395112460129785173016194284449004930130  common_with_siteCTM=27
+mmax=32 order=14 E=1.34264395112460129785173016188152503082919731  common_with_siteCTM=28
+mmax=33 order=15 E=1.34264395112460129785173016187408080044582152  common_with_siteCTM=29
+mmax=34 order=15 E=1.34264395112460129785173016187564438990265280  common_with_siteCTM=30
+mmax=35 order=16 E=1.34264395112460129785173016187571755983956462  common_with_siteCTM=31
+mmax=36 order=16 E=1.34264395112460129785173016187574170173065595  common_with_siteCTM=32
+mmax=37 order=17 E=1.34264395112460129785173016187574029294431783  common_with_siteCTM=33
+mmax=38 order=17 E=1.34264395112460129785173016187574038595349651  common_with_siteCTM=34
+mmax=39 order=18 E=1.34264395112460129785173016187574039322578914  common_with_siteCTM=35
+mmax=40 order=18 E=1.34264395112460129785173016187574039631105271  common_with_siteCTM=35
+window mmax=22..25 : common decimals = 19
+window mmax=23..26 : common decimals = 19
+window mmax=24..27 : common decimals = 21
+window mmax=25..28 : common decimals = 22
+window mmax=26..29 : common decimals = 22
+window mmax=27..30 : common decimals = 22
+window mmax=28..31 : common decimals = 25
+window mmax=29..32 : common decimals = 25
+window mmax=30..33 : common decimals = 27
+window mmax=31..34 : common decimals = 27
+window mmax=32..35 : common decimals = 28
+window mmax=33..36 : common decimals = 29
+window mmax=34..37 : common decimals = 30
+window mmax=35..38 : common decimals = 31
+window mmax=36..39 : common decimals = 32
+window mmax=37..40 : common decimals = 33
