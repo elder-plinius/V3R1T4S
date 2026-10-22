@@ -1,0 +1,9 @@
+{
+ "records": [
+  {
+   "source": "Orrick MaxDet archive (Archive-It copy), order 49, normalised determinant 96 * 12^23",
+   "value": "635974777627126753067532288"
+  }
+ ],
+ "note": "Normalised value D = |det| / 2^(n-1); the criterion compares det G with the square of the record, i.e. sqrt(det G) / 2^(n-1) with D."
+}
