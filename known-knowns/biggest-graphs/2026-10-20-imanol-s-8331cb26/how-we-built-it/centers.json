@@ -1,0 +1,27 @@
+{
+  "cell": [
+    14,
+    4
+  ],
+  "baseline": "repo/known-knowns/biggest-graphs/graphs/G_14_4_n8424.edges.txt",
+  "uncovered": 0,
+  "chosen": [
+    3303,
+    2403,
+    4213,
+    4441,
+    2831,
+    4383,
+    2462,
+    2378,
+    2435,
+    2711,
+    3543,
+    4149,
+    3692,
+    2680
+  ],
+  "exchanges": 1242,
+  "utc": "2026-10-20T22:30:16.203228+00:00",
+  "status": "bounded coverage search; not graph validity"
+}
