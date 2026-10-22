@@ -1,0 +1,32 @@
+{
+  "cell": [15, 7],
+  "n": 15,
+  "D": 7,
+  "k": 7,
+  "target_pure_distance": 8,
+  "status": "EXACT_PURE_STABILIZER_AME_STATE",
+  "construction_type": "Symmetric zero-diagonal circulant graph state over F_7",
+  "chord_vector_a1_to_a7": [1, 5, 4, 2, 1, 0, 0],
+  "first_row_mod_7": [0, 1, 5, 4, 2, 1, 0, 0, 0, 0, 1, 2, 4, 5, 1],
+  "vertex_degree": 10,
+  "verification": {
+    "total_7party_cuts": 6435,
+    "rank_deficient_cuts": 0,
+    "pure_distance": 8,
+    "search_time_seconds": 0.937,
+    "replaces_impure_codetables_entry": {
+      "codetables_entry": "[[15, 0, 8]]_7 (QECC.php?q=49&n=15&k=0)",
+      "codetables_pure_distance": 1,
+      "codetables_bad_cuts": 3003,
+      "literature_impact": "Provides the first genuinely pure [[15, 0, 8]]_7 = AME(15, 7) state, replacing the impure product state |AME(14,7)> x |+>_15 listed on codetables.de and cited in arXiv:2609.11796 Fig. 1."
+    }
+  },
+  "companion_F5_circulant_exhaustive_bound": {
+    "cell": [15, 5],
+    "search_space": "All 5^7 = 78,125 symmetric zero-diagonal 15x15 circulant graph states over F_5",
+    "exact_minimum_bad_cuts": 105,
+    "total_7party_cuts": 6435,
+    "best_chord_vector_a1_to_a7": [0, 3, 1, 2, 1, 0, 0],
+    "implication": "No symmetric circulant graph state over the prime base field F_5 is AME(15, 5); any pure stabilizer [[15, 0, 8]]_5 state must either break Z_15 graph symmetry or use non-graph symplectic / Hermitian self-dual structure over GF(5^2) = F_25."
+  }
+}
