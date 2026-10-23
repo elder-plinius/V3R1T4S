@@ -1,0 +1,35 @@
+{
+  "state": "AME(15, 9)",
+  "stabilizer_code": "[[15, 0, 8]]_9",
+  "purity": "PURE (d = 8, d_pure = 8)",
+  "field": "GF(9) = F_3[w] / (w^2 + 1), encoding a0 + 3*a1 in {0..8}",
+  "construction": "Symmetric 15-circulant graph state on Z_15 (regular degree 10)",
+  "half_step_vector_a1_to_a7": [
+    1,
+    3,
+    4,
+    5,
+    1,
+    0,
+    0
+  ],
+  "first_row_c0_to_c14": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    5,
+    4,
+    3,
+    1
+  ],
+  "total_7_party_cuts_checked": 6435,
+  "singular_7_party_cuts": 0
+}

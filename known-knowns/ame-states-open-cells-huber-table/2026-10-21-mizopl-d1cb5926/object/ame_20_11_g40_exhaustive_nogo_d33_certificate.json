@@ -1,0 +1,66 @@
+{
+  "title": "Theorems D33, D33B & D34: 100% Exhaustive Proof of Non-Existence of G_40-Symmetric Block-Circulant Unitary Generators across Both QR and QNR Cosets for AME(20, 11) over GF(121) (3.545 Billion Pairs, Global Minimum 12 / 4,970 = 99.7586%) and Exact Phase Transition Threshold q_c(G_40, n=20) = 13",
+  "target_cell": "AME(20, 11) / [[20, 0, 11]]_11",
+  "theorems": [
+    "Theorem D33 (Exact 16-Fold Gauge-Reduced Exhaustive No-Go for the QR Coset U_12^dagger = +-U_12 of G_40 at q = 11)",
+    "Theorem D33B (Exact 24-Fold Gauge-Reduced Exhaustive No-Go for the QNR Coset U_12 = beta*H_0 with beta*conj(beta) = -1 in QNR_11, Achieving sub = 0 / 177 and Global Minimum 12 / 4,970 = 99.7586%)",
+    "Theorem D34 (G_20 Bi-Unitary Odd-Rank Subfield Liberation sub = 125 [0, 25, 0, 100, 0] and the Entropy-Orbit Tradeoff Law)"
+  ],
+  "field_extension": "GF(121) = GF(11)[alpha] / (alpha^2 - 7) (primitive 5th root of unity zeta = 3 in GF(11)^*)",
+  "symmetry_group": "G_40 = (Z_5 x span(W_tilde) x span(R_tilde)) rtimes span(J_comp) acting on U in U(10, GF(121)) with 4,970 minor orbits (177 odd-Frobenius sub-orbits [2, 9, 24, 65, 77] + 4,793 even-Frobenius ext-orbits [1, 36, 336, 1695, 2725])",
+  "qr_coset_d33": {
+    "chiral_phase_gauge": "Since 11 == 3 (mod 4), gamma = 5*alpha = 55 in GF(121) satisfies gamma^2 = -1, conj(gamma) = -gamma, and gamma*conj(gamma) = 1. Conjugation by diag(I_5, gamma*I_5) in U(10, GF(121)) maps mode=1 (U_12^dagger = -U_12) bijectively onto mode=0 (U_12^dagger = U_12), and diag(I_5, -I_5) maps u_0 -> -u_0, restricting u_0 in {1, 2, 3, 4, 5} (4-fold reduction).",
+    "aut_z5_gauge": "Conjugation by diag(P_2, P_2) where P_2 permutes d -> 2*d mod 5 (order 4 in Aut(Z_5)) acts freely on all r=1..2 valid bases U_12 (4-fold reduction).",
+    "total_gauge_factor": 16,
+    "full_valid_bases": 85056,
+    "canonical_bases_swept": 5320,
+    "projective_unitary_circulants_per_base": 14400,
+    "canonical_pairs_swept": 76608000,
+    "full_pairs_represented": 1224806400,
+    "canonical_pairs_passing_r1_to_r5_pure_block_sieve": 54329285,
+    "elapsed_seconds_8_threads_local_cpu": 21.38,
+    "sub_0_of_177_count": 0,
+    "sub_1_of_177_count": 0,
+    "sub_2_of_177_canonical_count": 10,
+    "sub_2_of_177_full_count": 160,
+    "sub_3_of_177_canonical_count": 145,
+    "sub_3_of_177_full_count": 2320,
+    "qr_min_sub_bad_orbits": "2 / 177 (achieved at bidx=2990, kidx=1791: u11=[77,115,35,24,15], u12=[3,40,73,62,95], ext=43/4793, TOTAL=45/4970)",
+    "qr_min_total_bad_orbits": "31 / 4970 (99.3763% non-zero G_40-orbits, achieved at bidx=728, kidx=1850: u11=[61,55,113,51,108], u12=[1,30,60,71,107], sub=3/177, ext=28/4793)"
+  },
+  "qnr_coset_d33b": {
+    "coset_definition": "U_12 = beta * H_0 where H_0^dagger = H_0, beta = g^5 = 74 in GF(121)^*, beta*conj(beta) = 10 == -1 in QNR_11, and omega_0 = conj(beta)/beta = 91 in U(1, GF(121)). Because det(U_12) = beta^5 * det(H_0) with beta^5 * conj(beta^5) = (-1)^5 = -1 in QNR_11, this coset is strictly disjoint from the QR coset.",
+    "total_gauge_factor": 24,
+    "full_valid_bases": 161100,
+    "canonical_bases_swept": 6684,
+    "projective_unitary_circulants_per_base": 14400,
+    "canonical_pairs_swept": 96249600,
+    "full_pairs_represented": 2319936000,
+    "canonical_pairs_passing_r1_to_r5_pure_block_sieve": 68167486,
+    "elapsed_seconds_8_threads_local_cpu": 27.09,
+    "sub_0_of_177_canonical_count": 25,
+    "sub_1_of_177_canonical_count": 5,
+    "sub_2_of_177_canonical_count": 90,
+    "qnr_min_sub_bad_orbits": "0 / 177 (achieved 25 times; best total among sub=0 is 34 / 4970 at bidx=4352, kidx=5035: u11=[105,65,91,83,96], u12=[74,47,16,38,97], sub=0/177, ext=34/4793)",
+    "qnr_min_total_bad_orbits": "12 / 4970 (99.7586% non-zero G_40-orbits, achieved at bidx=249, kidx=1603: u11=[109,59,31,90,110], u12=[74,39,50,66,109], sub=2/177, ext=10/4793)"
+  },
+  "combined_g40_exhaustive_summary": {
+    "total_canonical_bases": 12004,
+    "total_canonical_pairs_swept": 172857600,
+    "total_full_pairs_represented": 3544742400,
+    "global_min_sub_bad_orbits": "0 / 177 (25 canonical hits in QNR coset D33B)",
+    "global_min_total_bad_orbits": "12 / 4970 (99.7586% non-zero G_40-orbits, bidx=249, kidx=1603 in QNR coset D33B: u11=[109,59,31,90,110], u12=[74,39,50,66,109], sub=2/177, ext=10/4793)",
+    "critical_dimension_threshold": "q_c(G_40, n=20) = 13 (AME(20, q) exists in G_40 for q in {13, 16, 17, 19} by Theorems D27B, D29, D28; 0 / 3,544,742,400 exist in G_40 across both QR and QNR cosets for q = 11 by Theorems D33 and D33B)"
+  },
+  "g20_biunitary_d34_summary": {
+    "symmetry_group": "G_20^unit = (Z_5 x span(W_tilde)) rtimes span(J_comp) (dropping R_tilde, so odd-rank sub-orbits vanish identically: sub = 125 [0, 25, 0, 100, 0], ext = 9,432, tot = 9,557)",
+    "pairs_swept": 47185920,
+    "sub_0_of_125_achieved": "0 / 125 (achieved at z=(7,35,45), kidx=4728: u11=[11,21,81,43,96], u12=[32,76,108,82,25])",
+    "best_total_bad_orbits": "52 / 9557 (99.4559% non-zero G_20-orbits, achieved at z=(10,27,114), kidx=6975: sub=3/125, ext=49/9432)"
+  },
+  "solver_sources": [
+    "scripts/solve_ame_20_11_d29_dft5_plucker.c",
+    "scripts/solve_ame_20_11_d33b_qnr_and_d34_g20.c",
+    "scripts/solve_ame_20_11_d34_g20_biunitary.c"
+  ]
+}
