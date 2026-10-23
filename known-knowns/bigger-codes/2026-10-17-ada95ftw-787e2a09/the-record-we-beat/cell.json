@@ -1,0 +1,12 @@
+{
+ "url": "https://aeb.win.tue.nl/codes/Andw.html",
+ "cell": "A(31,10,7)",
+ "printed": "62-109",
+ "table_upper": 109,
+ "fetched_utc": [
+  "2026-10-17T08:02:33Z",
+  "2026-10-17T12:15:46Z"
+ ],
+ "http_status": 200,
+ "sha256": "117899cff5af3fd00af17389595c5756050edb94cba876570cf9b76e451107f8"
+}
