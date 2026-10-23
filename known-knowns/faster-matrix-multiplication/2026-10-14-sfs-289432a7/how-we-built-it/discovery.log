@@ -1,0 +1,74 @@
+{"pid": {"pid": 36807, "started_utc": "2026-10-14T12:27:09.698353+00:00", "hard_seconds": 90, "args": {"format": "2x4x8", "map": "v", "seed": 101, "limit": 180, "mag": 2, "seconds": 90}}, "format": "2x4x8", "map": "v", "source_map_additions": 69, "dictionary_nodes": 180, "edge_choices": 850, "cancellation_edges": 844, "rows": 3549, "column_variables": 1210, "status": "solver pending"}
+Running HiGHS 1.2.0 [date: 2021-07-09, git hash: n/a]
+Copyright (c) 2022 ERGO-Code under MIT licence terms
+Presolving model
+2694 rows, 1093 cols, 7438 nonzeros
+2589 rows, 1076 cols, 7216 nonzeros
+Objective function is integral with scale 1
+
+Solving MIP model with:
+   2589 rows
+   1076 cols (932 binary, 0 integer, 0 implied int., 144 continuous)
+   7216 nonzeros
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+     Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   51              inf                  inf        0      0      0         0     0.0s
+         0       0         0   0.00%   60              inf                  inf        0      0      0       298     0.0s
+
+0.1% inactive integer columns, restarting
+Model after restart has 2583 rows, 1073 cols (930 bin., 0 int., 0 impl., 143 cont.), and 7197 nonzeros
+
+         0       0         0   0.00%   63              inf                  inf       64      0      0      5933     2.1s
+         0       0         0   0.00%   63              inf                  inf       64     32      0      6090     2.2s
+       724     214       222   0.01%   63              inf                  inf     4497    138   1425     28500     7.9s
+
+Restarting search from the root node
+Model after restart has 2572 rows, 1070 cols (927 bin., 0 int., 0 impl., 143 cont.), and 7167 nonzeros
+
+      1076       0         0   0.00%   63              inf                  inf      117      0      0     37825    10.5s
+      1076       0         0   0.00%   63              inf                  inf      117     48      5     37977    10.5s
+      1764     166       201   2.84%   64              inf                  inf     3789    106   1791     64432    15.5s
+
+Restarting search from the root node
+Model after restart has 2572 rows, 1070 cols (927 bin., 0 int., 0 impl., 143 cont.), and 7167 nonzeros
+
+      2599       0         0   0.00%   64              inf                  inf      152      0      0     83725    17.8s
+      2599       0         0   0.00%   64.25           inf                  inf      152     61      5     83927    17.9s
+      3531     266       300   0.01%   66              inf                  inf     3174    120   2761    110235    23.2s
+      4043     372       481   0.02%   66              inf                  inf     3651    141   4050    129969    28.9s
+ T    4529     111       650   0.22%   66              68                 2.94%     4172    159   5074    147013    33.5s
+      5506     292      1011   3.72%   66              68                 2.94%     5082    147   9866    180074    38.5s
+      7366     529      1737  24.85%   66              68                 2.94%     5800    134   9928    224571    43.5s
+      8737     687      2286  27.75%   66              68                 2.94%     6537    241   9674    268753    48.5s
+     10098     859      2818  33.36%   66              68                 2.94%     8554    157   9753    314039    53.5s
+     11063     934      3234  37.94%   66              68                 2.94%     8345    226   9756    356688    58.5s
+     11937     895      3670  41.31%   66              68                 2.94%     6967    183   9519    400033    63.5s
+     12970     956      4127  49.21%   66              68                 2.94%     7239    338   9984    443409    68.5s
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+     Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+     13468     713      4490  63.19%   66              68                 2.94%     8044    262   9565    498337    73.5s
+
+Solving report
+  Status            Optimal
+  Primal bound      68
+  Dual bound        68
+  Gap               0%
+  Solution status   feasible
+                    68 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            78.03 (total)
+                    0.02 (presolve)
+                    0.00 (postsolve)
+  Nodes             14437
+  LP iterations     552103 (total)
+                    89626 (strong br.)
+                    41240 (separation)
+                    59050 (heuristics)
+{"event": "improvement", "file": "candidate_2x4x8_rank51_adds182_milp_2x4x8_v_seed101.json", "map_additions": 68, "valid": true, "format": [2, 4, 8], "rank": 51, "additions": 182, "outputs_verified": 16, "brent_identities": 4096}
+{"pid": {"pid": 36807, "started_utc": "2026-10-14T12:27:09.698353+00:00", "hard_seconds": 90, "args": {"format": "2x4x8", "map": "v", "seed": 101, "limit": 180, "mag": 2, "seconds": 90}}, "format": "2x4x8", "map": "v", "source_map_additions": 69, "dictionary_nodes": 180, "edge_choices": 850, "cancellation_edges": 844, "rows": 3549, "column_variables": 1210, "status": 0, "message": "Optimization terminated successfully. (HiGHS Status 7: Optimal)", "objective": 68.0, "dual_bound": 68.0, "candidate": {"file": "candidate_2x4x8_rank51_adds182_milp_2x4x8_v_seed101.json", "map_additions": 68, "valid": true, "format": [2, 4, 8], "rank": 51, "additions": 182, "outputs_verified": 16, "brent_identities": 4096}, "utc": "2026-10-14T12:28:28.422430+00:00"}

@@ -1,0 +1,3 @@
+Contributor text, unverified.
+
+Bounded signed-grammar and cancellation reconstruction reduced the public 513-addition ternary schedule to 486, stages 101 + 159 + 226, preserving all 118 products and expanded factors. Actual selected records, code hashes and own warm predecessors are retained. Three fresh independent reviewers check the complete integer identity, literal cost and current comparisons, including actual 507-addition public PR 15 and compatible mixtures. Constructive replay verifies the selected operations without rerunning optimization; global minimality and full optimizer-history replay are unclaimed.

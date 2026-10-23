@@ -1,0 +1,55 @@
+{
+  "survey_utc_range": [
+    "2026-10-14T11:59:21.600922+00:00",
+    "2026-10-14T12:03:38.095043+00:00"
+  ],
+  "sota_entry": [
+    {
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "exponent": 2.828879
+    }
+  ],
+  "perminov_tree_truncated": false,
+  "all_matching_cr_files": [
+    {
+      "path": "schemes/results/addition_reduced_ZT/2x5x5_m40_cr153_cn283_ZT_reduced.json",
+      "cr": 153
+    }
+  ],
+  "minimum_cr": 153,
+  "reduced_known": {
+    "Z": 313,
+    "Z2": 218
+  },
+  "README_target_lines": [
+    "|  `2x5x5`   |     40      |      40      |      40      |   2.828878651   |"
+  ],
+  "CHANGELOG_target_lines": [],
+  "catalog_target_lines": [
+    "| `\u27e82,5,5\u27e9` | **\u2713 40** Alphatensor-F2 | **\u2713 40** Alphatensor-Z | \u2014 | \u2014 | **40** in F\u2082, R/Q/Z | +256 | \u2014 |"
+  ],
+  "catalog_addition_definition": [
+    "`+N adds` is the addition count (`nz(U)+nz(V)+nz(W) \u2212 2r \u2212 n\u00b7p`), shown for verified schemes only."
+  ],
+  "additional_known_255_rank": 40,
+  "additional_known_coefficient_set": [
+    -3,
+    -2,
+    -1,
+    0,
+    1,
+    2,
+    3
+  ],
+  "known_file_contains_no_reduced_SLP_or_cost": true,
+  "veritas_open_pr_count": 104,
+  "veritas_search_counts": {
+    "veritas-closed-exact-format-search.json": 0,
+    "veritas-exact-candidate-hash-search.json": 0
+  }
+}

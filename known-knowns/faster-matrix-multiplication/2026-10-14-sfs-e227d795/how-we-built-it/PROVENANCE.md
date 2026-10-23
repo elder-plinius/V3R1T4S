@@ -1,0 +1,1 @@
+The recorded156-addition construction can be replayed without rerunning optimization. Source dictionaries and runtime model-script hashes were not completely captured; archived scripts are labelled post-discovery snapshots. Original commands, seeds, own predecessors and selected decisions are retained. No whole-search replay or global optimum is claimed.

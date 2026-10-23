@@ -1,0 +1,3 @@
+Contributor text, unverified.
+
+The original signed dependency reconstruction reduced the public schedule from 188 to 185 additions. Further bounded cancellation dictionaries and shared dependency reconstruction reached 183. A mixed integer model selected an acyclic 68-addition B preprocessing graph within its recorded finite 180-node dictionary, combined with the existing 37-addition A and 77-addition output stages, for 182 total. The saved literal schedule and selected constructive decisions reproduce exactly over Z. Solver optimality applies only to its finite dictionary, not to all circuits or decompositions. Whole-search replay was not preserved; that limit is explicit.

@@ -1,0 +1,26 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/results/addition_reduced_ZT/4x4x6_m73_cr280_cn540_ZT_reduced.json",
+  "utc": "2026-10-14T15:12:57.403762+00:00",
+  "http_status": 200,
+  "headers": {
+    "Content-Length": "17875",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"e9202d118a66c9ab5b4f28a21e97997965d1ca6004cf389788250897e260f537\"",
+    "Date": "Wed, 14 Oct 2026 15:12:57 GMT"
+  },
+  "sha256": "cbc252aaf1694aa0cb565cf4a4c3e9d418697afad253af77e25611dc66852222",
+  "cell": "(4, 4, 6), rank73, ternary ZT",
+  "reference_additions": 280,
+  "candidate_additions": 264,
+  "reference_stages": [
+    73,
+    81,
+    126
+  ],
+  "candidate_stages": [
+    67,
+    76,
+    121
+  ],
+  "source_commit": "f0efd4f67f6ff09bf0418af75c2a209c8cf814b3"
+}

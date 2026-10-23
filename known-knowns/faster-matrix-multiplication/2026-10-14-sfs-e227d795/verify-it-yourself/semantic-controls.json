@@ -1,0 +1,398 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 156,
+          "identities_verified": 3600,
+          "rank": 47,
+          "valid": true
+        },
+        "seconds": 0.015031582908704877
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 9139,
+      "fixture_sha256": "bed01d1c72237adbade22ddb33033cdf2e426457e3f93d98f84be70e2c4c939b",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "active_products": 47,
+          "basis_mismatch_count": 0,
+          "basis_mismatch_first": [],
+          "basis_pair_count": 240,
+          "coefficient_count": 3600,
+          "coefficient_mismatch_count": 0,
+          "coefficient_mismatch_first": [],
+          "distinct_products_up_to_sign": 47,
+          "expanded_naive_additions": 277,
+          "literal_additions": 156,
+          "pass": true,
+          "rank": 47,
+          "tensor_matches_mod_2": true,
+          "tensor_nonzero_count": 60,
+          "terminal_ternary": true
+        },
+        "seconds": 0.019935999996960163
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 1)",
+        "exception": "ValueError",
+        "seconds": 0.000196083914488554,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 9140,
+      "fixture_sha256": "040a843581f0a6f89123385604329036be5542213e127797ce6a510971698e63",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "active_products": 47,
+          "basis_mismatch_count": 3,
+          "basis_mismatch_first": [
+            {
+              "a": 0,
+              "b": 1,
+              "expected": [
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "got": [
+                -2,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "a": 0,
+              "b": 3,
+              "expected": [
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "got": [
+                -2,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "basis_pair_count": 240,
+          "coefficient_count": 3600,
+          "coefficient_mismatch_count": 3,
+          "coefficient_mismatch_first": [
+            {
+              "a": 0,
+              "b": 1,
+              "c": 0,
+              "expected": 0,
+              "got": -2
+            },
+            {
+              "a": 0,
+              "b": 3,
+              "c": 0,
+              "expected": 0,
+              "got": -2
+            },
+            {
+              "a": 0,
+              "b": 4,
+              "c": 0,
+              "expected": 0,
+              "got": 2
+            }
+          ],
+          "distinct_products_up_to_sign": 47,
+          "expanded_naive_additions": 277,
+          "literal_additions": 156,
+          "pass": false,
+          "rank": 47,
+          "tensor_matches_mod_2": true,
+          "tensor_nonzero_count": 63,
+          "terminal_ternary": true
+        },
+        "seconds": 0.018924207892268896
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.0001368329394608736,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 9140,
+      "fixture_sha256": "cce9b87e29fae866c5bcee131ba3feb0538439388f556c9cc740557b34770777",
+      "independent": {
+        "accepted": false,
+        "diagnostics": {
+          "active_products": 47,
+          "basis_mismatch_count": 4,
+          "basis_mismatch_first": [
+            {
+              "a": 0,
+              "b": 0,
+              "expected": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "got": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "a": 1,
+              "b": 5,
+              "expected": [
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ],
+              "got": [
+                -1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ],
+          "basis_pair_count": 240,
+          "coefficient_count": 3600,
+          "coefficient_mismatch_count": 4,
+          "coefficient_mismatch_first": [
+            {
+              "a": 0,
+              "b": 0,
+              "c": 0,
+              "expected": 1,
+              "got": -1
+            },
+            {
+              "a": 1,
+              "b": 5,
+              "c": 0,
+              "expected": 1,
+              "got": -1
+            },
+            {
+              "a": 2,
+              "b": 10,
+              "c": 0,
+              "expected": 1,
+              "got": -1
+            },
+            {
+              "a": 3,
+              "b": 15,
+              "c": 0,
+              "expected": 1,
+              "got": -1
+            }
+          ],
+          "distinct_products_up_to_sign": 47,
+          "expanded_naive_additions": 277,
+          "literal_additions": 156,
+          "pass": false,
+          "rank": 47,
+          "tensor_matches_mod_2": true,
+          "tensor_nonzero_count": 60,
+          "terminal_ternary": true
+        },
+        "seconds": 0.019287750124931335
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 9139,
+      "fixture_sha256": "b8b03a0e0ca0890ad32618f6b89caabbf78cbed0f1299aed58d461a6084f9fdd",
+      "independent": {
+        "accepted": false,
+        "error": "metadata reduced 157 != literal 156",
+        "exception": "Rejected",
+        "seconds": 0.0012550000101327896,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 9139,
+      "fixture_sha256": "c1bcb395a0388eee79d30a22607969d7c2678e93f1958d8be7ac3add2ceb7e7a",
+      "independent": {
+        "accepted": false,
+        "error": "u[0]: unavailable/forward index 50",
+        "exception": "Rejected",
+        "seconds": 0.00016704201698303223,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 9138,
+      "fixture_sha256": "a8acb6f86b5b6e7e95520081a607ad402452757d5be05f6131bc8db6cdfb0cce",
+      "independent": {
+        "accepted": false,
+        "error": "candidate must operate over Z",
+        "exception": "Rejected",
+        "seconds": 5.916925147175789e-06,
+        "unexpected_exception": false
+      },
+      "metadata_adjudication": "Exact ring-domain rejection from unchanged checker; initially unrecognized by v1 diagnostic keyword classifier. No rerun."
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 9114,
+      "fixture_sha256": "f4850dc8d49bee82e87a88e4b946d837d8e398e3c3aafca3c4b0e37abcbd96a2",
+      "independent": {
+        "accepted": false,
+        "error": "terminal dimensions do not match",
+        "exception": "Rejected",
+        "seconds": 4.875008016824722e-06,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    3,
+    4,
+    5
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "e227d795fa1418070e30f21b18eac6a55d7426e51cfc8f8ef99c57b831d021f2",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "e34a706e20f0eb4554c94cd870273cd819afcbb401afc285a3c155e7484dc848"
+  },
+  "original_sha256": "e227d795fa1418070e30f21b18eac6a55d7426e51cfc8f8ef99c57b831d021f2",
+  "pass": true,
+  "rank": 47,
+  "raw_v1_aggregate_pass": false,
+  "raw_v1_receipt_sha256": "2e3d2a54d92891cdc720f34ae3f62986ad6000a785844cb0d243a6df7dce3e05",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.08569583296775818
+}

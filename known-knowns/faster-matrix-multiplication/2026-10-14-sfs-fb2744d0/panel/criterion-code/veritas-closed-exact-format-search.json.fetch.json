@@ -1,0 +1,12 @@
+{
+  "url": "https://api.github.com/search/issues?q=repo%3Aelder-plinius%2FV3R1T4S%20is%3Apr%20is%3Aclosed%20%222x5x5%22&per_page=100",
+  "started_utc": "2026-10-14T12:03:37.652923+00:00",
+  "http_status": 200,
+  "sha256": "c9938edecb99d754b2d039ac9eec320a94c769b6a6417921e2dcbef9e2fe01a0",
+  "bytes": 79,
+  "headers": {
+    "Date": "Wed, 14 Oct 2026 12:03:38 GMT",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "79"
+  }
+}

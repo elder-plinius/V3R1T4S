@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/constructed/section5/2x5x5-r40-hk71-5e3b69e.json",
+  "utc": "2026-10-14T11:59:44.175073+00:00",
+  "started_utc": "2026-10-14T11:59:43.572921+00:00",
+  "http_status": 200,
+  "sha256": "9b6e56c88a0f653b8b832c449f2420dac034decb211b5d734984f2b934d29dee",
+  "bytes": 7001,
+  "file": "catalog-2x5x5-r40-hk71-5e3b69e.json",
+  "headers": {
+    "Content-Length": "7001",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"9d112a297c46a534e29d828d514c0ede02f6b4c417d6e81629350dec64d10b08\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

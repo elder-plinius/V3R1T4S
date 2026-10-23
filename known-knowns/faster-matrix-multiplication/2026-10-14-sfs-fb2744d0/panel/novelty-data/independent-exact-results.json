@@ -1,0 +1,154 @@
+[
+  {
+    "file": "scheme.json",
+    "sha256": "fb2744d037444d6e5f84f56628cf97a01ad2650e374421fbe4961bfafefd7ca2",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 31,
+      "v": 55,
+      "w": 62
+    },
+    "additions": 148,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "perminov-2x5x5_m40_cr153_cn283_ZT_reduced.json",
+    "sha256": "89296c6dd94e052ca7cb517fa4d59b8a1dc335dc08c7dfc73edb420bba0c1bab",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 34,
+      "v": 55,
+      "w": 64
+    },
+    "additions": 153,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "shared-Lille-2x5x5-raw.json",
+    "sha256": "2f5e1f8fbbe151221395689f90b837c9d66d9af7c7705a18fae55c3514e1b6f7",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 36,
+      "v": 54,
+      "w": 65
+    },
+    "additions": 155,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "shared-catalog-2x5x5-r40-alphatensor_Z-67f5fb7.json",
+    "sha256": "bd148ba092c8ca9a1fdb5167b6658351d6e129d2a1e2f4985e70e79e722ad133",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 37,
+      "v": 55,
+      "w": 64
+    },
+    "additions": 156,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "shared-catalog-2x5x5-r40-perminov_serbase_ZT-221c79e.json",
+    "sha256": "fe0ff395b235bea0f80eb77819a200f4a1f9a51bc3dd825fc562db9d71f61078",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 34,
+      "v": 64,
+      "w": 68
+    },
+    "additions": 166,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "shared-catalog-2x5x5-r40-perminov_ZT-8aea8c8.json",
+    "sha256": "652211f1783c406abba13e261c5b8153f306e2877763fc949a6a5a3e6e019063",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 32,
+      "v": 68,
+      "w": 63
+    },
+    "additions": 163,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "shared-catalog-2x5x5-r40-perminov_serbase_ZT-dc66eaf.json",
+    "sha256": "a5dc4c501d0da336ff0cfae8df345cca463dcc3cc1a4e382d3719b56f40eb3cc",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 32,
+      "v": 70,
+      "w": 66
+    },
+    "additions": 168,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  },
+  {
+    "file": "shared-catalog-2x5x5-r40-hk71-5e3b69e.json",
+    "sha256": "8c475cee0a2ebfb148202115fb519e526e85a94cfe046f2f08553d49ff8756b5",
+    "format": [
+      2,
+      5,
+      5
+    ],
+    "rank": 40,
+    "counts": {
+      "u": 37,
+      "v": 54,
+      "w": 64
+    },
+    "additions": 155,
+    "integer_coefficients_checked": 2500,
+    "expanded_tensor_ternary": true,
+    "valid": true
+  }
+]

@@ -1,0 +1,3 @@
+numpy==1.24.3
+scipy==1.11.4
+# Observed embedded solver: HiGHS 1.2.0. Constructive replay uses only the standard library.

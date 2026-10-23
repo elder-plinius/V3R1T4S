@@ -1,0 +1,50 @@
+{
+  "format": [
+    2,
+    5,
+    5
+  ],
+  "rank": 40,
+  "perminov_tree_truncated": false,
+  "perminov_tree_sha": "f0efd4f67f6ff09bf0418af75c2a209c8cf814b3",
+  "all_matching_reduced_ZT_files": [
+    "schemes/results/addition_reduced_ZT/2x5x5_m40_cr153_cn283_ZT_reduced.json"
+  ],
+  "perminov_minimum_cr": 153,
+  "reduced_known": {
+    "Z": 313,
+    "Z2": 218
+  },
+  "sota_entry": [
+    {
+      "format": [
+        2,
+        5,
+        5
+      ],
+      "rank": 40,
+      "exponent": 2.828879
+    }
+  ],
+  "sota_createdAt": "2026-10-09T11:45:48",
+  "Lille_complexity_variant_links": [],
+  "Lille_raw_additions": 208,
+  "coverage_row": "| `\u27e82,5,5\u27e9` | **\u2713 40** Alphatensor-F2 | **\u2713 40** Alphatensor-Z | \u2014 | \u2014 | **40** in F\u2082, R/Q/Z | +256 | \u2014 |",
+  "open_pr_pages": 2,
+  "open_pr_count": 104,
+  "open_pr_unique_count": 104,
+  "open_pr_exact_format_or_permutation_matches": [],
+  "trophy_exact_format_matches": [],
+  "injection_suspected": false,
+  "status": "ALL BINDING TABLES CHECKED",
+  "literature_blocked_source": {
+    "file": "number-beast-2024-2063.pdf",
+    "status": 403,
+    "retry_or_evasion": false
+  },
+  "optional_arxiv_html_missing": {
+    "file": "arxiv-2609.32388.html",
+    "status": 404,
+    "canonical_abstract_http": 200
+  }
+}

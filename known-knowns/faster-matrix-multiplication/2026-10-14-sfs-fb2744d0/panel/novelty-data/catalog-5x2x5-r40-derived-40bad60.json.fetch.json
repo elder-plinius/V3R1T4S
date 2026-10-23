@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/src/main/resources/schemes/derived/section5/5x2x5-r40-derived-40bad60.json",
+  "utc": "2026-10-14T11:59:44.247294+00:00",
+  "started_utc": "2026-10-14T11:59:43.573117+00:00",
+  "http_status": 200,
+  "sha256": "e725012d2944e1d40bb306cda710712c52063011936a853d90ad39c67ce220ec",
+  "bytes": 7065,
+  "file": "catalog-5x2x5-r40-derived-40bad60.json",
+  "headers": {
+    "Content-Length": "7065",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"9cf4f2a83351f3dadecd3d95b2123d8e10e12bb4d0304516320e0973adc9b177\"",
+    "Date": "Wed, 14 Oct 2026 11:59:44 GMT"
+  }
+}

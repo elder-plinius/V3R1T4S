@@ -1,0 +1,15 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/CHANGELOG.md",
+  "utc": "2026-10-14T11:58:20.585910+00:00",
+  "started_utc": "2026-10-14T11:58:20.103778+00:00",
+  "http_status": 200,
+  "sha256": "07fbb3249d1213b95d9a9c3069d208c0c3b4390a6b87c71325af64a2d56cd175",
+  "bytes": 85319,
+  "file": "perminov-CHANGELOG.md",
+  "headers": {
+    "Content-Length": "85319",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"57c8a86c4756a2785e7cb566521d3147fc6981094d0434f2710df858ce819eb4\"",
+    "Date": "Wed, 14 Oct 2026 11:58:20 GMT"
+  }
+}

@@ -1,0 +1,3 @@
+Contributor text, unverified.
+
+Signed dependency reconstruction, bounded bridge dictionaries and warm union probes reduced the existing 221-addition source schedule to 214 additions. Actual saved events and predecessor programs retain this finite search trail. Final stages cost 50+70+94, preserving all expanded factors and 58 products. Independent reviewers verified the complete integer identity and actual public comparisons, including the 218-addition public submission. This is a source-relative schedule improvement with a portable constructive replay; no complete optimizer-history replay or global optimality claim is made.

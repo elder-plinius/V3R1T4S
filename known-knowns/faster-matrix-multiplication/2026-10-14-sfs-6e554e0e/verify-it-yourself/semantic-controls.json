@@ -1,0 +1,165 @@
+{
+  "case_order": [
+    "original",
+    "first_output_term_sign",
+    "whole_output_sign",
+    "reduced_cost_plus_one",
+    "out_of_range_reference",
+    "wrong_ring_flag",
+    "missing_product"
+  ],
+  "checker_source_modified": false,
+  "controls": [
+    {
+      "basis": {
+        "accepted": true,
+        "diagnostics": {
+          "additions": 179,
+          "identities_verified": 3600,
+          "rank": 47,
+          "valid": true
+        },
+        "seconds": 0.01735008298419416
+      },
+      "case": "original",
+      "control_pass": true,
+      "fixture_bytes": 9151,
+      "fixture_sha256": "b3482f8442ab0dcf1011a43596ea60e2aef4493d49214dedfdc7795ffd472002",
+      "independent": {
+        "accepted": true,
+        "diagnostics": {
+          "active_products": 47,
+          "additions": 179,
+          "basis_binary_gate_checks": 53700,
+          "basis_output_checks": 3600,
+          "basis_pairs": 300,
+          "basis_product_checks": 14100,
+          "binary_gates": 179,
+          "coefficient_count": 3600,
+          "expected_one_coefficients": 60,
+          "expected_zero_coefficients": 3540,
+          "mismatches": 0,
+          "naive_additions": 332,
+          "ordering": "A[i,k]=i*5+k; B[k,j]=k*6+j; output C[i,j]=j*2+i",
+          "pass": true,
+          "rank_one_terms_distinct": 47,
+          "ring": "Z"
+        },
+        "seconds": 0.15843125013634562
+      }
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.00015016598626971245,
+        "unexpected_exception": false
+      },
+      "case": "first_output_term_sign",
+      "control_pass": true,
+      "fixture_bytes": 9152,
+      "fixture_sha256": "e08a7f8e713dc61712bfb3a153a5bdba064f83771a47c120a5c224b220941886",
+      "independent": {
+        "accepted": false,
+        "error": "integer tensor mismatch: 16 coefficients; first [(0, 0, 0, -1, 1), (0, 0, 6, 2, 0), (0, 0, 17, -2, 0), (0, 0, 23, 2, 0), (0, 4, 0, -2, 0)]",
+        "exception": "Invalid",
+        "seconds": 0.011018292047083378,
+        "unexpected_exception": false
+      },
+      "independent_mathematical_mismatch_reported": true
+    },
+    {
+      "basis": {
+        "accepted": false,
+        "error": "basis pair mismatch (0, 0)",
+        "exception": "ValueError",
+        "seconds": 0.00012233294546604156,
+        "unexpected_exception": false
+      },
+      "case": "whole_output_sign",
+      "control_pass": true,
+      "fixture_bytes": 9152,
+      "fixture_sha256": "34d9dc41c43612c58d9ade4d45fcd90ca714159c8375f95805abfbeadb7bfd92",
+      "independent": {
+        "accepted": false,
+        "error": "integer tensor mismatch: 5 coefficients; first [(0, 0, 0, -1, 1), (0, 1, 6, -1, 1), (0, 2, 12, -1, 1), (0, 3, 18, -1, 1), (0, 4, 24, -1, 1)]",
+        "exception": "Invalid",
+        "seconds": 0.010930541902780533,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "reduced_cost_plus_one",
+      "control_pass": true,
+      "fixture_bytes": 9151,
+      "fixture_sha256": "44b2a196730d1aa79fabc25b3aa92bdc62f3d6da5c2f5ae985fe8d73e19b9985",
+      "independent": {
+        "accepted": false,
+        "error": "count mismatch: computed 179, metadata 180",
+        "exception": "Invalid",
+        "seconds": 0.0012232910376042128,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "out_of_range_reference",
+      "control_pass": true,
+      "fixture_bytes": 9151,
+      "fixture_sha256": "1d53c1882243dfd287bf9686104d85a34772035699740f32aa146be97f1deb70",
+      "independent": {
+        "accepted": false,
+        "error": "u_final[0]: reference 48 outside earlier pool [0,48)",
+        "exception": "Invalid",
+        "seconds": 0.0001532919704914093,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "wrong_ring_flag",
+      "control_pass": true,
+      "fixture_bytes": 9150,
+      "fixture_sha256": "3384dea18bb7493b84235c6dc978aa787390b4fd5ee3632390bb98249051f382",
+      "independent": {
+        "accepted": false,
+        "error": "integer ring required; z2 must be false",
+        "exception": "Invalid",
+        "seconds": 7.250113412737846e-06,
+        "unexpected_exception": false
+      }
+    },
+    {
+      "case": "missing_product",
+      "control_pass": true,
+      "fixture_bytes": 9127,
+      "fixture_sha256": "6034fc46b0e44e6531791270aa18e8f205ef99d80c4046c4d14697edefb9b32a",
+      "independent": {
+        "accepted": false,
+        "error": "u: wrong final form count",
+        "exception": "Invalid",
+        "seconds": 8.999835699796677e-06,
+        "unexpected_exception": false
+      }
+    }
+  ],
+  "format": [
+    2,
+    5,
+    6
+  ],
+  "hash_guard_bypassed": true,
+  "original_and_checker_bytes_unchanged": true,
+  "original_and_checker_hashes": {
+    "object/scheme.json": "6e554e0ee89a3fda23f7c59d261ca1f27bcb089e141db911246437ca50e931e9",
+    "verify-it-yourself/basis_check.py": "52cfb7166cc61de245463fabfa8f314dfe4f5de9a13943e91f9ba5757eae94f6",
+    "verify-it-yourself/independent_check.py": "8f92cbac662a571f1507608bd87a051fadaaa2475b86f2b798f8aae8b5b1331a"
+  },
+  "original_sha256": "6e554e0ee89a3fda23f7c59d261ca1f27bcb089e141db911246437ca50e931e9",
+  "pass": true,
+  "rank": 47,
+  "raw_v1_aggregate_pass": true,
+  "raw_v1_receipt_sha256": "e1db61f762ad05f9a2a083ce553bdc765788b726c558c885c5c34976776ec862",
+  "receipt_revision": 2,
+  "scope": "Fixed deterministic semantic/schema controls; no exhaustive fault-detection claim.",
+  "seconds": 0.21027733315713704
+}

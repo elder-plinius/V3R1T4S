@@ -1,0 +1,13 @@
+{
+  "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/reduced_known.json",
+  "started_utc": "2026-10-14T11:59:21.602201+00:00",
+  "http_status": 200,
+  "sha256": "ef67c13792b0e770578de4ff01438178ce4e6ac4efd60a3580f3131e31907a5d",
+  "bytes": 1189,
+  "headers": {
+    "Content-Length": "1189",
+    "Content-Type": "text/plain; charset=utf-8",
+    "ETag": "\"a02dedc50917a53b470cd01e7b29b7f050c9ab7e28a99cf434cfbca2dbf9acd3\"",
+    "Date": "Wed, 14 Oct 2026 11:59:21 GMT"
+  }
+}

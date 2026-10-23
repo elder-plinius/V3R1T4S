@@ -1,0 +1,11 @@
+{"event": "skip_fixed_bound", "format": "3x4x5", "map": "u", "cost": 38}
+{"event": "dictionary", "format": "3x4x5", "map": "v", "direct_nodes": 320, "dual_nodes": 320, "direct_cancellation_edges": 5351, "dual_cancellation_edges": 1498}
+{"event": "dictionary", "format": "3x4x5", "map": "w", "direct_nodes": 320, "dual_nodes": 320, "direct_cancellation_edges": 1267, "dual_cancellation_edges": 6020}
+{"event": "skip_fixed_bound", "format": "2x5x6", "map": "u", "cost": 38}
+{"event": "dictionary", "format": "2x5x6", "map": "v", "direct_nodes": 320, "dual_nodes": 320, "direct_cancellation_edges": 2997, "dual_cancellation_edges": 1488}
+{"event": "skip_fixed_bound", "format": "2x5x6", "map": "w", "cost": 76}
+{"event": "skip_fixed_bound", "format": "2x4x8", "map": "u", "cost": 37}
+{"event": "dictionary", "format": "2x4x8", "map": "v", "direct_nodes": 320, "dual_nodes": 320, "direct_cancellation_edges": 3209, "dual_cancellation_edges": 1221}
+{"event": "skip_fixed_bound", "format": "2x4x8", "map": "w", "cost": 77}
+{"event": "improvement", "artifact": "candidate_3x4x5_rank47_adds156_bridges_seed71_mag2_warm.json", "cycle": 6, "format": "3x4x5", "rank": 47, "cost": 156, "maps": {"u": {"fixed_bound_cost": 38}, "v": {"source": 45, "direct": 44, "dual": 45}, "w": {"source": 74, "direct": 74, "dual": 74}}, "utc": "2026-10-14T12:24:23.974193+00:00", "identity": {"valid": true, "format": [3, 4, 5], "rank": 47, "additions": 156, "outputs_verified": 15, "brent_identities": 3600}}
+{"event": "time_cap", "elapsed_seconds": 201.30561799999998, "records": 22, "reason": "hard cap"}

@@ -1,0 +1,16 @@
+{
+  "url": "https://arxiv.org/html/2607.28676",
+  "utc": "2026-10-14T12:01:03.723529+00:00",
+  "started_utc": "2026-10-14T12:01:01.347851+00:00",
+  "http_status": 200,
+  "sha256": "75df572f3bbf041e0abf0c113d0e8e7ad0c1c9f889b259da2c34dc1ff33816b1",
+  "bytes": 418565,
+  "file": "arxiv-2607.28676.html",
+  "headers": {
+    "Content-Length": "418565",
+    "last-modified": "Mon, 24 Aug 2026 19:43:44 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "etag": "\"CIu55KGDupYDEAE=\"",
+    "Date": "Wed, 14 Oct 2026 12:01:03 GMT"
+  }
+}

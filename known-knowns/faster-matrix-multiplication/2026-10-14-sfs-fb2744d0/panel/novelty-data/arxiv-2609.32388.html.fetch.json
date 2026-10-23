@@ -1,0 +1,14 @@
+{
+  "url": "https://arxiv.org/html/2609.32388",
+  "utc": "2026-10-14T12:01:01.965746+00:00",
+  "started_utc": "2026-10-14T12:01:01.808178+00:00",
+  "http_status": 404,
+  "sha256": "0b0cbd9c7c0f9506e8aba60f1b554041aca00ff8ed7dbfbf81bfe2869e1ed15d",
+  "bytes": 7899,
+  "file": "arxiv-2609.32388.html",
+  "headers": {
+    "Content-Length": "7899",
+    "content-type": "text/html; charset=utf-8",
+    "Date": "Wed, 14 Oct 2026 12:01:02 GMT"
+  }
+}
