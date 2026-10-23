@@ -23,9 +23,9 @@ print('PASS' if ok else 'FAIL')
 """
 
 
-def w(path, text):
+def w(path, text, newline=None):
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, "w") as f:
+    with open(path, "w", newline=newline) as f:
         f.write(text)
 
 
@@ -59,7 +59,7 @@ class Base(unittest.TestCase):
         w(os.path.join(R, "target.md"), "id: toy-record\nwhy: practice\n")
         w(os.path.join(R, "scout.md"), "url: http://example.org/table\nstatus: 200\nsha256: %s\n" % HEX)
         w(os.path.join(R, "BRIEF.md"), "definition quoted\n")
-        w(os.path.join(R, "data", "status.html"), "<p>open</p>\n")
+        w(os.path.join(R, "data", "status.html"), "<p>open</p>\n", newline="")
         w(os.path.join(R, "scout.md"), "url: http://example.org/table\nstatus: 200\nsha256: %s\n"
           % hashlib.sha256(b"<p>open</p>\n").hexdigest())
 
@@ -72,7 +72,7 @@ class Base(unittest.TestCase):
             A = os.path.join(self.R, "attempts", "lens%d" % i)
             dead = "" if lv.endswith("_claim") else "dead lines:\n" + "".join(
                 "- tried idea %d: real output said no; dead because the bound is tight\n" % k for k in range(3))
-            w(os.path.join(A, "report.md"), "claim level: %s\n%s" % (lv, dead))
+            w(os.path.join(A, "report.md"), "claim level: %s\n%s" % (lv, dead), newline="")
             w(os.path.join(A, "NOTES.md"), "hypotheses\n")
             w(os.path.join(A, "code", "try.py"), "print(1)\n")
             w(os.path.join(A, "code", "try.out"), "1\n")
@@ -103,7 +103,7 @@ class Base(unittest.TestCase):
           "%s,A(4;2;2),3,2,2026-10-12T03:00:00Z,object/code.txt,%s\n" % (target, HEX))
         w(os.path.join(P, "object", "code.txt"), "1100\n1010\n0110\n")
         w(os.path.join(P, "verify-it-yourself", "check.py"), CHECKER if not corrupt_checker else "print('FAIL')\n")
-        w(os.path.join(P, "verify-it-yourself", "run_checks.sh"), "python3 verify-it-yourself/check.py\n")
+        w(os.path.join(P, "verify-it-yourself", "run_checks.sh"), "python3 verify-it-yourself/check.py\n", newline="")
         w(os.path.join(P, "verify-it-yourself", "RECEIPTS.md"), "PASS\n")
         w(os.path.join(P, "how-we-built-it", "search.py"), "print('search')\n")
         w(os.path.join(P, "HOW_WE_FOUND_IT.md"), "Contributor text, unverified. Two lenses.\n")

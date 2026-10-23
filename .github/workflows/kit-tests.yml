@@ -1,0 +1,45 @@
+name: Kit tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "kit/**"
+      - ".github/workflows/kit-tests.yml"
+  pull_request:
+    paths:
+      - "kit/**"
+      - ".github/workflows/kit-tests.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: ${{ matrix.os }} / Python ${{ matrix.python-version }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python-version: ["3.11", "3.14"]
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Check package checker prerequisites
+        # The fixtures execute POSIX scripts with python3, including on Windows.
+        run: |
+          python --version
+          python3 --version
+          python -c "import shutil; assert shutil.which('sh') or shutil.which('bash'), 'A POSIX shell is required to exercise package checkers'"
+      - name: Run kit tests
+        run: python -m unittest discover -s kit/tests -p 'test_*.py' -v
