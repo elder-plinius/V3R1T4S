@@ -1,0 +1,1 @@
+The preserved charter and prompt describe original proof-generation provenance. The current narrow public-source verification uses the new PREREG in how-we-built-it and the repository version recorded here. The quarry remains retired from automatic research.
