@@ -1,7 +1,6 @@
 # Panelist Report: NOVELTY — $C(40, 16, 7) \le 7,251$
 
 role: NOVELTY
-context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
 target_id: covering-designs-record
 cell: (v, k, t) = (40, 16, 7)
 claimed_value: 7251
@@ -13,10 +12,8 @@ table_value: 7470
 
 ## 1. Local Claim Artifact & Standalone Verification
 
-Inspected `claim/CLAIM.md`, `claim/REPRODUCE.md`, and `claim/design_40_16_7.txt`:
-- `claim/design_40_16_7.txt`: `sha256: 7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985`, `7,251` lines (`319,951` bytes).
-- `claim/author_checker_cover_check.py`: `sha256: dcf6f867fa3ea9d0e823640581f48d52d0a033a3a12bc1412085032f6abd82ac`.
-- Running `python3 claim/author_checker_cover_check.py 40 16 7 claim/design_40_16_7.txt` output:
+- `object/design_40_16_7.txt`: `sha256: 7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985`, `7,251` lines (`319,951` bytes).
+- Running the author's original standalone cover checker (not included in this package) with `40 16 7` on the design output:
   ```
   blocks=7251
   distinct=7251
@@ -25,6 +22,17 @@ Inspected `claim/CLAIM.md`, `claim/REPRODUCE.md`, and `claim/design_40_16_7.txt`
   C_v_t=18643560
   uncovered=0
   COVER_CHECK: PASS
+  ```
+- Re-run on the packaged files, `sh verify-it-yourself/run_checks.sh` (which runs `verify-it-yourself/check_40_16_7.py`) prints:
+  ```
+  control_positive_fano_7_3_2: PASS (21/21 covered, uncovered=0)
+  control_negative_fano_minus_1: PASS (rejected with uncovered=3)
+  sha256=7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985
+  v=40 k=16 t=7 blocks=7251 distinct=7251
+  schonheim_lower_bound=1965
+  previous_cr_record=7470 previous_ljcr_record=7470 delta=-219
+  total_7_subsets=18643560 uncovered=0
+  PASS
   ```
 
 ## 2. Single Honest Fetch of Primary Tables
@@ -36,7 +44,7 @@ Inspected `claim/CLAIM.md`, `claim/REPRODUCE.md`, and `claim/design_40_16_7.txt`
 - **UTC timestamp:** `2026-10-18T17:27:33Z`
 - **HTTP status:** `200`
 - **Response size / lines:** `171,740` bytes, `9,629` lines
-- **SHA-256 of live response:** `6d317b207c4f582d7e913c4c7d6ebd0305407fdcd2dbb6de1901adf4f13a2704` (compared against `claim/cr_archive_vkt.txt` `sha256: f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277`; three unrelated $t=3, k=9$ rows changed between the claim snapshot and this fetch, while the $(40,16,7)$ row is unchanged)
+- **SHA-256 of live response:** `6d317b207c4f582d7e913c4c7d6ebd0305407fdcd2dbb6de1901adf4f13a2704` (three unrelated $t=3, k=9$ rows changed relative to an earlier same-day snapshot of the archive, while the $(40,16,7)$ row is unchanged)
 - **Exact row for $(v, k, t) = (40, 16, 7)$ (line 5135):**
   ```
   40	16	07	07		7470
@@ -50,7 +58,7 @@ Inspected `claim/CLAIM.md`, `claim/REPRODUCE.md`, and `claim/design_40_16_7.txt`
    - **UTC timestamp:** `2026-10-18T17:27:34Z`
    - **HTTP status:** `200`
    - **Response size:** `9,200` bytes
-   - **SHA-256:** `a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3` (matches `claim/ljcr_home.html` byte-for-byte)
+   - **SHA-256:** `a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3` (matches the digest recorded in `the-record-we-beat/RECORD.md`)
    - **Quoted footer timestamp:** `Site last updated 2026-09-03`
 
 2. **Zenodo LJCR database records (single GET each, no retries):**

@@ -2,6 +2,5 @@
 set -e
 DIR="$(CDPATH= cd -- "$(dirname -- "$0")/.." && pwd)"
 cd "$DIR"
-PY="/opt/homebrew/bin/python3"
-[ -x "$PY" ] || PY="python3"
+PY="${PYTHON:-python3}"
 "$PY" verify-it-yourself/check_40_16_7.py

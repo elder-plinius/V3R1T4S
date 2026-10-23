@@ -2,7 +2,7 @@
 
 ## What
 
-An explicit (40,16,7) covering design claim/design_40_16_7.txt (319,951 bytes, sha256 7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985) with 7,251 blocks, exhaustively verified over all 18,643,560 7-subsets of a 40-set, strictly improving on the Covering Repository record of 7,470 and the La Jolla Covering Repository record of 7,470 for C(40,16,7) by 219 blocks.
+An explicit (40,16,7) covering design object/design_40_16_7.txt (319,951 bytes, sha256 7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985) with 7,251 blocks, exhaustively verified over all 18,643,560 7-subsets of a 40-set, strictly improving on the Covering Repository record of 7,470 and the La Jolla Covering Repository record of 7,470 for C(40,16,7) by 219 blocks.
 
 - **Target:** `covering-designs-record` (`combinatorics-covering`)
 - **Claim level:** `solution_claim` (`CONFIRMED_SOLUTION`)
@@ -23,7 +23,7 @@ It checks positive and negative Fano-plane controls ($C(7, 3, 2) = 7$), verifies
 ## Compared To
 
 - **Covering Repository (`https://coveringrepository.com/download_archive_vkt.aspx`, fetched `2026-10-18T17:27:33Z`, `sha256: 6d317b207c4f582d7e913c4c7d6ebd0305407fdcd2dbb6de1901adf4f13a2704`):** `7,470` blocks (`40 16 07 07  7470`). Our design improves this upper bound by **$219$ blocks** ($-2.932\%$).
-- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T17:27:34Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo `19472830` / v1.2 `19735294`):** `7,470` blocks. Our design improves this upper bound by **$219$ blocks** ($-2.932\%$).
+- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T17:27:34Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv` / v1.2 `19735294`):** `7,470` blocks. Our design improves this upper bound by **$219$ blocks** ($-2.932\%$).
 
 ## Not Claimed
 
@@ -33,4 +33,4 @@ It checks positive and negative Fano-plane controls ($C(7, 3, 2) = 7$), verifies
 ## Credits
 
 - **Contributor:** `mizopl`
-- **External data & literature:** Ingredient covering designs from Daniel M. Gordon's La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, Zenodo `19472830`); record table comparisons against G. Acerbi's Covering Repository (`https://coveringrepository.com`); combining framework generalizing Gordon, Kuperberg, and Patashnik (1995).
+- **External data & literature:** Ingredient covering designs from Daniel M. Gordon's La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv`); record table comparisons against G. Acerbi's Covering Repository (`https://coveringrepository.com`); combining framework generalizing Gordon, Kuperberg, and Patashnik (1995).

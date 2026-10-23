@@ -3,8 +3,11 @@
 (before prune.c seed=1 reduces it to 7,251 blocks).
 
 Usage:
+  python3 how-we-built-it/fetch_ingredients.py   # downloads the La Jolla ingredients (sha256-checked)
   python3 how-we-built-it/build_40_16_7.py [out_staircase.txt]
 """
+import csv
+import hashlib
 import heapq
 import itertools
 import os
@@ -16,10 +19,25 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ING = os.path.join(HERE, "ingredients")
 
 
+def _expected_sha256():
+    with open(os.path.join(HERE, "INGREDIENTS.tsv"), encoding="utf-8") as f:
+        return {row["file"]: row["sha256"] for row in csv.DictReader(f, delimiter="\t")}
+
+
+EXPECTED = _expected_sha256()
+
+
 def load_ing(v, k, t):
-    path = os.path.join(ING, f"C_{v}_{k}_{t}.txt")
-    with open(path, encoding="utf-8") as f:
-        return [frozenset(int(x) - 1 for x in line.split()) for line in f if line.strip()]
+    """Read a La Jolla ingredient downloaded by fetch_ingredients.py, after checking its sha256."""
+    name = f"C_{v}_{k}_{t}.txt"
+    path = os.path.join(ING, name)
+    if not os.path.exists(path):
+        sys.exit(f"missing {path}: run `python3 how-we-built-it/fetch_ingredients.py` first")
+    with open(path, "rb") as f:
+        data = f.read()
+    if hashlib.sha256(data).hexdigest() != EXPECTED[name]:
+        sys.exit(f"{name}: sha256 does not match INGREDIENTS.tsv")
+    return [frozenset(int(x) - 1 for x in line.split()) for line in data.decode().splitlines() if line.strip()]
 
 
 def ranks(blocks, s):

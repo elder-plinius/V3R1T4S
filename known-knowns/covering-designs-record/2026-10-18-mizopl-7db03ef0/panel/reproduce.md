@@ -1,10 +1,8 @@
 # Panelist Report: REPRODUCE (`C(40, 16, 7) <= 7,251`)
 
-context: Antigravity fresh subagent (invoke_subagent, role REPRODUCE)
-
 ## 1. Quoted Definition and Claimed Statement
 
-From `claim/CLAIM.md`:
+From the author's claim statement:
 
 > Let $V$ be a finite set of cardinality $v$, and let $v \ge k \ge t \ge 1$ be integers. A **$(v, k, t)$ covering design** is a collection $\mathcal{B}$ of $k$-element subsets of $V$ (called **blocks**) such that every $t$-element subset $T \subseteq V$ is contained in at least one block $B \in \mathcal{B}$ ($T \subseteq B$). The **covering number** $C(v, k, t)$ is the minimum number of blocks $b = |\mathcal{B}|$ in any $(v, k, t)$ covering design.
 >
@@ -13,11 +11,11 @@ From `claim/CLAIM.md`:
 
 Claimed bound:
 $$C(40, 16, 7) \le 7,251,$$
-witnessed by the explicit $7,251$-block design in `claim/design_40_16_7.txt`, improving on the prior record of $7,470$ on both `coveringrepository.com` (`claim/cr_archive_vkt.txt`) and the La Jolla Covering Repository (`claim/ljcr_home.html`) by $219$ blocks ($-2.932\%$).
+witnessed by the explicit $7,251$-block design in `object/design_40_16_7.txt`, improving on the prior record of $7,470$ on both `coveringrepository.com` and the La Jolla Covering Repository (see `the-record-we-beat/RECORD.md`) by $219$ blocks ($-2.932\%$).
 
 ## 2. Independent Checker Written Before Reading Author's Code
 
-Before inspecting `claim/author_checker_cover_check.py`, a standalone exhaustive checker `indep_reproduce_check.py` was written from scratch in Python + NumPy directly from the quoted mathematical definition:
+Before inspecting the author's checker, a standalone exhaustive checker (not included in this package) was written from scratch in Python + NumPy directly from the quoted mathematical definition:
 
 1. **File integrity and format checks:** Reads raw bytes, computes byte size and SHA-256, parses all non-empty lines, verifies that every block has exactly $k$ space-separated integers, all $k$ integers in each block are distinct and in $\{1, \dots, v\}$, and checks that all $b$ blocks are distinct as $k$-sets.
 2. **Schonheim bound re-derivation:** Computes $L(v, k, t)$ recursively from $L(v-t, k-t, 0) = 1$:
@@ -41,9 +39,9 @@ Before inspecting `claim/author_checker_cover_check.py`, a standalone exhaustive
   [SELF-TEST NEGATIVE Fano-1 (7,3,2)] blocks=6 schonheim=7 C(7,2)=21 uncovered=3 passed=False
   ```
 
-## 3. Independent Verification of `claim/design_40_16_7.txt` (Two Runs for Determinism)
+## 3. Independent Verification of `object/design_40_16_7.txt` (Two Runs for Determinism)
 
-Running `indep_reproduce_check.py 40 16 7 claim/design_40_16_7.txt` twice produced identical results:
+Running the independent checker with `40 16 7` on the design file twice produced identical results:
 
 - **Run 1 (`4.261462s`):**
   ```
@@ -94,21 +92,18 @@ Running `indep_reproduce_check.py 40 16 7 claim/design_40_16_7.txt` twice produc
   passed=True
   ```
 
-Furthermore, inspecting the block intersection sizes $k_1 = |B \cap \{1, \dots, 16\}|$ across all $7,251$ blocks in `claim/design_40_16_7.txt` confirmed that every line is in strictly increasing order and matches the 5-chain staircase structure described in `claim/CLAIM.md`:
+Furthermore, inspecting the block intersection sizes $k_1 = |B \cap \{1, \dots, 16\}|$ across all $7,251$ blocks in `object/design_40_16_7.txt` confirmed that every line is in strictly increasing order and matches the 5-chain staircase structure described in `HOW_WE_FOUND_IT.md`:
 ```
 k1_distribution: {0: 84, 4: 2579, 8: 3912, 12: 675, 16: 1}
 ```
 Here $84 + 2579 + 3912 + 675 + 1 = 7,251$ blocks (after greedy pruning of $0 + 245 + 644 + 32 + 0 = 921$ redundant blocks from the $8,172$-block raw staircase union), with $0$ redundant blocks remaining and every block uniquely covering at least $6$ of the $7$-subsets.
 
-## 4. Verification of Saved Hashes, Archive Snapshots, and Author's Checker
+## 4. Verification of Hashes, Record, and Author's Checker
 
-All saved files in `claim/` were hashed with `shasum -a 256` and matched `claim/CLAIM.md` and `claim/REPRODUCE.md` bit-for-bit:
-- `claim/design_40_16_7.txt`: `7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985` (`319951` bytes, `7251` lines)
-- `claim/author_checker_cover_check.py`: `dcf6f867fa3ea9d0e823640581f48d52d0a033a3a12bc1412085032f6abd82ac`
-- `claim/cr_archive_vkt.txt`: `f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277` (contains record line `40	16	07	07		7470`)
-- `claim/ljcr_home.html`: `a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`
+- `object/design_40_16_7.txt` hashed with `shasum -a 256`: `7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985` (`319951` bytes, `7251` lines).
+- The Covering Repository plain $(v,k,t)$ archive contains the record line `40	16	07	07		7470` (see `the-record-we-beat/RECORD.md`).
 
-After completing independent verification, `claim/author_checker_cover_check.py` was inspected and executed via the command in `claim/REPRODUCE.md`:
+After completing independent verification, the author's original standalone cover checker (not included in this package) was inspected and executed on the design:
 ```
 file=design_40_16_7.txt sha256=7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985 v=40 k=16 t=7
 blocks=7251
@@ -118,6 +113,18 @@ schonheim=1965
 C_v_t=18643560
 uncovered=0
 COVER_CHECK: PASS
+```
+
+Re-run on the packaged files, `sh verify-it-yourself/run_checks.sh` (which runs `verify-it-yourself/check_40_16_7.py`) prints:
+```
+control_positive_fano_7_3_2: PASS (21/21 covered, uncovered=0)
+control_negative_fano_minus_1: PASS (rejected with uncovered=3)
+sha256=7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985
+v=40 k=16 t=7 blocks=7251 distinct=7251
+schonheim_lower_bound=1965
+previous_cr_record=7470 previous_ljcr_record=7470 delta=-219
+total_7_subsets=18643560 uncovered=0
+PASS
 ```
 
 All properties, hashes, bounds, and exhaustive $\binom{40}{7} = 18,643,560$ subset coverage checks succeeded deterministically with zero discrepancies.
