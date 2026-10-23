@@ -1,0 +1,21 @@
+{
+  "certificate": "eaqecc_16_4_8_4.json",
+  "parameters": "[[16, 4, 8; 4]]_3",
+  "n": 16,
+  "k": 4,
+  "c": 4,
+  "s": 16,
+  "m_dual_dim": 16,
+  "r_isotropic_dim": 8,
+  "vectors_enumerated": 43046720,
+  "non_isotropic_vectors_enumerated": 43040160,
+  "d_pure": 8,
+  "d_ea": 8,
+  "d_claimed": 8,
+  "table_d_lower": 7,
+  "table_d_upper": 9,
+  "table_previous_entry": "[[16,4,7-9;4]]_3 (increasing dimension of [[16,0,7;0]] from codetables.de)",
+  "improvement": 1,
+  "verified": true,
+  "elapsed_seconds": 22.1964
+}

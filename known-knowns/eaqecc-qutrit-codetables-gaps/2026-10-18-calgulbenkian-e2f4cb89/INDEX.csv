@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+eaqecc-qutrit-codetables-gaps,qutrit n=16 k=4 c=4 minimum distance,8,7,2026-10-18T14:23:13Z,object/eaqecc_16_4_8_4.json,e2f4cb89b2b3c23d00e39c2126d5a3e094a9613fece4ba104dac17084c0e88c7

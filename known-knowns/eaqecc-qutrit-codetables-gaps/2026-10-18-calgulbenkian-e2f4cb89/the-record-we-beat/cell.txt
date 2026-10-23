@@ -1,0 +1,3 @@
+TD element (HTML markup written out as fields)
+title attribute: increasing dimension of [[16,0,7;0]] from codetables.de
+text: [[16,4,7-9;4]]_3
