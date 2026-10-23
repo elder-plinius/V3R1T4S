@@ -1,0 +1,49 @@
+{
+  "target_id": "fmm-additive-complexity-records",
+  "cell": "2x4x7_m45",
+  "rank": 45,
+  "claimed_cr": 164,
+  "claimed_ring": "Z",
+  "minimum_bar_across_all_sources": 174,
+  "margin": -10,
+  "sources": [
+    {
+      "name": "dronperminov/FastMatrixMultiplication addition_reduced_ZT",
+      "url": "https://api.github.com/repos/dronperminov/FastMatrixMultiplication/contents/schemes/results/addition_reduced_ZT",
+      "fetched_utc": "2026-10-14T03:50:16Z",
+      "http_status": 200,
+      "sha256": "f57b2ae11a9f012a1d4c17984369bca65a6109673a463ed7b5defd7205b43393",
+      "extracted_cell": {
+        "file": "2x4x7_m45_cr174_cn308_ZT_reduced.json",
+        "rank": 45,
+        "cr": 174
+      }
+    },
+    {
+      "name": "dronperminov/FastMatrixMultiplication reduced_known.json",
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/reduced_known.json",
+      "fetched_utc": "2026-10-14T03:50:15Z",
+      "http_status": 200,
+      "sha256": "ef67c13792b0e770578de4ff01438178ce4e6ac4efd60a3580f3131e31907a5d",
+      "extracted_cell": {
+        "key": "2x4x7-45",
+        "value": "none"
+      }
+    },
+    {
+      "name": "sedoglavic/fmm_digest fmm_sota.json",
+      "url": "https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json",
+      "fetched_utc": "2026-10-14T03:50:16Z",
+      "http_status": 200,
+      "sha256": "d0da2c364dcf4d13c0721ea8b7c3dcd7fae4f6f3c843d22a714a1ccb9bd244c1",
+      "extracted_cell": {
+        "format": [
+          2,
+          4,
+          7
+        ],
+        "rank": 45
+      }
+    }
+  ]
+}

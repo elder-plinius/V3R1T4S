@@ -1,0 +1,7 @@
+You are running a V3R1T4S research session in <WORKDIR>.
+Read <WORKDIR>/repo/kit/RULES.md and <WORKDIR>/repo/kit/RUN.md first and obey every rule in them.
+Then:
+1. Check <WORKDIR>/settings.md and <WORKDIR>/charter.md.
+2. Follow Steps 0 through 10 of <WORKDIR>/repo/kit/RUN.md in a new timestamped folder <WORKDIR>/runs/<UTC-YYYY-MM-DD-HHMM>/.
+3. Never contact anyone, push git commits, open pull requests, or leak any string from <WORKDIR>/private/never_publish.txt.
+4. Before finishing, run `python3 <WORKDIR>/repo/kit/check_run.py <WORKDIR>` and ensure it prints `CHECK_RUN: PASS`.
