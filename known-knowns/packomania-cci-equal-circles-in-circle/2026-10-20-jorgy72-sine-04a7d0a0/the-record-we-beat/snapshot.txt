@@ -1,0 +1,24 @@
+# The record we beat (table snapshot — the page itself is NOT included)
+
+Primary table page: https://packomania.com/cci/cci.html
+  fetched: 2026-10-20T08:59:32Z, HTTP 200, 1310659 bytes,
+  sha256 a90494f628fb596e9aea6a6b74b852bb9ecd51f43eaeeb562dd2984b5d5a090a
+  re-fetched: 2026-10-20T09:52:24Z, HTTP 200 (panel novelty re-fetch 09:54:13Z, HTTP 200)
+Values file: https://packomania.com/cci/txt/radius.txt
+  fetched: 2026-10-20T08:59:32Z, HTTP 200, 96415 bytes, 2735 rows,
+  sha256 6c60da0a2feb2ad01f2bed8dd99646021bcfd4cbfecb5ea2a7b332ecfa0beead
+  (identical sha256 to the 2026-10-15 scout: table unchanged)
+Extracted cell: N=3949 → 0.014965462848801963307763269064 (line 3949 of radius.txt)
+Author of the row: https://packomania.com/cci/txt/author.txt → N=3949: Eckard Specht
+Posted configuration compared against: https://packomania.com/cci/txt/cci3949.txt
+  sha256 b752757bcac8a46337373b99cec43c5c25b0abceed9bdfd0a054c00b5857180b
+Queue page: https://packomania.com/pending-requests.html
+  fetched: 2026-10-20T08:59:32Z and 2026-10-20T09:52:24Z, HTTP 200, 5427 bytes,
+  sha256 92ce2e3dd9802a85edda90ace95a1e7d81dac08297c3903bba46289cdb2a14ae
+  only cci entry: "15-Oct-2026 12:44, Vidit Patankar, cci, 193 candidates in the
+  range 652–3943" → N=3949 is outside every listed cci range
+  standing caveat: "26-Sep-2026, Moki & Julio, *many*, 4666 candidates total" —
+  category UNSPECIFIED (cannot be resolved; re-check N=3949 once it clears)
+History of updates on live cci.html: newest line 11-Oct-2026 (Zii Fave N=15
+  computer-assisted proofs); nothing touches N=3949.
+Credit: E. Specht (Packomania, https://packomania.com/cci/).
