@@ -1,7 +1,6 @@
 # Skeptic Panel Report — Role: NOVELTY
 
 role: NOVELTY
-context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
 target_id: covering-designs-record
 cell: C(68, 14, 5)
 claimed_bound: 15675
@@ -13,11 +12,13 @@ previous_best_bound: 16004
 
 ## 2. Claimed Artifact Verification
 
-- Claimed design file: `claim/design_68_14_5.txt`
-  - Size: `632,681` bytes, `15,675` lines
+- Claimed design file: `object/design_68_14_5.txt`
+  - Size: `632,514` bytes, `15,675` lines
   - SHA-256: `2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07`
-- Standalone checker (`claim/author_checker_cover_check.py`, SHA-256 `dcf6f867fa3ea9d0e823640581f48d52d0a033a3a12bc1412085032f6abd82ac`) output on `claim/design_68_14_5.txt` for `(v, k, t) = (68, 14, 5)`:
+- The author's original standalone cover checker (not included in this package) output on the design for `(v, k, t) = (68, 14, 5)`:
   - `blocks=15675`, `distinct=15675`, `base=1`, `schonheim=5785`, `C_v_t=10424128`, `uncovered=0`, `COVER_CHECK: PASS`
+- Re-run on the packaged files, `sh verify-it-yourself/run_checks.sh` (running `verify-it-yourself/check_68_14_5.py`) prints:
+  - `v=68 k=14 t=5 blocks=15675 distinct=15675`, `schonheim_lower_bound=5785`, `total_5_subsets=10424128 uncovered=0`, `PASS`
 - The claimed upper bound is `C(68, 14, 5) \le 15,675`, which exceeds the Schonheim lower bound `L(68, 14, 5) = 5,785` and improves upon the previously known bound `16,004` by `329` blocks (`-2.06%`).
 
 ## 3. Honest Single-GET Verification of Primary Tables
@@ -30,7 +31,7 @@ Every primary source was fetched once via `curl -sS -A "V3R1T4S-research-agent (
 - Fetch UTC timestamp: `2026-10-18T10:37:58Z`
 - HTTP status: `200`
 - Response size: `171,740` bytes (`9,629` lines)
-- SHA-256: `f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277` (matches `claim/cr_archive_vkt.txt` fetched at `2026-10-18T10:33:16Z`)
+- SHA-256: `f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277` (matches the archive digest recorded in `the-record-we-beat/RECORD.md`, fetched at `2026-10-18T10:33:16Z`)
 - Exact `(68, 14, 5)` row (line `4079`) and neighboring `(68, 14, t)` rows:
   ```text
   3821:68	14	02	02		30
@@ -49,7 +50,7 @@ Every primary source was fetched once via `curl -sS -A "V3R1T4S-research-agent (
    - Fetch UTC timestamp: `2026-10-18T10:37:59Z`
    - HTTP status: `200`
    - Response size: `9,200` bytes
-   - SHA-256: `a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3` (matches `claim/ljcr_home.html` fetched at `2026-10-18T10:33:20Z`)
+   - SHA-256: `a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3` (matches the status-page digest recorded in `the-record-we-beat/RECORD.md`, fetched at `2026-10-18T10:33:20Z`)
    - Quoted page footer and Zenodo link: `Site last updated 2026-09-03`, linking to DOI `10.5281/zenodo.10779736` and noting that `coveringrepository.com` contains all coverings in the LJCR database plus more recent improvements.
 
 2. **Zenodo LJCR Records (`19472830` v1.1 and `19735294` v1.2) and `coverdata.json`:**
@@ -126,6 +127,6 @@ Both primary tables (`coveringrepository.com` and LJCR Zenodo v1.2) list **`16,0
 
 ## 5. Verdict
 
-The claimed explicit covering design `claim/design_68_14_5.txt` (`15,675` blocks) strictly improves the best known upper bound `C(68, 14, 5) \le 16,004` in both the Covering Repository (`coveringrepository.com`) and the La Jolla Covering Repository (`dmgordon.org` / Zenodo v1.2 `19735294`) by `329` blocks (`-2.06%`), with no prior or competing improvement in the literature, GitHub repositories, `TROPHY_CASE.md`, or open pull requests.
+The claimed explicit covering design `object/design_68_14_5.txt` (`15,675` blocks) strictly improves the best known upper bound `C(68, 14, 5) \le 16,004` in both the Covering Repository (`coveringrepository.com`) and the La Jolla Covering Repository (`dmgordon.org` / Zenodo v1.2 `19735294`) by `329` blocks (`-2.06%`), with no prior or competing improvement in the literature, GitHub repositories, `TROPHY_CASE.md`, or open pull requests.
 
 pass: true

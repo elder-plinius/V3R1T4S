@@ -23,7 +23,7 @@ It checks positive and negative Fano-plane controls ($C(7, 3, 2) = 7$), verifies
 ## Compared To
 
 - **Covering Repository (`https://coveringrepository.com/download_archive_vkt.aspx`, fetched `2026-10-18T10:33:16Z`, `sha256: f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277`):** `16,004` blocks (`68 14 05 05  16004`). Our design improves this upper bound by **$329$ blocks** ($-2.06\%$).
-- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T10:33:20Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo `19472830` / v1.2 `19735294`):** `16,004` blocks. Our design improves this upper bound by **$329$ blocks** ($-2.06\%$).
+- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T10:33:20Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv` / v1.2 `19735294`):** `16,004` blocks. Our design improves this upper bound by **$329$ blocks** ($-2.06\%$).
 
 ## Not Claimed
 
@@ -33,4 +33,4 @@ It checks positive and negative Fano-plane controls ($C(7, 3, 2) = 7$), verifies
 ## Credits
 
 - **Contributor:** `mizopl`
-- **External data & literature:** Ingredient covering designs from Daniel M. Gordon's La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, Zenodo `19472830`); record table comparisons against G. Acerbi's Covering Repository (`https://coveringrepository.com`); combining framework generalizing Gordon, Kuperberg, and Patashnik (1995).
+- **External data & literature:** Ingredient covering designs from Daniel M. Gordon's La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv`); record table comparisons against G. Acerbi's Covering Repository (`https://coveringrepository.com`); combining framework generalizing Gordon, Kuperberg, and Patashnik (1995).

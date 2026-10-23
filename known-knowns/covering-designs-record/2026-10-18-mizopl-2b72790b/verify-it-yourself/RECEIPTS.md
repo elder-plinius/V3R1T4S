@@ -3,7 +3,7 @@
 ## 1. Object Integrity
 
 - **File:** `object/design_68_14_5.txt`
-- **Size:** `632,681` bytes (`618 KB`, `< 1 MB`)
+- **Size:** `632,514` bytes (`618 KB`, `< 1 MB`)
 - **Lines (blocks):** `15,675`
 - **SHA-256:** `2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07`
 

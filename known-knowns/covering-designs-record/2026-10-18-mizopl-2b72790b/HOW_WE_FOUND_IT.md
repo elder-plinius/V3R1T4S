@@ -20,13 +20,13 @@ Splitting $V_{68} = V_1 \sqcup V_2$ with $v_1 = 18$ (`{1..18}`) and $v_2 = 50$ (
 - $j = 0$, $(k_1, k_2) = (0, 14)$: $\mathcal{A}_0 = C(18, 0, 0)$ ($1$ empty block) $\times \mathcal{B}_0 = C(50, 14, 5)$ ($2,711$ blocks from LJCR) $= 2,711$ blocks.
 - $j = 1$, $(k_1, k_2) = (2, 12)$: $\mathcal{A}_1 = C(18, 2, 1)$ ($9$ disjoint pairs) $\times \mathcal{B}_1 = C(50, 12, 4)$ ($773$ blocks from LJCR) $= 6,957$ blocks.
 - $j \in [2, 3]$, $(k_1, k_2) = (6, 8)$ (nested staircase chain):
-  * $\mathcal{A}_3 = C(18, 6, 3)$ ($48$ blocks from LJCR), with greedy nested subset $\mathcal{A}_2 \subset \mathcal{A}_3$ covering all $2$-subsets of $V_1$ ($|\mathcal{A}_2| = 12$, $|\mathcal{A}_3 \setminus \mathcal{A}_2| = 36$);
-  * $\mathcal{B}_2 = C(50, 8, 3)$ ($350$ blocks from LJCR), with greedy nested subset $\mathcal{B}_3 \subset \mathcal{B}_2$ covering all $2$-subsets of $V_2$ ($|\mathcal{B}_3| = 65$);
-  * Staircase union $(\mathcal{A}_2 \times \mathcal{B}_2) \cup (\mathcal{A}_3 \times \mathcal{B}_3)$ has $12 \times 350 + 36 \times 65 = 6,540$ blocks ($6,566$ before cross-chain dedupe).
+  * $\mathcal{A}_3 = C(18, 6, 3)$ ($48$ blocks from LJCR), with greedy nested subset $\mathcal{A}_2 \subset \mathcal{A}_3$ covering all $2$-subsets of $V_1$ ($|\mathcal{A}_2| = 14$, $|\mathcal{A}_3 \setminus \mathcal{A}_2| = 34$);
+  * $\mathcal{B}_2 = C(50, 8, 3)$ ($350$ blocks from LJCR), with greedy nested subset $\mathcal{B}_3 \subset \mathcal{B}_2$ covering all $2$-subsets of $V_2$ ($|\mathcal{B}_3| = 49$);
+  * Staircase union $(\mathcal{A}_2 \times \mathcal{B}_2) \cup (\mathcal{A}_3 \times \mathcal{B}_3)$ has $14 \times 350 + 34 \times 49 = 6,566$ blocks.
 - $j = 4$, $(k_1, k_2) = (12, 2)$: $\mathcal{A}_4 = C(18, 12, 4)$ ($12$ blocks from LJCR) $\times \mathcal{B}_4 = C(50, 2, 1)$ ($25$ disjoint pairs) $= 300$ blocks.
 - $j = 5$, $(k_1, k_2) = (14, 0)$: $\mathcal{A}_5 = C(18, 14, 5)$ ($9$ blocks from LJCR) $\times \mathcal{B}_5 = C(50, 0, 0)$ ($1$ empty block) $= 9$ blocks.
 
-Total blocks in the raw staircase union (`how-we-built-it/build_68_14_5.py`): **$16,543$ blocks**.
+Total blocks in the raw staircase union (`how-we-built-it/build_68_14_5.py`): $2,711 + 6,957 + 6,566 + 300 + 9 =$ **$16,543$ blocks** (the five chains are pairwise disjoint, as the script's printed `built=16543` confirms).
 
 ## 3. Greedy Redundant-Block Pruning (`16,543 -> 15,675`)
 
