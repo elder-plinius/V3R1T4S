@@ -1,0 +1,3 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+packomania-scu-spheres-in-cube,N=83 (erratum; posted coords r*),0.1162844418378275,0.116285160418976515059766617287,2026-10-17T02:15:13Z,object/scu_errata_cells.csv,37737462b083df85b62c0cb8c1d0dca9b7e79eeb900f231eaa9105422942ca8d
+packomania-scu-spheres-in-cube,N=507 (erratum; posted coords r*),0.0659283580135824,0.065932119200351706079281328718,2026-10-17T02:15:13Z,object/scu_errata_cells.csv,37737462b083df85b62c0cb8c1d0dca9b7e79eeb900f231eaa9105422942ca8d

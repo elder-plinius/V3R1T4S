@@ -1,0 +1,4 @@
+# How we found it (contributor text, unverified)
+1. A full sweep of Packomania scu (all rows of radius.txt) recomputed r* from each posted scu<N>.txt with exact Decimal arithmetic and compared it with radius.txt. Only N = 83 and N = 507 came out below the table by more than rounding (> 1e-9). The other files either matched or were within 1e-10 rounding noise.
+2. The same sweep flagged 285 files with N <= 1000 whose last index line is blank (N-1 centres). We re-derived that list on 2026-10-17 from a fresh scu_coords.tar.gz download (how-we-built-it/sweep_rowcount.py) and it matches the 16-Oct sweep exactly.
+3. The earlier separate PRs #206/#207 also shipped polished objects and copies of the Packomania files. Following review, this package drops all copies and the refined objects, since it makes no record claim. It keeps only URLs, hashes and Last-Modified dates.
