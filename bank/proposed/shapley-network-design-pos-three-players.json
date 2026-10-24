@@ -1,0 +1,37 @@
+{
+  "id": "shapley-network-design-pos-three-players",
+  "name": "Price of stability of undirected Shapley network design with three players: an instance above 1769/1126 (upper bound 286/175)",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (exact enumeration of all strategy profiles on graphs with 5-9 vertices, inside a search over topologies and edge costs)",
+  "statement": "Three players choose simple paths in an undirected graph and split each used edge's positive cost equally. Price of stability is the cheapest Nash-equilibrium social cost divided by the cheapest profile's social cost. Disser, Feldmann, Klimm and Mihalák (TCS 2015) give a five-vertex construction with ratio 1769/1126. Bilò and Bove (2011) give upper bound 286/175. The cited paper leaves the three-player value open. The target is an explicit rational instance with a larger exact ratio, verified by enumerating all paths, profiles and unilateral deviations. Later published lower bounds must also be checked.",
+  "success_criterion": "CONFIRMED: an explicit instance with exactly three players (undirected graph, positive rational edge costs, three source-target pairs) whose price of stability is strictly greater than 1769/1126, computed exactly: every simple path for every player is listed, every strategy profile is evaluated with exact rational cost shares, every profile is tested for the Nash condition against all of the deviating player's simple paths, the optimum is the minimum social cost over all profiles, and the ratio (cheapest equilibrium cost) / (optimum) is reported as an exact fraction. Two independently written checkers must agree, and the value must exceed every 3-player lower bound published at verification time (search for papers citing Disser et al. 2015). Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "An independent exact reproduction, with published code, of the 1769/1126 instance of Disser et al. (all profiles enumerated, the equilibrium shown unique, the optimum confirmed at 1126) and of their potential-optimal family whose ratio approaches 286/175, establishing a verified baseline that the literature currently states only in prose and figures."
+    }
+  ],
+  "verification_method": "Read the instance; enumerate all simple s_i-t_i paths per player (graphs are small); for every profile compute each player's cost as the sum over her edges of c_e divided by the number of players on e, using exact fractions; mark a profile as an equilibrium if no player has a path with strictly smaller cost given the others' paths; compute the optimum as the minimum over profiles of the total cost of edges used by at least one player; output min equilibrium cost / optimum as a fraction and compare with 1769/1126. Sanity checks: the 2-player worst case 4/3 and Disser et al.'s 5-vertex instance (equilibrium 1769, optimum 1126).",
+  "primary_sources": [
+    "https://www2.mathematik.tu-darmstadt.de/%7Edisser/pdfs/DisserFeldmannKlimmMihalak15.pdf"
+  ],
+  "status_source": "https://www2.mathematik.tu-darmstadt.de/%7Edisser/pdfs/DisserFeldmannKlimmMihalak15.pdf",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Adversary search: fix a small topology (5 to 8 vertices, the 1769/1126 example being 5), then optimise the edge costs with an LP or local search that keeps a chosen bad profile an equilibrium while pushing every cheaper profile out of equilibrium; each step's exact ratio comes from full enumeration, which is milliseconds at this size.",
+    "The record has a simple structure (in its unique equilibrium each player uses the direct edge s_i t_i, while the optimum uses all the other edges): enumerate small gadget families of this kind and solve for the edge costs that make the expensive profile the unique equilibrium.",
+    "Use the gap: Bilò and Bove's 286/175 is tight only for potential-minimising equilibria, so a better instance must make every potential minimiser expensive while a cheaper non-minimising equilibrium does not exist; search for instances where the potential minimiser is the unique equilibrium.",
+    "Scale out: the search is embarrassingly parallel over topologies and source-target placements; many cores can run a cost optimisation for every connected graph on up to 6 vertices and every placement of three pairs, then sample 7- and 8-vertex graphs."
+  ],
+  "pitfalls": [
+    "Price of stability, not anarchy: the ratio uses the CHEAPEST equilibrium, so every equilibrium of the instance must be found and costed.",
+    "Strategies are simple paths; a player who uses a non-simple walk or two parallel routes is outside the model.",
+    "Cost shares are equal splits among the players actually using the edge (Shapley), and the social cost counts each used edge once.",
+    "Directed instances do not count (directed PoS is H_k and is known to be tight).",
+    "Floating-point ratios hide ties; an equilibrium test that is off by a tie changes the answer. Use exact fractions throughout.",
+    "Cite and beat the newest 3-player bound: check papers citing Disser et al. 2015 before claiming."
+  ]
+}
