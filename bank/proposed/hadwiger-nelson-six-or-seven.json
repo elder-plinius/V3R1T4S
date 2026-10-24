@@ -1,0 +1,32 @@
+{
+  "id": "hadwiger-nelson-six-or-seven",
+  "name": "Hadwiger–Nelson: does the plane require six colours or seven?",
+  "category": "erdos-and-proofs",
+  "kind": "moonshot",
+  "tractability": 1,
+  "compute_profile": "laptop-hours for bounded graph searches; a full resolution may require substantially more compute or new mathematics",
+  "statement": "KNOWN (source-reported, checked 2026-10-19): The Hadwiger–Nelson problem asks for the least number of colours in a colouring of every point of the Euclidean plane such that points at distance exactly one receive different colours. Aubrey D. N. J. de Grey established the lower bound five in 2018. OpenAI's September 2026 paper, The Euclidean plane is not five-colorable, and its published Lean formalization report the lower bound six for arbitrary colourings, without measurability or continuity assumptions, and the upper bound seven including boundary points. The seven-colour upper bound is historically credited to John R. Isbell. Google DeepMind's Formal Conjectures entry for Erdos problem 508 records six <= chi(R^2) <= seven and classifies the exact value as open. Determine which of six and seven is the answer. These source statements are not an independent audit of the published proofs.",
+  "success_criterion": "Resolve chi(R^2) = 6 or chi(R^2) = 7, with an independently checkable certificate or machine-checked proof. For the finite-obstruction route to seven: supply a finite simple graph, distinct exact planar coordinates for all vertices, a proof that every listed edge has squared length exactly one, and a checkable certificate that the graph has no proper six-colouring. Supply the complete encoding and an independently checked UNSAT proof (for example LRAT), not just a solver verdict. The published seven-colour upper bound then completes the equality. Alternatively supply a machine-checked proof of non-six-colourability of the plane. For six: supply a machine-checked proof of a proper six-colouring of the entire plane, covering all points and all unit-distance pairs, including boundaries; the published lower bound six completes the equality. All routes must verify the supporting bound, assumptions and current literature before claiming a resolution; a previously published resolution is not a new win.",
+  "partial_wins": [],
+  "verification_method": "For a finite graph, independently parse the coordinates and edge list; reject loops, invalid endpoints and coincident vertices. Use exact algebraic arithmetic (with specified roots/isolating intervals where needed) or machine-checked equalities to verify every edge's squared distance is one. Unlisted unit-distance pairs need not be edges: a non-six-colourable subgraph suffices. Independently regenerate the six-colouring CNF from the supplied graph: each vertex has exactly one of six colours and endpoints of every edge have different colours. Verify the UNSAT certificate against that regenerated formula with a separately implemented proof checker. Omit symmetry-breaking constraints unless their satisfiability-preserving reduction is independently proved. Record hashes, pinned tools and rerunnable commands. For a formal-proof route, build in a clean pinned environment, inspect the theorem statement and transitive axioms, and reject admitted goals, sorryAx or custom axioms assuming the result. For a six-colouring, verify total coverage of R^2 rather than a bounded sample, measurable-only variant or almost-everywhere statement. Independently verify the supporting published bound and recheck the live status and novelty.",
+  "primary_sources": [
+    "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/508.lean",
+    "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/docs/158.md"
+  ],
+  "status_source": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/508.lean",
+  "status_checked": "2026-10-19",
+  "disclosure": "open",
+  "angles": [
+    "HEURISTIC: Search exact algebraic unit-distance constructions by composing and rotating rigid graph gadgets, then test six-colourability with a proof-producing SAT solver.",
+    "HEURISTIC: Use small certified obstructions from failed colour assignments to guide subsequent constructions; retain exact coordinates throughout.",
+    "HEURISTIC: Explore periodic six-colour constructions only with a plan to prove coverage and all unit-distance exclusions, including tile boundaries."
+  ],
+  "pitfalls": [
+    "The known lower bound six does not show that a seven-chromatic finite unit-distance graph exists. This search may fail because the plane is six-colourable.",
+    "A five- or six-chromatic graph does not settle the remaining six-versus-seven question. This proposal defines no partial wins.",
+    "Floating-point distances near one are not unit-distance proofs. An abstract non-six-colourable graph without an exact planar unit-distance realization is insufficient.",
+    "A solver timeout or an UNSAT string without a verified certificate is not a proof. An incorrect CNF or unjustified symmetry breaking can manufacture false obstructions.",
+    "Non-measurable colourings are allowed. Ruling out only measurable, periodic or other restricted six-colourings does not rule out arbitrary six-colourings.",
+    "The Formal Conjectures repository contains statement placeholders with sorry and links to external proofs; those placeholders are not proofs. Inspect and verify the actual linked proof and its dependencies."
+  ]
+}
