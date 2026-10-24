@@ -1,0 +1,29 @@
+{
+  "id": "three-agent-additive-chores-efx",
+  "name": "Three agents dividing additive chores: does a complete EFX allocation always exist?",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-hours to laptop-days for adversarial integer-cost search; checking a 3-agent, 13–15-chore counterexample means 1594323–14348907 allocations",
+  "statement": "Wentao He and Biaoshuai Tao, EFX for Additive Chores: Nonexistence, Pareto Incompatibility, and Bi-Valued Existence (arXiv:2606.08872v2, July 2026), explicitly state in Section 6: \"It is open whether an EFX allocation always exists for three agents.\" They show nonexistence for every n>=4, using a four-agent, thirteen-chore, three-cost-level example, and prove existence for four agents with common bi-valued costs. Thus neither the general four-agent nonexistence question nor four-agent bi-valued existence is a new target. The remaining three-agent problem has nonnegative additive costs c_ig. A complete allocation X is EFX if, whenever X_i is nonempty, c_i(X_i)-min_{g in X_i}c_ig <= c_i(X_j) for every i,j. This is Definition 2 in the paper, including zero-cost chores. No Pareto or efficiency condition is imposed.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Settle the stated three-agent existence question: either an explicit nonnegative rational 3xm cost matrix with no complete EFX allocation and a complete exact obstruction certificate, or a machine-checkable existence proof for all m and all nonnegative additive costs. The preferred computational route is a small counterexample with a strict violation in every allocation.",
+  "partial_wins": [],
+  "verification_method": "For a finite counterexample clear denominators, precompute exact subset costs for each agent and enumerate every assignment of every chore to one of the three labeled agents. For each allocation, verify an ordered pair i,j with nonempty X_i and c_i(X_i)-min_{g in X_i}c_ig > c_i(X_j). Empty bundles are handled exactly as in Definition 2. Enumeration with incremental subset sums takes minutes to hours for the suggested sizes. If chores have identical cost columns, an independently verified multiplicity enumeration can replace labeled enumeration. Positive general proofs require a proof kernel; bounded tests or a bounded-size UNSAT search do not prove existence for arbitrary m.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2606.08872"
+  ],
+  "status_source": "https://arxiv.org/pdf/2606.08872",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Use the published four-agent, three-type obstruction as structural guidance, while recognizing that simply deleting an agent changes the problem.",
+    "Search integer cost matrices with a few repeated chore types and a separation routine that returns an EFX allocation to rule out the current candidate.",
+    "Require a positive exact obstruction margin and simplify a found instance before certifying all allocations."
+  ],
+  "pitfalls": [
+    "For chores, remove an item from the envious agent's OWN bundle. The goods convention removes an item from the envied bundle.",
+    "EFX tests removal of every item, equivalently the cheapest own chore, not the most expensive one.",
+    "The source's general n>=4 counterexamples are already published. Common bi-valued three-agent instances are also already covered by existence results.",
+    "A failure of EFX plus Pareto optimality is not a failure of EFX existence."
+  ]
+}
