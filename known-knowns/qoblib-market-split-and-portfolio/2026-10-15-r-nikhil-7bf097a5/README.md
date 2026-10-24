@@ -4,7 +4,7 @@
 
 For QOBLIB class 06 instance po_a400_t10_s00 with B=100 and lambda=0.01 and the other shipped parameters fixed, portfolio.sol is feasible under the published reference model and has exact objective -1696664, which is 606382 below the lowest comparable public objective located in the sources reviewed on 2026-10-15, -1090282.
 
-PROVED-HERE: exact arithmetic and three independent fresh reviewers verify this one feasible witness and the stated comparison.
+Feasibility and objective verified in exact arithmetic by three independent fresh reviewers. The comparison value is the best posted one (open QOBLIB PR #87); the official table has no row for this cell.
 
 ## Check it yourself
 
