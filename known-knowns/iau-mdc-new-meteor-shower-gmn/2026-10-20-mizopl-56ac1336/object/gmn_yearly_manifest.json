@@ -1,0 +1,92 @@
+[
+  {
+    "year": 2018,
+    "bytes": 460180,
+    "sha256": "c89edd266b847874710f4d89bd0cce8a1a19e5ade57492a92904ae138ee34b52",
+    "total_trajectories": 497,
+    "num_stat_ge_3": 13,
+    "unassigned_ge_3": 12,
+    "num_stat_ge_3_countries_ge_2": 0,
+    "elapsed_sec": 0.01
+  },
+  {
+    "year": 2019,
+    "bytes": 46498742,
+    "sha256": "d78c1a04e131d33e291c413a024e6c6566818046f3322c44411e712b469c8f00",
+    "total_trajectories": 50263,
+    "num_stat_ge_3": 21163,
+    "unassigned_ge_3": 14649,
+    "num_stat_ge_3_countries_ge_2": 2056,
+    "elapsed_sec": 0.73
+  },
+  {
+    "year": 2020,
+    "bytes": 115779832,
+    "sha256": "c2f90b739ac442817103a43ca73ccea7ce6344ad2b4d1cdd92617d852b7dd68c",
+    "total_trajectories": 125098,
+    "num_stat_ge_3": 50622,
+    "unassigned_ge_3": 35483,
+    "num_stat_ge_3_countries_ge_2": 5885,
+    "elapsed_sec": 38.57
+  },
+  {
+    "year": 2021,
+    "bytes": 196153342,
+    "sha256": "cd1526118300abab9234c6c35995253eba364217ea0ba9996147f7b597924c63",
+    "total_trajectories": 211851,
+    "num_stat_ge_3": 91104,
+    "unassigned_ge_3": 61768,
+    "num_stat_ge_3_countries_ge_2": 10132,
+    "elapsed_sec": 48.05
+  },
+  {
+    "year": 2022,
+    "bytes": 311120248,
+    "sha256": "262fb31bd7c4e0cc2e7361d14161397fb131846901d9fd9ded9d00e9e728ef8a",
+    "total_trajectories": 334661,
+    "num_stat_ge_3": 159143,
+    "unassigned_ge_3": 106519,
+    "num_stat_ge_3_countries_ge_2": 19648,
+    "elapsed_sec": 50.61
+  },
+  {
+    "year": 2023,
+    "bytes": 420839167,
+    "sha256": "b1cf267cdd6fc80b3ecb2855bf27739d30b3490cbb139d37afee9f098fee6ca8",
+    "total_trajectories": 451903,
+    "num_stat_ge_3": 233386,
+    "unassigned_ge_3": 161237,
+    "num_stat_ge_3_countries_ge_2": 30547,
+    "elapsed_sec": 153.7
+  },
+  {
+    "year": 2024,
+    "bytes": 657058618,
+    "sha256": "460934bbd0e2a0df296165883dc4a54a241969d7613b2b24451ce19b1a1f72d9",
+    "total_trajectories": 705964,
+    "num_stat_ge_3": 360095,
+    "unassigned_ge_3": 261207,
+    "num_stat_ge_3_countries_ge_2": 46407,
+    "elapsed_sec": 139.69
+  },
+  {
+    "year": 2025,
+    "bytes": 898581735,
+    "sha256": "37ae522d249fcd40af68071ba7a8acd2f8151212327eeb46c7399384cdeb8cd0",
+    "total_trajectories": 966063,
+    "num_stat_ge_3": 466273,
+    "unassigned_ge_3": 333324,
+    "num_stat_ge_3_countries_ge_2": 74289,
+    "elapsed_sec": 226.86
+  },
+  {
+    "year": 2026,
+    "bytes": 701564849,
+    "sha256": "2e0a73dfc02b5e0a04dfd070de5baa3c0d8759de87912e9ae4e3435d3b9f578e",
+    "total_trajectories": 753204,
+    "num_stat_ge_3": 390921,
+    "unassigned_ge_3": 289650,
+    "num_stat_ge_3_countries_ge_2": 99568,
+    "elapsed_sec": 105.66
+  }
+]
