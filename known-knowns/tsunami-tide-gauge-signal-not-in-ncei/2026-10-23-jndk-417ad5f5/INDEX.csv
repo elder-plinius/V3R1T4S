@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+tsunami-tide-gauge-signal-not-in-ncei,p1 NCEI event 5942 gauges Luganville (luga) and Lifou (lifo),"observations at 2 stations: luga peak 0.078 m R 8.44 onset +42 min; lifo peak 0.060 m R 5.24 onset +34 min",no runup row for either station (2 rows: Port Vila; Lenakel),2026-10-23T23:04:33Z,object/observations.csv,417ad5f52b217f8b23963029a12386b817dd2d4e86d48741ecfcde4371e68a20
