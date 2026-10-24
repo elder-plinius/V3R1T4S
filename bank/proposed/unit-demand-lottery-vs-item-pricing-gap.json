@@ -1,0 +1,38 @@
+{
+  "id": "unit-demand-lottery-vs-item-pricing-gap",
+  "name": "Lotteries vs item prices for a unit-demand buyer with independent values: an explicit menu earning more than (1 + ln2/5) ~ 1.1386 times any item pricing (gap [1.1386, 3])",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-hours (lottery-pricing LPs over 10^3-10^4 discrete types with lazily added IC constraints; certification is exact enumeration)",
+  "statement": "A unit-demand buyer values independent items and can buy at most one. Compare optimal lottery-menu revenue with optimal deterministic item-pricing revenue. Chawla, Malec and Sivan (EC 2010, arXiv:1002.3893) give lower bound 1+ln(2)/5 using capped equal-revenue items and a three-entry menu. Jin and Lu (arXiv:2606.10169, Corollary 2(ii)) give upper bound 3 and retain that lower bound. The source appendix's rounded revenue calculation must be recomputed before close calibration. The target is a finite explicit menu whose certified ratio is strictly larger than the symbolic lower-bound constant. Independence and conservative buyer tie-breaking are essential.",
+  "success_criterion": "An explicit instance (k >= 2 independent item-value distributions, given either with finite rational supports or as closed-form CDFs) and an explicit finite menu of lotteries with rational entries (x >= 0, sum_i x_i <= 1, price l). A checker must confirm three things. (a) The menu's revenue R is computed exactly. With finite supports, enumerate all value profiles; the buyer picks a utility-maximising entry, ties go to the LOWEST-priced maximiser, and the buyer buys nothing when the best utility is <= 0. With closed-form CDFs, use interval-certified integration over the regions where each entry is chosen. (b) An upper bound D on optimal item-pricing revenue: either D = sum_i max_p p * Pr[v_i >= p], always valid for a unit-demand buyer, or the exact OIP from a search over a price set proved sufficient in the write-up. (c) D > 0 and R/D > 1 + ln(2)/5. Direction: higher is better. The bar is the Chawla-Malec-Sivan constant as restated in Jin-Lu, arXiv 2606.10169, Corollary 2(ii); re-check arXiv for newer lower bounds before claiming. The checker must first reproduce the CMS menu's revenue on CMS's capped equal-revenue pair for several n. Use interval integration of the continuous version, or exact enumeration of a fine rational discretisation with the discretisation error bounded. Derive the source menu revenue independently. Match printed finite numerical calibration values within one unit of the last printed digit. Do not turn a rounded appendix calculation into an exact identity. An exact rational or symbolic certificate of any strict improvement counts. For floating-point certificates require a certified ratio at least 1+ln(2)/5+1e-4. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "For the discrete two-item i.i.d. equal-revenue instance with P(v>=x)=1/x on {1,...,n} and some n>=8, certify the exact lottery-revenue and deterministic item-pricing revenue suprema. Give a rational primal-dual certificate for the lottery LP and prove its value is the supremum under the stated tie rule. For item pricing, give an exact exhaustive price-region proof or an appropriate integer/global certificate covering all prices. If conservative ties prevent attainment, provide epsilon-achieving menus or prices with a proved revenue gap. Compare existing published values before claiming novelty."
+    }
+  ],
+  "verification_method": "Python with fractions.Fraction, under 150 lines. Read the item distributions and the menu. Check x >= 0 and sum x <= 1 for every entry. Enumerate the product of supports, apply the conservative tie rule, accumulate the revenue exactly, and compute D as the sum of the single-item monopoly revenues. Prove R/D > 1 + ln(2)/5. Refine rigorous bounds on ln 2 until the strict comparison is certified; a fixed decimal approximation must not set a minimum improvement. Calibrate on the CMS menu first. For the partial win, check the lottery LP primal and dual feasibility exactly, with equal objective values, and the argument connecting it to the revenue supremum under conservative ties. Independently verify the complete deterministic-price region enumeration or global certificate. Distinguish an attained optimum from a supremum approached by epsilon-achieving menus or prices.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/1002.3893",
+    "https://arxiv.org/html/2606.10169"
+  ],
+  "status_source": "https://arxiv.org/abs/2606.10169",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Let the LP find the menu. For discretised equal-revenue pairs with n = 8, 16, 32, ..., solve the lottery-pricing LP (one allocation vector and payment per type; IC constraints added lazily). The item-pricing bound stays exactly 2, so any LP optimum above 2.27746 is a record after extracting and verifying the menu.",
+    "Thanassoulis' intuition, as CMS summarise it: a 50/50 lottery sells to buyers nearly indifferent between items who cannot afford either item. Richer menus (many split lotteries at graded prices) should harvest more of the middle of the value square without leaking the high tail.",
+    "Go beyond two items: with k i.i.d. equal-revenue items the item-pricing bound is k, and lotteries can split across more items. Test whether OLP/k grows with k.",
+    "Asymmetric pairs: one equal-revenue item plus one item with a different tail (uniform, two-point) may break the symmetry that limits the CMS menu."
+  ],
+  "pitfalls": [
+    "This is the UNIT-DEMAND cell. The additive-buyer gaps (Rev vs SRev/BRev, Rev vs DRev for additive valuations) are different problems with different constants.",
+    "Correlated item values make the gap unbounded (Briest et al.). The instance must be a product distribution.",
+    "1.1386 is a LIMIT (n -> infinity) of the CMS construction. Finite truncations fall short, so a finite instance must strictly exceed the bar.",
+    "Tie-breaking toward the seller inflates menu revenue. Use lowest-price-among-maximisers and buy-nothing at zero utility.",
+    "Learned or 'approximately IC' mechanisms do not count. A menu with true buyer best-responses is IC by construction, and that is what must be scored.",
+    "If exact OIP is claimed instead of the sum-of-monopoly bound, the candidate price set must be provably sufficient; prices at support points alone may not be, because of cross-item indifferences."
+  ],
+  "category": "graphs-games-automata"
+}
