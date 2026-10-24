@@ -23,7 +23,7 @@ Expected last line: PASS. Python3 and a C++17 compiler; normally a few seconds. 
 
 The 19,290,640 profile in `the-record-we-beat/` is an unsubmitted intermediate from this workspace, not a public value.
 
-**Composition statement.** This object is not a composition of known instances; it was found by search. n = 23 is prime. The best direct sum of published blocks is 16,615,120 (the order-16 Irving–Leather instance with 195,472 times J. Jo's order-7 instance with 85), above a(23); every other split we checked is lower (for example 12,277,568 for order 22 plus one pair). In 2002 Thurber's odd-size operation beat the comparable direct sum by about 12 %, which applied to today's blocks would land near 18.5 million (the maintainer's estimate), below this object's 19,305,568 by about 4 %; without Appendix C we cannot certify that margin. Thurber's (2002) own composition operations (his Appendix C) were not recomputed with the newer blocks: we could not access the paper.
+**Composition statement.** This object is not a composition of known instances; it was found by search. n = 23 is prime. The best direct sum of published blocks is 16,615,120 (the order-16 Irving–Leather instance with 195,472 times M. Jo's order-7 instance with 85), above a(23); every other split we checked is lower (for example 12,277,568 for order 22 plus one pair). In 2002 Thurber's odd-size operation beat the comparable direct sum by about 12 %, which applied to today's blocks would land near 18.5 million (the maintainer's estimate), below this object's 19,305,568 by about 4 %; without Appendix C we cannot certify that margin. Thurber's (2002) own composition operations (his Appendix C) were not recomputed with the newer blocks: we could not access the paper.
 
 ## Not claimed
 
