@@ -1,0 +1,31 @@
+{
+  "id": "binary-minimal-code-length-records",
+  "name": "Binary minimal codes for secret sharing: shorten the dimension 10–13 records",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days for structured generator-matrix search; exact minimality checking over at most 8191 nonzero messages takes seconds to minutes with GF(2) rank tests",
+  "statement": "Vladimir Chubenko and Sascha Kurz, Divisible Minimal Codes, Serdica Journal of Computing 18(2), 97–124 (issue year 2024; published 25 June 2025), Table 2, give m(10,2)=28–29, m(11,2)=31–35, m(12,2)=34–38 and m(13,2)=39–43. Here m(k,2) is the minimum length of a k-dimensional binary linear minimal code. Minimality means no distinct nonzero codewords have one support contained in the other. The paper relates these codes to secret sharing and uses generalized circulant constructions. Dimensions 7–9 are exact and excluded. This optimizes minimal-code length; the upstream codetables target optimizes Hamming minimum distance.",
+  "success_criterion": "Give a full-rank binary generator matrix for a minimal [n,k] code with k=10 and n≤28, k=11 and n≤34, k=12 and n≤37, or k=13 and n≤42. The resulting code must satisfy minimality for all nonzero codewords. No divisibility, quasi-cyclic structure, projectivity or minimum-distance assumption beyond what follows from minimality is imposed. A valid dimension-10 construction would settle m(10,2)=28 using the published lower bound; the other cases improve a published upper bound. Also strictly improve the best comparable published result at claim time, including compatible compositions of published objects. State whether the candidate is a composition and identify its components. Values in unmerged pull requests do not set the bar.",
+  "partial_wins": [],
+  "verification_method": "Check that the supplied k-by-n matrix is binary and has rank k over GF(2). For every nonzero message a in GF(2)^k, compute c=aG and collect the columns of G at positions where c is zero. Their rank must be k−1. This is an exact minimality test: a codeword bG is supported within supp(c) precisely when b annihilates those columns; a one-dimensional kernel must be {0,a}. Independently cross-check by enumerating all nonzero codewords and rejecting any pair with a proper support inclusion. The rank version avoids a quadratic pair scan and uses at most 8191 small elimination problems. Check n against the corresponding record after validation.",
+  "primary_sources": [
+    "https://serdica-comp.math.bas.bg/index.php/serdicajcomputing/article/download/sjc.2024.18.97-124/pdf",
+    "https://doi.org/10.55630/sjc.2024.18.97-124"
+  ],
+  "status_source": "https://serdica-comp.math.bas.bg/index.php/serdicajcomputing/article/download/sjc.2024.18.97-124/pdf",
+  "status_checked": "2026-10-15 (supplied literature-status date; primary publication re-read 2026-10-24, later literature not independently rechecked)",
+  "disclosure": "open",
+  "angles": [
+    "Reproduce the paper’s generalized circulant constructions, then puncture, repair and replace columns while tracking low-rank hyperplane intersections.",
+    "Use the exact rank criterion as a counterexample-guided search objective; each failing message gives a concrete missing-span constraint.",
+    "Search small projective strong blocking sets in GF(2)^k with local trades and occasional exact repair; output a generator matrix for the final unrestricted check."
+  ],
+  "pitfalls": [
+    "Good minimum distance alone does not imply minimality.",
+    "Minimality concerns support inclusion, not the size of a generator matrix.",
+    "The Ashikhmin–Barg sufficient weight-ratio condition is not necessary.",
+    "The actual publication date is June 2025; the issue year is 2024.",
+    "Later constructions and compatible combinations of published constructions must be checked before claiming."
+  ]
+}
