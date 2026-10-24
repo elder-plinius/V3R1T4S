@@ -1,0 +1,37 @@
+{
+ "id": "binary-action-games-max-nash-equilibria",
+ "name": "Most Nash equilibria in a generic 4-player game with two actions each: find 39 or more (bounds 37 and 65), refuting Hertling-Vujić Conjecture 4.5",
+ "category": "graphs-games-automata",
+ "kind": "standard",
+ "tractability": 2,
+ "compute_profile": "laptop-days (exact equilibrium enumeration of one candidate takes 81 small polynomial systems; search over 32 payoff-difference coefficients is embarrassingly parallel)",
+ "statement": "For a generic finite game the number of Nash equilibria of its mixed extension is finite and odd. Let mu(n; 2,...,2) be the largest number of Nash equilibria in a generic n-player game in which every player has two pure strategies. Known: mu = 3 for n = 2, and mu = 9 for n = 3 (Jahani and von Stengel, 2024). The maximum number of totally mixed equilibria is the derangement number !n (McKelvey and McLennan, 1997). Vidunas (2017) gives the upper bound V(n) = sum over l of n!/l!, so mu(4) <= 65 and mu(5) <= 326. Hertling and Vujić (arXiv:2412.17890, v1 2024-12-23, v2 2026-09-25) prove the lower bound (V(n) + !n)/2 by small generic deformations of 'product two-action games', so mu(4) >= 37 and mu(5) >= 185 (v2's table prints 187 for n = 5, which does not match the formula (326 + 44)/2 = 185), and they 'optimistically' conjecture equality (Conjecture 4.5): mu(4) = 37. Their v2 dropped a chapter because another of their conjectures (5.2) and a theorem (5.3) had a counterexample.",
+ "success_criterion": "CONFIRMED by an explicit game with rational payoffs (for each of the n players a payoff table over the 2^n pure profiles) that is generic in the sense that every equilibrium is regular (for each equilibrium the indifference system of the players who mix has a nonsingular Jacobian there, and every pure-strategy best-response comparison at the equilibrium is strict) and that has (a) at least 39 Nash equilibria for n = 4, refuting Conjecture 4.5, or (b) at least 189 Nash equilibria for n = 5, exceeding both the formula value 185 and the printed 187. The full equilibrium list must be produced by exact support enumeration (all 3^n combinations of 'plays 0', 'plays 1', 'mixes' per player), each support's polynomial system solved exactly (Gröbner basis or resultants with certified real-root isolation), every candidate checked against all best-response inequalities in exact arithmetic, and the count reproduced by a second, independently written enumerator (for example one using a different computer algebra system). Since generic counts are odd, an even count signals an error. A machine-checked proof (for example in Lean 4 or Isabelle) that mu(4) <= 63 is also a full win. For the equilibrium-count constructions, also beat any higher count from later published games or valid compositions of published games with the same total player count. Disclose whether the game is a composition and cite its components. Unmerged submissions are not bars.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "An explicit generic 4-player binary-action game with rational payoffs and exactly 37 equilibria, every equilibrium listed with exact algebraic coordinates and certified as in the success criterion. The published lower bound is proved by a deformation argument; an explicit certified example makes it checkable by anyone and gives the search a verified starting point."
+  }
+ ],
+ "verification_method": "Reduce each player's payoffs to the difference function D_i(x_-i) = U_i(1, x_-i) - U_i(0, x_-i), multilinear in the other players' mixing probabilities (8 coefficients per player for n = 4). For every support pattern, players who mix must have D_i = 0 at the point, players fixed at 1 need D_i >= 0 and players fixed at 0 need D_i <= 0, with mixing probabilities strictly in (0, 1). Solve each system exactly (for example msolve, Singular or Sage over the rationals) and isolate real roots with certified intervals; check the inequalities with interval or exact arithmetic; check regularity. Test the enumerator on random 3-player games (the count must be odd and never exceed 9) and on the totally mixed bound !4 = 9.",
+ "primary_sources": [
+  "https://arxiv.org/abs/2412.17890",
+  "https://arxiv.org/pdf/2412.17890v2"
+ ],
+ "status_source": "https://arxiv.org/abs/2412.17890",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation.",
+ "disclosure": "open",
+ "angles": [
+  "Count fast, certify slowly: numerically, each candidate needs only the real solutions of 81 small multilinear systems (at most 9 totally mixed points), so a local search over the 32 coefficients can score candidates quickly in floating point; re-certify exactly only games that score 39 or more.",
+  "Start from the paper's maximal product two-action games and their deformations (37 equilibria), then perturb away from the product structure; v2 acknowledges an example that led the authors to modify a conjecture, and dropped Conjecture 5.2 and Theorem 5.3 after a counterexample (arXiv comments), so the authors' structured families are evidently not the last word.",
+  "Count by face dimension: Vidunas' bound V(4) = 65 adds the per-face maxima (9 totally mixed, plus contributions from faces where some players are pure); look for games where several face types reach their maxima at once instead of trading off.",
+  "The 3-player case (9, proved in 2024) is a calibration: a search that cannot find 9 on n = 3 is not ready for n = 4."
+ ],
+ "pitfalls": [
+  "Non-generic games (ties, degenerate equilibria, continua) can show larger naive counts; only regular equilibria of a game in which all equilibria are regular count.",
+  "Floating-point solvers miss or duplicate roots near the simplex boundary; every counted equilibrium needs an exact or certified-interval proof, and so does the claim that there are no others.",
+  "The paper's table entry 187 for n = 5 disagrees with its own formula (185); state which number a claim beats.",
+  "Do not confuse this with the maximum number of equilibria of d x d bimatrix games (a different problem) or with the totally mixed maximum !n, which is already settled.",
+  "The field is active (v2 posted 2026-09-25 with a dropped conjecture); check arXiv for newer versions before claiming."
+ ]
+}
