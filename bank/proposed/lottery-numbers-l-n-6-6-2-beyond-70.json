@@ -1,0 +1,46 @@
+{
+  "id": "lottery-numbers-l-n-6-6-2-beyond-70",
+  "name": "Lottery numbers L(n,6,6,2) for n >= 71: fewest 6-number tickets that guarantee a 2-match prize (UK-lottery problem, past the published range)",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 2,
+  "compute_profile": "laptop-hours to laptop-days (constraint programming or SAT on a local model around a maximal independent set, as in Cushing-Stewart; checking an explicit design means scanning C(n,6) draws, about 1.3e8 at n = 71 and 6.2e8 at n = 90, which takes seconds to minutes)",
+  "statement": "L(n,6,6,2) is the minimum number of six-number tickets such that every six-number draw shares at least two numbers with a ticket. Cushing and Stewart (arXiv:2307.12430) prove values through n=70, including L(70,6,6,2)=35. Their program calls the value 38 at n=71 a conjecture. The target is an exact value for some 71 <= n <= 90, with a working design and a checked lower-bound proof. Published lottery-design tables and compositions supply upper bounds, not exact values by themselves. This question differs from the bank's ordinary covering-design record target.",
+  "success_criterion": "Success means the EXACT value of L(n,6,6,2) for at least one n with 71 <= n <= 90, established by both of the following. (a) An explicit list of L tickets (6-subsets of {1..n}) such that every one of the C(n,6) draws meets some ticket in >= 2 numbers, checked exhaustively. (b) A proof that no design with L - 1 tickets exists, whose computational part comes with a certificate an independent tool checks: an LRAT/DRAT proof checked by cake_lpr or drat-trim, a VeriPB proof, or an exact ILP infeasibility certificate re-verified in rational arithmetic. Any mathematical reduction must be written out in full or cited to a published lemma (e.g. Cushing-Stewart arXiv:2307.12430 Section 3). L must also be no larger than the live upper bound for the cell. Read that bound from coveringrepository.com ((v,k,t,m) = (n,6,2,6)), lottodesigns.altervista.org, and any later paper citing Cushing-Stewart, all re-fetched at claim time. Before claiming, the claimant must also check that no later paper has already settled the cell. The first target is n = 71 (L(71,6,6,2) >= 35 by monotonicity; the published program conjectures 38). Include the best valid composition of published objects for the same parameters and metric in the bar, even if it is absent from a printed table. State whether the candidate is a composition. Identify its components and composition rule. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A certified lower bound: for some n in 71..90, a proof (same certificate standard as success criterion part b) that L(n,6,6,2) is STRICTLY greater than max(35, the Füredi-Székely-Zubor bound for n) and strictly greater than any lower bound published for that n after 2024-06-17."
+    },
+    {
+      "id": "p2",
+      "statement": "A certificate-backed re-proof of a Cushing-Stewart value for some n in 60..70 (e.g. L(67,6,6,2) = 34 or L(70,6,6,2) = 35): an explicit design plus an LRAT/DRAT, VeriPB or exact-ILP certificate for the non-existence of a design one ticket smaller. The published proofs rest on an uncertified Prolog CP run, so this is the first independently checkable proof of that value."
+    }
+  ],
+  "verification_method": "Upper part: parse the tickets and assert each has 6 distinct numbers in 1..n. Enumerate all C(n,6) draws, or equivalently build the graph G whose edges are pairs sharing a ticket and confirm that G has no independent set of size 6 (a clique search in the complement, run as a second, independent check). Lower part: run the certificate through its checker (cake_lpr or drat-trim for LRAT/DRAT, VeriPB for pseudo-Boolean proofs, exact rational re-verification for ILP), and confirm the encoding's generator matches the written reduction. Re-derive the reduction lemmas against Cushing-Stewart Section 3. Recompute the FSZ bound and the monotonicity bound. Re-fetch coveringrepository.com and lottodesigns.altervista.org for the cell, and search arXiv/Google Scholar for papers citing arXiv:2307.12430. Recompute comparison compositions using the same checker and resource metric.",
+  "primary_sources": [
+    "https://arxiv.org/abs/2307.12430",
+    "https://arxiv.org/pdf/2307.12430",
+    "https://coveringrepository.com/",
+    "https://lottodesigns.altervista.org/",
+    "https://lottodesigns.altervista.org/HowToUseThisSite.html",
+    "https://lottodesigns.altervista.org/Improvements.html"
+  ],
+  "status_source": "https://arxiv.org/abs/2307.12430",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Start at n = 71. The published program already reduces it to a few exceptional configurations (Figure 1 of arXiv:2307.12430: four 'bad (r,s)' tuples and one degree-pattern exception). Encode only those as SAT/CP with symmetry breaking, and emit LRAT or VeriPB certificates.",
+    "Re-implement the paper's local model (structure around a maximal independent set I, with |I| <= 5 forced because 6 independent numbers form a losing draw) in a certificate-producing solver (CaDiCaL plus LRAT, or RoundingSat/VeriPB) rather than Prolog CP. Calibrate by re-proving n = 66 to 70 first (partial win p2).",
+    "Equivalent form: L(n,6,6,2) is the fewest 6-cliques whose union graph on n vertices has independence number <= 5. The Turán-type and Shannon chromatic-index arguments in the paper are the obstruction side. Look there for the extra lemma that kills the n = 71 exceptions.",
+    "Upper side: a non-disjoint-union design with 37 tickets at n = 71 would also refute the program's conjecture of 38. Try local search seeded from the (14,14,14,14,15) union. Note that an upper-bound record by itself is already a covering-designs-record partial win (lottery (v,k,t,m) tables); here it counts only as part of an exact value.",
+    "Sweep n = 71..90 in order. L is monotone in n, so each settled value is a lower bound for the next. n = 90 (SuperEnalotto shape) is the showpiece cell."
+  ],
+  "pitfalls": [
+    "Do not confuse L(n,k,p,t) (lottery designs) with covering designs C(v,k,t). The repositories write lottery designs as (v,k,t,m), with t the guarantee and m the draw size, so this entry's cells are (n,6,2,6).",
+    "The Cushing-Stewart lower bounds are not certificate-backed, and Bate-van Rees 1998 has known gaps. Do not cite either as a checker.",
+    "The FSZ minimum is over unequal partitions: the balanced partition overstates it.",
+    "The live repository value for (n,6,2,6) may already be below the disjoint-union bound. Read it before quoting an upper bound.",
+    "The Springer journal version (Constraints, 2024) was not read for this entry. Check it for any added values or corrections before claiming."
+  ]
+}
