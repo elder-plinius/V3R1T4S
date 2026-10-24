@@ -1,0 +1,47 @@
+{
+  "id": "selection-min-comparisons-n16-n17",
+  "name": "Minimum-comparison selection: settle V8(16) in {28, 29}, or beat the new n = 17 upper bounds (V6..V9 of 17)",
+  "category": "algorithms",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (single-threaded proof-number or depth-first construction search in Rust, many workers in parallel; certificates check in seconds; refuting a budget is far more expensive than finding an algorithm)",
+  "statement": "V_i(n) is the minimum worst-case comparison count for finding the i-th smallest of n distinct elements. J. Cremer (arXiv:2610.18740) reports V_7(16)=28 and 28 <= V_8(16) <= 29. For n=17 and ranks 6 through 9, reported upper bounds are 29, 30, 31 and 31; lower bounds are 28, 29, 29 and 29. Earlier bounds and search methods credit Dörrer and coauthors (SEA 2025). The target is an explicit decision graph improving one of these five upper bounds. A 28-comparison algorithm for V_8(16) closes that cell if the reported lower bound remains current.",
+  "success_criterion": "Success means an explicit comparison-selection algorithm for one cell (n, i) in {(16, 8), (17, 6), (17, 7), (17, 8), (17, 9)} (1-based rank i; the mirror rank n+1-i is the same cell), written as a decision graph in the Rust certificate format of Cremer's repository and of the Dörrer et al. search code (functions that compare two arguments, discard arguments that cannot be the answer, call another function on the remaining arguments, or return an element), or in a format converted losslessly into it, whose worst-case number of comparisons is STRICTLY LESS (direction: min) than the best upper bound for that cell on the status sources re-fetched at verification time (on 2026-10-14: V8(16) <= 29, V6(17) <= 29, V7(17) <= 30, V8(17) <= 31, V9(17) <= 31, all from Cremer arXiv:2610.18740v1) and than any lower value in a newer arXiv version or in any paper citing it. The certificate must be accepted, with the claimed worst case, by (1) Cremer's static checker (python3 -I code/verifier/verify_rs_algorithm.py CERT.rs --expect-n N --expect-i I --expect-worst W, where --expect-i is 1-based) and (2) a second checker written from the definition without Cremer's code. A reported worst case below the proven lower bound (V8(16) >= 28; V6(17) >= 28; V7(17), V8(17), V9(17) >= 29) means a checker or parser bug, not a record. A 28-comparison certificate for the 8th smallest of 16 settles V8(16) = 28 and is the headline result; a certificate meeting the lower bound for an n = 17 cell settles that cell. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A raised lower bound for one of the open cells (V8(16) >= 29; V6(17) >= 29; V7(17), V8(17) or V9(17) >= 30) established either by a proof object accepted by a formally verified checker (for example a Lean 4 proof, or a DRAT/LRAT/VeriPB proof of an encoding whose correctness is argued in a short note), or by two independently written exhaustive searches (for example a forward minimax search and a backward search, as Dörrer et al. did) that complete with the same answer and whose runs a skeptic can repeat on comparable hardware; the second route is labelled computational, not certified."
+    },
+    {
+      "id": "p2",
+      "statement": "An explicit certificate for a cell (18, i) with 5 <= i <= 9 whose worst case is strictly below the Hadian-Sobel bound n - i + (i - 1) * ceil(log2(n + 2 - i)) and below every value for that cell in Gasarch-Kelly-Pugh 1996 Table 3 and later sources (a claimant must locate and read that table), verified by the same two checkers."
+    }
+  ],
+  "verification_method": "Fetch the certificate and run Cremer's tooling as in his README quick start (SHA-256 check; code/verifier/verify_rs_algorithm.py with --expect-n/--expect-i/--expect-worst; code/independent_checks/checker/pathcheck.py; Python standard library only, seconds). Then run an independent checker written from the definition: start from the empty order on n elements, follow both outcomes of every comparison while maintaining the transitive closure, compute each function's precondition as the relations common to all its call sites (never trust doc comments), require each discarded element to have at least r+1 known predecessors or at least m-r known successors (0-based rank r among m remaining elements), require each returned element to have exactly r known predecessors and m-1-r known successors, require call arguments to be distinct and the callee rank to be adjusted correctly, require an acyclic call graph, and take the maximum number of comparisons over all paths. Optional third and fourth checks: compile the Rust certificate and run it on 10^7 or more random permutations, and replay Cremer's Lean 4 development (code/lean; about 3 minutes and 1.8 GB for his seven bounds) on the new certificate. Calibrate both checkers on Cremer's certificates (they must report exactly 28 for V7(16) and 29 for V8(16)) and on the 70 optimal algorithms published by Dörrer et al. Re-fetch the repository README and the arXiv listing immediately before claiming.",
+  "primary_sources": [
+    "https://arxiv.org/abs/2610.18740",
+    "https://arxiv.org/html/2610.18740",
+    "https://raw.githubusercontent.com/JCremerr/selection-7-of-16/main/README.md",
+    "https://drops.dagstuhl.de/storage/00lipics/lipics-vol338-sea2025/LIPIcs.SEA.2025.16/LIPIcs.SEA.2025.16.pdf",
+    "https://raw.githubusercontent.com/JGDoerrer/selection_generator/main/README.md",
+    "http://www.cs.hut.fi/~cessu/selection/"
+  ],
+  "status_source": "https://raw.githubusercontent.com/JCremerr/selection-7-of-16/main/README.md",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Proof-number search with a better initialisation: Cremer seeds unexplored df-pn nodes from a cost predictor fitted to exactly solved small problems, shifted pessimistically, and reports that this mattered by factors of 10-100. Fit a stronger predictor on a larger corpus of exactly solved reduced posets (n <= 12-13, generated with the Dörrer et al. code) and run many df-pn workers in parallel with different predictor shifts, tie-breaks and comparison orderings at one fixed budget.",
+    "Leave the runner-up opening for V8(16): Cremer's search found no 28-comparison completion from his 15-comparison opening R16 (a search-level result, stated as such), so a 28-comparison median-of-16 algorithm, if it exists, opens differently. Enumerate openings of 10-16 comparisons up to isomorphism, rank them by the combined Fussenegger-Gabow weight and the KEY bound (Cremer, Section 5), and run df-pn from each opening state at the remaining budget.",
+    "This is an AND/OR game against an adversary: game-solving machinery transfers directly (df-pn+ with threshold control, transposition tables keyed by canonical reduced posets shared across workers, dual problems (P, i) and (P reversed, n+1-i) sharing entries, retrograde tables of all small reduced problems).",
+    "For n = 17, start from Cremer's certificates (his Table 3: 266 to 1,493 functions, found in 89 s to 63 min single-threaded) and ask for one comparison less; V6(17) is one comparison above its lower bound 28, so a 28 certificate settles that cell outright.",
+    "Feed the refutation side too: any state lower bound stronger than Cremer's combined weight (for example weights on solutions rather than counts, as he suggests) prunes the construction search and is the only road to p1."
+  ],
+  "pitfalls": [
+    "Index conventions differ: Cremer's checker flag --expect-i is 1-based, while the doc comments and the Dörrer et al. program use 0-based ranks; V_i(n) = V_{n+1-i}(n), so (16, 9) is the same cell as (16, 8).",
+    "The status moved on 2026-10-13 and the field has at least two active groups; re-fetch the README, the arXiv listing and papers citing arXiv:2610.18740 immediately before claiming. A tie is not a record.",
+    "A checker that reads the relations stated in doc comments instead of propagating them from the call sites accepts wrong programs; Cremer's checker intersects preconditions over all callers for this reason.",
+    "Random-permutation testing is not a proof; the exhaustive propagation check (or the Lean replay) is.",
+    "Refutations under a fixed opening, timeouts and search logs are not lower bounds; only the routes listed in p1 count, and the two-program route is labelled computational.",
+    "A worst case below a proven lower bound (28 for V8(16)) means a bug in the certificate, its parser or the checker."
+  ]
+}
