@@ -1,0 +1,33 @@
+{
+  "id": "laminar-ef1-four-agent-key-matroids",
+  "name": "Cookson–Shah four-agent key matroids: EF1 with ordered no-envy on 8 or 12 goods",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days for rational MILP/SMT search; a counterexample has only 864 or 31104 feasible labeled allocations to check",
+  "statement": "Benjamin Cookson and Nisarg Shah, Constrained Fair Allocations via Partition Matroid Reductions (arXiv:2608.31121, August 2026), explicitly leave two finite key-matroid questions open in Section 5 and Appendix B. They write that their computer-aided attempts were \"unfruitful\" but the result may be within reach with \"a smarter brute-force strategy\". Four agents have arbitrary nonnegative additive values v_ig and a prescribed order 1,2,3,4. In the size-8 matroid, the goods form groups {1,2,3}, {4,5,6}, {7,8}; each bundle contains at most two goods and at most one from each group. In the size-12 matroid there are four groups of three; each bundle contains at most three goods and at most one from each group. All goods must be allocated. The question is whether an allocation can always be both EF1 and free of envy from every earlier agent to every later agent. EF1 means v_i(A_i) >= v_i(A_j)-max_{g in A_j} v_ig; ordered no-envy means v_i(A_i) >= v_i(A_j) for i<j. Positive resolutions for both key matroids complete the authors' reduction for all four-colorable laminar matroids. Independent exact enumeration for this audit counted 864 and 31104 feasible labeled allocations, respectively. These are search-space counts, not evidence for either existence question.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Either provide a nonnegative rational 4x8 or 4x12 valuation matrix for which no complete feasible allocation satisfies both properties, with a complete exact obstruction certificate; or prove existence for every nonnegative additive valuation matrix on BOTH key matroids with a machine-checkable proof/certificate. A counterexample refutes the stronger key-matroid lemma, not necessarily ordinary EF1 existence for laminar matroids.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A machine-checkable universal existence proof for exactly one of the two key matroids, including arbitrary real nonnegative additive values and any prescribed agent order."
+    }
+  ],
+  "verification_method": "For a counterexample, clear denominators and enumerate injective assignments of each group to the four agents, retaining equal loads two or three. Verify completeness of the resulting 864/31104 allocations, then exhibit an exact EF1 or ordered-envy violation in every allocation. Regenerate the enumeration from the group constraints instead of trusting a supplied allocation list. A universal proof may partition normalized valuation space into finitely many rational polyhedra, associate allocations with each region, and supply exact linear-arithmetic/Farkas certificates of coverage and the required inequalities. Include all boundary/tie cases and zero-value rows. A kernel-checked general proof is also acceptable; an unexplained SMT UNSAT exit is not.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2608.31121"
+  ],
+  "status_source": "https://arxiv.org/pdf/2608.31121",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Solve the size-8 question first. An adversarial MILP can search valuation matrices while a separation routine finds satisfying allocations.",
+    "Exploit within-group item symmetries and per-agent positive scaling. Do not sort agents away when the no-envy order is fixed.",
+    "For a positive proof, use small allocation menus on valuation regions and exact linear certificate checking, rather than exhaustively enumerating numerical valuations."
+  ],
+  "pitfalls": [
+    "Lemma 12 already disproves the top-i-goods-in-distinct-bundles construction. Rediscovering that example is not a win; it does not disprove the desired EF1/no-envy property.",
+    "EF1 alone, or the existence of some acyclic envy order rather than the prescribed order, is insufficient.",
+    "All goods must be allocated, and every bundle must obey both its size and group constraints."
+  ]
+}
