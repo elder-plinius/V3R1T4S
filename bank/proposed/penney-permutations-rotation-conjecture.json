@@ -1,0 +1,40 @@
+{
+  "id": "penney-permutations-rotation-conjecture",
+  "name": "Permutation Penney: does moving the last entry to the front always beat the first player?",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (exact consecutive-pattern counts and rational tail certificates for small k; a general proof is harder)",
+  "statement": "Sergi Elizalde and Yixin Lin, Penney’s Game for Permutations, DMTCS 28:1 (2026), Conjecture 6.1, state: \"For any k ≥ 3 and any σ = σ1 . . . σk−1 σk ∈ Sk, the permutation τ = σk σ1 . . . σk−1\" satisfies Pr(sigma precedes tau)<1/2. Generate independent draws from any continuous distribution and inspect consecutive length-k windows by relative order. Alice first chooses sigma; Bob chooses its indicated right rotation tau. The first chosen consecutive pattern to appear wins. The paper proves k=3 and reports numerical evidence for k=4,5 from truncation at n=11; it does not prove the general conjecture. This is a probability-game response strategy, not the already solved binary-word version of Penney’s game.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Either prove Conjecture 6.1 for every k>=3 with a finite machine-checkable proof, or give a specific k>=4 and permutation sigma for which its right rotation tau has Pr(sigma precedes tau)>=1/2, with an exact probability or rigorously certified bound proving the inequality. Equality is a counterexample to the strict conjecture, but requires a proof of equality; floating-point values near one half are insufficient.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Give a rigorous exact-arithmetic verification for every sigma in S4, covering the full infinite experiment with certified tails or symbolic identities, beyond the paper’s numerical evidence."
+    },
+    {
+      "id": "p2",
+      "statement": "Give such a complete verification for every sigma in S5. Reproducing the truncated numerical estimates does not qualify."
+    }
+  ],
+  "verification_method": "Verify tau is precisely the right rotation and sigma is a permutation. Count, using the paper’s consecutive-pattern/avoidance framework, permutations of length H for which sigma wins by H, tau wins by H, or neither has appeared. Uniform iid continuous draws induce the uniform distribution on these H! order types. If the counts are A,B,R, the probability that sigma wins lies in [A/H!, (A+R)/H!]. All counts and inequalities can be checked with integers. Supply a compact counting recurrence with a justified state meaning (or proof-assistant-checked generating-function identity), plus the computed integers; a checker regenerates the recurrence outputs. Refined analytic tails may replace R/H! only with a checkable proof. For a strict counterexample the lower endpoint can suffice; for a positive finite-length verification the upper endpoint must be below 1/2. Exact equality or a general-k theorem requires a symbolic proof. Use the source’s enumerative methods so a supplied small-k certificate is checkable within hours; brute force over all H! permutations is not the proposed method.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2404.06585",
+    "https://doi.org/10.46298/dmtcs.16361"
+  ],
+  "status_source": "https://arxiv.org/pdf/2404.06585",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Start by turning the paper’s k=4 numerical evidence into rigorous intervals; retain the unresolved tail explicitly.",
+    "Complement symmetry halves the number of permutations to check. Keep all other symmetry reductions justified.",
+    "Look for small margins at k=5 or k=6 to prioritize counterexample search. The rotation need not be Bob’s best response to be a winning response."
+  ],
+  "pitfalls": [
+    "The relative order of the most recent k-1 draws, by itself, must not be treated as a Markov state with uniform next-rank insertion after conditioning on avoidance. That defines the different model mentioned at the end of the paper.",
+    "These probabilities need not be rational; the source proves irrational examples. Require bounds or symbolic real values, not an unjustified rational linear system.",
+    "Problem 6.2 asks for the BEST response, which is stronger than merely winning and is left as a separate related problem, not padded into a second proposal.",
+    "The source’s example sigma=2341 already shows its rotation is not always the best response; that does not refute Conjecture 6.1.",
+    "The k=3 case is solved and is excluded as a win."
+  ]
+}
