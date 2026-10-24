@@ -1,0 +1,44 @@
+{
+  "id": "binary-polynomial-multiplication-gates",
+  "name": "Binary polynomial multiplication M(n): fewer AND/XOR gates than the best known circuit for n-term polynomials over GF(2)",
+  "category": "algorithms",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours (straight-line-program heuristics and SAT-based local improvement on circuits of 100 to 8,000 gates; symbolic verification in seconds)",
+  "statement": "M(n) is the minimum number of two-input AND and XOR gates that multiply two n-term polynomials over GF(2), retaining all 2n-1 coefficients. Published constructions include D. J. Bernstein (2009), Cenk and Hasan (2015), M. G. Find and R. Peralta (2019), D'angella and coauthors (2013), and A. De Piccoli, A. Visconti and O. G. Rizzo (2020). Find and Peralta's Table 5 gives 349 gates for n=16 and 3673 for n=64. These are upper bounds. The supplied page leaves two source comparisons incomplete. A claim requires the missing tables and the best valid compositions of published circuits to be checked.",
+  "success_criterion": "Success means an explicit straight-line program over GF(2) for some 2 <= n <= 100, with inputs f0..f(n-1), g0..g(n-1), each line a two-input AND or XOR of earlier values (no constants, no other gate types), and designated outputs h0..h(2n-2), that a symbolic checker confirms computes every h_k = sum_{i+j=k} f_i g_j exactly, and whose gate count is STRICTLY LESS (direction: min) than the minimum for that n over: Bernstein's table (binary.cr.yp.to/m.html), the circuits in Peralta's BinPolMult.tar.gz and on the CMT page, both size columns of Find-Peralta Table 5, the values of De Piccoli-Visconti-Rizzo (2020) and D'angella et al. (2013), and any later value found by a literature search at verification time. Each reference value is recounted with the same counter where a circuit is available. If De Piccoli-Visconti-Rizzo or D'angella et al. cannot be read, the claim is PENDING TABLE CHECK until the human checks them. Include the best valid composition of published objects for the same parameters and metric in the bar, even if it is absent from a printed table. State whether the candidate is a composition. Identify its components and composition rule. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "The same kind of strict improvement for some 101 <= n <= 1000 over Bernstein's table and every later published value for that n (Cenk-Hasan 2015 and De Piccoli-Visconti-Rizzo 2020 must be checked), with priority to cryptographic sizes such as n = 113, 127, 128, 131, 163, 193, 233, 239, 251, 256, 283, 409 and 571."
+    },
+    {
+      "id": "p2",
+      "statement": "An exact value: for some n >= 3 with no published optimality proof (check the literature first), a SAT encoding of 'n-term binary polynomial multiplication with at most M - 1 AND/XOR gates', where M is the current best upper bound, shown unsatisfiable with a proof accepted by a formally verified checker (cake_lpr), together with a short argument that the encoding is complete for circuits of that size."
+    }
+  ],
+  "verification_method": "Parse the program and evaluate it symbolically in the Boolean polynomial ring: represent each wire as the set of monomials it computes over the 2n input variables (XOR = symmetric difference, AND = product reduced with x*x = x), and compare each designated output with sum_{i+j=k} f_i g_j. This is exact and runs in seconds for n <= 100 because these circuits stay bilinear. Count gates (each AND or XOR line is one; renaming or outputting an existing wire is free). Calibrate the counter by recounting Peralta's published circuits for n = 10, 11, 12 and 15 (154, 186, 207, 312) and Bernstein's straight-line code for one n. Re-fetch the reference pages before claiming. Recompute comparison compositions using the same checker and resource metric.",
+  "primary_sources": [
+    "https://binary.cr.yp.to/m.html",
+    "http://www.cs.yale.edu/homes/peralta/CircuitStuff/CMT.html",
+    "https://pmc.ncbi.nlm.nih.gov/articles/PMC6774206/",
+    "https://link.springer.com/article/10.1007/s13389-019-00210-w"
+  ],
+  "status_source": "http://www.cs.yale.edu/homes/peralta/CircuitStuff/CMT.html",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Polish the linear layers: a Find-Peralta circuit is a top XOR layer, an AND layer and a bottom XOR layer; each XOR layer is a shortest-linear-program problem where heuristics newer than the 2019 circuits (Boyar-Peralta with all ties explored, Tan-Peyrin, cancellation-allowing searches) often shave gates.",
+    "SAT-based local improvement (Kulikov et al., 'SAT-based circuit local improvement', 2021): cut windows of 6 to 12 gates out of a record circuit and ask a SAT solver for a smaller equivalent subcircuit; repeat over thousands of windows in parallel.",
+    "Change the bilinear formula, not only its wiring: other choices of the products with the same number of AND gates (Montgomery's five-, six- and seven-term formulae, enumerations of optimal bilinear formulae) can have cheaper linear layers.",
+    "Recursion bookkeeping for composite n: combine the best k-term formula with the best m-term circuits for every split of n and count shared XORs across recursive calls (Bernstein's refined Karatsuba overlap); sweep all splits automatically for n <= 100 and propagate improvements upward.",
+    "A win at n = 64 or 128 (carry-less multiplication, GHASH) or at a NIST binary-curve size is the one practitioners would notice."
+  ],
+  "pitfalls": [
+    "Conventions differ: Bernstein counts ANDs and XORs, Find-Peralta's basis includes the constant 1, and some circuits on the CMT page (S-boxes) use XNOR. This entry counts only two-input AND and XOR gates; recount reference circuits with the same counter.",
+    "The frontier is spread over five sources (2009-2020) with no living table, one of them paywalled; take the minimum per n and keep a claim PENDING until every source is checked.",
+    "Sources are not monotone: for n = 100 Cenk-Hasan's 7934 is worse than Bernstein's 7909, and Find-Peralta's 7847 beats both.",
+    "Random-input testing is not a proof for larger n; use the symbolic check.",
+    "Depth is not part of this record."
+  ]
+}
