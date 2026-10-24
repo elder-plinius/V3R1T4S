@@ -1,0 +1,30 @@
+{
+  "id": "schutte-multiple-tournament-dice-bounds",
+  "name": "Unfair dice games: improve a small Schütte multiple-tournament construction bound",
+  "category": "graphs-games-automata",
+  "kind": "harvest",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days (SAT/local search on two or three tournaments with at most thirteen vertices; witness checking is sub-second scale)",
+  "statement": "Joel Jeffries, Schütte’s property for sets of tournaments and an application to dice games (arXiv:2604.08790, April 2026), Definition 2.2, defines f(m,k) as the minimum order of m tournaments on one vertex set such that every k-subset is dominated by a vertex outside that subset in at least one tournament. Section 4 leaves improvement of its construction bound open. Proposition 2.3 composes orders n1,n2 into order n1+n2, with m=m1+m2 and k=k1+k2+1. The published composition bounds in Figure 7 are f(2,5)<=14 and f(3,6)<=13. They follow from two order-7 S2 tournaments, or two order-3 S1 tournaments and one order-7 S2 tournament, respectively. Closing the small published cells under this composition gives the same bars, 14 and 13. The input’s additional f(2,4)<=9 target is removed: Figure 7 explicitly marks f(2,4)=10 as SAT-confirmed exact. The two retained cells are unstarred construction bounds, not claims of proven optimality. The definition is motivated by dice games with a last chooser who selects both a die and a roll mode. Tournament matrices alone do not establish physical dice realization.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Give explicit adjacency matrices proving f(2,5)<=13 or f(3,6)<=12, with n>=k+1, and strictly below the best composition of all published constructions available when the claim is checked. The cited-source composition bars are 14 and 13; a later published improvement or its compositions can lower them. Unmerged pull-request values are not bars. Report whether the submitted object is itself a composition, and cite every ingredient if it is. One vertex fewer suffices because orders and the verification are exact. Optimality requires a separate lower-bound certificate and is not part of this construction target.",
+  "partial_wins": [],
+  "verification_method": "Check each matrix has diagonal zero, entries in {0,1}, and A[i,j]+A[j,i]=1 for i!=j. For every k-subset U, check that some single tournament and vertex v outside U have A[v,u]=1 for every u in U. At most C(13,5)=1287 subsets are needed for the proposed witnesses. Regenerate the best composition bar from published ingredients using Proposition 2.3 and compare exact integer orders. For a submitted composition, also check its ingredients and assembly rule; direct checking of the final matrices remains required. A positive SAT search is certified by the matrices independently of the solver. An impossibility claim is outside this success criterion.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2604.08790"
+  ],
+  "status_source": "https://arxiv.org/pdf/2604.08790",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Seed the search with Proposition 2.3’s block construction, remove one vertex, and repair uncovered k-subsets.",
+    "Use symmetry breaking for vertex relabeling and permutation of the tournaments; retain a direct matrix checker independent of the encoding.",
+    "Search (m,k)=(2,5) and (3,6), whose Figure 7 cells are unstarred."
+  ],
+  "pitfalls": [
+    "Figure 7 marks f(2,4)=10 as exact. Its removal leaves only unstarred cells; no global optimality claim is made for 14 or 13.",
+    "The dominator must be the same vertex for all elements of U in one tournament; allowing a different tournament for each edge changes the property.",
+    "A tournament tuple alone does not supply physical dice whose first m roll sums realize it. The paper explicitly leaves that additional realization question open.",
+    "Do not retarget the solved m>=k+1 regime, for which the paper proves f(m,k)=k+1.",
+    "This is distinct from lottery coverings and covering codes already in the bank, despite the SAT encoding’s covering interpretation."
+  ]
+}
