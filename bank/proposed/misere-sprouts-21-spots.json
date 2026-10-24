@@ -1,0 +1,50 @@
+{
+ "id": "misere-sprouts-21-spots",
+ "name": "Misère Sprouts: settle the 21-spot game (first unknown since 2011)",
+ "category": "graphs-games-automata",
+ "kind": "standard",
+ "tractability": 2,
+ "compute_profile": "laptop-days (the 20-spot proof database of 2011 holds 73,258 positions and was found by human-guided search; no CPU time is published)",
+ "statement": "Sprouts (Conway and Paterson, 1967) starts with n spots in the plane; a move joins two spots (or one spot to itself) by a curve that crosses nothing and puts a new spot on it, and no spot may have more than 3 lines. In misère play the player who makes the last move loses. Starting-position outcomes are known only for n <= 20: Applegate, Jacobson and Sleator (1991) to 9 spots, then 10 to 16 in 2006-2009 (credited to Purinton and Khorkov on the Glop records page, to Josh Jordan and Roman Khorkov on Wikipedia), then Lemoine and Viennot's program Glop: 17 win (2009-08-30), 18 win and 19 loss (2010-12-18), 20 loss (2011-03-18). The Glop records page lists 21 as '?', and Wikipedia's Sprouts article still gives 20 spots (2011) as the misère frontier. Lemoine and Viennot (arXiv:0908.4407, Conjecture 3) conjecture that the first player wins exactly when n mod 6 is 0, 4 or 5, except that n = 1 is a win and n = 4 a loss; this predicts 21 = loss, 22 = win, 23 = win. Normal-play Sprouts moved far ahead in 2025 (Čížek, Balko and Schmid's SPOTS solver, 480-1024 cores: all n <= 62 plus 27 cases up to 104), but SPOTS handles normal play only, and its nimber reductions do not apply to misère play. The earlier page review could not retrieve the Wikipedia status source (HTTP 403); it checked the Glop table, which lists 21 as unknown.",
+ "success_criterion": "CONFIRMED: the misère outcome (first-player win or loss) of the 21-spot starting position in the plane, under standard rules (at most 3 lines per spot; the last player to move loses), with BOTH of the following. (1) A complete solution tree (OR nodes: one named child proven lost for the player to move; AND nodes: every child proven won), in Lemoine-Viennot string notation or another documented notation, that a checker which shares no code with the solver accepts, where the checker regenerates the full child list of every AND node with its own move generator. If the certificate uses Lemoine-Viennot reduced canonical trees (RCTs) to split positions into independent lands, the checker recomputes every RCT it relies on from scratch; nimber (Grundy) reductions are not valid in misère play and may not be used. (2) The outcome reproduced by a second, independent implementation (for example Glop 2.2 from the official tarball, run on the same certificate or from scratch). The 21-spot misère value must be unknown at verification time on Wikipedia's Sprouts article, the Glop records page and arXiv (search 'misère Sprouts'). A first-player win at n = 21, refuting the conjecture, is an equally full win.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "The misère outcome of the 22-spot or 23-spot starting position (both predicted first-player wins, where the root needs only one proven-losing child), certified exactly as in the success criterion, while n = 21 is still open."
+  },
+  {
+   "id": "p2",
+   "statement": "The first independent confirmation of the 2009-2011 misère values for n = 17, 18, 19 and 20: solution trees produced by a solver that shares no code with Glop, each accepted by a checker as in criterion (1) and agreeing with the Glop records table."
+  }
+ ],
+ "verification_method": "Build an independent Sprouts move generator and test it first: reproduce the published normal-play outcomes for n <= 14 and the misère outcomes for n <= 12 from scratch, and compare child counts of random small positions with Glop 2.2 (GPL v2; source at http://download.tuxfamily.org/sprouts/glop-2.2.tar.bz2). Then walk the claimed solution tree: at every AND node regenerate all children and check each is a proven win in the certificate; at every OR node check that the named child is legal and a proven loss; terminal positions (no legal move) are wins for the player to move in misère play. Recompute any RCT the certificate uses. Finally run Glop 2.2 (or another independent solver) on the same position and compare outcomes.",
+ "primary_sources": [
+  "http://sprouts.tuxfamily.org/wiki/doku.php?id=records",
+  "https://en.wikipedia.org/wiki/Sprouts_(game)",
+  "https://arxiv.org/abs/0908.4407",
+  "https://arxiv.org/pdf/1008.2320",
+  "https://arxiv.org/abs/2511.10339",
+  "https://arxiv.org/html/2511.10339v2",
+  "https://github.com/cizektom/spots",
+  "http://sprouts.tuxfamily.org/wiki/doku.php?id=home"
+ ],
+ "status_source": "https://en.wikipedia.org/wiki/Sprouts_(game)",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation. The earlier page review could not retrieve the Wikipedia status source (HTTP 403); it checked the Glop table, which lists 21 as unknown.",
+ "disclosure": "open",
+ "angles": [
+  "Lemoine and Viennot wrote that the bottleneck for larger Sprouts games was human time spent guiding the search, not CPU or memory, and suggested proof-number search. Port SPOTS (open source, PNS-PDFPN, two-level parallelism) to misère play: replace its nimber reductions with RCT-based land splitting, or start with whole-position PN search and canonical-string transpositions, run in parallel.",
+  "Attack 22 and 23 first: a predicted win needs one proven-losing child at the root. In normal play the easy refutations for p = 5 mod 6 linked one spot to itself and split the remaining spots into two equal sets; test the misère analogue of that child first.",
+  "Warm-start from the published misère databases (Records Sprouts misère - n6rct and the 6-spot RCT database on download.tuxfamily.org/sprouts/bases/) so that all positions already solved for n <= 20 cost nothing.",
+  "For 21 (predicted loss) every root child must be proven a win; order children by the authors' 'lives' measure and solve the cheapest first, sharing a transposition table across workers.",
+  "Keep a solution-tree export from day one (Glop's 'check computation' idea: re-run guided by the database and store only one losing child per winning node), so the certificate is small enough for an independent checker."
+ ],
+ "pitfalls": [
+  "Normal and misère results must never be mixed: Sprague-Grundy sums do not hold in misère play, and only RCT reductions proved in arXiv:0908.4407 are sound.",
+  "The Glop records page's prose still says the first unknown misère value is the 20-spot game; its table shows 20 solved (loss, 2011-03-18) and 21 as '?'.",
+  "The record databases are not compatible with Glop 2.2 (page note); use the matching Glop version or recompute.",
+  "The 'positions' column counts stored database entries (including the whole 6-spot game tree), not search effort.",
+  "The record is for the plane (sphere); results on other compact surfaces are a different table.",
+  "A single solver run proves nothing: a move-generator bug gives a wrong outcome. Two independent implementations are required.",
+  "Crowding risk: the SPOTS team (Charles University) titled its paper 'Impartial Games and Beyond' and could move to misère play; check arXiv and the SPOTS repository before and after a run."
+ ]
+}
