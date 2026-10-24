@@ -1,0 +1,3 @@
+repo_tag: none
+repo_commit: ab114dcb1aad5cc1b2a53c58bc3ad3fcacd1107c (pinned in settings at run start and at packaging)
+charter: v4 tables lane (charter.md last changed 2026-10-16T19:17:19-0700, before this run started)
