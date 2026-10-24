@@ -1,0 +1,62 @@
+{
+ "4": {
+  "closed": true,
+  "characters_multiplicative": {
+   "A1": true,
+   "A2": true,
+   "B1": true,
+   "B2": true
+  },
+  "preserves_bonds": {
+   "e": true,
+   "r90": true,
+   "r180": true,
+   "r270": true,
+   "mr": true,
+   "mc": true,
+   "d": true,
+   "ad": true
+  },
+  "n_elements": 8
+ },
+ "6": {
+  "closed": true,
+  "characters_multiplicative": {
+   "A1": true,
+   "A2": true,
+   "B1": true,
+   "B2": true
+  },
+  "preserves_bonds": {
+   "e": true,
+   "r90": true,
+   "r180": true,
+   "r270": true,
+   "mr": true,
+   "mc": true,
+   "d": true,
+   "ad": true
+  },
+  "n_elements": 8
+ },
+ "10": {
+  "closed": true,
+  "characters_multiplicative": {
+   "A1": true,
+   "A2": true,
+   "B1": true,
+   "B2": true
+  },
+  "preserves_bonds": {
+   "e": true,
+   "r90": true,
+   "r180": true,
+   "r270": true,
+   "mr": true,
+   "mc": true,
+   "d": true,
+   "ad": true
+  },
+  "n_elements": 8
+ }
+}
