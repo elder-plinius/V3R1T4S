@@ -1,0 +1,48 @@
+{
+  "id": "bilateral-trade-best-offer-vs-second-best",
+  "name": "Bilateral trade: an instance where the better of seller-offering and buyer-offering earns less than 3/4 of second-best gains from trade (open gap [1/2, 3/4], Babaioff-Dobzinski-Kupfer 2021)",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours (exact rational LPs over supports of 3-30 points per side; one large instance of 20,000 support points only for the AlphaEvolve angle)",
+  "statement": "A seller and a buyer have independent private values. Seller-offering and buyer-offering each select a profit-maximising price. Their better gains from trade are compared with second-best gains from trade under Bayesian incentive compatibility, interim individual rationality and ex-ante budget balance. Babaioff, Dobzinski and Kupfer (arXiv:2111.07790, Section 3) give a limiting ratio of 3/4, against the 1/2 guarantee credited to Brustle, Cai, Wu and Zhao. Their two-by-two example uses adverse offer ties; favourable ties give ratio 1. The open target is a ratio strictly below 3/4 that survives favourable ties. Later first-best comparisons concern a different denominator. Relevant constructions include M. Jo (arXiv:2607.13959) and Shang and Chen (arXiv:2610.06547).",
+  "success_criterion": "An instance given by two finite-support distributions (rational support points and rational probabilities) for s and b, independent, plus an explicit mechanism M, such that a checker in exact rational arithmetic confirms all of the following. (a) M is feasible. Either M is a posted price p (trade iff s <= p <= b), which is incentive compatible, individually rational and budget balanced by construction. Or M is given by allocation probabilities x(s,b) in [0,1] and interim expected transfers, and every BIC constraint (each type against each misreport) and every interim IR constraint holds for both agents, together with ex-ante budget balance (E[buyer payment] >= E[seller receipt]). This makes GFT_M = E[(b - s) x(s,b)] a lower bound on SB. (b) GFT_SO and GFT_BO are computed exactly. Seller offers range over the buyer's support points and buyer offers over the seller's support points. Among tied profit-maximising offers, each agent takes the one giving the LARGEST GFT, so the claim holds under every tie-breaking rule. (c) GFT_M > 0 and max(GFT_SO, GFT_BO) < (3/4) * GFT_M. Direction: lower ratio is better. The bar is 3/4 from BDK, arXiv 2111.07790, Section 3. Before claiming, re-run the status search and compare against any newer bound. The checker must first reproduce two calibration values. On BDK's 2x2 instance it must report ratio 1 under the GFT-favourable tie rule and 3/4 under BDK's adversarial rule. On the AlphaEvolve instance (appendix code of arXiv 2603.08679) it must reproduce FB ~ 1.2322, SO ~ 0.3312 and BO ~ 0.8565 under that paper's own tie rule. Any exact rational certificate of this strict inequality counts, however small the improvement. Match printed numerical calibration values within one unit of the last printed digit. The exact BDK calibration fractions remain exact. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "An explicit instance whose certified ratio FB/RO exceeds 2.28862548 + 1e-6, where RO = (GFT_SO + GFT_BO)/2 with GFT-favourable tie-breaking. Supports may be finite and checked exactly, or distributions closed-form with interval-arithmetic integrals in the style of M. Jo 2026. This pushes the worst-case random-offerer ratio below 0.436943488, the limit of Shang-Chen's recursive families (arXiv 2610.06547). The cell is crowded (four 2026 papers, two using AI search)."
+    },
+    {
+      "id": "p2",
+      "statement": "Exact second-best values, each an LP optimum with a rational primal-dual certificate, for the published hard instances. These are the AlphaEvolve instance in the appendix code of arXiv 2603.08679 and BDK's Section 2 family for H = 3..20. Report max(SO,BO)/SB for each. No second-best figures for these instances are published, so the table settles whether the first-best-hard instances are also second-best-hard."
+    }
+  ],
+  "verification_method": "Python with fractions.Fraction, under 200 lines. (1) Read the two distributions. (2) For each seller type, evaluate profit at every buyer support point, keep the maximisers and take the GFT-maximising one; do the mirror image for buyer types; sum to get GFT_SO and GFT_BO exactly. (3) If M is a posted price, compute E[(b - s) 1{s <= p <= b}]. Otherwise check every BIC and interim-IR inequality and the ex-ante budget inequality exactly, then compute GFT_M. (4) Check GFT_M > 0 and max(GFT_SO, GFT_BO) < (3/4) * GFT_M. Reproduce BDK's 3/4 (adversarial ties) and ratio 1 (favourable ties) on the 2x2 instance first. An optional second check solves the full SB LP with an exact rational solver (SoPlex in exact mode, or a sympy/fractions simplex for small supports) and confirms SB >= GFT_M.",
+  "primary_sources": [
+    "https://arxiv.org/abs/2111.07790",
+    "https://arxiv.org/pdf/2111.07790",
+    "https://arxiv.org/pdf/2603.08679",
+    "https://arxiv.org/abs/2607.13959",
+    "https://arxiv.org/abs/2609.37997",
+    "https://arxiv.org/pdf/2610.06547",
+    "https://arxiv.org/abs/2609.37366",
+    "https://arxiv.org/abs/2609.30702"
+  ],
+  "status_source": "https://export.arxiv.org/api/query?search_query=abs:%22bilateral%20trade%22&sortBy=submittedDate&sortOrder=descending&max_results=50",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Cheapest first move: compute SB on the AlphaEvolve instance (FB ~ 1.2322, max(SO,BO) = BO ~ 0.8565). If SB > 0.8565 / 0.75 ~ 1.1420, i.e. SB/FB > 0.927, the 3/4 bar falls to a published object nobody has evaluated against second-best.",
+    "Small-support adversary search: anneal over 3-10 support points per side with SB computed exactly (LP, or the discrete Myerson-Satterthwaite virtual-value characterisation with a one-dimensional multiplier search), maximising SB / max(SO,BO). Keep ties robust by always scoring with GFT-favourable tie-breaking.",
+    "Pricing view: max(SO,BO) is the better of two one-sided monopoly quotes. Look for instances where both monopolists' optimal quotes shade far from the efficient price while one posted 'mid' price, or a randomised IC mechanism, still trades almost all profitable pairs.",
+    "Seed from equal-revenue-type families (BDK Section 2, M. Jo 2026, Shang-Chen 2026), which already make one side's offer badly distorted, and perturb them toward instances where a single price nearly separates s < b, so SB stays close to FB."
+  ],
+  "pitfalls": [
+    "Tie-breaking is the whole game at the bar. BDK's 3/4 exists only with ties broken against trade (implemented by perturbation); scoring SO/BO with adversarial ties produces false records. Use GFT-favourable ties or strictly unique optimal offers.",
+    "Benchmark confusion: this cell is versus SECOND-best (BIC, interim IR, ex-ante budget balance, per BDK). The 2026 random-offerer papers and the AlphaEvolve instance report ratios against FIRST-best. A first-best ratio below 3/4 says nothing here unless SB is certified.",
+    "A posted price or any explicit feasible mechanism only lower-bounds SB, which suffices for the claim. Do not claim SB itself without an exact dual certificate.",
+    "Best-of means max(SO, BO), not the random-offerer average (SO+BO)/2. Ratio direction varies across papers (RO/FB 0.4369 vs FB/RO 2.2886).",
+    "Continuous distributions need interval-certified integrals; floating-point ratios do not count.",
+    "Neighbouring cells moved monthly in 2026, with AI-assisted searches by at least two groups. Re-check arXiv the day of any claim."
+  ],
+  "category": "graphs-games-automata"
+}
