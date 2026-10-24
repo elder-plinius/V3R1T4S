@@ -1,0 +1,36 @@
+{
+ "id": "three-player-von-neumann-poker-equilibrium",
+ "name": "Three-player von Neumann poker (Krityakierne-Thanatipanonda-Zeilberger 2024): is the conjectured threshold equilibrium a Nash equilibrium at bet size 2?",
+ "category": "graphs-games-automata",
+ "kind": "standard",
+ "tractability": 3,
+ "compute_profile": "laptop-minutes to laptop-hours (exact algebra over piecewise-polynomial payoffs; finite-deck LP/NLP cross-checks)",
+ "statement": "Krityakierne, Thanatipanonda and Zeilberger, 'von Neumann and Newman Pokers with Finite Decks', arXiv:2407.16155 (v1, 23 Jul 2024; Maple packages FinitePoker and ThreePersonPoker), Section 4, extend von Neumann's poker to three players: each antes 1 and receives an independent uniform(0,1) hand; Player I checks (three-way showdown for the pot of 3) or bets b; if I bets, Players II and III each call or fold, the call/fold of each not depending on the other's action (their Call2/Call3 payoffs and Fast NLP give II and III strategies that depend only on their own card), and the highest hand among the non-folded players wins. They write that 'the dynamics of the three-player game therein remain unexplored', guess the form of the continuous equilibrium from finite-deck data ('conjectured Nash equilibrium strategies', Figure 2): I bets iff x < A or x > B, II and III call iff their hand > C, with II and III symmetric, and obtain A, B, C from three indifference equations only (Eq. A, B, C). For b = 2 they report A = 0.137058194328370, B = 0.829422249795391, C = 0.641304115985175, value to I 0.122557074714865, and an optimal bet b* ~ 2.07 with value 0.122590664136184. The paper does not verify the global best-response conditions (only indifference at the three cut points), does not discuss asymmetric equilibria of II and III, and gives no exact closed form. The historical proposal reported no later work on this game. A proof for every b > 0 with simultaneous callers is now under review in PR #196 and is not established.",
+ "success_criterion": "For b = 2 in the game exactly as defined in arXiv:2407.16155 Section 4 (II and III decide without observing each other's decision), EITHER (A) a proof, by exact symbolic computation verified by an independent checker or by a machine-checked proof, that the profile (A, B, C) defined by the paper's Eq. A-C (with A, B, C given as exact real algebraic numbers, isolating intervals included) is a Nash equilibrium: for every hand value, each player's prescribed action is a best response against the other two, over ALL measurable deviations; OR (B) a refutation: an explicit hand interval and deviation for one player that strictly improves that player's payoff against the other two players' profile, certified in exact or interval arithmetic. Direction: settle, either way. In case (A) the exact game value at b = 2 must be stated as an algebraic number agreeing with the printed 0.122557074714865 within one unit of its last printed digit (10^-15).",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "Settle the same question for every b > 0 (or for every b in a stated interval containing 2): a symbolic proof that the threshold profile from Eq. A-C is (or, for a certified explicit b, is not) a Nash equilibrium."
+  }
+ ],
+ "verification_method": "Write the three payoff functions in closed form: against threshold opponents, each player's payoff from each action is a piecewise polynomial in their own hand with breakpoints at A, B, C, so best-response checks reduce to sign conditions of explicit polynomials on finitely many intervals, decidable exactly (Sturm sequences or real-root isolation in sympy, msolve or Mathematica). Validate the evaluator by reproducing the paper's two-player special case (von Neumann: a = 1/9, b = 7/9, c = 5/9, value 1/9 at bet 2) and the reported three-player numbers. Cross-check with the paper's finite-deck solutions, e.g. FastMNE(4,1): value 1/24 for I and -1/48 for II and III, recomputed by exact LP or exact best responses on the finite game. Calibration against printed decimal numbers must agree within one unit of the last printed digit; exact identities and exact source fractions must agree exactly.",
+ "primary_sources": [
+  "https://arxiv.org/abs/2407.16155",
+  "https://arxiv.org/pdf/2407.16155",
+  "https://www.math.ucla.edu/~tom/papers/poker2.pdf",
+  "https://github.com/elder-plinius/V3R1T4S/pull/196"
+ ],
+ "status_source": "https://arxiv.org/abs/2407.16155",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation. A proof for every b > 0 under the simultaneous-callers rules is under review in V3R1T4S PR #196. It is not an established proof or a record bar.",
+ "disclosure": "open",
+ "angles": [
+  "Check the regions the indifference equations do not cover: I's check region (A, B) against betting, II's fold region below C (including hands below A, which beat I's bluffs), and whether a hand between C and B prefers to fold when the other caller's range is accounted for.",
+  "If the symmetric profile fails, solve for the true equilibrium with an exact finite-deck NLP sequence (n up to a few hundred) and lift its pattern, the method the paper itself used."
+ ],
+ "pitfalls": [
+  "The observation structure matters: if Player III sees Player II's decision before acting (as at a real table), the game is different and the paper's profile does not even have the right strategy space. Stick to the paper's simultaneous reading, or state clearly that a sequential-variant result is a different target.",
+  "Ties have probability zero in the continuous game; in finite decks the paper deals distinct cards, which matters for cross-checks.",
+  "A modest target: the most likely outcome is a clean confirmation (A). Do not overstate it; the novelty is the first full verification, not a new strategy.",
+  "The every-b>0 submission in PR #196 is under review; it does not establish the b=2 target or the all-b partial target."
+ ]
+}
