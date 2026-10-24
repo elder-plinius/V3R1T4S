@@ -1,0 +1,42 @@
+{
+  "id": "qoblib-portfolio-ten-assets-exact",
+  "name": "QOBLIB ten-asset portfolio: close the exact optimum gap for a010_t10_orig_b004_l1e-03",
+  "category": "optimization-benchmarks",
+  "kind": "standard",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days; 10 assets, 10 periods, 600 position binaries before presolve, plus 110 slack bits; exploit interchangeable unit copies and the four-position budget",
+  "statement": "Thorsten Koch and colleagues’ Quantum Optimization Benchmarking Library publishes a multi-period Markowitz benchmark with transaction costs, cash interest and short positions. On 2026-10-24 the portfolio table labels a010_t10_orig_b004_l1e-03 best known with incumbent -8397. Maximilian Schicker’s 2025-08-19 submission reports -8397 and numerical bound -15342.65126758 after 3600.03 seconds; that bound is not an exact proof. The canonical schedule file repeats instance po_a010_t10_orig, budget 4, lambda 0.001 and objective -8397. Fix the shipped rounded integer-coefficient BQP, dataset po_a010_t10_orig, a=10, t=10, B=4 and lambda=1/1000; keep the other parameter_u3_c10.zpl settings, including unit=100000, cash=1000000, ub=3, delta=0.001, nu=0.0001, rho=0.000025 and upscale=1. There are three interchangeable copies per asset, direction and period, plus four-bit cash and seven-bit budget slack registers. The exact global optimum remains unproved in the source table.",
+  "success_criterion": "Give a globally optimal feasible position schedule for this exact instance, its integer objective v <= -8397, and an independently checkable matching lower-bound certificate. A solution equal to -8397 is a full win only with an exact global optimality certificate. Certificates may be a complete dynamic-programming/Bellman certificate or an exact rational branch-and-bound proof for the published BQP; a solver status or floating-point gap alone does not qualify.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "An explicit feasible canonical schedule with recomputed integer objective at most -8398, strictly improving the published -8397 incumbent, even without proving optimality. Also strictly improve the best comparable published result at claim time, including compatible compositions of published objects. State whether the candidate is a composition and identify its components. Values in unmerged pull requests do not set the bar."
+    }
+  ],
+  "verification_method": "Read the original price and covariance decimal strings as rationals. Reproduce the coefficients of bqp_u3_c10.zpl using Zimpl round-half-away-from-zero, at the same places as the model. Check every unit count is an integer in 0..3, per-period total count <=4, cash slack 10-net in 0..15 and budget slack 4-total in 0..127. Reconstruct canonical copy slots, slack bits and the complete objective, including initial purchases, final liquidation and the model's actual indexing/multiplicities. Cross-check with the public exact Rust checker. For optimality, enumerate per-period count states and verify all Bellman lower-bound inequalities and a matching attaining path. There are 10606 count states before any additional pruning: 20 direction/asset counts in 0..3 with total <=4. Direct comparisons are about a billion small integer operations; a certified weighted-L1 distance transform can reduce this substantially. A verifier should take minutes to hours in compiled code.",
+  "primary_sources": [
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/README.md",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/solutions/README.md",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/submissions/20250819_MIP_Schicker/po_a010_t10_orig/po_a010_t10_orig_b004_l1e-3/README.md",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/solutions/po_a010_t10_orig/po_a010_t10_orig_b004_l1e-3.bst.sol",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/models/binary_quadratic_programming/bqp_u3_c10.zpl",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/models/binary_quadratic_programming/parameter_u3_c10.zpl",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/check/README.md",
+    "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/README.md"
+  ],
+  "status_source": "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/solutions/README.md",
+  "status_checked": "2026-10-24 (live best-known status, submission gap, canonical schedule header and model definitions confirmed)",
+  "disclosure": "commit-only",
+  "angles": [
+    "Use long/short unit counts, not permutations of the three identical copies. The source checker explains why canonical aligned slots preserve the optimum.",
+    "Build an exact dynamic program over daily states. Transaction costs are weighted absolute count changes; shortest-path distance transforms on the count-state graph may avoid an all-pairs transition loop.",
+    "Use the -8397 schedule as a reproducibility check before searching. Optimize the rounded shipped objective, with its exact boundary terms."
+  ],
+  "pitfalls": [
+    "The source table is not an optimality certificate. Likewise the reported Gurobi lower bound is floating-point evidence, not a proof.",
+    "The high-level README simplifies the model. The Zimpl source and parameter file define the actual instance, including any repeated summands; do not silently repair the economics.",
+    "Long and short holdings in the same asset are not forbidden by the published constraints. Adding that prohibition changes the benchmark.",
+    "The time-index convention matters: price data and objective return/liquidation indices must follow the source exactly.",
+    "QOBLIB has a live solver/submission table, so the bank's commit-only disclosure rule is selected. This proposal authorizes no submission or contact."
+  ]
+}
