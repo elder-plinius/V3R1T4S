@@ -1,0 +1,30 @@
+{
+  "id": "short-binary-multiple-deletion-code-records",
+  "name": "Binary deletion codes: improve the best size at length 15 or 16, correcting two or three deletions",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days for local clique/independent-set search on 32768 or 65536 candidate words; certificate verification is seconds to minutes",
+  "statement": "Franziska Weindel and Reinhard Heckel, LLM-Guided Search for Deletion-Correcting Codes, arXiv:2504.00613v2 (5 June 2026), Table 2, gives best-known construction sizes and unresolved upper bounds. Maxima across every reported row are (n,s)=(15,2):136, (16,2):215, (15,3):30 and (16,3):42. The LP upper bounds are 277,487,61,99. A binary code corrects s adversarial deletions when distinct codewords have disjoint sets of length n-s subsequences. These unrestricted nonlinear synchronization-error codes differ from upstream Hamming-metric linear, covering and constant-weight codes, and from quaternary edit codes with DNA constraints.",
+  "success_criterion": "Provide an explicit set of distinct binary words with respectively at least 137, 216, 31 or 43 codewords for any one of the four specified (n,s) cells, with pairwise disjoint s-deletion subsequence sets. No linearity, constant-weight or decoder-efficiency assumption is imposed. The complete codebook is the certificate. Also strictly improve the best comparable published result at claim time, including compatible compositions of published objects. State whether the candidate is a composition and identify its components. Values in unmerged pull requests do not set the bar.",
+  "partial_wins": [],
+  "verification_method": "For every word enumerate all choices of s deleted positions, deduplicate the resulting length n−s strings within that word, and insert each string into a map from received string to originating codeword. Reject if a string occurs for two distinct words. Check word length, alphabet and uniqueness, then compare code size to the frozen threshold. Independently cross-check with pairwise dynamic-programming longest common subsequences: LCS(x,y)<n−s. At these four thresholds fewer than 30000 deletion-pattern evaluations suffice for the smallest winning certificates.",
+  "primary_sources": [
+    "https://arxiv.org/html/2504.00613"
+  ],
+  "status_source": "https://arxiv.org/html/2504.00613",
+  "status_checked": "2026-10-15 (supplied literature-status date; primary publication re-read 2026-10-24, later literature not independently rechecked)",
+  "disclosure": "open",
+  "angles": [
+    "Use penalty-guided clique search, but maintain deletion-conflict sets implicitly instead of materializing a dense graph.",
+    "Start with the best conventional solver codebooks, then use k-for-(k+1) exchanges and component-wise exact search.",
+    "Try priority functions trained jointly on shorter deletion counts and lengths; score the final explicit code with the exact checker."
+  ],
+  "pitfalls": [
+    "Beating only the learned-method row is insufficient; take maxima over all rows and comparable later constructions.",
+    "Hamming distance alone does not certify deletion correction.",
+    "Repeated subsequences within one word are harmless and must be deduplicated.",
+    "Naive concatenation need not preserve correction of adversarial deletions across block boundaries.",
+    "The June 2026 paper is the numerical source; later record literature was not independently rechecked."
+  ]
+}
