@@ -1,0 +1,36 @@
+{
+  "id": "smt2026-p4-dfa-unknown-certificates",
+  "name": "SMT-COMP 2026 P4/DFA bit-vector holdouts: one exact SAT model or UNSAT certificate",
+  "category": "optimization-benchmarks",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days using alternative preprocessing and solver configurations; require model/proof checking within laptop-hours",
+  "statement": "SMT-COMP 2026 metadata marks eight Xiaoqi Chen P4/DFA QF_BV files unknown. On 2026-10-24 each has 23 single-query runs, all Timeout or unknown; the parallel, model-validation and unsat-core logs contain no runs for these eight paths. Under QF_BV/20221214-p4dfa-XiaoqiChen/ the files are Composition/compose.s4._bit8_na6_nr4_paired.smt2; StringMatching/string2x16.10._bit8_na6_nr3_paired.smt2; StringMatching/string4x16.2._bit8_na6_nr4_pairedtwobranch.smt2; StringMatching/string4x8.2._bit8_na6_nr3_paired.smt2; StringMatching/string4x8.3._bit16_na6_nr4_paired.smt2; StringMatching/string4x8.5._bit8_na6_nr3_paired.smt2; StringMatching/string4x8.8._bit16_na6_nr4_paired.smt2; TCP/tcp_full_split4_bit8_na6_nr4_paired.smt2. The metadata reports 4969 assertions for the TCP file. This confirms no SAT/UNSAT result in the checked 2026 public logs, not the absence of private solutions. Original benchmark bytes and checksums were not retrieved in this preparation. Finite bit-vector SMT differs from the upstream SAT Competition instances.",
+  "success_criterion": "Decide any one of the eight exact benchmark instances with an independently checked SAT model or UNSAT certificate. Identify the official SMT-LIB file path and SHA-256 of the unmodified downloaded input. A SAT answer needs a total assignment satisfying every assertion under exact SMT-LIB bit-vector semantics. An UNSAT answer needs a checked bit-blasting translation plus a replayable SAT proof, or another independently checkable theory proof. A bare solver answer, timeout change or solution of a simplified non-equivalent instance does not win.",
+  "partial_wins": [],
+  "verification_method": "For SAT, parse the original SMT-LIB input and evaluate all terms under the submitted assignment using width-bounded integers, including signed operations, shifts, overflow and division-by-zero semantics. For UNSAT, independently reconstruct or certify every preprocessing/bit-blasting step, and validate the resulting LRAT or comparably explicit proof. Verify that the CNF proved UNSAT is equisatisfiable with the original assertions. Accept only certificates that a reviewer can check within hours on one laptop; search runtime itself is not evidence.",
+  "primary_sources": [
+    "https://smt-comp.github.io/2026/results/qf_bitvec-single-query/",
+    "https://smt-comp.github.io/2026/results/",
+    "https://raw.githubusercontent.com/SMT-COMP/smt-comp.github.io/master/data/benchmarks-2026.json.gz",
+    "https://raw.githubusercontent.com/SMT-COMP/smt-comp.github.io/master/data/results-sq-2026.json.gz",
+    "https://raw.githubusercontent.com/SMT-COMP/smt-comp.github.io/master/data/results-mv-2026.json.gz",
+    "https://raw.githubusercontent.com/SMT-COMP/smt-comp.github.io/master/data/results-parallel-2026.json.gz",
+    "https://raw.githubusercontent.com/SMT-COMP/smt-comp.github.io/master/data/results-uc-2026.json.gz"
+  ],
+  "status_source": "https://raw.githubusercontent.com/SMT-COMP/smt-comp.github.io/master/data/benchmarks-2026.json.gz",
+  "status_checked": "2026-10-24 (unknown metadata joined to all four non-incremental 2026 result logs; original SMT-LIB files not fetched)",
+  "disclosure": "commit-only",
+  "angles": [
+    "Inspect the TCP and smaller string-matching constraints first, identify repeated automaton structure, and derive semantics-preserving preprocessing.",
+    "Try word-level simplification before bit-blasting and switch between eager and lazy bit-vector reasoning.",
+    "Use failed runs to choose a different encoding or branching strategy; prioritize SAT models because their certificates are smaller."
+  ],
+  "pitfalls": [
+    "Unknown metadata alone is insufficient; check corresponding result logs.",
+    "The original input must be downloaded and hashed before attacking or claiming; metadata is not input verification.",
+    "A public timeout does not prove no private solution exists.",
+    "Every UNSAT preprocessing and translation step needs independent checking.",
+    "This is a solver-table target with commit-only disclosure; any required setter notification remains for the human maintainer."
+  ]
+}
