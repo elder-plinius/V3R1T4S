@@ -1,0 +1,123 @@
+{
+  "0": [
+    {
+      "interval": [
+        "0",
+        "A"
+      ],
+      "action0": "3*x**2 - 1",
+      "action1": "C**2*b + 3*C**2 - b - 1",
+      "difference": "C**2*b + 3*C**2 - b - 3*x**2"
+    },
+    {
+      "interval": [
+        "A",
+        "C"
+      ],
+      "action0": "3*x**2 - 1",
+      "action1": "C**2*b + 3*C**2 - b - 1",
+      "difference": "C**2*b + 3*C**2 - b - 3*x**2"
+    },
+    {
+      "interval": [
+        "C",
+        "B"
+      ],
+      "action0": "3*x**2 - 1",
+      "action1": "-2*C*b*x + 3*b*x**2 - b + 3*x**2 - 1",
+      "difference": "-2*C*b*x + 3*b*x**2 - b"
+    },
+    {
+      "interval": [
+        "B",
+        "1"
+      ],
+      "action0": "3*x**2 - 1",
+      "action1": "-2*C*b*x + 3*b*x**2 - b + 3*x**2 - 1",
+      "difference": "-2*C*b*x + 3*b*x**2 - b"
+    }
+  ],
+  "1": [
+    {
+      "interval": [
+        "0",
+        "A"
+      ],
+      "action0": "-1",
+      "action1": "-A*b + B*b + 2*C*b*x + 3*C*x - b - 1",
+      "difference": "-A*b + B*b + 2*C*b*x + 3*C*x - b"
+    },
+    {
+      "interval": [
+        "A",
+        "C"
+      ],
+      "action0": "-3*A*x + 3*x**2 - 1",
+      "action1": "2*A*C*b + 3*A*C - A*b - 3*A*x + B*b - b + 3*x**2 - 1",
+      "difference": "2*A*C*b + 3*A*C - A*b + B*b - b"
+    },
+    {
+      "interval": [
+        "C",
+        "B"
+      ],
+      "action0": "-3*A*x + 3*x**2 - 1",
+      "action1": "-A*C*b + 3*A*b*x - A*b + B*b - b + 3*x**2 - 1",
+      "difference": "-A*C*b + 3*A*b*x - A*b + 3*A*x + B*b - b"
+    },
+    {
+      "interval": [
+        "B",
+        "1"
+      ],
+      "action0": "-3*A*x + 3*B*x - 1",
+      "action1": "-A*C*b + 3*A*b*x - A*b + B*C*b - 3*B*b*x + B*b - C*b*x + 3*b*x**2 - b + 3*x**2 - 1",
+      "difference": "-A*C*b + 3*A*b*x - A*b + 3*A*x + B*C*b - 3*B*b*x + B*b - 3*B*x - C*b*x + 3*b*x**2 - b + 3*x**2"
+    }
+  ],
+  "2": [
+    {
+      "interval": [
+        "0",
+        "A"
+      ],
+      "action0": "-1",
+      "action1": "-A*b + B*b + 2*C*b*x + 3*C*x - b - 1",
+      "difference": "-A*b + B*b + 2*C*b*x + 3*C*x - b"
+    },
+    {
+      "interval": [
+        "A",
+        "C"
+      ],
+      "action0": "-3*A*x + 3*x**2 - 1",
+      "action1": "2*A*C*b + 3*A*C - A*b - 3*A*x + B*b - b + 3*x**2 - 1",
+      "difference": "2*A*C*b + 3*A*C - A*b + B*b - b"
+    },
+    {
+      "interval": [
+        "C",
+        "B"
+      ],
+      "action0": "-3*A*x + 3*x**2 - 1",
+      "action1": "-A*C*b + 3*A*b*x - A*b + B*b - b + 3*x**2 - 1",
+      "difference": "-A*C*b + 3*A*b*x - A*b + 3*A*x + B*b - b"
+    },
+    {
+      "interval": [
+        "B",
+        "1"
+      ],
+      "action0": "-3*A*x + 3*B*x - 1",
+      "action1": "-A*C*b + 3*A*b*x - A*b + B*C*b - 3*B*b*x + B*b - C*b*x + 3*b*x**2 - b + 3*x**2 - 1",
+      "difference": "-A*C*b + 3*A*b*x - A*b + 3*A*x + B*C*b - 3*B*b*x + B*b - 3*B*x - C*b*x + 3*b*x**2 - b + 3*x**2"
+    }
+  ],
+  "profile_values": [
+    "-A**3 + A*C**2*b + 3*A*C**2 - A*b - B**3*b + B**2*C*b + B*b - C*b",
+    "-(-A**3 + A*C**2*b + 3*A*C**2 - A*b - B**3*b + B**2*C*b + B*b - C*b)/2",
+    "-(-A**3 + A*C**2*b + 3*A*C**2 - A*b - B**3*b + B**2*C*b + B*b - C*b)/2"
+  ],
+  "symbolic_action_differences_verified": 12
+}
+PASS: all 12 action-difference polynomials match, value sum is zero
