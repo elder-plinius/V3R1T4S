@@ -1,5 +1,7 @@
 # Stable-marriage instance at n=13
 
+> Public values for n = 13: OEIS A357271 a(13) = 6,720; Ong et al.'s instance file 7,123; V3R1T4S #150 7,698 (superseded by this object). This object: 9,836. The 9,796 profile named below is an unsubmitted intermediate from this workspace.
+
 ## What
 
 The complete strict n=13 preference profile in `object.prefs` (SHA256 `30437fed4d5de6bf272631b49ae7a94298a2fdefb65c3cd5529df582506c9c56`) has exactly 9,836 stable matchings, exceeding the independently recounted 9,796 stable matchings of `data/prior_n13.prefs` by 40.
@@ -14,7 +16,16 @@ Expected last line: PASS. Python3 and a C++17 compiler; roughly a minute dependi
 
 ## Compared to
 
-The preceding same-size object has 9796 stable matchings; this object has 9836, a gain of 40. The weaker public A357271 n13 term is6720, fetched at 2026-10-15T16:49:49.350346+00:00 from https://oeis.org/A357271/b357271.txt. The independent panel checked current comparison sources.
+| source | n = 13 value |
+|---|---|
+| OEIS A357271 data line, a(13) (Thurber 2002 composition bound), https://oeis.org/A357271/b357271.txt | 6,720 |
+| Ong et al. instance file a357271_1.txt linked from A357271 | 7,123 |
+| V3R1T4S known-knowns, merged #150 (superseded by this object) | 7,698 |
+| this object | **9,836** |
+
+The 9,796 profile in `the-record-we-beat/` is an unsubmitted intermediate from this workspace, not a public value.
+
+**Composition statement.** This object is not a composition of known instances; it was found by search. n = 13 is prime, so the only products are trivial, and the best direct sum of published or merged blocks is 6,472 (the order-12 composition bound plus one pair); the best composition we know is therefore the merged 7,698 instance itself. Thurber's (2002) own composition operations (his Appendix C) were not recomputed with the newer blocks: we could not access the paper.
 
 ## Not claimed
 
