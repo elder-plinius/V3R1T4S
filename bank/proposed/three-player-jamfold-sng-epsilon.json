@@ -1,0 +1,42 @@
+{
+  "id": "three-player-jamfold-sng-epsilon",
+  "name": "3-handed no-limit hold'em jam/fold sit-and-go endgame (Ganzfried-Sandholm): a certified epsilon-equilibrium well below $0.0488",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (exact preflop all-in outcome tables for all 169-class pairs and triples with card removal, about 1e13-1e14 seven-card evaluations; then a 946-state stochastic-game solve and an exact ex post best-response check)",
+  "statement": "Ganzfried and Sandholm (AAMAS 2008, IJCAI 2009) model a three-handed hold'em sit-and-go endgame with jam/fold actions. There are 13,500 chips, blinds 300/600, 946 nonterminal stack vectors and payouts of 50, 30 and 20 dollars. Terminal values use the Independent Chip Model. Their reported maximum unilateral improvement is 0.0488 dollars across starting states and players. The target is an explicit stationary profile with a certified maximum gain at most 0.0010 dollars, using exact all-in outcome probabilities. The proposal checks both stated same-hand elimination conventions. Later variants with other payouts or approximate equities do not move this model's bar.",
+  "success_criterion": "An explicit stationary jam/fold profile for G: for each of the 946 stack vectors, the jam probability of the button, the small blind and the big blind for each of the 169 hand classes in every decision situation. Its ex post epsilon must be at most $0.0010, at least 48 times below the published $0.0488 (direction: lower). Epsilon is the maximum, over all 946 starting states and all three players, of the player's best-response value in the induced undiscounted MDP minus the player's value under the profile, in dollars of the $100 pool, computed as in Ganzfried's thesis section 9.4. All-in outcome probabilities must be exact: full enumeration of boards and of the remaining cards. The sources do not say how two players eliminated in the same hand are ranked, so the bound must hold under both readings: (i) the player who started the hand with more chips takes the higher place, and equal starting stacks split the two prizes; (ii) all players eliminated in the same hand split their prizes equally. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A profile whose certified ex post epsilon is strictly below $0.0488 (but above $0.0010) under both readings, verified exactly as in the success criterion. This is a new record for the published model, though not the full win."
+    }
+  ],
+  "verification_method": "Build an independent checker in four steps. (1) Recompute the two- and three-way preflop all-in outcome probabilities by exhaustive enumeration with a fast 7-card evaluator; cross-check a second evaluator on random deals and on standard heads-up equities. (2) For each player, build the MDP the profile induces (946 x 3 position-states plus terminal ICM states), with blinds moving clockwise, the split-pot rule, and short-stack blind posting. (3) Compute the player's best-response value with policy iteration for the undiscounted total-reward criterion, taking the minimal non-negative solution as in thesis section 9.4.1, or with value iteration from a pessimistic start (thesis Theorem 2). Compute the profile's own values by solving the linear system in exact rational arithmetic or rigorous outward-rounded intervals. A residual alone is insufficient; prove bounds on strategy and best-response values. (4) Epsilon is the largest gap over states and players; repeat for both elimination readings.",
+  "primary_sources": [
+    "https://aamas.csc.liv.ac.uk/Proceedings/aamas08/proceedings/pdf/paper/AAMAS08_0313.pdf",
+    "https://www.ijcai.org/Abstract/09/034",
+    "https://www.ijcai.org/Proceedings/09/Papers/034.pdf",
+    "https://www.csd.cmu.edu/sites/default/files/phd-thesis/CMU-CS-15-104.pdf",
+    "https://arxiv.org/abs/2608.09586"
+  ],
+  "status_source": "https://www.ijcai.org/Abstract/09/034",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Write the ex post checker first, then the solver. The checker is the certificate, and it also defines every convention (blind posting, side pots, splits, eliminations).",
+    "Equity tables: in 2008 the 3-way rollout took 'a month using 16 processors'. With suit canonicalisation, a table-based 7-card evaluator and a multi-core laptop it should take hours. Store the 13 outcome probabilities per class triple, as the source does, with checksums.",
+    "Solve each state's 3-player jam/fold game (169, 338 and 507 information sets) with CFR+ or fictitious play inside a policy-iteration outer loop (PI-FP from IJCAI 2009). Then polish: identify the indifferent hands and solve the indifference equations by Newton's method, driving epsilon toward machine precision.",
+    "Report where the exact equilibrium values deviate from ICM. AAMAS 2008 Table 1 lists the ICM deviations of their profile (mean $0.3703 over 2,838 state-seat pairs), which gives a reproducibility cross-check."
+  ],
+  "pitfalls": [
+    "Terminal states use ICM payoffs (thesis section 9.4), not heads-up jam/fold equilibrium values; the conference papers only say 'substitute the corresponding payoffs'. The ranking of players busted in the same hand is unstated, hence the two readings.",
+    "Split pots must keep stacks in multiples of 300 via the random 300-chip rule. Any other rounding defines a different game with a different state space.",
+    "Short stacks: a player with 300 chips in the big blind is all-in for less, which creates side pots. Fix and document the convention, and keep it identical in solver and checker.",
+    "The MDP is undiscounted. Naive value iteration from an optimistic start can converge to wrong values (Ganzfried's thesis gives an example); use the minimal non-negative solution.",
+    "Epsilon is the maximum over ALL 946 starting states and all three players, in dollars of a $100 pool ($10 entry). A per-hand or average figure is not the published quantity.",
+    "Equities must be computed over actual cards with card removal; strategies depend only on the 169 classes.",
+    "Search papers citing Ganzfried-Sandholm 2008/2009 before claiming; 'ICM Out!' (2026) shows renewed interest in this exact state space."
+  ]
+}
