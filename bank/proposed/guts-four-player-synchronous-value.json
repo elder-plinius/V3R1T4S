@@ -1,0 +1,36 @@
+{
+  "id": "guts-four-player-synchronous-value",
+  "name": "Four-player continuous Guts: exact value against a coordinated three-player coalition",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-days (small-support discovery followed by exact polynomial saddle inequalities and recursive-value certification; no deck enumeration)",
+  "statement": "Kevin Buck, Jae Hwan Lee, Jacob Platnick, Aric Wheeler and Kevin Zumbrun (2022), section 3.2, state that the prior analysis \"leaves open the question of the optimal strategy in the full (nonbloc) n-player game, n ≥ 3\"; section 5 computes approximations. The December 2024 paper by Kevin Buck, Jessica Babyak, Leah Dichter, David Jiang and Kevin Zumbrun gives analytical three-player best-response formulas, including recursive payoffs for sufficiently small continuation values in Appendix B. It does not settle the four-player value. Take the ordinary continuous Guts model of section 1 of the 2022 paper with n=4: independent uniform hands, simultaneous hold/drop decisions, highest holder taking the pot, each losing holder matching it, all players redealt after a contested pot, and termination at a sole holder. All dropping causes a redeal with unchanged stakes. Player 1 faces a synchronous coalition of players 2,3,4, who may jointly randomize their threshold vector. They coordinate thresholds, not the privately dealt hands after seeing them. Use exactly the generalized recursive game with the paper’s virtual-ante payoff alpha, stakes multiplier beta, and termination fee/initial value v0=-1. The paper’s Table 1, N=3 (three opponents), reports an approximate coalition return 0.0339 under its reduced pseudo-bloc computation; this is a numerical observation, not an exact value or certified unrestricted optimum.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Determine the exact recursive minimax value V for player 1 in this four-player model and give attaining strategies, or a symbolic family approaching V with certified bounds. An algebraic value must be specified by an integer polynomial and isolating interval. Certify both sides against ALL opposing threshold choices and their allowed mixtures, and certify that V is the value reached under the paper’s recursive-game convention. Verifying only a discretized game, a restricted bloc/pseudo-bloc game, or an arbitrary fixed point of value(alpha+beta*V) does not count.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Determine the exact unrestricted synchronous value and matching optimal strategies for the four-player ONE-SHOT alpha game (continuation value zero), using exact global saddle certificates. This is a smaller published-model subproblem; it does not settle the recursive value."
+    }
+  ],
+  "verification_method": "Regenerate alpha and beta from the definitions. For h>=1 holders, immediate payoffs are h-2 to every player, plus 4 to the highest holder and minus 4 to every other holder; beta=h-1. If h=0, alpha=0 and beta=1. Integrate on each threshold-order chamber. Given a claimed recursive value v and strategies x*,mu*, verify E[alpha(x*,t)+(beta(x*,t)-1)*v]>=0 for every coalition vector t, and E[alpha(s,mu*)+(beta(s,mu*)-1)*v]<=0 for every player-1 threshold s. Linearity then handles arbitrary mixed deviations. These are finite-degree polynomial inequalities when the strategies have finite algebraic supports; require exact identities or replayable real-algebraic certificates. Also check the supplied convergence/termination-fee argument, for example the hypotheses of the a posteriori estimates in the 2022 paper. This step excludes spurious fixed points and trapped increasing stakes. For the one-shot partial win the same checks use beta*v=0 and ordinary minimax, without a recursive tail. Exact certificate checking should take minutes to hours; numerical search may take days. Any calibration against Table 1 must reproduce the same discretized pseudo-bloc experiment within one unit of the last printed digit; the printed value is not an exact unrestricted benchmark.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2208.02788",
+    "https://arxiv.org/pdf/2412.19855"
+  ],
+  "status_source": "https://arxiv.org/pdf/2208.02788",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "The observed two-component coalition mix is a useful support guess: an equal-threshold bloc, and a vector with one always-holding opponent and equal thresholds for the others. Treat its optimality as something to prove.",
+    "First solve the one-shot four-player game. Then include the unknown continuation value in the polynomial equations.",
+    "Use the solved three-player case to validate payoff normalization and the recursive certificate machinery."
+  ],
+  "pitfalls": [
+    "N in Table 1 is the coalition size, so N=3 means four players in total.",
+    "The numerical 0.0339 is the coalition’s positive return, with the opposite sign for player 1.",
+    "The follow-up shows that one-shot and recursive optimal strategies differ in the three-player model.",
+    "The coalition is allowed correlated threshold choices. Replacing it by independent mixed strategies changes the problem.",
+    "Numerical optimization and a fixed-point residual alone do not certify the recursive game value."
+  ]
+}
