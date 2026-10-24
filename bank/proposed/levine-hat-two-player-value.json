@@ -1,0 +1,55 @@
+{
+ "id": "levine-hat-two-player-value",
+ "name": "Levine's two-player hat puzzle: tighten the published 7/20 and 81/224 bounds, and certify finite-stack optima",
+ "kind": "standard",
+ "tractability": 2,
+ "compute_profile": "laptop-days (exhaustive or branch-and-bound search over column partitions of a balanced hint matrix; the exact V_{2,4} cell is laptop-minutes)",
+ "statement": "Two players each wear an infinite stack of independent fair black/white hats, see only the other player's stack, and simultaneously name a position on their own stack; they win iff both named hats are black. V2 is the supremum of the success probability, V2 = lim V_{2,h} where V_{2,h} restricts both stacks to h hats. Lower bound: V2 >= 7/20 = 0.35 via recursive 'skip monochromatic triples' strategies (Carter-Reyes and Tiefenbruck, OEIS A345255/A345257); Bouquet, Chikhi, Charles, Zhou, Wang (arXiv:2508.01737v2, 19 Apr 2026) add an order-5 recursive strategy S5 and an infinite R_t family, all exactly 7/20. Conjecture: V2 = 7/20 (Buhler et al. Conjecture 2; Bouquet et al. Conjecture 1). Upper bound: V2 <= 81/224 ~ 0.361607, proved by Buhler, Freiling, Graham, Kariv, Roche, Tiefenbruck, Van Alten, Yeroshkin ('On Levine's notorious hat puzzle', INTEGERS 21A (2021), arXiv:1407.4711v8) with the 'matrix hint' game on the 8x14 matrix whose columns are the 14 non-constant affine functions on 3 bits (exhaustive over column partitions; 3920 optimal partitions of 8 types). They write that 81/224 'remains the best provable upper bound to date' and suggest the 16x30 matrix of non-constant affine functions on 4 bits, where hill climbs found no partition better than 0.35625 but 'an exhaustive search over all partitions of the 30 columns of this matrix currently seems infeasible'; the 6x20 matrix of weight-3 columns is worse (partitions reaching 117/320 = 0.365625 exist). Heilman and Tamuz (arXiv:2503.09042, 2025) give a computer-free Fourier-analytic bound, quoted by Bouquet et al. as V2 <= 0.37193. Bouquet et al. (2026) still list V2 as unknown with 81/224 as the upper bound. Finite stacks: brute force has settled only h <= 3 (V_{2,3} = 22/64); Buhler et al. also exhausted SYMMETRIC 4-hat strategies only. Best known lower bounds (Bouquet et al., hill climbing plus their recursive inequality; take the larger of their two tables): V_{2,4} >= 0.34765625 (= 89/256), V_{2,5} >= 0.349609375 (= 358/1024), V_{2,6} >= 0.349853515625, V_{2,7} >= 0.34991455078125, V_{2,8} >= 0.3499755859375, V_{2,9} >= 0.3499908447265625, V_{2,10} >= 0.34999847412109375, V_{2,11} >= 0.34999847412109375, V_{2,12} >= 0.34999942779541016, V_{2,13} >= 0.34999990463256836; they call 4 <= h <= 6 'likely sharp', unproven. OPEN as of 2026-10-14: an arXiv API listing for Levine's hat problem shows no paper newer than 2508.01737v2. A complete-enumeration candidate V_{2,4} = 89/256 exists but is unverified; the published strategy lower bound 89/256 is established by the cited construction, while equality as an optimum is not. The earlier page review could not retrieve its alternate arXiv status search (HTTP 429), so later improvements were not ruled out.",
+ "success_criterion": "Fair coin (p = 1/2) throughout. FULL WIN is either (A) or (B). (A) Upper bound: a 0/1 matrix M (any size, duplicate columns allowed) in which EVERY column has exactly half of its entries equal to 1, together with an exhaustive certificate, evaluated in exact rational arithmetic, that the matrix-game value V(M) = max over all partitions ~ of the columns of V(M;~) is at most some U STRICTLY LESS THAN 81/224 (direction: min). Here, per Buhler et al. Section 3.2, V(M;~) = (1/n) * E[max_i r_i . v], where r_i are the rows of M, n is the number of columns, and v in {0,1}^n is constant on each class of ~ with independent fair bits across classes; by their Section 3.4 this proves V2 <= U. (B) Beyond the conjecture: an explicit two-player strategy pair (finite h, or a recursive infinite strategy with its renewal formula written out) whose exact success probability is STRICTLY GREATER THAN 7/20 (direction: max), refuting Conjecture 1 of Bouquet et al. In both cases the result must also beat any newer value found on the status source at verification time. The improvement bar includes the best valid composition of published objects under these same rules, as well as direct published objects. Unmerged submissions are not bars. State whether the submitted object is a composition and identify all components and their sources.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "Exact V_{2,4}: an exhaustive, re-runnable search (symmetry reduction allowed if the verifier re-checks it) over ALL pairs of 4-hat strategies, not only symmetric ones, giving the maximum success probability as an exact rational with an optimal pair. If the maximum exceeds 89/256 it is also a new best 4-hat strategy. The existing complete-enumeration candidate 89/256 has not been verified; independently certifying it is still a partial target."
+  },
+  {
+   "id": "p2",
+   "statement": "Exact V_{2,5} with an exhaustive or branch-and-bound certificate, OR an explicit h-hat strategy pair for some 4 <= h <= 13 whose exact success probability strictly exceeds the larger of the two values listed for that h in Bouquet et al. (arXiv:2508.01737v2, Section 3). Compare with the best valid composition of published strategies for that h and disclose whether the strategy is a composition. Recover exact published win-count fractions where possible; if only a rounded decimal bar is available, clear it by one unit of its last printed digit."
+  },
+  {
+   "id": "p3",
+   "statement": "The exact, certified value V(M) of the 16x30 hint matrix (rows: the 16 points of F_2^4; columns: the 30 non-constant affine functions on 4 bits) proposed by Buhler et al., even if it is not below 81/224 (settling the computation they called infeasible)."
+  }
+ ],
+ "verification_method": "For (A) and p3: re-implement V(M;~) from the definition with exact rationals; check every column of M is balanced; calibrate by reproducing 3/8 for the 4x6 matrix of weight-2 columns and 81/224 for the 8x14 affine matrix (all 190,899,322 partitions of 14 columns, minutes in C). Then re-run the claimant's exhaustive or branch-and-bound search with an independently written checker: every leaf must carry a bound <= U derivable from its partial partition, and every symmetry or dominance reduction must be re-verified (for example, that each claimed group element maps M to itself up to row and column permutations). For (B) and p2: count wins over all 2^(2h) hat configurations with integers; for recursive strategies re-derive the renewal formula (Bouquet et al. give (358 - 1)/((2^5 - 1)^2 + 2(2^5 - 1) - 3) = 7/20 for S5; S3 gives (22 - 1)/60) and evaluate it exactly. For p1: re-run the exhaustive search (4^16 ~ 4.3e9 strategies for one player, exact best response for the other: minutes in C) or check the canonical-form reduction and re-run the reduced search. Calibration against printed decimal numbers must agree within one unit of the last printed digit; exact identities and exact source fractions must agree exactly.",
+ "primary_sources": [
+  "https://arxiv.org/abs/1407.4711",
+  "https://arxiv.org/pdf/1407.4711",
+  "https://arxiv.org/abs/2508.01737",
+  "https://arxiv.org/pdf/2508.01737",
+  "https://arxiv.org/abs/2503.09042",
+  "https://arxiv.org/abs/2208.06858",
+  "https://oeis.org/A345255",
+  "https://export.arxiv.org/api/query?search_query=abs:Levine%20AND%20abs:hat&sortBy=submittedDate&sortOrder=descending&max_results=50"
+ ],
+ "status_source": "https://export.arxiv.org/api/query?search_query=abs:Levine%20AND%20abs:hat&sortBy=submittedDate&sortOrder=descending&max_results=50",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation. The earlier page review could not retrieve its alternate arXiv status search (HTTP 429), so later improvements were not ruled out. A candidate V_{2,4} = 89/256 from complete enumeration exists but has not been verified. It is not an established optimum or a record bar.",
+ "disclosure": "open",
+ "angles": [
+  "Evaluator first: reproduce 81/224 and the 3920 optimal partitions on the 8x14 affine matrix before touching anything larger.",
+  "16x30 affine matrix: AGL(4,2) (order 322,560) acts on rows and columns and preserves the game value; enumerate partitions up to this group by canonical augmentation, prune with an optimistic bound for partially assigned partitions, and use the 0.35625 hill-climb value as the incumbent. B_30 ~ 8.5e23 partitions, so pruning, not brute force, decides feasibility.",
+  "Search the space of hint matrices, not only partitions: short (few rows), wide (many columns), balanced matrices from designs, codes or group orbits, ranked by a cheap heuristic estimate of V(M) before any exhaustive certification.",
+  "p1: the position-relabelling symmetry (S_4 acting on each player's own stack, with the matching change in the other player's view) plus swapping the players shrinks the 4-hat search; the best response of the second player is computed exactly with bitmasks.",
+  "(B): the recursive reset construction of Buhler et al. (Appendix E.4) turns an h-hat base strategy into an infinite one; search base strategies at h = 6 or 7 whose recursive value would exceed 7/20, re-deriving the reset bookkeeping for each candidate."
+ ],
+ "pitfalls": [
+  "A hint matrix with an unbalanced column biases the referee and voids the upper bound.",
+  "V(M) is a maximum over ALL partitions; a hill climb that finds nothing above U proves nothing (the 0.35625 figure for the 16x30 matrix is exactly such an unproved number).",
+  "Bigger hint matrices are not monotonically better: the 6x20 weight-3 matrix admits 117/320 > 81/224.",
+  "Finite-stack values V_{2,h} are lower bounds on V2; they never bound V2 from above.",
+  "The 2014 exhaustive 4-hat search covered symmetric strategies only; p1 needs all pairs.",
+  "Bouquet et al.'s 'continuous Levine game' (value exactly 1/2) is a different game.",
+  "Use exact integer win counts out of 4^h; floating point cannot separate values near 7/20.",
+  "Do not confuse the established 4-hat lower bound 89/256 with the unverified claim that complete enumeration proves V_{2,4}=89/256."
+ ],
+ "category": "graphs-games-automata"
+}
