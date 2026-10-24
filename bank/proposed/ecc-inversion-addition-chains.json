@@ -1,0 +1,42 @@
+{
+  "id": "ecc-inversion-addition-chains",
+  "name": "Shorter addition chains for elliptic-curve field and scalar inversion exponents (Curve25519, P-256, P-384, secp256k1)",
+  "category": "algorithms",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours (laptop-days for the field-inversion cells); verification takes milliseconds",
+  "statement": "An addition chain to exponent E gives a fixed schedule of squarings and multiplications. Brian Smith's ECC inversion page and Michael McLoughlin's addchain results give eight reference exponents. For the P-256, P-384 and secp256k1 field entries, E=N-3 computes the square of the inverse. For Curve25519's field entry and all four scalar entries, E=N-2 computes the inverse. Reference lengths are 265, 266, 396 and 269 for those field entries, and 283, 292, 433 and 290 for the Curve25519, P-256, P-384 and secp256k1 scalar entries. Contributors include Bernstein, Gueron, Krasnov, Dettman, Wuille and Smith. These lengths are not optimality proofs. Compare chains only for the same exact exponent.",
+  "success_criterion": "Success means an explicit addition chain 1 = a_0, a_1, ..., a_L = E, where E is one of the eight exponents N - d listed in addchain's doc/results.md for Curve25519, P-256, P-384 and secp256k1 field and scalar inversion (d=3 for the P-256, P-384 and secp256k1 field entries; d=2 for the Curve25519 field entry and all four scalar entries), in which every a_i (i >= 1) equals a_j + a_k for some j, k < i (j = k is a doubling), checked with exact integer arithmetic, and whose length L is STRICTLY LESS (direction: min) than the best of: Brian Smith's live page, addchain's live doc/results.md, and any shorter chain for the same exponent published elsewhere (papers or library source such as BoringSSL, Go crypto, fiat-crypto, RustCrypto, curve25519-dalek, libsecp256k1 before its switch to safegcd), which the claimant must search for and cite. Bars on 2026-10-14: Curve25519 field 265, P-256 field 266, P-384 field 396, secp256k1 field 269, secp256k1 scalar 290, P-256 scalar 292, P-384 scalar 433, Curve25519 scalar 283. Include the best valid composition of published objects for the same parameters and metric in the bar, even if it is absent from a printed table. State whether the candidate is a composition. Identify its components and composition rule. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "For one of the twelve field-inversion exponents that addchain lists without a published best (M-221, E-222, Curve1174, E-382, M-383/Curve383187, Curve41417, M-511, P-192, P-224, Goldilocks, secp192k1, secp224k1), a verified chain strictly shorter than addchain's listed length and than any chain the claimant finds in papers or public source code for that exponent."
+    },
+    {
+      "id": "p2",
+      "statement": "For one of the eight main exponents, a verified chain of the same total length as the live bar but with strictly fewer additions (multiplications), i.e. a cheaper inversion whenever a squaring costs less than a multiplication."
+    }
+  ],
+  "verification_method": "Write the chain as a list of index pairs (j, k), or in addchain's acc format (addchain can parse and evaluate it). Recompute every element with Python integers, check that the last element equals the hexadecimal N - d printed in addchain's results.md (and re-derive N from the curve standards), and count doublings (j = k) and additions. As an end-to-end check, follow the chain to compute x^E mod N for 100 nonzero x. Confirm x*x^E=1 mod N when d=2, and x^2*x^E=1 mod N when d=3. Re-fetch Smith's page and results.md before comparing. Milliseconds. Recompute comparison compositions using the same checker and resource metric.",
+  "primary_sources": [
+    "https://briansmith.org/ecc-inversion-addition-chains-01",
+    "https://github.com/mmcloughlin/addchain",
+    "https://raw.githubusercontent.com/mmcloughlin/addchain/master/doc/results.md",
+    "https://arxiv.org/abs/2207.13276"
+  ],
+  "status_source": "https://briansmith.org/ecc-inversion-addition-chains-01",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Scalar inversions are the soft cells: n - 2 has a structured top half (runs of ones, cheap through x^(2^k - 1) ladders) and a random-looking low half of about 128 bits (192 for P-384). Optimise jointly the window decomposition of the low half (dynamic programming over splits) and a shortest addition sequence for the set of odd window values (Bos-Coster, Bergeron-Berstel-Brlek, or exact search for small sets).",
+    "Use addchain as the baseline and evaluator; widen its dictionary and hybrid algorithms, try many decompositions, and add simulated annealing or beam search over the dictionary terms. Smith's trick of building odd multiples by repeatedly adding 2 generalises to building the needed table as short arithmetic progressions.",
+    "Estimate slack first with Schönhage's lower bound l(n) >= log2 n + log2 v(n) - 2.13 and with the typical length of good chains for random 128-bit numbers; spend compute where the gap to the bar is largest.",
+    "Field inversion or inverse-square exponents (p - d with long runs of ones) are near-optimal by construction; search over run-length chains (Bernstein's classical chain for 2^255 - 21 builds runs of 5, 10, 20, 40, 50, 100, 200 and 250 ones; addchain's uses 10, 20, 30, 60, 120, 240, 250) jointly with the head and tail, but treat a one-step gain there as a long shot."
+  ],
+  "pitfalls": [
+    "Length counts every step, doublings and additions alike, and not the starting 1. Some sources quote squarings and multiplications separately; compare totals.",
+    "The chain must reach exactly E=N-d for its table entry. Congruent but different exponents are different targets, and variable-time methods (binary GCD, safegcd) are not addition chains.",
+    "Smith's page records hand-optimised chains from 2017 and addchain's 'Best Known' column is a snapshot; library source code may hold shorter unpublished chains, so the novelty search is part of the claim.",
+    "Hex transcription errors: derive N from FIPS 186-5, SEC 2 and RFC 7748, and cross-check against results.md."
+  ]
+}
