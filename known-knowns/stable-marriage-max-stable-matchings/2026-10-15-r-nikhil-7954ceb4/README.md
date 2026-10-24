@@ -1,5 +1,7 @@
 # Stable-marriage instance at n=21
 
+> Public value for n = 21: OEIS A357271 a(21) = 3,506,880. This object: 5,400,616 (+54 %). The 5,382,608 profile named below is an unsubmitted intermediate from this workspace.
+
 ## What
 
 The complete strict preference profile in `object.prefs` for 21 men and 21 women has exactly 5,400,616 stable matchings, exceeding the independently recounted 5,382,608 stable matchings of `data/prior_n21.prefs` by 18,008 and the freshly fetched OEIS A357271 n=21 composition bound of 3,506,880.
@@ -14,7 +16,14 @@ Expected last line: PASS. Python3 and a C++17 compiler; roughly a minute dependi
 
 ## Compared to
 
-The preceding same-size object has 5382608 stable matchings; this object has 5400616, a gain of 18008. The weaker public A357271 n21 term is3506880, fetched at 2026-10-15T16:49:49.350346+00:00 from https://oeis.org/A357271/b357271.txt. The independent panel checked current comparison sources.
+| source | n = 21 value |
+|---|---|
+| OEIS A357271 data line, a(21) (Thurber 2002 composition bound), https://oeis.org/A357271/b357271.txt | 3,506,880 |
+| this object | **5,400,616** |
+
+The 5,382,608 profile in `the-record-we-beat/` is an unsubmitted intermediate from this workspace, not a public value.
+
+**Composition statement.** This object is not a composition of known instances; it was found by search. The best lexicographic product of a 3-instance with the published 81- and 85-blocks is 1,842,375 (checked in both orders); the best direct sum of published blocks is 3,419,680 (the order-20 composition bound plus one pair), then 3,127,552 (order 16 plus order 5). Thurber's (2002) own composition operations (his Appendix C) were not recomputed with the newer blocks: we could not access the paper.
 
 ## Not claimed
 
