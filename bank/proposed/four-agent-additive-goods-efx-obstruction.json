@@ -1,0 +1,30 @@
+{
+  "id": "four-agent-additive-goods-efx-obstruction",
+  "name": "Four additive agents: an exact finite counterexample to complete EFX existence",
+  "category": "graphs-games-automata",
+  "kind": "moonshot",
+  "tractability": 1,
+  "compute_profile": "laptop-hours to laptop-days for structured counterexample search; 4^10=1048576 to 4^12=16777216 allocations for exact checking; no exhaustive search of all valuations is proposed",
+  "statement": "Eyad Alkassar, Mahmoud Fouz and Kurt Mehlhorn, Complete EFX Allocations Exist for Four Additive Agents and Up to Nine Goods (arXiv:2608.08590, August 2026), explicitly say that complete EFX existence for additive valuations is open for n>=4. Their Theorem 1 settles all four-agent instances with at most nine goods, even for strong zero-tolerant EFX0. They distinguish recently published submodular counterexamples from the still-open additive case. The target here is a counterexample with four agents and strictly positive rational item values, so EFX and EFX0 coincide. For a complete allocation A, require v_i(A_i) >= v_i(A_j)-min_{g in A_j}v_ig for every i,j with A_j nonempty. The published frontier forces any such four-agent witness to have at least ten goods. This is a hard conjecture target, not a claim that the next size should be easy.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "An explicit strictly positive rational 4xm additive valuation matrix, m>=10, such that no allocation of all m goods is EFX, together with an exact exhaustive or compressed obstruction certificate checkable within a few hours on a laptop. Every good must be assigned once; there are no constraints on bundle size. A witness for nonadditive valuations, incomplete allocation or EFX plus an extra efficiency condition does not qualify.",
+  "partial_wins": [],
+  "verification_method": "Clear denominators and verify strict positivity. Enumerate all 4^m labeled complete allocations and, using exact subset sums, find an i,j,g in A_j with v_i(A_i)<v_i(A_j)-v_ig for each allocation. It suffices to use the good of minimum v_i-value in each envied bundle. Any symmetry reduction must carry a proof that all allocations are covered; unproved canonicalization is not allowed. At m=10..12 a compiled enumerator is a laptop-scale checker. Larger witnesses need a compact proof with independently checked coverage, not just an UNSAT assertion.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2608.08590",
+    "https://arxiv.org/pdf/2606.08872"
+  ],
+  "status_source": "https://arxiv.org/pdf/2608.08590",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "The source reports difficult regions with near-identical valuations and a common top good. Search perturbations in those regions rather than uniform random matrices.",
+    "Combine adversarial rational valuation search with an exact EFX-allocation separation oracle.",
+    "Use the published <=9 theorem as a negative control on any checker; a claimed positive-valued counterexample below ten goods signals a bug or a conflicting claim requiring resolution."
+  ],
+  "pitfalls": [
+    "All sizes up to nine goods are already solved for four agents. The original literature's older n+3 frontier is stale.",
+    "The source used five 48-vCPU machines for its universal positive result. Extending that exhaustive computation is not the proposed laptop attack.",
+    "Three-agent additive existence and recent submodular counterexamples cannot be repackaged as this target.",
+    "The strictly positive witness requirement avoids counting a change in zero-good conventions as a disproof."
+  ]
+}
