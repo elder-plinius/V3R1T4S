@@ -1,0 +1,76 @@
+0	200	90347	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=284.46579&dec=-8.54736&radius_arcsec=1.5
+1	200	21531	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=277.21228&dec=-22.00156&radius_arcsec=1.5
+2	200	60352	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=84.055&dec=-4.2425&radius_arcsec=1.5
+3	200	4016	no band with >= 50 good epochs	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=84.25004&dec=-6.96719&radius_arcsec=1.5
+4	200	3890	no band with >= 50 good epochs	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=287.14368&dec=-4.60897&radius_arcsec=1.5
+5	200	149872	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=330.94507&dec=47.99431&radius_arcsec=1.5
+6	200	226975	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=281.61978&dec=40.7105&radius_arcsec=1.5
+7	200	2	no ZTF object within 1.5 arcsec	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=328.71542&dec=48.36389&radius_arcsec=1.5
+8	200	36539	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=331.10257&dec=47.86006&radius_arcsec=1.5
+9	200	2	no ZTF object within 1.5 arcsec	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=301.11584&dec=-0.75722&radius_arcsec=1.5
+10	200	195429	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=286.98862&dec=8.51417&radius_arcsec=1.5
+11	200	64670	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=101.29821&dec=-18.45239&radius_arcsec=1.5
+12	200	142908	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=183.646&dec=50.38661&radius_arcsec=1.5
+13	200	113938	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=307.65216&dec=6.17881&radius_arcsec=1.5
+14	200	64387	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=101.29575&dec=-18.36064&radius_arcsec=1.5
+15	200	60134	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=211.50722&dec=-11.309&radius_arcsec=1.5
+16	200	67023	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=90.44787&dec=-1.36281&radius_arcsec=1.5
+17	200	149173	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=310.44672&dec=11.87572&radius_arcsec=1.5
+18	200	58494	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=91.94258&dec=-6.38392&radius_arcsec=1.5
+19	200	40100	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=289.62534&dec=-5.31581&radius_arcsec=1.5
+20	200	162622	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=206.70192&dec=23.01933&radius_arcsec=1.5
+21	200	127160	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=82.09121&dec=29.47039&radius_arcsec=1.5
+22	200	68997	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=283.27432&dec=-8.68981&radius_arcsec=1.5
+23	200	131868	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=226.87292&dec=19.59694&radius_arcsec=1.5
+24	200	139133	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=291.66034&dec=-5.93589&radius_arcsec=1.5
+25	200	118472	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=124.30642&dec=10.77283&radius_arcsec=1.5
+26	200	88051	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=350.94345&dec=58.91303&radius_arcsec=1.5
+27	200	2	no ZTF object within 1.5 arcsec	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=281.83716&dec=-4.75828&radius_arcsec=1.5
+28	200	2	no ZTF object within 1.5 arcsec	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=166.80646&dec=59.30267&radius_arcsec=1.5
+29	200	125420	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=280.83096&dec=5.4815&radius_arcsec=1.5
+30	200	27316	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=141.1205&dec=-23.75267&radius_arcsec=1.5
+31	200	25224	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=301.51688&dec=17.22956&radius_arcsec=1.5
+32	200	107986	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=259.72928&dec=-17.67317&radius_arcsec=1.5
+33	200	43405	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=197.22575&dec=-15.53744&radius_arcsec=1.5
+34	200	173654	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=332.37384&dec=55.77747&radius_arcsec=1.5
+35	200	134959	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=179.93787&dec=29.19269&radius_arcsec=1.5
+36	200	71352	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=241.99001&dec=-3.40275&radius_arcsec=1.5
+37	200	9541	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=83.75646&dec=-4.56044&radius_arcsec=1.5
+38	200	245290	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=74.46496&dec=-6.17725&radius_arcsec=1.5
+39	200	238396	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=297.0318&dec=27.16461&radius_arcsec=1.5
+40	200	30134	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=222.66092&dec=-24.38056&radius_arcsec=1.5
+41	200	122234	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=171.71925&dec=53.63467&radius_arcsec=1.5
+42	200	179967	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=284.15024&dec=-8.34008&radius_arcsec=1.5
+43	200	199933	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=316.55551&dec=41.50797&radius_arcsec=1.5
+44	200	25844	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=84.11817&dec=-6.81244&radius_arcsec=1.5
+45	200	160842	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=300.26892&dec=16.36175&radius_arcsec=1.5
+46	200	13651	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=31.68558&dec=-2.20467&radius_arcsec=1.5
+47	200	39619	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=171.5312&dec=-14.062&radius_arcsec=1.5
+48	200	17011	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=84.96208&dec=26.24456&radius_arcsec=1.5
+49	200	315	no band with >= 50 good epochs	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=264.87662&dec=-24.14919&radius_arcsec=1.5
+50	200	244007	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=285.68753&dec=-6.18064&radius_arcsec=1.5
+51	200	109866	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=71.35996&dec=-7.73217&radius_arcsec=1.5
+52	200	64309	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=101.28742&dec=-17.94439&radius_arcsec=1.5
+53	200	33990	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=244.45204&dec=-22.82258&radius_arcsec=1.5
+54	200	481665	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=144.14301&dec=44.12922&radius_arcsec=1.5
+55	200	2	no ZTF object within 1.5 arcsec	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=264.14572&dec=-8.1275&radius_arcsec=1.5
+56	200	61649	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=245.71297&dec=-12.88936&radius_arcsec=1.5
+57	200	77185	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=242.65401&dec=-1.22517&radius_arcsec=1.5
+58	200	140228	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=289.92587&dec=-2.00081&radius_arcsec=1.5
+59	200	8440	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=264.21268&dec=-23.95383&radius_arcsec=1.5
+60	200	6066	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=329.57938&dec=45.85944&radius_arcsec=1.5
+61	200	158838	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=176.84442&dec=58.85064&radius_arcsec=1.5
+62	200	3268	no band with >= 50 good epochs	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=234.79321&dec=-0.63897&radius_arcsec=1.5
+63	200	139253	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=328.31049&dec=45.25417&radius_arcsec=1.5
+64	200	158852	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=185.394&dec=51.78244&radius_arcsec=1.5
+65	200	74326	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=84.97392&dec=-2.52658&radius_arcsec=1.5
+66	200	72386	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=83.41996&dec=-2.25897&radius_arcsec=1.5
+67	200	43650	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=190.1433&dec=-17.67711&radius_arcsec=1.5
+68	200	169749	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=310.88095&dec=38.20472&radius_arcsec=1.5
+69	200	246637	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=273.7168&dec=31.81175&radius_arcsec=1.5
+70	200	65590	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=81.29192&dec=9.97717&radius_arcsec=1.5
+71	200	117822	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=283.68018&dec=-10.16775&radius_arcsec=1.5
+72	200	98312	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=41.44696&dec=42.59944&radius_arcsec=1.5
+73	200	280806	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=309.71957&dec=71.4815&radius_arcsec=1.5
+74	200	55519	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=82.99079&dec=-4.44767&radius_arcsec=1.5
+75	200	72080	usable	https://db.ztf.snad.space/api/v3/data/latest/circle/full/json?ra=269.00424&dec=-17.20872&radius_arcsec=1.5
