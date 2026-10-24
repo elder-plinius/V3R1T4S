@@ -1,0 +1,30 @@
+{
+  "id": "auction-deterministic-threshold-monotonicity",
+  "name": "Two-item auction determinism threshold: is Thirumulanathan’s c2*(c1) increasing?",
+  "category": "algorithms",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days for polynomial-density search, algebraic root isolation and exact inequality certificates; a general positive proof requires additional analysis",
+  "statement": "D. Thirumulanathan, On Deterministic Optimal Mechanisms in a Two-Item Setting for Distributions with Nondecreasing Density (arXiv:2608.22371; Journal of Mathematical Economics, DOI 10.1016/j.jmateco.2026.103293), states in the footnote on p. 14: \"Whether c2*(c1) is an increasing function of c1 or not is still an open problem.\" This is the explicitly constructed sufficient threshold of Section 3.1, not the minimal true boundary of deterministic optimality. Fix normalized, strictly positive, nondecreasing C1 densities g_i on [0,b_i]. Values for the two items are independent with translated densities f_i(z)=g_i(z-c_i). For c=c1 in [0,1/g1(0)), write G(x)=integral_0^x g1(u)du and q(c) for the unique optimal single-item price, solving q-(1-G(q-c))/g1(q-c)=0. Define h1=1/[g2(0)G(q-c)], h2=[2+max_{0<=x<=q-c}(c+x)g1'(x)/g1(x)]/g2(0), and R=q(1-G(q-c)). The third threshold h3 is the unique h>=1/g2(0) for which, with t=G^{-1}(1/[h g2(0)]), integral_0^t (c+x)g1(x)dx/G(t)=R. Then c2*(c)=max(h1,h2,h3). Theorem 4 guarantees a deterministic separate-sale mechanism above this threshold. Uniform densities already give the increasing expression 2*b2*b1^2/(b1-c)^2.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Resolve the published monotonicity question. A negative result must give explicit admissible densities, 0<=c<c'<1/g1(0), and certified values showing c2*(c)>c2*(c'). Prefer rational polynomial densities and algebraic/rational isolating intervals, so the strict decrease is checkable. A positive result must be a machine-checkable proof for the full stated density class. State whether \"increasing\" is interpreted weakly or strictly and, for a positive resolution, account for the equality case rather than leaving this ambiguity unresolved.",
+  "partial_wins": [],
+  "verification_method": "Check normalization, strict positivity and nonnegative derivative of the supplied densities on their entire intervals. For polynomial examples use exact integration, Sturm sequences or rational Bernstein/SOS certificates. Isolate each monopoly-price root and prove it is the required global maximizer. Certify h2's global maximum by checking endpoints and every stationary point, not a grid. Isolate h3 using its defining equation and the source's uniqueness property, bound all three h values at both shifts, and verify a strictly separated max comparison. Such a fixed low-degree algebraic witness takes minutes to hours to check. General positive results require a proof kernel or a complete formally verified reduction.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2608.22371",
+    "https://doi.org/10.1016/j.jmateco.2026.103293"
+  ],
+  "status_source": "https://arxiv.org/pdf/2608.22371",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Search positive monotone polynomial densities for g1. For fixed g2, its value g2(0) only rescales these three threshold expressions.",
+    "Track switches between the three active thresholds. A plot of a single branch is not a plot of the maximum.",
+    "Use floating point only to locate candidates; convert a candidate to a rational polynomial and obtain exact root and inequality certificates."
+  ],
+  "pitfalls": [
+    "The threshold is sufficient and is explicitly not claimed tight. Changing the question to monotonicity of the true optimal-auction boundary is a different problem.",
+    "Keep the densities fixed while translating their supports. Comparing different density shapes at different c is not a monotonicity counterexample.",
+    "Do not cross the boundary c=1/g1(0); the expression has a prescribed domain and diverges at that boundary.",
+    "A sampled decrease, unchecked stationary maximum, or approximate auction solve does not certify this question."
+  ]
+}
