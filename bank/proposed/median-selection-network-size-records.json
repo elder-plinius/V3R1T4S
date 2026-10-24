@@ -1,0 +1,31 @@
+{
+  "id": "median-selection-network-size-records",
+  "name": "Median selection networks: reduce a current comparator count for 10–25 inputs",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days for evolutionary search or SAT-assisted local replacement; exhaustive zero-one verification at n≤25 fits laptop memory and minutes to hours",
+  "statement": "Bert Dobbelaere’s maintained List of median selection networks gives explicit size/depth trade-offs. On 2026-10-24, the least listed comparator counts for n=10 through 25 are respectively 22,25,29,32,38,41,46,49,55,58,63,66,74,77,82,85. These are construction records, not proofs of optimality. The page includes updates through 2026-10-16 and credits Mason Hemmer and Touko Ursin. For odd n one designated output is the middle order statistic. For even n two designated outputs are the two middle order statistics, possibly unordered. The page also describes reductions from networks with nearby input sizes. Median selection differs from full sorting and adaptive comparison selection.",
+  "success_criterion": "For any listed n, give an input-independent sequence of compare-exchange pairs, output positions, and an exact correctness certificate, using strictly fewer comparators than the listed minimum for that n. A comparator replaces its ordered pair of wires by (min,max). For even n return the two middle input values as an unordered pair; averaging is outside the network. Count every comparator including any added at the outputs. Depth is reported but unconstrained. Also strictly improve the best comparable published result at claim time, including compatible compositions of published objects. State whether the candidate is a composition and identify its components. Values in unmerged pull requests do not set the bar.",
+  "partial_wins": [],
+  "verification_method": "Check pair indices and count comparators, then evaluate every binary input in {0,1}^n using packed bitsets or batches. For odd n the selected bit must be 1 iff the input contains at least (n+1)/2 ones. For even n compare the sorted selected pair with binary order statistics n/2 and n/2+1. The threshold principle for comparator circuits extends this exhaustive binary check to all totally ordered inputs, including ties. A SAT UNSAT certificate for a violating input is an alternative, provided the encoding is independently reconstructed and the proof checked.",
+  "primary_sources": [
+    "https://bertdobbelaere.github.io/median_networks.html",
+    "https://github.com/bertdobbelaere/SorterHunter"
+  ],
+  "status_source": "https://bertdobbelaere.github.io/median_networks.html",
+  "status_checked": "2026-10-24 (maintained table and construction rules confirmed; broader later literature not independently rechecked)",
+  "disclosure": "open",
+  "angles": [
+    "Delete or reroute comparators in the recent records and use counterexamples to repair the network.",
+    "Seed from nearby input sizes using the table’s documented trimming and central-pair constructions.",
+    "Resynthesize a small suffix exactly while freezing the prefix; verify the resulting whole network."
+  ],
+  "pitfalls": [
+    "Count comparator elements, not the separate min/max subcomponent cost.",
+    "For even n the middle two outputs may be unordered; averaging is outside the network.",
+    "Random testing is not a correctness certificate.",
+    "Nearby-size constructions are part of the comparison bar.",
+    "The upstream full sorting-network target shares SorterHunter, but asks a different question."
+  ]
+}
