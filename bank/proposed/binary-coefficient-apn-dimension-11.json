@@ -1,0 +1,31 @@
+{
+  "id": "binary-coefficient-apn-dimension-11",
+  "name": "Quadratic APN functions over GF(2^11): counterexample to the six-class conjecture",
+  "category": "record-tables",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-days for a bounded structured counterexample search; roughly four million derivative evaluations per APN check, with invariant checks in minutes to hours; full classification is out of scope",
+  "statement": "Yuyin Yu, Jingchen Li, Nadiia Ichanska and Nikolay Kaleyski, Classification of quadratic APN functions with coefficients in F2 in dimension 10 (December 2025), classify dimension 10 and conjecture six CCZ-equivalence classes in dimension 11. Table 3 lists x^3, x^5, x^9, x^17, x^33 and x^3+Tr(x^9), with absolute trace GF(2^11) to GF(2). The class is F(x)=sum_{0<=i<j<11} c_ij x^(2^i+2^j), with c_ij in {0,1}. APN means each nonzero input difference has at most two preimages for any output difference. Their partial search found 29 APN functions in six invariant signatures; equivalence within a signature was not fully checked in dimension 11. The estimated full search takes at least 70 single-core years. This target asks for a certified counterexample, not a full classification.",
+  "success_criterion": "Give a quadratic homogeneous polynomial of the specified binary-coefficient form over GF(2^11), prove by exhaustive evaluation that it is APN, and supply an independently checkable certificate that it is CCZ-inequivalent to each of the six Table 3 representatives. A sufficient certificate is an ortho-derivative differential/Walsh spectrum signature different from that of every representative, using the invariant theorem for quadratic APN functions cited in the paper. Merely finding a different truth table or a seventh output of a heuristic classifier is insufficient.",
+  "partial_wins": [],
+  "verification_method": "Specify an irreducible binary degree-11 modulus; independently verify irreducibility and build exact field arithmetic. Expand F and each reference function on all 2048 inputs. Check all 2047 nonzero differences and all 2048 inputs, requiring difference counts 0 or 2. For each a≠0, form the linear derivative x↦F(x+a)+F(x)+F(a)+F(0); its image has rank 10. Compute its unique nonzero orthogonal normal vector by GF(2) elimination to obtain the ortho-derivative. Recompute its full differential spectrum and component Walsh spectra. Compare invariant histograms with all six references. Include the cited invariant justification; an alternative inequivalence certificate must have a complete exact replay, not a failed equivalence search.",
+  "primary_sources": [
+    "https://link.springer.com/article/10.1007/s00200-025-00711-8",
+    "https://link.springer.com/article/10.1007/s00200-025-00711-8/tables/3"
+  ],
+  "status_source": "https://link.springer.com/article/10.1007/s00200-025-00711-8",
+  "status_checked": "2026-10-15 (supplied literature-status date; primary publication re-read 2026-10-24, later literature not independently rechecked)",
+  "disclosure": "open",
+  "angles": [
+    "Adapt the paper’s reduced-matrix partial-search algorithm, concentrating on matrix patterns omitted by its restriction.",
+    "Reject non-APN candidates after the first low-rank derivative, before constructing full invariants.",
+    "Use symmetry and algebraic constructions to bias toward a new invariant signature rather than enumerate the full space."
+  ],
+  "pitfalls": [
+    "Binary coefficients and dimension 11 are part of the conjecture.",
+    "Equal spectra do not prove equivalence; a differing valid invariant can prove inequivalence.",
+    "Ortho-derivative invariance requires the quadratic-APN hypotheses.",
+    "Failure of an equivalence program is not an inequivalence certificate.",
+    "The primary paper was re-read, but later literature was not independently rechecked."
+  ]
+}
