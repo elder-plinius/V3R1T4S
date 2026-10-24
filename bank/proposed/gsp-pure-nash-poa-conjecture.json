@@ -1,0 +1,48 @@
+{
+  "id": "gsp-pure-nash-poa-conjecture",
+  "name": "Sponsored-search GSP auction: a full-information pure Nash equilibrium (no overbidding) with welfare ratio above 1.259134, refuting the 2010 Lucier-Paes Leme conjecture (proven upper bound 1.28216)",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-days (search over values, click-through rates and rankings for n = 5-8 bidders; each candidate equilibrium is checked by a few hundred exact rational inequalities)",
+  "statement": "In a full-information GSP auction, slots have decreasing click-through rates and bidders pay the next bid per click. Each bidder obeys b_i <= v_i. Lucier and Paes Leme (arXiv:1011.3268) conjectured that the worst pure-equilibrium welfare ratio for any slot count equals the three-slot supremum. Caragiannis, Kaklamanis, Kanellopoulos, Kyropoulou, Lucier, Paes Leme and Tardos (JET 2015, arXiv:1201.6429) establish the three-slot value near 1.259134 and the general upper bound (61+7*sqrt(217))/128. Ding, Wu, Qin and Liu (arXiv:1305.5404) claim a four-slot result; the supplied page records no independent verification of that proof. Kroll, Schäfer and Tsikiridis (arXiv:2609.39532) study weaker aggregate no-overbidding. Their bounds do not change this per-bidder target.",
+  "success_criterion": "An explicit instance (n bidders, rational values v_i, rational CTRs alpha_1 >= ... >= alpha_n >= 0), a bid vector b with 0 <= b_i <= v_i, and a stated deterministic tie-breaking rule. An exact-rational checker must confirm that b is a pure Nash equilibrium of the full-information GSP auction under that rule: no bidder i can strictly increase alpha_slot * (v_i - price) by moving to any slot via any bid in [0, v_i]. It must also confirm that OPT(v)/SW(b) > 1.259134, where OPT sorts values against CTRs. Direction: higher is better. The bar is the 3-slot supremum bound 1 + 2*zeta, reported numerically as approximately 1.259134 of arXiv 1201.6429 (Theorem 4.2 / App. B.1), which the 1.25913 conjecture of arXiv 1011.3268 says holds for all n. Re-check arXiv for newer GSP equilibrium bounds before claiming. The checker must first reproduce the published 3-bidder instance (ratio >= 1.259133, NE verified exactly) and the 2-slot instance (v = (1, 1/2), alpha = (1, 1/2), b = (0, 1/2), ratio 5/4). The decimal bar is numerical. Alternatively an exact symbolic certificate that the ratio exceeds the exact three-slot supremum defined in Theorem 4.2 counts, without a minimum gap. If transcribed printed parameters fail an exact Nash check, calibrate on the source-defined exact instance; printed numerical outputs use tolerance within one unit of the last printed digit. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A coarse correlated equilibrium (finite-support distribution over bid profiles, each with b_i <= v_i, rational probabilities) of a full-information GSP instance with OPT/E[SW] > 1.259134. A mixed Nash equilibrium is a special case. The checker verifies the CCE inequality for every bidder against every deviation bid in [0, v_i]; this reduces exactly to finitely many breakpoints at the other bidders' support bids, with each tie side checked. This raises the best lower bound for the GSP mixed and CCE PoA under per-bidder no-overbidding; the upper bound is 2.310."
+    },
+    {
+      "id": "p2",
+      "statement": "In the budget-free GSP model of arXiv 2609.39532, Section 6 (aggregate, in-expectation no-overbidding as an equilibrium refinement; deviations over all bids): a PNE or CCE with liquid/social welfare ratio > 2. This improves the lower end of their open interval [2, 3.146]. The cell is crowded: the authors report AI-assisted constructions."
+    },
+    {
+      "id": "p3",
+      "statement": "An exhaustive, machine-checkable proof for n = 4 (all rankings, exact LP or SMT certificates) that the pure PoA with per-bidder no-overbidding is at most 1.259134, or a 4-bidder counterexample. This independently settles the unrefereed claim of arXiv 1305.5404 and tells a search where to start."
+    }
+  ],
+  "verification_method": "Exact rational arithmetic, under 100 lines. Sort bids, assign slots under the stated tie rule, and compute payments (the next bid). For each bidder i and each target slot j, compute the cheapest deviation bid in [0, v_i] that lands i in slot j under the same tie rule. Moving up costs the bid of the bidder currently in slot j; moving down costs the bid of the bidder who ends up just below. Check that utility does not strictly increase. Then compute OPT and SW exactly and compare against 1.259134. For a CCE, enumerate profiles in the support and check deviations at all breakpoints. Calibrate on the JET 3-bidder instance and the 2-slot example first. For the symbolic route compare with the exact three-slot supremum defined in the source theorem, using certified algebraic or symbolic inequalities. Do not replace that value with a fixed decimal threshold.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/1201.6429",
+    "https://arxiv.org/pdf/1011.3268",
+    "https://arxiv.org/pdf/1305.5404",
+    "https://arxiv.org/pdf/2609.39532"
+  ],
+  "status_source": "https://arxiv.org/abs/2609.39532",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Cheapest first move: Ding et al.'s own weakly feasible 4-bidder example in arXiv 1305.5404 has v = (1.00, 0.53, 0.25, 0.16), alpha = (1.00, 0.57, 0.47, 0.19), ranking (2,3,1,4) and ratio 1.269. Whether bids b <= v make it a Nash equilibrium is one small exact LP. Their unrefereed PoA_4 = 1.259 proof (details shown for one permutation only) says no; checking it, and its neighbourhood, costs minutes.",
+    "For a fixed ranking pi and fixed CTRs, the equilibrium conditions are linear in the bids, and with values free they are bilinear. Fix pi and alpha, then maximise OPT - r*SW over (v, b) with an LP or bilinear solver, and binary-search r. Enumerate non-cyclic rankings for n = 5, 6, 7 (Ding et al. claim the cyclic one and n = 4 are safe).",
+    "Weakly feasible allocations (the relaxation behind the 1.28216 upper bound) reach 1.269 at n = 4 per arXiv 1305.5404. Use the gap between weak feasibility and true NE constraints to see which constraint blocks each candidate, and design rankings where it is slack.",
+    "Intuition: inefficiency comes from a high-value bidder underbidding into a low slot while lower-value bidders sit above at cheap prices. Search instances with long chains of such underbidders and geometric CTR profiles.",
+    "For the CCE partial, the LP 'minimise E[SW] subject to the CCE constraints' over a discretised bid grid is exact once deviations are restricted to breakpoints; this alone may beat 1.259."
+  ],
+  "pitfalls": [
+    "The no-overbidding variant changes the answer: per-bidder pointwise b_i <= v_i (this cell, bar 1.259134) vs aggregate in-expectation NOB (bar 2). Never compare across them.",
+    "Ties: the published worst cases sit exactly on indifferences. Fix and state the tie rule, verify the NE under that rule, and prefer instances whose inequalities hold strictly so the claim survives any tie rule.",
+    "Weakly feasible is not Nash. Ding et al.'s 1.269 n = 4 allocation is only weakly feasible, and a claim needs actual equilibrium bids checked exactly.",
+    "The 3-slot supremum is irrational, so rational instances cannot match it exactly. Any claim at n = 3 above 1.259134 is a checker bug, since Theorem 4.2 proves the bound there.",
+    "Quality factors and 'squashing' variants change the model. Use the plain separable-CTR GSP of arXiv 1201.6429 Section 2."
+  ],
+  "category": "graphs-games-automata"
+}
