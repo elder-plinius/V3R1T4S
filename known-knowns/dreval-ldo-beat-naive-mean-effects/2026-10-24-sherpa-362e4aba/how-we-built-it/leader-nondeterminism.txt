@@ -1,0 +1,1 @@
+00:59:47Z parallel runner picks different hyperparameters than the sequential pipeline on the same fold (units_per_layer [16,8,4] vs [128,64,32]); predictions max|diff| 4.88, corr 0.75. MultiOmicsNeuralNetwork tuning is nondeterministic (no torch seeding in hpam_tune), so the leader needs more than one run.

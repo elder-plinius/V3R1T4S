@@ -1,0 +1,18 @@
+== PotencyTransfer
+   all_drugs                normR2 +0.2249 (SE 0.0354, 10 splits)
+   single_agents            normR2 +0.2038 (SE 0.0409, 10 splits)
+   combinations_only        normR2 +0.2031 (SE 0.0472, 10 splits)
+   vault_all_82             normR2 +0.1153 (SE 0.1404, 10 splits)
+   vault_74_never_exposed   normR2 +0.0868 (SE 0.1437, 10 splits)
+   drug-level r  all                            0.5971245074900827
+   drug-level r  singles                        0.5680748840465067
+   drug-level r  singles maxsim [0.00,0.30)     (207, 0.4905446198515208)
+   drug-level r  singles maxsim [0.30,0.45)     (118, 0.37250189672221723)
+   drug-level r  singles maxsim [0.45,0.60)     (80, 0.777301449747511)
+   drug-level r  singles maxsim [0.60,1.01)     (91, 0.7317875226092571)
+== NaiveMeanEffectsPredictor
+   all_drugs                normR2 -0.0247 (SE 0.0086, 10 splits)
+   single_agents            normR2 -0.0297 (SE 0.0113, 10 splits)
+   combinations_only        normR2 -0.1953 (SE 0.1182, 10 splits)
+   vault_all_82             normR2 -0.1345 (SE 0.0533, 10 splits)
+   vault_74_never_exposed   normR2 -0.1493 (SE 0.0559, 10 splits)

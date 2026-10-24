@@ -1,0 +1,2 @@
+teacher threshold 0.60: mean normR2 +0.2243  SE 0.0351  positive 10/10
+teacher threshold 0.50: mean normR2 +0.1736  SE 0.0299  positive 10/10

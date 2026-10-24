@@ -1,0 +1,16 @@
+
+== seed42
+   WITH prior,    all drugs      +0.2243 (SE 0.0351, 10/10)
+   WITHOUT prior, all drugs      +0.1450 (SE 0.0284, 10/10)        <- the pre-committed ablation
+   WITH prior,    single agents  +0.2030 (SE 0.0406, 10/10)
+   WITHOUT prior, single agents  +0.1117 (SE 0.0340, 9/10)
+   WITH prior,    novel scaffold +0.1174 (SE 0.0626, 7/10)
+   WITHOUT prior, novel scaffold -0.0186 (SE 0.0574, 6/10)
+
+== independent
+   WITH prior,    all drugs      +0.2261 (SE 0.0478, 10/10)
+   WITHOUT prior, all drugs      +0.1556 (SE 0.0333, 9/10)        <- the pre-committed ablation
+   WITH prior,    single agents  +0.2021 (SE 0.0523, 10/10)
+   WITHOUT prior, single agents  +0.1213 (SE 0.0347, 8/10)
+   WITH prior,    novel scaffold +0.0528 (SE 0.0831, 5/10)
+   WITHOUT prior, novel scaffold -0.0147 (SE 0.0374, 4/10)

@@ -1,0 +1,16 @@
+
+== seed42: single agents only, pooled over the 10 splits
+   max Tanimoto to training      drugs    pairs  pooled normR2  mean of per-split  splits>0
+   [0.00, 0.30)                     207    85262        +0.1615            +0.1174      7/10
+   [0.30, 0.45)                     118    52387        +0.0900            +0.0074      7/10
+   [0.45, 0.60)                      80    33918        +0.4485            +0.3826     10/10
+   [0.60, 1.01)                      91    34216        +0.3438            +0.2644      7/10
+   ALL single agents                     205783        +0.2354
+
+== independent: single agents only, pooled over the 10 splits
+   max Tanimoto to training      drugs    pairs  pooled normR2  mean of per-split  splits>0
+   [0.00, 0.30)                     214    90342        +0.1114            +0.0527      5/10
+   [0.30, 0.45)                     109    45761        +0.1989            +0.1324      8/10
+   [0.45, 0.60)                      80    33755        +0.4028            +0.1465      6/10
+   [0.60, 1.01)                      93    35925        +0.3881            +0.1980      7/10
+   ALL single agents                     205783        +0.2293

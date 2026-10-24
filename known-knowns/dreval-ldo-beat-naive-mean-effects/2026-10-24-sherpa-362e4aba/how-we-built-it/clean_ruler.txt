@@ -1,0 +1,12 @@
+
+== seed42
+   normalized R^2 with shipped_ruler          mean +0.2244  SE 0.0352  min +0.0913  positive 10/10
+   normalized R^2 with replayed_buggy_ruler   mean +0.2244  SE 0.0352  min +0.0913  positive 10/10
+   normalized R^2 with clean_ruler            mean +0.2243  SE 0.0351  min +0.0913  positive 10/10
+   max |replayed buggy ruler - shipped ruler| over splits: 6.25e-07
+
+== independent
+   normalized R^2 with shipped_ruler          mean +0.2263  SE 0.0478  min +0.0252  positive 10/10
+   normalized R^2 with replayed_buggy_ruler   mean +0.2263  SE 0.0478  min +0.0252  positive 10/10
+   normalized R^2 with clean_ruler            mean +0.2261  SE 0.0478  min +0.0250  positive 10/10
+   max |replayed buggy ruler - shipped ruler| over splits: 5.83e-07

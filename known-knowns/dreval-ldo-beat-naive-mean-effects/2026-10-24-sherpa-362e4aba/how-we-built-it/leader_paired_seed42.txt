@@ -1,0 +1,21 @@
+per-split normalized R^2 (same splits, same ruler, same environment)
+  split  PotencyTransfer    leader re-run      difference
+    0      +0.1804           +0.0192          +0.1612
+    1      +0.0913           -0.1497          +0.2410
+    2      +0.2823           -0.0550          +0.3373
+    3      +0.1813           +0.0587          +0.1226
+    4      +0.4639           +0.1008          +0.3631
+    5      +0.2922           -0.1044          +0.3967
+    6      +0.2458           +0.1543          +0.0915
+    7      +0.1110           -0.1934          +0.3044
+    8      +0.1283           -0.1626          +0.2909
+    9      +0.2674           +0.0637          +0.2037
+
+  mean   +0.2244           -0.0268          +0.2512
+  SD     0.1112            0.1224           0.1043
+
+paired test over the 10 splits: t = 7.61, p = 3.28e-05
+Wilcoxon signed-rank: p = 0.0020  (splits where the claim wins: 10/10)
+
+my leader re-run -0.0268 vs its published +0.0235: difference -0.0503, which is 1.30 SE of my re-run
+published across-split SD for the leader (decoded from the report): 0.1060 | my re-run's SD: 0.1224

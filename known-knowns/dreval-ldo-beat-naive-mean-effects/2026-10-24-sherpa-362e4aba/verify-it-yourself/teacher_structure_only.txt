@@ -1,0 +1,7 @@
+CTRPv2 drugs: 545 | distinct fingerprints: 543 | fingerprints shared by >1 drug: 2
+groups of drugs sharing a fingerprint: 2 covering 4 drugs
+groups where the prior DISAGREES across identical fingerprints: 0  <- must be 0
+
+re-deriving the prior from the saved weights: shipped - f(fingerprint) has range 1.177e-06 (a single constant offset, the training-set mean, is expected)
+  constant offset = -4.719257; max deviation from constant = 6.067e-07
+  => the shipped prior IS a deterministic function of the fingerprint: YES
