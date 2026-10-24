@@ -1,5 +1,7 @@
 # Stable-marriage instance at n=19
 
+> Public value for n = 19: OEIS A357271 a(19) = 637,336. This object: 935,662 (+46.8 %). The 896,068 profile named below is an unsubmitted intermediate from this workspace.
+
 ## What
 
 The complete strict preference profile in object.prefs for 19 men and 19 women has exactly 935,662 stable matchings, exceeding the independently recounted 896,068 in data/prior_n19.prefs by 39,594 and the checked OEIS A357271 order-19 composition bound of 637,336.
@@ -14,7 +16,14 @@ Expected last line: PASS. Python3 and a C++17 compiler; roughly a minute dependi
 
 ## Compared to
 
-The preceding same-size object has 896068 stable matchings; this object has 935662, a gain of 39594. The weaker public A357271 n19 term is637336, fetched at 2026-10-15T16:49:49.350346+00:00 from https://oeis.org/A357271/b357271.txt. The independent panel checked current comparison sources.
+| source | n = 19 value |
+|---|---|
+| OEIS A357271 data line, a(19) (Thurber 2002 composition bound), https://oeis.org/A357271/b357271.txt | 637,336 |
+| this object | **935,662** |
+
+The 896,068 profile in `the-record-we-beat/` is an unsubmitted intermediate from this workspace, not a public value.
+
+**Composition statement.** This object is not a composition of known instances; it was found by search. n = 19 is prime. The best direct sum of published blocks is 586,416 (the order-16 Irving–Leather instance with 195,472, plus an order-3 instance), as the maintainer also found; the best lexicographic product plus padding we built is 530,528. Thurber's (2002) own composition operations (his Appendix C) were not recomputed with the newer blocks: we could not access the paper.
 
 ## Not claimed
 
