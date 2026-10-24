@@ -1,0 +1,5 @@
+Fetches made by the builder of this folder (plain GET, curl, user agent "V3R1T4S-research (honest client; curl)", no retries needed). UTC time, URL, HTTP status, sha256 of the response.
+2026-10-19T13:49:35Z https://ar5iv.labs.arxiv.org/html/cond-mat/0409381 200 d49b0f2da4ec1b72c38947f62bf9376933bea8e8fc6fa1f8c76dd8678e4c2637
+2026-10-19T13:49:36Z https://ar5iv.labs.arxiv.org/html/1304.7216 200 aa8527a091a91b792e900918061dab3f6655169c2248a5b04d78d230df7bbe3d
+2026-10-19T15:15:13Z https://www.statslab.cam.ac.uk/~grg1000/papers/loc-6.pdf 200 2ec73172d21c51a7a520760009d8e28cf44bc3fbaaea5c8c28a2f1ed70cc46fb
+Notes: the second URL (Grimmett and Li, Counting self-avoiding walks) returned a short page that was not used. The first and third were read. The arXiv abstract-page fetches listed in README.md were made by the triage of the k = 30 claim (2026-10-19T05:20Z), not by this builder.
