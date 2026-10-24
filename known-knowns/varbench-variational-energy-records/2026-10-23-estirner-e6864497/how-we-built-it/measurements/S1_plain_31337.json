@@ -1,0 +1,68 @@
+{
+ "ckpt": "runs/2026-10-22-1610/attempts/representation-transfer/ckpt/r10_J0.9_B1.pt",
+ "ckpt_sha256": "e68644979db4d9764ac1787d1c064fe18c4750cb4cb47ee573e40588bcd9c485",
+ "step": 648,
+ "config": {
+  "L": 10,
+  "net": {
+   "channels": 16,
+   "blocks": 3,
+   "kernel": 3
+  },
+  "prior": "stripe",
+  "irrep": "B1",
+  "flip": true,
+  "sym": true
+ },
+ "J2": 0.9,
+ "args": {
+  "ckpt": "runs/2026-10-22-1610/attempts/representation-transfer/ckpt/r10_J0.9_B1.pt",
+  "nqs_dir": "runs/2026-10-23-1501/attempts/representation-transfer/code",
+  "J2": 0.9,
+  "mode": "plain",
+  "chains": 2048,
+  "therm": 50,
+  "gap": 2.0,
+  "min_rounds": 50,
+  "max_rounds": 400,
+  "seed": 31337,
+  "neff": 100000.0,
+  "varH": null,
+  "hold": 225.0,
+  "out": "runs/2026-10-23-1501/attempts/exact-scorer-first/out/S1_plain_31337",
+  "max_images": 65536
+ },
+ "start": "2026-10-23T15:55:14Z",
+ "estimator_sha256": "d4f754f343bed3be92782b03f54cf45b40c8d100629ed0b53e31912e89cfe1fc",
+ "result": {
+  "acc": 0.21811516927083338,
+  "max_abs_Im_Eloc": 0.00028082400646570936,
+  "E": -253.748446817066,
+  "sigma": 0.003746765388504872,
+  "sigma_chain_means": 0.0033272356147148224,
+  "sigma_blocking": 0.003746765388504872,
+  "blocking_levels": [
+   0.0032662614507858634,
+   0.0034063105745053587,
+   0.0036704213743244973,
+   0.003746765388504872,
+   0.0030377004999972606
+  ],
+  "sample_var": 1.4294377326051817,
+  "n": 153600,
+  "max_abs_dev": 198.73556573633584,
+  "seconds": 2162.866963863373,
+  "chains": 2048,
+  "therm_sweeps": 50,
+  "gap_sweeps": 2.0,
+  "seed": 31337,
+  "mode": "plain",
+  "rounds": 75,
+  "replaced_fraction": null,
+  "varH_for_neff": 1.4294377326051817,
+  "N_eff": 101824.48975878143,
+  "e_spinhalf": -0.634371117042665,
+  "sigma_e_spinhalf": 9.36691347126218e-06
+ },
+ "end": "2026-10-23T16:31:17Z"
+}
