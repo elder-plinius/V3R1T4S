@@ -1,0 +1,40 @@
+{
+ "id": "subtraction-game-max-period-terms",
+ "name": "Subtraction games: longest eventual period for largest move n (extend OEIS A389689 beyond n = 23 and A389690 beyond n = 22)",
+ "category": "graphs-games-automata",
+ "kind": "harvest",
+ "tractability": 4,
+ "compute_profile": "laptop-hours to laptop-days (exhaustive over 2^(n-1) move sets; about 8e6 sets at n = 24, 5e8 at n = 30)",
+ "statement": "In the subtraction game with finite move set S (a player removes s in S tokens from one heap; whoever cannot move loses), the outcome sequence and the Sprague-Grundy sequence are eventually periodic (Golomb, 1966), but the only general bound on the period is exponential; Althöfer and Bültermann (TCS 148, 1995) gave sets with cubic periods, and Flammenkamp (1997) conjectured at most quadratic periods for 3-move sets. OEIS A389689 (Rui Yao, Oct 2025) lists, for each n, the longest eventual period of the win/lose sequence over all S with max S = n: n = 1..23 known (2, 4, 6, 8, 10, 12, 22, 25, 28, 45, 54, 61, 76, 94, 168, 168, 204, 314, 309, 266, 444, 516, 446). A389690 does the same for the Sprague-Grundy sequence, n = 1..22 known (2, 4, 6, 8, 10, 12, 22, 25, 28, 58, 54, 87, 114, 144, 189, 336, 306, 456, 728, 1178, 1180, 4464). Both entries carry the 'more' keyword and have not been extended since October 2025; the terms come from exhaustive Python searches over all 2^(n-1) sets. The earlier page review could not retrieve the OEIS sources (HTTP 403), so the sequence frontiers remain input-reported.",
+ "success_criterion": "CONFIRMED: the exact value of the next unknown term (A389689 at n = 24, or A389690 at n = 23), or of any later term once those are filled, using the entries' own definitions (S ranges over all subsets of {1, ..., n} that contain n; the period is the minimal eventual period, found as the first repeat of the length-n window of outcomes or Sprague-Grundy values), with all of: (1) an explicit maximising set S whose period an independent program recomputes exactly; (2) two independently written exhaustive searches over all 2^(n-1) sets that agree on the maximum AND on the full histogram of periods (number of sets with each period); (3) the term is not yet in the OEIS entry, its b-file or its history at verification time. Submitting to OEIS is an action for the human only.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "A correction of a published term: for some n already listed (n <= 23 in A389689, n <= 22 in A389690), an explicit set S with max S = n whose eventual period exceeds the listed value, confirmed by the OEIS Python program and one independent program."
+  }
+ ],
+ "verification_method": "Recompute the eventual period of each claimed maximising set with the Python program linked from the OEIS entry (a389689_1.txt or a389690_2.txt) and with an independent implementation. For the maximum, rerun an independent exhaustive search (C or Rust; bit-parallel windows for A389689) and compare the period histogram line by line with the claimant's; also confirm that the search reproduces every listed term for smaller n.",
+ "primary_sources": [
+  "https://oeis.org/A389689",
+  "https://oeis.org/A389690",
+  "https://oeis.org/A389689/a389689_1.txt",
+  "https://oeis.org/A389690/a389690_2.txt",
+  "https://arxiv.org/abs/2601.18715"
+ ],
+ "status_source": "https://oeis.org/A389690",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation. The earlier page review could not retrieve the OEIS sources (HTTP 403), so the sequence frontiers remain input-reported.",
+ "disclosure": "open",
+ "angles": [
+  "Win/lose sequence as bit operations: with the last n outcomes in a machine word w, the next outcome is ((~w) & maskS) != 0; Brent's cycle detection on w needs no hash table, so each set costs a few thousand word operations and 2^(n-1) sets split perfectly across cores.",
+  "For Sprague-Grundy values the window holds small integers (values are at most |S|); pack them ceil(log2(n+1)) bits per entry (five bits are needed once n >= 16) and use the same cycle detection.",
+  "Study the maximising sets for n <= 23 first (small-data) and seed a running maximum with the analogous sets and with Althöfer-Bültermann-type sets at the new n; this gives an early lower bound for the report, but the exhaustive pass must still cover every set.",
+  "Keep and publish the per-set periods for a random 1% sample plus all sets within 10% of the maximum, so that a checker can spot-check cheaply before a full rerun."
+ ],
+ "pitfalls": [
+  "The minimal period is the first repeat of the full length-n window, starting only once n values exist; a repeat of a shorter block, or one found inside the padded prefix, is wrong.",
+  "Off-by-one in the convention: position 0 is a loss (no move), moves may not go below 0, and n itself must be in S.",
+  "A389689 is not monotone (for example 314, 309, 266 at n = 18..20), so a search capped by the previous term is invalid.",
+  "Some periods grow fast (A389690 jumps from 1180 to 4464 at n = 22); detection must not assume a period bound below 2^n (win/lose) or (n+1)^n (Sprague-Grundy).",
+  "This is a modest table: the value of a win is a correct, independently reproduced new term, not a theorem about period growth."
+ ]
+}
