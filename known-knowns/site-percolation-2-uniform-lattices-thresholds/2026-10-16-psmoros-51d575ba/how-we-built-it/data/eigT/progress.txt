@@ -1,0 +1,8 @@
+06:11:51Z TSS transposed m=4: 
+06:11:52Z TS transposed m=1: root 0.41965518745351277
+06:11:53Z TS transposed m=2: root 0.41964185088347056
+06:11:54Z TS transposed m=3: root 0.41964068611177086
+06:12:24Z TS transposed m=4: root 0.41964046745426198
+06:21:28Z TS transposed m=5: root 0.41964040446408796
+06:21:28Z TSSS transposed m=1: root 0.45844496946747004
+06:21:53Z TSSS transposed m=2: root 0.45844582463769135
