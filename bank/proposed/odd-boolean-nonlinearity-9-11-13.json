@@ -1,0 +1,31 @@
+{
+  "id": "odd-boolean-nonlinearity-9-11-13",
+  "name": "Odd-variable Boolean nonlinearity: exceed 242, 996 or 4040",
+  "category": "record-tables",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-hours to laptop-days for symmetry-restricted search and local modifications; a full Walsh certificate takes milliseconds to seconds",
+  "statement": "Claude Carlet, Marko Ðurasevic, Domagoj Jakobovic, Stjepan Picek and Luca Mariot, A Systematic Study on the Design of Odd-Sized Highly Nonlinear Boolean Functions via Evolutionary Algorithms (arXiv:2504.17666v1, April 2025; journal publication December 2025), describe maximum nonlinearity for odd n>7 as open. Table 1 gives unrestricted best-known values 242,996,4040 for n=9,11,13, and upper bounds 244,1000,4050. Nonlinearity is minimum Hamming distance to an affine Boolean function. The n=9 construction is credited to Kavut and Yücel. Direct sums of an n=9, nonlinearity-242 function with two- or four-variable bent functions already give 996 and 4040. These compositions belong to the bar. Author spellings here follow the cited preprint.",
+  "success_criterion": "Supply the complete truth table of f:{0,1}^n→{0,1}, for n=9,11 or 13, with nonlinearity strictly greater than 242,996 or4040 respectively. No balancedness, rotation symmetry or algebraic-degree restriction is imposed. Report the full Walsh spectrum and the exact achieved nonlinearity; the checker recomputes it. Also strictly improve the best comparable published result at claim time, including compatible compositions of published objects. State whether the candidate is a composition and identify its components. Values in unmerged pull requests do not set the bar.",
+  "partial_wins": [],
+  "verification_method": "Validate 2^n Boolean table entries in explicitly specified lexicographic bit order. Apply the integer fast Walsh–Hadamard transform to (-1)^f(x). Compute NL(f)=2^(n−1)−max_a |W_f(a)|/2, which includes distances to both affine constants. Check Parseval sum_a W_f(a)^2=2^(2n) and compare the exact integer result with the threshold. This requires at most 8192×13 additions and no floating-point tolerance.",
+  "primary_sources": [
+    "https://arxiv.org/html/2504.17666v1",
+    "https://link.springer.com/article/10.1007/s10710-025-09526-5"
+  ],
+  "status_source": "https://arxiv.org/html/2504.17666v1",
+  "status_checked": "2026-10-15 (supplied literature-status date; primary publication re-read 2026-10-24, later literature not independently rechecked)",
+  "disclosure": "open",
+  "angles": [
+    "Explore generalized rotation-symmetric orbits, but verify the expanded unrestricted truth table.",
+    "Use incremental Walsh updates for small truth-table moves and optimize the largest coefficients first.",
+    "Search secondary constructions from the n=9 examples while tracking exact spectral changes."
+  ],
+  "pitfalls": [
+    "Balanced-function records do not set unrestricted thresholds.",
+    "Semi-bent values are below the records here.",
+    "A Walsh spectrum alone is not a function certificate; include the truth table.",
+    "The established bent-function compositions already attain 996 and 4040.",
+    "Later unrestricted records were not independently rechecked."
+  ]
+}
