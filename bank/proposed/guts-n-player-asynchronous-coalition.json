@@ -1,0 +1,36 @@
+{
+  "id": "guts-n-player-asynchronous-coalition",
+  "name": "Continuous Guts: is the asynchronous coalition value zero for every n >= 4?",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (n=4 payoff analysis, finite-support counterexample search, and exact univariate or chamber certificates)",
+  "statement": "Kevin Buck, Jessica Babyak, Leah Dichter, David Jiang and Kevin Zumbrun (2024), Remark 5.9 and section 9.1, explicitly conjecture: \"VA = 0 also for the n-player game with (n − 1) vs. 1 coalition.\" Their paper proves the three-player case. This proposal concerns the ordinary ONE-SHOT continuous Guts alpha payoff and n>=4, not a new game and not the already solved n=3 case. Each player sees an independent uniform [0,1] hand and holds above a selected threshold. The zero-sum alpha accounting is defined in section 3 of Kevin Buck, Jae Hwan Lee, Jacob Platnick, Aric Wheeler and Kevin Zumbrun (2022): if h>=1 hold, everybody receives h-2, the highest holder additionally receives n, and each other holder additionally pays n; if nobody holds, alpha=0. For probability measures mu2,...,mun on [0,1], define VA(n)=inf_{mu2,...,mun} sup_{t1 in [0,1]} E[alpha(t1,T2,...,Tn)], where the opponent thresholds T2,...,Tn are independent with these respective laws. This infimum of a best response is the asynchronous coalition value. A symmetric Nash profile supplies the known upper bound zero; the conjecture is that an independent coalition cannot force it lower.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Either prove VA(n)=0 for every integer n>=4, with a machine-checkable argument that covers arbitrary independent opponent probability measures, or produce one n>=4 and explicit independent opponent laws for which sup_{t1} E[alpha(t1,T2,...,Tn)]<0, with an exact certificate. Finite-support rational or algebraic laws are suitable counterexample objects. Exhibiting an ordinary Nash equilibrium or a correlated winning coalition does not answer this question.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Prove VA(4)=0 for arbitrary independent probability measures on all three opponent thresholds. A check of pure opponent thresholds alone is insufficient unless an exact reduction to them is proved."
+    }
+  ],
+  "verification_method": "For a finite-support counterexample, verify nonnegative normalized weights for each independent law, form the product distribution, and independently reconstruct the expected alpha. As a function of t1 it is piecewise polynomial, with breakpoints at opponent support thresholds. Isolate every derivative root exactly, evaluate all roots and endpoints, and prove every possible maximum is strictly negative. For a positive result, verify the measure-to-finite-dimensional reduction and its hypotheses (the 2024 paper’s Propositions 5.6–5.7 illustrate this route), followed by exact chamber inequalities. A proof for all n needs a finite formal argument in addition to calculations. The suggested n=4 counterexample certificates or chamber identities are laptop-checkable in minutes to hours.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2412.19855",
+    "https://arxiv.org/pdf/2208.02788"
+  ],
+  "status_source": "https://arxiv.org/pdf/2412.19855",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Try to extend the partial convexity/concavity arguments of the solved three-player case to four players.",
+    "For counterexample discovery, optimize two- or three-point distributions for each opponent, then rationalize and certify the entire best-response curve.",
+    "Keep the product-distribution restriction explicit in the search representation."
+  ],
+  "pitfalls": [
+    "The order is inf over opponent product measures, then sup over player 1; swapping these operations gives a different value.",
+    "Independent mixing and synchronized mixing are different. The known negative synchronous value does not refute this conjecture.",
+    "The follow-up’s Corollary 5.8 contains a repeated-subscript typo; its prose, abstract, and section 9.1 identify the conjecture unambiguously.",
+    "This entry concerns the one-shot alpha game. Do not attach an unsupported conclusion about the infinite recursive asynchronous game.",
+    "The paper’s suggestions about negotiation are excluded because they do not specify an exact success criterion."
+  ]
+}
