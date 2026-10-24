@@ -1,0 +1,40 @@
+{
+  "id": "guts-weenie-rule-strong-equilibrium",
+  "name": "Guts with the Weenie rule: does the symmetric threshold resist every coalition for n >= 4?",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days (exact polynomial integration and certificates in three or four opponent thresholds; the rating concerns the n=4 and n=5 partial wins)",
+  "statement": "Kevin Buck, Jae Hwan Lee, Jacob Platnick, Aric Wheeler and Kevin Zumbrun, Continuous Guts Poker and Numerical Optimization of Generalized Recursive Games (2022), Appendix B.3, explicitly conjecture min_{t2,...,tn in [0,1]} alpha(3^(-1/(n-1)),t2,...,tn) >= 0 for every n >= 2. Their words are: \"We conjecture that this property holds for general n ≥ 2\". Appendix B.2 proves the cases n=2,3; B.3 reports numerical tests for n=3,4,5, not a proof for n>=4. The model gives each player an independent uniform [0,1] hand on every deal. A player holds exactly above their threshold. A sole holder wins and ends the game; otherwise the highest holder wins the pot, each losing holder matches it, and play continues. Under the Weenie rule, when everybody drops, the highest-hand player must match the pot, doubling it for the next deal. Alpha is the paper’s expected zero-sum immediate payoff including virtual-ante adjustments, in units of one player’s current ante. Explicitly, for h>=1 holders, each player receives the virtual amount h-2, the highest holder additionally receives n, and each other holder additionally pays n. For h=0 under the Weenie rule, each receives 1 and the highest-hand player additionally pays n. The target is this published alpha inequality, which underlies the claimed resistance to a coordinated coalition.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Either prove the displayed inequality for every integer n>=2 and every opponent threshold vector, with a finite machine-checkable proof, or refute it by one n>=4 and an explicit threshold vector for which the exact alpha value is strictly negative. A counterexample must specify every threshold as a rational or real algebraic number with isolating data; the distinguished threshold is the positive root of 3*a^(n-1)-1=0. A finite grid with no counterexample is not a full proof.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Prove the inequality for n=4 for ALL (t2,t3,t4) in [0,1]^3, with an exact global nonnegativity certificate."
+    },
+    {
+      "id": "p2",
+      "statement": "Prove the inequality for n=5 for ALL four opponent thresholds, with an exact global nonnegativity certificate."
+    }
+  ],
+  "verification_method": "Independently integrate the event payoffs over the unit cube of dealt hands, partitioning at the thresholds and the possible highest hand. This yields piecewise polynomials with rational coefficients. Substitute a=3^(-1/(n-1)) using its polynomial and a rational isolating interval. For a negative witness, evaluate in the real algebraic field and certify its sign. For a finite-n proof, check every ordering chamber and boundary using a supplied exact identity (for example a rational sum-of-squares/Bernstein certificate after mapping the ordered chamber to a simplex), or a replayable real-algebraic proof. A general-n proof must include its induction or other symbolic argument in a proof assistant; finitely many positive samples cannot verify it. Small-n certificates should check in minutes to hours.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2208.02788",
+    "https://arxiv.org/pdf/2412.19855"
+  ],
+  "status_source": "https://arxiv.org/pdf/2208.02788",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Start with n=4. Opponent exchange symmetry reduces the cases to the position of a among the sorted opponent thresholds.",
+    "Reconstruct payoffs from the event definition before optimizing; Appendix B.1 gives useful n=2,3 cross-checks.",
+    "Search numerically for negative regions, then use exact algebraic arithmetic to validate a witness; if none appears, attempt a symbolic chamber certificate."
+  ],
+  "pitfalls": [
+    "The abstract sounds more general than the proved body: Appendix B.3 explicitly leaves n>=4 conjectural.",
+    "The 2024 solution of ordinary three-player Guts does not prove this different-rule, higher-player conjecture.",
+    "The one-shot alpha includes virtual-ante accounting. Simply summing cash won during a deal computes a different expression.",
+    "The source has typographical slips in some formulas; derive the definition independently and distinguish any corrected identity from a quotation.",
+    "A proof of the alpha inequality is the precise target. Additional claims about infinite-play utilities require the source’s recursive-game justification."
+  ]
+}
