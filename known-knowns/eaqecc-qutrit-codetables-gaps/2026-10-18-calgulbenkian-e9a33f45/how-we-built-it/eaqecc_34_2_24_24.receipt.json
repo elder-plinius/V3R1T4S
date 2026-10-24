@@ -1,0 +1,21 @@
+{
+  "certificate": "eaqecc_34_2_24_24.json",
+  "parameters": "[[34, 2, 24; 24]]_3",
+  "n": 34,
+  "k": 2,
+  "c": 24,
+  "s": 56,
+  "m_dual_dim": 12,
+  "r_isotropic_dim": 8,
+  "vectors_enumerated": 531440,
+  "non_isotropic_vectors_enumerated": 524880,
+  "d_pure": 24,
+  "d_ea": 24,
+  "d_claimed": 24,
+  "table_d_lower": 23,
+  "table_d_upper": 32,
+  "table_previous_entry": "[[34,2,23-32;24]]_3 (subcode of [[34,4,23;24]] from arXiv:2207.05647)",
+  "improvement": 1,
+  "verified": true,
+  "elapsed_seconds": 0.328
+}
