@@ -1,0 +1,40 @@
+{
+ "id": "all-in-three-player-ruin-angel-holmes-conjecture",
+ "name": "Three-player all-in betting game (Angel-Holmes): is being short-stacked always worse than tying your opponent? Prove or refute Conjecture 9",
+ "kind": "standard",
+ "tractability": 2,
+ "compute_profile": "laptop-hours for a pointwise counterexample hunt (certified depth-n recursion, error <= 2^-n); laptop-days or more for a region-based computer-assisted proof (the source's MILP method stalled beyond depth 6 on 8 cores)",
+ "statement": "The 'all in' variant of three-player gambler's ruin (the final-table / ICM setting): players 1, 2, 3 hold real stacks x, y, z > 0. Each round an unordered pair of players is chosen uniformly at random (probability 1/3 each) and they bet on a fair coin; the bet is the largest possible, namely the whole stack of the poorer of the two (a heads-up all-in). A player at 0 is eliminated. f(x, y, z) is the probability that player 1 is eliminated first. The game is scale invariant, and from every state the six transitions (pair, coin) each have probability 1/6 (He-Holmes Figure 1). Angel and Holmes (unpublished manuscript ''All In' poker sequences') showed f is NOT monotone decreasing in x (a player can lower their chance of busting first by giving chips away), and conjectured two weaker monotonicity statements. The first, f(x, y, z) > f(y, x, z) > f(z, x, y) for 0 < x < y < z ('you are better off starting with more money than your opponent'), was proved by Angel Y. He and Mark Holmes, 'All In: Give me your money!', arXiv:2410.15329 (v1, 20 Oct 2024, Theorem 1), with a computer-assisted proof (framework MeshItUp: region partition of the simplex plus mixed-integer programs; code github.com/7angel4/betting-game-proof, MIT licence). Their Section 5.3 (Future Work) states the second as open: Conjecture 9 (Angel-Holmes): for x, y, z > 0 with x < y, f(x, y, z) > f(y, y, z), i.e. a short stack is always strictly worse off than a stack tied with the opponent's. They report that their attempt to prove it with the same method 'ran beyond n = 6' and became too slow. On 2026-10-14 only v1 of arXiv:2410.15329 was listed and a literature search found no proof or refutation; the earlier page review noted that the repository README identifies a yyz module for this comparison but did not establish a resolution. A computer-assisted proof in PR #192 is PROMISING and pending a human expert's review of two analytic lemmas.",
+ "success_criterion": "Settle Angel-Holmes Conjecture 9 as stated in arXiv:2410.15329 Section 5.3 (direction: settle, either way), for the game exactly as defined in that paper's abstract and Section 1. EITHER (A) COUNTEREXAMPLE: explicit positive rationals x < y and z with f(x, y, z) <= f(y, y, z), proved by rigorous enclosures: f(s) lies in [h_n(s), h_n(s) + 2^-n] where h_n(s) is the exact (rational) probability that player 1 is eliminated first within n rounds, so it suffices to exhibit n with h_n(x, y, z) + 2^-n <= h_n(y, y, z), computed in exact rational arithmetic (or interval arithmetic with directed rounding) by a checker that shares no code with the search. OR (B) PROOF: a machine-checked proof (Lean, Coq or Isabelle, no sorry/axioms) or a computer-assisted proof whose certificate (region partition plus the bounds used in each region, in exact arithmetic) is verified by an independent checker, that f(x, y, z) > f(y, y, z) for ALL real x, y, z > 0 with x < y.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "A certified computer-assisted proof of Conjecture 9 on one of the three orderings of z separately, with an independently verified certificate: z >= y (player 3 is the chip leader), or z <= x (player 3 is the shortest), or x < z < y. All three together are the full win (B)."
+  }
+ ],
+ "verification_method": "Write an exact evaluator: from state (a, b, c) with a, b, c > 0, each of the 6 (pair, winner) outcomes has probability 1/6; the poorer member of the chosen pair either doubles or is eliminated (equal stacks: the loser is eliminated). h_0 = 0; h_n(s) = sum over outcomes of (1/6) * [1 if player 1 is eliminated by that outcome; 0 if another player is eliminated; h_{n-1}(next state) otherwise]. Every round ends the game with probability at least 1/2, so 0 <= f - h_n <= 2^-n, which turns finite-depth exact values into rigorous enclosures. Sanity checks before trusting anything: f(1, 1, 1) = 1/3 (first round always eliminates someone; player 1 is in 2 of the 3 pairs and loses half the time); f(x, y, z) = f(x, z, y); scale invariance f(cx, cy, cz) = f(x, y, z); Monte Carlo agreement at random points; reproduce the sign of He-Holmes Theorem 1 at random 0 < x < y < z. For (A), check the enclosures separate. For (B), re-run the certificate checker, confirm the region partition covers {x < y} completely (including the boundary cases x -> 0 and z equal to x, y or a multiple where transitions change), and that every inequality is checked in exact arithmetic; cross-check against the authors' MeshItUp code where it overlaps.",
+ "primary_sources": [
+  "https://arxiv.org/abs/2410.15329",
+  "https://arxiv.org/pdf/2410.15329",
+  "https://github.com/7angel4/betting-game-proof",
+  "https://arxiv.org/abs/2011.07610",
+  "https://github.com/elder-plinius/V3R1T4S/pull/192"
+ ],
+ "status_source": "https://arxiv.org/abs/2410.15329",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation. A computer-assisted proof is under review in V3R1T4S PR #192 with status PROMISING, pending a human expert's check of two analytic lemmas. The conjecture is not established by this submission.",
+ "disclosure": "open",
+ "angles": [
+  "Counterexample first, it is cheap: f is piecewise defined with discontinuities (transitions change whenever two stacks cross or one doubles past another), so the gap f(x, y, z) - f(y, y, z) may be smallest near such boundaries. Scan a fine rational grid of (x/y, z/y) with depth-12 exact values, then refine wherever the certified lower bound of the gap is smallest; Angel-Holmes's own non-monotonicity example shows where f behaves badly.",
+  "If the gap stays bounded away from 0 numerically, switch to proof mode: He-Holmes Lemma-style decomposition into h_n plus a tail bound alpha_n; their bottleneck was the branching of the MILP region tree beyond n = 6 on 8 cores. More cores, symmetry (f(x, y, z) = f(x, z, y)), scale normalisation (y = 1) and a better partition (cells aligned with the hyperplanes where transitions change) may push depth to 8-10.",
+  "Split by the position of z relative to x and y (the partial win p1) and settle the easiest ordering first."
+ ],
+ "pitfalls": [
+  "The conjecture compares f(x, y, z) with f(y, y, z): player 1 moves to player 2's stack while player 3 keeps z (the total changes). Do not confuse it with Theorem 1 (already proved) or with plain monotonicity in x (false, per Angel-Holmes).",
+  "Bets are all-in for the poorer stack, not unit bets: this is NOT the Diaconis-Ethier unit-step model (proposed target gamblers-ruin-scaling-conjecture).",
+  "Floating-point evaluation of h_n is not a certificate; near-ties at region boundaries are exactly where rounding lies.",
+  "Before claiming, inspect the 'yyz' folder of github.com/7angel4/betting-game-proof (it may hold partial or complete progress on this very conjecture), search for the Angel-Holmes manuscript if it has appeared, and search papers citing arXiv:2410.15329.",
+  "The Angel-Holmes manuscript is unpublished; the binding statement is the one quoted in arXiv:2410.15329 Section 5.3.",
+  "PR #192 remains under review; PROMISING status does not establish the conjecture. Check both analytic lemmas and independent certificate coverage before making a proof claim."
+ ],
+ "category": "graphs-games-automata"
+}
