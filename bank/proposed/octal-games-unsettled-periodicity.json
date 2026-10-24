@@ -1,0 +1,45 @@
+{
+ "id": "octal-games-unsettled-periodicity",
+ "name": "Octal games: prove ultimate periodicity of one unsettled 2- or 3-digit octal game in Flammenkamp's table",
+ "category": "graphs-games-automata",
+ "kind": "moonshot",
+ "tractability": 1,
+ "compute_profile": "laptop-days per game (sequential sparse-space sliding window; about 1e15 table lookups to go from 2^43 to 2^44 for the cheapest games; memory is only the window, 1e4 to 1e9 values)",
+ "statement": "An octal game 0.d1d2d3 (or 4.d1d2d3) is an impartial heap game whose digit d_i says whether removing i tokens may leave zero, one or two heaps; it is conjectured that every finite octal game has an ultimately periodic Sprague-Grundy (nim) sequence. Achim Flammenkamp's table (last updated 2026-10-14 16:06 UTC+2) lists 93 non-trivial octal games with at most 3 places and counts 65 + 8 games whose periodicity is still unknown (its unsettled.txt lists 65 of the form 0.ddd and 8 of the form 4.ddd), plus Grundy's game and 0.6111..., listed separately, for example .6, .14, .36, .64, .76, .007 (Treblecross), .167, .174, .205 and 4.045. These have been computed to max n = 2^27 (games with no sparse-space structure, such as .06 and .125) up to 2^43 (.167: 60 rare values, last rare index 1,303, depth 9,407; .174: 57 rare values, last 674; .205; 4.045; 0.6111...), and 2^42 for .015, .245, .324 and 4.367, without a period. In July 2026 Tyler Satchel Orden extended the sequences of many games. Record solved games: .106 (period 328,226,140,474, preperiod 465,384,263,797; 2002-05-21), 4.404 (preperiod 6,872,982,644; 2012-10-29), .104 and .454 (2000-2001). Find the period and preperiod of any game on the unsettled list.",
+ "success_criterion": "CONFIRMED: for one game that is unsettled at verification time, meaning listed in http://wwwhomes.uni-bielefeld.de/achim/unsettled.txt or shown without a period among the non-trivial games of the main table on octal.html (0.ddd or 4.ddd; Grundy's game and 0.6111... excluded because their periodicity criteria differ), an explicit preperiod n0 and period p such that a program sharing no code with the claimant's search computes G(0..N) exactly and verifies G(i+p) = G(i) for every i in [n0, N - p), with N large enough for a published sufficient condition: either the Guy-Smith theorem as quoted in Plambeck, arXiv:math/0501315 (for a finite octal with P places after the point, G(r+p) = G(r) for all r0 <= r < 2*r0 + p + P implies it for all r >= r0; for a 4.ddd game the claimant must justify that the theorem covers splitting without removal, or use the next condition) or Flammenkamp's sparse-space condition (verify over t + max{last, depth} successive values beyond the preperiod, t the largest index of a non-zero digit, p even for a sparse space), stating which one is used. The recomputed sequence must also match Flammenkamp's published value-frequency statistics (nim/stat_<game>) up to his max n. A period claimed from a repeated block without the full window, or from a hash match without exact re-verification, does not count.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "The first independent verification of a published record period with a program sharing no code with Flammenkamp's: .106 (period 328,226,140,474, preperiod 465,384,263,797), .104 (period 11,770,282, preperiod 197,769,598), .454 (60,620,715 / 160,949,019) or 4.404 (145 / 6,872,982,644), re-proved under a stated sufficient condition, with the code and frequency statistics published; or a demonstration that one of them is wrong."
+  }
+ ],
+ "verification_method": "Write an independent nim-sequence generator from the octal code definition (digit d_i: bit 1 = remove i tokens leaving no heap, bit 2 = leaving one heap, bit 4 = leaving two non-empty heaps; leading 4 = split without removal), check it against easy_octal.txt (first 40 values and the published periods of small solved games such as .45, .156, .644, .16), then run it to N and test G(i+p) = G(i) over the required window exactly. Compare value frequencies with Flammenkamp's nim/stat_<game> file up to his max n. Sparse-space acceleration is allowed in the checker, but its common/rare split must be re-derived, not copied.",
+ "primary_sources": [
+  "http://wwwhomes.uni-bielefeld.de/achim/octal.html",
+  "http://wwwhomes.uni-bielefeld.de/achim/unsettled.txt",
+  "http://wwwhomes.uni-bielefeld.de/achim/octal_two_power.txt",
+  "http://wwwhomes.uni-bielefeld.de/achim/nim/stat_.36",
+  "http://wwwhomes.uni-bielefeld.de/achim/nim/stat_.167",
+  "http://wwwhomes.uni-bielefeld.de/achim/nim/stat_.6",
+  "https://en.wikipedia.org/wiki/Octal_game",
+  "https://arxiv.org/pdf/math/0501315"
+ ],
+ "status_source": "http://wwwhomes.uni-bielefeld.de/achim/octal.html",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation.",
+ "disclosure": "open",
+ "angles": [
+  "Pick games with tiny rare sets and short windows, where a period, if it exists at reachable size, is cheapest to see: .167, .174, 4.045, .245, .015, .166, .374, .774. After the last rare value the game is a finite shift register of length at most last + t (Flammenkamp's remark), so run Brent cycle detection on a rolling hash of the register state instead of storing the sequence, then verify exactly.",
+  "Parallelise the mex step: contributions from rare indices r >= R depend only on values at least R steps back, so most cores can precompute the excluded-value sets for a block ahead of the frontier while one core finishes the near contributions; this turns a sequential 1e15-step job into days.",
+  "Calibrate on .106: its period (3.3e11) and preperiod (4.7e11) appeared at about 2^40, so the evaluator's speed and correctness can be tested on a known answer (partial win p1) before any open game.",
+  "Look at depth and last+t together: games whose depth is close to last (.36: last 11,798, depth 32,322; .374: last 2,354, depth 10,961) have small states, while games such as .64 (depth 6.2e8) are poor bets."
+ ],
+ "pitfalls": [
+  "This is a lottery: several cheap games have run to 2^43 (8.8e12) with no period; a week of laptop time reaches perhaps 2^44 to 2^45 for one game.",
+  "Active competition: Tyler Satchel Orden extended many sequences in July 2026 and the page was updated on 2026-10-14; re-fetch the table and the game's stat file before and after a run.",
+  "Many codes are the same game (comp_octal.txt maps all 1024 codes to 167 standard forms), but not all apparent twins are: .161 differs from .36 from index 520 on (Czajka, 2020).",
+  "The games marked '?' in the bitstring column (9 in the main table on 2026-10-14, among them .06 and .125) have no known sparse-space structure; without it the computation is quadratic and stuck near 2^27.",
+  "unsettled.txt lists .64 twice; the main table also shows .74 without a period, so the second entry is probably .74. Use the main table's list of non-trivial games without a period as the authority and say which game is claimed.",
+  "Flammenkamp's stat files cover heap sizes 0 to 2^k - 1; the 'max n' column encodes 2^k as k (for example 243 means 2^43).",
+  "A long repeated block, or an equal rolling hash, is evidence, not proof; only the exact window check counts."
+ ]
+}
