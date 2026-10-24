@@ -1,0 +1,48 @@
+{
+  "id": "bitcoin-selfish-mining-revenue-bounds",
+  "name": "Optimal selfish mining in Bitcoin (Sapirshtein-Sompolinsky-Zohar model, gamma = 0): certify an upper bound on the attacker's optimal relative revenue below 0.70109 at alpha = 0.45 (or below the trivial 0.90476 at alpha = 0.475)",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours (finite MDPs with up to ~10^6 states (a, h, fork); certificates are one exact or interval inequality per state-action pair)",
+  "statement": "Sapirshtein, Sompolinsky and Zohar's Bitcoin selfish-mining MDP (FC 2016, arXiv:1507.06183) optimises the attacker's share of accepted blocks. Fix rushing parameter gamma=0. Table 2 reports upper bounds 0.70109 at alpha=0.45 and 0.90476 at alpha=0.475. The latter is the trivial alpha/(1-alpha) bound. Bar-Zur, Eyal and Tamar (AFT 2020, arXiv:2007.05614) report achievable-side numerical values 0.66894 and 0.80184. The target is a certified upper bound for the untruncated SSZ model, obtained from its over-paying finite MDP. Results for richer mining models do not change these bars.",
+  "success_criterion": "A machine-checkable certificate that max over all policies of REV in the untruncated SSZ model (definitions as in arXiv 1507.06183, Sections 2-4, with gamma = 0) is at most U, where U <= 0.70099 at alpha = 0.45 or U <= 0.90466 at alpha = 0.475. Each bar is 1e-4 below the published SSZ Table 2 upper bound (0.70109, 0.90476); lower is better. The certificate has three parts. (i) A rational rho = U and a truncation T. (ii) The finite over-paying MDP N_rho^T built exactly as SSZ Section 4.2 defines it (same states, actions and transition probabilities; compensation rewards from eq. (7) and the following display). (iii) A rational or outward-rounded interval average-reward dual certificate: a gain g < 0 and a bias vector h over all states of N_rho^T such that, for every state s and every action a allowed in s, r_rho(s,a) + sum_{s'} P(s'|s,a) h(s') - h(s) <= g. Here r_rho(s,a) is the expected one-step reward, the transition-probability-weighted w_rho(R_t, honest blocks accepted), including SSZ's truncation compensation. An independent checker rebuilds N_rho^T from the paper's formulas (not from the claimant's files), verifies every inequality, and concludes via SSZ Proposition 3 that max REV < rho. The checker must first reproduce SSZ's lower values 0.56808 / 0.66891 within one unit of their last printed digit with its own model builder. As a sanity test that the over-paying MDP is not mis-built, its own policy-iteration solve of N_rho^T at alpha = 0.45, rho = 0.66 must return a positive optimal gain. These safety margins compare against numerical published bars. If an incumbent is available as an exact certificate, any exactly certified strict improvement over it counts. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "An explicit stationary policy, given as an action table on a finite state set with 'adopt' at its boundary, whose relative revenue in the SSZ model at gamma = 0, computed in exact rational arithmetic from its Markov chain, exceeds 0.66894 + 1e-6 at alpha = 0.45 or 0.80184 + 1e-6 at alpha = 0.475. This is strictly above every published value (OSM 2016, PTO 2020), and those values are floating-point and uncertified."
+    },
+    {
+      "id": "p2",
+      "statement": "The full certificate format at alpha = 0.4 or 0.425 (gamma = 0), with U below SSZ Table 2's upper bounds 0.48904 or 0.57226 by at least 1e-4."
+    },
+    {
+      "id": "p3",
+      "statement": "A certified enclosure of width <= 1e-4 for the selfish-mining profitability threshold in the Ethereum PoW model of arXiv 2007.05614, Section 7 (gamma = 0.5, uncle and nephew rewards as defined there, REV_ARR objective). Equivalently, an exact policy profitable at alpha <= 0.2467, which would show the threshold is below the published 0.2468; that value was computed with forks capped at 20/25 in floating point."
+    }
+  ],
+  "verification_method": "Write an independent builder for N_rho^T from SSZ Section 4.2 (Python, under 300 lines; states (a, h, fork) with max(a, h) <= T). Load the claimed (rho, g, h). For every state-action pair, evaluate w_rho(s,a) + sum P h - h - g with fractions.Fraction, or mpmath intervals with outward rounding, and check that it is <= 0. Check g < 0. Then reproduce two calibration facts with the same builder. First, the under-paying MDP solved by policy iteration gives SSZ's lower values 0.56808 and 0.66891 within one unit of their last printed digit. Second, the optimal gain of N_rho^T is positive for rho comfortably below SSZ's published lower values 0.56808 and 0.66891 (e.g. 0.56 and 0.66), so no certificate can exist there. Cross-check model semantics against the Bitcoin model in the PTO repository and the OSM Matlab code. Minutes per alpha.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/1507.06183",
+    "https://arxiv.org/pdf/2007.05614",
+    "https://arxiv.org/abs/2607.24415",
+    "https://api.github.com/repos/nirenzang/Optimal-Selfish-Mining-Strategies-in-Bitcoin",
+    "https://api.github.com/repos/roibarzur/pto-selfish-mining"
+  ],
+  "status_source": "https://export.arxiv.org/api/query?search_query=abs:%22selfish%20mining%22&sortBy=submittedDate&sortOrder=descending&max_results=50",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "The published upper bound may be loose for numerical rather than structural reasons. SSZ's Algorithm 1 reports rho' + 2(u + epsilon') from an epsilon'-optimal solver run, and the OSM code is known to have stopped early. Start by certifying N_rho^T at T = 95 with an exact dual certificate before raising T.",
+    "Certifier lens: solve N_rho^T in floating point by policy iteration, rationalise the bias vector, then repair it. Shift h by a small multiple of a Lyapunov-like function, or use exact policy evaluation of the final policy, until every inequality holds with margin. Binary-search rho downward.",
+    "Raise T as needed: the over-paying compensation alpha(1-alpha)/(1-2alpha)^2 is 24.75 at alpha = 0.45 and 99.75 at alpha = 0.475, and Proposition 3 guarantees convergence as T grows. Use sparse structure (at most 3 successors per state-action).",
+    "The lower side is a pure exact-evaluation problem: take PTO's or your own optimal truncated policy, compute its stationary revenue in rationals (or via a renewal-reward cycle decomposition), and push T to see if anything clears 0.66894 + 1e-6."
+  ],
+  "pitfalls": [
+    "Model variants change the numbers. Use SSZ's gamma semantics (match needs a block prepared in advance), not Eyal-Sirer's SM1 or the 'uniform tie-breaking' variant (where SSZ's 0.2321 threshold lives), nor the gamma-minus/gamma-plus model of arXiv 2607.24415.",
+    "Relative revenue is not time-averaged profit before a difficulty adjustment (Grunspan and Perez-Marco), and Ethereum's denominators include uncles. State the objective exactly as SSZ define REV.",
+    "A truncated (under-paying) MDP gives only LOWER bounds. An upper bound must go through the over-paying construction or an equally rigorous dominance argument.",
+    "Floating-point value iteration is not a certificate: every inequality must be checked exactly or with outward rounding, and the checker must build the MDP itself.",
+    "The compensation rewards in eq. (7) are easy to transcribe wrongly (the PDF typesetting is dense). Test the builder by confirming that rho values below the known lower bounds cannot be certified."
+  ],
+  "category": "graphs-games-automata"
+}
