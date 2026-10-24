@@ -1,0 +1,2 @@
+submission_id,date_utc,credit,github,target_id,category,title,claim_level,claimed_value,previous_best,object_path,object_sha256
+2026-10-18-mizopl-d54f4151,2026-10-18T17:28:00Z,mizopl,mizopl,ihtp-ihtc2024-hidden-m-instances-upper-bounds,optimization-benchmarks,IHTC-2024 competition (m01-m30) instances: lower a best known integrated surgery-admission-nurse schedule cost below the post-competition table,CONFIRMED_SOLUTION,m28 Total cost = 45873 (Total violations = 0),m28 Total cost = 45913,object/sol_m28.json,d54f4151a022f91800fdc8a12226a5bc4da6d47ce2dcf51c575b36ead51b79c7
