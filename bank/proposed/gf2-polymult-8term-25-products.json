@@ -1,0 +1,47 @@
+{
+  "id": "gf2-polymult-8term-25-products",
+  "name": "Multiply two 8-term binary polynomials with 25 products (NIST open problem), or a smaller GF(2^8) AES-field multiplier circuit",
+  "category": "algorithms",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-days (flip-graph or SAT search over rank-25 decompositions); verification takes milliseconds",
+  "statement": "The full product of two eight-term binary polynomials is a bilinear map with fifteen output coefficients. The supplied proposal attributes a 26-product construction and the question of 25 products to NIST's circuit-complexity project. Related sources are Find and Peralta (2019) and Covanov's exhaustive bilinear-map search. The supplied checked page could not retrieve the NIST problem listing, so its current open status still needs confirmation before attacking. A construction with at most 25 products or a checked impossibility proof answers the stated mathematical question. Reduced field multiplication is a separate partial target.",
+  "success_criterion": "Success means an explicit bilinear algorithm over GF(2) for the product of two 8-term polynomials using at most 25 products, given as 0/1 matrices U (r x 8), V (r x 8) and W (15 x r), where r <= 25 (zero padding to 25 rows is allowed) such that, over GF(2), sum_t U[t][i] V[t][j] W[k][t] equals 1 if i + j = k and 0 otherwise, for all 0 <= i, j <= 7 and 0 <= k <= 14 (direction: min; best known 26), answering the open problem stated on https://csrc.nist.gov/projects/circuit-complexity, provided no publication has already given such an algorithm or proved it impossible (the claimant searches the literature, including doi:10.1109/TC.2018.2874662 and doi:10.1007/978-3-030-34029-2_22). The other answer also settles the open problem: CONFIRMED equally by a proof that no bilinear algorithm over GF(2) with at most 25 products exists for this map, given as a proof object accepted by a formally verified checker (for example an LRAT proof checked by cake_lpr, or a VeriPB proof checked through CakePB) for an encoding of rank-25 decompositions whose correctness is argued in a short note that a skeptic checks against the definition. Include the best valid composition of published objects for the same parameters and metric in the bar, even if it is absent from a printed table. State whether the candidate is a composition. Identify its components and composition rule. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A circuit of 2-input AND, XOR and XNOR gates (no other gates, no constants) for multiplication in GF(2^8) modulo the AES polynomial x^8 + x^4 + x^3 + x + 1, standard polynomial basis in and out, verified on all 65536 input pairs, with at most 116 gates, i.e. strictly below the 117-gate circuit on the NIST list of circuits and below any smaller published one."
+    },
+    {
+      "id": "p2",
+      "statement": "The same kind of circuit for GF(2^7) modulo x^7 + x^4 + 1 with at most 83 gates, or modulo x^7 + x^3 + 1 with at most 84, or for GF(2^6) modulo x^6 + x^3 + 1 with at most 56, verified on all input pairs and below any smaller published circuit."
+    },
+    {
+      "id": "p3",
+      "statement": "A computational (not certified) answer that 26 is optimal: two independently written exhaustive searches over rank-25 bilinear decompositions of the 8-term product over GF(2), with stated symmetry reductions proved in a short note, that both complete with no solution and that a skeptic can re-run; labelled computational."
+    }
+  ],
+  "verification_method": "Main claim: check the 8 x 8 x 15 tensor identity over GF(2) from U, V and W (960 equations), count the rows of U and V, and as an end-to-end check build the induced circuit and compare with schoolbook multiplication on all 2^16 pairs of 8-bit polynomials. Partial wins: parse the gate list, reject any gate other than AND, XOR, XNOR, evaluate all input pairs against a reference field multiplication (2^16 pairs for GF(2^8), 2^14 for GF(2^7), 2^12 for GF(2^6)), and count gates with the same counter applied to the NIST circuit files (data/slp/gf in github.com/usnistgov/Circuits). Milliseconds. Recompute comparison compositions using the same checker and resource metric.",
+  "primary_sources": [
+    "https://csrc.nist.gov/projects/circuit-complexity",
+    "https://csrc.nist.gov/Projects/circuit-complexity/list-of-circuits",
+    "https://www.cs.yale.edu/homes/peralta/CircuitStuff/CMT.html",
+    "https://arxiv.org/abs/1705.07728",
+    "https://binary.cr.yp.to/m.html"
+  ],
+  "status_source": "https://csrc.nist.gov/projects/circuit-complexity",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Flip-graph random walks (Kauers-Moosbauer style) on the 8 x 8 x 15 multiplication tensor over GF(2), started from many 26-term decompositions (two-level Karatsuba variants, Chinese-remainder constructions, the published formula), looking for a reduction step; quotient by the tensor's symmetries (swapping a and b, reversing coefficient order).",
+    "SAT or MaxSAT encoding of a rank-25 decomposition with symmetry breaking (fix the first products up to the symmetry group); try restricted families first (decompositions containing many rank-one 'evaluation' products), remembering that a negative answer inside a restricted family proves nothing.",
+    "Smaller sizes first: reproduce the best published formulas for 5-, 6- and 7-term products (Montgomery 2005; Barbulescu et al. 2012) with the same search, and study what their decompositions share, before searching at 8 terms.",
+    "For the field multipliers, optimise the polynomial product and the reduction modulo the field polynomial jointly (the reduction is a fixed linear map, so merge it into the post-processing XOR layer of the bilinear algorithm and run exact or randomised XOR-SLP minimisation)."
+  ],
+  "pitfalls": [
+    "Read Barbulescu-Detrey-Estibals-Zimmermann 2012, Covanov 2018 and doi:10.1109/TC.2018.2874662 before investing: if any proves rank 26 optimal for 8 terms, the main target is closed. BDEZ 2012 was not read for this entry; the NIST page, updated 2026-10-06, still calls the question open.",
+    "The algorithm must use GF(2) coefficients only, so that it works when the coefficients are themselves binary polynomials. Formulas over GF(4) or with other scalars, or 25-product formulas for other bilinear maps (short product, middle product, circulant product mod x^8 - 1), do not count.",
+    "For the field multipliers, inputs and outputs must be in the standard polynomial basis; a tower-field or normal-basis multiplier (such as the 106-gate tower-field GF(2^8) circuit on the CMT page) is a different function.",
+    "Gate counting: AND, XOR and XNOR each count one; NOT gates and constants are not allowed in the NIST basis."
+  ]
+}
