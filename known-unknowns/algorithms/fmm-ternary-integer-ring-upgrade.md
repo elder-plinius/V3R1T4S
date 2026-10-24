@@ -8,7 +8,7 @@ Several best-known FMM ranks are attained only with coefficients outside {-1,0,1
 
 ## What counts as a win
 
-Success means an explicit bilinear scheme for a format <n,m,p> with max(n,m,p) <= 16 and sorted(n,m,p) != (4,4,4), whose coefficients all lie in {-1,0,1} (ternary, 'ZT') or all in Z (integer), with rank r such that (1) r is STRICTLY LESS (direction: min) than the 'ZT rank' (for a ternary claim) or the 'Z rank' (for an integer claim) listed for that format in https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md re-fetched live immediately before claiming; (2) r is GREATER THAN OR EQUAL to the minimum over the live ZT/Z/Q columns for that format and to the live fmm_sota.json rank, i.e. the scheme does NOT beat the overall best rank (a scheme that does is the catalogue target fmm-catalogue-small-format-rank, never both); (3) no scheme of rank <= r in the same coefficient class already exists in the live schemes/results/ZT (or /Z) directory of that repository or in https://github.com/MerlijnW70/fmm-schemes; (4) the Brent equations are verified exactly over Z with integer arithmetic (so the scheme is valid over every ring), not merely mod 2. Equalling the format's Q rank is the natural goal but any strict ZT or Z improvement satisfying (1)-(4) counts.
+Success means an explicit bilinear scheme for a format <n,m,p> with max(n,m,p) <= 16 and sorted(n,m,p) != (4,4,4), whose coefficients all lie in {-1,0,1} (ternary, 'ZT') or all in Z (integer), with rank r such that (1) r is STRICTLY LESS (direction: min) than the 'ZT rank' (for a ternary claim) or the 'Z rank' (for an integer claim) listed for that format in https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/docs/ranks.md re-fetched live immediately before claiming; (2) r is GREATER THAN OR EQUAL to the minimum over the live ZT/Z/Q columns for that format and to the live fmm_sota.json rank, i.e. the scheme does NOT beat the overall best rank (a scheme that does is the catalogue target fmm-catalogue-small-format-rank, never both); (3) no scheme of rank <= r in the same coefficient class already exists in the live schemes/results/ZT (or /Z) directory of that repository or in https://github.com/MerlijnW70/fmm-schemes; (4) the Brent equations are verified exactly over Z with integer arithmetic (so the scheme is valid over every ring), not merely mod 2. Equalling the format's Q rank is the natural goal but any strict ZT or Z improvement satisfying (1)-(4) counts.
 
 ## Partial wins
 
@@ -17,17 +17,18 @@ Success means an explicit bilinear scheme for a format <n,m,p> with max(n,m,p) <
 
 ## How a win is checked
 
-Load the candidate as U, V, W matrices (Perminov's JSON format, 'Scheme File Formats' in the README). Assert every coefficient is in {-1,0,1} (ternary claim) or in Z (integer claim). Verify the Brent equations exactly with integer arithmetic: for all i,j,k,l,s,t, sum_r U_r[i,j] V_r[k,l] W_r[s,t] = [j==k][i==s][l==t] (mind the file's index convention; permute axes if it stores the transposed product). Count r after removing zero terms. Re-fetch Perminov's README (all three columns) and the ZT/Z directories, fmm_sota.json, the Lille per-format page and the MerlijnW70 repo; confirm condition (2) (r does not beat the overall best rank) and condition (3) (no existing scheme of rank <= r in the same coefficient class). For p1, verify the Brent equations modulo the stated modulus. For p2, re-run the DRAT checker on the certificate. Seconds to minutes on this Mac for formats up to 16x16x16.
+Load the candidate as U, V, W matrices (Perminov's JSON format, 'Scheme File Formats' in the README). Assert every coefficient is in {-1,0,1} (ternary claim) or in Z (integer claim). Verify the Brent equations exactly with integer arithmetic: for all i,j,k,l,s,t, sum_r U_r[i,j] V_r[k,l] W_r[s,t] = [j==k][i==s][l==t] (mind the file's index convention; permute axes if it stores the transposed product). Count r after removing zero terms. Re-fetch Perminov's docs/ranks.md (all three columns) and the ZT/Z directories, fmm_sota.json, the Lille per-format page and the MerlijnW70 repo; confirm condition (2) (r does not beat the overall best rank) and condition (3) (no existing scheme of rank <= r in the same coefficient class). For p1, verify the Brent equations modulo the stated modulus. For p2, re-run the DRAT checker on the certificate. Seconds to minutes on this Mac for formats up to 16x16x16.
 
 ## Is it still open?
 
 Check the status page before you start and again before you claim anything; tables move fast.
 
-- <https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md>
+- <https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/docs/ranks.md>
 
 ## Sources
 
 - <https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md>
+- <https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/docs/ranks.md>
 - <https://github.com/dronperminov/FastMatrixMultiplication>
 - <https://github.com/dronperminov/ternary_flip_graph>
 - <https://github.com/MerlijnW70/fmm-schemes>
@@ -56,7 +57,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 
 - Verifying only mod 2 and claiming an integer scheme: a ternary scheme must satisfy the Brent equations over Z exactly (signs matter), otherwise it is a GF(2) scheme only.
 - Perminov's table columns are the best ranks found in that coefficient set; 'Q rank' already includes schemes with 1/2. A scheme with coefficients in {-2,...,2} is 'Z', not 'ZT'; label the claim precisely.
-- Duplicate work: the repository adds rediscoveries weekly (ZT 2x9x10:140 on 30 Sep 2026; MerlijnW70 batches on 29 Sep and 2 Oct 2026). Re-fetch README, CHANGELOG and the ZT/Z directories at verification time; a scheme already present is not a win.
+- Duplicate work: the repository adds rediscoveries weekly (ZT 2x9x10:140 on 30 Sep 2026; MerlijnW70 batches on 29 Sep and 2 Oct 2026). Re-fetch docs/ranks.md, README, CHANGELOG and the ZT/Z directories at verification time; a scheme already present is not a win.
 - Index-convention errors (row-major vs column-major, which factor is transposed) make a correct scheme look wrong or a wrong scheme look right under a permuted test; verify against the explicit symbolic product A*B.
 - If the new ternary/integer scheme also beats the overall best rank, it is the catalogue target's win, not this one; never claim the same scheme under two targets.
 - <4,4,4> is excluded here: a ternary/integer rank-48 scheme for 4x4 is partial win p1 of the moonshot entry fmm-4x4x4-rank47-3x3x3-rank22.
