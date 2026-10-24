@@ -13,7 +13,7 @@ with `cat`). `FULL=1` also verifies the shipped n = 10, 12 and 13 certificates (
 6 more minutes), `FULL=2` also recomputes P+_{2,11} from scratch with `verify-it-yourself/recompute_value.py`.
 The faster C++ checker `verify-it-yourself/cg_verify.cpp` (GMP, zlib) does the same checks in seconds; see
 RUN_IT_YOURSELF.md. The certificates for n = 14..16 are too large for git; their names, sizes, state counts and
-sha256 are listed below, and the archive URL is given in RUN_IT_YOURSELF.md; placed into `object/cert/` they are
+sha256 are listed below, they are not published yet (available on request; not needed for this claim); placed into `object/cert/` they are
 verified by the same script.
 
 Values (reduced fractions, from `object/values.json`):

@@ -9,10 +9,11 @@ certificate (reassembled from object/cert/n11.txt.gz.part-*) verified on every s
 To reassemble a shipped certificate by hand: `cat object/cert/n13.txt.gz.part-* > n13.txt.gz`. The reassembled files are
 byte-identical to the originals; sha256 of the gzip files: n10 692351f7c01e7a5dec72944c71cceb4f69cfa8fcf6baa72cd2d1584f18fa6b90; n11 a76e7b21d9077161148ab470fcb87ee54be74bab3cee9c0a3b4ca54200da052a; n12 a34b63f5023bdfe691d6e132ed8edcbc2d5f6868de6da5c43cbc1c2c624a7748; n13 6763774ff4ee481f9bd1c2883d0c93a9f43eba0c36ad520451a6367e0072a996.
 
-## Verify the large certificates (n = 10..16)
-They are not in git (50 MB to 224 MB each; n = 10..13 are shipped in parts). Download them from the archive URL below, check their sha256 against
-README.md, put them into object/cert/, and rerun the script; each certificate present is verified on every state
-(n = 16: about 30 minutes, 1.5 GB). Archive URL: ARCHIVE_URL_TO_BE_ADDED_BY_THE_SUBMITTER.
+## Verify the large certificates (n = 14..16)
+The n = 10..13 certificates are shipped in parts (above). The n = 14..16 certificates (49.8 MB to 224 MB each)
+are not shipped and not published yet: they are not needed for this claim (n = 11..13) and are available on
+request. If you have them, check their sha256 against README.md, put them into object/cert/ and rerun the
+script; each certificate present is verified on every state (n = 16: about 30 minutes, 1.5 GB).
 Single file: `python3 -I verify-it-yourself/verify_cert.py object/cert/n16.txt.gz --claimed 287519620950287971428538054033/95596617538340806567680000000`
 (`--literal` evaluates the rational recursion with fractions as well; `--persistence` also tests the 1981 persistence
 conjecture on every state).
