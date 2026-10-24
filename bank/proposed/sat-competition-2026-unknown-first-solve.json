@@ -1,0 +1,55 @@
+{
+  "id": "sat-competition-2026-unknown-first-solve",
+  "name": "SAT Competition 2026: first certified solve of a Main-track instance whose result is unknown",
+  "category": "optimization-benchmarks",
+  "kind": "harvest",
+  "tractability": 2,
+  "compute_profile": "laptop-days per instance (portfolio of CDCL and local-search solvers, cube-and-conquer on a multi-core machine); an UNSAT proof from a multi-day run can need tens to hundreds of GB of disk",
+  "statement": "SAT Competition 2026's Main track contains 400 CNF formulas. The supplied database snapshot lists 40 rows with result unknown. The supplied scores comparison excludes hash 3c51a565526faa922fb298a2658440e9, which received a competition answer, leaving 39 eligible candidates. An unknown database row alone does not establish eligibility. A target formula must still have no SAT or UNSAT answer from any configuration in the cited competition scores and no later published answer. Either a complete satisfying assignment or a checked proof of unsatisfiability answers the exact original formula. The competition organisers and benchmark contributors provide the reference files and proof rules.",
+  "success_criterion": "Success means, for one instance whose GBD result attribute is 'unknown' on https://benchmark-database.de/?track=main_2026 when re-fetched at verification time and that received no sat or unsat answer from any configuration in https://satcompetition.github.io/2026/downloads/scores.csv (39 instances on 2026-10-14: exclude 3c51a565526faa922fb298a2658440e9 and re-derive the eligible list from the linked database and scores), downloaded from http://benchmark-database.de/file/<hash> and matched to that hash: (a) if satisfiable, a complete assignment that satisfies every clause of the original (unpreprocessed) CNF, checked by a model checker written independently of the solver; or (b) if unsatisfiable, a proof of unsatisfiability of that exact CNF accepted by a formally verified checker from the competition's pipelines (LRAT checked by cake_lpr, for example after elaboration with drat-trim or dpr-trim; GRAT checked by gratchk; or a VeriPB proof checked through CakePB), with the checker's accepting output, its version and the proof's SHA-256 saved. The instance must not have been reported solved elsewhere (search arXiv and the web for the hash and file name; check any published 2026 parallel or cloud track results). Either answer counts; the result is the first certified solve. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "An UNSAT proof for one of the 39 instances accepted by an unverified checker (drat-trim or dpr-trim) when the formally verified checker does not finish within 72 hours on the claimant's machine, labelled as such."
+    },
+    {
+      "id": "p2",
+      "statement": "A certified answer under the same certificate and checker standards as the full win, with the following explicit eligibility exception, of an instance tagged main_2025 on GBD whose result is 'unknown' at verification time and which is not among the 40 main_2026 instances."
+    },
+    {
+      "id": "p3",
+      "statement": "A certified answer under the same certificate and checker standards as the full win, with the following explicit eligibility exception, of 3c51a565526faa922fb298a2658440e9 (hard-cep), the one GBD-unknown main_2026 instance that the 2026 experimental-track configuration reported unsat without a checked proof: a proof accepted by a formally verified checker (or a model, which would contradict that report)."
+    }
+  ],
+  "verification_method": "Download the CNF by hash (xz-compressed DIMACS), confirm the normalised GBD hash with GBD's open-source tools, then: SAT: parse the v-lines, confirm every variable is assigned (or extend unassigned variables arbitrarily and re-check) and that every clause contains a true literal (a short independent script, seconds); UNSAT: run the verified chain on the claimed proof against the same CNF (for example drat-trim in LRAT-output mode followed by cake_lpr, or the VeriPB/CakePB chain), recording versions, wall time and the accepting line. Re-fetch the GBD track page and confirm the result column still reads 'unknown' for that hash.",
+  "primary_sources": [
+    "https://satcompetition.github.io/2026/",
+    "https://satcompetition.github.io/2026/tracks.html",
+    "https://satcompetition.github.io/2026/output.html",
+    "https://satcompetition.github.io/2026/rules.html",
+    "https://satcompetition.github.io/2026/downloads.html",
+    "https://satcompetition.github.io/2026/downloads/scores.csv",
+    "https://satcompetition.github.io/2026/downloads/track_main_2026.uri",
+    "https://benchmark-database.de/?track=main_2026"
+  ],
+  "status_source": "https://benchmark-database.de/?track=main_2026",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Triage first: for all 39 record size, family and structure, give each a short portfolio run (kissat, CaDiCaL, a stochastic local-search solver for satisfiable-looking families), then concentrate the nights on the three to five that move.",
+    "The 19 instances that appear only in 2026 have had one competition's worth of attention (33 x 5000 s); scheduling-like families (school-timetabling, station-repacking from spectrum repacking) and colouring families (van der Waerden, cyclic anti-bandwidth) are where long local-search runs or symmetry breaking most often succeed.",
+    "Cube-and-conquer for UNSAT-leaning combinatorial families (greentao, erdos-discrepancy, van der Waerden, Tseitin, xor-chain): split with a lookahead cuber, solve cubes in parallel, emit per-cube proofs and a proof of the cube cover, and check the merged proof.",
+    "Re-encode at the application level when CDCL stalls: Gauss-Jordan/XOR reasoning for xor-chain, Tseitin and syndrome-decoding instances; a bit-level view of the cryptography and bitvector instances; any model found must still be checked against the original CNF.",
+    "The crypto_2021 instance and the syndrome-decoding instance are attack encodings; understanding the cipher or code suggests variable orders and guessing strategies (cube on key or error bits).",
+    "Plan disk: use binary DRAT, compress, keep only the proof of the run that finishes, and check incrementally."
+  ],
+  "pitfalls": [
+    "The criterion is GBD's 'unknown', not 'unsolved in 2026': GBD already records results for instances no 2026 solver finished.",
+    "Instances are identified by GBD hash of the normalized CNF; download by hash and verify before running checkers, or the result may be for a different file.",
+    "A solver's 's UNSATISFIABLE' line is not a result; only an accepted proof counts, and the formally verified checker is the bar for the full win (p1 covers acceptance by unverified checkers).",
+    "Check models against the original CNF, not a preprocessed or re-encoded file.",
+    "Some families encode open mathematical questions (Green-Tao, van der Waerden, Erdős discrepancy, matrix multiplication); a SAT answer there may be a mathematical result in its own right and deserves an independent cross-check and a literature search.",
+    "Results may exist outside GBD (papers, solver authors' private runs, the 2026 parallel and cloud tracks); search before claiming.",
+    "The hard-cep instance 3c51a565526faa922fb298a2658440e9 is GBD-unknown but was answered (unsat, unverified) in the 2026 experimental track; it counts only as partial win p3, and scores.csv must be re-read for any newer answer."
+  ]
+}
