@@ -1,5 +1,7 @@
 # Stable-marriage instance at n=23
 
+> Public value for n = 23: OEIS A357271 a(23) = 15,481,956. This object: 19,305,568 (+24.7 %). The 19,290,640 profile named below is an unsubmitted intermediate from this workspace. See the composition statement under Compared to.
+
 ## What
 
 The complete strict preference profile in `object.prefs` for 23 men and 23 women has exactly 19,305,568 stable matchings, exceeding the supplied preceding same-size profile's 19,290,640 by 14,928 and the historical OEIS A357271 n=23 lower bound of 15,481,956.
@@ -14,7 +16,14 @@ Expected last line: PASS. Python3 and a C++17 compiler; normally a few seconds. 
 
 ## Compared to
 
-The preceding same-size object has 19290640 stable matchings; this object has 19305568, a gain of 14928. The weaker public A357271 n23 term is15481956, fetched at 2026-10-15T18:51:58.356959+00:00 from https://oeis.org/A357271/b357271.txt. The independent panel checked current comparison sources.
+| source | n = 23 value |
+|---|---|
+| OEIS A357271 data line, a(23) (Thurber 2002 composition bound), https://oeis.org/A357271/b357271.txt | 15,481,956 |
+| this object | **19,305,568** |
+
+The 19,290,640 profile in `the-record-we-beat/` is an unsubmitted intermediate from this workspace, not a public value.
+
+**Composition statement.** This object is not a composition of known instances; it was found by search. n = 23 is prime. The best direct sum of published blocks is 16,615,120 (the order-16 Irving–Leather instance with 195,472 times J. Jo's order-7 instance with 85), above a(23); every other split we checked is lower (for example 12,277,568 for order 22 plus one pair). In 2002 Thurber's odd-size operation beat the comparable direct sum by about 12 %, which applied to today's blocks would land near 18.5 million (the maintainer's estimate), below this object's 19,305,568 by about 4 %; without Appendix C we cannot certify that margin. Thurber's (2002) own composition operations (his Appendix C) were not recomputed with the newer blocks: we could not access the paper.
 
 ## Not claimed
 
