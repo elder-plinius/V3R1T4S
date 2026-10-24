@@ -1,0 +1,5 @@
+MIN t=195 p=261 k=4 cells: (-1,0,2) (0,-1,2) (0,2,1) (1,-2,1)
+DONE rule=LLRL K=4 T=195 wid=0/4 leaves=20584493 viol=0 mins=1 flags=0
+DONE rule=LLRL K=4 T=195 wid=1/4 leaves=896291 viol=0 mins=0 flags=0
+DONE rule=LLRL K=4 T=195 wid=2/4 leaves=3777413 viol=0 mins=0 flags=0
+DONE rule=LLRL K=4 T=195 wid=3/4 leaves=1999667 viol=0 mins=0 flags=0

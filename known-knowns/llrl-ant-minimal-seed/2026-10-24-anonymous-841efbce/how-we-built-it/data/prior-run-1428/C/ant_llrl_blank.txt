@@ -1,0 +1,3 @@
+cert t=256241 P=384 D=(4,-4) heading 3->3 checked=4678 : OK
+cert t=256240 P=384 D=(4,-4) heading 0->2 checked=0 : FAIL
+RESULT rule=LLRL N=270000 onset=256241 P=384 D=(4,-4) heading_at_onset=3 cert_at_onset=OK cert_at_onset-1=FAIL class=39a168f2c058efab

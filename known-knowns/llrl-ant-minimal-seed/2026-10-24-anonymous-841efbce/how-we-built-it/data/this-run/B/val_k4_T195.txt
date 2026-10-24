@@ -1,0 +1,3 @@
+blank: onset 256241 period 384
+MIN t=195 p=261 k=4 cells: (-1,0,2) (0,-1,2) (0,2,1) (1,-2,1)
+DONE rule=LLRL K=4 T=195 wid=0/1 leaves=27257864 viol=0 mins=1 flags=0

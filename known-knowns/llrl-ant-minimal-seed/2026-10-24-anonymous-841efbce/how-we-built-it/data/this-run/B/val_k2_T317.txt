@@ -1,0 +1,2 @@
+blank: onset 256241 period 384
+DONE rule=LLRL K=2 T=317 wid=0/1 leaves=32636 viol=0 mins=0 flags=0
