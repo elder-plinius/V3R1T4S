@@ -1,0 +1,31 @@
+{
+  "id": "beggar-terminating-trajectory-collision",
+  "name": "Beggar-My-Neighbour: two reachable histories that merge and then terminate",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 5,
+  "compute_profile": "laptop-hours (hash reachable trick states from balanced initial decks; a positive certificate replays in minutes or less)",
+  "statement": "Nicolas Andorno, Giulio Cernoia, Simone Duiz and Alessandro Michelangeli, The Dynamical Landscape of Beggar-My-Neighbour: Ultra-long Matches, Loops, and Infinite Matches (July 2026 revision), section 13, explicitly request: \"Construct explicit examples for the currently hypothetical trajectory types depicted in Figure 15 and not detected (yet?), specifically: merging trajectories that proceed to a finite termination (collisions)\". Their section 7 exhibits reachable collisions associated with infinite play; the requested terminating collision is still on their open-problem list. Use their (N,R) model: N cards, four indistinguishable copies of each special rank 1,...,R and N-4R ordinary C cards, with two equal initial decks and player A initially leading. Ordinary cards alternate; a special rank r makes the opponent play up to r cards, with a new special card reversing the challenge. Failure to answer awards the central pile to the challenger, in the source’s collection order; that player leads the next trick. The state includes both ordered decks and the next leader at an empty-pile trick boundary.\n\nSource check, 2026-10-24 UTC: the retrieved status source still presents the question as open. This confirms the cited source, rather than establishing that no later result exists elsewhere. Recheck current literature before claiming a new result.",
+  "success_criterion": "Provide two valid, distinct balanced initial deals in one specified (N,R) setting, together with reachable distinct playable trick-boundary states x!=y on their trajectories, such that F(x)=F(y)=z and the common continuation from z terminates after finitely many legal moves. Include both traces through the distinct predecessors, the shared successor, and the complete terminating suffix. A collision of arbitrary unbalanced states without balanced-start reachability, a mere equality of terminal winner identities, or entry into a known infinite loop does not count.",
+  "partial_wins": [],
+  "verification_method": "An independent simulator checks card multiplicities, equal initial deck sizes, initial leader A, and every card play and collection. Serialize each trick state as (ordered A deck, ordered B deck, next leader). Verify that x and y are distinct nonterminal states reached from the two supplied balanced starts, that their complete successor states are identical, and that the common suffix legally empties one deck. Include the central pile and challenge counter in move-level traces where needed to disambiguate end-of-game behavior. The checker must implement sections 2 and 5 of the paper, and cross-check the source’s worked finite example before accepting a new witness. No exhaustive classification is needed for this existential question: a short finite replay is an exact certificate and is laptop-checkable in minutes.",
+  "primary_sources": [
+    "https://arxiv.org/pdf/2602.23406",
+    "https://www.richardpmann.com/beggar-my-neighbour-records.html"
+  ],
+  "status_source": "https://arxiv.org/pdf/2602.23406",
+  "status_checked": "2026-10-24",
+  "disclosure": "open",
+  "angles": [
+    "Hash full reachable trick-boundary states and retain predecessors and balanced-start provenance; flag collisions whose common suffix terminates.",
+    "Begin with small legal four-suit deck settings rather than the full 52-card configuration. The authors formulate the question for the (N,R) family.",
+    "The paper’s section 7 illustrates local noninjectivity mechanisms. Use them as search seeds, but prove balanced-start reachability for any proposed witness."
+  ],
+  "pitfalls": [
+    "General nontermination is solved: Brayden Casella’s 2024 infinite game, published in 2025, is not a new target.",
+    "The next player is part of the state. Identical decks with different leaders are not a collision.",
+    "The collected pile order matters; accidentally reversing it changes the game.",
+    "A trajectory can pass through another balanced initial configuration. Demand distinct predecessors merging at a successor, not just two starting points on one orbit.",
+    "The primary source is an exploratory preprint; its explicit open question is being quoted, not its broader claims about difficulty endorsed. This has a card-game link but weaker direct betting relevance than the Guts entries."
+  ]
+}
