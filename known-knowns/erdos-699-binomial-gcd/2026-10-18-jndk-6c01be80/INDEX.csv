@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+erdos-699-binomial-gcd,p1,"For every integer n>=65536 and every integer j with 4<=j<=floor(n/2) and 2^36*(n-2j)^6<=n^5, there exists an odd prime dividing both C(n,3) and C(n,j).",j<=3i/2 or n=2j; additional prior ranges reviewed,2026-10-18T20:39:10.977979+00:00,object/PROOF.md,6c01be8056dce86ca1cef0df2df38c99b1747e463bc1069c6c4e0a3fcf915837

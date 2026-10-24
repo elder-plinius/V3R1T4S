@@ -1,0 +1,3 @@
+contributor text, unverified
+
+The original research run investigated the cubic residual through positional localization. Successive integer quotients retain information lost by coarse size bounds, giving a positive integer smaller than one in the stated band. The original review remained promising because two manuscripts were unreadable. The human then supplied both complete LaTeX texts and identified their shared project. This separate review kept the proof unchanged, compared the full sources, and used three new independent skeptics. Earlier finite searches and stronger unpanelled ideas are outside this claim.

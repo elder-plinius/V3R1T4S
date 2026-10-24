@@ -1,0 +1,300 @@
+[
+  {
+    "key": "prior-extra-0",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/astra-i3-20260911/bands.md",
+    "time": "2026-10-18T20:43:13.604059+00:00",
+    "http": 200,
+    "sha256": "5a051ac4e38a92b86b94db7f98bcc74ee938492b65515aae2984de841c26bb54",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"7179613ebc40d77a2dded6c0e6f5c1523cbf9e2a6ff3d9cbf0a7dc27dd2d2eff\"",
+      "Date": "Sun, 18 Oct 2026 20:43:13 GMT"
+    }
+  },
+  {
+    "key": "prior-extra-1",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/astra-i3-20260911/close.md",
+    "time": "2026-10-18T20:43:13.814632+00:00",
+    "http": 200,
+    "sha256": "5a3f8293a04732e7e3a9e178c231fe0e1a196e1a9a21788d773f53561129455c",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"3f22b837ca28f6f2f22fec0490a3500fcd2b74f1ceb0ccd5a8a5295c3b3dff8d\"",
+      "Date": "Sun, 18 Oct 2026 20:43:14 GMT"
+    }
+  },
+  {
+    "key": "prior-extra-2",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/astra-i3-20260911/result.md",
+    "time": "2026-10-18T20:43:14.008107+00:00",
+    "http": 200,
+    "sha256": "d098a0b8dfe16b55c712543081260ca20b36453ca58d922205d547b68b97aeae",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"6b2e7759b95043d6f12bf7ce16c97b8acac18e44e6d4dc70722b506a789a1d27\"",
+      "Date": "Sun, 18 Oct 2026 20:43:14 GMT"
+    }
+  },
+  {
+    "key": "prior-extra-3",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/claude-699-general-i-20260928/README.md",
+    "time": "2026-10-18T20:43:14.199595+00:00",
+    "http": 200,
+    "sha256": "1f99f1982f897b957ea6e5770ed80a012cc1a2bd93c8816254101ddc63508a30",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"b511bf534099521548787ed2fb7acdc1b272f1869494497a124077815274f763\"",
+      "Date": "Sun, 18 Oct 2026 20:43:14 GMT"
+    }
+  },
+  {
+    "key": "prior-extra-4",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/astra-briefcase-20260904/699/diagonal-completion.md",
+    "time": "2026-10-18T20:43:14.407758+00:00",
+    "http": 200,
+    "sha256": "32c7d875703a254f56191d772706cedbe3b862239eaf2e3f350d331c002b0961",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"0b746d5294ba77c648a5c65ea4700a7d8b919248ac0d4917e814af470e43b3cd\"",
+      "Date": "Sun, 18 Oct 2026 20:43:14 GMT"
+    }
+  },
+  {
+    "key": "prior-extra-5",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/astra-briefcase-20260904/699/result.md",
+    "time": "2026-10-18T20:43:14.603296+00:00",
+    "http": 200,
+    "sha256": "1b54e9c318a3391e32361cdc01c6a3d7953be9fefe094bc99056727703df9870",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"87aa15ad0311caabde44eb6aaa4fb23d2afa1b98741d5971b755288fdf38608d\"",
+      "Date": "Sun, 18 Oct 2026 20:43:14 GMT"
+    }
+  },
+  {
+    "key": "prior-extra-6",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/views/graph/P699.md",
+    "time": "2026-10-18T20:43:14.811067+00:00",
+    "http": 200,
+    "sha256": "17cf7715bda6e9090e64194a17944321bb7c24284d2442082448ccf496813ad9",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"bc9b8520e06519e76ea559c8975819240135e348bcdc80ff967d0676f8a9a807\"",
+      "Date": "Sun, 18 Oct 2026 20:43:15 GMT"
+    }
+  },
+  {
+    "key": "github-pulls-html-2",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls?q=is%3Apr+state%3Aopen&page=2",
+    "time": "2026-10-18T20:40:55.539252+00:00",
+    "http": 200,
+    "sha256": "8af1e9599a8886fe6a14c44a3aff132e4b1a0c14adbc71bb414e32a7d5700d82",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:56 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"3e06e53802b5843014a14b7b75234c4b\""
+    }
+  },
+  {
+    "key": "github-pulls-html-3",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls?q=is%3Apr+state%3Aopen&page=3",
+    "time": "2026-10-18T20:40:56.160740+00:00",
+    "http": 200,
+    "sha256": "bce4d74df3570c2ccda2699e9add813fee652a07823eba0e46db357273e68dc0",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:56 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"3a76ed1d75922f238a76b96befcdbbdf\""
+    }
+  },
+  {
+    "key": "github-pulls-html-4",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls?q=is%3Apr+state%3Aopen&page=4",
+    "time": "2026-10-18T20:40:56.760180+00:00",
+    "http": 200,
+    "sha256": "fdd3178c757e765a1cd073ec819df9cd0eb07e48f9bb5cf9f08d430531b99f19",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:57 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"616e8a510c6a7f85b2096df40717c1e5\""
+    }
+  },
+  {
+    "key": "github-pulls-html-5",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls?q=is%3Apr+state%3Aopen&page=5",
+    "time": "2026-10-18T20:40:57.335540+00:00",
+    "http": 200,
+    "sha256": "45c29b22919b5e1a3056dacc9629e3489d89b9466d5b44cf4b1ddce9e9ef9d7c",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:57 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"88ad3b54cb043f3ff14249ba604a3ce8\""
+    }
+  },
+  {
+    "key": "github-pulls-html-6",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls?q=is%3Apr+state%3Aopen&page=6",
+    "time": "2026-10-18T20:40:57.959339+00:00",
+    "http": 200,
+    "sha256": "0500539c6eeeb7d5073501e7366da8f4f42dee861d679a423e30985256695065",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:58 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"0161678cb2a35129d653a7e90628e9cc\""
+    }
+  },
+  {
+    "key": "github-pulls-html-7",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls?q=is%3Apr+state%3Aopen&page=7",
+    "time": "2026-10-18T20:40:58.579811+00:00",
+    "http": 200,
+    "sha256": "2caa72a4819047e36a89fac19552c0d7fa4ccba8185883d6b183324a0d5a59ea",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:58 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"e4f6d89b3ca6988806a31a48aff73535\""
+    }
+  },
+  {
+    "key": "yasufuku-publisher",
+    "url": "https://londmathsoc.onlinelibrary.wiley.com/doi/abs/10.1112/blms.70349",
+    "time": "2026-10-18T20:40:59.076320+00:00",
+    "http": 403,
+    "sha256": "7740cf35097aff0c3bca98c23d75378023d0f4e625bda0f1a618d8d74487711d",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:40:59 GMT",
+      "Content-Type": "text/html; charset=UTF-8"
+    }
+  },
+  {
+    "key": "yasufuku-author",
+    "url": "https://w-rdb.waseda.jp/html/100004012_en.html",
+    "time": "2026-10-18T20:40:59.121304+00:00",
+    "http": 200,
+    "sha256": "4b074bcbef78b951029c71c273b5f652b54d42e5cd4fbf119eaa118d9c825938",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:41:00 GMT",
+      "Last-Modified": "Sat, 17 Oct 2026 14:54:22 GMT",
+      "ETag": "\"25a41-65e0a74c4c380\"",
+      "Content-Type": "text/html; charset=UTF-8"
+    }
+  },
+  {
+    "key": "atlas-tree",
+    "url": "https://api.github.com/repos/techno-optimist/erdos-frontier-atlas/git/trees/5e1f513b5383ed986b1543708ca7f3d1d80e6240?recursive=1",
+    "time": "2026-10-18T20:41:02.501528+00:00",
+    "http": 200,
+    "sha256": "982a99838ce1920d407227526e70739363aa79326beeed6c8d9dedfb7017ea4b",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:41:02 GMT",
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"982a99838ce1920d407227526e70739363aa79326beeed6c8d9dedfb7017ea4b\"",
+      "Last-Modified": "Tue, 13 Oct 2026 05:49:55 GMT"
+    }
+  },
+  {
+    "key": "atlas-current-readme",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/main/README.md",
+    "time": "2026-10-18T20:41:02.795504+00:00",
+    "http": 200,
+    "sha256": "36447910aaf5c19d9ae005a566efb946cbd1c559b46215be48983f3fdf240325",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"f0e42ccc448ec90b76b0d6c0be7ec1966bf1e8c0e1acf68d47bd91da3d25da11\"",
+      "Date": "Sun, 18 Oct 2026 20:41:03 GMT"
+    }
+  },
+  {
+    "key": "status",
+    "url": "https://www.erdosproblems.com/699",
+    "time": "2026-10-18T20:39:10.977979+00:00",
+    "http": 200,
+    "sha256": "1f13659138f158986347a266a400c070245372d22498a7755a33fc477a8f621c",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:39:26 GMT",
+      "Content-Type": "text/html; charset=utf-8"
+    }
+  },
+  {
+    "key": "forum",
+    "url": "https://www.erdosproblems.com/forum/thread/699",
+    "time": "2026-10-18T20:39:26.744276+00:00",
+    "http": 200,
+    "sha256": "75d0432bffb22ea1e76c4b7a986c03a3aa5bcf035e2ae7cc55ec392145ba8588",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:39:27 GMT",
+      "Content-Type": "text/html; charset=utf-8"
+    }
+  },
+  {
+    "key": "proof-claims",
+    "url": "https://www.erdosproblems.com/forum/thread/699/proof-claims",
+    "time": "2026-10-18T20:39:27.108151+00:00",
+    "http": 200,
+    "sha256": "330592915d2c497c1fbf01fbe01dcd7736c3ca9fd1c1a9df5cbed9d3c3ae78b4",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:39:27 GMT",
+      "Content-Type": "text/html; charset=utf-8"
+    }
+  },
+  {
+    "key": "github-pulls-html",
+    "url": "https://github.com/elder-plinius/V3R1T4S/pulls",
+    "time": "2026-10-18T20:39:27.681035+00:00",
+    "http": 200,
+    "sha256": "c7adeeeda59af8e1dd4cceeb036cb51502ee5c4ae582460efe7d06fe7c11bc01",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:39:28 GMT",
+      "Content-Type": "text/html; charset=utf-8",
+      "ETag": "W/\"539c4159db37907798052db9c74bda74\""
+    }
+  },
+  {
+    "key": "prior-i3",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/claude-699-i3-position-20260928/README.md",
+    "time": "2026-10-18T20:39:28.885837+00:00",
+    "http": 200,
+    "sha256": "b26cb90ee0e3ab51308b4141c4cdafa1ffff1e51248e1ee13fb83df79b2aeaef",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"d70a1b1b8cc8e9cd3d6ebaa24b107477a6545fbd4d8f30e073722aea68006d2e\"",
+      "Date": "Sun, 18 Oct 2026 20:39:29 GMT"
+    }
+  },
+  {
+    "key": "prior-strip",
+    "url": "https://raw.githubusercontent.com/techno-optimist/erdos-frontier-atlas/5e1f513b5383ed986b1543708ca7f3d1d80e6240/experiments/astra-20260904/699-strip.md",
+    "time": "2026-10-18T20:39:29.142328+00:00",
+    "http": 200,
+    "sha256": "f3eaf51c8c385c1df94617bd71f156b44e30e716557451c7ca476fbf4982f97c",
+    "selected_headers": {
+      "Content-Type": "text/plain; charset=utf-8",
+      "ETag": "\"02a0b50218932b05d8dd68fb98b46fff7da7b7445880c186bf84044e7c72bc7e\"",
+      "Date": "Sun, 18 Oct 2026 20:39:29 GMT"
+    }
+  },
+  {
+    "key": "github-open-pulls-1",
+    "url": "https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open&per_page=100&page=1",
+    "time": "2026-10-18T20:39:29.410759+00:00",
+    "http": 200,
+    "sha256": "b303c267abc1da3791648f82dfbab5a0026ae9063629f117974c649ee4949577",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:39:29 GMT",
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"b303c267abc1da3791648f82dfbab5a0026ae9063629f117974c649ee4949577\""
+    }
+  },
+  {
+    "key": "github-open-pulls-2",
+    "url": "https://api.github.com/repositories/1011751194/pulls?state=open&per_page=100&page=2",
+    "time": "2026-10-18T20:39:30.134832+00:00",
+    "http": 200,
+    "sha256": "0cf575b20342afd390996447897b5e2c050ac0701ce14857de3b84fee5bde857",
+    "selected_headers": {
+      "Date": "Sun, 18 Oct 2026 20:39:30 GMT",
+      "Content-Type": "application/json; charset=utf-8",
+      "ETag": "W/\"0cf575b20342afd390996447897b5e2c050ac0701ce14857de3b84fee5bde857\""
+    }
+  }
+]
