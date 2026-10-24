@@ -1,0 +1,49 @@
+{
+  "id": "covering-codes-q2-q4-upper-bounds",
+  "name": "Covering codes K_q(n,R) for q = 2, 3, 4 (hypercube domination, football pool): beat an upper bound in Kéri's tables",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (local search and large-neighbourhood search with exact coverage counts; exhaustive verification over q^n words takes seconds for ternary and up to minutes for binary n <= 33 with a 1 GiB bit array)",
+  "statement": "K_q(n,R) is the minimum number of q-ary words needed so that every length-n word is within Hamming distance R of one of them. Gerzson Kéri's tables cover binary, ternary and quaternary cells. The supplied ternary table gives 71 <= K_3(6,1) <= 73 and credits Laarhoven, Aarts, van Lint and Wille for the upper construction. Márk Marosi (arXiv:2608.19872) gives newer search methods and bounds mainly for larger alphabets. Tamal Maharaj (arXiv:2610.03760) gives K_4(8,2) <= 256 and K_4(6,2) <= 48. The target is a smaller explicit code for a still-open cell. Reference tables alone do not establish the full current frontier; compositions and later publications must also be checked.",
+  "success_criterion": "Success means an explicit code C contained in Z_q^n with q in {2, 3, 4}, given as a list of distinct words, whose covering radius is at most R (every one of the q^n words lies within Hamming distance R of a codeword, checked exhaustively), for a cell inside the ranges of Kéri's tables (q = 2: n <= 33, 1 <= R <= 10; q = 3: n <= 14, 1 <= R <= 8; q = 4: n <= 11, 1 <= R <= 8), such that |C| is STRICTLY SMALLER (direction: min) than (a) the upper bound for (q, n, R) in Kéri's table re-fetched at verification time, read from the rendered PDF, and (b) every later published upper bound for that cell, including the values implied through K_q(n+1, R+1) <= K_q(n, R) and K_q(n+1, R) <= q * K_q(n, R) by newer codes (later bounds known on 2026-10-14: K_4(8,2) <= 256 and K_4(6,2) <= 48, Maharaj arXiv:2610.03760), found by a search of arXiv and Google Scholar for covering codes with the cell's parameters (2012-present). |C| must be at least the best published lower bound for the cell; a smaller code means a checker bug. Cells with a perfect code (key h) are closed. For compositions, include direct products and direct sums with added radii, plus valid coordinate-extension constructions. Include the best valid composition of published objects for the same parameters and metric in the bar, even if it is absent from a printed table. State whether the candidate is a composition. Identify its components and composition rule. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A strictly smaller explicit code for a cell of Kéri's mixed binary/ternary table (mixed_tables.pdf, file date 2011-11-24), below that table's upper bound and any later published value, checked exhaustively in the same way."
+    },
+    {
+      "id": "p2",
+      "statement": "A certified lower bound strictly above the best published lower bound for a cell with q in {2, 3, 4} (for example from a higher level of the Gijswijt-Polak semidefinite hierarchy), delivered as an exact rational dual certificate verified by a standalone exact-arithmetic checker that rebuilds the program from (q, n, R), as in Marosi's pipeline."
+    }
+  ],
+  "verification_method": "Parse the code (one word per line, symbols 0..q-1), assert the length n, the symbol range and distinctness, and count M. Method 1: mark the radius-R ball of every codeword in a q^n-entry array (M * sum_{j<=R} C(n,j)(q-1)^j updates) and confirm that no word is unmarked. Method 2 (shares no code with method 1): R rounds of coordinate-wise dilation of the code's indicator array, which computes no distances (one of the four checks Marosi used). Binary n <= 33 needs at most 2^33 bits (1 GiB); ternary n <= 14 needs about 4.8 million entries. Re-fetch Kéri's directory listing and the cell's PDF, read the cell from the rendered PDF, and repeat the literature search before claiming. Recompute comparison compositions using the same checker and resource metric.",
+  "primary_sources": [
+    "https://old.sztaki.hu/~keri/codes/",
+    "https://old.sztaki.hu/~keri/codes/2_tables.pdf",
+    "https://old.sztaki.hu/~keri/codes/3_tables.pdf",
+    "https://old.sztaki.hu/~keri/codes/4-5_tables.pdf",
+    "https://arxiv.org/abs/2608.19872",
+    "https://arxiv.org/html/2608.19872",
+    "https://arxiv.org/abs/2610.03760",
+    "https://arxiv.org/abs/2511.02542"
+  ],
+  "status_source": "https://old.sztaki.hu/~keri/codes/",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Transfer Marosi's two searches (arXiv:2608.19872 Sections 4-5) to q = 2, 3, 4: a focused local search seeded with structured codes, and a large-neighbourhood search that scores every candidate codeword position at once by exact coverage counts computed with a coordinate-wise transform. He reports the local search effective for q^n up to about 10^8 and the LNS up to 10^10, which spans every binary cell (2^33 is about 8.6 * 10^9) and every ternary cell (3^14 is about 4.8 * 10^6) of Kéri's tables.",
+    "Aim first at cells whose upper bound is an old direct sum or algebraic construction far above the sphere-covering bound (for example K_2(13,2) <= 128 from 1985 against a lower bound of 97, K_3(8,2) <= 81 against 54, K_3(8,3) <= 27 against 14); Marosi's largest gains came from cells whose tabulated bound was a direct sum.",
+    "Prescribe automorphisms (cyclic shifts, a subgroup of coordinate permutations, a linear subcode acting by translation: the matrix method of Östergård and Kéri) so the code is a union of orbits, then solve the orbit set-cover exactly with CP-SAT or an ILP.",
+    "Propagate every win automatically: a new code for (n, R) gives bounds for (n+1, R+1), (n+1, R) via the factor q, and direct sums with other table codes; sweep the neighbours before claiming each cell once.",
+    "Moonshot cell inside the harvest: the football pool K_3(6,1) in [71, 73]; a 72-word ternary code of length 6 with covering radius 1 would improve the upper bound. It would not establish optimality against the reported lower bound 71."
+  ],
+  "pitfalls": [
+    "In text extraction of Kéri's PDFs the key letters and footnote marks are glued to the numbers (for example '2717' for an exactly known cell of 27 with marks); always read the cell from the rendered PDF.",
+    "The q >= 5 cells are Marosi's territory since August 2026 and two q = 4 cells moved on 2026-09-27; binary and ternary tables have no living maintainer, so a literature search is part of every claim and a tie is not a record.",
+    "Covering radius is a maximum over all q^n words: sampling words is not a check.",
+    "Count distinct codewords; duplicates do not count.",
+    "Do not mix tables: unrestricted codes K_q(n,R) (this entry), linear covering codes and the length function l(r,R) (e.g. Davydov-Marcugini-Pambianco, arXiv:2511.02542), mixed binary/ternary codes (p1) and Lee-metric or Z4-linear Gray-image codes are different records.",
+    "A code smaller than a certified lower bound means a checker bug."
+  ]
+}
