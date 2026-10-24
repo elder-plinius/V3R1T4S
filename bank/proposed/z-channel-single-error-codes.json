@@ -1,0 +1,39 @@
+{
+  "id": "z-channel-single-error-codes",
+  "name": "Single-error-correcting codes for the Z-channel: beat 112, 198 or 379 (Sloane's 1zc challenge graphs), or certify a tighter upper bound",
+  "category": "record-tables",
+  "kind": "standard",
+  "tractability": 1,
+  "compute_profile": "laptop-hours to laptop-days (maximum-independent-set heuristics and exact solvers on graphs with 1,024 to 4,096 vertices; verification in milliseconds)",
+  "statement": "A Z-channel changes a transmitted 1 into 0. For distinct binary words x,y, let N(x,y) count positions with x_i=1,y_i=0. Correcting one error requires max(N(x,y),N(y,x)) >= 2. The supplied proposal gives construction baselines 112, 198 and 379 at lengths 10, 11 and 12, with upper bounds 117, 210 and 410. Sources credit Etzion, Östergård, Butenko, Pardalos, Sergienko, Shylo and Stetsyuk; N. J. A. Sloane supplies equivalent independent-set graphs. The supplied checked page could not retrieve OEIS or the challenge page, so these are provisional historical bars. A claim requires a current source and composition comparison. Nakasho, Hagiwara, Anderson and Nation's single-deletion result concerns a different channel.",
+  "success_criterion": "Success means either (a) RECORD: an explicit set of distinct binary words of length n in {10, 11, 12} with max(N(x,y), N(y,x)) >= 2 for every pair (checked for all pairs), also verified as an independent set of the DIMACS graph 1zc.1024, 1zc.2048 or 1zc.4096 from Sloane's page, whose size is STRICTLY GREATER (direction: max) than the best lower bound shown on OEIS A010101 and on the challenge page re-fetched at verification time and than any later published value found by a literature search (on 2026-10-14: 112, 198 and 379); or (b) CLOSURE: a proof that 112 is optimal for n = 10 (the independence number of 1zc.1024 is 112), with a certificate checkable without trusting the search: a VeriPB proof log of a maximum-independent-set or clique solver run verified by VeriPB (and preferably CakePB), or a DRAT/LRAT proof for a CNF or pseudo-Boolean encoding whose correctness is argued in a short note and whose proof is accepted by cake_lpr. Include the best valid composition of published objects for the same parameters and metric in the bar, even if it is absent from a printed table. State whether the candidate is a composition. Identify its components and composition rule. Values in unmerged pull requests are not bars.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A certified upper bound strictly below the published one for n = 10, 11 or 12 (below 117, 210 or 410): an exact rational dual certificate of an LP or semidefinite relaxation adapted to asymmetric distance (exploiting the symmetric group on coordinates), checked by a standalone exact-arithmetic program that rebuilds the relaxation from the definition, or a verified proof log as in (b)."
+    }
+  ],
+  "verification_method": "Parse the words (or the DIMACS node numbers, where node = 1 + decimal value of the word). Check the asymmetric-distance condition directly for every pair (O(M^2 n), milliseconds). Separately rebuild the graph from the definition, confirm that its edge set equals the downloaded 1zc file (this pins the bit-order convention), and check independence in the file. For a closure or upper bound, run VeriPB (and CakePB) on the proof log, or the exact rational checker on the dual certificate after rebuilding the relaxation from the definition. Re-fetch OEIS A010101 and the challenge page, and search the literature on asymmetric (Z-channel) single-error-correcting codes, before claiming. Recompute comparison compositions using the same checker and resource metric.",
+  "primary_sources": [
+    "https://oeis.org/A010101/internal",
+    "https://oeis.org/A265032/a265032.html",
+    "https://arxiv.org/abs/2309.14736"
+  ],
+  "status_source": "https://oeis.org/A010101/internal",
+  "status_checked": "2026-10-14; historical source check from supplied batch A material. Current sources were not re-fetched during preparation.",
+  "disclosure": "open",
+  "angles": [
+    "Use the symmetry: the problem is invariant under permutations of coordinates (not under complementation); prescribe a subgroup (cyclic shifts, products of cycles; for n = 11 the cyclic group of prime order) so the code is a union of orbits, then solve the orbit-weighted independent-set problem exactly with an ILP or CP-SAT.",
+    "Layer by weight: two words of equal weight conflict only when they differ in exactly two positions, and words of adjacent weights conflict when one covers the other with one extra 1; seed each weight layer from good constant-weight codes of minimum distance 4 and solve the inter-layer conflicts exactly.",
+    "Modern maximum-independent-set machinery, many runs in parallel: kernelization and reduce-and-peel (KaMIS-style), long local-search runs (NuMVC/FastVC-style vertex-cover search) with many seeds; the graphs are small enough for millions of moves per second.",
+    "Closing n = 10 (112 against 117): exact branch-and-bound with orbital branching or symmetry-breaking constraints and clique cuts from Z-channel balls, with VeriPB proof logging (supported by the Glasgow subgraph/clique solvers), so the closure is checkable.",
+    "Bounds: Delsarte-type LP and Schrijver-type SDP bounds for asymmetric distance (the metric is not translation-invariant, so reduce by the symmetric group acting on weight classes); a certified rational dual giving 116 would be a new upper bound (p1)."
+  ],
+  "pitfalls": [
+    "Do not confuse asymmetric distance 2 (this entry) with Hamming distance 3 codes or with codes for unidirectional errors; check the definition against the graph file.",
+    "Node numbering is 1 + decimal value of the word, but the bit order must be pinned by comparing a rebuilt graph with the file.",
+    "Sloane's challenge page is stale in places (1dc.2048 was closed in 2023); use OEIS A010101 for the current range and search the literature before claiming.",
+    "Maximum-clique benchmark tables list these graphs as complements; make sure the claimed set is independent in 1zc (a clique in the complement).",
+    "A branch-and-bound log without a proof certificate is not a closure."
+  ]
+}
