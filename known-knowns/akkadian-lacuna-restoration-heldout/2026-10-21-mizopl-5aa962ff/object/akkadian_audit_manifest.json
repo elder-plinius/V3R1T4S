@@ -1,0 +1,387 @@
+{
+  "benchmark_id": "akkadian-lacuna-restoration-heldout",
+  "category": "ancient-texts",
+  "repository": "https://github.com/SLAB-NLP/Akk",
+  "repository_commit": "dfd2a66d4305cf36981e4fd3fde823a5020161dd",
+  "data_file": "data/akk_from_jsons.jsonl",
+  "data_file_bytes": 21156545,
+  "data_file_sha256": "b970895b8be1ff6dfe8b569110b311d9d6f3b213e60d1a61e6b963da783623a3",
+  "split_protocol": {
+    "train_test_split_seed": 2,
+    "n_train_rows": 18568,
+    "n_test_rows_after_id_text_dedup": 1882,
+    "n_test_rows_strict_zero_overlap": 1875,
+    "exact_id_text_overlap": 0,
+    "pqx_6digit_id_overlap": 0,
+    "exact_bert_input_overlap": 0,
+    "mask_seed": 42,
+    "mlm_probability": 0.15,
+    "block_size": 128,
+    "n_masked_positions_all": 27650,
+    "n_masked_positions_non_missing_sign": 25958,
+    "n_masked_positions_non_missing_all_variants": 25957,
+    "n_masked_positions_single_token_words": 21459,
+    "active_akkadian_vocab_size": 1875
+  },
+  "paper_benchmarks_lazar_et_al_2021": {
+    "source": "Lazar et al., EMNLP 2021 Findings (arXiv:2109.04513), Section 5 & Table 2",
+    "mbert_plus_akk_overall": {
+      "mrr": 0.83,
+      "hit_at_1": null,
+      "hit_at_5": 0.89,
+      "hit_at_5_precise_text": 0.895,
+      "hit_at_10": 0.92
+    }
+  },
+  "overall_results_all_27650_frozen_positions": {
+    "mbert_akk_reproduced_baseline": {
+      "n": 27650,
+      "mrr": 0.8236941690413306,
+      "hit_at_1": 0.7769258589511754,
+      "hit_at_5": 0.876998191681736,
+      "hit_at_10": 0.9090054249547921,
+      "hits_1": 21482,
+      "hits_5": 24249,
+      "hits_10": 25134
+    },
+    "clss_c_v3_pure_symbolic_0_neural": {
+      "n": 27650,
+      "mrr": 0.8248003529873148,
+      "hit_at_1": 0.7647016274864377,
+      "hit_at_5": 0.8963833634719711,
+      "hit_at_10": 0.9270524412296565,
+      "hits_1": 21144,
+      "hits_5": 24785,
+      "hits_10": 25633
+    },
+    "clss_akk_v3_100pct_mask": {
+      "n": 27650,
+      "mrr": 0.8473746547494551,
+      "hit_at_1": 0.7868354430379747,
+      "hit_at_5": 0.9200723327305605,
+      "hit_at_10": 0.9440867992766727,
+      "hits_1": 21756,
+      "hits_5": 25440,
+      "hits_10": 26104
+    },
+    "clss_akk_v3_full_collator_80_10_10": {
+      "n": 27650,
+      "mrr": 0.8559331196298954,
+      "hit_at_1": 0.8009764918625678,
+      "hit_at_5": 0.9215551537070524,
+      "hit_at_10": 0.9451717902350814,
+      "hits_1": 22147,
+      "hits_5": 25481,
+      "hits_10": 26134
+    },
+    "margins_clss_akk_v3_over_paper": {
+      "delta_mrr_vs_083": 0.025933119629895418,
+      "delta_hit5_vs_089": 0.03155515370705242,
+      "delta_hit5_vs_0895": 0.026555153707052415,
+      "delta_hit10_vs_092": 0.025171790235081315
+    },
+    "margins_clss_akk_v3_over_reproduced_baseline": {
+      "delta_mrr": 0.03223895058856474,
+      "delta_hit1": 0.024050632911392422,
+      "delta_hit5": 0.04455696202531645,
+      "delta_hit10": 0.03616636528028927,
+      "paired_bootstrap_10000_mrr_win_rate": 1.0,
+      "paired_bootstrap_10000_hit5_win_rate": 1.0,
+      "paired_bootstrap_p_value": 0.0001
+    }
+  },
+  "subset_results": {
+    "non_missing_positions_25957": {
+      "mbert_akk_reproduced_baseline": {
+        "n": 25957,
+        "mrr": 0.8200785261393131,
+        "hit_at_1": 0.7745116924143777,
+        "hit_at_5": 0.8715182802326925,
+        "hit_at_10": 0.9048811495935586,
+        "hits_1": 20104,
+        "hits_5": 22622,
+        "hits_10": 23488
+      },
+      "clss_akk_v3_full": {
+        "n": 25957,
+        "mrr": 0.8598138384068037,
+        "hit_at_1": 0.8089917941210464,
+        "hit_at_5": 0.9198289478753323,
+        "hit_at_10": 0.9438687059367415,
+        "hits_1": 20999,
+        "hits_5": 23876,
+        "hits_10": 24500
+      }
+    },
+    "single_token_whole_words_21459": {
+      "mbert_akk_reproduced_baseline": {
+        "n": 21459,
+        "mrr": 0.8230508800924189,
+        "hit_at_1": 0.7809310778694254,
+        "hit_at_5": 0.8690526119576868,
+        "hit_at_10": 0.9013001537816301,
+        "hits_1": 16758,
+        "hits_5": 18649,
+        "hits_10": 19341
+      },
+      "clss_akk_v3_full": {
+        "n": 21459,
+        "mrr": 0.8570771208280958,
+        "hit_at_1": 0.806701151032201,
+        "hit_at_5": 0.9161657113565403,
+        "hit_at_10": 0.9405843701943241,
+        "hits_1": 17311,
+        "hits_5": 19660,
+        "hits_10": 20184
+      }
+    }
+  },
+  "table2_genre_breakdown": {
+    "Lexical": {
+      "n": 10240,
+      "paper_mrr": 0.69,
+      "paper_hit_at_5": 0.85,
+      "mbert_akk_baseline": {
+        "n": 10240,
+        "mrr": 0.8271719601706968,
+        "hit_at_1": 0.7865234375,
+        "hit_at_5": 0.87236328125,
+        "hit_at_10": 0.9044921875,
+        "hits_1": 8054,
+        "hits_5": 8933,
+        "hits_10": 9262
+      },
+      "clss_akk_v3": {
+        "n": 10240,
+        "mrr": 0.8609065553389238,
+        "hit_at_1": 0.80439453125,
+        "hit_at_5": 0.92919921875,
+        "hit_at_10": 0.949609375,
+        "hits_1": 8237,
+        "hits_5": 9515,
+        "hits_10": 9724
+      }
+    },
+    "Astrological Report": {
+      "n": 1753,
+      "paper_mrr": 0.81,
+      "paper_hit_at_5": 0.88,
+      "mbert_akk_baseline": {
+        "n": 1753,
+        "mrr": 0.7877921764251605,
+        "hit_at_1": 0.7256132344552196,
+        "hit_at_5": 0.8551055333713634,
+        "hit_at_10": 0.8984597832287508,
+        "hits_1": 1272,
+        "hits_5": 1499,
+        "hits_10": 1575
+      },
+      "clss_akk_v3": {
+        "n": 1753,
+        "mrr": 0.8670425914712923,
+        "hit_at_1": 0.8168853394181403,
+        "hit_at_5": 0.9252709640616087,
+        "hit_at_10": 0.9549343981745579,
+        "hits_1": 1432,
+        "hits_5": 1622,
+        "hits_10": 1674
+      }
+    },
+    "Royal or Monumental": {
+      "n": 177,
+      "paper_mrr": 0.84,
+      "paper_hit_at_5": 0.9,
+      "mbert_akk_baseline": {
+        "n": 177,
+        "mrr": 0.8614755166559022,
+        "hit_at_1": 0.8192090395480226,
+        "hit_at_5": 0.9096045197740112,
+        "hit_at_10": 0.943502824858757,
+        "hits_1": 145,
+        "hits_5": 161,
+        "hits_10": 167
+      },
+      "clss_akk_v3": {
+        "n": 177,
+        "mrr": 0.9037496637072909,
+        "hit_at_1": 0.8757062146892656,
+        "hit_at_5": 0.9378531073446328,
+        "hit_at_10": 0.9491525423728814,
+        "hits_1": 155,
+        "hits_5": 166,
+        "hits_10": 168
+      }
+    },
+    "Royal Inscription": {
+      "n": 230,
+      "paper_mrr": 0.83,
+      "paper_hit_at_5": 0.9,
+      "mbert_akk_baseline": {
+        "n": 230,
+        "mrr": 0.6798083079806024,
+        "hit_at_1": 0.6217391304347826,
+        "hit_at_5": 0.7434782608695653,
+        "hit_at_10": 0.8043478260869565,
+        "hits_1": 143,
+        "hits_5": 171,
+        "hits_10": 185
+      },
+      "clss_akk_v3": {
+        "n": 230,
+        "mrr": 0.8437677728467342,
+        "hit_at_1": 0.8043478260869565,
+        "hit_at_5": 0.8869565217391304,
+        "hit_at_10": 0.9043478260869565,
+        "hits_1": 185,
+        "hits_5": 204,
+        "hits_10": 208
+      }
+    },
+    "Administrative Letter": {
+      "n": 3024,
+      "paper_mrr": null,
+      "paper_hit_at_5": null,
+      "mbert_akk_baseline": {
+        "n": 3024,
+        "mrr": 0.8354419511846408,
+        "hit_at_1": 0.7860449735449735,
+        "hit_at_5": 0.8912037037037037,
+        "hit_at_10": 0.9216269841269841,
+        "hits_1": 2377,
+        "hits_5": 2695,
+        "hits_10": 2787
+      },
+      "clss_akk_v3": {
+        "n": 3024,
+        "mrr": 0.8498813727761978,
+        "hit_at_1": 0.7943121693121693,
+        "hit_at_5": 0.9166666666666666,
+        "hit_at_10": 0.9404761904761905,
+        "hits_1": 2402,
+        "hits_5": 2772,
+        "hits_10": 2844
+      }
+    },
+    "Scholarly Letter": {
+      "n": 1565,
+      "paper_mrr": null,
+      "paper_hit_at_5": null,
+      "mbert_akk_baseline": {
+        "n": 1565,
+        "mrr": 0.8592967947005994,
+        "hit_at_1": 0.8095846645367412,
+        "hit_at_5": 0.9156549520766774,
+        "hit_at_10": 0.9431309904153354,
+        "hits_1": 1267,
+        "hits_5": 1433,
+        "hits_10": 1476
+      },
+      "clss_akk_v3": {
+        "n": 1565,
+        "mrr": 0.8749805119525756,
+        "hit_at_1": 0.8210862619808307,
+        "hit_at_5": 0.9412140575079873,
+        "hit_at_10": 0.9623003194888179,
+        "hits_1": 1285,
+        "hits_5": 1473,
+        "hits_10": 1506
+      }
+    },
+    "Extispicy Query": {
+      "n": 1033,
+      "paper_mrr": null,
+      "paper_hit_at_5": null,
+      "mbert_akk_baseline": {
+        "n": 1033,
+        "mrr": 0.8588635192035073,
+        "hit_at_1": 0.8121974830590513,
+        "hit_at_5": 0.9157792836398838,
+        "hit_at_10": 0.9486931268151017,
+        "hits_1": 839,
+        "hits_5": 946,
+        "hits_10": 980
+      },
+      "clss_akk_v3": {
+        "n": 1033,
+        "mrr": 0.9290049505467882,
+        "hit_at_1": 0.9002904162633107,
+        "hit_at_5": 0.9641819941916747,
+        "hit_at_10": 0.9767666989351403,
+        "hits_1": 930,
+        "hits_5": 996,
+        "hits_10": 1009
+      }
+    },
+    "Priestly Letter": {
+      "n": 759,
+      "paper_mrr": null,
+      "paper_hit_at_5": null,
+      "mbert_akk_baseline": {
+        "n": 759,
+        "mrr": 0.857628033481752,
+        "hit_at_1": 0.8129117259552042,
+        "hit_at_5": 0.9156785243741765,
+        "hit_at_10": 0.9393939393939394,
+        "hits_1": 617,
+        "hits_5": 695,
+        "hits_10": 713
+      },
+      "clss_akk_v3": {
+        "n": 759,
+        "mrr": 0.8790043516464996,
+        "hit_at_1": 0.83399209486166,
+        "hit_at_5": 0.932806324110672,
+        "hit_at_10": 0.9565217391304348,
+        "hits_1": 633,
+        "hits_5": 708,
+        "hits_10": 726
+      }
+    }
+  },
+  "artifacts": {
+    "frozen_masked_positions.json": {
+      "bytes": 5780131,
+      "sha256": "4abcfdb61d6a391d07b024136ace51d4dc4e3378a7ad2b89b6b12e1de75216c1"
+    },
+    "frozen_test_tensors_seed42.npz": {
+      "bytes": 302914,
+      "sha256": "8033d870bd9d8787627690fc26771693a6acc112be17c7d94f204ed4a9654ec4"
+    },
+    "bert_test_strict_1875.txt": {
+      "bytes": 1256550,
+      "sha256": "65e7fe8a338048e3a373f0061bbf435154e4e2a49845513c8074abd48fa9fd4c"
+    },
+    "clss_akk_corpus_full.bin": {
+      "bytes": 12112120,
+      "sha256": "bac96e1142ff5d9a4bf6fb8c3c638b494747294415e89d12f2646fa0acf27b05"
+    },
+    "mbert_ep34_top128.npz": {
+      "bytes": 9482211,
+      "sha256": "88d8549dc6f74913949a1a6448fea6aa11b2393aab49a70f4a28f75961a29126"
+    },
+    "clss_akk_engine_v3.c": {
+      "bytes": 36049,
+      "sha256": "af810ea742cfb86033065e2875781354670f4cb6fe15a531bc3e5821856d7041"
+    },
+    "train_mbert_akk_fast.py": {
+      "bytes": 13223,
+      "sha256": "fe91325f47484745e9a08986390899096c9ec2c0011ffefc44ee25e6893017fa"
+    },
+    "mbert_akk_baseline_top5_predictions.csv": {
+      "bytes": 2270741,
+      "sha256": "e0dbc99d781c410800484a693143fe1bfc027631e4714cf498d59845bfcb9e48"
+    },
+    "clss_akk_top5_predictions.csv": {
+      "bytes": 2236752,
+      "sha256": "4d974bb65acd8993a726065a4626cee8d96f0ea1bd01539e49c3dac1dac7ad9d"
+    },
+    "clss_akk_100mask_top5_predictions.csv": {
+      "bytes": 2237053,
+      "sha256": "38b4df5dbfbc087e61a541d92b66e46c089ec1420524087eff294790c1b58879"
+    },
+    "clss_c_v3_pure_top5_predictions.csv": {
+      "bytes": 2217235,
+      "sha256": "3bbf26c6a421a93cabe1881d3a49ac7acb8d811b9239652af1821ce5e6657b3e"
+    }
+  }
+}
