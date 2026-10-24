@@ -1,0 +1,21 @@
+# Langton's ant, 6x6 box: exhaustive capture run plus independent re-check (every number below is recomputed by verify-it-yourself/code/check_object.py)
+box: 6x6, bit b -> cell (b mod 6 - 2, floor(b/6) - 2), black = 1
+convention: ant at (0,0) heading north; d = (d + 1 + 2g) mod 4, flip, move; dirs N(0,+1) E(+1,0) S(0,-1) W(-1,0)
+cap: 2000000
+chunks: 4096
+contiguous: yes
+masks: 68719476736
+captured: 68719476736
+uncap: 0
+oob: 0
+max_tcap: 375545
+max_tcap_mask: 40920836116
+hard_cases: 4096
+hard_cases_equal: 4096
+seed: 0x5EED20261020 (splitmix64(mask+seed) mod 10000 < 100)
+sample_units: 16384
+sample_masks: 687234013
+sample_cap: 687234013
+sample_max_tcap: 271692
+sample_max_tcap_mask: 61493184540
+sample_units_over_chunk_max: 0
