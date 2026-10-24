@@ -1,0 +1,40 @@
+{
+ "id": "gamblers-ruin-scaling-conjecture",
+ "name": "Three-player gambler's ruin (the final-table ICM problem): a counterexample to the Diaconis-Ethier 0.0004 scaling conjecture",
+ "kind": "standard",
+ "tractability": 1,
+ "compute_profile": "laptop-hours (exact sparse linear solves for N up to a few hundred; interval-certified iteration beyond)",
+ "statement": "Three players hold A, B, C units, N = A + B + C. Each round a pair of surviving players is chosen uniformly at random and a fair coin moves one unit between them; after the first elimination the other two play ordinary fair gambler's ruin. P_{A,B,C}(sigma), sigma in S3, is the probability of elimination order sigma (sigma = 132: player 1 out first, then player 3). These are the probabilities final-table deals and the Independent Chip Model (ICM) try to approximate. Diaconis and Ethier ('Gambler's ruin and the ICM', Statistical Science 37(3) (2022) 289-305, arXiv:2011.07610v3) show the ICM is inadequate, compute exact values for N <= 200 and near-exact values for N = 300 (WSOP 2019 Main Event final three as the worked example), and state the scaling conjecture P_{nA,nB,nC}(sigma) ~ P_{A,B,C}(sigma). Their Conjecture 4.2(a): for each A, B, C >= 1, sigma in S3 and n >= 2, |P_{nA,nB,nC}(sigma) - P_{A,B,C}(sigma)| < 0.0004; they report differences 'as large as 0.000383'. Conjecture 4.2(b): |P_{nA,nB,nC}(sigma) - P^BM_{A,B,C}(sigma)| = O(1/(nN)^4). Denisov and Wachtel (arXiv:2212.11526; Ann. Appl. Probab. 34(5), 2024) confirmed the exact asymptotic (Brownian-motion) behaviour with a rate of convergence; that does not settle the numerical inequality 4.2(a). OPEN as of 2026-10-14: a literature search found no proof or refutation, and later three-gambler arXiv papers (2309.08762, 2406.07878) treat other questions.",
+ "success_criterion": "Integers A, B, C >= 1, n >= 2 and an elimination order sigma in S3 with |P_{nA,nB,nC}(sigma) - P_{A,B,C}(sigma)| >= 0.0004 (direction: max; a counterexample to Diaconis-Ethier Conjecture 4.2(a)), under exactly the rules of arXiv:2011.07610 Section 1, with both probabilities given as exact rationals or as interval enclosures with directed rounding whose separation proves the inequality. A specific finite n must be named; the n -> infinity limit does not count.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "A certified discrepancy |P_{nA,nB,nC}(sigma) - P_{A,B,C}(sigma)| strictly greater than 0.000383 (the largest the authors report) but below 0.0004, with exact or interval-certified values: a new largest known discrepancy that narrows the conjecture's margin. This is a numerical-bar comparison: certify strict separation from the reported decimal and check for newer published discrepancies before calling it a record."
+  }
+ ],
+ "verification_method": "Recompute both probabilities with an independent code: interior states (a, b, c) with a, b, c >= 1 and a + b + c = N; each of the six moves (three pairs, two coin outcomes) has probability 1/6; on reaching a state where one player has 0, the remaining order is decided by two-player fair ruin (the player holding x of the remaining x + y units outlasts the other with probability x/(x + y)). Solve the absorbing chain in exact rationals (sparse elimination or FLINT) for N up to about 100, or by interval-certified Jacobi iteration beyond. Sanity checks before comparing: the six sigma sum to 1; P_{i,i,N-2i}(123) = (1 - 2i/N)/2 (their eq. 4.5); P_{1,1,2}(312) = 1/14; the paper's Table 9 entries (e.g., (2,3,5), sigma = 213: 0.190419015064). The authors' Mathematica programs listed in Section 6 of the paper are a second reference. Calibration against printed decimal numbers must agree within one unit of the last printed digit; exact identities and exact source fractions must agree exactly.",
+ "primary_sources": [
+  "https://arxiv.org/abs/2011.07610",
+  "https://arxiv.org/pdf/2011.07610",
+  "https://arxiv.org/abs/2212.11526",
+  "https://arxiv.org/abs/2406.07878",
+  "https://export.arxiv.org/api/query?search_query=abs:%22gambler%27s%20ruin%22&sortBy=submittedDate&sortOrder=descending&max_results=50"
+ ],
+ "status_source": "https://export.arxiv.org/api/query?search_query=abs:%22gambler%27s%20ruin%22&sortBy=submittedDate&sortOrder=descending&max_results=50",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation.",
+ "disclosure": "open",
+ "angles": [
+  "Discreteness effects are largest for small N: tabulate every base triple with N <= 40 exactly and compare with multiples up to nN ~ 600 (certified iteration), and with the Brownian limit where the Ferguson/Hajek conformal-map formula is computable (the paper's Figure 5 covers A = B).",
+  "Rank (base triple, sigma) cells by the discrepancy at n = 2 and at the limit; spend compute only on the top cells.",
+  "Kill early: if the certified maximum over all bases with N <= 40 sits below 0.0004 and is decreasing in N, record it (p1 if above 0.000383) and park the line."
+ ],
+ "pitfalls": [
+  "The conjecture is about each finite n >= 2; a counterexample must name n.",
+  "sigma is the elimination order (first out listed first), not the finishing order used in many ICM tools.",
+  "While three players survive the pair is uniform over the three pairs; after the first bust the game is two-player.",
+  "Orders covered by (4.5) are exactly scale-invariant; do not search there.",
+  "Double-precision solves at N = 300 carry errors far below 1e-4 but are not certificates; certify the final numbers.",
+  "Denisov-Wachtel's confirmation concerns asymptotics, not the 0.0004 constant; re-check papers citing arXiv:2011.07610 before claiming."
+ ],
+ "category": "graphs-games-automata"
+}
