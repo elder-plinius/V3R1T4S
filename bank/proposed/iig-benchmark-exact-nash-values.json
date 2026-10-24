@@ -1,0 +1,44 @@
+{
+ "id": "iig-benchmark-exact-nash-values",
+ "name": "Exact Nash values of the ICLR-2026 imperfect-information benchmarks: Phantom Tic-Tac-Toe, Abrupt Phantom Tic-Tac-Toe, Abrupt 3x3 Dark Hex, 2-dice 5-face Liar's Dice",
+ "category": "graphs-games-automata",
+ "kind": "harvest",
+ "tractability": 2,
+ "compute_profile": "laptop-days (one exact gradient/best-response pass over 2-3e10 histories took 27-47 s on a 24-core EPYC with 256 GB in the source; thousands of solver passes are needed; measure the memory footprint on the target machine first)",
+ "statement": "Rudolph, Lichtle, Mohammadpour, Bayen, Kolter, Zhang, Farina, Vinitsky and Sokota ('Reevaluating Policy Gradient Methods for Imperfect-Information Games', ICLR 2026; arXiv:2502.08938v4, 27 May 2026) introduced five two-player zero-sum benchmark games and released exact exploitability code: exp-a-spiel (MIT licence; sequence form with the payoff matrix generated on the fly). The paper reports each game's Nash value (player 1's expected payoff; win +1, loss -1, draw 0) only to about +-2e-4 (Table 1): 2-dice 5-face Liar's Dice LD2D5F 0.01770 +- 1.8e-4 (235.93M states, 15.73M information states); 3x3 Dark Hex DH3 1.00000 +- 0.0 (19.12B states, 6.07M infostates; already solved, since the first player has a deterministic winning strategy, Appendix B); 3x3 Abrupt Dark Hex ADH3 0.38443 +- 2.1e-4 (29.31B, 27.33M); classical Phantom Tic-Tac-Toe PTTT 0.66665 +- 2.6e-4 (19.93B, 5.99M); Abrupt Phantom Tic-Tac-Toe APTTT 0.55017 +- 1.4e-4 (27.12B, 23.31M). Classical rules make a player who collides with a hidden opponent piece choose another cell; abrupt rules make them lose the turn. Their tabular baselines (Table 3, 512 iterations) reach exploitability, the duality gap, of 0.0004070 (PTTT, DCFR), 0.0003577 (APTTT, DCFR) and 0.0006123 (ADH3, PCFR+). One exact best response takes 27 s (PTTT), 47 s (DH3) or 11 s (LD2D5F) on an AMD EPYC 7413 with 256 GB (Table 2). No exact value for PTTT, APTTT, ADH3 or LD2D5F was found in any source as of 2026-10-14. The MIT 6.S890 Fall-2024 Phantom TTT challenge (Farina) used the abrupt rule; its best leaderboard entry had per-seat exploitabilities 0.00034 and 0.00027, from a private grader.",
+ "success_criterion": "For at least one game G in {PTTT, APTTT, ADH3, LD2D5F}, give explicit behavioural strategies sigma1 and sigma2 (a probability vector for every information state) with ALL action probabilities rational. Rules: for the first three games, exactly as implemented in exp-a-spiel (github.com/gabrfarina/exp-a-spiel, commit 9412882c24e521fad7cbd96fdd68311d9bf6f203, or a later commit named in the claim); for LD2D5F, OpenSpiel's liars_dice with numdice=2 and dice_sides=5 as used by the paper. Certify in exact rational arithmetic, with a checker that shares no code with the solver, that L := min over player-2 strategies of u1(sigma1, .) equals U := max over player-1 strategies of u1(., sigma2). L = U is then the exact Nash value of G. Report it as a reduced fraction; it must lie inside the Table 1 interval of arXiv:2502.08938v4 (PTTT 0.66665 +- 2.6e-4, APTTT 0.55017 +- 1.4e-4, ADH3 0.38443 +- 2.1e-4, LD2D5F 0.01770 +- 1.8e-4). Direction: the width of the certified enclosure of the value, from about 3e-4 to 5e-4 in Table 1, down to 0.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "For one of the four games, a certified enclosure [L, U] of the Nash value with U - L <= 1e-6, at least 280 times narrower than the game's Table 1 interval. L and U must be the best-response values of explicit strategies, computed with rigorous error control (exact rationals, or floating point with a proven rounding-error bound) and reproduced both by exp-a-spiel at the pinned commit (where it supports the game) and by an independent best-response implementation."
+  }
+ ],
+ "verification_method": "Load the strategies into exp-a-spiel at the pinned commit (Traverser.ev_and_exploitability) and record ev0 and the per-player exploitability terms; their sum is the duality gap U - L. Recompute both best-response values with an independent traversal written in a different code base, in exact rational arithmetic (full win) or with a stated rigorous error bound (p1). Check that the strategies are valid: non-negative, summing to 1 at every information state, and zero on illegal actions. Check that the information-state enumeration matches the game. Before trusting the independent checker, calibrate it on DH3: it must agree within one unit of the last printed digit with exp-a-spiel's README output for uniform play in Dark Hex (ev0 = 0.333684, expl = 1.166488, 0.666318) and value 1 for the paper's deterministic first-player strategy. For LD2D5F (not covered by exp-a-spiel's README), two independent best-response implementations must agree. Calibration against printed decimal numbers must agree within one unit of the last printed digit; exact identities and exact source fractions must agree exactly.",
+ "primary_sources": [
+  "https://arxiv.org/abs/2502.08938",
+  "https://arxiv.org/pdf/2502.08938",
+  "https://github.com/gabrfarina/exp-a-spiel",
+  "https://github.com/nathanlct/IIG-RL-Benchmark",
+  "https://www.mit.edu/~gfarina/6S890/challenge.html",
+  "https://live.ocw.mit.edu/courses/6-s890-topics-in-multiagent-learning-fall-2024/mit6_s890_f24_tic-tac-toe.pdf"
+ ],
+ "status_source": "https://arxiv.org/abs/2502.08938",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation.",
+ "disclosure": "open",
+ "angles": [
+  "Run the paper's own tabular solvers far longer: Table 3 stops at 512 iterations, while days of laptop time allow thousands. Mix in PCFR+ and DCFR with linear or quadratic averaging, then switch to support identification. Zero out actions whose probability is negligible, solve the restricted indifference conditions at the remaining mixed information states, and rationalize.",
+  "PTTT's Table 1 value 0.66665 +- 2.6e-4 contains 2/3. Test the hypothesis that the classical Phantom Tic-Tac-Toe value is exactly 2/3. A clean rational would suggest a structural argument and a small certificate; a certified enclosure that excludes 2/3 would refute the guess.",
+  "LD2D5F has two orders of magnitude fewer states (235.93M) than the tic-tac-toe and Dark Hex games. A sparse sequence-form LP with iterative refinement and rational reconstruction (e.g. SoPlex in exact mode) may be within reach on a laptop with tens of GB of memory, which could make it the first exact value.",
+  "Quotient by symmetry before solving: the tic-tac-toe board has 8 symmetries and Liar's Dice has face and dice-order symmetries. That shrinks memory and makes exact verification cheaper.",
+  "Write the independent exact best-response checker first (integer numerators over a common denominator) and test it on the solved DH3 and on small OpenSpiel games (Liar's Dice 1d4f, 2d3f) before running any solver."
+ ],
+ "pitfalls": [
+  "Rule variants are different games: classical vs abrupt collision handling, what the opponent observes about a failed attempt, who moves first, and the draw payoff. APTTT is the paper's own implementation (not in OpenSpiel). Liar's Dice bid-order and wild-face rules must match OpenSpiel's liars_dice exactly.",
+  "Running the same solvers longer than Table 3's 512 iterations and quoting a smaller exploitability is not a win; only an exact value (full) or a certified enclosure of width <= 1e-6 (p1) counts.",
+  "Floating-point best responses accumulated over about 2e10 histories carry rounding error that can approach 1e-7. For p1 the error bound must be part of the certificate.",
+  "exp-a-spiel returns exploitability as a per-player tuple; the duality gap is their sum. Do not compare per-seat numbers with sums, or with the private MIT leaderboard.",
+  "Memory: the source machine had 256 GB. Measure the traverser's memory footprint before planning long runs on a smaller machine.",
+  "DH3 is already solved (value 1) and does not count.",
+  "An 'exact' value outside the Table 1 interval almost certainly signals a rules or implementation mismatch, not a discovery."
+ ]
+}
