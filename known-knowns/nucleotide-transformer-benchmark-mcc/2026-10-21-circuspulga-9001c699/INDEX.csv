@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+nucleotide-transformer-benchmark-mcc,histone best-vs-second sign-flip p (6 tasks p>=0.05),H3K9me3 p=0.4512,0.4807 vs 0.4750,2026-10-21T17:38:54Z,object/fold_audit_histone.json,9001c699dca1aca233e88776475bf8ebd0e75a0576f80dddf2bca8809b00989b
