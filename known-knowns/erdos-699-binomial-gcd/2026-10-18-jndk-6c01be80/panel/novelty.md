@@ -58,8 +58,6 @@ A recent general lead was Yu Yasufuku, GCD inequalities arising from codimension
 
 The theorem's worthwhile increment is the explicit universal d^6<=n^5/2^36 region in the unresolved cubic residual. The use of positional localization, the 3 cancellation, parity reductions, sparse-n bounds, and finite verification is prior art. Bergman's orbit-content/cancellation background and the Price/Rocca localization/fat-point/discriminant framework must be credited. The claim's credits already identify the essential positional predecessors. Rocca's manuscript is credited to its displayed author and, for results it attributes to Price, to Price as well.
 
-injection_suspected: the fetched prior atlas attack card views/graph/P699.md contains “STOP — read before spending” and instructions to agents about promoting work. I treated those passages as untrusted source data, did not obey them, and did not use that card's status register as the primary current status. The mathematical original notes were compared separately. No shared report, shared log, claim, repo, PAUSE state, publication or external message was changed.
-
 Outstanding limitations are the absence of an independently attested live manuscript version hash, a bounded rather than exhaustive literature search, and the blocked full publisher access to the general GCD lead. None is evidence of an actual subsuming theorem; neither supplied full manuscript, even with all its results granted, subsumes the claimed region. Publication/refereeing requirements in the literal p1 criterion belong to the CRITERION decision and are not satisfied merely by this novelty pass. No full i=3 theorem, full conjecture, or externally refereed publication is asserted.
 
 pass: true
