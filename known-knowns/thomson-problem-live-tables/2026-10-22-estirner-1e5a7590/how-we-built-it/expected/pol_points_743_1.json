@@ -1,0 +1,43 @@
+{
+ "input": "points_743_1.dat",
+ "input_sha256": "68ac9c8deba352959b12b63fa04ea87aef2cfbb502fe44123437f3e860b3df9a",
+ "N": 743,
+ "E_input_mp30": "264837.5858503620609750247",
+ "gT_input_mp30": "2.13618e-6",
+ "lbfgs_iters": 2,
+ "after_lbfgs_E_f64": "np.float64(264837.585850362)",
+ "after_lbfgs_gT_f64": 1.2741171570388164e-06,
+ "f64_newton_steps": 1,
+ "after_f64_newton_E": "np.float64(264837.5858503621)",
+ "after_f64_newton_gT": 7.361594270820602e-12,
+ "mp_newton_steps": [
+  {
+   "step": 1,
+   "E_mp30": "264837.5858503620609677129",
+   "gT_mp30": "4.59704e-24"
+  }
+ ],
+ "E_star_mp30": "264837.5858503620609677129",
+ "gT_final_mp30": "4.59704e-24",
+ "gT_below_1e-20": true,
+ "E_change_in_mp_stage": "2.22305e-24",
+ "E_change_input_to_final": "-7.31181039933e-15",
+ "hessian": {
+  "n_eigs": 1483,
+  "expected_n_eigs": 1483,
+  "min_eig": 2.234761350825306,
+  "second_eig": 3.2454753230262576,
+  "max_eig": 4455.285789313866,
+  "n_nonpositive": 0,
+  "frobenius_norm_Ht": 96876.19678509462,
+  "delta_bound": 3.195868230982844e-07,
+  "rotation_rayleigh_quotients": [
+   -5.766281021758441e-14,
+   1.692938746080424e-14,
+   -5.556715069130017e-14
+  ],
+  "hessian_pass": true
+ },
+ "seconds": 16.0,
+ "coords_out": "pol_points_743_1.txt"
+}
