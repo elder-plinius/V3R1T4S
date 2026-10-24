@@ -1,0 +1,8 @@
+# PREREG — run 2026-10-24-0139, langton-ant-fT-minimal-seed (frozen 2026-10-24T01:39:59Z, before any experiment of this run and before claim/ was built)
+null_test: not needed because the claim is an exact deterministic table (minimum onsets) proved by exhaustive search and checked by exact simulation; there is no statistic or score to beat a null.
+Criterion: the success criterion in target.md (verbatim from targets-local/langton-ant-fT-minimal-seed.json).
+Checkers that judge it: (1) fsearch.c (first-read DFS + grid-phase completion test) and (2) lcone.c (light-cone DFS + forced turn word), written independently with no shared code, each run uncapped for k=1..10 at T = table value (violations at T-1 must be 0, minimisers at T listed); k=11 at T=0 exhaustive by both; k=10 at T=0 must give no seed; (3) an independent simulator (check_onset.py and the package's stdlib checker) re-simulates every minimiser and the blank grid; brute.c/brute3.c as a third check for k<=2 (k=3 partial).
+Thresholds: every value and minimiser must agree across both exhaustive checkers; any disagreement, any flagged/edge run, or any failed control means no claim.
+Controls: blank grid onset 9977; planted positives K=3,T=127 and K=7,T=46 must report violations; K=10,T=0 must report 0 seeds.
+Status allowed this run: CONFIRMED_SOLUTION for langton-ant-fT-minimal-seed only if a fresh three-skeptic panel (criterion, novelty, reproduce; fresh headless contexts that see only claim/) all write pass: true and the honesty gate finds no downgrade; otherwise PROMISING. The claim is the full table k=0..11 (success criterion), not partial win p1 alone.
+Blank-highway assumption: the claim states explicitly that it assumes the blank-grid highway, once begun at update 9977, repeats forever.
