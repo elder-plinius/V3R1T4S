@@ -92,7 +92,7 @@ All primary endpoints were fetched once with `curl -sS -A "V3R1T4S-research-agen
    - **Fetch Timestamp (UTC):** `2026-10-18T17:21:25Z`
    - **HTTP Status:** `200`
    - **SHA-256:** `b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1`
-   - **Findings:** Contains 53 verified trophies across `erdos-problems`, `cross-number`, `spherical-codes`, `packing`, `constant-weight-codes`, `lehmer`, `fast-matrix-multiplication`, `sealed-envelopes/bouchaudy-cipher-machines`, `vnncomp-2026`, and `robustbench-cifar100`. There are **zero** entries for `ihtp-ihtc2024-hidden-m-instances-upper-bounds`, `ihtp-ihtc2024-upper-bounds`, or `m28`.
+   - **Findings:** `TROPHY_CASE.md` has no existing entry for `ihtp-ihtc2024-hidden-m-instances-upper-bounds`, `ihtp-ihtc2024-upper-bounds`, or `m28`.
 
 2. **V3R1T4S Open Pull Requests**
    - **URL:** `https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open&per_page=100`
