@@ -23,7 +23,7 @@ It checks positive and negative Fano-plane controls ($C(7, 3, 2) = 7$), verifies
 ## Compared To
 
 - **Covering Repository (`https://coveringrepository.com/download_archive_vkt.aspx`, fetched `2026-10-18T17:27:33Z`, `sha256: 6d317b207c4f582d7e913c4c7d6ebd0305407fdcd2dbb6de1901adf4f13a2704`):** `7,470` blocks (`40 16 07 07  7470`). Our design improves this upper bound by **$219$ blocks** ($-2.932\%$).
-- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T17:27:34Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv` / v1.2 `19735294`):** `7,470` blocks. Our design improves this upper bound by **$219$ blocks** ($-2.932\%$).
+- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T17:27:34Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294):** `7,470` blocks. Our design improves this upper bound by **$219$ blocks** ($-2.932\%$).
 
 ## Not Claimed
 
