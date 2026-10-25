@@ -135,8 +135,15 @@ def verify_all(pkg_root: str) -> None:
         if int(sigil_h[mask].sum()) != exp["sigil_hits"]:
             raise ValueError(f"Stratum {sname} sigil_hits mismatch")
         p_l, np_l = paired_boot(clss_h[mask], kn3l_h[mask], 10000, 0)
+        p_b, np_b = paired_boot(clss_h[mask], kn3b_h[mask], 10000, 0)
+        p_f, np_f = paired_boot(clss_h[mask], kn3f_h[mask], 10000, 0)
         p_s, np_s = paired_boot(clss_h[mask], sigil_h[mask], 10000, 0)
-        if np_l != exp["raw_nonpos_vs_kn3_left"] or np_s != exp["raw_nonpos_vs_sigil"]:
+        if (
+            np_l != exp["raw_nonpos_vs_kn3_left"]
+            or np_b != exp["raw_nonpos_vs_kn3_bidir"]
+            or np_f != exp["raw_nonpos_vs_kn3_blanket_f"]
+            or np_s != exp["raw_nonpos_vs_sigil"]
+        ):
             raise ValueError(f"Bootstrap mismatch on {sname}")
         if p_l >= 0.001 or p_s >= 0.001:
             raise ValueError(f"Bootstrap p >= 0.001 on {sname}: p_l={p_l}, p_s={p_s}")
@@ -145,7 +152,7 @@ def verify_all(pkg_root: str) -> None:
     exp_strict = results["cohort_b_strict_post1977_range_mode1"]["pooled"]
     if int(strict_mask.sum()) != 2031 or int(clss_h[strict_mask].sum()) != 390:
         raise ValueError("Cohort B strict mismatch")
-    print("[3/5] Masked-sign top-1 restoration accuracies and 10,000-resample paired bootstraps (p = 0.0001 < 0.001 across Pooled, Mohenjo-daro, Harappa, Dholavira, and Cohort B Strict) verified.")
+    print("[3/5] Masked-sign top-1 restoration accuracies and 10,000-resample paired bootstraps (vs KN3-Left & SIGIL p = 0.0001 across all strata; vs KN3-Bidir p = 0.0001 pooled, 0.0019 Mohenjo-daro, 0.0147 Harappa; vs KN3-BlanketF p = 0.0048 pooled, 0.2988 Mohenjo-daro, 0.0188 Harappa) verified.")
 
     c_frames = defaultdict(set)
     ab_frames = defaultdict(set)

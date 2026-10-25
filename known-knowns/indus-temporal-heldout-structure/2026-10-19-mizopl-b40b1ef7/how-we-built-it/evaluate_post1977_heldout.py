@@ -823,7 +823,7 @@ def main():
         f.write(f"controls: {null_400['controls']}\n")
         f.write(f"best_control: {null_400['best_control']:.6f}\n")
         f.write(f"real: {real_pooled_acc:.6f}\n")
-        f.write("command: python3 claim/author_checker_indus.py --verify-null-controls\n")
+        f.write("command: sh verify-it-yourself/run_checks.sh\n")
         f.write(f"real_beats_all_controls: {beats_all}\n\n")
         f.write("## Summary of 400 SIGIL Matched-Null Controls\n\n")
         f.write(f"- **Number of independent synthetic controls**: `{null_400['controls']}` (`seed = 1..400`)\n")
