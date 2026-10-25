@@ -1,0 +1,5 @@
+snapped coordinates 0 of 3072
+onnxruntime f32 margin 0.0004062354565 disjunct 5
+torch torch.float32 margin 0.0004063546658 disjunct 5; min |ReLU input| per layer [1.63e-05, 1.13e-06, 1.23e-07, 4.08e-06, 1.32e-05, 1.45e-05]
+torch torch.float64 margin 0.0004040482089 disjunct 5; min |ReLU input| per layer [1.63e-05, 1.11e-06, 1.68e-07, 4.1e-06, 1.33e-05, 1.45e-05]
+max |ort - torch64| 2.65e-06

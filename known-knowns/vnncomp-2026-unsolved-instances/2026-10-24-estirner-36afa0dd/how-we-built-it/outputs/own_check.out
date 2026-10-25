@@ -1,0 +1,9 @@
+vnnlib version 2.0, input X [1, 3, 32, 32], output Y [1, 10], 6145 assertions
+witness format plain, 3072 input values, 0 not exactly float32
+inputs as written     : 6144/6144 input assertions strictly true, 0 on a bound, 0 violated; min slack 1949257/8192000000000 (= 2.379464111e-07) -> strict: True
+inputs float32-rounded: 6144/6144 input assertions strictly true, 0 on a bound, 0 violated; min slack 1949257/8192000000000 (= 2.379464111e-07) -> strict: True
+onnx input shape ['batch_size', 3, 32, 32]; output length ort 10, reference 10; max |ort - reference| = 3.81e-06
+onnxruntime-cpu : all 6145 assertions hold at zero tolerance: True; min output margin 0.00040624 (need >= 1e-06) -> True
+onnx.reference  : all 6145 assertions hold at zero tolerance: True; min output margin 0.00040722 (need >= 1e-06) -> True
+onnxruntime argmax output index 6, value 0.48046383
+VERDICT: PASS
