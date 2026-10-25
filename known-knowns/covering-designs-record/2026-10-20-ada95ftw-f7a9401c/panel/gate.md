@@ -1,18 +1,11 @@
 # Honesty gate: C(36,5,3) <= 812 (claim/C36_5_3_812, target covering-designs-record, full success criterion)
 status: CONFIRMED_SOLUTION
-confirmed_scope: The 812 blocks in claim/object/C36_5_3_812.txt form a valid (36,5,3) covering design (all 7140 triples covered, 812 distinct 5-subsets of {1..36}), so C(36,5,3) <= 812, which is strictly below the value 821 listed on 2026-10-20 by coveringrepository.com (archive and live search) and by dmgordo/LJCR GitHub coverdata.json, and above the Schonheim bound 756.
+confirmed_scope: The 812 blocks in object/C36_5_3_812.txt form a valid (36,5,3) covering design (all 7140 triples covered, 812 distinct 5-subsets of {1..36}), so C(36,5,3) <= 812, which is strictly below the value 821 listed on 2026-10-20 by coveringrepository.com (archive and live search) and by dmgordo/LJCR GitHub coverdata.json, and above the Schonheim bound 756.
 gate_utc: 2026-10-20T23:21:00Z
 gate_by: an executor session delegated by the workspace's main assistant session to carry out kit/RUN.md step 7 (not one of the three skeptics); it read all three panel files itself
-hold: NOT packaged (kit/RUN.md step 8 not done). Awaits [name withheld]'s decision to package and, after that, his 'submit'. No branch, push or PR.
-
-## Layout note
-This run has one claim. The skeptics wrote their files to panel/C36_5_3_812/; this gate.md is written there too
-(canonical). As in run 2026-10-20-1253 (whose run-level panel/ holds C38_6_3_469's files), byte-identical copies
-of the four files sit directly in panel/ because kit/check_run.py's workspace check reads only <run>/panel/.
-No separate check-only run folder was needed. The three panel files were not edited (see panel/README.md).
 
 ## What I read
-- reproduce.md, novelty.md, criterion.md in panel/C36_5_3_812/. Each has its own context line ("subagent (fresh
+- reproduce.md, novelty.md, criterion.md in panel/. Each has its own context line ("subagent (fresh
   executor, saw only claim/)") and ends with pass: true.
 - REPRODUCE: own tuple/set checker written from the quoted definition before opening claim/check_cover.py. sha256
   f7a9401c...51da6b23 matches; 812 lines, 812 distinct valid 5-subsets of 1..36; 7140/7140 triples covered
@@ -26,7 +19,7 @@ No separate check-only run folder was needed. The three panel files were not edi
 - CRITERION: clause by clause against the bank criterion; archive GET 23:15:17Z (821, sha256 identical to the
   claim's copy), live systems.aspx search 23:15:54Z (821), GitHub coverdata.json (821); GitHub repo/issue search and
   shallow clones of recent covering-design repos, arXiv API since 2026-04-20: no (36,5,3) claim. Its
-  confirmed_scope is copied above verbatim.
+  confirmed_scope is copied above verbatim, with the object path given as it is in this package (object/).
 - My own check at the gate (2026-10-20T23:20Z): sha256 unchanged; claim/check_cover.py prints "VALID v=36 k=5 t=3
   b=812 distinct=812 bad_blocks=0 uncovered=0 of 7140 schonheim=756"; my own itertools checker also gives 812
   distinct blocks and 0 of 7140 uncovered; for no point p do the blocks avoiding p cover the other 35 points.
@@ -53,7 +46,7 @@ No separate check-only run folder was needed. The three panel files were not edi
 - Claim folder edited after the panel: no (claim/ files 19:08 EDT, panel files 19:15-19:18 EDT).
 
 ## Subsumption check (stated plainly, checked myself)
-- Our own pending PR #596 claims C(35,5,3) <= 713 (outbox/2026-10-20-ada95ftw-a19e372c). Adding one point to a
+- Our own pending PR #596 claims C(35,5,3) <= 713. Adding one point to a
   (35,5,3) covering needs a C(35,4,2) on the old points for the triples through the new point; C(35,4,2) = 105
   (coverdata.json size 105 = low_bd 105, so it cannot be lower). 713 + 105 = 818 > 812: not subsumed.
   With the table's own C(35,5,3) (732 archive, 733 GitHub) the same route gives 837/838.
@@ -69,8 +62,6 @@ No separate check-only run folder was needed. The three panel files were not edi
 ## Caveats (honest, not blocking)
 - GitHub code search was unauthenticated (repo/issue search plus clones, not a full code grep).
 - All three skeptics were subagents of the same assistant product: separate contexts working only from claim/.
-- kit/check_run.py's "CONFIRMED but not packaged" test matches by target id, and outbox/ already holds other
-  covering-designs-record packages, so it does not flag that this claim has no package yet. It has none.
 - Not claimed optimal; C(36,5,3) stays open (756..812).
 
 Result: passes the gate. The status takes effect only if kit/check_run.py prints CHECK_RUN: PASS.

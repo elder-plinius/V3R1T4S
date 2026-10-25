@@ -1,9 +1,7 @@
 # C(36,5,3) <= 812 (explicit covering design), covering-designs-record
 
 ## What
-The 812 blocks in claim/object/C36_5_3_812.txt form a valid (36,5,3) covering design (all 7140 triples covered, 812 distinct 5-subsets of {1..36}), so C(36,5,3) <= 812, which is strictly below the value 821 listed on 2026-10-20 by coveringrepository.com (archive and live search) and by dmgordo/LJCR GitHub coverdata.json, and above the Schonheim bound 756.
-
-(In this package the file is object/C36_5_3_812.txt; it is byte-identical to the panel's claim/object/C36_5_3_812.txt, sha256 f7a9401c9fc3e6db6721b7eee490dbad8a7cb95bf6a9e8d0de9bcf7851da6b23.)
+The 812 blocks in object/C36_5_3_812.txt form a valid (36,5,3) covering design (all 7140 triples covered, 812 distinct 5-subsets of {1..36}), so C(36,5,3) <= 812, which is strictly below the value 821 listed on 2026-10-20 by coveringrepository.com (archive and live search) and by dmgordo/LJCR GitHub coverdata.json, and above the Schonheim bound 756.
 
 ## Check it yourself
 ```sh
