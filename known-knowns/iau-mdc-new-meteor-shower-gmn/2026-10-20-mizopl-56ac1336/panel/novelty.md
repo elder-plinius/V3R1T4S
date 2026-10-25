@@ -61,7 +61,7 @@ Running `claim/verify_meteor_discovery.py --verify-null-controls` against `claim
 
 ## 4. Check of `TROPHY_CASE.md` and Open Pull Requests on `elder-plinius/V3R1T4S`
 
-- **`TROPHY_CASE.md`:** Contains 53 rows across 7 existing families (degree-diameter graphs, constant-weight codes, Lehmer's totient problem, fast matrix multiplication, Bouchaudy cipher challenges, VNN-COMP 2026 counterexamples, RobustBench CIFAR-100 attack). Zero entries involve meteor showers, GMN, or `iau-mdc-new-meteor-shower-gmn`.
+- **`TROPHY_CASE.md`:** `TROPHY_CASE.md` has no existing entry for `iau-mdc-new-meteor-shower-gmn`, meteor showers, or GMN.
 - **Open Pull Requests (`https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open`):** Scanned all `282` open pull requests across pages 1–3 (`PR #11` through `PR #596`). Zero open PRs match `iau-mdc-new-meteor-shower-gmn`, `meteor`, `gmn`, or `streamfulldata`.
 
 ---
