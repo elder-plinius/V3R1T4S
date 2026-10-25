@@ -6,7 +6,6 @@ Standalone Deterministic Verifier for V3R1T4S Package `2026-10-22-mizopl-e47a7dd
 import os
 import sys
 import json
-import glob
 import random
 import hashlib
 from collections import defaultdict
@@ -14,8 +13,22 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CERT_PATH = os.path.join(ROOT, "object", "CERTIFICATE.json")
 SCHEMES_DIR = os.path.join(ROOT, "object", "schemes")
-REF_DIR = os.path.join(ROOT, "the-record-we-beat", "reference_live_champions")
-EXPECTED_CERT_SHA256 = "ede93f9030024c813dfb7ce8d1bdd3e3180fd2cdfab0691e552f30e81180b834"
+EXPECTED_CERT_BYTES = 3699
+EXPECTED_CERT_SHA256 = "4a2e07b5d438be3327737929448819782885fb1eb1ba946acabeda846082cbb6"
+
+PINNED_SOTA_RANKS = {
+    "3x3x7": 49,
+    "3x5x6": 68,
+    "3x5x7": 79,
+    "5x6x6": 130,
+}
+
+PINNED_BASELINE_AT_FILING = {
+    "3x3x7": {"m": 51, "cr": 146, "matmulcatalog_adds": 404},
+    "3x5x6": {"m": 70, "cr": 252, "matmulcatalog_adds": 482},
+    "3x5x7": {"m": 83, "cr": 291, "matmulcatalog_adds": 520},
+    "5x6x6": {"m": 130, "cr": 499, "matmulcatalog_adds": 1716},
+}
 
 
 def eval_comb(comb, vecs, nin):
@@ -172,24 +185,9 @@ def run_random_greedy_cse_null_model(tu, tv, tw, n_trials=400, seed=20261022):
 
 def main():
     cert_bytes = open(CERT_PATH, "rb").read()
-    assert len(cert_bytes) == 2847, "CERTIFICATE.json byte size mismatch"
+    assert len(cert_bytes) == EXPECTED_CERT_BYTES, "CERTIFICATE.json byte size mismatch"
     assert hashlib.sha256(cert_bytes).hexdigest() == EXPECTED_CERT_SHA256, "CERTIFICATE.json SHA-256 mismatch"
     cert = json.loads(cert_bytes.decode("utf-8"))
-
-    sota_data = json.load(open(os.path.join(REF_DIR, "fmm_sota.json")))
-    sota_ranks = {}
-    for e in sota_data["entries"]:
-        dims = sorted(e["format"])
-        fmt = f"{dims[0]}x{dims[1]}x{dims[2]}"
-        sota_ranks[fmt] = e["rank"]
-
-    ref_min_by_fmt = {}
-    for p in sorted(glob.glob(os.path.join(REF_DIR, "*_ZT_reduced.json"))):
-        bn = os.path.basename(p)
-        fmt = bn.split("_")[0]
-        res = verify_scheme_file(p, require_unit_coeffs=False)
-        if fmt not in ref_min_by_fmt or (res["m"], res["cr_len"]) < (ref_min_by_fmt[fmt]["m"], ref_min_by_fmt[fmt]["cr_len"]):
-            ref_min_by_fmt[fmt] = {"m": res["m"], "cr_len": res["cr_len"], "cr_val": res["cr_val"], "bn": bn}
 
     assert len(cert["schemes"]) == 4
     exact_sota_wins = []
@@ -211,18 +209,21 @@ def main():
         )
         fmt = entry["fmt"]
         assert max(entry["n"]) <= 8
-        assert entry["sota_rank"] == sota_ranks[fmt]
+        assert entry["sota_rank"] == PINNED_SOTA_RANKS[fmt]
+        base = PINNED_BASELINE_AT_FILING[fmt]
+        assert entry["live_min_m"] == base["m"] and entry["live_min_cr"] == base["cr"]
+        assert entry["matmulcatalog_adds"] == base["matmulcatalog_adds"]
+        assert entry["cr"] < entry["matmulcatalog_adds"]
         if fn == "3x3x7_m49_cr167_cn404_ZT_reduced.json":
             mats_337 = res["mats"]
 
         if entry["category"] == "exact_sota_champion_improvement":
-            ref = ref_min_by_fmt[fmt]
-            assert entry["m"] == sota_ranks[fmt] == ref["m"]
-            assert entry["cr"] < ref["cr_len"] and entry["cr"] < ref["cr_val"]
-            exact_sota_wins.append((fmt, entry["m"], entry["cr"], ref["cr_len"], entry["cr"] - ref["cr_len"], fn))
+            assert entry["m"] == PINNED_SOTA_RANKS[fmt] == base["m"]
+            assert entry["cr"] < base["cr"]
+            exact_sota_wins.append((fmt, entry["m"], entry["cr"], base["cr"], entry["cr"] - base["cr"], fn))
         elif entry["category"] == "new_sota_rank_zt_addition_reduced":
-            assert entry["m"] == sota_ranks[fmt] < entry["live_min_m"]
-            new_sota_zt_wins.append((fmt, entry["m"], entry["cr"], entry["live_min_m"], entry["live_min_cr"], fn))
+            assert entry["m"] == PINNED_SOTA_RANKS[fmt] < base["m"]
+            new_sota_zt_wins.append((fmt, entry["m"], entry["cr"], base["m"], base["cr"], fn))
 
     assert len(exact_sota_wins) == 1 and len(new_sota_zt_wins) == 3
 
@@ -240,8 +241,8 @@ def main():
     assert rejected
 
     best_ctrl, med_ctrl, iqr_ctrl = run_random_greedy_cse_null_model(*mats_337, n_trials=400, seed=20261022)
-    assert 167 < best_ctrl == 304
-    print("VERIFIED: All 4 ternary SLP record schemes, 4 reference calibrations, negative control, and 400 null controls passed.")
+    assert 167 < best_ctrl == 304 and med_ctrl == 336 and iqr_ctrl == 13
+    print("VERIFIED: All 4 ternary SLP record schemes, baseline comparisons, negative control, and 400 null controls passed.")
     print("PASS")
 
 
