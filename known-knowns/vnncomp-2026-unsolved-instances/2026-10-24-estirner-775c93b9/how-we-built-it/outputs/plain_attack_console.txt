@@ -1,0 +1,3 @@
+{"onnx": "cifar10_eps8_wide_cnn7.onnx.gz", "vnnlib": "cifar10_eps8_wide_cnn7_idx6249_sample7.vnnlib.gz", "n_inputs": 3072, "n_disjuncts": 9, "conversion_max_abs_diff_at_centre": 9.5367431640625e-06, "centre_cpu_margin": -0.11924520134925842, "centre_best_disjunct": 3, "seed": 0, "budget_s": 300.0, "restarts": 256, "steps": 200}
+stage1 done 48.2s best gpu -0.00510186 cpu -0.00509852
+DONE best cpu margin -0.00504332781 (disjunct 3) gpu -0.00504469872 candidates 0 evals 2508800 wall 313.6s

@@ -1,0 +1,43 @@
+round 0 disj 3 A s=0.01 best_k -0.00502795 best_cpu -0.00503105 t=52
+round 0 disj 6 A s=0.01 best_k -0.0353176 best_cpu -0.00503105 t=85
+CANDIDATE cpu margin 0.00214469433 disjunct 2 t=91.9
+CANDIDATE cpu margin 0.00513654947 disjunct 2 t=92.2
+CANDIDATE cpu margin 0.00579771399 disjunct 2 t=92.5
+CANDIDATE cpu margin 0.00643333793 disjunct 2 t=93.2
+CANDIDATE cpu margin 0.00704100728 disjunct 2 t=93.8
+CANDIDATE cpu margin 0.00820368528 disjunct 2 t=94.4
+CANDIDATE cpu margin 0.00901859999 disjunct 2 t=94.7
+CANDIDATE cpu margin 0.00923126936 disjunct 2 t=95.6
+CANDIDATE cpu margin 0.00949430466 disjunct 2 t=96.2
+CANDIDATE cpu margin 0.00974819064 disjunct 2 t=96.5
+CANDIDATE cpu margin 0.00991517305 disjunct 2 t=97.1
+CANDIDATE cpu margin 0.0101144314 disjunct 2 t=97.6
+CANDIDATE cpu margin 0.0102479458 disjunct 2 t=99.2
+CANDIDATE cpu margin 0.0103551447 disjunct 2 t=99.7
+CANDIDATE cpu margin 0.0103645623 disjunct 2 t=100.4
+CANDIDATE cpu margin 0.0104755163 disjunct 2 t=100.6
+CANDIDATE cpu margin 0.0105360746 disjunct 2 t=101.8
+CANDIDATE cpu margin 0.0106157959 disjunct 2 t=102.1
+CANDIDATE cpu margin 0.0110895932 disjunct 2 t=102.5
+CANDIDATE cpu margin 0.0111893713 disjunct 2 t=102.8
+CANDIDATE cpu margin 0.0112111568 disjunct 2 t=104.7
+CANDIDATE cpu margin 0.0115141869 disjunct 2 t=107.0
+CANDIDATE cpu margin 0.0115909874 disjunct 2 t=107.6
+CANDIDATE cpu margin 0.0115985572 disjunct 2 t=108.1
+CANDIDATE cpu margin 0.0116354227 disjunct 2 t=108.9
+CANDIDATE cpu margin 0.0116926432 disjunct 2 t=110.9
+CANDIDATE cpu margin 0.0117070675 disjunct 2 t=120.8
+CANDIDATE cpu margin 0.0117144883 disjunct 2 t=121.5
+CANDIDATE cpu margin 0.0117159188 disjunct 2 t=126.1
+CANDIDATE cpu margin 0.011723429 disjunct 2 t=126.8
+CANDIDATE cpu margin 0.011736393 disjunct 2 t=126.9
+CANDIDATE cpu margin 0.0117423832 disjunct 2 t=127.4
+CANDIDATE cpu margin 0.0117446184 disjunct 2 t=127.9
+CANDIDATE cpu margin 0.0117453933 disjunct 2 t=130.4
+CANDIDATE cpu margin 0.0117475688 disjunct 2 t=130.9
+CANDIDATE cpu margin 0.0117540956 disjunct 2 t=131.6
+CANDIDATE cpu margin 0.0117588043 disjunct 2 t=132.3
+CANDIDATE cpu margin 0.0117608309 disjunct 2 t=132.9
+CANDIDATE cpu margin 0.0117628574 disjunct 2 t=133.7
+round 0 disj 2 A s=0.01 best_k 0.0117564 best_cpu 0.0117629 t=134
+DONE best cpu margin 0.0117628574 disjunct 2 candidates 39 evals 768000 wall 134
