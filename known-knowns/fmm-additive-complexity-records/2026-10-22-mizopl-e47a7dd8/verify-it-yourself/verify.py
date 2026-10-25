@@ -15,7 +15,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CERT_PATH = os.path.join(ROOT, "object", "CERTIFICATE.json")
 SCHEMES_DIR = os.path.join(ROOT, "object", "schemes")
 REF_DIR = os.path.join(ROOT, "the-record-we-beat", "reference_live_champions")
-EXPECTED_CERT_SHA256 = "e47a7dd88e8f9778d65667b7d4030ca66cf39c6de9d89b3b0f1c5f61cb9cc1de"
+EXPECTED_CERT_SHA256 = "ede93f9030024c813dfb7ce8d1bdd3e3180fd2cdfab0691e552f30e81180b834"
 
 
 def eval_comb(comb, vecs, nin):
@@ -172,7 +172,7 @@ def run_random_greedy_cse_null_model(tu, tv, tw, n_trials=400, seed=20261022):
 
 def main():
     cert_bytes = open(CERT_PATH, "rb").read()
-    assert len(cert_bytes) == 26573, "CERTIFICATE.json byte size mismatch"
+    assert len(cert_bytes) == 2847, "CERTIFICATE.json byte size mismatch"
     assert hashlib.sha256(cert_bytes).hexdigest() == EXPECTED_CERT_SHA256, "CERTIFICATE.json SHA-256 mismatch"
     cert = json.loads(cert_bytes.decode("utf-8"))
 
@@ -191,11 +191,10 @@ def main():
         if fmt not in ref_min_by_fmt or (res["m"], res["cr_len"]) < (ref_min_by_fmt[fmt]["m"], ref_min_by_fmt[fmt]["cr_len"]):
             ref_min_by_fmt[fmt] = {"m": res["m"], "cr_len": res["cr_len"], "cr_val": res["cr_val"], "bn": bn}
 
-    assert len(cert["schemes"]) == 48
+    assert len(cert["schemes"]) == 4
     exact_sota_wins = []
-    zt_best_wins = []
     new_sota_zt_wins = []
-    mats_247 = None
+    mats_337 = None
 
     for entry in cert["schemes"]:
         fn = entry["filename"]
@@ -213,42 +212,36 @@ def main():
         fmt = entry["fmt"]
         assert max(entry["n"]) <= 8
         assert entry["sota_rank"] == sota_ranks[fmt]
-        if fn == "2x4x7_m45_cr157_cn345_ZT_reduced.json":
-            mats_247 = res["mats"]
+        if fn == "3x3x7_m49_cr167_cn404_ZT_reduced.json":
+            mats_337 = res["mats"]
 
         if entry["category"] == "exact_sota_champion_improvement":
             ref = ref_min_by_fmt[fmt]
             assert entry["m"] == sota_ranks[fmt] == ref["m"]
             assert entry["cr"] < ref["cr_len"] and entry["cr"] < ref["cr_val"]
             exact_sota_wins.append((fmt, entry["m"], entry["cr"], ref["cr_len"], entry["cr"] - ref["cr_len"], fn))
-        elif entry["category"] == "zt_best_rank_champion_improvement":
-            ref = ref_min_by_fmt[fmt]
-            assert entry["m"] == ref["m"]
-            assert entry["cr"] < ref["cr_len"] and entry["cr"] < ref["cr_val"]
-            zt_best_wins.append((fmt, entry["m"], entry["cr"], ref["cr_len"], entry["cr"] - ref["cr_len"], fn))
         elif entry["category"] == "new_sota_rank_zt_addition_reduced":
             assert entry["m"] == sota_ranks[fmt] < entry["live_min_m"]
             new_sota_zt_wins.append((fmt, entry["m"], entry["cr"], entry["live_min_m"], entry["live_min_cr"], fn))
 
-    distinct_exact_sota = sorted(list(set(x[0] for x in exact_sota_wins)))
-    assert len(distinct_exact_sota) == 9
+    assert len(exact_sota_wins) == 1 and len(new_sota_zt_wins) == 3
 
-    p247 = os.path.join(SCHEMES_DIR, "2x4x7_m45_cr157_cn345_ZT_reduced.json")
-    d247 = json.load(open(p247))
-    d247["u_fresh"][0][0]["value"] = -d247["u_fresh"][0][0]["value"]
-    _, tu_bad = expand_and_check_block(8, d247["u_fresh"], d247["u"], True)
-    _, tv_ok = expand_and_check_block(28, d247["v_fresh"], d247["v"], True)
-    _, tw_ok = expand_and_check_block(45, d247["w_fresh"], d247["w"], True)
+    p337 = os.path.join(SCHEMES_DIR, "3x3x7_m49_cr167_cn404_ZT_reduced.json")
+    d337 = json.load(open(p337))
+    d337["u_fresh"][0][0]["value"] = -d337["u_fresh"][0][0]["value"]
+    _, tu_bad = expand_and_check_block(9, d337["u_fresh"], d337["u"], True)
+    _, tv_ok = expand_and_check_block(21, d337["v_fresh"], d337["v"], True)
+    _, tw_ok = expand_and_check_block(49, d337["w_fresh"], d337["w"], True)
     rejected = False
     try:
-        verify_symbolic_product_over_Z(2, 4, 7, 45, tu_bad, tv_ok, tw_ok)
+        verify_symbolic_product_over_Z(3, 3, 7, 49, tu_bad, tv_ok, tw_ok)
     except AssertionError:
         rejected = True
     assert rejected
 
-    best_ctrl, med_ctrl, iqr_ctrl = run_random_greedy_cse_null_model(*mats_247, n_trials=400, seed=20261022)
-    assert 157 < best_ctrl == 262
-    print("VERIFIED: All 48 ternary SLP schemes, 36 reference calibrations, negative control, and 400 null controls passed.")
+    best_ctrl, med_ctrl, iqr_ctrl = run_random_greedy_cse_null_model(*mats_337, n_trials=400, seed=20261022)
+    assert 167 < best_ctrl == 304
+    print("VERIFIED: All 4 ternary SLP record schemes, 4 reference calibrations, negative control, and 400 null controls passed.")
     print("PASS")
 
 
