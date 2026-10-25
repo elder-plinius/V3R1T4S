@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Standalone deterministic verifier for the akkadian-lacuna-restoration-heldout
-claim bundle in claim/.
+package bundle.
 Contains zero absolute paths; operates relative to its own directory.
 """
 import os
@@ -204,7 +204,8 @@ def main():
     w_mrr = sum(1 for _ in range(1000) if diff_mrr[rng.integers(0, N_m, size=N_m)].mean() > 0)
     assert w_mrr == 1000, f"Bootstrap win rate < 100%: {w_mrr}/1000"
 
-    # 400 label-permutation null controls
+    # 400 label-permutation null controls (independent rng=default_rng(0) matching check_akkadian_package.py)
+    rng_null = np.random.default_rng(0)
     with open(os.path.join(CLAIM_DIR, "clss_akk_top5_predictions.csv"), "r", encoding="utf-8") as f:
         rdr = csv.DictReader(f)
         pred_mat = np.array([[int(row[f"pred{k}_id"]) for k in range(1, 6)] for row in rdr], dtype=np.int32)
@@ -213,7 +214,7 @@ def main():
     null_mrr = np.zeros(400, dtype=np.float64)
     weights = np.array([1.0, 0.5, 1.0/3.0, 0.25, 0.2], dtype=np.float64)
     for s in range(400):
-        perm_lbl = rng.permutation(lbl_m)[:, None]
+        perm_lbl = rng_null.permutation(lbl_m)[:, None]
         matches = (pred_mat == perm_lbl)
         null_h5[s] = matches.any(axis=1).mean()
         null_mrr[s] = (matches * weights).max(axis=1).mean()

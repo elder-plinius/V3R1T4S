@@ -25,7 +25,7 @@ Each primary source URL was fetched exactly once with `curl -sS -D [headers] -A 
 
 ### 2.1 Primary Repository State (`SLAB-NLP/Akk`)
 
-- Latest commit on `main`: `dfd2a66d4305cf36981e4fd3fde823a5020161dd` (`2022-11-10T08:27:40Z`, message: `"Merge pull request #1"`), matching `claim/CLAIM.md` and `claim/akkadian_audit_manifest.json`.
+- Latest commit on `main`: `dfd2a66d4305cf36981e4fd3fde823a5020161dd` (`2022-11-10T08:27:40Z`, message: `"Merge pull request #1"`), matching `README.md` and `object/akkadian_audit_manifest.json`.
 - Prior commit history:
   - `95d714af158040338bef596018a0814b47571881` (`2022-11-10T08:26:52Z`, `"fixing command line argument typo"`)
   - `baa07b0fdf8c7d8623fbd78508867c30a8a7ff6d` (`2021-09-15T14:12:32Z`, `"Update README.md"`)
@@ -107,22 +107,23 @@ Single honest GET queries were executed against OpenAlex, arXiv, and GitHub:
 
 ## 5. Novelty Comparison: Claimed Results vs. Published SOTA and Reproduced Baseline
 
-All claimed metrics from `claim/CLAIM.md` and `claim/akkadian_audit_manifest.json` on the strictly held-out `SLAB-NLP/Akk` benchmark (`SEED = 2`, `18,568` training rows, `1,875` strictly unseen test documents, $N = 27,650$ frozen masked positions at `torch.manual_seed(42)` in `claim/frozen_masked_positions.json`):
+All claimed metrics from `README.md`, `object/akkadian_predictions_part1..4.csv`, and `object/akkadian_audit_manifest.json` on the strictly held-out `SLAB-NLP/Akk` benchmark (`SEED = 2`, `18,568` training rows, `1,875` strictly unseen test documents, $N = 27,650$ frozen masked positions at `torch.manual_seed(42)`):
 
 | System / Regime | Artifact | `MRR` | `Hit@1` | `Hit@5` | `Hit@10` | Margin vs Published SOTA (`MRR = 0.83`, `Hit@5 = 0.89` / `0.895`, `Hit@10 = 0.92`) |
 |---|---|---:|---:|---:|---:|---|
 | Published `MBERT+Akk` (Lazar et al., 2021, Table 2 & Sec. 1) | `2021.emnlp-main.384.pdf` | `0.83000` | — | `0.89000` (`0.89500`) | `0.92000` | Baseline reference |
-| Reproduced `MBERT+Akk` Baseline (Clause 1) | `claim/mbert_akk_baseline_top5_predictions.csv` | `0.82369` | `0.77693` | `0.87700` | `0.90901` | Inside `[0.87000, 0.91000]` comparability window |
-| Pure Symbolic `CLSS-C-v3` (`0` Neural Params, $\alpha = 0$) | `claim/clss_c_v3_pure_top5_predictions.csv` | `0.82480` | `0.76470` | **`0.89638`** | **`0.92705`** | **`+0.00638` vs `0.89` (`+0.00138` vs `0.895`) on `Hit@5`; `+0.00705` on `Hit@10`** |
-| `CLSS-Akk-v3` under `100%_MASK` | `claim/clss_akk_100mask_top5_predictions.csv` | **`0.84737`** | `0.78684` | **`0.92007`** | **`0.94409`** | **`+0.01737` `MRR`; `+0.03007` (`+0.02507`) `Hit@5`; `+0.02409` `Hit@10`** |
-| **`CLSS-Akk-v3` Full (`COLLATOR_80_10_10`, Clause 2)** | `claim/clss_akk_top5_predictions.csv` | **`0.85593`** | **`0.80098`** | **`0.92156`** | **`0.94517`** | **`+0.02593` `MRR`; `+0.03156` (`+0.02656`) `Hit@5`; `+0.02517` `Hit@10`** |
-| **`CLSS-Akk-v3` Non-Missing Subset ($N = 25,957$)** | `claim/akkadian_audit_manifest.json` | **`0.85981`** | **`0.80899`** | **`0.91983`** | **`0.94387`** | **`+0.02981` `MRR`; `+0.02983` (`+0.02483`) `Hit@5`; `+0.02387` `Hit@10`** |
+| Reproduced `MBERT+Akk` Baseline (Clause 1) | `object/akkadian_predictions_part1..4.csv` | `0.82369` | `0.77693` | `0.87700` | `0.90901` | Inside `[0.87000, 0.91000]` comparability window |
+| Pure Symbolic `CLSS-C-v3` (`0` Neural Params, $\alpha = 0$) | `object/akkadian_audit_manifest.json` | `0.82480` | `0.76470` | **`0.89638`** | **`0.92705`** | **`+0.00638` vs `0.89` (`+0.00138` vs `0.895`) on `Hit@5`; `+0.00705` on `Hit@10`** |
+| `CLSS-Akk-v3` under `100%_MASK` | `object/akkadian_audit_manifest.json` | **`0.84737`** | `0.78684` | **`0.92007`** | **`0.94409`** | **`+0.01737` `MRR`; `+0.03007` (`+0.02507`) `Hit@5`; `+0.02409` `Hit@10`** |
+| **`CLSS-Akk-v3` Full (`COLLATOR_80_10_10`, Clause 2)** | `object/akkadian_predictions_part1..4.csv` | **`0.85593`** | **`0.80098`** | **`0.92156`** | **`0.94517`** | **`+0.02593` `MRR`; `+0.03156` (`+0.02656`) `Hit@5`; `+0.02517` `Hit@10`** |
+| **`CLSS-Akk-v3` `[MASK]`-Only Subset ($N = 22,205$)** | `object/akkadian_predictions_part1..4.csv` | **`0.84015`** | **`0.77924`** | **`0.91263`** | **`0.93943`** | **`+0.01015` `MRR`; `+0.02263` (`+0.01763`) `Hit@5`; `+0.04800` over `MBERT+Akk` (`0.86463`)** |
+| **`CLSS-Akk-v3` Non-Missing Subset ($N = 25,957$, raw CSV)** | `object/akkadian_predictions_part1..4.csv` | **`0.85139`** | **`0.79593`** | **`0.91729`** | **`0.94156`** | **`+0.02139` `MRR`; `+0.02729` (`+0.02229`) `Hit@5`; `+0.04697` over `MBERT+Akk` (`0.87032`)** |
 
 And on the Table 2 genre breakdown:
 - **`Lexical` ($N = 10,240$):** `CLSS-Akk-v3` achieves `MRR = 0.86091` (vs published `0.69`, **`+0.17091`**, and vs reproduced `MBERT+Akk` `0.82717`, **`+0.03374`**) and `Hit@5 = 0.92920` (vs published `0.85`, **`+0.07920`**, and vs reproduced `MBERT+Akk` `0.87236`, **`+0.05684`**).
 - **`Astrological Report` ($N = 1,753$):** `CLSS-Akk-v3` achieves `MRR = 0.86704` (vs published `0.81`, **`+0.05704`**, and vs reproduced `MBERT+Akk` `0.78779`, **`+0.07925`**) and `Hit@5 = 0.92527` (vs published `0.88`, **`+0.04527`**, and vs reproduced `MBERT+Akk` `0.85511`, **`+0.07016`**).
 - **`Royal or Monumental` ($N = 177$):** `CLSS-Akk-v3` achieves `MRR = 0.90375` (vs published `0.84`, **`+0.06375`**, and vs reproduced `MBERT+Akk` `0.86148`, **`+0.04227`**) and `Hit@5 = 0.93785` (vs published `0.90`, **`+0.03785`**, and vs reproduced `MBERT+Akk` `0.90960`, **`+0.02825`**).
 
-Every overall and genre-level target strictly beats both the published SOTA in Lazar et al. (2021) and the reproduced `MBERT+Akk` baseline by wide margins (`+2.59` to `+17.09` percentage points), with zero prior records or open pull requests in `V3R1T4S`.
+Every overall, subset, and genre-level target strictly beats both the published SOTA in Lazar et al. (2021) and the reproduced `MBERT+Akk` baseline by wide margins, with zero prior records or open pull requests in `V3R1T4S`.
 
 pass: true

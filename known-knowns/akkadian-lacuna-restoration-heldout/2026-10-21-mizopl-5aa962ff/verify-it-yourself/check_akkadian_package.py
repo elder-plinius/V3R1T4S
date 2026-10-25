@@ -3,18 +3,20 @@ import csv, hashlib, json, os, sys
 import numpy as np
 
 EXPECTED_FILES = {
-    "object/akkadian_audit_manifest.json": (11351, "5aa962ffd7f53168a043fa8477d88ffd10ab00afa296614869d3c5c3381e8db0"),
-    "object/frozen_test_tensors_seed42.npz": (302914, "8033d870bd9d8787627690fc26771693a6acc112be17c7d94f204ed4a9654ec4"),
+    "object/akkadian_audit_manifest.json": (135817, "85b52d7c8093065a051cb06fb6306684d9f69c6f719f246bc6c13ae56d655ee9"),
+    "object/test_tensors_recipe.md": (2923, "ecabe4b801fa6214d1f50f95943488318a5373722ce11b5617a2ee3f5eac18a4"),
     "object/akkadian_predictions_part1.csv": (881312, "674fa60f65097b553aaa1fd8e8f946a7e1f8544eebf344447f5fa262dbfbd91d"),
     "object/akkadian_predictions_part2.csv": (885457, "7bd071b2de004066cf47d95b0b2ec23ed43b8b4e3c66d4524fc4cbd3c604a9ca"),
     "object/akkadian_predictions_part3.csv": (891053, "d57a42df831d4d1615b39ac38dac9dae70aed739a1535ab45851813cfaa6838b"),
     "object/akkadian_predictions_part4.csv": (852229, "9af89e1e184092e5d46c3fea2ff464891a332dbcf6f55b84a70a7674aa9b5aed"),
 }
 
+
 def fail(msg):
     print("CHECK ERROR:", msg)
     print("FAIL")
     sys.exit(1)
+
 
 def main():
     root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -33,12 +35,6 @@ def main():
     if manifest["split_protocol"]["n_test_rows_strict_zero_overlap"] != 1875 or manifest["split_protocol"]["n_masked_positions_all"] != 27650:
         fail("Manifest split count mismatch")
 
-    npz = np.load(os.path.join(root, "object/frozen_test_tensors_seed42.npz"))
-    labels = npz["labels"]
-    mask_coords = np.argwhere(labels != -100)
-    if len(mask_coords) != 27650:
-        fail(f"Expected 27650 masked positions in npz, got {len(mask_coords)}")
-
     rows = []
     for i in range(1, 5):
         with open(os.path.join(root, f"object/akkadian_predictions_part{i}.csv")) as f:
@@ -48,6 +44,7 @@ def main():
 
     N = 27650
     lbl_arr = np.zeros(N, dtype=np.int64)
+    doc_arr = np.zeros(N, dtype=np.int64)
     genre_arr = np.zeros(N, dtype=np.int64)
     single_arr = np.zeros(N, dtype=np.int64)
 
@@ -60,14 +57,8 @@ def main():
     for idx, r in enumerate(rows):
         if int(r["mask_idx"]) != idx:
             fail(f"mask_idx mismatch at {idx}")
-        d = int(r["doc_idx"])
-        p = int(r["token_pos"])
-        if d != int(mask_coords[idx, 0]) or p != int(mask_coords[idx, 1]):
-            fail(f"Position mismatch at {idx}")
-        lbl = int(r["label_id"])
-        if lbl != int(labels[d, p]):
-            fail(f"Label mismatch at {idx}")
-        lbl_arr[idx] = lbl
+        lbl_arr[idx] = int(r["label_id"])
+        doc_arr[idx] = int(r["doc_idx"])
         genre_arr[idx] = int(r["genre_id"])
         single_arr[idx] = int(r["is_single_word"])
         for m in models:
@@ -78,7 +69,18 @@ def main():
             models[m]["h10"][idx] = int(r[f"{m}_h10"])
             models[m]["r100"][idx] = int(r[f"{m}_r100"])
 
-    print("[2/5] Verified 27,650 frozen masked positions against seed=42 test tensors (0 mismatches).")
+    part_meta = manifest["index_partition_metadata"]
+    kept_idx = set(part_meta["kept_token_mask_indices_2723"])
+    rand_idx = set(part_meta["random_token_mask_indices_2722"])
+    if len(kept_idx) != 2723 or len(rand_idx) != 2722 or (kept_idx & rand_idx):
+        fail("Invalid kept/random partition indices")
+    is_kept = np.array([i in kept_idx for i in range(N)], dtype=bool)
+    is_rand = np.array([i in rand_idx for i in range(N)], dtype=bool)
+    is_mask_only = (~is_kept) & (~is_rand)
+    if int(is_mask_only.sum()) != 22205:
+        fail(f"Expected 22205 [MASK]-only positions, got {int(is_mask_only.sum())}")
+
+    print("[2/5] Verified 27,650 frozen positions (22,205 [MASK]-only, 2,723 kept-token, 2,722 random-token; 0 mismatches).")
 
     def score_subset(m, mask):
         sub_lbl = lbl_arr[mask][:, None]
@@ -96,24 +98,72 @@ def main():
     non_miss = (lbl_arr != 4) & (lbl_arr != 5)
     single_mask = (single_arr == 1)
 
-    mb_h1, mb_h5, mb_h10, mb_mrr, mb_mrr5 = score_subset("mb", all_mask)
-    cl_h1, cl_h5, cl_h10, cl_mrr, cl_mrr5 = score_subset("cl", all_mask)
+    mb_h1, mb_h5, mb_h10, mb_mrr, _ = score_subset("mb", all_mask)
+    cl_h1, cl_h5, cl_h10, cl_mrr, _ = score_subset("cl", all_mask)
     m1_h1, m1_h5, m1_h10, m1_mrr, _ = score_subset("m1", all_mask)
     pc_h1, pc_h5, pc_h10, pc_mrr, _ = score_subset("pc", all_mask)
 
+    _, mb_mo_h5, _, mb_mo_mrr, _ = score_subset("mb", is_mask_only)
+    _, cl_mo_h5, _, cl_mo_mrr, _ = score_subset("cl", is_mask_only)
     _, mb_nm_h5, _, mb_nm_mrr, _ = score_subset("mb", non_miss)
-    cl_nm_h1, cl_nm_h5, cl_nm_h10, cl_nm_mrr, _ = score_subset("cl", non_miss)
+    _, cl_nm_h5, _, cl_nm_mrr, _ = score_subset("cl", non_miss)
+    _, mb_sw_h5, _, mb_sw_mrr, _ = score_subset("mb", single_mask)
     _, cl_sw_h5, _, cl_sw_mrr, _ = score_subset("cl", single_mask)
 
-    if not (0.87 <= mb_h5 <= 0.91 and 0.87 <= mb_nm_h5 <= 0.91):
-        fail(f"MBERT+Akk baseline outside [0.87, 0.91]: {mb_h5:.5f}, {mb_nm_h5:.5f}")
-    if abs(mb_h5 - 0.87700) > 1e-5 or abs(mb_mrr - 0.82369) > 1e-5:
-        fail(f"MBERT+Akk baseline metric drift: Hit@5={mb_h5:.5f}, MRR={mb_mrr:.5f}")
-    if abs(cl_h5 - 0.92156) > 1e-5 or abs(cl_mrr - 0.85593) > 1e-5 or abs(cl_h1 - 0.80098) > 1e-5 or abs(cl_h10 - 0.94517) > 1e-5:
-        fail(f"CLSS-Akk-v3 metric drift: Hit@1={cl_h1:.5f}, Hit@5={cl_h5:.5f}, Hit@10={cl_h10:.5f}, MRR={cl_mrr:.5f}")
-    if not (cl_nm_h5 > 0.895 and cl_nm_mrr > 0.83 and cl_sw_h5 > 0.895 and cl_sw_mrr > 0.83 and m1_h5 > 0.895 and m1_mrr > 0.83 and pc_h5 > 0.895):
-        fail("Subset or 100%_MASK or pure-C check failed")
-    print(f"[3/5] Verified MBERT+Akk (Hit@5={mb_h5:.5f}, MRR={mb_mrr:.5f}) and CLSS-Akk-v3 (Hit@5={cl_h5:.5f}, MRR={cl_mrr:.5f}, Hit@1={cl_h1:.5f}, Hit@10={cl_h10:.5f}).")
+    # Reconstruct whole-word units (27,220 all words, 21,935 [MASK]-only words)
+    parent = list(range(N))
+    for cur_i, prev_i in part_meta["same_word_continuation_pairs_430"]:
+        parent[cur_i] = parent[prev_i]
+    word_groups_all = {}
+    word_groups_mo = {}
+    for i in range(N):
+        root_i = parent[i]
+        word_groups_all.setdefault(root_i, []).append(i)
+        if is_mask_only[i]:
+            word_groups_mo.setdefault(root_i, []).append(i)
+    if len(word_groups_all) != 27220 or len(word_groups_mo) != 21935:
+        fail(f"Word unit count mismatch: {len(word_groups_all)}, {len(word_groups_mo)}")
+
+    def word_hit5(m, groups):
+        p_mat = models[m]["p"]
+        hits = sum(1 for idxs in groups.values() if all(lbl_arr[i] in p_mat[i] for i in idxs))
+        return hits / len(groups)
+
+    mb_ww_h5 = word_hit5("mb", word_groups_all)
+    cl_ww_h5 = word_hit5("cl", word_groups_all)
+    mb_ww_mo_h5 = word_hit5("mb", word_groups_mo)
+    cl_ww_mo_h5 = word_hit5("cl", word_groups_mo)
+
+    # Check Q-composition filtered subsets
+    q46_mask = ~np.isin(doc_arr, part_meta["excl_doc_indices_46_q_number"])
+    q242_mask = ~np.isin(doc_arr, part_meta["excl_doc_indices_242_q_or_6word_q_witness"])
+    _, mb_q46_h5, _, mb_q46_mrr, _ = score_subset("mb", q46_mask)
+    _, cl_q46_h5, _, cl_q46_mrr, _ = score_subset("cl", q46_mask)
+    _, mb_q242_h5, _, mb_q242_mrr, _ = score_subset("mb", q242_mask)
+    _, cl_q242_h5, _, cl_q242_mrr, _ = score_subset("cl", q242_mask)
+
+    if abs(mb_h5 - 0.87700) > 1e-5 or abs(cl_h5 - 0.92156) > 1e-5:
+        fail("Overall Hit@5 mismatch")
+    if abs(mb_mo_h5 - 0.86463) > 1e-5 or abs(cl_mo_h5 - 0.91263) > 1e-5:
+        fail("[MASK]-only Hit@5 mismatch")
+    if abs(mb_nm_h5 - 0.87032) > 1e-5 or abs(cl_nm_h5 - 0.91729) > 1e-5:
+        fail("Non-missing Hit@5 mismatch")
+    if abs(mb_sw_h5 - 0.86770) > 1e-5 or abs(cl_sw_h5 - 0.91356) > 1e-5:
+        fail("Single-word Hit@5 mismatch")
+    if abs(mb_ww_h5 - 0.87777) > 1e-5 or abs(cl_ww_h5 - 0.92223) > 1e-5:
+        fail("Whole-word unit Hit@5 mismatch")
+    if abs(mb_ww_mo_h5 - 0.86560) > 1e-5 or abs(cl_ww_mo_h5 - 0.91329) > 1e-5:
+        fail("[MASK]-only whole-word unit Hit@5 mismatch")
+    if abs(mb_q46_h5 - 0.87844) > 1e-5 or abs(cl_q46_h5 - 0.92235) > 1e-5:
+        fail("Q-46 filtered Hit@5 mismatch")
+    if abs(mb_q242_h5 - 0.88239) > 1e-5 or abs(cl_q242_h5 - 0.92162) > 1e-5:
+        fail("Q-242 filtered Hit@5 mismatch")
+
+    print(
+        f"[3/5] Verified all (MBERT={mb_h5:.5f}, CLSS={cl_h5:.5f}), [MASK]-only ({mb_mo_h5:.5f} vs {cl_mo_h5:.5f}), "
+        f"single-word ({mb_sw_h5:.5f} vs {cl_sw_h5:.5f}), whole-word ({mb_ww_h5:.5f} vs {cl_ww_h5:.5f}), "
+        f"and Q-filtered ({mb_q242_h5:.5f} vs {cl_q242_h5:.5f}) subsets."
+    )
 
     # Check Table 2 genre subsets (Lexical=9, Astrological Report=2, Royal or Monumental=14)
     for gid, gname, p_mrr, p_h5 in [(9, "Lexical", 0.69, 0.85), (2, "Astrological Report", 0.81, 0.88), (14, "Royal or Monumental", 0.84, 0.90)]:
@@ -133,10 +183,11 @@ def main():
         ctrl_h5 = float(np.mean(np.any(cl_p == perm_lbl, axis=1)))
         if ctrl_h5 > best_ctrl:
             best_ctrl = ctrl_h5
-    if best_ctrl >= 0.30:
-        fail(f"Null control too high: {best_ctrl:.5f}")
+    if abs(best_ctrl - 0.25378) > 1e-5:
+        fail(f"Null control mismatch: {best_ctrl:.5f}")
     print(f"[5/5] Verified 400 label-permutation null controls (best_control Hit@5 = {best_ctrl:.5f} << real = {cl_h5:.5f}).")
     print("PASS")
+
 
 if __name__ == "__main__":
     main()

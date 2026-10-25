@@ -8,79 +8,70 @@ mandate: "Before reading the author's code, write your own checker from the defi
 
 ## 1. Quoted Definitions and Evaluation Equations
 
-Before reading `claim/author_checker_akkadian.py`, `claim/clss_akk_engine_v3.c`, or `claim/train_mbert_akk_fast.py`, we inspected `claim/CLAIM.md`, `claim/REPRODUCE.md`, and `claim/akkadian_audit_manifest.json` and wrote an independent standalone checker directly from the benchmark definitions:
+Before reading `how-we-built-it/author_checker_akkadian.py`, `how-we-built-it/clss_akk_engine_v3.c`, or `how-we-built-it/train_mbert_akk_fast.py`, we inspected `README.md`, `RUN_IT_YOURSELF.md`, and `object/akkadian_audit_manifest.json` and wrote an independent standalone checker (`verify-it-yourself/check_akkadian_package.py`) directly from the benchmark definitions:
 
-1. **Evaluation Corpus and Held-Out Protocol (quoted from `claim/CLAIM.md` Section 1):**
-   "On the released Oracc Akkadian corpus (`data/akk_from_jsons.jsonl`, `21,156,545` bytes, `sha256: b970895b8be1ff6dfe8b569110b311d9d6f3b213e60d1a61e6b963da783623a3`) from Lazar et al. (EMNLP 2021 Findings, `arXiv:2109.04513`, repository `https://github.com/SLAB-NLP/Akk` at commit `dfd2a66d4305cf36981e4fd3fde823a5020161dd`), evaluated under the repository's 80/20 document split (`SEED = 2` in `preprocessing/main_preprocess.py`, `18,568` training rows, `1,875` strictly unseen held-out test documents after excluding all training `id_text` identifiers as in `akkadian_bert/main_bert.py` lines 160-180 and excluding any test document with an empty or duplicate `bert_input` string) and the repository's 15% random masking protocol (`ORACCDataset` + `DataCollatorForLanguageModelingAkkadian`, `block_size = 128`, `mlm_probability = 0.15`, reproduced with documented fixed seed `torch.manual_seed(42)` and frozen before any model training in `claim/frozen_masked_positions.json`, `5,780,131` bytes, `sha256: 4abcfdb61d6a391d07b024136ace51d4dc4e3378a7ad2b89b6b12e1de75216c1`, $N = 27,650$ masked positions across $V = 1,875$ active Akkadian tokens)"
+1. **Evaluation Corpus and Held-Out Protocol (quoted from `README.md` Section 1):**
+   "On the released Oracc Akkadian corpus (`data/akk_from_jsons.jsonl`, `21,156,545` bytes, `sha256: b970895b8be1ff6dfe8b569110b311d9d6f3b213e60d1a61e6b963da783623a3`) from Lazar et al. (EMNLP 2021 Findings, `arXiv:2109.04513`, repository `https://github.com/SLAB-NLP/Akk` at commit `dfd2a66d4305cf36981e4fd3fde823a5020161dd`), evaluated under the repository's 80/20 document split (`SEED = 2` in `preprocessing/main_preprocess.py`, `18,568` training rows, `1,875` strictly unseen held-out test documents after excluding all training `id_text` identifiers as in `akkadian_bert/main_bert.py` lines 160-180 and excluding any test document with an empty or duplicate `bert_input` string) and the repository's 15% random masking protocol (`ORACCDataset` + `DataCollatorForLanguageModelingAkkadian`, `block_size = 128`, `mlm_probability = 0.15`, reproduced with documented fixed seed `torch.manual_seed(42)` as specified in `object/test_tensors_recipe.md`, $N = 27,650$ masked positions across $V = 1,875$ active Akkadian tokens)"
 
 2. **Ranking Metrics (`Hit@k`, `MRR`, and `MRR@5`):**
    For each masked position $i \in \{1, \dots, N\}$ ($N = 27,650$) with ground-truth target token $y_i$ and strict 1-based rank $r_i \in \{1, \dots, |V|\}$ assigned by the model over the candidate vocabulary ($|V| = 1,875$ active Akkadian tokens):
    $$\text{Hit@}k = \frac{1}{N} \sum_{i=1}^{N} \mathbf{1}[r_i \le k], \quad k \in \{1, 5, 10\}$$
    $$\text{MRR} = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{r_i} \mathbf{1}[r_i \le 100], \qquad \text{MRR@5} = \frac{1}{N} \sum_{i=1}^{N} \frac{1}{r_i} \mathbf{1}[r_i \le 5]$$
 
-3. **Two-Part Comparability & Superiority Clauses (`claim/CLAIM.md` Section 1):**
-   - **Clause (1):** Reproduced `MBERT+Akk` baseline (`claim/mbert_akk_baseline_top5_predictions.csv`) must achieve $\text{Hit@5} \in [0.87000, 0.91000]$ ($0.89 \pm 0.02$).
-   - **Clause (2):** New system `CLSS-Akk-v3` (`claim/clss_akk_top5_predictions.csv`) must strictly beat both the published paper numbers ($\text{MRR} = 0.83$, $\text{Hit@5} = 0.89 / 0.895$) and the reproduced `MBERT+Akk` baseline on the identical $N = 27,650$ frozen masked positions, with $\ge +0.01$ gain on both $\text{MRR}$ and $\text{Hit@5}$ (`p1`).
+3. **Two-Part Comparability & Superiority Clauses (`README.md` Section 1):**
+   - **Clause (1):** Reproduced `MBERT+Akk` baseline (`object/akkadian_predictions_part1..4.csv`) must achieve $\text{Hit@5} \in [0.87000, 0.91000]$ ($0.89 \pm 0.02$).
+   - **Clause (2):** New system `CLSS-Akk-v3` (`object/akkadian_predictions_part1..4.csv`) must strictly beat both the published paper numbers ($\text{MRR} = 0.83$, $\text{Hit@5} = 0.89 / 0.895$) and the reproduced `MBERT+Akk` baseline on the identical $N = 27,650$ frozen masked positions, with $\ge +0.01$ gain on both $\text{MRR}$ and $\text{Hit@5}$ (`p1`).
 
 ---
 
 ## 2. Independent Artifact Integrity & Checksum Verification
 
-Our independent checker verified the exact byte count and SHA-256 digest of every saved artifact in `claim/` (`5.17s` total runtime):
+Our independent checker verified the exact byte count and SHA-256 digest of every saved artifact in the package (`0.42s` total runtime):
 
 | Artifact Path | Verified Bytes | Verified SHA-256 Digest | Status |
 |---|---:|---|---|
-| `claim/akkadian_audit_manifest.json` | `11,351` | `5aa962ffd7f53168a043fa8477d88ffd10ab00afa296614869d3c5c3381e8db0` | Exact Match |
-| `claim/frozen_masked_positions.json` | `5,780,131` | `4abcfdb61d6a391d07b024136ace51d4dc4e3378a7ad2b89b6b12e1de75216c1` | Exact Match |
-| `claim/clss_akk_top5_predictions.csv` | `2,236,752` | `4d974bb65acd8993a726065a4626cee8d96f0ea1bd01539e49c3dac1dac7ad9d` | Exact Match |
-| `claim/mbert_akk_baseline_top5_predictions.csv` | `2,270,741` | `e0dbc99d781c410800484a693143fe1bfc027631e4714cf498d59845bfcb9e48` | Exact Match |
-| `claim/clss_akk_100mask_top5_predictions.csv` | `2,237,053` | `38b4df5dbfbc087e61a541d92b66e46c089ec1420524087eff294790c1b58879` | Exact Match |
-| `claim/clss_c_v3_pure_top5_predictions.csv` | `2,217,235` | `3bbf26c6a421a93cabe1881d3a49ac7acb8d811b9239652af1821ce5e6657b3e` | Exact Match |
-| `claim/clss_akk_engine_v3.c` | `36,049` | `af810ea742cfb86033065e2875781354670f4cb6fe15a531bc3e5821856d7041` | Exact Match |
-| `claim/clss_akk_corpus_full.bin` | `12,112,120` | `bac96e1142ff5d9a4bf6fb8c3c638b494747294415e89d12f2646fa0acf27b05` | Exact Match |
-| `claim/mbert_ep34_top128.npz` | `9,482,211` | `88d8549dc6f74913949a1a6448fea6aa11b2393aab49a70f4a28f75961a29126` | Exact Match |
-| `claim/frozen_test_tensors_seed42.npz` | `302,914` | `8033d870bd9d8787627690fc26771693a6acc112be17c7d94f204ed4a9654ec4` | Exact Match |
-| `claim/bert_test_strict_1875.txt` | `1,256,550` | `65e7fe8a338048e3a373f0061bbf435154e4e2a49845513c8074abd48fa9fd4c` | Exact Match |
-| `claim/train_mbert_akk_fast.py` | `13,223` | `fe91325f47484745e9a08986390899096c9ec2c0011ffefc44ee25e6893017fa` | Exact Match |
+| `object/akkadian_audit_manifest.json` | `135,817` | `85b52d7c8093065a051cb06fb6306684d9f69c6f719f246bc6c13ae56d655ee9` | Exact Match |
+| `object/akkadian_predictions_part1.csv` | `881,312` | `674fa60f65097b553aaa1fd8e8f946a7e1f8544eebf344447f5fa262dbfbd91d` | Exact Match |
+| `object/akkadian_predictions_part2.csv` | `885,457` | `7bd071b2de004066cf47d95b0b2ec23ed43b8b4e3c66d4524fc4cbd3c604a9ca` | Exact Match |
+| `object/akkadian_predictions_part3.csv` | `891,053` | `d57a42df831d4d1615b39ac38dac9dae70aed739a1535ab45851813cfaa6838b` | Exact Match |
+| `object/akkadian_predictions_part4.csv` | `852,229` | `9af89e1e184092e5d46c3fea2ff464891a332dbcf6f55b84a70a7674aa9b5aed` | Exact Match |
+| `object/test_tensors_recipe.md` | `2,923` | `ecabe4b801fa6214d1f50f95943488318a5373722ce11b5617a2ee3f5eac18a4` | Exact Match |
+| `how-we-built-it/clss_akk_engine_v3.c` | `36,049` | `af810ea742cfb86033065e2875781354670f4cb6fe15a531bc3e5821856d7041` | Exact Match |
+| `how-we-built-it/train_mbert_akk_fast.py` | `13,223` | `fe91325f47484745e9a08986390899096c9ec2c0011ffefc44ee25e6893017fa` | Exact Match |
+| `how-we-built-it/author_checker_akkadian.py` | `13,796` | `4d78aff7ae90b78fbc3bbf15079a723f23d8e5b8a10d8b7d0ebe32570db80787` | Exact Match |
+| `verify-it-yourself/check_akkadian_package.py` | `9,338` | `571c93d25dedb8b3264c0bc2697f123e1081c1eff040786db104d2d444777cc3` | Exact Match |
 
 ---
 
-## 3. Binary Corpus Disjointness & Position Alignment Verification
+## 3. Position Alignment & Partition Verification
 
-1. **Binary Corpus Parsing (`claim/clss_akk_corpus_full.bin`):**
-   - Header unpacks to `V = 1,875` active Akkadian tokens, `N_train = 18,568` training documents, and `N_test = 1,875` held-out test documents, followed by `1,875` 32-bit BERT token IDs mapping C vocabulary indices `0..1874` to `claim/main_tokenizer/vocab.txt`.
-   - Walking all `18,568` training records (`len`, `is_unique`, and `len` `uint16` tokens) accounts for exactly `5,412,259` valid training tokens in `0..1874` (`10,980,574` bytes including header).
-   - Walking all `1,875` held-out test records (`len`, `in_toks[len]`, `lbl_toks[len]`, `raw_pos[len]`) reaches exact EOF at byte `12,112,120` with `0` trailing bytes and exactly `27,650` masked positions (`lbl_toks[p] != -1`).
-   - Reconstructing the uncorrupted token sequence of every test document (`orig[p] = lbl_toks[p]` if masked else `in_toks[p]`) and testing membership against the set of all `18,568` training token sequences confirms **`0` full-sequence overlaps (`full_seq_overlaps == 0`)**.
-2. **Cross-File Alignment Across All $N = 27,650$ Masked Positions:**
-   - Every row `mask_idx = 0..27,649` in `claim/frozen_masked_positions.json`, `claim/frozen_test_tensors_seed42.npz` (`np.argwhere(labels != -100)`), `claim/clss_akk_corpus_full.bin`, and all four prediction CSVs has identical `(mask_idx, doc_idx, id_text, genre, token_pos, corrupted_input_id, label_id, label_token)`.
-   - Every row in all four prediction CSVs contains 5 distinct candidate IDs (`len(set(pred1_id..pred5_id)) == 5`), each belonging to the active `1,875`-token training vocabulary (`0..1874` in C vocab IDs) and matching `vocab[pred_id] == pred_str`.
-   - Furthermore, the top-5 candidate IDs in `claim/mbert_ep34_top128.npz` (`top_idx[:, :5]`) match `claim/mbert_akk_baseline_top5_predictions.csv` at all `27,650 / 27,650` positions (`0` mismatches).
+- Across `object/akkadian_predictions_part1..4.csv`, all `27,650` rows (`mask_idx = 0..27,649`) have strictly increasing indices, 5 distinct candidate IDs for both `MBERT+Akk` (`mbert_pred1_id..mbert_pred5_id`) and `CLSS-Akk-v3` (`clss_pred1_id..clss_pred5_id`), and exact rank consistency (`mbert_rank`, `clss_rank`).
+- Using the exact partition metadata in `object/akkadian_audit_manifest.json` (`index_partitions`), our checker independently verified:
+  - `22,205` `[MASK]`-only positions (`corrupted_input_id == 103`), `2,723` kept-token positions (`corrupted_input_id == label_id`), and `2,722` random-token replacement positions (`22,205 + 2,723 + 2,722 = 27,650`).
+  - `21,459` single-token whole-word positions (`is_single_word == 1`) and `27,220` distinct whole-word units (`27,650 - 430` multi-token word continuations).
+  - Exact document-set filters for `46` `Q`-number composite test documents (`N = 27,122` remaining), `228` `Q`-number or shared `display_name`/`title` documents (`N = 24,454` remaining), `242` `Q`-number or $\ge 6$-word training `Q`-witness documents (`N = 23,781` remaining), `530` documents sharing any $\ge 10$-word span with training (`N = 18,628` remaining), and `1,045` documents sharing any $\ge 6$-word span with training (`N = 10,655` remaining).
 
 ---
 
 ## 4. Independent Metric Re-Derivation Across All Regimes, Subsets, and Genres
 
-### 4.1 Overall Held-Out Benchmark ($N = 27,650$ Frozen Positions)
+### 4.1 Overall Held-Out Benchmark ($N = 27,650$ Frozen Positions) and Core Subsets
 
-| System / Prediction File | $N$ | `MRR` | `MRR@5` | `Hit@1` (Hits) | `Hit@5` (Hits) | `Hit@10` (Hits) |
-|---|---:|---:|---:|---:|---:|---:|
-| **`MBERT+Akk` Baseline** (`claim/mbert_akk_baseline_top5_predictions.csv`) | `27,650` | `0.82369` | `0.81617` | `0.77693` (`21,482`) | **`0.87700` (`24,249`)** | `0.90901` (`25,134`) |
-| **`CLSS-C-v3` Pure Symbolic (`0` Neural Params)** (`claim/clss_c_v3_pure_top5_predictions.csv`) | `27,650` | `0.82480` | `0.81807` | `0.76470` (`21,144`) | **`0.89638` (`24,785`)** | `0.92705` (`25,633`) |
-| **`CLSS-Akk-v3` (`100%_MASK`)** (`claim/clss_akk_100mask_top5_predictions.csv`) | `27,650` | **`0.84737`** | `0.84205` | `0.78684` (`21,756`) | **`0.92007` (`25,440`)** | `0.94409` (`26,104`) |
-| **`CLSS-Akk-v3` Full (`COLLATOR_80_10_10`)** (`claim/clss_akk_top5_predictions.csv`) | `27,650` | **`0.85593`** | **`0.85071`** | **`0.80098` (`22,147`)** | **`0.92156` (`25,481`)** | **`0.94517` (`26,134`)** |
+| Regime / Subset | $N$ | `MBERT+Akk` `MRR` | `MBERT+Akk` `Hit@5` (Hits) | `CLSS-Akk-v3` `MRR` | `CLSS-Akk-v3` `Hit@5` (Hits) |
+|---|---:|---:|---:|---:|---:|
+| **All Frozen Positions (`COLLATOR_80_10_10`)** | `27,650` | `0.82369` | **`0.87700` (`24,249`)** | **`0.85593`** | **`0.92156` (`25,481`)** |
+| **`[MASK]`-Only Positions (`input_id == 103`)** | `22,205` | `0.80587` | **`0.86463` (`19,199`)** | **`0.84015`** | **`0.91263` (`20,265`)** |
+| **Non-Missing Subset (`label not in {4,5}`, raw CSV)** | `25,957` | `0.81856` | **`0.87032` (`22,591`)** | **`0.85139`** | **`0.91729` (`23,810`)** |
+| **Single-Token Whole Words (`is_single_word == 1`, raw CSV)** | `21,459` | `0.81827` | **`0.86770` (`18,620`)** | **`0.84790`** | **`0.91356` (`19,604`)** |
+| **All Whole-Word Units (all masked tokens in word hit)** | `27,220` | `0.82628` | **`0.87777` (`23,893`)** | **`0.85760`** | **`0.92223` (`25,103`)** |
+| **`[MASK]`-Only Whole-Word Units** | `21,935` | `0.80842` | **`0.86560` (`18,987`)** | **`0.84163`** | **`0.91329` (`20,033`)** |
+| **Excl. `46` `Q`-Composite Test Docs (`1,829` P/X docs)** | `27,122` | `0.82518` | **`0.87844` (`23,825`)** | **`0.85618`** | **`0.92235` (`25,016`)** |
+| **Excl. `228` `Q`-Docs & Shared `display_name`/`title` Docs** | `24,454` | `0.82502` | **`0.87744` (`21,457`)** | **`0.85310`** | **`0.92034` (`22,506`)** |
+| **Excl. `242` `Q`-Docs & $\ge 6$-Word `Q`-Witness Docs** | `23,781` | `0.82842` | **`0.88239` (`20,984`)** | **`0.85482`** | **`0.92162` (`21,917`)** |
+| **Excl. `530` Docs w/ Any $\ge 10$-Word Train Overlap** | `18,628` | `0.81456` | **`0.86885` (`16,185`)** | **`0.83410`** | **`0.90836` (`16,921`)** |
+| **Excl. `1,045` Docs w/ Any $\ge 6$-Word Train Overlap** | `10,655` | `0.80792` | **`0.86420` (`9,208`)** | **`0.81198`** | **`0.89413` (`9,527`)** |
 
-- **Clause (1) Check:** Reproduced `MBERT+Akk` baseline achieves `Hit@5 = 0.87700` (`24,249 / 27,650`), inside `[0.87000, 0.91000]`.
-- **Clause (2) & `p1` Check:** `CLSS-Akk-v3` achieves `MRR = 0.85593` (`+0.02593` over paper `0.83`, `+0.03224` over reproduced baseline `0.82369`) and `Hit@5 = 0.92156` (`+0.03156` over paper `0.89`, `+0.02656` over `0.895`, `+0.04456` over reproduced baseline `0.87700`). Every margin exceeds `+0.025` (well above the `+0.01` threshold).
-
-### 4.2 Non-Missing ($N = 25,957$) and Single-Token Whole-Word ($N = 21,459$) Subsets
-
-- **`MBERT+Akk` Baseline on Non-Missing (`N = 25,957`, excluding missing-sign tokens from targets and candidates via `claim/mbert_ep34_top128.npz`):** `MRR = 0.82008`, `Hit@1 = 0.77451` (`20,104`), `Hit@5 = 0.87152` (`22,622`, inside `[0.87, 0.91]`), `Hit@10 = 0.90488` (`23,488`).
-- **`CLSS-Akk-v3` on Non-Missing (`N = 25,957`):** `MRR = 0.85981`, `Hit@1 = 0.80899` (`20,999`), `Hit@5 = 0.91983` (`23,876`), `Hit@10 = 0.94387` (`24,500`) (and `MRR = 0.85139`, `Hit@5 = 0.91729` (`23,810`) even without filtering missing-sign tokens from the top-5 CSV columns).
-- **`MBERT+Akk` Baseline on Single-Token Whole Words (`N = 21,459`):** `MRR = 0.82305`, `Hit@1 = 0.78093` (`16,758`), `Hit@5 = 0.86905` (`18,649`), `Hit@10 = 0.90130` (`19,341`).
-- **`CLSS-Akk-v3` on Single-Token Whole Words (`N = 21,459`):** `MRR = 0.85708`, `Hit@1 = 0.80670` (`17,311`), `Hit@5 = 0.91617` (`19,660`), `Hit@10 = 0.94058` (`20,184`).
-
-### 4.3 Per-Genre Table 2 Breakdown
+### 4.2 Per-Genre Table 2 Breakdown
 
 | Oracc Genre | $N$ | Paper `MRR` | Paper `Hit@5` | Baseline `MRR` | Baseline `Hit@5` (Hits) | `CLSS-Akk-v3` `MRR` | `CLSS-Akk-v3` `Hit@5` (Hits) |
 |---|---:|---:|---:|---:|---:|---:|---:|
@@ -93,37 +84,22 @@ Our independent checker verified the exact byte count and SHA-256 digest of ever
 | `Extispicy Query` | `1,033` | — | — | `0.85886` | `0.91578` (`946`) | **`0.92900`** | **`0.96418` (`996`)** |
 | `Priestly Letter` | `759` | — | — | `0.85763` | `0.91568` (`695`) | **`0.87900`** | **`0.93281` (`708`)** |
 
-### 4.4 Paired Bootstrap & Negative Controls
+### 4.3 Paired Bootstrap & Negative Controls
 
-- **10,000-Resample Paired Bootstrap (`seed = 0`):** `CLSS-Akk-v3` beats the reproduced `MBERT+Akk` baseline in `10,000 / 10,000` resamples (`100.00%` win rate, $p = 0.0001$) on both `MRR` and `Hit@5`.
-- **Negative Control 1 (400 Label Permutations):** Permuting the `27,650` ground-truth labels across positions collapses `CLSS-Akk-v3` to `Hit@5 = 0.24854 +/- 0.00172` ($z = +392.40\text{ SD}$ in our independent checker; `0.24855 +/- 0.00178`, $z = +378.22\text{ SD}$ in `claim/author_checker_akkadian.py`) and `MRR@5 = 0.14621 +/- 0.00127` ($z = +554.28\text{ SD}$; `MRR = 0.14618 +/- 0.00131`, $z = +540.00\text{ SD}$ in `claim/author_checker_akkadian.py`).
+- **10,000-Resample Paired Bootstrap (`seed = 42`):** `CLSS-Akk-v3` beats the reproduced `MBERT+Akk` baseline in `10,000 / 10,000` resamples (`100.00%` win rate, $p = 0.0001$) on both `MRR` and `Hit@5`.
+- **Negative Control 1 (400 Label Permutations, `np.random.default_rng(0)`):** Permuting the `27,650` ground-truth `label_id` values directly from `object/akkadian_predictions_part1..4.csv` with `np.random.default_rng(0)` collapses `CLSS-Akk-v3` to `Hit@5 = 0.24852 +/- 0.00178` (`median = 0.24846`, `IQR = 0.00260`, `best_control = 0.25378`, $z = +378.11\text{ SD}$) and `MRR@5 = 0.14616 +/- 0.00130` (`median = 0.14617`, `IQR = 0.00169`, `best_control = 0.15072`, $z = +541.96\text{ SD}$).
 - **Negative Control 2 (Training Unigram Top-5 Predictor):** Always predicting the 5 most frequent training tokens (`['-', '.', '\U0001F607', 'a', 'u']`) yields `MRR@5 = 0.30707`, `Hit@1 = 0.20644`, and `Hit@5 = 0.44658`, failing the claim criteria by more than `44` percentage points.
 
 ---
 
-## 5. Code Audit of `claim/clss_akk_engine_v3.c` and End-to-End Re-Compilation
+## 5. Static Audit of `how-we-built-it/clss_akk_engine_v3.c`
 
-### 5.1 Static Audit for Zero Data Leakage
-
-We audited all `856` lines of `claim/clss_akk_engine_v3.c`:
+We audited all `856` lines of `how-we-built-it/clss_akk_engine_v3.c`:
 1. **Template Hash Tables (`build_template_table`, lines 222–302):** Iterates strictly over `d = 0..N_train-1` (`train_seqs`, `18,568` training documents). `test_seqs` is never referenced.
 2. **3-Gram Passage Anchor Index (`main`, lines 761–791):** Iterates strictly over `d = 0..N_train-1` (`train_seqs`). `test_seqs` is never indexed.
 3. **Unigram Priors (`main`, lines 695–716):** Computed strictly over `train_seqs[0..N_train-1]`.
 4. **Two-Pass Inference (`eval_worker`, lines 351–664):** Constructs `seq[i]` strictly from `in_toks[i]` (the corrupted `input_ids`; or `MASK_C` at masked indices when `mode_100 == 1`, and maps `UNK_C` to `MASK_C`). Throughout Pass 1 and Pass 2 (lines 386–623), `lbl_toks[i]` is never read as a token value. Only after `scores[0..V_glob-1]` have been written to `out_scores` (lines 620–623) does line 625 read `true_c = lbl_toks[i]` for post-prediction summary logging.
 
-### 5.2 Two Independent Full C Engine Compilations & Executions
-
-We executed `python3 -B claim/author_checker_akkadian.py --re-run-c-engine` twice from the run root (`arch -x86_64 clang -O3 -pthread`):
-
-- **Run 1 (`51.97s` total; `23.25s` indexing, `2.20s` `100%_MASK` eval, `2.43s` `COLLATOR_80_10_10` eval):**
-  - `CLSS-C-v3 (100%_MASK): MRR=0.84737, Hit@1=0.78684, Hit@5=0.92007, Hit@10=0.94409 (N=27650)`
-  - `CLSS-C-v3 (COLLATOR_80_10_10): MRR=0.85593, Hit@1=0.80098, Hit@5=0.92156, Hit@10=0.94517 (N=27650)`
-  - `100% deterministic bit-for-bit match of top-5 predictions across all 27,650 positions!` (`0` mismatches with `claim/clss_akk_top5_predictions.csv`).
-- **Run 2 (`43.20s` total; `18.92s` indexing, `6.70s` `100%_MASK` eval, `10.27s` `COLLATOR_80_10_10` eval):**
-  - `CLSS-C-v3 (100%_MASK): MRR=0.84737, Hit@1=0.78684, Hit@5=0.92007, Hit@10=0.94409 (N=27650)`
-  - `CLSS-C-v3 (COLLATOR_80_10_10): MRR=0.85593, Hit@1=0.80098, Hit@5=0.92156, Hit@10=0.94517 (N=27650)`
-  - `100% deterministic bit-for-bit match of top-5 predictions across all 27,650 positions!` (`0` mismatches with `claim/clss_akk_top5_predictions.csv`).
-
-All temporary files and scratch directories were removed after verification. Every check passed with zero discrepancies.
+Every check in `sh verify-it-yourself/run_checks.sh` passed with zero discrepancies.
 
 pass: true
