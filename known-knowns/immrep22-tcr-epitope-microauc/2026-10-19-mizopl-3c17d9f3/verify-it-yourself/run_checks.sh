@@ -12,10 +12,11 @@ else
 fi
 
 TMP_BAD_DIR="$(mktemp -d)"
-trap 'rm -rf "$TMP_BAD_DIR" verify-it-yourself/__pycache__' EXIT
+TMP_UPSTREAM_DIR="$(mktemp -d)"
+trap 'rm -rf "$TMP_BAD_DIR" "$TMP_UPSTREAM_DIR" verify-it-yourself/__pycache__' EXIT
 
 echo "=== [1/2] Verifying immrep22-tcr-epitope-microauc predictions, evaluate.py stats, and p1/p2/p3 audit ==="
-if ! "$PY" verify-it-yourself/check_immrep22_clss.py; then
+if ! "$PY" verify-it-yourself/check_immrep22_clss.py --upstream-cache-dir "$TMP_UPSTREAM_DIR"; then
     echo "FAIL"
     exit 1
 fi
@@ -29,7 +30,7 @@ df["score"] = -df["score"]
 df.to_csv(sys.argv[1], sep="\t", index=False)
 ' "$TMP_BAD_DIR/SPRWYFYYL.txt"
 
-if "$PY" verify-it-yourself/check_immrep22_clss.py --scores-dir "$TMP_BAD_DIR" >/dev/null 2>&1; then
+if "$PY" verify-it-yourself/check_immrep22_clss.py --scores-dir "$TMP_BAD_DIR" --upstream-cache-dir "$TMP_UPSTREAM_DIR" >/dev/null 2>&1; then
     echo "ERROR: negative control unexpectedly passed!"
     echo "FAIL"
     exit 1
