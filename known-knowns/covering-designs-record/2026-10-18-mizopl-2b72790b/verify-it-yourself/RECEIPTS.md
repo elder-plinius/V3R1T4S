@@ -10,7 +10,7 @@
 ## 2. Output of `sh verify-it-yourself/run_checks.sh`
 
 ```
-control_positive_fano_7_3_2: PASS (35/35 covered, uncovered=0)
+control_positive_fano_7_3_2: PASS (21/21 covered, uncovered=0)
 control_negative_fano_minus_1: PASS (rejected with uncovered=3)
 sha256=2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07
 v=68 k=14 t=5 blocks=15675 distinct=15675
