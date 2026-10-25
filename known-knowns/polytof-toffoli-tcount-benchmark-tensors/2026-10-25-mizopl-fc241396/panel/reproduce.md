@@ -13,25 +13,25 @@ run_id: 2026-10-25-1935
 
 ## 1. Executive Summary
 
-I independently executed `python3 claim/verify.py`, `python3 claim/synthesize_and_verify_circuits.py`, `ZIB-IOL/polytof`'s `scripts/verify_paper_schemes.py`, and an independent clean-room Python verification script against the unmodified upstream repository `ZIB-IOL/polytof` (`commit 0dcac107d15adc34dc646242d222f21ae7d32699`).
+I independently executed `python3 verify-it-yourself/verify.py`, `python3 verify-it-yourself/synthesize_and_verify_circuits.py`, `ZIB-IOL/polytof`'s `scripts/verify_paper_schemes.py`, and an independent clean-room Python verification script against the unmodified upstream repository `ZIB-IOL/polytof` (`commit 0dcac107d15adc34dc646242d222f21ae7d32699`).
 
 Every claimed decomposition, tensor reconstruction, circuit equivalence check, optimality certificate (`p2`), and 88-tensor audit result (`p3`) reproduced with **zero discrepancies**:
 
 1. **Sub-Table Record 1 (`0732`, $\mathrm{GF}(2^9)$ Multiplication, $n=27$, $\mathrm{nnz}=123$, `07xx` variant):**
-   - `claim/waring/0732-00139.npy` (SHA-256 `fc241396f7286a7ce735432937b1af57acc14a7af5e3dfee58598e3b53fc536a`) has shape `(139, 27)` over $\{0,1\}$, with 139 distinct nonzero parity rows, **8 fewer terms** ($-5.44\%$) than the live `docs/tensors.md` Waring record (`147`), found in **`0.17 s` single-thread CPU time** via Law `M7` full-nullspace `tohpe()` + 4-symmetry fiber scan (matching the `arXiv:2603.29894` rank `139` with `0 / 139` overlapping rows).
-   - `claim/waring/0732-00141.npy` (SHA-256 `6d0b3549d2d391faeb3375c4924354ac923f597662bbce3877d0b0b7de4c5576`) has shape `(141, 27)` over $\{0,1\}$, with 141 distinct nonzero parity rows, **6 fewer terms** ($-4.08\%$) than `147`.
-   - `claim/waring/0732-00143.npy` (SHA-256 `2dad2e86180c2214fae71f82ca1b85043cd58f57bca33a7976bf23ff2d717b98`) has shape `(143, 27)` over $\{0,1\}$, **4 fewer terms** than `147`.
+   - `object/waring/0732-00139.npy` (SHA-256 `fc241396f7286a7ce735432937b1af57acc14a7af5e3dfee58598e3b53fc536a`) has shape `(139, 27)` over $\{0,1\}$, with 139 distinct nonzero parity rows, **8 fewer terms** ($-5.44\%$) than the live `docs/tensors.md` Waring record (`147`), found in **`0.17 s` single-thread CPU time** via Law `M7` full-nullspace `tohpe()` + 4-symmetry fiber scan (matching the `arXiv:2603.29894` rank `139` with `0 / 139` overlapping rows).
+   - `object/waring/0732-00141.npy` (SHA-256 `6d0b3549d2d391faeb3375c4924354ac923f597662bbce3877d0b0b7de4c5576`) has shape `(141, 27)` over $\{0,1\}$, with 141 distinct nonzero parity rows, **6 fewer terms** ($-4.08\%$) than `147`.
+   - `object/waring/0732-00143.npy` (SHA-256 `2dad2e86180c2214fae71f82ca1b85043cd58f57bca33a7976bf23ff2d717b98`) has shape `(143, 27)` over $\{0,1\}$, **4 fewer terms** than `147`.
    - All three reconstruct the exact unmodified tensor `data/tensors/0732.npy` (`123` strict upper-triangular triples $i < j < k$, with `data/paper/transform/0732.npy` verified equal to $I_{27}$) and pass `ZIB-IOL/polytof`'s `verify_waring` in `scripts/verify_paper_schemes.py`.
 
 2. **Sub-Table Record 2 (`0733`, $\mathrm{GF}(2^{10})$ Multiplication, $n=30$, $\mathrm{nnz}=148$, `07xx` variant):**
-   - `claim/waring/0733-00161.npy` (SHA-256 `ca804f7397e3d1c9bf8b4cc41f8b63c71f5bb4f6ef8e5a9680c40e4bce02cc8d`) has shape `(161, 30)` over $\{0,1\}$, with 161 distinct nonzero parity rows, **12 fewer terms** ($-6.94\%$) than the live `docs/tensors.md` Waring record (`173`), found in **`1.42 s` single-thread CPU time**.
+   - `object/waring/0733-00161.npy` (SHA-256 `ca804f7397e3d1c9bf8b4cc41f8b63c71f5bb4f6ef8e5a9680c40e4bce02cc8d`) has shape `(161, 30)` over $\{0,1\}$, with 161 distinct nonzero parity rows, **12 fewer terms** ($-6.94\%$) than the live `docs/tensors.md` Waring record (`173`), found in **`1.42 s` single-thread CPU time**.
    - It reconstructs the exact unmodified tensor `data/tensors/0733.npy` (`148` strict upper-triangular triples $i < j < k$, with `data/paper/transform/0733.npy` verified equal to $I_{30}$) and passes `ZIB-IOL/polytof`'s `verify_waring`.
 
 3. **Repaired Posted Waring Decompositions (`0105`, `0108`, `0115`, `0817`):**
-   - `claim/waring/0105-00039.npy` (`(39, 21)`, vs posted `0105-00041.npy` at `41`),
-   - `claim/waring/0108-00073.npy` (`(73, 42)`, vs posted `0108-00077.npy` at `77`),
-   - `claim/waring/0115-00051.npy` (`(51, 28)`, vs posted `0115-00055.npy` at `55`), and
-   - `claim/waring/0817-00059.npy` (`(59, 42)`, vs posted `0817-00063.npy` at `63`)
+   - `object/waring/0105-00039.npy` (`(39, 21)`, vs posted `0105-00041.npy` at `41`),
+   - `object/waring/0108-00073.npy` (`(73, 42)`, vs posted `0108-00077.npy` at `77`),
+   - `object/waring/0115-00051.npy` (`(51, 28)`, vs posted `0115-00055.npy` at `55`), and
+   - `object/waring/0817-00059.npy` (`(59, 42)`, vs posted `0817-00063.npy` at `63`)
    all reconstruct their exact BCO-transformed benchmark tensors and pass `ZIB-IOL/polytof`'s `verify_waring`.
 
 ---
@@ -53,7 +53,7 @@ Every claimed decomposition, tensor reconstruction, circuit equivalence check, o
 
 ## 3. Requirement (c): Explicit Circuit Synthesis & Exact Path-Sum + Statevector Equivalence
 
-I independently verified `claim/synthesize_and_verify_circuits.py`:
+I independently verified `verify-it-yourself/synthesize_and_verify_circuits.py`:
 
 - **Zero Extra Non-Clifford Gates:** In all claimed Waring matrices $A \in \{0,1\}^{r \times n}$, every column sum $\sum_{q=1}^r A_{q,i}$ is even and every pair sum $\sum_{q=1}^r A_{q,i} A_{q,j}$ ($i<j$) is even. Consequently, in the multilinear expansion over $\mathbb{Z}_8[x_0, \dots, x_{n-1}]/(x_i^2 - x_i)$,
   $$\sum_{q=1}^r \left(p^{(q)}(x) \bmod 2\right) \equiv \sum_i M_i x_i - 2 \sum_{i<j} Q_{ij} x_i x_j + 4 \sum_{i<j<k} T_{ijk} x_i x_j x_k \pmod 8,$$

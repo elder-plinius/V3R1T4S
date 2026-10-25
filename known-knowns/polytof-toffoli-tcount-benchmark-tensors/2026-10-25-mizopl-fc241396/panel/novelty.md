@@ -13,7 +13,7 @@ run_id: 2026-10-25-1935
 
 ## 1. Executive Summary
 
-I audited the novelty and non-supersession of all claims in `claim/CERTIFICATE.json` (`"verdict": "PARTIAL_PROGRESS"`, `"partial_wins_achieved": ["p2", "p3"]`) against:
+I audited the novelty and non-supersession of all claims in `object/CERTIFICATE.json` (`"verdict": "PARTIAL_PROGRESS"`, `"partial_wins_achieved": ["p2", "p3"]`) against:
 1. The live upstream `ZIB-IOL/polytof` repository (`commit 0dcac107d15adc34dc646242d222f21ae7d32699`, `docs/tensors.md` SHA-256 `f83839d0589888d75fb0ac357f8e251bc3f743d5c1749757cb51beec26676dc3`, and all 88 files in `data/paper/waring/`).
 2. All four papers cited in `target.md` (`arXiv:2602.15285`, `arXiv:2610.01024`, `arXiv:2402.14396`, `arXiv:2405.00083`).
 3. A broad adversarial arXiv and GitHub search across 2025–2026 quantum compilation preprints, including `arXiv:2603.29894` (Fisher, Khrulkov, Saygin, Oseledets, Straupe, 2026) and its companion repositories (`DanilkaFish/VarTodd` and `DanilkaFish/gigaevo-core-vartodd`).
@@ -27,9 +27,9 @@ I audited the novelty and non-supersession of all claims in `claim/CERTIFICATE.j
 - **Transparent Citation of `arXiv:2603.29894` & Independent Verification of `0732-00139.npy` (`0/139` Row Overlap):**
   - During the Round 1 `NOVELTY` audit, I uncovered `arXiv:2603.29894` (Fisher et al., *"LLM-Guided Evolutionary Search for Algebraic T-Count Optimization"*), which reported `139` on `0732` ($\mathrm{GF}(2^9)$ Khoruzhii branch) and `157` on `0733` ($\mathrm{GF}(2^{10})$ Khoruzhii branch).
   - Following my Round 1 remediation guidance:
-    1. The solver upgraded `tohpe()` with multi-kernel `kernel_all` + XOR combinations under `we*` Law `M7` and independently found a `139`-term Waring decomposition of `0732` (`claim/waring/0732-00139.npy`, SHA-256 `fc241396f7286a7ce735432937b1af57acc14a7af5e3dfee58598e3b53fc536a`) in `0.17s` single-thread CPU time (`-8` below `docs/tensors.md` `147`, matching `arXiv:2603.29894`'s `139` without LLM evolutionary search).
-    2. I directly compared the 139 parity rows of our `claim/waring/0732-00139.npy` against Fisher et al.'s `gf2^9_khor_139.npy`: they have **`0 / 139` overlapping rows**, proving that `0732-00139.npy` is a genuinely distinct, independently discovered decomposition in a different $\mathrm{GF}(2^9)$ symmetry fiber (`verify_waring = True`, `odd_cols = 0`, `odd_pairs = 0`).
-    3. The orchestrator properly scoped `claim/CERTIFICATE.json` to `"verdict": "PARTIAL_PROGRESS"` (`"partial_wins_achieved": ["p2", "p3"]`) and transparently cited `arXiv:2603.29894` (`139` on `0732`, `157` on `0733`) alongside our sub-table decompositions (`139`, `141`, `143` on `0732`; `161` on `0733`).
+    1. The solver upgraded `tohpe()` with multi-kernel `kernel_all` + XOR combinations under `we*` Law `M7` and independently found a `139`-term Waring decomposition of `0732` (`object/waring/0732-00139.npy`, SHA-256 `fc241396f7286a7ce735432937b1af57acc14a7af5e3dfee58598e3b53fc536a`) in `0.17s` single-thread CPU time (`-8` below `docs/tensors.md` `147`, matching `arXiv:2603.29894`'s `139` without LLM evolutionary search).
+    2. I directly compared the 139 parity rows of our `object/waring/0732-00139.npy` against Fisher et al.'s `gf2^9_khor_139.npy`: they have **`0 / 139` overlapping rows**, proving that `0732-00139.npy` is a genuinely distinct, independently discovered decomposition in a different $\mathrm{GF}(2^9)$ symmetry fiber (`verify_waring = True`, `odd_cols = 0`, `odd_pairs = 0`).
+    3. The orchestrator properly scoped `object/CERTIFICATE.json` to `"verdict": "PARTIAL_PROGRESS"` (`"partial_wins_achieved": ["p2", "p3"]`) and transparently cited `arXiv:2603.29894` (`139` on `0732`, `157` on `0733`) alongside our sub-table decompositions (`139`, `141`, `143` on `0732`; `161` on `0733`).
 
 ---
 
@@ -59,7 +59,7 @@ I audited the novelty and non-supersession of all claims in `claim/CERTIFICATE.j
 4. **AlphaTensor-Quantum (`arXiv:2402.14396` / *Nature Machine Intelligence* 7, 374–385, 2025):**
    - Reports `161` for $\mathrm{GF}(2^9)$ and `196` for $\mathrm{GF}(2^{10})$.
 5. **Fisher, Khrulkov, Saygin, Oseledets, Straupe (`arXiv:2603.29894`, 2026):**
-   - Reports `139` on `0732` (`K` branch) and `157` on `0733` (`K` branch), which are now accurately cited in `claim/CERTIFICATE.json` while scoping the run verdict to `PARTIAL_PROGRESS` (`p2` + `p3`).
+   - Reports `139` on `0732` (`K` branch) and `157` on `0733` (`K` branch), which are now accurately cited in `object/CERTIFICATE.json` while scoping the run verdict to `PARTIAL_PROGRESS` (`p2` + `p3`).
 
 ### 2.3 Competing PRs and Issues on `elder-plinius/V3R1T4S` and `ZIB-IOL/polytof`
 - **`ZIB-IOL/polytof`:** `0` open or closed issues; `0` open or closed PRs.

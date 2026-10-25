@@ -6,7 +6,7 @@
 - best_control: 539 symmetric triple Hamming distance on 0732 (mean 630.06 +- 29.87, 0/400 exact matches; deterministic single-scheme baseline Waring = 147 on 0732 and 173 on 0733)
 - real: 0 symmetric triple Hamming distance at Waring = 139 on 0732 (-8 vs table 147) and Waring = 161 on 0733 (-12 vs table 173), plus 4 repaired posted schemes (0105 41->39, 0108 77->73, 0115 55->51, 0817 63->59) and 7 p2 optimality certificates
 - real_beats_all_controls: yes
-- command: python3 claim/verify.py
+- command: python3 verify-it-yourself/verify.py
 
 ## 1. Calibration & Negative Controls (Law `M5`)
 

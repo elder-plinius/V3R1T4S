@@ -30,7 +30,7 @@ from hunt_all_benchmarks import GL3, encode_cpd_row, random_flip_walk
 
 WORK_CPD_DIR = POLYTOF_DIR / "data" / "cpd" / "topp"
 WORK_WAR_DIR = POLYTOF_DIR / "data" / "waring"
-CLAIM_WAR_DIR = Path("claim/waring")
+CLAIM_WAR_DIR = Path("object/waring")
 BIN_DIR = POLYTOF_DIR / "bin"
 
 TABLE_WARING = {4: 39, 5: 59, 6: 77, 7: 101, 8: 123, 9: 147, 10: 173}

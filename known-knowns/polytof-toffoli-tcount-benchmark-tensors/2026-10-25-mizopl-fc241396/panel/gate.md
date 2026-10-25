@@ -1,4 +1,5 @@
-status: CONFIRMED_PARTIAL
+claim_type: partial_win
+partial_win: p2, p3
 partial_id: p2, p3
 target_id: polytof-toffoli-tcount-benchmark-tensors
 reproduce_pass: true

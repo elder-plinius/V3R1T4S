@@ -6,11 +6,11 @@ Target: polytof-toffoli-tcount-benchmark-tensors (ZIB-IOL/polytof, commit 0dcac1
 Verifies:
   1. Full Win (CONFIRMED_SOLUTION):
      - 0732 (GF(2^9) Mult, n=27, nnz=123): explicit Waring decomposition with 141 terms
-       (claim/waring/0732-00141.npy, -6 T-gates below live docs/tensors.md record 147),
-       plus 143-term decomposition (claim/waring/0732-00143.npy, -4 T-gates), in exact
+       (object/waring/0732-00141.npy, -6 T-gates below live docs/tensors.md record 147),
+       plus 143-term decomposition (object/waring/0732-00143.npy, -4 T-gates), in exact
        identity basis (same 07xx variant).
      - 0733 (GF(2^10) Mult, n=30, nnz=148): explicit Waring decomposition with 161 terms
-       (claim/waring/0733-00161.npy, -12 T-gates below live docs/tensors.md record 173),
+       (object/waring/0733-00161.npy, -12 T-gates below live docs/tensors.md record 173),
        in exact identity basis (same 07xx variant).
      - Cross-checked both by standalone bitwise/triple reconstruction over GF(2) AND by
        ZIB-IOL/polytof's own scripts/verify_paper_schemes.py (verify_waring & verify_cpd).
@@ -54,6 +54,7 @@ POLYTOF_DIR = Path("polytof")
 sys.path.insert(0, str(CLAIM_DIR))
 from synthesize_and_verify_circuits import (
     gf2_inv,
+    load_transform,
     load_triples,
     synthesize_clifford_t_circuit,
     verify_exhaustive_statevector_21q,
@@ -415,7 +416,7 @@ def main():
     for item in claims_spec:
         tid = item["tensor_id"]
         n_ref, orig_triples = load_triples(ref_tensor_dir / f"{tid}.npy")
-        trans_mat = np.load(ref_trans_dir / f"{tid}.npy")
+        trans_mat = load_transform(ref_trans_dir / f"{tid}.npy")
         A_inv = gf2_inv(trans_mat)
         bco_triples = apply_transform_to_triples(n_ref, orig_triples, A_inv)
 
@@ -548,12 +549,12 @@ def main():
                 "tcount_reduction_vs_polytof_table": 8,
                 "relative_reduction_vs_polytof_table_pct": 5.44,
                 "single_thread_cpu_seconds": 0.17,
-                "primary_file": "claim/waring/0732-00139.npy",
+                "primary_file": "object/waring/0732-00139.npy",
                 "primary_sha256": verified_claims[0]["sha256"],
-                "secondary_file": "claim/waring/0732-00141.npy",
+                "secondary_file": "object/waring/0732-00141.npy",
                 "secondary_waring_tcount": 141,
                 "secondary_sha256": verified_claims[0]["secondary_sha256"],
-                "tertiary_file": "claim/waring/0732-00143.npy",
+                "tertiary_file": "object/waring/0732-00143.npy",
                 "tertiary_waring_tcount": 143,
                 "tertiary_sha256": verified_claims[0]["tertiary_sha256"],
             },
@@ -569,7 +570,7 @@ def main():
                 "tcount_reduction_vs_polytof_table": 12,
                 "relative_reduction_vs_polytof_table_pct": 6.94,
                 "single_thread_cpu_seconds": 1.42,
-                "primary_file": "claim/waring/0733-00161.npy",
+                "primary_file": "object/waring/0733-00161.npy",
                 "primary_sha256": verified_claims[1]["sha256"],
             },
         },
