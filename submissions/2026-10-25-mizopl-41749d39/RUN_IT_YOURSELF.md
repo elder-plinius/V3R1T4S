@@ -1,0 +1,13 @@
+# Run It Yourself (`2026-10-25-mizopl-41749d39`)
+
+1. Ensure `python3` (`>= 3.9`) with `numpy`, `scipy`, and `scikit-learn` is available.
+2. From the root of this package directory, execute:
+   ```sh
+   sh verify-it-yourself/run_checks.sh
+   ```
+3. The script runs `verify-it-yourself/verify.py`, performing in **`~0.45` seconds single-thread CPU time**:
+   - **SHA-256 & Zero-Contamination Firewall Check:** verifies the SHA-256 digests of `object/bd2009_blind_certificate.json` (`41749d395512d1d02975bfa03c861bbdb93c57c7dd9f1df95414751d3b2a6046`) and `object/blind_predictions.npz` (`c59c21de2b11786e78973fbf9ebdc85737b6b6770f19cc34e777345cba79d2dc`), plus the 7 raw benchmark SHA-256 hashes (`bdata.2009.mhci.public.1.txt`, `bdata.2009.mhci.public.1.cv_rnd.txt`, `bdata.20130222.mhci.public.1.txt`, `bdata.2013.mhci.public.blind.1.txt`, and the 3 reference `.xls` tables) and zero post-2009 training rows (`post2009_training_rows_used == 0`).
+   - **Exact 87-Dataset `Blind` ROC-AUC Re-Computation (`26,861` measurements, `9,213` binders at `meas < 500.0` nM):** recomputes every per-dataset ROC-AUC from raw per-peptide predictions and binary labels in `object/blind_predictions.npz`, verifying `0 / 87` discrepancies for both **Variant A (`Pure Sequence f(allele, seq)`: `0.889379`, `+0.006057` vs `NetMHC = 0.883322`, `+0.006331` vs `NetMHCpan = 0.883048`, `+0.041990` vs `SMM-PMBEC = 0.847389`)** and **Variant B (`Sequence + BD2009 IRT`: `0.889556`, `+0.006234` vs `NetMHC`, `+0.006508` vs `NetMHCpan`, `+0.042167` vs `SMM-PMBEC`, `57 / 87` wins vs `NetMHC`, two-sided binomial sign test $p = 0.005014 < 0.01$)**.
+   - **Partial Win `p1` (`iedb-mhci-small-allele-blind-auc`):** verifies that on the 20 smallest datasets by training sample size `size_cv` (`57..326`), Variant A (`0.850714`) and Variant B (`0.850861`) beat `NetMHC` (`0.830038`), `NetMHCpan` (`0.829313`), and `SMM-PMBEC` (`0.746466`) by **`+0.020676` / `+0.020823` vs `NetMHC`** and **`+0.021401` / `+0.021548` vs `NetMHCpan`** ($\ge 0.02$).
+   - **Partial Win `p2` (`iedb-mhci-cv-blind-optimism-gap-shrink`):** verifies that the Zero-Fold-Leakage Homology-Damped 5-fold `cv_rnd` OOF mean AUC (`0.907408`) yields an optimism gap of **`0.017852`** (Variant B) / **`0.018028`** (Variant A), shrinking `NetMHCpan`'s optimism gap (`0.034553` table / `0.031700` paper) by **`+0.016701` / `+0.016524` (table)** and **`+0.013848` / `+0.013672` (paper)** ($\ge 0.01$) while outperforming all three references on `Blind`.
+   - **Partial Win `p3` (`iedb-mhci-bd2013-leakage-quantification`):** verifies the 6-point temporal contamination audit across all `42,038` unique post-2009 `(mhckey, sequence)` rows in `(BD2013 U Blind) \ BD2009`, printing `PASS` as its final line.
