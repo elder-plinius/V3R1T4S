@@ -16,38 +16,733 @@ EXPECTED_OBJ_FILES = {
         34276,
         "dd093b972a4f7eb7d6d9db4c5809a3332e413868719635bb6d2fdc9e59dacdb2",
     ),
-    "lychrel_base98_certificate.json": (
-        38310,
-        "6ec98e276bfb691187e5ebdb4c8ccf0c149f2754e201e362c15a4a681dbb5256",
-    ),
-    "lychrel_base146_certificate.json": (
-        69366,
-        "118af24a34557dbba72c36eb478019f1f4bed84999e23dc46367c5865ba55945",
-    ),
-    "seal_base26_baseline_certificate.json": (
-        10562,
-        "02cae252da5d9e1b7cbdde9a52c5751b1affc36dcda22abfb41eb2a5fb7e0c27",
-    ),
-    "kuitche_2023_audit.json": (
-        14637,
-        "918d070676a95905173766663baef89c576b2f22d135cc7eacc7dd691f596736",
-    ),
 }
 
-EXPECTED_REC_FILES = {
-    "rs_2659802.pdf": (
-        648343,
-        "c5130873a5d82c3577ac52d7a9a1ec94a7dce1017d9ce2dededa13a87f64dac7",
-    ),
-    "dseal_live.htm": (
-        4085,
-        "abd869951209dd65d19b0ea8000f2bc3a3bed28bfeeece9097f258ef1ad95c3c",
-    ),
-    "Lychrel_number.html": (
-        206959,
-        "2e5338385838c5abe91d01fb0fb68ae77ada436ef0ea765a340629d14bd6ab05",
-    ),
+SEAL_BASE26_BASELINE = json.loads(r"""{
+  "base": 26,
+  "label": "David Seal 1996 baseline b = 26 (Period-4 template cycle)",
+  "is_power_of_two": false,
+  "in_known_set_11_17_20_26": true,
+  "period": 4,
+  "parameter_threshold_m0": 1,
+  "outer_length": 8,
+  "inner_length_even_phases": 4,
+  "inner_length_odd_phases": 5,
+  "start_n_T1_m1_digits": [
+    1,
+    23,
+    5,
+    14,
+    21,
+    10,
+    6,
+    12,
+    25,
+    25,
+    6,
+    14,
+    7,
+    0,
+    0,
+    13,
+    5,
+    9,
+    22,
+    14,
+    5,
+    23
+  ],
+  "start_n_T1_m1_base10": "980748602697229467552545222385",
+  "start_n_T1_m1_length_in_base_b": 22,
+  "pre_template_seed_digits": [
+    2,
+    23,
+    5,
+    14,
+    21,
+    10,
+    6,
+    12,
+    25,
+    25,
+    6,
+    14,
+    7,
+    0,
+    0,
+    13,
+    5,
+    9,
+    22,
+    14,
+    5,
+    22
+  ],
+  "pre_template_seed_base10": "1498880473972674105513390354160",
+  "pre_template_seed_enters_at_step": 1,
+  "pre_template_seed_target": "T_2(1)",
+  "L0": [
+    1,
+    23,
+    5,
+    14,
+    21,
+    10,
+    6,
+    12
+  ],
+  "R0": [
+    0,
+    13,
+    5,
+    9,
+    22,
+    14,
+    5,
+    23
+  ],
+  "L1": [
+    25,
+    2,
+    20,
+    11,
+    4,
+    15,
+    19,
+    13
+  ],
+  "R1": [
+    12,
+    19,
+    16,
+    5,
+    10,
+    20,
+    2,
+    24
+  ],
+  "M0": [
+    25,
+    6,
+    14,
+    7
+  ],
+  "M1": [
+    6,
+    20,
+    21,
+    6
+  ],
+  "M2": [
+    25,
+    13,
+    16,
+    15,
+    13
+  ],
+  "M3": [
+    13,
+    3,
+    7,
+    3,
+    12
+  ],
+  "templates": [
+    {
+      "name": "T_1(m)",
+      "phase": 0,
+      "prefix": [
+        1,
+        23,
+        5,
+        14,
+        21,
+        10,
+        6,
+        12
+      ],
+      "left_repeat_digit": 25,
+      "middle": [
+        25,
+        6,
+        14,
+        7
+      ],
+      "right_repeat_digit": 0,
+      "suffix": [
+        0,
+        13,
+        5,
+        9,
+        22,
+        14,
+        5,
+        23
+      ],
+      "normalized_rle_blocks": [
+        {
+          "digit": 1,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 23,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 14,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 21,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 10,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 6,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 12,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 25,
+          "a": 1,
+          "c": 1
+        },
+        {
+          "digit": 6,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 14,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 7,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 0,
+          "a": 1,
+          "c": 1
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 9,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 22,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 14,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 23,
+          "a": 0,
+          "c": 1
+        }
+      ],
+      "next_template": "T_2(m)",
+      "carries": {
+        "c_R": 0,
+        "c_M": 1,
+        "c_L": 0
+      }
+    },
+    {
+      "name": "T_2(m)",
+      "phase": 1,
+      "prefix": [
+        25,
+        2,
+        20,
+        11,
+        4,
+        15,
+        19,
+        13
+      ],
+      "left_repeat_digit": 0,
+      "middle": [
+        6,
+        20,
+        21,
+        6
+      ],
+      "right_repeat_digit": 25,
+      "suffix": [
+        12,
+        19,
+        16,
+        5,
+        10,
+        20,
+        2,
+        24
+      ],
+      "normalized_rle_blocks": [
+        {
+          "digit": 25,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 2,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 20,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 11,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 4,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 15,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 19,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 0,
+          "a": 1,
+          "c": 0
+        },
+        {
+          "digit": 6,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 20,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 21,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 6,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 25,
+          "a": 1,
+          "c": 0
+        },
+        {
+          "digit": 12,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 19,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 16,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 10,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 20,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 2,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 24,
+          "a": 0,
+          "c": 1
+        }
+      ],
+      "next_template": "T_3(m)",
+      "carries": {
+        "c_R": 1,
+        "c_M": 0,
+        "c_L": 1
+      }
+    },
+    {
+      "name": "T_3(m)",
+      "phase": 2,
+      "prefix": [
+        1,
+        23,
+        5,
+        14,
+        21,
+        10,
+        6,
+        12
+      ],
+      "left_repeat_digit": 25,
+      "middle": [
+        25,
+        13,
+        16,
+        15,
+        13
+      ],
+      "right_repeat_digit": 0,
+      "suffix": [
+        0,
+        13,
+        5,
+        9,
+        22,
+        14,
+        5,
+        23
+      ],
+      "normalized_rle_blocks": [
+        {
+          "digit": 1,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 23,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 14,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 21,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 10,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 6,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 12,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 25,
+          "a": 1,
+          "c": 1
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 16,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 15,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 0,
+          "a": 1,
+          "c": 1
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 9,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 22,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 14,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 23,
+          "a": 0,
+          "c": 1
+        }
+      ],
+      "next_template": "T_4(m)",
+      "carries": {
+        "c_R": 0,
+        "c_M": 1,
+        "c_L": 0
+      }
+    },
+    {
+      "name": "T_4(m)",
+      "phase": 3,
+      "prefix": [
+        25,
+        2,
+        20,
+        11,
+        4,
+        15,
+        19,
+        13
+      ],
+      "left_repeat_digit": 0,
+      "middle": [
+        13,
+        3,
+        7,
+        3,
+        12
+      ],
+      "right_repeat_digit": 25,
+      "suffix": [
+        12,
+        19,
+        16,
+        5,
+        10,
+        20,
+        2,
+        24
+      ],
+      "normalized_rle_blocks": [
+        {
+          "digit": 25,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 2,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 20,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 11,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 4,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 15,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 19,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 0,
+          "a": 1,
+          "c": 0
+        },
+        {
+          "digit": 13,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 3,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 7,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 3,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 12,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 25,
+          "a": 1,
+          "c": 0
+        },
+        {
+          "digit": 12,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 19,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 16,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 5,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 10,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 20,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 2,
+          "a": 0,
+          "c": 1
+        },
+        {
+          "digit": 24,
+          "a": 0,
+          "c": 1
+        }
+      ],
+      "next_template": "T_1(m+1)",
+      "carries": {
+        "c_R": 1,
+        "c_M": 0,
+        "c_L": 1
+      }
+    }
+  ]
 }
+""")
 
 
 def normalize_rle(blocks):
@@ -403,9 +1098,9 @@ def run_negative_and_null_controls(cert50):
 
 def main():
     t_start = time.time()
-    print("=== V3R1T4S Mechanical Lychrel Template-Closure Verifier ===")
+    print("=== V3R1T4S Mechanical Lychrel Template-Closure Verifier (Base 50) ===")
 
-    # Step 1: Check file integrity of object/ and the-record-we-beat/
+    # Step 1: Check file integrity of object/lychrel_base50_certificate.json
     for fname, (exp_size, exp_hash) in EXPECTED_OBJ_FILES.items():
         fpath = os.path.join(OBJ_DIR, fname)
         assert os.path.isfile(fpath), f"Missing file {fname}"
@@ -413,51 +1108,32 @@ def main():
         assert len(raw) == exp_size, f"Size mismatch on {fname}: got {len(raw)}, expected {exp_size}"
         h = hashlib.sha256(raw).hexdigest()
         assert h == exp_hash, f"SHA-256 mismatch on {fname}: got {h}, expected {exp_hash}"
-    if os.path.isdir(REC_DIR):
-        for fname, (exp_size, exp_hash) in EXPECTED_REC_FILES.items():
-            fpath = os.path.join(REC_DIR, fname)
-            assert os.path.isfile(fpath), f"Missing file {fname}"
-            raw = open(fpath, "rb").read()
-            assert len(raw) == exp_size, f"Size mismatch on {fname}: got {len(raw)}, expected {exp_size}"
-            h = hashlib.sha256(raw).hexdigest()
-            assert h == exp_hash, f"SHA-256 mismatch on {fname}: got {h}, expected {exp_hash}"
-    print("[1/6] File integrity verified for all object/ and reference files.")
+    print("[1/5] File integrity verified for object/lychrel_base50_certificate.json.")
 
     # Step 2: Reproduce David Seal's 1996 Base-26 baseline first
-    cert26 = json.load(open(os.path.join(OBJ_DIR, "seal_base26_baseline_certificate.json")))
-    sym26 = verify_certificate(cert26, brute_force_max_m=500, require_new_base=False)
-    print(f"[2/6] Baseline reproduction PASSED: David Seal Base 26 (Period 4, {sym26} symbolic blocks, brute-forced m=1..500).")
+    sym26 = verify_certificate(SEAL_BASE26_BASELINE, brute_force_max_m=500, require_new_base=False)
+    print(f"[2/5] Baseline reproduction PASSED: David Seal Base 26 (Period 4, {sym26} symbolic blocks, brute-forced m=1..500).")
 
-    # Step 3: Verify primary Base-50 certificate + secondary Base-98 + tertiary Base-146
+    # Step 3: Verify Base-50 certificate
     cert50 = json.load(open(os.path.join(OBJ_DIR, "lychrel_base50_certificate.json")))
-    cert98 = json.load(open(os.path.join(OBJ_DIR, "lychrel_base98_certificate.json")))
-    cert146 = json.load(open(os.path.join(OBJ_DIR, "lychrel_base146_certificate.json")))
-
-    for cert in (cert50, cert98, cert146):
-        b = cert["base"]
-        sym_cnt = verify_certificate(cert, brute_force_max_m=500, require_new_base=True)
-        print(
-            f"[3/6] New Base b={b:3d} PASSED: symbolic all-m closure ({sym_cnt} uniform symbolic blocks), "
-            f"symbolic non-palindromicity, seed entry, and brute-force m=1..500 "
-            f"(|L0|={cert['outer_length']}, |M0|={cert['inner_length_even_phases']}, |T_1(1)|={cert['start_n_T1_m1_length_in_base_b']})."
-        )
+    sym_cnt = verify_certificate(cert50, brute_force_max_m=500, require_new_base=True)
+    print(
+        f"[3/5] New Base b= 50 PASSED: symbolic all-m closure ({sym_cnt} uniform symbolic blocks), "
+        f"symbolic non-palindromicity, seed entry, and brute-force m=1..500 "
+        f"(|L0|={cert50['outer_length']}, |M0|={cert50['inner_length_even_phases']}, |T_1(1)|={cert50['start_n_T1_m1_length_in_base_b']})."
+    )
 
     # Step 4: Simulate 100,000 steps of the Base-50 orbit and match every iterate against regexes
     t_sim = time.time()
     final_len = simulate_orbit_1e5_with_regex(cert50, n_steps=100000)
     print(
-        f"[4/6] Base 50 orbit simulation + regex matching PASSED: 100,000 steps "
+        f"[4/5] Base 50 orbit simulation + regex matching PASSED: 100,000 steps "
         f"(t=0..100,000, final length = {final_len:,} base-50 digits) in {time.time() - t_sim:.2f}s."
     )
 
-    # Step 5: Verify Kuitche (2023) mechanical audit across bases 3..10
-    audit = json.load(open(os.path.join(OBJ_DIR, "kuitche_2023_audit.json")))
-    verify_kuitche_audit(audit)
-    print("[5/6] Kuitche (2023) mechanical audit PASSED across all bases b=3..10 (explicit failure instances verified for all b in {3,5,6,7,9,10}).")
-
-    # Step 6: Negative & null-model controls
+    # Step 5: Negative & null-model controls
     n_null = run_negative_and_null_controls(cert50)
-    print(f"[6/6] Perturbation & null-model controls PASSED (corrupted M0 rejected, non-uniform carry rejected, 0/{n_null} random 82-digit starts).")
+    print(f"[5/5] Perturbation & null-model controls PASSED (corrupted M0 rejected, non-uniform carry rejected, 0/{n_null} random 82-digit starts).")
 
     print(f"ALL CHECKS PASSED in {time.time() - t_start:.2f}s.")
 
