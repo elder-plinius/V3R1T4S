@@ -1,0 +1,4 @@
+blank: onset 256241 period 384
+VIOLATION t=318 p=334 k=2 cells: (1,0,2) (1,-1,1)
+MIN t=319 p=335 k=2 cells: (1,0,2) (1,-1,1)
+DONE rule=LLRL K=2 T=319 wid=0/1 leaves=32936 viol=1 mins=1 flags=0

@@ -1,0 +1,9 @@
+# new best 231
+SOL onset=231 k=4 found_t=232 phase=263 cells: (0,0,1) (1,1,2) (-2,1,1) (2,2,1)
+# new best 202
+SOL onset=202 k=4 found_t=208 phase=267 cells: (0,0,1) (1,1,2) (-2,1,2) (2,2,1)
+# new best 199
+SOL onset=199 k=4 found_t=200 phase=262 cells: (-1,0,1) (0,-1,2) (0,2,2) (1,-2,1)
+# new best 195
+SOL onset=195 k=4 found_t=200 phase=266 cells: (-1,0,2) (0,-1,2) (0,2,1) (1,-2,1)
+RESULT rule=LLRL K=4 best_onset=195 minimisers=1 nodes=14961196 tests=106204389 maxR=14 Dmin=238 flagged=0

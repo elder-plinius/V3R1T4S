@@ -1,0 +1,2 @@
+phases built P=384: forced non-zero first reads min 12 (phase 65) max 27; Dmin(after 60 periods)=238; late non-zero first reads=0
+RESULT split=0/4@6 subtrees=1909 rule=LLRL K=4 NONE onset<=196 nodes=11940091 tests=80298433 maxR=14 Dmin=238
