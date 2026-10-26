@@ -24,16 +24,16 @@ My independent checker verified the exact byte counts and SHA-256 checksums of a
 | `object/CERTIFICATE.json` | `3,699` | `4a2e07b5d438be3327737929448819782885fb1eb1ba946acabeda846082cbb6` | PASS |
 | `verify-it-yourself/verify.py` | `10,050` | `f6fad5a2883ba369fb33c743e2f45ab2c9167c15ec443c677a33b26fac0b505d` | PASS |
 | `how-we-built-it/clss_cl1_tellegen_reducer.cpp` | `24,238` | `c4dbcec6ab78e5a335bb993689806e4672509c42e8e8a5f3dbe39b4629ad1c66` | PASS |
-| `object/schemes/3x3x7_m49_cr167_cn404_ZT_reduced.json` | `26,356` | `2f10739cd6200745967118e413c1433a1781a8db374eb3343c3fe92c7a7fc280` | PASS |
-| `object/schemes/3x5x6_m68_cr245_cn494_ZT_reduced.json` | `38,487` | `4271edeb86e3c452ebaa6edec9647590162e7093a0b4468b5c5dbc866acc850f` | PASS |
-| `object/schemes/3x5x7_m79_cr294_cn520_ZT_reduced.json` | `45,872` | `7aaaceef49b6d190b1a50d3779209c6b216bedef03578144602a8d3808c4e977` | PASS |
-| `object/schemes/5x6x6_m130_cr492_cn1697_ZT_reduced.json` | `76,412` | `b17cdb716cc62a02d0b7d5fa982067147dd3c2ea721723986fa5af9e3e2a27b2` | PASS |
+| `object/schemes/3x3x7_m49_cr167_cn404_ZT_reduced.json` | `26,027` | `2f10739cd6200745967118e413c1433a1781a8db374eb3343c3fe92c7a7fc280` | PASS |
+| `object/schemes/3x5x6_m68_cr245_cn494_ZT_reduced.json` | `37,078` | `4271edeb86e3c452ebaa6edec9647590162e7093a0b4468b5c5dbc866acc850f` | PASS |
+| `object/schemes/3x5x7_m79_cr294_cn520_ZT_reduced.json` | `45,808` | `7aaaceef49b6d190b1a50d3779209c6b216bedef03578144602a8d3808c4e977` | PASS |
+| `object/schemes/5x6x6_m130_cr492_cn1697_ZT_reduced.json` | `77,200` | `b17cdb716cc62a02d0b7d5fa982067147dd3c2ea721723986fa5af9e3e2a27b2` | PASS |
 
 ---
 
 ## 3. Upstream Reference Metadata & Credited Source Schemes
 
-`object/CERTIFICATE.json` and `verify-it-yourself/verify.py` record the URLs, byte sizes, and SHA-256 digests of the upstream reference sources (replacing third-party file copies):
+`README.md`, `the-record-we-beat/table_status.md`, and `object/CERTIFICATE.json` record the URLs, byte sizes, and SHA-256 digests of the upstream reference sources (replacing third-party file copies):
 - `https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json` (`343,774` bytes, `sha256: 2a6535154ac877aeb495f9294a5e97c3dbf1b1969aefe6ffc0a612f2cf01cbae`)
 - `https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/reduced_known.json` (`1,189` bytes, `sha256: ef67c13792b0e770578de4ff01438178ce4e6ac4efd60a3580f3131e31907a5d`)
 - `https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md` (`94,842` bytes, `sha256: c2a9bd929b477acb44d4f92aa8055a0c26eab3c33121c0734be650c5c86254b7`; current `COVERAGE.md` `adds` values: `+404`, `+482`, `+520`, `+1716` at ranks `49`, `68`, `79`, `130`)
@@ -75,6 +75,10 @@ Running `indep_fmm_check.py` across all `4` `.json` files in `object/schemes/` v
    - Flipping `u_fresh[0][0]["value"]` in `object/schemes/3x3x7_m49_cr167_cn404_ZT_reduced.json` causes symbolic output entry mismatches over $\mathbb{Z}[A, B]$ and is immediately rejected (`AssertionError`).
    - Introducing a self-loop index (`index == cur_idx`) or a non-unit coefficient (`value = 2`) immediately raises `ValueError`.
 2. **Author Verifier (`verify-it-yourself/verify.py`) Executed via `sh verify-it-yourself/run_checks.sh`:**
-   - Running `sh verify-it-yourself/run_checks.sh` deterministically verifies all `4` schemes, upstream reference metadata, the corrupted-gate negative control, and the `400`-sample random greedy CSE null control on `3x3x7` ($m = 49, \text{cn} = 404$): `best_control = 304`, `median = 336`, `IQR = 13` vs claimed `cr = 167` (`-137` additions below `best_control`), printing `PASS`.
+   - Running `sh verify-it-yourself/run_checks.sh` deterministically verifies all `4` schemes, baseline comparisons (`sota_rank`, `live_min_m`, `live_min_cr`, and `matmulcatalog_adds`), the corrupted-gate negative control, and the `400`-sample random greedy CSE null control on `3x3x7` ($m = 49, \text{cn} = 404$): `best_control = 304`, `median = 336`, `IQR = 13` vs claimed `cr = 167` (`-137` additions below `best_control`), printing:
+     ```text
+     VERIFIED: All 4 ternary SLP record schemes, baseline comparisons, negative control, and 400 null controls passed.
+     PASS
+     ```
 
 pass: true
