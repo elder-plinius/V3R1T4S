@@ -1,0 +1,3 @@
+phases built: forced-set size min 11 max 22, Dmin(after 80 periods)=159
+RESULT K=5 NONE t<=61 nodes=211183 maxR=13 Dmin=159
+exit=0
