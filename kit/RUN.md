@@ -50,13 +50,19 @@ The first run is always light. Run `date -u` at the start and before each new li
 (`nice`), with a hard time cap, a checkpoint every few minutes, and their process id recorded so you can stop
 exactly them later.
 
+Before parallel work or a larger input, profile a bounded pilot and size the batch to the run-wide memory budget
+(`kit/RULES.md` rule 10). In the attempt's `NOTES.md`, record the pilot's input size and peak memory, the planned
+worker count and chunk size. Simultaneous lenses and local skeptics share that budget; it is not a separate
+allowance for each process.
+
 ## Step 0. Preflight
 
 Stop with a one-line report if `PAUSE` exists. Create `runs/<YYYY-MM-DD-HHMM>/` (from `date -u`). Write a stub
 `<WORKDIR>/REPORT.md` (the workspace root, not the run folder) now, whose first line is
 `STATUS: IN PROGRESS (run started <time from date -u>)`, so a run cut off by a time limit still leaves a report.
 The final report replaces it. Check free disk space (at least
-10 GB). If a dossier lists a claim labelled `single-context, unpanelled` and you can now start fresh contexts, its
+10 GB), available RAM and any existing job/container memory limit; set the run's memory budget under rule 10.
+If a dossier lists a claim labelled `single-context, unpanelled` and you can now start fresh contexts, its
 panel (step 6) is this run's first job.
 
 ## Step 1. Read
@@ -90,8 +96,8 @@ sha256. Public inputs (the ciphertext, the problem file) go in the run's `data/`
   off-limits ...`, `dead: unreachable ...`, `dead: record moved ...`) in `target.md`, note it in the dossier, and
   pick another target in a new run folder (at most twice), or end the run. Nothing else counts as dead.
 - Write `BRIEF.md`: the definition quoted from the source, the current best with its source, what failed before,
-  pitfalls, and at least 5 concrete angles. Write a checker from the definition and test it on a known positive
-  and a known negative case.
+  pitfalls, the run-wide memory budget, and at least 5 concrete angles. Write a checker from the definition and
+  test it on a known positive and a known negative case.
 
 ## Step 3b. Freeze the rule (`PREREG.md`)
 
