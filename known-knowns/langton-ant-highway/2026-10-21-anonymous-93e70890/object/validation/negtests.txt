@@ -1,0 +1,14 @@
+N1: 4x4 mask 0 has tcap 9977 (enum4). cap 9976 must NOT capture, cap 9977 must capture:
+0 -1 0 0 0 UNCAPTURED_WITHIN_CAP
+0 9977 -2 -2 3 CAP
+N2: empty-grid run (6x6 mask 0); planted black cell at the ant's position at step 20000 of the unplanted run
+plant at -210 -184
+unplanted:
+0 9977 -2 -2 3 CAP
+planted (must not certify before step 20000; tcap expected > 20000 since the highway is disrupted):
+0 20299 -2 -2 3 CAP
+steps 21120
+N3: planted black cell at the unplanted ant's position at step 100000 (far down the highway): certification must happen after step 100000
+plant at -1748 -1726
+0 106359 -2 2 1 CAP
+steps 107776
