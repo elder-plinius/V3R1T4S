@@ -1,0 +1,35 @@
+{
+  "id": "whirlwind-linear-layer-xor-records",
+  "name": "Whirlwind M0/M1: beat the 2026 XOR-count records of 159 and 169",
+  "category": "record-tables",
+  "kind": "harvest",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to laptop-days for randomized linear-circuit synthesis; verification uses 32-bit coefficient vectors and is effectively instantaneous",
+  "statement": "Buji Xu and Xiaoming Sun, Utilizing Circulant Structure to Optimize the Implementations of Linear Layers, IACR ToSC 2026(2), Table 4, gives binary-XOR implementations of the 32-by-32 Whirlwind M0 and M1 maps with 159 and 169 gates. The prior comparable counts shown are 173 and 180. The separate CNOT quantum-depth tables optimize a different objective. Appendix C supplies the 159-XOR M0 circuit; the authors’ circulant_synth repository describes its synthesis tool. The reference repository supplies both 32-by-32 binary matrices. NIST’s older catalogue was retrieved, but its entries do not replace the newer paper’s counts.",
+  "success_criterion": "Supply a straight-line circuit using only two-input XOR, input wires, the zero constant and free fan-out/wire renaming, computing the exact published 32-bit Whirlwind M0 map with at most 158 XORs, or M1 with at most 168 XORs. Include the 32 target binary rows copied from the cited matrix definition, their bit-order convention, the entire circuit, and output-wire mapping. Count any nontrivial basis conversion. There is no depth constraint. Also strictly improve the best comparable published result at claim time, including compatible compositions of published objects. State whether the candidate is a composition and identify its components. Values in unmerged pull requests do not set the bar.",
+  "partial_wins": [],
+  "verification_method": "Represent input wire i by the 32-bit unit vector 1<<i. Propagate XOR coefficient vectors through every assignment and compare the 32 output vectors with an independently transcribed expansion of the published matrix. Validate the gate DAG and count all XOR assignments. Cross-check the target expansion against the published reference circuit or dataset, rather than accepting a claimant-supplied target matrix. Reversible in-place assignments can be expanded into ordinary SSA wires before counting.",
+  "primary_sources": [
+    "https://tosc.iacr.org/index.php/ToSC/article/download/13012/12590",
+    "https://tosc.iacr.org/index.php/ToSC/article/view/13012",
+    "https://github.com/DerryAlex/circulant_synth",
+    "https://csrc.nist.gov/Projects/circuit-complexity/list-of-circuits",
+    "https://raw.githubusercontent.com/rub-hgi/shorter_linear_slps_for_mds_matrices/master/matrices_bp_format/Whirlwind_M0.txt",
+    "https://raw.githubusercontent.com/rub-hgi/shorter_linear_slps_for_mds_matrices/master/matrices_bp_format/Whirlwind_M1.txt"
+  ],
+  "status_source": "https://tosc.iacr.org/index.php/ToSC/article/download/13012/12590",
+  "status_checked": "2026-10-15 (supplied literature-status date; primary publication re-read 2026-10-24, later literature not independently rechecked)",
+  "disclosure": "open",
+  "angles": [
+    "Combine circulant block decomposition with common-subexpression search and local exact resynthesis.",
+    "Search both a matrix and its transpose with a correctly costed transposition transformation.",
+    "Use random restarts of the supplied small C++ synthesizer; retain a tiny independent coefficient-vector checker."
+  ],
+  "pitfalls": [
+    "Compare two-input XOR counts under the same circuit model.",
+    "Quantum CNOT depth is a different objective.",
+    "Compute the exact M0 or M1 map, not an arbitrary 32-bit diffusion matrix.",
+    "Basis conversions count toward the total.",
+    "NIST may lag recent papers; later published circuits and compatible compositions need a fresh comparison."
+  ]
+}
