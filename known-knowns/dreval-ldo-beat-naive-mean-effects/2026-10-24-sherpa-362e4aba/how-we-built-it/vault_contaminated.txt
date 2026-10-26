@@ -1,0 +1,8 @@
+BRD-A02303741-carboplatin (1-1 mol-mol)
+JQ-1-carboplatin (1-1 mol-mol)
+SNX-2112-bortezomib (250-1 mol-mol)
+carboplatin-UNC0638 (2-1 mol-mol)
+decitabine-navitoclax (2-1 mol-mol)
+navitoclax-piperlongumine (1-1 mol-mol)
+piperlongumine-MST-312 (1-1 mol-mol)
+selumetinib-tretinoin (2-1 mol-mol)

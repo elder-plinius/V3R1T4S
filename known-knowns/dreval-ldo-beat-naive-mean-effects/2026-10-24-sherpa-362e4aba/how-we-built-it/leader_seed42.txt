@@ -1,0 +1,5 @@
+generation: seed42
+  PotencyTransfer (the claim)      mean +0.2244  SE 0.0352  positive 10/10
+  leader via sequential pipeline  mean -0.0268  SE 0.0387  positive 5/10  | claim beats it: True  (margin +0.2512)
+  leader via per-fold runner      INCOMPLETE (0/10 folds) -- not scored
+  published leader value on the status page: +0.0235

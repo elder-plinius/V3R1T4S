@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+dreval-ldo-beat-naive-mean-effects,CTRPv2 LDO normalized R^2 (10 splits, seed 42),0.2249,0.0235,2026-10-23T23:49:53Z,object/MANIFEST.sha256,362e4abaa203f5d9057acf62d202200cda0bf2d31df09f77f17d3dae009b3f65

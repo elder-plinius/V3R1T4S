@@ -1,0 +1,20 @@
+independent generation, per split (same splits, same ruler, same environment)
+  split  PotencyTransfer   leader re-run    difference   | leader, sequential replicate
+    0      +0.1080          -0.2924        +0.4004    | -0.1405
+    1      +0.4884          -0.1208        +0.6092    | -0.0647
+    2      +0.2019          +0.1259        +0.0761    | +0.1052
+    3      +0.1301          -0.1960        +0.3261    | -0.0743
+    4      +0.1154          -0.3039        +0.4193    | -0.1373
+    5      +0.1283          +0.0817        +0.0466    |    --  
+    6      +0.3798          -0.0882        +0.4680    |    --  
+    7      +0.3427          -0.1869        +0.5297    |    --  
+    8      +0.3432          +0.1795        +0.1637    |    --  
+    9      +0.0252          -0.1270        +0.1521    |    --  
+
+  mean   +0.2263          -0.0928        +0.3191
+  SD     0.1512           0.1694         0.1980
+
+paired t = 5.10, p = 6.47e-04; Wilcoxon p = 0.0020; claim wins 10/10 splits
+
+leader, sequential replicate on its 5 completed folds: mean -0.0623 (same folds, runner replicate: -0.1574)
+  -> two independent leader replicates agree that it is at or below the baseline here

@@ -1,0 +1,5 @@
+generation: independent
+  PotencyTransfer (the claim)      mean +0.2263  SE 0.0478  positive 10/10
+  leader via sequential pipeline  INCOMPLETE (5/10 folds) -- not scored
+  leader via per-fold runner      mean -0.0928  SE 0.0536  positive 3/10  | claim beats it: True  (margin +0.3191)
+  published leader value on the status page: +0.0235
