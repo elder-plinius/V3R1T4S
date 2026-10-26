@@ -1,0 +1,421 @@
+{
+  "candidate_id": "GMN_P1_OUTBURST_2025_SEP01_CYG_DRA",
+  "designation_provisional": "2025 September 1 Cygnus-Draco 4.8h Outburst",
+  "claim_type": "partial_win_p1_6h_outburst",
+  "audit": {
+    "n_members": 10,
+    "years": [
+      2025
+    ],
+    "n_years": 1,
+    "jd_min": 2460919.38892285,
+    "jd_max": 2460919.59047251,
+    "jd_span_days": 0.20154965994879603,
+    "jd_span_hours": 4.837191838771105,
+    "sol_lon_min": 158.368316,
+    "sol_lon_max": 158.563297,
+    "sol_lon_span_deg": 0.19498100000001273,
+    "mean_orbit": {
+      "q": 0.9478095,
+      "e": 0.695434,
+      "i": 35.988358,
+      "node": 158.45219899575272,
+      "peri": 211.58331937102045,
+      "sol_lon": 158.44732649571003,
+      "ra": 300.98448334800753,
+      "dec": 52.83944104896589,
+      "vg": 23.4583
+    },
+    "median_orbit": {
+      "q": 0.9493875,
+      "e": 0.6906829999999999,
+      "i": 35.98403,
+      "node": 158.44462,
+      "peri": 211.245975,
+      "sol_lon": 158.4395235
+    },
+    "max_member_dsh_exact": 0.061893256976480265,
+    "max_member_dsh_planar": 0.06181630436695797,
+    "max_member_dsh_to_median_exact": 0.06305463218196442,
+    "max_member_dsh_to_median_planar": 0.06298301257107167,
+    "max_pairwise_dsh_exact": 0.11138660721323672,
+    "max_pairwise_dsh_planar": 0.11122771360065761,
+    "min_mdc_dsh_catalog": 0.25210966491036824,
+    "closest_mdc_dsh_catalog": [
+      "02582",
+      "01206",
+      "FDR",
+      "53-Draconids",
+      0.25210966491036824,
+      0.27212426600910367
+    ],
+    "min_mdc_dsh_all2192": 0.25210966491036824,
+    "closest_mdc_dsh_all2192": [
+      "02582",
+      "01206",
+      "FDR",
+      "53-Draconids",
+      0.25210966491036824,
+      0.27212426600910367
+    ],
+    "min_member_mdc_dsh_all2192": 0.21911083652239616,
+    "min_matched_rad_sep_deg": 20.647253796450915,
+    "closest_mdc_rad": [
+      "00731",
+      "00220",
+      "NDR",
+      "nu-Draconids",
+      20.647253796450915,
+      162.6
+    ],
+    "min_interval_rad_sep_deg": 8.993435471572882,
+    "min_num_stat": 3,
+    "all_countries": [
+      "CA",
+      "CZ",
+      "DE",
+      "HU",
+      "SK",
+      "UK"
+    ],
+    "n_countries_cluster": 6,
+    "n_multicountry_members": 2,
+    "all_members_multicountry": false
+  },
+  "null_test_400_controls": {
+    "controls": 400,
+    "real": 10,
+    "best_control": 3,
+    "real_beats_all_controls": "yes",
+    "control_mean": 0.48,
+    "control_std": 0.6751,
+    "sideband_mean": 0.75,
+    "effective_bg_mu": 0.75,
+    "effective_bg_sigma": 0.866,
+    "z_score_sigma": 10.68,
+    "poisson_log10_p": -8.1,
+    "poisson_equiv_sigma": 5.96,
+    "control_histogram": {
+      "0": 246,
+      "1": 119,
+      "2": 32,
+      "3": 3
+    },
+    "cross_year_same_window_counts": {
+      "2019": 0,
+      "2020": 0,
+      "2021": 0,
+      "2022": 1,
+      "2023": 0,
+      "2024": 0
+    }
+  },
+  "members": [
+    {
+      "id": "20250831212002_53i33",
+      "year": 2025,
+      "jd": 2460919.38892285,
+      "utc": "2025-08-31 21:20:02.934252",
+      "iau_no": -1,
+      "sol_lon": 158.368316,
+      "ra": 303.24977,
+      "dec": 52.4902,
+      "vg": 23.79972,
+      "vg_err": 0.0661,
+      "q": 0.939174,
+      "e": 0.694874,
+      "i": 36.49359,
+      "peri": 213.84097,
+      "node": 158.37289,
+      "qc": 86.22,
+      "num_stat": 3,
+      "countries": [
+        "CZ",
+        "DE"
+      ],
+      "stations": [
+        "CZ0002",
+        "DE0011",
+        "DE0012"
+      ],
+      "d_sh_to_mean_exact": 0.02935,
+      "d_sh_to_mean_planar": 0.02918
+    },
+    {
+      "id": "20250831214115_sr27S",
+      "year": 2025,
+      "jd": 2460919.40365556,
+      "utc": "2025-08-31 21:41:15.840725",
+      "iau_no": -1,
+      "sol_lon": 158.382569,
+      "ra": 303.51592,
+      "dec": 51.73267,
+      "vg": 23.13828,
+      "vg_err": 0.2154,
+      "q": 0.936246,
+      "e": 0.67125,
+      "i": 35.47122,
+      "peri": 214.92868,
+      "node": 158.38736,
+      "qc": 80.02,
+      "num_stat": 3,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK00A0",
+        "UK00AL",
+        "UK00C2"
+      ],
+      "d_sh_to_mean_exact": 0.0484,
+      "d_sh_to_mean_planar": 0.04828
+    },
+    {
+      "id": "20250831214116_6Y3Kd",
+      "year": 2025,
+      "jd": 2460919.40366851,
+      "utc": "2025-08-31 21:41:16.959126",
+      "iau_no": -1,
+      "sol_lon": 158.382582,
+      "ra": 302.6153,
+      "dec": 52.26815,
+      "vg": 22.81234,
+      "vg_err": 0.0642,
+      "q": 0.940945,
+      "e": 0.655116,
+      "i": 35.20584,
+      "peri": 214.00694,
+      "node": 158.38743,
+      "qc": 89.32,
+      "num_stat": 5,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK002F",
+        "UK004D",
+        "UK005M",
+        "UK008F",
+        "UK0098"
+      ],
+      "d_sh_to_mean_exact": 0.05138,
+      "d_sh_to_mean_planar": 0.05131
+    },
+    {
+      "id": "20250831214232_8kYwr",
+      "year": 2025,
+      "jd": 2460919.40454039,
+      "utc": "2025-08-31 21:42:32.289636",
+      "iau_no": -1,
+      "sol_lon": 158.383424,
+      "ra": 300.4991,
+      "dec": 48.98918,
+      "vg": 22.39692,
+      "vg_err": 0.2095,
+      "q": 0.940631,
+      "e": 0.711875,
+      "i": 33.2716,
+      "peri": 213.23045,
+      "node": 158.38873,
+      "qc": 44.76,
+      "num_stat": 5,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK001H",
+        "UK004B",
+        "UK0057",
+        "UK006J",
+        "UK007G"
+      ],
+      "d_sh_to_mean_exact": 0.05435,
+      "d_sh_to_mean_planar": 0.0543
+    },
+    {
+      "id": "20250831230342_UdggA",
+      "year": 2025,
+      "jd": 2460919.46091334,
+      "utc": "2025-08-31 23:03:42.912946",
+      "iau_no": -1,
+      "sol_lon": 158.437959,
+      "ra": 300.36355,
+      "dec": 55.95144,
+      "vg": 24.24938,
+      "vg_err": 0.271,
+      "q": 0.957563,
+      "e": 0.686492,
+      "i": 38.01308,
+      "peri": 209.05646,
+      "node": 158.44263,
+      "qc": 34.55,
+      "num_stat": 3,
+      "countries": [
+        "HU",
+        "SK"
+      ],
+      "stations": [
+        "HU0006",
+        "HU0009",
+        "SK0003"
+      ],
+      "d_sh_to_mean_exact": 0.04856,
+      "d_sh_to_mean_planar": 0.04857
+    },
+    {
+      "id": "20250831230822_JGDv6",
+      "year": 2025,
+      "jd": 2460919.4641473,
+      "utc": "2025-08-31 23:08:22.326719",
+      "iau_no": -1,
+      "sol_lon": 158.441088,
+      "ra": 297.53515,
+      "dec": 50.70156,
+      "vg": 21.70922,
+      "vg_err": 0.1376,
+      "q": 0.954442,
+      "e": 0.677082,
+      "i": 32.87129,
+      "peri": 210.0638,
+      "node": 158.44661,
+      "qc": 79.63,
+      "num_stat": 6,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK000U",
+        "UK001L",
+        "UK002Z",
+        "UK004D",
+        "UK0087",
+        "UK0098"
+      ],
+      "d_sh_to_mean_exact": 0.06061,
+      "d_sh_to_mean_planar": 0.06061
+    },
+    {
+      "id": "20250901003656_ZmvrS",
+      "year": 2025,
+      "jd": 2460919.52565794,
+      "utc": "2025-09-01 00:36:56.846153",
+      "iau_no": -1,
+      "sol_lon": 158.500594,
+      "ra": 300.53767,
+      "dec": 52.89573,
+      "vg": 23.50846,
+      "vg_err": 0.029,
+      "q": 0.94947,
+      "e": 0.702794,
+      "i": 36.01076,
+      "peri": 211.07489,
+      "node": 158.50579,
+      "qc": 87.22,
+      "num_stat": 7,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK00A0",
+        "UK00AL",
+        "UK00AN",
+        "UK00BJ",
+        "UK00CC",
+        "UK00CU",
+        "UK00D7"
+      ],
+      "d_sh_to_mean_exact": 0.00946,
+      "d_sh_to_mean_planar": 0.00939
+    },
+    {
+      "id": "20250901003657_0atOF",
+      "year": 2025,
+      "jd": 2460919.5256598,
+      "utc": "2025-09-01 00:36:57.006563",
+      "iau_no": -1,
+      "sol_lon": 158.500595,
+      "ra": 298.49514,
+      "dec": 52.71053,
+      "vg": 23.71617,
+      "vg_err": 0.0627,
+      "q": 0.955303,
+      "e": 0.739112,
+      "i": 35.9573,
+      "peri": 209.04569,
+      "node": 158.5058,
+      "qc": 33.75,
+      "num_stat": 4,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK0026",
+        "UK005G",
+        "UK006G",
+        "UK008F"
+      ],
+      "d_sh_to_mean_exact": 0.05422,
+      "d_sh_to_mean_planar": 0.05414
+    },
+    {
+      "id": "20250901005510_DBFc8",
+      "year": 2025,
+      "jd": 2460919.53831809,
+      "utc": "2025-09-01 00:55:10.682626",
+      "iau_no": -1,
+      "sol_lon": 158.512841,
+      "ra": 300.26687,
+      "dec": 54.82481,
+      "vg": 24.72226,
+      "vg_err": 0.3485,
+      "q": 0.955016,
+      "e": 0.734981,
+      "i": 38.08945,
+      "peri": 209.16914,
+      "node": 158.51651,
+      "qc": 45.56,
+      "num_stat": 3,
+      "countries": [
+        "CA"
+      ],
+      "stations": [
+        "CA0022",
+        "CA002V",
+        "CA0031"
+      ],
+      "d_sh_to_mean_exact": 0.06189,
+      "d_sh_to_mean_planar": 0.06182
+    },
+    {
+      "id": "20250901021016_Ea5MF",
+      "year": 2025,
+      "jd": 2460919.59047251,
+      "utc": "2025-09-01 02:10:16.824670",
+      "iau_no": -1,
+      "sol_lon": 158.563297,
+      "ra": 302.92826,
+      "dec": 55.67031,
+      "vg": 24.53025,
+      "vg_err": 0.0383,
+      "q": 0.949305,
+      "e": 0.680764,
+      "i": 38.49945,
+      "peri": 211.41706,
+      "node": 158.56824,
+      "qc": 19.76,
+      "num_stat": 4,
+      "countries": [
+        "UK"
+      ],
+      "stations": [
+        "UK0022",
+        "UK004F",
+        "UK0079",
+        "UK008T"
+      ],
+      "d_sh_to_mean_exact": 0.04626,
+      "d_sh_to_mean_planar": 0.04626
+    }
+  ],
+  "raw_lines_file": "p1_outburst_gmn_lines.txt"
+}

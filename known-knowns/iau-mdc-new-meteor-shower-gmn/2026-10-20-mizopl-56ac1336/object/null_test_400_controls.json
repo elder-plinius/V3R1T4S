@@ -1,0 +1,114 @@
+{
+  "controls": 400,
+  "real": 20,
+  "best_control": 3,
+  "real_beats_all_controls": "yes",
+  "main_m2_hercules": {
+    "controls": 400,
+    "real": 20,
+    "best_control": 3,
+    "real_beats_all_controls": "yes",
+    "control_mean": 0.5275,
+    "control_std": 0.6822,
+    "sideband_mean": 0.4,
+    "effective_bg_mu": 0.5275,
+    "effective_bg_sigma": 0.7263,
+    "z_score_sigma": 26.81,
+    "poisson_log10_p": -24.16,
+    "poisson_equiv_sigma": 10.46,
+    "control_histogram": {
+      "0": 227,
+      "1": 140,
+      "2": 28,
+      "3": 5
+    }
+  },
+  "main_m1_cepheus_core": {
+    "controls": 400,
+    "real": 15,
+    "best_control": 2,
+    "real_beats_all_controls": "yes",
+    "control_mean": 0.1975,
+    "control_std": 0.411,
+    "sideband_mean": 0.0,
+    "effective_bg_mu": 0.1975,
+    "effective_bg_sigma": 0.4444,
+    "z_score_sigma": 33.31,
+    "poisson_log10_p": -22.76,
+    "poisson_equiv_sigma": 10.15,
+    "control_histogram": {
+      "0": 323,
+      "1": 75,
+      "2": 2
+    }
+  },
+  "main_m1_cepheus_mc": {
+    "controls": 400,
+    "real": 15,
+    "best_control": 7,
+    "real_beats_all_controls": "yes",
+    "control_mean": 1.0925,
+    "control_std": 1.0132,
+    "sideband_mean": 0.0,
+    "effective_bg_mu": 1.0925,
+    "effective_bg_sigma": 1.0452,
+    "z_score_sigma": 13.31,
+    "poisson_log10_p": -11.98,
+    "poisson_equiv_sigma": 7.3,
+    "control_histogram": {
+      "0": 129,
+      "1": 150,
+      "2": 84,
+      "3": 32,
+      "4": 4,
+      "7": 1
+    }
+  },
+  "main_m3_camelopardalis": {
+    "controls": 400,
+    "real": 16,
+    "best_control": 2,
+    "real_beats_all_controls": "yes",
+    "control_mean": 0.12,
+    "control_std": 0.333,
+    "sideband_mean": 0.1,
+    "effective_bg_mu": 0.12,
+    "effective_bg_sigma": 0.3464,
+    "z_score_sigma": 45.84,
+    "poisson_log10_p": -28.1,
+    "poisson_equiv_sigma": 11.3,
+    "control_histogram": {
+      "0": 353,
+      "1": 46,
+      "2": 1
+    }
+  },
+  "p1_2025_sep01_outburst": {
+    "controls": 400,
+    "real": 10,
+    "best_control": 3,
+    "real_beats_all_controls": "yes",
+    "control_mean": 0.48,
+    "control_std": 0.6751,
+    "sideband_mean": 0.75,
+    "effective_bg_mu": 0.75,
+    "effective_bg_sigma": 0.866,
+    "z_score_sigma": 10.68,
+    "poisson_log10_p": -8.1,
+    "poisson_equiv_sigma": 5.96,
+    "control_histogram": {
+      "0": 246,
+      "1": 119,
+      "2": 32,
+      "3": 3
+    },
+    "cross_year_same_window_counts": {
+      "2019": 0,
+      "2020": 0,
+      "2021": 0,
+      "2022": 1,
+      "2023": 0,
+      "2024": 0
+    }
+  }
+}
