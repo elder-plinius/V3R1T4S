@@ -2,25 +2,28 @@
 """
 Standalone deterministic verifier for Conway's 99-Graph Problem (srg(99, 14, 1, 2)),
 Tracks p2 (forced-structure reduction of arXiv:2608.11211) and p1 (DRAT/LRAT-checked
-prime-order and Frobenius automorphism exclusions).
+prime-order and Frobenius automorphism exclusions, including the resolution of the last
+open prime order p = 7 from Cesarz & Woldar, arXiv:2308.02978, 2023, and Thakkar & Severini,
+arXiv:2608.11211, 2026).
 
 Uses only the Python standard library. Independently:
-1. Re-generates all 26 CNF formulas from scratch across two independent cardinality
-   encodings:
+1. Re-generates all 46 CNF formulas (23 theorems x 2 encodings) from scratch across two
+   independent cardinality encodings:
    - Encoding A: Sinz (2005) Sequential Counter
    - Encoding B: Bailleux & Boufkhad (2003) Binary Tree Unary Totalizer
 2. Verifies positive non-vacuity on srg(9, 4, 1, 2) = K_3 box K_3 by propagating the
    explicit 4-cycle outer truth assignment on the unblocked Encoding A and Encoding B
    formulas and confirming every clause is satisfied.
-3. Verifies that every clause in each of the 26 trimmed CNF core files (*_core.cnf)
+3. Verifies that every clause in each of the 46 trimmed CNF core files (*_core.cnf)
    is an exact member of the freshly generated CNF from its corresponding encoder.
 4. Verifies all SHA-256 digests, clause counts, variable counts, and cycle-structure
    invariants against certificate.json.
-5. Verifies all 26 LRAT proofs (19,693 Reverse Unit Propagation steps across Encoding A
+5. Verifies all 46 LRAT proofs (92,137 Reverse Unit Propagation steps across Encoding A
    and Encoding B, with 0 RAT lemmas) from the trimmed CNF cores to the empty clause 0
    using a self-contained pure-Python LRAT RUP checker.
 """
 
+from collections import Counter
 import hashlib
 import itertools
 import json
@@ -389,36 +392,464 @@ def compute_cycle_stats(perms, prime_order):
     }
 
 
-def build_automorphism_cnf(perms, encoding="A", r4_mode="all"):
-    def group_elems_fn(p):
+def build_p7_fix1_orbit_cnf(encoding="A"):
+    """
+    Orbit-valency matrix reduction for p = 7 (p7_fix1, |Fix(g)| = 1, 14 x 7-cycles).
+    Encodes the 6 x 12 top submatrix [M | Q] on I_LL = {0,1,2} and I_RR = {3,4,5} against
+    all 12 outer 7-cycle orbits, where Tr(B) = 0 by the Galois-Spectral Trace Theorem.
+    Returns (primary_vars, outer_orbits=12, total_vars, clauses).
+    """
+    clauses = []
+    next_var = 1
+    t_vars = {}
+
+    def add_eq(L, rhs):
+        nonlocal next_var
+        if encoding == "A":
+            next_var = add_exact_sinz(clauses, L, rhs, next_var)
+        else:
+            next_var = add_exact_totalizer(clauses, L, rhs, next_var)
+
+    def add_le(L, rhs):
+        nonlocal next_var
+        slack = [next_var + r for r in range(rhs)]
+        next_var += rhs
+        for r in range(1, rhs):
+            clauses.append([-slack[r], slack[r - 1]])
+        add_eq(L + slack, rhs)
+
+    for i in range(6):
+        t_vars[(i, i)] = []
+        for j in range(i + 1, 12):
+            u_list = [next_var + r for r in range(3)]
+            next_var += 3
+            for r in range(1, 3):
+                clauses.append([-u_list[r], u_list[r - 1]])
+            t_vars[(i, j)] = u_list
+            t_vars[(j, i)] = u_list
+
+    primary_vars = next_var - 1
+
+    def add_lex_le(x_u, y_u, cond_vars):
+        nonlocal next_var
+        for r in range(3):
+            clauses.append([-c for c in cond_vars] + [-x_u[r], y_u[r]])
+        eq_v = next_var
+        next_var += 1
+        eq_r_vars = []
+        for r in range(3):
+            er = next_var
+            next_var += 1
+            clauses.append([y_u[r], er])
+            clauses.append([-x_u[r], er])
+            eq_r_vars.append(er)
+        clauses.append([-c for c in cond_vars] + [-er for er in eq_r_vars] + [eq_v])
+        return eq_v
+
+    eq_01_02 = add_lex_le(t_vars[(0, 1)], t_vars[(0, 2)], [])
+    eq_02_12 = add_lex_le(t_vars[(0, 2)], t_vars[(1, 2)], [])
+    add_lex_le(t_vars[(3, 4)], t_vars[(3, 5)], [])
+    add_lex_le(t_vars[(3, 5)], t_vars[(4, 5)], [])
+    c12 = [eq_01_02]
+    for col in (3, 4, 5):
+        c12 = [add_lex_le(t_vars[(1, col)], t_vars[(2, col)], c12)]
+    c01 = [eq_02_12]
+    for col in (3, 4, 5):
+        c01 = [add_lex_le(t_vars[(0, col)], t_vars[(1, col)], c01)]
+
+    c_z2 = []
+    for (a, b), (c, d) in [((0, 1), (3, 4)), ((0, 2), (3, 5)), ((1, 2), (4, 5))]:
+        c_z2 = [add_lex_le(t_vars[(a, b)], t_vars[(c, d)], c_z2)]
+
+    for j in range(6, 11):
+        cond = []
+        for i in range(6):
+            cond = [add_lex_le(t_vars[(i, j)], t_vars[(i, j + 1)], cond)]
+
+    for i in range(6):
+        L_m = []
+        for j in range(3):
+            L_m.extend(t_vars[(i, j)])
+        for j in range(3, 6):
+            for u in t_vars[(i, j)]:
+                L_m.append(-u)
+        add_eq(L_m, 9 if i < 3 else 6)
+
+    L_sll = []
+    for (a, b) in [(0, 1), (0, 2), (1, 2)]:
+        L_sll.extend(t_vars[(a, b)])
+    for (c, d) in [(3, 4), (3, 5), (4, 5)]:
+        for u in t_vars[(c, d)]:
+            L_sll.append(-u)
+    add_eq(L_sll, 9)
+
+    for i in range(6):
+        L_tot = []
+        for j in range(12):
+            L_tot.extend(t_vars[(i, j)])
+        add_eq(L_tot, 12)
+
+        L_diff = []
+        for j in range(12):
+            if j == i:
+                continue
+            L_diff.append(t_vars[(i, j)][0])
+            L_diff.append(-t_vars[(i, j)][2])
+        add_eq(L_diff, 18)
+
+        L_diag = []
+        for j in range(12):
+            if j == i:
+                continue
+            u_list = t_vars[(i, j)]
+            L_diag.append(u_list[1])
+            L_diag.extend([u_list[2], u_list[2]])
+        add_eq(L_diag, 5)
+
+        L_ll = []
+        for j in range(3):
+            for u in t_vars[(i, j)]:
+                L_ll.extend([u, u])
+        for j in range(6, 12):
+            L_ll.extend(t_vars[(i, j)])
+        add_eq(L_ll, 12)
+
+        L_rr = []
+        for j in range(3, 6):
+            for u in t_vars[(i, j)]:
+                L_rr.extend([u, u])
+        for j in range(6, 12):
+            L_rr.extend(t_vars[(i, j)])
+        add_eq(L_rr, 12)
+
+    for j in range(6, 12):
+        L_col = []
+        for i in range(3):
+            L_col.extend(t_vars[(i, j)])
+        for i in range(3, 6):
+            for u in t_vars[(i, j)]:
+                L_col.append(-u)
+        add_eq(L_col, 9)
+
+        L_c_up = []
+        for i in range(3):
+            L_c_up.extend(t_vars[(i, j)])
+        add_le(L_c_up, 6)
+
+        L_c_diag = []
+        for i in range(6):
+            u_list = t_vars[(i, j)]
+            L_c_diag.append(u_list[1])
+            L_c_diag.extend([u_list[2], u_list[2]])
+        add_le(L_c_diag, 5)
+
+    for i in range(6):
+        for j in range(i + 1, 6):
+            rhs_ij = 14 if (i < 3 and j >= 3) else 10
+            L_ij = list(t_vars[(i, j)])
+            for k in range(12):
+                if k == i or k == j:
+                    continue
+                ui = t_vars[(i, k)]
+                uj = t_vars[(j, k)]
+                for r1 in range(3):
+                    for r2 in range(3):
+                        p = next_var
+                        next_var += 1
+                        clauses.append([-p, ui[r1]])
+                        clauses.append([-p, uj[r2]])
+                        clauses.append([-ui[r1], -uj[r2], p])
+                        L_ij.append(p)
+            add_eq(L_ij, rhs_ij)
+
+    return primary_vars, 12, next_var - 1, deduplicate_clauses(clauses)
+
+
+def build_p5_t1_orbit_cnf(encoding="A"):
+    """
+    Orbit-valency matrix reduction for p = 5 (p5_t1_fix9, |Fix(g)| = 9, 18 x 5-cycles).
+    Encodes the 20 x 20 orbit-valency matrix B on the 16 5-cycle outer orbits and 4 fixed outer
+    orbits with S_2 x S_2 x S_4 x Z_2 symmetry breaking.
+    Returns (primary_vars, outer_orbits=20, total_vars, clauses).
+    """
+    p5_perms = [{(i, s): (((i + step) % 5, s) if i < 5 else (i, s)) for i, s in INNER} for step in range(5)]
+
+    def apply_perm(perm, p):
         u, v = OUTER[p]
-        return [OUTER_IDX[canon_pair(perm[u], perm[v])] for perm in perms]
+        return OUTER_IDX[canon_pair(perm[u], perm[v])]
+
+    seen_o = set()
+    outer_orbits = []
+    for p in range(84):
+        if p not in seen_o:
+            orb = sorted({apply_perm(perm, p) for perm in p5_perms})
+            outer_orbits.append(orb)
+            seen_o.update(orb)
+
+    seen_in = set()
+    inner_orbits = []
+    for v in INNER:
+        if v not in seen_in:
+            orb = sorted({perm[v] for perm in p5_perms}, key=lambda x: INNER_IDX[x])
+            inner_orbits.append(orb)
+            seen_in.update(orb)
+
+    k = len(outer_orbits)
+    assert k == 20 and len(inner_orbits) == 6
+
+    C_mat = [[0] * k for _ in range(6)]
+    R_mat = [[0] * 6 for _ in range(k)]
+    for a_idx, A_orb in enumerate(inner_orbits):
+        A_set = set(A_orb)
+        for j in range(k):
+            u_rep = outer_orbits[j][0]
+            C_mat[a_idx][j] = len(set(OUTER[u_rep]) & A_set)
+        for i in range(k):
+            u_rep = outer_orbits[i][0]
+            P_u = set(OUTER[u_rep])
+            M_u = {matched(v) for v in P_u}
+            R_mat[i][a_idx] = sum(1 if (a in P_u or a in M_u) else 2 for a in A_orb)
+
+    RHS = [[0] * k for _ in range(k)]
+    for i in range(k):
+        u_rep = outer_orbits[i][0]
+        for j in range(k):
+            c_ij = sum((2 - len(set(OUTER[u_rep]) & set(OUTER[v]))) for v in outer_orbits[j] if v != u_rep)
+            RHS[i][j] = (c_ij - 12) if i == j else c_ij
+
+    clauses = []
+    next_var = 1
+    t_vars = {}
+
+    def add_eq(L, rhs):
+        nonlocal next_var
+        if encoding == "A":
+            next_var = add_exact_sinz(clauses, L, rhs, next_var)
+        else:
+            next_var = add_exact_totalizer(clauses, L, rhs, next_var)
+
+    I_pure = {0, 1, 2, 3, 4, 5, 10, 11}
+    I_fix = {16, 17, 18, 19}
+
+    for i in range(16):
+        t_vars[(i, i)] = []
+        for j in range(i + 1, 16):
+            u1, u2 = next_var, next_var + 1
+            next_var += 2
+            clauses.append([-u2, u1])
+            t_vars[(i, j)] = [u1, u2]
+            t_vars[(j, i)] = [u1, u2]
+
+    for i in range(16):
+        for kf in range(16, 20):
+            if i in I_pure:
+                u = next_var
+                next_var += 1
+                t_vars[(i, kf)] = [u]
+                t_vars[(kf, i)] = [u]
+            else:
+                t_vars[(i, kf)] = []
+                t_vars[(kf, i)] = []
+
+    for kf1 in range(16, 20):
+        t_vars[(kf1, kf1)] = []
+        for kf2 in range(kf1 + 1, 20):
+            u = next_var
+            next_var += 1
+            if (kf1, kf2) in [(16, 17), (16, 18), (17, 19), (18, 19)]:
+                clauses.append([u])
+            else:
+                clauses.append([-u])
+            t_vars[(kf1, kf2)] = [u]
+            t_vars[(kf2, kf1)] = [u]
+
+    primary_vars = next_var - 1
+
+    def add_lex_le(x_u, y_u, cond_vars):
+        nonlocal next_var
+        for r in range(len(x_u)):
+            clauses.append([-c for c in cond_vars] + [-x_u[r], y_u[r]])
+        eq_v = next_var
+        next_var += 1
+        eq_r_vars = []
+        for r in range(len(x_u)):
+            er = next_var
+            next_var += 1
+            clauses.append([y_u[r], er])
+            clauses.append([-x_u[r], er])
+            eq_r_vars.append(er)
+        clauses.append([-c for c in cond_vars] + [-er for er in eq_r_vars] + [eq_v])
+        return eq_v
+
+    b4 = [1, 3, 4, 5]
+    cols_b4 = [16, 17, 18, 19, 0, 2, 10, 11, 6, 7, 8, 9, 12, 13, 14, 15]
+    for idx in range(3):
+        r1, r2 = b4[idx], b4[idx + 1]
+        cond = []
+        for c in cols_b4:
+            cond = [add_lex_le(t_vars[(r1, c)], t_vars[(r2, c)], cond)]
+
+    cols_02 = [16, 17, 18, 19, 1, 3, 4, 5, 10, 11, 6, 7, 8, 9, 12, 13, 14, 15]
+    cond = []
+    for c in cols_02:
+        cond = [add_lex_le(t_vars[(0, c)], t_vars[(2, c)], cond)]
+
+    cols_1011 = [16, 17, 18, 19, 0, 2, 1, 3, 4, 5, 6, 7, 8, 9, 12, 13, 14, 15]
+    cond = []
+    for c in cols_1011:
+        cond = [add_lex_le(t_vars[(10, c)], t_vars[(11, c)], cond)]
+
+    add_lex_le(t_vars[(0, 2)], t_vars[(10, 11)], [])
+
+    for i in I_pure:
+        add_eq([t_vars[(i, kf)][0] for kf in range(16, 20)], 1)
+    for kf in range(16, 20):
+        add_eq([t_vars[(i, kf)][0] for i in I_pure], 2)
+
+    for kf in range(16, 20):
+        for a_idx in (0, 1):
+            L_kf = []
+            for j in I_pure:
+                c_ja = C_mat[a_idx][j]
+                if c_ja > 0:
+                    L_kf.extend([t_vars[(j, kf)][0]] * c_ja)
+            add_eq(L_kf, 2)
+
+    for i in range(20):
+        for a_idx in range(6):
+            if i in I_fix and a_idx in (0, 1):
+                continue
+            L = []
+            for j in range(20):
+                c_ja = C_mat[a_idx][j]
+                if c_ja == 0:
+                    continue
+                st = 5 if (i in I_fix and j in I_pure) else 1
+                for u in t_vars[(i, j)]:
+                    L.extend([u] * (c_ja * st))
+            add_eq(L, R_mat[i][a_idx])
+
+    for i in range(16):
+        L_diag = [t_vars[(i, j)][1] for j in range(16) if j != i]
+        rhs_d = 1 if i in {0, 2, 10, 11} else 2
+        add_eq(L_diag, rhs_d)
+
+    and_cache = {}
+
+    def get_and_var(u1, u2):
+        nonlocal next_var
+        if u1 == u2:
+            return u1
+        if u1 > u2:
+            u1, u2 = u2, u1
+        if (u1, u2) not in and_cache:
+            w = next_var
+            next_var += 1
+            clauses.append([-w, u1])
+            clauses.append([-w, u2])
+            clauses.append([w, -u1, -u2])
+            and_cache[(u1, u2)] = w
+        return and_cache[(u1, u2)]
+
+    for i in range(20):
+        for j in range(i + 1, 20):
+            r_i, r_j = (j, i) if RHS[j][i] < RHS[i][j] else (i, j)
+            rhs_ij = RHS[r_i][r_j]
+            st_ij = 5 if (r_i in I_fix and r_j in I_pure) else 1
+            L_ij = []
+            for u in t_vars[(r_i, r_j)]:
+                L_ij.extend([u] * st_ij)
+            for m in range(20):
+                st_im = 5 if (r_i in I_fix and m in I_pure) else 1
+                st_mj = 5 if (m in I_fix and r_j in I_pure) else 1
+                mult = st_im * st_mj
+                for u1 in t_vars[(r_i, m)]:
+                    for u2 in t_vars[(m, r_j)]:
+                        w = get_and_var(u1, u2)
+                        L_ij.extend([w] * mult)
+            add_eq(L_ij, rhs_ij)
+
+    return primary_vars, 20, next_var - 1, deduplicate_clauses(clauses)
+
+
+def build_automorphism_cnf(perms, encoding="A", r4_mode="conj_or_fix", inv_abc=None):
+    """
+    Build the SAT CNF for an automorphism subgroup `perms` acting on INNER and OUTER.
+    Returns (num_edge_orbits, num_outer_orbits, total_vars, clauses).
+    """
+    if r4_mode == "p7_orbit_top6":
+        return build_p7_fix1_orbit_cnf(encoding=encoding)
+    if r4_mode == "p5_orbit_sym":
+        return build_p5_t1_orbit_cnf(encoding=encoding)
 
     num_outer = 84
-    edge_orbits = {}
+
+    def apply_perm(perm, p):
+        u, v = OUTER[p]
+        return OUTER_IDX[canon_pair(perm[u], perm[v])]
+
+    def group_elems_fn(p):
+        return [apply_perm(perm, p) for perm in perms]
+
     pair_to_var = {}
     var_count = 0
     for p in range(num_outer):
         imgs_p = group_elems_fn(p)
         for q in range(p + 1, num_outer):
-            imgs_q = group_elems_fn(q)
-            canon = min((min(ip, iq), max(ip, iq)) for ip, iq in zip(imgs_p, imgs_q))
-            if canon not in edge_orbits:
+            if (p, q) not in pair_to_var:
                 var_count += 1
-                edge_orbits[canon] = var_count
-            pair_to_var[(p, q)] = edge_orbits[canon]
-            pair_to_var[(q, p)] = edge_orbits[canon]
+                imgs_q = group_elems_fn(q)
+                for ip, iq in zip(imgs_p, imgs_q):
+                    pair_to_var[(ip, iq)] = var_count
+                    pair_to_var[(iq, ip)] = var_count
 
     clauses = []
     next_var = var_count + 1
 
+    def add_eq(L, rhs):
+        nonlocal next_var
+        if encoding == "A":
+            next_var = add_exact_sinz(clauses, L, rhs, next_var)
+        else:
+            next_var = add_exact_totalizer(clauses, L, rhs, next_var)
+
     seen_p = set()
     outer_reps = []
+    conj_vars = []
     for p in range(num_outer):
         if p not in seen_p:
             outer_reps.append(p)
-            for ip in group_elems_fn(p):
+            gp = group_elems_fn(p)
+            for ip in gp:
                 seen_p.add(ip)
+            if len(set(gp)) == 2:
+                conj_vars.append(pair_to_var[(gp[0], gp[1])])
+
+    if r4_mode == "spectral_trace":
+        assert inv_abc is not None
+        a, b, c = inv_abc
+        k2 = len(conj_vars)
+        t_min = (12 - 4 * a) if (c == 1 and a >= 1) else 0
+        t_max_bound = (12 + 2 * a) if c == 1 else min(k2, 10 * c * c + 2 * c + 10 * a)
+        rhs_base = 8 * a + 3 * b + 4 * k2
+        valid_tr = [t for t in range(t_min, t_max_bound + 1) if (rhs_base - t) % 7 == 0]
+        t_max = max(valid_tr)
+        M = (t_max - min(valid_tr)) // 7
+        y_vars = [next_var + r for r in range(M)]
+        next_var += M
+        for r in range(1, M):
+            clauses.append([-y_vars[r], y_vars[r - 1]])
+        L_trace = list(conj_vars)
+        for y in y_vars:
+            L_trace.extend([y] * 7)
+        add_eq(L_trace, t_max)
+        anchor = (6, "L") if c >= 1 else (0, "L")
+        for idx in range(2 * a, 2 * a + b - 1):
+            p1 = OUTER_IDX[canon_pair((idx, "L"), anchor)]
+            q1 = apply_perm(perms[1], p1)
+            p2 = OUTER_IDX[canon_pair((idx + 1, "L"), anchor)]
+            q2 = apply_perm(perms[1], p2)
+            clauses.append([-pair_to_var[(p1, q1)], pair_to_var[(p2, q2)]])
 
     for p in outer_reps:
         P_p = set(OUTER[p])
@@ -427,13 +858,30 @@ def build_automorphism_cnf(perms, encoding="A", r4_mode="all"):
             qs = [q for q in range(num_outer) if q != p and a in OUTER[q]]
             L = [pair_to_var[(p, q)] for q in qs]
             rhs = 1 if (a in P_p or a in M_p) else 2
-            for v in set(L):
-                if L.count(v) > rhs:
-                    clauses.append([-v])
-            if encoding == "A":
-                next_var = add_exact_sinz(clauses, L, rhs, next_var)
+            if r4_mode == "spectral_trace":
+                counts = Counter(L)
+                L_odd = [v for v, cnt in counts.items() if cnt == 1]
+                L_even = [v for v, cnt in counts.items() if cnt == 2]
+                for v, cnt in counts.items():
+                    if cnt > rhs:
+                        clauses.append([-v])
+                if rhs == 1:
+                    add_eq(L_odd, 1)
+                else:
+                    if not L_even:
+                        add_eq(L_odd, 2)
+                    elif not L_odd:
+                        add_eq(L_even, 1)
+                    else:
+                        z = next_var
+                        next_var += 1
+                        add_eq(L_odd + [z, z], 2)
+                        add_eq(L_even + [-z], 1)
             else:
-                next_var = add_exact_totalizer(clauses, L, rhs, next_var)
+                for v in set(L):
+                    if L.count(v) > rhs:
+                        clauses.append([-v])
+                add_eq(L, rhs)
 
     if r4_mode != "none":
         seen_pairs = set()
@@ -491,6 +939,11 @@ def build_automorphism_cnf(perms, encoding="A", r4_mode="all"):
                 gq = group_elems_fn(q)
                 if not ((q in gp) or (len(set(gp)) == 1 and len(set(gq)) == 1)):
                     continue
+            elif r4_mode == "spectral_trace":
+                gp = group_elems_fn(p)
+                gq = group_elems_fn(q)
+                if not ((q in gp) or (len(set(gp)) == 1) or (len(set(gq)) == 1)):
+                    continue
             s = len(set(OUTER[p]) & set(OUTER[q]))
             rhs = 2 - s
             L = [pair_to_var[(p, q)]]
@@ -498,10 +951,27 @@ def build_automorphism_cnf(perms, encoding="A", r4_mode="all"):
                 if r == p or r == q:
                     continue
                 L.append(get_and_var(pair_to_var[(p, r)], pair_to_var[(q, r)]))
-            if encoding == "A":
-                next_var = add_exact_sinz(clauses, L, rhs, next_var)
+            if r4_mode == "spectral_trace":
+                counts = Counter(L)
+                L_odd = [v for v, cnt in counts.items() if cnt == 1]
+                L_even = [v for v, cnt in counts.items() if cnt == 2]
+                for v, cnt in counts.items():
+                    if cnt > rhs:
+                        clauses.append([-v])
+                if rhs == 1:
+                    add_eq(L_odd, 1)
+                else:
+                    if not L_even:
+                        add_eq(L_odd, 2)
+                    elif not L_odd:
+                        add_eq(L_even, 1)
+                    else:
+                        z = next_var
+                        next_var += 1
+                        add_eq(L_odd + [z, z], 2)
+                        add_eq(L_even + [-z], 1)
             else:
-                next_var = add_exact_totalizer(clauses, L, rhs, next_var)
+                add_eq(L, rhs)
 
     if r4_mode == "frob21_fig10":
         rep_LL = OUTER_IDX[((0, "L"), (1, "L"))]
@@ -519,10 +989,9 @@ def build_automorphism_cnf(perms, encoding="A", r4_mode="all"):
                 for q in orbs[name]:
                     if p < q:
                         clauses.append([-pair_to_var[(p, q)]])
-        add_fn = add_exact_sinz if encoding == "A" else add_exact_totalizer
         for p, target_orb in ((rep_LL, orbs["LL"]), (rep_LL, orbs["RR"]), (rep_RR, orbs["RR"])):
             L = [pair_to_var[(p, q)] for q in target_orb if q != p]
-            next_var = add_fn(clauses, L, 2, next_var)
+            add_eq(L, 2)
 
     return var_count, len(outer_reps), next_var - 1, deduplicate_clauses(clauses)
 
@@ -620,7 +1089,7 @@ def verify_lrat_python(cnf_clauses, lrat_paths):
                 new_id = ints[0]
                 zero1 = ints.index(0, 1)
                 lemma_lits = ints[1:zero1]
-                hints = [h for h in ints[zero1 + 1:] if h != 0]
+                hints = [h for h in ints[zero1 + 1 :] if h != 0]
                 if any(h < 0 for h in hints):
                     raise ValueError(f"RAT hint encountered at step {new_id}")
 
@@ -692,9 +1161,9 @@ def main():
     if cert.get("parameters") != [99, 14, 1, 2]:
         fail("Invalid parameters")
     summary = cert.get("summary", {})
-    if summary.get("total_theorems_certified") != 13:
+    if summary.get("total_theorems_certified") != 23:
         fail("Invalid total_theorems_certified")
-    if summary.get("total_unsat_proofs") != 26:
+    if summary.get("total_unsat_proofs") != 46:
         fail("Invalid total_unsat_proofs")
     if summary.get("total_rat_lemmas") != 0:
         fail("Invalid total_rat_lemmas")
@@ -752,7 +1221,6 @@ def main():
                 fail(f"{pid} {enc_key}: rat_lemmas must be 0")
 
             core_cnf_path = os.path.join(proofs_dir, ed.get("core_cnf_file", ""))
-            core_drat_path = os.path.join(proofs_dir, ed.get("core_drat_file", ""))
             lrat_files = ed.get("core_lrat_files", [])
             lrat_sha256s = ed.get("core_lrat_sha256s", [])
             if len(lrat_files) != len(lrat_sha256s) or not lrat_files:
@@ -761,8 +1229,6 @@ def main():
 
             if sha256_file(core_cnf_path) != ed.get("core_cnf_sha256"):
                 fail(f"{pid} {enc_key}: core_cnf_sha256 mismatch")
-            if sha256_file(core_drat_path) != ed.get("core_drat_sha256"):
-                fail(f"{pid} {enc_key}: core_drat_sha256 mismatch")
             for lp, lsha in zip(lrat_paths, lrat_sha256s):
                 if sha256_file(lp) != lsha:
                     fail(f"{pid} {enc_key}: core_lrat_sha256 mismatch on {os.path.basename(lp)}")
@@ -792,42 +1258,58 @@ def main():
                 total_lrat_B += nl
         print(f"[PASS] Track p2 {pid}: Enc A & Enc B CNF membership + LRAT RUP verified")
 
-    # 3. Verify Track p1 automorphism exclusions (8 cases x 2 encodings = 16 proofs)
+    # 3. Verify Track p1 automorphism exclusions (18 cases x 2 encodings = 36 proofs)
+    p7_fix1_perms = [{(i, s): (((i + step) % 7, s)) for i, s in INNER} for step in range(7)]
+    p5_t1_perms = [{(i, s): (((i + step) % 5, s) if i < 5 else (i, s)) for i, s in INNER} for step in range(5)]
     p3_t1_perms = [{(i, s): (((i + step) % 3, s) if i < 3 else (i, s)) for i, s in INNER} for step in range(3)]
     frob21_perms = [{(i, s): (((i * m + sh) % 7, s)) for i, s in INNER} for m in (1, 2, 4) for sh in range(7)]
 
     p1_specs = {
-        "p3_t1_fix33": (p3_t1_perms, 3, "none"),
-        "p2_a0_b1_c6_fix73": (make_involution_perms(0, 1, 6), 2, "conj"),
-        "p2_a0_b2_c5_fix51": (make_involution_perms(0, 2, 5), 2, "conj_or_fix"),
-        "p2_a1_b0_c5_fix53": (make_involution_perms(1, 0, 5), 2, "conj_or_fix"),
-        "p2_a0_b4_c3_fix19": (make_involution_perms(0, 4, 3), 2, "conj_or_fix"),
-        "p2_a1_b2_c3_fix21": (make_involution_perms(1, 2, 3), 2, "conj_or_fix"),
-        "p2_a1_b3_c2_fix11": (make_involution_perms(1, 3, 2), 2, "conj_or_fix"),
-        "frob21_z7_z3": (frob21_perms, 7, "frob21_fig10"),
+        "p7_fix1": (p7_fix1_perms, 7, "p7_orbit_top6", None),
+        "p5_t1_fix9": (p5_t1_perms, 5, "p5_orbit_sym", None),
+        "p3_t1_fix33": (p3_t1_perms, 3, "none", None),
+        "frob21_z7_z3": (frob21_perms, 7, "frob21_fig10", None),
+        "p2_a0_b1_c6_fix73": (make_involution_perms(0, 1, 6), 2, "conj", (0, 1, 6)),
+        "p2_a0_b2_c5_fix51": (make_involution_perms(0, 2, 5), 2, "conj_or_fix", (0, 2, 5)),
+        "p2_a0_b3_c4_fix33": (make_involution_perms(0, 3, 4), 2, "conj_or_fix", (0, 3, 4)),
+        "p2_a0_b4_c3_fix19": (make_involution_perms(0, 4, 3), 2, "conj_or_fix", (0, 4, 3)),
+        "p2_a0_b5_c2_fix9": (make_involution_perms(0, 5, 2), 2, "spectral_trace", (0, 5, 2)),
+        "p2_a0_b6_c1_fix3": (make_involution_perms(0, 6, 1), 2, "spectral_trace", (0, 6, 1)),
+        "p2_a1_b0_c5_fix53": (make_involution_perms(1, 0, 5), 2, "conj_or_fix", (1, 0, 5)),
+        "p2_a1_b1_c4_fix35": (make_involution_perms(1, 1, 4), 2, "conj_or_fix", (1, 1, 4)),
+        "p2_a1_b2_c3_fix21": (make_involution_perms(1, 2, 3), 2, "conj_or_fix", (1, 2, 3)),
+        "p2_a1_b3_c2_fix11": (make_involution_perms(1, 3, 2), 2, "conj_or_fix", (1, 3, 2)),
+        "p2_a1_b4_c1_fix5": (make_involution_perms(1, 4, 1), 2, "spectral_trace", (1, 4, 1)),
+        "p2_a1_b5_c0_fix3": (make_involution_perms(1, 5, 0), 2, "spectral_trace", (1, 5, 0)),
+        "p2_a2_b0_c3_fix23": (make_involution_perms(2, 0, 3), 2, "conj_or_fix", (2, 0, 3)),
+        "p2_a2_b1_c2_fix13": (make_involution_perms(2, 1, 2), 2, "conj_or_fix", (2, 1, 2)),
     }
 
     p1_cases = cert.get("track_p1_automorphism_exclusions", [])
-    if len(p1_cases) != 8:
-        fail("Expected 8 cases in track_p1_automorphism_exclusions")
+    if len(p1_cases) != 18:
+        fail("Expected 18 cases in track_p1_automorphism_exclusions")
 
     for case in p1_cases:
         cid = case.get("case_id")
         if cid not in p1_specs:
             fail(f"Unknown case_id {cid}")
-        perms, prime_p, expected_r4 = p1_specs[cid]
+        perms, prime_p, expected_r4, inv_abc = p1_specs[cid]
         if case.get("r4_mode") != expected_r4:
             fail(f"{cid}: r4_mode mismatch")
         stats = compute_cycle_stats(perms, prime_p)
         if case.get("cycle_structure") != stats:
             fail(f"{cid}: cycle_structure mismatch")
+        if inv_abc is not None and case.get("involution_profile_abc") != list(inv_abc):
+            fail(f"{cid}: involution_profile_abc mismatch")
 
         for enc_key, enc_code in [("encoding_A", "A"), ("encoding_B", "B")]:
             ed = case.get(enc_key, {})
             exp_enc_name = "Sinz_2005_Sequential_Counter" if enc_code == "A" else "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer"
             if ed.get("encoding_name") != exp_enc_name:
                 fail(f"{cid} {enc_key}: encoding_name mismatch")
-            n_edge_orbits, n_v_orbits, nvars, clauses = build_automorphism_cnf(perms, encoding=enc_code, r4_mode=expected_r4)
+            n_edge_orbits, n_v_orbits, nvars, clauses = build_automorphism_cnf(
+                perms, encoding=enc_code, r4_mode=expected_r4, inv_abc=inv_abc
+            )
             if ed.get("primary_edge_orbit_variables") != n_edge_orbits:
                 fail(f"{cid} {enc_key}: primary_edge_orbit_variables mismatch")
             if ed.get("outer_vertex_orbits") != n_v_orbits:
@@ -840,7 +1322,6 @@ def main():
                 fail(f"{cid} {enc_key}: rat_lemmas must be 0")
 
             core_cnf_path = os.path.join(proofs_dir, ed.get("core_cnf_file", ""))
-            core_drat_path = os.path.join(proofs_dir, ed.get("core_drat_file", ""))
             lrat_files = ed.get("core_lrat_files", [])
             lrat_sha256s = ed.get("core_lrat_sha256s", [])
             if len(lrat_files) != len(lrat_sha256s) or not lrat_files:
@@ -849,8 +1330,6 @@ def main():
 
             if sha256_file(core_cnf_path) != ed.get("core_cnf_sha256"):
                 fail(f"{cid} {enc_key}: core_cnf_sha256 mismatch")
-            if sha256_file(core_drat_path) != ed.get("core_drat_sha256"):
-                fail(f"{cid} {enc_key}: core_drat_sha256 mismatch")
             for lp, lsha in zip(lrat_paths, lrat_sha256s):
                 if sha256_file(lp) != lsha:
                     fail(f"{cid} {enc_key}: core_lrat_sha256 mismatch on {os.path.basename(lp)}")
@@ -890,7 +1369,7 @@ def main():
         fail("total_lrat_rup_lemmas_encoding_B mismatch")
 
     print(
-        f"All 26 UNSAT proofs (13 theorems x 2 encodings, {total_lrat_A + total_lrat_B} RUP lemmas, 0 RAT lemmas) verified."
+        f"All 46 UNSAT proofs (23 theorems x 2 encodings, {total_lrat_A + total_lrat_B} RUP lemmas, 0 RAT lemmas) verified."
     )
     print("VERIFY: PASS")
 

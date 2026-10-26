@@ -11,18 +11,18 @@
     "p1"
   ],
   "summary": {
-    "total_theorems_certified": 13,
+    "total_theorems_certified": 23,
     "track_p2_propositions": 5,
-    "track_p1_automorphism_exclusions": 8,
+    "track_p1_automorphism_exclusions": 18,
     "total_independent_encodings": 2,
     "encoding_A_name": "Sinz_2005_Sequential_Counter",
     "encoding_B_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
-    "total_unsat_proofs": 26,
+    "total_unsat_proofs": 46,
     "total_rat_lemmas": 0,
-    "total_core_clauses_encoding_A": 44756,
-    "total_core_clauses_encoding_B": 31292,
-    "total_lrat_rup_lemmas_encoding_A": 9816,
-    "total_lrat_rup_lemmas_encoding_B": 9877,
+    "total_core_clauses_encoding_A": 146183,
+    "total_core_clauses_encoding_B": 89587,
+    "total_lrat_rup_lemmas_encoding_A": 55502,
+    "total_lrat_rup_lemmas_encoding_B": 36635,
     "positive_control_srg_9_4_1_2_encoding_A_sat": true,
     "positive_control_srg_9_4_1_2_encoding_B_sat": true
   },
@@ -40,15 +40,13 @@
         "solve_seconds": 0.0223,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "4b4e7e29029a26a210ac5d8df81e16c0ca8e93ceb63a6d19ec28431c6229c272",
-        "core_drat_sha256": "f9cc3da0fec9eefcde2e5cbdfd024b187f12f6281094b421c5a66cd3046a7408",
+        "core_cnf_sha256": "3953b0731311394fac348033c3bb18926a1da3ebfbb7b0faecaf25c6d42ee44e",
+        "core_lrat_sha256s": [
+          "1c4bc12af81bd8a4eb19861a6772174526fdd4603737964bd520534dad9071e8"
+        ],
         "core_cnf_file": "p2_1_inner_matching_k14_encA_core.cnf",
-        "core_drat_file": "p2_1_inner_matching_k14_encA_core.drat",
         "core_lrat_files": [
           "p2_1_inner_matching_k14_encA_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "c8e81b3947e09a92af285c01c3fea11e797a4cd17aa791a6a871533473337ef4"
         ]
       },
       "encoding_B": {
@@ -61,15 +59,13 @@
         "solve_seconds": 0.0118,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "fe0e3585c22931d363ac53c28c567555d34bdcfc487c0f191c29b4c4fa943d25",
-        "core_drat_sha256": "069c3b85e86bcc81302a1d737e119641bd397b1deb78f0c25c4a2defacc41b10",
+        "core_cnf_sha256": "95efa70b10303bc1cddc07be9f049a7419a3f8479d1b98f2be5b84a99d336a07",
+        "core_lrat_sha256s": [
+          "1c4bc12af81bd8a4eb19861a6772174526fdd4603737964bd520534dad9071e8"
+        ],
         "core_cnf_file": "p2_1_inner_matching_k14_encB_core.cnf",
-        "core_drat_file": "p2_1_inner_matching_k14_encB_core.drat",
         "core_lrat_files": [
           "p2_1_inner_matching_k14_encB_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "a246305bf358d2f44d3112adb7c97d579edabee0812de183fcfdb9fc21850149"
         ]
       }
     },
@@ -86,15 +82,13 @@
         "solve_seconds": 0.0123,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "90b20c1c8e954b4cfe3c96791f65181f9072d8bcbdc943457d07e2c56c7d8d3d",
-        "core_drat_sha256": "880749e42c1bd38c065092b664c9b9ba20c00332e00ff94f31f4110747c66aa5",
+        "core_cnf_sha256": "b0a80b007c2e122718d2d858b644107b7c4160ea0084ec687689d3dd6d58ba8f",
+        "core_lrat_sha256s": [
+          "fd7a5549fac3ce28e62762995ac5b31c53bb4b254da60fb7e6d51a8d7bff6372"
+        ],
         "core_cnf_file": "p2_2_outer_bijection_k14_encA_core.cnf",
-        "core_drat_file": "p2_2_outer_bijection_k14_encA_core.drat",
         "core_lrat_files": [
           "p2_2_outer_bijection_k14_encA_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "1705bc60c20cc1641935dcdc2c320f2a549a1b7a7e268a258aedd2cfa48ec5fa"
         ]
       },
       "encoding_B": {
@@ -107,15 +101,13 @@
         "solve_seconds": 0.0118,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "533055473ba80e1a428e622c2d654ae0e8497e18226c8b4fc31f2c5a4240a46e",
-        "core_drat_sha256": "e7d3c4b2a55abd83f5868ccd1bb7f1dbe9c0ba1381c70cbf3dbdf64eaa5c0ab0",
+        "core_cnf_sha256": "a3e6c972f20098bda0a022b86a4c3205bd53b94f91b1f69db39cb2e9cc5a5e6e",
+        "core_lrat_sha256s": [
+          "d0c17ce9b2c58dbdebf9e450601e063ce470eda4bdb191c64e0e5c06b14c4788"
+        ],
         "core_cnf_file": "p2_2_outer_bijection_k14_encB_core.cnf",
-        "core_drat_file": "p2_2_outer_bijection_k14_encB_core.drat",
         "core_lrat_files": [
           "p2_2_outer_bijection_k14_encB_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "1e86a6504f17578b1537aa30a6e740a633aa6b9c3d1e7f7f25d1950a625e59ef"
         ]
       }
     },
@@ -132,15 +124,13 @@
         "solve_seconds": 0.0175,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "b28e0f0cac6b0acb93717ce710923db7c40b2a4e6f1f8754acc18d27b6852e0c",
-        "core_drat_sha256": "d9b27263ec33ad5b1e9db2b56b739c111769c09f0e7167121ae6eac90067b6fa",
+        "core_cnf_sha256": "dfe16f56af409831ffc41df350d8d17124cc2e304f6ab1d0ae9038e14e9d05fe",
+        "core_lrat_sha256s": [
+          "7635a89d1e9d90e9bd3974cf7e5f77be3a1462f4dfd258535857556a28389cc3"
+        ],
         "core_cnf_file": "p2_3_inner_outer_balance_k14_encA_core.cnf",
-        "core_drat_file": "p2_3_inner_outer_balance_k14_encA_core.drat",
         "core_lrat_files": [
           "p2_3_inner_outer_balance_k14_encA_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "fdec20d3254da7b96c3b3f1240c7170983c79194c9558d5892b2a10d43ffa1eb"
         ]
       },
       "encoding_B": {
@@ -153,15 +143,13 @@
         "solve_seconds": 0.0194,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "c6193f0a197a7ff0668d09ee44a8cde2c132f6c2286d81a0de196fd9122b4bb3",
-        "core_drat_sha256": "40f684ce644798c562313d52677d0d3910e4745353790e0305dc57635e36c813",
+        "core_cnf_sha256": "de0dd2a1b06f83e3a634e7b5f4a42e8485897658abdef9de524dad0b1aaef344",
+        "core_lrat_sha256s": [
+          "17b82351e3f27c714b67ebeb00117b1b77af4300932d7c962afc8538448faa7c"
+        ],
         "core_cnf_file": "p2_3_inner_outer_balance_k14_encB_core.cnf",
-        "core_drat_file": "p2_3_inner_outer_balance_k14_encB_core.drat",
         "core_lrat_files": [
           "p2_3_inner_outer_balance_k14_encB_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "467041e4b46e7f5488bf214943707f668cbac7271649d8267e77c519faffa2e9"
         ]
       }
     },
@@ -178,15 +166,13 @@
         "solve_seconds": 0.0131,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "63c38054cb59e77dc9410d97034e8cd0c57e0c98f4292903c468db9fe97e19bc",
-        "core_drat_sha256": "65824c0e4ef7bd5338fa5ba269572d91a639e476497fde1a638195c62f72df1b",
+        "core_cnf_sha256": "330cfb68031d44dabe7fa120c1f9f71d4748e2b89a3982a5790f195a9473cd1d",
+        "core_lrat_sha256s": [
+          "4920beabffc789db1b164ae15a79560a5ef7b116b052c43252163306f683dcab"
+        ],
         "core_cnf_file": "p2_4_outer_pair_cn_k14_encA_core.cnf",
-        "core_drat_file": "p2_4_outer_pair_cn_k14_encA_core.drat",
         "core_lrat_files": [
           "p2_4_outer_pair_cn_k14_encA_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "7e30d91cb0f82582adf87ad686d70453b92bd2b9d78466e51262308ddb5d0a3d"
         ]
       },
       "encoding_B": {
@@ -199,15 +185,13 @@
         "solve_seconds": 0.0119,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "5bd733aa9cd19365c0957a1c83368ec81466179d55f9b9ceb9073f9f6107de08",
-        "core_drat_sha256": "a0ec365b4df8db03fdfa8c69a1b437fe3923788466f8444886da79fbd1fc9e6c",
+        "core_cnf_sha256": "45a00b07d8410fdc3272be3482f853d57d2de0f88206cacdb9b93f544152b6ae",
+        "core_lrat_sha256s": [
+          "f71e4652d10a05cce2d20d4f6f1063294a4b3167acb3c7587dfac1e35db14d02"
+        ],
         "core_cnf_file": "p2_4_outer_pair_cn_k14_encB_core.cnf",
-        "core_drat_file": "p2_4_outer_pair_cn_k14_encB_core.drat",
         "core_lrat_files": [
           "p2_4_outer_pair_cn_k14_encB_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "ccbc2c0af14b45199bec78c6b649aaef07fc8e3030d24c9b39b26d9320bc1a36"
         ]
       }
     },
@@ -224,15 +208,13 @@
         "solve_seconds": 0.0114,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "19126348393d6559b5847ed0d41a8acdf01bb433de7aa35ce542cb4c80ef9c4e",
-        "core_drat_sha256": "bce202f3f57b1f9152c7211a964892785b091eee64878a99f804e56708ae5444",
+        "core_cnf_sha256": "193537bcac6ddbb6537be9e48abcb6e00c694c676d1fd7c93ce93f5977b66ca7",
+        "core_lrat_sha256s": [
+          "7b93f9359315a69bacc0521ab93ee7090af395c0099e798f08efc05ae2f27aad"
+        ],
         "core_cnf_file": "p2_5_srg9_uniqueness_encA_core.cnf",
-        "core_drat_file": "p2_5_srg9_uniqueness_encA_core.drat",
         "core_lrat_files": [
           "p2_5_srg9_uniqueness_encA_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "6b6d7b69ee06be9edf80e193e92bc82d2032d4438c2e283bec6de8d7c95fbec2"
         ]
       },
       "encoding_B": {
@@ -245,23 +227,169 @@
         "solve_seconds": 0.0117,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_sha256": "f9e186c9bb283ddb6608c5860fcc9e52b4ef285c24a319b7176988b3c4e92644",
-        "core_drat_sha256": "c180b2a6b1f4a3d6878c56387ce821e7684dca767db6e2eb302905ebfc89a85c",
+        "core_cnf_sha256": "3489836f917c391c5dcba0f388fc9f61bb0ab4b12614649588d80d8c1390e416",
+        "core_lrat_sha256s": [
+          "3f08fcbf4d7a6b7fa7f0376cc8d5fb3503caed234add438b836766b533cc7dff"
+        ],
         "core_cnf_file": "p2_5_srg9_uniqueness_encB_core.cnf",
-        "core_drat_file": "p2_5_srg9_uniqueness_encB_core.drat",
         "core_lrat_files": [
           "p2_5_srg9_uniqueness_encB_core.lrat"
-        ],
-        "core_lrat_sha256s": [
-          "c12177fe3b553c1c729e233aa4c9da66764f90cec9e355b1a483b91ef35b66f1"
         ]
       }
     }
   ],
   "track_p1_automorphism_exclusions": [
     {
+      "case_id": "p7_fix1",
+      "description": "Prime order p=7 automorphism fixing root x=0 and cycling all 7 matched edges of Gamma_1(x) (1 fixed vertex, 14 cycles of length 7; resolves the last open prime order in Cesarz & Woldar 2023 and Thakkar & Severini 2026)",
+      "r4_mode": "p7_orbit_top6",
+      "cycle_structure": {
+        "generator_prime_order": 7,
+        "group_order": 7,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 0,
+        "fixed_in_Gamma2": 0,
+        "total_fixed_vertices_in_Gamma": 1,
+        "moved_vertices_in_Gamma": 98,
+        "num_generator_p_cycles_in_Gamma": 14
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 153,
+        "outer_vertex_orbits": 12,
+        "full_variables": 32572,
+        "full_clauses": 125958,
+        "core_clauses": 36342,
+        "lrat_rup_lemmas": 10590,
+        "rat_lemmas": 0,
+        "solve_seconds": 1.1753,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p7_fix1_encA_core.cnf",
+        "core_cnf_sha256": "f7aeffb75836fc02cde4b8317d6a1b8c1aabf6ae706649ba86639abf7a65d7d6",
+        "core_lrat_files": [
+          "p7_fix1_encA_core_part01.lrat",
+          "p7_fix1_encA_core_part02.lrat",
+          "p7_fix1_encA_core_part03.lrat",
+          "p7_fix1_encA_core_part04.lrat",
+          "p7_fix1_encA_core_part05.lrat",
+          "p7_fix1_encA_core_part06.lrat",
+          "p7_fix1_encA_core_part07.lrat",
+          "p7_fix1_encA_core_part08.lrat",
+          "p7_fix1_encA_core_part09.lrat",
+          "p7_fix1_encA_core_part10.lrat",
+          "p7_fix1_encA_core_part11.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "b327c8fffa27fba7bf44795318a89b2b9cea9319585b14e3919649f082fb9b37",
+          "0a3118b8cda5792816e189d01acc715c1f3588b4e9acc0952bb7edd66a04ef2f",
+          "1ae88c03fd0010af45d9f2850cf97ac1b46eb1a4792ffc797a17966e2d40ca12",
+          "1f1d56f91f29da449c7485ba52f230c207726c3471a41b712be1dab2a6a4ffc7",
+          "b2ecf8e0d23520450ceebc0d9618b00e142ac410686127076d6a956f75a7143b",
+          "ccc042ee5af0078e64991fc635f75e83efbd527907d5384184b56881ca26e851",
+          "f5dd8fb7fb8a32318989a82c16d8a7969eaf7b3445ef494fce9611bd2370583b",
+          "e4f37baec0388456092415321ea9e1dde59cfa040ec66983d03804428ad672be",
+          "d82b6d0223fce668798303a087181a2fb1466c939485e67d5cc6ffddc7910530",
+          "7b25a629dec7c0d6f797d0850479939af006b082d7cda0a10486a16f55c4c095",
+          "f502e0ee6d2fbd1eed34aca5f1b5e406fe9287a0faf43261d2d159347e4f3556"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 153,
+        "outer_vertex_orbits": 12,
+        "full_variables": 13175,
+        "full_clauses": 88249,
+        "core_clauses": 17392,
+        "lrat_rup_lemmas": 5209,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.5141,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p7_fix1_encB_core.cnf",
+        "core_cnf_sha256": "519343aa2b2a4c0a83244dd6378c520e27cb83fff4299fd82f00196b5751c0a5",
+        "core_lrat_files": [
+          "p7_fix1_encB_core_part01.lrat",
+          "p7_fix1_encB_core_part02.lrat",
+          "p7_fix1_encB_core_part03.lrat",
+          "p7_fix1_encB_core_part04.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "8a351e42346ec5df592e0720aa635ea0ce3bd89ea7774cbf708d45489ce7f661",
+          "045a761f945cd9708c8d7d5a9b09a6f0be6555a1a4fe60ed7587f92660ef2c18",
+          "e22ac6de3751deaac62d54e3ae2c9105d436dbbefa85c19ec86128ec7c412a08",
+          "ce109b0cbe38cbaaf332883d78beaffb8bc406494df48de898f0f6297174db90"
+        ]
+      }
+    },
+    {
+      "case_id": "p5_t1_fix9",
+      "description": "Prime order p=5 automorphism fixing root x=0, cycling 5 matched edges of Gamma_1(x), and fixing 2 matched edges pointwise (9 fixed vertices, 18 cycles of length 5)",
+      "r4_mode": "p5_orbit_sym",
+      "cycle_structure": {
+        "generator_prime_order": 5,
+        "group_order": 5,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 4,
+        "fixed_in_Gamma2": 4,
+        "total_fixed_vertices_in_Gamma": 9,
+        "moved_vertices_in_Gamma": 90,
+        "num_generator_p_cycles_in_Gamma": 18
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 278,
+        "outer_vertex_orbits": 20,
+        "full_variables": 83657,
+        "full_clauses": 321069,
+        "core_clauses": 31141,
+        "lrat_rup_lemmas": 2461,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.9109,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p5_t1_fix9_encA_core.cnf",
+        "core_cnf_sha256": "d7103387d87b20e537c84d833e1704b0711f55a9e276053c5f9b21e338a74772",
+        "core_lrat_files": [
+          "p5_t1_fix9_encA_core_part01.lrat",
+          "p5_t1_fix9_encA_core_part02.lrat",
+          "p5_t1_fix9_encA_core_part03.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "e49033bd12d3535b82652803c965e123144ea6fdfaab207e689b9434c5f4e349",
+          "592c21b22aed53416a087063cd372e83e63ea35dca58352c3c8bb2c5973bed9f",
+          "94ec48916ecc72bb2f59c5a03358d677727a90b829266ffaff59ece760ca549d"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 278,
+        "outer_vertex_orbits": 20,
+        "full_variables": 44033,
+        "full_clauses": 253949,
+        "core_clauses": 21073,
+        "lrat_rup_lemmas": 2050,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.8724,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p5_t1_fix9_encB_core.cnf",
+        "core_cnf_sha256": "1a82b545294da92fce19a2946a04542b0d9cfe826f1b3d573283200233f2a76e",
+        "core_lrat_files": [
+          "p5_t1_fix9_encB_core_part01.lrat",
+          "p5_t1_fix9_encB_core_part02.lrat",
+          "p5_t1_fix9_encB_core_part03.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "7512c0ec7161957e99d79609cdcfe3de5c13af4bf35d82ffb2f8f8502e77c086",
+          "6153c4b6c1df0cb56e0a0b637177d7cc944113c544ddb0e460955bc06a0b6274",
+          "e625dd6bd3e2eae70a84ea9f77d95b989817095e0d5210f05ab6f5a54109593b"
+        ]
+      }
+    },
+    {
       "case_id": "p3_t1_fix33",
-      "description": "Prime order p=3 automorphism fixing root x, 4 matched edges of Gamma_1(x), and 24 vertices of Gamma_2(x) (33 fixed vertices, 22 cycles of length 3)",
+      "description": "Prime order p=3 automorphism fixing root x=0, 4 matched edges of Gamma_1(x), and 24 vertices of Gamma_2(x) (33 fixed vertices, 22 cycles of length 3)",
       "r4_mode": "none",
       "cycle_structure": {
         "generator_prime_order": 3,
@@ -282,18 +410,16 @@
         "core_clauses": 166,
         "lrat_rup_lemmas": 23,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0354,
+        "solve_seconds": 0.0264,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p3_t1_fix33_encA_core.cnf",
-        "core_cnf_sha256": "883ded0af2f4a3a9dc09ddde3688bc8e7a18816bc66833ce7f1181861357b0a7",
-        "core_drat_file": "p3_t1_fix33_encA_core.drat",
-        "core_drat_sha256": "fb0bc2ee803bebd6d232fbb6aa436f9f97533215f209eb48d9c00b98bc2d2234",
+        "core_cnf_sha256": "9b54ee61baebadff40dc725f821bf96966b50eb3f6060e1ebdac602439c063bf",
         "core_lrat_files": [
           "p3_t1_fix33_encA_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "93534e31fe8f0d0874922602deb9b9f00287e0ef68d8e206f71d73783ee81f83"
+          "571acff2165cdffe2e6efd50328b01e341761c176f698c9e2244b1669f5ec7c3"
         ]
       },
       "encoding_B": {
@@ -305,24 +431,85 @@
         "core_clauses": 251,
         "lrat_rup_lemmas": 35,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0235,
+        "solve_seconds": 0.0272,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p3_t1_fix33_encB_core.cnf",
-        "core_cnf_sha256": "4923c719b2578d550242f7583709f6eab60f9b48edeae779f0e8b1c73065099d",
-        "core_drat_file": "p3_t1_fix33_encB_core.drat",
-        "core_drat_sha256": "f71fe6ebcf1d24dbdc34bf5adb04aa405c1fee92673b0e8c074e3291e24002b6",
+        "core_cnf_sha256": "c1158d60dac4d4f27c3a95733f603faee138867113b76246c7953102cd2eda43",
         "core_lrat_files": [
           "p3_t1_fix33_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "b9cbe80406e3ef82f196d7d374b1078c907c56f9a448e8f27546e1afd30b6dbc"
+          "2cdff8ca87b13a9ceee69887d11249316cd169f9bb9aa24e285409074c61eb4b"
+        ]
+      }
+    },
+    {
+      "case_id": "frob21_z7_z3",
+      "description": "Order 21 Frobenius subgroup Frob(21) = Z_7 x| Z_3 fixing root x=0 (generated by prime order p=7 with 1 fixed vertex and 14 7-cycles, and prime order p=3 with 3 fixed vertices and 32 3-cycles)",
+      "r4_mode": "frob21_fig10",
+      "cycle_structure": {
+        "generator_prime_order": 7,
+        "group_order": 21,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 0,
+        "fixed_in_Gamma2": 0,
+        "total_fixed_vertices_in_Gamma": 1,
+        "moved_vertices_in_Gamma": 98,
+        "num_generator_p_cycles_in_Gamma": 14
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 166,
+        "outer_vertex_orbits": 4,
+        "full_variables": 34588,
+        "full_clauses": 130592,
+        "core_clauses": 13758,
+        "lrat_rup_lemmas": 3253,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.7151,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "frob21_z7_z3_encA_core.cnf",
+        "core_cnf_sha256": "88879bb4ee8935077a62daca5b2bb8bc7cb5b71f36c18215da86fc6d83d834ec",
+        "core_lrat_files": [
+          "frob21_z7_z3_encA_core_part01.lrat",
+          "frob21_z7_z3_encA_core_part02.lrat",
+          "frob21_z7_z3_encA_core_part03.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "d24af6debc7aef4964a4d80110e2c214d75c89a58a6ac7fcc2093fa6f95d512b",
+          "64eca46b3207f29e579c44e9f73fb7eca64a169a4e18ce19904b5ef6da381fd5",
+          "43bf3a8dd22fefefe6ff6945e9281aeabb62d6b6367b3528ebaea96bc9cb3f7f"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 166,
+        "outer_vertex_orbits": 4,
+        "full_variables": 34198,
+        "full_clauses": 133570,
+        "core_clauses": 8104,
+        "lrat_rup_lemmas": 3016,
+        "rat_lemmas": 0,
+        "solve_seconds": 1.0982,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "frob21_z7_z3_encB_core.cnf",
+        "core_cnf_sha256": "f49237ee7d7b34582d8379a2dea913b6becdab0706d78a9ccdbe3dc42a58db9c",
+        "core_lrat_files": [
+          "frob21_z7_z3_encB_core_part01.lrat",
+          "frob21_z7_z3_encB_core_part02.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "b3a020192fa333c1fe8f147c4f9e9421e092b45c5609d3a63b32f7b56b5821e3",
+          "ee06348c73f4e3fc7bd87697f6eb703ed1bf5e4fba7298386fa61880549ff9a7"
         ]
       }
     },
     {
       "case_id": "p2_a0_b1_c6_fix73",
-      "description": "Prime order p=2 involution fixing root x, swapping 1 matched edge of Gamma_1(x) and fixing 6 matched edges pointwise (73 fixed vertices, 13 transpositions)",
+      "description": "Prime order p=2 involution fixing root x=0, flipping 1 matched edge of Gamma_1(x) and fixing 6 matched edges pointwise (73 fixed vertices, 13 transpositions)",
       "r4_mode": "conj",
       "cycle_structure": {
         "generator_prime_order": 2,
@@ -343,18 +530,16 @@
         "core_clauses": 178,
         "lrat_rup_lemmas": 1,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0402,
+        "solve_seconds": 0.0324,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a0_b1_c6_fix73_encA_core.cnf",
-        "core_cnf_sha256": "8641b8a63753d39e3e794a1b66fb03ce1c1a785534bb1081d67c35732677c7fb",
-        "core_drat_file": "p2_a0_b1_c6_fix73_encA_core.drat",
-        "core_drat_sha256": "f99e19beb25a60a53ed8fc54ca364780a573dcf40163e6e2e8f429480a03b3aa",
+        "core_cnf_sha256": "fd9fec097072db80efe803e8683c577a5a96d632696a9a21090cc9081c09c9df",
         "core_lrat_files": [
           "p2_a0_b1_c6_fix73_encA_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "41d96941ed9eedece1b7b6f5a1a8e2fc2a681ac9cb1778aa692ec0cb52924da5"
+          "b1b42896b328c401adf5d883a87db5b797b10c1f7483c0abb4507884ac427208"
         ]
       },
       "encoding_B": {
@@ -366,24 +551,27 @@
         "core_clauses": 170,
         "lrat_rup_lemmas": 1,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0308,
+        "solve_seconds": 0.0329,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a0_b1_c6_fix73_encB_core.cnf",
-        "core_cnf_sha256": "cd3e35c795aa13a97126becc01b1f9519ae0c5f4cbec44ced3aec80feadfe857",
-        "core_drat_file": "p2_a0_b1_c6_fix73_encB_core.drat",
-        "core_drat_sha256": "fded7244d2bb9e50db1187f3436b8952c556e921a2c61543bc991983a54409d0",
+        "core_cnf_sha256": "a455ab84fae844e5159eef33f4845b702124101c4e4213022a260d8a74fc1e9d",
         "core_lrat_files": [
           "p2_a0_b1_c6_fix73_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "69feeefdd4539863e238a26f8dc3daf7b1c93ea8056465b732fc2c0929fc7125"
+          "af5fe514ec96ab06b133cc61dccc4c52d6fbe7c2f3d6ec0c01ed91acbec5ddee"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        0,
+        1,
+        6
+      ]
     },
     {
       "case_id": "p2_a0_b2_c5_fix51",
-      "description": "Prime order p=2 involution fixing root x, swapping 2 matched edges of Gamma_1(x) and fixing 5 matched edges pointwise (51 fixed vertices, 24 transpositions)",
+      "description": "Prime order p=2 involution fixing root x=0, flipping 2 matched edges of Gamma_1(x) and fixing 5 matched edges pointwise (51 fixed vertices, 24 transpositions)",
       "r4_mode": "conj_or_fix",
       "cycle_structure": {
         "generator_prime_order": 2,
@@ -401,21 +589,19 @@
         "outer_vertex_orbits": 62,
         "full_variables": 175139,
         "full_clauses": 683045,
-        "core_clauses": 440,
+        "core_clauses": 439,
         "lrat_rup_lemmas": 115,
         "rat_lemmas": 0,
-        "solve_seconds": 0.1846,
+        "solve_seconds": 0.1968,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a0_b2_c5_fix51_encA_core.cnf",
-        "core_cnf_sha256": "ebec57b78ff5a2701504a8e3eee4e4775bd30cca93b7c8891ab2f489d5c024af",
-        "core_drat_file": "p2_a0_b2_c5_fix51_encA_core.drat",
-        "core_drat_sha256": "2fbf5db3bb8f4a388e1be75a0bda58bfeeb035fee2dc6f93518ade3b8b89de98",
+        "core_cnf_sha256": "41ea878a7ae5f28db59da90ae17f1cc0d53f91d3387e8830f949203e0c731b4a",
         "core_lrat_files": [
           "p2_a0_b2_c5_fix51_encA_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "b8ccb3d1d5e425ef86507adafcf2ef0bbeb514699e54dab22ba887d971267ced"
+          "3bffefbc9266704bc39ec5bf438dea5758811f831652fe1a72602bb3d53e95bb"
         ]
       },
       "encoding_B": {
@@ -424,88 +610,98 @@
         "outer_vertex_orbits": 62,
         "full_variables": 172347,
         "full_clauses": 692611,
-        "core_clauses": 720,
+        "core_clauses": 717,
         "lrat_rup_lemmas": 308,
         "rat_lemmas": 0,
-        "solve_seconds": 0.1765,
+        "solve_seconds": 0.2318,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a0_b2_c5_fix51_encB_core.cnf",
-        "core_cnf_sha256": "51c869b7c27aceb085e6eb82bd293874cd8dd8fe2660cf7fe7ee9a0d7ed12fe1",
-        "core_drat_file": "p2_a0_b2_c5_fix51_encB_core.drat",
-        "core_drat_sha256": "bdf10242db84cfdcb3fbdd0645f387d5404a7f37c7679cbf0f42942b9b26a56b",
+        "core_cnf_sha256": "cbb3d13c123fc46f52cb9c3fd953d3e14f6f4f5fc4185b0bd49698d21316b41f",
         "core_lrat_files": [
           "p2_a0_b2_c5_fix51_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "58f1239a3aba5cef320a558e66f3308d1da848abeee9014e61ed9f912b64b761"
+          "fe1de2e5354a29900128e7560870cb8772bc6d1f4d18866c4c2c86bbe2f4c013"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        0,
+        2,
+        5
+      ]
     },
     {
-      "case_id": "p2_a1_b0_c5_fix53",
-      "description": "Prime order p=2 involution fixing root x, transposing 1 pair of matched edges of Gamma_1(x) and fixing 5 matched edges pointwise (53 fixed vertices, 23 transpositions)",
+      "case_id": "p2_a0_b3_c4_fix33",
+      "description": "Prime order p=2 involution fixing root x=0, flipping 3 matched edges of Gamma_1(x) and fixing 4 matched edges pointwise (33 fixed vertices, 33 transpositions)",
       "r4_mode": "conj_or_fix",
       "cycle_structure": {
         "generator_prime_order": 2,
         "group_order": 2,
         "fixed_root": 1,
-        "fixed_in_Gamma1": 10,
-        "fixed_in_Gamma2": 42,
-        "total_fixed_vertices_in_Gamma": 53,
-        "moved_vertices_in_Gamma": 46,
-        "num_generator_p_cycles_in_Gamma": 23
+        "fixed_in_Gamma1": 8,
+        "fixed_in_Gamma2": 24,
+        "total_fixed_vertices_in_Gamma": 33,
+        "moved_vertices_in_Gamma": 66,
+        "num_generator_p_cycles_in_Gamma": 33
       },
       "encoding_A": {
         "encoding_name": "Sinz_2005_Sequential_Counter",
-        "primary_edge_orbit_variables": 2184,
-        "outer_vertex_orbits": 63,
-        "full_variables": 194445,
-        "full_clauses": 754466,
-        "core_clauses": 666,
-        "lrat_rup_lemmas": 174,
+        "primary_edge_orbit_variables": 1896,
+        "outer_vertex_orbits": 54,
+        "full_variables": 70971,
+        "full_clauses": 293631,
+        "core_clauses": 2648,
+        "lrat_rup_lemmas": 7057,
         "rat_lemmas": 0,
-        "solve_seconds": 0.1871,
+        "solve_seconds": 1.138,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_file": "p2_a1_b0_c5_fix53_encA_core.cnf",
-        "core_cnf_sha256": "32ce2a2442814351cdde7608b5901764f99b2aa216c794fae79deebfe873d230",
-        "core_drat_file": "p2_a1_b0_c5_fix53_encA_core.drat",
-        "core_drat_sha256": "62cf1c5c5d85d4266d4749195b5da85c240ef0d6c344cf21a188547a6fd881e3",
+        "core_cnf_file": "p2_a0_b3_c4_fix33_encA_core.cnf",
+        "core_cnf_sha256": "e76aabef59b17fc8bbb5324d8846eb9ac7f7f579f30bb5a0aac5ce563a8fe7d3",
         "core_lrat_files": [
-          "p2_a1_b0_c5_fix53_encA_core.lrat"
+          "p2_a0_b3_c4_fix33_encA_core_part01.lrat",
+          "p2_a0_b3_c4_fix33_encA_core_part02.lrat",
+          "p2_a0_b3_c4_fix33_encA_core_part03.lrat"
         ],
         "core_lrat_sha256s": [
-          "26dcefc1d9d32c4e3e35fa525f7a421e582059e8de59dcbebf98a8f61b585e00"
+          "83d9b3413ae4b55312db0b2749081f6112be832c06907de22b173d88d7b9482e",
+          "dd838a8a6040ec43b69fc2c73df331601676ba78444165628f0d84d3bcaa6227",
+          "065040c613b1a64e46282be57f1a70ddfe955763c8fe82e418912f2abbdad4af"
         ]
       },
       "encoding_B": {
         "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
-        "primary_edge_orbit_variables": 2184,
-        "outer_vertex_orbits": 63,
-        "full_variables": 191469,
-        "full_clauses": 766228,
-        "core_clauses": 637,
-        "lrat_rup_lemmas": 157,
+        "primary_edge_orbit_variables": 1896,
+        "outer_vertex_orbits": 54,
+        "full_variables": 69207,
+        "full_clauses": 294779,
+        "core_clauses": 2326,
+        "lrat_rup_lemmas": 4686,
         "rat_lemmas": 0,
-        "solve_seconds": 0.209,
+        "solve_seconds": 0.4268,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_file": "p2_a1_b0_c5_fix53_encB_core.cnf",
-        "core_cnf_sha256": "94e0d4e7f0af0aa561db6fa7e21673337564021226841cf70f8312c5160a4012",
-        "core_drat_file": "p2_a1_b0_c5_fix53_encB_core.drat",
-        "core_drat_sha256": "a157e213e9e0800b81953b837509d2583e5ce5898ea8b81c741c60caf0e37a64",
+        "core_cnf_file": "p2_a0_b3_c4_fix33_encB_core.cnf",
+        "core_cnf_sha256": "b666f64e21c01236010324c89a9f0313d5a49e5b2f8f818a8cb3f777554a1b93",
         "core_lrat_files": [
-          "p2_a1_b0_c5_fix53_encB_core.lrat"
+          "p2_a0_b3_c4_fix33_encB_core_part01.lrat",
+          "p2_a0_b3_c4_fix33_encB_core_part02.lrat"
         ],
         "core_lrat_sha256s": [
-          "7b506163512f738eae0e8a2a64979069888b4f3a939b04f0e1b1591070467dfa"
+          "b3da96aef58c87a661fb2d9a5262591f98a75509094688926b4e83f56c7f87ca",
+          "49c8858ab1eec8ce92aef7c1b739a70298cdf61487a8c98df3eeaf5cae2d4be7"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        0,
+        3,
+        4
+      ]
     },
     {
       "case_id": "p2_a0_b4_c3_fix19",
-      "description": "Prime order p=2 involution fixing root x, swapping 4 matched edges of Gamma_1(x) and fixing 3 matched edges pointwise (19 fixed vertices, 40 transpositions)",
+      "description": "Prime order p=2 involution fixing root x=0, flipping 4 matched edges of Gamma_1(x) and fixing 3 matched edges pointwise (19 fixed vertices, 40 transpositions)",
       "r4_mode": "conj_or_fix",
       "cycle_structure": {
         "generator_prime_order": 2,
@@ -523,21 +719,19 @@
         "outer_vertex_orbits": 48,
         "full_variables": 31140,
         "full_clauses": 142942,
-        "core_clauses": 6427,
+        "core_clauses": 5910,
         "lrat_rup_lemmas": 1035,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0749,
+        "solve_seconds": 0.0848,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a0_b4_c3_fix19_encA_core.cnf",
-        "core_cnf_sha256": "acf7725fdc3cb683ff4453e8fe3e223e3e259916ab6322a37fe4180e1f246955",
-        "core_drat_file": "p2_a0_b4_c3_fix19_encA_core.drat",
-        "core_drat_sha256": "fb98f069583d6926617ab4606b56240905540c997d08b4ea08314ee1e79d2d96",
+        "core_cnf_sha256": "74a29705f5a3921ebbba5a9c2114f4fc5dca01fb0b7444fb90192300f6802996",
         "core_lrat_files": [
           "p2_a0_b4_c3_fix19_encA_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "b0fb58c7e6394d1a217bc176fa07c4e120c2645023424232a8c3ee3959fd03f6"
+          "271475b697841831695d6888b6e58814e5a694d5222d955032a03b465be7604e"
         ]
       },
       "encoding_B": {
@@ -546,27 +740,290 @@
         "outer_vertex_orbits": 48,
         "full_variables": 29844,
         "full_clauses": 142006,
-        "core_clauses": 5536,
+        "core_clauses": 5185,
         "lrat_rup_lemmas": 1697,
         "rat_lemmas": 0,
-        "solve_seconds": 0.1356,
+        "solve_seconds": 0.1475,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a0_b4_c3_fix19_encB_core.cnf",
-        "core_cnf_sha256": "858b2d10944b023d862e38bd687184305e9d53c41b70e496c751d02431b65a7f",
-        "core_drat_file": "p2_a0_b4_c3_fix19_encB_core.drat",
-        "core_drat_sha256": "aad4a7d026a7b070837be2a05ac5f1d61d3642fe72bcf98117a0d26bb5f41eab",
+        "core_cnf_sha256": "478f40c9ff54e0fb0d24a308e81b49f8d95c7ff1879f611763dfee4df12691f2",
         "core_lrat_files": [
           "p2_a0_b4_c3_fix19_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "a0df1533c2ca967540efa3e189e58447286bc1521b99859a13e97295f2a7c977"
+          "23ce511a90417ecc24072030f1eea2420c59a36e53dc5985cba6c77f779f104d"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        0,
+        4,
+        3
+      ]
+    },
+    {
+      "case_id": "p2_a0_b5_c2_fix9",
+      "description": "Prime order p=2 involution fixing root x=0, flipping 5 matched edges of Gamma_1(x) and fixing 2 matched edges pointwise (9 fixed vertices, 45 transpositions)",
+      "r4_mode": "spectral_trace",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 4,
+        "fixed_in_Gamma2": 4,
+        "total_fixed_vertices_in_Gamma": 9,
+        "moved_vertices_in_Gamma": 90,
+        "num_generator_p_cycles_in_Gamma": 45
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1766,
+        "outer_vertex_orbits": 44,
+        "full_variables": 55528,
+        "full_clauses": 229407,
+        "core_clauses": 7186,
+        "lrat_rup_lemmas": 10109,
+        "rat_lemmas": 0,
+        "solve_seconds": 1.746,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a0_b5_c2_fix9_encA_core.cnf",
+        "core_cnf_sha256": "1f752e576942b77453d1db8253cb2451c9ede206b009081d5e93d35d7db95a2b",
+        "core_lrat_files": [
+          "p2_a0_b5_c2_fix9_encA_core_part01.lrat",
+          "p2_a0_b5_c2_fix9_encA_core_part02.lrat",
+          "p2_a0_b5_c2_fix9_encA_core_part03.lrat",
+          "p2_a0_b5_c2_fix9_encA_core_part04.lrat",
+          "p2_a0_b5_c2_fix9_encA_core_part05.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "7a04e949b76f89b49608cdc97ece75539bdc2e55c4cf6d0f6a2db13ffc07a3eb",
+          "7fa247fb6d53fe2275e9fb8b47435473bbf47d68eca30e0b8e733757383b82a5",
+          "4d2a929873a55b23bd389d51fdd4e4c2b9da77bf145025997641660f59d3328d",
+          "9c3688041a80668272eee6ac4459e176a14ca24794223ff501ae97b87a8594bf",
+          "9cd3ce2b278515b3d9c5ea01cff76b1a13313d79a8fcc2b3d79d0f530bef05e0"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1766,
+        "outer_vertex_orbits": 44,
+        "full_variables": 51904,
+        "full_clauses": 225902,
+        "core_clauses": 3628,
+        "lrat_rup_lemmas": 4964,
+        "rat_lemmas": 0,
+        "solve_seconds": 1.3711,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a0_b5_c2_fix9_encB_core.cnf",
+        "core_cnf_sha256": "be7bf666c5c5e199891686d51cfbb0f3edcdce8ea448b1e13efec20f8381eaba",
+        "core_lrat_files": [
+          "p2_a0_b5_c2_fix9_encB_core_part01.lrat",
+          "p2_a0_b5_c2_fix9_encB_core_part02.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "3ebdecbaddca26f89879466efcda4448994bdf788abc63e6a447a30d5fa8bb70",
+          "1f8822c304d6370e3ef58b7804acce64a39386e2baa1955d0d281d22c8af131b"
+        ]
+      },
+      "involution_profile_abc": [
+        0,
+        5,
+        2
+      ]
+    },
+    {
+      "case_id": "p2_a0_b6_c1_fix3",
+      "description": "Prime order p=2 involution fixing root x=0, flipping 6 matched edges of Gamma_1(x) and fixing 1 matched edge pointwise (3 fixed vertices, 48 transpositions)",
+      "r4_mode": "spectral_trace",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 2,
+        "fixed_in_Gamma2": 0,
+        "total_fixed_vertices_in_Gamma": 3,
+        "moved_vertices_in_Gamma": 96,
+        "num_generator_p_cycles_in_Gamma": 48
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1764,
+        "outer_vertex_orbits": 42,
+        "full_variables": 16659,
+        "full_clauses": 87573,
+        "core_clauses": 56,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0303,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a0_b6_c1_fix3_encA_core.cnf",
+        "core_cnf_sha256": "0975df16dd9f351713583186d3ab9619c3bff1e1231fb418e3b4cb06d3da33f7",
+        "core_lrat_files": [
+          "p2_a0_b6_c1_fix3_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "14b7a60136dc0f58f0a25d4ea8d17ef2b5aa38b80a62aa36eb943aba12717cf7"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1764,
+        "outer_vertex_orbits": 42,
+        "full_variables": 15219,
+        "full_clauses": 85451,
+        "core_clauses": 37,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0293,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a0_b6_c1_fix3_encB_core.cnf",
+        "core_cnf_sha256": "237bc5cd441d35daef65029e0d13926710ae6e93baac9ee2bde38d0123a6d27a",
+        "core_lrat_files": [
+          "p2_a0_b6_c1_fix3_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "b3c7db64f0756eb3606f7dd97c994545af9b74d5b0bf047bcdacf4f5e8ec90ad"
+        ]
+      },
+      "involution_profile_abc": [
+        0,
+        6,
+        1
+      ]
+    },
+    {
+      "case_id": "p2_a1_b0_c5_fix53",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 1 pair of matched edges of Gamma_1(x) and fixing 5 matched edges pointwise (53 fixed vertices, 23 transpositions)",
+      "r4_mode": "conj_or_fix",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 10,
+        "fixed_in_Gamma2": 42,
+        "total_fixed_vertices_in_Gamma": 53,
+        "moved_vertices_in_Gamma": 46,
+        "num_generator_p_cycles_in_Gamma": 23
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 2184,
+        "outer_vertex_orbits": 63,
+        "full_variables": 194445,
+        "full_clauses": 754466,
+        "core_clauses": 664,
+        "lrat_rup_lemmas": 174,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.2037,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a1_b0_c5_fix53_encA_core.cnf",
+        "core_cnf_sha256": "44a34f7ee28adbd93488a5981af35cdce9c3ea4a419265a54ae780f7cee0035e",
+        "core_lrat_files": [
+          "p2_a1_b0_c5_fix53_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "24b424bac2a859fcd2d181bf90b27cade2ceec91f16b1b46b1ba65e01091e988"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 2184,
+        "outer_vertex_orbits": 63,
+        "full_variables": 191469,
+        "full_clauses": 766228,
+        "core_clauses": 602,
+        "lrat_rup_lemmas": 157,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.2166,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a1_b0_c5_fix53_encB_core.cnf",
+        "core_cnf_sha256": "6cb41835075c27dded8e03d8017208929fe18e44ff7c6df1a1a078be8000bf22",
+        "core_lrat_files": [
+          "p2_a1_b0_c5_fix53_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "8be49668461c42be02f1fecf4f43eac9dc4c736d18300f452297f63e60d0b59a"
+        ]
+      },
+      "involution_profile_abc": [
+        1,
+        0,
+        5
+      ]
+    },
+    {
+      "case_id": "p2_a1_b1_c4_fix35",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 1 pair of matched edges, flipping 1 matched edge, and fixing 4 matched edges pointwise (35 fixed vertices, 32 transpositions)",
+      "r4_mode": "conj_or_fix",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 8,
+        "fixed_in_Gamma2": 26,
+        "total_fixed_vertices_in_Gamma": 35,
+        "moved_vertices_in_Gamma": 64,
+        "num_generator_p_cycles_in_Gamma": 32
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1920,
+        "outer_vertex_orbits": 55,
+        "full_variables": 82093,
+        "full_clauses": 335590,
+        "core_clauses": 872,
+        "lrat_rup_lemmas": 3368,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.2852,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a1_b1_c4_fix35_encA_core.cnf",
+        "core_cnf_sha256": "ce600baea6d354627117a3a3fa2429161a7040a0f8bcdafd9c169b95c3b0fe8a",
+        "core_lrat_files": [
+          "p2_a1_b1_c4_fix35_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "8559d697a78fa08136dca16dc3c6b1dea660e3538f233c572496845baf6e6270"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1920,
+        "outer_vertex_orbits": 55,
+        "full_variables": 80209,
+        "full_clauses": 338010,
+        "core_clauses": 3004,
+        "lrat_rup_lemmas": 5815,
+        "rat_lemmas": 0,
+        "solve_seconds": 2.4606,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a1_b1_c4_fix35_encB_core.cnf",
+        "core_cnf_sha256": "ae1a320123f09a150d05be69f972ecfd5306761b1b7cce63ab625229d3d55f75",
+        "core_lrat_files": [
+          "p2_a1_b1_c4_fix35_encB_core_part01.lrat",
+          "p2_a1_b1_c4_fix35_encB_core_part02.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "411e92cae8a443e024d634b8d67012719db80bbad74729da02d3870b38c7a17e",
+          "4abe18788649c247adaff57cb5b2e47b8596bce6f5bb52eeb05079d6afd3a8ff"
+        ]
+      },
+      "involution_profile_abc": [
+        1,
+        1,
+        4
+      ]
     },
     {
       "case_id": "p2_a1_b2_c3_fix21",
-      "description": "Prime order p=2 involution fixing root x, transposing 1 pair of matched edges, swapping 2 matched edges, and fixing 3 matched edges pointwise (21 fixed vertices, 39 transpositions)",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 1 pair of matched edges, flipping 2 matched edges, and fixing 3 matched edges pointwise (21 fixed vertices, 39 transpositions)",
       "r4_mode": "conj_or_fix",
       "cycle_structure": {
         "generator_prime_order": 2,
@@ -584,21 +1041,19 @@
         "outer_vertex_orbits": 49,
         "full_variables": 36628,
         "full_clauses": 163953,
-        "core_clauses": 16282,
+        "core_clauses": 15993,
         "lrat_rup_lemmas": 2924,
         "rat_lemmas": 0,
-        "solve_seconds": 0.2832,
+        "solve_seconds": 0.316,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a1_b2_c3_fix21_encA_core.cnf",
-        "core_cnf_sha256": "335182de18276859cc3eb0e848abd182f3d4c60b62a421033dafc9ba5b8d07df",
-        "core_drat_file": "p2_a1_b2_c3_fix21_encA_core.drat",
-        "core_drat_sha256": "02704a58fce78413108811eae8caf828fa9a4da3cd3b769bfe4b30f434d06c8d",
+        "core_cnf_sha256": "04838f26f3b9df66c1144cbecd35383b2f4d62f6858d43934e947c5d359d017e",
         "core_lrat_files": [
           "p2_a1_b2_c3_fix21_encA_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "a02129d709daaf5b6daca0bdfa4e95d3b025f16361c82be929db10c2ec2d8cc7"
+          "9d92fe83e312e41cfefe34c190511a540f40482b3f5d10733acc0ddb18a33151"
         ]
       },
       "encoding_B": {
@@ -607,27 +1062,30 @@
         "outer_vertex_orbits": 49,
         "full_variables": 35260,
         "full_clauses": 163625,
-        "core_clauses": 10280,
+        "core_clauses": 10041,
         "lrat_rup_lemmas": 2605,
         "rat_lemmas": 0,
-        "solve_seconds": 0.2957,
+        "solve_seconds": 0.3395,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a1_b2_c3_fix21_encB_core.cnf",
-        "core_cnf_sha256": "294cfc0e0b6f485da285e1ed80c24687a3ba47169097f24ea5a1bb33ec1511d6",
-        "core_drat_file": "p2_a1_b2_c3_fix21_encB_core.drat",
-        "core_drat_sha256": "b4f054bf4ad065daec1bf4b210c58566c99ed15c1f746536e6d1c4dfac1a1289",
+        "core_cnf_sha256": "27b5b3e9a86159b74cd920288195a4c808c185c086faac18d6d06665b1f84035",
         "core_lrat_files": [
           "p2_a1_b2_c3_fix21_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "1f2d57f6b8d10a9e82867ff126960fc0b7244cddde57b4c058141976ca7cc097"
+          "8feb980cafd1cb3c316200ea0b9f554a6fc9e498eee07473db7bb5b5b534935f"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        1,
+        2,
+        3
+      ]
     },
     {
       "case_id": "p2_a1_b3_c2_fix11",
-      "description": "Prime order p=2 involution fixing root x, transposing 1 pair of matched edges, swapping 3 matched edges, and fixing 2 matched edges pointwise (11 fixed vertices, 44 transpositions)",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 1 pair of matched edges, flipping 3 matched edges, and fixing 2 matched edges pointwise (11 fixed vertices, 44 transpositions)",
       "r4_mode": "conj_or_fix",
       "cycle_structure": {
         "generator_prime_order": 2,
@@ -645,21 +1103,19 @@
         "outer_vertex_orbits": 45,
         "full_variables": 22998,
         "full_clauses": 112131,
-        "core_clauses": 3328,
+        "core_clauses": 3323,
         "lrat_rup_lemmas": 1308,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0665,
+        "solve_seconds": 0.0728,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a1_b3_c2_fix11_encA_core.cnf",
-        "core_cnf_sha256": "94b69812e992cb87f8b62c4005231954eea128e86c39b0496a53a512aa714576",
-        "core_drat_file": "p2_a1_b3_c2_fix11_encA_core.drat",
-        "core_drat_sha256": "e12eba8fcc94b3f583ecdce17f774f331e060ecef3899dd32bacb11b2050da35",
+        "core_cnf_sha256": "eeb5395cf7e5a3653d61d1ed4978b95d1ad1a1a616e904e5180c4fccf82a0d96",
         "core_lrat_files": [
           "p2_a1_b3_c2_fix11_encA_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "ddd05567c7799dee701edfe611aa0263ae26b22b65eceb9a2df12ca0adf992ec"
+          "f5de9237a004e35c90bbfa825ab85eebacc4f72432676d8e971e48ddff5748d3"
         ]
       },
       "encoding_B": {
@@ -668,94 +1124,284 @@
         "outer_vertex_orbits": 45,
         "full_variables": 21834,
         "full_clauses": 111391,
-        "core_clauses": 2172,
+        "core_clauses": 2123,
         "lrat_rup_lemmas": 1162,
         "rat_lemmas": 0,
-        "solve_seconds": 0.0736,
+        "solve_seconds": 0.079,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
         "core_cnf_file": "p2_a1_b3_c2_fix11_encB_core.cnf",
-        "core_cnf_sha256": "d7136449781bbd769154ac873d7411e2b5dab6e6792b3b79ef61aefd97103556",
-        "core_drat_file": "p2_a1_b3_c2_fix11_encB_core.drat",
-        "core_drat_sha256": "8d28b38df4552eac567fabb827e68cf08bbd962a4d71ce8451fc5cf211923994",
+        "core_cnf_sha256": "fed7ef349682410c57585ad520c5f1c631f73dd489ee1b2e15980b47390ca76e",
         "core_lrat_files": [
           "p2_a1_b3_c2_fix11_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "e0fbda8c56e4060bbabe35ce3a3ca43026de484554531535866f54e79c46d958"
+          "361690729631bae023f9094f63e7a15e4292b2a2d16c384323e8fd2574c33dc0"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        1,
+        3,
+        2
+      ]
     },
     {
-      "case_id": "frob21_z7_z3",
-      "description": "Order 21 Frobenius subgroup Frob(21) = Z_7 x| Z_3 fixing root x (generated by prime order p=7 with 1 fixed vertex and 14 7-cycles, and prime order p=3 with 3 fixed vertices and 32 3-cycles)",
-      "r4_mode": "frob21_fig10",
+      "case_id": "p2_a1_b4_c1_fix5",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 1 pair of matched edges, flipping 4 matched edges, and fixing 1 matched edge pointwise (5 fixed vertices, 47 transpositions)",
+      "r4_mode": "spectral_trace",
       "cycle_structure": {
-        "generator_prime_order": 7,
-        "group_order": 21,
+        "generator_prime_order": 2,
+        "group_order": 2,
         "fixed_root": 1,
-        "fixed_in_Gamma1": 0,
-        "fixed_in_Gamma2": 0,
-        "total_fixed_vertices_in_Gamma": 1,
-        "moved_vertices_in_Gamma": 98,
-        "num_generator_p_cycles_in_Gamma": 14
+        "fixed_in_Gamma1": 2,
+        "fixed_in_Gamma2": 2,
+        "total_fixed_vertices_in_Gamma": 5,
+        "moved_vertices_in_Gamma": 94,
+        "num_generator_p_cycles_in_Gamma": 47
       },
       "encoding_A": {
         "encoding_name": "Sinz_2005_Sequential_Counter",
-        "primary_edge_orbit_variables": 166,
-        "outer_vertex_orbits": 4,
-        "full_variables": 34588,
-        "full_clauses": 130592,
-        "core_clauses": 14407,
-        "lrat_rup_lemmas": 3253,
+        "primary_edge_orbit_variables": 1764,
+        "outer_vertex_orbits": 43,
+        "full_variables": 35323,
+        "full_clauses": 155212,
+        "core_clauses": 2425,
+        "lrat_rup_lemmas": 4644,
         "rat_lemmas": 0,
-        "solve_seconds": 0.581,
+        "solve_seconds": 0.7755,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_file": "frob21_z7_z3_encA_core.cnf",
-        "core_cnf_sha256": "5cf6010fd53c74546a13cf5acdefce9265000c263f61c2281d4c5538e118b344",
-        "core_drat_file": "frob21_z7_z3_encA_core.drat",
-        "core_drat_sha256": "fcd25ac0563fab4f168a2d031e1f848adda8afac3af5a5247b25ed73377d6ddb",
+        "core_cnf_file": "p2_a1_b4_c1_fix5_encA_core.cnf",
+        "core_cnf_sha256": "168446f7dfc9f6b1a0a6563e6a925224f6e3b5128e1d9e6b374e2fab5e54007c",
         "core_lrat_files": [
-          "frob21_z7_z3_encA_core_part01.lrat",
-          "frob21_z7_z3_encA_core_part02.lrat",
-          "frob21_z7_z3_encA_core_part03.lrat",
-          "frob21_z7_z3_encA_core_part04.lrat"
+          "p2_a1_b4_c1_fix5_encA_core_part01.lrat",
+          "p2_a1_b4_c1_fix5_encA_core_part02.lrat",
+          "p2_a1_b4_c1_fix5_encA_core_part03.lrat"
         ],
         "core_lrat_sha256s": [
-          "1ac55a0af6a024fa918884dbb61cf132dfc532489def7ecba762e073576d1022",
-          "dd14de1083b0eadac3813dc4ee2a208c19af027d6150dc1a6f9ed4fdb0bbe069",
-          "410414bc8a0937ab071cbed884f6fedb372b9fcfaba39fa728c0a530e917e0a0",
-          "46b88fa58270eb6580a0df58ec222219d030a56aef469d8a0849f65456422bb4"
+          "d5f5e6db24c953fdd824a955c814489ba3d7c5db78f33d550493ba84b654fb01",
+          "799fc30dde3f6f4203c32cf2f383db5de6a590b44ba52fb6071b3de84368b033",
+          "142e49f9f3283e3ef7e43486ed8ec0a10b1404b3716bc5badd3a0061e15af94c"
         ]
       },
       "encoding_B": {
         "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
-        "primary_edge_orbit_variables": 166,
-        "outer_vertex_orbits": 4,
-        "full_variables": 34198,
-        "full_clauses": 133570,
-        "core_clauses": 8678,
-        "lrat_rup_lemmas": 3016,
+        "primary_edge_orbit_variables": 1764,
+        "outer_vertex_orbits": 43,
+        "full_variables": 33845,
+        "full_clauses": 154840,
+        "core_clauses": 1898,
+        "lrat_rup_lemmas": 857,
         "rat_lemmas": 0,
-        "solve_seconds": 0.9976,
+        "solve_seconds": 0.2479,
         "drat_trim_verified": true,
         "python_lrat_verified": true,
-        "core_cnf_file": "frob21_z7_z3_encB_core.cnf",
-        "core_cnf_sha256": "51d503c3bdf072bb5661a4fbdf87327aaeeca25265e8c1f9aa1cb351de5d3fe0",
-        "core_drat_file": "frob21_z7_z3_encB_core.drat",
-        "core_drat_sha256": "fdf970d149f68854a1d5ed66880c50ccc52394f5d0b49fb201fb24ef5f6cf190",
+        "core_cnf_file": "p2_a1_b4_c1_fix5_encB_core.cnf",
+        "core_cnf_sha256": "f1eacd1f60203b68f4a47dbea6f052ec426475df4b8d69f06ada692d2cda3d2f",
         "core_lrat_files": [
-          "frob21_z7_z3_encB_core_part01.lrat",
-          "frob21_z7_z3_encB_core_part02.lrat",
-          "frob21_z7_z3_encB_core_part03.lrat"
+          "p2_a1_b4_c1_fix5_encB_core.lrat"
         ],
         "core_lrat_sha256s": [
-          "b47941f2d524a742ed7e51cca1ee72283c4c30468abf484259fae8c02be5f534",
-          "d2b8c62a10931b1c55e3f15c72f8364d4633a59a72d1150f274b110c1c97c82a",
-          "0777a2ceb997a70fe4aba5ee2b77299762fba9e70f58c74dc4993d329104c0fe"
+          "b975662382f69347f6619c83c4d068a824dc97c9337f486ef224e0648df31479"
         ]
-      }
+      },
+      "involution_profile_abc": [
+        1,
+        4,
+        1
+      ]
+    },
+    {
+      "case_id": "p2_a1_b5_c0_fix3",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 1 pair of matched edges and flipping 5 matched edges of Gamma_1(x) (3 fixed vertices, 48 transpositions)",
+      "r4_mode": "spectral_trace",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 0,
+        "fixed_in_Gamma2": 2,
+        "total_fixed_vertices_in_Gamma": 3,
+        "moved_vertices_in_Gamma": 96,
+        "num_generator_p_cycles_in_Gamma": 48
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1764,
+        "outer_vertex_orbits": 43,
+        "full_variables": 35819,
+        "full_clauses": 156787,
+        "core_clauses": 5118,
+        "lrat_rup_lemmas": 1525,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.6269,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a1_b5_c0_fix3_encA_core.cnf",
+        "core_cnf_sha256": "79b28c7208c4b4163d3b465ca3281240b375a7212c23eb22c7b0fba5b939347c",
+        "core_lrat_files": [
+          "p2_a1_b5_c0_fix3_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "6f79c9b9d5cb26fec7bf6e01614fedbcd065da3157f6e428e6fe64fa5f40b3ee"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1764,
+        "outer_vertex_orbits": 43,
+        "full_variables": 34448,
+        "full_clauses": 156666,
+        "core_clauses": 1321,
+        "lrat_rup_lemmas": 377,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1062,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a1_b5_c0_fix3_encB_core.cnf",
+        "core_cnf_sha256": "ddc18c4d7b504b363c1885df067adb306be85264434e480562568325b37937b2",
+        "core_lrat_files": [
+          "p2_a1_b5_c0_fix3_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "4caac2d440cbbcbc3705a9678cdfb6e55e858d43fa2ec19b7cf4f5383d17bea5"
+        ]
+      },
+      "involution_profile_abc": [
+        1,
+        5,
+        0
+      ]
+    },
+    {
+      "case_id": "p2_a2_b0_c3_fix23",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 2 pairs of matched edges of Gamma_1(x) and fixing 3 matched edges pointwise (23 fixed vertices, 38 transpositions)",
+      "r4_mode": "conj_or_fix",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 6,
+        "fixed_in_Gamma2": 16,
+        "total_fixed_vertices_in_Gamma": 23,
+        "moved_vertices_in_Gamma": 76,
+        "num_generator_p_cycles_in_Gamma": 38
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1820,
+        "outer_vertex_orbits": 50,
+        "full_variables": 43025,
+        "full_clauses": 188341,
+        "core_clauses": 16111,
+        "lrat_rup_lemmas": 5363,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.5581,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b0_c3_fix23_encA_core.cnf",
+        "core_cnf_sha256": "3ac8e60e08c2a8167cc7d25cee8bdc70acf4d58987847ec3faeac7e3784849a0",
+        "core_lrat_files": [
+          "p2_a2_b0_c3_fix23_encA_core_part01.lrat",
+          "p2_a2_b0_c3_fix23_encA_core_part02.lrat",
+          "p2_a2_b0_c3_fix23_encA_core_part03.lrat",
+          "p2_a2_b0_c3_fix23_encA_core_part04.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "0dc033fab1990ba10a38365815295840b2cd80dbbaca254fed96f622ae3a0813",
+          "ceb7765e173c94f63340aa188f9a6ef3000b7adb2980d6c1dfd82c8606d9d0ef",
+          "f1b34a35db2cade28822637c74e983141a642d39c37379c9144ee2a71f0266b8",
+          "474dbe6037817f7d743b9a5c08ff4246cf135fb27b4f89a660fcb8e82091f899"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1820,
+        "outer_vertex_orbits": 50,
+        "full_variables": 41577,
+        "full_clauses": 188909,
+        "core_clauses": 8301,
+        "lrat_rup_lemmas": 2375,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.5443,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b0_c3_fix23_encB_core.cnf",
+        "core_cnf_sha256": "9561c7f34c510b781d5556a786bb1b3144da1f33648d6b8a337b10b1541890ca",
+        "core_lrat_files": [
+          "p2_a2_b0_c3_fix23_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "734ccff3a4ed82a2fa51cc6a0a63b033945c4041fe508562656abe8555901361"
+        ]
+      },
+      "involution_profile_abc": [
+        2,
+        0,
+        3
+      ]
+    },
+    {
+      "case_id": "p2_a2_b1_c2_fix13",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 2 pairs of matched edges, flipping 1 matched edge, and fixing 2 matched edges pointwise (13 fixed vertices, 43 transpositions)",
+      "r4_mode": "conj_or_fix",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 4,
+        "fixed_in_Gamma2": 8,
+        "total_fixed_vertices_in_Gamma": 13,
+        "moved_vertices_in_Gamma": 86,
+        "num_generator_p_cycles_in_Gamma": 43
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1776,
+        "outer_vertex_orbits": 46,
+        "full_variables": 25831,
+        "full_clauses": 123029,
+        "core_clauses": 991,
+        "lrat_rup_lemmas": 568,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1825,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b1_c2_fix13_encA_core.cnf",
+        "core_cnf_sha256": "f4838d12508710f0e0b31542ee905d0efd3f2acfac7c83158d19802b3ad73e04",
+        "core_lrat_files": [
+          "p2_a2_b1_c2_fix13_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "b462af6002b4e4db60947ba91ca2569946cb96c9a23df84de8ae56c241632319"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1776,
+        "outer_vertex_orbits": 46,
+        "full_variables": 24619,
+        "full_clauses": 122645,
+        "core_clauses": 566,
+        "lrat_rup_lemmas": 424,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1071,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b1_c2_fix13_encB_core.cnf",
+        "core_cnf_sha256": "43886fc435c01247473a0054963217de7bbb5efd8591719ed5decb1a4097f297",
+        "core_lrat_files": [
+          "p2_a2_b1_c2_fix13_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "4e66cf7ab2a36c1ef3ca13050c802e45057bb32fe8093a072b0e5d2546813dcb"
+        ]
+      },
+      "involution_profile_abc": [
+        2,
+        1,
+        2
+      ]
     }
   ]
 }

@@ -8,8 +8,8 @@ claim_targeted: p1 + p2
 ## 1. Execution & Standard-Library-Only Verification
 
 - **Command executed:** `python3 -B verify.py` inside the `claim/` directory.
-- **Standard library compliance:** Inspected `verify.py` imports (`hashlib`, `itertools`, `json`, `os`, `sys`). No third-party packages, external SAT solvers, or external C binaries are imported or invoked during verification.
-- **Execution result:** Completed in $\sim 10.5$ seconds with exit code `0` and final line `VERIFY: PASS`.
+- **Standard library compliance:** Inspected `verify.py` imports (`collections`, `hashlib`, `itertools`, `json`, `os`, `sys`). No third-party packages, external SAT solvers, or external C binaries are imported or invoked during verification.
+- **Execution result:** Completed in $\sim 18$ seconds with exit code `0` and final line `VERIFY: PASS`.
 
 ```text
 [PASS] Positive non-vacuity control on srg(9, 4, 1, 2) = K_3 box K_3 (Encoding A & Encoding B)
@@ -18,15 +18,25 @@ claim_targeted: p1 + p2
 [PASS] Track p2 p2_3_inner_outer_balance_k14: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p2 p2_4_outer_pair_cn_k14: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p2 p2_5_srg9_uniqueness: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p7_fix1: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p5_t1_fix9: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p1 p3_t1_fix33: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 frob21_z7_z3: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p1 p2_a0_b1_c6_fix73: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p1 p2_a0_b2_c5_fix51: Enc A & Enc B CNF membership + LRAT RUP verified
-[PASS] Track p1 p2_a1_b0_c5_fix53: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a0_b3_c4_fix33: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p1 p2_a0_b4_c3_fix19: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a0_b5_c2_fix9: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a0_b6_c1_fix3: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a1_b0_c5_fix53: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a1_b1_c4_fix35: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p1 p2_a1_b2_c3_fix21: Enc A & Enc B CNF membership + LRAT RUP verified
 [PASS] Track p1 p2_a1_b3_c2_fix11: Enc A & Enc B CNF membership + LRAT RUP verified
-[PASS] Track p1 frob21_z7_z3: Enc A & Enc B CNF membership + LRAT RUP verified
-All 26 UNSAT proofs (13 theorems x 2 encodings, 19693 RUP lemmas, 0 RAT lemmas) verified.
+[PASS] Track p1 p2_a1_b4_c1_fix5: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a1_b5_c0_fix3: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a2_b0_c3_fix23: Enc A & Enc B CNF membership + LRAT RUP verified
+[PASS] Track p1 p2_a2_b1_c2_fix13: Enc A & Enc B CNF membership + LRAT RUP verified
+All 46 UNSAT proofs (23 theorems x 2 encodings, 92137 RUP lemmas, 0 RAT lemmas) verified.
 VERIFY: PASS
 ```
 
@@ -35,10 +45,10 @@ VERIFY: PASS
 - **Dual Cardinality Encoders:**
   - **Encoding A (`add_exact_sinz`):** Implements the Sinz (2005) linear sequential counter using $n \cdot k$ register variables $s_{i,j}$ with bidirectional implications enforcing $\sum_{i=1}^n L_i = k$.
   - **Encoding B (`add_exact_totalizer`):** Implements the Bailleux & Boufkhad (2003) binary tree unary totalizer recursively splitting $L$ into balanced subtrees and enforcing both upward at-most-$k$/sum propagation and downward sum-witness propagation.
-- **26 Formulas Re-Generated From Scratch:**
-  - `verify.py` constructs all $5$ Track `p2` propositions (`p2_1_inner_matching_k14`, `p2_2_outer_bijection_k14`, `p2_3_inner_outer_balance_k14`, `p2_4_outer_pair_cn_k14`, `p2_5_srg9_uniqueness`) and all $8$ Track `p1` automorphism exclusion cases (`p3_t1_fix33`, `p2_a0_b1_c6_fix73`, `p2_a0_b2_c5_fix51`, `p2_a1_b0_c5_fix53`, `p2_a0_b4_c3_fix19`, `p2_a1_b2_c3_fix21`, `p2_a1_b3_c2_fix11`, `frob21_z7_z3`) under both Encoding A and Encoding B ($13 \times 2 = 26$ full CNFs).
+- **46 Formulas Re-Generated From Scratch:**
+  - `verify.py` constructs all $5$ Track `p2` propositions (`p2_1_inner_matching_k14`, `p2_2_outer_bijection_k14`, `p2_3_inner_outer_balance_k14`, `p2_4_outer_pair_cn_k14`, `p2_5_srg9_uniqueness`) and all $18$ Track `p1` automorphism exclusion cases (`p7_fix1`, `p5_t1_fix9`, `p3_t1_fix33`, `frob21_z7_z3`, and 14 involution profiles `p2_*`) under both Encoding A and Encoding B ($23 \times 2 = 46$ full CNFs).
 - **Exact Clause Set Membership:**
-  - For each of the $26$ proof objects, `verify.py` parses `*_core.cnf` via `parse_dimacs_clauses` and checks `cl in full_clause_set` against the freshly generated CNF from its corresponding encoder. All $44,756$ core clauses in Encoding A and $31,292$ core clauses in Encoding B are verified to be exact subsets of the freshly generated formulas.
+  - For each of the $46$ proof objects, `verify.py` parses `*_core.cnf` via `parse_dimacs_clauses` and checks `cl in full_clause_set` against the freshly generated CNF from its corresponding encoder. All $146,183$ core clauses in Encoding A and $89,587$ core clauses in Encoding B are verified to be exact subsets of the freshly generated formulas.
 
 ## 3. Positive Non-Vacuity Control (`srg(9, 4, 1, 2)`)
 
@@ -47,9 +57,9 @@ VERIFY: PASS
 ## 4. Pure-Python LRAT RUP Proof Checker & Hash Integrity Audit
 
 - **Pure-Python LRAT RUP Checker (`verify_lrat_python`):**
-  - Loads the $1$-indexed clauses of `*_core.cnf`, processes clause deletions (`d`) and RUP additions across single and multi-part `.lrat` files, explicitly rejects any negative hint (`any(h < 0 for h in hints)` $\implies$ error, enforcing $0$ RAT lemmas), verifies that every hint chain reaches a unit-propagation conflict from the negated lemma literals using only active clauses, and confirms that the empty clause `0` (`len(lemma_lits) == 0`) is derived in all $26$ proofs ($9,816$ RUP lemmas in Encoding A $+ 9,877$ RUP lemmas in Encoding B $= 19,693$ RUP lemmas total, $0$ RAT lemmas).
+  - Loads the $1$-indexed clauses of `*_core.cnf`, processes clause deletions (`d`) and RUP additions across single and multi-part `.lrat` files, explicitly rejects any negative hint (`any(h < 0 for h in hints)` $\implies$ error, enforcing $0$ RAT lemmas), verifies that every hint chain reaches a unit-propagation conflict from the negated lemma literals using only active clauses, and confirms that the empty clause `0` (`len(lemma_lits) == 0`) is derived in all $46$ proofs ($55,502$ RUP lemmas in Encoding A $+ 36,635$ RUP lemmas in Encoding B $= 92,137$ RUP lemmas total, $0$ RAT lemmas).
 - **Hash & Artifact Cross-Check:**
-  - All $26$ `core_cnf_sha256`, $26$ `core_drat_sha256`, and $31$ `core_lrat_sha256s` digests in `certificate.json` match the files on disk and are mutually distinct between Encoding A and Encoding B.
+  - All $46$ `core_cnf_sha256` and $80$ `core_lrat_sha256s` digests (`126` files total, each strictly $< 750\text{ KB}$, $40.60\text{ MB}$ total) in `certificate.json` match the files on disk and are mutually distinct between Encoding A and Encoding B.
   - Every variable count, full clause count, core clause count, RUP lemma count, and cycle-structure statistic in `artifact.md` matches `certificate.json` and `verify.py` with zero discrepancies.
 
 pass: true
