@@ -1,14 +1,14 @@
-# QOBLIB minimum Birkhoff decomposition: an exact decomposition of B5_25_2 with at most 13 terms or B6_36_10 with at most 19
+# QOBLIB minimum Birkhoff decomposition: an exact decomposition of B5_25_2 with at most 13 terms or B6_36_10 with at most 18
 
-🚚 **Optimization benchmarks** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours to laptop-days for search; exact checking takes seconds; 5x5 and 6x6 integer matrices, respectively 120 and 720 possible permutation columns · open as of 2026-10-25
+🚚 **Optimization benchmarks** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours to laptop-days for search; exact checking takes seconds; 5x5 and 6x6 integer matrices, respectively 120 and 720 possible permutation columns · open as of 2026-10-26
 
 ## The problem
 
-QOBLIB's Minimum Birkhoff Decomposition problem (ZIB-AOPT/QOBLIB, 03-birkhoff) asks for the fewest permutation matrices in an exact convex decomposition of a doubly stochastic matrix (Kulkarni, Lee and Singh, IPCO 2017; Dufosse and Ucar, Linear Algebra Appl. 2016). On 2026-10-25 the auto-generated best-known table (last updated 2026-10-19) lists B5_25_2 at 14 and B6_36_10 at 20, both from the 20260111_MIP_Schicker submission (Maximilian Schicker, 2026-01-10). Both matrices are integer matrices with row and column sums 10000 (scale 10000) in qbench_05_dense.json and qbench_06_dense.json. The current solutions/B5_25_2.bst.json and B6_36_10.bst.json files list 13 and 17 terms with floating-point weights, but neither support reconstructs its matrix exactly over the rationals (re-checked for this entry: the exact linear systems are inconsistent, residuals about 12 and 24 in the scaled entries), so they do not settle these cells.
+QOBLIB's Minimum Birkhoff Decomposition problem (ZIB-AOPT/QOBLIB, 03-birkhoff) asks for the fewest permutation matrices in an exact convex decomposition of a doubly stochastic matrix (Kulkarni, Lee and Singh, IPCO 2017; Dufosse and Ucar, Linear Algebra Appl. 2016). On 2026-10-26 the auto-generated best-known table still lists B5_25_2 at 14 and B6_36_10 at 20, both from the 20260111_MIP_Schicker submission (Maximilian Schicker, 2026-01-10). However, András Czégel's RCS preprint (arXiv:2610.25837v1, 2026-10-19, Appendix D, Table 8) already reports lengths 14 and 19 for these instances. Its exact decompositions are public in QOBLIB PR #95 (opened 2026-10-20, still unmerged when checked), submission 20261020_RecoverCertifySearch_Czegel. The 19-term B6_36_10 decomposition reconstructs the matrix exactly with positive integer weights summing to 10000, so a record improvement needs at most 18 terms even while the generated table shows 20. Both matrices are integer matrices with row and column sums 10000 (scale 10000) in qbench_05_dense.json and qbench_06_dense.json. The current solutions/B5_25_2.bst.json and B6_36_10.bst.json files list 13 and 17 terms with floating-point weights, but neither support reconstructs its matrix exactly over the rationals (re-checked for this entry: the exact linear systems are inconsistent, residuals about 12 and 24 in the scaled entries), so they do not settle these cells.
 
 ## What counts as a win
 
-For either named matrix A, give pairwise distinct permutations and strictly positive rational weights w_k summing to 10000 such that A=sum_k w_k P_k entrywise exactly, with at most 13 terms for B5_25_2 or at most 19 for B6_36_10. This is a record win; global minimality need not be proved. Alternatively, close either exact optimum by an attaining decomposition and an independently checkable lower-bound certificate valid for arbitrary nonnegative real weights. A certificate restricted to integer weights does not establish the latter claim.
+For either named matrix A, give pairwise distinct permutations and strictly positive rational weights w_k summing to 10000 such that A=sum_k w_k P_k entrywise exactly, with at most 13 terms for B5_25_2 or at most 18 for B6_36_10. This is a record win; global minimality need not be proved. Alternatively, close either exact optimum by an attaining decomposition and an independently checkable lower-bound certificate valid for arbitrary nonnegative real weights. A certificate restricted to integer weights does not establish the latter claim.
 
 ## How a win is checked
 
@@ -33,6 +33,10 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/03-birkhoff/solutions/B5_25_2.bst.json>
 - <https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/03-birkhoff/solutions/B6_36_10.bst.json>
 - <https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/03-birkhoff/check/README.md>
+- <https://arxiv.org/abs/2610.25837v1>
+- <https://github.com/ZIB-AOPT/QOBLIB/pull/95>
+- <https://raw.githubusercontent.com/tg90000/qoblib-03-min-birkhoff/ced56a4384c17482b7dd40ff8dd0a349d68fd091/03-birkhoff/submissions/20261020_RecoverCertifySearch_Czegel/B5_25_2/B5_25_2_solution.json>
+- <https://raw.githubusercontent.com/tg90000/qoblib-03-min-birkhoff/ced56a4384c17482b7dd40ff8dd0a349d68fd091/03-birkhoff/submissions/20261020_RecoverCertifySearch_Czegel/B6_36_10/B6_36_10_solution.json>
 
 ## Ideas to start from
 
@@ -51,6 +55,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - The Schicker submission's 'optimality bounds' (13 for B5_25_2, 11 for B6_36_10) come from an integer-weight model solved numerically by Gurobi; they bound integer decompositions, not decompositions with real weights.
 - Exact rational weights, including any strict improvement, require zero reconstruction tolerance.
 - Benchmark libraries are open targets: publish the exact decomposition in full.
+- The auto-generated best-known table can lag public unmerged submissions. Czégel's RCS preprint and QOBLIB PR #95 already publish an exact 19-term B6_36_10 decomposition; reproducing it is not a record. Check preprints and open QOBLIB submissions as well as the table before claiming novelty.
 
 ## Point your agent at it
 
