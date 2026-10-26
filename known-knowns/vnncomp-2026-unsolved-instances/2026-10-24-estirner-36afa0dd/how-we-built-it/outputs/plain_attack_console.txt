@@ -1,0 +1,17 @@
+{"onnx": "cifar10_eps8_wide_cnn7.onnx.gz", "vnnlib": "cifar10_eps8_wide_cnn7_idx7490_sample8.vnnlib.gz", "n_inputs": 3072, "n_disjuncts": 9, "conversion_max_abs_diff_at_centre": 7.3909759521484375e-06, "centre_cpu_margin": -0.2002466320991516, "centre_best_disjunct": 2, "seed": 0, "budget_s": 300.0, "restarts": 256, "steps": 200}
+stage1 done 48.1s best gpu -0.0123968 cpu -0.0124076
+CANDIDATE cpu margin 5.94556332e-05 disjunct 5 (gpu 6.07669353e-05) t=215.0
+CANDIDATE cpu margin 7.27772713e-05 disjunct 5 (gpu 7.38501549e-05) t=215.3
+CANDIDATE cpu margin 7.30752945e-05 disjunct 5 (gpu 7.44462013e-05) t=215.7
+CANDIDATE cpu margin 7.30752945e-05 disjunct 5 (gpu 7.47442245e-05) t=216.4
+CANDIDATE cpu margin 7.43865967e-05 disjunct 5 (gpu 7.50124454e-05) t=216.8
+CANDIDATE cpu margin 7.42077827e-05 disjunct 5 (gpu 7.52806664e-05) t=217.0
+CANDIDATE cpu margin 7.56084919e-05 disjunct 5 (gpu 7.64727592e-05) t=217.5
+CANDIDATE cpu margin 7.83503056e-05 disjunct 5 (gpu 7.97510147e-05) t=218.3
+CANDIDATE cpu margin 7.88271427e-05 disjunct 5 (gpu 7.98404217e-05) t=226.4
+CANDIDATE cpu margin 7.88867474e-05 disjunct 5 (gpu 8.04066658e-05) t=226.9
+CANDIDATE cpu margin 7.87973404e-05 disjunct 5 (gpu 8.09431076e-05) t=230.8
+CANDIDATE cpu margin 7.94827938e-05 disjunct 5 (gpu 8.12411308e-05) t=232.6
+CANDIDATE cpu margin 7.96914101e-05 disjunct 5 (gpu 8.21948051e-05) t=232.7
+CANDIDATE cpu margin 7.97510147e-05 disjunct 5 (gpu 8.2552433e-05) t=232.9
+DONE best cpu margin 7.97510147e-05 (disjunct 5) gpu 8.2552433e-05 candidates 14 evals 2508800 wall 311.1s
