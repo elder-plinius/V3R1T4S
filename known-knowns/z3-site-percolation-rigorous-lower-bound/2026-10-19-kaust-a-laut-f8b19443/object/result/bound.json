@@ -1,0 +1,22 @@
+{
+  "target": "z3-site-percolation-rigorous-lower-bound",
+  "statement": "p_c^site(Z^3) >= 263376/1000000",
+  "bound": {
+    "numerator": 263376,
+    "denominator": 1000000,
+    "decimal": "0.263376"
+  },
+  "method": "canonical shortest paths (parent = smallest direction index), finite criterion K_N(p) < 1",
+  "N": 20,
+  "certificate_file": "outputs/p20.txt",
+  "K_N_at_bound": "0.999971526024 (exact rational comparison < 1, code/verify_cert.py)",
+  "K_N_at_next_grid_point": "1.000041779030 (263377/1000000)",
+  "K_N_at_5_over_19": "0.984758991853 (< 1)",
+  "walk_total_a20": 3516072837894,
+  "sum_c_f": 14334995983614,
+  "monotone_interval": "[0, 21/44]",
+  "previous_record": "0.2522 (Georgakopoulos-Panagiotis, Combin. Probab. Comput. 32 (2023) 912-955, Theorem 7.1; also arXiv:2107.06272, eq. (16); from Barequet-Shalah's site-animal growth bound a(Z^3) < 9.3835)",
+  "unproven_comparator": "5/19 = 0.263158 (Torquato-Jiao 2013, stated without proof; they prove 1/6)",
+  "older_bound": "0.21103 = 1/4.7387 (Ponitz-Tittmann 2000 via p_c >= 1/mu)",
+  "margin_over_record": "0.011111 against the exact 0.252265 (0.011176 against the rounded 0.2522 they state)"
+}

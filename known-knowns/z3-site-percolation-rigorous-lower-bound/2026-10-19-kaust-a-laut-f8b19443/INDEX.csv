@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+z3-site-percolation-rigorous-lower-bound,site percolation on Z^3: rigorous lower bound on p_c,263376/1000000,0.2522 (Georgakopoulos-Panagiotis CPC 2023 Theorem 7.1),2026-10-19T19:07:43Z,object/result/bound.json,f8b194431de54d8cffcfac07ad5f79f42cc36a637b86633cba8fdc9554d58f9b

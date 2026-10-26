@@ -1,0 +1,6 @@
+N = 20, sum of c_f = 14334995983614
+f_max = 23: K_N is increasing on [0, 21/44] = [0, 0.477273]; (j+1)/10^6 inside: True
+K_N(263376/10^6) = 0.999971526024  ->  PASS: p_c >= 263376/10^6
+K_N(263377/10^6) = 1.000041779030  ->  fails (p* is maximal on the grid)
+sanity 1/5 (proven bound; must pass): K = 0.005547
+sanity 0.3116 (numerical p_c; must fail): K = 21.417580
