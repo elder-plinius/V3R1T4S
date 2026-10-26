@@ -1,36 +1,47 @@
-# Exact build commands (from the ring-graft lens; paths relative to the run folder)
-
-cd attempts/ring-graft/code
+# Exact build commands (from the ring-graft lens; paths relative to this package root)
 
 # 1. Hexagonal truncation search (20k evaluations of the raw-truncation objective)
-python3 a2search.py
+python3 how-we-built-it/a2search.py
 # best raw truncation: theta=12.863 deg, s=0.02987721, offset (0.001694, 0.007549),
 # 3949 smallest-|p| points -> margin -2.69e-05
 
 # 2. Jam the truncation (overlap relaxation)
-python3 jam.py
+python3 how-we-built-it/jam.py
 # -> jammed configuration at the raw radius
 
 # 3. Smooth-max bottleneck polish with ratcheting (polish.py: L-BFGS-B on
 #    logsumexp(alpha * overlaps) / alpha; after each round set r := feasible_r)
-python3 deep_polish.py
+python3 how-we-built-it/deep_polish.py
 # -> after 8 ratchets: margin -1.3e-08
 
 # 4. Aggressive re-polish (12 outer rounds, alpha=1e6)
-python3 batch_polish.py
-python3 squeeze.py
+python3 how-we-built-it/batch_polish.py
+python3 how-we-built-it/squeeze.py
 # -> margin +2.372e-06 (50-digit certified)
 
 # 5. Non-isometry vs the posted seed
-python3 noniso.py ../result/candidate_n3949.txt
+python3 how-we-built-it/noniso.py object/candidate_n3949.txt
 # -> NON-ISOMETRIC (max sorted-distance diff ~5e-03)
 
-# 6. 50-digit certification (run-folder checker, mpmath)
-cd ../..
-python3 code/checker.py attempts/ring-graft/result/candidate_n3949.txt 3949
+# 6. 50-digit certification
+# The run-folder mpmath checker (code/checker.py) is NOT included in this package.
+# The package's own 50-digit check is:
+python3 verify-it-yourself/verify.py object/candidate_n3949.txt
 # -> margin r*-r_table = 2.372e-06 (need >= 1e-11 to beat)
+# (or run the whole check with: sh verify-it-yourself/run_checks.sh)
 
-Dead lines killed along the way (see attempts/ring-graft/report.md):
+# Notes on the build scripts
+# - squeeze.py is included in how-we-built-it/ verbatim from the ring-graft run.
+#   It reads run-folder intermediates (deep00.txt) through common.py's RUN path,
+#   which is a placeholder ('<WORKDIR>/...') in this package's common.py, so the
+#   full rebuild above requires those intermediates; the check that runs from
+#   this package alone is verify-it-yourself/run_checks.sh.
+# - The run-folder mpmath checker (code/checker.py) is not included; the
+#   package verifier (verify-it-yourself/verify.py) performs the same 50-digit
+#   margin check with the standard library.
+
+Dead lines killed along the way (recorded in the ring-graft run report, not
+included in this package):
 - rattler -> largest-cavity relocation (binding-constraint degeneracy)
 - boundary-ring annealing from the posted seed (basin jams exactly at r_table)
 - phyllotaxis seeds, naive inflate-and-jam

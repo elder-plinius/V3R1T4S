@@ -20,12 +20,12 @@ sh verify-it-yourself/run_checks.sh
 The discovery code is in how-we-built-it/ (numpy/scipy needed). In brief, from the
 lens's REPRODUCE notes:
 1. Generate hexagonal truncations of ~3949 points (orientation θ, spacing s, offset):
-   see gen.py / a2search.py (parameter search, 20k evaluations on the raw-truncation
+   see how-we-built-it/gen.py / how-we-built-it/a2search.py (parameter search, 20k evaluations on the raw-truncation
    objective F = min(s/2, 1 − max|p|); best raw truncation θ=12.863°, s=0.02987721).
-2. Jam each truncation with the overlap-relaxation in jam.py.
-3. Deep-polish the best with smooth_max_polish (polish.py: L-BFGS-B on
+2. Jam each truncation with the overlap-relaxation in how-we-built-it/jam.py.
+3. Deep-polish the best with smooth_max_polish (how-we-built-it/polish.py: L-BFGS-B on
    logsumexp(α·overlaps)/α, ratcheting r → feasible r each round), then aggressive
-   re-polish (batch_polish.py, deep_polish.py) → +2.372e-06.
+   re-polish (how-we-built-it/batch_polish.py, how-we-built-it/squeeze.py) → +2.372e-06.
 The exact command history is in how-we-built-it/COMMANDS.txt.
 
 ## Re-fetching the record we beat

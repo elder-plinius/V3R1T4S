@@ -1,8 +1,8 @@
 04b17edb28a1ad60f49df30db0001f7adfb75b93fe35028c73016035cbdcabec  ./HOW_WE_FOUND_IT.md
 74967d0b0cdfb6cb8d021286ba1c7c67464ab0896f7d75990dcef6fd430146fe  ./INDEX.csv
-27664ab85a55501063db3fd60298883794003f57f8dceb0dea5eed48c81e7af6  ./README.md
-bc93ff9974915b7b6e984e9c482049bfd204df542f22db881a4bfe71144950e0  ./RUN_IT_YOURSELF.md
-e781134c7656ba1f12c00b39f660d8f2b096751fb7b10d48e877dffb7683a6a9  ./how-we-built-it/COMMANDS.txt
+bf83c9038ec3acd510dc78bf1430a742e600510a735c4755aa37261a7957a0bc  ./README.md
+eb467eb90eb759437fecaa3420760a7b09a1968651acdf28a067572c6239a0a3  ./RUN_IT_YOURSELF.md
+53d6c7cf32d38b816574be10e66637865310ddf986f3b04093c72c30e3237484  ./how-we-built-it/COMMANDS.txt
 88ab71d970616ccb44c087e22a5fa0ee08471175bfe32caaf8e245816d1f9c79  ./how-we-built-it/PREREG.md
 1f5d45a59e257c7faeb7cc5212e481ead584dba138c2d5795cb3c0b0a6f77b38  ./how-we-built-it/a2search.py
 752dc9f9e278a70788b62f3d27cae987a0afef389670fc9550a0466113d9a73c  ./how-we-built-it/batch_polish.py
@@ -12,6 +12,7 @@ e781134c7656ba1f12c00b39f660d8f2b096751fb7b10d48e877dffb7683a6a9  ./how-we-built
 e2f34e758933f419fac4c5eba5583d109fdd8832d8fa4fd8204ebb2ede1d8ff3  ./how-we-built-it/jam.py
 c2068aab9cb6c46b1162542fd47e7e8efa9947df29430083a49ebae4ba8223b3  ./how-we-built-it/noniso.py
 0503fe597565a56d8e43d08525f82afe4d91ed704a4dd8aaae97fc4acecad6e6  ./how-we-built-it/polish.py
+68823fe9283c7ed1f141be4644728ca9f028d4ebfa54dd90986e00d0990361c5  ./how-we-built-it/squeeze.py
 04a7d0a00005196d0694044e38aba2f519924b6be12dc9197bce2cddf3070b68  ./object/candidate_n3949.txt
 7d5040adb6d23aa048722878bf3c3e5bb81ed9a8193f72cfa8a940bc578d384f  ./panel/criterion.md
 3d97de7644041b8f54c41e69163ed4f27a238f48e6f591e45d89ede7d73693ac  ./panel/gate.md

@@ -39,6 +39,5 @@ object is rejected.
 ## Credits
 - E. Specht — the Packomania record table and the posted cci3949.txt seed
   (https://packomania.com/cci/)
-- Yuri Stoyan & Georgiy Yaskov — neighbouring large-N cci rows
 - The V3R1T4S open research kit (https://github.com/elder-plinius/V3R1T4S)
 - Discovered by the V3R1T4S nightly hunt, credit "Jorgy72 & Sine", 2026-10-20
