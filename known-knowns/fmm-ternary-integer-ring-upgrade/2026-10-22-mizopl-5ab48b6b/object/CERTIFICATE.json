@@ -1,0 +1,289 @@
+{
+  "submission_id": "2026-10-22-mizopl-5ab48b6b",
+  "target_id": "fmm-ternary-integer-ring-upgrade",
+  "category": "algorithms",
+  "status": "CONFIRMED_SOLUTION",
+  "contributor": "mizopl",
+  "method": "Higher-Order S_{b*g} Sub-Block Conjugation & Unimodular GL_g(Z) Within-Group Basis Reduction on Serendipitous Tensor Products",
+  "upstream_merged_context": {
+    "repository": "https://github.com/dronperminov/FastMatrixMultiplication",
+    "merged_commit": "b4f756b",
+    "merged_schemes_directory": "schemes/known/mizopl/",
+    "merged_formats": [
+      "9x12x14:954 (ZT)",
+      "10x15x15:1389 (ZT)",
+      "12x15x15:1640 (ZT)",
+      "14x15x15:1894 (ZT)"
+    ],
+    "part_i_prs": [
+      "https://github.com/elder-plinius/V3R1T4S/pull/402",
+      "https://github.com/elder-plinius/V3R1T4S/pull/432"
+    ]
+  },
+  "live_reference_fetches": {
+    "perminov_readme": {
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/README.md",
+      "fetched_utc": "2026-10-22T02:23:22Z",
+      "http_status": 200,
+      "bytes": 112906,
+      "sha256": "5f8eb46827fd667f0200990f0e91d2f439db13f6555f63eeecbb39bc7b9fc17e"
+    },
+    "perminov_status_json": {
+      "url": "https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/schemes/status.json",
+      "fetched_utc": "2026-10-22T02:23:23Z",
+      "http_status": 200,
+      "bytes": 2180006,
+      "sha256": "8f129ee5cf9683c769de46143323219eeebbc7fed24b201cc02a22f4a851cf1c"
+    },
+    "sedoglavic_fmm_sota_json": {
+      "url": "https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json",
+      "fetched_utc": "2026-10-22T02:23:23Z",
+      "http_status": 200,
+      "bytes": 343774,
+      "sha256": "2a6535154ac877aeb495f9294a5e97c3dbf1b1969aefe6ffc0a612f2cf01cbae"
+    }
+  },
+  "totals": {
+    "schemes_verified": 7,
+    "zt_schemes_verified": 6,
+    "z_schemes_verified": 1,
+    "zt_gt_z_gaps_closed_to_zero": 5,
+    "total_zt_multiplications_saved_vs_live_readme": 42,
+    "total_z_multiplications_saved_on_12x13x16": 3,
+    "total_exact_int64_brent_equations_verified": 29648196,
+    "total_brent_mismatches": 0
+  },
+  "schemes": [
+    {
+      "file": "object/6x12x14_m654_ZT.json",
+      "format": "6x12x14",
+      "dimensions": [
+        6,
+        12,
+        14
+      ],
+      "ring": "ZT",
+      "rank": 654,
+      "previous_zt_rank": 666,
+      "previous_z_rank": 654,
+      "overall_q_rank": 645,
+      "delta_vs_previous_zt": -12,
+      "delta_vs_previous_z": 0,
+      "max_abs": 1,
+      "complexity": 13241,
+      "nnz_u": 4149,
+      "nnz_v": 5477,
+      "nnz_w": 5007,
+      "total_nnz": 14633,
+      "non_ternary_terms": {
+        "u": 0,
+        "v": 0,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 654,
+      "total_brent_equations": 1016064,
+      "brent_mismatches": 0,
+      "bytes": 114018,
+      "sha256": "5ab48b6b88fd1a7b9fbe8c81670522bd45f290e580be8a4443751e208f2f2bc4"
+    },
+    {
+      "file": "object/9x10x13_m763_ZT.json",
+      "format": "9x10x13",
+      "dimensions": [
+        9,
+        10,
+        13
+      ],
+      "ring": "ZT",
+      "rank": 763,
+      "previous_zt_rank": 771,
+      "previous_z_rank": 763,
+      "overall_q_rank": 758,
+      "delta_vs_previous_zt": -8,
+      "delta_vs_previous_z": 0,
+      "max_abs": 1,
+      "complexity": 14116,
+      "nnz_u": 4852,
+      "nnz_v": 5069,
+      "nnz_w": 5838,
+      "total_nnz": 15759,
+      "non_ternary_terms": {
+        "u": 0,
+        "v": 0,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 763,
+      "total_brent_equations": 1368900,
+      "brent_mismatches": 0,
+      "bytes": 123209,
+      "sha256": "a351d9eef1a62ff9ab7a300e67928a880200e9fcb4ba7f3accffc900e99c1923"
+    },
+    {
+      "file": "object/9x10x16_m920_ZT.json",
+      "format": "9x10x16",
+      "dimensions": [
+        9,
+        10,
+        16
+      ],
+      "ring": "ZT",
+      "rank": 920,
+      "previous_zt_rank": 924,
+      "previous_z_rank": 920,
+      "overall_q_rank": 916,
+      "delta_vs_previous_zt": -4,
+      "delta_vs_previous_z": 0,
+      "max_abs": 1,
+      "complexity": 17397,
+      "nnz_u": 5856,
+      "nnz_v": 6056,
+      "nnz_w": 7469,
+      "total_nnz": 19381,
+      "non_ternary_terms": {
+        "u": 0,
+        "v": 0,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 920,
+      "total_brent_equations": 2073600,
+      "brent_mismatches": 0,
+      "bytes": 153081,
+      "sha256": "42ad6efd9f8b6aab2320058835d85c565300f616d007b57535bf1968c0cb0076"
+    },
+    {
+      "file": "object/10x15x16_m1484_ZT.json",
+      "format": "10x15x16",
+      "dimensions": [
+        10,
+        15,
+        16
+      ],
+      "ring": "ZT",
+      "rank": 1484,
+      "previous_zt_rank": 1488,
+      "previous_z_rank": 1484,
+      "overall_q_rank": 1482,
+      "delta_vs_previous_zt": -4,
+      "delta_vs_previous_z": 0,
+      "max_abs": 1,
+      "complexity": 28160,
+      "nnz_u": 11226,
+      "nnz_v": 10136,
+      "nnz_w": 9926,
+      "total_nnz": 31288,
+      "non_ternary_terms": {
+        "u": 0,
+        "v": 0,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 1484,
+      "total_brent_equations": 5760000,
+      "brent_mismatches": 0,
+      "bytes": 254512,
+      "sha256": "02199a88ebd24b1457c5cae7a5a2dcb895aa396ada9e5daaf0ea1cc4846d09d3"
+    },
+    {
+      "file": "object/11x15x16_m1629_ZT.json",
+      "format": "11x15x16",
+      "dimensions": [
+        11,
+        15,
+        16
+      ],
+      "ring": "ZT",
+      "rank": 1629,
+      "previous_zt_rank": 1641,
+      "previous_z_rank": 1629,
+      "overall_q_rank": 1605,
+      "delta_vs_previous_zt": -12,
+      "delta_vs_previous_z": 0,
+      "max_abs": 1,
+      "complexity": 39490,
+      "nnz_u": 14532,
+      "nnz_v": 14854,
+      "nnz_w": 13538,
+      "total_nnz": 42924,
+      "non_ternary_terms": {
+        "u": 0,
+        "v": 0,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 1629,
+      "total_brent_equations": 6969600,
+      "brent_mismatches": 0,
+      "bytes": 349814,
+      "sha256": "0d2eb6e651f61c7c9fa5d137eb4813f37f287016eaa91e95deae53107016b288"
+    },
+    {
+      "file": "object/12x13x16_m1546_ZT.json",
+      "format": "12x13x16",
+      "dimensions": [
+        12,
+        13,
+        16
+      ],
+      "ring": "ZT",
+      "rank": 1546,
+      "previous_zt_rank": 1548,
+      "previous_z_rank": 1544,
+      "overall_q_rank": 1509,
+      "delta_vs_previous_zt": -2,
+      "delta_vs_previous_z": 2,
+      "max_abs": 1,
+      "complexity": 64887,
+      "nnz_u": 18520,
+      "nnz_v": 25516,
+      "nnz_w": 24135,
+      "total_nnz": 68171,
+      "non_ternary_terms": {
+        "u": 0,
+        "v": 0,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 1546,
+      "total_brent_equations": 6230016,
+      "brent_mismatches": 0,
+      "bytes": 547710,
+      "sha256": "b639c891628cd5e5042311d19adfa2c29eff95d6c0b1077466c36ce3204e796a"
+    },
+    {
+      "file": "object/12x13x16_m1541_Z.json",
+      "format": "12x13x16",
+      "dimensions": [
+        12,
+        13,
+        16
+      ],
+      "ring": "Z",
+      "rank": 1541,
+      "previous_zt_rank": 1548,
+      "previous_z_rank": 1544,
+      "overall_q_rank": 1509,
+      "delta_vs_previous_zt": null,
+      "delta_vs_previous_z": -3,
+      "max_abs": 2,
+      "complexity": 64983,
+      "nnz_u": 18608,
+      "nnz_v": 25480,
+      "nnz_w": 24169,
+      "total_nnz": 68257,
+      "non_ternary_terms": {
+        "u": 31,
+        "v": 12,
+        "w": 0
+      },
+      "zero_terms": 0,
+      "distinct_triples": 1541,
+      "total_brent_equations": 6230016,
+      "brent_mismatches": 0,
+      "bytes": 548395,
+      "sha256": "911599680fd3bbe0558dbf7fe5e0886deb863c4244915812d28404156660f780"
+    }
+  ]
+}

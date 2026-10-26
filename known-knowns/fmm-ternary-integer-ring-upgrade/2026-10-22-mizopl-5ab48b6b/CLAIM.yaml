@@ -1,0 +1,24 @@
+submission_id: 2026-10-22-mizopl-5ab48b6b
+target_id: fmm-ternary-integer-ring-upgrade
+category: algorithms
+status: CONFIRMED_SOLUTION
+credit: mizopl
+part_i_pull_requests:
+  - https://github.com/elder-plinius/V3R1T4S/pull/402
+  - https://github.com/elder-plinius/V3R1T4S/pull/432
+upstream_merged_commit: https://github.com/dronperminov/FastMatrixMultiplication/commit/b4f756b
+primary_object: object/6x12x14_m654_ZT.json
+primary_sha256: 5ab48b6b88fd1a7b9fbe8c81670522bd45f290e580be8a4443751e208f2f2bc4
+notes: >
+  Seven machine-verified bilinear fast matrix multiplication schemes (6 in ZT = {-1, 0, 1} and 1 in Z)
+  constructed via Higher-Order S_{b*g} Sub-Block Conjugation on Serendipitous Tensor Products,
+  following up on our upstream-merged schemes in dronperminov/FastMatrixMultiplication (commit b4f756b,
+  schemes/known/mizopl/: 9x12x14:954, 10x15x15:1389, 12x15x15:1640, 14x15x15:1894; V3R1T4S PRs #402 and #432):
+  (1) object/6x12x14_m654_ZT.json (rank 654 in ZT vs live ZT 666, -12, closing ZT > Z gap to 0),
+  (2) object/9x10x13_m763_ZT.json (rank 763 in ZT vs live ZT 771, -8, closing ZT > Z gap to 0),
+  (3) object/9x10x16_m920_ZT.json (rank 920 in ZT vs live ZT 924, -4, closing ZT > Z gap to 0),
+  (4) object/10x15x16_m1484_ZT.json (rank 1484 in ZT vs live ZT 1488, -4, closing ZT > Z gap to 0),
+  (5) object/11x15x16_m1629_ZT.json (rank 1629 in ZT vs live README ZT 1641, -12, closing ZT > Z gap to 0),
+  (6) object/12x13x16_m1546_ZT.json (rank 1546 in ZT vs live ZT 1548, -2),
+  and (7) object/12x13x16_m1541_Z.json (rank 1541 in Z vs live Z 1544, -3).
+  All 29,648,196 exact integer Brent equations over Z are verified with 0 mismatches in ~3 seconds.
