@@ -11,6 +11,8 @@ bind the same way.
    `SPECULATION` or `KNOWN`. A `SKETCH` is never a proof. Every number, time, hash and HTTP status you write comes
    from a command's real output (`date -u`, `sha256sum`, `curl -w '%{http_code}'`); never type one from memory.
    Freeze the success rule (criterion, statistic, thresholds, null design) in `PREREG.md` before measuring.
+   For an empirical benchmark, first reproduce its published baseline under the same protocol, with tolerances
+   frozen before the reference run (`kit/RUN.md` step 3c). An unresolved baseline cannot support an improvement claim.
 2. **A false "we found it" is the only real failure.** A clean negative result is a good day. Never stop early
    because results are negative; always stop at the budget. Stopping before the attack step (`kit/RUN.md` step 4)
    is stopping early, unless the target is dead; "light" and "commit-only" are never reasons to skip the attack.

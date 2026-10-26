@@ -12,7 +12,7 @@ a PASS means the paperwork is honest and complete, not that the result is true.
 
 Last line: "CHECK_RUN: PASS" or "CHECK_RUN: FAIL (<n> problems)". Exit status 0 or 1.
 """
-import argparse, calendar, csv, hashlib, io, json, os, re, shutil, subprocess, sys, tempfile
+import argparse, calendar, csv, decimal, hashlib, io, json, os, re, shutil, subprocess, sys, tempfile
 
 TEXT_EXT = {".md", ".txt", ".json", ".csv", ".log", ".tsv", ".yaml", ".yml", ""}
 CODE_EXT = {".py", ".sh", ".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx",
@@ -247,6 +247,166 @@ def check_null(c, path, label):
     return good and beats in ("yes", "true")
 
 
+def check_baseline(c, root, prereg_path, label, claim=False, check_times=True):
+    """Check baseline evidence, not whether the reference method or scientific protocol is correct.
+
+    check_times=False for packages: their files are copies, so file times say nothing about the freeze order."""
+    pre = kv(read(prereg_path))
+    declaration = pre.get("baseline_test", "")
+    base = os.path.join(root, "baseline")
+    record = ("plan.json", "result.json", "output.txt")
+    has_record = "baseline_plan_sha256" in pre or any(os.path.lexists(os.path.join(base, n)) for n in record)
+    has_evidence = os.path.lexists(base) or has_record
+    # A free-form baseline/ without a declaration predates this record format; a claim still needs a declaration.
+    if not declaration and not has_record and not (claim and has_evidence):
+        c.warn("%s: PREREG.md has no baseline_test line (legacy or non-benchmark run); baseline reproduction was "
+               "not checked" % label)
+        return
+    if declaration.startswith("not needed because ") and declaration[len("not needed because "):].strip():
+        if has_evidence:
+            c.fail("%s: baseline evidence conflicts with 'baseline_test: not needed because ...'" % label)
+        return
+    if declaration.startswith("none published because ") and declaration[len("none published because "):].strip():
+        # baseline/ may hold a note saying so (kit/RUN.md step 3c), but not a baseline record.
+        if has_record:
+            c.fail("%s: a baseline record conflicts with 'baseline_test: none published because ...'" % label)
+        else:
+            c.warn("%s: no baseline was reproduced (none published); the report and any package must say so" % label)
+        return
+    if declaration != "required":
+        c.fail("%s: PREREG.md needs 'baseline_test: required', 'baseline_test: not needed because <reason>' or "
+               "'baseline_test: none published because <reason>'" % label)
+        return
+
+    paths = {name: os.path.join(base, name) for name in record}
+    for name, path in paths.items():
+        if not os.path.isfile(path):
+            c.fail("%s: baseline/%s missing" % (label, name))
+            return
+        if os.path.commonpath((os.path.realpath(root), os.path.realpath(path))) != os.path.realpath(root):
+            c.fail("%s: baseline/%s must stay inside its evidence folder" % (label, name))
+            return
+    try:
+        with open(paths["plan.json"], encoding="utf-8") as f:
+            plan = json.load(f, parse_float=decimal.Decimal)
+        with open(paths["result.json"], encoding="utf-8") as f:
+            result = json.load(f, parse_float=decimal.Decimal)
+        hashes = {}
+        for name in ("plan.json", "output.txt"):
+            digest = hashlib.sha256()
+            with open(paths[name], "rb") as f:
+                for block in iter(lambda: f.read(65536), b""):
+                    digest.update(block)
+            hashes[name] = digest.hexdigest()
+    except (OSError, ValueError, decimal.DecimalException) as e:
+        c.fail("%s: could not read baseline evidence: %s" % (label, e))
+        return
+    if not isinstance(plan, dict) or not isinstance(result, dict):
+        c.fail("%s: baseline plan.json and result.json must be JSON objects" % label)
+        return
+    before = len(c.fails)
+    if pre.get("baseline_plan_sha256") != hashes["plan.json"]:
+        c.fail("%s: baseline_plan_sha256 does not match baseline/plan.json; freeze the plan before measuring" % label)
+    if result.get("output_sha256") != hashes["output.txt"]:
+        c.fail("%s: baseline output_sha256 does not match baseline/output.txt" % label)
+    for name in ("result.json", "output.txt"):
+        if check_times and frozen_time(prereg_path) > os.path.getmtime(paths[name]) + 1:
+            c.fail("%s: freeze PREREG.md before writing baseline/%s" % (label, name))
+    for field in ("source", "revision", "data", "split", "preprocessing"):
+        value = plan.get(field)
+        if not isinstance(value, str) or not value.strip():
+            c.fail("%s: baseline plan needs a nonempty %s" % (label, field))
+    command = result.get("command")
+    if not isinstance(command, str) or not command.strip():
+        c.fail("%s: baseline result needs the actual command" % label)
+    status = result.get("status")
+    if status not in ("reproduced", "mismatch", "blocked"):
+        c.fail("%s: baseline status must be reproduced, mismatch or blocked" % label)
+    exit_code = result.get("exit_code")
+    if "exit_code" not in result or (exit_code is not None and type(exit_code) is not int) or \
+            (status in ("reproduced", "mismatch") and exit_code != 0):
+        c.fail("%s: baseline exit_code must be 0 for a completed comparison, or an integer/null when blocked" % label)
+    if status in ("mismatch", "blocked"):
+        reason = result.get("reason")
+        if not isinstance(reason, str) or not reason.strip():
+            c.fail("%s: unresolved baseline needs a reason" % label)
+    metrics = plan.get("metrics")
+    scores = result.get("scores")
+    if not isinstance(metrics, dict) or not metrics or any(not name.strip() for name in metrics):
+        c.fail("%s: baseline metrics must be a nonempty object of named metrics" % label)
+        return
+    if not isinstance(scores, dict) or (status != "blocked" and set(scores) != set(metrics)) or \
+            (isinstance(scores, dict) and not set(scores) <= set(metrics)):
+        c.fail("%s: baseline scores must match the metric names in the frozen plan" % label)
+        return
+
+    def number(value, field):
+        if isinstance(value, bool) or not isinstance(value, (str, int, float, decimal.Decimal)):
+            c.fail("%s: baseline %s must be a finite decimal" % (label, field))
+            return None
+        try:
+            n = decimal.Decimal(str(value))
+        except decimal.InvalidOperation:
+            n = None
+        if n is None or not n.is_finite():
+            c.fail("%s: baseline %s must be a finite decimal" % (label, field))
+            return None
+        return n
+
+    matches = True
+    for name, metric in metrics.items():
+        if not isinstance(metric, dict) or not isinstance(metric.get("definition"), str) or not metric["definition"].strip():
+            c.fail("%s: baseline metric %s needs a definition" % (label, name))
+            continue
+        expected = number(metric.get("expected"), "%s expected" % name)
+        tolerance = number(metric.get("tolerance"), "%s tolerance" % name)
+        if tolerance is not None and tolerance < 0:
+            c.fail("%s: baseline %s tolerance cannot be negative" % (label, name))
+            continue
+        score = number(scores[name], "%s score" % name) if name in scores else None
+        if expected is None or tolerance is None or score is None:
+            continue
+        values = (expected, tolerance, score)
+        precision = max(28, max(v.adjusted() for v in values) - min(v.as_tuple().exponent for v in values) + 2)
+        if precision > MAX_SCAN:
+            c.fail("%s: baseline %s decimal precision is too large" % (label, name))
+            continue
+        try:
+            with decimal.localcontext() as ctx:
+                ctx.prec = precision
+                ctx.Emin = min(ctx.Emin, min(v.adjusted() for v in values))
+                ctx.Emax = max(ctx.Emax, max(v.adjusted() for v in values) + 1)
+                ctx.traps[decimal.Inexact] = True
+                within = abs(score - expected) <= tolerance
+        except (ValueError, decimal.DecimalException) as e:
+            c.fail("%s: baseline %s cannot be compared: %s" % (label, name, e))
+            continue
+        if not within:
+            matches = False
+            if status == "reproduced":
+                c.fail("%s: baseline %s is outside its frozen tolerance" % (label, name))
+    if status == "mismatch" and matches:
+        c.fail("%s: baseline status says mismatch but all scores are within tolerance" % label)
+    if len(c.fails) != before:
+        return
+    if status == "reproduced":
+        c.ok("%s: baseline reproduced within the frozen tolerances" % label)
+    elif claim:
+        c.fail("%s: baseline is %s; it cannot support an improvement claim" % (label, status))
+    else:
+        c.warn("%s: baseline is %s, so the comparison is unresolved; claim no improvement against it "
+               "(kit/RUN.md step 3c)" % (label, status))
+
+
+def check_run_baseline(c, workdir, run, tid, entry, label, claim=False):
+    root = run
+    if (entry or {}).get("disclosure") == "commit-only":
+        root = os.path.join(workdir, "private", tid)
+        if os.path.lexists(os.path.join(run, "baseline")):
+            c.fail("%s: commit-only baseline evidence belongs in private/%s/baseline/" % (label, tid))
+    check_baseline(c, root, os.path.join(run, "PREREG.md"), label, claim=claim)
+
+
 def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
     user = os.environ.get("USER") or os.environ.get("USERNAME") or ""
     for p in walk(root):
@@ -312,13 +472,19 @@ def check_envelope(c, path, workdir=None, bank=None):
     if bank and target in (bank or {}) and bank[target].get("disclosure") != "commit-only":
         c.warn("%s: target %s is not commit-only; open results are published as full packages" % (label, target))
     if workdir and target:
-        if not find_confirmed_gate(workdir, target):
+        run = find_confirmed_gate(workdir, target)
+        if not run:
             c.fail("%s: no run in this workspace has a panel-confirmed gate for %s" % (label, target))
+        else:
+            check_run_baseline(c, workdir, run, target, (bank or {}).get(target), label, claim=True)
+    elif not workdir:
+        c.warn("%s: private baseline reproduction was not checked without --workdir" % label)
     leak_scan(c, os.path.dirname(path), label, never_publish_list(workdir), workdir)
     return target
 
 
 def find_confirmed_gate(workdir, target):
+    """Return the supporting run directory, or False if no panel-confirmed gate exists."""
     for run in sorted(os.listdir(os.path.join(workdir, "runs"))) if os.path.isdir(os.path.join(workdir, "runs")) else []:
         rd = os.path.join(workdir, "runs", run)
         tid = kv(read(os.path.join(rd, "target.md"))).get("id", "")
@@ -331,7 +497,7 @@ def find_confirmed_gate(workdir, target):
                     sub = Checker(quiet=True)
                     check_panel(sub, pd, "x", require_confirmed=False)
                     if not sub.fails:
-                        return True
+                        return rd
     return False
 
 
@@ -408,6 +574,8 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
                 check_null(c, nulls[0], label)
     if os.path.isdir(os.path.join(pkg, "panel")):
         check_panel(c, os.path.join(pkg, "panel"), label)
+    built = os.path.join(pkg, "how-we-built-it")
+    check_baseline(c, built, os.path.join(built, "PREREG.md"), label, claim=True, check_times=False)
     # sha256sums
     sums = read(os.path.join(pkg, "SHA256SUMS"))
     listed = {}
@@ -762,6 +930,9 @@ def check_run_dir(c, workdir, run, bank, dry):
     has_claim = any(x in ("partial_win_claim", "solution_claim") for x in claim_levels) or \
         os.path.isdir(os.path.join(run, "claim")) or bool(gate) or \
         (tid and os.path.isdir(os.path.join(workdir, "private", tid, "claim")))
+    # Once the honesty gate has ruled, its status decides: step 7 downgrades a claim on an unresolved baseline.
+    baseline_claim = bool(CONFIRMED_RE.search(gate.get("status", ""))) if gate else has_claim
+    check_run_baseline(c, workdir, run, tid, entry, label, claim=baseline_claim)
     null_required = nt.startswith("required") or (entry or {}).get("category") in NULL_CATEGORIES
     null_ok = None
     if has_claim and null_required:
@@ -904,4 +1075,3 @@ def main(argv=None):
 
 if __name__ == "__main__":
     sys.exit(main())
-
