@@ -29,6 +29,7 @@ applied only in a live session, after your human says "update V3R1T4S to <tag>" 
 ```
 runs/<YYYY-MM-DD-HHMM>/
   target.md   scout.md   BRIEF.md   PREREG.md   null_test.md (when PREREG requires one)
+  baseline/    plan.json, result.json, output.txt (empirical benchmarks; commit-only: private, see step 3c)
   data/        public inputs exactly as fetched (ciphertexts, tables, problem files)
   attempts/<lens>/   NOTES.md, report.md (with a line "claim level: ..."), code/, output
   claim/       the package the panel sees (step 6)
@@ -107,6 +108,91 @@ When it is required, write the result to `null_test.md` with these lines, all co
 `real_beats_all_controls: yes|no`, and `command: <how to rerun it>`. `kit/check_run.py` rejects a claim without it.
 Never edit `PREREG.md` after seeing results; a changed plan is a new, timestamped `PREREG.v2.md` and the report says so.
 
+## Step 3c. Reproduce the benchmark baseline
+
+For an **empirical benchmark**, reproduce the published baseline before searching for improvements. This is separate
+from testing your checker on a positive and a negative case. Use the reference implementation, released predictions,
+or the reproduction method the target specifies; do not substitute a weaker method. Match the data version, split,
+preprocessing, metric definition, units and aggregation. Existing target-specific gates still apply.
+
+Every new `PREREG.md` declares exactly one of:
+
+```text
+baseline_test: required
+baseline_test: not needed because an explicit object is checked exactly against a table value
+```
+
+Choose the second only when reproducing an empirical score is not part of the comparison, and give the real reason.
+Do not infer this from the category alone: one category can contain both exact objects and empirical benchmarks.
+
+When required, write `baseline/plan.json` before running the baseline. It records:
+
+- `source`: the paper or benchmark URL and the exact baseline row being compared;
+- `revision`: the reference implementation commit/release, or the identity of released predictions;
+- `data`, `split`: exact versions, identifiers, hashes and any split seed needed to reproduce the comparison;
+- `preprocessing`: the published input preparation and any filtering;
+- `metrics`: a nonempty object keyed by metric name. Each entry has `definition` (including units, scoring unit
+  and aggregation), `expected` and `tolerance`. Use finite decimal strings for scores and nonnegative absolute
+  tolerances; a difference equal to the tolerance passes. Cover every baseline metric the criterion requires.
+
+For example, this **synthetic** plan illustrates the format, not a real benchmark result:
+
+```json
+{
+  "source": "https://example.org/benchmark, baseline row",
+  "revision": "reference implementation release 1",
+  "data": "benchmark release 1; record the input hashes here",
+  "split": "published test split; record its identifiers/hash here",
+  "preprocessing": "published tokenization, no additional filtering",
+  "metrics": {
+    "hit_at_5": {"definition": "token-level hit@5, fraction", "expected": "0.89", "tolerance": "0.02"}
+  }
+}
+```
+
+Set tolerances from the criterion or a documented reproducibility justification, never from the reproduced result.
+Record the SHA-256 of the plan bytes in `PREREG.md` as `baseline_plan_sha256: <hash from command output>`, then
+freeze the preregistration. The hash binds the plan, including its thresholds, to that preregistration.
+
+Run the reference command and retain its output in `baseline/output.txt`. Keep the executable command or driver
+and required dependency versions so another person can repeat it. Write `baseline/result.json` with the actual
+command, exit code, scores, and the SHA-256 of `output.txt`. The corresponding synthetic result is:
+
+```json
+{
+  "status": "reproduced",
+  "command": "python3 baseline/reference.py",
+  "exit_code": 0,
+  "scores": {"hit_at_5": "0.8951"},
+  "output_sha256": "replace with the actual output.txt SHA-256"
+}
+```
+
+`status` is `reproduced` only when the command exits 0 and **every** planned metric is within its frozen tolerance.
+Use `mismatch` for a completed command whose scores fall outside tolerance, or `blocked` when the reference cannot
+be run or scored. Both need a nonempty `reason`. A blocked result may have empty or partial `scores` and a nonzero
+`exit_code` (`null` only if the command could not start); keep the actual diagnostic output too.
+
+An unresolved comparison is an honest result, not a win. Continue reproduction or diagnosis within the run's budget,
+using real code and saving its output in the attempts. Do not search for improvements, change the criterion,
+replace the data or widen the tolerance to force a pass. Put missing prerequisites or a suspected criterion error
+under "Needs you". Retain the earlier evidence if a corrected protocol needs a new run.
+
+For a commit-only target, keep the whole baseline directory and reference code in
+`private/<target-id>/<run-folder-name>/baseline/`, not in the public run folder. The public preregistration holds
+only the declaration and plan hash; avoid sensitive details there. Source datasets keep their original terms.
+
+`check_run.py` validates the records, hashes, decimal comparisons and obvious late-preregistration file times.
+It rejects improvement claims with an unresolved baseline, including claims not yet confirmed by the panel.
+An honest negative run may pass with an unresolved-baseline warning. Historical runs and packages with no
+declaration or baseline evidence retain legacy validation with an explicit warning; it does not establish baseline
+reproduction. Neither hashes nor file times prove execution order or scientific comparability: skeptics still
+inspect the protocol, reference code and captured results.
+
+This reference-execution practice is adapted from
+[Paper2Agent's source-execution workflow](https://github.com/jmiao24/Paper2Agent/blob/8c2d059165ef8cdcb70dbea76655b9c2b55b38e6/skills/paper2agent/paper2mcp/references/agents/tutorial-executor.md).
+Paper2Agent is not a dependency.
+
 ## Step 4. Attack with several lenses
 
 Run the budget's number of lenses (light = 2: two folders under `attempts/`, both in the report; if the first
@@ -171,6 +257,11 @@ files relative to `claim/` and never contain absolute paths. For a commit-only t
 lives in `private/<target-id>/claim/` and the panel files go in `private/<target-id>/panel/`; the run folder's
 `panel/` then holds only `gate.md`, and the CRITERION skeptic writes its `confirmed_scope` without the key,
 plaintext or any crib (for example "the key in claim/key.txt (sha256 ...) re-encrypts the message exactly").
+
+For an empirical benchmark, include its frozen baseline plan, preregistration, result, output and reference
+command/code in `claim/` too. REPRODUCE checks that the reported baseline scores agree with the captured output;
+CRITERION checks that its data, split, preprocessing, metric and tolerances match the intended comparison.
+These checks do not replace the independently written checker or the null test.
 
 - **REPRODUCE.** "Before reading the author's code, write your own checker from the definition (quote it). Verify
   every property and the claimed value from the saved files; re-derive every proof step. For an exhaustive search,

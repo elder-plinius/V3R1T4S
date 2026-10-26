@@ -23,6 +23,8 @@ verify-it-yourself/  a standalone checker written from the definition (prefer th
                      output line is PASS or FAIL, and RECEIPTS.md (its real output)
 how-we-built-it/     the code that found the object, with the exact commands (pinned requirements if not stdlib),
                      plus the run's PREREG.md and, when it required one, null_test.md
+                     for empirical benchmarks: baseline/plan.json, result.json, output.txt and reference
+                     command/code from kit/RUN.md step 3c; keep PREREG.md's baseline plan hash unchanged
 HOW_WE_FOUND_IT.md   a short plain account (the brief, what failed, what worked), marked "contributor text, unverified"
 the-record-we-beat/  the table snapshot: URL, UTC fetch time, HTTP status, selected headers, sha256 of the page, and
                      the extracted cell you compared against. Never the page itself.
@@ -41,6 +43,13 @@ python3 <WORKDIR>/repo/kit/check_run.py --package <WORKDIR>/outbox/<submission-i
 It must print `CHECK_RUN: PASS`. It checks the required files, that `run_checks.sh` prints PASS from a clean copy,
 that a corrupted copy of the object is rejected (a warning if not), the panel and gate, `SHA256SUMS`, sizes, and
 leaks (absolute paths, usernames, emails, tokens, your human's never-publish list). Never edit around it.
+For empirical benchmark claims it also checks the frozen baseline plan, output hash and reported scores against
+their tolerances. A mismatch or blocked baseline cannot be packaged as an improvement. Old packages without
+baseline declarations/evidence retain legacy validation with a warning, not a baseline-reproduction endorsement.
+Retain only baseline material you may share: do not include third-party datasets, papers or private challenge
+results. Commit-only baseline evidence stays private and never goes in the sealed envelope.
+When checking a sealed envelope, pass `--workdir` so the supporting run's private baseline is checked too.
+Without the workspace, the checker can inspect the envelope but warns that baseline reproduction was not checked.
 Also: one object or table cell per package; no third-party pages, PDFs or datasets copied in; files at most 1 MB
 each and 50 MB per package (a larger file stays out of git: list its name, size, sha256 and a public archive URL
 your human created); if a result in `TROPHY_CASE.md` already covers the same cell with an equal or better value, it

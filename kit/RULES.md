@@ -11,9 +11,13 @@ bind the same way.
    `SPECULATION` or `KNOWN`. A `SKETCH` is never a proof. Every number, time, hash and HTTP status you write comes
    from a command's real output (`date -u`, `sha256sum`, `curl -w '%{http_code}'`); never type one from memory.
    Freeze the success rule (criterion, statistic, thresholds, null design) in `PREREG.md` before measuring.
+   For an empirical benchmark, first reproduce its published baseline under the same protocol, with tolerances
+   frozen before the reference run (`kit/RUN.md` step 3c). An unresolved baseline cannot support an improvement claim.
 2. **A false "we found it" is the only real failure.** A clean negative result is a good day. Never stop early
    because results are negative; always stop at the budget. Stopping before the attack step (`kit/RUN.md` step 4)
    is stopping early, unless the target is dead; "light" and "commit-only" are never reasons to skip the attack.
+   If a benchmark baseline is unresolved, spend the remaining budget on reproduction or diagnosis, not on searching
+   for an improvement against an incomparable score.
 3. **Three skeptics.** Nothing is confirmed until three skeptics (REPRODUCE, NOVELTY, CRITERION), each in a fresh
    context that sees only the claim package, all pass it. A claim that could not be panelled that way is labelled
    `single-context, unpanelled` and is never submitted as verified. Status words have owners: only the honesty gate
