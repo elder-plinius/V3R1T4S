@@ -1,0 +1,33 @@
+{"onnx": "cifar10_eps8_cnn7.onnx.gz", "vnnlib": "cifar10_eps8_cnn7_idx8072_sample9.vnnlib.gz", "n_inputs": 3072, "n_disjuncts": 9, "conversion_max_abs_diff_at_centre": 2.2467225790023804e-05, "centre_cpu_margin": -0.33558373153209686, "centre_best_disjunct": 2, "seed": 0, "budget_s": 300.0, "restarts": 256, "steps": 200}
+stage1 done 20.6s best gpu -0.00557745 cpu -0.00557667
+CANDIDATE cpu margin 0.000508844852 disjunct 2 (gpu 0.000492364168) t=24.8
+CANDIDATE cpu margin 0.000532329082 disjunct 2 (gpu 0.000520884991) t=24.9
+CANDIDATE cpu margin 0.000638216734 disjunct 2 (gpu 0.000628471375) t=25.0
+CANDIDATE cpu margin 0.000666946173 disjunct 2 (gpu 0.000658333302) t=25.1
+CANDIDATE cpu margin 0.00068539381 disjunct 2 (gpu 0.000676095486) t=25.1
+CANDIDATE cpu margin 0.000944554806 disjunct 2 (gpu 0.000935465097) t=25.3
+CANDIDATE cpu margin 0.00141569972 disjunct 2 (gpu 0.00140845776) t=25.3
+CANDIDATE cpu margin 0.00167518854 disjunct 2 (gpu 0.00166642666) t=25.4
+CANDIDATE cpu margin 0.00263622403 disjunct 2 (gpu 0.00262472034) t=25.5
+CANDIDATE cpu margin 0.00266173482 disjunct 2 (gpu 0.0026563108) t=25.6
+CANDIDATE cpu margin 0.00272646546 disjunct 2 (gpu 0.00271907449) t=25.8
+CANDIDATE cpu margin 0.00274348259 disjunct 2 (gpu 0.00273185968) t=25.9
+CANDIDATE cpu margin 0.00279691815 disjunct 2 (gpu 0.00278836489) t=26.6
+CANDIDATE cpu margin 0.00281348825 disjunct 2 (gpu 0.00280609727) t=27.5
+CANDIDATE cpu margin 0.00283515453 disjunct 2 (gpu 0.00282767415) t=28.3
+CANDIDATE cpu margin 0.0028565526 disjunct 2 (gpu 0.00284811854) t=29.6
+CANDIDATE cpu margin 0.00286331773 disjunct 2 (gpu 0.00285425782) t=29.7
+CANDIDATE cpu margin 0.002866745 disjunct 2 (gpu 0.00285801291) t=30.2
+CANDIDATE cpu margin 0.00286874175 disjunct 2 (gpu 0.00286316872) t=30.8
+CANDIDATE cpu margin 0.00288236141 disjunct 2 (gpu 0.00287395716) t=31.1
+CANDIDATE cpu margin 0.00288420916 disjunct 2 (gpu 0.00287732482) t=31.1
+CANDIDATE cpu margin 0.00289037824 disjunct 2 (gpu 0.00288388133) t=31.2
+CANDIDATE cpu margin 0.00289312005 disjunct 2 (gpu 0.00288590789) t=31.3
+CANDIDATE cpu margin 0.00290033221 disjunct 2 (gpu 0.00289130211) t=31.5
+CANDIDATE cpu margin 0.00289848447 disjunct 2 (gpu 0.00289168954) t=31.5
+CANDIDATE cpu margin 0.00289815664 disjunct 2 (gpu 0.00289347768) t=31.6
+CANDIDATE cpu margin 0.00290346146 disjunct 2 (gpu 0.00289461017) t=32.1
+CANDIDATE cpu margin 0.00290587544 disjunct 2 (gpu 0.00289660692) t=32.2
+CANDIDATE cpu margin 0.00290763378 disjunct 2 (gpu 0.00289940834) t=32.3
+CANDIDATE cpu margin 0.00291544199 disjunct 2 (gpu 0.00290539861) t=32.5
+DONE best cpu margin 0.00291544199 (disjunct 2) gpu 0.00290539861 candidates 30 evals 665600 wall 32.5s
