@@ -5,4 +5,3 @@ pairwise at distance >= 7, join two orbits when all their words are compatible, 
 (weight = orbit size). For (10,7) there are 36,648 such orbits and 136,278,580 compatible pairs; a 600 s branch and bound
 found a clique of 12 orbits (four of size 1, eight of size 5) = 44 words. What failed: random orbit sampling and plain
 local search in earlier runs stayed below the table; exact cyclic codes of two orbits at (17,13) do not exist.
-The same method gives 33 > 32 at (11,8) and 144 > 134 at (9,5), which are still under review (not part of this package).

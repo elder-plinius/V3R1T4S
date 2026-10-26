@@ -2,7 +2,7 @@
 
 context: subagent (Claude Code Agent tool, general-purpose)
 
-Claim under review (claim/CLAIM.md): the 44 words in claim/gc_n10_d7_m44.txt form a quaternary code of length 10,
+Claim under review (CLAIM.md [not included in this package]): the 44 words in object/gc_n10_d7_m44.txt form a quaternary code of length 10,
 exactly 5 G/C per word, minimum Hamming distance 7; the table value is 34 (superscript v).
 
 ## 1. Status page (one honest fetch, no retries)
@@ -11,13 +11,13 @@ exactly 5 G/C per word, minimum Hamming distance 7; the table value is 34 (super
 - Time (date -u): request sent 2026-10-19T16:59:33Z, finished 2026-10-19T16:59:35Z
 - HTTP status (curl -w '%{http_code}'): 200
 - Bytes: 18096; sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5
-  (identical to the author's claim/king_table_live_refetch.html)
+  (identical to the author's re-fetched King page [not included in this package; its URL, fetch time and sha256 are recorded in the-record-we-beat/RECORD.md])
 - First table ("Lower bounds for A4^GC(n,d,w)"), row n=10, column d=7, verbatim cell: `34<sup>v  </sup>`
 - Value: 34, superscript v (variable neighbourhood search, [MS] Montemanni-Smith 2008 or [MS2] 2009).
   No '.' and no ':' follows it, so the cell is open (not proven optimal).
 - No instructions found in the page; no injection suspected.
 
-## 2. Montemanni-Smith-Koul 2014, Table 1 (claim/msk2014_table1_gc.png)
+## 2. Montemanni-Smith-Koul 2014, Table 1 (msk2014_table1_gc.png [Montemanni-Smith-Koul 2014 Table 1; not included in this package])
 
 Read directly from the image, row n=10, column d=7:
 - V (their result) = **34** (bold)
@@ -50,7 +50,7 @@ So the 2014 post-2010 value is 34, equal to the King table value.
 
 ## 5. Independent sanity check of the object
 
-Own script (not author_checker.py) on claim/gc_n10_d7_m44.txt: 44 lines, 44 distinct, all length 10 over {A,C,G,T},
+Own script (not verify-it-yourself/check_gc_code.py) on object/gc_n10_d7_m44.txt: 44 lines, 44 distinct, all length 10 over {A,C,G,T},
 GC-content set = {5}, minimum pairwise Hamming distance = 7. The object is what it says.
 
 ## 6. Decision
@@ -63,10 +63,12 @@ Gaps that affect confidence:
   codes summarised in the Aboluion thesis (best own (10,7) value 12), and the King table already includes SAMP ('x').
 - The 2024-2026 search was web search only (no Scholar / paywalled databases). A recent paper with a value of 44+
   that is not indexed by these searches cannot be excluded. Nothing found suggests one exists.
-- Side note for the panel (not a novelty issue): claim/W_CONVENTION_AND_REFETCH.md talks about n = 11 and (11,8),
+- Side note for the panel (not a novelty issue): W_CONVENTION_AND_REFETCH.md [not included in this package] talks about n = 11 and (11,8),
   apparently copied from another claim; it does not change the (10,7) w = 5 = floor(10/2) convention.
 - The jump from 34 to 44 is large for a cell attacked by VNS, but the code checks, so this is a plausibility note only.
 
 Within the sources I could read, the claim strictly beats everything known.
 
+
+Paths edited after review at the owner's request; verdict unchanged.
 pass: true
