@@ -1,0 +1,15 @@
+{"description": "The BPZ Lean schedule for C7 (ShannonBounds/CertC7.lean at aa21eeb12b75, sha256 dc06f7b44c13b2e6bccf2d3b21042151c4d51c2c41d98fa85a29906f42e81a25), transcribed from the Lean source: node names, rules (Sa = S3a, Sb = S2a, Sc = S3b), child order and child exponents (en3, eq2, en5, en4, en6, en8, en11, en25, eT), the base sizes w0 and w0f = sigma(w0) (B,N,A,D,O,H,V), and the terminal code K = K4a on four copies of n25 (E = 100, so d = 500). The Lean source states Theta(C7) >= 3.258827985920007 for it.",
+ "w0": [359, 322, 19, 26, 8, 8, 8],
+ "w0f": [359, 322, 26, 19, 8, 8, 8],
+ "nodes": [
+  {"name": "n3",  "rule": "S3a", "children": ["w", "w", "w"],    "exponents": [1, 1, 1]},
+  {"name": "q2",  "rule": "S2a", "children": ["w", "wf"],         "exponents": [1, 1]},
+  {"name": "n5",  "rule": "S3a", "children": ["n3", "w", "w"],   "exponents": [3, 1, 1]},
+  {"name": "n4",  "rule": "S3a", "children": ["q2", "w", "w"],   "exponents": [2, 1, 1]},
+  {"name": "n6",  "rule": "S3a", "children": ["n3", "w", "q2"],  "exponents": [3, 1, 2]},
+  {"name": "n8",  "rule": "S3a", "children": ["n4", "q2", "q2"], "exponents": [4, 2, 2]},
+  {"name": "n11", "rule": "S3a", "children": ["n5", "n3", "n3"], "exponents": [5, 3, 3]},
+  {"name": "n25", "rule": "S3b", "children": ["n6", "n11", "n8"], "exponents": [6, 11, 8]}
+ ],
+ "terminal": {"code": "K4a", "children": ["n25", "n25", "n25", "n25"], "exponents": [25, 25, 25, 25]},
+ "base_degree": 5}

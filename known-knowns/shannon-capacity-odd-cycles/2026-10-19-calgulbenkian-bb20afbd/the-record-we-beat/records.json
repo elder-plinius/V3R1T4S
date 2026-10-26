@@ -1,0 +1,54 @@
+{
+ "cycle": "C7",
+ "note": "Values the claim is compared against. The exact integers are re-derived or copied as data from the sources named in table-record/README.md.",
+ "records": [
+  {
+   "id": "tandon_d500",
+   "kind": "exact",
+   "M": "33964672918117456943408517573718333225317390754651100605971152590324909277046876400440353958428359262989621520394737276681196655776758386330470832773308559159990317076102131413374061066595834823529274560988950698158729501949866486079791784996498585401881281",
+   "d": 500,
+   "headline": true,
+   "label": "Tandon (arXiv:2608.30273 Theorem 2, d=500; the live top entry of 9a.md)"
+  },
+  {
+   "id": "bpz_lean",
+   "kind": "exact",
+   "M": "33940530657597882925191574865912775290145601934564455387323703442021579944400980807795193611076112075323881909090940058499574128346740787309714999247400230617883682426438549034212777014725965605971521485006367332005696041071231504616529306366222412425335489",
+   "d": 500,
+   "headline": false,
+   "label": "BPZ Lean repository CertC7.lean at aa21eeb12b75 (d=500)"
+  },
+  {
+   "id": "9a_tandon_rounded",
+   "kind": "decimal",
+   "value": "3.25883262",
+   "label": "9a.md, C7 table, Tandon row (8 decimals shown)"
+  },
+  {
+   "id": "9a_bpz",
+   "kind": "decimal",
+   "value": "3.258805369885",
+   "label": "9a.md, C7 table, BPZ row"
+  },
+  {
+   "id": "9a_gao",
+   "kind": "decimal",
+   "value": "3.258789153908",
+   "label": "9a.md, C7 table, Gao row"
+  },
+  {
+   "id": "ircr_134753_d10",
+   "kind": "exact",
+   "M": "134753",
+   "d": 10,
+   "label": "Itty-Rosin-Carstensen-Reichman 134,753 in C7^10 (arXiv:2607.21517)"
+  },
+  {
+   "id": "polak_schrijver_367_d5",
+   "kind": "exact",
+   "M": "367",
+   "d": 5,
+   "label": "Polak-Schrijver 367 in C7^5 (arXiv:1808.07438)"
+  }
+ ]
+}
