@@ -31,7 +31,7 @@ This audit inspected only the permitted target, scout, and claim files:
   - **Encoding A (`Sinz_2005_Sequential_Counter`):** $4 + 13 + 2,487 + 345 + 13 = 2,862$ trimmed core clauses and $1 + 3 + 836 + 142 + 1 = 983$ pure-RUP LRAT steps (`0 RAT lemmas`).
   - **Encoding B (`Bailleux_Boufkhad_2003_Binary_Tree_Totalizer`):** $4 + 12 + 2,483 + 342 + 7 = 2,848$ trimmed core clauses and $1 + 3 + 780 + 111 + 1 = 896$ pure-RUP LRAT steps (`0 RAT lemmas`).
 
-### 2.2 Track `p1`: Resolution of Open Prime Order $p = 7$ (`p7_fix1`) and 17 Additional Automorphism Exclusions
+### 2.2 Track `p1`: Resolution of Open Prime Order $p = 7$ (`p7_fix1`) and 21 Additional Automorphism Exclusions
 
 - **Prior-Art Baseline:**
   - Makhnev & Minakova (2004) and Behbahani & Lam (2011) restricted prime divisors of $|\mathrm{Aut}(\Gamma)|$ for $\Gamma = \mathrm{srg}(99, 14, 1, 2)$.
@@ -39,15 +39,15 @@ This audit inspected only the permitted target, scout, and claim files:
   - Aalok Thakkar & Simone Severini (`arXiv:2608.11211v2`, 18 Sep 2026) ran 14-core CP-SAT searches on prime orders $p \in \{2, 3, 5, 7, 11\}$ and resolved $p \in \{3, 5, 11\}$, **leaving standalone prime order $p = 7$ (`p7_fix1`) as the sole remaining open prime-order automorphism case after timing out at $> 48\text{ hours}$**, and did not emit DRAT/LRAT proof certificates for any case.
 
 - **Novelty of the Present Claim on Track `p1`:**
-  By proving the **Galois-Spectral Trace Theorem** ($\mathrm{Tr}(B) = 0$ on the $12$ outer $7$-cycle orbits of `p7_fix1`), the **Involution Spectral Trace & Flipped-Edge Window Theorem** ($\mathrm{Tr}(B) = 8a + 3b + 4k_2 - 7m_3(-1)$), and projecting onto orbit-valency matrices anchored at root vertex $x = 0$, the artifact resolves the open prime order $p = 7$ (`p7_fix1`) and produces dual-encoded pure-RUP LRAT (`0 RAT lemmas`) UNSAT certificates for $18$ distinct prime-order and Frobenius automorphism actions ($36$ proofs):
+  By proving the **Galois-Spectral Trace Theorem** ($\mathrm{Tr}(B) = 0$ on the $12$ outer $7$-cycle orbits of `p7_fix1`), the **Involution Spectral Trace & Flipped-Edge Window Theorem** ($\mathrm{Tr}(B) = 8a + 3b + 4k_2 - 7m_3(-1)$), the **Global Flipped-Edge Triangle Bijection Theorem** ($\mathrm{Tr}(B) = \sum_{z \in \mathrm{Fix}(g) \setminus \{x_0\}} b_z$), and projecting onto orbit-valency matrices anchored at root vertex $x = 0$, the artifact resolves the open prime order $p = 7$ (`p7_fix1`) and produces dual-encoded pure-RUP LRAT (`0 RAT lemmas`) UNSAT certificates for $22$ distinct prime-order and Frobenius automorphism actions ($44$ proofs):
   1. `p7_fix1`: **Resolves the last open prime order $p = 7$** ($1$ fixed vertex, $14 \times 7$-cycles) in $1.14\text{s}$ (Enc A: $36,342$ core clauses, $10,590$ RUP steps) and $0.82\text{s}$ (Enc B: $17,392$ core clauses, $5,209$ RUP steps).
   2. `p5_t1_fix9`: Prime order $p = 5$ fixing $9$ vertices ($1 + 4 + 4$) with $18$ cycles of length $5$ ($31,141$ / $21,073$ core clauses, $2,461$ / $2,050$ RUP steps).
   3. `p3_t1_fix33`: Prime order $p = 3$ fixing $33$ vertices ($1 + 8 + 24$) with $22$ cycles of length $3$ ($166$ / $251$ core clauses, $23$ / $35$ RUP steps).
   4. `frob21_z7_z3`: Order-$21$ Frobenius subgroup $\mathrm{Frob}(21) = \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ ($13,758$ / $8,104$ core clauses, $3,253$ / $3,016$ RUP steps).
-  5. **14 prime-order $p = 2$ involutions (`p2_*`):** `(0,1,6)`, `(0,2,5)`, `(0,3,4)`, `(0,4,3)`, `(0,5,2)`, `(0,6,1)`, `(1,0,5)`, `(1,1,4)`, `(1,2,3)`, `(1,3,2)`, `(1,4,1)`, `(1,5,0)`, `(2,0,3)`, `(2,1,2)`.
+  5. **18 of the 19 prime-order $p = 2$ involutions (`p2_*`):** `(0,1,6)`, `(0,2,5)`, `(0,3,4)`, `(0,4,3)`, `(0,5,2)`, `(0,6,1)`, `(1,0,5)`, `(1,1,4)`, `(1,2,3)`, `(1,3,2)`, `(1,4,1)`, `(1,5,0)`, `(2,0,3)`, `(2,1,2)`, `(2,2,1)`, `(2,3,0)`, `(3,0,1)`, `(3,1,0)`.
 
 ## 3. Conclusion
 
-Across both tracks (`5` forced-structure reduction propositions in Track `p2` and `18` prime-order / Frobenius subgroup automorphism exclusions in Track `p1`, including the open prime order $p = 7$), the artifact delivers $46$ independent pure-RUP LRAT UNSAT certificates ($92,137$ total RUP steps, $0$ RAT lemmas) across two structurally distinct SAT cardinality encodings. The claim genuinely advances beyond the existing literature on Conway's 99-graph problem.
+Across both tracks (`5` forced-structure reduction propositions in Track `p2` and `22` prime-order / Frobenius subgroup automorphism exclusions in Track `p1`, including the open prime order $p = 7$), the artifact delivers $54$ independent pure-RUP LRAT UNSAT certificates ($92,259$ total RUP steps, $0$ RAT lemmas) across two structurally distinct SAT cardinality encodings. The claim genuinely advances beyond the existing literature on Conway's 99-graph problem.
 
 pass: true

@@ -11,18 +11,18 @@
     "p1"
   ],
   "summary": {
-    "total_theorems_certified": 23,
+    "total_theorems_certified": 27,
     "track_p2_propositions": 5,
-    "track_p1_automorphism_exclusions": 18,
+    "track_p1_automorphism_exclusions": 22,
     "total_independent_encodings": 2,
     "encoding_A_name": "Sinz_2005_Sequential_Counter",
     "encoding_B_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
-    "total_unsat_proofs": 46,
+    "total_unsat_proofs": 54,
     "total_rat_lemmas": 0,
-    "total_core_clauses_encoding_A": 146183,
-    "total_core_clauses_encoding_B": 89587,
-    "total_lrat_rup_lemmas_encoding_A": 55502,
-    "total_lrat_rup_lemmas_encoding_B": 36635,
+    "total_core_clauses_encoding_A": 150439,
+    "total_core_clauses_encoding_B": 90023,
+    "total_lrat_rup_lemmas_encoding_A": 55589,
+    "total_lrat_rup_lemmas_encoding_B": 36670,
     "positive_control_srg_9_4_1_2_encoding_A_sat": true,
     "positive_control_srg_9_4_1_2_encoding_B_sat": true
   },
@@ -1401,6 +1401,254 @@
         2,
         1,
         2
+      ]
+    },
+    {
+      "case_id": "p2_a2_b2_c1_fix7",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 2 pairs of matched edges, flipping 2 matched edges, and fixing 1 matched edge pointwise (7 fixed vertices, 46 transpositions; excluded via Global Flipped-Edge Triangle Bijection Theorem)",
+      "r4_mode": "global_triangle_bijection",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 2,
+        "fixed_in_Gamma2": 4,
+        "total_fixed_vertices_in_Gamma": 7,
+        "moved_vertices_in_Gamma": 92,
+        "num_generator_p_cycles_in_Gamma": 46
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1766,
+        "outer_vertex_orbits": 44,
+        "full_variables": 16692,
+        "full_clauses": 57549,
+        "core_clauses": 743,
+        "lrat_rup_lemmas": 17,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1196,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b2_c1_fix7_encA_core.cnf",
+        "core_cnf_sha256": "53fd7a66f0245bf6a702b17a6068e4d3d086fa7d592539cab20fc28c503bf4ac",
+        "core_lrat_files": [
+          "p2_a2_b2_c1_fix7_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "d86bf1d845b9380a96c4fc63c94d3274fc2673e943f8a693757d5baaf3c494d6"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1766,
+        "outer_vertex_orbits": 44,
+        "full_variables": 13826,
+        "full_clauses": 51516,
+        "core_clauses": 91,
+        "lrat_rup_lemmas": 8,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1175,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b2_c1_fix7_encB_core.cnf",
+        "core_cnf_sha256": "ac6a65bce08f45157e8c99b5cbbd72c6856727a9fd94d7330a27229f2495d7a3",
+        "core_lrat_files": [
+          "p2_a2_b2_c1_fix7_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "76172f8210795cd43bfad99ff496c2dcbcf44ebc7715fef92d57c6f1a763a77c"
+        ]
+      },
+      "involution_profile_abc": [
+        2,
+        2,
+        1
+      ]
+    },
+    {
+      "case_id": "p2_a2_b3_c0_fix5",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 2 pairs of matched edges and flipping 3 matched edges of Gamma_1(x) (5 fixed vertices, 47 transpositions; excluded via Global Flipped-Edge Triangle Bijection Theorem)",
+      "r4_mode": "global_triangle_bijection",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 0,
+        "fixed_in_Gamma2": 4,
+        "total_fixed_vertices_in_Gamma": 5,
+        "moved_vertices_in_Gamma": 94,
+        "num_generator_p_cycles_in_Gamma": 47
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1766,
+        "outer_vertex_orbits": 44,
+        "full_variables": 17366,
+        "full_clauses": 60200,
+        "core_clauses": 906,
+        "lrat_rup_lemmas": 14,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1336,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b3_c0_fix5_encA_core.cnf",
+        "core_cnf_sha256": "4ffd623f6e7860d8f51c1cbdde4a604bfea0e727eaacd738ffc76ab8798d0b56",
+        "core_lrat_files": [
+          "p2_a2_b3_c0_fix5_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "2490689d03ca0ca3fd9e7eba2840fd59c7cc49050d3010b8c72242e47487f84f"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1766,
+        "outer_vertex_orbits": 44,
+        "full_variables": 13918,
+        "full_clauses": 52707,
+        "core_clauses": 91,
+        "lrat_rup_lemmas": 8,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1326,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a2_b3_c0_fix5_encB_core.cnf",
+        "core_cnf_sha256": "c21bd94265151e3b9df8607a56b9c624079a0f854cc8d9816a610719828873c5",
+        "core_lrat_files": [
+          "p2_a2_b3_c0_fix5_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "5c4d927936d1380e1aff56ad3653965b5c0829e07b9f334ac852cb3a11ee6e9b"
+        ]
+      },
+      "involution_profile_abc": [
+        2,
+        3,
+        0
+      ]
+    },
+    {
+      "case_id": "p2_a3_b0_c1_fix9",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 3 pairs of matched edges and fixing 1 matched edge pointwise (9 fixed vertices, 45 transpositions; excluded via Global Flipped-Edge Triangle Bijection Theorem)",
+      "r4_mode": "global_triangle_bijection",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 2,
+        "fixed_in_Gamma2": 6,
+        "total_fixed_vertices_in_Gamma": 9,
+        "moved_vertices_in_Gamma": 90,
+        "num_generator_p_cycles_in_Gamma": 45
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1770,
+        "outer_vertex_orbits": 45,
+        "full_variables": 16855,
+        "full_clauses": 58289,
+        "core_clauses": 1583,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1398,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a3_b0_c1_fix9_encA_core.cnf",
+        "core_cnf_sha256": "65af94ae71ecf20433517ef28f1f3541a6d047a61858200c297060509a35e5ab",
+        "core_lrat_files": [
+          "p2_a3_b0_c1_fix9_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "1b2c46132952910a277541e39cfbd31154213f8e223eb033c8d13cb245327a72"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1770,
+        "outer_vertex_orbits": 45,
+        "full_variables": 13937,
+        "full_clauses": 52821,
+        "core_clauses": 74,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1195,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a3_b0_c1_fix9_encB_core.cnf",
+        "core_cnf_sha256": "aa5d25a2f98ece0bd6ecabf0ae8065a869400dfd3264875b44e9dcc199ac5480",
+        "core_lrat_files": [
+          "p2_a3_b0_c1_fix9_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "56145ab7f483c3f0caf8654e4f3792921849d8d5f195588163ac79dafa425aa7"
+        ]
+      },
+      "involution_profile_abc": [
+        3,
+        0,
+        1
+      ]
+    },
+    {
+      "case_id": "p2_a3_b1_c0_fix7",
+      "description": "Prime order p=2 involution fixing root x=0, transposing 3 pairs of matched edges and flipping 1 matched edge of Gamma_1(x) (7 fixed vertices, 46 transpositions; excluded via Global Flipped-Edge Triangle Bijection Theorem)",
+      "r4_mode": "global_triangle_bijection",
+      "cycle_structure": {
+        "generator_prime_order": 2,
+        "group_order": 2,
+        "fixed_root": 1,
+        "fixed_in_Gamma1": 0,
+        "fixed_in_Gamma2": 6,
+        "total_fixed_vertices_in_Gamma": 7,
+        "moved_vertices_in_Gamma": 92,
+        "num_generator_p_cycles_in_Gamma": 46
+      },
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "primary_edge_orbit_variables": 1770,
+        "outer_vertex_orbits": 45,
+        "full_variables": 17179,
+        "full_clauses": 59422,
+        "core_clauses": 1024,
+        "lrat_rup_lemmas": 55,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1942,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a3_b1_c0_fix7_encA_core.cnf",
+        "core_cnf_sha256": "af95b42476ad865984c76c40aa69e5af4ed32d9d18ccdee51fa447506e2357a2",
+        "core_lrat_files": [
+          "p2_a3_b1_c0_fix7_encA_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "8728dba154663bb852032711f666503be35eb84eb9e6750e1f4ade00c7636e1c"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "primary_edge_orbit_variables": 1770,
+        "outer_vertex_orbits": 45,
+        "full_variables": 14127,
+        "full_clauses": 52981,
+        "core_clauses": 180,
+        "lrat_rup_lemmas": 18,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.1442,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_file": "p2_a3_b1_c0_fix7_encB_core.cnf",
+        "core_cnf_sha256": "b73781f94dc600c9da5d7ca0a02fe11262a58b36c58663a940b5ca59f3e0d240",
+        "core_lrat_files": [
+          "p2_a3_b1_c0_fix7_encB_core.lrat"
+        ],
+        "core_lrat_sha256s": [
+          "2e84114022fd2d89ae6cb8f9f203b43f2f88a1f9518b1c95c2514b2686a32e0a"
+        ]
+      },
+      "involution_profile_abc": [
+        3,
+        1,
+        0
       ]
     }
   ]

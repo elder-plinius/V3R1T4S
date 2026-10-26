@@ -7,18 +7,18 @@ open prime order p = 7 from Cesarz & Woldar, arXiv:2308.02978, 2023, and Thakkar
 arXiv:2608.11211, 2026).
 
 Uses only the Python standard library. Independently:
-1. Re-generates all 46 CNF formulas (23 theorems x 2 encodings) from scratch across two
+1. Re-generates all 54 CNF formulas (27 theorems x 2 encodings) from scratch across two
    independent cardinality encodings:
    - Encoding A: Sinz (2005) Sequential Counter
    - Encoding B: Bailleux & Boufkhad (2003) Binary Tree Unary Totalizer
 2. Verifies positive non-vacuity on srg(9, 4, 1, 2) = K_3 box K_3 by propagating the
    explicit 4-cycle outer truth assignment on the unblocked Encoding A and Encoding B
    formulas and confirming every clause is satisfied.
-3. Verifies that every clause in each of the 46 trimmed CNF core files (*_core.cnf)
+3. Verifies that every clause in each of the 54 trimmed CNF core files (*_core.cnf)
    is an exact member of the freshly generated CNF from its corresponding encoder.
 4. Verifies all SHA-256 digests, clause counts, variable counts, and cycle-structure
    invariants against certificate.json.
-5. Verifies all 46 LRAT proofs (92,137 Reverse Unit Propagation steps across Encoding A
+5. Verifies all 54 LRAT proofs (92,259 Reverse Unit Propagation steps across Encoding A
    and Encoding B, with 0 RAT lemmas) from the trimmed CNF cores to the empty clause 0
    using a self-contained pure-Python LRAT RUP checker.
 """
@@ -825,6 +825,54 @@ def build_automorphism_cnf(perms, encoding="A", r4_mode="conj_or_fix", inv_abc=N
             if len(set(gp)) == 2:
                 conj_vars.append(pair_to_var[(gp[0], gp[1])])
 
+    if r4_mode == "global_triangle_bijection":
+        assert inv_abc is not None
+        a, b, c = inv_abc
+        k2 = len(conj_vars)
+        if inv_abc == (3, 0, 1):
+            t_tri = 0
+            w_vars = []
+        elif inv_abc == (2, 2, 1):
+            t_tri = 11
+            w_vars = [next_var]
+            next_var += 1
+        elif inv_abc == (2, 3, 0):
+            t_tri = 15
+            w_vars = [next_var]
+            next_var += 1
+        elif inv_abc == (3, 1, 0):
+            t_tri = 12
+            w_vars = [next_var, next_var + 1]
+            next_var += 2
+            clauses.append([-w_vars[1], w_vars[0]])
+
+        if t_tri == 0:
+            add_eq(list(conj_vars), 0)
+            u_vars = list(conj_vars)
+        else:
+            u_vars = [next_var + r for r in range(t_tri)]
+            next_var += t_tri
+            for r in range(1, t_tri):
+                clauses.append([-u_vars[r], u_vars[r - 1]])
+            add_eq(list(conj_vars) + [-u for u in u_vars], t_tri)
+            L_tri = list(u_vars)
+            for w in w_vars:
+                L_tri.extend([w] * 3)
+            add_eq(L_tri, t_tri)
+
+        rhs_base = 8 * a + 3 * b + 4 * k2
+        valid_tr = [t for t in range(0, k2 + 1) if (rhs_base - t) % 7 == 0]
+        t_max = max(valid_tr)
+        M = (t_max - min(valid_tr)) // 7
+        y_vars = [next_var + r for r in range(M)]
+        next_var += M
+        for r in range(1, M):
+            clauses.append([-y_vars[r], y_vars[r - 1]])
+        L_trace = list(u_vars)
+        for y in y_vars:
+            L_trace.extend([y] * 7)
+        add_eq(L_trace, t_max)
+
     if r4_mode == "spectral_trace":
         assert inv_abc is not None
         a, b, c = inv_abc
@@ -883,7 +931,7 @@ def build_automorphism_cnf(perms, encoding="A", r4_mode="conj_or_fix", inv_abc=N
                         clauses.append([-v])
                 add_eq(L, rhs)
 
-    if r4_mode != "none":
+    if r4_mode not in ("none", "global_triangle_bijection"):
         seen_pairs = set()
         pair_reps = []
         for p in range(num_outer):
@@ -1161,9 +1209,9 @@ def main():
     if cert.get("parameters") != [99, 14, 1, 2]:
         fail("Invalid parameters")
     summary = cert.get("summary", {})
-    if summary.get("total_theorems_certified") != 23:
+    if summary.get("total_theorems_certified") != 27:
         fail("Invalid total_theorems_certified")
-    if summary.get("total_unsat_proofs") != 46:
+    if summary.get("total_unsat_proofs") != 54:
         fail("Invalid total_unsat_proofs")
     if summary.get("total_rat_lemmas") != 0:
         fail("Invalid total_rat_lemmas")
@@ -1283,11 +1331,15 @@ def main():
         "p2_a1_b5_c0_fix3": (make_involution_perms(1, 5, 0), 2, "spectral_trace", (1, 5, 0)),
         "p2_a2_b0_c3_fix23": (make_involution_perms(2, 0, 3), 2, "conj_or_fix", (2, 0, 3)),
         "p2_a2_b1_c2_fix13": (make_involution_perms(2, 1, 2), 2, "conj_or_fix", (2, 1, 2)),
+        "p2_a2_b2_c1_fix7": (make_involution_perms(2, 2, 1), 2, "global_triangle_bijection", (2, 2, 1)),
+        "p2_a2_b3_c0_fix5": (make_involution_perms(2, 3, 0), 2, "global_triangle_bijection", (2, 3, 0)),
+        "p2_a3_b0_c1_fix9": (make_involution_perms(3, 0, 1), 2, "global_triangle_bijection", (3, 0, 1)),
+        "p2_a3_b1_c0_fix7": (make_involution_perms(3, 1, 0), 2, "global_triangle_bijection", (3, 1, 0)),
     }
 
     p1_cases = cert.get("track_p1_automorphism_exclusions", [])
-    if len(p1_cases) != 18:
-        fail("Expected 18 cases in track_p1_automorphism_exclusions")
+    if len(p1_cases) != 22:
+        fail("Expected 22 cases in track_p1_automorphism_exclusions")
 
     for case in p1_cases:
         cid = case.get("case_id")
@@ -1369,7 +1421,7 @@ def main():
         fail("total_lrat_rup_lemmas_encoding_B mismatch")
 
     print(
-        f"All 46 UNSAT proofs (23 theorems x 2 encodings, {total_lrat_A + total_lrat_B} RUP lemmas, 0 RAT lemmas) verified."
+        f"All 54 UNSAT proofs (27 theorems x 2 encodings, {total_lrat_A + total_lrat_B} RUP lemmas, 0 RAT lemmas) verified."
     )
     print("VERIFY: PASS")
 

@@ -4,13 +4,13 @@
 
 Conway's 99-graph problem asks whether there exists a strongly regular graph $\Gamma = \mathrm{srg}(99, 14, 1, 2)$, equivalently a graph on $99$ vertices in which every edge lies in a unique triangle ($\lambda = 1$) and every non-adjacent pair of vertices shares a unique $4$-cycle ($\mu = 2$).
 
-This artifact provides standalone, zero-dependency machine-checked UNSAT certificates (**46 Pure-RUP LRAT proofs across 23 theorems**, with **0 RAT lemmas**, i.e., $100\%$ pure Reverse Unit Propagation across $92,137$ RUP steps) across **two independent SAT cardinality encodings**—**Encoding A** (Sinz 2005 Linear Sequential Counter) and **Encoding B** (Bailleux & Boufkhad 2003 Binary Tree Unary Totalizer)—for both published partial-progress tracks of the `conway-99-graph` target:
+This artifact provides standalone, zero-dependency machine-checked UNSAT certificates (**54 Pure-RUP LRAT proofs across 27 theorems**, with **0 RAT lemmas**, i.e., $100\%$ pure Reverse Unit Propagation across $92,259$ RUP steps) across **two independent SAT cardinality encodings**—**Encoding A** (Sinz 2005 Linear Sequential Counter) and **Encoding B** (Bailleux & Boufkhad 2003 Binary Tree Unary Totalizer)—for both published partial-progress tracks of the `conway-99-graph` target:
 
-1. **Resolution of the Last Open Prime Order $p = 7$ (`p7_fix1`) & 17 Additional Automorphism Exclusions (Track `p1`):**
+1. **Resolution of the Last Open Prime Order $p = 7$ (`p7_fix1`) & 21 Additional Automorphism Exclusions (Track `p1`):**
    - In **Patrick G. Cesarz & Andrew J. Woldar (`arXiv:2308.02978`, 2023, *On the automorphism group of a putative Conway 99-graph*)**, the authors excluded prime orders $p \in \{11, 13\}$ and narrowed $\mathrm{Aut}(\Gamma)$ to $\{1, 2, 3, 5, 7\}$, while ruling out $\mathrm{Frob}(21) \cong \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ via manual casework/GAP, leaving standalone prime order $p = 7$ ($|\mathrm{Fix}(g)| = 1$, $14$ cycles of length $7$) open.
    - In **Aalok Thakkar & Simone Severini (`arXiv:2608.11211v2`, 18 Sep 2026, *Structure forced by Conway's 99-graph problem*)**, CP-SAT searched prime orders $p \in \{2, 3, 5, 7, 11\}$ on a 14-core CPU and resolved $p \in \{3, 5, 11\}$, **leaving standalone prime order $p = 7$ (`p7_fix1`) as the sole remaining open prime-order automorphism case after timing out at $> 48\text{ hours}$**.
    - By proving the **Galois-Spectral Trace Theorem** ($\mathrm{Tr}(B) = 0$ on the $12$ outer $7$-cycle orbits of $\Gamma_2(x)$) and projecting the quadratic SRG equation $B^2 = 5I + J_{12} + C + B(2J_{12} - K) - A_{\text{in}}$ onto the top $6 \times 12$ submatrix $[M \mid Q]$ over the $6$ single-edge inner orbits $I_{LL} \cup I_{RR}$ with $S_3 \times S_3 \rtimes \mathbb{Z}_2 \times S_6$ normalizer symmetry breaking, we **resolve and exclude `p7_fix1` in $1.14\text{s}$ (Encoding A: $36,342$ core clauses, $10,590$ RUP lemmas) and $0.82\text{s}$ (Encoding B: $17,392$ core clauses, $5,209$ RUP lemmas) with `0 RAT lemmas`**.
-   - Together with `p7_fix1`, we certify **18 distinct prime-order and subgroup automorphism exclusions (`36` Pure-RUP LRAT proofs)**: prime order $p = 7$ (`p7_fix1`), prime order $p = 5$ (`p5_t1_fix9`, $|\mathrm{Fix}(g)| = 9$), prime order $p = 3$ (`p3_t1_fix33`, $|\mathrm{Fix}(g)| = 33$), the order-$21$ Frobenius subgroup $\mathrm{Frob}(21) = \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ (`frob21_z7_z3`), and **14 prime-order $p = 2$ involution profiles** spanning $|\mathrm{Fix}(g)| \in \{3, 5, 9, 11, 13, 19, 21, 23, 33, 35, 51, 53, 73\}$.
+   - Together with `p7_fix1`, we certify **22 distinct prime-order and subgroup automorphism exclusions (`44` Pure-RUP LRAT proofs)**: prime order $p = 7$ (`p7_fix1`), prime order $p = 5$ (`p5_t1_fix9`, $|\mathrm{Fix}(g)| = 9$), prime order $p = 3$ (`p3_t1_fix33`, $|\mathrm{Fix}(g)| = 33$), the order-$21$ Frobenius subgroup $\mathrm{Frob}(21) = \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ (`frob21_z7_z3`), and **18 of the 19 prime-order $p = 2$ involution profiles** spanning $|\mathrm{Fix}(g)| \in \{3, 5, 7, 9, 11, 13, 19, 21, 23, 33, 35, 51, 53, 73\}$.
 2. **Track `p2` (Forced-Structure Reduction of `arXiv:2608.11211`):**
    An independent machine-checked re-derivation of all five forced-structure reduction propositions (`p2_1`–`p2_5`, `10` Pure-RUP LRAT proofs) of Thakkar & Severini (`arXiv:2608.11211`, Section 2.3), certifying how the global $\mathrm{srg}(99, 14, 1, 2)$ axioms around a fixed root vertex $x$ force the exact reduced constraints on the $84$-vertex second neighborhood $\Gamma_2(x)$, together with exactness and uniqueness on the smaller validation benchmark $\mathrm{srg}(9, 4, 1, 2) \cong K_3 \square K_3$.
 
@@ -44,6 +44,13 @@ Let $g \in \mathrm{Aut}(\Gamma)$ be an involution ($p = 2$) fixing root $x = 0$ 
   - For **`(a,b,c) = (1,4,1)` (`p2_a1_b4_c1_fix5`)**: $\mathrm{Tr}(B) \in [8, 14]$ and $\mathrm{Tr}(B) \equiv 6 \pmod{7}$ forces $\mathrm{Tr}(B) = 13$ uniquely ($2,425$ / $1,898$ core clauses, $4,644$ / $857$ RUP lemmas).
   - For **`(a,b,c) = (1,5,0)` (`p2_a1_b5_c0_fix3`)**: $\mathrm{Tr}(B) \in [0, 10]$ and $\mathrm{Tr}(B) \equiv 3 \pmod{7}$ forces $\mathrm{Tr}(B) \in \{3, 10\}$ ($5,118$ / $1,321$ core clauses, $1,525$ / $377$ RUP lemmas).
   - For **`(a,b,c) = (0,5,2)` (`p2_a0_b5_c2_fix9`)**: $\mathrm{Tr}(B) \in \{1, 8, 15, 22, 29, 36, 43\}$ ($7,186$ / $3,628$ core clauses, $10,109$ / $4,964$ RUP lemmas).
+- **Global Flipped-Edge Triangle Bijection Theorem:** Suspending $\Gamma$ at every fixed vertex $z \in \mathrm{Fix}(g)$ gives a local involution profile $(a_z, b_z, c_z)$ satisfying $1 + 2a_z + 2c_z^2 = |\mathrm{Fix}(g)| = 1 + 2a + 2c^2$ and $b_z = b + c - 2c^2 + 2c_z^2 - c_z$, yielding the global conservation identity:
+  $$\mathrm{Tr}(B) = \sum_{z \in \mathrm{Fix}(g) \setminus \{0\}} b_z.$$
+  Combining this identity with $\mathrm{Tr}(B) \equiv 8a + 3b + 4k_2 \pmod{7}$ immediately refutes four additional low-fixed-point profiles:
+  - **`(a,b,c) = (2,2,1)` (`p2_a2_b2_c1_fix7`)**: $\mathrm{Tr}(B) = 8 + 3t' \in \{8, 11\}$ vs. $\mathrm{Tr}(B) = 182 - 7m_3(-1) \equiv 0 \pmod{7}$ ($743$ / $91$ core clauses, $17$ / $8$ RUP lemmas).
+  - **`(a,b,c) = (2,3,0)` (`p2_a2_b3_c0_fix5`)**: $\mathrm{Tr}(B) = 12 + 3t \in \{12, 15\}$ vs. $\mathrm{Tr}(B) = 185 - 7m_3(-1) \equiv 3 \pmod{7}$ ($906$ / $91$ core clauses, $14$ / $8$ RUP lemmas).
+  - **`(a,b,c) = (3,0,1)` (`p2_a3_b0_c1_fix9`)**: since `(0,5,2)` is certified UNSAT (`p2_a0_b5_c2_fix9`), every $z \in \mathrm{Fix}(g)$ has profile `(3,0,1)` with $b_z = 0 \implies \mathrm{Tr}(B) = 0$ vs. $\mathrm{Tr}(B) = 180 - 7m_3(-1) \equiv 5 \pmod{7}$ ($1,583$ / $74$ core clauses, $1$ / $1$ RUP lemma).
+  - **`(a,b,c) = (3,1,0)` (`p2_a3_b1_c0_fix7`)**: $\mathrm{Tr}(B) = 6 + 3t \in \{6, 9, 12\}$ vs. $\mathrm{Tr}(B) = 183 - 7m_3(-1) \equiv 1 \pmod{7}$ ($1,024$ / $180$ core clauses, $55$ / $18$ RUP lemmas).
 
 ---
 
@@ -61,7 +68,7 @@ Fix a root vertex $x \in V(\Gamma)$. Since $\Gamma$ is $14$-regular on $99$ vert
 
 ---
 
-## Track `p1`: Dual-Encoded DRAT/LRAT Automorphism Exclusion Certificates (18 Cases = 36 Proofs)
+## Track `p1`: Dual-Encoded DRAT/LRAT Automorphism Exclusion Certificates (22 Cases = 44 Proofs)
 
 Any automorphism $g \in \mathrm{Aut}(\Gamma)$ fixing root $x$ preserves $\Gamma_1(x)$ and its unique perfect matching $M_x$ of $7$ edges, inducing a canonical action on the $84$ non-matched pairs $\Gamma_2(x)$ via $g(P_u) = \{g(a), g(b)\}$. For an involution $g$ ($p = 2$) fixing $x$, its action on the $7$ matched edges of $M_x$ is classified by the triple $(a, b, c)$ with $2a + b + c = 7$, where $a$ pairs of matched edges are transposed, $b$ matched edges have their endpoints swapped, and $c$ matched edges are fixed pointwise.
 
@@ -85,6 +92,10 @@ Any automorphism $g \in \mathrm{Aut}(\Gamma)$ fixing root $x$ preserves $\Gamma_
 | `p2_a1_b5_c0_fix3` | $p=2$, $(a,b,c)=(1,5,0)$ | $3$ ($1 + 0 + 2$) | $48 \times 2$ | $1,764$ / $43$ | $156,787$ / $5,118$ | $1,525$ | $156,666$ / $1,321$ | $377$ | $0$ |
 | `p2_a2_b0_c3_fix23` | $p=2$, $(a,b,c)=(2,0,3)$ | $23$ ($1 + 6 + 16$) | $38 \times 2$ | $1,820$ / $50$ | $188,341$ / $16,111$ | $5,363$ | $188,909$ / $8,301$ | $2,375$ | $0$ |
 | `p2_a2_b1_c2_fix13` | $p=2$, $(a,b,c)=(2,1,2)$ | $13$ ($1 + 4 + 8$) | $43 \times 2$ | $1,776$ / $46$ | $123,029$ / $991$ | $568$ | $122,645$ / $566$ | $424$ | $0$ |
+| `p2_a2_b2_c1_fix7` | $p=2$, $(a,b,c)=(2,2,1)$ | $7$ ($1 + 2 + 4$) | $46 \times 2$ | $1,766$ / $44$ | $57,549$ / $743$ | $17$ | $51,516$ / $91$ | $8$ | $0$ |
+| `p2_a2_b3_c0_fix5` | $p=2$, $(a,b,c)=(2,3,0)$ | $5$ ($1 + 0 + 4$) | $47 \times 2$ | $1,766$ / $44$ | $60,200$ / $906$ | $14$ | $52,707$ / $91$ | $8$ | $0$ |
+| `p2_a3_b0_c1_fix9` | $p=2$, $(a,b,c)=(3,0,1)$ | $9$ ($1 + 2 + 6$) | $45 \times 2$ | $1,770$ / $45$ | $58,289$ / $1,583$ | $1$ | $52,821$ / $74$ | $1$ | $0$ |
+| `p2_a3_b1_c0_fix7` | $p=2$, $(a,b,c)=(3,1,0)$ | $7$ ($1 + 0 + 6$) | $46 \times 2$ | $1,770$ / $45$ | $59,422$ / $1,024$ | $55$ | $52,981$ / $180$ | $18$ | $0$ |
 
 ---
 
@@ -94,15 +105,15 @@ Any automorphism $g \in \mathrm{Aut}(\Gamma)$ fixing root $x$ preserves $\Gamma_
    - In both Cesarz & Woldar (`arXiv:2308.02978`, 2023) and Thakkar & Severini (`arXiv:2608.11211`, Sep 2026), standalone prime order $p = 7$ ($|\mathrm{Fix}(g)| = 1$, $14$ cycles of length $7$) remained the sole unexcludable prime-order symmetry of a putative Conway $99$-graph (timing out after $> 48\text{ hours}$ on 14 CPU cores in `arXiv:2608.11211`).
    - Naive edge-orbit SAT/CP-SAT encodings stall on $p = 7$ because the $492$ edge-orbit variables undergo a $7^3$-fold symmetry explosion inside the $\binom{12}{2} = 66$ quadratic common-neighbor equations. By combining the **Galois-Spectral Trace Theorem** ($\mathrm{Tr}(B) = 0$) with the $6 \times 12$ orbit-valency projection $[M \mid Q]$ on $I_{LL} \cup I_{RR}$, the $48\text{-hour}$ timeout collapses to a **$0.82\text{-second}$ pure-RUP UNSAT certificate ($5,209$ RUP lemmas in Encoding B, $10,590$ in Encoding A)**.
 2. **Closing the Verification Gap Between Uncertified Procedural/CP-SAT Searches and Zero-Trust Pure-RUP (`0 RAT`) Certificates:**
-   - Prior exclusions of prime-order automorphisms ($p \in \{2, 3, 5\}$) and $\mathrm{Frob}(21) \cong \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ relied on custom backtracking, GAP scripts, or CP-SAT runs without proof certificates. Here all $23$ theorems ($46$ proofs across Encoding A and Encoding B) are certified by **Pure-RUP LRAT chains (`0 RAT lemmas`, $92,137$ RUP steps)**, verified from freshly generated CNF clauses in $\sim 18$ seconds using **only the Python standard library**.
+   - Prior exclusions of prime-order automorphisms ($p \in \{2, 3, 5\}$) and $\mathrm{Frob}(21) \cong \mathbb{Z}_7 \rtimes \mathbb{Z}_3$ relied on custom backtracking, GAP scripts, or CP-SAT runs without proof certificates. Here all $27$ theorems ($54$ proofs across Encoding A and Encoding B) are certified by **Pure-RUP LRAT chains (`0 RAT lemmas`, $92,259$ RUP steps)**, verified from freshly generated CNF clauses in $\sim 18$ seconds using **only the Python standard library**.
 
 ---
 
 ## Independent Verification (`verify.py`)
 
 Running `python3 -B verify.py` executes the complete verification pipeline using only the Python standard library in $\sim 18$ seconds:
-1. Re-generates all $46$ full CNF clause sets from scratch across Encoding A and Encoding B,
+1. Re-generates all $54$ full CNF clause sets from scratch across Encoding A and Encoding B,
 2. Verifies positive non-vacuity on $\mathrm{srg}(9, 4, 1, 2) \cong K_3 \square K_3$ by unit propagation on the unblocked Encoding A and Encoding B formulas,
-3. Verifies that every clause in each of the $46$ trimmed `*_core.cnf` files is an exact member of the freshly generated CNF from its encoder,
+3. Verifies that every clause in each of the $54$ trimmed `*_core.cnf` files is an exact member of the freshly generated CNF from its encoder,
 4. Verifies all SHA-256 hashes, variable/clause counts, and cycle-structure invariants against `certificate.json`,
-5. Runs a self-contained pure-Python LRAT RUP proof checker across all $46$ LRAT proofs ($55,502 + 36,635 = 92,137$ RUP steps, $0$ RAT lemmas), confirming derivation of the empty clause `0`.
+5. Runs a self-contained pure-Python LRAT RUP proof checker across all $54$ LRAT proofs ($55,589 + 36,670 = 92,259$ RUP steps, $0$ RAT lemmas), confirming derivation of the empty clause `0`.
