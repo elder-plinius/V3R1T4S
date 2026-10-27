@@ -1,0 +1,15 @@
+artefact point nn00888600 NN.YER..HHZ k=1667392 (83369.60 s): f32 0.2731, f64 0.273111, direct 0.273111
+event nn00890362 BFC: f32 0.654882, f64 0.654882, direct 0.654882
+event nn00890362 KVN: f32 0.504528, f64 0.504528, direct 0.504528
+event nn00890362 PNT: f32 0.836954, f64 0.836954, direct 0.836954
+event nn00890362 YER: f32 0.685684, f64 0.685684, direct 0.685684
+event NCC (mean of 4 station CCs, f64): 0.670512
+random points: 200 (first 50 in the mainshock chunk 102); max |f64 - direct| 2.48e-12; max |f32 - direct| 1.51e-03 (in-chunk max 1.51e-03)
+CHECKER: PASS (artefact True, event True, random True)
+nn00888600 KVN: max |f32-f64| 0.0055 at j=1662699 (23:05:34.95, chunk 102): f32 -0.1277 f64 -0.1222; whole day max diff 6.06e-01
+nn00888600 PNT: max |f32-f64| 0.0045 at j=1664512 (23:07:05.60, chunk 102): f32 0.1269 f64 0.1224; whole day max diff 6.98e-01
+nn00888600 YER: max |f32-f64| 0.5165 at j=1667405 (23:09:30.25, chunk 102): f32 0.7050 f64 0.1886; whole day max diff 5.16e-01
+nn00890362 BFC: max |f32-f64| 0.0023 at j=1662481 (23:05:24.05, chunk 102): f32 -0.0134 f64 -0.0111; whole day max diff 5.94e-01
+nn00890362 KVN: max |f32-f64| 0.0059 at j=1662709 (23:05:35.45, chunk 102): f32 -0.0534 f64 -0.0475; whole day max diff 6.66e-01
+nn00890362 PNT: max |f32-f64| 0.0041 at j=1664491 (23:07:04.55, chunk 102): f32 -0.1145 f64 -0.1186; whole day max diff 6.98e-01
+nn00890362 YER: max |f32-f64| 0.1937 at j=1667196 (23:09:19.80, chunk 102): f32 -0.1869 f64 0.0068; whole day max diff 3.39e-01

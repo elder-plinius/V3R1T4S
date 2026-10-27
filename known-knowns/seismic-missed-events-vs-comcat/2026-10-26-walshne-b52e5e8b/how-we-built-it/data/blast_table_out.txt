@@ -1,0 +1,5 @@
+ComCat earthquakes 2020-2025 within 50 km: n 2059, fraction in 08-17 PST 0.348 (uniform 0.417)
+   by local hour 0..23: [109, 112, 106, 82, 88, 86, 81, 69, 75, 63, 72, 55, 60, 55, 70, 86, 93, 87, 93, 96, 102, 118, 102, 99]
+added detections (declustered, > 30 s from ComCat), search span: n 1821, fraction in 08-17 PST 0.334 (uniform 0.417)
+   by local hour 0..23: [97, 95, 65, 81, 76, 60, 59, 59, 40, 41, 55, 37, 48, 31, 43, 89, 105, 120, 120, 101, 112, 89, 106, 92]
+the event: 2024-12-09 23:20 UTC = 15:20 PST

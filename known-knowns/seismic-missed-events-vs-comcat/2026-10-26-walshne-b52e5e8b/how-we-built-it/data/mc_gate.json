@@ -1,0 +1,376 @@
+{
+ "mc_table": {
+  "20 km 2020-2024 floor": {
+   "n": 835,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "20 km 2020-2024 round": {
+   "n": 835,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "20 km 2021-2025 floor": {
+   "n": 1495,
+   "maxc": 1.2,
+   "mc": 1.4
+  },
+  "20 km 2021-2025 round": {
+   "n": 1495,
+   "maxc": 1.2,
+   "mc": 1.4
+  },
+  "20 km 2022.06-now floor": {
+   "n": 2220,
+   "maxc": 1.5,
+   "mc": 1.7
+  },
+  "20 km 2022.06-now round": {
+   "n": 2220,
+   "maxc": 1.6,
+   "mc": 1.8
+  },
+  "30 km 2020-2024 floor": {
+   "n": 895,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "30 km 2020-2024 round": {
+   "n": 895,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "30 km 2021-2025 floor": {
+   "n": 1558,
+   "maxc": 1.2,
+   "mc": 1.4
+  },
+  "30 km 2021-2025 round": {
+   "n": 1558,
+   "maxc": 1.2,
+   "mc": 1.4
+  },
+  "30 km 2022.06-now floor": {
+   "n": 2301,
+   "maxc": 1.5,
+   "mc": 1.7
+  },
+  "30 km 2022.06-now round": {
+   "n": 2301,
+   "maxc": 1.6,
+   "mc": 1.8
+  },
+  "50 km 2020-2024 floor": {
+   "n": 1318,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "50 km 2020-2024 round": {
+   "n": 1318,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "50 km 2021-2025 floor": {
+   "n": 1888,
+   "maxc": 1.2,
+   "mc": 1.4
+  },
+  "50 km 2021-2025 round": {
+   "n": 1888,
+   "maxc": 1.2,
+   "mc": 1.4
+  },
+  "50 km 2022.06-now floor": {
+   "n": 2548,
+   "maxc": 1.5,
+   "mc": 1.7
+  },
+  "50 km 2022.06-now round": {
+   "n": 2548,
+   "maxc": 1.6,
+   "mc": 1.8
+  },
+  "100 km 2020-2024 floor": {
+   "n": 14136,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "100 km 2020-2024 round": {
+   "n": 14136,
+   "maxc": 0.8,
+   "mc": 1.0
+  },
+  "100 km 2021-2025 floor": {
+   "n": 13735,
+   "maxc": 1.4,
+   "mc": 1.6
+  },
+  "100 km 2021-2025 round": {
+   "n": 13735,
+   "maxc": 0.8,
+   "mc": 1.0
+  },
+  "100 km 2022.06-now floor": {
+   "n": 7691,
+   "maxc": 1.1,
+   "mc": 1.3
+  },
+  "100 km 2022.06-now round": {
+   "n": 7691,
+   "maxc": 1.1,
+   "mc": 1.3
+  }
+ },
+ "mc_max": 1.8,
+ "validation": [
+  {
+   "id": "nn00889312",
+   "time": "2024-12-12T02:57:15.080Z",
+   "mag": 3.2,
+   "comcat": [
+    39.1838,
+    -119.001,
+    5.5
+   ],
+   "loc": {
+    "rms": 0.22,
+    "lat": 39.1638,
+    "lon": -119.011,
+    "depth": 18.0,
+    "origin": 1733972235.1861482,
+    "h_err_km": 3.4,
+    "n_picks": 15,
+    "n_sta": 8,
+    "residuals": {
+     "NN.BFC_P": 0.085,
+     "NN.BFC_S": 0.353,
+     "NN.BMHS_P": 0.193,
+     "NN.CMK6_P": -0.166,
+     "NN.CMK6_S": 0.223,
+     "NN.KVN_P": -0.046,
+     "NN.KVN_S": 0.164,
+     "NN.PNT_P": -0.009,
+     "NN.PNT_S": 0.393,
+     "NN.REDF_P": -0.09,
+     "NN.REDF_S": -0.04,
+     "NN.WASH_P": -0.273,
+     "NN.WASH_S": -0.233,
+     "NN.YER_P": -0.335,
+     "NN.YER_S": -0.221
+    },
+    "dropped": [
+     "NN.BMHS_S"
+    ]
+   },
+   "epi_diff_km": 2.39,
+   "pass": true
+  },
+  {
+   "id": "nn00888992",
+   "time": "2024-12-10T14:07:17.217Z",
+   "mag": 3.0,
+   "comcat": [
+    39.1666,
+    -119.0383,
+    4.5
+   ],
+   "loc": {
+    "rms": 0.246,
+    "lat": 39.1466,
+    "lon": -119.0483,
+    "depth": 15.5,
+    "origin": 1733839637.422954,
+    "h_err_km": 3.4,
+    "n_picks": 15,
+    "n_sta": 8,
+    "residuals": {
+     "NN.BFC_P": 0.049,
+     "NN.BFC_S": 0.286,
+     "NN.BMHS_P": 0.127,
+     "NN.BMHS_S": 0.497,
+     "NN.CMK6_P": -0.209,
+     "NN.CMK6_S": 0.092,
+     "NN.KVN_P": -0.093,
+     "NN.KVN_S": 0.218,
+     "NN.PNT_P": -0.029,
+     "NN.PNT_S": 0.337,
+     "NN.REDF_P": -0.17,
+     "NN.REDF_S": -0.248,
+     "NN.WASH_P": -0.319,
+     "NN.YER_P": -0.31,
+     "NN.YER_S": -0.229
+    },
+    "dropped": [
+     "NN.WASH_S"
+    ]
+   },
+   "epi_diff_km": 2.39,
+   "pass": true
+  },
+  {
+   "id": "nn00889115",
+   "time": "2024-12-11T00:30:46.781Z",
+   "mag": 3.0,
+   "comcat": [
+    39.1645,
+    -119.0397,
+    7.2
+   ],
+   "loc": {
+    "rms": 0.27,
+    "lat": 39.1445,
+    "lon": -119.0497,
+    "depth": 16.0,
+    "origin": 1733877046.960432,
+    "h_err_km": 3.4,
+    "n_picks": 14,
+    "n_sta": 7,
+    "residuals": {
+     "NN.BFC_P": 0.042,
+     "NN.BFC_S": 0.436,
+     "NN.CMK6_P": -0.201,
+     "NN.CMK6_S": 0.397,
+     "NN.KVN_P": 0.028,
+     "NN.KVN_S": 0.015,
+     "NN.PNT_P": -0.002,
+     "NN.PNT_S": 0.46,
+     "NN.REDF_P": -0.046,
+     "NN.REDF_S": 0.113,
+     "NN.WASH_P": -0.281,
+     "NN.WASH_S": -0.357,
+     "NN.YER_P": -0.382,
+     "NN.YER_S": -0.222
+    },
+    "dropped": [
+     "NN.BMHS_S"
+    ]
+   },
+   "epi_diff_km": 2.39,
+   "pass": true
+  },
+  {
+   "id": "nn00888959",
+   "time": "2024-12-10T12:36:20.418Z",
+   "mag": 2.9,
+   "comcat": [
+    39.1284,
+    -119.0144,
+    12.2
+   ],
+   "loc": {
+    "rms": 0.108,
+    "lat": 39.1284,
+    "lon": -119.0244,
+    "depth": 20.0,
+    "origin": 1733834180.3997333,
+    "h_err_km": 2.4,
+    "n_picks": 12,
+    "n_sta": 6,
+    "residuals": {
+     "NN.BFC_P": 0.004,
+     "NN.BFC_S": 0.104,
+     "NN.CMK6_P": -0.032,
+     "NN.CMK6_S": -0.057,
+     "NN.KVN_P": 0.115,
+     "NN.KVN_S": -0.212,
+     "NN.PNT_P": -0.04,
+     "NN.PNT_S": 0.162,
+     "NN.REDF_P": 0.076,
+     "NN.REDF_S": 0.101,
+     "NN.WASH_P": -0.109,
+     "NN.WASH_S": -0.112
+    },
+    "dropped": [
+     "NN.BMHS_S",
+     "NN.YER_P"
+    ]
+   },
+   "epi_diff_km": 0.86,
+   "pass": true
+  },
+  {
+   "id": "nn00889068",
+   "time": "2024-12-10T21:40:23.833Z",
+   "mag": 2.9,
+   "comcat": [
+    39.1268,
+    -119.0421,
+    6.9
+   ],
+   "loc": {
+    "rms": 0.179,
+    "lat": 39.1168,
+    "lon": -119.0521,
+    "depth": 11.5,
+    "origin": 1733866824.1859286,
+    "h_err_km": 3.4,
+    "n_picks": 15,
+    "n_sta": 8,
+    "residuals": {
+     "NN.BFC_P": -0.006,
+     "NN.BFC_S": 0.212,
+     "NN.BMHS_P": 0.127,
+     "NN.CMK6_P": -0.12,
+     "NN.CMK6_S": 0.272,
+     "NN.KVN_P": -0.109,
+     "NN.KVN_S": 0.065,
+     "NN.PNT_P": -0.043,
+     "NN.PNT_S": 0.34,
+     "NN.REDF_P": -0.101,
+     "NN.REDF_S": 0.133,
+     "NN.WASH_P": -0.269,
+     "NN.WASH_S": -0.104,
+     "NN.YER_P": -0.26,
+     "NN.YER_S": -0.137
+    },
+    "dropped": [
+     "NN.BMHS_S"
+    ]
+   },
+   "epi_diff_km": 1.41,
+   "pass": true
+  },
+  {
+   "id": "nn00889009",
+   "time": "2024-12-10T15:14:14.719Z",
+   "mag": 2.7,
+   "comcat": [
+    39.1549,
+    -119.0436,
+    10.7
+   ],
+   "loc": {
+    "rms": 0.174,
+    "lat": 39.1549,
+    "lon": -119.0536,
+    "depth": 18.5,
+    "origin": 1733843654.560406,
+    "h_err_km": 3.4,
+    "n_picks": 14,
+    "n_sta": 7,
+    "residuals": {
+     "NN.BFC_P": 0.131,
+     "NN.BFC_S": 0.093,
+     "NN.CMK6_P": -0.015,
+     "NN.CMK6_S": 0.027,
+     "NN.KVN_P": 0.055,
+     "NN.KVN_S": -0.164,
+     "NN.PNT_P": 0.149,
+     "NN.PNT_S": 0.285,
+     "NN.REDF_P": 0.086,
+     "NN.REDF_S": -0.026,
+     "NN.WASH_P": -0.045,
+     "NN.WASH_S": -0.295,
+     "NN.YER_P": -0.392,
+     "NN.YER_S": 0.109
+    },
+    "dropped": [
+     "NN.BMHS_S"
+    ]
+   },
+   "epi_diff_km": 0.86,
+   "pass": true
+  }
+ ],
+ "gate_pass": true
+}
