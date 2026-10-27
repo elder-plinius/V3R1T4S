@@ -1,0 +1,17 @@
+# Table Snapshot — ihtp-ihtc2024-hidden-m-instances-upper-bounds (m29)
+
+Table Snapshot — ihtp-ihtc2024-hidden-m-instances-upper-bounds (m29)
+
+Primary Status Source:
+URL: https://ihtc2024.github.io/ihtp/index.html
+Fetched (UTC): 2026-10-27T19:43:31Z
+HTTP Status: 200
+SHA-256: 2b69fe2e2b6e0a978472aa3916c8c53a774e223e666f20966156802f9ce2f363
+
+Instance m29 Benchmark Cell Record:
+- Published BKS on status page: 48079 (sol_m29.json)
+- Initial hunt baseline: 48082
+- Submitted feasible upper bound (object/sol_m29_47253.json): 47253
+- Constraint status: Total violations = 0 across all 9 hard constraint categories
+- Strict improvement vs published BKS: -826 points
+- Strict improvement vs hunt baseline: -829 points
