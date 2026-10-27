@@ -1,0 +1,41 @@
+{
+  "id": "z3-site-percolation-rigorous-lower-bound",
+  "name": "Site percolation on the cubic lattice Z^3: a certified lower bound on p_c above Georgakopoulos-Panagiotis's 0.2522 (2023)",
+  "category": "physics",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours to laptop-days (exhaustive enumeration of walks or animals, a few GB at the largest sizes)",
+  "statement": "In site percolation on the simple cubic lattice Z^3, each site is open independently with probability p, and p_c^site(Z^3) is the threshold above which an infinite open cluster exists. Monte Carlo puts it near 0.3116; N. Ball (arXiv:1312.0961) gives the 99.9999% confidence interval [0.3110, 0.3118], which is not a bound. Rigorous lower bounds are much lower. The classical bound p_c >= 1/mu, with Andre Poenitz and Peter Tittmann's connective-constant bound mu(Z^3) <= 4.7387 (Electron. J. Combin. 7 (2000) R21), gives 0.21102. Alexander Georgakopoulos and Christoforos Panagiotis (Combin. Probab. Comput. 32 (2023) 912-955, Theorem 7.1; arXiv:2107.06272, eq. (16)) proved p_c^site(Z^3) > 0.2522, calling it the best rigorous lower bound known. Their inequality a(Z^3) >= (1+r)^(1+r)/r^r at r = (1-p_c)/p_c, together with Gill Barequet and Mira Shalah's bound a(Z^3) < 9.3835 on the site-animal growth constant (arXiv:1906.11447), gives exactly 0.252265.... Salvatore Torquato and Yang Jiao (Phys. Rev. E 87 (2013) 032149, arXiv:1302.0332) state 5/19 = 0.263158 for this threshold without proof; they prove 1/6. A search on 2026-10-26 found no published improvement on 0.2522; arXiv:2107.06272 has only version v1.",
+  "success_criterion": "Success means a rigorous lower bound p_c^site(Z^3) >= p0 with p0 at least 1e-4 above the best published rigorous lower bound. That bound is the one found by a search of arXiv, Google Scholar and the works citing arXiv:2107.06272, re-run immediately before claiming. It is currently 0.2522 (exactly 0.252265... from Georgakopoulos-Panagiotis's inequality), so p0 >= 0.252366. The claim is decided by a machine-checkable certificate with three parts. (a) A finite condition at p0, verified by a program in exact integer or rational arithmetic, or in outward-rounded interval arithmetic with an exact final comparison. Examples: an inequality between exact integer counts and p0, or a spectral-radius test with an explicit vector. (b) The program that generates every number the condition uses by exhaustive enumeration from the stated definitions. A stranger must be able to rerun it from scratch, and its runtime and memory must be stated. Its output must match an external anchor where one exists (for example OEIS walk or polycube counts), and a second implementation that shares no code must reproduce it at small sizes. (c) A written derivation that the finite condition implies p_c^site(Z^3) >= p0. It may use only published theorems cited by number, plus steps a skeptic can check line by line, and every constant in it must come from the computation. Floating-point evidence, series or Monte Carlo estimates, and values stated without proof (such as 5/19) do not count.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A certified improvement, by at least 1e-4, of the best published rigorous lower bound on p_c^site(Z^d) for d = 4, 5 or 6 that the claimant can cite (DOI or arXiv, with page). An example is 1/mu with a published connective-constant bound. The certificate rules are the same. Without a citable comparator it does not count."
+    }
+  ],
+  "verification_method": "Skeptic: (1) Run the claimant's exact checker on the archived data at p0 (minutes). (2) Write an independent enumerator from the written definitions. Reproduce the data byte for byte at every size it reaches in an hour, and check the totals against OEIS where they apply. (3) Recheck the final inequality in exact arithmetic with your own code. (4) Read the derivation. Check that every event used with independence or with the Harris-FKG inequality is of the stated type. Check that the counted objects are exactly the ones the derivation needs. (5) Optionally, regenerate the largest table (hours).",
+  "primary_sources": [
+    "https://arxiv.org/abs/2107.06272",
+    "https://doi.org/10.1017/S0963548323000214",
+    "https://arxiv.org/abs/1906.11447",
+    "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v7i1r21",
+    "https://arxiv.org/abs/1302.0332",
+    "https://arxiv.org/abs/1312.0961",
+    "https://oeis.org/A174319"
+  ],
+  "status_source": "https://arxiv.org/abs/2107.06272",
+  "status_checked": "2026-10-26",
+  "disclosure": "open",
+  "angles": [
+    "Lattice animals: Georgakopoulos-Panagiotis's inequality turns any better rigorous upper bound on the site-animal growth constant a(Z^3) (currently Barequet-Shalah's 9.3835) into a better bound on p_c.",
+    "Self-avoiding walks: p_c >= 1/mu. Certified upper bounds on mu(Z^3) from finite-memory automata (Poenitz-Tittmann) improve with larger memory.",
+    "Exploration processes that force extra closed sites next to the explored path count fewer configurations than plain walk counting. In 2D this is the spirit of Menshikov-Pelikh and van den Berg-Ermakov."
+  ],
+  "pitfalls": [
+    "Estimates (about 0.3116) and rigorous confidence intervals (Ball 2013) are not bounds. A 'lower bound' above 0.3116 indicates a bug.",
+    "Torquato and Jiao state 5/19 and 1/5 without proof; only their 1/6 is proved. None of these is the comparator.",
+    "Bond percolation on Z^3 (p_c about 0.2488) is a different model.",
+    "In an exploration process, independence holds only for sites not yet examined. A derivation that reuses examined sites, or that applies the Harris-FKG inequality to events that are not both increasing or both decreasing, gives an invalid bound.",
+    "Floating-point ratios are not certificates. Use exact arithmetic, or outward rounding with an exact final comparison."
+  ]
+}
