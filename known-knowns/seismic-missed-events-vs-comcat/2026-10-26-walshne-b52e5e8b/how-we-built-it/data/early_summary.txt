@@ -1,0 +1,3 @@
+window 2024-12-09T23:13:31 + 144000 samples at 20 Hz; templates 385; controls 3000 (seed 20261026)
+E2 (event, unshifted, +/-0.5 s of 2024-12-09T23:20:12.75): 0.6706 (template nn00890362)
+best control 0.6887; controls >= E2: 1; EFC_early = 1 / 3000 x 36 = 0.0120

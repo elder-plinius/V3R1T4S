@@ -1,0 +1,6 @@
+event: best real detection within 0.5 s of 2024-12-09T23:20:12.75: NCC 0.6705 (template nn00890362, 23:20:12.75)
+null     controls 400, declustered detections 13888, best 0.6121, >= 0.6705: 0
+null_d9  controls 200, declustered detections 1466, best 0.5351, >= 0.6705: 0
+ALL: controls 600, best_control 0.6121, count >= event NCC 0, EFC over the 3.0-day span = 0 x 3.0 / 600 = 0.0000 (95% upper bound 0.0150)
+raw per-control maxima: best 0.6121 (null 2024-12-10), 12-09 best 0.5351, 12-10..12 best 0.6121, >= event NCC: 0; written to null_per_control_max.csv
+real detections: 14677 over the 4 days (real_detections.json); 29 within +/-30 s of the event (detections_within_30s.json)

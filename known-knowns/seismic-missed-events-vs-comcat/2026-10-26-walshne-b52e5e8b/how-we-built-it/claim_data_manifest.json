@@ -1,0 +1,250 @@
+{
+ "templates.json": {
+  "bytes": 5148254,
+  "sha256": "b854598020c132bc57cdcdfb609c8196739a52ae0f136e2548230c52b40f9a54"
+ },
+ "Parker_Butte_Catalog.csv": {
+  "bytes": 143439,
+  "sha256": "b0bddf40d27865030a8ef0f58133dee236851955f8eca2c2bd9e4d669a838685"
+ },
+ "absence_comcat.csv": {
+  "bytes": 160,
+  "sha256": "d0011b19654d4069505c5263bdbd23d0992301571b783f489577472ebd3a7f17"
+ },
+ "absence_comcat_includedeleted.csv": {
+  "bytes": 160,
+  "sha256": "d0011b19654d4069505c5263bdbd23d0992301571b783f489577472ebd3a7f17"
+ },
+ "absence_comcat_scout.csv": {
+  "bytes": 160,
+  "sha256": "d0011b19654d4069505c5263bdbd23d0992301571b783f489577472ebd3a7f17"
+ },
+ "absence_isc.txt": {
+  "bytes": 0,
+  "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+ },
+ "all_types_2020_2025_50km.csv": {
+  "bytes": 379710,
+  "sha256": "a843acc61587a8b9b8752adbd9af6ec8d5a4f61414a920332c387d9cd0eeef3f"
+ },
+ "alltypes_5y_event_centred.csv": {
+  "bytes": 552547,
+  "sha256": "87c231c42de700740b69ca109a9a51d7bd80fd1f45510ab7489554471e695a17"
+ },
+ "blast_table_out.txt": {
+  "bytes": 510,
+  "sha256": "07b15872632041f9353da29a4ceae2da19c303605ce6705e01d5de6f67ba79fb"
+ },
+ "cand_173378641275_NN.BFC.mseed": {
+  "bytes": 34816,
+  "sha256": "9de6fd5fa7ecad3bae95c2c71448f04775f69c1c02b37eb6f036ba98e64020bb"
+ },
+ "cand_173378641275_NN.BMHS.mseed": {
+  "bytes": 63488,
+  "sha256": "3637f99796e55f8988290a6b0e3e8bc2ee9de93179ddc770a7ea9ce7f3635325"
+ },
+ "cand_173378641275_NN.CMK6.mseed": {
+  "bytes": 28160,
+  "sha256": "8a22080dcee3548447ee5bc682174bf4d14c678d6d166eca9115c51cd02135dd"
+ },
+ "cand_173378641275_NN.KVN.mseed": {
+  "bytes": 33280,
+  "sha256": "21da1218178321b6b3577238b3293fbd78fcc67d207a48b600c89bf6983b63cc"
+ },
+ "cand_173378641275_NN.PNT.mseed": {
+  "bytes": 35328,
+  "sha256": "b3b26157f74e9c93b3d17910a485cd17678331450d3cde61971b59ca456bca7d"
+ },
+ "cand_173378641275_NN.REDF.mseed": {
+  "bytes": 35840,
+  "sha256": "d87da793cd1447cb5f2803698d73e196719afa862a838cd1921ef333fd1a721e"
+ },
+ "cand_173378641275_NN.WASH.mseed": {
+  "bytes": 32256,
+  "sha256": "1ca1b305a41f0affd351c49b1f7937d71d7e497f7403eb18678cb687c8055ade"
+ },
+ "cand_173378641275_NN.YER.mseed": {
+  "bytes": 35840,
+  "sha256": "5ee7de4518fa043610bb4b35bff0e1fe7e46c8c48f0c0b65b5c4fad1e76e6c8f"
+ },
+ "comcat_status.html": {
+  "bytes": 34773,
+  "sha256": "8827192f69dd4a0c82373fbb07c0f9ea4f8b2d2eaccf90e8d487f34d4b955467"
+ },
+ "detections_within_30s.json": {
+  "bytes": 1724,
+  "sha256": "44dac4f34a57221c9899b48a038da743c08390a936c069eca4d7917b629ee607"
+ },
+ "early_per_control_max.csv": {
+  "bytes": 364810,
+  "sha256": "d3637c22ab60ff69b86dbddcdd10317c82c36fec6b9c06a6d98a402c01d30eb5"
+ },
+ "early_summary.txt": {
+  "bytes": 262,
+  "sha256": "4463c8b00e24fa41b2af4943450ab0db1318fe67c877b2b1291dbe9ee84545f9"
+ },
+ "fetchlog_absence.jsonl": {
+  "bytes": 2057,
+  "sha256": "03c5487b3cdab54a6b394fbf2e34a56289d3705675c5679d7ebe4d6f30a11439"
+ },
+ "fetchlog_comcat.jsonl": {
+  "bytes": 11421,
+  "sha256": "b05f77962a189f293175ad00823ce28a67c85c61d36bf03ffb0a2154ee532f5d"
+ },
+ "fetchlog_dayfiles.jsonl": {
+  "bytes": 10297,
+  "sha256": "7e42bf7a4b9c825dbec795709eeff6a50ebfcb4e549e5f39e5980fdacdbabb65"
+ },
+ "fetchlog_evwf.jsonl": {
+  "bytes": 309276,
+  "sha256": "63ef49e4c3626f5c25836c6e30c1476def8981f8e6997694e6efcb39d91203da"
+ },
+ "fetchlog_geoserve.jsonl": {
+  "bytes": 773,
+  "sha256": "8e4d604fe4eeb3506f5063cc028c8c7964e29a9f0cc5ab236c1c61a19761a1a2"
+ },
+ "fetchlog_isc.jsonl": {
+  "bytes": 1572,
+  "sha256": "7e533d08ae523b2c319111dd6930f8092c0e25a570d15c3944906958a6a64d25"
+ },
+ "fetchlog_known.jsonl": {
+  "bytes": 998,
+  "sha256": "b9a42ab0de213f470a0a647606f540673ab87ca70e02dd862f9cac6d13ce7405"
+ },
+ "fetchlog_stations.jsonl": {
+  "bytes": 3903,
+  "sha256": "e8ff87da2c5230e8cd03d3f30b21aa4aa420fad5eca133752d1f91d89d8123f9"
+ },
+ "fetchlog_wf.jsonl": {
+  "bytes": 47725,
+  "sha256": "c6afa95b72f0a4da850e04102ccc4cbfb080887811951f114a50fea993555458"
+ },
+ "fetchlog_zenodo.jsonl": {
+  "bytes": 445,
+  "sha256": "65c7efe1fefa9fd31db85cb015f355d32cd98600b221a2e429ecdc4bde55d886"
+ },
+ "global_m55_window.csv": {
+  "bytes": 728,
+  "sha256": "3d05f1d8bdf2ed823b1b72a4b4bb01d56e0d904496dc4e10c14094fcd372fa5c"
+ },
+ "layers_authoritative.json": {
+  "bytes": 7041,
+  "sha256": "fa89ed493b224383242f93071262c6faed1ce0801dde00d850e1a5299761a199"
+ },
+ "mc_2020-2024_100km.csv": {
+  "bytes": 2639004,
+  "sha256": "501606b1d8eb7f4e5bf8d10a6433f1878ac49b55582a17be6ad9eb9d203cb53c"
+ },
+ "mc_2020-2024_20km.csv": {
+  "bytes": 154845,
+  "sha256": "404454fb5f53104a6a636e614eba063ac9176e8a9c5e75ce4cba53f650afe4a2"
+ },
+ "mc_2020-2024_30km.csv": {
+  "bytes": 165862,
+  "sha256": "b9fb8e687560a5a47bd706eb52fafbc414115f0656fa93c3dfa4ee9b88be74cf"
+ },
+ "mc_2020-2024_50km.csv": {
+  "bytes": 242823,
+  "sha256": "c3a17812ad1aafceadded61b2d95e591174da71f4a0eab99add2e876f5ec8719"
+ },
+ "mc_2021-2025_100km.csv": {
+  "bytes": 2566498,
+  "sha256": "3cf208effd7464503a81884d0376887e86bd6c999e6024a589fd59bccdbaf985"
+ },
+ "mc_2021-2025_20km.csv": {
+  "bytes": 276784,
+  "sha256": "65ec68991992340d209ace0b7abd670fa382006a484a8baf1dd45be4af8fffae"
+ },
+ "mc_2021-2025_30km.csv": {
+  "bytes": 288379,
+  "sha256": "3181fe784f0cc5f8763bf76f9465fff5e9377188c8f16ee15c0295d0676acafa"
+ },
+ "mc_2021-2025_50km.csv": {
+  "bytes": 348566,
+  "sha256": "645056ed0833b1224421724d8e1e179885191a1b59e7de1b725ed2867de5da27"
+ },
+ "mc_2022.06-now_100km.csv": {
+  "bytes": 1431941,
+  "sha256": "24ab4acb383c3a88720051f66addad2ef74fce08021b9e1c7f26f885af7d6ca5"
+ },
+ "mc_2022.06-now_20km.csv": {
+  "bytes": 417584,
+  "sha256": "fe63a8c76d7caed56272a887a72726f3b41817d7b08412fa50fa8f9756b84a44"
+ },
+ "mc_2022.06-now_30km.csv": {
+  "bytes": 432843,
+  "sha256": "8dfbe48a88021cf8a3356fcd3ae2b791df1a41ba5227c928d32edbaae3024302"
+ },
+ "mc_2022.06-now_50km.csv": {
+  "bytes": 477949,
+  "sha256": "8d49c76573780f3014aab30b00456faf5c0a476928f997e5b042a7e31f8e86f9"
+ },
+ "mc_gate.json": {
+  "bytes": 6683,
+  "sha256": "548a1791ac00e325695abb8f75e313fec8623f5abba5b72bb75caadd61096fc0"
+ },
+ "null_d9_jobs.json": {
+  "bytes": 39346,
+  "sha256": "63ef2500ae46253912a9297ef12a7dba3a9819ff86d99af933938a50c1cbdffb"
+ },
+ "null_jobs.json": {
+  "bytes": 77443,
+  "sha256": "33a079e5e86828d07fb0e8cafd0419c55f4173e58da513aac72413f94aefc4cb"
+ },
+ "null_per_control_max.csv": {
+  "bytes": 85043,
+  "sha256": "ea96a995aba26316a4a626f2aaa0f339f334b4bf4f896fc547488ea20e040d7e"
+ },
+ "null_summary.txt": {
+  "bytes": 681,
+  "sha256": "0988feb243b0e05e16ea964db6612b550f4bf677c125012d353f402e8b2a266c"
+ },
+ "point_v7.json": {
+  "bytes": 498,
+  "sha256": "5d8df4df45b0db5a357c7463b7acff4fc68ee9ef0d9ea0b80a6237a2f42a9c86"
+ },
+ "real_detections.json": {
+  "bytes": 841078,
+  "sha256": "733c841fcb35646a557a4cb8f26643e879d0353d9767eeecff6abc7b5ad377ca"
+ },
+ "record_15644553.json": {
+  "bytes": 5053,
+  "sha256": "02ee873f25c6bac3993b83f9178dd6d4dbf73d39da9d36144c3c6d1f28fe62b0"
+ },
+ "resp_NN.BFC.xml": {
+  "bytes": 35855,
+  "sha256": "7a531f0a86bd3b04275176ddd87c2f35163c380f57770af03905fca14f12a586"
+ },
+ "resp_NN.BMHS.xml": {
+  "bytes": 33109,
+  "sha256": "a03dafbb36183dcb5c56c03713c3d3a86e9494fd74bbf328483bb3cdd4cbc58a"
+ },
+ "resp_NN.CMK6.xml": {
+  "bytes": 100331,
+  "sha256": "b90ef345646066aa6651ae5b3f19a7eafd75e8ae63cc08b2747ba802d34d0de0"
+ },
+ "resp_NN.KVN.xml": {
+  "bytes": 33163,
+  "sha256": "44b052f5867d3a2ee5c26b686dac5787cbe6616f9f0e510203acfeaf36c5ef6b"
+ },
+ "resp_NN.PNT.xml": {
+  "bytes": 33148,
+  "sha256": "9ea2650c4fec2b429b4e833cc501360397d1cbb1121ce39d6bbc2c8f49183bca"
+ },
+ "resp_NN.REDF.xml": {
+  "bytes": 30761,
+  "sha256": "b605e0349e65c41a6c6ae869896abd8c891c9d0eef298c1bc90079d0e9f29bee"
+ },
+ "resp_NN.WASH.xml": {
+  "bytes": 35848,
+  "sha256": "8f40f5a249c7d279f1d91cd858edd00fb67f154ea2903c5a8eb7cbcc0b35048a"
+ },
+ "resp_NN.YER.xml": {
+  "bytes": 33161,
+  "sha256": "09d6e5c8ef65e121c6b5057917582241684e6d65eacaa6bd7211803c8a269a85"
+ },
+ "window_50km_alltypes.csv": {
+  "bytes": 78058,
+  "sha256": "4e68b97e453e4b2bf38929b4b91eb292e1b004bb9e161ab2424c96e27bd64e66"
+ }
+}

@@ -1,0 +1,336 @@
+{
+ "origin_time_utc": "2024-12-09T23:20:13.27",
+ "latitude": 39.1635,
+ "longitude": -119.0459,
+ "depth_km": 7.0,
+ "rms_s": 0.1787,
+ "horizontal_error_km": 3.446,
+ "horizontal_error_definition": "largest horizontal distance from the best node to any grid node with RMS <= best RMS + 0.1 s",
+ "location_method": "grid search, homogeneous Vp 6.0 km/s and Vs 3.46 km/s, station elevations; lat/lon +/- 0.5 deg in 0.01 deg, depth 0-20 km in 0.5 km; origin = mean residual (code/locate.py)",
+ "n_picks": 8,
+ "n_stations": 5,
+ "residuals_s": {
+  "NN.BFC_P": -0.153,
+  "NN.BFC_S": -0.059,
+  "NN.KVN_P": 0.126,
+  "NN.KVN_S": 0.153,
+  "NN.PNT_P": -0.074,
+  "NN.PNT_S": 0.331,
+  "NN.WASH_S": -0.266,
+  "NN.YER_S": -0.059
+ },
+ "dropped_picks": [
+  "NN.REDF S (no visible onset on a fresh-context re-check, run 2026-10-23-1839; not shipped, not used)"
+ ],
+ "magnitude": {
+  "M_cons": 1.68,
+  "rule": "M_cons = min(M_rel, Wood-Anderson ML calibrated, M_coloc)",
+  "M_rel": 2.45,
+  "wa_ml_uncalibrated": 1.59,
+  "wa_ml_calibrated": 1.68,
+  "calibration_offset": 0.0895,
+  "calibration_events": [
+   {
+    "id": "nn00889312",
+    "comcat_ml": 3.2,
+    "wa_ml": 3.048,
+    "n_sta": 8
+   },
+   {
+    "id": "nn00888992",
+    "comcat_ml": 3.0,
+    "wa_ml": 2.915,
+    "n_sta": 8
+   },
+   {
+    "id": "nn00889115",
+    "comcat_ml": 3.0,
+    "wa_ml": 2.823,
+    "n_sta": 8
+   },
+   {
+    "id": "nn00888959",
+    "comcat_ml": 2.9,
+    "wa_ml": 2.902,
+    "n_sta": 8
+   },
+   {
+    "id": "nn00889068",
+    "comcat_ml": 2.9,
+    "wa_ml": 2.806,
+    "n_sta": 8
+   },
+   {
+    "id": "nn00889009",
+    "comcat_ml": 2.7,
+    "wa_ml": 2.667,
+    "n_sta": 8
+   }
+  ],
+  "M_coloc": 1.723,
+  "n_coloc": 10,
+  "magType_reference": "ml (NN, ComCat)",
+  "wa_method": "response removed to displacement (pre-filter 0.5/1/25/40 Hz), Wood-Anderson simulated (poles -6.283+/-4.7124i, zeros 0,0, gain 2080); A = mean of the live horizontals' peak |amplitude| (mm; a constant channel is skipped: NN.YER..HHE is flat after the mainshock) in [P - 0.5 s, S + 4 s] (picked times, else predicted); station ML = log10 A + 1.11 log10(r/100) + 0.00189 (r - 100) + 3.0 (Hutton and Boore 1987); event ML = median over stations",
+  "coloc_method": "up to 10 ComCat ml events of the same UTC day within 5 km of the epicentre (nearest first): M_i + median over common stations of log10(A_cand / A_i), A as in wa_method with predicted P/S times for the ComCat events; then the median over events",
+  "wa_station_ml_and_noise_sensitivity": {
+   "NN.YER": {
+    "ML": 1.511,
+    "noise_ML": 0.983,
+    "amp_ratio": 3.38,
+    "r_km": 27.46
+   },
+   "NN.PNT": {
+    "ML": 1.744,
+    "noise_ML": 1.235,
+    "amp_ratio": 3.23,
+    "r_km": 49.32
+   },
+   "NN.BFC": {
+    "ML": 1.895,
+    "noise_ML": 1.529,
+    "amp_ratio": 2.32,
+    "r_km": 57.84
+   },
+   "NN.WASH": {
+    "ML": 1.301,
+    "noise_ML": 0.983,
+    "amp_ratio": 2.08,
+    "r_km": 66.48
+   },
+   "NN.REDF": {
+    "ML": 1.669,
+    "noise_ML": 1.552,
+    "amp_ratio": 1.31,
+    "r_km": 67.33
+   },
+   "NN.BMHS": {
+    "ML": 2.182,
+    "noise_ML": 2.133,
+    "amp_ratio": 1.12,
+    "r_km": 68.78
+   },
+   "NN.CMK6": {
+    "ML": 1.147,
+    "noise_ML": 1.236,
+    "amp_ratio": 0.82,
+    "r_km": 81.88
+   },
+   "NN.KVN": {
+    "ML": 1.46,
+    "noise_ML": 1.238,
+    "amp_ratio": 1.66,
+    "r_km": 82.98
+   }
+  },
+  "M_rel_method": "detecting template's ComCat ml + log10(median RMS ratio of detection to template windows, 2-8 Hz, 20 Hz)",
+  "coloc_events": [
+   {
+    "id": "nn00888573",
+    "comcat_ml": 3.0,
+    "n_common": 8,
+    "M": 1.685
+   },
+   {
+    "id": "nn00888621",
+    "comcat_ml": 2.6,
+    "n_common": 8,
+    "M": 1.511
+   },
+   {
+    "id": "nn00888618",
+    "comcat_ml": 2.6,
+    "n_common": 8,
+    "M": 1.723
+   },
+   {
+    "id": "nn00888610",
+    "comcat_ml": 3.1,
+    "n_common": 8,
+    "M": 1.716
+   },
+   {
+    "id": "nn00888581",
+    "comcat_ml": 3.1,
+    "n_common": 8,
+    "M": 1.754
+   },
+   {
+    "id": "nn00888607",
+    "comcat_ml": 3.24,
+    "n_common": 8,
+    "M": 3.116
+   },
+   {
+    "id": "nn00889136",
+    "comcat_ml": 2.3,
+    "n_common": 8,
+    "M": 1.746
+   },
+   {
+    "id": "nn00889287",
+    "comcat_ml": 1.4,
+    "n_common": 8,
+    "M": 1.722
+   },
+   {
+    "id": "nn00889283",
+    "comcat_ml": 2.8,
+    "n_common": 8,
+    "M": 1.899
+   },
+   {
+    "id": "nn00888591",
+    "comcat_ml": 3.0,
+    "n_common": 8,
+    "M": 1.658
+   }
+  ],
+  "wa_snr2_station_median": 1.627,
+  "computed_by": "code/mag_check.py compute (event windows in data/, data/evwin/; writes mag_check_out.json)"
+ },
+ "detection": {
+  "time_aligned_on_template_origin": "2024-12-09T23:20:12.75",
+  "template": "nn00890362",
+  "template_comcat": {
+   "lat": 39.1535,
+   "lon": -119.0559,
+   "dep": 11.9,
+   "mag": 1.5
+  },
+  "template_time": "2024-12-10T00:12:15.00",
+  "ncc": 0.6705,
+  "station_cc": {
+   "NN.BFC..HHZ": 0.6549,
+   "NN.KVN..HHZ": 0.5045,
+   "NN.PNT..HHZ": 0.837,
+   "NN.YER..HHZ": 0.6857
+  },
+  "n_template_stations": 4,
+  "detection_threshold": "9 x MAD of the template-day NCC",
+  "station_cc_note": "Pearson CC at the exact aligned lag (float64; code/null_full.py and a direct float64 check agree to < 1e-11); NCC = their mean",
+  "templates": "385 of the 415 ComCat events within 20 km of the mainshock epicentre in the search span (30 dropped for fewer than 3 stations at SNR >= 3); data/templates.json"
+ },
+ "null": {
+  "statistic": "NCC of the detecting template at 2024-12-09T23:20:12.75 = 0.6705",
+  "design": "600 whole-day controls (400 on 2024-12-10..12, 200 on 2024-12-09); stations 2-8 circularly shifted by distinct whole minutes in [10, 1430], >= 10 min apart; full pipeline (385 templates, 9 x MAD, +/-2 s declustering)",
+  "controls": 600,
+  "best_control": 0.6121,
+  "count_ge_event": 0,
+  "expected_false_count_3day_span": 0.0,
+  "efc_95pct_upper_bound": 0.015,
+  "per_control_maxima": "data/null_per_control_max.csv (raw maximum NCC of each control over all templates and samples)",
+  "summary": [
+   "event: best real detection within 0.5 s of 2024-12-09T23:20:12.75: NCC 0.6705 (template nn00890362, 23:20:12.75)",
+   "null     controls 400, declustered detections 13888, best 0.6121, >= 0.6705: 0",
+   "null_d9  controls 200, declustered detections 1466, best 0.5351, >= 0.6705: 0",
+   "ALL: controls 600, best_control 0.6121, count >= event NCC 0, EFC over the 3.0-day span = 0 x 3.0 / 600 = 0.0000 (95% upper bound 0.0150)",
+   "raw per-control maxima: best 0.6121 (null 2024-12-10), 12-09 best 0.5351, 12-10..12 best 0.6121, >= event NCC: 0; written to null_per_control_max.csv",
+   "real detections: 14677 over the 4 days (real_detections.json); 29 within +/-30 s of the event (detections_within_30s.json)"
+  ],
+  "detector_numerics": "float64 FFT numerator and direct per-window norms (run 2026-10-26-1727); the earlier float32 running-sum version gave spurious CCs in the FFT chunk holding the mainshock",
+  "early_hours_sensitivity": {
+   "design": "2024-12-09T23:13:31..2024-12-10T01:13:31 (first 2 h of the span), 3000 controls, YER fixed, other 7 stations circularly shifted >= 12000 samples (10 min) apart within the window, seed 20261026; code/early_null.py",
+   "event_E2": 0.6706,
+   "best_control": 0.6887,
+   "count_ge_event": 1,
+   "efc_early": 0.012,
+   "rule": "count / 3000 x 36 (72 h / 2 h)",
+   "per_control_maxima": "data/early_per_control_max.csv",
+   "note": "a stated sensitivity, not the criterion's null; it is below 0.05"
+  }
+ },
+ "checks": {
+  "S/P": [
+   "NN.PNT",
+   2.32
+  ],
+  "local_hour_PST": 15,
+  "teleseism_hits": [],
+  "comcat_live_30s_50km": [],
+  "isc_30s_0.45deg": "none (HTTP 204, 2026-10-26T19:13:26Z)",
+  "geoserve_authoritative": [
+   "NN"
+  ],
+  "epicentre_vs_template_km": 1.41,
+  "comcat_live_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=csv&starttime=2024-12-09T23:19:43&endtime=2024-12-09T23:20:44&latitude=39.1635&longitude=-119.0459&maxradiuskm=50",
+  "isc_url": "https://www.isc.ac.uk/fdsnws/event/1/query?starttime=2024-12-09T23:19:43&endtime=2024-12-09T23:20:44&latitude=39.1635&longitude=-119.0459&maxradius=0.45&format=text",
+  "geoserve_url": "https://earthquake.usgs.gov/ws/geoserve/regions.json?latitude=39.1635&longitude=-119.0459&type=authoritative",
+  "nonearthquake_types_within_50km_event_centred_2019-12-09_to_now": [
+   [
+    "2025-06-28T00:45:33.090Z",
+    "explosion",
+    "2",
+    "13 km NNW of Stagecoach, Nevada"
+   ],
+   [
+    "2025-06-30T00:30:42.062Z",
+    "explosion",
+    "1.9",
+    "13 km NNW of Stagecoach, Nevada"
+   ]
+  ],
+  "S/P_filter": "causal 4-pole Butterworth 2-15 Hz (as the picks)",
+  "mainshock": "nn00888580 (ComCat preferred id; event-page alias nn00888563), 2024-12-09T23:08:31.577 UTC, mwr 5.71",
+  "daytime_cluster": [
+   "ComCat earthquakes 2020-2025 within 50 km: n 2059, fraction in 08-17 PST 0.348 (uniform 0.417)",
+   "   by local hour 0..23: [109, 112, 106, 82, 88, 86, 81, 69, 75, 63, 72, 55, 60, 55, 70, 86, 93, 87, 93, 96, 102, 118, 102, 99]",
+   "added detections (declustered, > 30 s from ComCat), search span: n 1821, fraction in 08-17 PST 0.334 (uniform 0.417)",
+   "   by local hour 0..23: [97, 95, 65, 81, 76, 60, 59, 59, 40, 41, 55, 37, 48, 31, 43, 89, 105, 120, 120, 101, 112, 89, 106, 92]",
+   "the event: 2024-12-09 23:20 UTC = 15:20 PST"
+  ],
+  "comcat_live_fetch_time": "2026-10-26T19:13:26Z (header only; includedeleted=true also header only)",
+  "fetchlog": "data/fetchlog_absence.jsonl"
+ },
+ "waveform_urls_event_window": {
+  "NN.BFC": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=BFC&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.BMHS": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=BMHS&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.CMK6": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=CMK6&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.KVN": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=KVN&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.PNT": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=PNT&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.REDF": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=REDF&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.WASH": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=WASH&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404",
+  "NN.YER": "https://service.earthscope.org/fdsnws/dataselect/1/query?net=NN&sta=YER&loc=--&cha=HH?&starttime=2024-12-09T23:19:42&endtime=2024-12-09T23:21:12&nodata=404"
+ },
+ "station_coordinates": {
+  "NN.BFC": [
+   38.8938,
+   -119.6094,
+   1744.0
+  ],
+  "NN.BMHS": [
+   39.423,
+   -119.7648,
+   1392.0
+  ],
+  "NN.CMK6": [
+   39.31018,
+   -118.11932,
+   1332.0
+  ],
+  "NN.KVN": [
+   39.0484,
+   -118.1012,
+   1829.0
+  ],
+  "NN.PNT": [
+   39.0891,
+   -119.5997,
+   2076.0
+  ],
+  "NN.REDF": [
+   39.39,
+   -119.7647,
+   1466.0
+  ],
+  "NN.WASH": [
+   39.3339,
+   -119.7792,
+   1528.0
+  ],
+  "NN.YER": [
+   38.9852,
+   -119.2406,
+   1857.0
+  ]
+ }
+}
