@@ -1,0 +1,16 @@
+Table Snapshot — qoblib-portfolio-ten-assets-exact
+
+Primary Status Source:
+URL: https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/solutions/README.md
+Fetched (UTC): 2026-10-27T16:10:00Z
+HTTP Status: 200
+SHA-256: 05a6d23392d960fb16028cc1e9ba8d7547aa445a0e3f30c433f5f4acab56c09a
+
+Extracted Cell Record:
+| a010_t10_orig_b004_l1e-03 | -8397 | best known | reference | — |
+
+Published Solution Metadata:
+- File: solutions/po_a010_t10_orig_b004_l1e-3.bst.sol
+- SHA-256: d0cb3e4a86d01ac2b2884e3275df8219bb1d38dae908830784417b0d4e4b30ea
+- Published numerical bound: -15342.65126758
+- Closed optimality bound: -8397 (exact integer global optimum)
