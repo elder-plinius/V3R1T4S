@@ -31,7 +31,7 @@ object is rejected.
 
 ## Not claimed
 - No claim about any other N, any other Packomania table, or optimality of this
-  configuration (it is a better packing, not a proven optimum; only N <= 14 and N = 19 are proven, with computer-assisted proofs for N = 15, 16, 17, 18 and 20 announced on 11-Oct-2026).
+  configuration (it is a better packing, not a proven optimum; only N <= 13 and N = 19 are marked proven on Packomania, with computer-assisted proofs for N = 15 announced on 11-Oct-2026).
 - No submission has been made to Packomania; the claim is for the verified
   construction only.
 - The pending-queue caveat above is part of the claim's scope.
