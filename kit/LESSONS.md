@@ -43,6 +43,9 @@ Nine days of daily agent waves on real targets produced these. Each line cost so
 
 ## Mechanics
 16. Write a checker from the definition first and test it on one known positive and one known negative.
+    For empirical benchmarks, also reproduce the published baseline before searching for improvements. Freeze
+    the data, scoring unit and tolerances first: token-level and word-level scores, for example, are not comparable.
+    A failed baseline is a comparison to diagnose, never a reason to weaken the reference.
 17. For a stepping or periodic cipher, check your simulator on the solved sibling before attacking.
 18. Exact re-encryption (or an independent checker PASS) plus the criterion, literally, is the bar. A language
     model saying the text "reads well" is never evidence.
