@@ -1,0 +1,13 @@
+Table Snapshot — ihtp-ihtc2024-hidden-m-instances-upper-bounds (m21)
+
+Primary Status Source:
+URL: https://ihtc2024.github.io/ihtp/index.html
+Fetched (UTC): 2026-10-27T15:11:07Z
+HTTP Status: 200
+SHA-256: 2b69fe2e2b6e0a978472aa3916c8c53a774e223e666f20966156802f9ce2f363
+
+Instance m21 Benchmark Cell Record:
+- Published BKS on status page: 25157 (sol_m21.json)
+- Submitted feasible upper bound (object/sol_m21_24934.json): 24934
+- Constraint status: Total violations = 0 across all 9 hard constraint categories
+- Strict improvement vs published BKS: -223 points
