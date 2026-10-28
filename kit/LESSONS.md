@@ -32,6 +32,9 @@ Nine days of daily agent waves on real targets produced these. Each line cost so
 11. Small, resumable runs. Anything over ~10 minutes runs as a background job with `nice`, a hard time cap
     (`timeout`), a checkpoint file every few minutes and its PID written down. Kill only that PID; never
     `pkill`/`killall` (an operator incident came from a pattern kill).
+    CPU priority and time limits do not cap memory: parallel workers can exhaust RAM before either helps.
+    Measure one worker first, include parent data and concurrent jobs in the total, and follow rule 10's memory
+    budget. Prefer streaming or chunking large grids; repeat the measurement before scaling the input or worker count.
 12. Before the budget ends, write where every live job stands (PID, checkpoint path, next step) in the dossier.
 13. Covered search spaces go in the dossier only when exhaustive, uncapped and stated exactly.
 
