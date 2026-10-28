@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+card-guessing-yes-no-feedback-exact,P+_{2,11..16},"exact reduced rationals for n = 11..16 in object/values.txt (n=11: 137912544707079557/45735706696680000 through n=16: 287519620950287971428538054033/95596617538340806567680000000)",open,2026-10-28T18:25:00Z,object/values.txt,2a8d85e9086da4c9061dd18c8474d3bb017d7f9ce0dc050d646ee8558c427a2f
