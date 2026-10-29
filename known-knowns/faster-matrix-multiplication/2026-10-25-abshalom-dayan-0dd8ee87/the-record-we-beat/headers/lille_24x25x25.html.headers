@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Date: Sat, 24 Oct 2026 22:35:56 GMT
+Server: Apache
+Strict-Transport-Security: max-age=15768000
+Content-Type: text/html
+Content-Length: 15602
+Last-Modified: Wed, 20 Aug 2025 12:30:58 GMT
+ETag: "3cf2-63ccb25149503"
+Accept-Ranges: bytes
+Vary: Accept-Encoding
+Cache-Control: max-age=0
+Expires: Sat, 24 Oct 2026 22:35:56 GMT
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self' https://*.univ-lille.fr https://grist.numerique.gouv.fr;
+X-Content-Type-Options: nosniff
+
