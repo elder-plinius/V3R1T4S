@@ -1,0 +1,4 @@
+rules 1-2 only (OVERLAP ignored): SIGNAL / USABLE = 26 / 221 = 0.1176 (Wilson 95 % 0.082-0.167)
+fake SIGNAL 14 / 437 usable fake origins = 0.0320; expected chance 7.1; excess 0.086 of USABLE
+400 fake catalogues (seed 20261024): mean 0.0316, best 0.0550; real beats all: True
+real OVERLAP quakes that would be SIGNAL without rule 3: 0; real classes without rule 3: {'NO_DATA': 18, 'NO_GAUGE': 25, 'NO_SIGNAL': 194, 'SIGNAL': 26, 'SIGNAL_UNDECIDED': 1}

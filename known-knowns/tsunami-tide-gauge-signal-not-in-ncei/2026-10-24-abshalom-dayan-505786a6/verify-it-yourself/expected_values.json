@@ -1,0 +1,15 @@
+{
+ "S": 26,
+ "USABLE": 188,
+ "frac": 0.1383,
+ "wilson": [
+  0.096,
+  0.195
+ ],
+ "over264": 0.0985,
+ "upper264": 0.3864,
+ "listed_signal": 24,
+ "listed_usable": 86,
+ "unlisted_signal": 2,
+ "fake_rate": 0.027
+}

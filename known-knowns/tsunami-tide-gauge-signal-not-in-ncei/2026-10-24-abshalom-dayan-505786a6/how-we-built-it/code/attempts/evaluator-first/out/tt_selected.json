@@ -1,0 +1,5 @@
+{
+ "dmin": 10,
+ "c": -6.1,
+ "rule": "largest calibration share within +/-10 min; ties to smaller |c|"
+}

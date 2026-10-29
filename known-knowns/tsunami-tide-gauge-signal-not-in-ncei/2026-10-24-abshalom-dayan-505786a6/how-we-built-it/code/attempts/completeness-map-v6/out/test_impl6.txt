@@ -1,0 +1,6 @@
+IMPL6=False: 30-min gap filled 30/30, 45-min gap filled 30/45
+IMPL6=True: 30-min gap filled 30/30, 45-min gap filled 0/45
+30-min gap linear: True
+IMPL6=False: stuck on a series whose gridded copy has a 82-min flat run -> True
+IMPL6=True: stuck on a series whose gridded copy has a 82-min flat run -> False
+IMPL6=True: 60 identical raw values -> stuck True

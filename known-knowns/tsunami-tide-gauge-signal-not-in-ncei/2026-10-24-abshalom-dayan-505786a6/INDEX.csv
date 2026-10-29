@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+tsunami-tide-gauge-signal-not-in-ncei,p3: completeness map,26/188 = 0.138 scored quakes pass the per-gauge test (fake-origin rate 0.027); 24 of 26 NCEI-listed,no p3 claim; NCEI lists 115 of the 264 quakes (230 events 2015-2026),2026-10-24T19:20:31Z,object/map.csv,505786a6949b74e25914b9fbed6e8e95728432f7102eb49cea0b630d69e63d13

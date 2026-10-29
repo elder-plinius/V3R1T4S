@@ -1,0 +1,4 @@
+numpy==1.26.4
+scipy==1.17.1
+pandas==2.1.4
+scikit-fmm==2025.06.23

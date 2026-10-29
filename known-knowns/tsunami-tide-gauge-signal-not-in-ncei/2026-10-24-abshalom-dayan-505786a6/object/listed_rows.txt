@@ -1,0 +1,411 @@
+  us10001rvu M7.5 53 km SE of Kokopo, Papua New  NCEI 5581 TAREKUKURE, TARO ISLAN -> tare    eta   56.1 ncei_tt 71 r 6.947 arr 71.48 r>5_arrival_outside_10
+  us20002whh M6.7 150 km WNW of Malango, Solomon NCEI 5589 HONIARA, GUADALCANAL   -> solo    eta   23.0 ncei_tt 32 r 4.144 arr None r<=5
+  us20002yaw M7.0 80 km WNW of Lata, Solomon Isl NCEI 5588 HONIARA, GUADALCANAL   -> solo    eta   66.5 ncei_tt None r 3.888 arr None r<=5
+  us200030aq M6.9 Fox Islands, Aleutian Islands, NCEI 5591 ATKA ISLAND, AK        -> atka    eta   58.7 ncei_tt 75 r 2.75 arr None r<=5
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 VALPARAISO             -> valp    eta   20.9 ncei_tt 21 r 103.653 arr 23.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 TALTAL                 -> talt3   eta   58.8 ncei_tt 67 r None arr None NO_DATA
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 TALCAHUANO             -> talc2   eta   64.3 ncei_tt 85 r None arr None NO_DATA
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 SAN ANTONIO            -> sano2   eta   31.0 ncei_tt None r 86.391 arr 31.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 QUIRIQUINA ISLAND      -> quir2   eta   76.9 ncei_tt 82 r 31.808 arr 84.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 JUAN FERNANDEZ ISLANDS -> juan2   eta   58.6 ncei_tt 52 r 51.395 arr 31.47 r>5_arrival_outside_10
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 HUASCO                 -> huas3   eta   33.9 ncei_tt 25 r 63.532 arr 28.47 DETECT_ctrl_fail
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 CORRAL                 -> corr2   eta  106.0 ncei_tt 113 r 16.89 arr 123.47 r>5_arrival_outside_10
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 COQUIMBO               -> coqu    eta   28.2 ncei_tt 10 r 221.626 arr 19.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 CONSTITUCION           -> const   eta   50.7 ncei_tt 53 r 30.89 arr 56.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 CHANARAL               -> chnr    eta   56.0 ncei_tt 51 r 50.667 arr 53.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 CALDERA                -> cald    eta   47.5 ncei_tt 37 r 31.745 arr 42.47 DETECT_ctrl_fail
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 BUCALEMU               -> buca3   eta   37.0 ncei_tt None r None arr None NO_DATA
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 ANTOFAGASTA            -> anto2   eta   70.4 ncei_tt 66 r 40.067 arr 71.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 CORONEL                -> crnl2   eta   70.0 ncei_tt 73 r 18.449 arr 81.47 r>5_arrival_outside_10
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 LEBU                   -> lebu    eta   61.8 ncei_tt 61 r 26.249 arr 69.47 DETECT_ctrl_fail
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 PAPOSO                 -> papo    eta   59.7 ncei_tt 49 r 15.122 arr 60.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 QUEULE                 -> quel    eta  108.6 ncei_tt 114 r 10.077 arr 133.47 r>5_arrival_outside_10
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 QUINTERO               -> qtro    eta   17.7 ncei_tt 21 r 95.402 arr 21.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 MEJILLONES             -> meji    eta   78.9 ncei_tt 75 r 17.002 arr 86.47 PASS
+  us20003k7a M8.3 48 km W of Illapel, Chile      NCEI 5590 PICHIDANGUI            -> pich2   eta   10.3 ncei_tt None r None arr None NO_DATA
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 VALPARAISO             -> valp3   eta   23.1 ncei_tt 21 r None arr None NO_DATA
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 TALTAL                 -> talt2   eta   59.4 ncei_tt 67 r 3.713 arr 42.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 TALCAHUANO             -> talc2   eta   64.0 ncei_tt 85 r 2.449 arr 34.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 SAN FELIX              -> sanf    eta   80.0 ncei_tt 78 r 2.202 arr None r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 SAN ANTONIO            -> sano2   eta   30.3 ncei_tt None r 3.68 arr 4.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 QUIRIQUINA ISLAND      -> quir2   eta   73.4 ncei_tt 82 r 3.445 arr 43.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 JUAN FERNANDEZ ISLANDS -> juan2   eta   61.5 ncei_tt 52 r 1.538 arr None r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 HUASCO                 -> huas    eta   34.4 ncei_tt 25 r None arr None NO_DATA
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 CORRAL                 -> corr2   eta  105.0 ncei_tt 113 r 5.926 arr 75.75 r>5_arrival_outside_10
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 COQUIMBO               -> coqu2   eta   25.8 ncei_tt 10 r 2.774 arr 12.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 CONSTITUCION           -> const   eta   50.8 ncei_tt 53 r 4.964 arr 31.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 CHANARAL               -> chnr2   eta   53.4 ncei_tt 51 r 2.031 arr None r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 CALDERA                -> cald2   eta   46.0 ncei_tt 37 r 4.142 arr 75.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 BUCALEMU               -> buca    eta   40.3 ncei_tt None r 5.142 arr 20.75 r>5_arrival_outside_10
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 ANTOFAGASTA            -> anto    eta   70.0 ncei_tt 66 r 2.979 arr 56.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 CORONEL                -> crnl    eta   72.7 ncei_tt 73 r 7.228 arr 58.75 r>5_arrival_outside_10
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 LEBU                   -> lebu    eta   62.1 ncei_tt 61 r 4.592 arr 32.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 PAPOSO                 -> papo    eta   57.8 ncei_tt 49 r 4.604 arr 30.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 QUEULE                 -> quel2   eta  107.6 ncei_tt 114 r 7.3 arr 77.75 r>5_arrival_outside_10
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 QUINTERO               -> qtro    eta   19.0 ncei_tt 21 r 3.002 arr None r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 MEJILLONES             -> meji2   eta   76.3 ncei_tt 75 r 4.544 arr 74.75 r<=5
+  us20003kfj M6.5 54 km WNW of Illapel, Chile    NCEI 5590 PICHIDANGUI            -> pich3   eta   11.2 ncei_tt None r 2.736 arr None r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 VALPARAISO             -> valp3   eta   19.2 ncei_tt 21 r None arr None NO_DATA
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 TALTAL                 -> talt2   eta   57.3 ncei_tt 67 r 4.022 arr 27.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 TALCAHUANO             -> talc2   eta   62.3 ncei_tt 85 r 2.384 arr 62.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 SAN FELIX              -> sanf    eta   80.6 ncei_tt 78 r 2.186 arr None r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 SAN ANTONIO            -> sano2   eta   28.9 ncei_tt None r 2.314 arr 9.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 QUIRIQUINA ISLAND      -> quir2   eta   74.7 ncei_tt 82 r 2.601 arr 56.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 JUAN FERNANDEZ ISLANDS -> juan2   eta   59.1 ncei_tt 52 r 1.536 arr None r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 HUASCO                 -> huas    eta   32.8 ncei_tt 25 r None arr None NO_DATA
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 CORRAL                 -> corr2   eta   99.3 ncei_tt 113 r 5.843 arr 112.55 r>5_arrival_outside_10
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 COQUIMBO               -> coqu2   eta   24.8 ncei_tt 10 r 2.72 arr None r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 CONSTITUCION           -> const   eta   48.9 ncei_tt 53 r 4.948 arr 22.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 CHANARAL               -> chnr2   eta   55.0 ncei_tt 51 r 2.025 arr None r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 CALDERA                -> cald2   eta   44.6 ncei_tt 37 r 4.382 arr 56.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 BUCALEMU               -> buca    eta   34.0 ncei_tt None r 5.095 arr 5.55 r>5_arrival_outside_10
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 ANTOFAGASTA            -> anto    eta   68.7 ncei_tt 66 r 2.541 arr 41.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 CORONEL                -> crnl    eta   66.9 ncei_tt 73 r 6.854 arr 44.55 r>5_arrival_outside_10
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 LEBU                   -> lebu    eta   60.1 ncei_tt 61 r 4.156 arr 39.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 PAPOSO                 -> papo    eta   57.2 ncei_tt 49 r 4.534 arr 40.55 r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 QUEULE                 -> quel2   eta  106.6 ncei_tt 114 r 6.867 arr 80.55 r>5_arrival_outside_10
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 QUINTERO               -> qtro    eta   18.0 ncei_tt 21 r 2.991 arr None r<=5
+  us20003kfv M6.7 61 km WNW of Illapel, Chile    NCEI 5590 MEJILLONES             -> meji2   eta   76.3 ncei_tt 75 r 4.441 arr 59.55 r<=5
+  us10003x8t M6.9 81 km NW of Coquimbo, Chile    NCEI 5592 HUASCO                 -> huas    eta   12.1 ncei_tt None r None arr None NO_DATA
+  us10003x9g M6.9 85 km NW of Coquimbo, Chile    NCEI 5592 COQUIMBO               -> coqu    eta   10.1 ncei_tt None r 14.7 arr 4.68 DETECT_ctrl_fail
+  us10003x9g M6.9 85 km NW of Coquimbo, Chile    NCEI 5592 HUASCO                 -> huas3   eta   11.8 ncei_tt None r 3.268 arr 35.68 r<=5
+  us10004u1y M7.8 southwest of Sumatra, Indonesi NCEI 5598 PADANG, SUMATRA        -> bupo    eta   93.4 ncei_tt None r None arr None NO_DATA
+  us10004u1y M7.8 southwest of Sumatra, Indonesi NCEI 5598 COCOS ISLAND (KEELING) -> cocb    eta   59.9 ncei_tt 90 r 15.197 arr 85.2 r>5_arrival_outside_10
+  us10004u1y M7.8 southwest of Sumatra, Indonesi NCEI 5598 TANABALAH, SUMATRA     -> tnbl    eta   61.7 ncei_tt 68 r 2.21 arr None r<=5
+  us10004u1y M7.8 southwest of Sumatra, Indonesi NCEI 5598 TELUKDALAM, SUMATRA    -> telu    eta   65.2 ncei_tt None r 2.21 arr None r<=5
+  us20005e8t M6.9 82 km NNW of Port-Olry, Vanuat NCEI 5953 PORT VILA, EFATE ISLAN -> vanu    eta   43.1 ncei_tt None r 2.8 arr None r<=5
+  us20005e8t M6.9 82 km NNW of Port-Olry, Vanuat NCEI 5953 LUGANVILLE             -> luga    eta   16.5 ncei_tt None r 3.018 arr 55.13 r<=5
+  us10006d5h M7.2 southeast of the Loyalty Islan NCEI 5604 LENAKEL, TANNA         -> lena    eta   54.2 ncei_tt None r 14.647 arr 71.4 r>5_arrival_outside_10
+  us10006exl M7.4 South Georgia Island region    NCEI 5605 KING EDWARD IS, SOUTH  -> kepo    eta   45.1 ncei_tt None r 9.5 arr 54.63 PASS
+  us10006jbi M7.0 175 km NE of Gisborne, New Zea NCEI 5606 LOTTIN POINT           -> lott    eta   15.4 ncei_tt 0 r 21.066 arr 10.05 DETECT_ctrl_fail
+  us10006jbi M7.0 175 km NE of Gisborne, New Zea NCEI 5606 KOROTITI BAY, GREAT BA -> gbit    eta   58.3 ncei_tt 52 r 13.26 arr 60.05 PASS
+  us10006jbi M7.0 175 km NE of Gisborne, New Zea NCEI 5606 GISBORNE               -> gist    eta   40.9 ncei_tt 70 r 2.227 arr None r<=5
+  us10006jbi M7.0 175 km NE of Gisborne, New Zea NCEI 5606 TAURANGA               -> taut    eta   54.1 ncei_tt 46 r 4.922 arr 60.05 r<=5
+  us10007b88 M6.9 35 km ESE of Namie, Japan      NCEI 5618 MERA                   -> mera    eta   62.3 ncei_tt None r 10.128 arr 66.18 PASS
+  us10007b88 M6.9 35 km ESE of Namie, Japan      NCEI 5618 OFUNATO                -> ofun    eta   55.3 ncei_tt None r 18.788 arr 46.18 PASS
+  us10007b88 M6.9 35 km ESE of Namie, Japan      NCEI 5618 BOSO                   -> mera    eta   62.3 ncei_tt 39 r 10.128 arr 66.18 PASS
+  us10007b88 M6.9 35 km ESE of Namie, Japan      NCEI 5618 HANASAKI               -> hana    eta   96.7 ncei_tt None r 4.24 arr 129.18 r<=5
+  us10007b88 M6.9 35 km ESE of Namie, Japan      NCEI 5618 OMAEZAKI               -> omae    eta   88.4 ncei_tt None r 4.134 arr 61.18 r<=5
+  us10007b88 M6.9 35 km ESE of Namie, Japan      NCEI 5618 KUSHIMOTO              -> kusm    eta  104.0 ncei_tt None r 2.762 arr None r<=5
+  us10007c4w M6.9 156 km SSW of Puerto El Triunf NCEI 5620 ACAJUTLA               -> acaj    eta   43.0 ncei_tt None r 2.901 arr 65.22 r<=5
+  us20007z80 M7.8 69 km WSW of Kirakira, Solomon NCEI 5630 HONIARA, GUADALCANAL   -> solo    eta   35.2 ncei_tt None r 38.927 arr 50.23 r>5_arrival_outside_10
+  us20007z80 M7.8 69 km WSW of Kirakira, Solomon NCEI 5630 LUGANVILLE             -> luga    eta   74.6 ncei_tt None r 16.192 arr 96.23 r>5_arrival_outside_10
+  us20007z80 M7.8 69 km WSW of Kirakira, Solomon NCEI 5630 LATA WHARF, NENDO IS,  -> lata    eta   38.8 ncei_tt None r None arr None NO_DATA
+  us20007z80 M7.8 69 km WSW of Kirakira, Solomon NCEI 5630 LITZLITZ, MALEKULA ISL -> litz    eta   84.8 ncei_tt None r None arr None NO_DATA
+  us20007zbn M6.5 79 km WSW of Kirakira, Solomon NCEI 5630 HONIARA, GUADALCANAL   -> solo    eta   36.0 ncei_tt None r 2.318 arr 10.88 r<=5
+  us20007zbn M6.5 79 km WSW of Kirakira, Solomon NCEI 5630 LUGANVILLE             -> luga    eta   73.1 ncei_tt None r None arr None NO_DATA
+  us20007zbn M6.5 79 km WSW of Kirakira, Solomon NCEI 5630 LATA WHARF, NENDO IS,  -> lata    eta   35.6 ncei_tt None r None arr None NO_DATA
+  us20007zbn M6.5 79 km WSW of Kirakira, Solomon NCEI 5630 LITZLITZ, MALEKULA ISL -> litz    eta   80.7 ncei_tt None r 12.347 arr 71.88 DETECT_ctrl_undecided
+  us20007zlq M6.9 92 km WSW of Kirakira, Solomon NCEI 5630 HONIARA, GUADALCANAL   -> solo    eta   33.7 ncei_tt None r None arr None NO_DATA
+  us20007zlq M6.9 92 km WSW of Kirakira, Solomon NCEI 5630 LUGANVILLE             -> luga    eta   75.0 ncei_tt None r None arr None NO_DATA
+  us20007zlq M6.9 92 km WSW of Kirakira, Solomon NCEI 5630 LATA WHARF, NENDO IS,  -> lata    eta   38.3 ncei_tt None r None arr None NO_DATA
+  us20007zlq M6.9 92 km WSW of Kirakira, Solomon NCEI 5630 LITZLITZ, MALEKULA ISL -> litz    eta   82.3 ncei_tt None r None arr None NO_DATA
+  us10007mn3 M7.6 41 km SW of Quellón, Chile     NCEI 5637 PUERTO MELINKA         -> pmel    eta   28.4 ncei_tt None r 19.276 arr 24.55 DETECT_ctrl_fail
+  us10007mn3 M7.6 41 km SW of Quellón, Chile     NCEI 5637 BAHIA MANSA            -> bmsa2   eta  100.7 ncei_tt None r 2.977 arr None r<=5
+  us10007mn3 M7.6 41 km SW of Quellón, Chile     NCEI 5637 ANCUD, ISLA DE CHILOE  -> ancu    eta  111.6 ncei_tt None r 6.434 arr 163.55 r>5_arrival_outside_10
+  us10007mn3 M7.6 41 km SW of Quellón, Chile     NCEI 5637 CASTRO, ISLA DE CHILOE -> cstr    eta   96.5 ncei_tt None r 18.176 arr 149.55 r>5_arrival_outside_10
+  us10007pj6 M6.9 225 km SW of Nadi, Fiji        NCEI 5639 SUVA, KING'S WHARF     -> viti    eta   25.6 ncei_tt None r None arr None NO_DATA
+  us10007pj6 M6.9 225 km SW of Nadi, Fiji        NCEI 5639 LENAKEL, TANNA         -> lena    eta   75.5 ncei_tt None r 10.61 arr 86.5 r>5_arrival_outside_10
+  us10008kce M6.9 40 km W of Valparaíso, Chile   NCEI 5647 PICHIDANGUI            -> pich3   eta   12.0 ncei_tt None r 4.499 arr 28.5 r<=5
+  us10008kce M6.9 40 km W of Valparaíso, Chile   NCEI 5647 SAN ANTONIO            -> sano    eta   10.0 ncei_tt None r 5.355 arr 21.5 r>5_arrival_outside_10
+  us20009ynd M6.6 11 km ENE of Kos, Greece       NCEI 5655 SYROS                  -> syro    eta   74.6 ncei_tt None r 6.795 arr None r>5_arrival_outside_10
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 PUERTO CHIAPAS         -> chia    eta   58.5 ncei_tt None r None arr None NO_DATA
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 LAZARO CARDENAS        -> laza2   eta   85.4 ncei_tt None r None arr None NO_DATA
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 ZIHUATANEJO            -> zihu2   eta   80.9 ncei_tt None r None arr None NO_DATA
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 ACAPULCO               -> acya    eta   62.0 ncei_tt None r 3.02 arr 34.68 r<=5
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 SALINA CRUZ            -> sali2   eta   51.8 ncei_tt 40 r 29.224 arr 28.68 r>5_arrival_outside_10
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 PUERTO ANGEL           -> ptan    eta   26.3 ncei_tt None r None arr None NO_DATA
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 HUATULCO               -> huat2   eta   27.2 ncei_tt None r 49.996 arr 11.68 r>5_arrival_outside_10
+  us2000ahv0 M8.2 2017 Tehuantepec, Mexico Earth NCEI 5658 ACAJUTLA               -> acaj    eta   77.1 ncei_tt None r 7.573 arr 96.68 r>5_arrival_outside_10
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5663 LIFOU ISLAND           -> lifo    eta   18.9 ncei_tt None r 0.448 arr None r<=5
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5663 MARE ISLAND            -> mare    eta   17.3 ncei_tt None r 0.587 arr None r<=5
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5663 LENAKEL, TANNA         -> lena    eta   18.6 ncei_tt None r 13.082 arr 29.87 r>5_arrival_outside_10
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5663 OUINNE                 -> ouin2   eta   36.4 ncei_tt None r None arr None NO_DATA
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5664 LIFOU ISLAND           -> lifo    eta   18.9 ncei_tt None r 0.448 arr None r<=5
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5664 LENAKEL, TANNA         -> lena    eta   18.6 ncei_tt None r 13.082 arr 29.87 r>5_arrival_outside_10
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5664 MARE ISLAND            -> mare    eta   17.3 ncei_tt None r 0.587 arr None r<=5
+  us1000aytk M6.7 132 km E of Tadine, New Caledo NCEI 5664 OUINNE                 -> ouin2   eta   36.4 ncei_tt None r None arr None NO_DATA
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5663 LIFOU ISLAND           -> lifo    eta   17.7 ncei_tt None r 0.248 arr None r<=5
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5663 MARE ISLAND            -> mare2   eta   14.7 ncei_tt None r None arr None NO_DATA
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5663 LENAKEL, TANNA         -> lena    eta   20.0 ncei_tt None r 4.116 arr 30.05 r<=5
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5663 OUINNE                 -> ouin2   eta   34.0 ncei_tt None r None arr None NO_DATA
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5664 LIFOU ISLAND           -> lifo    eta   17.7 ncei_tt None r 0.248 arr None r<=5
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5664 LENAKEL, TANNA         -> lena    eta   20.0 ncei_tt None r 4.116 arr 30.05 r<=5
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5664 MARE ISLAND            -> mare2   eta   14.7 ncei_tt None r None arr None NO_DATA
+  us1000azjt M6.6 101 km E of Tadine, New Caledo NCEI 5664 OUINNE                 -> ouin2   eta   34.0 ncei_tt None r None arr None NO_DATA
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5670 THIO                   -> thio    eta   39.7 ncei_tt None r 4.37 arr None r<=5
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5670 OUINNE                 -> ouin2   eta   31.9 ncei_tt None r None arr None NO_DATA
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5670 MARE ISLAND            -> mare2   eta   11.5 ncei_tt None r None arr None NO_DATA
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5670 LIFOU ISLAND           -> lifo    eta   14.8 ncei_tt None r 5.722 arr 23.97 PASS
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5670 LENAKEL, TANNA         -> lena    eta   18.9 ncei_tt None r 4.079 arr 69.97 r<=5
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5670 LITZLITZ, MALEKULA ISL -> litz    eta   59.7 ncei_tt None r 2.576 arr None r<=5
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5723 OUINNE                 -> ouin2   eta   31.9 ncei_tt None r None arr None NO_DATA
+  us2000brgk M6.6 74 km E of Tadine, New Caledon NCEI 5724 OUINNE                 -> ouin2   eta   31.9 ncei_tt None r None arr None NO_DATA
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5670 THIO                   -> thio    eta   38.7 ncei_tt None r 5.821 arr 59.52 r>5_arrival_outside_10
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5670 OUINNE                 -> ouin2   eta   33.2 ncei_tt None r None arr None NO_DATA
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5670 MARE ISLAND            -> mare2   eta   10.2 ncei_tt None r None arr None NO_DATA
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5670 LIFOU ISLAND           -> lifo    eta   10.9 ncei_tt None r 254.257 arr 21.52 r>5_arrival_outside_10
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5670 LENAKEL, TANNA         -> lena    eta   15.4 ncei_tt None r 10.026 arr 25.52 r>5_arrival_outside_10
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5670 LITZLITZ, MALEKULA ISL -> litz    eta   58.4 ncei_tt None r 2.866 arr None r<=5
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5723 OUINNE                 -> ouin2   eta   33.2 ncei_tt None r None arr None NO_DATA
+  us2000brlf M7.0 85 km ENE of Tadine, New Caled NCEI 5724 OUINNE                 -> ouin2   eta   33.2 ncei_tt None r None arr None NO_DATA
+  us1000c2zy M7.5 203 km NNE of Barra Patuca, Ho NCEI 5672 CARRIE BOW CAY         -> cabc    eta   41.7 ncei_tt None r 2.486 arr None r<=5
+  us1000c2zy M7.5 203 km NNE of Barra Patuca, Ho NCEI 5672 GEORGE TOWN            -> geor    eta   18.9 ncei_tt None r 7.346 arr 49.45 r>5_arrival_outside_10
+  us1000c2zy M7.5 203 km NNE of Barra Patuca, Ho NCEI 5672 PUERTO MORELOS         -> pumo2   eta   48.9 ncei_tt None r 3.32 arr 65.45 r<=5
+  us1000c2zy M7.5 203 km NNE of Barra Patuca, Ho NCEI 5672 PORT OF BELIZE         -> pobe    eta   46.5 ncei_tt None r 3.97 arr 100.45 r<=5
+  us1000c2zy M7.5 203 km NNE of Barra Patuca, Ho NCEI 5672 SIAN KAAN              -> sian2   eta   38.5 ncei_tt 42 r None arr None NO_DATA
+  us2000cjfy M7.1 37 km W of Atiquipa, Peru      NCEI 5675 SAN JUAN               -> sjua2   eta   14.9 ncei_tt None r None arr None NO_DATA
+  us2000cjfy M7.1 37 km W of Atiquipa, Peru      NCEI 5675 MATARANI               -> mata    eta   31.5 ncei_tt None r 2.456 arr None r<=5
+  us2000cmy3 M7.9 261 km SE of Chiniak, Alaska   NCEI 5673 KODIAK ISLAND, AK      -> kodi    eta   61.6 ncei_tt None r 15.944 arr 78.33 r>5_arrival_outside_10
+  us2000cmy3 M7.9 261 km SE of Chiniak, Alaska   NCEI 5673 SEWARD, AK             -> sewa2   eta   85.2 ncei_tt None r 21.427 arr 96.33 r>5_arrival_outside_10
+  us2000cmy3 M7.9 261 km SE of Chiniak, Alaska   NCEI 5673 SITKA, AK              -> sitk    eta   86.6 ncei_tt None r 12.25 arr 102.33 r>5_arrival_outside_10
+  us2000cmy3 M7.9 261 km SE of Chiniak, Alaska   NCEI 5673 YAKUTAT, AK            -> yaku2   eta   84.2 ncei_tt None r None arr None NO_DATA
+  us2000cmy3 M7.9 261 km SE of Chiniak, Alaska   NCEI 5673 ELFIN COVE, AK         -> elak2   eta   84.7 ncei_tt None r None arr None NO_DATA
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 LAUTOKA                -> levu    eta  128.4 ncei_tt None r 4.779 arr 139.07 r<=5
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 SUVA, KING'S WHARF     -> viti    eta   95.7 ncei_tt None r 3.641 arr 143.07 r<=5
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 PORT VILA, EFATE ISLAN -> vanu    eta   41.2 ncei_tt None r 9.321 arr 94.07 r>5_arrival_outside_10
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 LENAKEL, TANNA         -> lena    eta   28.2 ncei_tt None r 21.386 arr 41.07 r>5_arrival_outside_10
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 OUINNE                 -> ouin2   eta   45.3 ncei_tt None r None arr None NO_DATA
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 LIFOU ISLAND           -> lifo    eta   26.4 ncei_tt None r 0.315 arr None r<=5
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 MARE ISLAND            -> mare2   eta   25.1 ncei_tt None r None arr None NO_DATA
+  us1000gjaz M7.1 238 km ESE of Tadine, New Cale NCEI 5688 LITZLITZ, MALEKULA ISL -> litz    eta   70.0 ncei_tt None r 3.501 arr None r<=5
+  us1000hclz M6.5 171 km E of Tadine, New Caledo NCEI 5725 OUINNE                 -> ouin2   eta   40.1 ncei_tt None r None arr None NO_DATA
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 LE CASTELLA            -> lcst    eta   33.1 ncei_tt 56 r 9.461 arr 46.13 r>5_arrival_outside_10
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 CROTONE                -> CR08    eta   34.2 ncei_tt 61 r 6.419 arr 64.13 r>5_arrival_outside_10
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 PORTOMASO              -> ptma    eta   79.9 ncei_tt None r None arr None NO_DATA
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 MESSINA, SICILY        -> ME13    eta   45.2 ncei_tt None r 2.333 arr None r<=5
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 REGGIO CALABRIA        -> RC09    eta   44.5 ncei_tt None r 6.148 arr 49.13 PASS
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 OTRANTO                -> OT15    eta   49.6 ncei_tt 41 r 2.987 arr None r<=5
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 CATANIA, SICILY        -> CT03    eta   42.8 ncei_tt 104 r 3.792 arr 63.13 r<=5
+  us1000hhb1 M6.8 32 km SW of Lithakiá, Greece   NCEI 5690 LAMPEDUSA              -> LA23    eta  114.8 ncei_tt 180 r 3.872 arr None r<=5
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 LAUTOKA                -> levu    eta  133.2 ncei_tt None r 6.892 arr 144.87 r>5_arrival_outside_10
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 HIENGHENE              -> hien2   eta   51.1 ncei_tt None r None arr None NO_DATA
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 LIFOU ISLAND           -> lifo    eta   21.5 ncei_tt None r 0.711 arr None r<=5
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 MARE ISLAND            -> mare    eta   21.0 ncei_tt 25 r 43.167 arr 25.87 PASS
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 NOUMEA                 -> numb2   eta   74.0 ncei_tt None r None arr None NO_DATA
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 OUINNE                 -> ouin2   eta   39.7 ncei_tt None r None arr None NO_DATA
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 THIO                   -> thio    eta   45.5 ncei_tt None r 19.386 arr 51.87 PASS
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 LENAKEL, TANNA         -> lena    eta   21.1 ncei_tt None r 40.215 arr 24.87 DETECT_ctrl_fail
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 LUGANVILLE             -> luga    eta   66.1 ncei_tt None r 11.681 arr 109.87 r>5_arrival_outside_10
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 PORT VILA, EFATE ISLAN -> vanu    eta   36.1 ncei_tt None r 28.932 arr 55.87 r>5_arrival_outside_10
+  us1000i2gt M7.5 166 km ESE of Tadine, New Cale NCEI 5698 LITZLITZ, MALEKULA ISL -> litz    eta   63.9 ncei_tt None r 7.176 arr None r>5_arrival_outside_10
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 LAUTOKA                -> levu    eta  130.6 ncei_tt None r 4.642 arr 127.93 r<=5
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 HIENGHENE              -> hien    eta   57.8 ncei_tt None r 5.277 arr 27.93 r>5_arrival_outside_10
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 LIFOU ISLAND           -> lifo    eta   23.8 ncei_tt None r 0.249 arr None r<=5
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 MARE ISLAND            -> mare2   eta   22.3 ncei_tt 25 r None arr None NO_DATA
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 NOUMEA                 -> numb2   eta   75.1 ncei_tt None r None arr None NO_DATA
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 OUINNE                 -> ouin2   eta   42.2 ncei_tt None r None arr None NO_DATA
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 THIO                   -> Thio2   eta   49.8 ncei_tt None r None arr None NO_DATA
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 LENAKEL, TANNA         -> lena    eta   25.2 ncei_tt None r 4.706 arr -4.07 r<=5
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 LUGANVILLE             -> luga    eta   69.4 ncei_tt None r 8.682 arr 50.93 r>5_arrival_outside_10
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 PORT VILA, EFATE ISLAN -> vanu    eta   38.2 ncei_tt None r 5.441 arr 8.93 r>5_arrival_outside_10
+  us1000i2k0 M6.6 199 km ESE of Tadine, New Cale NCEI 5698 LITZLITZ, MALEKULA ISL -> litz    eta   67.0 ncei_tt None r 8.292 arr 44.93 r>5_arrival_outside_10
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 RAOUL ISLAND, BOAT COV -> rbct    eta   11.1 ncei_tt None r 10.254 arr 15.93 PASS
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 RAOUL ISLAND, BOAT COV -> rfrt    eta   14.5 ncei_tt None r 12.281 arr 19.93 PASS
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 RAOUL ISLAND, FISHING  -> rbct    eta   11.1 ncei_tt None r 10.254 arr 15.93 PASS
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 RAOUL ISLAND, FISHING  -> rfrt    eta   14.5 ncei_tt None r 12.281 arr 19.93 PASS
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 KOROTITI BAY, GREAT BA -> gbit    eta  104.0 ncei_tt None r 10.038 arr 109.93 PASS
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 LOTTIN POINT           -> lott    eta   72.8 ncei_tt None r 9.857 arr 81.93 PASS
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 NORTH CAPE             -> ncpt    eta   97.1 ncei_tt None r 4.987 arr 114.93 r<=5
+  us6000417i M7.3 Kermadec Islands, New Zealand  NCEI 5711 TAURANGA               -> taut    eta  108.8 ncei_tt None r 2.751 arr None r<=5
+  us60004zhq M6.9 152 km SW of Labuan, Indonesia NCEI 5870 SEBESI ISLAND          -> sebe    eta   45.7 ncei_tt None r None arr None NO_DATA
+  us60006bjl M7.1 141 km NW of Ternate, Indonesi NCEI 5733 BITUNG                 -> bitu    eta   13.5 ncei_tt None r 11.715 arr 33.33 r>5_arrival_outside_10
+  us60007idc M7.7 123 km NNW of Lucea, Jamaica   NCEI 5740 GEORGE TOWN            -> cagt    eta   14.8 ncei_tt 11 r None arr None NO_DATA
+  us60007idc M7.7 123 km NNW of Lucea, Jamaica   NCEI 5740 PUERTO MORELOS         -> pumo    eta   74.1 ncei_tt None r 6.392 arr 117.6 r>5_arrival_outside_10
+  us70008fi4 M7.5 221 km SSE of Severo-Kuril’sk, NCEI 5746 VODOPADNAYA, KAMCHATKA -> vodo    eta   37.3 ncei_tt 45 r None arr None NO_DATA
+  us700098qd M6.5 91 km S of Néa Anatolí, Greece NCEI 5747 ALEXANDRIA             -> alex2   eta   59.8 ncei_tt None r None arr None NO_DATA
+  us700098qd M6.5 91 km S of Néa Anatolí, Greece NCEI 5747 ALEXANDRIA             -> alex    eta   63.2 ncei_tt None r None arr None NO_DATA
+  us6000ae4n M7.4 south of the Kermadec Islands  NCEI 5750 KOROTITI BAY, GREAT BA -> gbit    eta   86.2 ncei_tt None r 10.132 arr 93.12 DETECT_ctrl_fail
+  us6000ae4n M7.4 south of the Kermadec Islands  NCEI 5750 NORTH CAPE             -> ncpt    eta   88.1 ncei_tt None r 7.986 arr 100.12 r>5_arrival_outside_10
+  us6000ae4n M7.4 south of the Kermadec Islands  NCEI 5750 RAOUL ISLAND, FISHING  -> rbct    eta   27.3 ncei_tt None r 4.722 arr 83.12 r<=5
+  us6000ae4n M7.4 south of the Kermadec Islands  NCEI 5750 RAOUL ISLAND, FISHING  -> rfrt    eta   30.6 ncei_tt None r 5.631 arr None r>5_arrival_outside_10
+  us6000ae4n M7.4 south of the Kermadec Islands  NCEI 5750 RAOUL ISLAND, BOAT COV -> rbct    eta   27.3 ncei_tt None r 4.722 arr 83.12 r<=5
+  us6000ae4n M7.4 south of the Kermadec Islands  NCEI 5750 RAOUL ISLAND, BOAT COV -> rfrt    eta   30.6 ncei_tt None r 5.631 arr None r>5_arrival_outside_10
+  us7000asvb M7.8 2020 Perryville, Alaska Earthq NCEI 5753 SAND POINT, AK         -> sdpt    eta  105.7 ncei_tt None r 21.356 arr 76.27 r>5_arrival_outside_10
+  us7000asvb M7.8 2020 Perryville, Alaska Earthq NCEI 5753 UNALASKA, DUTCH HARBOR -> dutc    eta  121.5 ncei_tt None r 1.818 arr None r<=5
+  us6000c9hg M7.6 2020 Sand Point, Alaska Earthq NCEI 5755 SAND POINT, AK         -> sdpt    eta  147.4 ncei_tt 135 r 61.203 arr 119.37 r>5_arrival_outside_10
+  us6000c9hg M7.6 2020 Sand Point, Alaska Earthq NCEI 5755 UNALASKA, DUTCH HARBOR -> dutc    eta  105.9 ncei_tt None r 7.933 arr 117.37 r>5_arrival_outside_10
+  us6000c9hg M7.6 2020 Sand Point, Alaska Earthq NCEI 5755 ATKA ISLAND, AK        -> atka    eta  121.7 ncei_tt None r 8.444 arr 146.37 r>5_arrival_outside_10
+  us7000c7y0 M7.0 13 km NNE of Néon Karlovásion, NCEI 5757 SYROS                  -> syro    eta   38.0 ncei_tt None r None arr None NO_DATA
+  us7000c7y0 M7.0 13 km NNE of Néon Karlovásion, NCEI 5757 BODRUM                 -> bodr    eta   61.3 ncei_tt None r 5.012 arr 111.55 r>5_arrival_outside_10
+  us7000c7y0 M7.0 13 km NNE of Néon Karlovásion, NCEI 5757 KOS, CYCLADES          -> kos1    eta   63.0 ncei_tt None r 8.974 arr 68.55 DETECT_ctrl_fail
+  us7000c7y0 M7.0 13 km NNE of Néon Karlovásion, NCEI 5757 KOS MARINA             -> kos1    eta   63.0 ncei_tt None r 8.974 arr 68.55 DETECT_ctrl_fail
+  us7000c7y0 M7.0 13 km NNE of Néon Karlovásion, NCEI 5757 PLOMARI                -> plom    eta   47.7 ncei_tt None r 15.672 arr 50.55 DETECT_ctrl_fail
+  us6000d3i9 M6.7 146 km WNW of Corral, Chile    NCEI 5760 BAHIA MANSA            -> bmsa2   eta   25.4 ncei_tt None r 8.274 arr 38.77 r>5_arrival_outside_10
+  us7000d2rx M6.9 South Shetland Islands         NCEI 5762 PRAT BASE (CHILE)      -> prat    eta   28.6 ncei_tt None r 5.359 arr None r>5_arrival_outside_10
+  us7000d2rx M6.9 South Shetland Islands         NCEI 5762 O'HIGGINS BASE (CHILE) -> ohig    eta   35.9 ncei_tt None r 13.069 arr 47.15 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 LENAKEL, TANNA         -> lena    eta   39.2 ncei_tt 56 r 91.975 arr 50.08 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 MARE ISLAND            -> mare2   eta   38.0 ncei_tt 47 r None arr None NO_DATA
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 OUINNE                 -> ouin2   eta   57.2 ncei_tt 67 r None arr None NO_DATA
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 LIFOU ISLAND           -> lifo    eta   39.2 ncei_tt 47 r 2.078 arr None r<=5
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 SUVA, KING'S WHARF     -> viti    eta   80.0 ncei_tt 90 r 15.933 arr 93.08 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 NORFOLK ISLAND         -> kjni    eta   73.2 ncei_tt 85 r 15.946 arr 91.08 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 PORT VILA, EFATE ISLAN -> vanu    eta   54.1 ncei_tt 79 r 42.638 arr 99.08 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 THIO                   -> Thio2   eta   65.5 ncei_tt 75 r None arr None NO_DATA
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 HIENGHENE              -> hien    eta   69.9 ncei_tt 88 r 14.19 arr 96.08 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 NOUMEA                 -> numb2   eta   90.3 ncei_tt 96 r None arr None NO_DATA
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 OUVEA                  -> ouve    eta   51.7 ncei_tt 136 r 8.007 arr None r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 LAUTOKA                -> levu    eta  121.1 ncei_tt 118 r 10.503 arr 122.08 PASS
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 LUGANVILLE             -> luga    eta   85.4 ncei_tt 129 r 17.116 arr 132.08 r>5_arrival_outside_10
+  us6000dg77 M7.7 southeast of the Loyalty Islan NCEI 5763 LITZLITZ, MALEKULA ISL -> litz    eta   81.9 ncei_tt None r 13.257 arr 114.08 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 TAURANGA               -> taut    eta   57.0 ncei_tt None r 4.242 arr 75.43 r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 KOROTITI BAY, GREAT BA -> gbit    eta   63.6 ncei_tt None r 11.015 arr 73.43 PASS
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 LOTTIN POINT           -> lott    eta   19.3 ncei_tt None r 24.514 arr 22.43 DETECT_ctrl_fail
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 RAOUL ISLAND, BOAT COV -> rbct    eta   64.2 ncei_tt None r 7.47 arr 117.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 RAOUL ISLAND, BOAT COV -> rfrt    eta   65.0 ncei_tt None r 5.498 arr 48.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 RAOUL ISLAND, FISHING  -> rbct    eta   64.2 ncei_tt None r 7.47 arr 117.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5769 RAOUL ISLAND, FISHING  -> rfrt    eta   65.0 ncei_tt None r 5.498 arr 48.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 RAOUL ISLAND, BOAT COV -> rbct    eta   64.2 ncei_tt None r 7.47 arr 117.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 RAOUL ISLAND, BOAT COV -> rfrt    eta   65.0 ncei_tt None r 5.498 arr 48.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 RAOUL ISLAND, FISHING  -> rbct    eta   64.2 ncei_tt None r 7.47 arr 117.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 RAOUL ISLAND, FISHING  -> rfrt    eta   65.0 ncei_tt None r 5.498 arr 48.43 r>5_arrival_outside_10
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 KOROTITI BAY, GREAT BA -> gbit    eta   63.6 ncei_tt None r 11.015 arr 73.43 PASS
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 LOTTIN POINT           -> lott    eta   19.3 ncei_tt None r 24.514 arr 22.43 DETECT_ctrl_fail
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5770 NORTH CAPE             -> ncpt    eta   83.9 ncei_tt None r 4.857 arr 104.43 r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 KOROTITI BAY, GREAT BA -> gbit    eta   63.6 ncei_tt 115 r 11.015 arr 73.43 PASS
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 EAST CAPE              -> lott    eta   19.3 ncei_tt 86 r 24.514 arr 22.43 DETECT_ctrl_fail
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 NORTH CAPE             -> ncpt    eta   83.9 ncei_tt 119 r 4.857 arr 104.43 r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 AUCKLAND               -> auct    eta  120.5 ncei_tt 201 r 1.549 arr None r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 GISBORNE               -> gist    eta   35.5 ncei_tt None r 2.017 arr None r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 PORT NAPIER            -> napt    eta   69.9 ncei_tt 140 r 2.742 arr None r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 SUMNER HEAD            -> sumt    eta  114.0 ncei_tt 268 r 2.692 arr None r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 TAURANGA               -> taut    eta   57.0 ncei_tt 129 r 4.242 arr 75.43 r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 WELLINGTON             -> wlgt    eta   76.2 ncei_tt 234 r 1.957 arr None r<=5
+  us7000dffl M7.3 182 km NE of Gisborne, New Zea NCEI 5771 OWENGA, CHATHAM ISLAND -> chit    eta  107.3 ncei_tt 163 r 4.619 arr 133.43 r<=5
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5769 KOROTITI BAY, GREAT BA -> gbit    eta  115.1 ncei_tt None r 5.96 arr 144.62 r>5_arrival_outside_10
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5769 LOTTIN POINT           -> lott    eta   81.1 ncei_tt None r 3.405 arr 116.62 r<=5
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5770 KOROTITI BAY, GREAT BA -> gbit    eta  115.1 ncei_tt None r 5.96 arr 144.62 r>5_arrival_outside_10
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5770 LOTTIN POINT           -> lott    eta   81.1 ncei_tt None r 3.405 arr 116.62 r<=5
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5771 NUKUALOFA (NUKU'ALOFA) -> nkfa    eta   95.5 ncei_tt 75 r 7.214 arr None r>5_arrival_outside_10
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5771 KOROTITI BAY, GREAT BA -> gbit    eta  115.1 ncei_tt 115 r 5.96 arr 144.62 r>5_arrival_outside_10
+  us7000dfk3 M7.4 Kermadec Islands, New Zealand  NCEI 5771 EAST CAPE              -> lott    eta   81.1 ncei_tt 86 r 3.405 arr 116.62 r<=5
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5769 KOROTITI BAY, GREAT BA -> gbit    eta  110.0 ncei_tt None r 16.833 arr 82.45 r>5_arrival_outside_10
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5769 LOTTIN POINT           -> lott    eta   77.5 ncei_tt None r 6.316 arr 126.45 r>5_arrival_outside_10
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5770 KOROTITI BAY, GREAT BA -> gbit    eta  110.0 ncei_tt None r 16.833 arr 82.45 r>5_arrival_outside_10
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5770 LOTTIN POINT           -> lott    eta   77.5 ncei_tt None r 6.316 arr 126.45 r>5_arrival_outside_10
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5771 NUKUALOFA (NUKU'ALOFA) -> nkfa    eta   95.8 ncei_tt 75 r 11.4 arr 82.45 r>5_arrival_outside_10
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5771 KOROTITI BAY, GREAT BA -> gbit    eta  110.0 ncei_tt 115 r 16.833 arr 82.45 r>5_arrival_outside_10
+  us7000dflf M8.1 2021 Kermadec Islands, New Zea NCEI 5771 EAST CAPE              -> lott    eta   77.5 ncei_tt 86 r 6.316 arr 126.45 r>5_arrival_outside_10
+  us7000dfq2 M6.5 Kermadec Islands region        NCEI 5770 RAOUL ISLAND, BOAT COV -> rfrt    eta   11.5 ncei_tt None r None arr None NO_DATA
+  us7000dfq2 M6.5 Kermadec Islands region        NCEI 5770 RAOUL ISLAND, FISHING  -> rfrt    eta   11.5 ncei_tt None r None arr None NO_DATA
+  us7000dfq2 M6.5 Kermadec Islands region        NCEI 5771 NUKUALOFA (NUKU'ALOFA) -> nkfa    eta   82.3 ncei_tt 75 r 3.596 arr 58.02 r<=5
+  ak0219neiszm M8.2 2021 Chignik, Alaska Earthquak NCEI 5799 SAND POINT, AK         -> sdpt    eta  119.8 ncei_tt None r 62.464 arr 90.18 r>5_arrival_outside_10
+  ak0219neiszm M8.2 2021 Chignik, Alaska Earthquak NCEI 5799 UNALASKA, DUTCH HARBOR -> dutc    eta  144.8 ncei_tt None r 7.503 arr 158.18 r>5_arrival_outside_10
+  ak0219neiszm M8.2 2021 Chignik, Alaska Earthquak NCEI 5799 KODIAK, AK             -> kodi    eta  123.6 ncei_tt None r 9.688 arr 139.18 r>5_arrival_outside_10
+  us6000f48v M7.1 60 km ENE of Pondaguitan, Phil NCEI 5801 DAVAO                  -> davo    eta   23.7 ncei_tt None r 1.35 arr None r<=5
+  us6000f48v M7.1 60 km ENE of Pondaguitan, Phil NCEI 5801 BITUNG                 -> bitu    eta   56.5 ncei_tt None r 0.606 arr None r<=5
+  us6000f4ly M7.5 South Sandwich Islands region  NCEI 5802 KING EDWARD IS, SOUTH  -> kepo    eta   80.5 ncei_tt None r None arr None NO_DATA
+  us6000f53e M8.1 2021 South Sandwich Islands Ea NCEI 5802 KING EDWARD IS, SOUTH  -> kepo    eta   89.3 ncei_tt None r None arr None NO_DATA
+  us6000f8yd M6.7 South Sandwich Islands region  NCEI 5802 KING EDWARD IS, SOUTH  -> kepo    eta  104.0 ncei_tt None r None arr None NO_DATA
+  us6000h519 M7.3 57 km ENE of Namie, Japan      NCEI 5832 OFUNATO                -> ofun    eta   44.0 ncei_tt None r 3.505 arr 67.5 r<=5
+  us7000gyj0 M6.9 284 km ESE of Tadine, New Cale NCEI 5833 OUINNE                 -> ouin2   eta   47.1 ncei_tt None r None arr None NO_DATA
+  us7000gyj0 M6.9 284 km ESE of Tadine, New Cale NCEI 5833 MARE ISLAND            -> mare2   eta   28.4 ncei_tt None r None arr None NO_DATA
+  us7000gyj0 M6.9 284 km ESE of Tadine, New Cale NCEI 5833 LIFOU ISLAND           -> lifo    eta   29.7 ncei_tt None r 0.937 arr None r<=5
+  us7000gyj0 M6.9 284 km ESE of Tadine, New Cale NCEI 5834 MARE ISLAND            -> mare2   eta   28.4 ncei_tt None r None arr None NO_DATA
+  us7000gymk M7.0 southeast of the Loyalty Islan NCEI 5833 OUINNE                 -> ouin2   eta   47.3 ncei_tt None r None arr None NO_DATA
+  us7000gymk M7.0 southeast of the Loyalty Islan NCEI 5833 MARE ISLAND            -> mare2   eta   28.0 ncei_tt None r None arr None NO_DATA
+  us7000gymk M7.0 southeast of the Loyalty Islan NCEI 5833 LIFOU ISLAND           -> lifo    eta   29.3 ncei_tt None r 0.51 arr None r<=5
+  us7000gymk M7.0 southeast of the Loyalty Islan NCEI 5834 MARE ISLAND            -> mare2   eta   28.0 ncei_tt None r None arr None NO_DATA
+  us7000ip0l M7.3 205 km ESE of Neiafu, Tonga    NCEI 5866 NUKUALOFA (NUKU'ALOFA) -> nkfa    eta   53.4 ncei_tt None r 4.603 arr 47.23 r<=5
+  us7000ip0l M7.3 205 km ESE of Neiafu, Tonga    NCEI 5866 PAGO PAGO, AMERICAN SA -> pago    eta   38.2 ncei_tt None r 14.899 arr 50.23 r>5_arrival_outside_10
+  us7000irfb M7.0 18 km SW of Malango, Solomon I NCEI 5867 HONIARA, GUADALCANAL   -> solo    eta   18.4 ncei_tt None r 9.136 arr 6.9 r>5_arrival_outside_10
+  us7000jkbd M7.0 Kermadec Islands region        NCEI 5876 RAOUL ISLAND, BOAT COV -> rbct    eta   10.9 ncei_tt None r 13.353 arr 18.0 PASS
+  us7000jkbd M7.0 Kermadec Islands region        NCEI 5876 RAOUL ISLAND, BOAT COV -> rfrt    eta   10.9 ncei_tt None r 8.269 arr 20.0 PASS
+  us7000jkbd M7.0 Kermadec Islands region        NCEI 5876 RAOUL ISLAND, FISHING  -> rbct    eta   10.9 ncei_tt None r 13.353 arr 18.0 PASS
+  us7000jkbd M7.0 Kermadec Islands region        NCEI 5876 RAOUL ISLAND, FISHING  -> rfrt    eta   10.9 ncei_tt None r 8.269 arr 20.0 PASS
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 THIO                   -> Thio2   eta   61.1 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 MARE ISLAND            -> mare2   eta   30.4 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 OUINNE                 -> ouin2   eta   53.4 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 LIFOU ISLAND           -> lifo    eta   35.1 ncei_tt None r 0.709 arr None r<=5
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 LENAKEL, TANNA         -> lena    eta   36.3 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 PORT VILA, EFATE ISLAN -> vanu    eta   49.6 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 HIENGHENE              -> hien    eta   65.0 ncei_tt None r 9.683 arr 101.95 r>5_arrival_outside_10
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 LAUTOKA                -> levu    eta  130.0 ncei_tt None r 10.29 arr 136.95 DETECT_ctrl_fail
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5881 LITZLITZ, MALEKULA ISL -> litz    eta   78.4 ncei_tt None r 4.988 arr None r<=5
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5882 THIO                   -> Thio2   eta   61.1 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5882 OUINNE                 -> ouin2   eta   53.4 ncei_tt None r None arr None NO_DATA
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5882 LIFOU ISLAND           -> lifo    eta   35.1 ncei_tt None r 0.709 arr None r<=5
+  us6000kd0n M7.7 southeast of the Loyalty Islan NCEI 5882 MARE ISLAND            -> mare2   eta   30.4 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 THIO                   -> Thio2   eta   59.1 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 MARE ISLAND            -> mare2   eta   31.6 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 OUINNE                 -> ouin2   eta   51.4 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 LIFOU ISLAND           -> lifo    eta   33.4 ncei_tt None r 0.422 arr None r<=5
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 LENAKEL, TANNA         -> lena    eta   32.9 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 PORT VILA, EFATE ISLAN -> vanu    eta   47.5 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 HIENGHENE              -> hien    eta   63.3 ncei_tt None r 1.495 arr None r<=5
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 LAUTOKA                -> levu    eta  130.7 ncei_tt None r 1.821 arr None r<=5
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5881 LITZLITZ, MALEKULA ISL -> litz    eta   76.4 ncei_tt None r 1.982 arr None r<=5
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5882 THIO                   -> Thio2   eta   59.1 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5882 OUINNE                 -> ouin2   eta   51.4 ncei_tt None r None arr None NO_DATA
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5882 LIFOU ISLAND           -> lifo    eta   33.4 ncei_tt None r 0.422 arr None r<=5
+  us6000kdce M7.1 southeast of the Loyalty Islan NCEI 5882 MARE ISLAND            -> mare2   eta   31.6 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 THIO                   -> Thio2   eta   58.3 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 MARE ISLAND            -> mare2   eta   31.0 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 OUINNE                 -> ouin2   eta   49.6 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 LIFOU ISLAND           -> lifo    eta   32.2 ncei_tt None r 0.422 arr None r<=5
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 LENAKEL, TANNA         -> lena    eta   34.1 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 PORT VILA, EFATE ISLAN -> vanu    eta   46.0 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 HIENGHENE              -> hien    eta   62.3 ncei_tt None r 1.493 arr None r<=5
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 LAUTOKA                -> levu    eta  124.7 ncei_tt None r 1.816 arr None r<=5
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5881 LITZLITZ, MALEKULA ISL -> litz    eta   73.9 ncei_tt None r 1.983 arr None r<=5
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5882 THIO                   -> Thio2   eta   58.3 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5882 OUINNE                 -> ouin2   eta   49.6 ncei_tt None r None arr None NO_DATA
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5882 LIFOU ISLAND           -> lifo    eta   32.2 ncei_tt None r 0.422 arr None r<=5
+  us6000kdcu M6.5 southeast of the Loyalty Islan NCEI 5882 MARE ISLAND            -> mare2   eta   31.0 ncei_tt None r None arr None NO_DATA
+  us7000kg30 M7.2 2023 Sand Point, Alaska Earthq NCEI 5883 SAND POINT, AK         -> sdpt    eta   65.8 ncei_tt None r 9.995 arr 68.65 PASS
+  us6000lq00 M6.7 97 km E of Port-Olry, Vanuatu  NCEI 5902 LITZLITZ, MALEKULA ISL -> litz    eta   14.7 ncei_tt None r 10.652 arr 27.48 r>5_arrival_outside_10
+  us7000lff4 M7.6 19 km E of Gamut, Philippines  NCEI 5903 MALAKAL ISLAND, CAROLI -> mala    eta   70.6 ncei_tt None r 4.732 arr 94.93 r<=5
+  us7000lff4 M7.6 19 km E of Gamut, Philippines  NCEI 5903 LEGASPI                -> lega    eta   66.9 ncei_tt None r 3.217 arr None r<=5
+  us7000lff4 M7.6 19 km E of Gamut, Philippines  NCEI 5903 DAVAO                  -> davo    eta   48.8 ncei_tt None r 3.954 arr 56.93 r<=5
+  us7000lff4 M7.6 19 km E of Gamut, Philippines  NCEI 5903 BITUNG                 -> bitu    eta   76.5 ncei_tt None r 2.662 arr None r<=5
+  us7000lftp M6.6 47 km ENE of Hinatuan, Philipp NCEI 5903 MALAKAL ISLAND, CAROLI -> mala    eta   75.5 ncei_tt None r 1.729 arr None r<=5
+  us7000lftp M6.6 47 km ENE of Hinatuan, Philipp NCEI 5903 LEGASPI                -> lega    eta   62.1 ncei_tt None r 1.771 arr None r<=5
+  us7000lftp M6.6 47 km ENE of Hinatuan, Philipp NCEI 5903 DAVAO                  -> davo    eta   43.8 ncei_tt None r 1.496 arr None r<=5
+  us7000lftp M6.6 47 km ENE of Hinatuan, Philipp NCEI 5903 BITUNG                 -> bitu    eta   71.5 ncei_tt None r 2.013 arr 62.13 r<=5
+  us7000lfxx M6.9 34 km ENE of Aras-asan, Philip NCEI 5903 MALAKAL ISLAND, CAROLI -> mala    eta   76.7 ncei_tt None r 2.23 arr None r<=5
+  us7000lfxx M6.9 34 km ENE of Aras-asan, Philip NCEI 5903 LEGASPI                -> lega    eta   55.7 ncei_tt None r 1.725 arr None r<=5
+  us7000lfxx M6.9 34 km ENE of Aras-asan, Philip NCEI 5903 DAVAO                  -> davo    eta   44.8 ncei_tt None r 0.383 arr None r<=5
+  us7000lfxx M6.9 34 km ENE of Aras-asan, Philip NCEI 5903 BITUNG                 -> bitu    eta   74.6 ncei_tt None r 0.965 arr None r<=5
+  us7000lgwp M7.1 118 km S of Isangel, Vanuatu   NCEI 5904 PORT VILA, EFATE ISLAN -> vanu    eta   29.7 ncei_tt None r 7.366 arr 8.5 r>5_arrival_outside_10
+  us7000lgwp M7.1 118 km S of Isangel, Vanuatu   NCEI 5904 LENAKEL, TANNA         -> lena    eta   13.4 ncei_tt None r 6.615 arr 22.5 PASS
+  us7000lgwp M7.1 118 km S of Isangel, Vanuatu   NCEI 5904 MARE ISLAND            -> mare2   eta   21.2 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 LONGDONG               -> tlon    eta   30.4 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 ISHIGAKIKO             -> ishig   eta   24.9 ncei_tt None r 15.357 arr 14.8 r>5_arrival_outside_10
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 WENGANG, CHIAYI        -> tdog    eta   95.6 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 WENGANG, CHIAYI        -> twun    eta   95.6 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 WUSHI                  -> twus    eta   21.0 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 LINSHANBI              -> tlin    eta   58.5 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 DONGSHI, CHIAYI        -> tdog    eta   95.6 ncei_tt None r None arr None NO_DATA
+  us7000m9g4 M7.4 15 km S of Hualien City, Taiwa NCEI 5919 DONGSHI, CHIAYI        -> twun    eta   95.6 ncei_tt None r None arr None NO_DATA
+  us6000n8tq M7.2 10 km WSW of Atiquipa, Peru    NCEI 5921 SAN JUAN               -> sjua2   eta   20.1 ncei_tt 34 r None arr None NO_DATA
+  us6000nith M7.1 2024 Hyuganada Sea, Japan Eart NCEI 5922 ABURATSU               -> abur    eta   19.2 ncei_tt None r 29.277 arr 11.08 PASS
+  us6000nith M7.1 2024 Hyuganada Sea, Japan Eart NCEI 5922 TOSA-SHIMIZU           -> tosa    eta   46.0 ncei_tt None r 20.16 arr 35.08 r>5_arrival_outside_10
+  us6000nith M7.1 2024 Hyuganada Sea, Japan Eart NCEI 5922 KUSHIMOTO              -> kusm    eta   61.1 ncei_tt None r 7.9 arr 60.08 PASS
+  us6000nith M7.1 2024 Hyuganada Sea, Japan Eart NCEI 5922 MERA                   -> mera    eta  104.3 ncei_tt None r 5.979 arr 100.08 DETECT_ctrl_fail
+  nc75095651 M7.0 2024 Offshore Cape Mendocino,  NCEI 5940 ARENA COVE, CA         -> aren    eta   27.2 ncei_tt None r 4.733 arr 37.65 r<=5
+  us7000nzf3 M7.3 24 km WNW of Port-Vila, Vanuat NCEI 5942 LENAKEL, TANNA         -> lena    eta   30.3 ncei_tt None r 8.81 arr 34.58 PASS
+  us6000pjny M6.8 15 km SE of Miyazaki, Japan    NCEI 5948 TOSA-SHIMIZU           -> tosa    eta   38.8 ncei_tt None r 5.82 arr 43.47 PASS
+  us6000pjny M6.8 15 km SE of Miyazaki, Japan    NCEI 5948 ABURATSU               -> abur    eta   19.0 ncei_tt None r 7.72 arr 28.47 DETECT_ctrl_fail
+  us7000pmem M6.7 170 km WSW of Riverton, New Ze NCEI 5996 PUYSEGUR               -> puyt    eta   31.4 ncei_tt None r 4.039 arr 37.82 r<=5
+  us7000pntq M7.0 61 km SSE of Pangai, Tonga     NCEI 6000 NUKUALOFA (NUKU'ALOFA) -> nkfa    eta   40.9 ncei_tt None r 3.153 arr 63.17 r<=5
+  us7000pntq M7.0 61 km SSE of Pangai, Tonga     NCEI 6000 NIUE                   -> niue    eta   28.6 ncei_tt None r None arr None NO_DATA
+  us7000pwkn M7.4 2025 Drake Passage Earthquake  NCEI 6024 VERNADSKY FARADAY, ARG -> ver1    eta  115.3 ncei_tt None r None arr None NO_DATA
+  us7000pwkn M7.4 2025 Drake Passage Earthquake  NCEI 6024 PRAT BASE (CHILE)      -> prat    eta   97.8 ncei_tt None r None arr None NO_DATA
+  us7000qd1y M7.3 2025 Sand Point, Alaska Earthq NCEI 6037 SAND POINT, AK         -> sdpt    eta   55.0 ncei_tt None r 8.433 arr 73.32 r>5_arrival_outside_10
+  us6000qw60 M8.8 2025 Kamchatka Peninsula, Russ NCEI 6044 NIKOLSKOE, BERING I, C -> nksk    eta   37.9 ncei_tt None r None arr None NO_DATA
+  us6000qw60 M8.8 2025 Kamchatka Peninsula, Russ NCEI 6044 PETROPAVLOVSK, KAMCHAT -> petr    eta   16.4 ncei_tt None r 10.796 arr 38.13 r>5_arrival_outside_10
+  us6000qw60 M8.8 2025 Kamchatka Peninsula, Russ NCEI 6044 VODOPADNAYA, KAMCHATKA -> vodo    eta   27.9 ncei_tt None r None arr None NO_DATA
+  us6000qw6q M6.9 125 km SE of Petropavlovsk-Kam NCEI 6044 NIKOLSKOE, BERING I, C -> nksk    eta   43.0 ncei_tt None r None arr None NO_DATA
+  us6000qw6q M6.9 125 km SE of Petropavlovsk-Kam NCEI 6044 PETROPAVLOVSK, KAMCHAT -> petr    eta   14.3 ncei_tt None r 8.81 arr -6.97 r>5_arrival_outside_10
+  us6000qw6q M6.9 125 km SE of Petropavlovsk-Kam NCEI 6044 VODOPADNAYA, KAMCHATKA -> vodo    eta   21.2 ncei_tt None r None arr None NO_DATA
+  us6000r2xq M7.5 2025 Southern Drake Passage Ea NCEI 6047 VERNADSKY FARADAY, ARG -> ver1    eta   83.4 ncei_tt None r None arr None NO_DATA
+  us6000r2xq M7.5 2025 Southern Drake Passage Ea NCEI 6047 PRAT BASE (CHILE)      -> prat    eta   49.4 ncei_tt None r None arr None NO_DATA
+  us6000r2xq M7.5 2025 Southern Drake Passage Ea NCEI 6047 O'HIGGINS BASE (CHILE) -> ohig    eta   68.5 ncei_tt None r 6.774 arr 94.7 r>5_arrival_outside_10
+  us6000r2xq M7.5 2025 Southern Drake Passage Ea NCEI 6047 PORT STANLEY, FALKLAND -> stan    eta  134.2 ncei_tt None r None arr None NO_DATA
+  us6000rfwz M7.4 12 km E of Santiago, Philippin NCEI 6067 DAVAO                  -> davo    eta   33.8 ncei_tt None r 3.053 arr None r<=5
+  us6000rg2r M6.7 12 km SE of Santiago, Philippi NCEI 6067 DAVAO                  -> davo    eta   31.4 ncei_tt None r 0.917 arr None r<=5
+  us6000rmea M6.8 122 km E of Yamada, Japan      NCEI 6068 OFUNATO                -> ofun    eta   25.7 ncei_tt None r 9.619 arr 35.35 PASS
+  us6000rtdt M7.6 2025 Aomori Prefecture, Japan  NCEI 6078 OFUNATO                -> ofun    eta   48.7 ncei_tt None r 10.525 arr 48.85 DETECT_ctrl_fail
+  us6000rtdt M7.6 2025 Aomori Prefecture, Japan  NCEI 6078 KUSHIRO                -> kush    eta   47.4 ncei_tt None r 4.913 arr 56.85 r<=5
+  us6000rtie M6.6 129 km S of Honchō, Japan      NCEI 6078 OFUNATO                -> ofun    eta   43.8 ncei_tt None r 3.336 arr 53.32 r<=5
+  us6000rtie M6.6 129 km S of Honchō, Japan      NCEI 6078 KUSHIRO                -> kush    eta   37.8 ncei_tt None r 3.112 arr None r<=5

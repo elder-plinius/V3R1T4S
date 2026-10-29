@@ -1,0 +1,50 @@
+quakes in population (subsea): 264; rows: 264; processed: 264; NOT_PROCESSED: 0 []
+real classes: {'NO_SIGNAL': 162, 'NO_GAUGE': 25, 'OVERLAP': 34, 'NO_DATA': 17, 'SIGNAL': 26}
+HEADLINE: SIGNAL / USABLE = 26 / 188 = 0.138 (Wilson 95 % 0.096-0.195); SIGNAL_UNDECIDED 0
+over all 264: SIGNAL / 264 = 0.098; bounds [0.098, 0.386] (OVERLAP 34, NO_DATA 17, NO_GAUGE 25, ERROR 0, NOT_PROCESSED 0)
+SIGNAL x LISTED over USABLE quakes:
+listed     LISTED  not listed
+real_cls                     
+NO_SIGNAL      62         100
+SIGNAL         24           2
+SIGNAL x LISTED(validity 4) over USABLE quakes:
+listed_v4  LISTED validity 4  not validity 4
+real_cls                                    
+NO_SIGNAL                 57             105
+SIGNAL                    23               3
+LISTED among NO_DATA: 6 of 17; among NO_GAUGE: 0 of 25
+LISTED among OVERLAP: 23 of 34: us10002bpw(-), us20003kfj(L), us20003kfv(L), us10003x9g(L), us20005fzn(-), us20007zbn(L), us20007zlq(L), us2000brlf(L), us1000hfgv(-), us1000hfh3(-), us1000i2k0(L), us6000bgvu(-), us7000bg4v(-), us7000dfk3(L), us7000dflf(L), us7000dfq2(L), us6000f53e(L), us6000f8yd(L), us6000f9sq(-), us7000gawk(-), us7000gymk(L), us6000kdce(L), us6000kdcu(L), us6000ldqf(-), us7000l9h4(-), us7000l9ku(-), us7000lftp(L), us7000lfxx(L), us7000qdyl(L), us7000qdyw(L), us7000qdz2(L), us6000qw6q(L), us6000rg2r(L), us6000rtie(L)
+single-site SIGNALs: 19 of 26 (never claims of a missed tsunami)
+by 30-degree longitude band (west edge):
+       n  usable  signal  listed
+band                            
+-180  33      29       5      17
+-150   8       5       1       2
+-120   9       8       1       1
+-90   33      29       3      16
+-60    9       4       1       2
+-30   21       7       0       3
+ 0     8       4       1       4
+ 30    3       1       0       0
+ 60    2       1       0       0
+ 90   13      10       0       5
+ 120  52      40       4      21
+ 150  73      50      10      44
+fake-origin null: fake SIGNAL at o-5h 6/202, at o-7h 5/205; pooled fake rate 0.0270; expected chance SIGNALs among 188 real USABLE quakes 5.1
+400 fake catalogues: max 0.0495, mean 0.0271; real 0.1383; real beats all: True
+chance-corrected: expected chance SIGNALs (pooled rate) 5.1, (per-quake fake means) 3.5; excess 20.9 = 0.111 of USABLE
+v4 rules -> v5 rules (both with the PREREG.v6 corrections), real class transitions:
+real_cls          NO_DATA  NO_GAUGE  NO_SIGNAL  OVERLAP  SIGNAL
+v4_cls                                                         
+NO_DATA                17         0          0        1       0
+NO_GAUGE                0        25          0        0       0
+NO_SIGNAL               0         0        155       30       0
+SIGNAL                  0         0          7        2      26
+SIGNAL_UNDECIDED        0         0          0        1       0
+v4-rules SIGNAL quakes not SIGNAL under v5 rules: us200030aq->NO_SIGNAL, us20003kfj->OVERLAP, us10003x9g->OVERLAP, us10007mn3->NO_SIGNAL, us1000c2zy->NO_SIGNAL, us60007idc->NO_SIGNAL, us6000ae4n->NO_SIGNAL, us7000c7y0->NO_SIGNAL, us6000rtdt->NO_SIGNAL
+as-run v5 -> v6, real origin: 0 class changes
+as-run v5 -> v6, fake5 origin: 0 class changes
+as-run v5 -> v6, fake7 origin: 0 class changes
+PREREG.v3 main-win candidates under v5 (unlisted, >= 2 passing sites): 0 []
+LISTED quakes, NCEI tide-gauge rows at codes in scope (<= 5 km, dedup per row and site): {'r>5_arrival_outside_10': 100, 'rows with NCEI travel time': 107, 'rule miss (|NCEI tt - ETA| > 10)': 39, 'rule-miss rows not PASS (usable)': 33, 'r<=5': 136, 'PASS': 40, 'NO_DATA': 116, 'DETECT_ctrl_fail': 18, 'DETECT_ctrl_undecided': 1}
+LISTED USABLE quakes by miss type: {'NO_SIGNAL: no NCEI tide-gauge row in scope': 15, 'NO_SIGNAL: every NCEI row with a travel time is a rule miss': 4, 'NO_SIGNAL: >= 1 NCEI row within 10 min of ETA (detection miss)': 4, 'NO_SIGNAL: NCEI rows in scope, none with a travel time': 39, 'SIGNAL with NCEI rows in scope': 23, 'SIGNAL: no NCEI tide-gauge row in scope': 1}
