@@ -1,0 +1,96 @@
+{
+  "benchmark_id": "tdc-dti-dg-bindingdb-patent-pcc",
+  "skeptic_reproduce": {
+    "status": "PASS",
+    "test_rows": 49028,
+    "test_drug_target_keys_sha256": "b28e09b01f7990c55ede2facbe7b9831c6dc9203d140dc575814361ae649b674",
+    "verified_prediction_files": 25,
+    "zero_nan_inf": true,
+    "zero_test_label_leakage": true,
+    "single_row_inductive_max_diff": 0.0,
+    "tdc_evaluate_many_trackF2": [
+      0.6,
+      0.003
+    ],
+    "exact_5seed_mean_pcc_trackF2": 0.600184190273285,
+    "exact_5seed_std_pcc_trackF2": 0.0026610273498769797,
+    "tdc_evaluate_many_trackF1": [
+      0.6,
+      0.003
+    ],
+    "exact_5seed_mean_pcc_trackF1": 0.5999606728553772,
+    "exact_5seed_std_pcc_trackF1": 0.00265530214656011,
+    "tdc_evaluate_many_trackD2": [
+      0.588,
+      0.003
+    ],
+    "exact_5seed_mean_pcc_trackD2": 0.5884063005447387,
+    "tdc_evaluate_many_trackC1": [
+      0.58,
+      0.001
+    ],
+    "exact_5seed_mean_pcc_trackC1": 0.5805243253707886
+  },
+  "skeptic_novelty": {
+    "status": "PASS",
+    "three_handles": {
+      "handle_1_metaphor": "Asymmetric Stratum Compass Inversion & Single-Row Bayes-MMSE Excursion Equalizer with ESM-2 Paralog Bridge (Op-M1 + Op-M3 + Op-M4 + Op-M7)",
+      "handle_2_operational_law": "Law of Total Covariance across Heterogeneous Generalization Strata: (1) Invert ensemble weights across Exact-Pair interpolation (Ex: 0.78*D1 + 0.22*A1 non-linear GBDT/Huber stackers filtering multi-assay patent noise) vs Novel-Ligand Seen-Target extrapolation (NonEx: 0.62*C1_esm6 + 0.38*D1 where 552x176 Kronecker Bilinear ESM-2 + 4328D Ligand Ridge + Multi-View Cholesky TKRR leads); (2) Equalize cross-stratum excursion variance on Ex via 100% single-row inductive Bayes-MMSE shrinkage y_hat_i = mu_anc_i + beta_Ex * (y_hat_{i,Ex} - mu_anc_i) around the training-only Bayesian target prior anchor mu_anc_i = w_t * X_{i,1} + (1 - w_t) * mu_tr; (3) Bridge Unseen-Target (p3) cold start via unshrunk ESM-2 + catalytic-pocket paralog drug transfer.",
+      "handle_3_formal_certificate": "DTI_DG_BINDINGDB_PATENT_CAMPAIGN/results_certificate_fullwin.json"
+    }
+  },
+  "skeptic_criterion": {
+    "full_win_vs_rank_1_0598": {
+      "status": "PASS (COMPLETE WIN)",
+      "rank_1_target": "0.588 +- 0.002 (Otter-Knowledge-Ensemble)",
+      "required_full_win_threshold": 0.598,
+      "our_trackF2_evaluate_many": "0.600 +- 0.003",
+      "our_trackF2_exact_5seed": "0.60018 +- 0.00266",
+      "our_trackF2_seeds": [
+        0.59982,
+        0.60169,
+        0.60363,
+        0.60019,
+        0.59559
+      ],
+      "our_trackF1_exact_5seed": "0.59996 +- 0.00266",
+      "margin_over_rank_1": "+0.01218 PCC (+0.00218 over 0.598 Full Win threshold)",
+      "bootstrap_10000_mean": "0.60393 +- 0.00333",
+      "bootstrap_win_rate_vs_0588": 1.0,
+      "bootstrap_win_rate_vs_0598": 0.9617
+    },
+    "partial_win_p1_cpu_no_plm": {
+      "status": "PASS",
+      "our_trackA_5seed_pcc": "0.580 +- 0.003 (exact 0.57942 +- 0.00299)",
+      "rank_2_target": "0.538 +- 0.008 (OrangeBalls-ProtBertMorgan)",
+      "margin_over_rank_2": "+0.0420 PCC",
+      "bootstrap_win_rate_vs_0538": 1.0
+    },
+    "partial_win_p2_per_year_decomposition": {
+      "status": "PASS",
+      "year_2019": {
+        "n": 42009,
+        "trackF2": "0.57930 +- 0.00331",
+        "trackA": "0.55625 +- 0.00344",
+        "erm": "0.49720 +- 0.00278"
+      },
+      "year_2020": {
+        "n": 6947,
+        "trackF2": "0.75931 +- 0.00264",
+        "trackA": "0.74675 +- 0.00416",
+        "erm": "0.64163 +- 0.00460"
+      },
+      "year_2021": {
+        "n": 72,
+        "trackF2": "0.85359 +- 0.01926",
+        "trackA": "0.86212 +- 0.02894",
+        "erm": "0.07611 +- 0.03700"
+      }
+    },
+    "subset_decomposition_seen_vs_unseen": {
+      "seen_target_45031_rows": "0.61533 +- 0.00231 (Seed 3 = 0.61769)",
+      "unseen_target_p3_3997_rows": "0.20806 +- 0.00546 (vs ERM 0.12204, +70.5% relative gain)",
+      "unseen_ligand_30959_rows": "0.53020 +- 0.00294"
+    }
+  }
+}
