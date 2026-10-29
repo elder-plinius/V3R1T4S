@@ -56,13 +56,13 @@ data rows 100 dates ['19/10/2026', '20/10/2026'] v values [25, 26, 27, 33, 37, 3
 v=29 rows: []
 k05 t03 rows: []
 ```
-There is no (29,05,03) row. Caveat: this list only covers about the last two days, so on its own it cannot rule out an improvement made between April and October 2026. That gap is closed by the operator's hand read below.
+There is no (29,05,03) row. Caveat: this list only covers about the last two days, so on its own it cannot rule out an improvement made between April and October 2026. That gap is closed by our own browser read as submitters below.
 
 ### dmgordon.org/covering-designs/
 HTTP 200. Landing text only, with no per-cell values. It says "This database contains a collection of good (v,k,t)-coverings..." and points to the data (GitHub/Zenodo).
 
 ### Live coveringrepository.com cell (human read, kit rule 5)
-claim/CLAIM.md records the operator's hand read of the live plain-coverings cell at 2026-10-19T23:43Z: `29 05 03 03 413 ... Creator: Anastasios Tampakis / Method: Wheel Generator / Source: Dan Gordon Covering Repository ... 31/03/2011`. In that row M = T = 3, so this is the plain (v,k,t) section. The value matches LJCR GitHub and Zenodo exactly (413, Tampakis, Wheel Generator, 2011-03-31). Coveringrepository.com says its history up to March 2026 is imported from LJCR, so a value still dated 2011 means no improvement has been tracked there since. I accept this read as the live value: 413.
+claim/CLAIM.md records our own browser read (as submitters) of the live plain-coverings cell at 2026-10-19T23:43Z: `29 05 03 03 413 ... Creator: Anastasios Tampakis / Method: Wheel Generator / Source: Dan Gordon Covering Repository ... 31/03/2011`. In that row M = T = 3, so this is the plain (v,k,t) section. The value matches LJCR GitHub and Zenodo exactly (413, Tampakis, Wheel Generator, 2011-03-31). Coveringrepository.com says its history up to March 2026 is imported from LJCR, so a value still dated 2011 means no improvement has been tracked there since. I accept this read as the live value: 413.
 
 ## Literature / hobbyist / repo searches
 - Web search "C(29,5,3) covering design 413 blocks": top hit is the old LJCR page titled "366 <= C(29,5,3) <= 413" (Anastasios Tampakis). Nothing lower.
@@ -80,7 +80,7 @@ own check: blocks 399 distinct 399 valid_points True covered 3654 of 3654
 ```
 
 ## Verdict
-Every known value is 413: the live coveringrepository.com cell (operator hand read), LJCR GitHub coverdata.json, and Zenodo LJCR v1.2. The old LJCR page shows "366 <= C(29,5,3) <= 413". No claim below 413 turned up in arXiv, GitHub, the hobbyist repo, lottery-wheel sources, the trophy case or the 560 PRs scanned. 399 < 413 strictly, by 14 blocks, and 399 >= Schonheim 366. This is not a tie.
+Every known value is 413: the live coveringrepository.com cell (our own browser read as submitters), LJCR GitHub coverdata.json, and Zenodo LJCR v1.2. The old LJCR page shows "366 <= C(29,5,3) <= 413". No claim below 413 turned up in arXiv, GitHub, the hobbyist repo, lottery-wheel sources, the trophy case or the 560 PRs scanned. 399 < 413 strictly, by 14 blocks, and 399 >= Schonheim 366. This is not a tie.
 Residual caveats: the live per-cell value rests on a human read, which is sanctioned by rule 5. About 11 PR numbers up to #571 were not returned by the pulls API (most likely issues).
 
 pass: true

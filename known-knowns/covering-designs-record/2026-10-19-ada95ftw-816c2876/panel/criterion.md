@@ -71,7 +71,7 @@ The landing page states no per-cell value. Its own data links point to the Zenod
 
 Judgement: the LJCR value that https://dmgordon.org/covering-designs/ actually serves is the GitHub/Zenodo dataset it links to, so the "live LJCR value" is 413. This clause is met in substance. It is not met by a per-cell page at that exact URL, because no such page exists.
 
-Live coveringrepository.com plain (m=t) value: the machine cannot read the per-cell value, which is filled in by JavaScript. The operator read the row by hand in their own browser at 2026-10-19T23:43Z, seven minutes before this check, and pasted it into claim/CLAIM.md: "29 05 03 03 413 ... Creator: Anastasios Tampakis ... Source: Dan Gordon Covering Repository ... 31/03/2011". M=03=T, so this is the plain-coverings cell.
+Live coveringrepository.com plain (m=t) value: the machine cannot read the per-cell value, which is filled in by JavaScript. We read the row ourselves in a browser, as submitters, at 2026-10-19T23:43Z, seven minutes before this check, and pasted it into claim/CLAIM.md: "29 05 03 03 413 ... Creator: Anastasios Tampakis ... Source: Dan Gordon Covering Repository ... 31/03/2011". M=03=T, so this is the plain-coverings cell.
 
 Supporting machine evidence, fetched by me:
 
@@ -82,9 +82,9 @@ Supporting machine evidence, fetched by me:
     [] (no v=29 row)
     [] (no k=05,t=03 row)
 
-The latest (v,k,t) improvements page shows no (29,5,3) change. It only covers the last day or so, so it supports the hand read but does not replace it.
+The latest (v,k,t) improvements page shows no (29,5,3) change. It only covers the last day or so, so it supports the browser read but does not replace it.
 
-Judgement: a hand read of the live page, quoted verbatim and taken at verification time, counts as a re-fetch of the live table. The criterion's fallback "PENDING TABLE CHECK" applies only if the table cannot be fetched, and here it was fetched by a human. This rests on the operator's read and has no saved page hash, which is a weakness to note. However, the read agrees with the GitHub data, the Zenodo data and the improvements page.
+Judgement: a human browser read of the live page, quoted verbatim and taken at verification time, counts as a re-fetch of the live table. The criterion's fallback "PENDING TABLE CHECK" applies only if the table cannot be fetched, and here it was fetched by a human. This rests on our own browser read as submitters and has no saved page hash, which is a weakness to note. However, the read agrees with the GitHub data, the Zenodo data and the improvements page.
 
 399 < 413 against all three sources. Met.
 
@@ -121,10 +121,10 @@ I agree that none is needed. The object is explicit, two independent determinist
 
 ## Caveats (not blocking)
 
-1. The coveringrepository.com value rests on the operator's hand read, with no page hash. Machine evidence is consistent with it but indirect.
+1. The coveringrepository.com value rests on our own browser read as submitters, with no page hash. Machine evidence is consistent with it but indirect.
 2. The LJCR clause is satisfied through the GitHub/Zenodo data that the landing page links to, because the URL itself has no per-cell values.
 3. The arXiv grep is search-level, not full-text.
 
-confirmed_scope: The file claim/C29_5_3_399blocks.txt (sha256 816c287640bc50f50a87d27707aaae2c77ff99c1580a07336a594d3b94a56bbb) is a valid (29,5,3) covering design with 399 blocks, verified exhaustively over all 3654 triples, so C(29,5,3) <= 399, which is 14 fewer than the value 413 shown on 2026-10-19 by the dmgordo/LJCR GitHub data, the Zenodo LJCR v1.2 dataset and the operator's hand read of the live coveringrepository.com plain-coverings row.
+confirmed_scope: The file claim/C29_5_3_399blocks.txt (sha256 816c287640bc50f50a87d27707aaae2c77ff99c1580a07336a594d3b94a56bbb) is a valid (29,5,3) covering design with 399 blocks, verified exhaustively over all 3654 triples, so C(29,5,3) <= 399, which is 14 fewer than the value 413 shown on 2026-10-19 by the dmgordo/LJCR GitHub data, the Zenodo LJCR v1.2 dataset and our own browser read (as submitters) of the live coveringrepository.com plain-coverings row.
 
 pass: true

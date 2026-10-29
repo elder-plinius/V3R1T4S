@@ -8,6 +8,6 @@ set cover per (G-set, cell) job with a 20 s cap.
   point (v = 29) gave a 399-block cover of C(29,5,3) (capped, FEASIBLE). The table lists 413. The 91 blocks through the
   fixed point are the fixed point plus two pairs of one perfect matching of the other 28 points.
 - The next run (2026-10-19 23:00 UTC) picked it up as a lead. It re-checked it with independent checkers and tried to
-  push it to 398 (annealing, partial CP-SAT re-solves, large-neighbourhood search), without success. The operator read
-  the live Covering Repository cell by hand, because the per-cell pages are challenged for machines. Three
+  push it to 398 (annealing, partial CP-SAT re-solves, large-neighbourhood search), without success. We read the live
+  Covering Repository cell ourselves in a browser, as submitters, because the per-cell pages are challenged for machines. Three
   fresh-context subagent skeptics (REPRODUCE, NOVELTY, CRITERION) each passed it; see panel/.

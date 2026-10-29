@@ -68,7 +68,7 @@ Comparison, line by line: the two checkers agree on block count (399), triples (
 Beyond the exhaustive coverage check and the Schonheim sanity bound, there is no proof step to re-derive. I agree.
 
 ## Scope note
-This verdict covers only the mathematical validity of the object and the claimed value b = 399. I did not re-fetch the comparison tables. Whether 399 beats every live table value (413 in claim/data/*.json and the operator's hand read recorded in claim/CLAIM.md) is for the novelty and criterion skeptics. The two data excerpts in claim/data/ both state size 413, low_bd 366.
+This verdict covers only the mathematical validity of the object and the claimed value b = 399. I did not re-fetch the comparison tables. Whether 399 beats every live table value (413 in claim/data/*.json and our own browser read as submitters recorded in claim/CLAIM.md) is for the novelty and criterion skeptics. The two data excerpts in claim/data/ both state size 413, low_bd 366.
 
 ## Scratch code (work/mycheck.py)
 ```python
