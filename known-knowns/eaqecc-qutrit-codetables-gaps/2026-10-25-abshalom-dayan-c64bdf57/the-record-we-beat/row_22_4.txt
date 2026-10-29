@@ -1,0 +1,12 @@
+<TD NOWRAP bgcolor="#66ff00" class="EAQECC" title="from codetables.de">[[22,4,7-9;0]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#0099ff" class="EAQECC" title="increasing dimension of [[22,2,8;0]] from codetables.de">[[22,4,8-11;2]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ffff00" class="EAQECC" title="using teleportation">[[22,4,9-15;4]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[18,4,10;6]] from arXiv:2207.05647">[[22,4,10-16;6]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[19,4,11;9]] quantum shortening of [[20,3,12;9]] from arXiv:2207.05647">[[22,4,11-17;9]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[20,4,12;10]] increasing dimension of [[20,3,12;9]] from arXiv:2207.05647">[[22,4,12-17;10]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[20,4,13;12]] quantum shortening of [[21,3,14;12]] increasing dimension of [[21,2,14;11]] from arXiv:2207.05647">[[22,4,13-18;12]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[21,4,14;13]] increasing dimension of [[21,2,14;11]] from arXiv:2207.05647">[[22,4,14-18;13]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[21,4,15;15]] increasing dimension of [[21,2,15;13]] from arXiv:2207.05647">[[22,4,15-18;15]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[21,4,16;17]] increasing dimension of [[21,1,16;14]] from arXiv:2207.05647">[[22,4,16-18;17]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#0099ff" class="EAQECC" title="increasing dimension of [[22,1,17;15]] from arXiv:2207.05647">[[22,4,17-19;18]]<sub>3</sub></TD>
+row (22,4), 11 cells; c: d_lower-d_upper: 0: 7-9; 2: 8-11; 4: 9-15 (using teleportation); 6: 10-16; 9: 11-17; 10: 12-17; 12: 13-18; 13: 14-18; 15: 15-18; 17: 16-18; 18: 17-19

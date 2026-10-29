@@ -1,0 +1,10 @@
+<TD NOWRAP bgcolor="#66ff00" class="EAQECC" title="from codetables.de">[[23,5,7-9;0]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#0099ff" class="EAQECC" title="increasing dimension of [[23,4,8;1]] reducing length of [[24,4,8;0]] from codetables.de">[[23,5,8-11;2]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#0099ff" class="EAQECC" title="increasing dimension of [[23,1,9;0]] from codetables.de">[[23,5,9-12;4]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[20,5,10;6]] subcode of [[20,6,10;6]] from arXiv:2207.05647">[[23,5,10-15;6]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[20,5,11;9]] from arXiv:2207.05647">[[23,5,11-17;9]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#ff9900" class="EAQECC" title="lengthening of [[20,5,12;11]] increasing dimension of [[20,3,12;9]] from arXiv:2207.05647">[[23,5,12-17;11]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#0099ff" class="EAQECC" title="increasing dimension of [[23,4,13;11]] from arXiv:2207.05647">[[23,5,13-17;12]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#00ff99" class="EAQECC" title="quantum shortening of [[25,3,16;14]] from arXiv:2207.05647">[[23,5,14-18;14]]<sub>3</sub></TD>
+<TD NOWRAP bgcolor="#00ff99" class="EAQECC" title="quantum shortening of [[25,3,17;16]] increasing dimension of [[25,2,17;15]] from arXiv:2207.05647">[[23,5,15-18;16]]<sub>3</sub></TD>
+row (23,5), 9 cells; c: d_lower-d_upper: 0: 7-9; 2: 8-11; 4: 9-12; 6: 10-15; 9: 11-17; 11: 12-17; 12: 13-17; 14: 14-18; 16: 15-18
