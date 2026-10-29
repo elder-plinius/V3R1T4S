@@ -1,0 +1,47 @@
+== fmm_sota.json (sedoglavic/fmm_digest)
+createdAt 2026-10-19T20:46:33 entries 5456
+  28x29x29: rank 11203
+  29x28x29: no entry
+  29x29x28: no entry
+lowest formats containing the cell componentwise (restricting them gives the cell at the same or a lower rank): [(11203, (29, 29, 29)), (11863, (28, 29, 30)), (11889, (28, 30, 30)), (11889, (29, 29, 30)), (11889, (29, 30, 30))]
+
+== Lille index https://fmm.univ-lille.fr/ (the bank's status_source)
+rows parsed: 5426
+  row 28x29x29: rank 11203; text: ⟨28×29×29:11203⟩ 11203 23548 Proj([[29, 0], [0]], ⟨29×29×29:11203⟩ ) .4757516562 2.778620940 C 1
+  29x28x29: no row
+  29x29x28: no row
+
+== Lille per-format pages https://fmm.univ-lille.fr/<format>.html
+  28x29x29: HTTP/1.1 200 OK; rank 12152; definition: The algorithm ⟨28×29×29:12152⟩ could be constructed using the following decomposition: ⟨28×29×29:12152⟩ = ⟨28×1×29:812⟩ + ⟨28×28×29:11340⟩ .
+  29x28x29: not fetched
+  29x29x28: not fetched
+
+== matmulcatalog docs/catalog.json (Chatain Lacelle)
+schemes in the file: 11136
+  rank 11145  fields Q,R,C  lineage 29x29x29 ∖[14||]  (external_best_rank 11203 from fmm-lille)
+  rank 11442  fields Q,R,C  lineage naive-28x29x1 +p naive-28x1x28 +m 28x28x29 ∖[||0]  (external_best_rank 11203 from fmm-lille)
+  rank 11826  fields Q,R,C  lineage 29x29x30^ABC->BCA ∖[14|29|]  (external_best_rank 11203 from fmm-lille)
+  rank 11862  fields Q,R,C  lineage 29x30x30 ∖[16|29|29]  (external_best_rank 11203 from fmm-lille)
+  rank 12005  fields Q,R,C  lineage 29x29x29 ↓[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]  (external_best_rank 11203 from fmm-lille)
+  rank 12234  fields Q,R,C  lineage 29x29x29 ↓[0,1,2,3,4,5,6,7,8,9,10,11,12,13,15,16,17,18,19,20,21,22,23,24,25,26,27,28|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28]  (external_best_rank 11203 from fmm-lille)
+
+== matmulcatalog generated/COVERAGE.md
+sections up to max-dimension 16 ; hits for the format in any order: 0
+
+== Perminov FastMatrixMultiplication
+  perminov_docs_ranks.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_docs_additions.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_README.md: hits 0; largest dimension in any NxMxP name 16
+  repository tree: 6865 paths, truncated False, largest dimension in any path 16; paths for the format: []
+
+== MerlijnW70/fmm-schemes
+  tree: 39 paths, truncated False, largest dimension 16; paths for the format: []
+
+== khoruzhii/lita schemes/ listing
+  20 files; formats: 13x13x13_r1379, 14x14x14_r1593, 15x15x15_r1977, 16x16x16_r2236, 17x17x17_r2723, 18x18x18_r3031, 19x19x19_r3633, 20x20x20_r3994, 21x21x21_r4723, 22x22x22_r5141, 23x23x23_r6009, 24x24x24_r6488, 25x25x25_r7507, 26x26x26_r8051, 27x27x27_r9233, 28x28x28_r9846, 29x29x29_r11203, 30x30x30_r11889, 31x31x31_r13433, 32x32x32_r14196
+  rectangular schemes: []
+
+== verdict
+lowest value for the format in any axis order, over the sources above: 11145 (matmulcatalog catalog.json (29x29x29 ∖[14||]))
+built rank 10739; margin below the lowest value 406
+built rank strictly below every value found: YES
