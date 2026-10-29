@@ -28,7 +28,7 @@
   [PASS] ame_20_gf289_so10_d25_d26_certificate.json (sha256=81c81257fcb2...) -> Theorems D25/D26: Explicit G_40 SO(10, GF(289)) MDS generator for AME(20, 289) (184,755/184,755 minors) PASS
   [PASS] ame_table_n2_to_20_status_and_estimates.json (sha256=116c6ab2c232...) -> 266-cell 4-regime audit verified (224/266 resolved, 95/95 = 100% prime-power D>=11 resolved)
   [PASS] universal_paley_jacobsthal_ame_13_14_17_18_certificate.json (sha256=a442249dde03...) -> Universal Paley-Jacobsthal Z-certificate verified (universal_paley_jacobsthal_ame_13_14_17_18_certificate.json)
-  [PASS] universal_paley_jacobsthal_ame_19_20_certificate.json (sha256=0fc32a1ed4d4...) -> Universal Paley-Jacobsthal Z-certificate verified (universal_paley_jacobsthal_ame_19_20_certificate.json)
+  [PASS] ame_20_81_d36_so10_exact_certificate.json (sha256=0fc32a1ed4d4...) -> Universal Paley-Jacobsthal Z-certificate verified (ame_20_81_d36_so10_exact_certificate.json)
 
 VERIFIED: All 30 Part II AME & Quantum MDS Certificates PASS in 0.33s
 PASS

@@ -1,6 +1,6 @@
 {
   "quantum_mds_code": "[[13, 1, 7]]_5",
-  "construction": "Shortening of the Universal Paley Conference Graph State C_14 = [[14, 0, 8]]_5 on vertex 0 (Theorem 14C). Beats codetables.de [[13, 1, 6]]_5 by +1 minimum distance (achieving the Quantum Singleton Bound d = (n - k)/2 + 1 = 7).",
+  "construction": "Shortening of the Universal Paley Conference Graph State C_14 = [[14, 0, 8]]_5 on vertex 0 (Theorem 14C). Provides an explicit Paley-conference realization of the optimal [[13, 1, 7]]_5 quantum MDS code (matching the Quantum Singleton Bound d = (n - k)/2 + 1 = 7 listed in codetables.de since 23.05.2024), used as the quinary component in our composite D=10 analysis.",
   "field_q": 5,
   "n": 13,
   "k_logical_qudits": 1,

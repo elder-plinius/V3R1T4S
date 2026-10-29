@@ -43,9 +43,9 @@ All 28 JSON certificates in `object/` were hashed and verified before executing 
 | `object/ame_20_16_hermitian_mds_d29_certificate.json` | `4,613` | `b344b023b0d5c7783e07d9723e0aa166b1a668be5dbcdb5ca717ab5c0c826465` |
 | `object/ame_20_17_hermitian_mds_d28_certificate.json` | `7,557` | `d1cb59262b7cf1832669061429b3bbfb6fb2f562f52feed2fc4eb82d56b3245e` |
 | `object/ame_20_gf289_so10_d25_d26_certificate.json` | `4,859` | `81c81257fcb23097c26876eb38a83a29b7aed5d1ba94eddecf87ad1aa23ab09d` |
-| `object/ame_table_n2_to_20_status_and_estimates.json` | `57,888` | `95e817c436014f28c17e6f25070c66ef35b194f082e2190796da1a70ab347d51` |
-| `object/universal_paley_jacobsthal_ame_13_14_17_18_certificate.json` | `2,234` | `a442249dde030b73dc17e87675962b2dc1600fd558d46289c89a40fc8ade8615` |
-| `object/universal_paley_jacobsthal_ame_19_20_certificate.json` | `8,803` | `0fc32a1ed4d418da7bb324e845549e1f74c51b58b17e5da0004a4f4b7077905d` |
+| `object/ame_table_n2_to_20_status_and_estimates.json` | `56,892` | `116c6ab2c232fb26626c8542bbb18bb96c6ad5490e95948783529869d98c40be` |
+| `object/universal_paley_jacobsthal_ame_13_14_17_18_certificate.json` | `25,098` | `e97afb9a72765e3ee1115bbb74ed7c43e5ae5a0991f1b84652b9e3b611f053ae` |
+| `object/ame_20_81_d36_so10_exact_certificate.json` | `2,245` | `c78a4529adfd9f918d25ceaecc217490fd87d225309484d5abbc5d8b831d1217` |
 
 ---
 

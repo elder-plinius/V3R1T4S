@@ -321,6 +321,6 @@
     "true_d8_orbits_checked": 496,
     "singular_8x8_submatrices": 0,
     "full_rank_8x8_submatrices": 12870,
-    "verified_by": "Exhaustive 12,870-subset Gaussian elimination over GF(19) in C (verify_ame_16_17_19.c)"
+    "verified_by": "verify_all_ame_submissions.py and src/fast_cut_and_minor_verifier.c (exhaustive 12,870 / 12,870 cut rank verification)"
   }
 }
