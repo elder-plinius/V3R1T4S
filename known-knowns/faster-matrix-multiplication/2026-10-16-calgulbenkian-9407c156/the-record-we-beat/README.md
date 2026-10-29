@@ -23,7 +23,7 @@ The reference count comes from Perminov's file https://raw.githubusercontent.com
 | Source | What it says for 3x5x5 at rank 58 | Our value |
 |---|---|---|
 | Perminov, arXiv:2512.13365 Table 1 | 221 (same convention) | 211 |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 355-58       369         238        222      0.26, 0.27, 0.08       300 / 355-58         689       331         326      363    52.7        0, 0.174, 0.07 / 355-58      608           266       255      353     58.1    0.005, 0.145, 0.075 / 355-58          413      232       220     193   46.7   0.21, 0.23, 0.06 | 211 |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 (PDF sha256 c095482d4bc6a410171092bc6b37ef4e2a1d07808c076149f0f183704fbff3d6, downloaded by hand after an automated fetch met a challenge page) | lowest count listed for 355-58: 222 over Z (Table 3.3); 220 over Z2 (Table 3.6, not comparable; below the reference 221, above our 211); author's reading of a hand-downloaded PDF | 211 |
 | V3R1T4S open pull requests on this target | none | 211 |
 | V3R1T4S TROPHY_CASE.md | no row for this target | 211 |
 

@@ -27,7 +27,7 @@ sh verify-it-yourself/run_checks.sh
 | fmm_sota.json (Sedoglavic), best known rank | 2x4x8 | rank 51 | rank 51 (same scheme rank; eligibility) | https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json | 2026-10-15T22:25:32Z |
 | Lille per-format page | 2x4x8 | rank 51; no complexity variant or operation count cited | 181 | https://fmm.univ-lille.fr/2x4x8.html | 2026-10-15T22:25:32Z |
 | matmulcatalog COVERAGE.md, adds column | 2x4x8 | naive count nz(U)+nz(V)+nz(W)-2r-np, not comparable | 181 | https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md | 2026-10-15T22:25:32Z |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 2x4x8 rank 51 | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 248-51       354         197        190      0.38, 0.01, 0.15         - / 248-51         354       190       183     171   48.3    0.34, 0.1, 0.15 | 181 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 2x4x8 rank 51 | lowest count listed for 248-51: 190 over Z (Table 3.3); 183 over Z2 (Table 3.6, not comparable; below the reference 188, above our 181); author's reading of a hand-downloaded PDF | 181 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
 | V3R1T4S TROPHY_CASE.md and open pull requests | this target | none | 181 | https://github.com/elder-plinius/V3R1T4S | 2026-10-15T22:25:32Z |
 
 Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.md`.
