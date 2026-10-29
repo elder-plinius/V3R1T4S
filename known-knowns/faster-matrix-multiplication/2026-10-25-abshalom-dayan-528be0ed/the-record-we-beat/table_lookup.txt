@@ -1,0 +1,45 @@
+== fmm_sota.json (sedoglavic/fmm_digest)
+createdAt 2026-10-19T20:46:33 entries 5456
+  30x30x31: rank 12789
+  30x31x30: no entry
+  31x30x30: no entry
+lowest formats containing the cell componentwise (restricting them gives the cell at the same or a lower rank): [(13254, (30, 30, 32)), (13433, (30, 31, 31)), (13433, (31, 31, 31)), (14196, (30, 31, 32)), (14196, (30, 32, 32))]
+
+== Lille index https://fmm.univ-lille.fr/ (the bank's status_source)
+rows parsed: 5426
+  row 30x30x31: rank 12789; text: ⟨30×30×31:12789⟩ 12789 27900 ⟨30×30×1:900⟩ + ⟨30×30×30:11889⟩ .4583870968 2.771391514 C 1
+  30x31x30: no row
+  31x30x30: no row
+
+== Lille per-format pages https://fmm.univ-lille.fr/<format>.html
+  30x30x31: HTTP/1.1 200 OK; rank 13610; definition: The algorithm ⟨30×30×31:13610⟩ could be constructed using the following decomposition: ⟨30×30×31:13610⟩ = ⟨30×30×1:900⟩ + ⟨30×30×30:12710⟩ .
+  30x31x30: not fetched
+  31x30x30: not fetched
+
+== matmulcatalog docs/catalog.json (Chatain Lacelle)
+schemes in the file: 11136
+  rank 12789  fields Q,R,C  lineage naive-30x30x1 +p 30x30x30  (external_best_rank 12789 from fmm-lille)
+  rank 12790  fields Q,R,C  lineage naive-30x30x1 +p 30x30x30  (external_best_rank 12789 from fmm-lille)
+  rank 13309  fields Q,R,C  lineage 31x31x31 ∖[15|15|]  (external_best_rank 12789 from fmm-lille)
+  rank 13572  fields Q,R,C  lineage naive-30x30x1 +p 30x30x30  (external_best_rank 12789 from fmm-lille)
+
+== matmulcatalog generated/COVERAGE.md
+sections up to max-dimension 16 ; hits for the format in any order: 0
+
+== Perminov FastMatrixMultiplication
+  perminov_docs_ranks.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_docs_additions.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_README.md: hits 0; largest dimension in any NxMxP name 16
+  repository tree: 6865 paths, truncated False, largest dimension in any path 16; paths for the format: []
+
+== MerlijnW70/fmm-schemes
+  tree: 39 paths, truncated False, largest dimension 16; paths for the format: []
+
+== khoruzhii/lita schemes/ listing
+  20 files; formats: 13x13x13_r1379, 14x14x14_r1593, 15x15x15_r1977, 16x16x16_r2236, 17x17x17_r2723, 18x18x18_r3031, 19x19x19_r3633, 20x20x20_r3994, 21x21x21_r4723, 22x22x22_r5141, 23x23x23_r6009, 24x24x24_r6488, 25x25x25_r7507, 26x26x26_r8051, 27x27x27_r9233, 28x28x28_r9846, 29x29x29_r11203, 30x30x30_r11889, 31x31x31_r13433, 32x32x32_r14196
+  rectangular schemes: []
+
+== verdict
+lowest value for the format in any axis order, over the sources above: 12789 (fmm_sota.json 30x30x31)
+built rank 12395; margin below the lowest value 394
+built rank strictly below every value found: YES
