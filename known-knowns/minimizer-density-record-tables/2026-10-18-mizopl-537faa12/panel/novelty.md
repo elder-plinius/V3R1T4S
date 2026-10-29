@@ -7,15 +7,15 @@ context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
 
 ## 2. Live Single-Fetch Audit of Primary Tables & Precomputed Minimizers
 
-Each primary resource in `OrensteinLab/10-minimizers` and `OrensteinLab/GreedyMini` was fetched once via `curl -sS -A "V3R1T4S-research-agent (honest single fetch)"` with zero retries:
+Each primary resource in `OrensteinLab/10-minimizers` and `OrensteinLab/GreedyMini` was fetched once via `curl -sS -A "V3R1T4S-research-agent (honest single fetch)"` with zero retries (recorded in `the-record-we-beat/minimizer_record_snapshot.md`):
 
 1. **Expected-Density Table (`k_extension_k16_w12.csv`, $w = 12$)**
    - **URL:** `https://raw.githubusercontent.com/OrensteinLab/10-minimizers/main/density-measurement-and-plots/GM%20paper%20densities/k_extension_k16_w12.csv`
    - **Fetch Timestamp (UTC):** `2026-10-18T15:59:53Z`
    - **HTTP Status:** `200`
-   - **SHA-256:** `88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa` (matches `claim/k_extension_k16_w12.csv` byte-for-byte)
-   - **All 7 Published Values in Column `4` ($w = 12, k = 4$):**
-     - `GreedyMini`: `0.136046`
+   - **SHA-256:** `88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa` (`1,644` bytes)
+   - **All 7 Listed Values in Column `4` ($w = 12, k = 4$):**
+     - `GreedyMini`: `0.136046` (smallest listed value)
      - `angle-based`: `0.138322748`
      - `decycling`: `0.143956`
      - `double decycling`: `0.145236`
@@ -27,7 +27,7 @@ Each primary resource in `OrensteinLab/10-minimizers` and `OrensteinLab/GreedyMi
    - **URL:** `https://raw.githubusercontent.com/OrensteinLab/10-minimizers/main/density-measurement-and-plots/GM/w12_k4.gm`
    - **Fetch Timestamp (UTC):** `2026-10-18T15:59:54Z`
    - **HTTP Status:** `200`
-   - **SHA-256:** `7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131` (`136` bytes; matches `claim/published_w12_k4.gm`)
+   - **SHA-256:** `7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131` (`136` bytes)
    - **Decoded 16-entry `uint64_t` Rank Vector (`len_header = 16`):** `[6, 1, 16, 16, 16, 16, 16, 0, 16, 2, 4, 3, 16, 16, 5, 16]`
    - **Exact Expected DNA Density (`prob_gc_dna(12, 4, order) / 2^32`):** `584312429 / 4294967296 = 0.1360458389` (which rounds to `0.136046` in `k_extension_k16_w12.csv`).
 
@@ -35,7 +35,7 @@ Each primary resource in `OrensteinLab/10-minimizers` and `OrensteinLab/GreedyMi
    - **URL:** `https://raw.githubusercontent.com/OrensteinLab/GreedyMini/main/minimizer%20loading%20example/w12_k4.gm`
    - **Fetch Timestamp (UTC):** `2026-10-18T15:59:54Z`
    - **HTTP Status:** `200`
-   - **SHA-256:** `7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131` (`136` bytes; identical to `OrensteinLab/10-minimizers` `w12_k4.gm` and `claim/published_w12_k4.gm`).
+   - **SHA-256:** `7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131` (`136` bytes; identical to `OrensteinLab/10-minimizers` `w12_k4.gm`).
 
 4. **Repository Commit History Checks**
    - **`OrensteinLab/10-minimizers` Commits URL:** `https://api.github.com/repos/OrensteinLab/10-minimizers/commits?per_page=5`
@@ -72,13 +72,13 @@ Each primary resource in `OrensteinLab/10-minimizers` and `OrensteinLab/GreedyMi
 
 ## 4. Strict Novelty & Threshold Comparison
 
-Running `claim/author_checker_minimizer_check.py` on `claim/w12_k4_improved.gm` (`sha256: 537faa127958cbb7f10b0e90c8832449b375b2fad8360bfd4c7e596eee187bc4`, rank vector `[15, 6, 7, 12, 10, 4, 11, 3, 0, 1, 8, 9, 14, 2, 13, 5]`) against `claim/published_w12_k4.gm` (`sha256: 7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131`) and `claim/k_extension_k16_w12.csv` (`sha256: 88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa`) confirms:
+Running `verify-it-yourself/author_checker_minimizer_check.py` (via `verify-it-yourself/run_checks.sh`, output saved in `verify-it-yourself/RECEIPTS.md`) on `object/w12_k4_improved.gm` (`sha256: 537faa127958cbb7f10b0e90c8832449b375b2fad8360bfd4c7e596eee187bc4`, rank vector `[15, 6, 7, 12, 10, 4, 11, 3, 0, 1, 8, 9, 14, 2, 13, 5]`) against upstream `w12_k4.gm` (`sha256: 7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131`) and `k_extension_k16_w12.csv` (`sha256: 88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa`) confirms:
 
-- **Smallest Previously Known Expected DNA Density at $(w = 12, k = 4)$:**
+- **Smallest Listed Expected DNA Density at $(w = 12, k = 4)$:**
   $$\frac{584,312,429}{2^{32}} \approx 0.1360458389 \quad (\text{listed as } 0.136046 \text{ in } \texttt{k\_extension\_k16\_w12.csv})$$
-- **Claimed Witness (`claim/w12_k4_improved.gm`) Exact Expected DNA Density:**
+- **Claimed Witness (`object/w12_k4_improved.gm`) Exact Expected DNA Density:**
   $$\frac{573,933,439}{2^{32}} \approx 0.1336292920$$
 - **Absolute Reduction:** $-10,378,990$ gamechanger windows out of $4^{16} = 4,294,967,296$ ($-0.0024165469$ density)
-- **Relative Reduction:** **$-1.776274\%$** vs `0.1360458389` (`-1.776390%` vs `0.136046`), strictly beating the best known result and exceeding the required $0.5\%$ relative improvement threshold by more than $3.55\times$.
+- **Relative Reduction:** **$-1.776274\%$** vs `0.1360458389` (`-1.776390%` vs `0.136046`), strictly beating the smallest listed value and exceeding the required $0.5\%$ relative improvement threshold by more than $3.55\times$.
 
 pass: true
