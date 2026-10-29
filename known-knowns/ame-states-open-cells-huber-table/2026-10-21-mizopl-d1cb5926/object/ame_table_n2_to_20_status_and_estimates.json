@@ -17,21 +17,21 @@
     },
     "ext_n2_20": {
       "total": 95,
-      "exists": 93,
+      "exists": 95,
       "nogo": 0,
-      "open": 2,
-      "our_wins": 31
+      "open": 0,
+      "our_wins": 33
     },
     "all_n2_20": {
       "total": 266,
-      "exists": 189,
+      "exists": 191,
       "nogo": 33,
-      "open": 44,
-      "our_wins": 43
+      "open": 42,
+      "our_wins": 45
     }
   },
-  "open_cells_count": 44,
-  "expected_additional_existing_states_among_open": 13.75,
+  "open_cells_count": 42,
+  "expected_additional_existing_states_among_open": 9.65,
   "open_cells": [
     {
       "n": 6,
@@ -250,12 +250,6 @@
       "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
     },
     {
-      "n": 19,
-      "D": 11,
-      "p_exists": 0.55,
-      "note": "Theorem D31 exhausted all 2,357,947,690 symmetric 19-circulants (26,199,449 canonical necklaces) over GF(11) (0 solutions, min 1/126 self-conjugate & 6/2494 dihedral orbits = 209/92,378 cuts, 99.7738%); Skew-Jacobsthal Q_19 gives 0-bad-cut orthogonal MDS; non-circulant pure state open"
-    },
-    {
       "n": 20,
       "D": 5,
       "p_exists": 0.02,
@@ -290,12 +284,6 @@
       "D": 10,
       "p_exists": 0.4,
       "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
-    },
-    {
-      "n": 20,
-      "D": 11,
-      "p_exists": 0.55,
-      "note": "Theorems D33 & D33B exhausted all 3,544,742,400 G_40-symmetric unitary pairs across both QR and QNR cosets over GF(121) (0 solutions, sub=0/177 achieved 25 times, global min 12/4970 = 99.7586%, proving q_c(G_40, 20) = 13); general non-G_40 state open"
     }
   ],
   "table": {
@@ -1817,10 +1805,10 @@
         "our_win": false
       },
       "11": {
-        "status": "OPEN",
-        "source": "Theorem D31 exhausted all 2,357,947,690 symmetric 19-circulants (26,199,449 canonical necklaces) over GF(11) (0 solutions, min 1/126 self-conjugate & 6/2494 dihedral orbits = 209/92,378 cuts, 99.7738%); Skew-Jacobsthal Q_19 gives 0-bad-cut orthogonal MDS; non-circulant pure state open",
-        "p_exists_estimate": 0.55,
-        "our_win": false
+        "status": "EXISTS",
+        "source": "Theorem D37 & D37A Conjugate-Block U(10, GF(121)) -> GF(11) Pure Graph State [[19,0,10]]_11 & [[19,1,10]]_11 (92,378/92,378 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
       },
       "13": {
         "status": "EXISTS",
@@ -1903,10 +1891,10 @@
         "our_win": false
       },
       "11": {
-        "status": "OPEN",
-        "source": "Theorems D33 & D33B exhausted all 3,544,742,400 G_40-symmetric unitary pairs across both QR and QNR cosets over GF(121) (0 solutions, sub=0/177 achieved 25 times, global min 12/4970 = 99.7586%, proving q_c(G_40, 20) = 13); general non-G_40 state open",
-        "p_exists_estimate": 0.55,
-        "our_win": false
+        "status": "EXISTS",
+        "source": "Theorem D37 & D37A Conjugate-Block U(10, GF(121)) -> GF(11) Pure Graph State [[20,0,11]]_11 (184,756/184,756 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
       },
       "13": {
         "status": "EXISTS",

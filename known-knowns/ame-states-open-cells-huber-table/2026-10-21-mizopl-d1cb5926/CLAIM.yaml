@@ -8,12 +8,12 @@ part_i_submission_id: 2026-10-20-mizopl-9a17cd1e
 primary_object: object/ame_20_17_hermitian_mds_d28_certificate.json
 primary_sha256: d1cb59262b7cf1832669061429b3bbfb6fb2f562f52feed2fc4eb82d56b3245e
 notes: >
-  Complementary Part II submission ("Part II: General Algebraic Laws D1-D35, N<=20 Open Cells & Pure Graph-State Upgrades")
+  Complementary Part II submission ("Part II: General Algebraic Laws D1-D37A, N<=20 Open Cells & Pure Graph-State Upgrades")
   to our earlier open PR #576 ("Part I: Composite-Dimension Cyclotomic Constructions AME(9,10) & AME(11,10) + p2 Audit",
   submission_id 2026-10-20-mizopl-9a17cd1e, https://github.com/elder-plinius/V3R1T4S/pull/576).
   Delivered in a separate conflict-free directory (known-knowns/ame-states-open-cells-huber-table/2026-10-21-mizopl-d1cb5926/)
   so that @elder-plinius can merge BOTH PR #576 and this Part II PR without conflicts.
-  Resolves 13 additional open (unknown / blank) cells: AME(20, 17), AME(20, 16), AME(20, 13), AME(20, 289),
+  Resolves 17 additional open (unknown / blank) cells (completing 95/95 = 100% of prime-power D>=11 for n<=20): AME(20, 11), AME(19, 11), AME(20, 121), AME(19, 121), AME(20, 17), AME(20, 16), AME(20, 13), AME(20, 289),
   AME(19, 13), AME(18, 16), AME(16, 13), AME(16, 11), AME(13, 5), AME(15, 8), AME(17, 8), AME(18, 7), and AME(10, 10),
   repairs the impure codetables.de [[15, 0, 8]]_7 state with a pure circulant graph state AME(15, 7),
   upgrades AME(15, 9), AME(17, 7), AME(16, 16/17/19), AME(19, 16/17/19), and universal Paley-Jacobsthal laws over Z,

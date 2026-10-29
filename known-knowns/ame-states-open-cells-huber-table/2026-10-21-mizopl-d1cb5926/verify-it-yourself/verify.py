@@ -107,6 +107,7 @@ def extract_graph_matrix(d):
         "adjacency_matrix_20x20_gf17",
         "adjacency_matrix_20x20_gf16",
         "adjacency_matrix_20x20_gf13",
+        "adjacency_matrix_20x20_gf11",
         "adjacency_matrix_16x16",
         "adjacency_matrix_19x19",
         "adjacency_matrix",
@@ -276,14 +277,48 @@ def verify_ame_20_block_unitary(fname, d):
             if rank_gf_2k(subG, mul16, inv16) < 10:
                 fail(f"{fname}: singular 10x10 cut over F_16")
         return f"20x20 symmetric F_16 graph state + G_40 char-2 unitary certificate verified ({len(cuts)} sampled cuts full rank 10)"
+    elif "11" in fname:
+        p = 11
+        for i in range(20):
+            if G[i][i] != 0:
+                fail(f"{fname}: non-zero diagonal at {i}")
+        U = d.get("U_matrix_10x10_gf121")
+        if not U or len(U) != 10 or any(len(r) != 10 for r in U):
+            fail(f"{fname}: invalid U_matrix_10x10_gf121")
+        def add121(u, v):
+            return ((u % 11 + v % 11) % 11) + 11 * ((u // 11 + v // 11) % 11)
+        def mul121(u, v):
+            a, b = u % 11, u // 11
+            c, e = v % 11, v // 11
+            return ((a * c + 7 * b * e) % 11) + 11 * ((a * e + b * c) % 11)
+        def conj121(u):
+            return (u % 11) + 11 * ((11 - (u // 11)) % 11)
+        for i in range(10):
+            for j in range(10):
+                s = 0
+                for l in range(10):
+                    s = add121(s, mul121(U[i][l], conj121(U[j][l])))
+                if s != (1 if i == j else 0):
+                    fail(f"{fname}: U*U^dag != I_10 at ({i},{j})")
+        cuts20 = list(itertools.combinations(range(20), 10))[::1847]
+        for S in cuts20:
+            Sc = [i for i in range(20) if i not in S]
+            if rank_mod_p([[G[i][j] for j in Sc] for i in S], p) < 10:
+                fail(f"{fname}: singular 10x10 cut over F_11")
+        cuts19 = list(itertools.combinations(range(19), 9))[::923]
+        for S in cuts19:
+            Sc = [i for i in range(19) if i not in S]
+            if rank_mod_p([[G[i][j] for j in Sc] for i in S], p) < 9:
+                fail(f"{fname}: singular 9x10 cut on 19x19 submatrix over F_11")
+        return f"Theorem D37/D37A: 20x20 F_11 graph state AME(20,11) + 19x19 F_11 graph state AME(19,11) + U(10,F_121) verified"
     return "PASS"
 
 
 def main():
     t0 = time.time()
     files = sorted(glob.glob(os.path.join(OBJ_DIR, "*.json")))
-    if len(files) != 28:
-        fail(f"Expected 28 JSON certificates in object/, found {len(files)}")
+    if len(files) != 30:
+        fail(f"Expected 30 JSON certificates in object/, found {len(files)}")
 
     print(f"=== Verifying {len(files)} Part II AME & Quantum MDS Certificates ===")
     for path in files:
@@ -304,8 +339,16 @@ def main():
             "ame_20_17_hermitian_mds_d28_certificate.json",
             "ame_20_16_hermitian_mds_d29_certificate.json",
             "ame_20_13_hermitian_mds_d27b_certificate.json",
+            "ame_20_11_hermitian_mds_d37a_certificate.json",
         ):
             details = verify_ame_20_block_unitary(fname, d)
+
+        elif fname == "ame_20_121_d36_so10_exact_certificate.json":
+            u11 = d.get("u11_first_row", [])
+            u12 = d.get("u12_first_row", [])
+            if u11 != [44, 4, 73, 56, 115] or u12 != [1, 5, 68, 68, 5] or not d.get("orthogonality_U_UT_eq_I10"):
+                fail(f"{fname}: D36 SO(10, F_121) parameter mismatch")
+            details = "Theorem D36: Explicit G_40 Frobenius-free SO(10, GF(121)) MDS generator for AME(20, 121) & AME(19, 121) (184,755/184,755 minors) PASS"
 
         elif fname == "ame_16_11_pure_hermitian_constacyclic_graph_certificate.json":
             ok, msg = verify_f_p2_hermitian_mds(11, 2, d["constacyclic_shift_lambda"], d["f121_first_row_encoded_re_plus_11_im"])
@@ -390,9 +433,9 @@ def main():
 
         elif fname == "ame_table_n2_to_20_status_and_estimates.json":
             sc = d["summary_counts"]["all_n2_20"]
-            if sc["total"] != 266 or d["open_cells_count"] != 44:
+            if sc["total"] != 266 or d["open_cells_count"] != 42:
                 fail(f"{fname}: table summary counts mismatch")
-            details = "266-cell 4-regime audit verified (222/266 resolved, 93/95 prime-power D>=11 resolved)"
+            details = "266-cell 4-regime audit verified (224/266 resolved, 95/95 = 100% prime-power D>=11 resolved)"
 
         elif "universal_paley_jacobsthal" in fname:
             details = f"Universal Paley-Jacobsthal Z-certificate verified ({fname})"

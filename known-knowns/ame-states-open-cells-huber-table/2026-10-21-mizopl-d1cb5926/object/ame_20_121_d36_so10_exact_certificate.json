@@ -1,0 +1,40 @@
+{
+  "theorem": "Theorem D36 \u2014 Exact Frobenius-Free Orthogonal SO(10, F_121) Solution for n=20 (184,755 / 184,755 Non-Zero Minors)",
+  "field": "GF(121) = GF(11)[alpha]/(alpha^2 - 7)",
+  "bidx": 165,
+  "kidx": 2698,
+  "u11_first_row": [
+    44,
+    4,
+    73,
+    56,
+    115
+  ],
+  "u12_first_row": [
+    1,
+    5,
+    68,
+    68,
+    5
+  ],
+  "dft5_u11": [
+    39,
+    23,
+    59,
+    2,
+    119
+  ],
+  "dft5_u12": [
+    15,
+    86,
+    107,
+    107,
+    86
+  ],
+  "orthogonality_U_UT_eq_I10": true,
+  "det_U": 1,
+  "g40_orbits_nonzero": "4970 / 4970 (100.0000%)",
+  "sub_orbits_nonzero": "177 / 177 (100.0000%)",
+  "ext_orbits_nonzero": "4793 / 4793 (100.0000%)",
+  "all_minors_r1_to_10_nonzero": "184755 / 184755 (bad = 0, 100.000000%)"
+}
