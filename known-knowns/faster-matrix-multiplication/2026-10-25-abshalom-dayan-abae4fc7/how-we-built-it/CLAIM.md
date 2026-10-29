@@ -1,0 +1,38 @@
+# Claim
+
+**Claim (one sentence):** The three files in `object/` (u.txt, v.txt, w.txt) define a bilinear (non-commutative)
+scheme over Q with exactly 1709 multiplications for the matrix multiplication format <14,14,15> (A 14x14 times
+B 14x15), and 1709 is strictly below the minimum 1789 of the four sources the criterion names: fmm_sota.json lists
+1789 (fetched 2026-10-25T07:05:01Z), the Lille per-format page https://fmm.univ-lille.fr/14x14x15.html lists 1798
+(fetched 2026-10-25T07:03:39Z), Perminov's docs/ranks.md lists ZT 1798, Z 1798, Q 1790 (fetched 2026-10-25T07:05:02Z),
+and MerlijnW70/fmm-schemes lists no <14,14,15> scheme (fetched 2026-10-25T07:05:03Z).
+
+- target id: `fmm-catalogue-small-format-rank`
+- claimed level: the main success criterion (max(n,m,p) = 15 <= 16; sorted format (14,14,15) is not (3,3,3) or
+  (4,4,4)).
+- status_source (from the bank entry): https://fmm.univ-lille.fr/
+- ring: Q (coefficients are integers and fractions; denominators occurring: 2, 3, 4, 5, 8, 10, 12, 13, 17, 20, 24, 26,
+  30, 34, 39, 40, 52, 60, 65, 68, 78, 104, 120, 130, 136, 156, 195, 260, 312, 390, 520, 544, 780, 1088, 1560).
+- also below every value already public in this repository: the merged known-knowns entry <14,14,15> rank 1716
+  (TROPHY_CASE #47) and the closed pull request #6 (rank 1715). See TABLE_RECORD.md.
+- provenance (fact, for the composition clause): obtained from the published 15x15x15 rank-1977 scheme of
+  Khoruzhii, Serafin, Gelss and Pokutta (LITA, https://github.com/khoruzhii/lita, file schemes/15x15x15_r1977.npz,
+  copied in `rebuild/`) by two exact one-slice restrictions, each followed by exact 2-reductions (linear dependencies
+  among the terms):
+  1. the row index shared by A and C, with e = (1,1,1,1,1,1,1,-5,1,1,1,1,1,1,1) on the A side and
+     f = (-1,1,1,1,1,1,1,1,1,1,1,1,1,1,1) on the C side: 112 terms vanish, 1865 remain, 29 removed, 1836 remain
+     (a <14,15,15> scheme);
+  2. the inner index shared by A and B, with e = f = (1,1,1,1,1,1,1,-5,1,1,1,1,1,1,1): 105 terms vanish, 1731 remain,
+     22 removed, 1709 remain.
+
+  `rebuild/` regenerates the object from the LITA file. It is not a composition, padding or block splitting of known
+  schemes.
+
+## Success criterion (verbatim from the bank)
+
+Success means an explicit bilinear scheme (U, V, W coefficient matrices or an equivalent list of rank-one terms) for a format <n,m,p> with max(n,m,p) <= 16 and sorted(n,m,p) not in {(3,3,3),(4,4,4)}, whose number of rank-one terms r is STRICTLY LESS (direction: min) than ALL of: the rank listed for the sorted format in https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json, the rank on https://fmm.univ-lille.fr/{n}x{m}x{p}.html, the minimum over the ZT/Z/Q columns for that format in https://raw.githubusercontent.com/dronperminov/FastMatrixMultiplication/master/docs/ranks.md, and the lowest rank for that format in https://github.com/MerlijnW70/fmm-schemes (every one re-fetched live immediately before claiming; the scheme beats the minimum over all four). The scheme must be verified in exact arithmetic (integers/fractions, or mod p for GF(p)) over the ring it claims; a scheme valid only over GF(2) counts here ONLY if r is also strictly below the GF(2) rank (F2 column) for that format in https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md (otherwise see partial win p2). A scheme obtained by composing, padding or block-splitting known schemes does not count if the resulting rank equals a value already listed (the Lille table has a 'construction' column listing such derivations). Ternary/integer re-derivations of a rank already attained over Q are NOT this target (see fmm-ternary-integer-ring-upgrade); fewer additions at an existing rank is NOT this target (see fmm-additive-complexity-records).
+
+## Partial wins (verbatim from the bank)
+
+- p1: A new rank for a format with 17 <= max(n,m,p) <= 32 (outside Perminov's 16x16x16 table but inside the Lille catalogue): an exactly verified scheme whose rank is strictly below the live fmm_sota.json entry and the live Lille per-format page for that format, and not a plain composition already listed in the Lille 'construction' column.
+- p2: A GF(2)-only improvement: an exactly verified (mod 2) scheme whose rank is strictly below the F2 column for its format in the live matmulcatalog COVERAGE.md AND below every GF(2)-valid scheme for that format in Perminov's live repository and MerlijnW70's repository, for a format where the characteristic-0 best rank is already <= the new GF(2) rank (so it is not a new rank overall).

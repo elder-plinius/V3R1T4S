@@ -1,0 +1,21 @@
+HTTP/2 200 
+date: Sun, 25 Oct 2026 07:03:41 GMT
+content-type: application/json; charset=utf-8
+cache-control: public, max-age=60, s-maxage=60
+vary: Accept,Accept-Encoding, Accept, X-Requested-With
+etag: W/"e9fe476a493607d6d4869a78dfc6bb398c04372f3a918d8154d4305c3081c75a"
+last-modified: Wed, 30 Sep 2026 16:53:51 GMT
+x-github-media-type: github.v3; format=json
+x-github-api-version-selected: 2022-11-28
+access-control-allow-origin: *
+x-frame-options: deny
+x-content-type-options: nosniff
+x-xss-protection: 0
+referrer-policy: origin-when-cross-origin, strict-origin-when-cross-origin
+content-security-policy: default-src 'none'
+server: github.com
+accept-ranges: bytes
+content-length: 9577
+x-github-request-id: D3A9:3DE720:8EB1448:D474744:6ADDA9CD
+x-github-edge-region: fra
+
