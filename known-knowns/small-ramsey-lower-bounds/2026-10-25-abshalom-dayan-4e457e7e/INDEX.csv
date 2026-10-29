@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+small-ramsey-lower-bounds,"R(3,3,15) lower bound (DS1 Table XIb; partial win p1)",272,269,2026-10-25T11:04:12Z,object/R_3_3_15.txt,4e457e7ee1232a6b4c5ea299b7616c6e4329f04ba11531cadacd4a0d715e9ca7
