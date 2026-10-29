@@ -1,0 +1,10 @@
+HTTP/1.1 404 Not Found
+Date: Sat, 24 Oct 2026 22:36:00 GMT
+Server: Apache
+Strict-Transport-Security: max-age=15768000
+Content-Type: text/html; charset=iso-8859-1
+Content-Length: 236
+X-Frame-Options: SAMEORIGIN
+Content-Security-Policy: frame-ancestors 'self' https://*.univ-lille.fr https://grist.numerique.gouv.fr;
+X-Content-Type-Options: nosniff
+

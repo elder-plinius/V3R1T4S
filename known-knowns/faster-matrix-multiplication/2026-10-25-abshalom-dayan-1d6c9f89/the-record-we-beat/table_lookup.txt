@@ -1,0 +1,46 @@
+== fmm_sota.json (sedoglavic/fmm_digest)
+createdAt 2026-10-19T20:46:33 entries 5456
+  26x26x27: rank 8727
+  26x27x26: no entry
+  27x26x26: no entry
+lowest formats containing the cell componentwise (restricting them gives the cell at the same or a lower rank): [(9078, (26, 26, 28)), (9233, (26, 27, 27)), (9233, (27, 27, 27)), (9551, (26, 26, 29)), (9794, (26, 27, 28))]
+
+== Lille index https://fmm.univ-lille.fr/ (the bank's status_source)
+rows parsed: 5426
+  row 26x26x27: rank 8727; text: ⟨26×26×27:8727⟩ 8727 18252 ⟨26×26×1:676⟩ + ⟨26×26×26:8051⟩ .4781393820 2.774403564 C 1
+  26x27x26: no row
+  27x26x26: no row
+
+== Lille per-format pages https://fmm.univ-lille.fr/<format>.html
+  26x26x27: HTTP/1.1 200 OK; rank 9334; definition: The algorithm ⟨26 × 26 × 27:9334⟩ could be constructed using the following decomposition: ⟨26 × 26 × 27:9334⟩ = ⟨26 × 26 × 1:676⟩ + ⟨26 × 26 × 26:8658⟩ .
+  26x27x26: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+  27x26x26: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+
+== matmulcatalog docs/catalog.json (Chatain Lacelle)
+schemes in the file: 11136
+  rank 8727  fields Q,R,C  lineage naive-26x26x1 +p 26x26x26  (external_best_rank 8727 from fmm-lille)
+  rank 8728  fields Q,R,C  lineage naive-26x26x1 +p 26x26x26  (external_best_rank 8727 from fmm-lille)
+  rank 9125  fields Q,R,C  lineage 27x27x27 ∖[13|13|]  (external_best_rank 8727 from fmm-lille)
+  rank 9328  fields Q,R,C  lineage naive-26x26x1 +p 26x26x26  (external_best_rank 8727 from fmm-lille)
+  rank 9334  fields Q,R,C  lineage naive-26x26x1 +p DIS09Lemma4(n=26)  (external_best_rank 8727 from fmm-lille)
+
+== matmulcatalog generated/COVERAGE.md
+sections up to max-dimension 16 ; hits for the format in any order: 0
+
+== Perminov FastMatrixMultiplication
+  perminov_docs_ranks.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_docs_additions.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_README.md: hits 0; largest dimension in any NxMxP name 16
+  repository tree: 6865 paths, truncated False, largest dimension in any path 16; paths for the format: []
+
+== MerlijnW70/fmm-schemes
+  tree: 39 paths, truncated False, largest dimension 16; paths for the format: []
+
+== khoruzhii/lita schemes/ listing
+  20 files; formats: 13x13x13_r1379, 14x14x14_r1593, 15x15x15_r1977, 16x16x16_r2236, 17x17x17_r2723, 18x18x18_r3031, 19x19x19_r3633, 20x20x20_r3994, 21x21x21_r4723, 22x22x22_r5141, 23x23x23_r6009, 24x24x24_r6488, 25x25x25_r7507, 26x26x26_r8051, 27x27x27_r9233, 28x28x28_r9846, 29x29x29_r11203, 30x30x30_r11889, 31x31x31_r13433, 32x32x32_r14196
+  rectangular schemes: []
+
+== verdict
+lowest value for the format in any axis order, over the sources above: 8727 (fmm_sota.json 26x26x27)
+built rank 8437; margin below the lowest value 290
+built rank strictly below every value found: YES
