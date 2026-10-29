@@ -1,0 +1,18 @@
+== pull requests of elder-plinius/V3R1T4S (all states): 691 (#1 to #714); {'merged': 150, 'closed': 198, 'open': 343}
+PRs whose title or body names the format in any order and notation: 0
+PRs whose title or body contains one of the numbers [5423, 5625, 5626, 5917, 6050]: 1
+   #23 (closed, created 2026-10-14T04:06:23Z) [claim] fmm-additive-complexity-records: (3, 5, 5) rank 58 SLP in 218 additions over Z (beats 221 by  [numbers [5625]]
+
+== file names of the FMM-related pull requests (first page of up to 100 files each)
+121 pull requests, 2969 file names; PRs with 100 or more files (only the first 100 listed, a limit of this scan): [465, 616]
+file names naming the format (any order) or containing one of the numbers: none
+largest NxMxP in an FMM PR's file names, PRs with a dimension of 17 or more: {41: 17, 42: 17, 43: 17, 44: 17, 45: 18, 46: 18, 47: 17, 48: 17, 49: 17, 50: 18, 51: 18, 708: 19, 714: 19}
+
+== main branch
+tree: 5439 paths, truncated False; paths naming the format: none
+fmm_INDEX.csv: names the format: False; contains one of the numbers: []
+TROPHY_CASE.md: names the format: False; contains one of the numbers: []
+
+== arXiv API results
+arxiv_au_khoruzhii.xml: 13 entries, published 2000-03-07 to 2026-07-02; entries naming the format or one of the numbers: none
+arxiv_recent_mm_rank.xml: 100 entries, published 2025-03-07 to 2026-10-19; entries naming the format or one of the numbers: none
