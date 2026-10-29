@@ -143,7 +143,7 @@ def load_bank(workdir, settings, errors=None):
     without the bank's guards."""
     paths = []
     if settings.get("bank"):
-        b = settings["bank"].split()[0]
+        b = settings["bank"]  # kv() removes Markdown wrapping; spaces belong to the path.
         paths.append(b if os.path.isabs(b) else os.path.join(workdir or ".", b))
     if workdir:
         paths.append(os.path.join(workdir, "repo", "bank", "targets.json"))
