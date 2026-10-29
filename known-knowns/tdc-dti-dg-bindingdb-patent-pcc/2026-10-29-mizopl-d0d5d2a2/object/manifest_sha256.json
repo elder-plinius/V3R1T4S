@@ -1,0 +1,279 @@
+{
+  "benchmark_group": "DTI_DG_Group",
+  "benchmark_name": "bindingdb_patent",
+  "pytdc_version": "1.1.15",
+  "created_at_utc": "2026-10-29T03:12:07Z",
+  "files": {
+    "data/dti_dg_group.zip": {
+      "sha256": "4708233b8536d856a9ee6522623e4d44bbf7d2efc1c8496e69f6cd2c6482457a",
+      "size_bytes": 9515670
+    },
+    "data/dti_dg_group/.DS_Store": {
+      "sha256": "37ce3c79da4b9043c8c97e852bbeb4c54bec46e31214793e8831bbb7e85c4105",
+      "size_bytes": 6148
+    },
+    "data/dti_dg_group/bindingdb_patent/.DS_Store": {
+      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
+      "size_bytes": 6148
+    },
+    "data/dti_dg_group/bindingdb_patent/test.csv": {
+      "sha256": "3124f012b92c8c00de39a82ae0ef9d3dd5cc135732bd8bfd420629e1a13dec31",
+      "size_bytes": 44933376
+    },
+    "data/dti_dg_group/bindingdb_patent/train_val.csv": {
+      "sha256": "1cb713579f1a9f6f5fe0374e8939da8ae0e6b187fd24c0b0197b54c81ec486b6",
+      "size_bytes": 167715236
+    },
+    "data/__MACOSX/dti_dg_group/._.DS_Store": {
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
+      "size_bytes": 120
+    },
+    "data/__MACOSX/dti_dg_group/bindingdb_patent/._.DS_Store": {
+      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
+      "size_bytes": 120
+    }
+  },
+  "test_drug_target_keys_sha256": "b28e09b01f7990c55ede2facbe7b9831c6dc9203d140dc575814361ae649b674",
+  "test_full_table_sha256": "7eba0308cddbc74280c61102a99a3b052d9b264e545766380991daa716dfbf75",
+  "eda": {
+    "train_val_rows": 183430,
+    "test_rows": 49028,
+    "columns": [
+      "Drug_ID",
+      "Drug",
+      "Target_ID",
+      "Target",
+      "Y",
+      "Year"
+    ],
+    "train_val_years": {
+      "2013": 11402,
+      "2014": 20186,
+      "2015": 30314,
+      "2016": 28869,
+      "2017": 51504,
+      "2018": 41155
+    },
+    "test_years": {
+      "2019": 42009,
+      "2020": 6947,
+      "2021": 72
+    },
+    "train_val_y_stats": {
+      "mean": 4.532674846035947,
+      "std": 3.0543573722238326,
+      "min": -11.736056516362565,
+      "q25": 2.302585093004046,
+      "median": 4.488636369733263,
+      "q75": 6.486160788944241,
+      "max": 16.11809565095832
+    },
+    "test_y_stats": {
+      "mean": 4.563012234392542,
+      "std": 2.9456768870269925,
+      "min": -3.912023000428146,
+      "q25": 2.302585093004046,
+      "median": 4.605170185989091,
+      "q75": 6.309918278226698,
+      "max": 16.11809565095832
+    },
+    "train_val_y_by_year": {
+      "2013": {
+        "count": 11402,
+        "mean": 4.632697373894026,
+        "std": 3.016995636473818,
+        "median": 4.5951198501356
+      },
+      "2014": {
+        "count": 20186,
+        "mean": 3.863036918553574,
+        "std": 3.116004423987242,
+        "median": 3.9889840465661264
+      },
+      "2015": {
+        "count": 30314,
+        "mean": 4.451093131997812,
+        "std": 3.147820890950773,
+        "median": 4.18965474202794
+      },
+      "2016": {
+        "count": 28869,
+        "mean": 4.242824826753447,
+        "std": 3.124890485190112,
+        "median": 3.970291913554009
+      },
+      "2017": {
+        "count": 51504,
+        "mean": 4.691734820734582,
+        "std": 2.7888205624351783,
+        "median": 4.605170185989091
+      },
+      "2018": {
+        "count": 41155,
+        "mean": 4.897767245274474,
+        "std": 3.156587133190712,
+        "median": 4.605170185989091
+      }
+    },
+    "test_y_by_year": {
+      "2019": {
+        "count": 42009,
+        "mean": 4.56809798832351,
+        "std": 3.006211971588262,
+        "median": 4.605170185989091
+      },
+      "2020": {
+        "count": 6947,
+        "mean": 4.536016050174085,
+        "std": 2.560250610601102,
+        "median": 4.290459441149761
+      },
+      "2021": {
+        "count": 72,
+        "mean": 4.200443552165014,
+        "std": 1.7711067078766123,
+        "median": 4.1971736807102
+      }
+    },
+    "unique_targets_train_val": 428,
+    "unique_targets_test": 248,
+    "unique_targets_overlap": 199,
+    "unique_targets_test_unseen": 49,
+    "test_rows_seen_target": 45031,
+    "test_rows_unseen_target": 3997,
+    "unique_drugs_train_val": 118021,
+    "unique_drugs_test": 34278,
+    "unique_drugs_overlap": 11553,
+    "test_rows_seen_drug": 18069,
+    "test_rows_unseen_drug": 30959,
+    "test_rows_both_seen": 18068,
+    "test_rows_seen_target_unseen_drug": 26963,
+    "test_rows_unseen_target_seen_drug": 1,
+    "test_rows_both_unseen": 3996,
+    "test_exact_pair_in_train_val": 16839,
+    "train_val_unique_pairs": 157172,
+    "test_unique_pairs": 43800
+  },
+  "seeds_1_to_5": {
+    "1": {
+      "train_rows": 146800,
+      "valid_rows": 36630,
+      "train_years": {
+        "2013": 9168,
+        "2014": 16151,
+        "2015": 24249,
+        "2016": 23092,
+        "2017": 41223,
+        "2018": 32917
+      },
+      "valid_years": {
+        "2013": 2234,
+        "2014": 4035,
+        "2015": 6065,
+        "2016": 5777,
+        "2017": 10281,
+        "2018": 8238
+      },
+      "train_unique_targets": 422,
+      "valid_unique_targets": 396,
+      "valid_unseen_targets_in_train": 7,
+      "valid_unseen_drugs_in_train": 17824
+    },
+    "2": {
+      "train_rows": 146439,
+      "valid_rows": 36991,
+      "train_years": {
+        "2013": 9102,
+        "2014": 16142,
+        "2015": 24226,
+        "2016": 23071,
+        "2017": 41094,
+        "2018": 32804
+      },
+      "valid_years": {
+        "2013": 2300,
+        "2014": 4044,
+        "2015": 6088,
+        "2016": 5798,
+        "2017": 10410,
+        "2018": 8351
+      },
+      "train_unique_targets": 422,
+      "valid_unique_targets": 391,
+      "valid_unseen_targets_in_train": 6,
+      "valid_unseen_drugs_in_train": 18109
+    },
+    "3": {
+      "train_rows": 146865,
+      "valid_rows": 36565,
+      "train_years": {
+        "2013": 9165,
+        "2014": 16206,
+        "2015": 24263,
+        "2016": 23118,
+        "2017": 41208,
+        "2018": 32905
+      },
+      "valid_years": {
+        "2013": 2237,
+        "2014": 3980,
+        "2015": 6051,
+        "2016": 5751,
+        "2017": 10296,
+        "2018": 8250
+      },
+      "train_unique_targets": 425,
+      "valid_unique_targets": 390,
+      "valid_unseen_targets_in_train": 3,
+      "valid_unseen_drugs_in_train": 17844
+    },
+    "4": {
+      "train_rows": 146156,
+      "valid_rows": 37274,
+      "train_years": {
+        "2013": 9105,
+        "2014": 16098,
+        "2015": 24178,
+        "2016": 23025,
+        "2017": 40989,
+        "2018": 32761
+      },
+      "valid_years": {
+        "2013": 2297,
+        "2014": 4088,
+        "2015": 6136,
+        "2016": 5844,
+        "2017": 10515,
+        "2018": 8394
+      },
+      "train_unique_targets": 424,
+      "valid_unique_targets": 393,
+      "valid_unseen_targets_in_train": 4,
+      "valid_unseen_drugs_in_train": 18258
+    },
+    "5": {
+      "train_rows": 146390,
+      "valid_rows": 37040,
+      "train_years": {
+        "2013": 9103,
+        "2014": 16064,
+        "2015": 24180,
+        "2016": 23014,
+        "2017": 41179,
+        "2018": 32850
+      },
+      "valid_years": {
+        "2013": 2299,
+        "2014": 4122,
+        "2015": 6134,
+        "2016": 5855,
+        "2017": 10325,
+        "2018": 8305
+      },
+      "train_unique_targets": 424,
+      "valid_unique_targets": 392,
+      "valid_unseen_targets_in_train": 4,
+      "valid_unseen_drugs_in_train": 17998
+    }
+  }
+}
