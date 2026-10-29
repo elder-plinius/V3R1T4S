@@ -1,0 +1,25 @@
+{
+ "fixture": "hsp6_anomaly_4col.txt",
+ "synthetic": true,
+ "dim": 6,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  1,
+  2,
+  3
+ ],
+ "found_columns": 4,
+ "expected_columns": [
+  6,
+  7
+ ],
+ "must_not": [
+  "pad to 6 columns",
+  "return a (3,4) array",
+  "accept as dim 4",
+  "return any coords"
+ ],
+ "note": "an index + 4 coords file read at dim 6 must surface as a loader flag (CoordAnomaly), never silent acceptance"
+}

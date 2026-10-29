@@ -1,0 +1,35 @@
+{
+ "fixture": "ccd_lj13_gapped_index.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13
+ ],
+ "found_columns": 4,
+ "expected_columns": [
+  3,
+  4
+ ],
+ "must_not": [
+  "strip column 0 anyway",
+  "renumber the index",
+  "return a (13,4) array",
+  "return any coords"
+ ],
+ "note": "a non-sequential or gapped index must raise (rule 2)"
+}

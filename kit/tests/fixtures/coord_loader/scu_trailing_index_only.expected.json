@@ -1,0 +1,22 @@
+{
+ "fixture": "scu_trailing_index_only.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  6
+ ],
+ "found_columns": 1,
+ "expected_columns": [
+  3,
+  4
+ ],
+ "must_not": [
+  "drop the lone last line and return N-1 rows",
+  "pad the last row",
+  "return any coords"
+ ],
+ "note": "5 indexed rows then a final line holding only the index 6 (Packomania scu blank-last-sphere pattern seen 2026-10-17); must raise, not return N=5"
+}
