@@ -1,0 +1,4 @@
+start n=13 count=9796 events=71 maxdepth=5 maxnodes=100000 seconds=30
+NEWBEST count=9804 depth=1 arity=4 nodes=1 long=1
+NEWBEST count=9836 depth=1 arity=3 nodes=2 long=1
+end n=13 best=9836 evaluated=3 cycle_paths=90 cutoff=0

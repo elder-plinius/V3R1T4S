@@ -1,0 +1,8 @@
+start pid=41472 n=13 original=9796 initial=9796 len=71 long=0 seed=1301002 mode=2 temp=0.025 seconds=60 maxproposals=10000000
+checkpoint elapsed=10.00 proposed=811005 changed=72257 valid=9282 accepted=471 longvalid=9282 worse=236 current=9648 best=9796 len=72 long=1
+checkpoint elapsed=20.00 proposed=1522703 changed=137244 valid=17543 accepted=909 longvalid=17543 worse=455 current=9504 best=9796 len=73 long=2
+checkpoint elapsed=30.00 proposed=2247023 changed=203552 valid=25924 accepted=1124 longvalid=25924 worse=563 current=9648 best=9796 len=72 long=1
+NEWBEST count=9836 len=72 long=1 proposed=2673573 valid=30008 rng=2432212175335879719
+checkpoint elapsed=40.00 proposed=3080431 changed=292737 valid=34824 accepted=1309 longvalid=34824 worse=655 current=9836 best=9836 len=72 long=1
+checkpoint elapsed=50.00 proposed=3839216 changed=388747 valid=44032 accepted=1691 longvalid=44032 worse=846 current=9836 best=9836 len=72 long=1
+end elapsed=60.001 proposed=4613746 changed=486953 valid=53271 accepted=2059 longvalid=53271 worse=1030 current=9836 best=9836 len=72 long=1
