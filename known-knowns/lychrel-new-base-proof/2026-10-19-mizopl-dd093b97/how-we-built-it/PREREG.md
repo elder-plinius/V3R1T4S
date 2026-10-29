@@ -1,5 +1,7 @@
 # PREREG — lychrel-new-base-proof (Mechanical Template-Closure Proof in New Bases b = 50, 98, 146)
 
+> **Dated Note (2026-10-29):** The frozen pre-registration text below is preserved unmodified from the initial 2026-10-19 run. Per repository packaging rules (one result per PR, no copied third-party files), that run was split into four single-result packages: **#517** (this package: base 50, `object/lychrel_base50_certificate.json`), **#723** (base 98), **#724** (base 146), and **#725** (Kuitché 2023 mechanical audit). Accordingly, the copied third-party files (`data/Lychrel_number.html`, `data/rs_2659802.pdf`, `dseal_live.htm`) and the companion JSON files (`lychrel_base98_certificate.json`, `lychrel_base146_certificate.json`, `seal_base26_baseline_certificate.json`, `claim/kuitche_2023_audit.json`) mentioned below are no longer included in this directory; `the-record-we-beat/README.md` records the external source URLs, fetch timestamps, and SHA-256 digests, and `verify-it-yourself/check_lychrel.py` verifies `object/lychrel_base50_certificate.json` and the inline Seal (1996) base-26 baseline directly.
+
 Frozen: 2026-10-19T05:45:00Z
 
 ## Frozen Acceptance Rule

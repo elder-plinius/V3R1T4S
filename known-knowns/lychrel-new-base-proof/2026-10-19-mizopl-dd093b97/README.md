@@ -2,9 +2,9 @@
 
 ## What
 
-Mechanical template-closure proof that Lychrel numbers exist in base $b = 50 = 2 \cdot 5^2 \notin \{2^k, 11, 17, 20, 26\}$ (`object/lychrel_base50_certificate.json`, `34,276` bytes, `sha256: dd093b972a4f7eb7d6d9db4c5809a3332e413868719635bb6d2fdc9e59dacdb2`, Period-4 templates $T_1(m)\dots T_4(m)$ with $|L_0|=|R_0|=36$, $|M_0|=8$, and 82-digit start integer $n = T_1(1)$ plus 1-step pre-template seed $n_{\text{seed}}$), verified by block-by-block symbolic carry computation for all integer parameters $m \ge 1$, symbolic mirrored-block non-palindromicity, brute force over $m$ from $1$ to $500$, and a 100,000-step orbit simulation with compiled regex matching to 50,082 digits in base 50.
+Mechanical template-closure proof that Lychrel numbers exist in new base b = 50 = 2*5^2 (object/lychrel_base50_certificate.json, sha256 dd093b972a4f7eb7d6d9db4c5809a3332e413868719635bb6d2fdc9e59dacdb2, Period-4 templates T_1(m)..T_4(m) with |L_0|=|R_0|=36, |M_0|=8, and 82-digit start integer n = T_1(1) plus 1-step pre-template seed n_seed), outside {2^k, 11, 17, 20, 26}, verified by block-by-block symbolic carry computation for all integer parameters m at least 1, symbolic mirrored-block non-palindromicity, brute force over m from 1 to 500, and 100,000-step orbit simulation with compiled regex matching to 50,082 digits in base 50.
 
-*(Separate single-object packages are submitted for base $b = 98 = 2 \cdot 7^2$, base $b = 146 = 2 \cdot 73$, and the mechanical audit of Kuitché 2023 across bases $3\dots 10$ [`p2`]).*
+*(Separate single-object packages are submitted in #723 for base $b = 98 = 2 \cdot 7^2$, #724 for base $b = 146 = 2 \cdot 73$, and #725 for the mechanical audit of Kuitché 2023 across bases $3\dots 10$ [`p2`]).*
 
 ## Check it yourself
 
