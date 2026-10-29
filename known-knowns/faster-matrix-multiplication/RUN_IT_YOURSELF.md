@@ -72,3 +72,26 @@ Expected: `r_new 1842` and `final_r 1842`; `"n_killed": 16`, `"r_new": 2180`; `F
 The outputs equal `schemes/14x15x15_r1842_Q.json` and `schemes/15x16x16_r2180_Q.json` term for term (the JSON header
 fields differ, so the sha256 does not). Details, the sweep that chose the direction pairs, and
 the single commands per scheme: `how-we-built-it/README.md`; a recorded run: `how-we-built-it/SMOKE.md`.
+
+## Wrapper contract dependency
+
+`verify-it-yourself/run_checks.sh` requires the standard-library helper
+`../check_harness_contract.py`, relative to this family directory. Keep the normal
+repository layout, or copy `known-knowns/check_harness_contract.py` beside any
+standalone family copy. A missing helper fails explicitly with exit 2. The helper
+validates completed negative-control evidence and/or indexed inventory; it does
+not replace the scientific checker or independently prove its result.
+
+For lightweight orchestration regressions from the repository root (Python 3.9+,
+no scientific dependencies, downloads, or compiler):
+
+```sh
+python3 known-knowns/tests/harness_contracts/run_regressions.py --output known-knowns/tests/harness_contracts/results-local
+```
+
+These tests mock scientific commands and execute only the standard-library
+contract helper. Root `SHA256SUMS` edits remain a maintainer-only step. Before merging, maintainers
+must refresh entries for the changed wrappers/documents and add the helper and
+regression files. The pinned 91419e28 manifest already has stale kit entries;
+regenerate and verify the manifest against the final complete tree, rather than
+assuming unchanged entries are current.
