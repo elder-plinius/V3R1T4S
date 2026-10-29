@@ -1,0 +1,56 @@
+{
+ "machine": "1RB1LC_1LC0RD_0LE1LA_0RF1RA_1LA0LA_---0RB",
+ "notation": "A is a state marker immediately before the scanned cell, x is any single bit, powers have nonnegative integer exponents, all omitted left/right context is arbitrary and untouched. Step counts count defined transitions.",
+ "claim_scope": "Universal context-preserving parametric transfer rules, not an invariant and not a nonhalting certificate.",
+ "rules": [
+  {
+   "id": "even",
+   "domain": "k>=1",
+   "input": "x A0 1^(2k) 00",
+   "output": "A x 1^(2k-2) 00 111",
+   "steps": "12k-3"
+  },
+  {
+   "id": "odd",
+   "domain": "k>=1",
+   "input": "x00 A0 1^(2k+1) 00",
+   "output": "A x10 1^(2k-1) 00 111",
+   "steps": "12k+5"
+  },
+  {
+   "id": "Eodd",
+   "domain": "k>=1",
+   "input": "x00 A0110 1^(2k+1) 00",
+   "output": "A x10 1^(2k-1) 00 1^6",
+   "steps": "24k+7"
+  },
+  {
+   "id": "even_drain",
+   "domain": "k>=0",
+   "input": "0^k A0 1^(2k) 00",
+   "output": "A000 1^(3k)",
+   "steps": "6k^2+3k"
+  },
+  {
+   "id": "Dstep",
+   "domain": "k>=1",
+   "input": "A010 1^(2k+3) 00",
+   "output": "1 A010 1^(2k-1) 00 111",
+   "steps": "12k+13"
+  },
+  {
+   "id": "Ddrain1",
+   "domain": "k>=0",
+   "input": "A010 1^(4k+1) 00",
+   "output": "1^k A0101 00 1^(3k)",
+   "steps": "12k^2+13k"
+  },
+  {
+   "id": "Ddrain3",
+   "domain": "k>=0",
+   "input": "A010 1^(4k+3) 00",
+   "output": "1^k A010 1^3 00 1^(3k)",
+   "steps": "12k^2+25k"
+  }
+ ]
+}
