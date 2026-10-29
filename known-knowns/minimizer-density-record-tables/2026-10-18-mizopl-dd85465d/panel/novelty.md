@@ -4,33 +4,32 @@ context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
 
 ## 1. Claim Summary & Witness Verification
 
-Per `claim/CLAIM.md` and `claim/REPRODUCE.md`, the claim submits an explicit binary-projected DNA minimizer order for `(w = 12, k = 3)` over the $2^3 = 8$ binary 3-mers `000..111` (`0..7`):
+Per `README.md`, the package submits an explicit binary-projected DNA minimizer order for `(w = 12, k = 3)` over the $2^3 = 8$ binary 3-mers `000..111` (`0..7`):
 
 - **Rank vector:** `[4, 7, 1, 0, 6, 5, 2, 3]`
-- **Witness files in `claim/`:**
-  - `claim/w12_k3_improved.gm` (`72` bytes, `sha256: dd85465d87f23d688778ff35175ed19e4c9f00e71cad28b535d7a9d73294f302`, binary `.gm` format with `uint64_t` length prefix `8` followed by `[4, 7, 1, 0, 6, 5, 2, 3]`)
-  - `claim/w12_k3_improved.csv` (`59` bytes, `sha256: 24790fb381b985fe053ea4d82ae225412815e1a2df754a55fe5a53448ab7b55a`)
+- **Witness files in `object/`:**
+  - `object/w12_k3_improved.gm` (`72` bytes, `sha256: dd85465d87f23d688778ff35175ed19e4c9f00e71cad28b535d7a9d73294f302`, binary `.gm` format with `uint64_t` length prefix `8` followed by `[4, 7, 1, 0, 6, 5, 2, 3]`)
+  - `object/w12_k3_improved.csv` (`59` bytes, `sha256: 24790fb381b985fe053ea4d82ae225412815e1a2df754a55fe5a53448ab7b55a`)
 - **Claimed exact expected DNA density (`prob_gc_dna` and 4-ary transfer-matrix DP over all $4^{15} = 1,073,741,824$ DNA windows of length $w + k = 15$):**
-  $$\frac{146,639,789}{2^{30}} \approx 0.1365689458 \quad (\text{density factor } (w+1) \cdot d = 1.7753962951)$$
-- **Independent execution of `claim/author_checker_minimizer_check.py`:**
-  - `Published w12_k3.gm (prob_gc_dna)        : 149082035 / 2^30 = 0.1388434647`
-  - `Improved  w12_k3_improved.gm (prob_gc_dna): 146639789 / 2^30 = 0.1365689458`
-  - `Improved  w12_k3_improved.gm (4-ary DP)   : 146639789 / 2^30 = 0.1365689458`
-  - `Smallest published value: 0.1383894480 (angle-based)`
-  - `Relative reduction vs best: -1.315492% (required at least 0.500000%)`
-  - `Empirical Check (N=1,000,000, seed=0): Published 0.138838 vs Improved 0.136709 (-1.5334%)`
+  $$\frac{146,639,789}{2^{30}} \approx 0.1365689458 \quad (\text{density factor } (w+1) \cdot d = 1.7753962958)$$
+- **Independent execution of `verify-it-yourself/author_checker_minimizer_check.py` (via `verify-it-yourself/run_checks.sh`, recorded in `verify-it-yourself/RECEIPTS.md`):**
+  - `Published w12_k3.gm (bit-plane exact)        : 149082035 / 2^30 = 0.1388434647`
+  - `Improved  w12_k3_improved.gm (bit-plane)     : 146639789 / 2^30 = 0.1365689458`
+  - `Improved  w12_k3_improved.gm (4-ary DP)      : 146639789 / 2^30 = 0.1365689458`
+  - `Smallest listed value   : 0.1383894480 (angle-based)`
+  - `Relative reduction vs smallest listed: -1.315492% (required >= 0.500000%)`
 
 ---
 
 ## 2. Live Single-Fetch Audit of Primary Tables & Precomputed Minimizers
 
-Each upstream resource was fetched **once** via `curl -sS -A "V3R1T4S-research-agent (honest single fetch)"` with zero retries.
+Each upstream resource was fetched **once** via `curl -sS -A "V3R1T4S-research-agent (honest single fetch)"` with zero retries (recorded in `the-record-we-beat/minimizer_record_snapshot.md`).
 
 ### 2.1 Primary Expected-Density Table (`k_extension_k16_w12.csv`)
 - **URL:** `https://raw.githubusercontent.com/OrensteinLab/10-minimizers/main/density-measurement-and-plots/GM%20paper%20densities/k_extension_k16_w12.csv`
 - **UTC Timestamp:** `2026-10-18T17:27:39Z`
 - **HTTP Status:** `200`
-- **Size & SHA256:** `1644` bytes, `sha256: 88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa` (identical to `claim/k_extension_k16_w12.csv`)
+- **Size & SHA256:** `1,644` bytes, `sha256: 88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa`
 - **All Values in Column `3` (`w = 12, k = 3`):**
 
 | Method (`k_extension_k16_w12.csv`) | Column `3` Value | Claimed Density (`0.1365689458`) | Relative Change |
@@ -47,9 +46,9 @@ Each upstream resource was fetched **once** via `curl -sS -A "V3R1T4S-research-a
 - **URL:** `https://raw.githubusercontent.com/OrensteinLab/10-minimizers/main/density-measurement-and-plots/GM/w12_k3.gm`
 - **UTC Timestamp:** `2026-10-18T17:27:39Z`
 - **HTTP Status:** `200`
-- **Size & SHA256:** `72` bytes, `sha256: c592519b57ad8104860b7e1559b28c2d37ef329db82298b151a65e056ce27f1d` (identical to `claim/published_w12_k3.gm`)
+- **Size & SHA256:** `72` bytes, `sha256: c592519b57ad8104860b7e1559b28c2d37ef329db82298b151a65e056ce27f1d`
 - **Decoded Rank Vector:** length prefix `8`, ranks `[8, 2, 8, 8, 0, 4, 1, 3]`
-- **Exact Expected DNA Density (`prob_gc_dna`):** `149,082,035 / 2^30 = 0.1388434647` (relative reduction of `claim/w12_k3_improved.gm` vs `w12_k3.gm`: **`-1.638189%`**, or `-2,442,246` gamechanger windows out of $4^{15}$).
+- **Exact Expected DNA Density (`prob_gc_dna`):** `149,082,035 / 2^30 = 0.1388434647` (relative reduction of `object/w12_k3_improved.gm` vs `w12_k3.gm`: **`-1.638189%`**, or `-2,442,246` gamechanger windows out of $4^{15}$).
 
 ### 2.3 Upstream Repository Commit Histories
 - **`OrensteinLab/10-minimizers` Commits:**
@@ -101,6 +100,6 @@ Each upstream resource was fetched **once** via `curl -sS -A "V3R1T4S-research-a
 
 ## 4. Verdict
 
-The claimed binary-projected DNA minimizer order `[4, 7, 1, 0, 6, 5, 2, 3]` (`claim/w12_k3_improved.gm`) achieves an exact expected DNA density of `146,639,789 / 2^30 = 0.1365689458` at `(w = 12, k = 3)`, strictly beating the smallest published value `0.138389448` (`angle-based` in `k_extension_k16_w12.csv`) by **`-1.315492%` relative** (`2.63x` the required `0.5%` relative threshold) and beating the precomputed `w12_k3.gm` (`0.1388434647`) by **`-1.638189%` relative**, with identical storage cost (`72` bytes on disk / `24` bits of rank table storage) and zero prior claims in the literature, `TROPHY_CASE.md`, or open pull requests.
+The claimed binary-projected DNA minimizer order `[4, 7, 1, 0, 6, 5, 2, 3]` (`object/w12_k3_improved.gm`) achieves an exact expected DNA density of `146,639,789 / 2^30 = 0.1365689458` at `(w = 12, k = 3)`, strictly beating the smallest listed value `0.138389448` (`angle-based` in `k_extension_k16_w12.csv`) by **`-1.315492%` relative** (`2.63x` the required `0.5%` relative threshold) and beating the precomputed `w12_k3.gm` (`0.1388434647`) by **`-1.638189%` relative**, with identical storage cost (`72` bytes on disk / `24` bits of rank table storage) and zero prior claims in the literature, `TROPHY_CASE.md`, or open pull requests.
 
 pass: true
