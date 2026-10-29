@@ -29,11 +29,11 @@ def w(path, text):
         f.write(text)
 
 
-def panel(d, gate_status="CONFIRMED_PARTIAL", contexts=("subagent", "subagent", "subagent"), passes=(True, True, True)):
+def panel(d, gate_status="CONFIRMED_PARTIAL", contexts=("subagent", "subagent", "subagent"), passes=(True, True, True), scope="one cell, exactly as reproduced."):
     for role, ctx, ok in zip(check_run.PANEL, contexts, passes):
-        w(os.path.join(d, role + ".md"), "# %s\ncontext: %s\nchecked %s independently.\npass: %s\n"
-          % (role, ctx, role, "true" if ok else "false"))
-    w(os.path.join(d, "gate.md"), "status: %s\nconfirmed_scope: one cell, exactly as reproduced.\n" % gate_status)
+        w(os.path.join(d, role + ".md"), "# %s\ncontext: %s\nchecked %s independently.\n%spass: %s\n"
+          % (role, ctx, role, ("confirmed_scope: %s\n" % scope) if role == "criterion" else "", "true" if ok else "false"))
+    w(os.path.join(d, "gate.md"), "status: %s\nconfirmed_scope: %s\n" % (gate_status, scope))
 
 
 class Base(unittest.TestCase):
@@ -147,7 +147,7 @@ class GoodFixtures(Base):
         w(os.path.join(self.R, "target.md"), "id: toy-cipher\n")
         self.attack(levels=("solution_claim", "negative"), null="required")
         w(os.path.join(self.R, "null_test.md"), "controls: 400\nbest_control: 0.41\nreal: 0.97\nreal_beats_all_controls: yes\ncommand: python3 null.py\n")
-        panel(os.path.join(self.W, "private", "toy-cipher", "panel"))
+        panel(os.path.join(self.W, "private", "toy-cipher", "panel"), scope="key reproduces the ciphertext.")
         w(os.path.join(self.R, "panel", "gate.md"), "status: CONFIRMED_SOLUTION\nconfirmed_scope: key reproduces the ciphertext.\n")
         w(os.path.join(self.W, "private", "toy-cipher", "plaintext.txt"), PLAINTEXT)
         w(os.path.join(self.W, "outbox", "2026-10-12-tester-deadbeef", "envelope.md"),
@@ -392,6 +392,417 @@ class WindowsPortability(Base):
         self.attack()
         check_run.wbytes(os.path.join(self.R, "attempts", "lens0", "report.md"), b"claim level: negative\r\ndead lines:\r\n- one\r\n")
         self.assertFail("needs 'dead lines:'", self.W)
+
+
+class PackageBoundaries(Base):
+    def symlink(self, target, link, directory=False):
+        try:
+            os.symlink(target, link, target_is_directory=directory)
+        except (OSError, NotImplementedError):
+            self.skipTest("symlinks unavailable")
+
+    def assertUnsafeWithoutReads(self, P, needle):
+        # An unsafe entry must be rejected before reading any package data or
+        # workspace settings, hashing files, or starting the package checker.
+        with mock.patch.object(check_run, "read", side_effect=AssertionError("unexpected read")), \
+                mock.patch.object(check_run, "rbytes", side_effect=AssertionError("unexpected hash read")), \
+                mock.patch.object(check_run, "run_own_checker", side_effect=AssertionError("unexpected execution")):
+            self.assertFail(needle, "--package", P, "--workdir", self.W)
+
+    def test_regular_package_still_passes(self):
+        self.assertPass("--package", self.package(), "--workdir", self.W)
+
+    def test_file_symlink_rejected_before_reads(self):
+        P = self.package()
+        outside = os.path.join(self.tmp, "outside.txt")
+        w(outside, "synthetic external content\n")
+        self.symlink(outside, os.path.join(P, "external.txt"))
+        self.assertUnsafeWithoutReads(P, "symbolic links are not allowed")
+
+    def test_directory_symlink_rejected_before_reads(self):
+        P = self.package()
+        outside = os.path.join(self.tmp, "outside")
+        w(os.path.join(outside, "fixture.txt"), "synthetic external content\n")
+        self.symlink(outside, os.path.join(P, "external"), directory=True)
+        self.assertUnsafeWithoutReads(P, "symbolic links are not allowed")
+
+    def test_dangling_symlink_rejected_before_reads(self):
+        P = self.package()
+        self.symlink(os.path.join(self.tmp, "does-not-exist"), os.path.join(P, "dangling"))
+        self.assertUnsafeWithoutReads(P, "symbolic links are not allowed")
+
+    def test_package_root_symlink_rejected_before_reads(self):
+        P = self.package()
+        link = os.path.join(self.tmp, "linked-package")
+        self.symlink(P, link, directory=True)
+        self.assertUnsafeWithoutReads(link, "symbolic links are not allowed")
+
+    @unittest.skipUnless(hasattr(os, "mkfifo"), "FIFOs unavailable")
+    def test_fifo_rejected_before_reads(self):
+        P = self.package()
+        os.mkfifo(os.path.join(P, "pipe.txt"))
+        self.assertUnsafeWithoutReads(P, "unsupported file type")
+
+    def test_hidden_directory_is_hashed_and_scanned(self):
+        P = self.package()
+        w(os.path.join(P, ".github", "fixture.txt"), "synthetic marker gh" + "p_" + "A" * 36 + "\n")
+        self.assertFail(".github/fixture.txt is not listed", "--package", P, "--no-exec")
+        self.assertIn("GitHub token", self.out)
+
+    def test_hashed_hidden_directory_is_allowed(self):
+        P = self.package()
+        w(os.path.join(P, ".github", "notes.txt"), "public reproduction notes\n")
+        self.sums(P)
+        self.assertPass("--package", P)
+
+    def test_hidden_file_size_is_checked(self):
+        P = self.package()
+        w(os.path.join(P, ".github", "large.bin"), "x" * 1_000_001)
+        self.sums(P)
+        self.assertFail(".github/large.bin is larger than 1 MB", "--package", P, "--no-exec")
+
+    def test_plain_text_pem_private_key_marker_is_scanned(self):
+        P = self.package()
+        w(os.path.join(P, "how-we-built-it", "synthetic.pem"),
+          "-----BEGIN PRIVATE KEY-----\nSYNTHETIC_NON_SECRET_FIXTURE\n-----END PRIVATE KEY-----\n")
+        self.sums(P)
+        self.assertFail("private key in how-we-built-it/synthetic.pem", "--package", P, "--no-exec")
+
+    def test_unknown_text_extension_never_publish_is_scanned(self):
+        P = self.package()
+        w(os.path.join(P, "how-we-built-it", "notes.custom"), "Placeholder Realname\n")
+        self.sums(P)
+        self.assertFail("never_publish", "--package", P, "--workdir", self.W, "--no-exec")
+
+    def envelope(self):
+        P = os.path.join(self.W, "outbox", "sealed")
+        w(os.path.join(self.R, "target.md"), "id: toy-cipher\n")
+        panel(os.path.join(self.R, "panel"))
+        w(os.path.join(P, "envelope.md"), "# Sealed envelope sealed\ntarget: toy-cipher\nproblem: Problem 7\n"
+          "| file | frozen (UTC) | commitment |\n|---|---|---|\n"
+          "| solution file 1 (key) | 2026-10-12T03:14:15Z | `%s` |\n" % HEX)
+        return P
+
+    def test_sealed_envelope_directory_and_file_still_pass(self):
+        P = self.envelope()
+        self.assertPass("--package", P, "--workdir", self.W)
+        self.assertPass("--package", os.path.join(P, "envelope.md"), "--workdir", self.W)
+
+    def test_nested_envelope_is_an_extra_file(self):
+        P = self.envelope()
+        w(os.path.join(P, "nested", "envelope.md"), "synthetic unsealed solution\n")
+        self.assertFail("envelope.md only; found nested/envelope.md", "--package", P, "--workdir", self.W)
+
+    def test_hidden_envelope_extra_file_is_rejected(self):
+        P = self.envelope()
+        w(os.path.join(P, ".github", "notes.txt"), "synthetic unsealed solution\n")
+        self.assertFail("envelope.md only; found .github/notes.txt", "--package", P, "--workdir", self.W)
+
+    def test_standalone_envelope_symlink_rejected_before_reads(self):
+        P = self.envelope()
+        link = os.path.join(self.tmp, "linked-envelope.md")
+        self.symlink(os.path.join(P, "envelope.md"), link)
+        self.assertUnsafeWithoutReads(link, "symbolic links are not allowed")
+
+    def test_manifest_cannot_reference_outside_package(self):
+        P = self.package()
+        outside = os.path.join(os.path.dirname(P), "outside.txt")
+        w(outside, "public synthetic fixture\n")
+        with open(os.path.join(P, "SHA256SUMS"), "a") as f:
+            f.write("%s  ../outside.txt\n" % hashlib.sha256(check_run.rbytes(outside)).hexdigest())
+        self.assertFail("SHA256SUMS path leaves the package", "--package", P, "--no-exec")
+
+    def test_unsafe_package_is_not_read_again_by_workspace_secret_scan(self):
+        self.attack()
+        P = self.package()
+        outside = os.path.join(self.tmp, "outside.txt")
+        w(outside, "synthetic external fixture\n")
+        link = os.path.join(P, "external.txt")
+        self.symlink(outside, link)
+        w(os.path.join(self.W, "private", "toy-cipher", "plaintext.txt"), PLAINTEXT)
+        original_is_text = check_run.is_text
+        def guarded_is_text(path, *args, **kwargs):
+            self.assertNotEqual(path, link, "workspace scanner revisited rejected package symlink")
+            return original_is_text(path, *args, **kwargs)
+        with mock.patch.object(check_run, "is_text", side_effect=guarded_is_text):
+            self.assertFail("symbolic links are not allowed", self.W)
+
+    def test_confirmed_workspace_does_not_read_index_symlink_before_preflight(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"))
+        P = self.package()
+        outside = os.path.join(self.tmp, "outside-index.csv")
+        w(outside, "target_id\ntoy-record\n")
+        link = os.path.join(P, "INDEX.csv")
+        os.remove(link)
+        self.symlink(outside, link)
+        original_read = check_run.read
+        def guarded_read(path, *args, **kwargs):
+            self.assertNotEqual(path, link, "confirmation presence check read unsafe package symlink")
+            return original_read(path, *args, **kwargs)
+        with mock.patch.object(check_run, "read", side_effect=guarded_read):
+            self.assertFail("symbolic links are not allowed", self.W)
+
+    def test_hidden_outbox_package_is_validated(self):
+        self.attack()
+        P = self.package(name=".hidden-package")
+        w(os.path.join(P, "synthetic.pem"),
+          "-----BEGIN PRIVATE KEY-----\nSYNTHETIC_NON_SECRET_FIXTURE\n-----END PRIVATE KEY-----\n")
+        self.assertFail("synthetic.pem is not listed", self.W, "--no-exec")
+        self.assertIn("private key in synthetic.pem", self.out)
+
+    def test_valid_hidden_outbox_package_passes(self):
+        self.attack()
+        self.package(name=".hidden-package")
+        self.assertPass(self.W)
+
+    def test_hidden_outbox_directory_symlink_is_rejected(self):
+        self.attack()
+        P = self.package()
+        outside = os.path.join(self.tmp, "outside-package")
+        shutil.move(P, outside)
+        link = os.path.join(self.W, "outbox", ".hidden-package")
+        self.symlink(outside, link, directory=True)
+        self.assertFail("symbolic links are not allowed", self.W)
+
+    def test_hidden_outbox_file_symlink_is_not_read(self):
+        self.attack()
+        os.makedirs(os.path.join(self.W, "outbox"), exist_ok=True)
+        outside = os.path.join(self.tmp, "outside.txt")
+        w(outside, "synthetic external fixture\n")
+        link = os.path.join(self.W, "outbox", ".hidden.txt")
+        self.symlink(outside, link)
+        w(os.path.join(self.W, "private", "toy-cipher", "plaintext.txt"), PLAINTEXT)
+        original_is_text = check_run.is_text
+        def guarded_is_text(path, *args, **kwargs):
+            self.assertNotEqual(path, link, "workspace scanner opened an unsupported outbox symlink")
+            return original_is_text(path, *args, **kwargs)
+        with mock.patch.object(check_run, "is_text", side_effect=guarded_is_text):
+            self.assertFail("outbox holds only package folders", self.W)
+
+    def test_hidden_regular_outbox_files_are_skipped(self):
+        self.attack()
+        os.makedirs(os.path.join(self.W, "outbox"), exist_ok=True)
+        with open(os.path.join(self.W, "outbox", ".DS_Store"), "wb") as f:
+            f.write(b"\x00\x00\x00\x01Bud1" + b"\x00" * 64)
+        w(os.path.join(self.W, "outbox", ".notes.txt"), "synthetic local note\n")
+        self.assertPass(self.W)
+
+    def test_hidden_regular_outbox_file_is_still_secret_scanned(self):
+        self.attack()
+        w(os.path.join(self.W, "private", "toy-cipher", "plaintext.txt"), PLAINTEXT)
+        w(os.path.join(self.W, "outbox", ".notes.txt"), PLAINTEXT + "\n")
+        self.assertFail("outbox/.notes.txt contains text from", self.W)
+
+    def test_nonaffirmative_checker_terminal_lines_fail(self):
+        for terminal in ("NOT PASS", "PASS: 0", "BYPASS", "PASS FAIL"):
+            with self.subTest(terminal=terminal):
+                P = self.package()
+                w(os.path.join(P, "verify-it-yourself", "run_checks.sh"), "printf '%s\\n'\n" % terminal)
+                self.sums(P)
+                self.assertFail("did not pass from a clean copy", "--package", P)
+
+
+class ConfirmationGates(Base):
+    def test_duplicate_gate_fields_rejected(self):
+        P = self.package()
+        for extra in ("status: NOTHING", "status: CONFIRMED_PARTIAL",
+                      "confirmed_scope: a different claim"):
+            with self.subTest(extra=extra):
+                panel(os.path.join(P, "panel"))
+                path = os.path.join(P, "panel", "gate.md")
+                w(path, check_run.read(path) + extra + "\n")
+                self.sums(P)
+                self.assertFail("duplicate critical field", "--package", P)
+
+    def test_duplicate_panel_decisions_rejected(self):
+        P = self.package()
+        for fields in ("novelty: complete\nnovelty: PENDING STATUS CHECK\n",
+                       "context: same session\n"):
+            with self.subTest(fields=fields):
+                w(os.path.join(P, "panel", "novelty.md"),
+                  "context: subagent\n" + fields + "pass: true\n")
+                self.sums(P)
+                self.assertFail("duplicate critical field", "--package", P)
+
+    def test_only_final_pass_line_decides(self):
+        # Published panels quote checker transcripts and prose ("Pass: the object meets ...").
+        # As on main, only the last nonempty line is the verdict; earlier "pass:" lines are not.
+        P = self.package()
+        quoted = ("Pass: the object meets the stated criterion.\n"
+                  "```\n$ sh verify-it-yourself/run_checks.sh\npass: true\nPASS: all saved-object checks\n```\n"
+                  "    pass: true\n")
+        scope = "confirmed_scope: one cell, exactly as reproduced.\n"
+        for role in check_run.PANEL:
+            for body, final, ok in ((quoted, "pass: true", True), ("pass: false\n", "pass: true", True),
+                                    (quoted, "pass: false", False)):
+                with self.subTest(role=role, body=body[:12], final=final):
+                    panel(os.path.join(P, "panel"))
+                    w(os.path.join(P, "panel", role + ".md"), "# %s\ncontext: subagent\n%s%s%s\n"
+                      % (role, scope if role == "criterion" else "", body, final))
+                    self.sums(P)
+                    if ok:
+                        self.assertPass("--package", P, "--no-exec")
+                        self.assertNotIn("duplicate critical field", self.out)
+                    else:
+                        self.assertFail("%s.md does not end with 'pass: true'" % role, "--package", P, "--no-exec")
+
+    def test_duplicate_null_decisions_rejected(self):
+        path = os.path.join(self.R, "null_test.md")
+        base = ("controls: 400\nbest_control: 0.4\nreal: 0.9\n"
+                "real_beats_all_controls: yes\ncommand: python3 null.py\n")
+        for extra in ("controls: 4", "best_control: 1.0", "real: 0.1",
+                      "real_beats_all_controls: no", "command: another.py"):
+            with self.subTest(extra=extra):
+                w(path, base + extra + "\n")
+                c = check_run.Checker(quiet=True)
+                self.assertFalse(check_run.check_null(c, path, "fixture"))
+                self.assertTrue(any("duplicate critical field" in x for x in c.fails))
+
+    def test_duplicate_prereg_null_decision_rejected(self):
+        self.attack()
+        path = os.path.join(self.R, "PREREG.md")
+        w(path, check_run.read(path) + "null_test: required\n")
+        self.assertFail("duplicate critical field 'null_test'", self.W)
+
+    def test_duplicate_noncritical_metadata_remains_compatible(self):
+        P = self.package()
+        for filename in ("gate.md", "novelty.md"):
+            path = os.path.join(P, "panel", filename)
+            w(path, "note: first source\nnote: second source\n" + check_run.read(path))
+        self.sums(P)
+        self.assertPass("--package", P)
+
+    def test_envelope_rejects_duplicate_gate_decision(self):
+        w(os.path.join(self.R, "target.md"), "id: toy-cipher\n")
+        panel(os.path.join(self.R, "panel"))
+        path = os.path.join(self.R, "panel", "gate.md")
+        w(path, check_run.read(path) + "status: NOTHING\n")
+        self.assertFalse(check_run.find_confirmed_gate(self.W, "toy-cipher"))
+
+    def test_empty_or_failed_status_cannot_confirm(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"))
+        self.package()
+        digest = hashlib.sha256(b"<p>open</p>\n").hexdigest()
+        for status in ("", "status: 403\ncontrols: 200", "http_status: 429",
+                       "HTTP/2 503", "HTTP 301", "controls: 200"):
+            with self.subTest(status=status):
+                w(os.path.join(self.R, "scout.md"),
+                  ("url: https://example.org/table\nsha256: %s\n%s\n" % (digest, status)) if status else "")
+                self.assertFail("requires a completed status/table check", self.W)
+
+    def test_explicit_successful_http_formats(self):
+        self.attack()
+        digest = hashlib.sha256(b"<p>open</p>\n").hexdigest()
+        for status in ("status: 200", "http_status: 200 OK", "HTTP/2 200", "HTTP 200", "HTTP status: 200"):
+            with self.subTest(status=status):
+                w(os.path.join(self.R, "scout.md"), "url: https://example.org/table\nsha256: %s\n%s\n" % (digest, status))
+                self.assertPass(self.W)
+
+    def test_explicit_http_field_takes_precedence_over_generic_status(self):
+        self.attack()
+        digest = hashlib.sha256(b"<p>open</p>\n").hexdigest()
+        for fields, ok in (("status: open\nhttp_status: 200", True), ("status: open\nhttp_code: 200", True),
+                           ("http_status: 200 OK\nstatus: open", True), ("status: open\nhttp_status: 404", False),
+                           ("status: 200\nhttp_status: 503", False), ("status: open", False)):
+            with self.subTest(fields=fields):
+                w(os.path.join(self.R, "scout.md"), "url: https://example.org/table\nsha256: %s\n%s\n" % (digest, fields))
+                if ok:
+                    self.assertPass(self.W)
+                else:
+                    self.assertFail("scout.md needs the status source's URL, HTTP status and page sha256", self.W)
+
+    def test_confirmed_run_accepts_http_status_next_to_target_status(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"))
+        self.package()
+        digest = hashlib.sha256(b"<p>open</p>\n").hexdigest()
+        w(os.path.join(self.R, "scout.md"), "url: https://example.org/table\nstatus: open\nhttp_status: 200\nsha256: %s\n" % digest)
+        self.assertPass(self.W, "--no-exec")
+        self.assertIn("CONFIRMED status backed by three panel files", self.out)
+
+    def test_nonexact_confirmed_gate_status_warns(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        for status in ("CONFIRMED_PARTIAL (pending table check)", "NOT_CONFIRMED_SOLUTION",
+                       "confirmed_partial", "CONFIRMED_"):
+            with self.subTest(status=status):
+                panel(os.path.join(self.R, "panel"), gate_status=status)
+                self.assertPass(self.W)
+                self.assertIn("is not exactly CONFIRMED_SOLUTION or CONFIRMED_PARTIAL", self.out)
+                self.assertIn("claim present, not confirmed", self.out)
+
+    def test_exact_or_unconfirmed_gate_status_does_not_warn(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"), gate_status="PROMISING")
+        self.assertPass(self.W)
+        self.assertNotIn("is not exactly CONFIRMED_", self.out)
+        panel(os.path.join(self.R, "panel"))
+        self.package()
+        self.assertPass(self.W, "--no-exec")
+        self.assertNotIn("is not exactly CONFIRMED_", self.out)
+        self.assertIn("CONFIRMED status backed by three panel files", self.out)
+
+    def test_pending_novelty_cannot_confirm_package(self):
+        P = self.package()
+        for status in ("PENDING STATUS CHECK", "pending   table check"):
+            with self.subTest(status=status):
+                w(os.path.join(P, "panel", "novelty.md"),
+                  "context: subagent\nnovelty: %s\npass: true\n" % status)
+                self.sums(P)
+                self.assertFail("novelty.md reports a pending", "--package", P)
+
+    def test_pending_status_blocks_confirmation(self):
+        self.attack(levels=("partial_win_claim", "negative"))
+        panel(os.path.join(self.R, "panel"))
+        self.package()
+        for status in ("PENDING STATUS CHECK", "PENDING TABLE CHECK", "pending   status check"):
+            with self.subTest(status=status):
+                w(os.path.join(self.R, "scout.md"), status + "\n")
+                self.assertFail("requires a completed status/table check", self.W)
+
+    def test_pending_status_allows_unconfirmed_run(self):
+        self.attack()
+        w(os.path.join(self.R, "scout.md"), "PENDING STATUS CHECK\n")
+        self.assertPass(self.W)
+
+    def test_package_requires_exact_confirmed_status(self):
+        P = self.package()
+        for status in ("NOT_CONFIRMED_PARTIAL", "CONFIRMED_SOLUTION_RETRACTED",
+                       "not CONFIRMED_PARTIAL", "PROMISING"):
+            with self.subTest(status=status):
+                panel(os.path.join(P, "panel"), gate_status=status)
+                self.sums(P)
+                self.assertFail("not CONFIRMED_*", "--package", P)
+
+    def test_envelope_cannot_use_negated_confirmation(self):
+        w(os.path.join(self.R, "target.md"), "id: toy-cipher\n")
+        panel(os.path.join(self.R, "panel"), gate_status="NOT_CONFIRMED_SOLUTION")
+        self.assertFalse(check_run.find_confirmed_gate(self.W, "toy-cipher"))
+
+    def test_package_rejects_failed_required_null_test(self):
+        bank = {"targets": [{"id": "toy-record", "category": "undeciphered-scripts",
+                             "disclosure": "open"}]}
+        w(os.path.join(self.W, "repo", "bank", "targets.json"), json.dumps(bank))
+        P = self.package()
+        for verdict in ("no", "false"):
+            with self.subTest(verdict=verdict):
+                w(os.path.join(P, "how-we-built-it", "null_test.md"),
+                  "controls: 400\nbest_control: 0.9\nreal: 0.4\n"
+                  "real_beats_all_controls: %s\ncommand: python3 null.py\n" % verdict)
+                self.sums(P)
+                self.assertFail("requires a passing null test", "--package", P, "--workdir", self.W)
+
+    def test_package_accepts_passing_required_null_test(self):
+        bank = {"targets": [{"id": "toy-record", "category": "undeciphered-scripts",
+                             "disclosure": "open"}]}
+        w(os.path.join(self.W, "repo", "bank", "targets.json"), json.dumps(bank))
+        P = self.package()
+        w(os.path.join(P, "how-we-built-it", "null_test.md"),
+          "controls: 400\nbest_control: 0.4\nreal: 0.9\n"
+          "real_beats_all_controls: yes\ncommand: python3 null.py\n")
+        self.sums(P)
+        self.assertPass("--package", P, "--workdir", self.W)
 
 
 class NullControlCounts(unittest.TestCase):
