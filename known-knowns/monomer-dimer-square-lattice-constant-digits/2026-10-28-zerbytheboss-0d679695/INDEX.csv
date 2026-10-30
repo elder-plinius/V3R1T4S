@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+monomer-dimer-square-lattice-constant-digits,entropy_constant_h2,0.6627989728337459151551962343893506376024,0.662798972834,2026-10-28T22:30:00Z,object/h2_monomer_dimer_certified_digits.txt,0d679695c9467955c9037b322d9a5867eb514d7978e4e906484ac4df63cedb0f
