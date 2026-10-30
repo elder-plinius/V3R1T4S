@@ -1,0 +1,34 @@
+# Greetings from The On-Line Encyclopedia of Integer Sequences! http://oeis.org/
+
+Search: id:a247413
+Showing 1-1 of 1
+
+%I A247413 #41 Oct 27 2026 21:11:25
+%S A247413 1,3,4,2,6,4,3,9,5,1,1,2,4,6,0,1,2,9,7,8,5,1,7,3,0,1
+%N A247413 Decimal expansion of the entropy constant related to A063443.
+%D A247413 Steven R. Finch, Mathematical Constants, Cambridge, 2003, p. 343.
+%D A247413 B. D. McKay, On Calkin and Wilf's limit theorem for grid graphs, unpublished note, 1996.
+%H A247413 Anzal Abidi, <a href="https://github.com/anzal1/research/tree/main/kings-entropy-a247413">C program computing a(1)-a(26) by transfer-matrix renormalization</a>, 2026.
+%H A247413 N. J. Calkin, K. James, and S. Purvis, <a href="https://www.math.clemson.edu/~kevja/PAPERS/Kings2-2005REU.pdf">Counting Kings</a>, 2006, p.9.
+%H A247413 N. J. Calkin and H. S. Wilf, <a href="https://hdl.handle.net/1853/31277">The number of independent sets in a grid graph</a>, preprint, 1995.
+%H A247413 N. J. Calkin and H. S. Wilf, <a href="https://doi.org/10.1137/S089548019528993X">The number of independent sets in a grid graph</a>, SIAM J. Discrete Math, 11 (1998) 54-60.
+%H A247413 Steven R. Finch, <a href="https://arxiv.org/abs/math/9810155">Several Constants Arising in Statistical Mechanics</a>, arXiv:math/9810155 [math.CO], 1999, p.8.
+%H A247413 D. E. Knuth, <a href="https://www-cs-faculty.stanford.edu/~knuth/preprints.html">Nonattacking kings on a chessboard</a>, 1994.
+%H A247413 Vaclav Kotesovec, <a href="https://oeis.org/wiki/User:Vaclav_Kotesovec">Non-attacking chess pieces</a>, 6ed, 2013, p.68-69.
+%H A247413 M. Larsen, <a href="https://doi.org/10.37236/1212">The Problem of Kings</a>, The Electronic Journal of Combinatorics 2, 1995.
+%H A247413 Kai Liang, <a href="https://arxiv.org/abs/2505.12776">Independent Set Enumeration in King Graphs by Tensor Network Contractions</a>, arXiv:2505.12776 [math.CO], 2025. See p. 4, 6 and 16.
+%H A247413 Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/HardHexagonEntropyConstant.html">Hard Hexagon Entropy Constant</a>
+%H A247413 Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/HardSquareEntropyConstant.html">Hard Square Entropy Constant</a>
+%H A247413 H. S. Wilf, <a href="https://doi.org/10.37236/1197">The problem of the kings</a>, Elec. J. Combin. 2, 1995.
+%F A247413 Equals limit n->infinity (A063443(n))^(1/n^2).
+%F A247413 Equals limit n->infinity (A212269(n))^(1/n^2).
+%e A247413 1.3426439511246012978517301...
+%Y A247413 Cf. A063443, A212269.
+%Y A247413 Cf. A085850, A085851.
+%K A247413 nonn,cons,more,nice,changed
+%O A247413 1,2
+%A A247413 _Vaclav Kotesovec_, Sep 16 2014
+%E A247413 a(14)-a(18) computed by Kai Liang, added by _Vaclav Kotesovec_, Oct 24 2025
+%E A247413 a(19)-a(26) from _Anzal Abidi_, Oct 18 2026
+
+# Content is available under The OEIS End-User License Agreement: http://oeis.org/LICENSE
