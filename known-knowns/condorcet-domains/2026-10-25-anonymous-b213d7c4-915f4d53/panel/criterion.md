@@ -1,0 +1,25 @@
+# Criterion skeptic
+
+context: fresh subagent
+
+Input boundary: reviewed only claim/ and independently obtained primary-source search results; no attempts, author reasoning, or other panel verdicts were read. The binding source is claim/criterion.md. This is a literal success-criterion assessment of the single frozen assignment.
+
+The ASCII assignment has exactly 2300 distinct sorted triples covering all combinations of three alternatives from 1 through 25, exactly one valid iNj condition per triple, and SHA256 915f4d534bc6a8557649f3b02bf4ed21d8782ce01a450c2c39c53c25751d508b. Each condition names the i-th smallest member and forbids rank j, with rank 1 at the top. The object counted is ALL orders satisfying those conditions. It is not a sampled subdomain, an explicit list with omissions, a peak-pit-only score, or a restriction to nine alternatives. Sen's theorem gives the Condorcet guarantee under the binding definition.
+
+Before reading claim/verify_assignment.py, I independently wrote and executed the implementation now preserved as panel/criterion-independent.py. It returns exactly 180870896 using arbitrary-size Python integers and all admissible prefixes. Its transition tests the rank of the named forbidden alternative when that alternative is appended. All constraints concerning it become permanently decided at that point. A state records the prefix set and counts all distinct admissible prefixes yielding that set; transitions append each remaining alternative once. Thus every satisfying full order has exactly one path and every counted full path satisfies every triple. There is no statistical claim. The independently written implementation visited 3792 reachable prefix states over all layers (maximum 367 in one layer).
+
+I then read and ran claim/verify_assignment.py. It also returns exactly 180870896 with the identical assignment hash. It passes Fishburn calibration values n=9:488 and n=20:2115186 and malformed-input negatives, and its first-nine restriction has 458 orders under both DP and exhaustive enumeration of 9! permutations. These are two independent implementations of the exact count; they use the same mathematically valid prefix-set method, which the criterion permits.
+
+The permitted range 9..25 includes n=25, and the comparison direction is strict maximum. I inspected the exact fresh claim/source/arxiv-abs.body and claim/source/arxiv-html-v1.body inputs, verified their hashes and lengths against the actual HTTP200/exit0 receipts, and read the submission history (v1 only) and the n=25 row of Table 4. The relevant f(n) & h(n) lower-bound cell is 160316046; the criterion explicitly fixes this column through its listed v1 values. The 195312500 formula-column entry is not the criterion's stated lower-bound target. The historical PENDING marker in claim/source-provenance.md is resolved by these current raw HTTP inputs.
+
+The fresh repository facts in claim/source/source-facts.json report all/open Condorcet PR searches with 12 results, the largest n=25 comparison being open PR389 at 178950728, no Condorcet entry in current TROPHY_CASE.md, and no known-knowns/condorcet-domains/ directory. These are source facts, not panel verdicts. The strict improvements are 20554850 over Table 4 and 1920168 over PR389. The claim therefore exceeds both comparison thresholds found.
+
+I additionally performed bounded fresh searches of arXiv and 2025-2026 literature for Condorcet-domain size/lower-bound results and the candidate/comparison numbers. No larger n=25 construction was found. Primary-source abstracts inspected directly included Coxeter Condorcet domains (2026), Outer Diversity of Condorcet Domains (2026), and An orderly algorithm for generation of Condorcet Domains (2025); none reports a larger n=25 construction in its abstract. The fresh factual source list also identifies the 2025 coherent-domain and heuristic-search literature. This is a dated literature search, not a theorem that every possible unpublished construction is smaller. The criterion asks comparison against larger values found in a fresh search; none was found.
+
+Primary-source links: [status paper](https://arxiv.org/abs/2601.07336), [Coxeter Condorcet domains](https://arxiv.org/abs/2606.01690), [Outer Diversity](https://arxiv.org/abs/2610.00720), [orderly generation](https://arxiv.org/abs/2509.20865), [existing n25 claim](https://github.com/elder-plinius/V3R1T4S/pull/389).
+
+No full order list is shipped in claim/, so the optional-list submission condition is inapplicable. The assignment file is small. No optimality, asymptotic improvement, other n, search-space exclusion, or exhaustive enumeration of all assignments is established or claimed. The claim is a constructive lower-bound improvement for this single object.
+
+confirmed_scope: The assignment in claim/assignment.txt (SHA256 915f4d534bc6a8557649f3b02bf4ed21d8782ce01a450c2c39c53c25751d508b) defines a Condorcet domain on 25 alternatives containing exactly 180870896 linear orders, exceeding the verified arXiv:2601.07336v1 Table 4 lower bound 160316046 and the largest existing n=25 comparison found in the fresh search, 178950728.
+
+pass:true

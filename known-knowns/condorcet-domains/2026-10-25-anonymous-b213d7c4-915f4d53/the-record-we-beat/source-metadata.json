@@ -1,0 +1,85 @@
+{
+  "status_source": {
+    "url": "https://arxiv.org/abs/2601.07336",
+    "latest_version": "v1",
+    "submission_history_versions": [
+      "v1"
+    ],
+    "submitted": "2026-01-12T09:03:12Z",
+    "http_status": 200,
+    "client_exit": 0,
+    "start_utc": "2026-10-25T18:36:28.608783Z",
+    "end_utc": "2026-10-25T18:36:28.761824Z",
+    "raw_bytes": 41568,
+    "sha256": "5d57174029ffee102f9ea40ec0c18386c28c76987619a73c2b0a7ef2b620608b",
+    "raw_body": "panel/novelty-source/arxiv-abs.body",
+    "headers": "panel/novelty-source/arxiv-abs.headers",
+    "receipt": "panel/novelty-source/arxiv-abs-fetch.json"
+  },
+  "table_source": {
+    "url": "https://arxiv.org/html/2601.07336v1",
+    "table": 4,
+    "title": "Maximum size of Condorcet domains",
+    "n": 25,
+    "column": "f(n) & h(n)",
+    "cell": "\u2265 160316046 (ks)",
+    "lower_bound": 160316046,
+    "fishburn_column": 84990640,
+    "formula_column": 195312500,
+    "http_status": 200,
+    "client_exit": 0,
+    "start_utc": "2026-10-25T18:36:53.790698Z",
+    "end_utc": "2026-10-25T18:36:53.944541Z",
+    "raw_bytes": 330995,
+    "sha256": "a018d41785d2594aca2ffb57a28eb3e596acda1469395452e565aa4c268fb93a",
+    "raw_body": "panel/novelty-source/arxiv-html-v1.body",
+    "headers": "panel/novelty-source/arxiv-html-v1.headers",
+    "receipt": "panel/novelty-source/arxiv-html-v1-fetch.json"
+  },
+  "current_competing_claim": {
+    "url": "https://github.com/elder-plinius/V3R1T4S/pull/389",
+    "state": "open",
+    "merged": false,
+    "author": "psmoros",
+    "n": 25,
+    "claimed_count": 178950728,
+    "head_sha": "9573bcf8d98bebff42c6d82fe1e7c481dd103c27",
+    "updated_at": "2026-10-24T16:14:46Z"
+  },
+  "literature_sources_found": [
+    {
+      "url": "https://arxiv.org/abs/2601.07336",
+      "title": "Improved lower bounds for the maximum size of Condorcet domains",
+      "date": "2026-01-12",
+      "n25_lower_bound": 160316046
+    },
+    {
+      "url": "https://doi.org/10.1016/j.dam.2025.03.007",
+      "title": "Coherent domains and improved lower bounds for the maximum size of Condorcet domains",
+      "year": 2025,
+      "reported_asymptotic_base": 2.1973
+    },
+    {
+      "url": "https://doi.org/10.1007/s10288-025-00583-1",
+      "title": "An efficient heuristic search algorithm for discovering large Condorcet domains",
+      "date": "2025-01-24",
+      "reported_n10": 1082,
+      "reported_n11": 2349
+    },
+    {
+      "url": "https://arxiv.org/abs/2509.20865",
+      "title": "An orderly algorithm for generation of Condorcet Domains",
+      "date": "2025-09-25"
+    },
+    {
+      "url": "https://arxiv.org/abs/2606.01690",
+      "title": "Coxeter Condorcet domains",
+      "date": "2026-06-01"
+    },
+    {
+      "url": "https://arxiv.org/abs/2610.00720",
+      "title": "Outer Diversity of Condorcet Domains",
+      "date": "2026-09-30"
+    }
+  ]
+}

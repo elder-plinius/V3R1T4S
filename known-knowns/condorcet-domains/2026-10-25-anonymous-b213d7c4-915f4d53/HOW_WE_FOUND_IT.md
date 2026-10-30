@@ -1,0 +1,5 @@
+# Contributor text, unverified
+
+We ran two independent implementation lenses. Local exact repair explored condition replacements, neutral neighborhoods, compatible extensions and aligned cores. The separate constructor lens tested restrictions, cloning, compatible overlaps and bounded group repairs. Strong public input assignments are credited to psmoros. The construction follows the compatible-overlap idea described by Karpov, Markstrom, Riis and Zhou.
+
+The selected carrier duplicates alternative 11 of the published 24 assignment as 25, copies conditions to both 24-subsets, and chooses the 23 remaining conditions on triples containing both copies. A deterministic native search found this explicit completion. An independently written Python integer DP agreed with its all-order count, and a complete first-nine restriction enumeration agreed with DP. Search traversal reports are operational single-implementation observations; the object/count is the only claim. Later unsuccessful families do not establish global optimality. Final fresh panel results belong in panel/.

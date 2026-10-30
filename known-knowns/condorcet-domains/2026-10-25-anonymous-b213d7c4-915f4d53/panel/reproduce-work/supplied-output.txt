@@ -1,0 +1,12 @@
+{
+  "assignment_sha256": "915f4d534bc6a8557649f3b02bf4ed21d8782ce01a450c2c39c53c25751d508b",
+  "n": 25,
+  "triples": 2300,
+  "exact_count": 180870896,
+  "reachable_prefix_sets": 3792,
+  "first9_dp": 458,
+  "first9_bruteforce": 458,
+  "calibration": "Fishburn9=488;20=2115186;malformed negatives rejected",
+  "seconds": 0.5845724996179342
+}
+PASS
