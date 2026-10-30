@@ -1,0 +1,84 @@
+{
+  "target_id": "auction-deterministic-threshold-monotonicity",
+  "status": "CONFIRMED_SOLUTION",
+  "density_pair": {
+    "g1": {
+      "formula": "7/57 + (350/57)*x^6",
+      "support": [0, 1],
+      "epsilon": "1/50",
+      "d": 6,
+      "Z": "57/350",
+      "normalization": "int_0^1 g1(x) dx = 1",
+      "g1_at_0": "7/57",
+      "g1_prime": "(700/19)*x^5 >= 0",
+      "domain_limit_1_over_g1_0": "57/7"
+    },
+    "g2": {
+      "formula": "1",
+      "support": [0, 1],
+      "g2_at_0": "1"
+    }
+  },
+  "shift_A": {
+    "y_A": "12/25",
+    "c_A_fraction": "11702081697/2754078775",
+    "c_A_decimal": 4.249000356571136,
+    "q_A_fraction": "13024039509/2754078775",
+    "q_A_decimal": 4.729000356571136,
+    "h1_A_fraction": "4638671875/297325372",
+    "h1_A_decimal": 15.601332115713285,
+    "h2_A_fraction": "42356979257312942/1733702834035543",
+    "h2_A_decimal": 24.431510652098627,
+    "h3_A_decimal": 22.93945027986,
+    "c2_star_A_fraction": "42356979257312942/1733702834035543",
+    "c2_star_A_decimal": 24.431510652098627,
+    "dominant_branch": "h2"
+  },
+  "shift_B": {
+    "y_B": "19/40",
+    "c_B_fraction": "939499441/214943135",
+    "c_B_decimal": 4.370920899613751,
+    "q_B_fraction": "8332779441/1719545080",
+    "q_B_decimal": 4.845920899613751,
+    "h1_B_fraction": "3276800000/206828627",
+    "h1_B_decimal": 15.84306799077673,
+    "h2_B_fraction": "44961617784851576/1848022051345129",
+    "h2_B_decimal": 24.32958943976082,
+    "h3_B_decimal": 24.010027494982,
+    "c2_star_B_fraction": "44961617784851576/1848022051345129",
+    "c2_star_B_decimal": 24.32958943976082,
+    "dominant_branch": "h2"
+  },
+  "comparison": {
+    "c_B_minus_c_A": "14434668720632936/118394065187091925",
+    "c_B_minus_c_A_decimal": 0.121920543042614,
+    "shift_increases": true,
+    "c2_star_A_minus_c2_star_B_decimal": 0.101921212337807,
+    "c2_star_decreases": true,
+    "strict_decrease_certified": true
+  },
+  "prompt_reference_points": {
+    "y_1_half": {
+      "c": "500/133",
+      "c_decimal": 3.7593984962406015,
+      "h2": "61704/2527",
+      "h2_decimal": 24.417886822318954,
+      "c2_star_decimal": 24.417886822318954
+    },
+    "y_2_fifths": {
+      "c": "52859/8785",
+      "c_decimal": 6.016960728514514,
+      "h2": "8097758/441007",
+      "h2_decimal": 18.361971578682425,
+      "h1": "3125/158",
+      "h1_decimal": 19.77848101265823
+    },
+    "h2_drop": 6.055915243636529,
+    "max_h1_h2_drop": 4.639405809660724
+  },
+  "uniform_calibration": {
+    "formula": "2*b2*b1^2 / (b1 - c)^2",
+    "verified_shifts": [0, 0.25, 0.5, 0.75],
+    "strictly_increasing": true
+  }
+}

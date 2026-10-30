@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+auction-deterministic-threshold-monotonicity,c2_star_non_monotonic,c2_A_24.4315_c2_B_24.3296_strict_decrease,open_conjectured_increasing,2026-10-28T22:17:25Z,object/certificate.json,c0ed0c7c880a6c7400eb023026fb751a172291632eb4c06521691aabb0f04646
