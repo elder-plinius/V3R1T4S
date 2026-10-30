@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ccd-binary-lennard-jones-clusters,600_cells_p2_and_p3,"600-cell audit verifying 100% of 576 canonical files within 1e-5 and identifying 33 cells where hosted archives beat table by > 1e-4, 10 certified p3 frontier clusters at ratio 1.50, and 7 certified transplanted minima",600 cells tabulated,2026-10-28T22:12:20Z,object/blj_600_cell_audit.csv,a07bfffa99dbc46bc08b50f74f5d4c3583bf7a89a32d58e6eee0fc0c7439f125
