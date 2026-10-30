@@ -1,0 +1,114 @@
+[
+  {
+    "digits": 1,
+    "n": 1,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.000171041,
+    "val": "4"
+  },
+  {
+    "digits": 2,
+    "n": 2,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 7.667e-6,
+    "val": "18"
+  },
+  {
+    "digits": 3,
+    "n": 3,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 4.333e-6,
+    "val": "148"
+  },
+  {
+    "digits": 4,
+    "n": 4,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.006477833,
+    "val": "2970"
+  },
+  {
+    "digits": 6,
+    "n": 5,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.000365917,
+    "val": "143224"
+  },
+  {
+    "digits": 8,
+    "n": 6,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.014445334,
+    "val": "16448400"
+  },
+  {
+    "digits": 10,
+    "n": 7,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.000274416,
+    "val": "4484823396"
+  },
+  {
+    "digits": 13,
+    "n": 8,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.035876667,
+    "val": "2901094068042"
+  },
+  {
+    "digits": 16,
+    "n": 9,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.033841083,
+    "val": "4448410550095612"
+  },
+  {
+    "digits": 20,
+    "n": 10,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.089106917,
+    "val": "16178049740086515288"
+  },
+  {
+    "digits": 24,
+    "n": 11,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 0.107297292,
+    "val": "139402641051212392498528"
+  },
+  {
+    "digits": 28,
+    "n": 12,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 1.4877041659999999,
+    "val": "2849295959501939989625992464"
+  },
+  {
+    "digits": 33,
+    "n": 13,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 5.852615292,
+    "val": "137950545200232788276834783781648"
+  },
+  {
+    "digits": 38,
+    "n": 14,
+    "status": "EXACT MATCH [PASS]",
+    "time_sec": 35.117281292,
+    "val": "15844635835975276495290739119895808472"
+  },
+  {
+    "digits": 43,
+    "n": 15,
+    "status": "NEW TERM CERTIFIED [WORLD RECORD]",
+    "time_sec": 62.352733834,
+    "val": "4310182149988584261406143524214457416387448"
+  },
+  {
+    "digits": 49,
+    "n": 16,
+    "status": "NEW TERM CERTIFIED [WORLD RECORD]",
+    "time_sec": 497.919528167,
+    "val": "2781781827849835218619790131266486746689884618378"
+  }
+]
