@@ -1,0 +1,7 @@
+{
+  "target_id": "three-player-jamfold-sng-epsilon",
+  "num_states": 946,
+  "convention_ii_exploitability": 0.047508,
+  "convention_i_exploitability": 0.048107,
+  "equity_table_bytes": 685464
+}
