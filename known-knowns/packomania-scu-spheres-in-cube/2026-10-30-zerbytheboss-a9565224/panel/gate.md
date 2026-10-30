@@ -1,0 +1,2 @@
+status: CONFIRMED_SOLUTION
+confirmed_scope: Breakthrough sphere packing record for N=344 equal spheres in unit cube [-1/2, 1/2]^3 achieving 50-digit feasible radius r* = 0.0751108346348785... strictly exceeding Packomania live table record 0.075110834623 by +1.18785e-11 >= 1.0e-11, non-isometric to posted configuration (max distance difference 0.026011 >> 1e-4), and unqueued on pending-requests.html; accompanied by 50-digit data-integrity audit across all N <= 1000 scu files (p3) and missing-center reconstruction for ssp N=20 (p2).
