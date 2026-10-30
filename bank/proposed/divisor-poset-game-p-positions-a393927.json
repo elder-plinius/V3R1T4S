@@ -1,0 +1,36 @@
+{
+  "id": "divisor-poset-game-p-positions-a393927",
+  "name": "Divisor takeaway poset game on {2, 3, ..., k}: second-player winning sizes beyond k = 125 (OEIS A393927)",
+  "category": "graphs-games-automata",
+  "kind": "harvest",
+  "tractability": 4,
+  "compute_profile": "laptop-hours (isolated-prime parity reduction + prime-chain quotient + upward-closed poset bitmask search)",
+  "statement": "In the divisor takeaway poset game on {2, 3, ..., k} (catalogued by Zhao Hui Du in OEIS A393927, March 2026, keyword `nonn,more`), two players start with the set S_k = {2, 3, ..., k} and alternate moves under normal play (last player to move wins). A move consists of choosing an available number x in S and removing x together with all divisors of x that are currently in S; equivalently, it is the downward-closed poset takeaway game on the divisibility poset ({2, ..., k}, |) (dual to Schuh's 1952 game of divisors / Chomp). OEIS A393927 lists the values of k for which the initial set {2, 3, ..., k} is a P-position (second-player win). As of 2026-10-30, only 10 terms are known (with the synthesized OEIS b-file `b393927.txt` ending at n = 10): a(1)..a(10) = 3, 7, 28, 34, 35, 66, 74, 84, 116, 125, and no terms are known beyond k = 125.",
+  "success_criterion": "CONFIRMED: the next 5 exact terms of OEIS A393927 beyond k = 125 (a(11) through a(15)), established by determining the exact 1st/2nd-player win/loss outcome of S_k = {2, ..., k} for EVERY integer k contiguously from k = 126 through k = a(15) (proving that a(11)..a(15) are P-positions and all other integers in [126, a(15)] are N-positions), verified by two independently written solvers using distinct algorithms that both reproduce the exact win/loss outcome of every k in 2..125 (confirming a(1)..a(10) = 3, 7, 28, 34, 35, 66, 74, 84, 116, 125 and confirming all other k in 2..125 are N-positions).",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Compute the next 2 unpublished terms of OEIS A393927 (a(11) and a(12), beyond k = 125) by determining the exact 1st/2nd-player win/loss outcome of every integer k contiguously from k = 126 up to a(12) (confirming all intervening values are N-positions), verified by two independent poset-game solvers that reproduce the exact outcome of every k in 2..125."
+    }
+  ],
+  "verification_method": "Because every prime p > k/2 has no multiples <= k and no divisors in {2, ..., k} other than itself, the initial game on {2, ..., k} is the disjunctive sum of the core divisibility poset C_k = {2, ..., k} \\ {primes p > k/2} and M_k = pi(k) - pi(floor(k/2)) isolated Nim piles of size 1 (total Nim-sum M_k mod 2). Thus {2, ..., k} is a P-position iff the boolean game (C_k, M_k mod 2) is a second-player win (or equivalently G(C_k) == (M_k mod 2)). Two independent solvers (e.g., one using upward-closed filter canonicalization and connected-component / prime-chain reduction in C/Rust, and one using Zobrist-hashed boolean alpha-beta over divisor bitmasks) must reproduce the exact win/loss outcome of every k in 2..125 and agree on every contiguous integer k from 126 through the last claimed term. Package the contiguous outcome table as a single file <= 1 MB (kit/SUBMIT.md).",
+  "primary_sources": [
+    "https://oeis.org/A393927",
+    "https://oeis.org/A393927/b393927.txt",
+    "https://aeb.win.tue.nl/games/chomp.html"
+  ],
+  "status_source": "https://oeis.org/A393927",
+  "status_checked": "2026-10-30",
+  "disclosure": "open",
+  "angles": [
+    "Factor out isolated primes p in (k/2, k] immediately: they never interact with any other element, contributing only a single parity bit par = (pi(k) - pi(floor(k/2))) mod 2. More generally, during play on an upward-closed filter S, any remaining element x that has neither multiples nor divisors left in S (i.e., x is both minimal and maximal in (S, |)) is an isolated Nim pile of size 1 and can be folded into `par ^= 1`.",
+    "Primes p in (k/3, k/2] each have only a single multiple in {2, ..., k} (namely 2p) and no proper divisors in {2, ..., k}; thus each pair {p, 2p} is a 2-element chain connected to the rest of the poset only via the divisibility edge 2 | 2p. Once 2 is removed (which happens on the first move that picks any even number), EVERY remaining pair {p, 2p} with p in (k/3, k/2] detaches into an independent 2-element chain (isomorphic to a Nim pile of size 2, since picking 2p removes both {p, 2p} while picking p removes only p and leaves the isolated element {2p} of size 1), or a pile of size 1 if p was already removed earlier leaving only {2p}.",
+    "At any state S, decomposing the comparability graph of (S, |) into connected components (or quotienting automorphic prime chains {p, 2p, ..., m*p} that share the same remaining multipliers) shrinks the effective state space substantially."
+  ],
+  "pitfalls": [
+    "In A393927, the number 1 is NOT in the set (the set is {2, 3, ..., k}), and a move chooses x in S and removes {d in S : d | x} (x and its divisors), NOT multiples of x.",
+    "An element x whose multiples have been removed is maximal in S, NOT isolated, unless all of its proper divisors have also already been removed; picking x still deletes its remaining divisors in S.",
+    "Removing primes <= sqrt(k) alone does NOT disconnect primes > sqrt(k), because composite numbers like 6 and 78 = 6*13 can still link primes p, q > sqrt(k) until those composites' common divisors are also removed.",
+    "To claim a(11), a(12), ..., every integer k from 126 up to the claimed term must be tested contiguously so no smaller P-position is missed."
+  ]
+}
