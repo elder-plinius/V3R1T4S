@@ -1,0 +1,26 @@
+# Run It Yourself
+
+To verify the complex line packing directly from this package directory in a fresh shell:
+
+```sh
+sh verify-it-yourself/run_checks.sh
+```
+
+Expected output:
+```text
+Object: object/5x49_v3r1t4s.txt
+Dimension d=5, Lines n=49
+Computed Coherence mu (40 digits): 0.5414603056425635743462895172126666579322
+Leaderboard Record Coherence    : 0.54164128
+Theoretical Lower Bound         : 0.50751922
+Strict Lowering Margin          : 0.000180974357436425653710482787333342067819
+VERIFIED: mu = 0.5414603056425635743462895172126666579322 strictly beats 0.54164128 by 0.000180974357436425653710482787333342067819 >= 1e-8
+PASS
+```
+
+## How to Rebuild the Object
+To rerun the active-set SQP equalizer that produced the object:
+```sh
+python3 how-we-built-it/sqp_equalizer.py
+```
+Dependencies: Python 3.8+, numpy, scipy, mpmath.
