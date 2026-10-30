@@ -1,0 +1,219 @@
+{
+  "status": "CONFIRMED_SOLUTION",
+  "description": "3-player undirected Shapley network design instance with Price of Stability > 1769/1126",
+  "vertices": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "edges": [
+    {
+      "u": 0,
+      "v": 1,
+      "cost": 2928
+    },
+    {
+      "u": 0,
+      "v": 2,
+      "cost": 599
+    },
+    {
+      "u": 1,
+      "v": 3,
+      "cost": 1692
+    },
+    {
+      "u": 1,
+      "v": 4,
+      "cost": 3545
+    },
+    {
+      "u": 2,
+      "v": 3,
+      "cost": 2967
+    },
+    {
+      "u": 2,
+      "v": 4,
+      "cost": 1483
+    },
+    {
+      "u": 3,
+      "v": 4,
+      "cost": 2226
+    }
+  ],
+  "terminal_pairs": [
+    {
+      "player": 1,
+      "source": 0,
+      "target": 1
+    },
+    {
+      "player": 2,
+      "source": 2,
+      "target": 3
+    },
+    {
+      "player": 3,
+      "source": 4,
+      "target": 1
+    }
+  ],
+  "paths_per_player": {
+    "player_1": [
+      {
+        "idx": 0,
+        "path": [
+          0,
+          1
+        ]
+      },
+      {
+        "idx": 1,
+        "path": [
+          0,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "idx": 2,
+        "path": [
+          0,
+          2,
+          3,
+          4,
+          1
+        ]
+      },
+      {
+        "idx": 3,
+        "path": [
+          0,
+          2,
+          4,
+          1
+        ]
+      },
+      {
+        "idx": 4,
+        "path": [
+          0,
+          2,
+          4,
+          3,
+          1
+        ]
+      }
+    ],
+    "player_2": [
+      {
+        "idx": 0,
+        "path": [
+          2,
+          0,
+          1,
+          3
+        ]
+      },
+      {
+        "idx": 1,
+        "path": [
+          2,
+          0,
+          1,
+          4,
+          3
+        ]
+      },
+      {
+        "idx": 2,
+        "path": [
+          2,
+          3
+        ]
+      },
+      {
+        "idx": 3,
+        "path": [
+          2,
+          4,
+          1,
+          3
+        ]
+      },
+      {
+        "idx": 4,
+        "path": [
+          2,
+          4,
+          3
+        ]
+      }
+    ],
+    "player_3": [
+      {
+        "idx": 0,
+        "path": [
+          4,
+          1
+        ]
+      },
+      {
+        "idx": 1,
+        "path": [
+          4,
+          2,
+          0,
+          1
+        ]
+      },
+      {
+        "idx": 2,
+        "path": [
+          4,
+          2,
+          3,
+          1
+        ]
+      },
+      {
+        "idx": 3,
+        "path": [
+          4,
+          3,
+          1
+        ]
+      },
+      {
+        "idx": 4,
+        "path": [
+          4,
+          3,
+          2,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "total_profiles_checked": 125,
+  "unique_ne_profile": [
+    0,
+    2,
+    0
+  ],
+  "ne_cost": 9440,
+  "opt_cost": 6000,
+  "pos_ratio_exact": "118/75",
+  "pos_ratio_float": 1.5733333333333333,
+  "disser_ratio_exact": "1769/1126",
+  "disser_ratio_float": 1.5710479573712255,
+  "beats_disser": true,
+  "margin": "193/84450",
+  "margin_float": 0.002285375962107756
+}
