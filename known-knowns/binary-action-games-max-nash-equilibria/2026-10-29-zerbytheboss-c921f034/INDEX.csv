@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+binary-action-games-max-nash-equilibria,p1_certified_37_regular_nash_equilibria,mu_4_ge_37,mu_4_ge_37_deformation,2026-10-29T04:41:42Z,object/certified_37_equilibria.json,c921f034eba3716045575cf73637b381ce721cd8cfccf585cab909d17ebcef60

@@ -1,0 +1,603 @@
+{
+  "target": "binary-action-games-max-nash-equilibria",
+  "claim": "p1",
+  "description": "Explicit generic 4-player binary-action game with rational payoffs and exactly 37 regular Nash equilibria",
+  "total_regular_nash_equilibria": 37,
+  "counts_by_dimension": {
+    "0": 8,
+    "1": 0,
+    "2": 12,
+    "3": 8,
+    "4": 9
+  },
+  "payoff_scale_factor": 64,
+  "offsets_a": {
+    "a_1_2": "1/4",
+    "a_1_3": "1/2",
+    "a_1_4": "3/4",
+    "a_2_1": "3/4",
+    "a_2_3": "1/4",
+    "a_2_4": "1/2",
+    "a_3_1": "1/2",
+    "a_3_2": "3/4",
+    "a_3_4": "1/4",
+    "a_4_1": "1/4",
+    "a_4_2": "1/2",
+    "a_4_3": "3/4"
+  },
+  "equilibria": [
+    {
+      "support": "0000",
+      "k": 0,
+      "coordinates": {
+        "1": "0",
+        "2": "0",
+        "3": "0",
+        "4": "0"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-3/32",
+        "slack_player_2": "-3/32",
+        "slack_player_3": "-3/32",
+        "slack_player_4": "-3/32"
+      }
+    },
+    {
+      "support": "0011",
+      "k": 0,
+      "coordinates": {
+        "1": "0",
+        "2": "0",
+        "3": "1",
+        "4": "1"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-9/32",
+        "slack_player_2": "-1/32",
+        "slack_player_3": "1/32",
+        "slack_player_4": "9/32"
+      }
+    },
+    {
+      "support": "0101",
+      "k": 0,
+      "coordinates": {
+        "1": "0",
+        "2": "1",
+        "3": "0",
+        "4": "1"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-3/32",
+        "slack_player_3": "-3/32",
+        "slack_player_2": "3/32",
+        "slack_player_4": "3/32"
+      }
+    },
+    {
+      "support": "0110",
+      "k": 0,
+      "coordinates": {
+        "1": "0",
+        "2": "1",
+        "3": "1",
+        "4": "0"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-1/32",
+        "slack_player_4": "-9/32",
+        "slack_player_2": "1/32",
+        "slack_player_3": "9/32"
+      }
+    },
+    {
+      "support": "01MM",
+      "k": 2,
+      "coordinates": {
+        "1": "0",
+        "2": "1",
+        "3": "1/4",
+        "4": "3/4"
+      },
+      "jacobian_det": "-9/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-1/32",
+        "slack_player_2": "1/32"
+      }
+    },
+    {
+      "support": "0M1M",
+      "k": 2,
+      "coordinates": {
+        "1": "0",
+        "2": "1/2",
+        "3": "1",
+        "4": "1/2"
+      },
+      "jacobian_det": "-9/256",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-1/32",
+        "slack_player_3": "1/32"
+      }
+    },
+    {
+      "support": "0MM1",
+      "k": 2,
+      "coordinates": {
+        "1": "0",
+        "2": "1/4",
+        "3": "3/4",
+        "4": "1"
+      },
+      "jacobian_det": "-1/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-3/32",
+        "slack_player_4": "3/32"
+      }
+    },
+    {
+      "support": "0MMM",
+      "k": 3,
+      "coordinates": {
+        "1": "0",
+        "2": "1/2",
+        "3": "3/4",
+        "4": "3/4"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "-1/32"
+      }
+    },
+    {
+      "support": "1001",
+      "k": 0,
+      "coordinates": {
+        "1": "1",
+        "2": "0",
+        "3": "0",
+        "4": "1"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "-9/32",
+        "slack_player_3": "-1/32",
+        "slack_player_1": "9/32",
+        "slack_player_4": "1/32"
+      }
+    },
+    {
+      "support": "1010",
+      "k": 0,
+      "coordinates": {
+        "1": "1",
+        "2": "0",
+        "3": "1",
+        "4": "0"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "-3/32",
+        "slack_player_4": "-3/32",
+        "slack_player_1": "3/32",
+        "slack_player_3": "3/32"
+      }
+    },
+    {
+      "support": "10MM",
+      "k": 2,
+      "coordinates": {
+        "1": "1",
+        "2": "0",
+        "3": "1/4",
+        "4": "3/4"
+      },
+      "jacobian_det": "-1/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "-3/32",
+        "slack_player_1": "3/32"
+      }
+    },
+    {
+      "support": "1100",
+      "k": 0,
+      "coordinates": {
+        "1": "1",
+        "2": "1",
+        "3": "0",
+        "4": "0"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_3": "-9/32",
+        "slack_player_4": "-1/32",
+        "slack_player_1": "1/32",
+        "slack_player_2": "9/32"
+      }
+    },
+    {
+      "support": "1111",
+      "k": 0,
+      "coordinates": {
+        "1": "1",
+        "2": "1",
+        "3": "1",
+        "4": "1"
+      },
+      "jacobian_det": "1",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "3/32",
+        "slack_player_2": "3/32",
+        "slack_player_3": "3/32",
+        "slack_player_4": "3/32"
+      }
+    },
+    {
+      "support": "1M0M",
+      "k": 2,
+      "coordinates": {
+        "1": "1",
+        "2": "1/2",
+        "3": "0",
+        "4": "1/2"
+      },
+      "jacobian_det": "-9/256",
+      "regular": true,
+      "slacks": {
+        "slack_player_3": "-1/32",
+        "slack_player_1": "1/32"
+      }
+    },
+    {
+      "support": "1MM0",
+      "k": 2,
+      "coordinates": {
+        "1": "1",
+        "2": "1/4",
+        "3": "3/4",
+        "4": "0"
+      },
+      "jacobian_det": "-9/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_4": "-1/32",
+        "slack_player_1": "1/32"
+      }
+    },
+    {
+      "support": "1MMM",
+      "k": 3,
+      "coordinates": {
+        "1": "1",
+        "2": "1/4",
+        "3": "1/4",
+        "4": "1/2"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_1": "1/32"
+      }
+    },
+    {
+      "support": "M01M",
+      "k": 2,
+      "coordinates": {
+        "1": "3/4",
+        "2": "0",
+        "3": "1",
+        "4": "1/4"
+      },
+      "jacobian_det": "-9/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "-1/32",
+        "slack_player_3": "1/32"
+      }
+    },
+    {
+      "support": "M0M1",
+      "k": 2,
+      "coordinates": {
+        "1": "1/2",
+        "2": "0",
+        "3": "1/2",
+        "4": "1"
+      },
+      "jacobian_det": "-9/256",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "-1/32",
+        "slack_player_4": "1/32"
+      }
+    },
+    {
+      "support": "M0MM",
+      "k": 3,
+      "coordinates": {
+        "1": "3/4",
+        "2": "0",
+        "3": "1/2",
+        "4": "3/4"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "-1/32"
+      }
+    },
+    {
+      "support": "M10M",
+      "k": 2,
+      "coordinates": {
+        "1": "3/4",
+        "2": "1",
+        "3": "0",
+        "4": "1/4"
+      },
+      "jacobian_det": "-1/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_3": "-3/32",
+        "slack_player_2": "3/32"
+      }
+    },
+    {
+      "support": "M1M0",
+      "k": 2,
+      "coordinates": {
+        "1": "1/2",
+        "2": "1",
+        "3": "1/2",
+        "4": "0"
+      },
+      "jacobian_det": "-9/256",
+      "regular": true,
+      "slacks": {
+        "slack_player_4": "-1/32",
+        "slack_player_2": "1/32"
+      }
+    },
+    {
+      "support": "M1MM",
+      "k": 3,
+      "coordinates": {
+        "1": "1/2",
+        "2": "1",
+        "3": "1/4",
+        "4": "1/4"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_2": "1/32"
+      }
+    },
+    {
+      "support": "MM01",
+      "k": 2,
+      "coordinates": {
+        "1": "1/4",
+        "2": "3/4",
+        "3": "0",
+        "4": "1"
+      },
+      "jacobian_det": "-9/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_3": "-1/32",
+        "slack_player_4": "1/32"
+      }
+    },
+    {
+      "support": "MM0M",
+      "k": 3,
+      "coordinates": {
+        "1": "3/4",
+        "2": "3/4",
+        "3": "0",
+        "4": "1/2"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_3": "-1/32"
+      }
+    },
+    {
+      "support": "MM10",
+      "k": 2,
+      "coordinates": {
+        "1": "1/4",
+        "2": "3/4",
+        "3": "1",
+        "4": "0"
+      },
+      "jacobian_det": "-1/64",
+      "regular": true,
+      "slacks": {
+        "slack_player_4": "-3/32",
+        "slack_player_3": "3/32"
+      }
+    },
+    {
+      "support": "MM1M",
+      "k": 3,
+      "coordinates": {
+        "1": "1/4",
+        "2": "1/2",
+        "3": "1",
+        "4": "1/4"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_3": "1/32"
+      }
+    },
+    {
+      "support": "MMM0",
+      "k": 3,
+      "coordinates": {
+        "1": "1/2",
+        "2": "3/4",
+        "3": "3/4",
+        "4": "0"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_4": "-1/32"
+      }
+    },
+    {
+      "support": "MMM1",
+      "k": 3,
+      "coordinates": {
+        "1": "1/4",
+        "2": "1/4",
+        "3": "1/2",
+        "4": "1"
+      },
+      "jacobian_det": "-3/1024",
+      "regular": true,
+      "slacks": {
+        "slack_player_4": "1/32"
+      }
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "1/4",
+        "2": "3/4",
+        "3": "1/4",
+        "4": "3/4"
+      },
+      "jacobian_det": "1/4096",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "1/4",
+        "2": "1/4",
+        "3": "1/4",
+        "4": "1/4"
+      },
+      "jacobian_det": "-1/4096",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "1/4",
+        "2": "1/2",
+        "3": "1/2",
+        "4": "3/4"
+      },
+      "jacobian_det": "-1/16384",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "1/2",
+        "2": "3/4",
+        "3": "1/4",
+        "4": "1/2"
+      },
+      "jacobian_det": "-1/16384",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "1/2",
+        "2": "1/2",
+        "3": "1/2",
+        "4": "1/2"
+      },
+      "jacobian_det": "1/65536",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "1/2",
+        "2": "1/2",
+        "3": "3/4",
+        "4": "1/4"
+      },
+      "jacobian_det": "-1/16384",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "3/4",
+        "2": "3/4",
+        "3": "3/4",
+        "4": "3/4"
+      },
+      "jacobian_det": "-1/4096",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "3/4",
+        "2": "1/4",
+        "3": "1/2",
+        "4": "1/2"
+      },
+      "jacobian_det": "-1/16384",
+      "regular": true,
+      "slacks": {}
+    },
+    {
+      "support": "MMMM",
+      "k": 4,
+      "coordinates": {
+        "1": "3/4",
+        "2": "1/4",
+        "3": "3/4",
+        "4": "1/4"
+      },
+      "jacobian_det": "1/4096",
+      "regular": true,
+      "slacks": {}
+    }
+  ]
+}
