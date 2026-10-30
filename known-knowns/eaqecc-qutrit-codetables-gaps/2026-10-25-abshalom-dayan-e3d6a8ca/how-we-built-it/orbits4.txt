@@ -1,0 +1,9 @@
+23:20:54Z
+degree-4 places: 1512
+rep 0 size 216
+rep 18 size 432
+rep 36 size 432
+rep 54 size 432
+        6.21 real         5.91 user         0.02 sys
+            18792448  maximum resident set size
+23:21:00Z

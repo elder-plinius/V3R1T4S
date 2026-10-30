@@ -1,0 +1,9 @@
+23:39:36Z
+K1 14 K2 10 n 28 tail [7,4]; GRS tail ranks: 3 4; any-tail ranks: 1 2 3 4
+head: rho1 6 rho0 5 s 1 bound 7 exact_grs 7
+try 0: true hull 5 pts 3 8 5 0 2 4 6 teps +-+--++ M 7 7 7 1 6 1 0 2 4 6 6 0 8 7 7 2
+try 8: true hull 6 pts 6 7 4 1 0 8 2 teps +--++++ M 8 5 5 6 3 6 8 6 7 8 4 6 5 5 4 0
+try 11535: true hull 7 pts 8 0 4 6 3 7 5 teps -+--++- M 6 8 4 5 7 4 0 1 5 1 7 2 0 1 8 3
+real: bound 7, exact_grs 7, best true hull 7
+exit=0
+23:39:36Z
