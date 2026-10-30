@@ -1,0 +1,42 @@
+{
+  "id": "node-kayles-lattices-petersen-a316632-a316533",
+  "name": "Node-Kayles on 3 x n lattices, m x n grids, and generalized Petersen graphs GP(n,2): open outcomes and nimbers (OEIS A316632, A316533)",
+  "category": "graphs-games-automata",
+  "kind": "harvest",
+  "tractability": 4,
+  "compute_profile": "laptop-hours (canonical connected-component Sprague-Grundy DP with multi-word bitmasks and graph-isomorphism hashing)",
+  "statement": "Node-Kayles (also called the domination game or normal-play independent-set game) on a simple graph G is an impartial game in which two players alternately choose a vertex v in V(G) and delete its closed neighborhood N_G[v] = {v} union N_G(v); the last player to move wins. In 'Nimber Sequences of Node-Kayles Games' (Journal of Integer Sequences, Vol. 23, 2020, Article 20.3.5), Sierra Brown, Spencer Daugherty, Eugene Fiorini, Barbara Maldonado, Diego Manzano-Ruiz, Sean Rainville, Riley Waechter, and Tony W. H. Wong determined closed-form or periodic nimber sequences for 3-paths, 2 x n ladders (period 2), 4 x n lattices (identically 0 by the modulo-4 row involution Theorem 6), prism graphs, hypercubes, and several linked cycle/diamond families, and proved that for the m x n lattice graph L_{m x n}, G(L_{m x n}) = 0 whenever both m and n are even and G(L_{m x n}) > 0 whenever both m and n are odd (Theorem 5). However, they left three concrete problems open (Section 3 Table 1 and Section 6, re-verified on OEIS on 2026-10-30): (1) OEIS A316632 (`nonn,more`): the Sprague-Grundy sequence G(L_{3 x n}) of the 3 x n lattice graph, computed by Brown et al. for n = 1..12 and extended by Max Fan (n = 13..15) and Alex Towell (n = 16..17) to n = 1..17 (2, 1, 1, 0, 3, 3, 2, 2, 2, 3, 3, 5, 2, 4, 1, 3, 2; only n = 4 is a known P-position); (2) OEIS A316533 (`nonn,more`): the Sprague-Grundy sequence G(GP(n,2)) of the generalized Petersen graph GP(n,2) (which is 0 for all even n by Theorem 12 and lies in {0,1,2} for odd n), known only for n = 5..26 (1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0); and (3) the unsolved cells of Table 1 (p. 14) for m x n lattices with 1 <= m, n <= 10: the odd-by-even grids L_{5 x 8}, L_{5 x 10}, L_{6 x 7}, L_{6 x 9}, L_{7 x 8}, L_{7 x 10}, L_{8 x 9}, L_{9 x 10} (for which even the 1st- vs. 2nd-player win/loss outcome is unknown) and the odd-by-odd grids L_{5 x 9}, L_{7 x 7}, L_{7 x 9}, L_{9 x 9} (whose 1st-player win outcome G > 0 is proved by Theorem 5, but whose exact Sprague-Grundy nimbers are unknown).",
+  "success_criterion": "CONFIRMED: (1) the next 5 contiguous exact terms of OEIS A316632 (G(L_{3 x n}) for n = 18..22) AND the next 12 contiguous indexed terms of OEIS A316533 (G(GP(n,2)) for n = 27..38, comprising the 6 unknown odd indices n = 27, 29, 31, 33, 35, 37 and the 6 even indices which equal 0 by Theorem 12), OR (2) at least 4 newly resolved cells of Brown et al.'s Table 1, consisting of exact Sprague-Grundy nimbers (or certified 1st/2nd-player outcomes) for unknown-outcome odd-by-even grids in {L_{5 x 8}, L_{6 x 7}, L_{5 x 10}, L_{6 x 9}, L_{7 x 8}, L_{7 x 10}, L_{8 x 9}, L_{9 x 10}} and/or exact Sprague-Grundy nimbers for odd-by-odd grids in {L_{5 x 9}, L_{7 x 7}, L_{7 x 9}, L_{9 x 9}} (outcome-only claims do not count for odd-by-odd grids since Theorem 5 already proves G > 0). All claimed values must be computed by two independently written solvers using distinct algorithms that both reproduce every shaded (published) entry in Table 1 of Brown et al. (2020) (including G(L_{5 x 7}) = 2) and all published terms of A316632 (n = 1..17) and A316533 (n = 5..26).",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Extend OEIS A316632 (Node-Kayles on the 3 x n lattice) contiguously through n = 20 (n = 18, 19, 20) and OEIS A316533 (Node-Kayles on GP(n,2)) contiguously through n = 32 (including odd n = 27, 29, 31), verified by two independent Sprague-Grundy solvers that reproduce all published terms."
+    },
+    {
+      "id": "p2",
+      "statement": "Settle the 1st/2nd-player outcome (or exact nimber) of the two smallest open odd-by-even outcome cells in Brown et al. Table 1 (the 40-vertex lattice L_{5 x 8} and the 42-vertex lattice L_{6 x 7}) OR determine the exact Sprague-Grundy nimbers of the two smallest open odd-by-odd cells (L_{5 x 9} and L_{7 x 7}), verified by two independent solvers that reproduce all published cells of Table 1 (including G(L_{5 x 7}) = 2)."
+    }
+  ],
+  "verification_method": "Verify with two independent Sprague-Grundy / heap-sum alpha-beta engines from scratch: (1) a connected-component mex engine using 128-bit (multi-word) bitmask neighborhood deletion and canonical graph/frontier hashing, and (2) an independent transfer-profile or heap-sum alpha-beta solver (`G + Nim(k)`). Both must first reproduce all 17 terms of A316632 (n = 1..17), all 22 terms of A316533 (n = 5..26), and all shaded entries of Table 1 in Brown et al. (2020), and agree on every new term or cell. Keep all package files <= 1 MB (kit/SUBMIT.md).",
+  "primary_sources": [
+    "https://cs.uwaterloo.ca/journals/JIS/VOL23/Wong/wong24.pdf",
+    "https://oeis.org/A316632",
+    "https://oeis.org/A316533",
+    "https://oeis.org/A316632/a316632_1.txt",
+    "https://oeis.org/A316533/a316533.txt"
+  ],
+  "status_source": "https://oeis.org/A316632",
+  "status_checked": "2026-10-30",
+  "disclosure": "open",
+  "angles": [
+    "In both L_{3 x n} and GP(n,2), deleting a closed neighborhood N[v] frequently disconnects the graph into smaller components whose Sprague-Grundy values XOR together (`G(H union K) = G(H) xor G(K)`). The reference Python scripts linked on OEIS (`a316632_1.txt` and `a316533.txt`) used NetworkX `is_isomorphic` in a linear loop over all seen graphs; replacing NetworkX with a 128-bit bitmask + canonical column-profile hash eliminates the linear isomorphism scan.",
+    "On L_{3 x n} (and GP(n,2) after the first move, which breaks the cycles at v into a bounded-pathwidth strip), the nimber of any residual subgraph can be memoized by its canonical column frontier profile.",
+    "For GP(n,2) with odd n, the initial graph is vertex-transitive on the outer cycle and on the inner cycle, so there are only 2 non-isomorphic opening moves (one outer vertex u_0, one inner vertex v_0). Thus G(GP(n,2)) = mex({G(GP(n,2)_{u_0}), G(GP(n,2)_{v_0})}) <= 2, reducing each odd n to just two bounded-pathwidth residual subproblems."
+  ],
+  "pitfalls": [
+    "Use 128-bit (two uint64_t words) or arbitrary-width bitmasks rather than a single 64-bit integer, since L_{3 x 22} and GP(33,2) have 66 vertices and Table 1 grids reach 90 vertices.",
+    "In GP(n,2), the inner vertices v_i are connected to v_{(i+2) mod n}; for odd n this forms a single n-cycle, whereas for even n it forms two (n/2)-cycles.",
+    "In Table 1 of Brown et al. (2020), G(L_{5 x 7}) = 2 is already shaded/solved, and all odd-by-odd grids already have known 1st-player win outcome (G > 0 by Theorem 5); for odd-by-odd grids only the exact nimber is open.",
+    "Always decompose into connected components after each move and XOR their nimbers before taking mex; failing to split disconnected components makes the state space exponential."
+  ]
+}
