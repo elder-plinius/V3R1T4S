@@ -1,0 +1,17 @@
+ca31341cee224ba773fb78f8847840f2fc2b5a9e6647aac84e766e1c7e7d88a0  ./HOW_WE_FOUND_IT.md
+1a4d93475864267dd1f577c03ac8b30154022e36a219ee14427e94e71adf1699  ./INDEX.csv
+f81a51acb7668c8b09614e5c40047794879aa6526c8cdd7d07c318ac465adc5d  ./README.md
+66d1a3ec132a1f78942b3929487cf61b80dca5b5867180f4160cbcc3c4f247e8  ./RUN_IT_YOURSELF.md
+dd1bd6aa1a105dac0eae4236a44b78563722189c64a7029a0b5384104cc5ed4e  ./how-we-built-it/PREREG.md
+463ffd868ba826909386b14401451a44bde6231c32ec39c9d6844b9f0f70ac4c  ./how-we-built-it/lens1_cms_and_p1.py
+a18393ff0553dd24375465fce0d2c0bcef6ba390cce2d7669ef70b71ac60cb64  ./how-we-built-it/lens2_discovery_and_certificate.py
+b3dced8ae6cdeddc38a902b7ed738a1bc2797d21022ba685de5e9d5ee022ae79  ./object/instance.json
+0b56842ae9b9d88fd1a3dc074c3b2760f4b644c60e33ff3e873d88a1ff3a50a8  ./object/p1_certificate_n8.json
+39db15871e01d00479188a1f45322f9dda570aab597cc8a5387c8829df4fe7c1  ./panel/criterion.md
+c5808a8d8bf3f09c07b0cd25baf15b2f2ae04be8c966c3eb6bfb4d49faaa5371  ./panel/gate.md
+49d614e035d62897fc35e1f8a631302e43095ad01f14bb3809fba5ba2f69e058  ./panel/novelty.md
+98ea1e94540c60050f3a184912cf806ab6c4d02b16ab718b566ba64c642b0958  ./panel/reproduce.md
+757a41712816ceba4118ba1a6ac58ee77d21d43936a0ef60aaec17b484385b75  ./the-record-we-beat/record.md
+3f1b69352f9fbd570f117230632f716d92f013a4026ac8ac1f1dc781fc04d7c3  ./verify-it-yourself/RECEIPTS.md
+538c251d310ddd7491add0a6fab51b646f95bbd86b2a8948709984fbbccf90ca  ./verify-it-yourself/run_checks.sh
+86a02c416834cf4fb20ba1a5b68b8a1c493d5d2c62ab19b8a9f8e2982c3e2d23  ./verify-it-yourself/verify_certificate.py

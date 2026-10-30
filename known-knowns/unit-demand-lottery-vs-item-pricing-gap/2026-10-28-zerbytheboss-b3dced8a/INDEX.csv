@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+unit-demand-lottery-vs-item-pricing-gap,lottery_vs_item_pricing_gap_ratio,1.139069994,1+ln(2)/5_approx_1.138629,2026-10-29T02:44:26Z,object/instance.json,b3dced8ae6cdeddc38a902b7ed738a1bc2797d21022ba685de5e9d5ee022ae79

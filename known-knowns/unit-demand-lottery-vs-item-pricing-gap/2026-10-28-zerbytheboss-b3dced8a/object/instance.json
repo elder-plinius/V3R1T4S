@@ -1,0 +1,69 @@
+{
+  "target_id": "unit-demand-lottery-vs-item-pricing-gap",
+  "instance_type": "closed_form_cdf",
+  "num_items": 2,
+  "distribution": {
+    "name": "capped_equal_revenue",
+    "support_min": 1,
+    "support_max": 50000,
+    "cdf": "1 - 1/v for 1 <= v < 50000, 1 for v >= 50000",
+    "pdf": "1/v^2 for 1 <= v < 50000",
+    "upper_point_mass": "1/50000 at v = 50000",
+    "monopoly_revenue_per_item": 1.0,
+    "upper_bound_D": 2.0
+  },
+  "menu": [
+    {
+      "id": 1,
+      "allocation": ["1/2", "1/2"],
+      "price": "23/10",
+      "price_decimal": 2.3
+    },
+    {
+      "id": 2,
+      "allocation": ["1", "0"],
+      "price": "18750",
+      "price_decimal": 18750.0
+    },
+    {
+      "id": 3,
+      "allocation": ["0", "1"],
+      "price": "18750",
+      "price_decimal": 18750.0
+    }
+  ],
+  "tie_breaking": "lowest_priced_maximizer",
+  "outside_option": "price_0_utility_0",
+  "theoretical_limit": {
+    "S_parameter": "23/5",
+    "p1_parameter": "23/10",
+    "alpha_parameter": "3/8",
+    "limiting_revenue_formula": "2 + (5/46) * ln(18/5)",
+    "limiting_revenue": 2.278463870344405,
+    "limiting_ratio": 1.1392319351722026,
+    "CMS_constant": "1 + ln(2)/5",
+    "CMS_value": 1.138629436111989,
+    "limiting_surplus": 0.0006024990602135
+  },
+  "finite_instance_certified": {
+    "n": 50000,
+    "alpha": "3/8",
+    "lottery_revenue_R": 2.278139987823547,
+    "item_bound_D": 2.0,
+    "ratio_R_over_D": 1.1390699939117735,
+    "CMS_bar": 1.138629436111989,
+    "surplus": 0.0004405577997844,
+    "required_margin": 0.0001,
+    "satisfies_criterion": true
+  },
+  "p1_partial_win": {
+    "n": 8,
+    "distribution": "discrete_equal_revenue_1_to_8",
+    "probabilities": ["1/2", "1/6", "1/12", "1/20", "1/30", "1/42", "1/56", "1/8"],
+    "lottery_lp_primal": "15/8",
+    "lottery_lp_dual": "15/8",
+    "duality_gap": "0",
+    "item_pricing_supremum": "15/8",
+    "status": "p1_certified"
+  }
+}
