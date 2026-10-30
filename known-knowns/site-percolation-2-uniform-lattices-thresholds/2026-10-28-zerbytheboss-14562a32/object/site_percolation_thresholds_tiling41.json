@@ -1,0 +1,75 @@
+{
+  "target_id": "site-percolation-2-uniform-lattices-thresholds",
+  "lattice_name": "Grünbaum-Shephard Tiling #41",
+  "vertex_configuration": "(1/2)(3,4,3,12) + (1/2)(3,12^2)",
+  "sites_per_unit_cell": 8,
+  "mean_coordination_number": 3.5,
+  "euler_characteristic_p0": 0.65465367,
+  "literature_baseline_2008": {
+    "reference": "Neher, Mecke, Wagner (arXiv:0708.3250, 0708.3251) / Wikipedia",
+    "pc_site": 0.7680,
+    "uncertainty": 0.0002
+  },
+  "calibrated_benchmarks": {
+    "kagome_site": {
+      "exact": 0.652703644666,
+      "computed_crossing": 0.65271933,
+      "diff": 1.57e-5
+    },
+    "super_kagome_3_12_site": {
+      "exact": 0.807900764434,
+      "computed_crossing": 0.80786312,
+      "diff": 3.76e-5
+    },
+    "tiling41_bond": {
+      "published_gu_ziff_2009": 0.67493252,
+      "computed_crossing": 0.67477228,
+      "diff": 1.60e-4
+    }
+  },
+  "lens1_newman_ziff_fss": {
+    "method": "Compiled Rust Newman-Ziff torus wrapping-probability finite-size scaling",
+    "sizes_evaluated": [64, 128, 256, 512, 1024, 2048],
+    "max_system_sites": 33554432,
+    "microcanonical_mean_nc_fractions": {
+      "L64": 0.770162,
+      "L128": 0.768950,
+      "L256": 0.768315,
+      "L512": 0.767744,
+      "L1024": 0.767492,
+      "L2048": 0.767375
+    },
+    "pairwise_crossings": [
+      {"L1": 64, "L2": 128, "L_eff": 90.51, "pc_star": 0.76695160, "R_star": 0.33947},
+      {"L1": 128, "L2": 256, "L_eff": 181.02, "pc_star": 0.76744712, "R_star": 0.38062},
+      {"L1": 256, "L2": 512, "L_eff": 362.04, "pc_star": 0.76686865, "R_star": 0.30332},
+      {"L1": 512, "L2": 1024, "L_eff": 724.08, "pc_star": 0.76719642, "R_star": 0.37576},
+      {"L1": 1024, "L2": 2048, "L_eff": 1448.15, "pc_star": 0.76709803, "R_star": 0.33301}
+    ],
+    "extrapolated_pc_y175": 0.76714539,
+    "uncertainty_y175": 1.43e-4,
+    "extrapolated_pc_y200": 0.76714644,
+    "uncertainty_y200": 1.39e-4,
+    "consensus_pc": 0.767145,
+    "consensus_uncertainty": 0.000144
+  },
+  "lens2_jacobsen_scullard_roots": {
+    "method": "Exact critical connection polynomial roots P_B(p) = P(2D; B) - P(0D; B) = 0",
+    "exact_physical_roots": {
+      "1x1_8sites": 0.76164257,
+      "1x2_16sites": 0.76471755,
+      "2x1_16sites": 0.76471755,
+      "1x3_24sites": 0.76608097,
+      "3x1_24sites": 0.76608097
+    },
+    "isotropic_commutation_verified": true,
+    "shanks_accelerated_limit": 0.76716706,
+    "power_law_fit_extrapolated_pc": 0.7680,
+    "power_law_fit_uncertainty": 0.0015
+  },
+  "method_agreement": {
+    "difference_between_lenses": 2.2e-5,
+    "combined_sigma_agreement": "< 0.2 sigma",
+    "conclusion": "CONFIRMED_SOLUTION"
+  }
+}
