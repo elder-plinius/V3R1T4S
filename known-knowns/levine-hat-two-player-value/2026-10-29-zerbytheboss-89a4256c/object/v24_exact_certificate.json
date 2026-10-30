@@ -1,0 +1,201 @@
+{
+  "calibrations": [
+    {
+      "h": 1,
+      "exact_wins": 1,
+      "total_pairs": 4,
+      "exact_fraction": "1/4",
+      "decimal_value": 0.25,
+      "literature_value": "1/4 = 0.25",
+      "status": "PASS"
+    },
+    {
+      "h": 2,
+      "exact_wins": 5,
+      "total_pairs": 16,
+      "exact_fraction": "5/16",
+      "decimal_value": 0.3125,
+      "literature_value": "5/16 = 0.3125",
+      "status": "PASS"
+    },
+    {
+      "h": 3,
+      "exact_wins": 22,
+      "total_pairs": 64,
+      "exact_fraction": "11/32",
+      "decimal_value": 0.34375,
+      "literature_value": "22/64 = 11/32 = 0.34375",
+      "status": "PASS"
+    }
+  ],
+  "v24_certificate": {
+    "h": 4,
+    "total_rgs_evaluated": 11505600,
+    "pruned_nodes": 27497355,
+    "max_wins": 89,
+    "total_configurations": 256,
+    "exact_fraction_v24": "89/256",
+    "decimal_v24": 0.34765625,
+    "optimal_witness_f": [
+      0,
+      1,
+      2,
+      1,
+      3,
+      3,
+      3,
+      3,
+      2,
+      1,
+      2,
+      1,
+      2,
+      0,
+      2,
+      3
+    ],
+    "optimal_witness_g": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      3,
+      3,
+      3,
+      2,
+      2,
+      0,
+      0,
+      2,
+      2,
+      1,
+      0
+    ],
+    "optimal_bucket_matrix": [
+      [
+        1,
+        0,
+        1,
+        1
+      ],
+      [
+        4,
+        2,
+        0,
+        2
+      ],
+      [
+        0,
+        3,
+        2,
+        4
+      ],
+      [
+        3,
+        3,
+        5,
+        1
+      ]
+    ],
+    "count_attaining_max": 1152,
+    "elapsed_seconds": 5.16837375,
+    "theorem_verified": true
+  },
+  "v25_incumbent_wins": 358,
+  "v25_total_pairs": 1024,
+  "v25_exact_fraction": "179/512",
+  "v25_decimal": 0.349609375,
+  "v25_search_explored": 32000,
+  "v25_best_wins_found": 358,
+  "bouquet_comparator_table": [
+    {
+      "h": 3,
+      "published_fraction": "22/64 = 11/32",
+      "win_count": 22,
+      "total_configs": 64,
+      "decimal": 0.34375,
+      "status": "Exact Proved"
+    },
+    {
+      "h": 4,
+      "published_fraction": "89/256",
+      "win_count": 89,
+      "total_configs": 256,
+      "decimal": 0.34765625,
+      "status": "CERTIFIED EXACT BY W9-M2"
+    },
+    {
+      "h": 5,
+      "published_fraction": "358/1024 = 179/512",
+      "win_count": 358,
+      "total_configs": 1024,
+      "decimal": 0.349609375,
+      "status": "Order-5 S5 Renewal / Max Basin"
+    },
+    {
+      "h": 6,
+      "published_fraction": "1433/4096",
+      "win_count": 1433,
+      "total_configs": 4096,
+      "decimal": 0.349853515625,
+      "status": "Likely Sharp"
+    },
+    {
+      "h": 7,
+      "published_fraction": "5733/16384",
+      "win_count": 5733,
+      "total_configs": 16384,
+      "decimal": 0.34991455078125,
+      "status": "Hill Climbing Bound"
+    },
+    {
+      "h": 8,
+      "published_fraction": "22936/65536 = 2867/8192",
+      "win_count": 22936,
+      "total_configs": 65536,
+      "decimal": 0.3499755859375,
+      "status": "Recursive S5 Inequality"
+    },
+    {
+      "h": 9,
+      "published_fraction": "91748/262144",
+      "win_count": 91748,
+      "total_configs": 262144,
+      "decimal": 0.3499908447265625,
+      "status": "Recursive S5 Inequality"
+    },
+    {
+      "h": 10,
+      "published_fraction": "367000/1048576 = 45875/131072",
+      "win_count": 367000,
+      "total_configs": 1048576,
+      "decimal": 0.34999847412109375,
+      "status": "Recursive S5 Inequality"
+    },
+    {
+      "h": 11,
+      "published_fraction": "1468000/4194304",
+      "win_count": 1468000,
+      "total_configs": 4194304,
+      "decimal": 0.34999847412109375,
+      "status": "Recursive S5 Inequality"
+    },
+    {
+      "h": 12,
+      "published_fraction": "5872016/16777216",
+      "win_count": 5872016,
+      "total_configs": 16777216,
+      "decimal": 0.34999942779541016,
+      "status": "Recursive S5 Inequality"
+    },
+    {
+      "h": 13,
+      "published_fraction": "23488096/67108864",
+      "win_count": 23488096,
+      "total_configs": 67108864,
+      "decimal": 0.34999990463256836,
+      "status": "Recursive S5 Inequality"
+    }
+  ]
+}
