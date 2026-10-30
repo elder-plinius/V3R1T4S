@@ -1,0 +1,38 @@
+{
+  "id": "non-attacking-queens-game-nimbers-a344227",
+  "name": "Non-Attacking Queens game (Node-Kayles on the n-queens graph): exact nimber a(18), the 20x20 outcome, and toroidal Conjecture T1 (OEIS A344227)",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours for toroidal boards n = 11..16, odd-n involution proof in Lean 4, and refutation-margin tables; workstation-days for exact G(18) or 20x20 outcome",
+  "statement": "The Non-Attacking Queens game (H. Noon, 2002; H. Noon and G. Van Brummelen, College Math. J. 37(3), 2006, 223-227; Thomas Jenrich, arXiv:1312.5135, 2013/2014; OEIS A344227) is Node-Kayles played on the n-queens graph Q_n: two players alternately place queens on an n x n chessboard so that no two queens attack each other (no shared row, column, or diagonal), and the last player able to place a queen wins. For odd n, the first player always wins by playing the center square and mirroring every reply by 180-degree rotation (so G(Q_n) >= 1). For n = 0..13, Noon, Bardoe, and Fan computed the Sprague-Grundy sequence A344227: 0, 1, 1, 2, 1, 3, 1, 2, 3, 1, 0, 1, 0, 1. Because a(10) = a(12) = 0 (and Jenrich showed 14x14 and 16x16 are second-player wins), A344227 carried the empirical conjecture that a(n) oscillates as 0, 1, 0, 1 for all n >= 9. In August 2026, Tavis Rudd ('queens-nimbers', OEIS A344227 comment and technical report) extended A344227 through n = 17 with G(14) = 0, G(15) = 1, G(16) = 0, G(17) = 2 (breaking the odd-n = 1 pattern) and proved that the 18x18 board is a first-player win (opening at I9 = (8,8), so G(18) >= 1, breaking the even-n = 0 pattern). As of 2026-10-30, three concrete problems are explicitly open in A344227 and Rudd (2026): (1) the exact Sprague-Grundy value a(18) = G(Q_{18}) (conjectured to be 1 in Section 6.5 of Rudd 2026, since proving G(18) = 1 reduces via the heap-sum method to showing Q_{18} + Nim(1) is a second-player win); (2) whether the 20x20 board (Q_{20}) is a first-player (N) or second-player (P) win; and (3) Conjecture T1 (Section 6.7 of Rudd 2026) on the toroidal n-queens graph TQ_n (where rows, columns, and both diagonals wrap mod n, so vertex-transitivity forces G(TQ_n) in {0,1}): Rudd computed G(TQ_n) for n = 1..10 as 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 and conjectured that G(TQ_n) = n mod 2 for all n >= 4.",
+  "success_criterion": "CONFIRMED: any one of: (1) the exact Sprague-Grundy value a(18) = G(Q_{18}) (certified via exact mex evaluation or heap-sum P-position verification of Q_{18} + Nim(a(18)) plus N-position verification of Q_{18} + Nim(k) for 0 <= k < a(18)) or the 1st/2nd-player win/loss outcome of Q_{20}, established by two independently written bitboard solvers that both reproduce A344227 for n = 0..17; OR (2) a machine-checked proof in Lean 4 (with no sorry and standard axioms) of Rudd's full Toroidal Conjecture T1 (G(TQ_n) = n mod 2 for all n >= 4); OR (3) an explicit toroidal counterexample refuting Conjecture T1 or the exact computational verification of Conjecture T1 for all n = 11..16 (including the three open even toroidal boards TQ_{12}, TQ_{14}, TQ_{16} and odd TQ_{11}, TQ_{13}, TQ_{15}) by two independent bitboard solvers that both reproduce G(TQ_n) for n = 1..10.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Compute the exact toroidal n-queens Sprague-Grundy values G(TQ_n) for n = 11, 12, 13, 14 (including the open even boards TQ_{12} and TQ_{14} testing Conjecture T1 beyond n = 10), plus the exact central-strike refutation margins on R_{14} and R_{16} (defined in Section 6.6 of Rudd 2026 as the count of legal Player 2 replies on R_n = Q_n \\ N[c*] that leave a P-position, calibrated against Rudd's published margins for n = 4, 6, 8, 10, 12), verified by two independent bitboard solvers."
+    },
+    {
+      "id": "p2",
+      "statement": "Prove the odd-n half of Rudd's Toroidal Conjecture T1 (that G(TQ_n) = 1 for all odd n >= 1) in Lean 4 (with no sorry and standard axioms) via the point-reflection involution x -> -x (mod n) on the residual graph TQ_n \\ N[(0,0)], and compute G(TQ_{12}) with two independent solvers."
+    }
+  ],
+  "verification_method": "For a formal proof in (2) or p2, run `lake build` in Lean 4 and verify `#print axioms` on the theorem. For computational claims in (1), (3), or p1/p2: on toroidal boards TQ_n, since TQ_n is vertex-transitive, every first move is isomorphic; thus G(TQ_n) = 1 iff the residual board H_n = TQ_n \\ N[(0,0)] after placing one queen at (0,0) is a P-position (second-player win), and G(TQ_n) = 0 otherwise. For exact standard-board nimbers a(n) = G(Q_n), boolean alpha-beta on Q_n alone only tests whether G(Q_n) > 0; solvers must either evaluate exact mex values or certify via the heap-sum game that Q_n + Nim(g) is a P-position and Q_n + Nim(k) is an N-position for all 0 <= k < g. Two independent bitboard solvers using distinct traversal/canonicalization algorithms (e.g., D_4-canonical Zobrist alpha-beta vs. independent retrograde/DAG solver) must reproduce G(TQ_n) for n = 1..10, A344227 for n = 0..17, and the published central-strike refutation margins for n = 4, 6, 8, 10, 12 before certifying any new value. Keep all package files <= 1 MB (kit/SUBMIT.md).",
+  "primary_sources": [
+    "https://oeis.org/A344227",
+    "https://github.com/tavisrudd/queens-nimbers",
+    "https://raw.githubusercontent.com/tavisrudd/queens-nimbers/main/docs/queens-n18-paper.md",
+    "https://arxiv.org/abs/1312.5135"
+  ],
+  "status_source": "https://oeis.org/A344227",
+  "status_checked": "2026-10-30",
+  "disclosure": "open",
+  "angles": [
+    "For Toroidal Conjecture T1 (G(TQ_n) for n >= 11), vertex-transitivity of TQ_n eliminates the root branching factor of n^2 completely: place the first queen at (0,0) and solve the single residual graph H_n = TQ_n \\ N[(0,0)] under D_4 symmetry around (0,0). For odd n, point reflection tau(r, c) = (-r, -c) mod n is a graph automorphism of H_n with no fixed points (since 2r = 0 and 2c = 0 mod n implies (r,c) = (0,0) for odd n), and no square (r,c) in H_n attacks (-r,-c) mod n (since 2r = 0, 2c = 0, 2(r-c) = 0, or 2(r+c) = 0 mod n implies (r,c) lies in N[(0,0)]). Thus Player 1 can pair every Player 2 move in H_n with its negation mod n, proving H_n is a P-position and G(TQ_n) = 1 for all odd n (p2)! The computational challenge of Conjecture T1 is therefore concentrated entirely on even n (n = 12, 14, 16), where 2z = 0 mod n has the nonzero solution z = n/2.",
+    "For the refutation-margin puzzle in Section 6.6 of Rudd (2026) at n = 14 and n = 16, after the central strike c* = (n/2 - 1, n/2 - 1), the central queen attacks 4n - 4 squares, so the residual board R_n = Q_n \\ N[c*] has exactly (n - 2)^2 live squares (144 at n = 14 and 196 at n = 16); solving each legal Player 2 reply in R_n independently with two bitboard solvers gives the exact count of replies that leave a P-position."
+  ],
+  "pitfalls": [
+    "On the torus TQ_n, two squares (r1, c1) and (r2, c2) attack each other iff r1 = r2 (mod n), c1 = c2 (mod n), r1 - c1 = r2 - c2 (mod n), or r1 + c1 = r2 + c2 (mod n). For even n, wrapped diagonals intersect at both (0,0) and (n/2, n/2), breaking the point-reflection pairing.",
+    "On the standard board Q_n, a(n) in A344227 is the Sprague-Grundy value G(Q_n), whereas a boolean solver on Q_n tests only whether G(Q_n) > 0; use exact mex or the heap-sum game Q_n + Nim(k) to certify exact nimbers."
+  ]
+}
