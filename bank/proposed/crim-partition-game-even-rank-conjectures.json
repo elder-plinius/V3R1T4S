@@ -1,0 +1,39 @@
+{
+  "id": "crim-partition-game-even-rank-conjectures",
+  "name": "CRIM on integer partitions: prove or refute the Bašić-Gottlieb-Krnc normal-play P-position conjectures or characterize 4-part P-positions (arXiv:2606.16828)",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 4,
+  "compute_profile": "laptop-hours to pure thought (p(50) = 204,226 partitions; dynamic programming over Young diagrams reaches n = 65..75 on one machine, and closed-form invariants are checkable in Lean 4)",
+  "statement": "Column-Row Impartial Merge (CRIM), studied by Ina Bašić, Eric Gottlieb, and Matjaž Krnc ('CRIM: A Natural Game on Integer Partitions', arXiv:2606.16828v1, June 15, 2026), is a normal-play impartial combinatorial game played on an integer partition lambda = [lambda_1, ..., lambda_r] (viewed as a Young diagram with r rows and largest part lambda_1). A legal move consists of removing either an arbitrary row i in {1, ..., r} (deleting lambda_i) or an arbitrary column j in {1, ..., lambda_1} (decrementing by 1 every part lambda_i >= j and dropping zero parts), with the remaining cells reattaching to form a single partition; the empty partition [] is the unique terminal P-position (second-player win). Bašić, Gottlieb, and Krnc prove that all Odds-Are-Even (OAE) partitions are P-positions (Theorem 1), that an Evens-Are-Odd (EAO) partition with lambda_1 > 1 and r > 1 is a P-position iff its Dyson rank |r - lambda_1| is even (Theorem 2), that the meld of balanced rectairs is in P (Theorem 3), and they completely characterize P-positions for 2-part and 3-part partitions (Proposition 10 and Theorem 11). For normal-play P/N outcomes, they pose four explicit structural conjectures and one open characterization question: Conjecture 1 (Even-Rank Conjecture, verified computationally by the authors for all partitions of size n <= 50): every P-position in CRIM has even Dyson rank |r - lambda_1|; Conjecture 7: the meld of losing thick hooks is in P; Conjecture 8: stacking an even-by-even hook Gamma_{r,c} onto a losing partition lambda preserves P-status; Conjecture 9: a parity self-conjugate partition (lambda_k = lambda'_k mod 2 for all k) is in N iff it is a stack of odd self-conjugate hooks and [1]; and Question 1: characterize the losing (P-position) partitions consisting of four parts [lambda_1, lambda_2, lambda_3, lambda_4]. (Note: the paper also states exact Sprague-Grundy Conjectures 2-5 for rectairs and staircases/padded staircases PS_n = [n,n,n-1,...,1] and a misere Conway-pair Conjecture 6, but Conjecture 3 already admits small counterexamples such as [6,6,5,4,3,2,1] of size 27 with G = 1 != 3 and [7,7,6,5,4,3,2,1] of size 35 with G = 3 != 1, so Conjectures 2-6 are excluded from this target.)",
+  "success_criterion": "CONFIRMED: either (A) a machine-checked proof in Lean 4 (with no sorry and standard axioms) of one of Bašić, Gottlieb, and Krnc's normal-play P-position conjectures (Conjecture 1, Conjecture 7, Conjecture 8, or Conjecture 9), or of a complete closed-form characterization of the 4-part P-positions (Question 1) proved by establishing internal stability (no P -> P move) and external stability (every non-P 4-part partition has a legal row/column move to P, using Theorem 11 for 3-part row removals); OR (B) an explicit counterexample partition lambda refuting Conjecture 1 (with size n > 50), Conjecture 7, Conjecture 8, or Conjecture 9, verified by two independently written normal-play CRIM solvers that both reproduce the authors' full computational baseline for all partitions of size n <= 50 (confirming zero odd-rank P-positions for n <= 50 and matching Table 1 for n <= 30) and agree on the P/N status of lambda and all its reachable subpartitions (with all package files strictly <= 1 MB per kit/SUBMIT.md).",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Exhaustive verification of Conjecture 1 (every P-position has even Dyson rank) and Conjecture 9 (characterization of parity self-conjugate N-positions) extended from n <= 50 to all partitions of size n <= 65, by two independent bottom-up dynamic programming solvers that reproduce all n <= 50 results and agree on the exact count of P-positions and Dyson-rank distributions for every n <= 65."
+    },
+    {
+      "id": "p2",
+      "statement": "An explicit candidate closed-form formula for the 4-part P-positions [lambda_1, lambda_2, lambda_3, lambda_4] (Question 1) validated exhaustively over the finite range of all 4-part partitions with lambda_1 <= 150 by two independent CRIM solvers (verifying internal and external stability on every 4-part state with lambda_1 <= 150)."
+    }
+  ],
+  "verification_method": "For a formal proof (A), run `lake build` in Lean 4 and verify `#print axioms` on the main theorem. For a counterexample (B) or finite-range verification (p1, p2), run two independent normal-play CRIM engines (one indexing partitions by integer-partition rank/lexicographic hash in C/Rust, one using conjugate-canonicalized Young diagram bitmasks in Python/C++) implementing the normal-play P/N recurrence (lambda is in P iff every legal row removal and every legal column removal lands in N). Both engines must first verify all theorems, the full n <= 50 computational baseline (confirming Conjectures 1 and 9 hold for all n <= 50), and the Table 1 fractions u(n) in arXiv:2606.16828v1 for n <= 30, and then verify every transition of the claimed counterexample or finite range.",
+  "primary_sources": [
+    "https://arxiv.org/abs/2606.16828",
+    "https://arxiv.org/html/2606.16828v1"
+  ],
+  "status_source": "https://arxiv.org/abs/2606.16828",
+  "status_checked": "2026-10-30",
+  "disclosure": "open",
+  "angles": [
+    "Because CRIM is symmetric under conjugation (transposing the Young diagram swaps row moves and column moves and preserves Dyson rank |r - lambda_1|), canonicalizing each partition with its conjugate lambda' halves the state space immediately.",
+    "For Question 1 (4-part partitions [a, b, c, d]), removing any row leaves a 3-part partition whose P/N status is already given in closed form by Theorem 11 of Bašić-Gottlieb-Krnc; thus external and internal stability reduce to a 1D recurrence along column removals.",
+    "For p1, bottom-up evaluation by partition size n = |lambda| needs only the P/N bit (1 bit per partition) of smaller sizes, and since p(65) = 2,012,558, the entire P-position bitset up to n = 65 fits in a few megabytes of RAM."
+  ],
+  "pitfalls": [
+    "Removing column j decrements every part lambda_i >= j by 1 (reattaching the right side of the Young diagram to the left); do not confuse this with Chomp (which deletes all cells below and to the right).",
+    "Dyson's rank in arXiv:2606.16828 is defined as |r - lambda_1|, where r is the number of positive parts and lambda_1 is the largest part.",
+    "Conjecture 3 (near-square rectair Sprague-Grundy values) already has small counterexamples ([6,6,5,4,3,2,1] at n = 27 gives G = 1 instead of 3, and [7,7,6,5,4,3,2,1] at n = 35 gives G = 3 instead of 1) and is excluded from this target; only the normal-play P-position Conjectures 1, 7, 8, 9 and Question 1 are in scope.",
+    "Always calibrate on all partitions up to n = 50 (the full range checked in Section 4 of arXiv:2606.16828v1), not just the n <= 30 summary in Table 1."
+  ]
+}
