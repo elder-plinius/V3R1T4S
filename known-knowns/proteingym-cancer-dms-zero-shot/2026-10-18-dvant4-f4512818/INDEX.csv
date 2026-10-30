@@ -1,0 +1,5 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+proteingym-cancer-dms-zero-shot,p1: PTEN_HUMAN_Matreyek_2021 Spearman (DMS-level),0.5658,0.516,2026-10-18T20:50:39Z,object/PTEN_HUMAN_Matreyek_2021.M1.csv,1aecf9c14a0746b6b434b38acebfdfe8ddeefec98bedb322d6ea53b1ee7760db
+proteingym-cancer-dms-zero-shot,p1: P53_HUMAN_Kotler_2018 Spearman (DMS-level),0.7686,0.722,2026-10-18T20:50:39Z,object/P53_HUMAN_Kotler_2018.M1.csv,78b38b6d6163a2461b45c42b4a6c1531a07e405da8f51595a527ef5e21979264
+proteingym-cancer-dms-zero-shot,p1: BRCA1_HUMAN_Findlay_2018 Spearman (DMS-level),0.5930,0.560,2026-10-18T20:50:39Z,object/BRCA1_HUMAN_Findlay_2018.M1.csv,f4512818b17b6acb26547903e1e91de64adb5dd1f4133f547d454d95bfa71e4b
+proteingym-cancer-dms-zero-shot,p1: PTEN_HUMAN_Mighell_2018 Spearman (DMS-level),0.5784,0.561,2026-10-18T20:50:39Z,object/PTEN_HUMAN_Mighell_2018.M1.csv,498eb6c09c658b96a68cbd30ec8be33885f966dbb83765cfaccbd6444b7b7fdd
