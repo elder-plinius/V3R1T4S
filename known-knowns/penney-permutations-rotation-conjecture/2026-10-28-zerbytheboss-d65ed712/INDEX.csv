@@ -1,0 +1,3 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+penney-permutations-rotation-conjecture,p1_S4_conjecture,"p1 certified for all 24 permutations in S_4 with exact integer horizon certificates (A+R)/H! < 1/2 in object/s4_certificates.json",open,2026-10-28T18:16:00Z,object/s4_certificates.json,d65ed712fff9187ef1fe3b4af2c0a7b58f1fad32723671f2f0e55c07c9d43bf1
+penney-permutations-rotation-conjecture,p2_S5_intervals,"p2 exact rational intervals and integer counts at H=16 for all 120 permutations of S_5 in object/s5_rational_intervals.json",open,2026-10-28T18:16:00Z,object/s5_rational_intervals.json,e455e2d823fdc7821c722ae9eec5de11b44353e7387bda21bab0e5efb6ea83da
