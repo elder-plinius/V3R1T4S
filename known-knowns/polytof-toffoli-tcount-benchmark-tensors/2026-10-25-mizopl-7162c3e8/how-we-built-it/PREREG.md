@@ -4,7 +4,6 @@
 - **Target ID:** `polytof-toffoli-tcount-benchmark-tensors`
 - **Pre-Registered Prediction ID:** `P0082` (`p = 0.75`)
 - **Timestamp (UTC):** `2026-10-25T18:35:00Z`
-- null_test: required
 
 ## 1. Frozen Success Criteria
 
@@ -21,19 +20,21 @@ For one or more tensor IDs listed in the live `ZIB-IOL/polytof` table (`https://
 2. **Exact Circuit-Level Equivalence Check (Requirement (c)):**
    - For at least one claimed circuit ($n \le 30$ qubits), synthesize the explicit CNOT + Toffoli/CCZ (for CP) or CNOT + `{T, S, Z}` phase-polynomial circuit (for Waring, fixing quadratic and linear diagonal phase corrections so the full phase polynomial matches the original circuit's phase polynomial modulo $8$) and verify exact unitary / statevector / path-sum equivalence on all $2^n$ computational basis states (or exact symbolic phase-polynomial identity over $\mathbb{Z}_8[x_1, \dots, x_n]/(x_i^2 - x_i)$).
 3. **Literature Non-Supersession (Requirement (d)):**
-   - Confirm against `arXiv:2602.15285`, `arXiv:2610.01024`, AlphaTensor-Quantum (`arXiv:2402.14396`), and Vandaele (`arXiv:2405.00083` / `2502.xxxxx`) that the new count is strictly lower than any published count for that tensor variant.
+   - Confirm against `arXiv:2602.15285`, `arXiv:2610.01024`, AlphaTensor-Quantum (`arXiv:2402.14396`), and Vandaele (`arXiv:2405.00083`) that the new count is strictly lower than any published count for that tensor variant.
 
 ### Partial Wins (`p1`, `p2`, `p3`)
 - **`p1`:** Strictly lower Toffoli (`CP`) count than the live table for at least one $\mathrm{GF}(2^k)$ multiplication tensor (`07xx`/`05xx`, $k = 2..10$) or AES S-box circuit tensor, checked against both `docs/tensors.md` and the classical bilinear complexity literature if on `05xx`.
-- **`p2`:** Certified optimality proof (exact SAT/UNSAT with DRAT proof or exhaustive algebraic certificate re-checkable in $< 1$ hour) that no decomposition with $(\text{table value} - 1)$ terms exists for a table row whose optimality is not already published.
-- **`p3`:** Complete independent re-verification audit of all 88 decompositions in `data/paper/` reporting every table value in `docs/tensors.md` not reproduced by its posted decomposition.
+- **`p2`:** Certified optimality certificate (exact SAT/UNSAT with DRAT certificate or exhaustive algebraic certificate re-checkable in $< 1$ hour) that no decomposition with $(\text{table value} - 1)$ terms exists for a table row whose optimality is not already published.
+- **`p3`:** Complete independent re-verification audit of all decompositions in `data/paper/` reporting every table value in `docs/tensors.md` not reproduced by its posted decomposition.
 
 ## 2. Attack Lenses (CLSS + Law `M7`)
 
 - **Lens 1 (`L-PTTF-001`, Law `M7` Fiber Diversity + Higher-Beam FastTODD & Flip-Graph Search):**
-  - First, complete the exact 88-tensor audit (`p3`).
-  - Second, apply **Law `M7`** (*Interface Gauge Freedom & Solution-Fiber Diversity*) to $\mathrm{GF}(2^k)$ multiplication (`0725..0733` / `0525..0533`) and circuit benchmarks (`0800..0824`, `0101..0168`):
-    - Generate a diverse fiber of minimal-rank CP decompositions via $\mathrm{Aut}(\mathbb{F}_{2^k})$, tower basis changes, evaluation-point permutations, and FGS plateau flips (`--fgs --plus`).
-    - Run `waring` (FastTODD) across the entire CP fiber and with elevated beam width (`-b 8..64`) + random column permutations to strictly beat the live `Waring` (T-count) and `CP` (Toffoli-count) records in `docs/tensors.md`.
-- **Lens 2 (`L-PTTF-002`, Symmetric Phase-Tensor CP Reduction & Cenk–Özbudak / Chudnovsky Sub-30 `GF(2^9)` / `GF(2^7)` Construction + `p2` Optimality Certificates):**
-  - Attack `CP` rank directly on `07xx` (`topp` symmetric cubic tensors, where cross-register terms and symmetric cancellations are permitted) and `05xx` (`GF(2^9)` rank $< 30$ via Cenk–Özbudak 2010 / Bshouty / FGS on `0532`/`0732` and `0726..0733`), plus certify exact optimality (`p2`) on small table rows.
+  - First, complete the exact audit of `data/paper/` (`p3`).
+  - Second, apply **Law `M7`** (*Interface Gauge Freedom & Solution-Fiber Diversity*) to $\mathrm{GF}(2^k)$ multiplication (`0725..0733` / `0525..0533`) and circuit benchmarks (`0800..0824`, `0101..0168`).
+- **Lens 2 (`L-PTTF-002`, Symmetric Phase-Tensor CP Reduction & `p2` Optimality Certificates):**
+  - Attack `CP` rank on `07xx`/`05xx` and certify optimality (`p2`) on small table rows.
+
+## 3. Package Split Note (`2026-10-30`)
+
+Per maintainer review on PR `#761` (`kit/SUBMIT.md` section 1, one object / partial-win claim per package), this package (`2026-10-25-mizopl-7162c3e8`) holds strictly the **`p3` audit of `data/paper/`** (`object/p3_audit_certificate.json`) and the **4 repaired Waring schemes** (`object/waring/0105-00039.npy`, `object/waring/0108-00073.npy`, `object/waring/0115-00051.npy`, `object/waring/0817-00059.npy`), while eligible `p2` optimality certificates are filed as separate single-row PRs.
