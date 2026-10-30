@@ -1,0 +1,137 @@
+# File compiled by the NIST circuit complexity team:
+# https://csrc.nist.gov/projects/circuit-complexity
+# File timestamp (UTC): 2020-06-26T15:29:51.465Z
+# Repository: https://github.com/usnistgov/Circuits/
+
+begin circuit Mult-GF256-IrredPoly-84310
+
+# Description: Multiplication in Galois Field GF(256) with irreducible polynomial X^8 + X^4 + X^3 + X + 1
+# References: July 2010: http://cs-www.cs.yale.edu/homes/peralta/CircuitStuff/CMT.html
+# Tally: 16 inputs, 8 outputs, 117 gates, 48 AND, 69 XOR
+# Depth(Gate): 6; Depth(AND): 1
+
+Inputs: A0:A7 B0:B7
+Outputs: C0:C7
+Internal: t1:t109
+GateSyntax: GateName Output Inputs
+
+begin SLP
+AND t1 A0 B0
+AND t2 A0 B1
+AND t3 A1 B0
+AND t4 A0 B2
+AND t5 A1 B1
+AND t6 A2 B0
+AND t7 A0 B3
+AND t8 A1 B2
+AND t9 A2 B1
+AND t10 A3 B0
+AND t11 A1 B3
+AND t12 A2 B2
+AND t13 A3 B1
+AND t14 A2 B3
+AND t15 A3 B2
+AND t16 A3 B3
+AND t17 A4 B4
+AND t18 A4 B5
+AND t19 A5 B4
+AND t20 A4 B6
+AND t21 A5 B5
+AND t22 A6 B4
+AND t23 A4 B7
+AND t24 A5 B6
+AND t25 A6 B5
+AND t26 A7 B4
+AND t27 A5 B7
+AND t28 A6 B6
+AND t29 A7 B5
+AND t30 A6 B7
+AND t31 A7 B6
+AND t32 A7 B7
+XOR t33 A0 A4
+XOR t34 A1 A5
+XOR t35 A2 A6
+XOR t36 A3 A7
+XOR t37 B0 B4
+XOR t38 B1 B5
+XOR t39 B2 B6
+XOR t40 B3 B7
+AND t41 t40 t36
+AND t42 t40 t35
+AND t43 t40 t34
+AND t44 t40 t33
+AND t45 t39 t36
+AND t46 t39 t35
+AND t47 t39 t34
+AND t48 t39 t33
+AND t49 t38 t36
+AND t50 t38 t35
+AND t51 t38 t34
+AND t52 t38 t33
+AND t53 t37 t36
+AND t54 t37 t35
+AND t55 t37 t34
+AND t56 t37 t33
+XOR t57 t2 t3
+XOR t58 t4 t5
+XOR t59 t6 t32
+XOR t60 t7 t8
+XOR t61 t9 t10
+XOR t62 t60 t61
+XOR t63 t11 t12
+XOR t64 t13 t63
+XOR t65 t14 t15
+XOR t66 t18 t19
+XOR t67 t20 t21
+XOR t68 t22 t67
+XOR t69 t23 t24
+XOR t70 t25 t26
+XOR t71 t69 t70
+XOR t72 t27 t28
+XOR t73 t29 t32
+XOR t74 t30 t31
+XOR t75 t52 t55
+XOR t76 t48 t51
+XOR t77 t54 t76
+XOR t78 t44 t47
+XOR t79 t50 t53
+XOR t80 t78 t79
+XOR t81 t43 t46
+XOR t82 t49 t81
+XOR t83 t42 t45
+XOR t84 t71 t74
+XOR t85 t41 t16
+XOR t86 t85 t68
+XOR t87 t66 t65
+XOR t88 t83 t87
+XOR t89 t58 t59
+XOR t90 t72 t73
+XOR t91 t74 t17
+XOR t92 t64 t91
+XOR t93 t82 t92
+XOR t94 t80 t62
+XOR C7 t94 t90
+XOR t95 t41 t77
+XOR t96 t84 t89
+XOR C6 t95 t96
+XOR t97 t57 t74
+XOR t98 t83 t75
+XOR t99 t86 t90
+XOR t100 t97 t98
+XOR C5 t99 t100
+XOR t101 t1 t56
+XOR t102 t90 t101
+XOR t103 t82 t84
+XOR t104 t88 t102
+XOR C4 t103 t104
+XOR t105 t71 t62
+XOR t106 t86 t105
+XOR C3 t106 t93
+XOR t107 t86 t88
+XOR C2 t89 t107
+XOR t108 t57 t32
+XOR t109 t108 t88
+XOR C1 t109 t93
+XOR C0 t93 t1
+end SLP
+end circuit
