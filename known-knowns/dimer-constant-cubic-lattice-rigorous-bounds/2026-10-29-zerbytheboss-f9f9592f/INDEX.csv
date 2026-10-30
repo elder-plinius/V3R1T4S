@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+dimer-constant-cubic-lattice-rigorous-bounds,z3_dimer_constant_lambda3,0.452010,0.452130,2026-10-29T14:10:00Z,object/dimer_3d_5_5_certificate.json,f9f9592f995930782ce9ceadca53a5188cd97ed6d83af4d281c78d6cb06052f8
