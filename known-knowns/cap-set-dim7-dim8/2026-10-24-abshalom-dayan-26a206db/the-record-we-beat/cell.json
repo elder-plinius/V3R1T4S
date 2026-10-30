@@ -1,0 +1,14 @@
+{
+ "cell": "largest cap in AG(9,3) = F_3^9",
+ "table_value": 1082,
+ "derivation": "Edel's table: 541-cap in PG(8,3); doubling theorem (Bierbrauer-Edel 2012, Theorem 1): 2 x 541 = 1082",
+ "url": "http://www.yvesedel.de/Matritzen/CAPs/CAPMatIndex.html",
+ "fetched_utc": ["2026-10-24T20:07:59Z", "2026-10-24T20:28:35Z"],
+ "http_status": 200,
+ "sha256": "8aa5a2837a51d261c7b030e500c2c99e396d9ce7a653ecce8bc9badf6c1e2817",
+ "also": {
+  "funsearch_notebook": {"url": "https://raw.githubusercontent.com/google-deepmind/funsearch/main/cap_set/cap_set.ipynb", "value": 1082, "sha256": "f97f6f6ec331e5809ca4d40205224d2c5c613687d4f65316ecc2dd04a1724203"},
+  "noirsys_capset_unrefereed": {"url": "https://github.com/Noirsys/capset", "value": 1084, "sha256": "dd4a6b464b7f88b847412c3e7301a925bf565d8d5dd60398728d2bc052ee73f7"}
+ },
+ "claimed_value": 1104
+}
