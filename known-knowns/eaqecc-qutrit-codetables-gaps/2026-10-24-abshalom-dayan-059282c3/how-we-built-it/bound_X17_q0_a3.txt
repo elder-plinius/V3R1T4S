@@ -1,0 +1,22 @@
+Sat Oct 24 18:36:44 UTC 2026
+tail ranks achievable: 1 2 3
+exact 6 bound 6 rho1 9 rho0 9 s 3 eps ++++++++++++++++++++++++++++
+bound 6 rho1 9 rho0 9 eps ++++++++++++++++++++++++++++
+patterns 134217728
+histogram (rho1 rho0 count bound):
+  9 9 1 6
+  10 8 42 3
+  10 9 56 4
+  10 10 28 5
+  11 8 287 1
+  11 9 3507 2
+  11 10 24269 3
+  11 11 53154 4
+  12 9 19908 0
+  12 10 1630405 1
+  12 11 36652910 2
+  12 12 95833161 3
+max bound over all head sign patterns: 6
+exact max hull (over all tails) among patterns with bound >= 5, histogram: 5:28 6:1
+exact max hull over all X codes of this pair: 6 (patterns with bound <= 4 have hull <= 4)
+Sat Oct 24 18:41:34 UTC 2026
