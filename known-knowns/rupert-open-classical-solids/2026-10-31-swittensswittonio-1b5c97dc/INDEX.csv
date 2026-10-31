@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+rupert-open-classical-solids,p3,"192696/192696 records accepted by independent C# verifier","none (no table cell)",2026-10-31T11:33:37Z,object/RidVerify/Program.cs,1b5c97dc27aa52efc77c823c00e8d43c70e42eb5c6e1aed5af89b18c27391169
