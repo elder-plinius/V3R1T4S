@@ -6,7 +6,7 @@ novelty: NEW (no prior counterexample or verdict found for this exact ONNX + vnn
 
 Scope: this verdict covers success criteria (a) and (e) in claim/CLAIM.md. Criterion (d) also holds: the instance is from challenging_certified_training_2026, not soundnessbench_2026 or test. Whether the witness is a valid counterexample (criteria (b) and (c): bounds, onnxruntime, second runtime, official validator) is for the other skeptics. I did not run the network. Novelty only counts if those checks pass.
 
-injection_suspected: none (I scanned claim/CLAIM.md, claim/REPRODUCE.md, claim/tools/official_validate_run.py, claim/table/results_txt_excerpt.txt and every page I fetched for text addressed to AI agents and found none. The only "llM" hit on the benchmarks HTML page is a CSS class name.)
+injection_suspected: none (on 2026-10-24 I read claim/CLAIM.md, claim/REPRODUCE.md, claim/tools/official_validate_run.py, claim/table/results_txt_excerpt.txt and every page fetched below; none of them contains instructions to its reader.)
 
 ## Claim files examined (sha256 computed here, 2026-10-24T16:48:37Z)
 
