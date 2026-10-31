@@ -1,0 +1,7 @@
+{
+ "cell": "C(20,6,3)",
+ "live_coveringrepository_com": {"value": 71, "read": "hand read by the operator in a browser", "read_utc": "2026-10-17T14:57:00Z", "credited_to": "Chaoying Dai, Ben Li and Michel Toulouse", "date": "11/04/2006"},
+ "ljcr_github": {"url": "https://raw.githubusercontent.com/dmgordo/LJCR/main/coverings/coverdata.json", "size": 71, "low_bd": 64, "fetched_utc": ["2026-10-17T13:04:00Z", "2026-10-17T14:51:09Z", "2026-10-17T15:00:48Z", "2026-10-17T15:01:00Z"], "http_status": 200, "sha256": "0984bb8b4c89fe07268569b9814794e3c8852302d075f0794140f202e83d7fef"},
+ "zenodo_ljcr_v1_2": {"url": "https://zenodo.org/api/records/19735294/files/coverdata.json/content", "size": 71, "low_bd": 64, "fetched_utc": "2026-10-17T14:51:27Z", "http_status": 200},
+ "schonheim_lower_bound": 64
+}
