@@ -1,0 +1,7 @@
+MC 0.04931   slice formula 0.04934   (s1=-0.633 s2=0.310)
+MC 0.02311   slice formula 0.02302   (s1=-0.726 s2=0.240)
+MC 0.09319   slice formula 0.09328   (s1=-0.436 s2=0.203)
+MC 0.08271   slice formula 0.08278   (s1=-0.497 s2=0.259)
+MC 0.00225   slice formula 0.00225   (s1=-0.723 s2=-0.195)
+MC 0.23914   slice formula 0.23922   (s1=-0.335 s2=0.748)
+random wedges tested: 5716, violations of excess <= E_up(e): 0, largest excess/E_up: 0.9973

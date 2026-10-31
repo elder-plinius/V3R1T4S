@@ -1,0 +1,2 @@
+families tested 150, middle-type wedges encountered 150, nested deletions 72
+violations (new overlap > original overlap + 3e-5): 0 ; families with uncovered original volume: 0 ; max (new-orig) overlap fraction 0.00e+00

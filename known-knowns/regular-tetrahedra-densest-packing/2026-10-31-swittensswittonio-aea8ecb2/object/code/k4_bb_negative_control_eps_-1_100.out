@@ -1,0 +1,14 @@
+eps = -1/100 ; C = 88209/20000 = 4.410450000 ; 9/2=4.5
+boxes processed 2920 stats {'dom': 258, 'in': 1, 'ok': 661, 'vtx': 478} unresolved 51
+[(Fraction(17285725, 33554432), Fraction(69142905, 134217728)), (Fraction(17285725, 33554432), Fraction(69142905, 134217728)), (Fraction(0, 1), Fraction(5, 134217728))]
+[(Fraction(69142895, 134217728), Fraction(17285725, 33554432)), (Fraction(69142895, 134217728), Fraction(17285725, 33554432)), (Fraction(0, 1), Fraction(5, 134217728))]
+[(Fraction(69142895, 134217728), Fraction(17285725, 33554432)), (Fraction(34571445, 67108864), Fraction(69142895, 134217728)), (Fraction(0, 1), Fraction(5, 134217728))]
+[(Fraction(34571445, 67108864), Fraction(69142895, 134217728)), (Fraction(69142895, 134217728), Fraction(17285725, 33554432)), (Fraction(0, 1), Fraction(5, 134217728))]
+[(Fraction(34571445, 67108864), Fraction(69142895, 134217728)), (Fraction(34571445, 67108864), Fraction(69142895, 134217728)), (Fraction(0, 1), Fraction(5, 134217728))]
+SHELL boxes 3468 {'core': 554, 'in': 0, 'ok': 1118} unresolved 51
+[(Fraction(-4067175, 16777216), Fraction(-2033587, 8388608)), (Fraction(-4067175, 16777216), Fraction(-2033587, 8388608)), (Fraction(-1, 2), Fraction(-8388607, 16777216))]
+[(Fraction(-508397, 2097152), Fraction(-4067175, 16777216)), (Fraction(-508397, 2097152), Fraction(-4067175, 16777216)), (Fraction(-1, 2), Fraction(-8388607, 16777216))]
+[(Fraction(-508397, 2097152), Fraction(-4067175, 16777216)), (Fraction(-4067177, 16777216), Fraction(-508397, 2097152)), (Fraction(-1, 2), Fraction(-8388607, 16777216))]
+[(Fraction(-4067177, 16777216), Fraction(-508397, 2097152)), (Fraction(-508397, 2097152), Fraction(-4067175, 16777216)), (Fraction(-1, 2), Fraction(-8388607, 16777216))]
+[(Fraction(-4067177, 16777216), Fraction(-508397, 2097152)), (Fraction(-4067177, 16777216), Fraction(-508397, 2097152)), (Fraction(-1, 2), Fraction(-8388607, 16777216))]
+RESULT: NOT PROVED

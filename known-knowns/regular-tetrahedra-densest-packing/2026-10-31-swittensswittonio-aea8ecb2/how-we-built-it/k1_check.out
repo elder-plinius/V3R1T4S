@@ -1,0 +1,17 @@
+e      | (1/2pi)int G (Arb)  - closed form (enclosure of the difference)
+0.01   | [+/- 5.60e-36]
+0.10   | [+/- 8.41e-36]
+0.20   | [+/- 7.85e-36]
+0.30   | [+/- 6.15e-36]
+0.50   | [+/- 5.18e-36]
+0.70   | [+/- 4.50e-36]
+0.90   | [+/- 5.77e-36]
+0.95   | [+/- 7.37e-36]
+0.97   | [+/- 8.60e-36]
+max |difference| + radius over the grid: 8.596e-36
+max |a_new - a_GB| over 2000 points of [0,0.99]: 1.9439744952665095e-16
+e=0.0  MC away-wedge fraction 0.19595  +- 0.00020   closed form 0.19591
+e=0.2  MC away-wedge fraction 0.14122  +- 0.00017   closed form 0.14120
+e=0.5  MC away-wedge fraction 0.07100  +- 0.00013   closed form 0.07104
+e=0.8  MC away-wedge fraction 0.01859  +- 0.00007   closed form 0.01849
+e=0.9  MC away-wedge fraction 0.00666  +- 0.00004   closed form 0.00662

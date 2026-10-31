@@ -1,0 +1,18 @@
+state (1, 2) t=0.892 CERTIFIED lower bound 3.483101e-03
+state (0, 3) t=0.588 CERTIFIED lower bound 3.483101e-03
+state (2, 2) t=1.392 CERTIFIED lower bound 7.335398e-04
+state (1, 3) t=1.088 CERTIFIED lower bound 1.029911e-05
+state (0, 4) t=0.784 CERTIFIED lower bound 1.000423e-06
+state (3, 2) t=1.892 CERTIFIED lower bound 7.335398e-04
+state (2, 3) t=1.588 CERTIFIED lower bound 1.029911e-05
+state (1, 4) t=1.284 CERTIFIED lower bound 1.566597e-07
+state (0, 5) t=0.980 CERTIFIED lower bound 1.273845e-11
+state (0, 6) CERTIFIED 5.342391e-12
+state (0, 7) CERTIFIED 5.342391e-12
+state (0, 8) CERTIFIED 5.342391e-12
+state (0, 9) CERTIFIED 5.342391e-12
+state (0, 10) CERTIFIED 5.342391e-12
+state (0, 20) CERTIFIED 5.342391e-12
+state (0, 30) CERTIFIED 5.342391e-12
+state (0, 40) CERTIFIED 5.342391e-12
+rho_cert(0,5) = 1.273845e-11   rho_cert(0,41) = 5.342391e-12
