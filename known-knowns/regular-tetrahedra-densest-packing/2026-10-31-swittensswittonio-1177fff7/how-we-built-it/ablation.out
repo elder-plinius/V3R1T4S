@@ -1,0 +1,5 @@
+chain=rho_cert.json   area_vertex=False -> deficit 1.8388e-15  (k=38 u=0.00840 q=5 qv=9 good=120)
+chain=rho_cert.json   area_vertex=True  -> deficit 3.0642e-15  (k=30 u=0.01140 q=6 qv=7 good=96)
+chain=rho_cert2.json  area_vertex=False -> deficit 2.7011e-15  (k=38 u=0.00840 q=5 qv=9 good=120)
+chain=rho_cert2.json  area_vertex=True  -> deficit 4.5011e-15  (k=30 u=0.01140 q=6 qv=7 good=96)
+previous run: 1.0215562e-15 (independent set /9, q_v from K2 count, chain rho_cert.json)
