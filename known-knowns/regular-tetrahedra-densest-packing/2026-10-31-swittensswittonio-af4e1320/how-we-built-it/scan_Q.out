@@ -1,0 +1,9 @@
+rho_hat(0,6)=4.7118e-12  gamma_6=0.2280  gamma^3*rho=5.587e-14
+rho_hat(0,7)=4.7118e-12  gamma_7=0.3053  gamma^3*rho=1.341e-13
+rho_hat(0,8)=4.7118e-12  gamma_8=0.3660  gamma^3*rho=2.310e-13
+rho_hat(0,10)=4.7118e-12  gamma_10=0.4558  gamma^3*rho=4.461e-13
+rho_hat(0,15)=4.7118e-12  gamma_15=0.5875  gamma^3*rho=9.556e-13
+rho_hat(0,20)=4.7118e-12  gamma_20=0.6610  gamma^3*rho=1.361e-12
+rho_hat(0,30)=4.7118e-12  gamma_30=0.7427  gamma^3*rho=1.931e-12
+rho_hat(0,40)=4.7118e-12  gamma_40=0.7883  gamma^3*rho=2.308e-12
+rho_hat(0,5)=1.1254e-11 gamma5=0.1257 gamma^3 rho=2.235e-14

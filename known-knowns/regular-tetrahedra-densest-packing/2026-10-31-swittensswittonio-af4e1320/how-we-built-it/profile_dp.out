@@ -1,0 +1,10 @@
+(1, 2) t=0.892 rho_hat=3.2716e-03 (after mono close 3.2716e-03)
+(0, 3) t=0.588 rho_hat=3.2716e-03 (after mono close 3.2716e-03)
+(2, 2) t=1.392 rho_hat=6.9932e-04 (after mono close 6.9932e-04)
+(1, 3) t=1.088 rho_hat=9.7830e-06 (after mono close 9.7830e-06)
+(0, 4) t=0.784 rho_hat=8.4332e-07 (after mono close 8.4332e-07)
+(3, 2) t=1.892 rho_hat=6.9932e-04 (after mono close 6.9932e-04)
+(2, 3) t=1.588 rho_hat=9.7830e-06 (after mono close 9.7830e-06)
+(1, 4) t=1.284 rho_hat=1.3287e-07 (after mono close 1.3287e-07)
+(0, 5) t=0.980 rho_hat=1.1254e-11 (after mono close 1.1254e-11)
+rho(0,5) = 1.12537227111339835368781495631e-11

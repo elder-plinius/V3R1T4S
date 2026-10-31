@@ -1,0 +1,19 @@
+alpha = [0.19591327601530363508542777961121545565831432472 +/- 1.18e-48] 
+1-alpha >= 0.804086723985 ; 1/2-alpha >= 0.304086723985 ; Lemma A: rho(c>=2,1) >= sqrt2/(3 pi) >= 0.15005271936 ; FCAP <= 0.654034004625
+directly verified states: 155  closure-justified: 0
+rho_hat(1, 2) >= 2.979110e-03
+rho_hat(0, 3) >= 2.979110e-03
+rho_hat(2, 2) >= 6.508480e-04
+rho_hat(1, 3) >= 9.056212e-06
+rho_hat(0, 4) >= 7.637494e-07
+rho_hat(3, 2) >= 6.508480e-04
+rho_hat(2, 3) >= 9.056212e-06
+rho_hat(1, 4) >= 1.205094e-07
+rho_hat(0, 5) >= 8.619948e-12
+rho_hat(0, 6) >= 3.636896e-12
+rho_hat(0, 10) >= 3.636896e-12
+rho_hat(0, 50) >= 3.636896e-12
+rho_hat(0, 151) >= 3.636896e-12
+scheme (Q=40, k=38, u=0.00840): gamma_Q=0.788335 r_v=0.022603 d=0.18920 q=5 q_v=9 m=2 m_v=3 good/tet=120 Delta=8
+rho_hat(0,Q) used = 3.636896e-12 ; b >= 1.021556e-15 ; CERTIFIED density <= 1 - 1.021556e-15
+published (GEK): 1 - 2.6e-25 ; ratio of deficits = 3.929e+09

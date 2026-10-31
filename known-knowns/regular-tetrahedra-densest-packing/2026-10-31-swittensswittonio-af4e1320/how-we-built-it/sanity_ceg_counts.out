@@ -1,0 +1,4 @@
+edge 4.242640687119285 d 0.18920000000000003 rv 0.02260344453213403
+(a) max #other tets with a centre within delta: 3 (bound q-1=4);  max centres per other tet: 2 (bound m=2)
+(b) max #tets with a centre within rv of a vertex: 4 (bound qv=9); max centres per tet: 3 (bound mv=3)
+(c) 10 good centres sampled; uncovered fraction of B(c,u): min 0.1012 mean 0.3409  (certified rho_hat(0,40) = 3.6e-12; conjectured 0.0204)

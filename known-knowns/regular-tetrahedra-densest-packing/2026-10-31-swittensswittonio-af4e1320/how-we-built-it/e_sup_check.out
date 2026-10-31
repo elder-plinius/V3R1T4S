@@ -1,0 +1,7 @@
+alpha 0.19591327601530364 V_flush(0) 0.19584863281250092
+r=0.20  sup(nonflush grid)=0.268793  V_flush(r)=0.268793  diff=5.55e-17 (np.float64(0.20943951023931953), np.float64(3.3510321638291125))
+r=0.50  sup(nonflush grid)=0.377256  V_flush(r)=0.377256  diff=1.67e-16 (np.float64(6.178465552059926), np.float64(3.036872898470133))
+--- local search at fixed edge distance
+r=0.30 best_local=0.306035  V_flush=0.305799  diff=2.36e-04
+r=0.60 best_local=0.410380  V_flush=0.410070  diff=3.10e-04
+r=1.00 best_local=0.497633  V_flush=0.497633  diff=2.13e-07
