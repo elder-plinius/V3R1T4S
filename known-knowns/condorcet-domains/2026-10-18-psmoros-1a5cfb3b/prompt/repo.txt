@@ -1,0 +1,3 @@
+repo_tag: none
+repo_commit: ab114dcb1aad5cc1b2a53c58bc3ad3fcacd1107c (pinned in settings at run start and at packaging)
+charter: v4.1 tables lane; prompt/charter.md is charter.md exactly as this run read it at its start (2026-10-17T22:2xZ, 32459 bytes, last changed 2026-10-16T19:17:19-0700). The human edited charter.md during the run (2026-10-17 18:14 PDT) to queue later runs; those edits do not touch this quarry and are not published here.
