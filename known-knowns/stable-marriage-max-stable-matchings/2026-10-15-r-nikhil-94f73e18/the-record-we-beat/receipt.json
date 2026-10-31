@@ -1,0 +1,12 @@
+{
+  "url": "https://oeis.org/A357271/b357271.txt",
+  "http_status": 200,
+  "fetched_utc": "2026-10-15T18:51:58.356959+00:00",
+  "sha256": "0d0e95042f30b2f8be60174047a5a03ea45bf70203d39e40b1665d0085b32b4a",
+  "selected_headers": {},
+  "header_note": "Response headers were not retained in the author scout receipt; no values are reconstructed.",
+  "cell": "n=23",
+  "public_table_value": 15481956,
+  "stronger_prior_local_count": 19290640,
+  "new_count": 19305568
+}
