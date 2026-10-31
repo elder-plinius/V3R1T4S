@@ -1,0 +1,31 @@
+# Receipts
+
+Real output of `sh verify-it-yourself/run_checks.sh` (Windows, Git Bash, Python 3.14, python-flint 0.9.0 installed into a temp venv), 2026-10-31.
+
+```
+step 1: sha256 of every file in object/
+object/ hashes: 13 files, 0 mismatches
+step 2: python-flint (Arb)
+step 3: re-certification with Arb
+alpha = [0.19591327601530363508542777961121545565831432472 +/- 1.18e-48] 
+1-alpha >= 0.804086723985 ; 1/2-alpha >= 0.304086723985 ; Lemma A: rho(c>=2,1) >= sqrt2/(3 pi) >= 0.15005271936 ; FCAP <= 0.654034004625
+directly verified states: 155  closure-justified: 0
+rho_hat(1, 2) >= 3.483098e-03
+rho_hat(0, 3) >= 3.483098e-03
+rho_hat(2, 2) >= 7.335385e-04
+rho_hat(1, 3) >= 1.029909e-05
+rho_hat(0, 4) >= 1.000420e-06
+rho_hat(3, 2) >= 7.335385e-04
+rho_hat(2, 3) >= 1.029909e-05
+rho_hat(1, 4) >= 1.566591e-07
+rho_hat(0, 5) >= 1.273839e-11
+rho_hat(0, 6) >= 5.342361e-12
+rho_hat(0, 10) >= 5.342361e-12
+rho_hat(0, 50) >= 5.342361e-12
+rho_hat(0, 151) >= 5.342361e-12
+scheme2 (Q=40, k=30, u=0.01140): gamma_Q=0.788335 r_v=0.030676 d=0.16940 q=6 (multiplicity) q_v=7 (area count; old 43) m_v=3 good/tet=96
+rho_hat(0,Q) used = 5.342361e-12 ; b >= 4.501141e-15 ; CERTIFIED density <= 1 - 4.501141e-15
+previous bound deficit 1.0215562e-15 ; new/prev = 4.4062 ; strictly larger: True
+published (GEK): 1 - 2.6e-25 ; ratio of deficits = 1.731e+10
+PASS
+```
