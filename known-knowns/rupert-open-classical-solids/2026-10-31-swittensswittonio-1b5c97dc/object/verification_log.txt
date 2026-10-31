@@ -1,0 +1,108 @@
+[00:00:00] RID certificate verifier (C#, .NET 8.0.30), threads=4
+[00:00:00] sha256(search.cert) = df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f (pinned df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f) -> MATCH
+[00:00:02] framing: 192697 lines, 192697 checksums ok (8 hex = start of SHA-256 of the JSON text after the space), 192696 records (header excluded), 0 framing/canonical-JSON problems
+[00:00:04] coverage: PASS (ok); prefix-free, Kraft sum exactly 1, paper's frontier algorithm leaves no unaccounted box; max depth 49, mean depth 29.55
+[00:00:05] geometry: PASS  60 distinct vertices 
+[00:00:05] geometry: PASS  V = -V (central symmetry) 
+[00:00:05] geometry: PASS  three families of sizes {12,24,24} 12,24,24
+[00:00:05] geometry: PASS  first family contains the 8 corners of [-1,1]^2x[-phi^3,phi^3] 
+[00:00:05] geometry: PASS  1770 vertex pairs at 17 distinct distances pairs=1770 distinct=17
+[00:00:05] geometry: PASS  all but two squared distances irrational (edge 4 and square diagonal 8 rational) rational: 4,8
+[00:00:05] geometry: PASS  120 pairs at squared distance 4 (the edges) 
+[00:00:05] geometry: PASS  every vertex has degree 4 
+[00:00:05] geometry: PASS  15 distinct edge vectors up to sign 
+[00:00:05] geometry: PASS  20 triangles of pairwise distance 2, each vertex in exactly one triangles=20
+[00:00:05] geometry: PASS  position vectors of each triangle linearly independent 
+[00:00:05] geometry: PASS  120 icosians, all of norm 1 
+[00:00:05] geometry: PASS  closed under -1 
+[00:00:05] geometry: PASS  closed under quaternion product (120x120 products) 
+[00:00:05] geometry: PASS  120 quaternions give 60 distinct rotations distinct=60
+[00:00:05] geometry: PASS  each rotation maps every vertex to a vertex 
+[00:00:05] geometry: PASS  at most 20*6 = 120 orthogonal body symmetries, and 60 rotations + 60 negatives attain it ordered triangles=120
+[00:00:05] geometry: PASS  30 quaternions with zero scalar -> 15 reflection normal lines 
+[00:00:05] geometry: PASS  15 oriented normals with h.n>0 
+[00:00:05] geometry: PASS  reflections S_n preserve V 
+[00:00:05] geometry: PASS  every oriented normal has nonnegative dot with (0,0,1),(1,0,phi),(0,1,phi^2) 
+[00:00:05] geometry: PASS  cone bounding plane with inward normal ~ (1,0,0) is among the 15 
+[00:00:05] geometry: PASS  cone bounding plane with inward normal ~ (0,1,0) is among the 15 
+[00:00:05] geometry: PASS  cone bounding plane with inward normal ~ ((-1+-1*s5)/2,(-3+-1*s5)/2,1) is among the 15 
+[00:00:05] geometry: PASS  the 12 selected quaternions (scalar phi/2) belong to Q 
+[00:00:05] geometry: PASS  identity: scalar((1,r)g)-1 = (eps r_i + (phi-1) delta r_{i+1} - (2-phi))/2 (40 random exact points) 
+[00:00:05] geometry: PASS  identity: fold polynomial ell_g = scalar((0,u)(1,r)g) (40 random exact points) 
+[00:00:05] geometry: PASS  identity: rotation formula (eq. relative-rotation) equals conjugation by (1,r) (40 random exact points) 
+[00:00:05] geometry: PASS  equal-shadow family: -(0,u)(0,0,0,1) = (1,-t,s,0) 
+[00:00:05] geometry: PASS  fold g=k on half-turn family equals (1+s^2+t^2)^2 (so violated unless s=t=0) 
+[00:00:05] geometry: PASS  Q+ has 60 elements, one per +-g pair 
+[00:00:05] geometry: PASS  arc plane sigma=1: max_v e2.R(sigma r_A)v = max_v e2.v = 2+sqrt5 (2+1*s5)/1 vs (2+1*s5)/1
+[00:00:05] geometry: PASS  arc plane sigma=-1: max_v e2.R(sigma r_A)v = max_v e2.v = 2+sqrt5 (2+1*s5)/1 vs (2+1*s5)/1
+[00:00:05] geometry: PASS  |r_A|^2 = 1 - 2/sqrt5 = tan^2(18 deg) 
+[00:00:05] geometry: PASS  pentagon viewing parameters satisfy eta = xi = 0 
+[00:00:05] geometry: PASS  inverse view change: (eta,xi) -> (s,t) -> (eta,xi) roundtrip 
+[00:00:05] cover parameters vs paper text: 192 checks, 0 mismatches
+[00:00:05] cover 0        : zooms  6, terminal cells    24 (witness 24, handed over 0), accepted 24, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 1        : zooms  6, terminal cells    45 (witness 45, handed over 0), accepted 45, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 2        : zooms  6, terminal cells    26 (witness 26, handed over 0), accepted 26, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 3        : zooms  6, terminal cells    27 (witness 27, handed over 0), accepted 27, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 4        : zooms  6, terminal cells    16 (witness 16, handed over 0), accepted 16, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 5        : zooms  6, terminal cells    20 (witness 20, handed over 0), accepted 20, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 6        : zooms  6, terminal cells    18 (witness 18, handed over 0), accepted 18, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 7        : zooms  6, terminal cells    27 (witness 27, handed over 0), accepted 27, rejected 0, domain-witness cells 0, problems 0
+[00:00:05] cover 8        : zooms  6, terminal cells    15 (witness 15, handed over 0), accepted 15, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 9        : zooms  6, terminal cells    34 (witness 34, handed over 0), accepted 34, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 10       : zooms  6, terminal cells    15 (witness 15, handed over 0), accepted 15, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 11       : zooms  6, terminal cells    12 (witness 12, handed over 0), accepted 12, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 12       : zooms  6, terminal cells    49 (witness 49, handed over 0), accepted 49, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 13       : zooms  6, terminal cells    12 (witness 12, handed over 0), accepted 12, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 14       : zooms  6, terminal cells    45 (witness 45, handed over 0), accepted 45, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 15       : zooms  6, terminal cells    15 (witness 15, handed over 0), accepted 15, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 16       : zooms  6, terminal cells    39 (witness 39, handed over 0), accepted 39, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 17       : zooms  6, terminal cells    22 (witness 22, handed over 0), accepted 22, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 18       : zooms  6, terminal cells    19 (witness 19, handed over 0), accepted 19, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 19       : zooms  6, terminal cells    67 (witness 67, handed over 0), accepted 67, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 20       : zooms  6, terminal cells    17 (witness 17, handed over 0), accepted 17, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 21       : zooms  6, terminal cells    25 (witness 25, handed over 0), accepted 25, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 22       : zooms  6, terminal cells    31 (witness 31, handed over 0), accepted 31, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 23       : zooms  6, terminal cells    35 (witness 35, handed over 0), accepted 35, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 24       : zooms  6, terminal cells    17 (witness 17, handed over 0), accepted 17, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 25       : zooms  6, terminal cells    29 (witness 29, handed over 0), accepted 29, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 26       : zooms  6, terminal cells    19 (witness 19, handed over 0), accepted 19, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 27       : zooms  6, terminal cells    17 (witness 17, handed over 0), accepted 17, rejected 0, domain-witness cells 0, problems 0
+[00:00:06] cover 28       : zooms  6, terminal cells    11 (witness 11, handed over 0), accepted 11, rejected 0, domain-witness cells 0, problems 0
+[00:00:07] cover 29       : zooms  6, terminal cells    85 (witness 85, handed over 0), accepted 85, rejected 0, domain-witness cells 0, problems 0
+[00:00:07] cover square   : zooms 18, terminal cells   877 (witness 877, handed over 0), accepted 877, rejected 0, domain-witness cells 95, problems 0
+[00:00:13] cover pentagon : zooms 24, terminal cells  6173 (witness 6173, handed over 0), accepted 6173, rejected 0, domain-witness cells 0, problems 0
+[00:00:13] cover arc+     : zooms  7, terminal cells   343 (witness 343, handed over 0), accepted 343, rejected 0, domain-witness cells 32, problems 0
+[00:00:14] cover arc-     : zooms  7, terminal cells   288 (witness 288, handed over 0), accepted 288, rejected 0, domain-witness cells 72, problems 0
+[00:00:14] cover endpoint+: zooms 21, terminal cells   305 (witness 305, handed over 0), accepted 305, rejected 0, domain-witness cells 10, problems 0
+[00:00:14] cover endpoint-: zooms 21, terminal cells   246 (witness 246, handed over 0), accepted 246, rejected 0, domain-witness cells 50, problems 0
+[00:00:16] cover crossing+: zooms 28, terminal cells  1465 (witness 1431, handed over 34), accepted 1465, rejected 0, domain-witness cells 31, problems 0
+[00:00:17] cover crossing-: zooms 28, terminal cells   701 (witness 687, handed over 14), accepted 701, rejected 0, domain-witness cells 160, problems 0
+[00:00:17] zoom cells: total 11231 (witness cells 11183 + handed over 48); accepted 11231, rejected 0; counts match paper table (Local 833, square 877, pentagon 6173, arc 343/288, endpoint 305/246, crossing 1431/687, handed 34/14): True
+[00:00:20] records Domain: 12650 (expected 12650), accepted 12650, rejected 0, 3.0s 
+[00:02:55] records Global: 157458 (expected 157458), accepted 157458, rejected 0, 155.3s 
+[00:02:55] records Local : 21792 (expected 21792), accepted 21792, rejected 0, 0.1s 
+[00:02:55] records Exotic: 796 (expected 796), accepted 796, rejected 0, 0.0s 
+[00:02:55] records per cover match paper table (Local 21792, square 56, pentagon 315, arc 135/68, endpoint 55/23, crossing 86/58): True
+[00:03:10] cross-check fast integer Global test vs generic polynomial/Bernstein implementation on 1200 random Global records: agree 1200/1200 (14.8s)
+[00:03:10] MC Domain: 24000 sample points, 24000 violate the named inequality as claimed (all)
+[00:03:11] MC Global: 24000 sample points (r != 0 almost surely), strict fits found: 0, smallest |slack| 6.941E-004
+[00:03:11] MC Local: 24000 sample points (r != 0 almost surely), strict fits found: 0, smallest |slack| 1.959E-004
+[00:03:11] MC Exotic: 3366 sample points (r != 0 almost surely), strict fits found: 0, smallest |slack| 7.404E-004
+[00:03:11] Monte-Carlo geometric sanity (not part of the proof): 51366 geometric samples, 0 strict fits; Domain samples violating the named inequality 24000/24000
+[00:03:11] cube: cube: 8 vertices, 12 edges (expected 8, 12)
+[00:03:13] cube: float search: best normalised worst score -0.0716923 at s=1.42592 t=0.703513 r=(-0.678214,0.28137,-0.875661)
+[00:03:13] cube: margin over the candidate directions (max ratio plug/hole support) = 0.948519; Nieuwland optimum for the cube is 2*sqrt2/3 = 0.942809, so a genuine passage has margin in [0.9428, 1)
+[00:03:13] cube: EXACT test at s=5841/4096 t=1441/2048 r=(-1389/2048,9/32,-3587/4096): candidates=24, worst score (maxPlug - d*maxHole) = -1737272747/4294967296 (~-0.40449); strict fit = True
+[00:03:13] cube: control aligned (r=0) at same view: strict fit = False (worst score 0) [expected false: scores are all 0]
+[00:03:13] cube: control aligned cube viewed along an axis: strict fit = False (worst 0) [expected false]
+[00:03:13] cube: control perturbed rotation r1+1/2: strict fit = False (worst 5632988757/4294967296)
+[00:03:13] cube known-positive (fit machinery recognises a genuine Rupert passage): PASS
+[00:03:28] control [wrong inequality index (Domain)]: tried 100, certified-false 100, refused 100, ACCEPTED 0, (uncertified mutants accepted: 0)
+[00:03:28] control [wrong edge or plug vertex (Global)]: tried 120, certified-false 120, refused 120, ACCEPTED 0, (uncertified mutants accepted: 0)
+[00:03:28] control [perturbed path (bit flip, Domain/Global)]: tried 115, certified-false 100, refused 100, ACCEPTED 0, (uncertified mutants accepted: 15)
+[00:03:28] control [box outside named cover (Local/Exotic, other cover or shifted box)]: tried 123, certified-false 120, refused 120, ACCEPTED 0, (uncertified mutants accepted: 3)
+[00:03:28] control [wrong component label]: tried 100, certified-false 100, refused 100, ACCEPTED 0, (uncertified mutants accepted: 0)
+[00:03:28] control [certificate framing/coverage corruption]: tried 71, certified-false 71, refused 71, ACCEPTED 0, (uncertified mutants accepted: 0)
+[00:03:28] control [zoom-cover cell corruption (witness / factor / validity)]: tried 112, certified-false 100, refused 100, ACCEPTED 0, (uncertified mutants accepted: 2)
+[00:03:28] CONTROLS total: 711 certified-false corrupted claims, 711 refused, 0 accepted (must be 0; need >=400 certified)
+[00:03:28] OVERALL: ALL CHECKS PASSED

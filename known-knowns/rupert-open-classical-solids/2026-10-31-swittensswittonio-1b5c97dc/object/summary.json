@@ -1,0 +1,109 @@
+{
+  "all_ok": true,
+  "checksums_ok": 192697,
+  "controls": [
+    {
+      "Category": "wrong inequality index (Domain)",
+      "Tried": 100,
+      "Certified": 100,
+      "Refused": 100,
+      "Accepted": 0,
+      "uncertified_accepted": 0
+    },
+    {
+      "Category": "wrong edge or plug vertex (Global)",
+      "Tried": 120,
+      "Certified": 120,
+      "Refused": 120,
+      "Accepted": 0,
+      "uncertified_accepted": 0
+    },
+    {
+      "Category": "perturbed path (bit flip, Domain/Global)",
+      "Tried": 115,
+      "Certified": 100,
+      "Refused": 100,
+      "Accepted": 0,
+      "uncertified_accepted": 15
+    },
+    {
+      "Category": "box outside named cover (Local/Exotic, other cover or shifted box)",
+      "Tried": 123,
+      "Certified": 120,
+      "Refused": 120,
+      "Accepted": 0,
+      "uncertified_accepted": 3
+    },
+    {
+      "Category": "wrong component label",
+      "Tried": 100,
+      "Certified": 100,
+      "Refused": 100,
+      "Accepted": 0,
+      "uncertified_accepted": 0
+    },
+    {
+      "Category": "certificate framing/coverage corruption",
+      "Tried": 71,
+      "Certified": 71,
+      "Refused": 71,
+      "Accepted": 0,
+      "uncertified_accepted": 0
+    },
+    {
+      "Category": "zoom-cover cell corruption (witness / factor / validity)",
+      "Tried": 112,
+      "Certified": 100,
+      "Refused": 100,
+      "Accepted": 0,
+      "uncertified_accepted": 2
+    }
+  ],
+  "controls_accepted": 0,
+  "controls_certified_false": 711,
+  "controls_refused": 711,
+  "coverage_ok": true,
+  "covers_ok": true,
+  "cube_known_positive": "PASS",
+  "framing_problems": 0,
+  "geometry_checks": 36,
+  "geometry_ok": true,
+  "global_crosscheck_agree": 1200,
+  "global_crosscheck_sample": 1200,
+  "lines": 192697,
+  "max_depth": 49,
+  "mean_depth": 29.551,
+  "monte_carlo": "51366 geometric samples, 0 strict fits; Domain samples violating the named inequality 24000/24000",
+  "param_audit_checks": 192,
+  "param_audit_mismatches": 0,
+  "records": 192696,
+  "records_by_component": {
+    "Domain": {
+      "total": 12650,
+      "accepted": 12650,
+      "rejected": 0
+    },
+    "Exotic": {
+      "total": 796,
+      "accepted": 796,
+      "rejected": 0
+    },
+    "Global": {
+      "total": 157458,
+      "accepted": 157458,
+      "rejected": 0
+    },
+    "Local": {
+      "total": 21792,
+      "accepted": 21792,
+      "rejected": 0
+    }
+  },
+  "sha256": "df1f8dbab68b561f22fa9daeca48153d71bde7b6fba3345d9f6b7b8077df4b5f",
+  "sha256_matches_pinned": true,
+  "wall_seconds": 208.8,
+  "zoom_cells_accepted": 11231,
+  "zoom_cells_handed_over": 48,
+  "zoom_cells_rejected": 0,
+  "zoom_cells_total": 11231
+}

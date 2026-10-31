@@ -1,0 +1,25 @@
+# NOTES: csharp-verifier (partial win p3). Lens run started ~11:36 UTC, verifier complete ~12:17 UTC.
+
+Giants: Hervay (paper, Rust prover and Python audit: used ONLY the paper, READMEs, certificate and cover JSON, per the independence rule);
+Steininger-Yurkevich (arXiv 2508.18475, 2023 paper on Nieuwland numbers); Garloff 1986 (Bernstein sign test); Scriba 1968, Nieuwland (cube passage).
+Independence: `data/nopert-rid/proof/src`, `audit/` and any Hervay Rust/Python code were never opened.
+
+## Hypotheses (chance guessed BEFORE testing, cost, test, outcome)
+
+| # | Hypothesis | chance | cost | outcome |
+|---|---|---|---|---|
+| H1 | The certificate, read from the paper alone, is accepted in full: 192,696 records, coverage, 38 covers | 0.85 | 1 to 2 h | HOLDS (see report.md). Lines of attack that could have killed it: any record, any cell, any gap in coverage. None did. |
+| H2 | Vertex indices are a natural generation order (cyclic permutation x sign loops, any nesting/bit order, 1152 variants tried) | 0.5 | 15 min | DEAD at once: every variant had >= 11 of the 15 certificate edge pairs not at squared distance 4 (`code/discover_vertex_order.py`, `discover2.py`). |
+| H2b | (imported from graph canonical labelling) vertices numbered by sorting the exact coordinates, comparing each coordinate as the pair (rational part, sqrt5 part), lexicographic over (x,y,z) | 0.4 | 5 min | HOLDS: all 15 edge pairs are edges (`discover3.py`, 0 bad); descending order also passes this edge test but is the antipodal relabelling (see H8). Ascending is pinned by the cover witnesses (descending fails most cover cells). |
+| H3 | The 60 fold inequalities (indices 13..72) are numbered by the sorted Q+ list (same sort), indices 1..12 by (i; eps=-1,+1; delta=-1,+1), 0 = viewing triangle | 0.4 | 10 min | HOLDS: all 12,650 Domain records accepted; reversing the Q+ order rejects 300/300 fold records; Q+[16] = k = (0,0,0,1), matching the paper's statement that the square cover's 95 fold cells use g = k = index 29. First attempt at finding the order (`discover_fold.py`, Python floats, brute force over 6731 records x 60 candidates) was too slow (300 s timeout, no output): dropped in favour of testing the hypothesis directly in C#. |
+| H4 | The zoom-cover JSON can be interpreted from the paper alone (zoom coordinate order, A/B/A'/T families, face names, tree = preorder bisection, witness fields) | 0.5 | 1 h | HOLDS after two interpretation bugs of mine: (a) witness field roles are `vertex` = PLUG vertex, `contact` = HOLE (supporting) vertex (float debug `debug_arc.py` found it: plug 5 hole 15 for sigma=+1); (b) for `{edge,vertex}` witnesses the hole vertex is the first edge endpoint. With these, 11,231 cells accepted with zero zoom-factor non-divisibility and zero validity failures. |
+| H5 | (imported from validated numerics) a float-only geometric check, from the definition of fit (convex hulls, no polynomials), finds no fit in any sampled eliminated box and sees every Domain claim violated | 0.9 | 20 min | HOLDS: 51,366 samples, 0 strict fits; 24,000/24,000 Domain samples violate the named inequality (not part of the proof; sanity only). |
+| H6 | (imported from information theory) prefix-free + Kraft sum exactly 1 is equivalent to the paper's frontier algorithm for completeness of the tiling | 0.95 | 15 min | HOLDS: both implemented, both pass; 25 coverage mutants all caught. |
+| H7 | (imported from mutation testing / proof-checking practice) every corruption can be given an independent falsity certificate (exact pointwise evaluation at a rational point of the box) so that "must be refused" is not circular | 0.8 | 40 min | HOLDS: 711 certified-false corrupted claims, 711 refused, 0 accepted. Uncertified mutants (no falsity found at the test points) are not counted; 20 of them were accepted (15 perturbed paths, 3 moved boxes, 2 cell mutants), which is legitimate (another valid certificate), since acceptance is an exact proof. |
+| H8 (strange) | The verifier is insensitive to relabelling: replacing the vertex numbering by its reverse still accepts every Global record | 0.2 | 5 min | HOLDS, and is explained: the reversed list is the antipodal relabelling v -> -v; a Global gap polynomial set is invariant under (n,v_p) -> (-n,-v_p) (paper sec. 6). Not a bug. Cover witnesses are NOT invariant (direction is a fixed screen direction), and descending order rejects them (cover 0: 23/24 cells, square 609/877). |
+| H9 | A discrepancy exists (some record or cell is rejected) | 0.08 | - | DEAD: 0 rejected anywhere after fixing my own bugs. One false alarm: my parameter audit assumed all Local witnesses are `direction` witnesses; some are moving-edge witnesses (also gap polynomials). Audit fixed (assertion was my over-strict reading, not a cover defect). |
+
+## What was run (exact, with wall times) is in report.md and `result/verification_log.txt`.
+
+## Where each line dies / lives
+- No live discrepancy lead. The only open items are scope limits listed in report.md ("not re-proved here").
