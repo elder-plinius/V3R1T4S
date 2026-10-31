@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+polytof-toffoli-tcount-benchmark-tensors,"p2 (0725 / GF(2^2) mult, n=6, nnz=5: certified CP=3 and Waring=17 optimality across all GL(6, F_2) basis changes)","CP=3 (0/1395 at R=1, 0/972315 at R=2, 120 triples at R=3); Waring=17 (0/4194304 at r<=16, 1008 schemes at r=17)","CP=3, Waring=17",2026-10-30T07:50:00Z,object/p2_0725_optimality_certificate.json,a073e111c38831bfba3839a47b5bb9a0f2cc2abde8aa9572ee7a528e241dbc8a
