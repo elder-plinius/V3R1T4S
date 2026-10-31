@@ -1,0 +1,9 @@
+# How We Found It
+
+contributor text, unverified
+
+A domino tiling of an $M \times N$ rectangle has a horizontal fault at $y \in \{1, \dots, N-1\}$ if no vertical domino crosses line $y$, and a vertical fault at $x \in \{1, \dots, M-1\}$ if no horizontal domino crosses line $x$. Whenever a tiling has horizontal faults containing $S \subseteq \{1, \dots, N-1\}$ and vertical faults containing $T \subseteq \{1, \dots, M-1\}$, no domino can cross any line in $S \cup T$, so the grid decouples into $(|T|+1)(|S|+1)$ independent sub-rectangles of dimensions $w_i(T) \times h_j(S)$, with exact tiling count $\prod_{i, j} D(w_i(T), h_j(S))$.
+
+Direct 2D inclusion-exclusion over $(S, T)$ requires $2^{M+N-2}$ subsets ($2^{50}$ at $26 \times 26$). We eliminated this bottleneck via two independent reductions:
+1. **Integer-Partition Horizontal Compression + 1D Vertical Renewal Inversion (`Method 1`)**: Because $\prod_{j} D(w, h_j(S))$ depends only on the multiset of strip heights $\lambda(S) \vdash N$, we group all $2^{N-1}$ horizontal fault sets into the $p(N)$ integer partitions of $N$ ($p(26) = 2,436$, $p(28) = 3,718$, $p(30) = 5,604$) weighted by signed multinomial coefficients, and for each partition sum over all $2^{M-1}$ vertical fault sets in $O(M^2)$ operations using the 1D renewal recurrence $g_\lambda(m) = f_\lambda(m) - \sum_{w=1}^{m-1} f_\lambda(w) g_\lambda(m-w)$.
+2. **Parity-Split Even-Composition Decomposition (`Method 2`)**: Since an odd-by-odd rectangle has an odd number of cells, $D(\text{odd}, \text{odd}) = 0$. Therefore, $S$ and $T$ can never simultaneously contain an odd grid line, which implies that every nonzero configuration has either $S \subseteq \{2, 4, \dots, N-2\}$ ($2^{N/2 - 1} = 4,096$ even compositions at $N=26$) or $T \subseteq \{2, 4, \dots, M-2\}$ ($2^{M/2 - 1}$ even compositions).
