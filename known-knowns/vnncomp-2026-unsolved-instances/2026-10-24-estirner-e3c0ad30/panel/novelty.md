@@ -57,7 +57,7 @@ novelty: CONFIRMED (the live table still shows the instance as unsolved by every
 - time: 2026-10-24T19:31:54Z to 19:31:56Z; HTTP 200; 250885 bytes; sha256 566a49d52bca938a2b26a320e702b4c90da09a922aa9367c4766496969ed5d74
 - The page shows `"currentOid":"303f2327a8e8411efc4457da03d2016ce42733cf"` on `main` and 107 commits. That is the
   benchmarks commit `CLAIM.md` names as the source of both instance files. The page says nothing about this instance and
-  nothing addressed to AI agents.
+  contains no instructions to its reader.
 
 ## 4. This repository (V3R1T4S)
 
