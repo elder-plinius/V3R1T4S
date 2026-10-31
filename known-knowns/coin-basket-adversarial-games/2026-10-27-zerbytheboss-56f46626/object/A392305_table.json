@@ -1,0 +1,37 @@
+{
+  "sequence": "A392305",
+  "name": "Fill your basket: fair compensation paid to presenter under optimal play",
+  "payoff": "largest basket sum minus second-largest basket sum (S_max - S_mid)",
+  "game_rules": "3 baskets, n turns, coins 1..n. Each turn Presenter chooses basket, Placer chooses coin.",
+  "status": "CONFIRMED_SOLUTION",
+  "terms": {
+    "1": 1,
+    "2": 1,
+    "3": 1,
+    "4": 2,
+    "5": 3,
+    "6": 3,
+    "7": 3,
+    "8": 3,
+    "9": 3,
+    "10": 4,
+    "11": 4,
+    "12": 5,
+    "13": 5,
+    "14": 5,
+    "15": 6,
+    "16": 6,
+    "17": 7,
+    "18": 7,
+    "19": 8,
+    "20": 8
+  },
+  "calibration_reproduced": "n=1..16 matches published OEIS A392305 bit-for-bit: [1, 1, 1, 2, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6]",
+  "new_terms": {
+    "A392305(17)": 7,
+    "A392305(18)": 7,
+    "A392305(19)": 8,
+    "A392305(20)": 8
+  },
+  "verification": "Two-sided decision bracket: placer forces >= a(n) and presenter caps <= a(n) (placer cannot force >= a(n) + 1)"
+}
