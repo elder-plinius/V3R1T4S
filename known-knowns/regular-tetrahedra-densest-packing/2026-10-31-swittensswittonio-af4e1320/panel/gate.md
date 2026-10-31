@@ -1,0 +1,10 @@
+# Gate (main session read all three panel files)
+Claim panelled: p2-type upper bound, density of any packing of regular tetrahedra <= 1 - 1.0215562e-15 (attempts/formalist-3, packaged as claim/).
+- reproduce.md: pass: true (independent Arb re-implementation 0.1-0.3% above the author's certified values; author's code reproduces byte-exact; reduction matches code).
+- novelty.md: pass: true (nothing published at or below the bound; Wikipedia status page still lists 1 - 2.6e-25; fetched once at about 2026-10-31T05:17Z, under 6 h before this gate).
+- criterion.md: pass: true, conditional on three GEK lemmas and Arb, not machine-checked.
+Corroboration, separately panelled (3x pass) and NOT part of this claim: attempts/formalist-2 (tier A: 1 - 5.714e-24 using GEK's printed statements only), panel files in attempts/formalist-2/panel/.
+Earlier version (attempts/formalist, 1 - 1.0748e-23) FAILED its criterion panel (attempts/formalist/v1_panel); its exact V(d) was later shown unsound by attempts/formalist-3 (e_sup_check.out), so it is withdrawn.
+Downgrade review: no hedging panelist (all state the condition openly); no reproduction mismatch; value strictly better than the live table (1 - 2.6e-25); scope is stated as conditional on imported GEK lemmas (3.3, 3.5, Lemma 4.2 construction), so the label is a conditional bound, never "proved" or "solved"; the claim is not a packing and says nothing about 4000/4671; the improvement over a 16-year-old published bound is large (4e9 x) and rests on new lemmas A, R, V that three fresh contexts re-derived but nobody outside this run has reviewed; flagged under Needs you.
+status: CONFIRMED_PARTIAL
+confirmed_scope: Conditional on GEK's published Lemma 3.3 (the wedge-area minimiser W*), Lemma 3.5 and the Lemma 4.2 nested-ball construction, and on Arb (python-flint 0.9.0) being correct, every packing of congruent regular tetrahedra has limsup density at most 1 - 1.0215562e-15, with the argument re-executed and reconciled with the written reduction but not machine-checked in a proof assistant.
