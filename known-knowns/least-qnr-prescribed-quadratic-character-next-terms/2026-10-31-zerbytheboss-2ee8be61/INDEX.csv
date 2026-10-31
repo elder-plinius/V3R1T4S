@@ -1,0 +1,6 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+least-qnr-prescribed-quadratic-character-next-terms,A000229(39),317398900373231,uncomputed (b000229.txt ends at n=38),2026-10-31T02:16:36Z,object/a000229_qnr_census.json,2ee8be61676d2b0487e8db5e1fd2ff04640eab4dc48df42a68c2583898a92d5e
+least-qnr-prescribed-quadratic-character-next-terms,A000229(40),112434732901969,uncomputed in A000229 (unblocked from A002224(39)),2026-10-31T02:16:36Z,object/a000229_qnr_census.json,2ee8be61676d2b0487e8db5e1fd2ff04640eab4dc48df42a68c2583898a92d5e
+least-qnr-prescribed-quadratic-character-next-terms,A000229(41),1463971373078639,"uncomputed (absent from A000229, A002223, A002224)",2026-10-31T02:16:36Z,object/a000229_qnr_census.json,2ee8be61676d2b0487e8db5e1fd2ff04640eab4dc48df42a68c2583898a92d5e
+least-qnr-prescribed-quadratic-character-next-terms,A000229(42),178936222537081,uncomputed in A000229 (unblocked from A002224(41)),2026-10-31T02:16:36Z,object/a000229_qnr_census.json,2ee8be61676d2b0487e8db5e1fd2ff04640eab4dc48df42a68c2583898a92d5e
+least-qnr-prescribed-quadratic-character-next-terms,A000229(43),501108392233679,uncomputed in A000229 (unblocked from A002223(41)),2026-10-31T02:16:36Z,object/a000229_qnr_census.json,2ee8be61676d2b0487e8db5e1fd2ff04640eab4dc48df42a68c2583898a92d5e
