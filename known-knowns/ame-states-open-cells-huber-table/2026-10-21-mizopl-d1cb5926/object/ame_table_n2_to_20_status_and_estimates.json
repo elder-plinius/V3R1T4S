@@ -1,0 +1,1925 @@
+{
+  "title": "Complete Audit & Probability Estimation of the AME(n, D) Table (n = 2..20, D in {2..10, 11, 13, 16, 17, 19})",
+  "summary_counts": {
+    "std_n2_12": {
+      "total": 99,
+      "exists": 79,
+      "nogo": 10,
+      "open": 10,
+      "our_wins": 2
+    },
+    "std_n2_20": {
+      "total": 171,
+      "exists": 96,
+      "nogo": 33,
+      "open": 42,
+      "our_wins": 12
+    },
+    "ext_n2_20": {
+      "total": 95,
+      "exists": 95,
+      "nogo": 0,
+      "open": 0,
+      "our_wins": 33
+    },
+    "all_n2_20": {
+      "total": 266,
+      "exists": 191,
+      "nogo": 33,
+      "open": 42,
+      "our_wins": 45
+    }
+  },
+  "open_cells_count": 42,
+  "expected_additional_existing_states_among_open": 9.65,
+  "open_cells": [
+    {
+      "n": 6,
+      "D": 6,
+      "p_exists": 0.35,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 7,
+      "D": 6,
+      "p_exists": 0.25,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 8,
+      "D": 6,
+      "p_exists": 0.25,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 9,
+      "D": 6,
+      "p_exists": 0.25,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 10,
+      "D": 6,
+      "p_exists": 0.25,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 10,
+      "D": 10,
+      "p_exists": 0.75,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 11,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 12,
+      "D": 4,
+      "p_exists": 0.05,
+      "note": "No stabilizer MDS exists in codetables.de (d_max=6 < 7); general non-stabilizer open"
+    },
+    {
+      "n": 12,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 12,
+      "D": 10,
+      "p_exists": 0.75,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 13,
+      "D": 4,
+      "p_exists": 0.02,
+      "note": "No stabilizer MDS exists in codetables.de (d_max=6 < 7); general non-stabilizer open"
+    },
+    {
+      "n": 13,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 13,
+      "D": 10,
+      "p_exists": 0.75,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 14,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 14,
+      "D": 10,
+      "p_exists": 0.75,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 15,
+      "D": 5,
+      "p_exists": 0.15,
+      "note": "PR #576 proved codetables [[15,0,8]]_5 is IMPURE (w=7); Theorem 2A exhausted all 78,125 15-circulants (min 105/6435)"
+    },
+    {
+      "n": 15,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 15,
+      "D": 10,
+      "p_exists": 0.4,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 16,
+      "D": 5,
+      "p_exists": 0.05,
+      "note": "Theorem 2B exhausted all 732,672 F_25 unitary (lam,theta)-circulants (min 256/8820) and 95,256 bordered 7-circulants"
+    },
+    {
+      "n": 16,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 16,
+      "D": 7,
+      "p_exists": 0.25,
+      "note": "Exhausted bordered 15-circulants, D_8 double-circulants (min 73/6435), and all F_49 lambda-circulants (min 18/3822)"
+    },
+    {
+      "n": 16,
+      "D": 8,
+      "p_exists": 0.3,
+      "note": "Exhausted all 18.87M F_64 nilpotent lambda-circulants and D_8 double-circulants (exact global min 32/6435 = 99.50%)"
+    },
+    {
+      "n": 16,
+      "D": 10,
+      "p_exists": 0.4,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 17,
+      "D": 5,
+      "p_exists": 0.02,
+      "note": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)"
+    },
+    {
+      "n": 17,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 17,
+      "D": 10,
+      "p_exists": 0.4,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 18,
+      "D": 5,
+      "p_exists": 0.02,
+      "note": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)"
+    },
+    {
+      "n": 18,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 18,
+      "D": 8,
+      "p_exists": 0.25,
+      "note": "Exhausted Z_18, Z_3^2xZ_2, and all 656.6M F_64 9x9 lambda-circulants (min 36/24310 = 99.85%); D_9 reached 15/1480"
+    },
+    {
+      "n": 18,
+      "D": 10,
+      "p_exists": 0.4,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 19,
+      "D": 5,
+      "p_exists": 0.02,
+      "note": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)"
+    },
+    {
+      "n": 19,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 19,
+      "D": 7,
+      "p_exists": 0.1,
+      "note": "Theorem 5 exhausted all 40,353,606 symmetric 19-circulants over GF(7) (0 solutions)"
+    },
+    {
+      "n": 19,
+      "D": 8,
+      "p_exists": 0.15,
+      "note": "Theorem 5 exhausted all 134,217,727 symmetric 19-circulants over GF(8) (0 solutions)"
+    },
+    {
+      "n": 19,
+      "D": 9,
+      "p_exists": 0.2,
+      "note": "Theorem 5 exhausted all 387,420,488 symmetric 19-circulants over GF(9) (0 solutions)"
+    },
+    {
+      "n": 19,
+      "D": 10,
+      "p_exists": 0.4,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    },
+    {
+      "n": 20,
+      "D": 5,
+      "p_exists": 0.02,
+      "note": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)"
+    },
+    {
+      "n": 20,
+      "D": 6,
+      "p_exists": 0.1,
+      "note": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)"
+    },
+    {
+      "n": 20,
+      "D": 7,
+      "p_exists": 0.05,
+      "note": "Theorem 5 exhausted all 40,353,606 symmetric 19-circulants over GF(7) (0 solutions)"
+    },
+    {
+      "n": 20,
+      "D": 8,
+      "p_exists": 0.1,
+      "note": "Theorem 5 exhausted all 134,217,727 symmetric 19-circulants over GF(8) (0 solutions)"
+    },
+    {
+      "n": 20,
+      "D": 9,
+      "p_exists": 0.15,
+      "note": "Theorem 5 exhausted all 387,420,488 symmetric 19-circulants over GF(9) (0 solutions)"
+    },
+    {
+      "n": 20,
+      "D": 10,
+      "p_exists": 0.4,
+      "note": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)"
+    }
+  ],
+  "table": {
+    "2": {
+      "2": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "3": {
+      "2": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Bell / GHZ / [3,1,3]_D MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "4": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "[[n,0,floor(n/2)+1]]_3 stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "EXISTS",
+        "source": "Golden AME(4,6) (Zyczkowski 2022) / Kronecker AME(5,2)xAME(5,3)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Kronecker AME(n,2)xAME(n,5) (n=5,6), MOLS (n=4), Z_10 circulant (n=7,8)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "5": {
+      "2": {
+        "status": "EXISTS",
+        "source": "[[5,0,3]]_2 / [[6,0,4]]_2",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "[[n,0,floor(n/2)+1]]_3 stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "EXISTS",
+        "source": "Golden AME(4,6) (Zyczkowski 2022) / Kronecker AME(5,2)xAME(5,3)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Kronecker AME(n,2)xAME(n,5) (n=5,6), MOLS (n=4), Z_10 circulant (n=7,8)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "6": {
+      "2": {
+        "status": "EXISTS",
+        "source": "[[5,0,3]]_2 / [[6,0,4]]_2",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "[[n,0,floor(n/2)+1]]_3 stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.35,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Kronecker AME(n,2)xAME(n,5) (n=5,6), MOLS (n=4), Z_10 circulant (n=7,8)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "7": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "[[n,0,floor(n/2)+1]]_3 stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.25,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Kronecker AME(n,2)xAME(n,5) (n=5,6), MOLS (n=4), Z_10 circulant (n=7,8)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "8": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.25,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "Kronecker AME(n,2)xAME(n,5) (n=5,6), MOLS (n=4), Z_10 circulant (n=7,8)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "9": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "[[n,0,floor(n/2)+1]]_3 stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.25,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US (PR #576): Exact closed-form Q(zeta_5) unitary construction of AME(9,10)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "10": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "EXISTS",
+        "source": "[[n,0,floor(n/2)+1]]_3 stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.25,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.75,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "11": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "EXISTS",
+        "source": "[[n,0,d]]_4 stabilizer MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US (PR #576): Exact closed-form Q(zeta_5) unitary construction of AME(11,10)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "12": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "OPEN",
+        "source": "No stabilizer MDS exists in codetables.de (d_max=6 < 7); general non-stabilizer open",
+        "p_exists_estimate": 0.05,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "GF(7) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.75,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 12)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 14)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "13": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "OPEN",
+        "source": "No stabilizer MDS exists in codetables.de (d_max=6 < 7); general non-stabilizer open",
+        "p_exists_estimate": 0.02,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "Universal Paley P_13, C_14 over Z + GF(7) stabilizer",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.75,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Universal Paley-Jacobsthal over Z (gcd(11, 6 or 1482) = 1)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_13/C_13 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_13/C_13 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_13/C_13 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_13/C_13 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      }
+    },
+    "14": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "EXISTS",
+        "source": "GF(5) stabilizer MDS (n<=12) + Universal Paley P_13, C_14 (n=13,14)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "Universal Paley P_13, C_14 over Z + GF(7) stabilizer",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "GF(8) stabilizer MDS",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.75,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Universal Paley-Jacobsthal over Z (gcd(11, 6 or 1482) = 1)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_14/C_14 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_14/C_14 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_14/C_14 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_14/C_14 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      }
+    },
+    "15": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "OPEN",
+        "source": "PR #576 proved codetables [[15,0,8]]_5 is IMPURE (w=7); Theorem 2A exhausted all 78,125 15-circulants (min 105/6435)",
+        "p_exists_estimate": 0.15,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Pure 10-reg 15-circulant AME(15,7) (Theorem 1, repairing impure codetables entry)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Pure 10-reg 15-circulant AME(15,8) ([[15,0,8]]_8, beating codetables d=7)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Pure 10-reg 15-circulant AME(15,9) ([[15,0,8]]_9, 0/6435 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.4,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Pure n-circulant / elliptic curve MDS over GF(11)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Pure n-circulant / elliptic curve MDS over GF(13)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 17)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 18)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    },
+    "16": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "OPEN",
+        "source": "Theorem 2B exhausted all 732,672 F_25 unitary (lam,theta)-circulants (min 256/8820) and 95,256 bordered 7-circulants",
+        "p_exists_estimate": 0.05,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "OPEN",
+        "source": "Exhausted bordered 15-circulants, D_8 double-circulants (min 73/6435), and all F_49 lambda-circulants (min 18/3822)",
+        "p_exists_estimate": 0.25,
+        "our_win": false
+      },
+      "8": {
+        "status": "OPEN",
+        "source": "Exhausted all 18.87M F_64 nilpotent lambda-circulants and D_8 double-circulants (exact global min 32/6435 = 99.50%)",
+        "p_exists_estimate": 0.3,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "Grassl & R\u00f6tteler [16, 8, 9]_81 Hermitian self-dual constacyclic MDS code -> [[16, 0, 9]]_9",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.4,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "NEW WIN: Cayley Unitary Constacyclic [16, 8, 9]_121 (lam=30) -> explicit 16x16 F_11 graph state [[16, 0, 9]]_11 (0/12,870 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "NEW WIN: Cayley Unitary Circulant [16, 8, 9]_169 (lam=1) -> explicit 16x16 F_13 graph state [[16, 0, 9]]_13 (0/12,870 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure graph-state certificate AME(16,16)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure graph-state certificate AME(16,17)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure graph-state certificate AME(16,19)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      }
+    },
+    "17": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "OPEN",
+        "source": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)",
+        "p_exists_estimate": 0.02,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Pure 17-circulant AME(17,7) + Universal Paley P_17",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "8": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Pure 16-reg 17-circulant AME(17,8) ([[17,0,9]]_8, beating codetables d=8)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.4,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Universal Paley-Jacobsthal over Z (gcd(11, 6 or 1482) = 1)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Universal Paley-Jacobsthal over Z (gcd(13, 6 or 1482) = 1)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_17/C_17 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_17/C_17 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_17/C_17 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      }
+    },
+    "18": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "OPEN",
+        "source": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)",
+        "p_exists_estimate": 0.02,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Pure 13-reg 18-circulant AME(18,7) (a=(0,1,1,3,5,4,3,0,4))",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "8": {
+        "status": "OPEN",
+        "source": "Exhausted Z_18, Z_3^2xZ_2, and all 656.6M F_64 9x9 lambda-circulants (min 36/24310 = 99.85%); D_9 reached 15/1480",
+        "p_exists_estimate": 0.25,
+        "our_win": false
+      },
+      "9": {
+        "status": "EXISTS",
+        "source": "GF(9) stabilizer / QR MDS (codetables.de)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.4,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Universal Paley-Jacobsthal over Z (gcd(11, 6 or 1482) = 1)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Pure n-circulant / elliptic curve MDS over GF(13)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure 17-regular symmetric 18-circulant graph-state certificate AME(18,16) over GF(16) (Theorem D4)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_18/C_18 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Universal Paley-Jacobsthal P_18/C_18 over Z + Reed-Solomon",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      }
+    },
+    "19": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "OPEN",
+        "source": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)",
+        "p_exists_estimate": 0.02,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "OPEN",
+        "source": "Theorem 5 exhausted all 40,353,606 symmetric 19-circulants over GF(7) (0 solutions)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "8": {
+        "status": "OPEN",
+        "source": "Theorem 5 exhausted all 134,217,727 symmetric 19-circulants over GF(8) (0 solutions)",
+        "p_exists_estimate": 0.15,
+        "our_win": false
+      },
+      "9": {
+        "status": "OPEN",
+        "source": "Theorem 5 exhausted all 387,420,488 symmetric 19-circulants over GF(9) (0 solutions)",
+        "p_exists_estimate": 0.2,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.4,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Theorem D37 & D37A Conjugate-Block U(10, GF(121)) -> GF(11) Pure Graph State [[19,0,10]]_11 & [[19,1,10]]_11 (92,378/92,378 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure 18-regular symmetric 19-circulant graph-state certificate AME(19,13) over GF(13) (Theorem D4) + Universal Skew-Jacobsthal Q_19",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure 19-circulant certificate AME(19,16) (Theorem 7)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure 19-circulant certificate AME(19,17) (Theorem 7)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "SOLVED BY US: Explicit pure graph-state certificate AME(19,19)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      }
+    },
+    "20": {
+      "2": {
+        "status": "NO-GO",
+        "source": "Higuchi-Sudbery (n=4), Huber-Guhne-Siewert (n=7), Rains/Scott (n>=8)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "3": {
+        "status": "NO-GO",
+        "source": "Rains shadow bound (n=8, n>=11) & Scott bound (n>=17)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "4": {
+        "status": "NO-GO",
+        "source": "Rains / LP / Scott bound (n >= 14 for D=4)",
+        "p_exists_estimate": 0.0,
+        "our_win": false
+      },
+      "5": {
+        "status": "OPEN",
+        "source": "Beyond known GF(5)/GF(25) MDS length (q^2+1=26, but quantum purity fails)",
+        "p_exists_estimate": 0.02,
+        "our_win": false
+      },
+      "6": {
+        "status": "OPEN",
+        "source": "Composite D=6 (gcd(6,6)!=1 blocks Paley; AME(n,2) fails for n>=7)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "7": {
+        "status": "OPEN",
+        "source": "Theorem 5 exhausted all 40,353,606 symmetric 19-circulants over GF(7) (0 solutions)",
+        "p_exists_estimate": 0.05,
+        "our_win": false
+      },
+      "8": {
+        "status": "OPEN",
+        "source": "Theorem 5 exhausted all 134,217,727 symmetric 19-circulants over GF(8) (0 solutions)",
+        "p_exists_estimate": 0.1,
+        "our_win": false
+      },
+      "9": {
+        "status": "OPEN",
+        "source": "Theorem 5 exhausted all 387,420,488 symmetric 19-circulants over GF(9) (0 solutions)",
+        "p_exists_estimate": 0.15,
+        "our_win": false
+      },
+      "10": {
+        "status": "OPEN",
+        "source": "Composite D=10 even-n / higher-n frontier (n=10 and n>=12)",
+        "p_exists_estimate": 0.4,
+        "our_win": false
+      },
+      "11": {
+        "status": "EXISTS",
+        "source": "Theorem D37 & D37A Conjugate-Block U(10, GF(121)) -> GF(11) Pure Graph State [[20,0,11]]_11 (184,756/184,756 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "13": {
+        "status": "EXISTS",
+        "source": "Theorem D27B + D28 + Corollary D29.1: Explicit G_40 Idempotent Unitary in U(10, GF(169)) & 20x20 Symmetric Graph State over GF(13) (184,756/184,756 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "16": {
+        "status": "EXISTS",
+        "source": "Theorem D29 + Corollary D29.1: Explicit G_40 Char-2 5-Point DFT Unitary in U(10, GF(256)) & 20x20 Symmetric Graph State over GF(16) (184,756/184,756 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "17": {
+        "status": "EXISTS",
+        "source": "Theorem D28 + Corollary D29.1: Explicit G_40 Hermitian Unitary in U(10, GF(289)) & 20x20 Symmetric Graph State over GF(17) (184,756/184,756 cuts)",
+        "p_exists_estimate": 1.0,
+        "our_win": true
+      },
+      "19": {
+        "status": "EXISTS",
+        "source": "Reed-Solomon / stabilizer MDS (n <= q+1 = 20)",
+        "p_exists_estimate": 1.0,
+        "our_win": false
+      }
+    }
+  }
+}

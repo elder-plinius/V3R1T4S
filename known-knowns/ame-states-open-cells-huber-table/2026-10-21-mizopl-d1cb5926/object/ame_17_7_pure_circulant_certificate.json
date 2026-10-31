@@ -1,0 +1,22 @@
+{
+  "state": "AME(17, 7)",
+  "stabilizer_code": "[[17, 0, 9]]_7",
+  "purity": "PURE (d = 9, d_pure = 9)",
+  "field": "GF(7)",
+  "construction": "Sparse symmetric 17-circulant graph state on Z_17 (regular degree 10) AND unweighted 8-regular Paley-17 graph P_17",
+  "sparse_degree_10_circulant": {
+    "half_step_vector_a1_to_a8": [1, 5, 0, 3, 6, 0, 3, 0],
+    "first_row_c0_to_c16": [0, 1, 5, 0, 3, 6, 0, 3, 0, 0, 3, 0, 6, 3, 0, 5, 1],
+    "regular_degree": 10,
+    "total_8_party_cuts_checked": 24310,
+    "singular_8_party_cuts": 0
+  },
+  "unweighted_paley_17_graph": {
+    "half_step_vector_a1_to_a8": [1, 1, 0, 1, 0, 0, 0, 1],
+    "first_row_c0_to_c16": [0, 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 0, 0, 1, 0, 1, 1],
+    "regular_degree": 8,
+    "integer_minor_gcd_range_over_all_24310_cuts": [1, 32],
+    "prime_divisors_of_integer_minor_gcds": [2, 3],
+    "universal_validity": "Exact pure AME(17, D) ([[17, 0, 9]]_D) graph state over every field F_q and ring Z/DZ with gcd(D, 6) = 1 (D = 5, 7, 11, 13, 17, 19, 23, 25, 35, ...)"
+  }
+}

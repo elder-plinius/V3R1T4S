@@ -1,0 +1,299 @@
+{
+  "title": "Exact 10x10 Superregular Special Orthogonal Block-Circulant Matrix in SO(10, F_289) with 184,755 / 184,755 Non-Zero Minors (Theorems D25 & D26)",
+  "field": "GF(289) = GF(17)[alpha] / (alpha^2 - 3)",
+  "encoding": "x = a0 + a1*17 represents a0 + a1*alpha in GF(289) with a0, a1 in {0..16}",
+  "group": "SO(10, F_289) with G_40 = (Z_5 x Z_2 x Z_2) x {id, star} symmetry",
+  "u11_first_row": [
+    129,
+    95,
+    174,
+    199,
+    170
+  ],
+  "u11_polynomial": [
+    "10+7*alpha",
+    "10+5*alpha",
+    "4+10*alpha",
+    "12+11*alpha",
+    "0+10*alpha"
+  ],
+  "u12_first_row": [
+    15,
+    21,
+    217,
+    217,
+    21
+  ],
+  "u12_polynomial": [
+    "15",
+    "4+1*alpha",
+    "13+12*alpha",
+    "13+12*alpha",
+    "4+1*alpha"
+  ],
+  "U_matrix_10x10_int": [
+    [
+      129,
+      95,
+      174,
+      199,
+      170,
+      15,
+      21,
+      217,
+      217,
+      21
+    ],
+    [
+      170,
+      129,
+      95,
+      174,
+      199,
+      21,
+      15,
+      21,
+      217,
+      217
+    ],
+    [
+      199,
+      170,
+      129,
+      95,
+      174,
+      217,
+      21,
+      15,
+      21,
+      217
+    ],
+    [
+      174,
+      199,
+      170,
+      129,
+      95,
+      217,
+      217,
+      21,
+      15,
+      21
+    ],
+    [
+      95,
+      174,
+      199,
+      170,
+      129,
+      21,
+      217,
+      217,
+      21,
+      15
+    ],
+    [
+      2,
+      285,
+      89,
+      89,
+      285,
+      129,
+      170,
+      199,
+      174,
+      95
+    ],
+    [
+      285,
+      2,
+      285,
+      89,
+      89,
+      95,
+      129,
+      170,
+      199,
+      174
+    ],
+    [
+      89,
+      285,
+      2,
+      285,
+      89,
+      174,
+      95,
+      129,
+      170,
+      199
+    ],
+    [
+      89,
+      89,
+      285,
+      2,
+      285,
+      199,
+      174,
+      95,
+      129,
+      170
+    ],
+    [
+      285,
+      89,
+      89,
+      285,
+      2,
+      170,
+      199,
+      174,
+      95,
+      129
+    ]
+  ],
+  "U_matrix_10x10_poly": [
+    [
+      "10+7*alpha",
+      "10+5*alpha",
+      "4+10*alpha",
+      "12+11*alpha",
+      "0+10*alpha",
+      "15",
+      "4+1*alpha",
+      "13+12*alpha",
+      "13+12*alpha",
+      "4+1*alpha"
+    ],
+    [
+      "0+10*alpha",
+      "10+7*alpha",
+      "10+5*alpha",
+      "4+10*alpha",
+      "12+11*alpha",
+      "4+1*alpha",
+      "15",
+      "4+1*alpha",
+      "13+12*alpha",
+      "13+12*alpha"
+    ],
+    [
+      "12+11*alpha",
+      "0+10*alpha",
+      "10+7*alpha",
+      "10+5*alpha",
+      "4+10*alpha",
+      "13+12*alpha",
+      "4+1*alpha",
+      "15",
+      "4+1*alpha",
+      "13+12*alpha"
+    ],
+    [
+      "4+10*alpha",
+      "12+11*alpha",
+      "0+10*alpha",
+      "10+7*alpha",
+      "10+5*alpha",
+      "13+12*alpha",
+      "13+12*alpha",
+      "4+1*alpha",
+      "15",
+      "4+1*alpha"
+    ],
+    [
+      "10+5*alpha",
+      "4+10*alpha",
+      "12+11*alpha",
+      "0+10*alpha",
+      "10+7*alpha",
+      "4+1*alpha",
+      "13+12*alpha",
+      "13+12*alpha",
+      "4+1*alpha",
+      "15"
+    ],
+    [
+      "2",
+      "13+16*alpha",
+      "4+5*alpha",
+      "4+5*alpha",
+      "13+16*alpha",
+      "10+7*alpha",
+      "0+10*alpha",
+      "12+11*alpha",
+      "4+10*alpha",
+      "10+5*alpha"
+    ],
+    [
+      "13+16*alpha",
+      "2",
+      "13+16*alpha",
+      "4+5*alpha",
+      "4+5*alpha",
+      "10+5*alpha",
+      "10+7*alpha",
+      "0+10*alpha",
+      "12+11*alpha",
+      "4+10*alpha"
+    ],
+    [
+      "4+5*alpha",
+      "13+16*alpha",
+      "2",
+      "13+16*alpha",
+      "4+5*alpha",
+      "4+10*alpha",
+      "10+5*alpha",
+      "10+7*alpha",
+      "0+10*alpha",
+      "12+11*alpha"
+    ],
+    [
+      "4+5*alpha",
+      "4+5*alpha",
+      "13+16*alpha",
+      "2",
+      "13+16*alpha",
+      "12+11*alpha",
+      "4+10*alpha",
+      "10+5*alpha",
+      "10+7*alpha",
+      "0+10*alpha"
+    ],
+    [
+      "13+16*alpha",
+      "4+5*alpha",
+      "4+5*alpha",
+      "13+16*alpha",
+      "2",
+      "0+10*alpha",
+      "12+11*alpha",
+      "4+10*alpha",
+      "10+5*alpha",
+      "10+7*alpha"
+    ]
+  ],
+  "verification": {
+    "U_times_U_transpose_equals_I10": true,
+    "det_U": 1,
+    "orbits_non_zero": "4970 / 4970 (100.0000%)",
+    "sub_orbits_non_zero": "538 / 538 (100.0000%)",
+    "ext_orbits_non_zero": "4432 / 4432 (100.0000%)",
+    "minors_by_order": {
+      "r=1": "100 / 100 (bad = 0)",
+      "r=2": "2025 / 2025 (bad = 0)",
+      "r=3": "14400 / 14400 (bad = 0)",
+      "r=4": "44100 / 44100 (bad = 0)",
+      "r=5": "63504 / 63504 (bad = 0)",
+      "r=6": "44100 / 44100 (bad = 0)",
+      "r=7": "14400 / 14400 (bad = 0)",
+      "r=8": "2025 / 2025 (bad = 0)",
+      "r=9": "100 / 100 (bad = 0)",
+      "r=10": "1 / 1 (bad = 0)"
+    },
+    "total_minors_non_zero": "184755 / 184755 (bad = 0, 100.000000%)",
+    "euclidean_self_dual_generator": "[I_10 | 4*U] over GF(289) (since 4^2 = 16 = -1 mod 17, G * G^T = 0)"
+  }
+}
