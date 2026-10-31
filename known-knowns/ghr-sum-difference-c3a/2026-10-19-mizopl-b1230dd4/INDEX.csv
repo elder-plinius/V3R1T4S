@@ -1,0 +1,3 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ghr-sum-difference-c3a,C_3a_finite_certified(B=17086_q=27995_N=1e13),1.19230254070568368329,1.19102809,2026-10-19T00:41:05Z,object/finite_certificate_17086_27995.json,b1230dd40bb7fcb2ae877bee31547f50dd52657d99c6e19e483271a871c1fe21
+ghr-sum-difference-c3a,C_3a_finite_certified(B=17032_q=27995_N=1e13),1.19229904840497896133,1.19102809,2026-10-19T00:41:05Z,object/finite_certificate_17032_27995.json,db1517d0d4b32ad27df910162aa55d283fa9e6a4fa0374bff651b6ae655de04b
