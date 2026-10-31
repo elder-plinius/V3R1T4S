@@ -1,0 +1,4 @@
+eps = 1/1000 ; C = 9018009/2000000 = 4.509004500 ; 9/2=4.5
+boxes processed 28959 stats {'dom': 1964, 'in': 2343, 'ok': 9999, 'vtx': 174} unresolved 0
+SHELL boxes 228811 {'core': 488, 'in': 28087, 'ok': 85831} unresolved 0
+RESULT: PROVED (all boxes certified)
