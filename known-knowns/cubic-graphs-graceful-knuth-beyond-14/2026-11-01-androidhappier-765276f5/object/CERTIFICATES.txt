@@ -1,0 +1,16 @@
+# Graceful-labeling certificates for connected cubic graphs, orders 4..22 (even): one gzip file per order n.
+# Line format inside each file: graph6 string (as output by nauty 2.8.8 geng -c -d3 -D3 n), then labels f(0) f(1) ... f(n-1)
+# Columns: sha256 of the .gz file, its size in bytes, file name, where it is, sha256 of the uncompressed text, its size.
+# The uncompressed sha256 values are the ones the panel checked (the run's result/SHA256SUMS.txt).
+# Files over 1,000,000 bytes are split into 1,000,000-byte parts FILE.part00, FILE.part01, ... in object/certs/;
+# concatenating the parts in order gives FILE. Order 22 is too large for this package (external).
+c6f232dfb7c647340a76704fdd7fa59df61dab24c551c05686c38b4c4c2b7de4 31 cert_4.txt.gz in-package 01e273e7e9554a3f96cac59bba5f303bf8b03115767c09e38dcd638d83fcaaf5 11
+24ac4a4f3ddbc2a9a0341152b070cc5785420ff16b4bb8e61713bacb5e44b003 48 cert_6.txt.gz in-package c53487802013683ec49da582b9c168f5eaa5cfc8aef527e4da796bcd76d6d0a0 34
+a6c9991c6c548a1b37dfaf235f73c775bcac756e39b192370017ab6af2d03de1 109 cert_8.txt.gz in-package 47c4eb488ec7271464f2489614449ae8759684d4fe8847922facb29bfc120f8c 129
+4889f6f5c1c09dd32c93e6f0dbb1ae1c9e3781e00cde015401b9aefa6f2a3364 337 cert_10.txt.gz in-package 79dcace00a1b5a6c952a67b9c91f021dd5ddc44f33fab28f30ae1fe86823a94f 651
+8c39e74baf75ea6f985ba41acad27fb3440e08378dbbefb412d5fe52be9995b2 1476 cert_12.txt.gz in-package 7bac76ffc54d31ee7675b89b085427519bd40f720598a2b7905c4c60e6b659a8 3632
+fcef835cdd10db8506f10728f0dcd2a51e16b774be2bb353c0caba62aadbb934 9478 cert_14.txt.gz in-package 3bf218dc93f7b2b1503eb90c818d1cbe4127299f32a7eebb6ab68d189d084025 27182
+b202f3f5c34003c40ba1eed2c2360baa256407a31d33aba4054276477a66aff1 80686 cert_16.txt.gz in-package 98e196335f901be573950ec9415b9eb164d5835927250bf6e17b9ede931fbb4e 255699
+e00b3f415c93b2e1a745c614cda2bd16c3eaa3ef8b72d255afcc90de5d092e39 914874 cert_18.txt.gz in-package b6404ba8cd5e93a5c83848c5912c036a29112943b72a42c0e461ed819c2dccd3 3083661
+550d4d98edc8b092539145e69124ba1935dced0032ac42dfe57321247c548659 12779779 cert_20.txt.gz in-package 6a0a93da4a1d3ca29d31d4ab09712b2ac044722fe7cb54c28d6a12f7041e0621 44109825
+6439fa6bb934916ff471f66a582728eff46b6e5cd7282f6835a468a4e5d835d1 196915682 cert_22.txt.gz external dbbe54e5a91052a9ac25375d57f5fea19e7b3e5b4d4a41eea1a4cec9772eb39d 726142050
