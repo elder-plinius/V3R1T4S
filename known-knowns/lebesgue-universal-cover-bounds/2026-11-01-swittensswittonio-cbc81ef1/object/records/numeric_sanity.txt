@@ -1,0 +1,6 @@
+random core samples 20000 min A = 0.8357878705732488  (> 0.834: True )
+Nelder-Mead local minima (best 3):
+  A=0.834824155 at z=[-0.01117, 0.00018, 0.01505, 0.02314, -0.00249]
+  A=0.834835357 at z=[-0.01183, 0.00192, 0.0, 0.02216, -0.00117]
+  A=0.834879996 at z=[0.00252, 0.01194, 0.43488, -0.01082, -0.01823]
+=> numeric minimum of A over the core box ~ 0.8348242 ; certified threshold 0.834 ; gap 8.24e-04

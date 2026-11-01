@@ -1,0 +1,3 @@
+e284fb4c3d755b62958ee8bf2aa5a41b54bccd2509a05bc52d780c63ae70260e  code/bin_final2/ZengCheck.dll
+ab09ccb87cddd1e3852bfc8d7e29c6d0c6f60e7ccf0b0c0b1e398461bfcec7ff  code/tables/tables_b.txt
+e75148452f6a9dc3067b1a244c4fdd1c21fdb44283f5b20e2cc33468144bb369  code/tables/author_exclusions.json

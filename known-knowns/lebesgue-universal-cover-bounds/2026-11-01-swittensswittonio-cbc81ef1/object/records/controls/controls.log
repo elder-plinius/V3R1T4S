@@ -1,0 +1,20 @@
+c0_baseline            tau=0.834     ACCEPT  min_slack=4.201e-07
+c1_bitflip             tau=0.834     REJECT  core5d readErr: JsonReaderException: ',' is invalid after a property name. Expected a ; core5d failing leaves=1; core5d cover: None
+c2_truncate            tau=0.834     REJECT  core5d readErr: JsonReaderException: '4' is an invalid end of a number. Expected a del; core5d failing leaves=1; core5d cover: None
+c3_drop100             tau=0.834     REJECT  core5d cover: summary leaf_count 8200 != 8100
+c4_dup1                tau=0.834     REJECT  core5d cover: summary leaf_count 8200 != 8201
+c5_shrink              tau=0.834     REJECT  core5d cover: volume mismatch sum!=root
+c6_grow                tau=0.834     REJECT  core5d cover: volume mismatch sum!=root
+c8_samples32           tau=0.834     REJECT  core5d failing leaves=87
+c9_psi07               tau=0.834     REJECT  core5d failing leaves=1
+c12_swap_lohi          tau=0.834     REJECT  core5d cover: leaf 200 non-positive width axis 3
+c14_shift              tau=0.834     REJECT  core5d cover: no separating plane (overlap or irregular cell)
+c15_countlie           tau=0.834     REJECT  core5d cover: summary leaf_count 8201 != 8200
+c7a_tau_0.8340004      tau=0.8340004 ACCEPT  min_slack=4.201e-07
+c7b_tau_0.8340005      tau=0.8340005 ACCEPT  min_slack=1.984e-06
+c7c_tau_0.84           tau=0.84      REJECT  core5d failing leaves=237
+c7d_tau_0.8348         tau=0.8348    ACCEPT  min_slack=8.010e-04
+c16_bad_table          tau=0.834     ACCEPT  exit=0  
+c3b_drop100_countfixed tau=0.834     REJECT  core5d cover: volume mismatch sum!=root
+c4b_dup1_countfixed    tau=0.834     REJECT  core5d cover: volume mismatch sum!=root
+c16b_bad_table(+1%)    tau=0.834     REJECT  exit=3762504530  Unhandled exception. System.Exception: membership recheck failed for (reul, 3, 128)

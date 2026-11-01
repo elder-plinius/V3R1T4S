@@ -1,0 +1,8 @@
+leaf 637abb6d74e21883acb4
+tau=0.834 checked=1 fails=0 minSlack=0.0002823754358126651 kinds={'template_simple_meanvalue': 1}
+tau=0.8341 checked=1 fails=0 minSlack=0.0002823754358126651 kinds={'template_simple_meanvalue': 1}
+tau=0.83413 checked=1 fails=0 minSlack=0.0002823754358126651 kinds={'template_simple_meanvalue': 1}
+tau=0.8342 checked=1 fails=0 minSlack=0.0002823754358126651 kinds={'template_simple_meanvalue': 1}
+tau=0.8345 checked=1 fails=1 minSlack=- kinds={}
+tau=0.8349 checked=1 fails=1 minSlack=- kinds={}
+tau=0.85 checked=1 fails=1 minSlack=- kinds={}

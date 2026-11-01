@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+lebesgue-universal-cover-bounds,p1,"6746392/6746392 leaves of Zeng's tau=0.834 certificate accepted by independent interval checker (exact box partitions)","none (no table cell; page lists lower bound 0.832)",2026-10-31T22:24:42Z,object/ZengCheck/LeafCheck.cs,cbc81ef1fd1a7ddb86c7aa570775a9e8b7844ff6aa8d4778787304ed700cd365

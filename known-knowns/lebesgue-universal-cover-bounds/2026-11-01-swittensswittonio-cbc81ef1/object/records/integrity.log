@@ -1,0 +1,3 @@
+shard hash {'files': 773, 'bytes': 787849048, 'sha256': 'b73e5571538f1592065abcad7ec06cce5311dc96af9536fe20998e56c3f5b553', 'claimed_sha256': 'c5fdc18d4e38f65d54e4e730e36ef1e41166ecc3a991494e653825f667eec78a', 'claimed_files': 773, 'claimed_bytes': 787849048, 'shard_hash_ok': False} t=17
+1 constants/metadata.jsonl.gz t=17
+DONE {"records": 6747165, "bad_record_sha": 0, "shard_hash_ok": false, "elapsed_s": 1244.2382266521454}

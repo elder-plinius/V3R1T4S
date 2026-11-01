@@ -1,0 +1,7 @@
+=== Z-L6c: turn criterion: all det(e_i,e_{i+1})>0 and total turn 2pi  <=>  convex (random polygons) ===
+random polygons with all turns positive: 7636; of these index 2 (non-convex, e.g. pentagram-like): 1285, index>2: 95; violations of 'index 1 <=> convex vertex-set in order': 0
+pentagram: min det = 2.1266270208800995  total turn / 2pi = 2.0  (so 'all turns positive' alone does not give convexity)
+=== Z-L6d/e: perturbation and mean-value lower bounds for the shoelace ===
+min over trials of [S(z) - perturbation bound] = 4.986e-12 (>=0 required; ~0 for the adversarial displacement); max |expansion identity residual| = 5.24e-16
+mean-value bound S(z) >= S(c) - sum G_k r_k on 12000 random z in 300 random core boxes (G_k sampled sup|dS/dz_k|): min(S(z) - bound) = 2.332e-05 (>=0)
+elapsed 86.91160011291504
