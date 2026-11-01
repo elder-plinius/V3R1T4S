@@ -1,0 +1,43 @@
+n=2 trees=1 fails=0
+n=2 seconds=0
+n=3 trees=1 fails=0
+n=3 seconds=0
+n=4 trees=2 fails=0
+n=4 seconds=0
+n=5 trees=3 fails=0
+n=5 seconds=0
+n=6 trees=6 fails=0
+n=6 seconds=1
+n=7 trees=11 fails=0
+n=7 seconds=0
+n=8 trees=23 fails=0
+n=8 seconds=0
+n=9 trees=47 fails=0
+n=9 seconds=0
+n=10 trees=106 fails=0
+n=10 seconds=0
+n=11 trees=235 fails=0
+n=11 seconds=0
+n=12 trees=551 fails=0
+n=12 seconds=0
+n=13 trees=1301 fails=0
+n=13 seconds=1
+n=14 trees=3159 fails=0
+n=14 seconds=0
+n=15 trees=7741 fails=0
+n=15 seconds=0
+n=16 trees=19320 fails=0
+n=16 seconds=1
+n=17 trees=48629 fails=0
+n=17 seconds=1
+n=18 trees=123867 fails=0
+n=18 seconds=3
+n=19 trees=317955 fails=0
+n=19 seconds=10
+n=20 trees=823065 fails=0
+n=20 seconds=21
+n=21 trees=2144505 fails=0
+n=21 seconds=58
+n=22 trees=5623756 fails=0
+n=22 seconds=161
+ALLDONE

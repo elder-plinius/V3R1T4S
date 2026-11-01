@@ -1,0 +1,25 @@
+# Odd-graceful tree certificates, orders 2..22: sha256, size in bytes, file, where it is
+# One gzip file per order n. Line format: p_1 ... p_{n-1} | f(0) ... f(n-1) (p_i = parent of vertex i, 0 <= p_i < i; f = labels).
+# Files larger than 1,000,000 bytes are split into 1,000,000-byte parts named FILE.part00, FILE.part01, ... in object/certs/;
+# concatenating the parts in order gives FILE with the sha256 below. Orders 21 and 22 are too large for this package.
+bbe5cf0ba0204b686ec147f47d2b652c4e4b3f592baa50dd351a471e2d3a0326 39 cert_2.txt.gz in-package
+b3a4486b2ab39e5cd415a747c0c749978341e6c8aacf3149728ec3ed680479d8 43 cert_3.txt.gz in-package
+1159ae5644e03286e43c7c794862e4189b2cf26076435644a6fdab39b5ffac38 58 cert_4.txt.gz in-package
+30416018723fbcc50b7af8c64b30d9c70919a6c28d08bd30c42ed7d3ab374e74 72 cert_5.txt.gz in-package
+b818f211e11f6cf13ca1b056347d9aa81dd76b1655d46e83df18500842205b09 99 cert_6.txt.gz in-package
+4afb6c97bb40a4c3694d147b54f37f0a4d55c8137f6bc2c3bca9ef7f336d23a5 149 cert_7.txt.gz in-package
+4afeadad708f53dd9cd033ec64fc36860b4cdcddcd03b29ff244e885c01933ae 281 cert_8.txt.gz in-package
+d89311ab1316d1c7962d6335f131dca3229115798b6a11b39bf513d4b8d11344 545 cert_9.txt.gz in-package
+a3451fbcaf2a21137fcaf7ca8c385a696a287637d066776336099837becf9e99 1287 cert_10.txt.gz in-package
+d075a5e6f850ff8cf985c5ec330325d398a3efeaa84ebfb91f9521a8117c7189 2948 cert_11.txt.gz in-package
+0de0f1b6534bd7b1f7190a0a60c3e758b6750ac9619b57dd28826dc0a4eff23a 7313 cert_12.txt.gz in-package
+b4be9594e186866f1f98fcbd70708a07f960a6001c1a07cc5792eae70f81ff5a 18218 cert_13.txt.gz in-package
+9c74a16c8de5e947f07ee1480b0794101b1bbbe5235a0ebaf3dfea8772b808a6 47267 cert_14.txt.gz in-package
+27b88990193a1a3eb87f6f3b9b0b413660cc1e31a33191afc5b3fee1f71aaf93 124007 cert_15.txt.gz in-package
+f1700628bd911769811d36ad80534b36bc809edd35929c47abf1e98c0c14239c 331263 cert_16.txt.gz in-package
+148dbd1b8a34cebca9106982cae438fc165fd23760e196b935731de402c84591 892536 cert_17.txt.gz in-package
+45c249b2557bfe49b3a2613c285bc0077d991e93a1e1418cadd0bd505c4a634b 2410425 cert_18.txt.gz in-package
+74e6dd8d734bbf2e825b25b8db673fee15267c07bbc346327d557a4d9354cb07 6550060 cert_19.txt.gz in-package
+5aa8cfd4a9461e0e6ef019761904f1cff2f8bbead25de2901c4cb8336eb0fff1 17860164 cert_20.txt.gz in-package
+10b82e2c5e10113c38bb493ef254c29bf22ee93e046f0dcf0055c23f6f0ddf29 48911418 cert_21.txt.gz external
+011e5e85c3ea6bddf2ded0621907680e365ad6278ac8876dde86c0884ff03070 134933581 cert_22.txt.gz external
