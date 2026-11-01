@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+gilbreath-conjecture-verification-beyond-1-5e15,p2,"local depths of all 349,009,729 blocks (8192 owned, overlap 1536) over primes 1500000000000013..1600001870813867: max depth 783, 0 flagged, row 1280 clean in every block","none (Colonna: verification up to 1.5e15, no block data)",2026-11-01T04:45:13Z,object/RESULT.json,597a9a3dadf654412fa438065a27eca9ec65fcb039ff42bc3a6a72c11dc9d9ea

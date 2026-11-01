@@ -1,0 +1,28 @@
+{
+ "range_first_prime": 1500000000000013,
+ "total_primes": 2859087706237,
+ "blocks": 349009729,
+ "M": 8192,
+ "O": 1536,
+ "KSTAR": 1280,
+ "max_depth": 783,
+ "max_depth_block": 344572324,
+ "max_depth_block_first_prime": 1598729274569041,
+ "top5_depth": [
+  783,
+  769,
+  759,
+  753,
+  741
+ ],
+ "unclean_row1280_blocks": 0,
+ "flagged_blocks": 0,
+ "min_depth": 85,
+ "median_depth": 189,
+ "windows": 46567,
+ "last_owned_first_prime_of_stream": 1600001870813867,
+ "depth_u16_bytes": 698019458,
+ "depth_u16_sha256": "5c100bc103967a2ec1d54e9da651a218cebfe9dd03916737c75763ecd70fc157",
+ "clean1280_u8_bytes": 349009729,
+ "clean1280_u8_sha256": "652718dcf93b2b8046ed02eceb7e346e003b5ed6c22dd58a18ef6b718330c0ed"
+}
