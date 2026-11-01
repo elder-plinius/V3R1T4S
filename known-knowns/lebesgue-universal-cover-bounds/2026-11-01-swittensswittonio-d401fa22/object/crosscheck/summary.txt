@@ -1,0 +1,48 @@
+leaves 3111 accepted 3111 below 0.8344: []
+U n 1000 min slack 1.636372e-05 mean 1.378073e-02 max 1.296846e+00 accepted 1000
+W n 998 min slack 1.598996e-05 mean 3.615146e-05 max 5.549587e-05 accepted 998
+D n 1113 min slack 1.626736e-05 mean 3.185278e-02 max 1.432060e+00 accepted 1113
+ALL n 3111 min slack 1.598996e-05 mean 1.583702e-02 max 1.432060e+00 accepted 3111
+hull-closed leaves 3111 min hull slack 1.598996e-05
+N 1024 hull leaves with LB<0.8344 at this resolution only: 0
+N 4096 hull leaves with LB<0.8344 at this resolution only: 0
+N 16384 hull leaves with LB<0.8344 at this resolution only: 0
+vs author double (K=1024): max |diff| 4.388e-06, mean 2.387e-06; mine>=author-? min(mine-author) 1.601e-06 max 4.388e-06
+vs previous-run C# (dump LB) n 998 mine - prev: min 2.184e-07 max 1.123e-05 mean 6.132e-06
+by depth: n, min slack
+22 64 1.3769e-01
+26 1 6.7595e-04
+28 1 5.8533e-03
+29 2 1.6016e-05
+31 2 1.6747e-05
+32 1 7.2988e-05
+33 4 1.4455e-04
+34 14 3.2984e-04
+35 4 8.0063e-04
+36 6 6.5203e-04
+37 8 1.5990e-05
+38 14 1.7312e-04
+39 31 7.3269e-05
+40 30 4.4141e-05
+41 50 1.9424e-05
+42 46 2.6641e-05
+43 51 1.9548e-05
+44 65 1.8647e-05
+45 59 2.3349e-05
+46 71 1.8810e-05
+47 74 1.7431e-05
+48 104 1.6325e-05
+49 108 1.7635e-05
+50 116 1.6070e-05
+51 180 1.6088e-05
+52 175 1.6898e-05
+53 247 1.6262e-05
+54 249 1.6423e-05
+55 225 1.6364e-05
+56 256 1.6541e-05
+57 228 1.6201e-05
+58 269 1.6002e-05
+59 165 1.9149e-05
+60 96 1.6267e-05
+61 73 1.8414e-05
+62 22 3.0247e-05

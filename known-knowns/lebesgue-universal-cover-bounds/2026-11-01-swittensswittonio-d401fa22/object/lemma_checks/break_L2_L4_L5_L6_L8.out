@@ -1,0 +1,15 @@
+==== L2: gauge reduction, mirror, rho period (point-set hull areas) ====
+max |area(original arrangement) - area(reduced placement (t3,rho in [0,2pi/5),t5))| over 300 random motions incl. reflections: 1.133364149863425e-06
+max |A(rho) - A(rho+2pi/5)|, |A(rho)-A(rho-4pi/5)| (support-function area, N=4000): 2.62279087337447e-12
+max |A(t3,rho,t5) - A(S t3,-rho,S t5)| (mirror): 6.092015780723159e-12
+control: |A(rho)-A(rho+pi/5)| = 0.012019943333735905 (must be >> 0)
+==== L4: erosion  |W_j-V_j|<=delta  =>  cap D(V_j,1-delta) in cap D(W_j,1) ====
+checked 1563600 boundary/near-boundary points of random eroded sets: max over (|p-W_j|-1) = 4.441e-16  (<=~1e-15 means no violation; tight case = 0)
+==== L5: corner movement bound ====
+B3: max(actual corner movement - delta3) = 3.331e-16, max ratio 1.000000000084041   B5: max(actual - delta5) = -1.306e-15, max ratio 0.999999999999766   (20000 boxes x 6 placements)
+adversarial (box vertex aligned with the rotation chord) max ratio actual/delta5 = 0.9999999785401488  (<=1 required)
+==== L6: core inside every placed body + beta <= A ====
+4800 (box,placement) cases (0 empty cores skipped): max over core points of (dist to placed corner - 1) = -4.718e-14; max(beta_inner - A_outer) = -1.220e-04 (must be < 0; beta_inner is inner (polygonal) so this is a conservative test)
+==== L8: a-priori exclusion: |t3|>0.7 or |t5|>0.7 => A >= f(0.7) ====
+min (A_outer - f(|t|)) over 3000 far placements = 0.5898662683934311 ; #A_outer < f(0.7): 0  (A_outer >= A so A_outer<f would be a violation)
+elapsed s: 59.482586145401

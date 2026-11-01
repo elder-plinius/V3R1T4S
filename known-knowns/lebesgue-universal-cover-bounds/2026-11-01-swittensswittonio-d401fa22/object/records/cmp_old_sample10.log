@@ -1,0 +1,28 @@
+VERIFY work/cert_B_08344.bin  tiers N=256/1024/4096  threads=6  2026-11-01T01:41:46.3016504Z  pid=48644
+  header: tau=0.8344 thresh=0.8344160021170217 tmax=0.7 m=1024 K=1024 depth=22 nseed=4194304 inflate=1E-11 nblk=4194304
+  a-priori threshold d0 = 0.6938309388802195 (F(d0)>=tau+1e-7)  tmax=0.7
+  seed rho-coverage: seeds at top end 524,288, of which not reaching true 2pi/5: 0; bottom-end seeds not reaching 0: 0
+  plan: 4,200,730 work units (68 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 6,426
+  plan: 3,596 jobs
+  jobs 0..3596 of 3596; already done (checkpoint): 0; to run: 353
+  [0.5 min] jobs 71/353  leaves 4,647,901  153,390 leaves/s  working set 1109 MB
+  [1.0 min] jobs 142/353  leaves 9,567,685  158,651 leaves/s  working set 1108 MB
+  [1.5 min] jobs 213/353  leaves 14,578,124  161,087 leaves/s  working set 1124 MB
+  [2.0 min] jobs 296/353  leaves 20,140,117  167,610 leaves/s  working set 1124 MB
+  [2.4 min] jobs 353/353  leaves 24,002,319  168,640 leaves/s  working set 1123 MB
+  wall time this run: 2.37 min
+====================================================================================================
+  jobs covered 353 of 3,596  (PARTIAL SLICE)
+  nodes 47,601,642 (incl. 0 pre-walk prefix split nodes)  leaves 24,002,319   (a-priori leaves 122,666, hull leaves 23,879,653)
+  forest identity: only checked on the full run (each processed subtree already ended exactly at its pre-walk bit position)
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf rigorous slack above tau (LB - tau - 1e-12): 4.910190E-006
+  worst leaf box (at the tier where it was accepted): [-0.016406249994093784,0.00546875000038281,-0.0765624999966094,0.010937500000656245,0.9228428419939652,0.019634954085917956,-0.010937499993765663,0.010937500000656245,-0.032812499994859405,0.010937500000656245]
+  worst slack after re-evaluating the 0 leaves with accepted slack < -1 at the finest tier N=4096 (max of accepted and fine LB): Infinity
+  max erosion delta3 3.093592E-002 delta5 9.019420E-002;  min half-width over splits: translation 8.544922E-005 rho 3.067962E-004;  max stack depth 31
+  leaf extents  t3x[-0.700000000007,0.700000000007] t3y[-0.700000000007,0.700000000007] rho[-0.000000000006280,1.256637061442197] t5x[-0.700000000007,0.700000000007] t5y[-0.700000000007,0.700000000007]
+  edge-refinement insertions 2,834,817,870 (118.71 per hull leaf)
+  split-coverage rounding margin (half*(inflate-2.3e-16) >= 1.5e-16 for every split): OK
+====================================================================================================
+RESULT: SLICE OK (not a full verification)

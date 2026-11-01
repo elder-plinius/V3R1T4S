@@ -1,0 +1,3 @@
+VERIFY work/tamper/trailing_byte.bin  tiers N=256/1024/4096  threads=1  2026-11-01T00:57:23.4093671Z  pid=22492
+  REJECTED: trailing bytes after last block
+RESULT: REJECTED

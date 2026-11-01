@@ -1,0 +1,32 @@
+VERIFY ../../work/cert_B_08344.bin  tiers N=256/1024/4096  threads=6  2026-10-31T22:37:54.3371768Z  pid=70344
+  claim decimal 8344/10000 = enclosure [0.8343999999999999,0.8344000000000001]; header tau double 0.8344 is inside it
+  header: tau=0.8344 thresh=0.8344160021170217 tmax=0.7 m=1024 K=1024 depth=22 nseed=4194304 inflate=1E-11 nblk=4194304
+  acceptance threshold TauThr = 0.8344000000010002 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6938309388801657  (interval-certified f(d0) >= 0.8344001005881776 >= TauThr + 1e-7)  tmax=0.7
+  seed rho-coverage (Iv): seeds at top end 524,288, of which not certified to reach true 2pi/5: 0; bottom-end seeds not certified to reach 0: 0; seed-split coverage failures: 0
+  plan: 4,200,730 work units (68 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 6,426
+  plan: 3,596 jobs
+  jobs 0..3596 of 3596; already done (checkpoint): 0; to run: 43
+  [0.6 min] jobs 5/43  leaves 287,085  8,567 leaves/s  working set 1105 MB
+  [1.1 min] jobs 14/43  leaves 763,467  11,769 leaves/s  working set 1105 MB
+  [1.6 min] jobs 23/43  leaves 1,465,238  14,988 leaves/s  working set 1105 MB
+  [2.1 min] jobs 29/43  leaves 1,871,820  14,642 leaves/s  working set 1106 MB
+  [2.7 min] jobs 36/43  leaves 2,350,538  14,454 leaves/s  working set 1120 MB
+  [3.1 min] jobs 43/43  leaves 2,897,141  15,719 leaves/s  working set 1120 MB
+  wall time this run: 3.07 min
+====================================================================================================
+  jobs covered 43 of 3,596  (PARTIAL SLICE)
+  nodes 5,732,796 (incl. 0 pre-walk prefix split nodes)  leaves 2,897,141   (a-priori leaves 7,460, hull leaves 2,889,681)
+  forest identity: only checked on the full run (each processed subtree already ended exactly at its pre-walk bit position)
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 8.189128E-006
+  worst leaf box (at the tier where it was accepted): [-0.024609374994339878,0.0027343750002187485,0.06015624999584378,0.00546875000038281,1.246819584399045,0.009817477043057153,0.005468749993437541,0.00546875000038281,0.005468749993437541,0.00546875000038281]
+  worst slack after re-evaluating the 581,035 leaves with accepted slack < 5e-5 at the finest tier N=4096 (max of accepted and fine LB): 1.583352E-005
+  worst-fine leaf box: [-0.028710937494613318,0.001367187500123046,0.00957031249373832,0.001367187500123046,0.22089323345533599,0.004908738521577664,-0.0013671874931367616,0.001367187500123046,-0.024609374994339878,0.0027343750002187485]
+  max erosion delta3 3.093592E-002 delta5 9.019420E-002;  min half-width over splits: translation 8.544922E-005 rho 3.067962E-004;  max stack depth 24
+  leaf extents  t3x[-0.700000000007,0.350000000003] t3y[-0.700000000007,0.700000000007] rho[-0.000000000005498,1.256637061442197] t5x[-0.350000000003,0.700000000007] t5y[-0.700000000007,0.700000000007]
+  edge-refinement insertions 343,396,655 (118.84 per hull leaf)
+  interval child-covers-parent checks at every split (incl. seed splits and pre-walk): failures 0  => OK
+====================================================================================================
+RESULT: SLICE OK (not a full verification)

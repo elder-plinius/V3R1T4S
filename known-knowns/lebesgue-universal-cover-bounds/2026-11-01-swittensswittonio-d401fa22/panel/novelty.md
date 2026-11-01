@@ -1,0 +1,28 @@
+context: subagent
+role: NOVELTY (bank p1 replay of Mishra cert_B_08344); skeptic; written 2026-11-01T02:03Z (UTC, `date -u`)
+
+## Status source (fetched once, no retry)
+- URL https://teorth.github.io/optimizationproblems/constants/13b.html, HTTP 200, fetched Sun Nov 1 01:58:20 UTC 2026, sha256 5bbaacfed90fd6b53fb15d8566a33a17ad6fce11da5c67a74eef95d71908dcfb (same hash as the claim's STATUS.md fetch of 2026-10-31T22:24:42Z, so unchanged).
+- Page value: best lower bound 0.832 ([BS2005]); best upper 0.8440935944 as listed in claim STATUS. The page has no mention of Mishra/Hatchett/Tomar/Eren/2608/2609 and no replay. (Page text grep: only "0.832" matched.) Table is stale, but lists nothing about replays.
+- Note: bank p1 is a replay note, not a bound improvement; the strict-beat test is read as "no equal-or-better public independent replay of this exact certificate".
+
+## Searches and results (all read-only; gh CLI GET/search only)
+1. This repo elder-plinius/V3R1T4S: `gh search prs` for "universal cover", "lebesgue", "Mishra", "0.8344", "cert_B_08344", "2608.30538": 0 hits each. `gh pr list --state all --limit 200`: 200 PRs, none with lebesgue/cover/mishra/replay/13b/0.83 in title (only #838 asteroid hit "cover" in "precovery"; irrelevant). `gh search issues "universal cover"`: 0. TROPHY_CASE.md: no line with leb/cover/mishra/8344/replay/13b (one hit "recovered", irrelevant). known-knowns/ directory listing: no lebesgue/universal/cover entry. Only known-unknowns/record-tables/lebesgue-universal-cover-bounds.md mentions the bank; its p1 line is the open criterion, no replay listed.
+2. Mishra repo Ujjwal238/universal-cover-problem (gh api): 0 forks, 0 stars, 0 issues (all states), 0 releases (so no release assets), last push 2026-09-02T07:53:56Z. README lists the author's OWN verifiers (verifyB.py, verify.py, src/independent.py): author self-verification, not a third-party replay. Worst leaf slack in README 1.2409e-05 (python verifier), different object from the claim's C# interval checker.
+3. Tao's optimization-constants repo teorth/optimizationproblems: `gh search prs` "0.8344": only #223 (open) "Record superseding bounds for 17 constants (...13b...)" which just lists 13b lower 0.832 -> 0.8344 with arXiv link; 1 comment; no replay. "universal cover" PRs: #223, #136 (merged, cross-link fix). Issues: none for 13b / universal cover.
+4. GitHub repo and code search: "Lebesgue universal cover" repos: guadaran/lebesgue-universal-covering-problem (2018), Sheldon-Anderson/lebesgue-universal-cover-new-lower-bound-certificate (2026-07-08, Brass-Sharifi package, README has no Mishra/8344/2608), vince-gonzalez/certified-covers (2026-08-21, readme no Mishra/8344/2608/Zeng/Xie, 0 issues, 0 releases). Code search for "cert_B_08344" and "2608.30538": only this repo's known-unknowns table, paper-list/news aggregators (isLinXu/paper-list, rainwangphy/TCSScholar, ehijano/rss_fetch, anghel4d/broadside-observer: arXiv feed mentions), LarsSivertsen/xeos_python (spurious). None is a replay.
+5. Zenodo API (one GET each, HTTP 200, 2026-11-01T01:59Z):
+   - Hatchett 10.5281/zenodo.22135010 (published 2026-08-27, BEFORE Mishra's 08-31 paper): 0.83474, own 192-bit Arb checker on its own certificate (461,208 leaves). Cannot be a replay of Mishra's file.
+   - Tomar 10.5281/zenodo.23717911 (+ dataset 10.5281/zenodo.23717912, 2026-10-27): paper proves 0.8366 (D,B3,B5,B7,B9) and Prop 4.2 M(D,B3,B5)>=0.8347 with own Arb certificates (cert5d_08347, cert8d_0836, cert11d_08366) and Lean proofs on its own certificates/root boxes. Dataset file list has no Mishra certificate. Paper text cites Mishra [12], quotes his node count (486,799,600 nodes) and his placement 0.834781191 as read from the paper; it states Mishra's 0.8344 and 0.83474 as earlier results. It does not check cert_B_08344.
+   - Eren 10.5281/zenodo.23711421 (2026-10-27): 0.8368, certificate cert3579_0.8368 only, two own checkers (A Arb, B C exact/interval). Supplementary zip (96 members) searched: no Mishra certificate or replay; PDF only cites Mishra [9] by arXiv id.
+6. arXiv/web (web_search x4, ~40 results): Mishra 2608.30538 v1/v2; Zeng 2609.01284; Xie 2606.04458 (v2 "Reproducible Certificate for the Brass-Sharifi bound", Brass-Sharifi 0.832, not Mishra); no paper/note replaying Mishra's certificate. arXiv API query returned HTTP 301 (not retried, per rule); web search used instead. f-keys.com note covers the classical upper-bound ladder only.
+
+## Does Tomar's Lean proof subsume the claim?
+No. Tomar's Lean theorems (hull5_geK, main5K, ...) check Tomar's own certificates (own root boxes, cells, bodies D,B3,B5,B7,B9 or D,B3,B5 at 0.8347). They establish a mathematically stronger fact (Lambda >= 0.8366, and M(D,B3,B5) >= 0.8347 > 0.8344), so the number 0.8344 is implied as a theorem once Tomar is accepted, but no artifact there runs Mishra's 245,496,952-leaf file. The claim's object (certificate-level replay of that file with outward-rounded interval arithmetic) is different and still open. Value caveat (not a novelty fail): the replay is of a superseded bound (0.83474 Hatchett, 0.8366 Tomar, 0.8368 Eren are higher), and the claim itself says it establishes no new lower bound; p1 asks only for the replay.
+
+## Limits of this search
+Tomar's multi-TB dataset was inspected by file names only (cert5d/8d/11d, k5/k8/k11 sources, l11), not unpacked. Forum/social channels were reached only through the web search tool. Search is a negative result as of 2026-11-01T02:01Z.
+
+## Verdict
+No equal-or-better public independent replay of cert_B_08344 found (self-verifiers by the author exist, not independent; Hatchett predates; Tomar and Eren replay their own certificates). Novelty holds for bank p1 as stated.
+pass: true

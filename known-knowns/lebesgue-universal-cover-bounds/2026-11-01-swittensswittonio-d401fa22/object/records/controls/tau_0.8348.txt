@@ -1,0 +1,45 @@
+VERIFY work/tamper/tau_0.8348.bin  tiers N=256/1024/4096  threads=1  2026-10-31T23:58:00.1516755Z  pid=22688
+  header: tau=0.8348 thresh=0.8300160021170216 tmax=0.7 m=1024 K=1024 depth=10 nseed=1024 inflate=1E-11 nblk=1024
+  acceptance threshold TauThr = 0.8348000000010001 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6949837865712996  (interval-certified f(d0) >= 0.8348001005896284 >= TauThr + 1e-7)  tmax=0.7
+  seed rho-coverage (Iv): seeds at top end 512, of which not certified to reach true 2pi/5: 0; bottom-end seeds not certified to reach 0: 0; seed-split coverage failures: 0
+  plan: 1,024 work units (0 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 0
+  plan: 17 jobs
+  jobs 0..17 of 17; already done (checkpoint): 0; to run: 17
+  [5.8 min] jobs 1/17  leaves 61,708  176 leaves/s  working set 30 MB
+  [9.4 min] jobs 2/17  leaves 144,137  256 leaves/s  working set 30 MB
+  [13.3 min] jobs 3/17  leaves 205,115  257 leaves/s  working set 31 MB
+  [15.6 min] jobs 4/17  leaves 269,416  288 leaves/s  working set 31 MB
+  [17.4 min] jobs 5/17  leaves 321,354  308 leaves/s  working set 31 MB
+  [24.0 min] jobs 6/17  leaves 413,559  288 leaves/s  working set 31 MB
+  [28.7 min] jobs 7/17  leaves 477,862  278 leaves/s  working set 31 MB
+  [35.8 min] jobs 8/17  leaves 538,839  251 leaves/s  working set 31 MB
+  [39.2 min] jobs 9/17  leaves 590,251  251 leaves/s  working set 31 MB
+  [44.1 min] jobs 10/17  leaves 671,493  254 leaves/s  working set 31 MB
+  [45.4 min] jobs 11/17  leaves 738,268  271 leaves/s  working set 31 MB
+  [48.4 min] jobs 12/17  leaves 804,978  277 leaves/s  working set 31 MB
+  [50.3 min] jobs 13/17  leaves 867,997  287 leaves/s  working set 31 MB
+  [52.3 min] jobs 14/17  leaves 937,635  299 leaves/s  working set 31 MB
+  [56.3 min] jobs 15/17  leaves 1,004,345  297 leaves/s  working set 31 MB
+  [59.3 min] jobs 16/17  leaves 1,071,118  301 leaves/s  working set 31 MB
+  [59.3 min] jobs 17/17  leaves 1,071,192  301 leaves/s  working set 31 MB
+  wall time this run: 59.34 min
+====================================================================================================
+  jobs covered 17 of 17  (FULL)
+  nodes 2,141,360 (incl. 0 pre-walk prefix split nodes)  leaves 1,071,192   (a-priori leaves 0, hull leaves 1,071,192)
+  forest identity 2L - nseed = 2,141,360 vs nodes 2,141,360: OK
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  hull leaves accepted at tier 0/1/2: 21,506 / 0 / 0; failed after last tier: 1,049,686
+  failing leaves 1,049,686  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): -4.784114E-003
+  worst leaf box (at the tier where it was accepted): [0.0041015624933555105,0.001367187500123046,-0.015039062494011754,0.001367187500123046,0.8982991493870096,0.004908738521577664,-0.002734374993246136,0.0027343750002187485,0.01914062499428519,0.0027343750002187485]
+  worst slack after re-evaluating the 1,049,894 leaves with accepted slack < 2E-005 at the finest tier N=4096 (max of accepted and fine LB): -4.784114E-003
+  worst-fine leaf box: [0.0041015624933555105,0.001367187500123046,-0.015039062494011754,0.001367187500123046,0.8982991493870096,0.004908738521577664,-0.002734374993246136,0.0027343750002187485,0.01914062499428519,0.0027343750002187485]
+  max erosion delta3 1.956559E-001 delta5 4.119723E-001;  min half-width over splits: translation 1.367188E-003 rho 4.908739E-003;  max stack depth 31
+  leaf extents  t3x[-0.700000000006,0.700000000006] t3y[-0.700000000005,0.700000000005] rho[-0.000000000006234,1.256637061442151] t5x[-0.700000000006,0.700000000006] t5y[-0.700000000005,0.700000000005]
+  edge-refinement insertions 16,985,456 (15.86 per hull leaf)
+  interval child-covers-parent checks at every split (incl. seed splits and pre-walk): failures 0  => OK
+  first failure: LEAF-FAIL lb=0.8310617669107347 seed 53 box [-0.08749999999650002,0.08750000000262498,-0.08749999999650002,0.08750000000262498,0.3141592653589793,0.3141592653621209,-0.52500000000175,0.17500000000349997,-0.17499999999825,0.17500000000349997]
+  (leaf extents above are informational bookkeeping in plain doubles; domain coverage is certified by the Iv split checks + Iv seed rho checks, not by them)
+====================================================================================================
+RESULT: VERIFICATION FAILED

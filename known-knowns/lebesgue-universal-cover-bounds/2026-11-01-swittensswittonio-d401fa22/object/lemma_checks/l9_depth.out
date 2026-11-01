@@ -1,0 +1,6 @@
+uncompressed bytes 81296166 sha256 33973342ab754dd5261b682d657e0b46b55f3377173a9238a2fa3948fefdb91f
+header: target 0.8344 thresh 0.8344160021170217 tmax 0.7 m 1024 K 1024 depth 22 nseed 4194304 inflate 1e-11 nblk 4194304
+nodes 486799600 leaves 245496952 blocks_inconsistent 0  forest identity 2L-s = 486799600 (== nodes: True)
+max depth below seed (deepest SPLIT is at depth maxd-1 below the seed): 40  -> total split depth from root incl. 22 root splits: 62 (deepest split node index below seed = 39 )
+splits per seed-relative depth (nonzero tail): [(34, 16042784), (35, 17217848), (36, 11466368), (37, 3225850), (38, 2102686), (39, 218582)]
+elapsed 5.697840452194214

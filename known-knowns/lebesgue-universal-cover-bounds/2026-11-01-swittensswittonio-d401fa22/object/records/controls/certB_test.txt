@@ -1,0 +1,36 @@
+VERIFY work/certB_test.bin  tiers N=256/1024/4096  threads=1  2026-10-31T23:07:27.3180517Z  pid=67168
+  header: tau=0.83 thresh=0.8300160021170216 tmax=0.7 m=1024 K=1024 depth=10 nseed=1024 inflate=1E-11 nblk=1024
+  acceptance threshold TauThr = 0.830000000001 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6810069056427346  (interval-certified f(d0) >= 0.8300001005716394 >= TauThr + 1e-7)  tmax=0.7
+  seed rho-coverage (Iv): seeds at top end 512, of which not certified to reach true 2pi/5: 0; bottom-end seeds not certified to reach 0: 0; seed-split coverage failures: 0
+  plan: 1,024 work units (0 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 0
+  plan: 17 jobs
+  jobs 0..17 of 17; already done (checkpoint): 0; to run: 17
+  [0.7 min] jobs 2/17  leaves 144,137  3,643 leaves/s  working set 30 MB
+  [1.3 min] jobs 4/17  leaves 269,416  3,345 leaves/s  working set 31 MB
+  [1.8 min] jobs 5/17  leaves 321,354  2,903 leaves/s  working set 31 MB
+  [2.4 min] jobs 7/17  leaves 477,862  3,287 leaves/s  working set 31 MB
+  [3.0 min] jobs 10/17  leaves 671,493  3,784 leaves/s  working set 31 MB
+  [3.5 min] jobs 12/17  leaves 804,978  3,810 leaves/s  working set 31 MB
+  [4.5 min] jobs 14/17  leaves 937,635  3,444 leaves/s  working set 31 MB
+  [5.1 min] jobs 16/17  leaves 1,071,118  3,471 leaves/s  working set 31 MB
+  [5.2 min] jobs 17/17  leaves 1,071,192  3,462 leaves/s  working set 31 MB
+  wall time this run: 5.16 min
+====================================================================================================
+  jobs covered 17 of 17  (FULL)
+  nodes 2,141,360 (incl. 0 pre-walk prefix split nodes)  leaves 1,071,192   (a-priori leaves 0, hull leaves 1,071,192)
+  forest identity 2L - nseed = 2,141,360 vs nodes 2,141,360: OK
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  hull leaves accepted at tier 0/1/2: 1,071,192 / 0 / 0; failed after last tier: 0
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 3.355731E-006
+  worst leaf box (at the tier where it was accepted): [0.0765624999966094,0.010937500000656245,0.032812499994859405,0.010937500000656245,0.37306412761339525,0.019634954085917956,0.010937499993765663,0.010937500000656245,0.010937499993765663,0.010937500000656245]
+  worst slack after re-evaluating the 7,088 leaves with accepted slack < 2E-005 at the finest tier N=4096 (max of accepted and fine LB): 1.588644E-005
+  worst-fine leaf box: [0.0041015624933555105,0.001367187500123046,-0.015039062494011754,0.001367187500123046,0.8982991493870096,0.004908738521577664,-0.002734374993246136,0.0027343750002187485,0.01914062499428519,0.0027343750002187485]
+  max erosion delta3 1.956559E-001 delta5 4.119723E-001;  min half-width over splits: translation 1.367188E-003 rho 4.908739E-003;  max stack depth 31
+  leaf extents  t3x[-0.700000000006,0.700000000006] t3y[-0.700000000005,0.700000000005] rho[-0.000000000006234,1.256637061442151] t5x[-0.700000000006,0.700000000006] t5y[-0.700000000005,0.700000000005]
+  edge-refinement insertions 136,333,316 (127.27 per hull leaf)
+  interval child-covers-parent checks at every split (incl. seed splits and pre-walk): failures 0  => OK
+  (leaf extents above are informational bookkeeping in plain doubles; domain coverage is certified by the Iv split checks + Iv seed rho checks, not by them)
+====================================================================================================
+RESULT VERIFIED  (interval mode)  a >= 0.83 nodes 2,141,360 leaves 1,071,192 failing 0

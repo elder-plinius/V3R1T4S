@@ -1,0 +1,14 @@
+cross leaves 1500 accepted(mine) 1500
+low 600 interval-mine: min -9.129e-06 max -6.014e-06 mean -6.446e-06  max|d| 9.129e-06; #|d|>1e-6: 600; #interval>mine+1e-9: 0
+   vs my N=1024: min -5.907e-06 max -2.823e-06  max|d| 5.907e-06  #|d|<=1e-6: 0
+   vs my N=4096: min -8.940e-06 max -5.847e-06  max|d| 8.940e-06  #|d|<=1e-6: 0
+   vs my N=16384: min -9.129e-06 max -6.014e-06  max|d| 9.129e-06  #|d|<=1e-6: 0
+rand 900 interval-mine: min -9.312e-06 max -5.301e-06 mean -6.177e-06  max|d| 9.312e-06; #|d|>1e-6: 900; #interval>mine+1e-9: 0
+   vs my N=1024: min -6.410e-06 max -2.610e-06  max|d| 6.410e-06  #|d|<=1e-6: 0
+   vs my N=4096: min -9.134e-06 max -5.174e-06  max|d| 9.134e-06  #|d|<=1e-6: 0
+   vs my N=16384: min -9.312e-06 max -5.301e-06  max|d| 9.312e-06  #|d|<=1e-6: 0
+all 1500 interval-mine: min -9.312e-06 max -5.301e-06 mean -6.285e-06  max|d| 9.312e-06; #|d|>1e-6: 1500; #interval>mine+1e-9: 0
+   vs my N=1024: min -6.410e-06 max -2.610e-06  max|d| 6.410e-06  #|d|<=1e-6: 0
+   vs my N=4096: min -9.134e-06 max -5.174e-06  max|d| 9.134e-06  #|d|<=1e-6: 0
+   vs my N=16384: min -9.312e-06 max -5.301e-06  max|d| 9.312e-06  #|d|<=1e-6: 0
+min my lb among cross leaves 0.8344160
