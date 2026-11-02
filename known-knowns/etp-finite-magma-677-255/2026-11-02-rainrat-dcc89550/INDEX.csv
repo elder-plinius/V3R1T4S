@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+etp-finite-magma-677-255,p2:Equation677=>Equation255,sorry-free Lean 4 proof under EveryLeftMulHasFixedPoint with two-sided separation (Sep7/Sep25/Sep55) from Issue #1517 LeftMulConjugacyClosed,unknown (no proof on finite graph; only Issue #1517 LeftMulConjugacyClosed previously proved),2026-11-02T19:55:56Z,object/Equation677.lean,dcc89550b0e5ce6d4e15f6e283a0401ccdaf9831289189929e67fa48cfebbe7f
