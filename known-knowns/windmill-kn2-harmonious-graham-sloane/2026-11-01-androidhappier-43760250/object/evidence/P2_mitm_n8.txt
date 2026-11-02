@@ -1,0 +1,7 @@
+n=8 q=56 sum_distinct_sets_containing_0=449472 distinct_masks=407352 solutions_ordered_pairs=0
+VERDICT n=8: NOT HARMONIOUS
+maxrss_kB 731816
+
+real	0m11.586s
+user	0m10.715s
+sys	0m0.869s
