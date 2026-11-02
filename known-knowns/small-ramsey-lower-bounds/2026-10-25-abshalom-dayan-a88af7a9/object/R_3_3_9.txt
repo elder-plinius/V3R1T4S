@@ -1,0 +1,5 @@
+# circulant 3-colouring of K_132 for R(3,3,9): colours 1 and 2 split the K5-free colour of Kuznetsov's (5,9) circulant on Z_132 (arXiv:1505.07186v5, Table 2); colour 3 is its K9-free colour, unchanged
+circulant 132 3
+1: 5 6 9 16 17 20 27 28 30 31 38 41 42
+2: 11 12 15 19 29 32 36 39 46 53 56 59 63 66
+3: 1 2 3 4 7 8 10 13 14 18 21 22 23 24 25 26 33 34 35 37 40 43 44 45 47 48 49 50 51 52 54 55 57 58 60 61 62 64 65
