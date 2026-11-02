@@ -1,0 +1,39 @@
+input <23,23,23> rank 6009
+
+[coordinate projection, 23^3 -> 22x23x23] best row: delete index 11 -> 5963 terms (46 vanish); vanishing counts over all rows: [24, 33, 34, 46]
+[coordinate projection, 23^3 -> 22x22x23] best pair: delete row 11 and column 11 -> 5917 terms (92 vanish)
+
+star vector e*: entry -9 at index 11, 1 elsewhere; e_0 = unit vector at index 0
+
+step 1, slice axis 0 (row index shared by A and C), e = e* on A, f = e_0 on C:
+  terms with U = e* x^T (killed on the A side): 264; with W = e_0 y^T (killed on the C side): 34; both: 0; total 298
+  after the slice: <22,23,23> rank 5711  (6009 - 298 = 5711)
+  2-reduction(s) (saved step1.json): removed 1 -> rank 5710
+
+[coordinate projection, 22x23x23:5710 -> 22x22x23] best column: delete index 11 -> 5675 terms (35 vanish); range of vanishing counts over all columns: (12, 35)
+
+step 2, slice axis 1 (column index of A = row index of B), e = e_0 on A, f = e* on B:
+  terms with U = x e_0^T (killed on the A side): 23; with V = e* y^T (killed on the B side): 263; both: 0; total 286
+  after the slice: <22,22,23> rank 5424  (5710 - 286 = 5424)
+  2-reduction(s) (saved step2.json): removed 1 -> rank 5423
+
+summary: 6009 -[slice 1 kills 298]-> 5711 -[2-reduction]-> 5710 -[slice 2 kills 286]-> 5424 -[2-reduction]-> 5423; total removed 586
+closed forms: step 1 removes (N^2+3N)/2 = 299 (measured 299); step 2 removes (N^2+2N-1)/2 = 287 (measured 287)
+        3.74 real         3.60 user         0.07 sys
+           362266624  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               24493  page reclaims
+                   1  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                   5  voluntary context switches
+                1482  involuntary context switches
+         64848703705  instructions retired
+         14340229123  cycles elapsed
+           348226280  peak memory footprint

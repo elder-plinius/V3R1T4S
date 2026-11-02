@@ -1,0 +1,46 @@
+== fmm_sota.json (sedoglavic/fmm_digest)
+createdAt 2026-10-19T20:46:33 entries 5456
+  22x23x23: rank 6009
+  23x22x23: no entry
+  23x23x22: no entry
+lowest formats containing the cell componentwise (restricting them gives the cell at the same or a lower rank): [(6009, (23, 23, 23)), (6396, (22, 23, 24)), (6488, (22, 24, 24)), (6488, (23, 23, 24)), (6488, (23, 24, 24))]
+
+== Lille index https://fmm.univ-lille.fr/ (the bank's status_source)
+rows parsed: 5426
+  row 22x23x23: rank 6009; text: ⟨22×23×23:6009⟩ 6009 11638 Proj([[23, 0], [0]], ⟨23×23×23:6009⟩ ) .5163258292 2.788181453 C 1
+  23x22x23: no row
+  23x23x22: no row
+
+== Lille per-format pages https://fmm.univ-lille.fr/<format>.html
+  22x23x23: HTTP/1.1 200 OK; rank 6501; definition: The algorithm ⟨22×23×23:6501⟩ could be constructed using the following decomposition: ⟨22×23×23:6501⟩ = ⟨11×12×12:990⟩ + ⟨11×12×12:990⟩ + ⟨11×12×12:990⟩ + TA(⟨11×11×11⟩, ⟨11×11×11⟩) + TA(⟨11×12×11⟩, ⟨11×11×12⟩).
+  23x22x23: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+  23x23x22: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+
+== matmulcatalog docs/catalog.json (Chatain Lacelle)
+schemes in the file: 11136
+  rank 5963  fields Q,R,C  lineage 23x23x23 ∖[11||]  (external_best_rank 6009 from fmm-lille)
+  rank 6437  fields Q,R,C  lineage 23x23x24^ABC->BCA ∖[11|23|]  (external_best_rank 6009 from fmm-lille)
+  rank 6442  fields Q,R,C  lineage R*[2x2x2^π([0, 1],[1, 0],[0, 1]); 11,11 | 11,12 | 11,12; pairs=[[3, 6]]]  (external_best_rank 6009 from fmm-lille)
+  rank 6476  fields Q,R,C  lineage 23x23x23 ↓[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22|0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22]  (external_best_rank 6009 from fmm-lille)
+  rank 6486  fields Q,R,C  lineage R[2x2x2; 10,12 | 11,12 | 11,12]  (external_best_rank 6009 from fmm-lille)
+
+== matmulcatalog generated/COVERAGE.md
+sections up to max-dimension 16 ; hits for the format in any order: 0
+
+== Perminov FastMatrixMultiplication
+  perminov_docs_ranks.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_docs_additions.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_README.md: hits 0; largest dimension in any NxMxP name 16
+  repository tree: 6865 paths, truncated False, largest dimension in any path 16; paths for the format: []
+
+== MerlijnW70/fmm-schemes
+  tree: 39 paths, truncated False, largest dimension 16; paths for the format: []
+
+== khoruzhii/lita schemes/ listing
+  20 files; formats: 13x13x13_r1379, 14x14x14_r1593, 15x15x15_r1977, 16x16x16_r2236, 17x17x17_r2723, 18x18x18_r3031, 19x19x19_r3633, 20x20x20_r3994, 21x21x21_r4723, 22x22x22_r5141, 23x23x23_r6009, 24x24x24_r6488, 25x25x25_r7507, 26x26x26_r8051, 27x27x27_r9233, 28x28x28_r9846, 29x29x29_r11203, 30x30x30_r11889, 31x31x31_r13433, 32x32x32_r14196
+  rectangular schemes: []
+
+== verdict
+lowest value for the format in any axis order, over the sources above: 5963 (matmulcatalog catalog.json (23x23x23 ∖[11||]))
+built rank 5710; margin below the lowest value 253
+built rank strictly below every value found: YES
