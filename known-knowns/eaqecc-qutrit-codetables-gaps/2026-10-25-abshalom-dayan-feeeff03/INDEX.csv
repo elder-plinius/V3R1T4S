@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+eaqecc-qutrit-codetables-gaps,"(n=24,k=4,c=10)",13,"[[24,4,12-19;10]] (d_lower 12)",2026-10-25T11:22:04Z,object/eaqecc_24_4_13_10.json,feeeff03749ecfd57a5b84b8778a2ffe2111723da17f31a3f197d02d048c1794
