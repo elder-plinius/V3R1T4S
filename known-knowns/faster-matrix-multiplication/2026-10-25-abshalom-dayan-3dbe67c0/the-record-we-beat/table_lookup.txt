@@ -1,0 +1,45 @@
+== fmm_sota.json (sedoglavic/fmm_digest)
+createdAt 2026-10-19T20:46:33 entries 5456
+  20x21x21: rank 4723
+  21x20x21: no entry
+  21x21x20: no entry
+lowest formats containing the cell componentwise (restricting them gives the cell at the same or a lower rank): [(4723, (21, 21, 21)), (5035, (20, 21, 22)), (5141, (20, 22, 22)), (5141, (21, 21, 22)), (5141, (21, 22, 22))]
+
+== Lille index https://fmm.univ-lille.fr/ (the bank's status_source)
+rows parsed: 5426
+  row 20x21x21: rank 4723; text: ⟨20×21×21:4723⟩ 4723 8820 Proj([[21, 0], [0]], ⟨21×21×21:4723⟩ ) .5354875283 2.793750248 C 1
+  21x20x21: no row
+  21x21x20: no row
+
+== Lille per-format pages https://fmm.univ-lille.fr/<format>.html
+  20x21x21: HTTP/1.1 200 OK; rank 4967; definition: The algorithm ⟨20×21×21:4967⟩ is serendipitous tensor product ( ⟨5×7×3:79⟩ - 5) ⊗ ⟨4×3×7:63⟩ + ⟨4×15×7:305⟩ .
+  21x20x21: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+  21x21x20: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+
+== matmulcatalog docs/catalog.json (Chatain Lacelle)
+schemes in the file: 11136
+  rank 4681  fields Q,R,C  lineage 21x21x21 ∖[10||]  (external_best_rank 4723 from fmm-lille)
+  rank 4967  fields Q,R,C  lineage 3x5x7→⟨5,3,7⟩ ⊗ˢ⟨4,7,3⟩  (external_best_rank 4723 from fmm-lille)
+  rank 4971  fields F3,Q,R,C  lineage 3x5x7→⟨5,3,7⟩ ⊗ˢ⟨4,7,3⟩  (external_best_rank 4723 from fmm-lille)
+  rank 4974  fields F3,Q,R,C  lineage 3x5x7→⟨5,3,7⟩ ⊗ˢ⟨4,7,3⟩  (external_best_rank 4723 from fmm-lille)
+
+== matmulcatalog generated/COVERAGE.md
+sections up to max-dimension 16 ; hits for the format in any order: 0
+
+== Perminov FastMatrixMultiplication
+  perminov_docs_ranks.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_docs_additions.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_README.md: hits 0; largest dimension in any NxMxP name 16
+  repository tree: 6865 paths, truncated False, largest dimension in any path 16; paths for the format: []
+
+== MerlijnW70/fmm-schemes
+  tree: 39 paths, truncated False, largest dimension 16; paths for the format: []
+
+== khoruzhii/lita schemes/ listing
+  20 files; formats: 13x13x13_r1379, 14x14x14_r1593, 15x15x15_r1977, 16x16x16_r2236, 17x17x17_r2723, 18x18x18_r3031, 19x19x19_r3633, 20x20x20_r3994, 21x21x21_r4723, 22x22x22_r5141, 23x23x23_r6009, 24x24x24_r6488, 25x25x25_r7507, 26x26x26_r8051, 27x27x27_r9233, 28x28x28_r9846, 29x29x29_r11203, 30x30x30_r11889, 31x31x31_r13433, 32x32x32_r14196
+  rectangular schemes: []
+
+== verdict
+lowest value for the format in any axis order, over the sources above: 4681 (matmulcatalog catalog.json (21x21x21 ∖[10||]))
+built rank 4471; margin below the lowest value 210
+built rank strictly below every value found: YES
