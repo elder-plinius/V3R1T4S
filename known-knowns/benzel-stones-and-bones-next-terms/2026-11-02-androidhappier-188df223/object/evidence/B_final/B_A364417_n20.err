@@ -1,0 +1,17 @@
+(20,37): cells 567 lines 37 bones 1482 stones 1024 window 58 Z 3 every 5
+pos 0/567 states 3
+pos 50/567 states 2099
+pos 100/567 states 64149
+pos 150/567 states 693085
+pos 200/567 states 6602231
+checkpoint pos 240 states 10180596
+pos 250/567 states 19582477
+checkpoint pos 265 states 15923655
+checkpoint pos 290 states 9894520
+pos 300/567 states 15323396
+pos 350/567 states 2099564
+pos 400/567 states 341752
+pos 450/567 states 56347
+pos 500/567 states 2652
+pos 550/567 states 45
+max states 50055349 overflow 0

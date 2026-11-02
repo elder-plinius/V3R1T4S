@@ -1,0 +1,11 @@
+a=20 b=37 cells=567 rows=37 tiles=2506 window=58 K=3 NL=4000
+t=0/567 states=3 checks=0 kills=0 undec=0
+t=25/567 states=338 checks=817 kills=153 undec=0
+t=50/567 states=3571 checks=11518 kills=3104 undec=0
+t=75/567 states=23504 checks=79529 kills=20664 undec=4
+t=100/567 states=62799 checks=526579 kills=212606 undec=22
+t=125/567 states=453570 checks=1995811 kills=680282 undec=602
+t=150/567 states=1294738 checks=7071746 kills=2050438 undec=3231
+t=175/567 states=5470984 checks=24002835 kills=6103011 undec=12200
+t=200/567 states=12051137 checks=73214111 kills=19657732 undec=57506
+checkpoint t=210 states=9147326

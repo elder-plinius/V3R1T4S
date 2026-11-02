@@ -1,0 +1,6 @@
+(11,18): cells 159 lines 18 bones 369 stones 265 window 30 Z 3 every 5
+pos 0/159 states 4
+pos 50/159 states 384
+pos 100/159 states 739
+pos 150/159 states 7
+max states 3348 overflow 0

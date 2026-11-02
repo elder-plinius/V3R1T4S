@@ -1,0 +1,10 @@
+(16,29): cells 357 lines 29 bones 900 stones 628 window 46 Z 3 every 5
+pos 0/357 states 3
+pos 50/357 states 2099
+pos 100/357 states 64149
+pos 150/357 states 351955
+pos 200/357 states 368305
+pos 250/357 states 23813
+pos 300/357 states 1893
+pos 350/357 states 6
+max states 1333007 overflow 0

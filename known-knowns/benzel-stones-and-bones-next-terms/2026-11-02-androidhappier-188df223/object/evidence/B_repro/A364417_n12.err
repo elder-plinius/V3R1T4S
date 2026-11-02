@@ -1,0 +1,6 @@
+(12,21): cells 195 lines 21 bones 462 stones 328 window 34 Z 3 every 5
+pos 0/195 states 3
+pos 50/195 states 2099
+pos 100/195 states 6346
+pos 150/195 states 681
+max states 21577 overflow 0
