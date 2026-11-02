@@ -1,0 +1,1 @@
+python-sat==1.9.dev17  # for code/check_fast.py, code/check_rot.py and code/mcheck.py
