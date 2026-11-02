@@ -1,0 +1,45 @@
+== fmm_sota.json (sedoglavic/fmm_digest)
+createdAt 2026-10-19T20:46:33 entries 5456
+  20x20x21: rank 4394
+  20x21x20: no entry
+  21x20x20: no entry
+lowest formats containing the cell componentwise (restricting them gives the cell at the same or a lower rank): [(4604, (20, 20, 22)), (4723, (20, 21, 21)), (4723, (21, 21, 21)), (4884, (20, 20, 23)), (5018, (20, 20, 24))]
+
+== Lille index https://fmm.univ-lille.fr/ (the bank's status_source)
+rows parsed: 5426
+  row 20x20x21: rank 4394; text: ⟨20×20×21:4394⟩ 4394 8400 ⟨20×20×1:400⟩ + ⟨20×20×20:3994⟩ .5230952381 2.784862993 C 1
+  20x21x20: no row
+  21x20x20: no row
+
+== Lille per-format pages https://fmm.univ-lille.fr/<format>.html
+  20x20x21: HTTP/1.1 200 OK; rank 4740; definition: The algorithm ⟨20×20×21:4740⟩ could be constructed using the following decomposition: ⟨20×20×21:4740⟩ = ⟨20×20×1:400⟩ + ⟨20×20×20:4340⟩ .
+  20x21x20: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+  21x20x20: HTTP/1.1 404 Not Found (the catalogue has pages for sorted formats only)
+
+== matmulcatalog docs/catalog.json (Chatain Lacelle)
+schemes in the file: 11136
+  rank 4394  fields Q,R,C  lineage naive-20x20x1 +p 20x20x20  (external_best_rank 4394 from fmm-lille)
+  rank 4395  fields Q,R,C  lineage naive-20x20x1 +p 20x20x20  (external_best_rank 4394 from fmm-lille)
+  rank 4639  fields Q,R,C  lineage 21x21x21 ∖[10|10|]  (external_best_rank 4394 from fmm-lille)
+  rank 4740  fields Q,R,C  lineage naive-20x20x1 +p DIS09Lemma4(n=20)  (external_best_rank 4394 from fmm-lille)
+
+== matmulcatalog generated/COVERAGE.md
+sections up to max-dimension 16 ; hits for the format in any order: 0
+
+== Perminov FastMatrixMultiplication
+  perminov_docs_ranks.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_docs_additions.md: hits 0; largest dimension in any NxMxP name 16
+  perminov_README.md: hits 0; largest dimension in any NxMxP name 16
+  repository tree: 6865 paths, truncated False, largest dimension in any path 16; paths for the format: []
+
+== MerlijnW70/fmm-schemes
+  tree: 39 paths, truncated False, largest dimension 16; paths for the format: []
+
+== khoruzhii/lita schemes/ listing
+  20 files; formats: 13x13x13_r1379, 14x14x14_r1593, 15x15x15_r1977, 16x16x16_r2236, 17x17x17_r2723, 18x18x18_r3031, 19x19x19_r3633, 20x20x20_r3994, 21x21x21_r4723, 22x22x22_r5141, 23x23x23_r6009, 24x24x24_r6488, 25x25x25_r7507, 26x26x26_r8051, 27x27x27_r9233, 28x28x28_r9846, 29x29x29_r11203, 30x30x30_r11889, 31x31x31_r13433, 32x32x32_r14196
+  rectangular schemes: []
+
+== verdict
+lowest value for the format in any axis order, over the sources above: 4394 (fmm_sota.json 20x20x21)
+built rank 4230; margin below the lowest value 164
+built rank strictly below every value found: YES
