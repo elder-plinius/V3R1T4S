@@ -1,0 +1,9 @@
+n=1 graphs=1 maxperiod=1 witness_graph6=@ witness_state=0
+n=2 graphs=2 maxperiod=1 witness_graph6=A? witness_state=0
+n=3 graphs=4 maxperiod=1 witness_graph6=B? witness_state=0
+n=4 graphs=11 maxperiod=1 witness_graph6=C? witness_state=0
+n=5 graphs=34 maxperiod=2 witness_graph6=D]{ witness_state=19
+n=6 graphs=156 maxperiod=4 witness_graph6=E]yw witness_state=55
+n=7 graphs=1044 maxperiod=8 witness_graph6=FE~vw witness_state=7
+n=8 graphs=12346 maxperiod=14 witness_graph6=GEnvZ{ witness_state=104
+n=9 graphs=274668 maxperiod=27 witness_graph6=HCZJtzm witness_state=47

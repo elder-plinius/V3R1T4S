@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+graph-automata-max-period,"A384209(10), maximum Game of Life period over simple graphs on 10 vertices",46,"absent (DATA ends at a(9) = 27)",2026-11-02T09:43:11Z,object/VALUE.txt,1f7c477e32f0448ba5fda0a9361b2392e6f3f4421155e632364c7166b61015bb

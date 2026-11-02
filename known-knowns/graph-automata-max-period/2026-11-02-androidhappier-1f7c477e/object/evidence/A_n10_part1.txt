@@ -1,0 +1,36 @@
+n=10 graphs=1382073 maxperiod=46 witness_graph6=I?zUvYujw witness_state=62
+hist 1 438128
+hist 2 630691
+hist 3 91090
+hist 4 107805
+hist 5 24619
+hist 6 42077
+hist 7 16583
+hist 8 13253
+hist 9 6739
+hist 10 4781
+hist 11 1934
+hist 12 1340
+hist 13 750
+hist 14 870
+hist 15 414
+hist 16 350
+hist 17 184
+hist 18 141
+hist 19 89
+hist 20 93
+hist 21 31
+hist 22 42
+hist 23 13
+hist 24 15
+hist 25 8
+hist 26 5
+hist 27 13
+hist 28 3
+hist 29 3
+hist 30 5
+hist 31 1
+hist 35 1
+hist 38 1
+hist 46 1
+exit 0
