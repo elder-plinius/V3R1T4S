@@ -1,6 +1,8 @@
 """Standalone checker for a qutrit EAQECC [[n,k,d;c]]_3 given by its stabilizer matrix S over GF(3) (Python standard
-library; the exhaustive distance enumeration is done by enum_min.c, a small C program, because 3^22 vectors are far
-too many for pure Python).
+library). In this package only its `prepare` mode is used (by verify-it-yourself/run_checks.sh): it computes s, c and
+k from S and checks the object's GF(9) description; it does no distance search. Its `verdict` mode expects the output of
+enum_min.c (not shipped), an exhaustive enumerator of all 3^dim_perp vectors of span(S)^perp, and is not used here. The
+shipped distance checks are subset_ea.c, witness.py and verdict.py.
 
 Definition checked (bank entry eaqecc-qutrit-codetables-gaps): with s independent generators (rows of S, (x|z),
 2n columns, symplectic form <(x|z),(x'|z')> = x.z' - z.x'), c = rank(S J S^T)/2 and k = n - s + c; d is the minimum
@@ -11,9 +13,10 @@ Also checks the object's GF(9) description: D9 is Hermitian-orthogonal to G9 and
 GF(9) = GF(3)[w]/(w^2 - w - 1), a + b*w stored as a + 3b, conj(x) = x^3, phi(a + b*w) = (a | b) (rows r and w*r).
 
 Usage: check_eaqecc.py prepare object.json basis.txt   (prints s, c, k; writes the basis of span(S)^perp, isotropic
-                                                        part first, for enum_min)
-       check_eaqecc.py verdict object.json results.txt  (results.txt = the prepare JSON line, then one enum_min
-                                                        line per part; compares with the claimed n, k, c, d)"""
+                                                        part first, a file run_checks.sh does not use)
+       check_eaqecc.py verdict object.json results.txt  (not used in this package; results.txt = the prepare JSON
+                                                        line, then one enum_min line per part; compares with the
+                                                        claimed n, k, c, d)"""
 import json, sys
 P = 3
 
