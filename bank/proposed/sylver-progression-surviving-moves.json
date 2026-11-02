@@ -1,0 +1,27 @@
+{
+  "id": "sylver-progression-surviving-moves",
+  "name": "Sylver Coinage: resolve the interior Progression Hypothesis",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "pure thought (HEURISTIC research profile; no completion-time or memory estimate has been measured)",
+  "statement": "KNOWN: George Sicherman's Progression Hypothesis page states a formula for moves preserving the largest legal number in arithmetic-progression positions. Sylver Coinage, invented by John Horton Conway, alternates positive integer choices not expressible as nonnegative integer combinations of earlier choices; choosing 1 loses. Fix integers a>3, d>1, gcd(a,d)=1 and 1<=s<a-1. Put S={a+i*d:0<=i<=s}; membership in <S> means representability by nonnegative integer combinations, including zero. Let t be the largest nonnegative integer outside <S> (the Frobenius number). The source asserts that the non-suicidal legal choices x which leave t legal are exactly {t-k*d:1<=k<=((a-2) mod s)}. Here a non-suicidal legal choice means x>1 and x not in <S>; leaving t legal means t not in <S union {x}>. This selects the interior branch only, excluding the separate full-progression branch. This concerns preservation of a legal move, not a characterization of strategically winning moves; Roberts supplies the progression Frobenius framework and Sicherman formulates this hypothesis.",
+  "success_criterion": "CONFIRMED: prove the stated equality for every admissible (a,d,s) in Lean 4, or give one admissible triple for which the equality fails, accompanied by exhaustive independently checked representability evidence. A different branch of the hypothesis does not satisfy this target.",
+  "partial_wins": [],
+  "verification_method": "For a proof, formalize generated additive monoids, establish existence and maximality of t, and prove equality of the two explicitly defined finite sets. For a counterexample, include S, t and full representability bitsets through t+a. Verify t is absent and each integer t+1 through t+a is present; since a is a generator this proves all larger integers are present. For every integer x from 2 through t, recompute representability through t after adjoining x and compare the complete surviving set to the proposed formula. Reject nonpositive predicted elements rather than silently dropping them. Two implementations, using coin-change DP and shortest representable residues modulo a, must agree. Calibrate against the source examples S={6,13,20,27} with t=41 and survivor 34, and S={8,11,14,17,20,23,26} with t=29 and no survivors. Include complete source, reproducible build/check commands, and actual output. No sorry, new axioms or assumed numerical game answers are allowed; inspect theorem axioms and permit only propext, Quot.sound and Classical.choice. An independent reviewer must compare formal definitions to the stated object. All eventual claims need three fresh-context skeptics and the check_run gate. Certificates exceeding 1 MB remain outside git with accessible bytes, SHA-256 and a deterministic generator. Before hunting and claiming, check current source status and newer literature; already published results do not count. Calibration is prerequisite evidence, never a partial win.",
+  "primary_sources": [
+    "https://sicherman.net/sylver/progression.html",
+    "https://www.sicherman.net/sylver/index.html"
+  ],
+  "status_source": "https://sicherman.net/sylver/progression.html",
+  "status_checked": "2026-11-02",
+  "disclosure": "open",
+  "angles": [
+    "HEURISTIC: use Apéry sets (least representable value in each residue modulo a) to turn the formula into explicit finite inequalities."
+  ],
+  "pitfalls": [
+    "Source-open status is an observation of the cited page, not a proof of universal novelty.",
+    "Finite agreement or a fitted trend is not a proof of an assertion over all parameters.",
+    "This target is distinct from the earlier game proposals; no alternate game, parameter family or theorem may be substituted."
+  ]
+}
