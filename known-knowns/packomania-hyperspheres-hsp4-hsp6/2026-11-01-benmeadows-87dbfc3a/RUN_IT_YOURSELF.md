@@ -1,0 +1,24 @@
+# Run it yourself
+
+## Verify (standard library only)
+
+    sh verify-it-yourself/run_checks.sh
+
+Expected output (exact):
+
+```
+object sha256 = 87dbfc3abb5d7b1ebf915eb0dc8fc981c328ea801cd3e1f0ba587e29a225a963
+N = 136
+half min pair distance = 0.22622027769783905027963403197716063816105663529177 (pair 21, 119)
+1 - max norm = 0.22622027641762341826997812036415868264356258381056
+r* = 0.22622027641762341826997812036415868264356258381056
+table = 0.226201706521
+gain = 0.00001856989662341826997812036415868264356258381056
+gain >= 1e-10: True
+PASS
+```
+
+## Rebuild the object (optional)
+
+See how-we-built-it/COMMANDS.md and how-we-built-it/requirements.txt. The search is heuristic and seeded from the
+clock, so a rerun finds a different packing; the checker above is what matters.
