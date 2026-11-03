@@ -1,0 +1,12 @@
+1 1 DATA | ordered 1 | negative(no mult division) 1 same
+2 1 DATA | ordered 1 | negative(no mult division) 1 same
+3 1 DATA | ordered 2 | negative(no mult division) 2 differs
+4 2 DATA | ordered 5 | negative(no mult division) 6 differs
+5 3 DATA | ordered 14 | negative(no mult division) 24 differs
+6 4 DATA | ordered 42 | negative(no mult division) 120 differs
+7 6 DATA | ordered 132 | negative(no mult division) 720 differs
+8 12 DATA | ordered 429 | negative(no mult division) 5040 differs
+9 24 DATA | ordered 1430 | negative(no mult division) 40320 differs
+10 40 DATA | ordered 4862 | negative(no mult division) 362880 differs
+11 60 DATA | ordered 16796 | negative(no mult division) 3628800 differs
+12 120 DATA | ordered 58786 | negative(no mult division) 39916800 differs
