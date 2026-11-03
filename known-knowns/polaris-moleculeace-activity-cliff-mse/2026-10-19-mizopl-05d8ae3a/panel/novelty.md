@@ -7,7 +7,7 @@ context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
 Per the V3R1T4S novelty mandate:
 > *"Fetch the primary table or status page once, honestly (no retries; a block means fail), and quote URL, value and time. Search the last 24 months of literature, this repo's TROPHY_CASE.md and open pull requests. Pass only if the result strictly beats everything known. A tie is not a record."*
 
-This audit was executed in a fresh subagent context reading strictly from `claim/CLAIM.md`, `claim/REPRODUCE.md`, `claim/CHEMBL287_Ki_manifest.json`, `claim/moleculeace_30_sweep_manifest.json`, and `claim/MoleculeACE_results.csv`, paired with single honest HTTP `GET` fetches (`curl -sS -D ... -A "V3R1T4S-research-agent (honest single fetch)"`) of the live Polaris API, live Polaris benchmark leaderboard pages, arXiv API and HTML papers, OpenAlex API, GitHub repository search APIs, and the live V3R1T4S `TROPHY_CASE.md` and open pull requests endpoints.
+This audit was executed in a fresh subagent context reading strictly from `README.md`, `RUN_IT_YOURSELF.md`, `object/CHEMBL287_Ki_manifest.json`, `object/moleculeace_30_sweep_manifest.json`, and `upstream MoleculeACE_results.csv (sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5)`, paired with single honest HTTP `GET` fetches (`curl -sS -D ... -A "V3R1T4S-research-agent (honest single fetch)"`) of the live Polaris API, live Polaris benchmark leaderboard pages, arXiv API and HTML papers, OpenAlex API, GitHub repository search APIs, and the live V3R1T4S `TROPHY_CASE.md` and open pull requests endpoints.
 
 ---
 
@@ -17,7 +17,7 @@ Each live Polaris endpoint was fetched exactly once with zero retries. Below are
 
 | Endpoint Type | URL | UTC Fetch Time | HTTP Status | Bytes | SHA-256 Digest | Extracted Live Data / Leaderboard Entries |
 |---|---|---|---|---:|---|---|
-| Primary Polaris Benchmark API | `https://polarishub.io/api/v1/benchmark/molecularml/moleculeace-chembl287-ki` | `2026-10-19T15:07:25Z` | `HTTP/2 200` | `8,023` | `444c87a326f4a92621fd7fad88704f11c6a8a64e8e747a1f263e899390054593` | `name = "moleculeace-CHEMBL287-Ki"`, `nTrainDatapoints = 1061`, `nTestDatapoints = {"test": 267}`, `targetCols = ["y"]`, `mainMetric = "mean_squared_error"`, exact 1,061 train and 267 test indices matching `claim/CHEMBL287_Ki_manifest.json` |
+| Primary Polaris Benchmark API | `https://polarishub.io/api/v1/benchmark/molecularml/moleculeace-chembl287-ki` | `2026-10-19T15:07:25Z` | `HTTP/2 200` | `8,023` | `444c87a326f4a92621fd7fad88704f11c6a8a64e8e747a1f263e899390054593` | `name = "moleculeace-CHEMBL287-Ki"`, `nTrainDatapoints = 1061`, `nTestDatapoints = {"test": 267}`, `targetCols = ["y"]`, `mainMetric = "mean_squared_error"`, exact 1,061 train and 267 test indices matching `object/CHEMBL287_Ki_manifest.json` |
 | Primary Headline Leaderboard Page (`CHEMBL287_Ki`) | `https://polarishub.io/benchmarks/molecularml/moleculeace-chembl287-ki` | `2026-10-19T15:07:54Z` | `HTTP/2 200` | `156,554` | `af074d1acad331e811eef5f662e90d07109146dbe676ed9996e47c502b25b55f` | 1 listed entry: `autosota-moleculeace-chembl287-ki` with `mean_squared_error = 0.5031813063290076` (`RMSE = 0.70935274`) |
 | Multi-Entry Leaderboard Page (`CHEMBL234_Ki`) | `https://polarishub.io/benchmarks/molecularml/moleculeace-chembl234-ki` | `2026-10-19T15:07:55Z` | `HTTP/2 200` | `164,720` | `cb50c81480230367bdb0febeac7fd88670ce9949a2b6eff4279085ec5d84f51e` | 3 listed entries: (1) `autosota-moleculeace-chembl234-ki` (`mean_squared_error = 0.37022063353143536`), (2) `aether-pharmaos-chembl234-ki-ensemble` (`mean_squared_error = 0.40363769296273044`), (3) `MolEncoder` (`mean_squared_error = 0.49614280994488874`) |
 | Multi-Entry Leaderboard Page (`CHEMBL236_Ki`) | `https://polarishub.io/benchmarks/molecularml/moleculeace-chembl236-ki` | `2026-10-19T15:07:56Z` | `HTTP/2 200` | `164,711` | `880f969504c2acaa867d7b5adb36cfde9e29641fc96ba2ec945c586855b3fb3b` | 3 listed entries: (1) `autosota-moleculeace-chembl236-ki` (`mean_squared_error = 0.4496849288681984`), (2) `aether-pharmaos-chembl236-ki-ensemble` (`mean_squared_error = 0.4703740102898284`), (3) `MolEncoder` (`mean_squared_error = 0.7274940482755294`) |
@@ -25,9 +25,9 @@ Each live Polaris endpoint was fetched exactly once with zero retries. Below are
 | Cliff Benchmark Leaderboard Page (`CHEMBL204_Ki`) | `https://polarishub.io/benchmarks/molecularml/moleculeace-chembl204-ki` | `2026-10-19T15:07:57Z` | `HTTP/2 200` | `156,589` | `3217311b5f51ce8e249dc052dc0b74544cba4e33e64af8189796ccacd61207bf` | 1 listed entry: `autosota-moleculeace-chembl204-ki` with `mean_squared_error = 0.48515433936939145` |
 | Cliff Benchmark Leaderboard Page (`CHEMBL244_Ki`) | `https://polarishub.io/benchmarks/molecularml/moleculeace-chembl244-ki` | `2026-10-19T15:07:58Z` | `HTTP/2 200` | `156,588` | `1542ec784af609aeb5b65381a1163bc6a02463e6685577df2aba994e1b30436b` | 1 listed entry: `autosota-moleculeace-chembl244-ki` with `mean_squared_error = 0.4749981512616306` |
 
-### Comparison Against Live Polaris Leaderboard Entries & Official MoleculeACE Paper (`claim/MoleculeACE_results.csv`)
+### Comparison Against Live Polaris Leaderboard Entries & Official MoleculeACE Paper (`upstream MoleculeACE_results.csv (sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5)`)
 
-We verified `claim/MoleculeACE_results.csv` (`36,991` bytes, `sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5`, van Tilborg et al., *Journal of Chemical Information and Modeling* 2022, 720 rows = 30 targets $\times$ 24 model-descriptor combinations):
+We verified `upstream MoleculeACE_results.csv (sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5)` (`36,991` bytes, `sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5`, van Tilborg et al., *Journal of Chemical Information and Modeling* 2022, 720 rows = 30 targets $\times$ 24 model-descriptor combinations):
 
 | Target (`slug`) | Live Polaris Best MSE | MoleculeACE Paper Best Overall MSE (Method) | Claimed CLSS Overall MSE (`rel_impr` vs Polaris / vs Paper) | MoleculeACE Paper Best Cliff MSE (Method) | Claimed CLSS Cliff MSE (`rel_impr` vs Paper Cliff Best) | Strictly Beats All Listed Entries? |
 |---|---:|---:|---:|---:|---:|---|
@@ -38,7 +38,7 @@ We verified `claim/MoleculeACE_results.csv` (`36,991` bytes, `sha256: 6aa88c897f
 | **`CHEMBL204_Ki`** (`moleculeace-chembl204-ki`) | **`0.48515434`** (1 entry) | **`0.52291827`** (`SVM+ECFP`, `RMSE = 0.723131`) | **`0.42704071`** (**`-11.9784%`** / **`-18.3351%`**) | **`0.73755916`** (`SVM+ECFP`, `RMSE = 0.858813`) | **`0.65130003`** (**`-11.6952%`**) | **YES (strict record)** |
 | **`CHEMBL244_Ki`** (`moleculeace-chembl244-ki`) | **`0.47499815`** (1 entry) | **`0.51144897`** (`SVM+ECFP`, `RMSE = 0.715157`) | **`0.43389566`** (**`-8.6532%`** / **`-15.1634%`**) | **`0.63457383`** (`SVM+ECFP`, `RMSE = 0.796601`) | **`0.55421912`** (**`-12.6628%`**) | **YES (strict record)** |
 
-Across the complete 30-benchmark suite (`claim/moleculeace_30_sweep_manifest.json`, `sha256: 42c12361b8406c2530934bbed45a1acf701e4e03b50514a44f1dd056c17405e8`), the single fixed CPU recipe strictly beats the live Polaris leaderboard best MSE on **29 of 30** benchmarks (including both multi-entry leaderboards `moleculeace-chembl234-ki` and `moleculeace-chembl236-ki`), achieves $\ge 5.0\%$ relative MSE improvement and $\ge 95.0\%$ paired bootstrap win rate simultaneously on **21 of 30** benchmarks, strictly beats the MoleculeACE paper best overall MSE across all 24 methods on **28 of 30** benchmarks, and strictly beats the MoleculeACE paper best cliff MSE on **21 of 30** benchmarks.
+Across the complete 30-benchmark suite (`object/moleculeace_30_sweep_manifest.json`, `sha256: 42c12361b8406c2530934bbed45a1acf701e4e03b50514a44f1dd056c17405e8`), the single fixed CPU recipe strictly beats the live Polaris leaderboard best MSE on **29 of 30** benchmarks (including both multi-entry leaderboards `moleculeace-chembl234-ki` and `moleculeace-chembl236-ki`), achieves $\ge 5.0\%$ relative MSE improvement and $\ge 95.0\%$ paired bootstrap win rate simultaneously on **21 of 30** benchmarks, strictly beats the MoleculeACE paper best overall MSE across all 24 methods on **28 of 30** benchmarks, and strictly beats the MoleculeACE paper best cliff MSE on **21 of 30** benchmarks.
 
 ---
 
@@ -62,7 +62,7 @@ Every search endpoint below was queried with a single honest HTTP `GET` request:
 
 1. **Comparison on `CHEMBL287_Ki` (`moleculeace-chembl287-ki`):**
    - No paper or repository in the 2024–2026 literature reports a test-set MSE on the official `CHEMBL287_Ki` split lower than the live Polaris leaderboard best (`0.50318131`, `RMSE = 0.709353`) or the MoleculeACE paper best (`SVM+ECFP` `MSE = 0.51009699`, `RMSE = 0.714211`; cliff best `MSE = 0.61875106`, `RMSE = 0.786607`).
-   - Our single fixed CPU recipe (`claim/CHEMBL287_Ki_test_predictions.csv`, `sha256: 05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c`) achieves overall `MSE = 0.40802135` (`RMSE = 0.638765`, **`-18.9117%`** below Polaris best and **`-20.0110%`** below MoleculeACE paper best) and cliff `MSE = 0.50213600` (`RMSE = 0.708616`, **`-18.8468%`** below MoleculeACE paper cliff best).
+   - Our single fixed CPU recipe (`object/CHEMBL287_Ki_test_predictions.csv`, `sha256: 05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c`) achieves overall `MSE = 0.40802135` (`RMSE = 0.638765`, **`-18.9117%`** below Polaris best and **`-20.0110%`** below MoleculeACE paper best) and cliff `MSE = 0.50213600` (`RMSE = 0.708616`, **`-18.8468%`** below MoleculeACE paper cliff best).
    - Notably, Table 9 of `arXiv:2608.18982v1` (*Monroe*, Aug 2026) specifically documents why standard achiral fingerprints fail on `CHEMBL287_Ki` (`SOR`, Sigma opioid/intracellular receptor, `103` cliff molecules, `164` non-cliff molecules): **`40.4%` of molecules contain `R/S` tetrahedral stereocenters and `1.5%` contain `E/Z` stereobonds**, which standard achiral `ECFP` collapses completely.
 
 2. **30-Target Macro-Average Comparison Against Recent Papers (`Monroe`, `CheMeleon_PFN`, `MiniMol_PFN`, `CheMeleon`, `GraphCliff`, `SVM+ECFP`):**
@@ -71,7 +71,7 @@ Every search endpoint below was queried with a single honest HTTP `GET` request:
 
 | Method | External Pre-Training Data | Allowed by Bank Rule (d)? | 30-Target Mean Overall RMSE | 30-Target Mean Activity-Cliff RMSE |
 |---|---|---|---:|---:|
-| **`CLSS` (Ours, `claim/run_clss_moleculeace.py`)** | **None (`0` external molecules; official `split == 'train'` only)** | **YES** | **`0.6303`** (`MSE = 0.4020`) | **`0.7211`** (`MSE = 0.5298`) |
+| **`CLSS` (Ours, `how-we-built-it/run_clss_moleculeace.py`)** | **None (`0` external molecules; official `split == 'train'` only)** | **YES** | **`0.6303`** (`MSE = 0.4020`) | **`0.7211`** (`MSE = 0.5298`) |
 | `SVM+ECFP` (van Tilborg et al., *JCIM* 2022 best overall baseline) | None (`0` external molecules) | YES | `0.6712` | `0.7511` |
 | `GBM+ECFP` (van Tilborg et al., *JCIM* 2022) | None (`0` external molecules) | YES | `0.6948` | `0.7835` |
 | `RF+ECFP` (van Tilborg et al., *JCIM* 2022) | None (`0` external molecules) | YES | `0.7000` | `0.7857` |

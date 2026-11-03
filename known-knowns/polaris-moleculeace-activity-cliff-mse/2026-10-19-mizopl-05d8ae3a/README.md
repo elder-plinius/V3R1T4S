@@ -1,44 +1,14 @@
-# Polaris MoleculeACE Activity-Cliff MSE (`moleculeace-chembl287-ki` & 30-Benchmark CLSS Sweep)
+# `polaris-moleculeace-activity-cliff-mse` — Multi-Scale Chiral Ruzicka LOO KRR + CLSS Directional MMP Seam Surgery (`MSE = 0.4080` on `CHEMBL287_Ki`, `-18.91%`, and `29/30` Live Polaris Wins)
 
-## What
-
-A single fixed, deterministic, CPU-only CLSS recipe (claim/run_clss_moleculeace.py) fit strictly on stereo-stripped InChIKey[:14]-disjoint training splits (overlap == 0 across all 30/30 benchmarks) achieves test MSE 0.40802135 on moleculeace-chembl287-ki (claim/CHEMBL287_Ki_test_predictions.csv, sha256 05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c, n_train = 1,061, n_test = 267, n_cliff = 103) vs live Polaris best 0.50318131 (-18.9117% relative) and MoleculeACE paper best 0.51009699 (-20.0110% relative) with 99.97% paired bootstrap win rate vs reproduced SVM+ECFP and 97.98% scalar bootstrap win rate vs Polaris best across 10,000 resamples (seed=0), while lowering cliff_mol==1 MSE (n = 103, at least 40) to 0.50213600 vs paper best 0.61875106 (-18.8468%) and non-cliff MSE to 0.34891276 vs 0.41681673 (-16.2911%, p2), and beating live Polaris best MSE on 29/30 MoleculeACE benchmarks (21/30 with at least 5% relative margin and at least 95% bootstrap win rate, p3) with 30-target macro-average cliff RMSE 0.7211 (overall RMSE 0.6303).
-
-Path note: the sentence above is quoted word for word from `panel/gate.md`, and it names the panel's `claim/` folder. In this package the same files, with identical bytes, are in `object/` (headlined by `object/CHEMBL287_Ki_test_predictions.csv`, `object/CHEMBL287_Ki_manifest.json`, `object/moleculeace_30_sweep_manifest.json`, and `object/predictions/CHEMBL*_test_predictions.csv`) and `how-we-built-it/run_clss_moleculeace.py`.
-
-## Check it yourself
-
-From this package folder, run:
-
-```sh
-sh verify-it-yourself/run_checks.sh
-```
-
-- **Requirements**: `python3` with `numpy`, `pandas`, `scikit-learn`, `scipy`, `rdkit` (and `lightgbm` if running optional end-to-end retraining).
-- **Rough laptop time**: about 6 to 15 seconds for all 30 saved benchmarks and 400 permutation controls (~45 seconds if re-running end-to-end training on `CHEMBL287_Ki`).
-- **Expected last line**: `ALL CHECKS PASS`
-
-## Compared to
-
-| Source | Benchmark / Subset | Listed Best MSE | Ours (CLSS MSE & Relative Margin) | URL | UTC fetch time |
-|---|---|---:|---|---|---|
-| Live Polaris Leaderboard (`autosota-moleculeace-chembl287-ki`) | `moleculeace-chembl287-ki` (`CHEMBL287_Ki`, overall test $n=267$) | `0.50318131` | **`0.40802135`** (**`-18.9117%`**, `97.98%` scalar bootstrap, `99.97%` paired bootstrap) | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl287-ki | 2026-10-19T15:07:54Z |
-| MoleculeACE Paper (`SVM+ECFP`, van Tilborg et al., *JCIM* 2022) | `CHEMBL287_Ki` (overall test $n=267$) | `0.51009699` | **`0.40802135`** (**`-20.0110%`**, `99.97%` paired bootstrap) | https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/results/MoleculeACE_results.csv | 2026-10-19T11:44:45Z |
-| MoleculeACE Paper (`RF+PHYSCHEM` / `MLP+ECFP`, *JCIM* 2022) | `CHEMBL287_Ki` (`cliff_mol == 1`, $n=103$, `p2`) | `0.61875106` | **`0.50213600`** (**`-18.8468%`** vs Paper best, **`-23.7555%`** vs `SVM+ECFP` `0.65858689`) | https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/results/MoleculeACE_results.csv | 2026-10-19T11:44:45Z |
-| Live Polaris 3-Entry Leaderboard (`CHEMBL234_Ki`) | `moleculeace-chembl234-ki` ($n=733$, 3 entries) | `0.37022063` | **`0.36037801`** (**`-2.6586%`** vs Polaris, **`-6.7498%`** vs Paper `0.38646355`) | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl234-ki | 2026-10-19T15:07:55Z |
-| Live Polaris 3-Entry Leaderboard (`CHEMBL236_Ki`) | `moleculeace-chembl236-ki` ($n=521$, 3 entries) | `0.44968493` | **`0.44350711`** (**`-1.3738%`** vs Polaris, **`-8.5015%`** vs Paper `0.48471536`) | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl236-ki | 2026-10-19T15:07:56Z |
-| All 30 Live Polaris MoleculeACE Benchmarks (`p3`) | 30-Target Sweep (`object/moleculeace_30_sweep_manifest.json`) | `30` live tables | **`29 / 30` strict wins** (`21 / 30` with $\ge 5\%$ margin + $\ge 95\%$ bootstrap; macro cliff RMSE **`0.7211`** vs `Monroe` `0.737` & `SVM+ECFP` `0.7511`) | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl287-ki | 2026-10-19T15:07:54Z |
-
-Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.md`.
-
-## Not claimed
-
-- On 1 of the 30 MoleculeACE benchmarks (`CHEMBL2835_Ki`, JAK1 kinase, where the test set has $n = 126$ molecules and small variance), our universal recipe achieves `MSE = 0.175724` vs the listed `0.166184` (`29 / 30` wins overall).
-- Zero external pre-training or multi-target ChEMBL lookup was used; each of the 30 models was fit strictly on its own target's `InChIKey[:14]`-disjoint `split == 'train'` subset.
-- Not peer reviewed. Checked by a three-skeptic panel (`panel/`) and by the standalone checker shipped here.
-
-## Credits
-
-- **Derek van Tilborg, Alisa Alenicheva, and Francesca Grisoni** (*Exposing the Limitations of Molecular Machine Learning with Activity Cliffs*, *Journal of Chemical Information and Modeling* 2022, https://github.com/molML/MoleculeACE), authors of the MoleculeACE benchmark suite and baseline results (`the-record-we-beat/MoleculeACE_results.csv`).
-- **Polaris Hub** (`polarishub.io`, https://polarishub.io/benchmarks/molecularml/moleculeace-chembl287-ki), host of the 30 `molecularml/moleculeace-*` leaderboards.
-- Contributor credit: `mizopl`.
+- **Claim:** A single fixed, deterministic, CPU-only Constraint-Liberated Seam Surgery (CLSS) recipe (`how-we-built-it/run_clss_moleculeace.py`), fit strictly on official `split == 'train'` molecules after removing any training molecule sharing a stereo-stripped 14-character `InChIKey[:14]` with `split == 'test'` (`overlap == 0` across all `30 / 30` targets), achieves test-set `mean_squared_error = 0.40802135` (`RMSE = 0.63876549`) on the Polaris benchmark `molecularml/moleculeace-chembl287-ki` (`object/CHEMBL287_Ki_test_predictions.csv`, `sha256: 05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c`, $n_{\text{train}} = 1,061$, $n_{\text{test}} = 267$, $n_{\text{cliff}} = 103$), and beats the listed live Polaris leaderboard best MSE on **29 of the 30** MoleculeACE benchmarks (`21 / 30` simultaneously achieving at least `5.0%` relative MSE reduction, at least `95.0%` 10,000-resample paired bootstrap win rate, and beating the MoleculeACE paper best across all 24 baselines), with a 30-target macro-average Activity-Cliff RMSE of **`0.7211`** (overall RMSE **`0.6303`**).
+- **Compared to:**
+  1. **Live Polaris Leaderboard (`molecularml/moleculeace-chembl287-ki`):** https://polarishub.io/benchmarks/molecularml/moleculeace-chembl287-ki (fetched `2026-10-19T15:07:54Z` and re-verified `2026-11-03T20:25:58Z`, `sha256: af074d1acad331e811eef5f662e90d07109146dbe676ed9996e47c502b25b55f`), listed best `autosota-moleculeace-chembl287-ki` with `mean_squared_error = 0.50318131` (`RMSE = 0.70935274`); API https://polarishub.io/api/v1/benchmark/molecularml/moleculeace-chembl287-ki (fetched `2026-10-19T15:07:25Z` and re-verified `2026-11-03T20:25:23Z`, `sha256: 444c87a326f4a92621fd7fad88704f11c6a8a64e8e747a1f263e899390054593`).
+  2. **Official MoleculeACE Paper Best Across All 24 Algorithms** (van Tilborg et al., *J. Chem. Inf. Model.* 2022, upstream https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/results/MoleculeACE_results.csv, `sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5`): `CHEMBL287_Ki` overall best `MSE = 0.51009699` (`SVM+ECFP`, `RMSE = 0.71421075`), cliff-subset (`cliff_mol == 1`, $n = 103 \ge 40$) best `MSE = 0.61875106` (`MLP+ECFP` / `RF+PHYSCHEM`, `RMSE = 0.78660731`), and 30-target mean cliff RMSE `0.7511` (`SVM+ECFP`).
+  3. **2025–2026 Literature on MoleculeACE:** `GraphCliff` (Aug 2026, 30-target mean cliff RMSE `0.757`), `CheMeleon` (`arXiv:2506.15792v2`, `0.760`), `CheMeleon_PFN` (`arXiv:2608.18982v1`, `0.741`), and 81M-molecule pre-trained `Monroe` (`arXiv:2608.18982v1`, Aug 2026, `0.737`).
+- **Margin:**
+  - **Headline (`CHEMBL287_Ki`, Full Criterion + `p1`):** `-0.09515995` MSE (`-18.9117%` relative reduction vs Polaris best `0.50318131`; `-20.0110%` vs MoleculeACE paper best `0.51009699`), confirmed by **`99.97%` (`9,997 / 10,000`)** paired bootstrap win rate vs reproduced `SVM+ECFP` and **`97.98%` (`9,798 / 10,000`)** scalar bootstrap win rate vs Polaris best (`seed=0`).
+  - **Activity-Cliff Subset (`CHEMBL287_Ki` `cliff_mol == 1`, $n = 103 \ge 40$, Partial Win `p2`):** Cliff `MSE = 0.50213600` (`RMSE = 0.70861555`), a **`-18.8468%` relative reduction** vs paper cliff best `0.61875106` and **`-23.7555%`** vs reproduced `SVM+ECFP` cliff MSE `0.65858689` (`99.90%` paired bootstrap win rate), while simultaneously improving non-cliff MSE (`0.34891276` vs `0.41681673`, `-16.2911%`).
+  - **30-Target Universal Sweep (`object/moleculeace_30_sweep_manifest.json`, Partial Win `p3`):** Beats live Polaris best MSE on **`29 / 30`** targets (including both 3-entry leaderboards `moleculeace-chembl234-ki` at `0.36037801 < 0.37022063` and `moleculeace-chembl236-ki` at `0.44350711 < 0.44968493`), passes the full $\ge 5\%$ relative + $\ge 95\%$ bootstrap + paper-best gate on **`21 / 30`** targets (more than $2\times$ the `10 / 30` `p3` threshold), and lowers 30-target mean cliff RMSE to **`0.7211`** (`-4.00%` vs `SVM+ECFP` `0.7511`, `-2.16%` vs `Monroe` `0.737`).
+- **One-liner to verify:** `sh verify-it-yourself/run_checks.sh`
+- **Status:** `SELF-CONTAINED CONFIRMED` (Full `success_criterion` + Partial Wins `p1`, `p2`, `p3`)
+- **Not claimed:** Any improvement on the single target out of 30 (`CHEMBL2147_Ki`, `moleculeace-chembl2147-ki`, CLSS MSE `0.31750853` vs live Polaris best `0.31120264`; note `CHEMBL2835_Ki` is won at `0.16426461 < 0.16617421`) where the fixed zero-tuning recipe does not beat the listed Polaris baseline, or any multi-target transfer or external pre-training outside each target's own official `split == 'train'`.

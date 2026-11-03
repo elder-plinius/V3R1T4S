@@ -1,23 +1,19 @@
 # Run It Yourself (`polaris-moleculeace-activity-cliff-mse`)
 
-## One-line check
-
-From the package root:
-
+## 1. Fast Verification of Saved Predictions (`~18 seconds` on CPU)
+From the package root directory, run:
 ```sh
 sh verify-it-yourself/run_checks.sh
 ```
+This executes `verify-it-yourself/check_moleculeace_clss.py`, which:
+1. Fetches the upstream `MoleculeACE_results.csv` and all 30 `CHEMBL*.csv` benchmark files from `https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/` (caching in `${MOLECULEACE_UPSTREAM_CACHE:-/tmp/moleculeace_upstream_cache}`) and verifies every `sha256` against `the-record-we-beat/polaris_moleculeace_30_audit.json` (stopping with an error if any `sha256` does not match), along with `object/CHEMBL287_Ki_test_predictions.csv` (`sha256: 05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c`), `object/CHEMBL287_Ki_manifest.json`, `object/moleculeace_30_sweep_manifest.json`, and all 30 prediction CSVs in `object/predictions/`.
+2. Verifies that every `split == 'test'` row index, `smiles`, `cliff_mol` indicator, and `y` (`log10(nM)`) value matches the official MoleculeACE CSV and Polaris API split counts (`1,061` train, `267` test, `103` cliff on `CHEMBL287_Ki`).
+3. Recomputes RDKit canonical SMILES and stereo-stripped 14-character `InChIKey[:14]` sets across all 30 datasets and asserts `0` overlap between the training molecules used and the test set on all `30 / 30` benchmarks.
+4. Recomputes `sklearn.metrics.mean_squared_error` on overall, `cliff_mol == 1`, and `cliff_mol == 0` subsets, runs the `10,000`-resample paired and scalar bootstrap (`seed=0`), and runs `400` label-permutation null controls (`seed=42`) on `CHEMBL287_Ki`.
+5. Prints `PASS` on the final line and exits with code `0`.
 
-This runs `verify-it-yourself/check_moleculeace_clss.py` across `object/` and `the-record-we-beat/` (verifying all 30 benchmark splits, RDKit `InChIKey[:14]` disjointness `overlap == 0` across all `30 / 30` targets, independent `sklearn.metrics.mean_squared_error` on overall/cliff/non-cliff subsets, `10,000`-resample paired and scalar bootstrap on `CHEMBL287_Ki` and all 30 targets, and `400` label-permutation null controls), followed by a negative control (replacing test predictions on `CHEMBL287_Ki` with the constant mean) to confirm that any non-record or tampered prediction file is rejected. Expected last line: `ALL CHECKS PASS`.
-
-## Direct Python verification & optional end-to-end CPU retraining
-
-```sh
-python3 verify-it-yourself/check_moleculeace_clss.py
-```
-
-To retrain the primary headline benchmark `CHEMBL287_Ki` (`moleculeace-chembl287-ki`) from scratch on CPU (~45 seconds) and verify bit-level determinism (`max_abs_diff <= 1e-10`):
-
+## 2. Optional End-to-End CPU Retraining from Scratch (`~45 seconds` for `CHEMBL287_Ki`)
+To retrain the deterministic 3-stage CLSS model from scratch on CPU for the primary headline benchmark `CHEMBL287_Ki`:
 ```sh
 python3 how-we-built-it/run_clss_moleculeace.py --dataset CHEMBL287_Ki
 ```

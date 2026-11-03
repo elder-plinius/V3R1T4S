@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
 Standalone verifier for polaris-moleculeace-activity-cliff-mse in outbox package.
+Fetches upstream MoleculeACE CSVs from https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/
+(caching in ${MOLECULEACE_UPSTREAM_CACHE:-/tmp/moleculeace_upstream_cache}) and fails cleanly if any
+SHA-256 does not match the recorded digest in the-record-we-beat/polaris_moleculeace_30_audit.json.
 """
 import argparse
 import hashlib
 import json
 import os
 import sys
+import urllib.request
 from pathlib import Path
 import numpy as np
 import pandas as pd
@@ -16,10 +20,37 @@ from sklearn.metrics import mean_squared_error
 RDLogger.DisableLog("rdApp.*")
 
 PKG_ROOT = Path(__file__).resolve().parent.parent
+UPSTREAM_BASE = "https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data"
+RESULTS_CSV_URL = f"{UPSTREAM_BASE}/results/MoleculeACE_results.csv"
+RESULTS_CSV_SHA256 = "6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5"
 
 
 def sha256_file(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
+
+
+def ensure_upstream_file(rel_path: str, url: str, expected_sha256: str, cache_root: Path) -> Path:
+    dest = cache_root / rel_path
+    dest.parent.mkdir(parents=True, exist_ok=True)
+    if not dest.exists():
+        req = urllib.request.Request(url, headers={"User-Agent": "V3R1T4S-verifier/1.0"})
+        try:
+            with urllib.request.urlopen(req, timeout=30) as resp:
+                data = resp.read()
+        except Exception as exc:
+            raise RuntimeError(f"Failed to fetch upstream CSV {url}: {exc}") from exc
+        actual_sha = hashlib.sha256(data).hexdigest()
+        if actual_sha != expected_sha256:
+            raise AssertionError(
+                f"Upstream SHA-256 mismatch for {url}: expected {expected_sha256}, got {actual_sha}"
+            )
+        dest.write_bytes(data)
+    actual_sha = sha256_file(dest)
+    if actual_sha != expected_sha256:
+        raise AssertionError(
+            f"SHA-256 mismatch for {dest} ({url}): expected {expected_sha256}, got {actual_sha}"
+        )
+    return dest
 
 
 def paired_and_scalar_bootstrap(y_true, pred_model, pred_base, ref_mse, n_boot=10000, seed=0):
@@ -36,32 +67,53 @@ def paired_and_scalar_bootstrap(y_true, pred_model, pred_base, ref_mse, n_boot=1
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--predictions", type=str, default=None, help="Optional path to primary prediction CSV")
+    parser.add_argument(
+        "--upstream-cache",
+        type=str,
+        default=os.environ.get("MOLECULEACE_UPSTREAM_CACHE", "/tmp/moleculeace_upstream_cache"),
+        help="Directory for fetched upstream MoleculeACE CSVs",
+    )
     args = parser.parse_args()
+    cache_root = Path(args.upstream_cache)
 
     try:
         m287_path = PKG_ROOT / "object" / "CHEMBL287_Ki_manifest.json"
         sweep_path = PKG_ROOT / "object" / "moleculeace_30_sweep_manifest.json"
         pol_path = PKG_ROOT / "the-record-we-beat" / "polaris_moleculeace_30_audit.json"
-        res_csv_path = PKG_ROOT / "the-record-we-beat" / "MoleculeACE_results.csv"
         p287_file = Path(args.predictions) if args.predictions else (PKG_ROOT / "object" / "CHEMBL287_Ki_test_predictions.csv")
 
-        for p in [m287_path, sweep_path, pol_path, res_csv_path, p287_file]:
+        for p in [m287_path, sweep_path, pol_path, p287_file]:
             assert p.exists(), f"Missing file {p}"
 
-        res_sha = sha256_file(res_csv_path)
-        assert res_sha == "6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5", "MoleculeACE_results.csv sha256 mismatch"
+        res_csv_path = ensure_upstream_file(
+            "MoleculeACE_results.csv",
+            RESULTS_CSV_URL,
+            RESULTS_CSV_SHA256,
+            cache_root,
+        )
+        assert sha256_file(res_csv_path) == RESULTS_CSV_SHA256, "MoleculeACE_results.csv sha256 mismatch"
 
         m287 = json.loads(m287_path.read_text())
         sweep = json.loads(sweep_path.read_text())
-        pol_by_ds = {r["dataset"]: r for r in json.loads(pol_path.read_text())}
-        assert len(sweep) == 30, f"Expected 30 datasets in sweep, got {len(sweep)}"
+        pol_list = json.loads(pol_path.read_text())
+        pol_by_ds = {r["dataset"]: r for r in pol_list}
+        assert len(sweep) == 30 and len(pol_by_ds) == 30, f"Expected 30 datasets in sweep, got {len(sweep)}"
+
+        for r in pol_list:
+            assert r.get("polaris_benchmark_url", "").startswith("https://polarishub.io/benchmarks/molecularml/"), f"Missing polaris_benchmark_url for {r['dataset']}"
+            assert r.get("utc_fetched_at", "").endswith("Z"), f"Missing utc_fetched_at for {r['dataset']}"
 
         if args.predictions is None:
             assert sha256_file(p287_file) == m287["prediction_csv_sha256"] == "05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c", "Primary prediction sha256 mismatch"
             assert len(p287_file.read_bytes()) == m287["prediction_csv_bytes"] == 29346, "Primary prediction byte size mismatch"
 
         # 1. Verify Primary Headline Target (CHEMBL287_Ki) & every field of m287
-        raw_287 = PKG_ROOT / "the-record-we-beat" / "benchmark_data" / "CHEMBL287_Ki.csv"
+        raw_287 = ensure_upstream_file(
+            "benchmark_data/CHEMBL287_Ki.csv",
+            f"{UPSTREAM_BASE}/benchmark_data/CHEMBL287_Ki.csv",
+            m287["moleculeace_csv_sha256"],
+            cache_root,
+        )
         assert sha256_file(raw_287) == m287["moleculeace_csv_sha256"], "CHEMBL287_Ki.csv sha256 mismatch"
         df_raw_287 = pd.read_csv(raw_287)
         df_tr_287 = df_raw_287[df_raw_287["split"] == "train"].reset_index(drop=True)
@@ -109,7 +161,13 @@ def main():
         assert b_svm_287 >= 0.95 and b_pol_287 >= 0.95, "Bootstrap win rate below 95%"
         assert int(np.sum(c287)) >= 40 and mse287_cliff < m287["moleculeace_paper_best_cliff_mse"] and mse287_noncliff < svm287_noncliff, "Failed p2 cliff criterion"
 
-        # 2. Verify All 30 Benchmarks
+        # 2. Verify All 30 Benchmarks (check all 30 prediction CSV SHA-256s upfront before RDKit molecular parsing)
+        for r in sweep:
+            ds = r["dataset"]
+            pred_csv = PKG_ROOT / "object" / r["pred_csv_relpath"]
+            assert pred_csv.exists(), f"Missing prediction CSV on {ds}: {pred_csv}"
+            assert sha256_file(pred_csv) == r["pred_csv_sha256"], f"Prediction CSV sha256 mismatch on {ds}"
+
         wins_polaris = 0
         wins_5pct_boot95_paper = 0
         wins_paper = 0
@@ -119,7 +177,13 @@ def main():
         for r in sweep:
             ds = r["dataset"]
             pol_info = pol_by_ds[ds]
-            raw_csv = PKG_ROOT / "the-record-we-beat" / "benchmark_data" / f"{ds}.csv"
+            assert r["csv_sha256"] == pol_info["csv_sha256"], f"CSV sha256 mismatch in manifests on {ds}"
+            raw_csv = ensure_upstream_file(
+                f"benchmark_data/{ds}.csv",
+                pol_info.get("upstream_csv_url", f"{UPSTREAM_BASE}/benchmark_data/{ds}.csv"),
+                r["csv_sha256"],
+                cache_root,
+            )
             pred_csv = PKG_ROOT / "object" / r["pred_csv_relpath"]
 
             assert sha256_file(raw_csv) == r["csv_sha256"] == pol_info["csv_sha256"], f"CSV sha256 mismatch on {ds}"
