@@ -257,8 +257,8 @@ def check_baseline(c, root, prereg_path, label, claim=False, check_times=True):
     record = ("plan.json", "result.json", "output.txt")
     has_record = "baseline_plan_sha256" in pre or any(os.path.lexists(os.path.join(base, n)) for n in record)
     has_evidence = os.path.lexists(base) or has_record
-    # A free-form baseline/ without a declaration predates this record format; a claim still needs a declaration.
-    if not declaration and not has_record and not (claim and has_evidence):
+    # Only non-claim legacy runs may omit the declaration, whether or not they have a free-form baseline/.
+    if not declaration and not has_record and not claim:
         c.warn("%s: PREREG.md has no baseline_test line (legacy or non-benchmark run); baseline reproduction was "
                "not checked" % label)
         return

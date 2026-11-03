@@ -254,6 +254,7 @@ class BaselineChecks(fixtures.Base):
         pre = os.path.join(self.R, "PREREG.md")
         original = fixtures.check_run.read(pre).split("baseline_test:")[0]
         fixtures.w(pre, original + "baseline_test: not needed because an exact object is checked\n")
+        self.claim()
         self.assertPass(self.W)
         fixtures.w(pre, original + "baseline_test: not needed because\n")
         self.assertFail("baseline_test", self.W)
@@ -294,12 +295,14 @@ class BaselineChecks(fixtures.Base):
                    % fixtures.HEX)
         self.assertFail("conflicts", self.W)
 
-    def test_legacy_run_warns_without_failing(self):
+    def test_legacy_run_warns_without_claim_but_fails_with_claim(self):
         shutil.rmtree(self.B)
         pre = os.path.join(self.R, "PREREG.md")
         fixtures.w(pre, fixtures.check_run.read(pre).split("baseline_test:")[0])
         self.assertPass(self.W)
         self.assertIn("legacy", self.out)
+        self.claim()
+        self.assertFail("baseline_test", self.W)
 
     def test_free_form_record_without_declaration_is_legacy(self):
         shutil.rmtree(self.B)
@@ -327,6 +330,18 @@ class BaselineChecks(fixtures.Base):
         shutil.rmtree(os.path.join(P, "how-we-built-it", "baseline"))
         self.sums(P)
         self.assertFail("baseline", "--package", P, "--no-exec")
+
+    def test_package_cannot_omit_declaration_and_evidence(self):
+        P = self.package_with_baseline()
+        built = os.path.join(P, "how-we-built-it")
+        shutil.rmtree(os.path.join(built, "baseline"))
+        pre = os.path.join(built, "PREREG.md")
+        fixtures.w(pre, fixtures.check_run.read(pre).split("baseline_test:")[0])
+        self.sums(P)
+        self.assertFail("baseline_test", "--package", P, "--no-exec")
+        os.remove(pre)
+        self.sums(P)
+        self.assertFail("baseline_test", "--package", P, "--no-exec")
 
     def test_package_ignores_file_times_of_copies(self):
         P = self.package_with_baseline()
@@ -377,6 +392,12 @@ class BaselineChecks(fixtures.Base):
                 self.assertFail("baseline", "--package", path, "--workdir", self.W, "--no-exec")
                 self.result.update(status="reproduced", exit_code=0, scores={"hit_at_5": "0.8951"})
                 self.write_result()
+        shutil.rmtree(self.B)
+        pre = os.path.join(self.R, "PREREG.md")
+        fixtures.w(pre, fixtures.check_run.read(pre).split("baseline_test:")[0])
+        for path in (envelope, os.path.dirname(envelope)):
+            with self.subTest(path=path, declaration="missing"):
+                self.assertFail("baseline_test", "--package", path, "--workdir", self.W, "--no-exec")
 
     def test_dry_run_does_not_require_baseline_execution(self):
         shutil.rmtree(self.B)

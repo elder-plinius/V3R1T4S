@@ -141,6 +141,8 @@ criterion already sets a baseline gate, that gate is this step. A dry run stops 
 
 An explicit object checked by a deterministic checker against a table value needs none of this; its `PREREG.md` says
 `baseline_test: not needed because <reason>`, and the run has no `baseline/`.
+Claims need one of these `baseline_test` declarations even when no baseline files exist; include it in
+`how-we-built-it/PREREG.md` for a full package. Only legacy runs without a claim may omit it, with a warning.
 
 ## Step 4. Attack with several lenses
 
