@@ -1,0 +1,2 @@
+submission_id,date,credit,github,target_id,category,status,claim_type,summary,object_sha256,previous_record,new_value,checker_command
+2026-10-18-mizopl-7db03ef0,2026-10-18,mizopl,mizopl,covering-designs-record,combinatorics-covering,CONFIRMED_SOLUTION,solution_claim,"Explicit (40,16,7) covering design with 7,251 blocks (vs 7,470 in Covering Repository and La Jolla Covering Repository, -219 blocks)",7db03ef01cd698f6764f590955f51732a64cd8a41dbe97efce69a6738d479985,7470,7251,sh verify-it-yourself/run_checks.sh
