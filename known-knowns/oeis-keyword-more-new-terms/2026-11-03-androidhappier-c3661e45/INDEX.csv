@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+oeis-keyword-more-new-terms,"A131449 index 66 (T(6,2), row 6 m = 2)","360 (row 6: 132 entries non-increasing, 720,360,360,360,360,360,240,..., object/ROW6.txt)","absent (OEIS A131449 DATA and b-file end at index 65 = T(6,1) = 720)",2026-11-03T22:01:21Z,object/ROW6.txt,c3661e45bbff1f5a2fb05098c2940739a0d096689e593c1095142858cb66f120
