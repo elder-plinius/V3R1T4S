@@ -1,0 +1,120 @@
+high J?`e`~q]~]_ 40
+high J?`bmjd\u|? 46
+high J?`bmhn{v{? 43
+high J?qevPtnJm_ 40
+high J?optM{umn_ 40
+high J?qvAvsnU~? 45
+high J?qvAu{{qz_ 40
+high J?qvAvUjr~_ 49
+high J?qvAu]zvx_ 41
+high J?qtfXv}vn? 40
+high J?rNFey~F}_ 42
+high JCOfErs^C{_ 43
+high JCQfC|{ZvZ_ 40
+high JCQfHzYl]^_ 40
+high JCQfHzmNu|_ 40
+high JCRVBx{\t^_ 40
+high JCQvFT{}m~_ 46
+high JCpbfin^ev_ 54
+high JCpbUqsxmj_ 40
+high JCpbUqUzLn? 43
+high JCpbUr]zVm? 42
+high JCXefrVnf^_ 50
+order=11 connected_graphs=11576040 max_cycle=54
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 45 46 49 50 54
+witness 1 J??CBro{Fg? 0
+witness 2 J??CBro{FW? 7
+witness 3 J??CBroyEy? 797
+witness 4 J??CBrowbk? 911
+witness 5 J??CBra{S^? 966
+witness 6 J??CBroyEj_ 646
+witness 7 J??CBroyf]? 391
+witness 8 J??CBroweM? 391
+witness 9 J??CBroyMx_ 406
+witness 10 J??CBrqzUu_ 391
+witness 11 J?ABfNs}ff_ 334
+witness 12 J?ABfN[m~l_ 355
+witness 13 J?ABfNU}FY? 583
+witness 14 J?ABfNsux~_ 15
+witness 15 J?ABfNs}bZ? 398
+witness 16 J?ABfNs}u|_ 45
+witness 17 J?ABfN[j~v_ 39
+witness 18 J?B@fJok}^_ 39
+witness 19 J?ABfNUutv_ 163
+witness 20 J?ABfNV}fZ? 71
+witness 21 J?B@fG{mNt? 173
+witness 22 J?ABfN]zdu_ 15
+witness 23 J?ABfNyvn}_ 35
+witness 24 J?B@fJemt|? 166
+witness 25 J?ABfNy}]n_ 7
+witness 26 J?B@fJqnS~? 108
+witness 27 J?B@tas\bZ? 207
+witness 28 J?B@tbirpz_ 157
+witness 29 J?bBBJX|fv? 103
+witness 30 J?B@fI]zjz_ 35
+witness 31 J?bBBJkjVc_ 183
+witness 32 J?bFe^lnv}? 50
+witness 33 J?BDHyy\vU_ 228
+witness 34 J?b@briVn}? 55
+witness 35 J?`eMUtnfL? 103
+witness 36 J?bDrY||du_ 13
+witness 37 J?bDrZjvu~? 50
+witness 38 J?bBBHmqvz? 163
+witness 39 J?`eMTx^Cl_ 244
+witness 40 J?`e`~q]~]_ 67
+witness 41 J?qvAu]zvx_ 108
+witness 42 J?rNFey~F}_ 31
+witness 43 J?`bmhn{v{? 31
+witness 45 J?qvAvsnU~? 30
+witness 46 J?`bmjd\u|? 79
+witness 49 J?qvAvUjr~_ 39
+witness 50 JCXefrVnf^_ 11
+witness 54 JCpbfin^ev_ 15
+hist 1 1803316
+hist 2 6055099
+hist 3 893194
+hist 4 1166190
+hist 5 383420
+hist 6 511462
+hist 7 252020
+hist 8 172737
+hist 9 107438
+hist 10 75651
+hist 11 43523
+hist 12 31797
+hist 13 21159
+hist 14 18146
+hist 15 11284
+hist 16 8366
+hist 17 5528
+hist 18 4358
+hist 19 2846
+hist 20 2321
+hist 21 1460
+hist 22 1266
+hist 23 819
+hist 24 742
+hist 25 462
+hist 26 365
+hist 27 320
+hist 28 203
+hist 29 125
+hist 30 118
+hist 31 72
+hist 32 55
+hist 33 48
+hist 34 29
+hist 35 24
+hist 36 19
+hist 37 14
+hist 38 14
+hist 39 8
+hist 40 10
+hist 41 1
+hist 42 2
+hist 43 3
+hist 45 1
+hist 46 2
+hist 49 1
+hist 50 1
+hist 54 1

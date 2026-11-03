@@ -1,0 +1,105 @@
+high J?bDva{ZVK_ 40 1
+high J?bDvbpZbu_ 41 1
+high J?bevbwnfl_ 44 1
+high J?qff`[jjt_ 41 1
+high J?qffb]xv~_ 41 1
+high J?qjf@]m|~_ 41 1
+high JCOefLuzVv_ 41 1
+high JCQfDvszfj_ 42 1
+high JCQbdLwya}? 40 1
+high JCQbdL[dzr? 52 1
+high JCQbdNpVj^_ 40 1
+high JCRcuni~N^_ 47 1
+high JCpbayy|Ul? 52 1
+high JCpbaxx^jn_ 44 1
+n=11 graphs=13657398 connected=13498801 maxperiod=52 witness_graph6=JCQbdL[dzr? witness_state=55
+hist_all 1 2124045
+hist_all 2 7064419
+hist_all 3 1211382
+hist_all 4 1366532
+hist_all 5 440742
+hist_all 6 603810
+hist_all 7 277156
+hist_all 8 203087
+hist_all 9 121696
+hist_all 10 83698
+hist_all 11 46368
+hist_all 12 33287
+hist_all 13 21028
+hist_all 14 19323
+hist_all 15 11092
+hist_all 16 8769
+hist_all 17 5730
+hist_all 18 4174
+hist_all 19 3044
+hist_all 20 2259
+hist_all 21 1373
+hist_all 22 1425
+hist_all 23 713
+hist_all 24 618
+hist_all 25 434
+hist_all 26 305
+hist_all 27 279
+hist_all 28 166
+hist_all 29 89
+hist_all 30 112
+hist_all 31 70
+hist_all 32 41
+hist_all 33 36
+hist_all 34 25
+hist_all 35 16
+hist_all 36 18
+hist_all 37 8
+hist_all 38 11
+hist_all 39 4
+hist_all 40 3
+hist_all 41 5
+hist_all 42 1
+hist_all 44 2
+hist_all 47 1
+hist_all 52 2
+hist_conn 1 2085117
+hist_conn 2 6988629
+hist_conn 3 1200101
+hist_conn 4 1352314
+hist_conn 5 436991
+hist_conn 6 596813
+hist_conn 7 274444
+hist_conn 8 201105
+hist_conn 9 120708
+hist_conn 10 82936
+hist_conn 11 45994
+hist_conn 12 33065
+hist_conn 13 20896
+hist_conn 14 19166
+hist_conn 15 11014
+hist_conn 16 8680
+hist_conn 17 5688
+hist_conn 18 4146
+hist_conn 19 3025
+hist_conn 20 2242
+hist_conn 21 1370
+hist_conn 22 1412
+hist_conn 23 712
+hist_conn 24 617
+hist_conn 25 431
+hist_conn 26 303
+hist_conn 27 277
+hist_conn 28 164
+hist_conn 29 89
+hist_conn 30 111
+hist_conn 31 68
+hist_conn 32 41
+hist_conn 33 36
+hist_conn 34 25
+hist_conn 35 16
+hist_conn 36 18
+hist_conn 37 8
+hist_conn 38 11
+hist_conn 39 4
+hist_conn 40 3
+hist_conn 41 5
+hist_conn 42 1
+hist_conn 44 2
+hist_conn 47 1
+hist_conn 52 2

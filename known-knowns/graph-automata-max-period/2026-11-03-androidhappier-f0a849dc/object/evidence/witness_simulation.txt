@@ -1,0 +1,3 @@
+graph6=JCpbdo}ttv_ n=11 edges=31 start=1728 preperiod=0 cycle_length=71
+graph6=J?qrdjivb}_ n=11 edges=31 start=752 preperiod=0 cycle_length=71
+graph6=J?qrdjivb}_ n=11 edges=31 start=45 preperiod=0 cycle_length=71

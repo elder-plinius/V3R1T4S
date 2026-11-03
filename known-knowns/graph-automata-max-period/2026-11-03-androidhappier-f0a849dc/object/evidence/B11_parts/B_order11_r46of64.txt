@@ -1,0 +1,129 @@
+high J?`adjiruj? 42
+high J?`ebVcvVf? 52
+high J?`ehzWV^\? 43
+high J?`ehzkly~_ 52
+high J?`ehzmmv~_ 40
+high J?`vEpl{fx_ 46
+high J?`vEp|~fn_ 41
+high J?r@eUy]n^? 40
+high J?qbF_]mYn_ 42
+high J?q`qzo|dr_ 44
+high J?q`qzobw~? 48
+high J?q`qy]\Rj? 44
+high J?qet\{~V~? 42
+high J?otRnkl~z? 40
+high J?qvC~xnfv_ 40
+high J?qr`xyyu}? 49
+high J?qr`xlw~\_ 41
+high J?qr`zmnf^_ 41
+high J?qr`zm}Z|_ 40
+high J?qr`zNzb^_ 55
+high JCQfEV{lvm? 41
+high JCQbTf[w}}_ 47
+high JCQbTdt}l|_ 40
+high JCQeNVwZx~_ 42
+high JCQVVP[\nf? 40
+high JCQrUZofnV? 40
+high JCper^slu~_ 46
+order=11 connected_graphs=19044098 max_cycle=55
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 46 47 48 49 52 55
+witness 1 J??ED~{~Fw? 0
+witness 2 J??ED~{~Ft? 1027
+witness 3 J??ED~{^~z? 643
+witness 4 J??ED~y~B|_ 227
+witness 5 J??ED~y~Fm_ 434
+witness 6 J??ED}}}bn_ 434
+witness 7 J??ED~y}eN_ 28
+witness 8 J??ED~y~FN_ 69
+witness 9 J?AEBAotey? 455
+witness 10 J??ED~y|f\? 67
+witness 11 J?AEB@c{fY? 355
+witness 12 J?AEBAcpbr? 231
+witness 13 J?AEBBoXfZ? 485
+witness 14 J?AEBBcxj~_ 71
+witness 15 J?AEBBc`tv? 230
+witness 16 J?AEB@exb}_ 99
+witness 17 J?AFFN]nnz? 39
+witness 18 J?AFFNUnBM_ 419
+witness 19 J?AEBBExT}_ 99
+witness 20 J?ABFrU\jm_ 70
+witness 21 J?BDBNwvVk? 359
+witness 22 J?BDBNS|dv? 101
+witness 23 J?BDBM[}Fb? 229
+witness 24 J?BFEroul}_ 195
+witness 25 J?BDBL]mn{? 135
+witness 26 J?BDBN[}b|_ 39
+witness 27 J?BFEqsNrz_ 87
+witness 28 J?BELbhnJ]_ 39
+witness 29 J?BDdVMfvj_ 108
+witness 30 J?BDdVwv`n? 165
+witness 31 J?BDBN\|`n_ 291
+witness 32 J?`FEUwl^|? 391
+witness 33 J?bBDxz}f^_ 21
+witness 34 J?`ebT[pr{? 110
+witness 35 J?`FET\~B}? 211
+witness 36 J?`beVT}fN? 111
+witness 37 J?`vErd]v}_ 115
+witness 38 J?`cizInTN_ 91
+witness 39 J?`eJmynd~_ 44
+witness 40 J?`ehzmmv~_ 52
+witness 41 J?`vEp|~fn_ 29
+witness 42 J?`adjiruj? 401
+witness 43 J?`ehzWV^\? 57
+witness 44 J?q`qzo|dr_ 117
+witness 46 J?`vEpl{fx_ 111
+witness 47 JCQbTf[w}}_ 31
+witness 48 J?q`qzobw~? 61
+witness 49 J?qr`xyyu}? 47
+witness 52 J?`ebVcvVf? 99
+witness 55 J?qr`zNzb^_ 27
+hist 1 3254978
+hist 2 10043668
+hist 3 1676613
+hist 4 1614538
+hist 5 561114
+hist 6 768063
+hist 7 363691
+hist 8 266894
+hist 9 169025
+hist 10 110087
+hist 11 61598
+hist 12 43822
+hist 13 29251
+hist 14 24675
+hist 15 15402
+hist 16 11670
+hist 17 7897
+hist 18 5918
+hist 19 3958
+hist 20 3140
+hist 21 2040
+hist 22 1690
+hist 23 1071
+hist 24 969
+hist 25 598
+hist 26 434
+hist 27 345
+hist 28 279
+hist 29 155
+hist 30 143
+hist 31 84
+hist 32 66
+hist 33 51
+hist 34 52
+hist 35 35
+hist 36 17
+hist 37 13
+hist 38 14
+hist 39 13
+hist 40 8
+hist 41 4
+hist 42 4
+hist 43 1
+hist 44 2
+hist 46 2
+hist 47 1
+hist 48 1
+hist 49 1
+hist 52 2
+hist 55 1
