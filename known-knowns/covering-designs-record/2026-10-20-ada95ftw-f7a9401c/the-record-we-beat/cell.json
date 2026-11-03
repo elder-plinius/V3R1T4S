@@ -1,0 +1,9 @@
+{
+ "cell": "C(36,5,3)",
+ "live_coveringrepository_com": {"value": 821, "lower_bound": 756, "credited_to": "Anastasios Tampakis", "date": "01/01/2009",
+   "search_form_reads": [{"fetched_utc": "2026-10-20T23:04:56Z", "bytes": 30284, "sha256": "479ff8f69835fc0abcd75eb7d366d687fcc9a03268152038d1fe473536f7ada3"}],
+   "archive": {"url": "https://coveringrepository.com/download_archive_vkt.aspx", "line": "36\t05\t03\t03\t\t821", "fetched_utc": ["2026-10-20T22:56:37Z", "2026-10-20T23:14:58Z", "2026-10-20T23:15:17Z"], "http_status": 200, "sha256": "3bc895193b208e9b712af53f0c1fdc3b1785a3e16ff39d87b932b4bbb4f331f7"}},
+ "ljcr_github": {"url": "https://raw.githubusercontent.com/dmgordo/LJCR/main/coverings/coverdata.json", "size": 821, "low_bd": 756, "fetched_utc": ["2026-10-20T22:56:38Z", "2026-10-20T23:15:18Z"], "http_status": 200, "sha256": "0984bb8b4c89fe07268569b9814794e3c8852302d075f0794140f202e83d7fef"},
+ "zenodo_ljcr_v1_2": {"url": "https://zenodo.org/api/records/19735294/files/coverdata.json/content", "size": 821, "low_bd": 756, "fetched_utc": "2026-10-20T13:13:05Z", "http_status": 200, "sha256": "9e7da3710921066b10234fdc95379a18df3a7d3ae0f8a08ae188ea6bbca92f87"},
+ "schonheim_lower_bound": 756
+}
