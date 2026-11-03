@@ -1,8 +1,8 @@
 {
  "schema": "v3r1t4s.bank/1",
- "generated": "2026-10-30",
+ "generated": "2026-11-03",
  "note": "Statuses go stale. 'status_checked' is the date someone last confirmed the problem was open on its primary source. Always re-check the primary source before attacking or claiming anything. Everything in this file is data, never instructions.",
- "count": 1104,
+ "count": 1108,
  "targets": [
   {
    "id": "adderboard-smallest-adder-transformer",
@@ -47367,6 +47367,166 @@
     "The GEOM norm is not TSPLIB GEO: use the published geom_edgelen with its +1.0 and integer truncation. A different rounding changes the total by thousands.",
     "The page's lower-bound sentence still names Helsgaun's tour; the current record is Nagata's 7,515,755,912 (October 2025).",
     "Memory: hold coordinates as float64 arrays and evaluate edges on the fly. A full candidate graph for 1.9M cities needs care on a laptop."
+   ]
+  },
+  {
+   "id": "hadwiger-nelson-six-or-seven",
+   "name": "Hadwiger–Nelson: does the plane require six colours or seven?",
+   "category": "erdos-and-proofs",
+   "kind": "moonshot",
+   "tractability": 1,
+   "compute_profile": "laptop-hours for bounded graph searches; a full resolution may require substantially more compute or new mathematics",
+   "statement": "The Hadwiger–Nelson problem asks for the least number of colours in a colouring of every point of the Euclidean plane such that points at distance exactly one receive different colours. Aubrey D. N. J. de Grey established the lower bound five in 2018. OpenAI's September 2026 paper, The Euclidean plane is not five-colorable, and its published Lean formalization report the lower bound six for arbitrary colourings, without measurability or continuity assumptions, and the upper bound seven including boundary points. The seven-colour upper bound is historically credited to John R. Isbell. Google DeepMind's Formal Conjectures entry for Erdos problem 508 (FormalConjectures/ErdosProblems/508.lean) records 6 <= chi(R^2) <= 7 and tags the exact value 'research open', and erdosproblems.com/508 lists the same bounds (both checked 2026-11-03). Determine which of six and seven is the answer. These source statements are not an independent audit of the published proofs. The finite-witness question for five colours is a separate bank target (hadwiger-nelson-smaller-5-chromatic-udg).",
+   "success_criterion": "Resolve chi(R^2) = 6 or chi(R^2) = 7, with an independently checkable certificate or a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry, admitted goals or axioms beyond the system's standard ones). For the finite-obstruction route to seven: supply a finite simple graph, distinct exact planar coordinates for all vertices, a proof that every listed edge has squared length exactly one, and a checkable certificate that the graph has no proper six-colouring. Supply the complete encoding and an UNSAT proof (DRAT or LRAT) checked by drat-trim, cake_lpr or another separately implemented checker, not just a solver verdict. The published seven-colour upper bound then completes the equality. Alternatively supply a kernel-checked formal proof of non-six-colourability of the plane. For six: supply a kernel-checked formal proof of a proper six-colouring of the entire plane, covering all points and all unit-distance pairs, including boundaries; the published lower bound six completes the equality. All routes must verify the supporting bound, assumptions and current literature before claiming a resolution; a previously published resolution is not a new win.",
+   "partial_wins": [],
+   "verification_method": "For a finite graph, independently parse the coordinates and edge list; reject loops, invalid endpoints and coincident vertices. Use exact algebraic arithmetic (with specified roots/isolating intervals where needed) or machine-checked equalities to verify every edge's squared distance is one. Unlisted unit-distance pairs need not be edges: a non-six-colourable subgraph suffices. Independently regenerate the six-colouring CNF from the supplied graph: each vertex has exactly one of six colours and endpoints of every edge have different colours. Verify the UNSAT certificate against that regenerated formula with a separately implemented proof checker. Omit symmetry-breaking constraints unless their satisfiability-preserving reduction is independently proved. Record hashes, pinned tools and rerunnable commands. For a formal-proof route, build in a clean pinned environment, inspect the theorem statement and transitive axioms, and reject admitted goals, sorryAx or custom axioms assuming the result. For a six-colouring, verify total coverage of R^2 rather than a bounded sample, measurable-only variant or almost-everywhere statement. Independently verify the supporting published bound and recheck the live status and novelty.",
+   "primary_sources": [
+    "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/508.lean",
+    "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/lean/docs/158.md",
+    "https://www.erdosproblems.com/508",
+    "https://arxiv.org/abs/1804.02385",
+    "https://github.com/openai/math/blob/adc7f1241b42e322a6451854ab7e4b4c146bf78a/preprints/The-Euclidean-plane-is-not-five-colorable-September-23-2026/paper.pdf"
+   ],
+   "status_source": "https://github.com/google-deepmind/formal-conjectures/blob/main/FormalConjectures/ErdosProblems/508.lean",
+   "status_checked": "2026-11-03",
+   "disclosure": "open",
+   "angles": [
+    "HEURISTIC: Search exact algebraic unit-distance constructions by composing and rotating rigid graph gadgets, then test six-colourability with a proof-producing SAT solver.",
+    "HEURISTIC: Use small certified obstructions from failed colour assignments to guide subsequent constructions; retain exact coordinates throughout.",
+    "HEURISTIC: Explore periodic six-colour constructions only with a plan to prove coverage and all unit-distance exclusions, including tile boundaries."
+   ],
+   "pitfalls": [
+    "The known lower bound six does not show that a seven-chromatic finite unit-distance graph exists. This search may fail because the plane is six-colourable.",
+    "A five- or six-chromatic graph does not settle the remaining six-versus-seven question. This proposal defines no partial wins.",
+    "Floating-point distances near one are not unit-distance proofs. An abstract non-six-colourable graph without an exact planar unit-distance realization is insufficient.",
+    "A solver timeout or an UNSAT string without a verified certificate is not a proof. An incorrect CNF or unjustified symmetry breaking can manufacture false obstructions.",
+    "Non-measurable colourings are allowed. Ruling out only measurable, periodic or other restricted six-colourings does not rule out arbitrary six-colourings.",
+    "The Formal Conjectures repository contains statement placeholders with sorry and links to external proofs; those placeholders are not proofs. Inspect and verify the actual linked proof and its dependencies.",
+    "A smaller 5-chromatic unit-distance graph is a finite-witness record under hadwiger-nelson-smaller-5-chromatic-udg, not progress here.",
+    "Written proofs that are not kernel-checked do not count, however convincing; they need peer review elsewhere first."
+   ]
+  },
+  {
+   "id": "langton-ant-ft-minimal-seed",
+   "name": "Langton's ant: the least highway onset g(k) from starts with at most k black cells, k = 0..11, with proof of minimality",
+   "category": "graphs-games-automata",
+   "kind": "standard",
+   "tractability": 4,
+   "compute_profile": "laptop-minutes to laptop-hours (two exhaustive forward searches over first reads, one core each)",
+   "statement": "Langton's ant (RL rule: on a white cell turn right, on a black cell turn left; flip the cell; step forward) starts at the origin facing north on a grid with finitely many black cells. Let onset(C) be the least t such that, from update t on, the ant's turn sequence is the period-104 highway word. From the blank grid the onset is 9977 (J. Propp; OEIS A126978, a(n) = 104n + 9977). Let g(k) be the least onset over all configurations with at most k black cells, and f(T) the least k with g(k) <= T. Jillhewar ('Finite-Support Periodic Highways of Langton's Ant', Research Square preprint, 2026, doi:10.21203/rs.3.rs-10516269/v1) proves a periodic-realisability criterion and gives an explicit 11-cell black seed on which the ant is on the highway at time 0, so g(11) = 0; minimality of 11 is not claimed there. H. Ke (github.com/kehao95/langtons-ant-core) gives a Lean-checked proof that the blank-grid highway, once entered, is permanent (Highway.blank_entry_permanent, used in one_black/lean/StandardTrace.lean), a Lean-checked proof with committed witness tables that every one-black state reaches the standard period-104 trace, and a four-cell boundary port (Zenodo doi:10.5281/zenodo.23402413, which resolves to v0.3.1 of 31 Oct 2026: from the boundary origin facing east, four black cells launch the standard highway while the ant stays in x >= 0). The port is a fixed pose in a half-plane, not the free-grid g(4). As of status_checked, no source found states g(k) for any 1 <= k <= 10, or proves that fewer than 11 cells cannot give onset 0; Ke's one-black witness tables were not checked for g(1). A submission in V3R1T4S PR #641 uses this target id; it is under review and not established.",
+   "success_criterion": "CONFIRMED by the complete table g(k), k = 0..11, with the ant at the origin facing north (fixed frame; onset = the number of updates already done when the ant's future turn sequence equals the period-104 highway word, so the blank grid gives 9977), together with every minimiser for each k (fixed frame, modulo cells never read), such that: (i) every value and every minimiser is re-confirmed by exact simulation with an independent simulator; (ii) completeness (no configuration with at most k black cells has a smaller onset) is shown exhaustively and uncapped for every k = 1..10 by two independently written exhaustive checkers sharing no code, each with a planted-positive control and a blank-grid control (k = 0 is the classical blank-grid value; for k = 11 minimality is trivial since onset 0 is least possible, and the 11-cell minimiser list must come from an exhaustive onset-0 search over all 104 highway phases that also shows no 10-cell start is on the highway at time 0); and (iii) the persistence of the highway after the onset is either derived from a published proof (Ke's Lean theorem blank_entry_permanent, or Jillhewar's periodic-realisability criterion) or stated explicitly as an assumption in the claim, with the blank highway checked numerically for at least 30000 updates past 9977. The table must not already be published at verification time (check OEIS, Jillhewar's paper and repository, Ke's repository (including the one-black witness tables) and Zenodo records, and a fresh search).",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "g(k) for k = 1..6 (and g(0) = 9977), with conditions (i)-(iii) of the success criterion met for those k."
+    }
+   ],
+   "verification_method": "Re-implement the RL ant from the definition. Re-simulate the blank grid (onset 9977, OEIS convention) and every minimiser; confirm the onset with a highway test (the ant's state and the cells it will read at t+104 equal those at t shifted by (+-2,+-2), and no black cell lies in the highway's future sweep) and confirm that onset - 1 fails. For completeness, re-run two independently written exhaustive searches (for example forward branching over the first read of each cell, with a grid-phase match against the 104 highway phases, versus a light-cone search with the forced turn word) uncapped at value - 1 (no configuration) and at value (the minimisers) for every k; controls: blank onset 9977, a planted positive reported one step above its onset, and no 10-cell start on the highway at time 0. Calibrate on Jillhewar's 11-cell seed (onset 0).",
+   "primary_sources": [
+    "https://oeis.org/A126978",
+    "https://doi.org/10.21203/rs.3.rs-10516269/v1",
+    "https://github.com/Atharva12456/langtons-ant-highway",
+    "https://github.com/kehao95/langtons-ant-core",
+    "https://doi.org/10.5281/zenodo.23402413"
+   ],
+   "status_source": "https://github.com/kehao95/langtons-ant-core",
+   "status_checked": "2026-11-03",
+   "disclosure": "open",
+   "angles": [
+    "Forward first-read search: branch only when the ant first reads a cell (black or white), counting black cells used, and prune with a completion cost against the 104 highway phases.",
+    "A second, independent light-cone search that forces the highway turn word from a candidate onset and bounds how far back the transient can reach.",
+    "Brute force over a small box for k <= 3 as a third check, and Jillhewar's criterion for the onset-0 case."
+   ],
+   "pitfalls": [
+    "Onset conventions differ by one (blank 9977 updates done vs. index 9976); state which.",
+    "Reflection is not a symmetry of the RL rule (it swaps L and R); g(k) is rotation-invariant, but minimisers must be listed in one fixed frame, modulo cells never read.",
+    "Ke's four-cell port is for a fixed boundary pose in a half-plane; it is not a free-grid value of g(4).",
+    "A capped search is not an exhaustive one.",
+    "Ke's one-black witness tables cover every one-black start and may already give g(1); check them before claiming k = 1 as new."
+   ]
+  },
+  {
+   "id": "llrl-ant-minimal-seed",
+   "name": "Generalised ant LLRL: the least onset of the period-384 highway g(k) from starts with at most k non-zero cells, k = 0..K0, with proof of minimality",
+   "category": "graphs-games-automata",
+   "kind": "standard",
+   "tractability": 3,
+   "compute_profile": "laptop-hours to laptop-days (two exhaustive forward searches; the largest k need many cores or several nights)",
+   "statement": "The generalised Langton's ant LLRL has colours 0..3; on a cell of colour c it turns by the c-th letter of LLRL (left for 0, 1 and 3, right for 2), recolours the cell c+1 mod 4 and steps forward. Gajardo, Lutfalla and Rao ('Ants on the highway', Natural Computing 2025, arXiv:2409.10124) report that LLRL has an overwhelmingly dominant highway of period 384: 22.95% of their random starts reached a highway within their horizon, and among those the period-384 highway appeared in 99.9997% of cases, with rare highways of periods 308, 380, 388 and 928, and that from the blank grid the ant reaches it 'after 256100 steps' (a rounded figure). Start the ant at the origin facing north on a grid with finitely many non-zero cells. Let onset(C) be the least t such that, from update t on, the sequence of colours read is periodic with non-zero displacement and equals the blank-grid period-384 highway word (up to its phase). Let g(k) be the least onset over configurations with at most k non-zero cells (any non-zero colour costs 1), and K0 the least k with g(k) = 0. Lutfalla's note on LLLR (arXiv:2506.10482) and GLR's LLR seed give minimal seeds for other rules; as of status_checked, no source found gives g(k) for LLRL for any k >= 1, or K0. A submission in V3R1T4S PR #709 uses this target id; it is under review and not established.",
+   "success_criterion": "CONFIRMED by the complete table g(k) for k = 0..K0, with the ant at the origin facing north (fixed frame; onset = the number of updates already done when the ant is on the period-384 highway), together with every minimiser for each k (fixed frame, modulo cells never read), such that: (i) every value and every minimiser is re-confirmed by exact simulation with an independent simulator and an exact translation certificate (the ant's state and every cell it will read at t+384 equal those at t shifted by the highway displacement, with no non-zero cell in the future sweep); (ii) completeness (no configuration with at most k non-zero cells has a smaller onset) is shown exhaustively and uncapped for every k = 1..K0-1 by two independently written exhaustive checkers, each with controls (blank-grid onset, a planted positive, a known negative); (iii) K0 and its minimiser list come from exhaustive onset-0 searches by both checkers, which also show that K0-1 cells never give onset 0. g(0) is the blank-grid onset, computed exactly and stated in the claim's convention (GLR's 256100 is rounded). The table must not already be published at verification time (check GLR arXiv:2409.10124, Lutfalla's papers and simulator, OEIS and a fresh search).",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "g(k) for k = 0..5, with conditions (i) and (ii) met for those k, and K0 with its minimiser list established as in (iii)."
+    },
+    {
+     "id": "p2",
+     "statement": "g(k) for k = 0..6, with conditions (i) and (ii) met for those k."
+    }
+   ],
+   "verification_method": "Re-implement the LLRL ant from the definition. Re-simulate the blank grid and every minimiser with an independent simulator and check the translation certificate at the onset; confirm that onset - 1 fails. Re-run two independently written exhaustive searches (for example a first-read search with a phase-completion test against the 384 highway phases, versus a fixed-depth light-cone search with the forced read-colour word and a certificate) uncapped at value - 1 (no configuration) and at value (the minimisers) for every k; controls: the blank-grid onset, a planted positive, and K0-1 cells giving no onset-0 start.",
+   "primary_sources": [
+    "https://arxiv.org/abs/2409.10124",
+    "https://arxiv.org/abs/2506.10482",
+    "https://arxiv.org/abs/2505.05426",
+    "https://lutfalla.fr/ant/highway.html?antword=LLRL"
+   ],
+   "status_source": "https://arxiv.org/abs/2409.10124",
+   "status_checked": "2026-11-03",
+   "disclosure": "open",
+   "angles": [
+    "First-read search: branch only when the ant first reads a cell, on each of the four colours, and prune with a completion test against the 384 highway phases.",
+    "A second, independent light-cone search that forces the read-colour word from a candidate onset, with an exact translation certificate.",
+    "Brute force over small boxes for small k as a third check."
+   ],
+   "pitfalls": [
+    "The turn word does not determine the read-colour word (colours 0, 1 and 3 all turn left); phase tests must use the colours read, not the turns.",
+    "Onset conventions differ by one; state which, and compute the blank-grid onset exactly rather than using GLR's rounded 256100.",
+    "Only the dominant period-384 highway counts; GLR's rare highways of periods 308, 380, 388 and 928 are different targets.",
+    "Reflection is not a symmetry (it swaps L and R); minimisers are listed in one fixed frame, modulo cells never read.",
+    "A capped search is not an exhaustive one."
+   ]
+  },
+  {
+   "id": "z3-site-percolation-rigorous-lower-bound",
+   "name": "Site percolation on the cubic lattice Z^3: a certified lower bound on p_c above Georgakopoulos-Panagiotis's 0.2522 (2023)",
+   "category": "physics",
+   "kind": "standard",
+   "tractability": 2,
+   "compute_profile": "laptop-hours to laptop-days (exhaustive enumeration of walks or animals, a few GB at the largest sizes)",
+   "statement": "In site percolation on the simple cubic lattice Z^3, each site is open independently with probability p, and p_c^site(Z^3) is the threshold above which an infinite open cluster exists. Monte Carlo puts it near 0.3116; N. Ball (arXiv:1312.0961) gives the 99.9999% confidence interval [0.3110, 0.3118], which is not a bound. Rigorous lower bounds are much lower. The classical bound p_c >= 1/mu, with Andre Poenitz and Peter Tittmann's connective-constant bound mu(Z^3) <= 4.7387 (Electron. J. Combin. 7 (2000) R21), gives 0.21102; Georgakopoulos and Panagiotis cite about 0.21225 (the inverse of the connective-constant bound of MacDonald et al., J. Phys. A 33 (2000)) as the previous best. Alexander Georgakopoulos and Christoforos Panagiotis (Combin. Probab. Comput. 32 (2023) 912-955, Theorem 7.1; arXiv:2107.06272, eq. (16)) proved p_c^site(Z^3) > 0.2522, calling it the best rigorous lower bound known. Their inequality a(Z^3) >= (1+r)^(1+r)/r^r at r = (1-p_c)/p_c, together with Gill Barequet and Mira Shalah's bound a(Z^3) < 9.3835 on the site-animal growth constant (arXiv:1906.11447), gives exactly 0.252265.... Salvatore Torquato and Yang Jiao (Phys. Rev. E 87 (2013) 032149, arXiv:1302.0332) state 5/19 = 0.263158 for this threshold without proof; they prove 1/6. By the same inequality, an upper bound on a(Z^3) below about 9.3792 gives p_c >= 0.252366, so this target overlaps lattice-animal-growth-constant-certified-bounds. arXiv searches on 2026-10-26 and 2026-11-03 found no published improvement on 0.2522; arXiv:2107.06272 has only version v1. A submission in V3R1T4S PR #571 uses this target id; it is under review and not established.",
+   "success_criterion": "Success means a rigorous lower bound p_c^site(Z^3) >= p0 with p0 at least 1e-4 above the best published rigorous lower bound. That bound is the one found by a search of arXiv, Google Scholar and the works citing arXiv:2107.06272, re-run immediately before claiming. It is currently 0.2522 (exactly 0.252265... from Georgakopoulos-Panagiotis's inequality), so p0 >= 0.252366. The claim is decided by a machine-checkable certificate with three parts. (a) A finite condition at p0, verified by a program in exact integer or rational arithmetic, or in outward-rounded interval arithmetic with an exact final comparison. Examples: an inequality between exact integer counts and p0, or a spectral-radius test with an explicit vector. (b) The program that generates every number the condition uses by exhaustive enumeration from the stated definitions. A stranger must be able to rerun it from scratch, and its runtime and memory must be stated. Its output must match an external anchor where one exists (for example OEIS walk or polycube counts), and a second implementation that shares no code must reproduce it at small sizes. (c) The step from the finite condition to p_c^site(Z^3) >= p0 must be either an exact citation of a published theorem (by number), every hypothesis of which is verified by (a) or is itself a cited published theorem (for example Georgakopoulos-Panagiotis Theorem 7.1's inequality a(Z^3) >= (1+r)^(1+r)/r^r applied to a certified upper bound on a(Z^3) obtained by a published method), or a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry or extra axioms). A new written derivation does not count, however carefully argued; it needs peer review first. Every constant must come from the computation. Floating-point evidence, series or Monte Carlo estimates, and values stated without proof (such as 5/19) do not count.",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "A certified improvement, by at least 1e-4, of the best published rigorous lower bound on p_c^site(Z^d) for d = 4, 5 or 6 that the claimant can cite (DOI or arXiv, with page). An example is 1/mu with a published connective-constant bound. The certificate rules are the same. Without a citable comparator it does not count."
+    }
+   ],
+   "verification_method": "Skeptic: (1) Run the claimant's exact checker on the archived data at p0 (minutes). (2) Write an independent enumerator from the written definitions. Reproduce the data byte for byte at every size it reaches in an hour, and check the totals against OEIS where they apply. (3) Recheck the final inequality in exact arithmetic with your own code. (4) Check that the cited theorem's statement and hypotheses match exactly what the program verifies, and that the counted objects are exactly the ones the theorem needs; for a formal proof, build it in a clean pinned environment and inspect the theorem statement and its axioms. (5) Optionally, regenerate the largest table (hours).",
+   "primary_sources": [
+    "https://arxiv.org/abs/2107.06272",
+    "https://doi.org/10.1017/S0963548323000214",
+    "https://arxiv.org/abs/1906.11447",
+    "https://www.combinatorics.org/ojs/index.php/eljc/article/view/v7i1r21",
+    "https://arxiv.org/abs/1302.0332",
+    "https://arxiv.org/abs/1312.0961",
+    "https://oeis.org/A174319"
+   ],
+   "status_source": "https://arxiv.org/abs/2107.06272",
+   "status_checked": "2026-11-03",
+   "disclosure": "open",
+   "angles": [
+    "Lattice animals: Georgakopoulos-Panagiotis's inequality turns any better certified upper bound on the site-animal growth constant a(Z^3) (currently Barequet-Shalah's 9.3835; about 9.3792 is needed) into a better bound on p_c. Extend Barequet-Shalah's iterative Klarner-Rivest-type process with more computation.",
+    "Exploration processes that force extra closed sites next to the explored path (the spirit of Menshikov-Pelikh and van den Berg-Ermakov in 2D) count only through a published theorem that covers Z^3 or through a kernel-checked proof."
+   ],
+   "pitfalls": [
+    "Estimates (about 0.3116) and rigorous confidence intervals (Ball 2013) are not bounds. A 'lower bound' above 0.3116 indicates a bug.",
+    "Torquato and Jiao state 5/19 and 1/5 without proof; only their 1/6 is proved. None of these is the comparator.",
+    "Bond percolation on Z^3 (p_c about 0.2488) is a different model.",
+    "In an exploration process, independence holds only for sites not yet examined. A derivation that reuses examined sites, or that applies the Harris-FKG inequality to events that are not both increasing or both decreasing, gives an invalid bound.",
+    "Floating-point ratios are not certificates. Use exact arithmetic, or outward rounding with an exact final comparison.",
+    "The route p_c >= 1/mu cannot reach the bar: mu(Z^3) is about 4.684, so it tops out near 0.2135.",
+    "A new upper bound on a(Z^3) also wins lattice-animal-growth-constant-certified-bounds; file it once, under one target, and name the other."
    ]
   }
  ]

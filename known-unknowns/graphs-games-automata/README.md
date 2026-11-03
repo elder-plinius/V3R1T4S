@@ -2,7 +2,7 @@
 
 Graph records, puzzles, tilings and cellular automata.
 
-**157 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
+**159 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
 
 | Odds | Problem | Kind | Compute |
 |---|---|---|---|
@@ -12,6 +12,7 @@ Graph records, puzzles, tilings and cellular automata.
 | ★★★★☆ | [Jehn's adversarial coin-basket games: 'Fill your basket' fair compensation beyond n = 16…](coin-basket-adversarial-games.md) | harvest | laptop-hours (exact minimax with memoisation over (remaining-coin set, sorted 3-basket sums) states plus alpha-beta or decision-version search; about 2^n * P^2/12 states before pruning; a rough estimate, not measured) |
 | ★★★★☆ | [Jehn's random-basket coin game: exact optimal expected win for 2 baskets beyond n = 22 (O…](coin-basket-random-expected-values.md) | harvest | laptop-hours to laptop-days (exact backward induction over (remaining-coin set, basket-sum profile) states, layer by layer; memory, not time, is the limit: roughly 2^n * T/2 states for 2 baskets, T = n(n+1)/2, so the largest two adjacent layers reach about 1.5e10 entries near n = 26; rough estimates, not measured) |
 | ★★★★☆ | [Knuth's cubic graceful conjecture: extend the verification past 14 vertices (16, 18, 20,…](cubic-graphs-graceful-knuth-beyond-14.md) | harvest | laptop-hours (16-20 vertices); laptop-days for the 7,319,447 graphs on 22 vertices |
+| ★★★★☆ | [Langton's ant: the least highway onset g(k) from starts with at most k black cells, k = 0…](langton-ant-ft-minimal-seed.md) | standard | laptop-minutes to laptop-hours (two exhaustive forward searches over first reads, one core each) |
 | ★★★★☆ | [No three collinear in the n x n x n grid (OEIS A399138): beat a(7) >= 73, a(8) >= 94, a(9…](no-three-collinear-cube-a399138.md) | harvest | laptop-hours (CP-SAT or local search inside symmetry strata; a witness is checked in seconds) |
 | ★★★★☆ | [Oberwolfach problem: solve every instance OP(F) of order 61 to 64 (verified so far for al…](oberwolfach-problem-orders-61-64.md) | standard | laptop-days (order 59 took about 29 CPU-hours with the published method) |
 | ★★★★☆ | [Risk or Safety: exact optimal-play win probabilities beyond n = 30 (OEIS A387261/A387262)](risk-or-safety-exact-optimal-play.md) | harvest | laptop-hours to laptop-days (exact policy iteration over O(n^3) positions with big rationals, one strongly connected component at a time; measure growth at n >= 31) |
@@ -47,6 +48,7 @@ Graph records, puzzles, tilings and cellular automata.
 | ★★★☆☆ | [Crossing number of the hypercube Q_n: a drawing with fewer crossings than Yang-Wang-Wang-…](hypercube-crossing-number-drawings.md) | harvest | laptop-hours (n = 5..9); laptop-days for n = 10..13 (up to 8192 vertices) |
 | ★★★☆☆ | [Elementary CA on rings: the maximum cycle length of Rule 30 (A334497) and Rule 110 (A2043…](eca-rule30-rule110-cyclic-max-period.md) | harvest | laptop-days (exhaustive over 2^37 states, reduced by rotation, the only symmetry that commutes with Rules 30 and 110; bitset memory of order 16 GB, or a disk-backed variant) |
 | ★★★☆☆ | [Game of Life: a cheaper glider synthesis than Catagolue's best-known cost for a still lif…](catagolue-glider-synthesis-cost-records.md) | harvest | laptop-hours |
+| ★★★☆☆ | [Generalised ant LLRL: the least onset of the period-384 highway g(k) from starts with at…](llrl-ant-minimal-seed.md) | standard | laptop-hours to laptop-days (two exhaustive forward searches; the largest k need many cores or several nights) |
 | ★★★☆☆ | [Graham-Sloane windmill conjecture: is K_8^(2) (two K_8 sharing a vertex) harmonious? (fir…](windmill-kn2-harmonious-graham-sloane.md) | standard | laptop-hours |
 | ★★★☆☆ | [Guts with the Weenie rule: does the symmetric threshold resist every coalition for n >= 4?](guts-weenie-rule-strong-equilibrium.md) | standard | laptop-hours to laptop-days for the n=4 and n=5 certificates (exact polynomial integration and chamber certificates in three or four opponent thresholds); the all-n route is a formalisation project |
 | ★★★☆☆ | [Induced forests in planar graphs after the Albertson-Berman refutation: a planar graph wi…](induced-forest-planar-ratio-25-52.md) | standard | laptop-hours for gadget composition plus an exact feedback-vertex-set or SAT certificate (seconds to minutes per graph up to about 100 vertices) |

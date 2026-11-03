@@ -2,7 +2,7 @@
 
 Erdős problems and relatives: counterexamples, small cases, machine-checked proofs.
 
-**68 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
+**69 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
 
 | Odds | Problem | Kind | Compute |
 |---|---|---|---|
@@ -64,6 +64,7 @@ Erdős problems and relatives: counterexamples, small cases, machine-checked pro
 | ★★☆☆☆ | [Turán's K5^(3) conjecture: a certified upper bound on pi(K5^(3)) below 0.757017, or a K5^…](turan-k5-3-graph-density.md) | standard | needs cluster (7-vertex 3-graph flag-algebra programs; certificate checking is laptop-hours) |
 | ★☆☆☆☆ | [Erdos #287: unit-fraction representations of 1 must have a gap >= 3, for a full proof](erdos-287-egyptian-gaps.md) | standard | pure thought (plus laptop-minutes for certificate checks) |
 | ★☆☆☆☆ | [Erdos #993: a tree (or forest) with non-unimodal independent-set sequence](erdos-993-tree-independence-unimodality.md) | standard | laptop-hours |
+| ★☆☆☆☆ | [Hadwiger–Nelson: does the plane require six colours or seven?](hadwiger-nelson-six-or-seven.md) | moonshot | laptop-hours for bounded graph searches; a full resolution may require substantially more compute or new mathematics |
 | ★☆☆☆☆ | [MOONSHOT - Chromatic number of 3-space: a finite unit-distance graph in R^3 that is not 6…](chromatic-number-r3-7-chromatic-udg.md) | moonshot | needs cluster (SAT on graphs with thousands of vertices; a single check is laptop-hours) |
 | ★☆☆☆☆ | [MOONSHOT - Chvátal's conjecture (Erdős #701): a downset whose largest intersecting subfam…](chvatal-conjecture-ground-set-8.md) | moonshot | needs cluster (for a certified ground-set-8 verification); a counterexample search is laptop-days |
 | ★☆☆☆☆ | [MOONSHOT - Earth-Moon problem: a biplanar (thickness-2) graph with chromatic number 10](earth-moon-biplanar-10-chromatic.md) | moonshot | laptop-hours |

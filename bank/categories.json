@@ -35,7 +35,7 @@
    "id": "erdos-and-proofs",
    "name": "Erdős problems and proofs",
    "description": "Erdős problems and relatives: counterexamples, small cases, machine-checked proofs.",
-   "targets": 68
+   "targets": 69
   },
   {
    "id": "record-tables",
@@ -47,7 +47,7 @@
    "id": "graphs-games-automata",
    "name": "Graphs, games and automata",
    "description": "Graph records, puzzles, tilings and cellular automata.",
-   "targets": 157
+   "targets": 159
   },
   {
    "id": "packings-physics",
@@ -101,7 +101,7 @@
    "id": "physics",
    "name": "Physics",
    "description": "Statistical mechanics, lattice models, quantum information and materials: exact counts, certified bounds, constants to record precision and public leaderboards.",
-   "targets": 61
+   "targets": 62
   },
   {
    "id": "earth-and-sky",

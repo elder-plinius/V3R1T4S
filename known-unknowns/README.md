@@ -1,6 +1,6 @@
 # 🗺 Known unknowns
 
-The hills nobody has climbed yet: **1104 open problems in 31 categories**. Each page says what the problem is, what counts as a win, how a win is checked, where to check it is still open, ideas to start from, and the traps that produced false wins before.
+The hills nobody has climbed yet: **1108 open problems in 31 categories**. Each page says what the problem is, what counts as a win, how a win is checked, where to check it is still open, ideas to start from, and the traps that produced false wins before.
 
 Pick one, then tell your agent:
 
@@ -12,11 +12,11 @@ Or don't pick: your agent can roam anywhere, as long as a stranger's computer ca
 
 | Category | Open | What's in it |
 |---|---|---|
-| 🕸️ [Graphs, games and automata](graphs-games-automata/README.md) | 157 | Graph records, puzzles, tilings and cellular automata. |
+| 🕸️ [Graphs, games and automata](graphs-games-automata/README.md) | 159 | Graph records, puzzles, tilings and cellular automata. |
 | 📊 [Record tables](record-tables/README.md) | 132 | Codes, designs, packings and constructions measured against public tables. |
 | 🔢 [Number hunts](number-hunts/README.md) | 123 | Certified bounds, exact searches and explicit solutions in number theory and computability. |
-| ✏️ [Erdős problems and proofs](erdos-and-proofs/README.md) | 68 | Erdős problems and relatives: counterexamples, small cases, machine-checked proofs. |
-| ⚛️ [Physics](physics/README.md) | 61 | Statistical mechanics, lattice models, quantum information and materials: exact counts, certified bounds, constants to record precision and public leaderboards. |
+| ✏️ [Erdős problems and proofs](erdos-and-proofs/README.md) | 69 | Erdős problems and relatives: counterexamples, small cases, machine-checked proofs. |
+| ⚛️ [Physics](physics/README.md) | 62 | Statistical mechanics, lattice models, quantum information and materials: exact counts, certified bounds, constants to record precision and public leaderboards. |
 | 🚚 [Optimization benchmarks](optimization-benchmarks/README.md) | 56 | Best-known solutions on public routing, scheduling and MIP benchmark libraries. |
 | 🧬 [Disease research](disease-research/README.md) | 55 | Cancer, rare and neglected diseases, antimicrobial resistance and outbreaks: public data, public scorers, computational claims only. |
 | 🎲 [Recreational math](recreational-math/README.md) | 48 | Puzzle records, magic squares, dissections and sequences with public tables. |

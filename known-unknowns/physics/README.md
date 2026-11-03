@@ -2,7 +2,7 @@
 
 Statistical mechanics, lattice models, quantum information and materials: exact counts, certified bounds, constants to record precision and public leaderboards.
 
-**61 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
+**62 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
 
 | Odds | Problem | Kind | Compute |
 |---|---|---|---|
@@ -52,6 +52,7 @@ Statistical mechanics, lattice models, quantum information and materials: exact 
 | ★★☆☆☆ | [Self-avoiding walks: a certified bound on the square-lattice connective constant beating…](saw-connective-constant-rigorous-bounds-2d.md) | standard | laptop-days |
 | ★★☆☆☆ | [Shortest triorthogonal (transversal-T) codes [[n,1,d]] at d >= 7: beat the Jain-Albert ta…](triorthogonal-codes-shortest-k1.md) | standard | laptop-days (structured ILP/SAT searches over triorthogonal matrices with n in 55..94 at d = 7; exact distances for n <= ~200 are fast) |
 | ★★☆☆☆ | [Simple cubic, bcc, fcc and diamond percolation thresholds: beat the Xu-Wang-Lv-Deng (2014…](cubic-lattices-percolation-thresholds-digits.md) | standard | needs cluster (or laptop-days with a GPU union-find code); L up to 1024 and 1e8+ samples per size |
+| ★★☆☆☆ | [Site percolation on the cubic lattice Z^3: a certified lower bound on p_c above Georgakop…](z3-site-percolation-rigorous-lower-bound.md) | standard | laptop-hours to laptop-days (exhaustive enumeration of walks or animals, a few GB at the largest sizes) |
 | ★★☆☆☆ | [Smallest unsolved quantum random access code: three trits into one qutrit (n = d = D = 3)…](qrac-qutrit-three-trits-smallest-open.md) | standard | laptop-hours (seesaw searches; exact-arithmetic SDP dual certificates for upper bounds) |
 | ★★☆☆☆ | [Square-lattice site percolation threshold: settle the 5-sigma clash between Yang-Zhou's 0…](square-site-percolation-threshold-13th-digit.md) | standard | needs cluster (exact transfer matrices with state counts growing like ~2.6-2.75^n; n >= 25 needs 100+ GB RAM big-memory nodes) |
 | ★★☆☆☆ | [Stabilizer rank of magic states: an exact decomposition of \|T>^{(x)m} or \|F>^{(x)m} int…](magic-state-stabilizer-rank-exponents.md) | standard | laptop-days |
