@@ -697,74 +697,8 @@ def featurize_structure(atoms_dict: dict) -> np.ndarray:
     return np.nan_to_num(all_feat, nan=0.0, posinf=0.0, neginf=0.0)
 
 
-_COL_IDX = _SAMPLE_MAG_KEYS.index("Column")
-_ROW_IDX = _SAMPLE_MAG_KEYS.index("Row")
 _SOFT_IONIC_ELS = {"Li", "Na", "K", "Rb", "Cs", "Ca", "Sr", "Ba", "F", "Cl", "Br", "I", "H"}
 _CNO_ELS = {"B", "C", "N", "O"}
-
-
-def extract_iso_homolog_signature(atoms_dict: dict):
-    """
-    Scale-free unit-volume-per-atom crystallographic prototype + Periodic Table Group (Column)
-    signature for Single-Site Isoelectronic Substitutional Homolog matching.
-    """
-    from scipy.spatial.distance import cdist
-    lat = np.array(atoms_dict["lattice_mat"], dtype=np.float64)
-    coords = np.array(atoms_dict["coords"], dtype=np.float64)
-    els = list(atoms_dict["elements"])
-    cart = bool(atoms_dict.get("cartesian", False))
-    n = len(els)
-    frac = np.mod(coords @ np.linalg.inv(lat), 1.0) if cart else np.mod(coords, 1.0)
-    vol = max(abs(float(np.linalg.det(lat))), 1.0)
-    scale = (vol / n) ** (1.0 / 3.0)
-    lat_n = lat / scale
-    norms = np.sort(np.linalg.norm(lat_n, axis=1))
-    cart_n = frac @ lat_n
-    shifts = np.array(
-        [[i, j, k] for i in (-1, 0, 1) for j in (-1, 0, 1) for k in (-1, 0, 1)],
-        dtype=np.float64,
-    ) @ lat_n
-    all_pts = (cart_n[:, None, :] + shifts[None, :, :]).reshape(-1, 3)
-    dmat = np.sort(cdist(cart_n, all_pts), axis=1)[:, 1:9]
-    geom_vec = np.concatenate([norms, np.mean(dmat, axis=0), np.std(dmat, axis=0)])
-    col_hist = np.zeros(19, dtype=np.float64)
-    el_rows = {}
-    for e in els:
-        m = _get_el_info(e)[1]
-        c = int(round(m[_COL_IDX]))
-        if 1 <= c <= 18:
-            col_hist[c] += 1.0 / n
-        el_rows[e] = float(m[_ROW_IDX])
-    return n, col_hist, geom_vec, set(els), el_rows
-
-
-def compute_single_sub_homolog_distance(sigs_a, sigs_b, D_phys: np.ndarray) -> np.ndarray:
-    """
-    Pairwise distance in the Exact Isoelectronic Crystallographic Homolog manifold:
-    finite (< 1.0) iff two crystals have the same unit-cell atom count, identical Periodic Group
-    stoichiometry, scale-free crystal geometry within 0.008, and at most a single-element
-    substitution across adjacent periodic rows (|dRow| <= 1).
-    """
-    na = len(sigs_a)
-    nb = len(sigs_b)
-    D_hom = np.ones((na, nb), dtype=np.float64) * 10.0
-    for i, (ni, chi, gi, el_i, er_i) in enumerate(sigs_a):
-        for j, (nj, chj, gj, el_j, er_j) in enumerate(sigs_b):
-            if ni == nj and np.sum(np.abs(chi - chj)) < 0.01:
-                g_dist = float(np.mean(np.abs(gi - gj)))
-                if g_dist > 0.008:
-                    continue
-                diff_i = el_i - el_j
-                diff_j = el_j - el_i
-                if len(diff_i) <= 1 and len(diff_j) <= 1 and len(el_i & el_j) >= 1:
-                    row_jump = 0.0
-                    if len(diff_i) == 1 and len(diff_j) == 1:
-                        e1 = next(iter(diff_i))
-                        e2 = next(iter(diff_j))
-                        row_jump = abs(er_i[e1] - er_j[e2])
-                    if row_jump <= 1.0:
-                        D_hom[i, j] = g_dist + 0.05 * row_jump + 0.25 * float(D_phys[i, j])
-    return D_hom
 
 
 def extract_fracture_regime_vector(atoms_dict: dict, feat_vec: np.ndarray) -> np.ndarray:

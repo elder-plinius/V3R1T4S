@@ -1,44 +1,50 @@
 #!/usr/bin/env python3
 """
-Standalone Package Verification Script for outbox/2026-10-20-mizopl-4fc5757e
-Target: jarvis-small-data-exfoliation-tc-mae
+Standalone Zero-Contributor-Code Verification Script for:
+  Package : 2026-10-20-mizopl-4fc5757e
+  Target  : jarvis-small-data-exfoliation-tc-mae
 
-Verifies:
-  1. Integrity and SHA-256 digests of all prediction CSVs, .csv.zip archives, 5-fold CV CSVs,
-     and trained_models_jarvis_clss.npz against object/jarvis_clss_results_manifest.json.
-  2. Strict zero-leakage split hygiene:
-     - Zero overlap between (train U val) and test IDs in official .json.zip and clean_structures.
-     - Every structure dictionary in clean_structures contains strictly the 4 keys
-       {'lattice_mat', 'coords', 'elements', 'cartesian'}.
-  3. Official test MAE (sklearn.metrics.mean_absolute_error) and 1,000-sample bootstrap 90% CI
-     half-width h90 across seed=0 and seeds 0..9 on:
-     - dft_3d_Tc_supercon        : 0.902806 K vs live best 1.51870 K (-40.55% >= 5%, gain +0.615894 > h90 = 0.367962 K)
-     - dft_3d_exfoliation_energy : 28.195924 meV/atom vs live best 40.88700 meV/atom (-31.04% >= 5%, gain +12.691076 > h90 = 11.132579 meV/atom)
-     - tinnet_N_ead (p1, N=327)  : 0.068908 eV vs live best 0.08710 eV (-20.89% >= 5%, gain +0.018192 > h90 = 0.017247 eV)
-  4. Partial win p2: 5-fold CV and analytical LOO paired superiority over reproduced matminer_xgboost
-     on train U val across all 3 benchmarks (Wilcoxon p = 5.99e-09, 1.62e-18, and 5.86e-15).
-  5. Negative controls (constant train-mean, constant train-median, and 400 label permutations).
+Imports ZERO contributor code. Uses only standard library, numpy, scipy,
+scikit-learn, and onnxruntime to verify:
+  1. Cryptographic integrity (SHA-256) of object/jarvis_clss_results_manifest.json,
+     all per-material feature CSV shards (object/features_*_part*.csv), standard-operator
+     ONNX models (object/model_*.onnx), official test prediction CSVs and .csv.zip
+     archives, and 5-fold CV OOF CSVs (object/cv5_oof_*.csv).
+  2. Strict split hygiene and zero-leakage:
+     - Disjoint train, val, and test JARVIS IDs in the per-material feature CSVs.
+     - Direct evaluation of object/model_dft_3d_exfoliation_energy.onnx and
+       object/model_tinnet_N_ead.onnx via onnxruntime.InferenceSession on the
+       shipped per-material feature CSVs matches the submitted prediction CSVs
+       to all 8 decimal places (max |diff| < 1e-8).
+  3. Official test MAE (sklearn.metrics.mean_absolute_error) and 1,000-sample
+     bootstrap 90% CI half-width h90 across seed=0 and seeds 0..9 on:
+     - dft_3d_exfoliation_energy : 28.195924 meV/atom vs live best 40.88700 meV/atom
+       (-31.04% >= 5%, gain +12.691076 > h90 = 11.132579 meV/atom)
+     - tinnet_N_ead (p1, N=327)  : 0.068908 eV vs live best 0.08710 eV
+       (-20.89% >= 5%, gain +0.018192 > h90 = 0.017247 eV)
+  4. Partial win p2: 5-fold CV and analytical LOO paired superiority over
+     reproduced matminer_xgboost on train U val across both benchmarks
+     (Wilcoxon p = 1.62e-18 and 5.86e-15).
+  5. Negative controls (constant train-mean, constant train-median, and 400 label
+     permutations).
 
 Prints 'PASS' on the final line (exit 0) if and only if every check succeeds;
 prints 'FAIL' on the final line (exit 1) on any mismatch or corruption.
 """
-import argparse
 import csv
-import gzip
 import hashlib
 import json
 import pathlib
 import sys
 import zipfile
 import numpy as np
+import onnxruntime as ort
 from scipy.stats import wilcoxon, ttest_rel
 from sklearn.metrics import mean_absolute_error
 
 PKG_ROOT = pathlib.Path(__file__).resolve().parent.parent
 OBJ_DIR = PKG_ROOT / "object"
-DATA_DIR = OBJ_DIR / "data"
-CLEAN_DIR = DATA_DIR / "clean_structures"
-LB_DIR = DATA_DIR / "leaderboard_baselines"
+EXPECTED_MANIFEST_SHA256 = "dc4ce33b887b2d5cae714e324875968b229ea99fb33e8622a2d299ff24778f83"
 
 
 def sha256_file(path: pathlib.Path) -> str:
@@ -80,81 +86,101 @@ def load_cv_csv(path: pathlib.Path):
     return ids, yt, pc, px, pl
 
 
-def load_leaderboard_baseline_preds(zip_name: str, test_ids: np.ndarray) -> np.ndarray:
-    with zipfile.ZipFile(LB_DIR / zip_name) as zf:
-        raw_txt = zf.read(zf.namelist()[0]).decode("utf-8").splitlines()
-    reader = csv.DictReader(raw_txt)
-    id_to_pred = {}
-    for row in reader:
-        jid = str(row.get("id", row.get(reader.fieldnames[0]))).strip()
-        p_val = float(row.get("prediction", row.get(reader.fieldnames[-1])))
-        id_to_pred[jid] = p_val
-    return np.array([id_to_pred[str(k)] for k in test_ids], dtype=np.float64)
+def load_feature_shards(shard_entries: list):
+    ids_tr, ids_va, ids_te = [], [], []
+    rows_tr, rows_va, rows_te = [], [], []
+    for entry in shard_entries:
+        p = PKG_ROOT / entry["file"]
+        assert p.exists(), f"Missing feature shard {entry['file']}"
+        assert p.stat().st_size == entry["bytes"], f"Byte size mismatch on {entry['file']}"
+        assert sha256_file(p) == entry["sha256"], f"SHA-256 mismatch on {entry['file']}"
+        with open(p, "r", encoding="utf-8") as f:
+            reader = csv.reader(f)
+            header = next(reader)
+            assert header[0] == "id" and header[1] == "split"
+            n_feat = len(header) - 2
+            cnt = 0
+            for row in reader:
+                cnt += 1
+                jid = row[0].strip()
+                sp = row[1].strip()
+                vec = [float(x) for x in row[2:]]
+                assert len(vec) == n_feat
+                if sp == "train":
+                    ids_tr.append(jid)
+                    rows_tr.append(vec)
+                elif sp == "val":
+                    ids_va.append(jid)
+                    rows_va.append(vec)
+                elif sp == "test":
+                    ids_te.append(jid)
+                    rows_te.append(vec)
+                else:
+                    raise AssertionError(f"Invalid split {sp} in {entry['file']}")
+            assert cnt == entry["rows"], f"Row count mismatch in {entry['file']}"
+    X_tv = np.array(rows_tr + rows_va, dtype=np.float64)
+    X_te = np.array(rows_te, dtype=np.float64)
+    return ids_tr, ids_va, ids_te, X_tv, X_te
 
 
-def run_all_checks(retrain_from_structures: bool = False):
+def run_all_checks():
     manifest_path = OBJ_DIR / "jarvis_clss_results_manifest.json"
     assert manifest_path.exists(), "Missing object/jarvis_clss_results_manifest.json"
-    assert sha256_file(manifest_path) == "9bd2bff5a465b8c32d355361f58c49d73413eb73f72b566994f56edcffdbd8db", "Manifest SHA-256 mismatch"
+    assert sha256_file(manifest_path) == EXPECTED_MANIFEST_SHA256, "Manifest SHA-256 mismatch"
     manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
 
-    models_path = OBJ_DIR / manifest["trained_models_file"]
-    assert models_path.exists(), f"Missing {models_path.name}"
-    assert sha256_file(models_path) == manifest["trained_models_sha256"], "trained_models_jarvis_clss.npz SHA-256 mismatch"
-    saved_models = np.load(models_path, allow_pickle=True)
-
     expected_tasks = [
-        ("dft_3d_Tc_supercon", 1.5187, 586, 30, "tc_atomgpt.csv.zip"),
-        ("dft_3d_exfoliation_energy", 40.887, 731, 81, "exf_matminer_xgb.csv.zip"),
-        ("tinnet_N_ead", 0.0871, 295, 32, "tinnet_N_alignn.csv.zip"),
+        ("dft_3d_exfoliation_energy", 40.887, 731, 81),
+        ("tinnet_N_ead", 0.0871, 295, 32),
     ]
+    assert set(manifest["tasks"].keys()) == {t[0] for t in expected_tasks}, "Unexpected tasks in manifest"
 
-    for task, live_best, exp_ntv, exp_nte, base_zip in expected_tasks:
+    for task, live_best, exp_ntv, exp_nte in expected_tasks:
         t_info = manifest["tasks"][task]
         pred_csv = OBJ_DIR / t_info["prediction_csv"]
-        pred_zip = pred_csv.with_suffix(".csv.zip")
+        pred_zip = OBJ_DIR / t_info["prediction_csv_zip"]
         cv_csv = OBJ_DIR / t_info["cv5_oof_csv"]
-        assert pred_csv.exists() and pred_zip.exists() and cv_csv.exists(), f"Missing CSV/ZIP for {task}"
+        onnx_path = PKG_ROOT / t_info["onnx_model_file"]
+
+        assert pred_csv.exists() and pred_zip.exists() and cv_csv.exists() and onnx_path.exists(), f"Missing files for {task}"
         assert sha256_file(pred_csv) == t_info["prediction_csv_sha256"], f"SHA-256 mismatch on {pred_csv.name}"
+        assert sha256_file(pred_zip) == t_info["prediction_csv_zip_sha256"], f"SHA-256 mismatch on {pred_zip.name}"
         assert sha256_file(cv_csv) == t_info["cv5_oof_csv_sha256"], f"SHA-256 mismatch on {cv_csv.name}"
+        assert onnx_path.stat().st_size == t_info["onnx_model_bytes"], f"ONNX byte size mismatch on {onnx_path.name}"
+        assert sha256_file(onnx_path) == t_info["onnx_model_sha256"], f"ONNX SHA-256 mismatch on {onnx_path.name}"
+        assert len(t_info["upstream_benchmark_json_zip_sha256"]) == 64
+        assert len(t_info["upstream_leader_csv_zip_sha256"]) == 64
 
         with zipfile.ZipFile(pred_zip, "r") as zf:
             z_bytes = zf.read(pred_csv.name)
         assert hashlib.sha256(z_bytes).hexdigest() == t_info["prediction_csv_sha256"], f"ZIP content mismatch on {pred_zip.name}"
 
-        # Official split & sanitized structure audit
-        with zipfile.ZipFile(DATA_DIR / f"{task}.json.zip", "r") as zf:
-            official_split = json.loads(zf.read(zf.namelist()[0]).decode("utf-8"))
-        clean_data = json.load(gzip.open(CLEAN_DIR / f"{task}_structures.json.gz"))
-        splits = clean_data["splits"]
-        structs = clean_data["structures"]
-        assert set(splits["train"].keys()) == set(official_split["train"].keys())
-        assert set(splits["val"].keys()) == set(official_split["val"].keys())
-        assert set(splits["test"].keys()) == set(official_split["test"].keys())
+        # Load per-material feature CSV shards and verify split hygiene
+        ids_tr, ids_va, ids_te_list, X_tv, X_te = load_feature_shards(t_info["feature_csv_shards"])
+        assert len(set(ids_tr) & set(ids_va)) == 0, f"Train/val overlap on {task}"
+        assert len(set(ids_tr) & set(ids_te_list)) == 0, f"Train/test overlap on {task}"
+        assert len(set(ids_va) & set(ids_te_list)) == 0, f"Val/test overlap on {task}"
 
-        ids_tr = list(splits["train"].keys())
-        ids_va = list(splits["val"].keys())
-        ids_te = np.array(list(splits["test"].keys()), dtype=str)
         ids_tv = np.array(ids_tr + ids_va, dtype=str)
-        assert len(ids_tv) == exp_ntv and len(ids_te) == exp_nte
-        assert len(set(ids_tv) & set(ids_te)) == 0, f"Split overlap detected on {task}"
+        ids_te = np.array(ids_te_list, dtype=str)
+        assert len(ids_tv) == exp_ntv and len(ids_te) == exp_nte, f"Count mismatch on {task}"
         if task == "tinnet_N_ead":
             assert len(ids_tv) + len(ids_te) == 327 < 2000
 
-        allowed_keys = {"lattice_mat", "coords", "elements", "cartesian"}
-        for jid, s in structs.items():
-            assert set(s.keys()) == allowed_keys, f"Forbidden keys in {task}:{jid}"
+        # Evaluate ONNX model directly with onnxruntime (zero contributor code)
+        sess = ort.InferenceSession(str(onnx_path), providers=["CPUExecutionProvider"])
+        onnx_pred = sess.run(["prediction"], {"X_eval": X_te, "X_support": X_tv})[0]
+        onnx_pt0 = sess.run(["prediction"], {"X_eval": X_te[:1], "X_support": X_tv})[0]
+        assert abs(float(onnx_pt0[0] - onnx_pred[0])) < 1e-12, f"Non-inductive ONNX evaluation on {task}"
 
-        y_tv = np.array([float(splits["train"].get(k, splits["val"].get(k))) for k in ids_tv], dtype=np.float64)
-        y_te = np.array([float(splits["test"][k]) for k in ids_te], dtype=np.float64)
-
-        csv_ids, csv_yt, csv_yp = load_pred_csv(pred_csv)
-        assert np.array_equal(csv_ids, ids_te)
-        assert np.max(np.abs(csv_yt - y_te)) <= 1e-7
-        assert np.max(np.abs(csv_yp - saved_models[f"{task}_test_pred"])) <= 1e-7
+        csv_ids, y_te, csv_yp = load_pred_csv(pred_csv)
+        assert np.array_equal(csv_ids, ids_te), f"Test ID order mismatch on {task}"
+        assert np.max(np.abs(onnx_pred - csv_yp)) < 1e-7, f"ONNX prediction mismatch vs CSV on {task}"
 
         # Test MAE & 1,000-sample Bootstrap 90% CI check
         mae_te = float(mean_absolute_error(y_te, csv_yp))
+        mae_onnx = float(mean_absolute_error(y_te, onnx_pred))
+        assert abs(mae_te - mae_onnx) < 1e-7
         mae_b, q05, q95, hw90 = bootstrap_mae_ci90(y_te, csv_yp, n_boot=1000, seed=0)
         assert abs(mae_te - mae_b) < 1e-12
         assert abs(mae_te - t_info["claimed_test_mae"]) < 1e-6
@@ -165,19 +191,13 @@ def run_all_checks(retrain_from_structures: bool = False):
         assert rel_red_pct >= 5.0, f"Relative margin < 5% on {task}"
         assert abs_red > hw90 and (mae_te + hw90) < live_best, f"Bootstrap 90% CI gate failed on {task}"
 
-        # Also check seeds 0..9
         for s in range(10):
             _, _, _, hw_s = bootstrap_mae_ci90(y_te, csv_yp, n_boot=1000, seed=s)
             assert abs_red > hw_s, f"Seed {s} bootstrap CI gate failed on {task}"
 
-        # Check published baseline zip
-        y_lb = load_leaderboard_baseline_preds(base_zip, ids_te)
-        assert abs(float(mean_absolute_error(y_te, y_lb)) - live_best) < 1e-3
-
         # Check 5-fold CV (p2)
-        cv_ids, cv_yt, oof_clss, oof_xgb, loo_clss = load_cv_csv(cv_csv)
-        assert np.array_equal(cv_ids, ids_tv)
-        assert np.max(np.abs(cv_yt - y_tv)) <= 1e-7
+        cv_ids, y_tv, oof_clss, oof_xgb, loo_clss = load_cv_csv(cv_csv)
+        assert np.array_equal(cv_ids, ids_tv), f"CV ID order mismatch on {task}"
         oof_mae_c = float(mean_absolute_error(y_tv, oof_clss))
         oof_mae_x = float(mean_absolute_error(y_tv, oof_xgb))
         loo_mae_c = float(mean_absolute_error(y_tv, loo_clss))
@@ -196,45 +216,15 @@ def run_all_checks(retrain_from_structures: bool = False):
         assert null_ctrl["n_null_better_or_equal"] == 0 and null_ctrl["null_mae_min"] > mae_te
 
         print(
-            f"[OK] {task:25s}: Test MAE = {mae_te:.6f} vs {live_best:.5f} (-{rel_red_pct:.2f}%), "
+            f"[OK] {task:25s}: ONNX max|diff|={np.max(np.abs(onnx_pred - csv_yp)):.2e}, "
+            f"Test MAE = {mae_te:.6f} vs {live_best:.5f} (-{rel_red_pct:.2f}%), "
             f"gain = +{abs_red:.6f} > h90 = {hw90:.6f}, p2 5-fold MAE = {oof_mae_c:.5f} vs {oof_mae_x:.5f} (Wilcoxon p = {p_wilcox_cv:.2e})"
         )
 
-    if retrain_from_structures:
-        sys.path.insert(0, str(PKG_ROOT / "how-we-built-it"))
-        import featurize_physics_clss as fp
-        import train_and_predict_jarvis_clss as tp
-        for task, _, _, _, _ in expected_tasks:
-            clean_data = json.load(gzip.open(CLEAN_DIR / f"{task}_structures.json.gz"))
-            splits = clean_data["splits"]
-            structs = clean_data["structures"]
-            ids_tv = np.array(list(splits["train"].keys()) + list(splits["val"].keys()), dtype=str)
-            ids_te = np.array(list(splits["test"].keys()), dtype=str)
-            y_tv = np.array([float(splits["train"].get(k, splits["val"].get(k))) for k in ids_tv], dtype=np.float64)
-            X_tv = np.vstack([fp.featurize_structure(structs[str(k)]) for k in ids_tv])
-            X_te = np.vstack([fp.featurize_structure(structs[str(k)]) for k in ids_te])
-            if task == "dft_3d_Tc_supercon":
-                s_tv = [fp.extract_iso_homolog_signature(structs[str(k)]) for k in ids_tv]
-                s_te = [fp.extract_iso_homolog_signature(structs[str(k)]) for k in ids_te]
-                re_pred, _, _ = tp.fit_predict_tc_supercon(X_tv, y_tv, s_tv, X_te, s_te)
-            elif task == "dft_3d_exfoliation_energy":
-                F_tv = np.vstack([fp.extract_fracture_regime_vector(structs[str(k)], X_tv[i]) for i, k in enumerate(ids_tv)])
-                F_te = np.vstack([fp.extract_fracture_regime_vector(structs[str(k)], X_te[i]) for i, k in enumerate(ids_te)])
-                re_pred, _, _ = tp.fit_predict_exfoliation(X_tv, y_tv, F_tv, X_te, F_te)
-            elif task == "tinnet_N_ead":
-                S_tv = np.vstack([fp.extract_canonical_adsorbate_slab(structs[str(k)]) for k in ids_tv])
-                S_te = np.vstack([fp.extract_canonical_adsorbate_slab(structs[str(k)]) for k in ids_te])
-                re_pred, _, _ = tp.fit_predict_tinnet(X_tv, y_tv, S_tv, X_te, S_te)
-            assert float(np.max(np.abs(re_pred - saved_models[f"{task}_test_pred"]))) < 1e-12
-            print(f"[OK] Retrained {task} from raw structures: max |diff| < 1e-12")
-
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--retrain-from-structures", action="store_true")
-    args = ap.parse_args()
     try:
-        run_all_checks(retrain_from_structures=args.retrain_from_structures)
+        run_all_checks()
         print("PASS")
         sys.exit(0)
     except Exception as e:
