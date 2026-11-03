@@ -4,11 +4,12 @@ context: fresh subagent
 
 Scope: reproduction of the single frozen assignment in `claim/assignment.txt`.
 Only claim-package research inputs were read. No attempts, research notes,
-author reasoning outside the claim, or other panel reports were read. The
-requested route was `gpt-6.1-sol` with `xhigh`; effective runtime settings are
-not independently observable from this context. No network requests or
-descendants were used. All computation was short foreground validation in the
-default sandbox, with no background processes or elevated computation.
+author reasoning outside the claim, or other panel reports were read.
+
+Package note: this is the contributor's reproduction review from 2026-10-25.
+Historical claim/assignment.txt and claim/verify_assignment.py refer to the
+shipped object/assignment.txt and verify-it-yourself/check_assignment.py,
+respectively. Commands below record the original review locations.
 
 Definition used, quoted from the frozen criterion:
 
@@ -79,7 +80,7 @@ all pass. No nondeterminism or mismatch was observed.
 Reproduction limits: this review does not establish current comparison-table
 values, novelty, optimality, the historical source attribution for Sen's
 theorem, or the full binding success criterion's external-source clauses.
-Those belong to the other panel roles and coordinator. No native search count
+Those belong to the other panel roles. No native search count
 or search artifact outside `claim/` was consulted; the supplied Python forward
 DP and this independent suffix DP are the two reproduced exact counters.
 

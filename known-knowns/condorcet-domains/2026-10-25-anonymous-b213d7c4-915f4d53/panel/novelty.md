@@ -4,7 +4,7 @@ context: fresh subagent
 
 Review scope: one prospective claim only: `claim/assignment.txt`, n = 25, claimed |D(A)| = 180870896, SHA256 `915f4d534bc6a8557649f3b02bf4ed21d8782ce01a450c2c39c53c25751d508b`. Candidate inputs were confined to `claim/`; no local attempts, notes, other local panel reports, or search-author reasoning were inspected. Public comparison PR text was used only for prior-claim count and status metadata, never as independent soundness or novelty authority. This review decides novelty only; the separate soundness review must establish the count.
 
-The coordinator requested the saved verification route gpt-6.1-sol / xhigh. No descendants were launched. Frozen run start: 2026-10-25 17:20:06Z; new-work cutoff: 18:35:06Z; hard deadline: 18:50:06Z. This agent began verification at 18:36:11Z, after the cutoff. All work here was bounded verification and source search; no research search, heavy process, benchmark computation, outward submission, or policy/pinned-repository edit was performed.
+Package note: this is the contributor's dated novelty review from 2026-10-25. Historical claim/assignment.txt maps to object/assignment.txt. Detailed source logs and raw responses in panel/novelty-source/ are not included in this package; the shipped the-record-we-beat/ folder summarizes the table receipts and selected headers.
 
 ## Required fresh status and table check
 
@@ -15,7 +15,7 @@ I made exactly one approved plain HTTPS GET to the status URL and, after finding
 | https://arxiv.org/abs/2601.07336 | 18:36:28.608783–18:36:28.761824Z | 200 / 0 | 41568 | `5d57174029ffee102f9ea40ec0c18386c28c76987619a73c2b0a7ef2b620608b` |
 | https://arxiv.org/html/2601.07336v1 | 18:36:53.790698–18:36:53.944541Z | 200 / 0 | 330995 | `a018d41785d2594aca2ffb57a28eb3e596acda1469395452e565aa4c268fb93a` |
 
-All times above are 2026-10-25 UTC. The abstract response identifies v1, submitted 2026-01-12 09:03:12 UTC, as its sole version. The HTML is the named paper and contains Table 4, “Maximum size of Condorcet domains.” Its n = 25 entry in **f(n) & h(n)** is **≥160316046 (ks)**. The Fishburn column is 84990640; the formula column is 195312500. Those are different quantities and neither replaces the criterion's f(n) & h(n) comparison. Exact raw bodies, response headers, client stdout/stderr, receipts, extracted text, and the exact n25 row are in `panel/novelty-source/`. HTTP cache-age headers are preserved; these were actual fresh client requests to the origin URL, not substituted local saved extracts.
+All times above are 2026-10-25 UTC. The abstract response identifies v1, submitted 2026-01-12 09:03:12 UTC, as its sole version. The HTML is the named paper and contains Table 4, “Maximum size of Condorcet domains.” Its n = 25 entry in **f(n) & h(n)** is **≥160316046 (ks)**. The Fishburn column is 84990640; the formula column is 195312500. Those are different quantities and neither replaces the criterion's f(n) & h(n) comparison. Exact raw bodies, response headers, client stdout/stderr, receipts, extracted text, and the exact n25 row were saved in `panel/novelty-source/` (not included in this package). HTTP cache-age headers are preserved; these were actual fresh client requests to the origin URL, not substituted local saved extracts.
 
 ## Fresh comparison search
 
@@ -44,7 +44,7 @@ The candidate exceeds the live latest Table 4 lower bound by **20554850**, and t
 
 This is a genuine strict numerical improvement over every same-n value found by the required current checks. The conclusion is bounded by the indexed sources and public records searched; it asserts no optimality and cannot exclude an unpublished or unindexed larger domain. The required table check is complete, so PENDING TABLE CHECK does not apply. Numerical soundness remains the separate review's responsibility.
 
-Facts without this verdict are available in `panel/novelty-source/source-facts.json` for the coordinator and fresh CRITERION review. Report completed before 2026-10-25 18:41:30Z.
+The detailed `panel/novelty-source/source-facts.json` review input is not included in this package. Report completed before 2026-10-25 18:41:30Z.
 
 pass:true
 
