@@ -1,0 +1,24 @@
+{
+ "fixture": "hsp5_index_plus4_5col.txt",
+ "synthetic": true,
+ "dim": 5,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "index_in_dim_columns",
+ "rows": [
+  1,
+  2,
+  3
+ ],
+ "found_columns": 5,
+ "expected_columns": [
+  5,
+  6
+ ],
+ "must_not": [
+  "return a (3,5) array with the index as x1",
+  "strip the index and return (3,4)",
+  "return any coords"
+ ],
+ "note": "width equals dim, but col0 is a sequential integer run (1,2,3): an index plus dim-1 coordinates. This is a real published hsp5 layout (index + 4 coords)"
+}

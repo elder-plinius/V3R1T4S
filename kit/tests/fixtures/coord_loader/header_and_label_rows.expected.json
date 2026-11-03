@@ -1,0 +1,42 @@
+{
+ "fixture": "header_and_label_rows.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "ok",
+ "anomaly": null,
+ "N": 3,
+ "columns": 3,
+ "index_stripped": false,
+ "skipped_rows": [
+  {
+   "line": 1,
+   "reason": "header: no numeric tokens"
+  }
+ ],
+ "label_rows": [
+  {
+   "line": 2,
+   "label": "Ar",
+   "rule": "one leading non-numeric token followed by exactly dim numbers: label stripped, row kept"
+  }
+ ],
+ "coords": [
+  [
+   "0.100000",
+   "0.200000",
+   "0.300000"
+  ],
+  [
+   "0.400000",
+   "0.500000",
+   "0.600000"
+  ],
+  [
+   "-0.100000",
+   "-0.200000",
+   "-0.300000"
+  ]
+ ],
+ "compare": "exact decimal string"
+}

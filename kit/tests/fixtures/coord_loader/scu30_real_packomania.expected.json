@@ -1,0 +1,62 @@
+{
+ "fixture": "scu30_real_packomania.txt",
+ "synthetic": false,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  1,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36
+ ],
+ "found_columns": [
+  1,
+  5
+ ],
+ "expected_columns": [
+  3,
+  4
+ ],
+ "with_trailing_radius": {
+  "status": "anomaly",
+  "anomaly": "dimension_mismatch",
+  "rows": [
+   36
+  ]
+ },
+ "must_not": [
+  "drop the lone last line and return N-1 rows",
+  "pad the last row",
+  "return any coords"
+ ],
+ "note": "verbatim Packomania scu30 file as published 2026-10-17: radius line 1, 'index x y z radius' rows, lone '30' last line. Raises by default; with trailing_radius=True it still raises on the lone '30' line"
+}
