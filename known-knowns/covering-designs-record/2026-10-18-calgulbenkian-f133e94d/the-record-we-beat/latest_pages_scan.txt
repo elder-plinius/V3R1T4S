@@ -1,0 +1,6 @@
+Scan of the orchestrator's own GETs of the latest-improvements pages (rows are v k t m ...):
+- cr_latest_1.html: 100 table rows, dates in rows: 18/10/2026; rows with v=57 and k=14: ['57 14 08 15 8.669 Known design, view notes -> Sum (includes ', '57 14 08 16 3.643 Known design, view notes -> Sum (includes ']
+- cr_latest_2.html: 100 table rows, dates in rows: 18/10/2026; rows with v=57 and k=14: none
+- cr_latest_3.html: 100 table rows, dates in rows: 18/10/2026; rows with v=57 and k=14: none
+
+No row with (v,k,t) = (57,14,3) appears on any of the three pages. The rows with v=57, k=14 listed above (if any) are for t=8, a different table cell.
