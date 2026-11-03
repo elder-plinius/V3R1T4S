@@ -1,0 +1,5 @@
+# Contributor text, unverified
+
+On 2026-11-01 a manual run searched the 36-turbine case from fresh starts only (no published coordinates): a ring-structured start generator with SLSQP polishing under exact CS1 physics and strict geometry (1e-4 m internal margins), then a pre-registered ruin-and-recreate continuation that relocated 1-4 turbines, rotated the whole farm or perturbed all coordinates, starting from the run's own ring best (859452.80 MWh). It reached this layout at restart 3287, seconds before its 17:35Z deadline. An earlier, weaker 36-turbine object (865648.24 MWh) from the same run was frozen and partly reviewed but never completed; it is not part of this package.
+
+On 2026-11-02 a separate session re-evaluated the exact saved bytes with a standard-library evaluator written from the definition and the unmodified official evaluator, checked geometry in exact rational arithmetic, matched against all posted 36-turbine layouts including rotations and mirror images (at least 24/36 hubs stay > 50 m from any posted layout), then gave the frozen claim to three fresh review contexts. Panel reports are copied without edits.

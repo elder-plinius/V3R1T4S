@@ -1,0 +1,5 @@
+{"event": "start", "utc": "2026-11-01T17:05:56.550868+00:00", "pid": 9, "numpy": "2.5.4", "scipy": "1.18.1", "seed": 20261137, "deadline": "2026-11-01T17:35:00+00:00", "resumed": false}
+{"event": "best", "aep_MWh": 859452.796573924, "geometry": {"max_radius_m": 1999.9999000033692, "min_spacing_m": 315.0791102005226, "strictly_feasible": true}, "restart": 117, "kind": 6, "solver_success": true, "iterations": 47, "utc": "2026-11-01T17:09:48.423585+00:00", "seed": 20261137}
+{"event": "start", "utc": "2026-11-01T17:11:33.053269+00:00", "pid": 9, "numpy": "2.5.4", "scipy": "1.18.1", "seed": 20261138, "deadline": "2026-11-01T17:35:00+00:00", "resumed": false}
+{"event": "best", "aep_MWh": 869713.9496471488, "geometry": {"max_radius_m": 1999.9999000019018, "min_spacing_m": 260.25900134524915, "strictly_feasible": true}, "restart": 3287, "kind": 6, "solver_success": true, "iterations": 48, "utc": "2026-11-01T17:34:57.423691+00:00", "seed": 20261138}
+{"event": "complete", "utc": "2026-11-01T17:35:00.015452+00:00", "restarts": 3295, "best_MWh": 869713.9496471488}
