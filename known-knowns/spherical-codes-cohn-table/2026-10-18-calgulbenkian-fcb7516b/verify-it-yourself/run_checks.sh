@@ -15,6 +15,6 @@ if [ -f "$HERE/verify-it-yourself/.mismatch" ]; then rm -f "$HERE/verify-it-your
 echo "== check_sc.py: 50-digit decimal arithmetic, normalise, all pairs, against the saved live rows"
 $PY -I "$HERE/verify-it-yourself/check_sc.py" "$HERE/the-record-we-beat/index_rows.html" "$HERE/the-record-we-beat/plain_rows.csv" "$HERE"/object/*.txt > "$HERE/verify-it-yourself/.out.txt" || fail=1
 cat "$HERE/verify-it-yourself/.out.txt"
-$PY -I "$HERE/verify-it-yourself/assert_sc.py" p2 24 "$HERE/verify-it-yourself/.out.txt" || fail=1
+$PY -I "$HERE/verify-it-yourself/assert_sc.py" full 1 "$HERE/verify-it-yourself/.out.txt" || fail=1
 rm -f "$HERE/verify-it-yourself/.out.txt"
 if [ "$fail" -eq 0 ]; then echo "ALL CHECKS PASS"; else echo "FAIL"; exit 1; fi
