@@ -1,16 +1,18 @@
-# PREREG — lychrel-new-base-proof (Mechanical Template-Closure Proof in New Bases b = 50, 98, 146)
+# PREREG — lychrel-new-base-proof (Base-98 Template-Closure Proof)
 
-Frozen: 2026-10-19T05:45:00Z
+> **Dated Note (2026-11-03):** This single-object package for base $b = 98 = 2 \cdot 7^2$ (`object/lychrel_base98_certificate.json`, `sha256: 6ec98e276bfb691187e5ebdb4c8ccf0c149f2754e201e362c15a4a681dbb5256`) was split from the initial multi-base submission in [PR #517](https://github.com/elder-plinius/V3R1T4S/pull/517) so that each PR contains a single result and no copied third-party files. The pre-registration rules below are scoped to the files shipped in this base-98 package.
 
-## Frozen Acceptance Rule
-A Lychrel template family $(T_1(m), T_2(m), T_3(m), T_4(m))$ and start integer $n = T_1(1)$ (plus pre-template seed $n_{\text{seed}}$) in base $b$ are accepted as a confirmed solution if and only if:
-1. The exact same symbolic and concrete verifier first reproduces David Seal's 1996 Period-4 baseline in Base 26 (`1N5ELA6C P^m P6E7 0^m 0D59ME5N`).
-2. The base $b$ satisfies $b \notin \{2^k, 11, 17, 20, 26\}$ and is not listed as proven on `https://en.wikipedia.org/wiki/Lychrel_number` (`data/Lychrel_number.html`) at verification time.
-3. Symbolic run-length block-by-block carry computation (`symbolic_rle_rev_add`) proves $F_b(T_1(m)) = T_2(m)$, $F_b(T_2(m)) = T_3(m)$, $F_b(T_3(m)) = T_4(m)$, and $F_b(T_4(m)) = T_1(m+1)$ for **all** integers $m \ge 1$, with every parameter-dependent block emitting a constant digit run and a constant outgoing carry $c_{\text{out}} = c_{\text{in}} \in \{0, 1\}$.
-4. Symbolic mirrored-block comparison (`check_symbolic_non_palindromicity`) proves that no $T_i(m)$ ($i \in \{1, 2, 3, 4\}, m \ge 1$) is a base-$b$ palindrome.
-5. Brute-force reverse-and-add verification holds for all $1 \le m \le 500$ ($\ge \max(\text{threshold}, 200) = 200$), and the orbit of $n = T_1(1)$ in primary base $b = 50$ is simulated for $100,000$ steps (`t = 0 .. 100,000`) with every iterate matched to $T_1(m)..T_4(m)$ via a compiled regular expression (`re.Pattern.fullmatch`).
-6. Rostand S. Kuitché's 2023 preprint (`data/rs_2659802.pdf`) is obtained and mechanically audited across bases $3 \le b \le 10$ (`claim/kuitche_2023_audit.json`), subsuming partial win `p2`.
+frozen_before_evaluation: true
+target_id: lychrel-new-base-proof
+preregistered_rule: >
+  We search the decoupled carry-wire family in bases b == 2 (mod 24) (combining the b == 2 (mod 3) outer-engine transition constraint and b == 2 (mod 8) inner-core transition constraint of our search ansatz) for a Period-4 template cycle T_1(m) -> T_2(m) -> T_3(m) -> T_4(m) -> T_1(m+1) in base b = 98 = 2 * 7^2. A candidate solution is accepted if and only if:
+  1. David Seal's 1996 Period-4 Base-26 template cycle (https://www.mathpages.com/home/dseal.htm) is first reproduced and mechanically verified by the exact same symbolic run-length block carry transducer (`verify-it-yourself/check_lychrel.py`).
+  2. The base b = 98 satisfies b not in {2^k, 11, 17, 20, 26} and is not listed as proven on https://en.wikipedia.org/wiki/Lychrel_number (`the-record-we-beat/README.md`) at verification time.
+  3. Closure under base-b reverse-and-add for ALL integer parameters m >= 1 in `object/lychrel_base98_certificate.json` is mechanically proved by an explicit block-by-block symbolic carry computation (`symbolic_rle_rev_add` in `verify-it-yourself/check_lychrel.py`) in which every parameter-dependent block ((b-1)^m paired with 0^m at exact mirror offsets) is verified to produce a constant digit/carry run with outgoing carry equal to incoming carry (c_out == c_in), together with exhaustive brute-force verification for all 1 <= m <= 500 (strictly exceeding max(m_0, 200) = 200).
+  4. Symbolic non-palindromicity is mechanically proved for every template T_1(m)..T_4(m) and all m >= 1.
+  5. The starting integer n = T_1(1) (and a 1-step pre-template seed n_seed entering T_2(1) at step 1) is simulated and matched at every step to one of T_1..T_4 via compiled regular expressions (`re.Pattern.fullmatch`).
 
-null_test: not needed because the claim is an explicit mathematical proof reduced to a finite mechanical symbolic carry-transducer check and regex-verified 100,000-step orbit simulation; in addition, 400 seeded random 82-digit base-50 starting numbers and two structural perturbation controls are verified in `author_checker_lychrel_check.py`.
+holdout_discipline: >
+  Not an empirical train/test task. Every step of the template-closure proof for base b = 98 (`object/lychrel_base98_certificate.json`) is verified by a finite mechanical symbolic carry-transducer check, brute force over 1 <= m <= 500, and regex-verified 2,000-step orbit simulation (`t = 0..2,000`), alongside 400 seeded random 92-digit base-98 starting numbers and two structural perturbation controls in `verify-it-yourself/check_lychrel.py`.
 
 ratchet_budget: n/a (deterministic symbolic template-closure proof)

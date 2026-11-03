@@ -2,7 +2,7 @@
 """
 Standalone Mechanical Verifier for Lychrel Template-Closure Proofs in New Bases
 (Base 98 = 2 * 5^2, Base 98 = 2 * 7^2, Base 146 = 2 * 73), plus David Seal's
-1996 Base-26 baseline and the mechanical audit of Kuitche (2023) across bases 3..10.
+1996 Base-26 baseline for the Base-98 certificate.
 """
 import hashlib, json, os, random, re, sys, time
 import numpy as np
@@ -1114,7 +1114,7 @@ def main():
     sym26 = verify_certificate(SEAL_BASE26_BASELINE, brute_force_max_m=500, require_new_base=False)
     print(f"[2/5] Baseline reproduction PASSED: David Seal Base 26 (Period 4, {sym26} symbolic blocks, brute-forced m=1..500).")
 
-    # Step 3: Verify Base-50 certificate
+    # Step 3: Verify Base-98 certificate
     cert50 = json.load(open(os.path.join(OBJ_DIR, "lychrel_base98_certificate.json")))
     sym_cnt = verify_certificate(cert50, brute_force_max_m=500, require_new_base=True)
     print(
@@ -1123,12 +1123,12 @@ def main():
         f"(|L0|={cert50['outer_length']}, |M0|={cert50['inner_length_even_phases']}, |T_1(1)|={cert50['start_n_T1_m1_length_in_base_b']})."
     )
 
-    # Step 4: Simulate 2,000 steps of the Base-50 orbit and match every iterate against regexes
+    # Step 4: Simulate 2,000 steps of the Base-98 orbit and match every iterate against regexes
     t_sim = time.time()
     final_len = simulate_orbit_1e5_with_regex(cert50, n_steps=2000)
     print(
         f"[4/5] Base 98 orbit simulation + regex matching PASSED: 2,000 steps "
-        f"(t=0..100,000, final length = {final_len:,} base-98 digits) in {time.time() - t_sim:.2f}s."
+        f"(t=0..2,000, final length = {final_len:,} base-98 digits) in {time.time() - t_sim:.2f}s."
     )
 
     # Step 5: Negative & null-model controls
