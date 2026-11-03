@@ -1,0 +1,5 @@
+ortools==9.15.6755
+absl-py==2.5.1
+immutabledict==4.3.1
+protobuf==6.33.6
+numpy==2.5.4
