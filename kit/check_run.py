@@ -15,7 +15,8 @@ Last line: "CHECK_RUN: PASS" or "CHECK_RUN: FAIL (<n> problems)". Exit status 0 
 import argparse, calendar, csv, hashlib, io, json, os, re, shutil, subprocess, sys, tempfile
 
 TEXT_EXT = {".md", ".txt", ".json", ".csv", ".log", ".tsv", ".yaml", ".yml", ""}
-CODE_EXT = {".py", ".sh", ".c", ".h", ".js", ".ipynb", ".rs", ".go", ".java", ".jl", ".r", ".cpp", ".hpp"}
+CODE_EXT = {".py", ".sh", ".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx",
+            ".js", ".ipynb", ".rs", ".go", ".java", ".jl", ".r"}
 MAX_SCAN = 2_000_000
 SETTINGS_KEYS = ["credit", "github", "curious_about", "effort", "schedule", "publish_charter", "memory",
                  "capabilities", "agent_run", "repo_tag", "repo_commit", "tag_signature"]
