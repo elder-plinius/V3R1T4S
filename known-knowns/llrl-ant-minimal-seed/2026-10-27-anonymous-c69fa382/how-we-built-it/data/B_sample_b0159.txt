@@ -1,0 +1,2 @@
+MIN t=139 p=229 k=6 cells: (0,1,3) (2,1,3) (0,2,2) (1,2,3) (1,4,3) (3,0,1)
+DONE rule=LLRL K=6 T=139 wid=159/400 leaves=8367759 viol=0 mins=1 flags=0

@@ -1,0 +1,1 @@
+RESULT rule=LLRL N=30000 onset=139 P=384 D=(-4,-4) heading_at_onset=3 cert_at_onset=OK cert_at_onset-1=FAIL class=39a168f2c058efab
