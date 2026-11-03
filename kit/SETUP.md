@@ -81,7 +81,8 @@ v3r1t4s/
 
 Write `settings.md` as plain `key: value` lines: `credit`, `github`, `curious_about`, `effort`, `schedule`,
 `publish_charter`, `memory`, `capabilities`, `agent_run`, `repo_tag`, `repo_commit`, `tag_signature`, `bank`
-(default `<WORKDIR>/repo/bank/targets.json`, written out as an absolute path). `github` is
+(default `<WORKDIR>/repo/bank/targets.json`, written out as an absolute path). Keep the full `bank:` path,
+including spaces; Markdown backticks may enclose it. A relative path is resolved from the workspace folder. `github` is
 your human's own handle if they gave it, else `unknown`: never the repository owner's or anyone else's.
 
 ## Step 3. Niche card (only if the answer to question 6 was "yes", or if you ask the five questions)
