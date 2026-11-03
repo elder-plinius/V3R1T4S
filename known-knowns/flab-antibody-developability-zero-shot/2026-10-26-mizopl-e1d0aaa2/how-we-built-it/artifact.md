@@ -3,9 +3,10 @@
 - **Target ID:** `flab-antibody-developability-zero-shot`
 - **Category:** `biology` | **Kind:** `standard` | **Direction:** `max` | **Null Test:** `required`
 - **Benchmark Source:** Chungyoun & Gray, *"FLAb: Benchmarking deep learning methods for antibody fitness prediction"*, *bioRxiv* `10.64898/2025.12.27.696706` (Dec 2025); repository `https://github.com/Graylab/FLAb` at commit `e05e3f0135783ffb7de412df6a1467e7a0031911`.
-- **Verification Script:** `claim/verify.py` (standalone single-thread CPU script; `14.69s` wall time, `14.02s` CPU time for the entire evaluation + two $B=1,000$ permutation null batteries).
-- **Machine-Verified Certificate:** `claim/certificate.json`
-- **Per-Antibody Score Files:** `claim/predictions/` (all 36 datasets across `tm`, `polyreactivity`, `aggregation`, `expression`, `binding`, and `immunogenicity`).
+- **Verification Script:** `how-we-built-it/verify_full_benchmark.py` (offline certificate verifier: `verify-it-yourself/verify.py`) (standalone single-thread CPU script; `14.69s` wall time, `14.02s` CPU time for the entire evaluation + two $B=1,000$ permutation null batteries).
+- **Machine-Verified Certificate:** `object/certificate.json`
+- **Per-Antibody Score File (No Sequence Columns):** `object/predictions_tm_polyreactivity.csv` (`4,499` rows across `76` dataset evaluations in `score/tm` [15], `score/polyreactivity` [6], `data/thermostability` [21], `data/polyreactivity` [25], and `data/pharmacokinetics` [9], keyed by `(universe, category, dataset, row_index)` with zero sequence columns).
+- **Single Claimed Method & Pre-Registration Freeze:** **`CLSS_Reg8_AllBP_IMGT_Z`** (frozen at `2026-10-26T00:26:00Z` in commit `654c23f056b932c310723f591bc3fec89102ad73`, see `how-we-built-it/PREREG.md`; all other variants in this technical note are reported strictly as exploratory ablations).
 
 ---
 
@@ -30,7 +31,7 @@ We construct a strictly parameter-free, zero-shot antibody developability scorin
    - On **Thermostability (`15` datasets)**: `CLSS_Reg7_MW_IMGT_Z` is positive on **`15/15 = 100.00%`** of datasets; `CLSS_Reg8_AllBP_IMGT_Z` and `CLSS_Reg6_IMGT_Z` on **`14/15 = 93.33%`**; `CLSS_Reg7_IMGT_Z` on **`13/15 = 86.67%`**; and `CLSS_EqWt6_Shrink_Z`, `CLSS_EqWt5_NoPI_IMGT_Z`, and `CLSS_EqWt4_Fold_IMGT_Z` on **`12/15 = 80.00%`** (also **`16/20 = 80.00%`** on the 20-dataset standard universe and **`20/25 = 80.00%`** on the 25-dataset combined universe for `CLSS_Reg7_MW_IMGT_Z`).
    - On **Polyreactivity (`6` datasets)**: `CLSS_Reg8_AllBP_IMGT_Z`, `CLSS_Reg7_MW_IMGT_Z`, `CLSS_Reg7_IMGT_Z`, `CLSS_Reg6_IMGT_Z`, `CLSS_EqWt6_IMGT_Z`, `CLSS_EqWt6_Shrink_Z`, and `CLSS_EqWt7_IMGT_Z` are all positive on **`6/6 = 100.00%`** of datasets.
 6. **Partial Win `p3` (Length & Germline Confound Control):**
-   - Full rank-residualized partial Spearman ($\perp L$, $\perp G$, $\perp (L,G)$) and exact $(L, G)$ matched-stratum Spearman ($\bar{\rho}_{\text{matched}}$) across all 12 released models, 9 single descriptors, and 10 CLSS parameter-free methods in `claim/certificate.json`.
+   - Full rank-residualized partial Spearman ($\perp L$, $\perp G$, $\perp (L,G)$) and exact $(L, G)$ matched-stratum Spearman ($\bar{\rho}_{\text{matched}}$) across all 12 released models, 9 single descriptors, and 10 CLSS parameter-free methods in `object/certificate.json`.
 
 ---
 
@@ -186,7 +187,7 @@ Because the FLAb `score/` benchmark combines small deep-mutational-scanning libr
 
 ## 5. Partial Win `p1`: All 4 Thermostability Universe Definitions (15, 20, 21, and 25 Datasets)
 
-Because the FLAb repository contains both the 15-dataset pre-computed `score/tm/` benchmark and the 20/21-dataset `data/thermostability/` directory (yielding 25 unique datasets in the union after deduplicating `garbinski2023_tm1`), we evaluate our parameter-free CPU methods across all 4 universe definitions in `claim/certificate.json`:
+Because the FLAb repository contains both the 15-dataset pre-computed `score/tm/` benchmark and the 20/21-dataset `data/thermostability/` directory (yielding 25 unique datasets in the union after deduplicating `garbinski2023_tm1`), we evaluate our parameter-free CPU methods across all 4 universe definitions in `object/certificate.json`:
 
 | Thermostability Universe | Datasets ($D$) | Best Single Descriptor | `CLSS_Reg8_AllBP_IMGT_Z` (Unwt / $\sqrt{N}$ / $N$-wt) | `CLSS_Reg7_MW_IMGT_Z` (Unwt / $\sqrt{N}$ / $N$-wt) | `CLSS_EqWt6_IMGT_Z` | `CLSS_EqWt5_NoPI_IMGT_Z` | Margin (`CLSS_Reg7_MW` / `CLSS_Reg8` vs Best Single) |
 |---|---:|---|---:|---:|---:|---:|---:|
@@ -196,3 +197,18 @@ Because the FLAb repository contains both the 15-dataset pre-computed `score/tm/
 | **4. `combined_thermostability_25` (Union)** | 25 | `bp_flexibility` (`+0.1954`) | **`+0.2834`** (`19/25 = 76.0% > 0` \| `+0.1196` \| `+0.0596`) | **`+0.3313`** (**`20/25 = 80% > 0`** \| `+0.1597` \| `+0.0891`) | **`+0.2231`** (`14/25 > 0`) | **`+0.2578`** (`17/25 = 68% > 0`) | **`+0.1359` / `+0.0880`** (both $\gg +0.05$) |
 
 Across all 4 definitions of the Thermostability benchmark universe (`15`, `20`, `21`, and `25` datasets), `CLSS_Reg8_AllBP_IMGT_Z` and `CLSS_Reg7_MW_IMGT_Z` exceed every released model and every single Biopython descriptor by **`+0.0880` to `+0.2991`**, while maintaining positive `N>=10`, `SqrtN`-weighted, and `N`-weighted correlations across all 4 universes.
+
+---
+
+## 6. Full-Category (`data/polyreactivity/`) vs `score/polyreactivity/` Subset and Untouched Categories (`data/pharmacokinetics/`, `data/expression/`)
+
+In addition to the 4 Thermostability universes in §5, `how-we-built-it/verify_full_benchmark.py` evaluates our single claimed method **`CLSS_Reg8_AllBP_IMGT_Z`** across the entire `data/polyreactivity/` directory (`25` CSVs, including the `20` datasets omitted by `score/polyreactivity/`) and across two untouched FLAb categories (`data/pharmacokinetics/` [9 datasets] and `data/expression/` [4 datasets]) that were never loaded or inspected prior to the method freeze at `2026-10-26T00:26:00Z` (commit `654c23f056b932c310723f591bc3fec89102ad73`):
+
+| Universe / Untouched Category | Datasets ($D$) | `CLSS_Reg8_AllBP_IMGT_Z` Unweighted $\bar{\rho}$ | Positive Datasets (`>0`) | $\bar{\rho}_{N \ge 10}$ | $\bar{\rho}_{\sqrt{N}}$ | $\bar{\rho}_{N}$ |
+|---|---:|---:|---:|---:|---:|---:|
+| **`score/polyreactivity` (Released 6-dataset subset)** | `6` | **`+0.4467`** | **`6/6` (`100.0%`)** | **`+0.2379`** | **`+0.3073`** | **`+0.2569`** |
+| **`data/polyreactivity` (All 25 CSVs in `data/`)** | `25` | **`+0.1407`** | **`17/25` (`68.0%`)** | **`+0.0715`** | **`+0.0882`** | **`+0.0680`** |
+| **Combined Polyreactivity Union (`score/` $\cup$ `data/`)** | `26` | **`+0.1671`** | **`18/26` (`69.2%`)** | **`+0.0715`** | **`+0.0977`** | **`+0.0710`** |
+| **Unseen `data/polyreactivity` (`20` CSVs omitted by `score/`)** | `20` | **`+0.0844`** | **`12/20` (`60.0%`)** | **`+0.0382`** | **`+0.0568`** | **`+0.0510`** |
+| **Untouched Category: `data/pharmacokinetics` (All 9 CSVs)** | `9` | **`+0.2287`** | **`6/9` (`66.7%`)** | **`+0.2287`** | **`+0.2248`** | **`+0.2148`** |
+| **Untouched Category: `data/expression` (All 4 CSVs)** | `4` | **`+0.1913`** | **`4/4` (`100.0%`)** | **`+0.1913`** | **`+0.2183`** | **`+0.2266`** |

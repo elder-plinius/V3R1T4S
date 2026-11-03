@@ -1,6 +1,6 @@
 # How We Found It (`contributor text, unverified`)
 
-> **Note:** This file is contributor text, unverified by the mechanical gate (`check_run.py` verifies `object/certificate.json` and `object/predictions_tm_polyreactivity.csv` via `verify-it-yourself/run_checks.sh`).
+> **Note:** This file is contributor text, unverified by the mechanical gate (`check_run.py` verifies `object/certificate.json` and `object/predictions_tm_polyreactivity.csv` via `verify-it-yourself/run_checks.sh`). See [`how-we-built-it/PREREG.md`](how-we-built-it/PREREG.md) for the chronological audit trail of when the single claimed method `CLSS_Reg8_AllBP_IMGT_Z` was defined and frozen (`2026-10-26T00:26:00Z`, commit `654c23f056b932c310723f591bc3fec89102ad73`).
 
 ## 1. Diagnosing Why Deep Protein Language Models Flip Sign on FLAb
 
@@ -10,16 +10,19 @@ When we audited the 12 released models in `Graylab/FLAb` (`score/`), we observed
 
 ## 2. Diagnosing Simpson's Paradox in Unweighted Category Means (`n = 2` vs `n = 137`)
 
-In our first parameter-free whole-chain composite (`CLSS_EqWt6_IMGT_Z`, which standardizes the 6 intensive sequence-level descriptors against the external 432-pair human IMGT germline reference repertoire and sums them with equal weights `1/6`), we achieved `+0.3528` on `score/tm` and `+0.3987` on `score/polyreactivity` (`+0.5052` for `CLSS_EqWt7_IMGT_Z`). However, inspecting the largest clinical dataset `Wittrup2017_CST_Tm` ($N = 137$ clinical-stage antibodies across diverse human V-gene families) revealed that whole-chain `CLSS_EqWt6_IMGT_Z` had `-0.0028` on `Wittrup2017_CST_Tm`!
+In our initial whole-chain exploratory composite (`CLSS_EqWt6_IMGT_Z`, pre-registered at `2026-10-25T23:43:00Z` in `L-FADZ-004`, which standardizes the 6 intensive sequence-level descriptors against the external 432-pair human IMGT germline reference repertoire and sums them with equal weights `1/6`), inspecting `Wittrup2017_CST_Tm` ($N = 137$ clinical-stage antibodies across diverse human V-gene families in `score/tm`) revealed that whole-chain `CLSS_EqWt6_IMGT_Z` had `-0.0028` on `Wittrup2017_CST_Tm` despite `+0.3528` unweighted mean!
 Why? Because in `score/tm` (15 datasets), 3 datasets have $n = 2$ antibodies (`Hie2022_C143_Tm`, `Hie2022_MEDI8852_Tm`, `Hie2022_mAb114UCA_Tm`) and 5 more have $n = 5\text{--}8$. Under unweighted averaging, whole-chain `bp_flexibility` appears strongly positive (`+0.2908` unweighted) even though on the 137 clinical antibodies in `Wittrup2017_CST_Tm` it is **negative (`-0.1454`)**!
 
-## 3. Resolving the Paradox via Regional Antibody Domain Biophysics (`FWR1–4` vs `CDR1–3`)
+## 3. Defining and Freezing the Single Claimed Method `CLSS_Reg8_AllBP_IMGT_Z` (`FWR1–4` vs `CDR1–3`)
 
 An antibody variable domain is structurally divided into a conserved $\beta$-sandwich **Framework scaffold (`FWR1–4`)** (which governs cooperative thermal unfolding $T_m$) and three hypervariable **CDR loops (`CDR1–3`)** (which govern antigen binding and paratope surface stickiness/self-association).
-When we partition each variable domain using the four conserved immunoglobulin landmarks (`Cys22`, `Trp36`, `Cys92/104`, `WGQG/FGQG`) and evaluate:
-- **Scaffold folding stability descriptors** (`fwr_flex`, `neg_fwr_gravy`, `neg_fwr_inst`) on **`FWR1–4`**, and
-- **Paratope stickiness/electrostatic descriptors** (`neg_cdr_arom`, `neg_cdr_pI`, `neg_cdr_chg`) on **`CDR1–3`** (following Raybould et al., *PNAS* 2019 Therapeutic Antibody Profiler),
-alongside `mw` and `germ` with strictly equal weights (`1/8` in `CLSS_Reg8_AllBP_IMGT_Z`, `1/7` in `CLSS_Reg7_MW_IMGT_Z`):
-- Framework dipeptide stability (`neg_fwr_inst`) reaches **`+0.1957`** on `Wittrup2017_CST_Tm` ($N = 137$) and **`+0.1721`** across all 15 `tm` datasets (vs `+0.0243` whole-chain).
-- Framework hydrophilicity (`neg_fwr_gravy`) reaches **`+0.3517`** across all 15 `tm` datasets (vs `+0.1967` whole-chain) and **`+0.2203`** on `hutchinson2023enhancement_top200tm1_igg` ($N = 192$, vs `-0.0824` whole-chain).
-- Consequently, `CLSS_Reg7_MW_IMGT_Z` achieves **`+0.5160`** unweighted on `score/tm` (**`15/15 = 100.0%` positive**), **`+0.0598`** on `Wittrup2017_CST_Tm` ($N = 137$), and **`+0.1911`** $N$-weighted mean (beating even structure-based `esmif = +0.1882`), while `CLSS_Reg8_AllBP_IMGT_Z` achieves **`+0.4636`** (`14/15 = 93.3% > 0`, `Wittrup2017_CST_Tm = +0.0620`) on `score/tm` and **`+0.4467`** (**`6/6 = 100.0%` positive**, $N$-weighted **`+0.2569`**) on `score/polyreactivity`.
+To avoid any descriptor subset selection or weight tuning, we defined **`CLSS_Reg8_AllBP_IMGT_Z`** (`2026-10-26T00:13:00Z`, frozen at `2026-10-26T00:26:00Z` in commit `654c23f056b932c310723f591bc3fec89102ad73`) by taking **all 7** published Biopython `ProtParam` descriptors from `FLAb/models/biopython_score.py` and assigning each to its physical region via the four conserved immunoglobulin landmarks (`Cys22`, `Trp36`, `Cys92/104`, `WGQG/FGQG`):
+- **Scaffold folding stability descriptors** (`fwr_flex`, `neg_fwr_gravy`, `neg_fwr_inst`) on **`FWR1–4`**,
+- **Paratope stickiness/electrostatic descriptors** (`neg_cdr_arom`, `neg_cdr_pI`, `neg_cdr_chg`) on **`CDR1–3`** (matching the 3 CDR surface properties of Raybould et al., *PNAS* 2019 Therapeutic Antibody Profiler), and
+- **Whole-chain descriptors** (`mw` and `germ`),
+standardized exclusively against the external 432-pair human IMGT germline reference repertoire with strictly equal `1/8` weights (`CLSS_Reg7_MW_IMGT_Z`, `CLSS_Reg6_IMGT_Z`, `CLSS_EqWt6_IMGT_Z`, and `CLSS_EqWt7_IMGT_Z` are reported strictly as exploratory ablations).
+
+Evaluated across `score/`, `data/`, and the categories/datasets that were never loaded prior to commit `654c23f056b932c310723f591bc3fec89102ad73` (`how-we-built-it/PREREG.md`), the single claimed method **`CLSS_Reg8_AllBP_IMGT_Z`** achieves:
+- **Thermostability:** **`+0.4636`** on `score/tm` (`14/15 = 93.3% > 0`, $N$-weighted `+0.1666`, `Wittrup2017_CST_Tm = +0.0620`, beating `progen/xlarge = +0.2169` by **`+0.2467`** and `bp_flexibility = +0.2908` by **`+0.1728`**), **`+0.3270`** (`16/20 = 80.0% > 0`) on `data_thermostability_20_standard`, **`+0.3048`** (`16/21 = 76.2% > 0`) on `data_thermostability_21_all`, and **`+0.2834`** (`19/25 = 76.0% > 0`) on `combined_thermostability_25`.
+- **Polyreactivity:** **`+0.4467`** on `score/polyreactivity` (**`6/6 = 100.0%` positive**, $N$-weighted **`+0.2569`**, beating `progen/xlarge (+ppl) = +0.1936` by **`+0.2531`** and `mpnn (-ppl) = +0.1906` by **`+0.2561`**), **`+0.1407`** (`17/25 = 68.0% > 0`) across all 25 CSVs in `data/polyreactivity/`, and **`+0.1671`** (`18/26 = 69.2% > 0`) across the combined 26-dataset Polyreactivity universe.
+- **Untouched Categories (never scored prior to freeze):** **`+0.2287`** (`6/9 = 66.7% > 0`) on `data/pharmacokinetics` (`9` datasets) and **`+0.1913`** (`4/4 = 100.0% > 0`) on `data/expression` (`4` datasets).

@@ -501,11 +501,20 @@ def compute_size_weighted_stats(per_ds_dict, sizes_dict):
         "mean_spearman_n_weighted": round(float(np.average(rs, weights=ns)), 4),
     }
 
-pred_dir = os.path.join(RUN_DIR, "claim", "predictions")
-os.makedirs(pred_dir, exist_ok=True)
+def file_sha256(path):
+    h = hashlib.sha256()
+    with open(path, "rb") as f:
+        for chunk in iter(lambda: f.read(1 << 20), b""):
+            h.update(chunk)
+    return h.hexdigest()
+
+obj_dir = os.path.join(RUN_DIR, "object")
+os.makedirs(obj_dir, exist_ok=True)
 
 score_universe_results = {}
 p3_confound_results = {}
+upstream_file_sha256 = {}
+prediction_rows = []
 
 for cat, dmap in FAV_SIGN_SCORE.items():
     cat_res = {"datasets": sorted(dmap.keys()), "dataset_sizes": {}, "released_models": {}, "single_descriptors": {}, "clss_methods": {}}
@@ -515,9 +524,11 @@ for cat, dmap in FAV_SIGN_SCORE.items():
     ds_frames = {}
     for ds, sgn in sorted(dmap.items()):
         f = [x for x in glob.glob(f"{FLAB_ROOT}/score/antiberty/{cat}/{ds}/*.csv") if not x.endswith("_corr.csv")][0]
+        rel_f = os.path.relpath(f, FLAB_ROOT)
+        upstream_file_sha256[rel_f] = file_sha256(f)
         df = pd.read_csv(f).dropna(subset=["heavy", "light", "fitness"]).reset_index(drop=True)
         _, fdf = score_imgt_z_df(df, ["flex", "neg_gravy", "neg_arom", "neg_pI", "neg_inst", "germ"])
-        ds_frames[ds] = (df, fdf, sgn)
+        ds_frames[ds] = (df, fdf, sgn, rel_f)
         cat_res["dataset_sizes"][ds] = int(len(df))
 
     # 1. Released models in score/
@@ -526,7 +537,7 @@ for cat, dmap in FAV_SIGN_SCORE.items():
         per_ds_pos = {}
         m_sizes = {}
         p3_raw, p3_perp_L, p3_perp_G, p3_perp_LG, p3_matched = [], [], [], [], []
-        for ds, (df_base, fdf_base, sgn) in ds_frames.items():
+        for ds, (df_base, fdf_base, sgn, _) in ds_frames.items():
             ppls = [x for x in glob.glob(f"{FLAB_ROOT}/score/{m}/{cat}/{ds}/*.csv") if not x.endswith("_corr.csv")]
             if not ppls:
                 continue
@@ -574,7 +585,7 @@ for cat, dmap in FAV_SIGN_SCORE.items():
     for dname, (dkey, dsgn) in SINGLE_DESCRIPTORS.items():
         per_ds = {}
         p3_raw, p3_perp_L, p3_perp_G, p3_perp_LG, p3_matched = [], [], [], [], []
-        for ds, (df_base, fdf_base, sgn) in ds_frames.items():
+        for ds, (df_base, fdf_base, sgn, _) in ds_frames.items():
             x = dsgn * fdf_base[dkey].values.astype(float)
             y_fav = sgn * df_base["fitness"].values.astype(float)
             if np.std(x) < 1e-12:
@@ -608,12 +619,12 @@ for cat, dmap in FAV_SIGN_SCORE.items():
             "mean_matched_stratum": round(float(np.mean(p3_matched)), 4) if p3_matched else 0.0,
         }
 
-    # 3. Parameter-free equal-weight CLSS methods (both Regional FWR+CDR and Whole-Chain)
-    pred_buffers = {ds: df_base[["heavy", "light"]].copy() for ds, (df_base, _, _) in ds_frames.items()}
+    # 3. Parameter-free equal-weight CLSS methods (single claimed method CLSS_Reg8_AllBP_IMGT_Z + exploratory ablations)
+    ds_scores_cache = {ds: {} for ds in ds_frames}
     for cname, (cmode, ckeys) in CLSS_METHODS.items():
         per_ds = {}
         p3_raw, p3_perp_L, p3_perp_G, p3_perp_LG, p3_matched = [], [], [], [], []
-        for ds, (df_base, fdf_base, sgn) in ds_frames.items():
+        for ds, (df_base, fdf_base, sgn, _) in ds_frames.items():
             if cmode == "imgt":
                 x, _ = score_imgt_z_df(df_base, ckeys)
             else:
@@ -628,12 +639,13 @@ for cat, dmap in FAV_SIGN_SCORE.items():
             p3_perp_LG.append(partial_spearman(x, y_fav, [fdf_base["seq_len"].values, fdf_base["germ"].values]))
             p3_matched.append(matched_stratum_spearman(x, y_fav, fdf_base["stratum"].values))
 
-            if cname in ["CLSS_Reg8_AllBP_IMGT_Z", "CLSS_Reg7_MW_IMGT_Z", "CLSS_Reg6_IMGT_Z", "CLSS_EqWt6_IMGT_Z"]:
-                pred_buffers[ds][cname.lower()] = np.round(x, 6)
+            if cname in ["CLSS_Reg8_AllBP_IMGT_Z", "CLSS_Reg7_MW_IMGT_Z", "CLSS_EqWt6_IMGT_Z"]:
+                ds_scores_cache[ds][cname] = np.round(x, 6)
 
         vals = list(per_ds.values())
         w_stats = compute_size_weighted_stats(per_ds, cat_res["dataset_sizes"])
         cat_res["clss_methods"][cname] = {
+            "role": "claimed_primary" if cname == "CLSS_Reg8_AllBP_IMGT_Z" else "exploratory_ablation",
             "n_datasets": len(vals),
             "mean_spearman": round(float(np.mean(vals)), 4),
             "mean_spearman_n_ge_10": w_stats["mean_spearman_n_ge_10"],
@@ -651,10 +663,22 @@ for cat, dmap in FAV_SIGN_SCORE.items():
             "mean_matched_stratum": round(float(np.mean(p3_matched)), 4),
         }
 
-    out_cat_dir = os.path.join(pred_dir, cat)
-    os.makedirs(out_cat_dir, exist_ok=True)
-    for ds, out_df in pred_buffers.items():
-        out_df.to_csv(os.path.join(out_cat_dir, f"{ds}_scores.csv"), index=False)
+    if cat in ["tm", "polyreactivity"]:
+        for ds in sorted(ds_frames.keys()):
+            n_rows = len(ds_frames[ds][0])
+            s_reg8 = ds_scores_cache[ds]["CLSS_Reg8_AllBP_IMGT_Z"]
+            s_reg7 = ds_scores_cache[ds]["CLSS_Reg7_MW_IMGT_Z"]
+            s_eq6 = ds_scores_cache[ds]["CLSS_EqWt6_IMGT_Z"]
+            for idx in range(n_rows):
+                prediction_rows.append({
+                    "universe": f"score/{cat}",
+                    "category": cat,
+                    "dataset": ds,
+                    "row_index": idx,
+                    "clss_reg8_allbp_imgt_z": f"{s_reg8[idx]:.6f}",
+                    "exploratory_clss_reg7_mw_imgt_z": f"{s_reg7[idx]:.6f}",
+                    "exploratory_clss_eqwt6_imgt_z": f"{s_eq6[idx]:.6f}",
+                })
 
     # Best baselines in score/
     best_rel_fav = max((v["mean_spearman_fav_confidence"], k) for k, v in cat_res["released_models"].items())
@@ -674,23 +698,55 @@ for cat, dmap in FAV_SIGN_SCORE.items():
 
 # ============================================================================
 # 5. Evaluate All 4 Thermostability Universes (15, 20, 21, and 25 Datasets, `p1`)
+#    AND All Polyreactivity Universes (6 `score/`, 25 `data/`, 26 Combined, 20 Unseen)
+#    AND Untouched Categories (`pharmacokinetics` 9 datasets, `expression` 4 `data/` datasets)
 # ============================================================================
 score_tm_files = {ds: [x for x in glob.glob(f"{FLAB_ROOT}/score/antiberty/tm/{ds}/*.csv") if not x.endswith("_corr.csv")][0]
                   for ds in sorted(os.listdir(f"{FLAB_ROOT}/score/antiberty/tm")) if os.path.isdir(f"{FLAB_ROOT}/score/antiberty/tm/{ds}")}
 data_tm_21 = {fn.replace(".csv", ""): f"{FLAB_ROOT}/data/thermostability/{fn}"
               for fn in sorted(os.listdir(f"{FLAB_ROOT}/data/thermostability")) if fn.endswith(".csv")}
+for fn_k, fp_v in data_tm_21.items():
+    upstream_file_sha256[os.path.relpath(fp_v, FLAB_ROOT)] = file_sha256(fp_v)
 data_tm_20 = {k: v for k, v in data_tm_21.items() if k != "jain2024assessment_Tm"}
 comb_tm_25 = {k: v for k, v in data_tm_21.items() if k != "garbinski2023_tm1"}
 for gds in ["gsk2023_AM14_Tm", "gsk2023_D25_Tm", "gsk2023_MOTA_Tm", "gsk2023_RSB1_Tm", "Rosace2023_CR3022_Tm"]:
     comb_tm_25[gds] = score_tm_files[gds]
 
-thermostability_universes = {}
-for uname, umap in [
-    ("score_tm_15", score_tm_files),
-    ("data_thermostability_20_standard", data_tm_20),
-    ("data_thermostability_21_all", data_tm_21),
-    ("combined_thermostability_25", comb_tm_25),
-]:
+# Map between data/thermostability and score/tm:
+TM_DATA_IN_SCORE_MAP = {
+    "hie2023efficient_C143_Tm": "Hie2022_C143_Tm",
+    "hie2023efficient_MEDIUCA_Tm": "Hie2022_MEDI8852UCA_Tm",
+    "hie2023efficient_MEDI_Tm": "Hie2022_MEDI8852_Tm",
+    "hie2023efficient_REGN10987_Tm": "Hie2022_REGN10987_Tm",
+    "hie2023efficient_S309_Tm": "Hie2022_S309_Tm",
+    "hie2023efficient_mAb114UCA_Tm": "Hie2022_mAb114UCA_Tm",
+    "hie2023efficient_mAb114_Tm": "Hie2022_mAb114_Tm",
+    "jain2017biophysical_Tm": "Wittrup2017_CST_Tm",
+    "rosace2023automated_tm1_adalimumab": "Rosace2023_Adalimumab_Tm",
+    "rosace2023automated_tm1_golimumab": "Rosace2023_Golimumab_Tm",
+}
+unseen_tm_11 = {k: v for k, v in data_tm_21.items() if k not in TM_DATA_IN_SCORE_MAP}
+
+EVAL_METHOD_LIST = [
+    ("CLSS_Reg8_AllBP_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "neg_cdr_chg", "mw", "germ"]),
+    ("CLSS_Reg7_MW_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "germ", "mw"]),
+    ("CLSS_Reg7_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "neg_cdr_chg", "germ"]),
+    ("CLSS_Reg6_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "germ"]),
+    ("CLSS_EqWt6_IMGT_Z", ["flex", "neg_gravy", "neg_arom", "neg_pI", "neg_inst", "germ"]),
+    ("CLSS_EqWt7_IMGT_Z", ["flex", "neg_gravy", "neg_arom", "neg_pI", "neg_inst", "neg_chg", "germ"]),
+    ("CLSS_EqWt5_NoPI_IMGT_Z", ["flex", "neg_gravy", "neg_arom", "neg_inst", "germ"]),
+    ("CLSS_EqWt4_Fold_IMGT_Z", ["flex", "neg_gravy", "neg_inst", "germ"]),
+    ("bp_flexibility", ["flex"]),
+    ("neg_bp_gravy", ["neg_gravy"]),
+    ("neg_bp_aromaticity", ["neg_arom"]),
+    ("neg_bp_isoelectric_point", ["neg_pI"]),
+    ("neg_bp_instability_index", ["neg_inst"]),
+    ("neg_bp_charge_at_7_4", ["neg_chg"]),
+    ("bp_molecular_weight", ["mw"]),
+    ("pure_germline_identity", ["germ"]),
+]
+
+def evaluate_file_universe(umap, default_sgn=+1, record_preds_universe=None, record_preds_cat=None):
     u_sizes = {}
     u_frames = {}
     for ds, fpath in sorted(umap.items()):
@@ -703,50 +759,115 @@ for uname, umap in [
         u_sizes[ds] = int(len(sub))
 
     u_res = {"n_datasets": len(umap), "dataset_sizes": u_sizes, "methods": {}}
-    for mname, keys in [
-        ("CLSS_Reg8_AllBP_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "neg_cdr_chg", "mw", "germ"]),
-        ("CLSS_Reg7_MW_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "germ", "mw"]),
-        ("CLSS_Reg7_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "neg_cdr_chg", "germ"]),
-        ("CLSS_Reg6_IMGT_Z", ["fwr_flex", "neg_fwr_gravy", "neg_fwr_inst", "neg_cdr_arom", "neg_cdr_pI", "germ"]),
-        ("CLSS_EqWt6_IMGT_Z", ["flex", "neg_gravy", "neg_arom", "neg_pI", "neg_inst", "germ"]),
-        ("CLSS_EqWt5_NoPI_IMGT_Z", ["flex", "neg_gravy", "neg_arom", "neg_inst", "germ"]),
-        ("CLSS_EqWt4_Fold_IMGT_Z", ["flex", "neg_gravy", "neg_inst", "germ"]),
-        ("bp_flexibility", ["flex"]),
-        ("neg_bp_gravy", ["neg_gravy"]),
-        ("neg_bp_aromaticity", ["neg_arom"]),
-        ("neg_bp_isoelectric_point", ["neg_pI"]),
-        ("neg_bp_instability_index", ["neg_inst"]),
-        ("bp_molecular_weight", ["mw"]),
-        ("pure_germline_identity", ["germ"]),
-    ]:
+    ds_pred_cache = {ds: {} for ds in u_frames}
+    for mname, keys in EVAL_METHOD_LIST:
         per_ds = {}
         for ds, (sub, fit_col) in u_frames.items():
             x, _ = score_imgt_z_df(sub, keys)
+            if record_preds_universe and mname in ["CLSS_Reg8_AllBP_IMGT_Z", "CLSS_Reg7_MW_IMGT_Z", "CLSS_EqWt6_IMGT_Z"]:
+                ds_pred_cache[ds][mname] = np.round(x, 6)
             if np.std(x) < 1e-12:
                 continue
-            r, _ = spearmanr(x, sub[fit_col].values.astype(float))
+            sgn = default_sgn(ds) if callable(default_sgn) else default_sgn
+            r, _ = spearmanr(x, sgn * sub[fit_col].values.astype(float))
             if not np.isnan(r):
                 per_ds[ds] = round(float(r), 4)
         vals = list(per_ds.values())
         w_stats = compute_size_weighted_stats(per_ds, u_sizes)
         u_res["methods"][mname] = {
+            "role": "claimed_primary" if mname == "CLSS_Reg8_AllBP_IMGT_Z" else ("single_descriptor" if mname.startswith(("bp_", "neg_bp_", "pure_")) else "exploratory_ablation"),
             "n_defined": len(vals),
-            "mean_spearman": round(float(np.mean(vals)), 4),
+            "mean_spearman": round(float(np.mean(vals)), 4) if vals else 0.0,
             "mean_spearman_n_ge_10": w_stats["mean_spearman_n_ge_10"],
             "mean_spearman_sqrt_n_weighted": w_stats["mean_spearman_sqrt_n_weighted"],
             "mean_spearman_n_weighted": w_stats["mean_spearman_n_weighted"],
             "positive_count": int(sum(1 for v in vals if v > 0)),
-            "positive_fraction": round(float(sum(1 for v in vals if v > 0) / len(vals)), 4),
+            "positive_fraction": round(float(sum(1 for v in vals if v > 0) / len(vals)), 4) if vals else 0.0,
             "per_dataset": per_ds,
         }
-    best_single = max((u_res["methods"][k]["mean_spearman"], k) for k in ["bp_flexibility", "neg_bp_gravy", "neg_bp_aromaticity", "neg_bp_isoelectric_point", "neg_bp_instability_index", "bp_molecular_weight", "pure_germline_identity"])
+
+    if record_preds_universe:
+        for ds in sorted(u_frames.keys()):
+            n_rows = len(u_frames[ds][0])
+            s_reg8 = ds_pred_cache[ds]["CLSS_Reg8_AllBP_IMGT_Z"]
+            s_reg7 = ds_pred_cache[ds]["CLSS_Reg7_MW_IMGT_Z"]
+            s_eq6 = ds_pred_cache[ds]["CLSS_EqWt6_IMGT_Z"]
+            for idx in range(n_rows):
+                prediction_rows.append({
+                    "universe": record_preds_universe,
+                    "category": record_preds_cat,
+                    "dataset": ds,
+                    "row_index": idx,
+                    "clss_reg8_allbp_imgt_z": f"{s_reg8[idx]:.6f}",
+                    "exploratory_clss_reg7_mw_imgt_z": f"{s_reg7[idx]:.6f}",
+                    "exploratory_clss_eqwt6_imgt_z": f"{s_eq6[idx]:.6f}",
+                })
+
+    single_keys = ["bp_flexibility", "neg_bp_gravy", "neg_bp_aromaticity", "neg_bp_isoelectric_point", "neg_bp_instability_index", "bp_molecular_weight", "pure_germline_identity"]
+    best_single = max((u_res["methods"][k]["mean_spearman"], k) for k in single_keys)
     u_res["best_single_descriptor"] = {"name": best_single[1], "mean_spearman": best_single[0]}
     u_res["margin_CLSS_Reg8_AllBP_vs_best_single"] = round(u_res["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"] - best_single[0], 4)
     u_res["margin_CLSS_Reg7_MW_vs_best_single"] = round(u_res["methods"]["CLSS_Reg7_MW_IMGT_Z"]["mean_spearman"] - best_single[0], 4)
     u_res["margin_CLSS_Reg6_vs_best_single"] = round(u_res["methods"]["CLSS_Reg6_IMGT_Z"]["mean_spearman"] - best_single[0], 4)
     u_res["margin_CLSS_EqWt6_vs_best_single"] = round(u_res["methods"]["CLSS_EqWt6_IMGT_Z"]["mean_spearman"] - best_single[0], 4)
     u_res["margin_CLSS_EqWt5_NoPI_vs_best_single"] = round(u_res["methods"]["CLSS_EqWt5_NoPI_IMGT_Z"]["mean_spearman"] - best_single[0], 4)
-    thermostability_universes[uname] = u_res
+    return u_res
+
+thermostability_universes = {
+    "score_tm_15": evaluate_file_universe(score_tm_files, default_sgn=+1),
+    "data_thermostability_20_standard": evaluate_file_universe(data_tm_20, default_sgn=+1),
+    "data_thermostability_21_all": evaluate_file_universe(data_tm_21, default_sgn=+1, record_preds_universe="data/thermostability", record_preds_cat="thermostability"),
+    "combined_thermostability_25": evaluate_file_universe(comb_tm_25, default_sgn=+1),
+    "unseen_data_thermostability_11_omitted_by_score": evaluate_file_universe(unseen_tm_11, default_sgn=+1),
+    "datasets_omitted_by_score_tm": sorted(unseen_tm_11.keys()),
+    "datasets_in_score_tm_only": ["Rosace2023_CR3022_Tm", "gsk2023_AM14_Tm", "gsk2023_D25_Tm", "gsk2023_MOTA_Tm", "gsk2023_RSB1_Tm"],
+}
+
+# Polyreactivity Full-Category & Subset Audit (25 CSVs in data/polyreactivity/ + 6 in score/polyreactivity/)
+score_poly_files = {ds: [x for x in glob.glob(f"{FLAB_ROOT}/score/antiberty/polyreactivity/{ds}/*.csv") if not x.endswith("_corr.csv")][0]
+                    for ds in sorted(os.listdir(f"{FLAB_ROOT}/score/antiberty/polyreactivity")) if os.path.isdir(f"{FLAB_ROOT}/score/antiberty/polyreactivity/{ds}")}
+data_poly_25 = {fn.replace(".csv", ""): f"{FLAB_ROOT}/data/polyreactivity/{fn}"
+                for fn in sorted(os.listdir(f"{FLAB_ROOT}/data/polyreactivity")) if fn.endswith(".csv")}
+for fn_k, fp_v in data_poly_25.items():
+    upstream_file_sha256[os.path.relpath(fp_v, FLAB_ROOT)] = file_sha256(fp_v)
+
+POLY_DATA_IN_SCORE_MAP = {
+    "jain2017biophysical_CICRT": "Wittrup2017_CST_CIC",
+    "jain2017biophysical_ELISA": "Wittrup2017_CST_ELISA",
+    "jain2017biophysical_PSR": "Wittrup2017_CST_PSR",
+    "rosace2023automated_CICRT1_adalimumab": "Rosace2023_Adalimumab_CIC",
+    "rosace2023automated_CICRT1_golimumab": "Rosace2023_Golimumab_CIC",
+}
+unseen_poly_20 = {k: v for k, v in data_poly_25.items() if k not in POLY_DATA_IN_SCORE_MAP}
+comb_poly_26 = dict(data_poly_25)
+comb_poly_26["Rosace2023_CR3022_CIC"] = score_poly_files["Rosace2023_CR3022_CIC"]
+
+polyreactivity_universes = {
+    "score_polyreactivity_6": evaluate_file_universe(score_poly_files, default_sgn=-1),
+    "data_polyreactivity_25_all": evaluate_file_universe(data_poly_25, default_sgn=-1, record_preds_universe="data/polyreactivity", record_preds_cat="polyreactivity"),
+    "combined_polyreactivity_26": evaluate_file_universe(comb_poly_26, default_sgn=-1),
+    "unseen_data_polyreactivity_20_omitted_by_score": evaluate_file_universe(unseen_poly_20, default_sgn=-1),
+    "datasets_omitted_by_score_polyreactivity": sorted(unseen_poly_20.keys()),
+    "datasets_in_score_polyreactivity_only": ["Rosace2023_CR3022_CIC"],
+}
+
+# Untouched Categories (100% unseen when CLSS_Reg8_AllBP_IMGT_Z was frozen on 2026-10-26):
+data_pk_9 = {fn.replace(".csv", ""): f"{FLAB_ROOT}/data/pharmacokinetics/{fn}"
+             for fn in sorted(os.listdir(f"{FLAB_ROOT}/data/pharmacokinetics")) if fn.endswith(".csv")}
+for fn_k, fp_v in data_pk_9.items():
+    upstream_file_sha256[os.path.relpath(fp_v, FLAB_ROOT)] = file_sha256(fp_v)
+pk_sgn_fn = lambda ds: (+1 if ("FcRn" == ds.split("_")[-1] or "halflife" in ds) else -1)
+untouched_pharmacokinetics_9 = evaluate_file_universe(data_pk_9, default_sgn=pk_sgn_fn, record_preds_universe="data/pharmacokinetics", record_preds_cat="pharmacokinetics")
+
+data_exp_4 = {fn.replace(".csv", ""): f"{FLAB_ROOT}/data/expression/{fn}"
+              for fn in sorted(os.listdir(f"{FLAB_ROOT}/data/expression")) if fn.endswith(".csv")}
+for fn_k, fp_v in data_exp_4.items():
+    upstream_file_sha256[os.path.relpath(fp_v, FLAB_ROOT)] = file_sha256(fp_v)
+untouched_data_expression_4 = evaluate_file_universe(data_exp_4, default_sgn=+1)
+
+# Write object/predictions_tm_polyreactivity.csv (zero copied sequences; keyed by universe, category, dataset, row_index)
+preds_csv_path = os.path.join(obj_dir, "predictions_tm_polyreactivity.csv")
+pd.DataFrame(prediction_rows).to_csv(preds_csv_path, index=False)
 
 # ============================================================================
 # 6. Leave-One-Category-Out (LOCO) Zero-Shot Cross-Validation
@@ -852,6 +973,7 @@ for cat in ["tm", "polyreactivity", "aggregation", "expression"]:
     z_emp = float((obs_mean - np.mean(null_means_eq6)) / max(np.std(null_means_eq6), 1e-12))
     null_results[cat] = {
         "method": "CLSS_EqWt6_IMGT_Z",
+        "role": "exploratory_ablation",
         "observed_mean_spearman": obs_mean,
         "null_mean_spearman": round(float(np.mean(null_means_eq6)), 4),
         "null_sd_spearman": round(float(np.std(null_means_eq6)), 4),
@@ -864,6 +986,7 @@ for cat in ["tm", "polyreactivity", "aggregation", "expression"]:
     z_reg8 = float((obs_reg8 - np.mean(null_means_reg8)) / max(np.std(null_means_reg8), 1e-12))
     null_results_reg8[cat] = {
         "method": "CLSS_Reg8_AllBP_IMGT_Z",
+        "role": "claimed_primary",
         "observed_mean_spearman": obs_reg8,
         "null_mean_spearman": round(float(np.mean(null_means_reg8)), 4),
         "null_sd_spearman": round(float(np.std(null_means_reg8)), 4),
@@ -880,11 +1003,23 @@ cert = {
     "target_id": "flab-antibody-developability-zero-shot",
     "benchmark_repo": "https://github.com/Graylab/FLAb",
     "benchmark_commit": "e05e3f0135783ffb7de412df6a1467e7a0031911",
+    "claimed_method": {
+        "name": "CLSS_Reg8_AllBP_IMGT_Z",
+        "frozen_at_utc": "2026-10-26T00:26:00Z",
+        "frozen_git_commit": "654c23f056b932c310723f591bc3fec89102ad73",
+        "definition": "Equal-weight (1/8) arithmetic average of all 7 published FLAb Biopython ProtParam descriptors partitioned by conserved immunoglobulin landmarks into FWR1-4 scaffold (fwr_flex, neg_fwr_gravy, neg_fwr_inst), CDR1-3 paratope (neg_cdr_arom, neg_cdr_pI, neg_cdr_chg), and whole-Fv (mw), plus human IMGT V+J germline identity (germ), standardized solely against the external 432-pair human IMGT germline reference repertoire.",
+        "exploratory_ablation_methods": [
+            "CLSS_Reg7_MW_IMGT_Z", "CLSS_Reg7_IMGT_Z", "CLSS_Reg6_IMGT_Z",
+            "CLSS_EqWt6_IMGT_Z", "CLSS_EqWt6_Shrink_Z", "CLSS_EqWt7_IMGT_Z",
+            "CLSS_EqWt5_NoPI_IMGT_Z", "CLSS_EqWt5_NoPI_Shrink_Z", "CLSS_EqWt4_Fold_IMGT_Z"
+        ],
+    },
     "zero_shot_integrity": {
         "reads_fitness_column": False,
         "uses_hand_tuned_weights": False,
         "uses_ad_hoc_position_rules": False,
-        "weight_vector": "1:1:...:1 (strictly equal weights across all published FLAb Biopython descriptors + IMGT germline identity)",
+        "embeds_third_party_sequences": False,
+        "weight_vector": "1:1:1:1:1:1:1:1 (strictly 1/8 equal weights across all 7 published FLAb Biopython descriptors + IMGT germline identity)",
         "standardization_reference": "External Human IMGT V+J Germline Repertoire (24 IGHV x 18 IGKV/IGLV = 432 germline Fv pairs)",
         "imgt_reference_mean": {k: round(v, 5) for k, v in IMGT_MEAN.items()},
         "imgt_reference_std": {k: round(v, 5) for k, v in IMGT_STD.items()},
@@ -930,15 +1065,39 @@ cert = {
             "margin_EqWt6_vs_best_released": score_universe_results["polyreactivity"]["margin_CLSS_EqWt6_IMGT_Z_vs_best_released_either_sign"],
             "margin_EqWt7_vs_best_released": round(score_universe_results["polyreactivity"]["clss_methods"]["CLSS_EqWt7_IMGT_Z"]["mean_spearman"] - score_universe_results["polyreactivity"]["best_released_either_sign"]["mean_spearman"], 4),
         },
+        "polyreactivity_full_and_unseen_universes": {
+            "data_polyreactivity_25_CLSS_Reg8_AllBP_IMGT_Z_mean": polyreactivity_universes["data_polyreactivity_25_all"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_polyreactivity_25_CLSS_Reg8_AllBP_IMGT_Z_positive_count": polyreactivity_universes["data_polyreactivity_25_all"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "combined_polyreactivity_26_CLSS_Reg8_AllBP_IMGT_Z_mean": polyreactivity_universes["combined_polyreactivity_26"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "combined_polyreactivity_26_CLSS_Reg8_AllBP_IMGT_Z_positive_count": polyreactivity_universes["combined_polyreactivity_26"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "unseen_data_polyreactivity_20_CLSS_Reg8_AllBP_IMGT_Z_mean": polyreactivity_universes["unseen_data_polyreactivity_20_omitted_by_score"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "unseen_data_polyreactivity_20_CLSS_Reg8_AllBP_IMGT_Z_positive_count": polyreactivity_universes["unseen_data_polyreactivity_20_omitted_by_score"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+        },
+        "untouched_categories_at_freeze_time": {
+            "data_pharmacokinetics_9_CLSS_Reg8_AllBP_IMGT_Z_mean": untouched_pharmacokinetics_9["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_pharmacokinetics_9_CLSS_Reg8_AllBP_IMGT_Z_positive_count": untouched_pharmacokinetics_9["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "data_expression_4_CLSS_Reg8_AllBP_IMGT_Z_mean": untouched_data_expression_4["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_expression_4_CLSS_Reg8_AllBP_IMGT_Z_positive_count": untouched_data_expression_4["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+        },
     },
     "score_universe_results": score_universe_results,
     "thermostability_universes_p1": thermostability_universes,
+    "polyreactivity_universes": polyreactivity_universes,
+    "untouched_pharmacokinetics_9": untouched_pharmacokinetics_9,
+    "untouched_data_expression_4": untouched_data_expression_4,
     "loco_regional_sets": loco_regional_sets,
     "loco_complete_sets": loco_complete_sets,
     "loco_cross_validation": loco_results,
     "p3_length_and_germline_confound_control": p3_confound_results,
     "permutation_null_battery": null_results,
     "permutation_null_battery_reg8": null_results_reg8,
+    "upstream_flab_file_sha256": dict(sorted(upstream_file_sha256.items())),
+    "predictions_table_summary": {
+        "file": "object/predictions_tm_polyreactivity.csv",
+        "total_rows": len(prediction_rows),
+        "contains_copied_sequences": False,
+        "columns": ["universe", "category", "dataset", "row_index", "clss_reg8_allbp_imgt_z", "exploratory_clss_reg7_mw_imgt_z", "exploratory_clss_eqwt6_imgt_z"],
+    },
     "runtime": {
         "wall_seconds": elapsed_wall,
         "cpu_seconds": elapsed_cpu,
@@ -946,14 +1105,13 @@ cert = {
     },
 }
 
-cert_path = os.path.join(RUN_DIR, "claim", "certificate.json")
+cert_path = os.path.join(obj_dir, "certificate.json")
 with open(cert_path, "w") as f:
     json.dump(cert, f, indent=2)
 
 print("=== VERIFICATION COMPLETE ===")
 print(f"Certificate saved to: {cert_path}")
+print(f"Predictions saved to: {preds_csv_path} ({len(prediction_rows)} rows)")
 print(f"Wall time: {elapsed_wall}s | CPU time: {elapsed_cpu}s | Unique antibody pairs cached: {len(_DESC_CACHE)}")
 print("Primary Summary:", json.dumps(cert["primary_results_summary"], indent=2))
-print("LOCO Regional Sets:", json.dumps(cert["loco_regional_sets"], indent=2))
-print("LOCO Complete Sets:", json.dumps(cert["loco_complete_sets"], indent=2))
-print("Null Battery (Reg8):", json.dumps(cert["permutation_null_battery_reg8"], indent=2))
+

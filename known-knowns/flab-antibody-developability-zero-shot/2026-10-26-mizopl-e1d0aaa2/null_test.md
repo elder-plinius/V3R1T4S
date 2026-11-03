@@ -2,12 +2,13 @@
 
 - **Target ID:** `flab-antibody-developability-zero-shot`
 - `controls`: 1000
-- `best_control`: +0.3468 (`CLSS_Reg8_AllBP_IMGT_Z` on `tm`, $B=1,000$ within-dataset fitness permutations; `+0.3333` on `polyreactivity`; `+0.3297` for `CLSS_EqWt6_IMGT_Z` on `polyreactivity`)
-- `real`: +0.4636 (`CLSS_Reg8_AllBP_IMGT_Z` on `tm`; `+0.5160` for `CLSS_Reg7_MW_IMGT_Z` on `tm`; `+0.4467` on `polyreactivity`; `+0.3987` for `CLSS_EqWt6_IMGT_Z` on `polyreactivity`)
-- `command`: `python3 claim/verify.py`
+- **Single Claimed Zero-Shot Method:** **`CLSS_Reg8_AllBP_IMGT_Z`** (frozen at `2026-10-26T00:26:00Z` in commit `654c23f056b932c310723f591bc3fec89102ad73`; see `how-we-built-it/PREREG.md`; all other variants reported as exploratory ablations)
+- `best_control`: +0.3468 (`CLSS_Reg8_AllBP_IMGT_Z` on `score/tm`, $B=1,000$ within-dataset fitness permutations; `+0.3333` on `score/polyreactivity`)
+- `real`: +0.4636 (`CLSS_Reg8_AllBP_IMGT_Z` on `score/tm`; `+0.4467` on `score/polyreactivity`)
+- `command`: `sh verify-it-yourself/run_checks.sh`
 - `real_beats_all_controls`: yes
-- **Verification Script:** `claim/verify.py`
-- **Machine-Verified Certificate:** `claim/certificate.json`
+- **Verification Script:** `verify-it-yourself/verify.py` (and `how-we-built-it/verify_full_benchmark.py`)
+- **Machine-Verified Certificate:** `object/certificate.json`
 
 ---
 

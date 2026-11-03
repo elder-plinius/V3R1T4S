@@ -2,11 +2,29 @@
   "target_id": "flab-antibody-developability-zero-shot",
   "benchmark_repo": "https://github.com/Graylab/FLAb",
   "benchmark_commit": "e05e3f0135783ffb7de412df6a1467e7a0031911",
+  "claimed_method": {
+    "name": "CLSS_Reg8_AllBP_IMGT_Z",
+    "frozen_at_utc": "2026-10-26T00:26:00Z",
+    "frozen_git_commit": "654c23f056b932c310723f591bc3fec89102ad73",
+    "definition": "Equal-weight (1/8) arithmetic average of all 7 published FLAb Biopython ProtParam descriptors partitioned by conserved immunoglobulin landmarks into FWR1-4 scaffold (fwr_flex, neg_fwr_gravy, neg_fwr_inst), CDR1-3 paratope (neg_cdr_arom, neg_cdr_pI, neg_cdr_chg), and whole-Fv (mw), plus human IMGT V+J germline identity (germ), standardized solely against the external 432-pair human IMGT germline reference repertoire.",
+    "exploratory_ablation_methods": [
+      "CLSS_Reg7_MW_IMGT_Z",
+      "CLSS_Reg7_IMGT_Z",
+      "CLSS_Reg6_IMGT_Z",
+      "CLSS_EqWt6_IMGT_Z",
+      "CLSS_EqWt6_Shrink_Z",
+      "CLSS_EqWt7_IMGT_Z",
+      "CLSS_EqWt5_NoPI_IMGT_Z",
+      "CLSS_EqWt5_NoPI_Shrink_Z",
+      "CLSS_EqWt4_Fold_IMGT_Z"
+    ]
+  },
   "zero_shot_integrity": {
     "reads_fitness_column": false,
     "uses_hand_tuned_weights": false,
     "uses_ad_hoc_position_rules": false,
-    "weight_vector": "1:1:...:1 (strictly equal weights across all published FLAb Biopython descriptors + IMGT germline identity)",
+    "embeds_third_party_sequences": false,
+    "weight_vector": "1:1:1:1:1:1:1:1 (strictly 1/8 equal weights across all 7 published FLAb Biopython descriptors + IMGT germline identity)",
     "standardization_reference": "External Human IMGT V+J Germline Repertoire (24 IGHV x 18 IGKV/IGLV = 432 germline Fv pairs)",
     "imgt_reference_mean": {
       "flex": 1.00161,
@@ -87,6 +105,20 @@
       "margin_Reg7_MW_vs_best_released": 0.1523,
       "margin_EqWt6_vs_best_released": 0.2051,
       "margin_EqWt7_vs_best_released": 0.3116
+    },
+    "polyreactivity_full_and_unseen_universes": {
+      "data_polyreactivity_25_CLSS_Reg8_AllBP_IMGT_Z_mean": 0.1407,
+      "data_polyreactivity_25_CLSS_Reg8_AllBP_IMGT_Z_positive_count": 17,
+      "combined_polyreactivity_26_CLSS_Reg8_AllBP_IMGT_Z_mean": 0.1671,
+      "combined_polyreactivity_26_CLSS_Reg8_AllBP_IMGT_Z_positive_count": 18,
+      "unseen_data_polyreactivity_20_CLSS_Reg8_AllBP_IMGT_Z_mean": 0.0844,
+      "unseen_data_polyreactivity_20_CLSS_Reg8_AllBP_IMGT_Z_positive_count": 12
+    },
+    "untouched_categories_at_freeze_time": {
+      "data_pharmacokinetics_9_CLSS_Reg8_AllBP_IMGT_Z_mean": 0.2287,
+      "data_pharmacokinetics_9_CLSS_Reg8_AllBP_IMGT_Z_positive_count": 6,
+      "data_expression_4_CLSS_Reg8_AllBP_IMGT_Z_mean": 0.1913,
+      "data_expression_4_CLSS_Reg8_AllBP_IMGT_Z_positive_count": 4
     }
   },
   "score_universe_results": {
@@ -784,6 +816,7 @@
       },
       "clss_methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_datasets": 15,
           "mean_spearman": 0.4636,
           "mean_spearman_n_ge_10": 0.2106,
@@ -810,6 +843,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.516,
           "mean_spearman_n_ge_10": 0.2272,
@@ -836,6 +870,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.4901,
           "mean_spearman_n_ge_10": 0.2236,
@@ -862,6 +897,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.5365,
           "mean_spearman_n_ge_10": 0.2328,
@@ -888,6 +924,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.3528,
           "mean_spearman_n_ge_10": 0.247,
@@ -914,6 +951,7 @@
           }
         },
         "CLSS_EqWt6_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.3499,
           "mean_spearman_n_ge_10": 0.2399,
@@ -940,6 +978,7 @@
           }
         },
         "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.2955,
           "mean_spearman_n_ge_10": 0.1821,
@@ -966,6 +1005,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.398,
           "mean_spearman_n_ge_10": 0.2789,
@@ -992,6 +1032,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.3853,
           "mean_spearman_n_ge_10": 0.2629,
@@ -1018,6 +1059,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 15,
           "mean_spearman": 0.4287,
           "mean_spearman_n_ge_10": 0.29,
@@ -1529,6 +1571,7 @@
       },
       "clss_methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_datasets": 6,
           "mean_spearman": 0.4467,
           "mean_spearman_n_ge_10": 0.2379,
@@ -1546,6 +1589,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.3459,
           "mean_spearman_n_ge_10": 0.1867,
@@ -1563,6 +1607,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.419,
           "mean_spearman_n_ge_10": 0.1964,
@@ -1580,6 +1625,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.3185,
           "mean_spearman_n_ge_10": 0.1457,
@@ -1597,6 +1643,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.3987,
           "mean_spearman_n_ge_10": 0.2088,
@@ -1614,6 +1661,7 @@
           }
         },
         "CLSS_EqWt6_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.3984,
           "mean_spearman_n_ge_10": 0.2083,
@@ -1631,6 +1679,7 @@
           }
         },
         "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.5052,
           "mean_spearman_n_ge_10": 0.3257,
@@ -1648,6 +1697,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1568,
           "mean_spearman_n_ge_10": 0.1459,
@@ -1665,6 +1715,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1592,
           "mean_spearman_n_ge_10": 0.1495,
@@ -1682,6 +1733,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.0972,
           "mean_spearman_n_ge_10": 0.0565,
@@ -2189,6 +2241,7 @@
       },
       "clss_methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_datasets": 6,
           "mean_spearman": 0.0997,
           "mean_spearman_n_ge_10": 0.0997,
@@ -2206,6 +2259,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.0851,
           "mean_spearman_n_ge_10": 0.0851,
@@ -2223,6 +2277,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1161,
           "mean_spearman_n_ge_10": 0.1161,
@@ -2240,6 +2295,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.0991,
           "mean_spearman_n_ge_10": 0.0991,
@@ -2257,6 +2313,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1246,
           "mean_spearman_n_ge_10": 0.1246,
@@ -2274,6 +2331,7 @@
           }
         },
         "CLSS_EqWt6_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1174,
           "mean_spearman_n_ge_10": 0.1174,
@@ -2291,6 +2349,7 @@
           }
         },
         "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1112,
           "mean_spearman_n_ge_10": 0.1112,
@@ -2308,6 +2367,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1517,
           "mean_spearman_n_ge_10": 0.1517,
@@ -2325,6 +2385,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.1442,
           "mean_spearman_n_ge_10": 0.1442,
@@ -2342,6 +2403,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 6,
           "mean_spearman": 0.0909,
           "mean_spearman_n_ge_10": 0.0909,
@@ -2869,6 +2931,7 @@
       },
       "clss_methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_datasets": 7,
           "mean_spearman": 0.1205,
           "mean_spearman_n_ge_10": 0.1205,
@@ -2887,6 +2950,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.1648,
           "mean_spearman_n_ge_10": 0.1648,
@@ -2905,6 +2969,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.1501,
           "mean_spearman_n_ge_10": 0.1501,
@@ -2923,6 +2988,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.1942,
           "mean_spearman_n_ge_10": 0.1942,
@@ -2941,6 +3007,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.2152,
           "mean_spearman_n_ge_10": 0.2152,
@@ -2959,6 +3026,7 @@
           }
         },
         "CLSS_EqWt6_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.2032,
           "mean_spearman_n_ge_10": 0.2032,
@@ -2977,6 +3045,7 @@
           }
         },
         "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.1461,
           "mean_spearman_n_ge_10": 0.1461,
@@ -2995,6 +3064,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.2553,
           "mean_spearman_n_ge_10": 0.2553,
@@ -3013,6 +3083,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.2578,
           "mean_spearman_n_ge_10": 0.2578,
@@ -3031,6 +3102,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 7,
           "mean_spearman": 0.2006,
           "mean_spearman_n_ge_10": 0.2006,
@@ -3399,6 +3471,7 @@
       },
       "clss_methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_datasets": 1,
           "mean_spearman": -0.0172,
           "mean_spearman_n_ge_10": -0.0172,
@@ -3411,6 +3484,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0042,
           "mean_spearman_n_ge_10": -0.0042,
@@ -3423,6 +3497,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0297,
           "mean_spearman_n_ge_10": -0.0297,
@@ -3435,6 +3510,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0346,
           "mean_spearman_n_ge_10": -0.0346,
@@ -3447,6 +3523,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0673,
           "mean_spearman_n_ge_10": -0.0673,
@@ -3459,6 +3536,7 @@
           }
         },
         "CLSS_EqWt6_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0602,
           "mean_spearman_n_ge_10": -0.0602,
@@ -3471,6 +3549,7 @@
           }
         },
         "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0807,
           "mean_spearman_n_ge_10": -0.0807,
@@ -3483,6 +3562,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0333,
           "mean_spearman_n_ge_10": -0.0333,
@@ -3495,6 +3575,7 @@
           }
         },
         "CLSS_EqWt5_NoPI_Shrink_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0244,
           "mean_spearman_n_ge_10": -0.0244,
@@ -3507,6 +3588,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_datasets": 1,
           "mean_spearman": -0.0676,
           "mean_spearman_n_ge_10": -0.0676,
@@ -3555,6 +3637,7 @@
       },
       "methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_defined": 15,
           "mean_spearman": 0.4636,
           "mean_spearman_n_ge_10": 0.2106,
@@ -3581,6 +3664,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 15,
           "mean_spearman": 0.516,
           "mean_spearman_n_ge_10": 0.2272,
@@ -3607,6 +3691,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 15,
           "mean_spearman": 0.4901,
           "mean_spearman_n_ge_10": 0.2236,
@@ -3633,6 +3718,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 15,
           "mean_spearman": 0.5365,
           "mean_spearman_n_ge_10": 0.2328,
@@ -3659,6 +3745,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 15,
           "mean_spearman": 0.3528,
           "mean_spearman_n_ge_10": 0.247,
@@ -3684,7 +3771,35 @@
             "gsk2023_RSB1_Tm": 0.0104
           }
         },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 15,
+          "mean_spearman": 0.2955,
+          "mean_spearman_n_ge_10": 0.1821,
+          "mean_spearman_sqrt_n_weighted": 0.1999,
+          "mean_spearman_n_weighted": 0.0951,
+          "positive_count": 10,
+          "positive_fraction": 0.6667,
+          "per_dataset": {
+            "Hie2022_C143_Tm": -1.0,
+            "Hie2022_MEDI8852UCA_Tm": 0.6571,
+            "Hie2022_MEDI8852_Tm": 1.0,
+            "Hie2022_REGN10987_Tm": -0.1905,
+            "Hie2022_S309_Tm": 0.7333,
+            "Hie2022_mAb114UCA_Tm": 1.0,
+            "Hie2022_mAb114_Tm": 0.4643,
+            "Rosace2023_Adalimumab_Tm": 0.3894,
+            "Rosace2023_CR3022_Tm": 0.0857,
+            "Rosace2023_Golimumab_Tm": 0.8,
+            "Wittrup2017_CST_Tm": -0.0058,
+            "gsk2023_AM14_Tm": -0.0171,
+            "gsk2023_D25_Tm": 0.1531,
+            "gsk2023_MOTA_Tm": 0.5238,
+            "gsk2023_RSB1_Tm": -0.1601
+          }
+        },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 15,
           "mean_spearman": 0.398,
           "mean_spearman_n_ge_10": 0.2789,
@@ -3711,6 +3826,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 15,
           "mean_spearman": 0.4287,
           "mean_spearman_n_ge_10": 0.29,
@@ -3737,6 +3853,7 @@
           }
         },
         "bp_flexibility": {
+          "role": "single_descriptor",
           "n_defined": 15,
           "mean_spearman": 0.2908,
           "mean_spearman_n_ge_10": 0.2511,
@@ -3763,6 +3880,7 @@
           }
         },
         "neg_bp_gravy": {
+          "role": "single_descriptor",
           "n_defined": 15,
           "mean_spearman": 0.1967,
           "mean_spearman_n_ge_10": 0.2263,
@@ -3789,6 +3907,7 @@
           }
         },
         "neg_bp_aromaticity": {
+          "role": "single_descriptor",
           "n_defined": 9,
           "mean_spearman": 0.0882,
           "mean_spearman_n_ge_10": 0.0156,
@@ -3809,6 +3928,7 @@
           }
         },
         "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
           "n_defined": 14,
           "mean_spearman": 0.1999,
           "mean_spearman_n_ge_10": -0.0191,
@@ -3834,6 +3954,7 @@
           }
         },
         "neg_bp_instability_index": {
+          "role": "single_descriptor",
           "n_defined": 15,
           "mean_spearman": 0.0243,
           "mean_spearman_n_ge_10": 0.0056,
@@ -3859,7 +3980,34 @@
             "gsk2023_RSB1_Tm": 0.1314
           }
         },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 14,
+          "mean_spearman": 0.1529,
+          "mean_spearman_n_ge_10": -0.0642,
+          "mean_spearman_sqrt_n_weighted": 0.0348,
+          "mean_spearman_n_weighted": -0.0355,
+          "positive_count": 7,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "Hie2022_MEDI8852UCA_Tm": -0.0926,
+            "Hie2022_MEDI8852_Tm": 1.0,
+            "Hie2022_REGN10987_Tm": 0.0244,
+            "Hie2022_S309_Tm": 0.5198,
+            "Hie2022_mAb114UCA_Tm": 1.0,
+            "Hie2022_mAb114_Tm": 0.2988,
+            "Rosace2023_Adalimumab_Tm": -0.5914,
+            "Rosace2023_CR3022_Tm": -0.0304,
+            "Rosace2023_Golimumab_Tm": -0.1026,
+            "Wittrup2017_CST_Tm": -0.0803,
+            "gsk2023_AM14_Tm": 0.1067,
+            "gsk2023_D25_Tm": -0.0141,
+            "gsk2023_MOTA_Tm": 0.4286,
+            "gsk2023_RSB1_Tm": -0.3259
+          }
+        },
         "bp_molecular_weight": {
+          "role": "single_descriptor",
           "n_defined": 15,
           "mean_spearman": 0.2467,
           "mean_spearman_n_ge_10": -0.013,
@@ -3886,6 +4034,7 @@
           }
         },
         "pure_germline_identity": {
+          "role": "single_descriptor",
           "n_defined": 14,
           "mean_spearman": 0.1297,
           "mean_spearman_n_ge_10": -0.1445,
@@ -3947,6 +4096,7 @@
       },
       "methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_defined": 20,
           "mean_spearman": 0.327,
           "mean_spearman_n_ge_10": 0.1222,
@@ -3978,6 +4128,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 20,
           "mean_spearman": 0.3568,
           "mean_spearman_n_ge_10": 0.1497,
@@ -4009,6 +4160,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 20,
           "mean_spearman": 0.3431,
           "mean_spearman_n_ge_10": 0.1151,
@@ -4040,6 +4192,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 20,
           "mean_spearman": 0.3498,
           "mean_spearman_n_ge_10": 0.1141,
@@ -4071,6 +4224,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 20,
           "mean_spearman": 0.2256,
           "mean_spearman_n_ge_10": 0.1296,
@@ -4101,7 +4255,40 @@
             "tresanco2023nbthermo_tm": -0.101
           }
         },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.1834,
+          "mean_spearman_n_ge_10": 0.1059,
+          "mean_spearman_sqrt_n_weighted": 0.0355,
+          "mean_spearman_n_weighted": -0.0461,
+          "positive_count": 11,
+          "positive_fraction": 0.55,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.0005,
+            "hie2023efficient_C143_Tm": -1.0,
+            "hie2023efficient_MEDIUCA_Tm": 0.6571,
+            "hie2023efficient_MEDI_Tm": 1.0,
+            "hie2023efficient_REGN10987_Tm": -0.1905,
+            "hie2023efficient_S309_Tm": 0.7333,
+            "hie2023efficient_mAb114UCA_Tm": 1.0,
+            "hie2023efficient_mAb114_Tm": 0.4643,
+            "hutchinson2023enhancement_multitm1_igg": -0.1019,
+            "hutchinson2023enhancement_singletm1_igg": -0.0554,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3424,
+            "hutchinson2023enhancement_top27tm1_igg": -0.2412,
+            "jain2017biophysical_Tm": -0.0058,
+            "rosace2023automated_tm1_adalimumab": 0.3846,
+            "rosace2023automated_tm1_golimumab": 0.3591,
+            "shanehsazzadeh2023unlocking_DLS": 0.7076,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4231,
+            "shanehsazzadeh2023unlocking_DSF2": 0.2637,
+            "sulea2019assisted_sdAb_tm": -0.3725,
+            "tresanco2023nbthermo_tm": -0.0164
+          }
+        },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 20,
           "mean_spearman": 0.2465,
           "mean_spearman_n_ge_10": 0.1381,
@@ -4133,6 +4320,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 20,
           "mean_spearman": 0.2239,
           "mean_spearman_n_ge_10": 0.1006,
@@ -4164,6 +4352,7 @@
           }
         },
         "bp_flexibility": {
+          "role": "single_descriptor",
           "n_defined": 20,
           "mean_spearman": 0.1695,
           "mean_spearman_n_ge_10": 0.1338,
@@ -4195,6 +4384,7 @@
           }
         },
         "neg_bp_gravy": {
+          "role": "single_descriptor",
           "n_defined": 20,
           "mean_spearman": 0.0181,
           "mean_spearman_n_ge_10": 0.0073,
@@ -4226,6 +4416,7 @@
           }
         },
         "neg_bp_aromaticity": {
+          "role": "single_descriptor",
           "n_defined": 15,
           "mean_spearman": 0.1792,
           "mean_spearman_n_ge_10": 0.1368,
@@ -4252,6 +4443,7 @@
           }
         },
         "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
           "n_defined": 19,
           "mean_spearman": 0.1254,
           "mean_spearman_n_ge_10": 0.0016,
@@ -4282,6 +4474,7 @@
           }
         },
         "neg_bp_instability_index": {
+          "role": "single_descriptor",
           "n_defined": 20,
           "mean_spearman": -0.0055,
           "mean_spearman_n_ge_10": -0.0252,
@@ -4312,7 +4505,39 @@
             "tresanco2023nbthermo_tm": -0.1312
           }
         },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 19,
+          "mean_spearman": 0.0886,
+          "mean_spearman_n_ge_10": -0.0239,
+          "mean_spearman_sqrt_n_weighted": 0.0337,
+          "mean_spearman_n_weighted": 0.0687,
+          "positive_count": 10,
+          "positive_fraction": 0.5263,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.3375,
+            "hie2023efficient_MEDIUCA_Tm": -0.0926,
+            "hie2023efficient_MEDI_Tm": 1.0,
+            "hie2023efficient_REGN10987_Tm": 0.0244,
+            "hie2023efficient_S309_Tm": 0.5198,
+            "hie2023efficient_mAb114UCA_Tm": 1.0,
+            "hie2023efficient_mAb114_Tm": 0.2988,
+            "hutchinson2023enhancement_multitm1_igg": 0.0038,
+            "hutchinson2023enhancement_singletm1_igg": -0.1302,
+            "hutchinson2023enhancement_top200tm1_igg": -0.1329,
+            "hutchinson2023enhancement_top27tm1_igg": -0.3991,
+            "jain2017biophysical_Tm": -0.0803,
+            "rosace2023automated_tm1_adalimumab": -0.6087,
+            "rosace2023automated_tm1_golimumab": -0.2368,
+            "shanehsazzadeh2023unlocking_DLS": 0.0155,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3773,
+            "shanehsazzadeh2023unlocking_DSF2": -0.0999,
+            "sulea2019assisted_sdAb_tm": -0.2833,
+            "tresanco2023nbthermo_tm": 0.1693
+          }
+        },
         "bp_molecular_weight": {
+          "role": "single_descriptor",
           "n_defined": 20,
           "mean_spearman": 0.1675,
           "mean_spearman_n_ge_10": 0.0297,
@@ -4344,6 +4569,7 @@
           }
         },
         "pure_germline_identity": {
+          "role": "single_descriptor",
           "n_defined": 19,
           "mean_spearman": 0.0924,
           "mean_spearman_n_ge_10": -0.1,
@@ -4411,6 +4637,7 @@
       },
       "methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_defined": 21,
           "mean_spearman": 0.3048,
           "mean_spearman_n_ge_10": 0.1035,
@@ -4443,6 +4670,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 21,
           "mean_spearman": 0.3334,
           "mean_spearman_n_ge_10": 0.1295,
@@ -4475,6 +4703,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 21,
           "mean_spearman": 0.3196,
           "mean_spearman_n_ge_10": 0.0962,
@@ -4507,6 +4736,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 21,
           "mean_spearman": 0.3268,
           "mean_spearman_n_ge_10": 0.0964,
@@ -4539,6 +4769,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 21,
           "mean_spearman": 0.2087,
           "mean_spearman_n_ge_10": 0.111,
@@ -4570,7 +4801,41 @@
             "tresanco2023nbthermo_tm": -0.101
           }
         },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 21,
+          "mean_spearman": 0.1698,
+          "mean_spearman_n_ge_10": 0.0911,
+          "mean_spearman_sqrt_n_weighted": 0.0279,
+          "mean_spearman_n_weighted": -0.0479,
+          "positive_count": 11,
+          "positive_fraction": 0.5238,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.0005,
+            "hie2023efficient_C143_Tm": -1.0,
+            "hie2023efficient_MEDIUCA_Tm": 0.6571,
+            "hie2023efficient_MEDI_Tm": 1.0,
+            "hie2023efficient_REGN10987_Tm": -0.1905,
+            "hie2023efficient_S309_Tm": 0.7333,
+            "hie2023efficient_mAb114UCA_Tm": 1.0,
+            "hie2023efficient_mAb114_Tm": 0.4643,
+            "hutchinson2023enhancement_multitm1_igg": -0.1019,
+            "hutchinson2023enhancement_singletm1_igg": -0.0554,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3424,
+            "hutchinson2023enhancement_top27tm1_igg": -0.2412,
+            "jain2017biophysical_Tm": -0.0058,
+            "jain2024assessment_Tm": -0.1019,
+            "rosace2023automated_tm1_adalimumab": 0.3846,
+            "rosace2023automated_tm1_golimumab": 0.3591,
+            "shanehsazzadeh2023unlocking_DLS": 0.7076,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4231,
+            "shanehsazzadeh2023unlocking_DSF2": 0.2637,
+            "sulea2019assisted_sdAb_tm": -0.3725,
+            "tresanco2023nbthermo_tm": -0.0164
+          }
+        },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 21,
           "mean_spearman": 0.2298,
           "mean_spearman_n_ge_10": 0.1208,
@@ -4603,6 +4868,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 21,
           "mean_spearman": 0.2076,
           "mean_spearman_n_ge_10": 0.0849,
@@ -4635,6 +4901,7 @@
           }
         },
         "bp_flexibility": {
+          "role": "single_descriptor",
           "n_defined": 21,
           "mean_spearman": 0.1534,
           "mean_spearman_n_ge_10": 0.1122,
@@ -4667,6 +4934,7 @@
           }
         },
         "neg_bp_gravy": {
+          "role": "single_descriptor",
           "n_defined": 21,
           "mean_spearman": 0.0095,
           "mean_spearman_n_ge_10": -0.0048,
@@ -4699,6 +4967,7 @@
           }
         },
         "neg_bp_aromaticity": {
+          "role": "single_descriptor",
           "n_defined": 16,
           "mean_spearman": 0.1599,
           "mean_spearman_n_ge_10": 0.1163,
@@ -4726,6 +4995,7 @@
           }
         },
         "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
           "n_defined": 20,
           "mean_spearman": 0.1185,
           "mean_spearman_n_ge_10": 0.0006,
@@ -4757,6 +5027,7 @@
           }
         },
         "neg_bp_instability_index": {
+          "role": "single_descriptor",
           "n_defined": 21,
           "mean_spearman": 0.001,
           "mean_spearman_n_ge_10": -0.0142,
@@ -4788,7 +5059,40 @@
             "tresanco2023nbthermo_tm": -0.1312
           }
         },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 20,
+          "mean_spearman": 0.0825,
+          "mean_spearman_n_ge_10": -0.0245,
+          "mean_spearman_sqrt_n_weighted": 0.03,
+          "mean_spearman_n_weighted": 0.0654,
+          "positive_count": 10,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.3375,
+            "hie2023efficient_MEDIUCA_Tm": -0.0926,
+            "hie2023efficient_MEDI_Tm": 1.0,
+            "hie2023efficient_REGN10987_Tm": 0.0244,
+            "hie2023efficient_S309_Tm": 0.5198,
+            "hie2023efficient_mAb114UCA_Tm": 1.0,
+            "hie2023efficient_mAb114_Tm": 0.2988,
+            "hutchinson2023enhancement_multitm1_igg": 0.0038,
+            "hutchinson2023enhancement_singletm1_igg": -0.1302,
+            "hutchinson2023enhancement_top200tm1_igg": -0.1329,
+            "hutchinson2023enhancement_top27tm1_igg": -0.3991,
+            "jain2017biophysical_Tm": -0.0803,
+            "jain2024assessment_Tm": -0.0319,
+            "rosace2023automated_tm1_adalimumab": -0.6087,
+            "rosace2023automated_tm1_golimumab": -0.2368,
+            "shanehsazzadeh2023unlocking_DLS": 0.0155,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3773,
+            "shanehsazzadeh2023unlocking_DSF2": -0.0999,
+            "sulea2019assisted_sdAb_tm": -0.2833,
+            "tresanco2023nbthermo_tm": 0.1693
+          }
+        },
         "bp_molecular_weight": {
+          "role": "single_descriptor",
           "n_defined": 21,
           "mean_spearman": 0.1593,
           "mean_spearman_n_ge_10": 0.0273,
@@ -4821,6 +5125,7 @@
           }
         },
         "pure_germline_identity": {
+          "role": "single_descriptor",
           "n_defined": 20,
           "mean_spearman": 0.0937,
           "mean_spearman_n_ge_10": -0.0844,
@@ -4893,6 +5198,7 @@
       },
       "methods": {
         "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
           "n_defined": 25,
           "mean_spearman": 0.2834,
           "mean_spearman_n_ge_10": 0.0923,
@@ -4929,6 +5235,7 @@
           }
         },
         "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 25,
           "mean_spearman": 0.3313,
           "mean_spearman_n_ge_10": 0.1243,
@@ -4965,6 +5272,7 @@
           }
         },
         "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 25,
           "mean_spearman": 0.294,
           "mean_spearman_n_ge_10": 0.0889,
@@ -5001,6 +5309,7 @@
           }
         },
         "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 25,
           "mean_spearman": 0.3246,
           "mean_spearman_n_ge_10": 0.0965,
@@ -5037,6 +5346,7 @@
           }
         },
         "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 25,
           "mean_spearman": 0.2231,
           "mean_spearman_n_ge_10": 0.1157,
@@ -5072,7 +5382,45 @@
             "tresanco2023nbthermo_tm": -0.101
           }
         },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.166,
+          "mean_spearman_n_ge_10": 0.0782,
+          "mean_spearman_sqrt_n_weighted": 0.0371,
+          "mean_spearman_n_weighted": -0.0449,
+          "positive_count": 13,
+          "positive_fraction": 0.52,
+          "per_dataset": {
+            "Rosace2023_CR3022_Tm": 0.0857,
+            "gsk2023_AM14_Tm": -0.0171,
+            "gsk2023_D25_Tm": 0.1531,
+            "gsk2023_MOTA_Tm": 0.5238,
+            "gsk2023_RSB1_Tm": -0.1601,
+            "hie2023efficient_C143_Tm": -1.0,
+            "hie2023efficient_MEDIUCA_Tm": 0.6571,
+            "hie2023efficient_MEDI_Tm": 1.0,
+            "hie2023efficient_REGN10987_Tm": -0.1905,
+            "hie2023efficient_S309_Tm": 0.7333,
+            "hie2023efficient_mAb114UCA_Tm": 1.0,
+            "hie2023efficient_mAb114_Tm": 0.4643,
+            "hutchinson2023enhancement_multitm1_igg": -0.1019,
+            "hutchinson2023enhancement_singletm1_igg": -0.0554,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3424,
+            "hutchinson2023enhancement_top27tm1_igg": -0.2412,
+            "jain2017biophysical_Tm": -0.0058,
+            "jain2024assessment_Tm": -0.1019,
+            "rosace2023automated_tm1_adalimumab": 0.3846,
+            "rosace2023automated_tm1_golimumab": 0.3591,
+            "shanehsazzadeh2023unlocking_DLS": 0.7076,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4231,
+            "shanehsazzadeh2023unlocking_DSF2": 0.2637,
+            "sulea2019assisted_sdAb_tm": -0.3725,
+            "tresanco2023nbthermo_tm": -0.0164
+          }
+        },
         "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 25,
           "mean_spearman": 0.2578,
           "mean_spearman_n_ge_10": 0.1393,
@@ -5109,6 +5457,7 @@
           }
         },
         "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
           "n_defined": 25,
           "mean_spearman": 0.2539,
           "mean_spearman_n_ge_10": 0.1087,
@@ -5145,6 +5494,7 @@
           }
         },
         "bp_flexibility": {
+          "role": "single_descriptor",
           "n_defined": 25,
           "mean_spearman": 0.1954,
           "mean_spearman_n_ge_10": 0.1287,
@@ -5181,6 +5531,7 @@
           }
         },
         "neg_bp_gravy": {
+          "role": "single_descriptor",
           "n_defined": 25,
           "mean_spearman": 0.093,
           "mean_spearman_n_ge_10": 0.0473,
@@ -5217,6 +5568,7 @@
           }
         },
         "neg_bp_aromaticity": {
+          "role": "single_descriptor",
           "n_defined": 19,
           "mean_spearman": 0.089,
           "mean_spearman_n_ge_10": 0.0644,
@@ -5247,6 +5599,7 @@
           }
         },
         "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
           "n_defined": 24,
           "mean_spearman": 0.097,
           "mean_spearman_n_ge_10": -0.0256,
@@ -5282,6 +5635,7 @@
           }
         },
         "neg_bp_instability_index": {
+          "role": "single_descriptor",
           "n_defined": 25,
           "mean_spearman": -0.0082,
           "mean_spearman_n_ge_10": -0.0241,
@@ -5317,7 +5671,44 @@
             "tresanco2023nbthermo_tm": -0.1312
           }
         },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 24,
+          "mean_spearman": 0.0616,
+          "mean_spearman_n_ge_10": -0.0571,
+          "mean_spearman_sqrt_n_weighted": 0.0039,
+          "mean_spearman_n_weighted": 0.0422,
+          "positive_count": 11,
+          "positive_fraction": 0.4583,
+          "per_dataset": {
+            "Rosace2023_CR3022_Tm": -0.0304,
+            "gsk2023_AM14_Tm": 0.1067,
+            "gsk2023_D25_Tm": -0.0141,
+            "gsk2023_MOTA_Tm": 0.4286,
+            "gsk2023_RSB1_Tm": -0.3259,
+            "hie2023efficient_MEDIUCA_Tm": -0.0926,
+            "hie2023efficient_MEDI_Tm": 1.0,
+            "hie2023efficient_REGN10987_Tm": 0.0244,
+            "hie2023efficient_S309_Tm": 0.5198,
+            "hie2023efficient_mAb114UCA_Tm": 1.0,
+            "hie2023efficient_mAb114_Tm": 0.2988,
+            "hutchinson2023enhancement_multitm1_igg": 0.0038,
+            "hutchinson2023enhancement_singletm1_igg": -0.1302,
+            "hutchinson2023enhancement_top200tm1_igg": -0.1329,
+            "hutchinson2023enhancement_top27tm1_igg": -0.3991,
+            "jain2017biophysical_Tm": -0.0803,
+            "jain2024assessment_Tm": -0.0319,
+            "rosace2023automated_tm1_adalimumab": -0.6087,
+            "rosace2023automated_tm1_golimumab": -0.2368,
+            "shanehsazzadeh2023unlocking_DLS": 0.0155,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3773,
+            "shanehsazzadeh2023unlocking_DSF2": -0.0999,
+            "sulea2019assisted_sdAb_tm": -0.2833,
+            "tresanco2023nbthermo_tm": 0.1693
+          }
+        },
         "bp_molecular_weight": {
+          "role": "single_descriptor",
           "n_defined": 25,
           "mean_spearman": 0.1646,
           "mean_spearman_n_ge_10": 0.0296,
@@ -5354,6 +5745,7 @@
           }
         },
         "pure_germline_identity": {
+          "role": "single_descriptor",
           "n_defined": 24,
           "mean_spearman": 0.0679,
           "mean_spearman_n_ge_10": -0.0693,
@@ -5398,7 +5790,3216 @@
       "margin_CLSS_Reg6_vs_best_single": 0.1292,
       "margin_CLSS_EqWt6_vs_best_single": 0.0277,
       "margin_CLSS_EqWt5_NoPI_vs_best_single": 0.0624
-    }
+    },
+    "unseen_data_thermostability_11_omitted_by_score": {
+      "n_datasets": 11,
+      "dataset_sizes": {
+        "garbinski2023_tm1": 86,
+        "hutchinson2023enhancement_multitm1_igg": 15,
+        "hutchinson2023enhancement_singletm1_igg": 23,
+        "hutchinson2023enhancement_top200tm1_igg": 192,
+        "hutchinson2023enhancement_top27tm1_igg": 28,
+        "jain2024assessment_Tm": 43,
+        "shanehsazzadeh2023unlocking_DLS": 13,
+        "shanehsazzadeh2023unlocking_DSF1": 13,
+        "shanehsazzadeh2023unlocking_DSF2": 13,
+        "sulea2019assisted_sdAb_tm": 33,
+        "tresanco2023nbthermo_tm": 672
+      },
+      "methods": {
+        "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
+          "n_defined": 11,
+          "mean_spearman": 0.0261,
+          "mean_spearman_n_ge_10": 0.0261,
+          "mean_spearman_sqrt_n_weighted": 0.0048,
+          "mean_spearman_n_weighted": 0.0344,
+          "positive_count": 6,
+          "positive_fraction": 0.5455,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.0832,
+            "hutchinson2023enhancement_multitm1_igg": -0.4629,
+            "hutchinson2023enhancement_singletm1_igg": 0.0742,
+            "hutchinson2023enhancement_top200tm1_igg": -0.214,
+            "hutchinson2023enhancement_top27tm1_igg": -0.2705,
+            "jain2024assessment_Tm": -0.1396,
+            "shanehsazzadeh2023unlocking_DLS": 0.6964,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3956,
+            "shanehsazzadeh2023unlocking_DSF2": 0.3846,
+            "sulea2019assisted_sdAb_tm": -0.387,
+            "tresanco2023nbthermo_tm": 0.1269
+          }
+        },
+        "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": 0.0594,
+          "mean_spearman_n_ge_10": 0.0594,
+          "mean_spearman_sqrt_n_weighted": 0.0342,
+          "mean_spearman_n_weighted": 0.0596,
+          "positive_count": 6,
+          "positive_fraction": 0.5455,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.0383,
+            "hutchinson2023enhancement_multitm1_igg": -0.4593,
+            "hutchinson2023enhancement_singletm1_igg": 0.0974,
+            "hutchinson2023enhancement_top200tm1_igg": -0.1663,
+            "hutchinson2023enhancement_top27tm1_igg": -0.0864,
+            "jain2024assessment_Tm": -0.1342,
+            "shanehsazzadeh2023unlocking_DLS": 0.7354,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3791,
+            "shanehsazzadeh2023unlocking_DSF2": 0.4176,
+            "sulea2019assisted_sdAb_tm": -0.3164,
+            "tresanco2023nbthermo_tm": 0.148
+          }
+        },
+        "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": 0.0005,
+          "mean_spearman_n_ge_10": 0.0005,
+          "mean_spearman_sqrt_n_weighted": -0.1016,
+          "mean_spearman_n_weighted": -0.16,
+          "positive_count": 3,
+          "positive_fraction": 0.2727,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.0612,
+            "hutchinson2023enhancement_multitm1_igg": -0.1032,
+            "hutchinson2023enhancement_singletm1_igg": -0.0533,
+            "hutchinson2023enhancement_top200tm1_igg": -0.2772,
+            "hutchinson2023enhancement_top27tm1_igg": -0.3132,
+            "jain2024assessment_Tm": -0.1502,
+            "shanehsazzadeh2023unlocking_DLS": 0.7884,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3681,
+            "shanehsazzadeh2023unlocking_DSF2": 0.3516,
+            "sulea2019assisted_sdAb_tm": -0.3787,
+            "tresanco2023nbthermo_tm": -0.166
+          }
+        },
+        "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": 0.0026,
+          "mean_spearman_n_ge_10": 0.0026,
+          "mean_spearman_sqrt_n_weighted": -0.0958,
+          "mean_spearman_n_weighted": -0.151,
+          "positive_count": 3,
+          "positive_fraction": 0.2727,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.1044,
+            "hutchinson2023enhancement_multitm1_igg": -0.1194,
+            "hutchinson2023enhancement_singletm1_igg": -0.0421,
+            "hutchinson2023enhancement_top200tm1_igg": -0.2784,
+            "hutchinson2023enhancement_top27tm1_igg": -0.2354,
+            "jain2024assessment_Tm": -0.1334,
+            "shanehsazzadeh2023unlocking_DLS": 0.7549,
+            "shanehsazzadeh2023unlocking_DSF1": 0.2527,
+            "shanehsazzadeh2023unlocking_DSF2": 0.4011,
+            "sulea2019assisted_sdAb_tm": -0.3166,
+            "tresanco2023nbthermo_tm": -0.1505
+          }
+        },
+        "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": 0.0215,
+          "mean_spearman_n_ge_10": 0.0215,
+          "mean_spearman_sqrt_n_weighted": -0.0765,
+          "mean_spearman_n_weighted": -0.1262,
+          "positive_count": 3,
+          "positive_fraction": 0.2727,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.119,
+            "hutchinson2023enhancement_multitm1_igg": -0.1019,
+            "hutchinson2023enhancement_singletm1_igg": -0.04,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3392,
+            "hutchinson2023enhancement_top27tm1_igg": -0.1609,
+            "jain2024assessment_Tm": -0.1303,
+            "shanehsazzadeh2023unlocking_DLS": 0.7076,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4341,
+            "shanehsazzadeh2023unlocking_DSF2": 0.2308,
+            "sulea2019assisted_sdAb_tm": -0.1435,
+            "tresanco2023nbthermo_tm": -0.101
+          }
+        },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": 0.0148,
+          "mean_spearman_n_ge_10": 0.0148,
+          "mean_spearman_sqrt_n_weighted": -0.0567,
+          "mean_spearman_n_weighted": -0.075,
+          "positive_count": 4,
+          "positive_fraction": 0.3636,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.0005,
+            "hutchinson2023enhancement_multitm1_igg": -0.1019,
+            "hutchinson2023enhancement_singletm1_igg": -0.0554,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3424,
+            "hutchinson2023enhancement_top27tm1_igg": -0.2412,
+            "jain2024assessment_Tm": -0.1019,
+            "shanehsazzadeh2023unlocking_DLS": 0.7076,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4231,
+            "shanehsazzadeh2023unlocking_DSF2": 0.2637,
+            "sulea2019assisted_sdAb_tm": -0.3725,
+            "tresanco2023nbthermo_tm": -0.0164
+          }
+        },
+        "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": 0.0265,
+          "mean_spearman_n_ge_10": 0.0265,
+          "mean_spearman_sqrt_n_weighted": -0.0932,
+          "mean_spearman_n_weighted": -0.1718,
+          "positive_count": 5,
+          "positive_fraction": 0.4545,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.2516,
+            "hutchinson2023enhancement_multitm1_igg": -0.1019,
+            "hutchinson2023enhancement_singletm1_igg": 0.0143,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3023,
+            "hutchinson2023enhancement_top27tm1_igg": -0.0952,
+            "jain2024assessment_Tm": -0.1037,
+            "shanehsazzadeh2023unlocking_DLS": 0.6853,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4121,
+            "shanehsazzadeh2023unlocking_DSF2": 0.2033,
+            "sulea2019assisted_sdAb_tm": 0.0149,
+            "tresanco2023nbthermo_tm": -0.1841
+          }
+        },
+        "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 11,
+          "mean_spearman": -0.0309,
+          "mean_spearman_n_ge_10": -0.0309,
+          "mean_spearman_sqrt_n_weighted": -0.1159,
+          "mean_spearman_n_weighted": -0.1645,
+          "positive_count": 3,
+          "positive_fraction": 0.2727,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.3246,
+            "hutchinson2023enhancement_multitm1_igg": -0.109,
+            "hutchinson2023enhancement_singletm1_igg": 0.0114,
+            "hutchinson2023enhancement_top200tm1_igg": -0.2548,
+            "hutchinson2023enhancement_top27tm1_igg": -0.0705,
+            "jain2024assessment_Tm": -0.1203,
+            "shanehsazzadeh2023unlocking_DLS": 0.4402,
+            "shanehsazzadeh2023unlocking_DSF1": 0.6044,
+            "shanehsazzadeh2023unlocking_DSF2": -0.2363,
+            "sulea2019assisted_sdAb_tm": -0.1204,
+            "tresanco2023nbthermo_tm": -0.1596
+          }
+        },
+        "bp_flexibility": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": 0.0382,
+          "mean_spearman_n_ge_10": 0.0382,
+          "mean_spearman_sqrt_n_weighted": -0.0756,
+          "mean_spearman_n_weighted": -0.1612,
+          "positive_count": 4,
+          "positive_fraction": 0.3636,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.1189,
+            "hutchinson2023enhancement_multitm1_igg": -0.0608,
+            "hutchinson2023enhancement_singletm1_igg": -0.0823,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3156,
+            "hutchinson2023enhancement_top27tm1_igg": -0.1872,
+            "jain2024assessment_Tm": -0.1691,
+            "shanehsazzadeh2023unlocking_DLS": 0.5237,
+            "shanehsazzadeh2023unlocking_DSF1": 0.1813,
+            "shanehsazzadeh2023unlocking_DSF2": 0.3846,
+            "sulea2019assisted_sdAb_tm": 0.451,
+            "tresanco2023nbthermo_tm": -0.1863
+          }
+        },
+        "neg_bp_gravy": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": -0.0705,
+          "mean_spearman_n_ge_10": -0.0705,
+          "mean_spearman_sqrt_n_weighted": -0.0923,
+          "mean_spearman_n_weighted": -0.127,
+          "positive_count": 5,
+          "positive_fraction": 0.4545,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.1634,
+            "hutchinson2023enhancement_multitm1_igg": -0.622,
+            "hutchinson2023enhancement_singletm1_igg": 0.1488,
+            "hutchinson2023enhancement_top200tm1_igg": -0.0824,
+            "hutchinson2023enhancement_top27tm1_igg": 0.1864,
+            "jain2024assessment_Tm": -0.1621,
+            "shanehsazzadeh2023unlocking_DLS": 0.0529,
+            "shanehsazzadeh2023unlocking_DSF1": 0.0934,
+            "shanehsazzadeh2023unlocking_DSF2": -0.2857,
+            "sulea2019assisted_sdAb_tm": 0.2252,
+            "tresanco2023nbthermo_tm": -0.1663
+          }
+        },
+        "neg_bp_aromaticity": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": 0.1154,
+          "mean_spearman_n_ge_10": 0.1154,
+          "mean_spearman_sqrt_n_weighted": 0.0122,
+          "mean_spearman_n_weighted": -0.0704,
+          "positive_count": 6,
+          "positive_fraction": 0.5455,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.3814,
+            "hutchinson2023enhancement_multitm1_igg": 0.1027,
+            "hutchinson2023enhancement_singletm1_igg": -0.0865,
+            "hutchinson2023enhancement_top200tm1_igg": -0.3067,
+            "hutchinson2023enhancement_top27tm1_igg": -0.1647,
+            "jain2024assessment_Tm": -0.1303,
+            "shanehsazzadeh2023unlocking_DLS": 0.756,
+            "shanehsazzadeh2023unlocking_DSF1": 0.1964,
+            "shanehsazzadeh2023unlocking_DSF2": 0.4177,
+            "sulea2019assisted_sdAb_tm": 0.2043,
+            "tresanco2023nbthermo_tm": -0.1004
+          }
+        },
+        "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": 0.017,
+          "mean_spearman_n_ge_10": 0.017,
+          "mean_spearman_sqrt_n_weighted": 0.0406,
+          "mean_spearman_n_weighted": 0.0863,
+          "positive_count": 5,
+          "positive_fraction": 0.4545,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.4646,
+            "hutchinson2023enhancement_multitm1_igg": 0.109,
+            "hutchinson2023enhancement_singletm1_igg": -0.1578,
+            "hutchinson2023enhancement_top200tm1_igg": -0.2016,
+            "hutchinson2023enhancement_top27tm1_igg": -0.4419,
+            "jain2024assessment_Tm": -0.0126,
+            "shanehsazzadeh2023unlocking_DLS": 0.1392,
+            "shanehsazzadeh2023unlocking_DSF1": 0.4272,
+            "shanehsazzadeh2023unlocking_DSF2": -0.0444,
+            "sulea2019assisted_sdAb_tm": -0.2633,
+            "tresanco2023nbthermo_tm": 0.1684
+          }
+        },
+        "neg_bp_instability_index": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": -0.0753,
+          "mean_spearman_n_ge_10": -0.0753,
+          "mean_spearman_sqrt_n_weighted": -0.0987,
+          "mean_spearman_n_weighted": -0.1134,
+          "positive_count": 5,
+          "positive_fraction": 0.4545,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.4092,
+            "hutchinson2023enhancement_multitm1_igg": 0.2303,
+            "hutchinson2023enhancement_singletm1_igg": -0.0601,
+            "hutchinson2023enhancement_top200tm1_igg": 0.0123,
+            "hutchinson2023enhancement_top27tm1_igg": 0.0285,
+            "jain2024assessment_Tm": 0.1294,
+            "shanehsazzadeh2023unlocking_DLS": -0.2061,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3352,
+            "shanehsazzadeh2023unlocking_DSF2": -0.3791,
+            "sulea2019assisted_sdAb_tm": -0.3786,
+            "tresanco2023nbthermo_tm": -0.1312
+          }
+        },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": -0.0158,
+          "mean_spearman_n_ge_10": -0.0158,
+          "mean_spearman_sqrt_n_weighted": 0.0253,
+          "mean_spearman_n_weighted": 0.0851,
+          "positive_count": 5,
+          "positive_fraction": 0.4545,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.3375,
+            "hutchinson2023enhancement_multitm1_igg": 0.0038,
+            "hutchinson2023enhancement_singletm1_igg": -0.1302,
+            "hutchinson2023enhancement_top200tm1_igg": -0.1329,
+            "hutchinson2023enhancement_top27tm1_igg": -0.3991,
+            "jain2024assessment_Tm": -0.0319,
+            "shanehsazzadeh2023unlocking_DLS": 0.0155,
+            "shanehsazzadeh2023unlocking_DSF1": 0.3773,
+            "shanehsazzadeh2023unlocking_DSF2": -0.0999,
+            "sulea2019assisted_sdAb_tm": -0.2833,
+            "tresanco2023nbthermo_tm": 0.1693
+          }
+        },
+        "bp_molecular_weight": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": 0.078,
+          "mean_spearman_n_ge_10": 0.078,
+          "mean_spearman_sqrt_n_weighted": 0.1739,
+          "mean_spearman_n_weighted": 0.252,
+          "positive_count": 7,
+          "positive_fraction": 0.6364,
+          "per_dataset": {
+            "garbinski2023_tm1": 0.3217,
+            "hutchinson2023enhancement_multitm1_igg": -0.2878,
+            "hutchinson2023enhancement_singletm1_igg": 0.3598,
+            "hutchinson2023enhancement_top200tm1_igg": 0.2553,
+            "hutchinson2023enhancement_top27tm1_igg": 0.1913,
+            "jain2024assessment_Tm": -0.0045,
+            "shanehsazzadeh2023unlocking_DLS": -0.2089,
+            "shanehsazzadeh2023unlocking_DSF1": 0.0385,
+            "shanehsazzadeh2023unlocking_DSF2": -0.1429,
+            "sulea2019assisted_sdAb_tm": 0.0351,
+            "tresanco2023nbthermo_tm": 0.3007
+          }
+        },
+        "pure_germline_identity": {
+          "role": "single_descriptor",
+          "n_defined": 11,
+          "mean_spearman": -0.0446,
+          "mean_spearman_n_ge_10": -0.0446,
+          "mean_spearman_sqrt_n_weighted": 0.0401,
+          "mean_spearman_n_weighted": 0.1472,
+          "positive_count": 6,
+          "positive_fraction": 0.5455,
+          "per_dataset": {
+            "garbinski2023_tm1": -0.2539,
+            "hutchinson2023enhancement_multitm1_igg": -0.1488,
+            "hutchinson2023enhancement_singletm1_igg": 0.1816,
+            "hutchinson2023enhancement_top200tm1_igg": 0.1627,
+            "hutchinson2023enhancement_top27tm1_igg": 0.1761,
+            "jain2024assessment_Tm": 0.1187,
+            "shanehsazzadeh2023unlocking_DLS": -0.1427,
+            "shanehsazzadeh2023unlocking_DSF1": 0.0776,
+            "shanehsazzadeh2023unlocking_DSF2": -0.1924,
+            "sulea2019assisted_sdAb_tm": -0.7261,
+            "tresanco2023nbthermo_tm": 0.2565
+          }
+        }
+      },
+      "best_single_descriptor": {
+        "name": "neg_bp_aromaticity",
+        "mean_spearman": 0.1154
+      },
+      "margin_CLSS_Reg8_AllBP_vs_best_single": -0.0893,
+      "margin_CLSS_Reg7_MW_vs_best_single": -0.056,
+      "margin_CLSS_Reg6_vs_best_single": -0.1128,
+      "margin_CLSS_EqWt6_vs_best_single": -0.0939,
+      "margin_CLSS_EqWt5_NoPI_vs_best_single": -0.0889
+    },
+    "datasets_omitted_by_score_tm": [
+      "garbinski2023_tm1",
+      "hutchinson2023enhancement_multitm1_igg",
+      "hutchinson2023enhancement_singletm1_igg",
+      "hutchinson2023enhancement_top200tm1_igg",
+      "hutchinson2023enhancement_top27tm1_igg",
+      "jain2024assessment_Tm",
+      "shanehsazzadeh2023unlocking_DLS",
+      "shanehsazzadeh2023unlocking_DSF1",
+      "shanehsazzadeh2023unlocking_DSF2",
+      "sulea2019assisted_sdAb_tm",
+      "tresanco2023nbthermo_tm"
+    ],
+    "datasets_in_score_tm_only": [
+      "Rosace2023_CR3022_Tm",
+      "gsk2023_AM14_Tm",
+      "gsk2023_D25_Tm",
+      "gsk2023_MOTA_Tm",
+      "gsk2023_RSB1_Tm"
+    ]
+  },
+  "polyreactivity_universes": {
+    "score_polyreactivity_6": {
+      "n_datasets": 6,
+      "dataset_sizes": {
+        "Rosace2023_Adalimumab_CIC": 14,
+        "Rosace2023_CR3022_CIC": 6,
+        "Rosace2023_Golimumab_CIC": 5,
+        "Wittrup2017_CST_CIC": 137,
+        "Wittrup2017_CST_ELISA": 137,
+        "Wittrup2017_CST_PSR": 137
+      },
+      "methods": {
+        "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
+          "n_defined": 6,
+          "mean_spearman": 0.4467,
+          "mean_spearman_n_ge_10": 0.2379,
+          "mean_spearman_sqrt_n_weighted": 0.3073,
+          "mean_spearman_n_weighted": 0.2569,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.2264,
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.3211,
+            "Wittrup2017_CST_ELISA": 0.1526,
+            "Wittrup2017_CST_PSR": 0.2516
+          }
+        },
+        "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.3459,
+          "mean_spearman_n_ge_10": 0.1867,
+          "mean_spearman_sqrt_n_weighted": 0.2297,
+          "mean_spearman_n_weighted": 0.187,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.2264,
+            "Rosace2023_CR3022_CIC": 0.4286,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.2664,
+            "Wittrup2017_CST_ELISA": 0.0688,
+            "Wittrup2017_CST_PSR": 0.1853
+          }
+        },
+        "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.419,
+          "mean_spearman_n_ge_10": 0.1964,
+          "mean_spearman_sqrt_n_weighted": 0.2847,
+          "mean_spearman_n_weighted": 0.2388,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.1056,
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.3276,
+            "Wittrup2017_CST_ELISA": 0.1457,
+            "Wittrup2017_CST_PSR": 0.2067
+          }
+        },
+        "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.3185,
+          "mean_spearman_n_ge_10": 0.1457,
+          "mean_spearman_sqrt_n_weighted": 0.2077,
+          "mean_spearman_n_weighted": 0.1695,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.1056,
+            "Rosace2023_CR3022_CIC": 0.4286,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.2714,
+            "Wittrup2017_CST_ELISA": 0.0671,
+            "Wittrup2017_CST_PSR": 0.1386
+          }
+        },
+        "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.3987,
+          "mean_spearman_n_ge_10": 0.2088,
+          "mean_spearman_sqrt_n_weighted": 0.2398,
+          "mean_spearman_n_weighted": 0.1771,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.3714,
+            "Rosace2023_CR3022_CIC": 0.6571,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.3072,
+            "Wittrup2017_CST_ELISA": 0.0566,
+            "Wittrup2017_CST_PSR": 0.1001
+          }
+        },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.5052,
+          "mean_spearman_n_ge_10": 0.3257,
+          "mean_spearman_sqrt_n_weighted": 0.3301,
+          "mean_spearman_n_weighted": 0.2568,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.6176,
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.3569,
+            "Wittrup2017_CST_ELISA": 0.1359,
+            "Wittrup2017_CST_PSR": 0.1923
+          }
+        },
+        "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.1568,
+          "mean_spearman_n_ge_10": 0.1459,
+          "mean_spearman_sqrt_n_weighted": 0.1046,
+          "mean_spearman_n_weighted": 0.0814,
+          "positive_count": 3,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.3714,
+            "Rosace2023_CR3022_CIC": -0.5429,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.2415,
+            "Wittrup2017_CST_ELISA": -0.0277,
+            "Wittrup2017_CST_PSR": -0.0018
+          }
+        },
+        "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 6,
+          "mean_spearman": 0.0972,
+          "mean_spearman_n_ge_10": 0.0565,
+          "mean_spearman_sqrt_n_weighted": 0.0527,
+          "mean_spearman_n_weighted": 0.0372,
+          "positive_count": 3,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.1297,
+            "Rosace2023_CR3022_CIC": -0.5429,
+            "Rosace2023_Golimumab_CIC": 0.9,
+            "Wittrup2017_CST_CIC": 0.1386,
+            "Wittrup2017_CST_ELISA": -0.0123,
+            "Wittrup2017_CST_PSR": -0.0302
+          }
+        },
+        "bp_flexibility": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": 0.085,
+          "mean_spearman_n_ge_10": 0.0883,
+          "mean_spearman_sqrt_n_weighted": 0.0569,
+          "mean_spearman_n_weighted": 0.0445,
+          "positive_count": 3,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.2376,
+            "Rosace2023_CR3022_CIC": -0.5429,
+            "Rosace2023_Golimumab_CIC": 0.7,
+            "Wittrup2017_CST_CIC": 0.1913,
+            "Wittrup2017_CST_ELISA": -0.0309,
+            "Wittrup2017_CST_PSR": -0.0449
+          }
+        },
+        "neg_bp_gravy": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": -0.049,
+          "mean_spearman_n_ge_10": -0.0199,
+          "mean_spearman_sqrt_n_weighted": -0.0577,
+          "mean_spearman_n_weighted": -0.0627,
+          "positive_count": 2,
+          "positive_fraction": 0.3333,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.1188,
+            "Rosace2023_CR3022_CIC": -0.7143,
+            "Rosace2023_Golimumab_CIC": 0.5,
+            "Wittrup2017_CST_CIC": -0.0195,
+            "Wittrup2017_CST_ELISA": -0.0647,
+            "Wittrup2017_CST_PSR": -0.1143
+          }
+        },
+        "neg_bp_aromaticity": {
+          "role": "single_descriptor",
+          "n_defined": 5,
+          "mean_spearman": 0.3245,
+          "mean_spearman_n_ge_10": 0.2289,
+          "mean_spearman_sqrt_n_weighted": 0.1612,
+          "mean_spearman_n_weighted": 0.0961,
+          "positive_count": 4,
+          "positive_fraction": 0.8,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.7125,
+            "Rosace2023_Golimumab_CIC": 0.7071,
+            "Wittrup2017_CST_CIC": 0.2351,
+            "Wittrup2017_CST_ELISA": -0.0778,
+            "Wittrup2017_CST_PSR": 0.0457
+          }
+        },
+        "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": 0.4354,
+          "mean_spearman_n_ge_10": 0.251,
+          "mean_spearman_sqrt_n_weighted": 0.3179,
+          "mean_spearman_n_weighted": 0.2755,
+          "positive_count": 6,
+          "positive_fraction": 1.0,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.2148,
+            "Rosace2023_CR3022_CIC": 0.9411,
+            "Rosace2023_Golimumab_CIC": 0.6669,
+            "Wittrup2017_CST_CIC": 0.2565,
+            "Wittrup2017_CST_ELISA": 0.2309,
+            "Wittrup2017_CST_PSR": 0.302
+          }
+        },
+        "neg_bp_instability_index": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": 0.2544,
+          "mean_spearman_n_ge_10": -0.0255,
+          "mean_spearman_sqrt_n_weighted": 0.1618,
+          "mean_spearman_n_weighted": 0.1451,
+          "positive_count": 5,
+          "positive_fraction": 0.8333,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": -0.5551,
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "Rosace2023_Golimumab_CIC": 0.8,
+            "Wittrup2017_CST_CIC": 0.13,
+            "Wittrup2017_CST_ELISA": 0.1913,
+            "Wittrup2017_CST_PSR": 0.1318
+          }
+        },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": 0.3491,
+          "mean_spearman_n_ge_10": 0.3012,
+          "mean_spearman_sqrt_n_weighted": 0.3349,
+          "mean_spearman_n_weighted": 0.3304,
+          "positive_count": 5,
+          "positive_fraction": 0.8333,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.2148,
+            "Rosace2023_CR3022_CIC": 0.9411,
+            "Rosace2023_Golimumab_CIC": -0.0513,
+            "Wittrup2017_CST_CIC": 0.3253,
+            "Wittrup2017_CST_ELISA": 0.2914,
+            "Wittrup2017_CST_PSR": 0.3734
+          }
+        },
+        "bp_molecular_weight": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": -0.138,
+          "mean_spearman_n_ge_10": -0.1319,
+          "mean_spearman_sqrt_n_weighted": -0.0741,
+          "mean_spearman_n_weighted": -0.0378,
+          "positive_count": 2,
+          "positive_fraction": 0.3333,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": -0.4708,
+            "Rosace2023_CR3022_CIC": -0.6,
+            "Rosace2023_Golimumab_CIC": 0.3,
+            "Wittrup2017_CST_CIC": -0.0737,
+            "Wittrup2017_CST_ELISA": -0.0176,
+            "Wittrup2017_CST_PSR": 0.0343
+          }
+        },
+        "pure_germline_identity": {
+          "role": "single_descriptor",
+          "n_defined": 6,
+          "mean_spearman": -0.2129,
+          "mean_spearman_n_ge_10": 0.0397,
+          "mean_spearman_sqrt_n_weighted": -0.0716,
+          "mean_spearman_n_weighted": -0.0254,
+          "positive_count": 3,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "Rosace2023_Adalimumab_CIC": 0.2029,
+            "Rosace2023_CR3022_CIC": -0.6983,
+            "Rosace2023_Golimumab_CIC": -0.7379,
+            "Wittrup2017_CST_CIC": 0.0248,
+            "Wittrup2017_CST_ELISA": -0.0869,
+            "Wittrup2017_CST_PSR": 0.0179
+          }
+        }
+      },
+      "best_single_descriptor": {
+        "name": "neg_bp_isoelectric_point",
+        "mean_spearman": 0.4354
+      },
+      "margin_CLSS_Reg8_AllBP_vs_best_single": 0.0113,
+      "margin_CLSS_Reg7_MW_vs_best_single": -0.0895,
+      "margin_CLSS_Reg6_vs_best_single": -0.1169,
+      "margin_CLSS_EqWt6_vs_best_single": -0.0367,
+      "margin_CLSS_EqWt5_NoPI_vs_best_single": -0.2786
+    },
+    "data_polyreactivity_25_all": {
+      "n_datasets": 25,
+      "dataset_sizes": {
+        "jain2017biophysical_BVPELISA": 137,
+        "jain2017biophysical_CICRT": 137,
+        "jain2017biophysical_ELISA": 137,
+        "jain2017biophysical_PSR": 137,
+        "jain2017biophysical_SMACRT": 137,
+        "jain2023identifying_DNP": 112,
+        "jain2023identifying_FA2": 113,
+        "jain2023identifying_FVC32": 115,
+        "jain2023identifying_FvFVIII2": 115,
+        "jain2023identifying_FvLysM2": 115,
+        "jain2023identifying_Heme2": 113,
+        "jain2023identifying_HemeC32": 113,
+        "jain2023identifying_HemeFVIII2": 113,
+        "jain2023identifying_HemeLysM2": 113,
+        "jain2024assessment_Herapin_RT": 43,
+        "jain2024assessment_PSR": 43,
+        "rosace2023automated_CICRT1_adalimumab": 14,
+        "rosace2023automated_CICRT1_golimumab": 5,
+        "rosace2023automated_CICRT2_adalimumab": 14,
+        "rosace2023automated_CICRT2_golimumab": 5,
+        "shanehsazzadeh2023unlocking_elisa_ec50": 13,
+        "shanehsazzadeh2023unlocking_polyspecificity": 13,
+        "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 6,
+        "shanker2024unsupervised_APC-MFI_Ly1404": 18,
+        "shanker2024unsupervised_APC-MFI_SA58": 15
+      },
+      "methods": {
+        "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
+          "n_defined": 25,
+          "mean_spearman": 0.1407,
+          "mean_spearman_n_ge_10": 0.0427,
+          "mean_spearman_sqrt_n_weighted": 0.0981,
+          "mean_spearman_n_weighted": 0.0933,
+          "positive_count": 17,
+          "positive_fraction": 0.68,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.155,
+            "jain2017biophysical_CICRT": 0.3211,
+            "jain2017biophysical_ELISA": 0.1526,
+            "jain2017biophysical_PSR": 0.2516,
+            "jain2017biophysical_SMACRT": -0.0914,
+            "jain2023identifying_DNP": 0.2852,
+            "jain2023identifying_FA2": 0.3644,
+            "jain2023identifying_FVC32": -0.2547,
+            "jain2023identifying_FvFVIII2": -0.2608,
+            "jain2023identifying_FvLysM2": -0.2888,
+            "jain2023identifying_Heme2": 0.3016,
+            "jain2023identifying_HemeC32": 0.1408,
+            "jain2023identifying_HemeFVIII2": 0.1593,
+            "jain2023identifying_HemeLysM2": 0.1327,
+            "jain2024assessment_Herapin_RT": -0.017,
+            "jain2024assessment_PSR": 0.0035,
+            "rosace2023automated_CICRT1_adalimumab": 0.2044,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.1516,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3791,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.3581,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.4671,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2842
+          }
+        },
+        "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.036,
+          "mean_spearman_n_ge_10": 0.0035,
+          "mean_spearman_sqrt_n_weighted": 0.0346,
+          "mean_spearman_n_weighted": 0.044,
+          "positive_count": 15,
+          "positive_fraction": 0.6,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0591,
+            "jain2017biophysical_CICRT": 0.2664,
+            "jain2017biophysical_ELISA": 0.0688,
+            "jain2017biophysical_PSR": 0.1853,
+            "jain2017biophysical_SMACRT": -0.0635,
+            "jain2023identifying_DNP": 0.2011,
+            "jain2023identifying_FA2": 0.2475,
+            "jain2023identifying_FVC32": -0.1996,
+            "jain2023identifying_FvFVIII2": -0.241,
+            "jain2023identifying_FvLysM2": -0.3035,
+            "jain2023identifying_Heme2": 0.2068,
+            "jain2023identifying_HemeC32": 0.1506,
+            "jain2023identifying_HemeFVIII2": 0.1331,
+            "jain2023identifying_HemeLysM2": 0.0825,
+            "jain2024assessment_Herapin_RT": -0.2116,
+            "jain2024assessment_PSR": -0.0662,
+            "rosace2023automated_CICRT1_adalimumab": 0.2044,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.1516,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3681,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.3251,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.4671,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2842
+          }
+        },
+        "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.1459,
+          "mean_spearman_n_ge_10": 0.0486,
+          "mean_spearman_sqrt_n_weighted": 0.1045,
+          "mean_spearman_n_weighted": 0.1008,
+          "positive_count": 18,
+          "positive_fraction": 0.72,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.148,
+            "jain2017biophysical_CICRT": 0.3276,
+            "jain2017biophysical_ELISA": 0.1457,
+            "jain2017biophysical_PSR": 0.2067,
+            "jain2017biophysical_SMACRT": 0.0006,
+            "jain2023identifying_DNP": 0.2776,
+            "jain2023identifying_FA2": 0.3386,
+            "jain2023identifying_FVC32": -0.2384,
+            "jain2023identifying_FvFVIII2": -0.2387,
+            "jain2023identifying_FvLysM2": -0.2313,
+            "jain2023identifying_Heme2": 0.2903,
+            "jain2023identifying_HemeC32": 0.144,
+            "jain2023identifying_HemeFVIII2": 0.162,
+            "jain2023identifying_HemeLysM2": 0.1653,
+            "jain2024assessment_Herapin_RT": -0.0576,
+            "jain2024assessment_PSR": 0.0024,
+            "rosace2023automated_CICRT1_adalimumab": 0.0594,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.0594,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2857,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.562,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5004,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2679
+          }
+        },
+        "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.1189,
+          "mean_spearman_n_ge_10": 0.0179,
+          "mean_spearman_sqrt_n_weighted": 0.067,
+          "mean_spearman_n_weighted": 0.0593,
+          "positive_count": 17,
+          "positive_fraction": 0.68,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0528,
+            "jain2017biophysical_CICRT": 0.2714,
+            "jain2017biophysical_ELISA": 0.0671,
+            "jain2017biophysical_PSR": 0.1386,
+            "jain2017biophysical_SMACRT": 0.0459,
+            "jain2023identifying_DNP": 0.1782,
+            "jain2023identifying_FA2": 0.218,
+            "jain2023identifying_FVC32": -0.1937,
+            "jain2023identifying_FvFVIII2": -0.2218,
+            "jain2023identifying_FvLysM2": -0.2397,
+            "jain2023identifying_Heme2": 0.1955,
+            "jain2023identifying_HemeC32": 0.1469,
+            "jain2023identifying_HemeFVIII2": 0.1369,
+            "jain2023identifying_HemeLysM2": 0.1272,
+            "jain2024assessment_Herapin_RT": -0.2486,
+            "jain2024assessment_PSR": -0.0279,
+            "rosace2023automated_CICRT1_adalimumab": 0.0594,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.0594,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1264,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5234,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5004,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2679
+          }
+        },
+        "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.1898,
+          "mean_spearman_n_ge_10": 0.0985,
+          "mean_spearman_sqrt_n_weighted": 0.1292,
+          "mean_spearman_n_weighted": 0.1119,
+          "positive_count": 20,
+          "positive_fraction": 0.8,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.088,
+            "jain2017biophysical_CICRT": 0.3072,
+            "jain2017biophysical_ELISA": 0.0566,
+            "jain2017biophysical_PSR": 0.1001,
+            "jain2017biophysical_SMACRT": 0.0976,
+            "jain2023identifying_DNP": 0.198,
+            "jain2023identifying_FA2": 0.1715,
+            "jain2023identifying_FVC32": -0.0604,
+            "jain2023identifying_FvFVIII2": -0.0429,
+            "jain2023identifying_FvLysM2": -0.1498,
+            "jain2023identifying_Heme2": 0.1785,
+            "jain2023identifying_HemeC32": 0.2117,
+            "jain2023identifying_HemeFVIII2": 0.1916,
+            "jain2023identifying_HemeLysM2": 0.1241,
+            "jain2024assessment_Herapin_RT": 0.2206,
+            "jain2024assessment_PSR": 0.161,
+            "rosace2023automated_CICRT1_adalimumab": 0.3187,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.3231,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1813,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5262,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.8433,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.2511,
+          "mean_spearman_n_ge_10": 0.159,
+          "mean_spearman_sqrt_n_weighted": 0.1774,
+          "mean_spearman_n_weighted": 0.153,
+          "positive_count": 20,
+          "positive_fraction": 0.8,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.1607,
+            "jain2017biophysical_CICRT": 0.3569,
+            "jain2017biophysical_ELISA": 0.1359,
+            "jain2017biophysical_PSR": 0.1923,
+            "jain2017biophysical_SMACRT": 0.0257,
+            "jain2023identifying_DNP": 0.28,
+            "jain2023identifying_FA2": 0.286,
+            "jain2023identifying_FVC32": -0.087,
+            "jain2023identifying_FvFVIII2": -0.0384,
+            "jain2023identifying_FvLysM2": -0.1289,
+            "jain2023identifying_Heme2": 0.2714,
+            "jain2023identifying_HemeC32": 0.1867,
+            "jain2023identifying_HemeFVIII2": 0.189,
+            "jain2023identifying_HemeLysM2": 0.1263,
+            "jain2024assessment_Herapin_RT": 0.4015,
+            "jain2024assessment_PSR": 0.1243,
+            "rosace2023automated_CICRT1_adalimumab": 0.5868,
+            "rosace2023automated_CICRT1_golimumab": 1.0,
+            "rosace2023automated_CICRT2_adalimumab": 0.5253,
+            "rosace2023automated_CICRT2_golimumab": 0.9,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2143,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5785,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.1603,
+          "mean_spearman_n_ge_10": 0.065,
+          "mean_spearman_sqrt_n_weighted": 0.0907,
+          "mean_spearman_n_weighted": 0.0708,
+          "positive_count": 17,
+          "positive_fraction": 0.68,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0191,
+            "jain2017biophysical_CICRT": 0.2415,
+            "jain2017biophysical_ELISA": -0.0277,
+            "jain2017biophysical_PSR": -0.0018,
+            "jain2017biophysical_SMACRT": 0.2205,
+            "jain2023identifying_DNP": 0.079,
+            "jain2023identifying_FA2": 0.0273,
+            "jain2023identifying_FVC32": -0.0134,
+            "jain2023identifying_FvFVIII2": -0.0666,
+            "jain2023identifying_FvLysM2": -0.1624,
+            "jain2023identifying_Heme2": 0.1003,
+            "jain2023identifying_HemeC32": 0.2155,
+            "jain2023identifying_HemeFVIII2": 0.1753,
+            "jain2023identifying_HemeLysM2": 0.1302,
+            "jain2024assessment_Herapin_RT": -0.0806,
+            "jain2024assessment_PSR": 0.0856,
+            "rosace2023automated_CICRT1_adalimumab": 0.3187,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.3231,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1374,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.4435,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 25,
+          "mean_spearman": 0.085,
+          "mean_spearman_n_ge_10": -0.0206,
+          "mean_spearman_sqrt_n_weighted": 0.0209,
+          "mean_spearman_n_weighted": 0.0053,
+          "positive_count": 16,
+          "positive_fraction": 0.64,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0603,
+            "jain2017biophysical_CICRT": 0.1386,
+            "jain2017biophysical_ELISA": -0.0123,
+            "jain2017biophysical_PSR": -0.0302,
+            "jain2017biophysical_SMACRT": 0.1086,
+            "jain2023identifying_DNP": 0.0415,
+            "jain2023identifying_FA2": 0.0765,
+            "jain2023identifying_FVC32": -0.1047,
+            "jain2023identifying_FvFVIII2": -0.1848,
+            "jain2023identifying_FvLysM2": -0.27,
+            "jain2023identifying_Heme2": 0.0383,
+            "jain2023identifying_HemeC32": 0.1085,
+            "jain2023identifying_HemeFVIII2": 0.0634,
+            "jain2023identifying_HemeLysM2": -0.0147,
+            "jain2024assessment_Herapin_RT": -0.0893,
+            "jain2024assessment_PSR": 0.0106,
+            "rosace2023automated_CICRT1_adalimumab": 0.0945,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.0769,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3407,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.2369,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "bp_flexibility": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": 0.1272,
+          "mean_spearman_n_ge_10": 0.0501,
+          "mean_spearman_sqrt_n_weighted": 0.0589,
+          "mean_spearman_n_weighted": 0.0361,
+          "positive_count": 19,
+          "positive_fraction": 0.76,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0042,
+            "jain2017biophysical_CICRT": 0.1913,
+            "jain2017biophysical_ELISA": -0.0309,
+            "jain2017biophysical_PSR": -0.0449,
+            "jain2017biophysical_SMACRT": 0.2193,
+            "jain2023identifying_DNP": 0.0934,
+            "jain2023identifying_FA2": 0.0466,
+            "jain2023identifying_FVC32": -0.1431,
+            "jain2023identifying_FvFVIII2": -0.1116,
+            "jain2023identifying_FvLysM2": -0.2313,
+            "jain2023identifying_Heme2": 0.0869,
+            "jain2023identifying_HemeC32": 0.1109,
+            "jain2023identifying_HemeFVIII2": 0.1146,
+            "jain2023identifying_HemeLysM2": 0.0408,
+            "jain2024assessment_Herapin_RT": 0.0566,
+            "jain2024assessment_PSR": 0.0514,
+            "rosace2023automated_CICRT1_adalimumab": 0.2112,
+            "rosace2023automated_CICRT1_golimumab": 0.7,
+            "rosace2023automated_CICRT2_adalimumab": 0.1738,
+            "rosace2023automated_CICRT2_golimumab": 0.5,
+            "shanehsazzadeh2023unlocking_elisa_ec50": 0.011,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.6832,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5047,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.0729
+          }
+        },
+        "neg_bp_gravy": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": -0.0964,
+          "mean_spearman_n_ge_10": -0.106,
+          "mean_spearman_sqrt_n_weighted": -0.0899,
+          "mean_spearman_n_weighted": -0.0819,
+          "positive_count": 8,
+          "positive_fraction": 0.32,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0805,
+            "jain2017biophysical_CICRT": -0.0195,
+            "jain2017biophysical_ELISA": -0.0647,
+            "jain2017biophysical_PSR": -0.1143,
+            "jain2017biophysical_SMACRT": 0.1632,
+            "jain2023identifying_DNP": -0.1164,
+            "jain2023identifying_FA2": -0.1417,
+            "jain2023identifying_FVC32": -0.1462,
+            "jain2023identifying_FvFVIII2": -0.2944,
+            "jain2023identifying_FvLysM2": -0.3509,
+            "jain2023identifying_Heme2": -0.1311,
+            "jain2023identifying_HemeC32": 0.0681,
+            "jain2023identifying_HemeFVIII2": -0.0102,
+            "jain2023identifying_HemeLysM2": -0.0754,
+            "jain2024assessment_Herapin_RT": -0.1632,
+            "jain2024assessment_PSR": -0.0137,
+            "rosace2023automated_CICRT1_adalimumab": 0.1364,
+            "rosace2023automated_CICRT1_golimumab": 0.5,
+            "rosace2023automated_CICRT2_adalimumab": 0.0374,
+            "rosace2023automated_CICRT2_golimumab": 0.3,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.7033,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.011,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "neg_bp_aromaticity": {
+          "role": "single_descriptor",
+          "n_defined": 24,
+          "mean_spearman": 0.2008,
+          "mean_spearman_n_ge_10": 0.2039,
+          "mean_spearman_sqrt_n_weighted": 0.1532,
+          "mean_spearman_n_weighted": 0.1295,
+          "positive_count": 19,
+          "positive_fraction": 0.7917,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.1022,
+            "jain2017biophysical_CICRT": 0.2351,
+            "jain2017biophysical_ELISA": -0.0778,
+            "jain2017biophysical_PSR": 0.0457,
+            "jain2017biophysical_SMACRT": 0.258,
+            "jain2023identifying_DNP": 0.0569,
+            "jain2023identifying_FA2": -0.1047,
+            "jain2023identifying_FVC32": 0.1816,
+            "jain2023identifying_FvFVIII2": 0.2116,
+            "jain2023identifying_FvLysM2": 0.1143,
+            "jain2023identifying_Heme2": 0.0794,
+            "jain2023identifying_HemeC32": 0.2647,
+            "jain2023identifying_HemeFVIII2": 0.2639,
+            "jain2023identifying_HemeLysM2": 0.2742,
+            "jain2024assessment_Herapin_RT": 0.0168,
+            "jain2024assessment_PSR": 0.0191,
+            "rosace2023automated_CICRT1_adalimumab": 0.583,
+            "rosace2023automated_CICRT1_golimumab": 0.7071,
+            "rosace2023automated_CICRT2_adalimumab": 0.7125,
+            "rosace2023automated_CICRT2_golimumab": 0.7071,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.036,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.4688,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.8178
+          }
+        },
+        "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
+          "n_defined": 24,
+          "mean_spearman": 0.2447,
+          "mean_spearman_n_ge_10": 0.1743,
+          "mean_spearman_sqrt_n_weighted": 0.1869,
+          "mean_spearman_n_weighted": 0.1639,
+          "positive_count": 21,
+          "positive_fraction": 0.875,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.2198,
+            "jain2017biophysical_CICRT": 0.2565,
+            "jain2017biophysical_ELISA": 0.2309,
+            "jain2017biophysical_PSR": 0.302,
+            "jain2017biophysical_SMACRT": -0.274,
+            "jain2023identifying_DNP": 0.3477,
+            "jain2023identifying_FA2": 0.4693,
+            "jain2023identifying_FVC32": -0.1119,
+            "jain2023identifying_FvFVIII2": 0.0577,
+            "jain2023identifying_FvLysM2": 0.0414,
+            "jain2023identifying_Heme2": 0.3108,
+            "jain2023identifying_HemeC32": 0.047,
+            "jain2023identifying_HemeFVIII2": 0.1017,
+            "jain2023identifying_HemeLysM2": 0.0496,
+            "jain2024assessment_Herapin_RT": 0.7114,
+            "jain2024assessment_PSR": 0.1499,
+            "rosace2023automated_CICRT1_adalimumab": 0.179,
+            "rosace2023automated_CICRT1_golimumab": 0.6669,
+            "rosace2023automated_CICRT2_adalimumab": 0.2506,
+            "rosace2023automated_CICRT2_golimumab": 0.6669,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2663,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5007,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872
+          }
+        },
+        "neg_bp_instability_index": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": 0.1111,
+          "mean_spearman_n_ge_10": 0.0091,
+          "mean_spearman_sqrt_n_weighted": 0.0816,
+          "mean_spearman_n_weighted": 0.0802,
+          "positive_count": 17,
+          "positive_fraction": 0.68,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.1595,
+            "jain2017biophysical_CICRT": 0.13,
+            "jain2017biophysical_ELISA": 0.1913,
+            "jain2017biophysical_PSR": 0.1318,
+            "jain2017biophysical_SMACRT": -0.1463,
+            "jain2023identifying_DNP": 0.1864,
+            "jain2023identifying_FA2": 0.2969,
+            "jain2023identifying_FVC32": 0.0096,
+            "jain2023identifying_FvFVIII2": -0.0145,
+            "jain2023identifying_FvLysM2": -0.0097,
+            "jain2023identifying_Heme2": 0.2238,
+            "jain2023identifying_HemeC32": -0.0269,
+            "jain2023identifying_HemeFVIII2": 0.0066,
+            "jain2023identifying_HemeLysM2": 0.0242,
+            "jain2024assessment_Herapin_RT": 0.3061,
+            "jain2024assessment_PSR": 0.0515,
+            "rosace2023automated_CICRT1_adalimumab": -0.4141,
+            "rosace2023automated_CICRT1_golimumab": 0.8,
+            "rosace2023automated_CICRT2_adalimumab": -0.5441,
+            "rosace2023automated_CICRT2_golimumab": 0.9,
+            "shanehsazzadeh2023unlocking_elisa_ec50": 0.2198,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.4187,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.3326,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 24,
+          "mean_spearman": 0.2145,
+          "mean_spearman_n_ge_10": 0.2082,
+          "mean_spearman_sqrt_n_weighted": 0.2008,
+          "mean_spearman_n_weighted": 0.1911,
+          "positive_count": 19,
+          "positive_fraction": 0.7917,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.2665,
+            "jain2017biophysical_CICRT": 0.3253,
+            "jain2017biophysical_ELISA": 0.2914,
+            "jain2017biophysical_PSR": 0.3734,
+            "jain2017biophysical_SMACRT": -0.2644,
+            "jain2023identifying_DNP": 0.3798,
+            "jain2023identifying_FA2": 0.5506,
+            "jain2023identifying_FVC32": -0.1404,
+            "jain2023identifying_FvFVIII2": 0.0305,
+            "jain2023identifying_FvLysM2": 0.0248,
+            "jain2023identifying_Heme2": 0.3995,
+            "jain2023identifying_HemeC32": 0.044,
+            "jain2023identifying_HemeFVIII2": 0.117,
+            "jain2023identifying_HemeLysM2": 0.0657,
+            "jain2024assessment_Herapin_RT": 0.7423,
+            "jain2024assessment_PSR": 0.1678,
+            "rosace2023automated_CICRT1_adalimumab": 0.179,
+            "rosace2023automated_CICRT1_golimumab": -0.0513,
+            "rosace2023automated_CICRT2_adalimumab": 0.2506,
+            "rosace2023automated_CICRT2_golimumab": -0.0513,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1498,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.6314,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872
+          }
+        },
+        "bp_molecular_weight": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": -0.1535,
+          "mean_spearman_n_ge_10": -0.1527,
+          "mean_spearman_sqrt_n_weighted": -0.0947,
+          "mean_spearman_n_weighted": -0.0636,
+          "positive_count": 7,
+          "positive_fraction": 0.28,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.023,
+            "jain2017biophysical_CICRT": -0.0737,
+            "jain2017biophysical_ELISA": -0.0176,
+            "jain2017biophysical_PSR": 0.0343,
+            "jain2017biophysical_SMACRT": -0.2283,
+            "jain2023identifying_DNP": -0.046,
+            "jain2023identifying_FA2": 0.0091,
+            "jain2023identifying_FVC32": 0.0098,
+            "jain2023identifying_FvFVIII2": -0.0418,
+            "jain2023identifying_FvLysM2": -0.1022,
+            "jain2023identifying_Heme2": -0.0424,
+            "jain2023identifying_HemeC32": 0.0304,
+            "jain2023identifying_HemeFVIII2": -0.0288,
+            "jain2023identifying_HemeLysM2": -0.0724,
+            "jain2024assessment_Herapin_RT": 0.026,
+            "jain2024assessment_PSR": -0.1034,
+            "rosace2023automated_CICRT1_adalimumab": -0.4444,
+            "rosace2023automated_CICRT1_golimumab": 0.3,
+            "rosace2023automated_CICRT2_adalimumab": -0.4246,
+            "rosace2023automated_CICRT2_golimumab": 0.1,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1868,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.6474,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5549,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.4318
+          }
+        },
+        "pure_germline_identity": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": -0.0096,
+          "mean_spearman_n_ge_10": 0.0091,
+          "mean_spearman_sqrt_n_weighted": -0.0065,
+          "mean_spearman_n_weighted": -0.0076,
+          "positive_count": 13,
+          "positive_fraction": 0.52,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.0921,
+            "jain2017biophysical_CICRT": 0.0248,
+            "jain2017biophysical_ELISA": -0.0869,
+            "jain2017biophysical_PSR": 0.0179,
+            "jain2017biophysical_SMACRT": 0.0022,
+            "jain2023identifying_DNP": -0.0491,
+            "jain2023identifying_FA2": 0.0929,
+            "jain2023identifying_FVC32": 0.0145,
+            "jain2023identifying_FvFVIII2": -0.0099,
+            "jain2023identifying_FvLysM2": 0.0528,
+            "jain2023identifying_Heme2": -0.0205,
+            "jain2023identifying_HemeC32": 0.0526,
+            "jain2023identifying_HemeFVIII2": 0.003,
+            "jain2023identifying_HemeLysM2": -0.0393,
+            "jain2024assessment_Herapin_RT": -0.337,
+            "jain2024assessment_PSR": -0.0174,
+            "rosace2023automated_CICRT1_adalimumab": 0.0821,
+            "rosace2023automated_CICRT1_golimumab": -0.7379,
+            "rosace2023automated_CICRT2_adalimumab": 0.3419,
+            "rosace2023automated_CICRT2_golimumab": -0.5798,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3217,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.0432,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.4444
+          }
+        }
+      },
+      "best_single_descriptor": {
+        "name": "neg_bp_isoelectric_point",
+        "mean_spearman": 0.2447
+      },
+      "margin_CLSS_Reg8_AllBP_vs_best_single": -0.104,
+      "margin_CLSS_Reg7_MW_vs_best_single": -0.2087,
+      "margin_CLSS_Reg6_vs_best_single": -0.1258,
+      "margin_CLSS_EqWt6_vs_best_single": -0.0549,
+      "margin_CLSS_EqWt5_NoPI_vs_best_single": -0.0844
+    },
+    "combined_polyreactivity_26": {
+      "n_datasets": 26,
+      "dataset_sizes": {
+        "Rosace2023_CR3022_CIC": 6,
+        "jain2017biophysical_BVPELISA": 137,
+        "jain2017biophysical_CICRT": 137,
+        "jain2017biophysical_ELISA": 137,
+        "jain2017biophysical_PSR": 137,
+        "jain2017biophysical_SMACRT": 137,
+        "jain2023identifying_DNP": 112,
+        "jain2023identifying_FA2": 113,
+        "jain2023identifying_FVC32": 115,
+        "jain2023identifying_FvFVIII2": 115,
+        "jain2023identifying_FvLysM2": 115,
+        "jain2023identifying_Heme2": 113,
+        "jain2023identifying_HemeC32": 113,
+        "jain2023identifying_HemeFVIII2": 113,
+        "jain2023identifying_HemeLysM2": 113,
+        "jain2024assessment_Herapin_RT": 43,
+        "jain2024assessment_PSR": 43,
+        "rosace2023automated_CICRT1_adalimumab": 14,
+        "rosace2023automated_CICRT1_golimumab": 5,
+        "rosace2023automated_CICRT2_adalimumab": 14,
+        "rosace2023automated_CICRT2_golimumab": 5,
+        "shanehsazzadeh2023unlocking_elisa_ec50": 13,
+        "shanehsazzadeh2023unlocking_polyspecificity": 13,
+        "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 6,
+        "shanker2024unsupervised_APC-MFI_Ly1404": 18,
+        "shanker2024unsupervised_APC-MFI_SA58": 15
+      },
+      "methods": {
+        "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
+          "n_defined": 26,
+          "mean_spearman": 0.1671,
+          "mean_spearman_n_ge_10": 0.0427,
+          "mean_spearman_sqrt_n_weighted": 0.107,
+          "mean_spearman_n_weighted": 0.0956,
+          "positive_count": 18,
+          "positive_fraction": 0.6923,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "jain2017biophysical_BVPELISA": 0.155,
+            "jain2017biophysical_CICRT": 0.3211,
+            "jain2017biophysical_ELISA": 0.1526,
+            "jain2017biophysical_PSR": 0.2516,
+            "jain2017biophysical_SMACRT": -0.0914,
+            "jain2023identifying_DNP": 0.2852,
+            "jain2023identifying_FA2": 0.3644,
+            "jain2023identifying_FVC32": -0.2547,
+            "jain2023identifying_FvFVIII2": -0.2608,
+            "jain2023identifying_FvLysM2": -0.2888,
+            "jain2023identifying_Heme2": 0.3016,
+            "jain2023identifying_HemeC32": 0.1408,
+            "jain2023identifying_HemeFVIII2": 0.1593,
+            "jain2023identifying_HemeLysM2": 0.1327,
+            "jain2024assessment_Herapin_RT": -0.017,
+            "jain2024assessment_PSR": 0.0035,
+            "rosace2023automated_CICRT1_adalimumab": 0.2044,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.1516,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3791,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.3581,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.4671,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2842
+          }
+        },
+        "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.0511,
+          "mean_spearman_n_ge_10": 0.0035,
+          "mean_spearman_sqrt_n_weighted": 0.0395,
+          "mean_spearman_n_weighted": 0.0452,
+          "positive_count": 16,
+          "positive_fraction": 0.6154,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.4286,
+            "jain2017biophysical_BVPELISA": 0.0591,
+            "jain2017biophysical_CICRT": 0.2664,
+            "jain2017biophysical_ELISA": 0.0688,
+            "jain2017biophysical_PSR": 0.1853,
+            "jain2017biophysical_SMACRT": -0.0635,
+            "jain2023identifying_DNP": 0.2011,
+            "jain2023identifying_FA2": 0.2475,
+            "jain2023identifying_FVC32": -0.1996,
+            "jain2023identifying_FvFVIII2": -0.241,
+            "jain2023identifying_FvLysM2": -0.3035,
+            "jain2023identifying_Heme2": 0.2068,
+            "jain2023identifying_HemeC32": 0.1506,
+            "jain2023identifying_HemeFVIII2": 0.1331,
+            "jain2023identifying_HemeLysM2": 0.0825,
+            "jain2024assessment_Herapin_RT": -0.2116,
+            "jain2024assessment_PSR": -0.0662,
+            "rosace2023automated_CICRT1_adalimumab": 0.2044,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.1516,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3681,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.3251,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.4671,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2842
+          }
+        },
+        "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.1722,
+          "mean_spearman_n_ge_10": 0.0486,
+          "mean_spearman_sqrt_n_weighted": 0.1133,
+          "mean_spearman_n_weighted": 0.1031,
+          "positive_count": 19,
+          "positive_fraction": 0.7308,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "jain2017biophysical_BVPELISA": 0.148,
+            "jain2017biophysical_CICRT": 0.3276,
+            "jain2017biophysical_ELISA": 0.1457,
+            "jain2017biophysical_PSR": 0.2067,
+            "jain2017biophysical_SMACRT": 0.0006,
+            "jain2023identifying_DNP": 0.2776,
+            "jain2023identifying_FA2": 0.3386,
+            "jain2023identifying_FVC32": -0.2384,
+            "jain2023identifying_FvFVIII2": -0.2387,
+            "jain2023identifying_FvLysM2": -0.2313,
+            "jain2023identifying_Heme2": 0.2903,
+            "jain2023identifying_HemeC32": 0.144,
+            "jain2023identifying_HemeFVIII2": 0.162,
+            "jain2023identifying_HemeLysM2": 0.1653,
+            "jain2024assessment_Herapin_RT": -0.0576,
+            "jain2024assessment_PSR": 0.0024,
+            "rosace2023automated_CICRT1_adalimumab": 0.0594,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.0594,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2857,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.562,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5004,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2679
+          }
+        },
+        "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.1308,
+          "mean_spearman_n_ge_10": 0.0179,
+          "mean_spearman_sqrt_n_weighted": 0.0714,
+          "mean_spearman_n_weighted": 0.0604,
+          "positive_count": 18,
+          "positive_fraction": 0.6923,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.4286,
+            "jain2017biophysical_BVPELISA": 0.0528,
+            "jain2017biophysical_CICRT": 0.2714,
+            "jain2017biophysical_ELISA": 0.0671,
+            "jain2017biophysical_PSR": 0.1386,
+            "jain2017biophysical_SMACRT": 0.0459,
+            "jain2023identifying_DNP": 0.1782,
+            "jain2023identifying_FA2": 0.218,
+            "jain2023identifying_FVC32": -0.1937,
+            "jain2023identifying_FvFVIII2": -0.2218,
+            "jain2023identifying_FvLysM2": -0.2397,
+            "jain2023identifying_Heme2": 0.1955,
+            "jain2023identifying_HemeC32": 0.1469,
+            "jain2023identifying_HemeFVIII2": 0.1369,
+            "jain2023identifying_HemeLysM2": 0.1272,
+            "jain2024assessment_Herapin_RT": -0.2486,
+            "jain2024assessment_PSR": -0.0279,
+            "rosace2023automated_CICRT1_adalimumab": 0.0594,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.0594,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1264,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5234,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5004,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2679
+          }
+        },
+        "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.2078,
+          "mean_spearman_n_ge_10": 0.0985,
+          "mean_spearman_sqrt_n_weighted": 0.1357,
+          "mean_spearman_n_weighted": 0.1136,
+          "positive_count": 21,
+          "positive_fraction": 0.8077,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.6571,
+            "jain2017biophysical_BVPELISA": 0.088,
+            "jain2017biophysical_CICRT": 0.3072,
+            "jain2017biophysical_ELISA": 0.0566,
+            "jain2017biophysical_PSR": 0.1001,
+            "jain2017biophysical_SMACRT": 0.0976,
+            "jain2023identifying_DNP": 0.198,
+            "jain2023identifying_FA2": 0.1715,
+            "jain2023identifying_FVC32": -0.0604,
+            "jain2023identifying_FvFVIII2": -0.0429,
+            "jain2023identifying_FvLysM2": -0.1498,
+            "jain2023identifying_Heme2": 0.1785,
+            "jain2023identifying_HemeC32": 0.2117,
+            "jain2023identifying_HemeFVIII2": 0.1916,
+            "jain2023identifying_HemeLysM2": 0.1241,
+            "jain2024assessment_Herapin_RT": 0.2206,
+            "jain2024assessment_PSR": 0.161,
+            "rosace2023automated_CICRT1_adalimumab": 0.3187,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.3231,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1813,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5262,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.8433,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.2733,
+          "mean_spearman_n_ge_10": 0.159,
+          "mean_spearman_sqrt_n_weighted": 0.1854,
+          "mean_spearman_n_weighted": 0.1551,
+          "positive_count": 21,
+          "positive_fraction": 0.8077,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "jain2017biophysical_BVPELISA": 0.1607,
+            "jain2017biophysical_CICRT": 0.3569,
+            "jain2017biophysical_ELISA": 0.1359,
+            "jain2017biophysical_PSR": 0.1923,
+            "jain2017biophysical_SMACRT": 0.0257,
+            "jain2023identifying_DNP": 0.28,
+            "jain2023identifying_FA2": 0.286,
+            "jain2023identifying_FVC32": -0.087,
+            "jain2023identifying_FvFVIII2": -0.0384,
+            "jain2023identifying_FvLysM2": -0.1289,
+            "jain2023identifying_Heme2": 0.2714,
+            "jain2023identifying_HemeC32": 0.1867,
+            "jain2023identifying_HemeFVIII2": 0.189,
+            "jain2023identifying_HemeLysM2": 0.1263,
+            "jain2024assessment_Herapin_RT": 0.4015,
+            "jain2024assessment_PSR": 0.1243,
+            "rosace2023automated_CICRT1_adalimumab": 0.5868,
+            "rosace2023automated_CICRT1_golimumab": 1.0,
+            "rosace2023automated_CICRT2_adalimumab": 0.5253,
+            "rosace2023automated_CICRT2_golimumab": 0.9,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2143,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5785,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.1332,
+          "mean_spearman_n_ge_10": 0.065,
+          "mean_spearman_sqrt_n_weighted": 0.0829,
+          "mean_spearman_n_weighted": 0.0689,
+          "positive_count": 17,
+          "positive_fraction": 0.6538,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": -0.5429,
+            "jain2017biophysical_BVPELISA": 0.0191,
+            "jain2017biophysical_CICRT": 0.2415,
+            "jain2017biophysical_ELISA": -0.0277,
+            "jain2017biophysical_PSR": -0.0018,
+            "jain2017biophysical_SMACRT": 0.2205,
+            "jain2023identifying_DNP": 0.079,
+            "jain2023identifying_FA2": 0.0273,
+            "jain2023identifying_FVC32": -0.0134,
+            "jain2023identifying_FvFVIII2": -0.0666,
+            "jain2023identifying_FvLysM2": -0.1624,
+            "jain2023identifying_Heme2": 0.1003,
+            "jain2023identifying_HemeC32": 0.2155,
+            "jain2023identifying_HemeFVIII2": 0.1753,
+            "jain2023identifying_HemeLysM2": 0.1302,
+            "jain2024assessment_Herapin_RT": -0.0806,
+            "jain2024assessment_PSR": 0.0856,
+            "rosace2023automated_CICRT1_adalimumab": 0.3187,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.3231,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1374,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.4435,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 26,
+          "mean_spearman": 0.0609,
+          "mean_spearman_n_ge_10": -0.0206,
+          "mean_spearman_sqrt_n_weighted": 0.014,
+          "mean_spearman_n_weighted": 0.0035,
+          "positive_count": 16,
+          "positive_fraction": 0.6154,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": -0.5429,
+            "jain2017biophysical_BVPELISA": 0.0603,
+            "jain2017biophysical_CICRT": 0.1386,
+            "jain2017biophysical_ELISA": -0.0123,
+            "jain2017biophysical_PSR": -0.0302,
+            "jain2017biophysical_SMACRT": 0.1086,
+            "jain2023identifying_DNP": 0.0415,
+            "jain2023identifying_FA2": 0.0765,
+            "jain2023identifying_FVC32": -0.1047,
+            "jain2023identifying_FvFVIII2": -0.1848,
+            "jain2023identifying_FvLysM2": -0.27,
+            "jain2023identifying_Heme2": 0.0383,
+            "jain2023identifying_HemeC32": 0.1085,
+            "jain2023identifying_HemeFVIII2": 0.0634,
+            "jain2023identifying_HemeLysM2": -0.0147,
+            "jain2024assessment_Herapin_RT": -0.0893,
+            "jain2024assessment_PSR": 0.0106,
+            "rosace2023automated_CICRT1_adalimumab": 0.0945,
+            "rosace2023automated_CICRT1_golimumab": 0.9,
+            "rosace2023automated_CICRT2_adalimumab": 0.0769,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3407,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.2369,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "bp_flexibility": {
+          "role": "single_descriptor",
+          "n_defined": 26,
+          "mean_spearman": 0.1014,
+          "mean_spearman_n_ge_10": 0.0501,
+          "mean_spearman_sqrt_n_weighted": 0.0515,
+          "mean_spearman_n_weighted": 0.0343,
+          "positive_count": 19,
+          "positive_fraction": 0.7308,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": -0.5429,
+            "jain2017biophysical_BVPELISA": 0.0042,
+            "jain2017biophysical_CICRT": 0.1913,
+            "jain2017biophysical_ELISA": -0.0309,
+            "jain2017biophysical_PSR": -0.0449,
+            "jain2017biophysical_SMACRT": 0.2193,
+            "jain2023identifying_DNP": 0.0934,
+            "jain2023identifying_FA2": 0.0466,
+            "jain2023identifying_FVC32": -0.1431,
+            "jain2023identifying_FvFVIII2": -0.1116,
+            "jain2023identifying_FvLysM2": -0.2313,
+            "jain2023identifying_Heme2": 0.0869,
+            "jain2023identifying_HemeC32": 0.1109,
+            "jain2023identifying_HemeFVIII2": 0.1146,
+            "jain2023identifying_HemeLysM2": 0.0408,
+            "jain2024assessment_Herapin_RT": 0.0566,
+            "jain2024assessment_PSR": 0.0514,
+            "rosace2023automated_CICRT1_adalimumab": 0.2112,
+            "rosace2023automated_CICRT1_golimumab": 0.7,
+            "rosace2023automated_CICRT2_adalimumab": 0.1738,
+            "rosace2023automated_CICRT2_golimumab": 0.5,
+            "shanehsazzadeh2023unlocking_elisa_ec50": 0.011,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.6832,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5047,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.0729
+          }
+        },
+        "neg_bp_gravy": {
+          "role": "single_descriptor",
+          "n_defined": 26,
+          "mean_spearman": -0.1201,
+          "mean_spearman_n_ge_10": -0.106,
+          "mean_spearman_sqrt_n_weighted": -0.0976,
+          "mean_spearman_n_weighted": -0.0839,
+          "positive_count": 8,
+          "positive_fraction": 0.3077,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": -0.7143,
+            "jain2017biophysical_BVPELISA": 0.0805,
+            "jain2017biophysical_CICRT": -0.0195,
+            "jain2017biophysical_ELISA": -0.0647,
+            "jain2017biophysical_PSR": -0.1143,
+            "jain2017biophysical_SMACRT": 0.1632,
+            "jain2023identifying_DNP": -0.1164,
+            "jain2023identifying_FA2": -0.1417,
+            "jain2023identifying_FVC32": -0.1462,
+            "jain2023identifying_FvFVIII2": -0.2944,
+            "jain2023identifying_FvLysM2": -0.3509,
+            "jain2023identifying_Heme2": -0.1311,
+            "jain2023identifying_HemeC32": 0.0681,
+            "jain2023identifying_HemeFVIII2": -0.0102,
+            "jain2023identifying_HemeLysM2": -0.0754,
+            "jain2024assessment_Herapin_RT": -0.1632,
+            "jain2024assessment_PSR": -0.0137,
+            "rosace2023automated_CICRT1_adalimumab": 0.1364,
+            "rosace2023automated_CICRT1_golimumab": 0.5,
+            "rosace2023automated_CICRT2_adalimumab": 0.0374,
+            "rosace2023automated_CICRT2_golimumab": 0.3,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.7033,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.011,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "neg_bp_aromaticity": {
+          "role": "single_descriptor",
+          "n_defined": 24,
+          "mean_spearman": 0.2008,
+          "mean_spearman_n_ge_10": 0.2039,
+          "mean_spearman_sqrt_n_weighted": 0.1532,
+          "mean_spearman_n_weighted": 0.1295,
+          "positive_count": 19,
+          "positive_fraction": 0.7917,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.1022,
+            "jain2017biophysical_CICRT": 0.2351,
+            "jain2017biophysical_ELISA": -0.0778,
+            "jain2017biophysical_PSR": 0.0457,
+            "jain2017biophysical_SMACRT": 0.258,
+            "jain2023identifying_DNP": 0.0569,
+            "jain2023identifying_FA2": -0.1047,
+            "jain2023identifying_FVC32": 0.1816,
+            "jain2023identifying_FvFVIII2": 0.2116,
+            "jain2023identifying_FvLysM2": 0.1143,
+            "jain2023identifying_Heme2": 0.0794,
+            "jain2023identifying_HemeC32": 0.2647,
+            "jain2023identifying_HemeFVIII2": 0.2639,
+            "jain2023identifying_HemeLysM2": 0.2742,
+            "jain2024assessment_Herapin_RT": 0.0168,
+            "jain2024assessment_PSR": 0.0191,
+            "rosace2023automated_CICRT1_adalimumab": 0.583,
+            "rosace2023automated_CICRT1_golimumab": 0.7071,
+            "rosace2023automated_CICRT2_adalimumab": 0.7125,
+            "rosace2023automated_CICRT2_golimumab": 0.7071,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.036,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.4688,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.8178
+          }
+        },
+        "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": 0.2726,
+          "mean_spearman_n_ge_10": 0.1743,
+          "mean_spearman_sqrt_n_weighted": 0.1964,
+          "mean_spearman_n_weighted": 0.1664,
+          "positive_count": 22,
+          "positive_fraction": 0.88,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.9411,
+            "jain2017biophysical_BVPELISA": 0.2198,
+            "jain2017biophysical_CICRT": 0.2565,
+            "jain2017biophysical_ELISA": 0.2309,
+            "jain2017biophysical_PSR": 0.302,
+            "jain2017biophysical_SMACRT": -0.274,
+            "jain2023identifying_DNP": 0.3477,
+            "jain2023identifying_FA2": 0.4693,
+            "jain2023identifying_FVC32": -0.1119,
+            "jain2023identifying_FvFVIII2": 0.0577,
+            "jain2023identifying_FvLysM2": 0.0414,
+            "jain2023identifying_Heme2": 0.3108,
+            "jain2023identifying_HemeC32": 0.047,
+            "jain2023identifying_HemeFVIII2": 0.1017,
+            "jain2023identifying_HemeLysM2": 0.0496,
+            "jain2024assessment_Herapin_RT": 0.7114,
+            "jain2024assessment_PSR": 0.1499,
+            "rosace2023automated_CICRT1_adalimumab": 0.179,
+            "rosace2023automated_CICRT1_golimumab": 0.6669,
+            "rosace2023automated_CICRT2_adalimumab": 0.2506,
+            "rosace2023automated_CICRT2_golimumab": 0.6669,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2663,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5007,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872
+          }
+        },
+        "neg_bp_instability_index": {
+          "role": "single_descriptor",
+          "n_defined": 26,
+          "mean_spearman": 0.1387,
+          "mean_spearman_n_ge_10": 0.0091,
+          "mean_spearman_sqrt_n_weighted": 0.0907,
+          "mean_spearman_n_weighted": 0.0826,
+          "positive_count": 18,
+          "positive_fraction": 0.6923,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.8286,
+            "jain2017biophysical_BVPELISA": 0.1595,
+            "jain2017biophysical_CICRT": 0.13,
+            "jain2017biophysical_ELISA": 0.1913,
+            "jain2017biophysical_PSR": 0.1318,
+            "jain2017biophysical_SMACRT": -0.1463,
+            "jain2023identifying_DNP": 0.1864,
+            "jain2023identifying_FA2": 0.2969,
+            "jain2023identifying_FVC32": 0.0096,
+            "jain2023identifying_FvFVIII2": -0.0145,
+            "jain2023identifying_FvLysM2": -0.0097,
+            "jain2023identifying_Heme2": 0.2238,
+            "jain2023identifying_HemeC32": -0.0269,
+            "jain2023identifying_HemeFVIII2": 0.0066,
+            "jain2023identifying_HemeLysM2": 0.0242,
+            "jain2024assessment_Herapin_RT": 0.3061,
+            "jain2024assessment_PSR": 0.0515,
+            "rosace2023automated_CICRT1_adalimumab": -0.4141,
+            "rosace2023automated_CICRT1_golimumab": 0.8,
+            "rosace2023automated_CICRT2_adalimumab": -0.5441,
+            "rosace2023automated_CICRT2_golimumab": 0.9,
+            "shanehsazzadeh2023unlocking_elisa_ec50": 0.2198,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.4187,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.3326,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 25,
+          "mean_spearman": 0.2436,
+          "mean_spearman_n_ge_10": 0.2082,
+          "mean_spearman_sqrt_n_weighted": 0.2101,
+          "mean_spearman_n_weighted": 0.1935,
+          "positive_count": 20,
+          "positive_fraction": 0.8,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": 0.9411,
+            "jain2017biophysical_BVPELISA": 0.2665,
+            "jain2017biophysical_CICRT": 0.3253,
+            "jain2017biophysical_ELISA": 0.2914,
+            "jain2017biophysical_PSR": 0.3734,
+            "jain2017biophysical_SMACRT": -0.2644,
+            "jain2023identifying_DNP": 0.3798,
+            "jain2023identifying_FA2": 0.5506,
+            "jain2023identifying_FVC32": -0.1404,
+            "jain2023identifying_FvFVIII2": 0.0305,
+            "jain2023identifying_FvLysM2": 0.0248,
+            "jain2023identifying_Heme2": 0.3995,
+            "jain2023identifying_HemeC32": 0.044,
+            "jain2023identifying_HemeFVIII2": 0.117,
+            "jain2023identifying_HemeLysM2": 0.0657,
+            "jain2024assessment_Herapin_RT": 0.7423,
+            "jain2024assessment_PSR": 0.1678,
+            "rosace2023automated_CICRT1_adalimumab": 0.179,
+            "rosace2023automated_CICRT1_golimumab": -0.0513,
+            "rosace2023automated_CICRT2_adalimumab": 0.2506,
+            "rosace2023automated_CICRT2_golimumab": -0.0513,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1498,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.6314,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872
+          }
+        },
+        "bp_molecular_weight": {
+          "role": "single_descriptor",
+          "n_defined": 26,
+          "mean_spearman": -0.1707,
+          "mean_spearman_n_ge_10": -0.1527,
+          "mean_spearman_sqrt_n_weighted": -0.1009,
+          "mean_spearman_n_weighted": -0.0653,
+          "positive_count": 7,
+          "positive_fraction": 0.2692,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": -0.6,
+            "jain2017biophysical_BVPELISA": -0.023,
+            "jain2017biophysical_CICRT": -0.0737,
+            "jain2017biophysical_ELISA": -0.0176,
+            "jain2017biophysical_PSR": 0.0343,
+            "jain2017biophysical_SMACRT": -0.2283,
+            "jain2023identifying_DNP": -0.046,
+            "jain2023identifying_FA2": 0.0091,
+            "jain2023identifying_FVC32": 0.0098,
+            "jain2023identifying_FvFVIII2": -0.0418,
+            "jain2023identifying_FvLysM2": -0.1022,
+            "jain2023identifying_Heme2": -0.0424,
+            "jain2023identifying_HemeC32": 0.0304,
+            "jain2023identifying_HemeFVIII2": -0.0288,
+            "jain2023identifying_HemeLysM2": -0.0724,
+            "jain2024assessment_Herapin_RT": 0.026,
+            "jain2024assessment_PSR": -0.1034,
+            "rosace2023automated_CICRT1_adalimumab": -0.4444,
+            "rosace2023automated_CICRT1_golimumab": 0.3,
+            "rosace2023automated_CICRT2_adalimumab": -0.4246,
+            "rosace2023automated_CICRT2_golimumab": 0.1,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1868,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.6474,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5549,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.4318
+          }
+        },
+        "pure_germline_identity": {
+          "role": "single_descriptor",
+          "n_defined": 26,
+          "mean_spearman": -0.0361,
+          "mean_spearman_n_ge_10": 0.0091,
+          "mean_spearman_sqrt_n_weighted": -0.015,
+          "mean_spearman_n_weighted": -0.0098,
+          "positive_count": 13,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "Rosace2023_CR3022_CIC": -0.6983,
+            "jain2017biophysical_BVPELISA": -0.0921,
+            "jain2017biophysical_CICRT": 0.0248,
+            "jain2017biophysical_ELISA": -0.0869,
+            "jain2017biophysical_PSR": 0.0179,
+            "jain2017biophysical_SMACRT": 0.0022,
+            "jain2023identifying_DNP": -0.0491,
+            "jain2023identifying_FA2": 0.0929,
+            "jain2023identifying_FVC32": 0.0145,
+            "jain2023identifying_FvFVIII2": -0.0099,
+            "jain2023identifying_FvLysM2": 0.0528,
+            "jain2023identifying_Heme2": -0.0205,
+            "jain2023identifying_HemeC32": 0.0526,
+            "jain2023identifying_HemeFVIII2": 0.003,
+            "jain2023identifying_HemeLysM2": -0.0393,
+            "jain2024assessment_Herapin_RT": -0.337,
+            "jain2024assessment_PSR": -0.0174,
+            "rosace2023automated_CICRT1_adalimumab": 0.0821,
+            "rosace2023automated_CICRT1_golimumab": -0.7379,
+            "rosace2023automated_CICRT2_adalimumab": 0.3419,
+            "rosace2023automated_CICRT2_golimumab": -0.5798,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3217,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.0432,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.4444
+          }
+        }
+      },
+      "best_single_descriptor": {
+        "name": "neg_bp_isoelectric_point",
+        "mean_spearman": 0.2726
+      },
+      "margin_CLSS_Reg8_AllBP_vs_best_single": -0.1055,
+      "margin_CLSS_Reg7_MW_vs_best_single": -0.2215,
+      "margin_CLSS_Reg6_vs_best_single": -0.1418,
+      "margin_CLSS_EqWt6_vs_best_single": -0.0648,
+      "margin_CLSS_EqWt5_NoPI_vs_best_single": -0.1394
+    },
+    "unseen_data_polyreactivity_20_omitted_by_score": {
+      "n_datasets": 20,
+      "dataset_sizes": {
+        "jain2017biophysical_BVPELISA": 137,
+        "jain2017biophysical_SMACRT": 137,
+        "jain2023identifying_DNP": 112,
+        "jain2023identifying_FA2": 113,
+        "jain2023identifying_FVC32": 115,
+        "jain2023identifying_FvFVIII2": 115,
+        "jain2023identifying_FvLysM2": 115,
+        "jain2023identifying_Heme2": 113,
+        "jain2023identifying_HemeC32": 113,
+        "jain2023identifying_HemeFVIII2": 113,
+        "jain2023identifying_HemeLysM2": 113,
+        "jain2024assessment_Herapin_RT": 43,
+        "jain2024assessment_PSR": 43,
+        "rosace2023automated_CICRT2_adalimumab": 14,
+        "rosace2023automated_CICRT2_golimumab": 5,
+        "shanehsazzadeh2023unlocking_elisa_ec50": 13,
+        "shanehsazzadeh2023unlocking_polyspecificity": 13,
+        "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 6,
+        "shanker2024unsupervised_APC-MFI_Ly1404": 18,
+        "shanker2024unsupervised_APC-MFI_SA58": 15
+      },
+      "methods": {
+        "CLSS_Reg8_AllBP_IMGT_Z": {
+          "role": "claimed_primary",
+          "n_defined": 20,
+          "mean_spearman": 0.0844,
+          "mean_spearman_n_ge_10": 0.0005,
+          "mean_spearman_sqrt_n_weighted": 0.0517,
+          "mean_spearman_n_weighted": 0.0479,
+          "positive_count": 12,
+          "positive_fraction": 0.6,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.155,
+            "jain2017biophysical_SMACRT": -0.0914,
+            "jain2023identifying_DNP": 0.2852,
+            "jain2023identifying_FA2": 0.3644,
+            "jain2023identifying_FVC32": -0.2547,
+            "jain2023identifying_FvFVIII2": -0.2608,
+            "jain2023identifying_FvLysM2": -0.2888,
+            "jain2023identifying_Heme2": 0.3016,
+            "jain2023identifying_HemeC32": 0.1408,
+            "jain2023identifying_HemeFVIII2": 0.1593,
+            "jain2023identifying_HemeLysM2": 0.1327,
+            "jain2024assessment_Herapin_RT": -0.017,
+            "jain2024assessment_PSR": 0.0035,
+            "rosace2023automated_CICRT2_adalimumab": 0.1516,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3791,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.3581,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.4671,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2842
+          }
+        },
+        "CLSS_Reg7_MW_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": -0.0363,
+          "mean_spearman_n_ge_10": -0.036,
+          "mean_spearman_sqrt_n_weighted": -0.013,
+          "mean_spearman_n_weighted": 0.0032,
+          "positive_count": 10,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0591,
+            "jain2017biophysical_SMACRT": -0.0635,
+            "jain2023identifying_DNP": 0.2011,
+            "jain2023identifying_FA2": 0.2475,
+            "jain2023identifying_FVC32": -0.1996,
+            "jain2023identifying_FvFVIII2": -0.241,
+            "jain2023identifying_FvLysM2": -0.3035,
+            "jain2023identifying_Heme2": 0.2068,
+            "jain2023identifying_HemeC32": 0.1506,
+            "jain2023identifying_HemeFVIII2": 0.1331,
+            "jain2023identifying_HemeLysM2": 0.0825,
+            "jain2024assessment_Herapin_RT": -0.2116,
+            "jain2024assessment_PSR": -0.0662,
+            "rosace2023automated_CICRT2_adalimumab": 0.1516,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3681,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.3251,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.4671,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2842
+          }
+        },
+        "CLSS_Reg7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.1004,
+          "mean_spearman_n_ge_10": 0.0183,
+          "mean_spearman_sqrt_n_weighted": 0.0667,
+          "mean_spearman_n_weighted": 0.0632,
+          "positive_count": 13,
+          "positive_fraction": 0.65,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.148,
+            "jain2017biophysical_SMACRT": 0.0006,
+            "jain2023identifying_DNP": 0.2776,
+            "jain2023identifying_FA2": 0.3386,
+            "jain2023identifying_FVC32": -0.2384,
+            "jain2023identifying_FvFVIII2": -0.2387,
+            "jain2023identifying_FvLysM2": -0.2313,
+            "jain2023identifying_Heme2": 0.2903,
+            "jain2023identifying_HemeC32": 0.144,
+            "jain2023identifying_HemeFVIII2": 0.162,
+            "jain2023identifying_HemeLysM2": 0.1653,
+            "jain2024assessment_Herapin_RT": -0.0576,
+            "jain2024assessment_PSR": 0.0024,
+            "rosace2023automated_CICRT2_adalimumab": 0.0594,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2857,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.562,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5004,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2679
+          }
+        },
+        "CLSS_Reg6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.0768,
+          "mean_spearman_n_ge_10": -0.0079,
+          "mean_spearman_sqrt_n_weighted": 0.0346,
+          "mean_spearman_n_weighted": 0.0284,
+          "positive_count": 12,
+          "positive_fraction": 0.6,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0528,
+            "jain2017biophysical_SMACRT": 0.0459,
+            "jain2023identifying_DNP": 0.1782,
+            "jain2023identifying_FA2": 0.218,
+            "jain2023identifying_FVC32": -0.1937,
+            "jain2023identifying_FvFVIII2": -0.2218,
+            "jain2023identifying_FvLysM2": -0.2397,
+            "jain2023identifying_Heme2": 0.1955,
+            "jain2023identifying_HemeC32": 0.1469,
+            "jain2023identifying_HemeFVIII2": 0.1369,
+            "jain2023identifying_HemeLysM2": 0.1272,
+            "jain2024assessment_Herapin_RT": -0.2486,
+            "jain2024assessment_PSR": -0.0279,
+            "rosace2023automated_CICRT2_adalimumab": 0.0594,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1264,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5234,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5004,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.2679
+          }
+        },
+        "CLSS_EqWt6_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.1531,
+          "mean_spearman_n_ge_10": 0.0769,
+          "mean_spearman_sqrt_n_weighted": 0.1079,
+          "mean_spearman_n_weighted": 0.0953,
+          "positive_count": 15,
+          "positive_fraction": 0.75,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.088,
+            "jain2017biophysical_SMACRT": 0.0976,
+            "jain2023identifying_DNP": 0.198,
+            "jain2023identifying_FA2": 0.1715,
+            "jain2023identifying_FVC32": -0.0604,
+            "jain2023identifying_FvFVIII2": -0.0429,
+            "jain2023identifying_FvLysM2": -0.1498,
+            "jain2023identifying_Heme2": 0.1785,
+            "jain2023identifying_HemeC32": 0.2117,
+            "jain2023identifying_HemeFVIII2": 0.1916,
+            "jain2023identifying_HemeLysM2": 0.1241,
+            "jain2024assessment_Herapin_RT": 0.2206,
+            "jain2024assessment_PSR": 0.161,
+            "rosace2023automated_CICRT2_adalimumab": 0.3231,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1813,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5262,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.8433,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt7_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.2002,
+          "mean_spearman_n_ge_10": 0.1237,
+          "mean_spearman_sqrt_n_weighted": 0.1444,
+          "mean_spearman_n_weighted": 0.1249,
+          "positive_count": 15,
+          "positive_fraction": 0.75,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.1607,
+            "jain2017biophysical_SMACRT": 0.0257,
+            "jain2023identifying_DNP": 0.28,
+            "jain2023identifying_FA2": 0.286,
+            "jain2023identifying_FVC32": -0.087,
+            "jain2023identifying_FvFVIII2": -0.0384,
+            "jain2023identifying_FvLysM2": -0.1289,
+            "jain2023identifying_Heme2": 0.2714,
+            "jain2023identifying_HemeC32": 0.1867,
+            "jain2023identifying_HemeFVIII2": 0.189,
+            "jain2023identifying_HemeLysM2": 0.1263,
+            "jain2024assessment_Herapin_RT": 0.4015,
+            "jain2024assessment_PSR": 0.1243,
+            "rosace2023automated_CICRT2_adalimumab": 0.5253,
+            "rosace2023automated_CICRT2_golimumab": 0.9,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2143,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5785,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt5_NoPI_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.1288,
+          "mean_spearman_n_ge_10": 0.0499,
+          "mean_spearman_sqrt_n_weighted": 0.0781,
+          "mean_spearman_n_weighted": 0.0657,
+          "positive_count": 14,
+          "positive_fraction": 0.7,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0191,
+            "jain2017biophysical_SMACRT": 0.2205,
+            "jain2023identifying_DNP": 0.079,
+            "jain2023identifying_FA2": 0.0273,
+            "jain2023identifying_FVC32": -0.0134,
+            "jain2023identifying_FvFVIII2": -0.0666,
+            "jain2023identifying_FvLysM2": -0.1624,
+            "jain2023identifying_Heme2": 0.1003,
+            "jain2023identifying_HemeC32": 0.2155,
+            "jain2023identifying_HemeFVIII2": 0.1753,
+            "jain2023identifying_HemeLysM2": 0.1302,
+            "jain2024assessment_Herapin_RT": -0.0806,
+            "jain2024assessment_PSR": 0.0856,
+            "rosace2023automated_CICRT2_adalimumab": 0.3231,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1374,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.4435,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "CLSS_EqWt4_Fold_IMGT_Z": {
+          "role": "exploratory_ablation",
+          "n_defined": 20,
+          "mean_spearman": 0.0517,
+          "mean_spearman_n_ge_10": -0.0357,
+          "mean_spearman_sqrt_n_weighted": 0.004,
+          "mean_spearman_n_weighted": -0.0061,
+          "positive_count": 13,
+          "positive_fraction": 0.65,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0603,
+            "jain2017biophysical_SMACRT": 0.1086,
+            "jain2023identifying_DNP": 0.0415,
+            "jain2023identifying_FA2": 0.0765,
+            "jain2023identifying_FVC32": -0.1047,
+            "jain2023identifying_FvFVIII2": -0.1848,
+            "jain2023identifying_FvLysM2": -0.27,
+            "jain2023identifying_Heme2": 0.0383,
+            "jain2023identifying_HemeC32": 0.1085,
+            "jain2023identifying_HemeFVIII2": 0.0634,
+            "jain2023identifying_HemeLysM2": -0.0147,
+            "jain2024assessment_Herapin_RT": -0.0893,
+            "jain2024assessment_PSR": 0.0106,
+            "rosace2023automated_CICRT2_adalimumab": 0.0769,
+            "rosace2023automated_CICRT2_golimumab": 0.8,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3407,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.2369,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "bp_flexibility": {
+          "role": "single_descriptor",
+          "n_defined": 20,
+          "mean_spearman": 0.1077,
+          "mean_spearman_n_ge_10": 0.0431,
+          "mean_spearman_sqrt_n_weighted": 0.0507,
+          "mean_spearman_n_weighted": 0.0315,
+          "positive_count": 16,
+          "positive_fraction": 0.8,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0042,
+            "jain2017biophysical_SMACRT": 0.2193,
+            "jain2023identifying_DNP": 0.0934,
+            "jain2023identifying_FA2": 0.0466,
+            "jain2023identifying_FVC32": -0.1431,
+            "jain2023identifying_FvFVIII2": -0.1116,
+            "jain2023identifying_FvLysM2": -0.2313,
+            "jain2023identifying_Heme2": 0.0869,
+            "jain2023identifying_HemeC32": 0.1109,
+            "jain2023identifying_HemeFVIII2": 0.1146,
+            "jain2023identifying_HemeLysM2": 0.0408,
+            "jain2024assessment_Herapin_RT": 0.0566,
+            "jain2024assessment_PSR": 0.0514,
+            "rosace2023automated_CICRT2_adalimumab": 0.1738,
+            "rosace2023automated_CICRT2_golimumab": 0.5,
+            "shanehsazzadeh2023unlocking_elisa_ec50": 0.011,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.6832,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5047,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.0729
+          }
+        },
+        "neg_bp_gravy": {
+          "role": "single_descriptor",
+          "n_defined": 20,
+          "mean_spearman": -0.1424,
+          "mean_spearman_n_ge_10": -0.1261,
+          "mean_spearman_sqrt_n_weighted": -0.1091,
+          "mean_spearman_n_weighted": -0.0903,
+          "positive_count": 6,
+          "positive_fraction": 0.3,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.0805,
+            "jain2017biophysical_SMACRT": 0.1632,
+            "jain2023identifying_DNP": -0.1164,
+            "jain2023identifying_FA2": -0.1417,
+            "jain2023identifying_FVC32": -0.1462,
+            "jain2023identifying_FvFVIII2": -0.2944,
+            "jain2023identifying_FvLysM2": -0.3509,
+            "jain2023identifying_Heme2": -0.1311,
+            "jain2023identifying_HemeC32": 0.0681,
+            "jain2023identifying_HemeFVIII2": -0.0102,
+            "jain2023identifying_HemeLysM2": -0.0754,
+            "jain2024assessment_Herapin_RT": -0.1632,
+            "jain2024assessment_PSR": -0.0137,
+            "rosace2023automated_CICRT2_adalimumab": 0.0374,
+            "rosace2023automated_CICRT2_golimumab": 0.3,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.7033,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.011,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.6301,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "neg_bp_aromaticity": {
+          "role": "single_descriptor",
+          "n_defined": 19,
+          "mean_spearman": 0.175,
+          "mean_spearman_n_ge_10": 0.2057,
+          "mean_spearman_sqrt_n_weighted": 0.1543,
+          "mean_spearman_n_weighted": 0.1406,
+          "positive_count": 15,
+          "positive_fraction": 0.7895,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.1022,
+            "jain2017biophysical_SMACRT": 0.258,
+            "jain2023identifying_DNP": 0.0569,
+            "jain2023identifying_FA2": -0.1047,
+            "jain2023identifying_FVC32": 0.1816,
+            "jain2023identifying_FvFVIII2": 0.2116,
+            "jain2023identifying_FvLysM2": 0.1143,
+            "jain2023identifying_Heme2": 0.0794,
+            "jain2023identifying_HemeC32": 0.2647,
+            "jain2023identifying_HemeFVIII2": 0.2639,
+            "jain2023identifying_HemeLysM2": 0.2742,
+            "jain2024assessment_Herapin_RT": 0.0168,
+            "jain2024assessment_PSR": 0.0191,
+            "rosace2023automated_CICRT2_adalimumab": 0.7125,
+            "rosace2023automated_CICRT2_golimumab": 0.7071,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.036,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.4688,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.8178
+          }
+        },
+        "neg_bp_isoelectric_point": {
+          "role": "single_descriptor",
+          "n_defined": 19,
+          "mean_spearman": 0.223,
+          "mean_spearman_n_ge_10": 0.1584,
+          "mean_spearman_sqrt_n_weighted": 0.1625,
+          "mean_spearman_n_weighted": 0.134,
+          "positive_count": 16,
+          "positive_fraction": 0.8421,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.2198,
+            "jain2017biophysical_SMACRT": -0.274,
+            "jain2023identifying_DNP": 0.3477,
+            "jain2023identifying_FA2": 0.4693,
+            "jain2023identifying_FVC32": -0.1119,
+            "jain2023identifying_FvFVIII2": 0.0577,
+            "jain2023identifying_FvLysM2": 0.0414,
+            "jain2023identifying_Heme2": 0.3108,
+            "jain2023identifying_HemeC32": 0.047,
+            "jain2023identifying_HemeFVIII2": 0.1017,
+            "jain2023identifying_HemeLysM2": 0.0496,
+            "jain2024assessment_Herapin_RT": 0.7114,
+            "jain2024assessment_PSR": 0.1499,
+            "rosace2023automated_CICRT2_adalimumab": 0.2506,
+            "rosace2023automated_CICRT2_golimumab": 0.6669,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.2663,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.5007,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872
+          }
+        },
+        "neg_bp_instability_index": {
+          "role": "single_descriptor",
+          "n_defined": 20,
+          "mean_spearman": 0.097,
+          "mean_spearman_n_ge_10": 0.0089,
+          "mean_spearman_sqrt_n_weighted": 0.0675,
+          "mean_spearman_n_weighted": 0.0626,
+          "positive_count": 13,
+          "positive_fraction": 0.65,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.1595,
+            "jain2017biophysical_SMACRT": -0.1463,
+            "jain2023identifying_DNP": 0.1864,
+            "jain2023identifying_FA2": 0.2969,
+            "jain2023identifying_FVC32": 0.0096,
+            "jain2023identifying_FvFVIII2": -0.0145,
+            "jain2023identifying_FvLysM2": -0.0097,
+            "jain2023identifying_Heme2": 0.2238,
+            "jain2023identifying_HemeC32": -0.0269,
+            "jain2023identifying_HemeFVIII2": 0.0066,
+            "jain2023identifying_HemeLysM2": 0.0242,
+            "jain2024assessment_Herapin_RT": 0.3061,
+            "jain2024assessment_PSR": 0.0515,
+            "rosace2023automated_CICRT2_adalimumab": -0.5441,
+            "rosace2023automated_CICRT2_golimumab": 0.9,
+            "shanehsazzadeh2023unlocking_elisa_ec50": 0.2198,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.4187,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.3326,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.1694
+          }
+        },
+        "neg_bp_charge_at_7_4": {
+          "role": "single_descriptor",
+          "n_defined": 19,
+          "mean_spearman": 0.2121,
+          "mean_spearman_n_ge_10": 0.1884,
+          "mean_spearman_sqrt_n_weighted": 0.1752,
+          "mean_spearman_n_weighted": 0.1527,
+          "positive_count": 15,
+          "positive_fraction": 0.7895,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": 0.2665,
+            "jain2017biophysical_SMACRT": -0.2644,
+            "jain2023identifying_DNP": 0.3798,
+            "jain2023identifying_FA2": 0.5506,
+            "jain2023identifying_FVC32": -0.1404,
+            "jain2023identifying_FvFVIII2": 0.0305,
+            "jain2023identifying_FvLysM2": 0.0248,
+            "jain2023identifying_Heme2": 0.3995,
+            "jain2023identifying_HemeC32": 0.044,
+            "jain2023identifying_HemeFVIII2": 0.117,
+            "jain2023identifying_HemeLysM2": 0.0657,
+            "jain2024assessment_Herapin_RT": 0.7423,
+            "jain2024assessment_PSR": 0.1678,
+            "rosace2023automated_CICRT2_adalimumab": 0.2506,
+            "rosace2023automated_CICRT2_golimumab": -0.0513,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1498,
+            "shanehsazzadeh2023unlocking_polyspecificity": 0.6314,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872
+          }
+        },
+        "bp_molecular_weight": {
+          "role": "single_descriptor",
+          "n_defined": 20,
+          "mean_spearman": -0.1818,
+          "mean_spearman_n_ge_10": -0.1588,
+          "mean_spearman_sqrt_n_weighted": -0.1091,
+          "mean_spearman_n_weighted": -0.0738,
+          "positive_count": 5,
+          "positive_fraction": 0.25,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.023,
+            "jain2017biophysical_SMACRT": -0.2283,
+            "jain2023identifying_DNP": -0.046,
+            "jain2023identifying_FA2": 0.0091,
+            "jain2023identifying_FVC32": 0.0098,
+            "jain2023identifying_FvFVIII2": -0.0418,
+            "jain2023identifying_FvLysM2": -0.1022,
+            "jain2023identifying_Heme2": -0.0424,
+            "jain2023identifying_HemeC32": 0.0304,
+            "jain2023identifying_HemeFVIII2": -0.0288,
+            "jain2023identifying_HemeLysM2": -0.0724,
+            "jain2024assessment_Herapin_RT": 0.026,
+            "jain2024assessment_PSR": -0.1034,
+            "rosace2023automated_CICRT2_adalimumab": -0.4246,
+            "rosace2023automated_CICRT2_golimumab": 0.1,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.1868,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.6474,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": -0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": -0.5549,
+            "shanker2024unsupervised_APC-MFI_SA58": -0.4318
+          }
+        },
+        "pure_germline_identity": {
+          "role": "single_descriptor",
+          "n_defined": 20,
+          "mean_spearman": 0.023,
+          "mean_spearman_n_ge_10": 0.009,
+          "mean_spearman_sqrt_n_weighted": 0.0037,
+          "mean_spearman_n_weighted": -0.0039,
+          "positive_count": 10,
+          "positive_fraction": 0.5,
+          "per_dataset": {
+            "jain2017biophysical_BVPELISA": -0.0921,
+            "jain2017biophysical_SMACRT": 0.0022,
+            "jain2023identifying_DNP": -0.0491,
+            "jain2023identifying_FA2": 0.0929,
+            "jain2023identifying_FVC32": 0.0145,
+            "jain2023identifying_FvFVIII2": -0.0099,
+            "jain2023identifying_FvLysM2": 0.0528,
+            "jain2023identifying_Heme2": -0.0205,
+            "jain2023identifying_HemeC32": 0.0526,
+            "jain2023identifying_HemeFVIII2": 0.003,
+            "jain2023identifying_HemeLysM2": -0.0393,
+            "jain2024assessment_Herapin_RT": -0.337,
+            "jain2024assessment_PSR": -0.0174,
+            "rosace2023automated_CICRT2_adalimumab": 0.3419,
+            "rosace2023automated_CICRT2_golimumab": -0.5798,
+            "shanehsazzadeh2023unlocking_elisa_ec50": -0.3217,
+            "shanehsazzadeh2023unlocking_polyspecificity": -0.0432,
+            "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab": 0.8783,
+            "shanker2024unsupervised_APC-MFI_Ly1404": 0.0872,
+            "shanker2024unsupervised_APC-MFI_SA58": 0.4444
+          }
+        }
+      },
+      "best_single_descriptor": {
+        "name": "neg_bp_isoelectric_point",
+        "mean_spearman": 0.223
+      },
+      "margin_CLSS_Reg8_AllBP_vs_best_single": -0.1386,
+      "margin_CLSS_Reg7_MW_vs_best_single": -0.2593,
+      "margin_CLSS_Reg6_vs_best_single": -0.1462,
+      "margin_CLSS_EqWt6_vs_best_single": -0.0699,
+      "margin_CLSS_EqWt5_NoPI_vs_best_single": -0.0942
+    },
+    "datasets_omitted_by_score_polyreactivity": [
+      "jain2017biophysical_BVPELISA",
+      "jain2017biophysical_SMACRT",
+      "jain2023identifying_DNP",
+      "jain2023identifying_FA2",
+      "jain2023identifying_FVC32",
+      "jain2023identifying_FvFVIII2",
+      "jain2023identifying_FvLysM2",
+      "jain2023identifying_Heme2",
+      "jain2023identifying_HemeC32",
+      "jain2023identifying_HemeFVIII2",
+      "jain2023identifying_HemeLysM2",
+      "jain2024assessment_Herapin_RT",
+      "jain2024assessment_PSR",
+      "rosace2023automated_CICRT2_adalimumab",
+      "rosace2023automated_CICRT2_golimumab",
+      "shanehsazzadeh2023unlocking_elisa_ec50",
+      "shanehsazzadeh2023unlocking_polyspecificity",
+      "shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab",
+      "shanker2024unsupervised_APC-MFI_Ly1404",
+      "shanker2024unsupervised_APC-MFI_SA58"
+    ],
+    "datasets_in_score_polyreactivity_only": [
+      "Rosace2023_CR3022_CIC"
+    ]
+  },
+  "untouched_pharmacokinetics_9": {
+    "n_datasets": 9,
+    "dataset_sizes": {
+      "jain2023identifying_FcRnRelRT3": 132,
+      "jain2023identifying_HEPRT3": 130,
+      "jain2024assessment_FcRn": 43,
+      "jain2024assessment_tg32_clearance": 43,
+      "jain2024assessment_tg32_halflife": 43,
+      "makowski2022cooptimization_pI": 126,
+      "shanehsazzadeh2023unlocking_FcRnPeak": 13,
+      "shanehsazzadeh2023unlocking_FcRnRRT": 13,
+      "shanehsazzadeh2023unlocking_FcRnRT": 13
+    },
+    "methods": {
+      "CLSS_Reg8_AllBP_IMGT_Z": {
+        "role": "claimed_primary",
+        "n_defined": 9,
+        "mean_spearman": 0.2287,
+        "mean_spearman_n_ge_10": 0.2287,
+        "mean_spearman_sqrt_n_weighted": 0.2994,
+        "mean_spearman_n_weighted": 0.3697,
+        "positive_count": 6,
+        "positive_fraction": 0.6667,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.3284,
+          "jain2023identifying_HEPRT3": 0.3178,
+          "jain2024assessment_FcRn": -0.0651,
+          "jain2024assessment_tg32_clearance": -0.0194,
+          "jain2024assessment_tg32_halflife": 0.0179,
+          "makowski2022cooptimization_pI": 0.9251,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.0989,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.3144,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.3384
+        }
+      },
+      "CLSS_Reg7_MW_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.1767,
+        "mean_spearman_n_ge_10": 0.1767,
+        "mean_spearman_sqrt_n_weighted": 0.2304,
+        "mean_spearman_n_weighted": 0.2846,
+        "positive_count": 6,
+        "positive_fraction": 0.6667,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.2384,
+          "jain2023identifying_HEPRT3": 0.1587,
+          "jain2024assessment_FcRn": 0.0735,
+          "jain2024assessment_tg32_clearance": -0.0902,
+          "jain2024assessment_tg32_halflife": -0.0655,
+          "makowski2022cooptimization_pI": 0.824,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.1374,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.2837,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.3054
+        }
+      },
+      "CLSS_Reg7_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.2364,
+        "mean_spearman_n_ge_10": 0.2364,
+        "mean_spearman_sqrt_n_weighted": 0.3063,
+        "mean_spearman_n_weighted": 0.3738,
+        "positive_count": 6,
+        "positive_fraction": 0.6667,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.3325,
+          "jain2023identifying_HEPRT3": 0.3015,
+          "jain2024assessment_FcRn": 0.0973,
+          "jain2024assessment_tg32_clearance": -0.0344,
+          "jain2024assessment_tg32_halflife": -0.0217,
+          "makowski2022cooptimization_pI": 0.9214,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.033,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.2698,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.2944
+        }
+      },
+      "CLSS_Reg6_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.1848,
+        "mean_spearman_n_ge_10": 0.1848,
+        "mean_spearman_sqrt_n_weighted": 0.2368,
+        "mean_spearman_n_weighted": 0.2873,
+        "positive_count": 6,
+        "positive_fraction": 0.6667,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.2387,
+          "jain2023identifying_HEPRT3": 0.1385,
+          "jain2024assessment_FcRn": 0.2124,
+          "jain2024assessment_tg32_clearance": -0.1035,
+          "jain2024assessment_tg32_halflife": -0.0718,
+          "makowski2022cooptimization_pI": 0.8175,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.0604,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.2309,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.2613
+        }
+      },
+      "CLSS_EqWt6_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.19,
+        "mean_spearman_n_ge_10": 0.19,
+        "mean_spearman_sqrt_n_weighted": 0.2389,
+        "mean_spearman_n_weighted": 0.2903,
+        "positive_count": 8,
+        "positive_fraction": 0.8889,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.3233,
+          "jain2023identifying_HEPRT3": 0.2576,
+          "jain2024assessment_FcRn": -0.1915,
+          "jain2024assessment_tg32_clearance": 0.0896,
+          "jain2024assessment_tg32_halflife": 0.0553,
+          "makowski2022cooptimization_pI": 0.6368,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.0385,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.2253,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.2751
+        }
+      },
+      "CLSS_EqWt7_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.2474,
+        "mean_spearman_n_ge_10": 0.2474,
+        "mean_spearman_sqrt_n_weighted": 0.3153,
+        "mean_spearman_n_weighted": 0.3843,
+        "positive_count": 8,
+        "positive_fraction": 0.8889,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.3908,
+          "jain2023identifying_HEPRT3": 0.4103,
+          "jain2024assessment_FcRn": -0.2694,
+          "jain2024assessment_tg32_clearance": 0.1458,
+          "jain2024assessment_tg32_halflife": 0.0979,
+          "makowski2022cooptimization_pI": 0.805,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.0549,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.2698,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.3219
+        }
+      },
+      "CLSS_EqWt5_NoPI_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.0889,
+        "mean_spearman_n_ge_10": 0.0889,
+        "mean_spearman_sqrt_n_weighted": 0.0991,
+        "mean_spearman_n_weighted": 0.1139,
+        "positive_count": 6,
+        "positive_fraction": 0.6667,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.2256,
+          "jain2023identifying_HEPRT3": 0.0119,
+          "jain2024assessment_FcRn": 0.0138,
+          "jain2024assessment_tg32_clearance": -0.0154,
+          "jain2024assessment_tg32_halflife": -0.0193,
+          "makowski2022cooptimization_pI": 0.2241,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.0,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.1613,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.1981
+        }
+      },
+      "CLSS_EqWt4_Fold_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 9,
+        "mean_spearman": 0.0031,
+        "mean_spearman_n_ge_10": 0.0031,
+        "mean_spearman_sqrt_n_weighted": 0.0426,
+        "mean_spearman_n_weighted": 0.076,
+        "positive_count": 4,
+        "positive_fraction": 0.4444,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.1806,
+          "jain2023identifying_HEPRT3": 0.0042,
+          "jain2024assessment_FcRn": 0.0572,
+          "jain2024assessment_tg32_clearance": -0.1417,
+          "jain2024assessment_tg32_halflife": -0.0788,
+          "makowski2022cooptimization_pI": 0.2197,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.0659,
+          "shanehsazzadeh2023unlocking_FcRnRRT": -0.1085,
+          "shanehsazzadeh2023unlocking_FcRnRT": -0.0385
+        }
+      },
+      "bp_flexibility": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": 0.1752,
+        "mean_spearman_n_ge_10": 0.1752,
+        "mean_spearman_sqrt_n_weighted": 0.1606,
+        "mean_spearman_n_weighted": 0.1602,
+        "positive_count": 9,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.2316,
+          "jain2023identifying_HEPRT3": 0.0881,
+          "jain2024assessment_FcRn": 0.0509,
+          "jain2024assessment_tg32_clearance": 0.0178,
+          "jain2024assessment_tg32_halflife": 0.0463,
+          "makowski2022cooptimization_pI": 0.2413,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.1209,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.37,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.4099
+        }
+      },
+      "neg_bp_gravy": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": -0.2137,
+        "mean_spearman_n_ge_10": -0.2137,
+        "mean_spearman_sqrt_n_weighted": -0.1523,
+        "mean_spearman_n_weighted": -0.1156,
+        "positive_count": 2,
+        "positive_fraction": 0.2222,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.0426,
+          "jain2023identifying_HEPRT3": -0.2234,
+          "jain2024assessment_FcRn": 0.1164,
+          "jain2024assessment_tg32_clearance": -0.1897,
+          "jain2024assessment_tg32_halflife": -0.2184,
+          "makowski2022cooptimization_pI": -0.0839,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.4121,
+          "shanehsazzadeh2023unlocking_FcRnRRT": -0.5007,
+          "shanehsazzadeh2023unlocking_FcRnRT": -0.4539
+        }
+      },
+      "neg_bp_aromaticity": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": 0.0956,
+        "mean_spearman_n_ge_10": 0.0956,
+        "mean_spearman_sqrt_n_weighted": 0.0833,
+        "mean_spearman_n_weighted": 0.0758,
+        "positive_count": 7,
+        "positive_fraction": 0.7778,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.1444,
+          "jain2023identifying_HEPRT3": -0.0367,
+          "jain2024assessment_FcRn": 0.0345,
+          "jain2024assessment_tg32_clearance": 0.1319,
+          "jain2024assessment_tg32_halflife": 0.0596,
+          "makowski2022cooptimization_pI": 0.0999,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.0719,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.2381,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.2604
+        }
+      },
+      "neg_bp_isoelectric_point": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": 0.3814,
+        "mean_spearman_n_ge_10": 0.3814,
+        "mean_spearman_sqrt_n_weighted": 0.4387,
+        "mean_spearman_n_weighted": 0.5085,
+        "positive_count": 8,
+        "positive_fraction": 0.8889,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.335,
+          "jain2023identifying_HEPRT3": 0.7273,
+          "jain2024assessment_FcRn": -0.455,
+          "jain2024assessment_tg32_clearance": 0.2782,
+          "jain2024assessment_tg32_halflife": 0.2047,
+          "makowski2022cooptimization_pI": 0.994,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.2552,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.5267,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.5667
+        }
+      },
+      "neg_bp_instability_index": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": 0.0206,
+        "mean_spearman_n_ge_10": 0.0206,
+        "mean_spearman_sqrt_n_weighted": 0.0786,
+        "mean_spearman_n_weighted": 0.1275,
+        "positive_count": 6,
+        "positive_fraction": 0.6667,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.1545,
+          "jain2023identifying_HEPRT3": 0.1496,
+          "jain2024assessment_FcRn": -0.4152,
+          "jain2024assessment_tg32_clearance": 0.0574,
+          "jain2024assessment_tg32_halflife": 0.1741,
+          "makowski2022cooptimization_pI": 0.3371,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.1319,
+          "shanehsazzadeh2023unlocking_FcRnRRT": -0.2003,
+          "shanehsazzadeh2023unlocking_FcRnRT": -0.2036
+        }
+      },
+      "neg_bp_charge_at_7_4": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": 0.4272,
+        "mean_spearman_n_ge_10": 0.4272,
+        "mean_spearman_sqrt_n_weighted": 0.4725,
+        "mean_spearman_n_weighted": 0.5388,
+        "positive_count": 8,
+        "positive_fraction": 0.8889,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": 0.4014,
+          "jain2023identifying_HEPRT3": 0.7766,
+          "jain2024assessment_FcRn": -0.4191,
+          "jain2024assessment_tg32_clearance": 0.211,
+          "jain2024assessment_tg32_halflife": 0.166,
+          "makowski2022cooptimization_pI": 0.9929,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.405,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.6334,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.6778
+        }
+      },
+      "bp_molecular_weight": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": -0.1612,
+        "mean_spearman_n_ge_10": -0.1612,
+        "mean_spearman_sqrt_n_weighted": -0.1232,
+        "mean_spearman_n_weighted": -0.1008,
+        "positive_count": 2,
+        "positive_fraction": 0.2222,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": -0.0621,
+          "jain2023identifying_HEPRT3": -0.037,
+          "jain2024assessment_FcRn": -0.311,
+          "jain2024assessment_tg32_clearance": 0.0211,
+          "jain2024assessment_tg32_halflife": 0.0408,
+          "makowski2022cooptimization_pI": -0.1591,
+          "shanehsazzadeh2023unlocking_FcRnPeak": -0.3187,
+          "shanehsazzadeh2023unlocking_FcRnRRT": -0.2837,
+          "shanehsazzadeh2023unlocking_FcRnRT": -0.3411
+        }
+      },
+      "pure_germline_identity": {
+        "role": "single_descriptor",
+        "n_defined": 9,
+        "mean_spearman": 0.0106,
+        "mean_spearman_n_ge_10": 0.0106,
+        "mean_spearman_sqrt_n_weighted": -0.0381,
+        "mean_spearman_n_weighted": -0.0713,
+        "positive_count": 4,
+        "positive_fraction": 0.4444,
+        "per_dataset": {
+          "jain2023identifying_FcRnRelRT3": -0.0101,
+          "jain2023identifying_HEPRT3": -0.0309,
+          "jain2024assessment_FcRn": 0.2921,
+          "jain2024assessment_tg32_clearance": -0.1767,
+          "jain2024assessment_tg32_halflife": -0.1707,
+          "makowski2022cooptimization_pI": -0.3044,
+          "shanehsazzadeh2023unlocking_FcRnPeak": 0.2154,
+          "shanehsazzadeh2023unlocking_FcRnRRT": 0.1323,
+          "shanehsazzadeh2023unlocking_FcRnRT": 0.1481
+        }
+      }
+    },
+    "best_single_descriptor": {
+      "name": "neg_bp_isoelectric_point",
+      "mean_spearman": 0.3814
+    },
+    "margin_CLSS_Reg8_AllBP_vs_best_single": -0.1527,
+    "margin_CLSS_Reg7_MW_vs_best_single": -0.2047,
+    "margin_CLSS_Reg6_vs_best_single": -0.1966,
+    "margin_CLSS_EqWt6_vs_best_single": -0.1914,
+    "margin_CLSS_EqWt5_NoPI_vs_best_single": -0.2925
+  },
+  "untouched_data_expression_4": {
+    "n_datasets": 4,
+    "dataset_sizes": {
+      "adams2017measuring_4420-fluorescein_exp_er": 10970,
+      "garbinski2023_exp": 94,
+      "jain2017biophysical_HEK": 137,
+      "koenig2017mutational_er_g6": 4275
+    },
+    "methods": {
+      "CLSS_Reg8_AllBP_IMGT_Z": {
+        "role": "claimed_primary",
+        "n_defined": 4,
+        "mean_spearman": 0.1913,
+        "mean_spearman_n_ge_10": 0.1913,
+        "mean_spearman_sqrt_n_weighted": 0.1497,
+        "mean_spearman_n_weighted": 0.1375,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.1288,
+          "garbinski2023_exp": 0.2826,
+          "jain2017biophysical_HEK": 0.1992,
+          "koenig2017mutational_er_g6": 0.1547
+        }
+      },
+      "CLSS_Reg7_MW_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.1573,
+        "mean_spearman_n_ge_10": 0.1573,
+        "mean_spearman_sqrt_n_weighted": 0.1414,
+        "mean_spearman_n_weighted": 0.1349,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.1259,
+          "garbinski2023_exp": 0.1893,
+          "jain2017biophysical_HEK": 0.1579,
+          "koenig2017mutational_er_g6": 0.1561
+        }
+      },
+      "CLSS_Reg7_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.1674,
+        "mean_spearman_n_ge_10": 0.1674,
+        "mean_spearman_sqrt_n_weighted": 0.1573,
+        "mean_spearman_n_weighted": 0.1535,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.1506,
+          "garbinski2023_exp": 0.1186,
+          "jain2017biophysical_HEK": 0.2418,
+          "koenig2017mutational_er_g6": 0.1587
+        }
+      },
+      "CLSS_Reg6_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.1336,
+        "mean_spearman_n_ge_10": 0.1336,
+        "mean_spearman_sqrt_n_weighted": 0.1533,
+        "mean_spearman_n_weighted": 0.1567,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.1556,
+          "garbinski2023_exp": 0.0061,
+          "jain2017biophysical_HEK": 0.2118,
+          "koenig2017mutational_er_g6": 0.161
+        }
+      },
+      "CLSS_EqWt6_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.255,
+        "mean_spearman_n_ge_10": 0.255,
+        "mean_spearman_sqrt_n_weighted": 0.2491,
+        "mean_spearman_n_weighted": 0.2523,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.2628,
+          "garbinski2023_exp": 0.4074,
+          "jain2017biophysical_HEK": 0.1238,
+          "koenig2017mutational_er_g6": 0.226
+        }
+      },
+      "CLSS_EqWt7_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.2399,
+        "mean_spearman_n_ge_10": 0.2399,
+        "mean_spearman_sqrt_n_weighted": 0.2323,
+        "mean_spearman_n_weighted": 0.235,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.2452,
+          "garbinski2023_exp": 0.3821,
+          "jain2017biophysical_HEK": 0.1232,
+          "koenig2017mutational_er_g6": 0.209
+        }
+      },
+      "CLSS_EqWt5_NoPI_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.2267,
+        "mean_spearman_n_ge_10": 0.2267,
+        "mean_spearman_sqrt_n_weighted": 0.2339,
+        "mean_spearman_n_weighted": 0.2376,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.2406,
+          "garbinski2023_exp": 0.3353,
+          "jain2017biophysical_HEK": 0.0987,
+          "koenig2017mutational_er_g6": 0.2323
+        }
+      },
+      "CLSS_EqWt4_Fold_IMGT_Z": {
+        "role": "exploratory_ablation",
+        "n_defined": 4,
+        "mean_spearman": 0.1966,
+        "mean_spearman_n_ge_10": 0.1966,
+        "mean_spearman_sqrt_n_weighted": 0.246,
+        "mean_spearman_n_weighted": 0.2625,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.2757,
+          "garbinski2023_exp": 0.2083,
+          "jain2017biophysical_HEK": 0.0662,
+          "koenig2017mutational_er_g6": 0.2361
+        }
+      },
+      "bp_flexibility": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": 0.2035,
+        "mean_spearman_n_ge_10": 0.2035,
+        "mean_spearman_sqrt_n_weighted": 0.151,
+        "mean_spearman_n_weighted": 0.141,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.1439,
+          "garbinski2023_exp": 0.439,
+          "jain2017biophysical_HEK": 0.1028,
+          "koenig2017mutational_er_g6": 0.1283
+        }
+      },
+      "neg_bp_gravy": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": 0.0858,
+        "mean_spearman_n_ge_10": 0.0858,
+        "mean_spearman_sqrt_n_weighted": 0.0667,
+        "mean_spearman_n_weighted": 0.0599,
+        "positive_count": 3,
+        "positive_fraction": 0.75,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.0462,
+          "garbinski2023_exp": 0.3176,
+          "jain2017biophysical_HEK": -0.1156,
+          "koenig2017mutational_er_g6": 0.0951
+        }
+      },
+      "neg_bp_aromaticity": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": 0.1296,
+        "mean_spearman_n_ge_10": 0.1296,
+        "mean_spearman_sqrt_n_weighted": 0.0869,
+        "mean_spearman_n_weighted": 0.0769,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.0735,
+          "garbinski2023_exp": 0.3117,
+          "jain2017biophysical_HEK": 0.0522,
+          "koenig2017mutational_er_g6": 0.0811
+        }
+      },
+      "neg_bp_isoelectric_point": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": 0.0238,
+        "mean_spearman_n_ge_10": 0.0238,
+        "mean_spearman_sqrt_n_weighted": 0.0276,
+        "mean_spearman_n_weighted": 0.0386,
+        "positive_count": 3,
+        "positive_fraction": 0.75,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.0706,
+          "garbinski2023_exp": 0.0352,
+          "jain2017biophysical_HEK": 0.0328,
+          "koenig2017mutational_er_g6": -0.0433
+        }
+      },
+      "neg_bp_instability_index": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": -0.0402,
+        "mean_spearman_n_ge_10": -0.0402,
+        "mean_spearman_sqrt_n_weighted": 0.1173,
+        "mean_spearman_n_weighted": 0.1662,
+        "positive_count": 3,
+        "positive_fraction": 0.75,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.2107,
+          "garbinski2023_exp": -0.4945,
+          "jain2017biophysical_HEK": 0.0529,
+          "koenig2017mutational_er_g6": 0.07
+        }
+      },
+      "neg_bp_charge_at_7_4": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": 0.0074,
+        "mean_spearman_n_ge_10": 0.0074,
+        "mean_spearman_sqrt_n_weighted": 0.0148,
+        "mean_spearman_n_weighted": 0.0249,
+        "positive_count": 2,
+        "positive_fraction": 0.5,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.0532,
+          "garbinski2023_exp": -0.0424,
+          "jain2017biophysical_HEK": 0.0666,
+          "koenig2017mutational_er_g6": -0.0476
+        }
+      },
+      "bp_molecular_weight": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": -0.0242,
+        "mean_spearman_n_ge_10": -0.0242,
+        "mean_spearman_sqrt_n_weighted": -0.1092,
+        "mean_spearman_n_weighted": -0.1431,
+        "positive_count": 1,
+        "positive_fraction": 0.25,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": -0.192,
+          "garbinski2023_exp": 0.2341,
+          "jain2017biophysical_HEK": -0.112,
+          "koenig2017mutational_er_g6": -0.0269
+        }
+      },
+      "pure_germline_identity": {
+        "role": "single_descriptor",
+        "n_defined": 4,
+        "mean_spearman": 0.189,
+        "mean_spearman_n_ge_10": 0.189,
+        "mean_spearman_sqrt_n_weighted": 0.187,
+        "mean_spearman_n_weighted": 0.1969,
+        "positive_count": 4,
+        "positive_fraction": 1.0,
+        "per_dataset": {
+          "adams2017measuring_4420-fluorescein_exp_er": 0.2278,
+          "garbinski2023_exp": 0.2699,
+          "jain2017biophysical_HEK": 0.1407,
+          "koenig2017mutational_er_g6": 0.1177
+        }
+      }
+    },
+    "best_single_descriptor": {
+      "name": "bp_flexibility",
+      "mean_spearman": 0.2035
+    },
+    "margin_CLSS_Reg8_AllBP_vs_best_single": -0.0122,
+    "margin_CLSS_Reg7_MW_vs_best_single": -0.0462,
+    "margin_CLSS_Reg6_vs_best_single": -0.0699,
+    "margin_CLSS_EqWt6_vs_best_single": 0.0515,
+    "margin_CLSS_EqWt5_NoPI_vs_best_single": 0.0232
   },
   "loco_regional_sets": {
     "tm": {
@@ -6765,6 +10366,7 @@
   "permutation_null_battery": {
     "tm": {
       "method": "CLSS_EqWt6_IMGT_Z",
+      "role": "exploratory_ablation",
       "observed_mean_spearman": 0.3528,
       "null_mean_spearman": 0.0024,
       "null_sd_spearman": 0.1388,
@@ -6775,6 +10377,7 @@
     },
     "polyreactivity": {
       "method": "CLSS_EqWt6_IMGT_Z",
+      "role": "exploratory_ablation",
       "observed_mean_spearman": 0.3987,
       "null_mean_spearman": -0.0031,
       "null_sd_spearman": 0.1169,
@@ -6785,6 +10388,7 @@
     },
     "aggregation": {
       "method": "CLSS_EqWt6_IMGT_Z",
+      "role": "exploratory_ablation",
       "observed_mean_spearman": 0.1246,
       "null_mean_spearman": 0.0001,
       "null_sd_spearman": 0.0341,
@@ -6795,6 +10399,7 @@
     },
     "expression": {
       "method": "CLSS_EqWt6_IMGT_Z",
+      "role": "exploratory_ablation",
       "observed_mean_spearman": 0.2152,
       "null_mean_spearman": 0.005,
       "null_sd_spearman": 0.0712,
@@ -6807,6 +10412,7 @@
   "permutation_null_battery_reg8": {
     "tm": {
       "method": "CLSS_Reg8_AllBP_IMGT_Z",
+      "role": "claimed_primary",
       "observed_mean_spearman": 0.4636,
       "null_mean_spearman": -0.0005,
       "null_sd_spearman": 0.1342,
@@ -6817,6 +10423,7 @@
     },
     "polyreactivity": {
       "method": "CLSS_Reg8_AllBP_IMGT_Z",
+      "role": "claimed_primary",
       "observed_mean_spearman": 0.4467,
       "null_mean_spearman": -0.0017,
       "null_sd_spearman": 0.1192,
@@ -6827,6 +10434,7 @@
     },
     "aggregation": {
       "method": "CLSS_Reg8_AllBP_IMGT_Z",
+      "role": "claimed_primary",
       "observed_mean_spearman": 0.0997,
       "null_mean_spearman": 0.0002,
       "null_sd_spearman": 0.0348,
@@ -6837,6 +10445,7 @@
     },
     "expression": {
       "method": "CLSS_Reg8_AllBP_IMGT_Z",
+      "role": "claimed_primary",
       "observed_mean_spearman": 0.1205,
       "null_mean_spearman": 0.003,
       "null_sd_spearman": 0.0694,
@@ -6846,9 +10455,119 @@
       "n_permutations": 1000
     }
   },
+  "upstream_flab_file_sha256": {
+    "data/expression/adams2017measuring_4420-fluorescein_exp_er.csv": "fb29cda664077115636f6c9677ee8e9b7972f18def43a952f584810d91f10172",
+    "data/expression/garbinski2023_exp.csv": "6059a2bf61a3fa6f8d97ad4bc7c28a1b1bc8e71cb0b99cead6740cbad456a28b",
+    "data/expression/jain2017biophysical_HEK.csv": "80c7d7dfd6581d89452c5ee6f3215f218818006c70286a49657ffd4a28431be2",
+    "data/expression/koenig2017mutational_er_g6.csv": "7ec320e663f01f1bfeee9c62eb2520d602a11e3cf12d8ca93a714e89ccb48e4b",
+    "data/pharmacokinetics/jain2023identifying_FcRnRelRT3.csv": "ff2ed2b111a7b77fcffefd8890f6495c67c81fce395d7b6b2d1d79754627a3f3",
+    "data/pharmacokinetics/jain2023identifying_HEPRT3.csv": "021db811996fad6cfe8a1345aab84208f5bda1069567601bc5dccf4f4092dfe6",
+    "data/pharmacokinetics/jain2024assessment_FcRn.csv": "445bce140bc5a5686541ddad38dd2a73728d55012615c35edaf6f67fb51b7343",
+    "data/pharmacokinetics/jain2024assessment_tg32_clearance.csv": "cc7581e92ff0fb418fb6560bcfe2a18eb0497d212299b98bde3fdd2d1539afae",
+    "data/pharmacokinetics/jain2024assessment_tg32_halflife.csv": "4790b8d42090cd85d67f9111f5e449c121078b130addcedeb8fd0f3decb420ff",
+    "data/pharmacokinetics/makowski2022cooptimization_pI.csv": "9774cf9222e34e9ca66bc3a8871be29f1cbc1bcb328f3fedd27429d0c76d4319",
+    "data/pharmacokinetics/shanehsazzadeh2023unlocking_FcRnPeak.csv": "845ec8dc61028c4c40f0f05d2c64bf48f0faa32b9328ea2e053f934e3a68b7d6",
+    "data/pharmacokinetics/shanehsazzadeh2023unlocking_FcRnRRT.csv": "86cd4b8e0ff31e07b078505431d7d7f660739534f767e327ee58ceab7f201d97",
+    "data/pharmacokinetics/shanehsazzadeh2023unlocking_FcRnRT.csv": "d97b1db75e3a4d97afa1a87ed204baed7a0d6d14ef9715905eba206cf8e316c7",
+    "data/polyreactivity/jain2017biophysical_BVPELISA.csv": "3d1d39bae9ea870903b0e2f49bf5c73ef7eb506639fe07dc8a49a0c4f3bf6730",
+    "data/polyreactivity/jain2017biophysical_CICRT.csv": "0180151e3aedacc14460a024c5f7e133340b8f8aebffe777f6475e8369145367",
+    "data/polyreactivity/jain2017biophysical_ELISA.csv": "95b05b7b298d00381c12b26d9507873bea4af8827fdd3c05943db21aabbcbef3",
+    "data/polyreactivity/jain2017biophysical_PSR.csv": "ed4649aa777cc1ba5ffc249df677ee9f69b076a5b643fa2962eeb2e22f51711a",
+    "data/polyreactivity/jain2017biophysical_SMACRT.csv": "a89d658222a6e02074f398594422fd20a89682b8b7e501d2dc66d6ba9792ad45",
+    "data/polyreactivity/jain2023identifying_DNP.csv": "eacd6385b0fa675cf87bc8f0cdc7f04f5e79740a6bcca04e2f12a613cd728a56",
+    "data/polyreactivity/jain2023identifying_FA2.csv": "6b29a48ab6f0c5860468ec554bdddd13d24576b85e3aedd5ec28258c87a725d7",
+    "data/polyreactivity/jain2023identifying_FVC32.csv": "199c317c78a43254e58ac0433dbab20a322f9cba3ba9361549793359c75325c6",
+    "data/polyreactivity/jain2023identifying_FvFVIII2.csv": "5af8b5b6f22b14895c7913981ea56b81574582ad1cf9dbe4b077f3d466d9c10b",
+    "data/polyreactivity/jain2023identifying_FvLysM2.csv": "e3947f372925efce6012616653ff220e09ae203cf7e1692f7b5c0209be2f98a7",
+    "data/polyreactivity/jain2023identifying_Heme2.csv": "40c28a3e5ca04cdfac72d316a3fb38647b97ed6fcc57fd779335cbac3eb73af9",
+    "data/polyreactivity/jain2023identifying_HemeC32.csv": "2c69c3aed52a7e6491bbbda5094e45e008d3ac779e65c6e98632170296d02020",
+    "data/polyreactivity/jain2023identifying_HemeFVIII2.csv": "4b87ad9970f633de056952c12330934d8647720dbdccebcc9783798be9ce6e2a",
+    "data/polyreactivity/jain2023identifying_HemeLysM2.csv": "ada4f237312e109b17fb6ac2721c54adf5b232e10d97c77cac7c8456170d2f16",
+    "data/polyreactivity/jain2024assessment_Herapin_RT.csv": "88fafb12a45070cd474b98a6473f01d445794332694afde9a647303d597f4c6b",
+    "data/polyreactivity/jain2024assessment_PSR.csv": "5e77f845b2d113fb5f09d7319bc22553b8d1ce8544f332529023b901aa7ad62a",
+    "data/polyreactivity/rosace2023automated_CICRT1_adalimumab.csv": "1378b8297d7d812c1c041e10eb9b62166f775c6e5f2e4d11d893490ce34be758",
+    "data/polyreactivity/rosace2023automated_CICRT1_golimumab.csv": "382a539c796d4388c475bc1f9ed0bc9ec7ea08377d9de3cd087ef1078cde18ed",
+    "data/polyreactivity/rosace2023automated_CICRT2_adalimumab.csv": "3cc6f17b8d9c803241c11db3ad0332a0b674d9dc36a692b48ca61585369f9d1a",
+    "data/polyreactivity/rosace2023automated_CICRT2_golimumab.csv": "207a8e156b364cda08474f79966c19fc8dcc02bc79ef1d7eff932457652a74dc",
+    "data/polyreactivity/shanehsazzadeh2023unlocking_elisa_ec50.csv": "c82c187bb5e6436a32e13fba2d11f4718510012fd225988d48758aac80983403",
+    "data/polyreactivity/shanehsazzadeh2023unlocking_polyspecificity.csv": "7d47dacc99c8b715d2422babfb505639620c03ad2cf5eae10b8c242a1e76ac81",
+    "data/polyreactivity/shanker2024unsupervised_APC-MFI_Elotuzumab-Ixekuzimab.csv": "375516ab38a7ac0064baa148cb4a88d6af34b9e691e393f8e0dc916e2aa8837f",
+    "data/polyreactivity/shanker2024unsupervised_APC-MFI_Ly1404.csv": "baf07b9679840563cf0cbce1ab93d45346f05151072313a6e60d80d9c95f5c48",
+    "data/polyreactivity/shanker2024unsupervised_APC-MFI_SA58.csv": "e371a4a310981b69367c5f0c8a7f918ea23038d4e0544b14398771e160d2102d",
+    "data/thermostability/garbinski2023_tm1.csv": "ea02da65b2ab0663bb3e4ddbef3ec2038511443a2cbc2af2ac8afe3b4af4baf8",
+    "data/thermostability/hie2023efficient_C143_Tm.csv": "bcce005b7498b00e1298a4b4517c1dbddfad9efc71abdbf952b2165419c6fb84",
+    "data/thermostability/hie2023efficient_MEDIUCA_Tm.csv": "61be0d21700fbfa750d3aaf633889e909ffa1953b686901f78b0cd3676dae30d",
+    "data/thermostability/hie2023efficient_MEDI_Tm.csv": "4d692039defa0a45f01dbf07655238abdbc44c4afc0218db7227ae41688578c2",
+    "data/thermostability/hie2023efficient_REGN10987_Tm.csv": "fdf06e368ba1df2af8c213f4fe82b12b6e0d163a08da88c654b9eec683f4a137",
+    "data/thermostability/hie2023efficient_S309_Tm.csv": "3d346b0a70bfe898498dffdab433bef0450aa1db0dc6638b1ec7bbcbcdb79ccf",
+    "data/thermostability/hie2023efficient_mAb114UCA_Tm.csv": "fd372f1dcd491e0889b485fcafb6f1d5b0a75b1b57c182c202accb2b44ab8920",
+    "data/thermostability/hie2023efficient_mAb114_Tm.csv": "2a77e7049a183ca67a5d97237914be689e4e631377ce1ea1d66fe9e2b492ec57",
+    "data/thermostability/hutchinson2023enhancement_multitm1_igg.csv": "ded8db1c627e602e8aa14f4cad98c61d05cb0bfc38a5421d369f61dbb1864928",
+    "data/thermostability/hutchinson2023enhancement_singletm1_igg.csv": "cdc94741be47c4b6d1b750b81834514026373a0e7730a43c2c29e427811e66b9",
+    "data/thermostability/hutchinson2023enhancement_top200tm1_igg.csv": "74a6293f2be33d51acaaf102dea91b4584e24901cbbde843f1fa9daa450afce5",
+    "data/thermostability/hutchinson2023enhancement_top27tm1_igg.csv": "51398c33760f5652449800516a72d232a9e331a0d57c6749cef61e69c46fe6ac",
+    "data/thermostability/jain2017biophysical_Tm.csv": "86bf8d8da6015bd36907847ac94983edfcea425d1d188a422f75d40ea27bb09b",
+    "data/thermostability/jain2024assessment_Tm.csv": "b4ce11c7473b3d55f44c56bd62509db42ffa077dfb006cafad7ea326bb8d67b2",
+    "data/thermostability/rosace2023automated_tm1_adalimumab.csv": "eaa1fddba5702e22ae2858994f0911cbaf1efaab92f9a58546aa3f96f43657a7",
+    "data/thermostability/rosace2023automated_tm1_golimumab.csv": "4c7998d6f2159baeb8a3bc506d2065e18b9c2e2e69e2266c43a761b2d41fb0b2",
+    "data/thermostability/shanehsazzadeh2023unlocking_DLS.csv": "81de45d852c20c4e03d957de2408b0ab8c6025f121af53305523aa423079c8e5",
+    "data/thermostability/shanehsazzadeh2023unlocking_DSF1.csv": "fb21d1ba98309a7830f05d6232ebcee083eccd6551529e6482d906e3d712af6f",
+    "data/thermostability/shanehsazzadeh2023unlocking_DSF2.csv": "026d21ae62bd4211cd4882f565dc36b69e00307fd4b3fb47954bd5d0cdae30fc",
+    "data/thermostability/sulea2019assisted_sdAb_tm.csv": "718a22d91a402abb4641d34fc47a22327302ab9f31837f2e02f82de21b0b4864",
+    "data/thermostability/tresanco2023nbthermo_tm.csv": "cf61929d109de4ef272ad46dfc2cd5812241b42a6ba92ee372afdfdb893dda44",
+    "score/antiberty/aggregation/Wittrup2017_CST_ACSINS/Wittrup2017_CST_ACSINS_ppl.csv": "e3b7f5b37bdfb0164470fb8981be958a4e6c239a2b1645caa11011b6d019b5f3",
+    "score/antiberty/aggregation/Wittrup2017_CST_CSI/Wittrup2017_CST_CSI_ppl.csv": "1de06e822b320a1accaa1df907b7e0d7416d4df93c29f6386080bcaab5a4cb0d",
+    "score/antiberty/aggregation/Wittrup2017_CST_HIC/Wittrup2017_CST_HIC_ppl.csv": "4c407562d6513b0dfc515cbb1859db776d34ecea427a0bd5a6e372f3817435d5",
+    "score/antiberty/aggregation/Wittrup2017_CST_SAS/Wittrup2017_CST_SAS_ppl.csv": "15b69b1114409f233e413596da054518023877c8b6ea03c6aad7f7ddb24ff877",
+    "score/antiberty/aggregation/Wittrup2017_CST_SGAC/Wittrup2017_CST_SGAC_ppl.csv": "80f9f42adc6fe514eb72fc0285dcbcb634b8bb842811e4b89ffcbf3e0aa921d3",
+    "score/antiberty/aggregation/Wittrup2017_CST_SMAC/Wittrup2017_CST_SMAC_ppl.csv": "7068304013091335e727081cc58e3286a9eeb1dbfc669bdc97d1d1f82cbd8125",
+    "score/antiberty/expression/Koenig2017_g6_er/Koenig2017_g6_er_ppl.csv": "e1271fd9f7e57deb9f40ed503fd991c3e7e85ad0f888c73b1b0264f6abe1e740",
+    "score/antiberty/expression/Wittrup2017_CST_BVP/Wittrup2017_CST_BVP_ppl.csv": "277657e2a8a580857ec1169146fee102dae356d84b3ec9892a6253daa8f43f10",
+    "score/antiberty/expression/Wittrup2017_CST_HEK/Wittrup2017_CST_HEK_ppl.csv": "4a6381ad77473813f3251bd81a993812b4ee579750ba4f4117ae25f91dd65bd6",
+    "score/antiberty/expression/gsk2023_AM14_exp/gsk2023_AM14_exp_ppl.csv": "6c93d127cbbb874dc931da16c26c0356171233b3f81d8a0b955384706583ac54",
+    "score/antiberty/expression/gsk2023_D25_exp/gsk2023_D25_exp_ppl.csv": "63c6603015070661088f8f9b45137df9408b8cbb5332241d936728d49bd2098a",
+    "score/antiberty/expression/gsk2023_MOTA_exp/gsk2023_MOTA_exp_ppl.csv": "8cfb5f14823cef6ee5dfff78d10d0b9f4395f792686812bc0713f3325c8112ec",
+    "score/antiberty/expression/gsk2023_RSB1_exp/gsk2023_RSB1_exp_ppl.csv": "0833a4d516d2dc1697bb14668430511134a7de8b157b3ce4ecf38dd20ddfba7d",
+    "score/antiberty/immunogenicity/Prihoda2021_mAb_immunogenicity/Prihoda2021_mAb_immunogenicity_ppl.csv": "a3c56289f2778b050e07390f7cc1e6e5ed036a5c68e1f657f084b226c559ffe5",
+    "score/antiberty/polyreactivity/Rosace2023_Adalimumab_CIC/Rosace2023_Adalimumab_CIC_ppl.csv": "31dafdf19f3278bd78bc9d8d858b4cb322af7e35a42f6c0bbadefafc3e45df0f",
+    "score/antiberty/polyreactivity/Rosace2023_CR3022_CIC/Rosace2023_CR3022_CIC_ppl.csv": "e38c0f90ba88ea60d03e05f7b62a2c8e5d1df9b6732a84dd71752f0d0ba52012",
+    "score/antiberty/polyreactivity/Rosace2023_Golimumab_CIC/Rosace2023_Golimumab_CIC_ppl.csv": "356db782a91b8c7899e43db7fdeee84c5a7f61490bb36ba6d311f99545534c4f",
+    "score/antiberty/polyreactivity/Wittrup2017_CST_CIC/Wittrup2017_CST_CIC_ppl.csv": "d46bd151ae6bf1d81d44b715d0c8f5e6ad9373ef25ace264ee740013c7937350",
+    "score/antiberty/polyreactivity/Wittrup2017_CST_ELISA/Wittrup2017_CST_ELISA_ppl.csv": "87fd55dc0a5cdcd2fb01c0b4506b0cf28c1742578ddaa28c22a459aed604ff4f",
+    "score/antiberty/polyreactivity/Wittrup2017_CST_PSR/Wittrup2017_CST_PSR_ppl.csv": "13836036d23f05206b3f801513eb071eacb08dbce573f7f3dc312d5038cbac10",
+    "score/antiberty/tm/Hie2022_C143_Tm/Hie2022_C143_Tm_ppl.csv": "252ca43d8aaecca2178fb8f4d05e45ba2908b808f0af5bd610c854e730cae3e1",
+    "score/antiberty/tm/Hie2022_MEDI8852UCA_Tm/Hie2022_MEDI8852UCA_Tm_ppl.csv": "7651edb6f17e1bfb1e9a355837f528c979183d9f69a8a50b7ddb6e585bbe7d24",
+    "score/antiberty/tm/Hie2022_MEDI8852_Tm/Hie2022_MEDI8852_Tm_ppl.csv": "500b27aa8c3f034aaf4a055f643f72f85e2923d264b642c4bb70cd3610f93816",
+    "score/antiberty/tm/Hie2022_REGN10987_Tm/Hie2022_REGN10987_Tm_ppl.csv": "a7c968c0122d7804e943b70e7529a465695893d197e4cc49e6ef9b618480555c",
+    "score/antiberty/tm/Hie2022_S309_Tm/Hie2022_S309_Tm_ppl.csv": "c78c24cbf25b22382962e18404a062c99e5bffc9c0b864843708a17f64a37100",
+    "score/antiberty/tm/Hie2022_mAb114UCA_Tm/Hie2022_mAb114UCA_Tm_ppl.csv": "9407896e721717d86292b78e7ac076556e692ff087c671d97f9ea4d4de1b8bfa",
+    "score/antiberty/tm/Hie2022_mAb114_Tm/Hie2022_mAb114_Tm_ppl.csv": "bee0455d3ca7b9f3b169d329d3735fe646ee27ac1b35f8b2f994911376ab463e",
+    "score/antiberty/tm/Rosace2023_Adalimumab_Tm/Rosace2023_Adalimumab_Tm_ppl.csv": "b0f9572349972c504bc84ed1706abb687cb91fbc724513889d1bdc4d45eebfca",
+    "score/antiberty/tm/Rosace2023_CR3022_Tm/Rosace2023_CR3022_Tm_ppl.csv": "dedd65d029b25902f65a72d4fb07873511afcba37ed4b4438a583f06e7181686",
+    "score/antiberty/tm/Rosace2023_Golimumab_Tm/Rosace2023_Golimumab_Tm_ppl.csv": "7864122b2e8b04f7bda5aca53a0987d63923e01e0ce293e779b04a9185004ed6",
+    "score/antiberty/tm/Wittrup2017_CST_Tm/Wittrup2017_CST_Tm_ppl.csv": "78cbfc6eccc212d85331789bca46115bf3fe95873a13b6008c5ca0806a49ed00",
+    "score/antiberty/tm/gsk2023_AM14_Tm/gsk2023_AM14_Tm_ppl.csv": "082158f8882dcd18efcf8f566b718d10bc4d7a0223a9ee01780627192703b310",
+    "score/antiberty/tm/gsk2023_D25_Tm/gsk2023_D25_Tm_ppl.csv": "86e3f947ee2c550a51d996a123362b1f2ae93a74ce852a840a9712183e4e8541",
+    "score/antiberty/tm/gsk2023_MOTA_Tm/gsk2023_MOTA_Tm_ppl.csv": "d16abd3db374ce48bc3ca13e4e31f7c715f2bcd8cd75a954a676db46b86500c9",
+    "score/antiberty/tm/gsk2023_RSB1_Tm/gsk2023_RSB1_Tm_ppl.csv": "c0342d932267f58702265c47b6549f3df6e43673dab7ec97bdb1086ac177b9c4"
+  },
+  "predictions_table_summary": {
+    "file": "object/predictions_tm_polyreactivity.csv",
+    "total_rows": 4499,
+    "contains_copied_sequences": false,
+    "columns": [
+      "universe",
+      "category",
+      "dataset",
+      "row_index",
+      "clss_reg8_allbp_imgt_z",
+      "exploratory_clss_reg7_mw_imgt_z",
+      "exploratory_clss_eqwt6_imgt_z"
+    ]
+  },
   "runtime": {
-    "wall_seconds": 14.69,
-    "cpu_seconds": 14.02,
-    "unique_sequences_scored": 5961
+    "wall_seconds": 19.65,
+    "cpu_seconds": 19.39,
+    "unique_sequences_scored": 8900
   }
 }
