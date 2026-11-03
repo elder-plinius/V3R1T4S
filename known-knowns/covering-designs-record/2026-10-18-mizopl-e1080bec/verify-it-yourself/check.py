@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 """Standalone exhaustive verifier for the (94,13,5) covering design with 125,184 blocks.
 Runs built-in positive and negative self-tests on the Fano plane C(7,3,2)=7 first, then
-reassembles object/design_94_13_5_part1.txt .. part5.txt and exhaustively checks all
-C(94,5) = 54,891,018 5-subsets of {0..93}.
+verifies the SHA-256 of each part object/design_94_13_5_part1.txt .. part5.txt,
+reassembles the full design, and exhaustively checks all C(94,5) = 54,891,018 5-subsets of {0..93}.
 Last output line is PASS or FAIL."""
 import glob, hashlib, itertools, math, os, sys
+
+EXPECTED_PART_SHA256 = {
+    "object/design_94_13_5_part1.txt": "23293563435089495905a9e566a4e7967cc8ee2680d18d1c371c62dc259e0e84",
+    "object/design_94_13_5_part2.txt": "dba09719caebbf3a02311053e961c7b4d322b8ca6459867078667cd7e552406a",
+    "object/design_94_13_5_part3.txt": "17fa58d424b84ce7046f8afca8ac28d4fa43606850046ca0796aeac1cd3ae2de",
+    "object/design_94_13_5_part4.txt": "689115faa84af43d3c2d7fc411f272b02df5f9830ec8b02e72b26fba8861dc52",
+    "object/design_94_13_5_part5.txt": "0b43890442d627c987cf27f184512b0fd3288c035ca61dae22f308ab91e095fc",
+}
+EXPECTED_FULL_SHA256 = "e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908"
 
 def schonheim(v, k, t):
     b = 1
@@ -31,7 +40,7 @@ def check_design_bytes(v, k, t, raw_bytes, require_strict_inc=True):
                     return False, f"line {idx}: points not strictly increasing: {pts}"
         if min(pts) < 0 or max(pts) >= v or len(set(pts)) != k:
             return False, f"line {idx}: invalid or repeated points in 0..{v-1}: {pts}"
-        blocks.append(tuple( sorted(pts) ))
+        blocks.append(tuple(sorted(pts)))
     distinct = len(set(blocks))
     if distinct != b:
         return False, f"duplicate blocks: distinct={distinct} != b={b}"
@@ -95,15 +104,24 @@ def main():
         return 1
     print("self_tests: PASS (positive Fano C(7,3,2)=7 and negative controls)")
 
-    # 2. Reassemble object/design_94_13_5_part1.txt .. part5.txt
+    # 2. Verify each part's individual SHA-256 and reassemble object/design_94_13_5_part1.txt .. part5.txt
     parts = sorted(glob.glob("object/design_94_13_5_part*.txt"))
     if len(parts) != 5:
         print(f"expected 5 part files in object/, found {len(parts)}")
         print("FAIL")
         return 1
-    raw = b"".join(open(p, "rb").read() for p in parts)
+    chunks = []
+    for p in parts:
+        b_part = open(p, "rb").read()
+        sha_part = hashlib.sha256(b_part).hexdigest()
+        if sha_part != EXPECTED_PART_SHA256.get(p):
+            print(f"part sha256 mismatch on {p}: {sha_part}")
+            print("FAIL")
+            return 1
+        chunks.append(b_part)
+    raw = b"".join(chunks)
     sha = hashlib.sha256(raw).hexdigest()
-    print(f"reassembled_bytes={len(raw)} sha256={sha}")
+    print(f"parts_verified=5 reassembled_bytes={len(raw)} sha256={sha}")
 
     ok, msg = check_design_bytes(94, 13, 5, raw, require_strict_inc=True)
     print("check_94_13_5:", msg)
@@ -114,11 +132,11 @@ def main():
         print("unexpected block count")
         print("FAIL")
         return 1
-    if sha != "e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908":
+    if sha != EXPECTED_FULL_SHA256:
         print("sha256 mismatch against claimed design")
         print("FAIL")
         return 1
-    print("comparison: 125184 < 129203 (Covering Repository) and 125184 < 129337 (LJCR)")
+    print("comparison: 125184 < 125236 (47+47 LJCR combining baseline, -52) < 129203 (CR 2026-10-18, -4019) < 129337 (LJCR 2026-10-18, -4153)")
     print("PASS")
     return 0
 

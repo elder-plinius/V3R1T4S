@@ -1,37 +1,14 @@
-# C(94,13,5) <= 125,184: explicit (94,13,5) covering design beating CR (129,203) and LJCR (129,337)
+# covering-designs-record — Explicit `(94, 13, 5)` Covering Design with `125,184` Blocks
 
-## What
-
-An explicit (94,13,5) covering design in claim/design_94_13_5.txt (sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908) with 125,184 distinct 13-element blocks over {0..93}, exhaustively verified across all 54,891,018 5-subsets of a 94-set with zero uncovered 5-subsets, strictly improving on the Covering Repository plain (v,k,t) record of 129,203 (by 4,019 blocks) and the La Jolla Covering Repository record of 129,337 (by 4,153 blocks) for C(94,13,5).
-
-To stay under the 1 MB per-file repository limit, the 4,704,754-byte design file is stored as five plain-text parts `object/design_94_13_5_part1.txt` through `object/design_94_13_5_part5.txt` (~940 KB each) whose concatenation is byte-for-byte `claim/design_94_13_5.txt` (`sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908`).
-
-## Check it yourself
-
-One command from this package folder:
-
-```sh
-sh verify-it-yourself/run_checks.sh
-```
-
-Expected last line: `PASS`. Rough laptop time: ~2.5 seconds with `numpy` (~60 seconds with pure standard-library Python). It runs positive and negative self-tests on the Fano plane $C(7,3,2)=7$, reassembles the five part files in `object/`, verifies the SHA-256 and structural validity (`125,184` distinct blocks of 13 strictly increasing points in `0..93`, above the Schonheim lower bound $L(94,13,5)=42,705$), and exhaustively checks that all $\binom{94}{5} = 54,891,018$ 5-subsets are covered (`uncovered=0`).
-
-## Compared to
-
-| repository | cell | our blocks (b) | live table value | improvement | URL | fetched (UTC) |
-|---|---|---|---|---|---|---|
-| Covering Repository (plain v,k,t archive) | C(94,13,5) | 125,184 | 129,203 | -4,019 (-3.11%) | https://coveringrepository.com/download_archive_vkt.aspx | 2026-10-18T09:40:05Z |
-| La Jolla Covering Repository (LJCR v1.2) | C(94,13,5) | 125,184 | 129,337 | -4,153 (-3.21%) | https://dmgordon.org/covering-designs/ | 2026-10-18T09:40:05Z |
-
-## Not claimed
-
-- Only the single cell `C(94,13,5) <= 125,184` is claimed in this package (one cell per package).
-- No lower-bound improvement is claimed: the Schonheim lower bound remains $L(94,13,5) = 42,705$.
-- No claim is made that `125,184` is optimal; it is an explicit upper-bound construction that is 1-minimal (`0` redundant blocks under single-block deletion).
-
-## Credits
-
-- **Contributor:** [mizopl](https://github.com/mizopl).
-- **Daniel M. Gordon** — La Jolla Covering Repository (https://dmgordon.org/covering-designs/, Zenodo https://doi.org/10.5281/zenodo.10779736, GitHub https://github.com/dmgordo/LJCR), whose component coverings for $v=47$ served as the starting ingredients.
-- **Giovanni Acerbi** — Covering Repository (https://coveringrepository.com/), primary comparison table for $(v,k,t)$ coverings.
-- **Daniel M. Gordon, Greg Kuperberg, and Oren Patashnik** — "New constructions for covering designs", *Journal of Combinatorial Designs* 3(4):269–284, 1995 (combining construction framework).
+- **Claim:** The explicit `(94, 13, 5)` covering design stored in `object/design_94_13_5_part1.txt .. object/design_94_13_5_part5.txt` (reassembled `sha256: e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908`, `4,704,754` bytes) has `125,184` distinct 13-element blocks over `{0, ..., 93}` and covers all $\binom{94}{5} = 54,891,018$ 5-subsets of a 94-set (`0` uncovered 5-subsets).
+- **Compared to:**
+  - **$47 + 47$ LJCR ingredient combining baseline (`how-we-built-it/build.py`):** `C(94, 13, 5) <= 125,236` blocks, constructed by partitioning $94 = 47 + 47$ across $j = 0, \dots, 5$ using the La Jolla Covering Repository (LJCR v1.2, Zenodo record `19735294`, published `2026-04-24`, fetched `2026-10-18T09:40:54Z`) ingredient designs credited to **Jan de Heer & Steve Muir** ($C(47, 13, 5) \le 2,849$, `2026-02-28`; $C(47, 11, 4) \le 866$, `2026-02-28`; $C(47, 8, 3) \le 345$, `2009-07-02`) and **Michael Dambmann** ($C(47, 5, 2) \le 113$, `2008-11-22`) plus trivial $(47, 2, 1) = 24$ and $(47, 0, 0) = 1$ (`2,849 + 20,784 + 38,985 + 38,985 + 20,784 + 2,849 = 125,236`, `sha256: 4ddf66cf9edf0cf96165e7514dbcd0cafb9c3dc67198326ea0586a63661ffcfb`).
+  - **Covering Repository (`coveringrepository.com` plain `(v,k,t)` table, `m = t = 5`):** `C(94, 13, 5) <= 129,203` (fetched `2026-10-18T09:40:05Z`, `sha256: 78bf5453858b476b90eeebd8ee8a35454e5f31866dd5f629934083ca0cd9bee3`, line `3648`).
+  - **La Jolla Covering Repository (`dmgordon.org/covering-designs/` & Zenodo `dmgordo/LJCR` v1.1 `19472830` / v1.2 `19735294`):** `C(94, 13, 5) <= 129,337` (status page fetched `2026-10-18T09:40:05Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo v1.2 `coverdata.json` updated `2026-04-24`, fetched `2026-10-18T09:40:54Z`, `sha256: 9e7da3710921066b10234fdc95379a18df3a7d3ae0f8a08ae188ea6bbca92f87`).
+  - **Schönheim lower bound:** $L(94, 13, 5) = 42,705$.
+- **Margin:**
+  - **`52` blocks (`-0.0415%`)** below the `125,236`-block $47+47$ LJCR combining construction (`how-we-built-it/merge.c` pair-merge post-pass),
+  - **`4,019` blocks (`-3.1106%`)** below the live Covering Repository record (`129,203`, fetched `2026-10-18T09:40:05Z`), and
+  - **`4,153` blocks (`-3.2110%`)** below the live La Jolla Covering Repository record (`129,337`, fetched `2026-10-18T09:40:05Z` / `2026-10-18T09:40:54Z`).
+- **One-liner to verify:** `sh verify-it-yourself/run_checks.sh`
+- **Status:** `SELF-CONTAINED CONFIRMED`

@@ -1,2 +1,24 @@
-target_id,cell,value,table_value,table_fetched_utc,file,sha256
-covering-designs-record,"C(94,13,5)",125184,129203,2026-10-18T09:40:05Z,object/design_94_13_5_part1.txt,e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908
+path,role,sha256,description
+README.md,narrative,a6744fd9fe05f288dd936e9a2bd51638327c6563e31a929eabb6cbe67e16cde6,Top-level summary of the C(94,13,5) <= 125,184 record claim against the 125,236 47+47 LJCR combining baseline and live CR/LJCR tables
+HOW_WE_FOUND_IT.md,narrative,e184361646e840b59192825c6aa4e9d9f72d38db9b2f8192bcdcae1cfb4180f0,Contributor narrative on the 47+47 LJCR combining construction (125,236) and pair-merge local search (125,184)
+RUN_IT_YOURSELF.md,verification,c9db711c08e46d5d11ee5ce94fd9c5457c3edeb282679acffe632647231d1a11,One-command verification and rebuild instructions
+object/design_94_13_5_part1.txt,object,23293563435089495905a9e566a4e7967cc8ee2680d18d1c371c62dc259e0e84,Part 1 of 5 (lines 1..25,037; 962,542 bytes) of the 125,184-block (94,13,5) covering design (whole reassembled design_94_13_5.txt: 4,704,754 bytes, sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908)
+object/design_94_13_5_part2.txt,object,dba09719caebbf3a02311053e961c7b4d322b8ca6459867078667cd7e552406a,Part 2 of 5 (lines 25,038..50,074; 945,541 bytes) of the 125,184-block (94,13,5) covering design (whole reassembled design_94_13_5.txt sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908)
+object/design_94_13_5_part3.txt,object,17fa58d424b84ce7046f8afca8ac28d4fa43606850046ca0796aeac1cd3ae2de,Part 3 of 5 (lines 50,075..75,111; 941,586 bytes) of the 125,184-block (94,13,5) covering design (whole reassembled design_94_13_5.txt sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908)
+object/design_94_13_5_part4.txt,object,689115faa84af43d3c2d7fc411f272b02df5f9830ec8b02e72b26fba8861dc52,Part 4 of 5 (lines 75,112..100,148; 939,948 bytes) of the 125,184-block (94,13,5) covering design (whole reassembled design_94_13_5.txt sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908)
+object/design_94_13_5_part5.txt,object,0b43890442d627c987cf27f184512b0fd3288c035ca61dae22f308ab91e095fc,Part 5 of 5 (lines 100,149..125,184; 915,137 bytes) of the 125,184-block (94,13,5) covering design (whole reassembled design_94_13_5.txt sha256 e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908)
+verify-it-yourself/run_checks.sh,verification,8816b42d9e003d2b5a417cdf1b10582ada982581b13fffeea22a4fa9fc41d132,POSIX shell entry point for verification
+verify-it-yourself/check.py,verification,5acc11ba04c2b0af8b37eeb9c6431731992914d84d4f70cb65136e7b11e3f276,Standalone exhaustive combinadic verifier with Fano C(7,3,2) positive/negative self-tests and per-part SHA-256 checks
+verify-it-yourself/RECEIPTS.md,verification,1ecfe7c88a4abfc7e93d36a85fa834b695e485c1ff5bb8a36f19b4bc28306f12,Transcript of verification output
+how-we-built-it/COMMANDS.md,Provenance,059eface1de200211144f45e91ac19770eaa521d745df06fb80f88adfce6375c,Exact six v=47 LJCR ingredient terms (with URLs, sha256s, and contributor credits) and self-contained rebuild commands
+how-we-built-it/build.py,Provenance,955b96235ee8ca56e7c6fdb07383c7a817486a9a068de7b00ec31f31e76c11c3,Self-contained builder verifying the six v=47 LJCR ingredient sha256s and assembling the 125,236-block 47+47 baseline
+how-we-built-it/merge.c,Provenance,7b91a285ab65f5a14b787d0aae85919e950266a73777e8fb0131034ef1a6a992,C implementation of pair-merge local search on uniquely covered t-subsets (125,236 -> 125,184)
+how-we-built-it/prune.c,Provenance,48b126c5b459f28fc55a3244c20c74f0c9c660653f9247bcc0ba68aeae952a94,C implementation of greedy redundant-block elimination
+how-we-built-it/splitopt.py,Provenance,732e5b59d449239625db519ada29645766442e5f83ffb27f16bf3b784ddfda4c,Python optimizer for two-part combining constructions
+the-record-we-beat/snapshot.md,baseline,1cd4c9ee176eaafcca772e5e311f0c3599bb2647f10952133a46d3bb9bc6bc67,Dated snapshot of live Covering Repository (129,203), LJCR (129,337), and 47+47 LJCR combining baseline (125,236)
+panel/gate.md,panel,92e7ec56be6ddf410d43637adac678596089fb9e5701bb29914a1510fbd463af,Honesty Gate summary
+panel/reproduce.md,panel,c31a238eeccfb3d5894cc3d6d577ed93e739b5bfeea79b9f82fdfffeeb05c1fd,REPRODUCE skeptic report
+panel/novelty.md,panel,28e7ada1a7048752640c229591e904680ca1fe2aeedd707e86d845d2508e04be,NOVELTY skeptic report
+panel/criterion.md,panel,0abae28f12e69e9bdd47add2ed83bb96742d4b7e671a64a0723844e13a8d3f54,CRITERION skeptic report
+prompt/README.md,Provenance,a3630d5374083156cb5912153c895b6140a78aa9785bb607f759e91cd98ff3fd,Pinned repository commit and note on extending the sweep beyond the initial t=8 charter
+prompt/RUN_PROMPT.txt,Provenance,fa4bb95bde07ea21406aef5a5416ab874ec12187aba5e3f856e4dee05f19098e,Run prompt with workspace path sanitized

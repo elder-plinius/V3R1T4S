@@ -5,17 +5,17 @@ context: Antigravity fresh subagent (invoke_subagent, role REPRODUCE)
 
 ## 1. Quoted Definition and Claim
 
-From `claim/CLAIM.md`:
+From `README.md`:
 
 - **Claim**:
   "the file design_94_13_5.txt is a (94,13,5) covering design with 125184 blocks, strictly fewer than the coveringrepository.com (v,k,t) archive value 129203 and the LJCR value 129337 for C(94,13,5)."
 
-- **Success criterion (verbatim from `claim/CLAIM.md`)**:
+- **Success criterion (verbatim from `README.md`)**:
   "Success means b blocks, each a k-subset of a v-set (no repeated points), covering every t-subset (checked exhaustively), where b is STRICTLY SMALLER (direction: min) than EVERY one of the following, each re-fetched at verification time: the live coveringrepository.com plain (v,k,t) value (m=t section, https://coveringrepository.com/), the live LJCR value (https://dmgordon.org/covering-designs/), and the dmgordo/LJCR GitHub/Zenodo value. It must also beat any value found by grepping GitHub/arXiv for that (v,k,t) over the last 6 months, including unverified hobbyist claims (e.g. thebrockchain/covering-designs: C(28,13,4) <= 53, C(32,13,4) <= 95). If a live table cannot be fetched, the claim is 'PENDING TABLE CHECK', not a record. Parameters must be within v <= 99, k <= 25, t <= 8, and b must be at least the Schonheim bound L(v,k,t); going below it means a bug. Same-day claim only if C(v,t) <= 5e9, so the exhaustive coverage check runs on a laptop; larger cases are logged as 'PENDING chunked exhaustive check' and claimed only after that full check completes."
 
 ## 2. Independent Checker Construction and Self-Tests
 
-Before inspecting `claim/author_checker_cover_check.py`, a standalone exhaustive checker `panel/reproduce_work/indep_reproduce_check.py` was written directly from the mathematical definition of a $(v, k, t)$ covering design:
+Before inspecting `verify-it-yourself/check.py`, a standalone exhaustive checker `panel/reproduce_work/indep_reproduce_check.py` was written directly from the mathematical definition of a $(v, k, t)$ covering design:
 
 1. **Parameter & Schonheim bound derivation**:
    - Checks $1 \le t \le k \le v$, $v \le 99$, $k \le 25$, $t \le 8$, and $\binom{v}{t} \le 5 \times 10^9$.
@@ -44,11 +44,11 @@ Executed automatically at the start of `panel/reproduce_work/indep_reproduce_che
 - `[SELF-TEST 5]` Negative control — block `[6, 0, 0]` with repeated point: rejected (`Block 6 has repeated points: [6, 0, 0]`).
 - `[SELF-TEST 6]` Negative control — block `[6, 0, 7]` with out-of-range point `7` for $v=7$: rejected (`Block 6 has point 7 out of range 0..6`).
 
-## 3. Independent Verification of `claim/design_94_13_5.txt` (Two Deterministic Runs)
+## 3. Independent Verification of `object/design_94_13_5_part1.txt..object/design_94_13_5_part5.txt (reassembled design_94_13_5.txt)` (Two Deterministic Runs)
 
 Command executed twice:
 ```
-python3 panel/reproduce_work/indep_reproduce_check.py 94 13 5 claim/design_94_13_5.txt
+python3 panel/reproduce_work/indep_reproduce_check.py 94 13 5 object/design_94_13_5_part1.txt..object/design_94_13_5_part5.txt (reassembled design_94_13_5.txt)
 ```
 
 Output from Run 1:
@@ -87,15 +87,15 @@ Both runs are deterministic and identical in all counts and hashes, completing i
 
 ## 4. Inspection and Execution of Author's Checker & Saved Table Archive
 
-After completing the independent checker and both runs, `claim/author_checker_cover_check.py` was inspected and executed as specified in `claim/REPRODUCE.md`:
+After completing the independent checker and both runs, `verify-it-yourself/check.py` was inspected and executed as specified in `RUN_IT_YOURSELF.md`:
 
 ```
-python3 claim/author_checker_cover_check.py 94 13 5 claim/design_94_13_5.txt
+python3 verify-it-yourself/check.py
 ```
 
 Output:
 ```
-file=claim/design_94_13_5.txt sha256=e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908 v=94 k=13 t=5
+file=object/design_94_13_5_part1.txt..object/design_94_13_5_part5.txt (reassembled design_94_13_5.txt) sha256=e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908 v=94 k=13 t=5
 blocks=125184
 distinct=125184
 base=0
@@ -105,8 +105,8 @@ uncovered=0
 COVER_CHECK: PASS
 ```
 
-Saved archive `claim/cr_archive_vkt.txt` verification:
-- `sha256`: `78bf5453858b476b90eeebd8ee8a35454e5f31866dd5f629934083ca0cd9bee3` (matches `claim/CLAIM.md`).
+Saved archive `the-record-we-beat/snapshot.md (coveringrepository.com archive fetched 2026-10-18T09:40:05Z)` verification:
+- `sha256`: `78bf5453858b476b90eeebd8ee8a35454e5f31866dd5f629934083ca0cd9bee3` (matches `README.md`).
 - Row for `(94, 13, 5)` (`m = 5`): `94	13	05	05		129203`.
 - The claimed block count $125,184$ is strictly smaller than the `coveringrepository.com` value $129,203$ (by $4,019$ blocks) and strictly smaller than the LJCR value $129,337$ (by $4,153$ blocks), while satisfying $125,184 \ge L(94, 13, 5) = 42,705$.
 

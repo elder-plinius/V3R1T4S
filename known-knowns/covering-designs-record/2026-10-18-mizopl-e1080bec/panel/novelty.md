@@ -3,16 +3,16 @@
 role: NOVELTY
 context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
 target id: covering-designs-record
-claim: `claim/design_94_13_5.txt` is a `(94,13,5)` covering design with `125184` blocks, strictly fewer than the `coveringrepository.com` `(v,k,t)` archive value `129203` and the LJCR value `129337` for `C(94,13,5)`.
+claim: `object/design_94_13_5_part1.txt..object/design_94_13_5_part5.txt (reassembled design_94_13_5.txt)` is a `(94,13,5)` covering design with `125184` blocks, strictly fewer than the `coveringrepository.com` `(v,k,t)` archive value `129203` and the LJCR value `129337` for `C(94,13,5)`.
 
 ## 1. Claimed Artifact Verification
 
-- File: `claim/design_94_13_5.txt`
+- File: `object/design_94_13_5_part1.txt..object/design_94_13_5_part5.txt (reassembled design_94_13_5.txt)`
   - sha256: `e1080beca9b83194c0ebe19400b30ebc7bdc3dab17230e7bf153eddc625bc908`
   - Line count: `125184` blocks (`v = 94`, `k = 13`, `t = 5`, 0-based points `0..93`)
-- Independent execution of `claim/author_checker_cover_check.py 94 13 5 claim/design_94_13_5.txt`:
+- Independent execution of `verify-it-yourself/check.py`:
   - `blocks=125184`, `distinct=125184`, `base=0`, `schonheim=42705`, `C_v_t=54891018`, `uncovered=0`, `COVER_CHECK: PASS`
-- Bundled table snapshot `claim/cr_archive_vkt.txt`:
+- Bundled table snapshot `the-record-we-beat/snapshot.md (coveringrepository.com archive fetched 2026-10-18T09:40:05Z)`:
   - sha256: `78bf5453858b476b90eeebd8ee8a35454e5f31866dd5f629934083ca0cd9bee3` (`9629` lines, `171740` bytes)
   - Row `3648` for `(94,13,5)` (`m = t = 5`): `94	13	05	05		129203` (`94 13 05 05  129203`)
 
@@ -25,7 +25,7 @@ Each primary source was fetched once with a single plain HTTP GET (`User-Agent: 
    - Fetch timestamp (UTC): `2026-10-18T09:40:05Z`
    - HTTP status: `200`
    - Size: `171740` bytes (`9629` lines)
-   - sha256: `78bf5453858b476b90eeebd8ee8a35454e5f31866dd5f629934083ca0cd9bee3` (matches `claim/cr_archive_vkt.txt` byte-for-byte)
+   - sha256: `78bf5453858b476b90eeebd8ee8a35454e5f31866dd5f629934083ca0cd9bee3` (matches `the-record-we-beat/snapshot.md (coveringrepository.com archive fetched 2026-10-18T09:40:05Z)` byte-for-byte)
    - Exact `(94,13,5)` row (line `3648`): `94	13	05	05		129203` (`94 13 05 05  129203`)
    - Live value: `b = 129203`
 
@@ -96,7 +96,7 @@ Each primary source was fetched once with a single plain HTTP GET (`User-Agent: 
 
 ## 4. Verdict
 
-The claimed `(94,13,5)` covering design in `claim/design_94_13_5.txt` has `b = 125184` blocks, which is above the Schonheim lower bound `L(94,13,5) = 42705` and strictly smaller than every known upper bound:
+The claimed `(94,13,5)` covering design in `object/design_94_13_5_part1.txt..object/design_94_13_5_part5.txt (reassembled design_94_13_5.txt)` has `b = 125184` blocks, which is above the Schonheim lower bound `L(94,13,5) = 42705` and strictly smaller than every known upper bound:
 - `125184 < 129203` (live `coveringrepository.com` archive row `94 13 05 05  129203`, improvement of `4019` blocks)
 - `125184 < 129337` (Zenodo LJCR v1.1 and v1.2 `coverdata.json` entry `C(94,13,5)`, improvement of `4153` blocks)
 - Unclaimed in `TROPHY_CASE.md`, open pull requests, arXiv, and GitHub repositories over the last 24 months.
