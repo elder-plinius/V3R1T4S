@@ -1,0 +1,9 @@
+n=1 mode=neighbours graphs=1 maxperiod=1 witness_graph6=@ witness_rule_mask=1 witness_state=1 rule={0}
+n=2 mode=neighbours graphs=1 maxperiod=2 witness_graph6=A_ witness_rule_mask=1 witness_state=0 rule={0}
+n=3 mode=neighbours graphs=2 maxperiod=2 witness_graph6=BW witness_rule_mask=1 witness_state=0 rule={0}
+n=4 mode=neighbours graphs=6 maxperiod=6 witness_graph6=CU witness_rule_mask=2 witness_state=1 rule={1}
+n=5 mode=neighbours graphs=21 maxperiod=7 witness_graph6=D]w witness_rule_mask=6 witness_state=28 rule={1,2}
+n=6 mode=neighbours graphs=112 maxperiod=18 witness_graph6=ECrw witness_rule_mask=5 witness_state=22 rule={0,2}
+n=7 mode=neighbours graphs=853 maxperiod=38 witness_graph6=FQzuo witness_rule_mask=5 witness_state=11 rule={0,2}
+n=8 mode=neighbours graphs=11117 maxperiod=96 witness_graph6=GCz^nw witness_rule_mask=21 witness_state=129 rule={0,2,4}
+n=9 mode=neighbours graphs=261080 maxperiod=180 witness_graph6=H?`DBbS witness_rule_mask=5 witness_state=175 rule={0,2}
