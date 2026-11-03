@@ -1,0 +1,3 @@
+geng -cq 8 | wc -l: 11117
+geng -cq 8 | labelg -q | sort -u | wc -l: 11117
+A001349(8) from data/A001349.txt %S (offset 0): 11117

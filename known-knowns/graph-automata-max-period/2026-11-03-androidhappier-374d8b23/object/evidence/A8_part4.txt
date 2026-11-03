@@ -1,0 +1,136 @@
+G?~vf_ 4
+G?~vfo 7
+G?~vfW 16
+G?~ve[ 14
+G?~vfw 12
+G?~vf[ 12
+G?~vf{ 8
+G?~vvg 6
+G?~vvw 18
+G?~vvs 7
+G?~vv{ 14
+G?~v~w 8
+G?~v~{ 8
+G?~~~{ 4
+GErvfg 21
+GErvfK 20
+GErvek 24
+GErvfw 34
+GErvfk 20
+GErvf[ 32
+GErvf{ 26
+GErtrw 32
+GErtr[ 58
+GErtvw 63
+GErtvk 46
+GErtv[ 38
+GErtu{ 66
+GErtv{ 68
+GErvvW 28
+GErvvw 36
+GErvvs 28
+GErvvk 43
+GErvv[ 37
+GErvv{ 30
+GErvnk 15
+GErvn[ 22
+GErvm{ 24
+GErvl{ 30
+GErvn{ 28
+GErv]{ 30
+GErv\{ 38
+GErv^{ 30
+GEru~w 38
+GEru~s 38
+GEru}{ 28
+GEru~{ 36
+GErt~w 59
+GErt}{ 40
+GErt~{ 46
+GErv~{ 28
+GEr^fg 33
+GEr^fW 28
+GEr^fS 26
+GEr^es 24
+GEr^fK 30
+GEr^ek 24
+GEr^e[ 32
+GEr^fw 54
+GEr^fs 30
+GEr^fk 31
+GEr^f[ 28
+GEr^e{ 36
+GEr^d{ 53
+GEr^f{ 35
+GEr]vo 16
+GEr]vw 28
+GEr]v{ 14
+GEr^vo 12
+GEr^uw 28
+GEr^vw 28
+GEr^vs 26
+GEr^v{ 40
+GEr]~w 34
+GEr]~{ 20
+GEr^~{ 24
+GEr~vw 16
+GEr~vk 24
+GEr~u{ 14
+GEr~v{ 14
+GEr~~{ 12
+GTzvvw 38
+GTzvvs 28
+GTzvvk 35
+GTzvv[ 32
+GTzvv{ 36
+GTzvn[ 18
+GTzvn{ 22
+GTzv^[ 24
+GTzv^{ 37
+GTzv~{ 32
+GTzn~{ 20
+GTz~vw 26
+GTz~vk 23
+GTz~v[ 14
+GTz~v{ 27
+GTz~~{ 19
+G~~~~{ 2
+n=8 graphs=97 maxperiod=68 witness_graph6=GErtv{ witness_rule_mask=21333 witness_state=135 B={0,2,4,6} S={0,1,4,6}
+hist 2 1
+hist 4 2
+hist 6 1
+hist 7 2
+hist 8 3
+hist 12 4
+hist 14 6
+hist 15 1
+hist 16 3
+hist 18 2
+hist 19 1
+hist 20 4
+hist 21 1
+hist 22 2
+hist 23 1
+hist 24 7
+hist 26 4
+hist 27 1
+hist 28 11
+hist 30 6
+hist 31 1
+hist 32 5
+hist 33 1
+hist 34 2
+hist 35 2
+hist 36 4
+hist 37 2
+hist 38 5
+hist 40 2
+hist 43 1
+hist 46 2
+hist 53 1
+hist 54 1
+hist 58 1
+hist 59 1
+hist 63 1
+hist 66 1
+hist 68 1

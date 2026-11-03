@@ -1,0 +1,7 @@
+n=1 graphs=1 maxperiod=2 witness_graph6=@ witness_rule_mask=1 witness_state=0 B={0} S={}
+n=2 graphs=1 maxperiod=2 witness_graph6=A_ witness_rule_mask=1 witness_state=0 B={0} S={}
+n=3 graphs=2 maxperiod=4 witness_graph6=BW witness_rule_mask=14 witness_state=1 B={1,2} S={0}
+n=4 graphs=6 maxperiod=6 witness_graph6=CU witness_rule_mask=2 witness_state=1 B={1} S={}
+n=5 graphs=21 maxperiod=16 witness_graph6=DUw witness_rule_mask=162 witness_state=2 B={1} S={0,2}
+n=6 graphs=112 maxperiod=26 witness_graph6=EQzW witness_rule_mask=645 witness_state=36 B={0,2} S={1,3}
+n=7 graphs=853 maxperiod=66 witness_graph6=FEjvW witness_rule_mask=6731 witness_state=2 B={0,1,3,6} S={2,4,5}
