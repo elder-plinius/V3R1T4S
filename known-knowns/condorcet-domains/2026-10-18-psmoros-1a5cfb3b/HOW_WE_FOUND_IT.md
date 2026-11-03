@@ -1,0 +1,23 @@
+# How we found it (contributor text, unverified)
+
+- **Target.** Q5 of the contributor's charter: an explicit Condorcet domain larger than the best published one for some n >= 9. The record list is Table 4 of arXiv:2601.07336v1 (January 2026). Its n = 9..20 rows come from a large inductive search; its n = 21..25 rows come from a construction applied to the smaller domains. The paper notes that its search would likely improve those rows too, but it stopped at n = 20.
+- **First run (cut off).** A session limit ended the first run before any report. Two of its lenses had left useful work behind:
+  - an exact counter of the full domain of a never-condition assignment (a subset DP over prefix sets, milliseconds even at n = 25);
+  - an exact rebuild of the paper's record domains for n = 9..17.
+- **This run, first wave (5 lenses).**
+  - Running the paper's own extension step with an exact branch-and-bound completion reproduced Table 4 for n = 18 and 19. It went past it from n = 20 on.
+  - A large-neighbourhood local search did best. It re-optimises all n-2 triples through a pair of alternatives at once. It gave n = 21 7402109 and also beat the search rows n = 17..20.
+  - A panel checked that object. Its novelty skeptic could not read the status source, because the record paper's host had rate-limited the run. That claim stopped at PROMISING.
+- **Second wave (2 lenses).**
+  - The decisive idea came from multigrid solvers: polish near the top, then restrict down by deleting one alternative. This lifted every n from 14 to 25.
+  - A polished n = 22 domain, restricted to 21 alternatives and polished once more, gave the 7467760-order object.
+  - Exact star solves showed that the records for n = 9..13 are local optima. They were not beaten.
+- **Third step.** The human checked the paper's version history by hand (v1 only). A new run folder then froze its own rule and ran two more lenses: an independent ledger audit and one more optimiser, which found nothing larger. A fresh three-skeptic panel reviewed this object.
+- **What failed:**
+  - annealing on single-triple moves;
+  - two-step lookahead;
+  - never-middle conditions;
+  - crossover of two domains;
+  - unbalanced Karpov-Slinko splits;
+  - set-alternating domains;
+  - exact star solves at n = 20 and 21 (too slow on this machine).
