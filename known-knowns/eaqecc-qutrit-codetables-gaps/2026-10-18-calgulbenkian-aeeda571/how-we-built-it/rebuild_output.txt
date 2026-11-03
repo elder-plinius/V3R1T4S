@@ -1,0 +1,11 @@
+classical code D = rowspace(E*diag(MU)^-1): [33,6]_9, rank 6
+min weight of D (all nonzero words): 23
+weight distribution of D: [(23, 1176), (24, 5504), (25, 9952), (26, 19208), (27, 37832), (28, 75040), (29, 128456), (30, 118056), (31, 87808), (32, 27416), (33, 20992)]
+Hermitian hull dimension of D: 3 ( 729 words = 9^3 )
+min weight of D outside its hull (= quantum distance d): 23
+W = GF(3) image of D: dimension 12 (expect 12)
+S = symplectic dual of W: rows 54 (expect 54 = 2n - 12)
+rank(S_rebuilt) = 54  rank(S_shipped) = 54  rank(stacked) = 54
+REBUILT ROW SPACE EQUALS SHIPPED ROW SPACE: True
+s = 54, c = 24, k = 3, d (min weight of D outside hull) = 23
+RESULT [[33,3,23;24]]_3 MATCHES SHIPPED OBJECT

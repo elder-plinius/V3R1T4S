@@ -25,6 +25,17 @@ Claim: [[33,3,23;24]]_3, table cell [[33,3,22-30;24]]_3.
 - The same paper says it compares with "the latest records in [6], [10], [19], [22], [23], [25], [26]" (Cao-Li-Zhu 2025, Fan et al. arXiv 2501.04921, Kim 2023, Li-Zhu 2024 twice, Li et al. 2024, Liu-Li-Shi 2025). I did not read those works. They could in principle hold qutrit parameters not yet in the table.
 - I could not run a dedicated AG / norm-trace query inside the four-query budget; the Hermitian-hull paper above is the only construction-type hit.
 
+## Addendum 2026-11-03 (added at the maintainer's request; not part of the original skeptic report)
+
+The works that arXiv:2607.02170 compares against ([6], [10], [19], [22], [23], [25], [26]), checked for anything near (n,k,c) = (33,3,24):
+- 2607.02170 itself: qutrit codes only for n <= 25; its comparison entries reach n = 26. Nothing near (33,3,24).
+- [10] Fan et al., arXiv:2501.04921: read. Qubit codes only.
+- [23] Li and Zhu: arXiv:2207.02535 read; qutrit parameters only at n = 13 and 15. Not confirmed to be the journal paper cited as [23]; the journal version is unread.
+- [6] Cao, Li and Zhu; [22] Li and Zhu (symplectic hulls); [25] Li, Li, Guan and Song; [26] Liu, Li and Shi: unread (not found on arXiv). Second-hand, from Table VII of 2607.02170, the qutrit entries it cites from these works are at n = 7, 9, 15, 16 and 26.
+- [19] Kim: unread; it is about binary codes.
+
+On the relation to [[34,4,23;24]]_3 of Luo, Ezerman, Grassl and Ling (arXiv:2207.05647): the paper lists those parameters only in its Table 2, with no generator matrix and no statement of which of its methods produced the length-34 code, and the live table credits it only as "from arXiv:2207.05647". So whether shortening that code once gives this one could not be tested. A heuristic search (625 restarts) found no one-coordinate extension of this code to a [34,7,23]_9 code, which is suggestive only.
+
 ## Verdict
 The claimed d = 23 beats d_lower = 22 by one, the smallest possible margin. Nothing found gives d >= 23 for (33,3,24).
 unresolved: the cited newer works were not read for n = 33; only four arXiv queries were allowed.

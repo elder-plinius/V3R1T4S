@@ -20,4 +20,10 @@ Expected last line: `[[33,3,23;24]]_3 PASS`. It reads the 0/1/2 matrix as 54 x 6
 
 ## 2. Rebuild the code
 
-Not possible from this package: the construction script is not in the contributor's snapshot (see `how-we-built-it/README.md`).
+The contributor's construction script is not in the snapshot (see `how-we-built-it/README.md`). Instead, `how-we-built-it/rebuild_eaqecc_33_3_23_24.py` rebuilds the code from an explicit description that was recovered from the shipped object (33 points of PG(2,9) and 33 column scalings). Standard library only, a few seconds:
+
+```sh
+python3 -I how-we-built-it/rebuild_eaqecc_33_3_23_24.py object/eaqecc_33_3_23_24.json
+```
+
+Expected last line: `RESULT [[33,3,23;24]]_3 MATCHES SHIPPED OBJECT`. A real run is in `how-we-built-it/rebuild_output.txt`. It checks that the rebuilt GF(3) row space equals the shipped one and recomputes s = 54, c = 24, k = 3, d = 23. It does not reproduce how the contributor chose the points or the scalings.
