@@ -1,0 +1,19 @@
+rule B17/S1 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 MITM: all 25 pairs intersect (avg 1.00 words/pair) => no 1 x w orphan for w <= 8. total 0.0s
+rule B17/S1 h=2 tcnf_first_SAT_w=5 (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM DISJOINT pair depths 1+4 => orphan of width 5
+rule B64/S4 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 MITM: all 36 pairs intersect (avg 1.00 words/pair) => no 1 x w orphan for w <= 8. total 0.0s
+rule B64/S4 h=2 tcnf_first_SAT_w=6 (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM DISJOINT pair depths 2+4 => orphan of width 6
+rule B64/S1 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 MITM: all 49 pairs intersect (avg 1.00 words/pair) => no 1 x w orphan for w <= 8. total 0.0s
+rule B64/S1 h=2 tcnf_first_SAT_w=2 (all smaller UNSAT+DRAT verified) | mitm: h=2 BFS ORPHAN_WIDTH 2
+rule B8/S0 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 CLOSED
+rule B8/S0 h=2 tcnf_first_SAT_w=6 (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM DISJOINT pair depths 2+4 => orphan of width 6
+rule B24/S12 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 CLOSED
+rule B24/S12 h=2 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM: all 1764 pairs intersect (avg 1.00 words/pair) => no 2 x w orphan for w <= 8. total 0.0s
+rule B72/S12 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 CLOSED
+rule B72/S12 h=2 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM: all 784 pairs intersect (avg 1.00 words/pair) => no 2 x w orphan for w <= 8. total 0.0s
+rule B8/S6 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 MITM: all 25 pairs intersect (avg 1.00 words/pair) => no 1 x w orphan for w <= 8. total 0.0s
+rule B8/S6 h=2 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM: all 7396 pairs intersect (avg 1.00 words/pair) => no 2 x w orphan for w <= 8. total 0.0s
+rule B40/S0 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 CLOSED
+rule B40/S0 h=2 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM: all 169 pairs intersect (avg 1.58 words/pair) => no 2 x w orphan for w <= 8. total 0.0s
+rule B12/S4 h=1 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=1 CLOSED
+rule B12/S4 h=2 tcnf_first_SAT_w=none (all smaller UNSAT+DRAT verified) | mitm: h=2 MITM: all 2209 pairs intersect (avg 1.00 words/pair) => no 2 x w orphan for w <= 8. total 0.0s
+T= [[1, 1], [1, 1]] NO_PREDECESSOR(orphan confirmed)

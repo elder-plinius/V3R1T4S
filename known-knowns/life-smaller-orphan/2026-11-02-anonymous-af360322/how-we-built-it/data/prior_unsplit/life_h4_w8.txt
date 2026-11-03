@@ -1,0 +1,1 @@
+h=4 w=8 rule=8/12 exit=20 solve_ms=73984 vars=32928 clauses=2101376 drat_kb=63052 s VERIFIED drat_s=166781ms

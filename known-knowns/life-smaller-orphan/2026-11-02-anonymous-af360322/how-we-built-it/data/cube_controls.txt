@@ -1,0 +1,4 @@
+ooooo
+o.ooo
+NO_PREDECESSOR
+split validation 2026-10-29T15:05:15-04:00: B17/S1 h2 w4 cubes 4/4 UNSAT LRAT, w5 has SAT cube c3v3 (brutepred NO_PREDECESSOR, first-SAT width 5 matches controls); Life 4x6 c3 16/16 UNSAT LRAT (agrees with unsplit)

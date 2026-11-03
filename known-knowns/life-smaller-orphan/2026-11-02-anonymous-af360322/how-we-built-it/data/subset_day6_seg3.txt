@@ -1,0 +1,4 @@
+cube c4 v0: SUBSET_OK matched=16793856 units=5 units=-16 0 -17 0 -18 0 -19 0 -20 0  hdr_full=p cnf 164136 16793856 hdr_cube=p cnf 164136 16793861
+cube c4 v17: SUBSET_OK matched=16793856 units=5 units=16 0 -17 0 -18 0 -19 0 20 0  hdr_full=p cnf 164136 16793856 hdr_cube=p cnf 164136 16793861
+cube c4 v31: SUBSET_OK matched=16793856 units=5 units=16 0 17 0 18 0 19 0 20 0  hdr_full=p cnf 164136 16793856 hdr_cube=p cnf 164136 16793861
+DONE

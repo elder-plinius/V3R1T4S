@@ -1,0 +1,2 @@
+code/run1.sh: line 5: 696206 Killed                  nice -n19 $K -q $f.cnf $f.drat --no-binary > $f.out
+h=5 w=7 rule=8/12 exit=137 solve_ms=1003092 vars=114947 clauses=14696672 drat_kb=316420 
