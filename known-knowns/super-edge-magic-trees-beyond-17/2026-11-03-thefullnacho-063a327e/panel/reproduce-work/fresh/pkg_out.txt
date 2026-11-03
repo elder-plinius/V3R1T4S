@@ -1,0 +1,24 @@
+== 1. object/ files match SHA256SUMS
+ok   object/CERTIFICATES.md
+ok   object/certificates.sha256
+ok   object/hardest_trees_n19_n20.txt
+PASS
+== 2. the five hardest trees (object/hardest_trees_n19_n20.txt): labelings
+checked 5 labelings, 0 failures
+PASS
+== 3. full certificates
+ok   cert_n18.txt
+ok   cert_n19.txt
+ok   cert_n20.txt
+PASS
+== 4. coverage: trees on n vertices, distinct canonical forms, count = A000055(n), every labeling valid
+n=18 lines=123867 distinct_canonical=123867 A000055=123867 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=19 lines=317955 distinct_canonical=317955 A000055=317955 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=20 lines=823065 distinct_canonical=823065 A000055=823065 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+== 5. independent regeneration of all trees on 18..20 vertices and one-to-one matching
+n=18 regenerated=123867 A000055=123867 cert_lines=123867 distinct=123867 missing=0 extra=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=19 regenerated=317955 A000055=317955 cert_lines=317955 distinct=317955 missing=0 extra=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=20 regenerated=823065 A000055=823065 cert_lines=823065 distinct=823065 missing=0 extra=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+OVERALL: PASS
+PASS
+exit=0 secs=510

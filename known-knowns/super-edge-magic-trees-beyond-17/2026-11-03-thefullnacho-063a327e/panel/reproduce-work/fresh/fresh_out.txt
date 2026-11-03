@@ -1,0 +1,6 @@
+n=18 lines=123867 bad_parse=0 wrong_n=0 not_tree=0 bad_labels=0 bad_sums=0 dup=0 distinct=123867 expected_A000055=123867 -> PASS
+exit=0 secs=4
+n=19 lines=317955 bad_parse=0 wrong_n=0 not_tree=0 bad_labels=0 bad_sums=0 dup=0 distinct=317955 expected_A000055=317955 -> PASS
+exit=0 secs=253
+n=20 lines=823065 bad_parse=0 wrong_n=0 not_tree=0 bad_labels=0 bad_sums=0 dup=0 distinct=823065 expected_A000055=823065 -> PASS
+exit=0 secs=32

@@ -1,0 +1,6 @@
+# A000055 (number of unlabeled trees with n nodes), the three values this check needs, copied from the OEIS b-file
+# https://oeis.org/A000055/b000055.txt (fetched 2026-11-03T08:18Z, HTTP 200, sha256 of the fetched b-file
+# c76570ae3b5b6f76f03e8df858b79ee16360f6e40d0b974005d376885f12ff21). Format: n A000055(n).
+18 123867
+19 317955
+20 823065

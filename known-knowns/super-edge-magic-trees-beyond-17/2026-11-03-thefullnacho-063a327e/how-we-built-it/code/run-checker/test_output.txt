@@ -1,0 +1,5 @@
+pos P4 (True, 'ok')
+pos star (True, 'ok')
+neg P4 (False, 'edge sums not q consecutive integers')
+neg range (False, 'labels are not a bijection onto 1..n')
+C4 exhaustive SEM count 0
