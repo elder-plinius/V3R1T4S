@@ -2,9 +2,9 @@
 
 ## What
 
-Mechanical template-closure proof that Lychrel numbers exist in base $b = 146 = 2 \cdot 73 \notin \{2^k, 11, 17, 20, 26\}$ (`object/lychrel_base146_certificate.json`, `69,366` bytes, `sha256: 118af24a34557dbba72c36eb478019f1f4bed84999e23dc46367c5865ba55945`, Period-4 templates $T_1(m)\dots T_4(m)$ with $|L_0|=|R_0|=80$, $|M_0|=6$, and `168`-digit start integer $n = T_1(1)$ plus 1-step pre-template seed $n_{\text{seed}}$), verified by block-by-block symbolic carry computation for all integer parameters $m \ge 1$, symbolic mirrored-block non-palindromicity, brute force over $m$ from $1$ to $500$, and a 2,000-step concrete orbit simulation with compiled regex matching.
+Mechanical template-closure proof that Lychrel numbers exist in base $b = 146 = 2 \cdot 73 \notin \{2^k, 11, 17, 20, 26\}$ (`object/lychrel_base146_certificate.json`, `69,366` bytes, `sha256: 118af24a34557dbba72c36eb478019f1f4bed84999e23dc46367c5865ba55945`, Period-4 templates $T_1(m)\dots T_4(m)$ with $|L_0|=|R_0|=80$, $|M_0|=6$, and `168`-digit start integer $n = T_1(1)$ plus 1-step pre-template seed $n_{\text{seed}}$), verified by block-by-block symbolic carry computation for all integer parameters $m \ge 1$, symbolic mirrored-block non-palindromicity, brute force over $m$ from $1$ to $500$, and a 2,000-step concrete orbit simulation (`t = 0..2,000`) with compiled regex matching.
 
-*(Split from PR #517 per maintainer request so each package contains a single object.)*
+*(Split from [PR #517](https://github.com/elder-plinius/V3R1T4S/pull/517) per maintainer request so each package contains a single object.)*
 
 ## Check it yourself
 
@@ -22,18 +22,18 @@ sh verify-it-yourself/run_checks.sh
 
 | Source | Cell / Scope | Listed proven bases | Ours | URL | UTC fetch time |
 |---|---|---|---|---|---|
-| Wikipedia (`Lychrel_number`) | Proven Lychrel bases | `11, 17, 20, 26, and all powers of 2` | `b = 146 (2*73)` (Period-4 all-$m$ symbolic proof) | https://en.wikipedia.org/wiki/Lychrel_number | 2026-10-19T06:30:18Z |
-| MathPages (`dseal.htm`, David Seal 1996) | Sporadic Lychrel bases | `4, 11, 17, 20, 26` | `b = 146` (+ baseline reproduction of Base 26) | https://www.mathpages.com/%68ome/dseal.htm | 2026-10-19T06:30:19Z |
+| Wikipedia (`Lychrel_number`) | Proven Lychrel bases | `11, 17, 20, 26, and all powers of 2` | `b = 146 (2 * 73)` (Period-4 all-$m$ symbolic proof) | https://en.wikipedia.org/wiki/Lychrel_number | 2026-10-19T06:30:18Z |
+| MathPages (`dseal.htm`, David Seal 1996) | Sporadic Lychrel bases | `4, 11, 17, 20, 26` | `b = 146` (+ baseline reproduction of Base 26) | https://www.mathpages.com/home/dseal.htm | 2026-10-19T06:30:19Z |
 
 Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.md`.
 
 ## Not claimed
 
-- Base 10 (`196`) is not proved; our Period-4 Carry-Wire Decoupling theorem requires $b \equiv 2 \pmod{24}$.
-- Not formalized in Lean 4 or Coq; closure for all $m \ge 1$ is reduced to a finite mechanical symbolic run-length block carry computation (`symbolic_rle_rev_add`) plus brute force over $1 \le m \le 500$ and concrete regex-matched orbit simulation.
-- Not peer reviewed. Checked by a three-skeptic panel (`panel/`) and by the standalone checker shipped here.
+- Base 10 (`196`) is not proved; our specific decoupled carry-wire search ansatz restricts attention to bases $b \equiv 2 \pmod{24}$ (combining $b \equiv 2 \pmod{3}$ from our outer-engine transition constraints and $b \equiv 2 \pmod{8}$ from our inner-core transition constraints, a property of this search family rather than a necessary condition on all Period-4 templates).
+- Not formalized in Lean 4 or Coq; closure for all $m \ge 1$ is reduced to a finite mechanical symbolic run-length block carry computation (`symbolic_rle_rev_add`) plus brute force over $1 \le m \le 500$ and concrete regex-matched orbit simulation (`t = 0..2,000`).
+- Not peer reviewed. Checked by a three-skeptic panel (`panel/`, recorded during the initial multi-base evaluation for [PR #517](https://github.com/elder-plinius/V3R1T4S/pull/517) and scoped here to base 146) and by the standalone checker shipped here.
 
 ## Credits
 
-- **David Seal** (January 1996 `rec.puzzles` posting archived by **Kevin Brown** at MathPages, https://www.mathpages.com/%68ome/dseal.htm), author of the Period-4 Base-26 template family reproduced as our baseline.
+- **David Seal** (January 1996 `rec.puzzles` posting archived by **Kevin Brown** at MathPages, https://www.mathpages.com/home/dseal.htm), author of the Period-4 Base-26 template family reproduced as our baseline.
 - Contributor credit: `mizopl`.
