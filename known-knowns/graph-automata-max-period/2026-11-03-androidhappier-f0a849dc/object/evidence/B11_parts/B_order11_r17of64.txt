@@ -1,0 +1,124 @@
+high J?BDlZi~E~_ 40
+high J?bebrLezn_ 49
+high J?bebp\{bn_ 41
+high J?ba~`yf^\_ 45
+high J?bLbnittz? 49
+high J?qadrYyl~? 42
+high J?qadpx]tn? 44
+high J?qv@vsu}n_ 46
+high J?qv@u{Zv{_ 51
+high J?qv@vX^V^? 40
+high J?qv@uZ|NV_ 40
+high J?qv@tvuv\_ 40
+high J?qjcx}]t}? 40
+high JCOfDrd^Ez_ 45
+high JCOfDrTju\_ 48
+high JCQeJbiN^n_ 48
+high JCQeJbXZ^z_ 42
+high JCQeJbXZ\~_ 42
+high JCQeJan{qv_ 40
+high JCQerjLzFe_ 50
+high JCQerhltnx_ 41
+high JCRVFd]nF[_ 42
+high JCQu^fx~b|? 42
+high JCpbfXuV~z? 42
+order=11 connected_graphs=15866201 max_cycle=51
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 44 45 46 48 49 50 51
+witness 1 J??CFFa{FW? 0
+witness 2 J??CFFa{Bw? 7
+witness 3 J??CFFa{Ey? 387
+witness 4 J??CFFa{E]? 323
+witness 5 J??CFFa{EZ_ 964
+witness 6 J??CFFaeeN_ 67
+witness 7 J??CFFaubJ_ 455
+witness 8 J??CFFaf]f_ 387
+witness 9 J??CFFauFI_ 775
+witness 10 J??CFFautl_ 707
+witness 11 J?ABAacWvU? 359
+witness 12 J??CFEY}v|_ 193
+witness 13 J?ABAbQktV_ 202
+witness 14 J?ABAaswq}? 359
+witness 15 J?ABAby}u~_ 70
+witness 16 J?ABAbahQ]? 993
+witness 17 J?AFBJcVjf_ 167
+witness 18 J?AFBJafrn_ 359
+witness 19 J?AFBHytQ}_ 235
+witness 20 J?AFBJapvr? 167
+witness 21 J?AFBJWdtl? 367
+witness 22 J?ABe^k|FT_ 181
+witness 23 J?B@djuNv]_ 103
+witness 24 J?AFBH]lVN? 359
+witness 25 J?B@dje|f}_ 135
+witness 26 J?ABe^u}v^? 54
+witness 27 J?AFBJYltj_ 295
+witness 28 J?BDfBaTut_ 360
+witness 29 J?BDlZswzt_ 107
+witness 30 J?BDfBE~Ff? 355
+witness 31 J?BDf@Txl|? 111
+witness 32 J?Betvw|Jn_ 99
+witness 33 J?`DuZr~F\_ 115
+witness 34 J?BDlZq}D]_ 39
+witness 35 J?bFd^sf}|_ 30
+witness 36 J?`curdxdf_ 62
+witness 37 J?ba~_}yrr? 61
+witness 38 J?b@fG{\}v? 51
+witness 39 J?BDlZw{ux_ 43
+witness 40 J?BDlZi~E~_ 35
+witness 41 J?bebp\{bn_ 39
+witness 42 J?qadrYyl~? 82
+witness 44 J?qadpx]tn? 47
+witness 45 J?ba~`yf^\_ 15
+witness 46 J?qv@vsu}n_ 11
+witness 48 JCOfDrTju\_ 205
+witness 49 J?bebrLezn_ 31
+witness 50 JCQerjLzFe_ 107
+witness 51 J?qv@u{Zv{_ 23
+hist 1 3285216
+hist 2 7996848
+hist 3 1330139
+hist 4 1382097
+hist 5 430363
+hist 6 591599
+hist 7 271856
+hist 8 204089
+hist 9 122032
+hist 10 87039
+hist 11 47167
+hist 12 34026
+hist 13 22200
+hist 14 18665
+hist 15 11232
+hist 16 9235
+hist 17 6100
+hist 18 4687
+hist 19 2973
+hist 20 2429
+hist 21 1512
+hist 22 1294
+hist 23 784
+hist 24 769
+hist 25 470
+hist 26 355
+hist 27 279
+hist 28 199
+hist 29 136
+hist 30 115
+hist 31 78
+hist 32 53
+hist 33 40
+hist 34 26
+hist 35 22
+hist 36 16
+hist 37 14
+hist 38 15
+hist 39 8
+hist 40 6
+hist 41 2
+hist 42 6
+hist 44 1
+hist 45 2
+hist 46 1
+hist 48 2
+hist 49 2
+hist 50 1
+hist 51 1

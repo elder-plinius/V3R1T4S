@@ -1,0 +1,123 @@
+high J?bLbZ]{rf_ 40
+high J?bLbYztvu? 40
+high J?bM^`v~BZ_ 42
+high J?qbEy{vt|? 48
+high J?qbeu|}dj_ 40
+high J?qbeuvzbz_ 42
+high J?qfTz[}Vz_ 40
+high J?ovDNw|dz_ 41
+high J?qnByyul~_ 41
+high J?o~FBYfV{? 41
+high JCQefYyr~x_ 43
+high JCQbep{|Nf_ 41
+high JCQberi|Be_ 44
+high JCQbequV_~_ 40
+high JCQbepmjvz_ 42
+high JCQbeplrdn? 54
+high JCQbeo|xbf_ 41
+high JCQbSnXxm}_ 40
+high JCQUdXyu~Z_ 41
+high JCQUdYlyr}? 43
+high JCQvEdzfuz? 40
+high JCpelZYZ^x_ 46
+high JCrbdxyzdv? 42
+high JCrbdxy\t~_ 41
+high JCrbdxyjvT_ 42
+high JCZJdimuv^_ 42
+high JCZJdjbT~^? 43
+order=11 connected_graphs=13309006 max_cycle=54
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 46 48 54
+witness 1 J??FCzo{Fo? 0
+witness 2 J??FCzo{Ew? 7
+witness 3 J??FCzo{CV? 1422
+witness 4 J??FCzo{Ay? 973
+witness 5 J??FCzo{FY? 846
+witness 6 J??FCzo{EF_ 782
+witness 7 J??FCzovBT? 923
+witness 8 J??FCzovD{? 463
+witness 9 J??FCzouds_ 331
+witness 10 J??FCzoyQ}_ 347
+witness 11 J??FCzourz? 93
+witness 12 J??FCzW|fi? 363
+witness 13 J??FCzorZf_ 203
+witness 14 J??FCzX\~~_ 75
+witness 15 J??FCzw^fx_ 71
+witness 16 J?ABC~rzf|? 70
+witness 17 J??FCzYlv{_ 237
+witness 18 J??FCzW|vZ? 323
+witness 19 J??FCzqubu_ 151
+witness 20 J?AFfP[td^? 504
+witness 21 J?AFfPurrz? 103
+witness 22 J?AFfPuZ]}? 103
+witness 23 J?AFfRMmVj? 230
+witness 24 J?AFfR[M|}_ 233
+witness 25 J?AFfRrven_ 131
+witness 26 J?AFfR]|^\_ 71
+witness 27 J?AFfPmtrz? 103
+witness 28 J?AFfPutrz? 103
+witness 29 J?BFHy]|^y_ 44
+witness 30 J?BFEesLq^_ 111
+witness 31 J?BefQuTzy_ 139
+witness 32 J?BefQ}lv]? 228
+witness 33 J?BefRinU~_ 23
+witness 34 J?AFfPm\]}? 71
+witness 35 J?bBfQVnm~? 30
+witness 36 J?BefRfmux_ 7
+witness 37 J?bBfRY\`^? 189
+witness 38 J?`eJbkrp}_ 99
+witness 39 J?qbvrl~J~_ 22
+witness 40 J?bLbZ]{rf_ 30
+witness 41 J?ovDNw|dz_ 117
+witness 42 J?bM^`v~BZ_ 31
+witness 43 JCQefYyr~x_ 19
+witness 44 JCQberi|Be_ 111
+witness 46 JCpelZYZ^x_ 39
+witness 48 J?qbEy{vt|? 27
+witness 54 JCQbeplrdn? 93
+hist 1 1893302
+hist 2 6779738
+hist 3 1350438
+hist 4 1312149
+hist 5 452815
+hist 6 591129
+hist 7 289869
+hist 8 208950
+hist 9 142882
+hist 10 92690
+hist 11 55185
+hist 12 39349
+hist 13 26485
+hist 14 21671
+hist 15 14683
+hist 16 10692
+hist 17 7364
+hist 18 5426
+hist 19 3649
+hist 20 2884
+hist 21 1942
+hist 22 1596
+hist 23 1005
+hist 24 861
+hist 25 524
+hist 26 435
+hist 27 357
+hist 28 231
+hist 29 183
+hist 30 144
+hist 31 121
+hist 32 58
+hist 33 47
+hist 34 37
+hist 35 23
+hist 36 26
+hist 37 15
+hist 38 15
+hist 39 9
+hist 40 7
+hist 41 7
+hist 42 6
+hist 43 3
+hist 44 1
+hist 46 1
+hist 48 1
+hist 54 1

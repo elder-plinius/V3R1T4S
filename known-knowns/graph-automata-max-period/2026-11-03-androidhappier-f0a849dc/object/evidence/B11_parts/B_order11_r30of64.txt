@@ -1,0 +1,124 @@
+high J?AFKzqvtv_ 41
+high J?bFEvemn{_ 53
+high J?`efJ[]d|_ 40
+high J?`efJxjuu_ 41
+high J?`eurm|S}_ 42
+high J?qabNx^vZ_ 41
+high J?qbdq[Trz_ 41
+high J?qbdrh^bv_ 47
+high J?qbdp\vNZ? 46
+high J?rLbbbfnt? 46
+high JCQfDp\vfu_ 53
+high JCQe`roX~r? 42
+high JCQe`rb]dm_ 41
+high JCQevM{}v~_ 40
+high JCRcuhy\p^? 48
+high JCR`vJY\u|_ 42
+high JCpdcxmx}^_ 43
+high JCpdczLlvn_ 42
+high JCpdcyV^m^_ 42
+high JCpdcxz{vx_ 41
+high JCpbRew\nf? 40
+high JCpdmhyVv^_ 42
+high JCpdmht}V^_ 41
+high JCZJnrw|t~_ 42
+high JCXnA~wy~l_ 48
+high JEhuVo}zdf? 44
+order=11 connected_graphs=23104042 max_cycle=53
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 46 47 48 53
+witness 1 J??EEF_MFG? 0
+witness 2 J??EEF_MEK? 67
+witness 3 J??EEF_MDL? 323
+witness 4 J??EEF_MCN? 450
+witness 5 J??EEF_gq~? 449
+witness 6 J??EEF_gt|? 454
+witness 7 J??EEF_wn~_ 71
+witness 8 J??EEF_{e^_ 323
+witness 9 J??EEEowh^? 449
+witness 10 J??EEF_wl~? 836
+witness 11 J?AAD`ahVY? 455
+witness 12 J?ABAf_xS^? 327
+witness 13 J?ABAf_{dv_ 398
+witness 14 J?ABAec[fq_ 431
+witness 15 J?AFEfoZDK_ 295
+witness 16 J?AAD`eyS}? 994
+witness 17 J?ABAfQ|d^? 195
+witness 18 J?AFEfclvt_ 430
+witness 19 J?AFEfcVp~? 103
+witness 20 J?AFEdwll^? 271
+witness 21 J?AFEfK|Nl? 323
+witness 22 J?AFEdw]c|_ 222
+witness 23 J?AFEeu\t^_ 167
+witness 24 J?BD@js{T]? 868
+witness 25 J?B@d^U~f~_ 143
+witness 26 J?B@tM{{uj? 108
+witness 27 J?AFEdsfkz_ 107
+witness 28 J?AFEey\m^? 47
+witness 29 J?`DbdwnN]_ 15
+witness 30 J?`Dbcn{}~? 29
+witness 31 J?BDK|uVne_ 106
+witness 32 J?`Dbfu}^^_ 13
+witness 33 J?bBDj[}v^_ 51
+witness 34 J?bBDjk\v~_ 37
+witness 35 J?B@d^k\`x_ 389
+witness 36 J?`eH[}}Vu? 87
+witness 37 J?bBDh||e\_ 79
+witness 38 J?B@tNqzTr_ 27
+witness 39 J?bBDgvu]V_ 103
+witness 40 J?`efJ[]d|_ 71
+witness 41 J?AFKzqvtv_ 67
+witness 42 J?`eurm|S}_ 43
+witness 43 JCpdcxmx}^_ 85
+witness 44 JEhuVo}zdf? 54
+witness 46 J?qbdp\vNZ? 110
+witness 47 J?qbdrh^bv_ 71
+witness 48 JCRcuhy\p^? 15
+witness 53 J?bFEvemn{_ 81
+hist 1 4563460
+hist 2 11431809
+hist 3 2147311
+hist 4 2206551
+hist 5 634110
+hist 6 866600
+hist 7 410585
+hist 8 298608
+hist 9 190142
+hist 10 120662
+hist 11 68096
+hist 12 48537
+hist 13 30606
+hist 14 26589
+hist 15 16323
+hist 16 12433
+hist 17 8475
+hist 18 6485
+hist 19 4387
+hist 20 3485
+hist 21 2122
+hist 22 1943
+hist 23 1109
+hist 24 944
+hist 25 701
+hist 26 461
+hist 27 434
+hist 28 296
+hist 29 197
+hist 30 153
+hist 31 106
+hist 32 88
+hist 33 70
+hist 34 42
+hist 35 37
+hist 36 27
+hist 37 11
+hist 38 15
+hist 39 6
+hist 40 3
+hist 41 7
+hist 42 7
+hist 43 1
+hist 44 1
+hist 46 2
+hist 47 1
+hist 48 2
+hist 53 2

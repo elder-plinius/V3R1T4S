@@ -1,0 +1,118 @@
+high J?beehw{nV? 41
+high J?beehrX~[_ 46
+high J?qaejaL`~? 40
+high J?otStu\jv? 41
+high J?qlvHty]l_ 41
+high JCQerX}}Tm? 40
+high JCQVdYm]Uv_ 47
+high JCQVdZVnf]_ 42
+high JCRVRl{~e~_ 44
+high JCpdfQ{Tuf_ 43
+high JCpdfPunl}_ 49
+high JCpdfRMZtv_ 41
+high JCpdfP]trv_ 42
+high JCpdfP]M~[_ 42
+high JCpdfP]nn\_ 40
+high JCpdfRbZb^_ 46
+high JCpbdzw{zn? 40
+high JCpbdzs~n~? 44
+high JCpfbn]^Q|_ 40
+high JCZbers}u~? 44
+high JCZberN|fv_ 41
+high JCZVDjd]c}? 42
+order=11 connected_graphs=14085611 max_cycle=49
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 46 47 49
+witness 1 J??CBzw}Fo? 0
+witness 2 J??CBzw}FK? 7
+witness 3 J??CBzw|FX? 697
+witness 4 J??CBzw|FR_ 1030
+witness 5 J??CBzq}VL_ 198
+witness 6 J??CBzwxfL? 391
+witness 7 J??CBzwxfM? 391
+witness 8 J??CBzwxf}? 391
+witness 9 J??CBzwxml_ 422
+witness 10 J?AFAjomAl? 719
+witness 11 J?AFAjo\D{? 874
+witness 12 J?AFAjotbr_ 366
+witness 13 J?AFAjoxcy_ 362
+witness 14 J?AFAjoXvy? 327
+witness 15 J?AFAjoucy_ 299
+witness 16 J?AFAjo\v\_ 71
+witness 17 J?AFAjoxdz? 171
+witness 18 J?AFAjWZm}_ 394
+witness 19 J?AFAjoV`Z_ 231
+witness 20 J?AFAja\s~_ 167
+witness 21 J?AFAjWh\l? 367
+witness 22 J?AFAhmlnm_ 39
+witness 23 J?B@dZoZfk? 229
+witness 24 J?AFAi]M~M_ 110
+witness 25 J?B@dZQ|Ef? 229
+witness 26 J?BDbbg\cj_ 111
+witness 27 J?AFAisZbf? 227
+witness 28 J?BDKl{lrn? 334
+witness 29 J?BDhzg[}u_ 167
+witness 30 J?BDb`m|Vd_ 167
+witness 31 J?BDKlu|P|_ 108
+witness 32 J?bENZV~F}_ 43
+witness 33 J?`cuhkLul_ 31
+witness 34 J?b@eYyzL~? 49
+witness 35 J?`cujxjvJ_ 119
+witness 36 J?ba|rsf\n_ 57
+witness 37 J?ba|qn}Vn? 31
+witness 38 J?B@dW~tr^_ 45
+witness 39 JCQeHql\ut_ 63
+witness 40 J?qaejaL`~? 223
+witness 41 J?beehw{nV? 107
+witness 42 JCQVdZVnf]_ 27
+witness 43 JCpdfQ{Tuf_ 51
+witness 44 JCRVRl{~e~_ 29
+witness 46 J?beehrX~[_ 47
+witness 47 JCQVdYm]Uv_ 95
+witness 49 JCpdfPunl}_ 13
+hist 1 2646740
+hist 2 7225536
+hist 3 1262080
+hist 4 1275877
+hist 5 372790
+hist 6 536315
+hist 7 248703
+hist 8 185879
+hist 9 110474
+hist 10 74703
+hist 11 41563
+hist 12 30499
+hist 13 19668
+hist 14 16917
+hist 15 10316
+hist 16 8157
+hist 17 5240
+hist 18 4002
+hist 19 2548
+hist 20 2138
+hist 21 1321
+hist 22 1176
+hist 23 733
+hist 24 613
+hist 25 411
+hist 26 314
+hist 27 252
+hist 28 175
+hist 29 114
+hist 30 98
+hist 31 75
+hist 32 51
+hist 33 38
+hist 34 23
+hist 35 20
+hist 36 9
+hist 37 10
+hist 38 7
+hist 39 4
+hist 40 5
+hist 41 5
+hist 42 4
+hist 43 1
+hist 44 3
+hist 46 2
+hist 47 1
+hist 49 1

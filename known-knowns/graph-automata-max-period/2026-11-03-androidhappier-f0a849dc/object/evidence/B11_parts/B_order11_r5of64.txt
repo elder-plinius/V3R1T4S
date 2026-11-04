@@ -1,0 +1,121 @@
+high J?bFMhu\uz? 46
+high J?be\puruz? 40
+high J?qfExu^Ds_ 46
+high J?qbSvSNn[_ 40
+high J?qbSs}vP~_ 45
+high J?qaxzYvt~_ 44
+high J?qaxzYf}}_ 44
+high J?qaxzYf~}_ 42
+high J?ovFNMN||_ 41
+high J?otRjq~Rn? 40
+high J?opvJVnR~? 46
+high J?o~EfUnEz_ 42
+high J?o~EfUnFz_ 42
+high J?o~EfUnE~_ 42
+high J?o~EfUnF~_ 42
+high J?zTv`{utj? 42
+high J?zTv`|lu\_ 48
+high JCQdb`ynUV_ 45
+high JCQdbaxr^\? 48
+high JCQb`veyQn_ 44
+high JCQbTnk}v~_ 42
+high JCQfeYvzuv_ 40
+high JCp`eqv^a~_ 40
+high JCXecyyzez_ 46
+high JCXecym}eV_ 42
+high JCdefft|fw_ 41
+high JEhevZyzvm? 48
+order=11 connected_graphs=17872309 max_cycle=48
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 44 45 46 48
+witness 1 J???Frw}Fk? 0
+witness 2 J???Frw}EN? 1027
+witness 3 J???FrszE}? 828
+witness 4 J???Frw}VN_ 7
+witness 5 J??FfRor?^? 471
+witness 6 J???Frwx~r_ 7
+witness 7 J??FfRoyc~? 1102
+witness 8 J??FfRorEd_ 332
+witness 9 J???FrevTy_ 419
+witness 10 J??FfRovFS? 335
+witness 11 J??FfRWuvN_ 7
+witness 12 J??FfRorl\_ 466
+witness 13 J??FfRiuu^? 19
+witness 14 J??FfRWkz^_ 15
+witness 15 J??FfRW{t|? 23
+witness 16 J??FfRWft\_ 158
+witness 17 J??FfRquvN_ 7
+witness 18 J??FfRWfr\_ 219
+witness 19 J?AFe^wzM~_ 23
+witness 20 J?AFe^knDv? 181
+witness 21 J?AFe^w]vx_ 14
+witness 22 J?BEFbcr\v? 163
+witness 23 J?BEFakMzj? 422
+witness 24 J?AFe]{|N]_ 30
+witness 25 J?BFDvqfn}_ 69
+witness 26 J?BFDvw|^^_ 7
+witness 27 J?BFDvq^l}_ 27
+witness 28 J?BDKr`fvl? 355
+witness 29 J?AFe]{Z|~_ 23
+witness 30 J?Betr]nrn_ 15
+witness 31 J?BDd[~vf]_ 60
+witness 32 J?b@dJoUrT? 238
+witness 33 J?bBbVoF~x? 63
+witness 34 J?bBbUwlR\? 183
+witness 35 J?be\p|]uv_ 15
+witness 36 J?bBbTv~Az_ 106
+witness 37 J?bBbUkV~y_ 99
+witness 38 J?`CVRS}Vh_ 185
+witness 39 JCQdb`N]V}? 63
+witness 40 J?be\puruz? 98
+witness 41 J?ovFNMN||_ 39
+witness 42 J?qaxzYf~}_ 51
+witness 44 J?qaxzYvt~_ 58
+witness 45 J?qbSs}vP~_ 29
+witness 46 J?bFMhu\uz? 143
+witness 48 J?zTv`|lu\_ 43
+hist 1 2732194
+hist 2 9540364
+hist 3 1486550
+hist 4 1650222
+hist 5 558415
+hist 6 777391
+hist 7 365928
+hist 8 264881
+hist 9 163672
+hist 10 114916
+hist 11 62386
+hist 12 44751
+hist 13 28374
+hist 14 25937
+hist 15 15396
+hist 16 12299
+hist 17 7926
+hist 18 5868
+hist 19 3734
+hist 20 3376
+hist 21 1908
+hist 22 1627
+hist 23 1054
+hist 24 936
+hist 25 561
+hist 26 411
+hist 27 341
+hist 28 244
+hist 29 172
+hist 30 124
+hist 31 96
+hist 32 70
+hist 33 51
+hist 34 37
+hist 35 22
+hist 36 18
+hist 37 10
+hist 38 16
+hist 39 4
+hist 40 5
+hist 41 2
+hist 42 8
+hist 44 3
+hist 45 2
+hist 46 4
+hist 48 3

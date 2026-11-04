@@ -1,0 +1,4 @@
+order=1 connected_graphs=1 max_cycle=1
+periods: 1
+witness 1 @ 0
+hist 1 1
