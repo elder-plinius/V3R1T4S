@@ -1,0 +1,29 @@
+{
+  "kind": "result",
+  "utc": "2026-11-04T18:14:20.5593998Z",
+  "n": 10,
+  "q": 90,
+  "status": "COMPLETE",
+  "reason": "",
+  "found": false,
+  "nodes": 91726677,
+  "levels": [
+    0,
+    1,
+    81,
+    3307,
+    86350,
+    1466114,
+    14259762,
+    49173460,
+    23357808,
+    1676994,
+    1702800
+  ],
+  "leaves": 1702800,
+  "masks": 1571472,
+  "complement_pairs": 0,
+  "elapsed": 20.2463615,
+  "peak_working_bytes": 581566464,
+  "private_bytes": 494305280
+}
