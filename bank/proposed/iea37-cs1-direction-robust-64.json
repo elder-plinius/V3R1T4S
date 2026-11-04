@@ -1,0 +1,47 @@
+{
+  "id": "iea37-cs1-direction-robust-64",
+  "name": "IEA37 case study 1, 64 turbines: highest energy averaged over +-5 degree wind-direction uncertainty",
+  "category": "engineering",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-hours (one robust-mean evaluation is about 1-3 s vectorised; optimisation needs many)",
+  "statement": "IEA Wind Task 37 case study 1 (Baker, Stanley, Thomas, Ning and Dykes, AIAA SciTech 2019-0540; BYU FLOW Lab and NREL) scores layouts on a 16-bin wind rose at exactly 0, 22.5, ..., 337.5 degrees. Layouts optimised for those exact directions can lose more energy than others when directions vary slightly (Quaeghebeur et al., WES 2021; Thomas, Bay, Stanley and Ning, wes-2022-4; Valotta Rodrigues et al., WES 2024; Fischetti and Fischetti, arXiv:2610.07844). This target keeps the CS1 64-turbine problem unchanged (IEA37 3.35 MW turbines, D = 130 m, 9.8 m/s, Bastankhah Gaussian k = 0.0324555, CT = 8/9, RSS, R = 3000 m, spacing >= 260 m) and scores a layout by its AEP averaged over a common direction offset delta uniformly distributed on [-5, +5] degrees: every bin direction theta_k becomes theta_k + delta. Robust means as of 2026-11-04 (independent evaluator, Simpson quadrature): V3R1T4S PR #938 by Jimbootgit (head 9f1145de2f2c98d686f9ca7b74ffca6cab6c467d), the best strictly feasible PUBLIC layout, 1471996.820 MWh (nominal 1539447.117); participant 12, 1462764.065 (nominal 1526474.802, 4.1 mm outside R); SNOPT+WEC (participant 4), 1459095.476 (file 1.4e-10 m outside R). Disclosure: the proposer (OrenSleepwalker) holds an unpublished strictly feasible layout with robust mean 1479896.874 MWh (nominal 1538890.719); it does not count as a baseline until published, and its robustness relative to PR #938 was reviewed only within the proposer's own workflow.",
+  "success_criterion": "A strictly feasible 64-turbine layout (every hub at distance <= 3000 m from (0,0) and every pair >= 260 m, double precision, no tolerance) whose robust mean E[AEP(delta)], delta ~ U(-5, 5) degrees, computed with the official iea37-aepcalc.py model applied to shifted directions and composite Simpson quadrature with step <= 1/128 degree (and changing by < 0.1 MWh when the step is halved), is STRICTLY GREATER by at least 1 MWh than the best robust mean among all publicly posted, strictly feasible 64-turbine CS1 layouts, including V3R1T4S known-knowns and open claims, at claim time (baseline 1471996.820 MWh, PR #938, as of 2026-11-04). Re-check the open PRs immediately before claiming; a claim must name the layout it beats.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "A strictly feasible 64-turbine layout with robust mean (as defined) at least 1 MWh above the baseline AND nominal CS1 AEP at least 1526474.8025 MWh (participant 12's posted value), i.e. better under direction uncertainty without giving up the original benchmark record level."
+    },
+    {
+      "id": "p2",
+      "statement": "An independent re-implementation that reproduces the robust mean of every posted iea37-cs1-results opt64 layout and of the baseline layout (PR #938) to within 0.1 MWh, with its quadrature convergence reported."
+    },
+    {
+      "id": "p3",
+      "statement": "A strictly feasible 64-turbine layout whose robust mean is at least 1 MWh above the baseline under BOTH the uniform +-5 degree distribution and a symmetric triangular distribution with the same standard deviation (support +-5*sqrt(2) degrees)."
+    }
+  ],
+  "verification_method": "Check strict geometry. Evaluate AEP(delta) with the official model by adding delta to each wind-rose direction; integrate with composite Simpson on [-5, 5] at step 1/128 and 1/256 degree. First reproduce PR #938's robust mean (1471996.820 MWh) and participant 12's (1462764.065 MWh), and participant 12's nominal 1526474.8025. Seconds per layout.",
+  "primary_sources": [
+    "https://github.com/IEAWindSystems/iea37-wflo-casestudies/tree/master/cs1-2/iea37-cs1-results",
+    "https://doi.org/10.2514/6.2019-0540",
+    "https://github.com/elder-plinius/V3R1T4S/pull/938",
+    "https://wes.copernicus.org/articles/6/815/2021/",
+    "https://wes.copernicus.org/articles/9/321/2024/",
+    "https://arxiv.org/abs/2610.07844"
+  ],
+  "status_source": "https://github.com/elder-plinius/V3R1T4S/pulls?q=iea37-cs1-direction-robust-64",
+  "status_checked": "2026-11-04",
+  "disclosure": "open",
+  "angles": [
+    "Optimise the robust mean directly (it is smooth in coordinates away from wake-edge alignments).",
+    "Warm-start from layouts that already lose little under offsets (e.g. low fractional loss), then polish.",
+    "Multi-objective: trace the nominal-vs-robust Pareto front between the two scores."
+  ],
+  "pitfalls": [
+    "Wind direction sign: theta is the meteorological 'from' direction; validate on participant 12 (nominal 1526474.8025) before trusting an evaluator.",
+    "Several posted files are slightly outside R; strict feasibility uses no tolerance.",
+    "Trapezoid quadrature on a coarse grid biases means by ~0.1 MWh; use the stated Simpson rule.",
+    "A robust-mean win is not a nominal CS1 record and not a field-performance prediction (fixed speed, no turbulence)."
+  ]
+}
