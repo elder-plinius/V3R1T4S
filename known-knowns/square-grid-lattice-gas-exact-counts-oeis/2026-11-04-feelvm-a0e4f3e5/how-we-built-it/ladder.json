@@ -1,0 +1,128 @@
+{
+ "1": {
+  "bfile": 4,
+  "ref": 4,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 4,
+  "prime_iso": 101,
+  "zeta": 1,
+  "isotypic_matches": true
+ },
+ "2": {
+  "bfile": 18,
+  "ref": 18,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 18,
+  "prime_iso": 101,
+  "zeta": 100,
+  "isotypic_matches": true
+ },
+ "3": {
+  "bfile": 148,
+  "ref": 148,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 45,
+  "prime_iso": 103,
+  "zeta": 46,
+  "isotypic_matches": true
+ },
+ "4": {
+  "bfile": 2970,
+  "ref": 2970,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 41,
+  "prime_iso": 101,
+  "zeta": 10,
+  "isotypic_matches": true
+ },
+ "5": {
+  "bfile": 143224,
+  "ref": 143224,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 6,
+  "prime_iso": 101,
+  "zeta": 95,
+  "isotypic_matches": true
+ },
+ "6": {
+  "bfile": 16448400,
+  "ref": 16448400,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 21,
+  "prime_iso": 103,
+  "zeta": 57,
+  "isotypic_matches": true
+ },
+ "7": {
+  "bfile": 4484823396,
+  "ref": 4484823396,
+  "ref_kind": "exact_int",
+  "isotypic_mod": 70,
+  "prime_iso": 113,
+  "zeta": 109,
+  "isotypic_matches": true
+ },
+ "8": {
+  "bfile": 2901094068042,
+  "ref": 13,
+  "ref_kind": "direct_mod(p=17)",
+  "isotypic_mod": 26,
+  "prime_iso": 113,
+  "zeta": 18,
+  "isotypic_matches": true
+ },
+ "9": {
+  "bfile": 4448410550095612,
+  "ref": 15,
+  "ref_kind": "direct_mod(p=19)",
+  "isotypic_mod": 101,
+  "prime_iso": 109,
+  "zeta": 66,
+  "isotypic_matches": true
+ },
+ "10": {
+  "bfile": 16178049740086515288,
+  "ref": 27,
+  "ref_kind": "direct_mod(p=31)",
+  "isotypic_mod": 99,
+  "prime_iso": 101,
+  "zeta": 14,
+  "isotypic_matches": true
+ },
+ "11": {
+  "bfile": 139402641051212392498528,
+  "ref": 12,
+  "ref_kind": "direct_mod(p=23)",
+  "isotypic_mod": 100,
+  "prime_iso": 199,
+  "zeta": 61,
+  "isotypic_matches": true
+ },
+ "12": {
+  "bfile": 2849295959501939989625992464,
+  "ref": 29,
+  "ref_kind": "direct_mod(p=37)",
+  "isotypic_mod": 49,
+  "prime_iso": 109,
+  "zeta": 101,
+  "isotypic_matches": true
+ },
+ "13": {
+  "bfile": 137950545200232788276834783781648,
+  "ref": 46,
+  "ref_kind": "direct_mod(p=53)",
+  "isotypic_mod": 105,
+  "prime_iso": 131,
+  "zeta": 107,
+  "isotypic_matches": true
+ },
+ "14": {
+  "bfile": 15844635835975276495290739119895808472,
+  "ref": 13,
+  "ref_kind": "direct_mod(p=29)",
+  "isotypic_mod": 70,
+  "prime_iso": 113,
+  "zeta": 7,
+  "isotypic_matches": true
+ }
+}

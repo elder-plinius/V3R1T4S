@@ -1,0 +1,100 @@
+{
+ "1": {
+  "bfile": 4,
+  "isotypic_mod": 4,
+  "prime": 101,
+  "zeta": 1,
+  "matches": true
+ },
+ "2": {
+  "bfile": 18,
+  "isotypic_mod": 18,
+  "prime": 101,
+  "zeta": 100,
+  "matches": true
+ },
+ "3": {
+  "bfile": 148,
+  "isotypic_mod": 45,
+  "prime": 103,
+  "zeta": 46,
+  "matches": true
+ },
+ "4": {
+  "bfile": 2970,
+  "isotypic_mod": 41,
+  "prime": 101,
+  "zeta": 10,
+  "matches": true
+ },
+ "5": {
+  "bfile": 143224,
+  "isotypic_mod": 6,
+  "prime": 101,
+  "zeta": 95,
+  "matches": true
+ },
+ "6": {
+  "bfile": 16448400,
+  "isotypic_mod": 21,
+  "prime": 103,
+  "zeta": 57,
+  "matches": true
+ },
+ "7": {
+  "bfile": 4484823396,
+  "isotypic_mod": 70,
+  "prime": 113,
+  "zeta": 109,
+  "matches": true
+ },
+ "8": {
+  "bfile": 2901094068042,
+  "isotypic_mod": 26,
+  "prime": 113,
+  "zeta": 18,
+  "matches": true
+ },
+ "9": {
+  "bfile": 4448410550095612,
+  "isotypic_mod": 101,
+  "prime": 109,
+  "zeta": 66,
+  "matches": true
+ },
+ "10": {
+  "bfile": 16178049740086515288,
+  "isotypic_mod": 99,
+  "prime": 101,
+  "zeta": 14,
+  "matches": true
+ },
+ "11": {
+  "bfile": 139402641051212392498528,
+  "isotypic_mod": 100,
+  "prime": 199,
+  "zeta": 61,
+  "matches": true
+ },
+ "12": {
+  "bfile": 2849295959501939989625992464,
+  "isotypic_mod": 49,
+  "prime": 109,
+  "zeta": 101,
+  "matches": true
+ },
+ "13": {
+  "bfile": 137950545200232788276834783781648,
+  "isotypic_mod": 105,
+  "prime": 131,
+  "zeta": 107,
+  "matches": true
+ },
+ "14": {
+  "bfile": 15844635835975276495290739119895808472,
+  "isotypic_mod": 70,
+  "prime": 113,
+  "zeta": 7,
+  "matches": true
+ }
+}
