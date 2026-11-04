@@ -13333,7 +13333,14 @@
    ],
    "status_source": "https://github.com/jgregoriods/rongopy",
    "status_checked": "2026-10-03",
-   "disclosure": "open"
+   "disclosure": "open",
+   "pitfalls": [
+    "The ipezygj/rongorongo-catalogue-audit fetch_data.py sends a browser-imitating User-Agent, which kit/RULES.md rule 5 forbids. Fetch the CEIPP XML (kohaumotu.org) directly with an honest client instead: 25 plain GETs answered HTTP 200 on 2026-11-04.",
+    "rongopy's horley_parallels.csv gives each of Horley's 154 passages at ONE location only; the full concordance is in Horley 2021's Appendix F, which is not open. A novelty check against the CSV must therefore be one-sided: a candidate pair counts as listed if EITHER of its locations matches a listed passage. Read two-sided, the check lets a known Horley passage through as 'new'.",
+    "Ungapped search is exhausted. An all-offset search for windows of >= 10 positions with <= 2 mismatches, under both the Barthel (633 codes) and the Horley basic (429 classes) catalogue, found 104 and 125 regions on 2026-11-04. Every one is already in parallels3, Sproat 2003 or the Horley 2021 list. About 20% of Sproat's long matches need insertions or deletions, so new parallels, if any, need gapped alignment (e.g. Smith-Waterman with an allograph substitution matrix).",
+    "Repetitive same-tablet text (I, E, G, K) sets the chance ceiling of a family-wise global-maximum null: across 1,000 shuffles, the longest chance run is about 10 positions under a glyph shuffle and about 12 under a shuffle that keeps local repetition. Runs shorter than that cannot pass a global null. If the criterion's Bonferroni over tablet pairs is meant, pre-register per-pair nulls before looking at any pair.",
+    "Sources: Barthel 1958 is openly available as proofread OCR, with page scans, on kohaumotu.org/Rongorongo/Barthel/. It includes Kapitel 6, 'Textparallelen in der Osterinselschrift' (pp. 151-157), and the transcription of the P/H/Q parallel texts, so it can be checked for novelty. Pozdniakov 1996 (JSO 103, doi:10.3406/jso.1996.1995) is open on Persee at https://www.persee.fr/doc/jso_0300-953x_1996_num_103_2_1995, with its allograph arguments and more than fifty variant pairs, but the PDF download sits behind a CAPTCHA for automated clients, so a human must fetch it (kit/RULES.md rule 5). Still closed: Pozdniakov and Pozdniakov 2007, and Horley 2021, both the book's Appendix F and the PSL thesis (theses.fr 2021UPSLP013, 'not accessible online'). A novelty claim must say which of these it could not check."
+   ]
   },
   {
    "id": "voynich-generator-heldout-fingerprints",
