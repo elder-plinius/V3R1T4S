@@ -1,0 +1,10 @@
+n=18 lines=123867 distinct=123867 A000055(Otter)=123867 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=123867 missing=0 extra=0 -> PASS
+exit=0
+n=19 lines=317955 distinct=317955 A000055(Otter)=317955 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=317955 missing=0 extra=0 -> PASS
+exit=0
+n=20 lines=823065 distinct=823065 A000055(Otter)=823065 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=823065 missing=0 extra=0 -> PASS
+exit=0
+n=21 lines=2144505 distinct=2144505 A000055(Otter)=2144505 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=2144505 missing=0 extra=0 -> PASS
+exit=0
+n=22 lines=5623756 distinct=5623756 A000055(Otter)=5623756 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=5623756 missing=0 extra=0 -> PASS
+exit=0

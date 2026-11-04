@@ -1,0 +1,5 @@
+n=18 lines=123867 distinct=123867 A000055=123867 bad=0 firstbad=None -> PASS
+n=19 lines=317955 distinct=317955 A000055=317955 bad=0 firstbad=None -> PASS
+n=20 lines=823065 distinct=823065 A000055=823065 bad=0 firstbad=None -> PASS
+n=21 lines=2144505 distinct=2144505 A000055=2144505 bad=0 firstbad=None -> PASS
+n=22 lines=5623756 distinct=5623756 A000055=5623756 bad=0 firstbad=None -> PASS
