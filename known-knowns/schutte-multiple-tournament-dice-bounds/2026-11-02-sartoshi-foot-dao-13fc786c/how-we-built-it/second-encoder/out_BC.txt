@@ -1,0 +1,104 @@
+B	m2k5n13/10_7_0	ours UNSAT (0.1 s, 21268 vars)	enc2 UNSAT (0.1 s, 23608 vars)
+ext	m2k5n13/10_7_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_1_1	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.3 s, 23894 vars)
+ext	m2k5n13/11_1_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_4_0	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 23894 vars)
+ext	m2k5n13/11_4_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_8_0	ours UNSAT (0.1 s, 21450 vars)	enc2 UNSAT (0.1 s, 23322 vars)
+ext	m2k5n13/9_8_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_8_0	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 23894 vars)
+ext	m2k5n13/11_8_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/8_8_0	ours UNSAT (0.1 s, 21580 vars)	enc2 UNSAT (0.1 s, 23036 vars)
+ext	m2k5n13/8_8_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/8_7_1	ours UNSAT (0.1 s, 21580 vars)	enc2 UNSAT (0.1 s, 23036 vars)
+ext	m2k5n13/8_7_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_11_0	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 23894 vars)
+ext	m2k5n13/11_11_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/10_4_0	ours UNSAT (0.1 s, 21268 vars)	enc2 UNSAT (0.1 s, 23608 vars)
+ext	m2k5n13/10_4_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/8_2_1	ours UNSAT (0.8 s, 21580 vars)	enc2 UNSAT (0.9 s, 23036 vars)
+ext	m2k5n13/8_2_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/12_9_0	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 20748 vars)
+ext	m2k5n13/12_9_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_6_0	ours UNSAT (0.1 s, 21450 vars)	enc2 UNSAT (0.1 s, 23322 vars)
+ext	m2k5n13/9_6_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_3_3	ours UNSAT (0.1 s, 21450 vars)	enc2 UNSAT (0.1 s, 23322 vars)
+ext	m2k5n13/9_3_3	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_5_0	ours UNSAT (0.1 s, 21450 vars)	enc2 UNSAT (0.1 s, 23322 vars)
+ext	m2k5n13/9_5_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/8_1_1	ours UNSAT (6.7 s, 21580 vars)	enc2 UNSAT (6.2 s, 23036 vars)
+ext	m2k5n13/8_1_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/10_9_1	ours UNSAT (0.1 s, 21268 vars)	enc2 UNSAT (0.1 s, 23608 vars)
+ext	m2k5n13/10_9_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_6_0	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 23894 vars)
+ext	m2k5n13/11_6_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/7_4_1	ours UNSAT (0.1 s, 21658 vars)	enc2 UNSAT (0.1 s, 22750 vars)
+ext	m2k5n13/7_4_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_7_1	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 23894 vars)
+ext	m2k5n13/11_7_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/6_3_2	ours UNSAT (0.3 s, 21684 vars)	enc2 UNSAT (0.4 s, 22464 vars)
+ext	m2k5n13/6_3_2	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_1_1	ours UNSAT (4.5 s, 21450 vars)	enc2 UNSAT (5.0 s, 23322 vars)
+ext	m2k5n13/9_1_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/8_0_4	ours UNSAT (2.6 s, 21580 vars)	enc2 UNSAT (2.4 s, 23036 vars)
+ext	m2k5n13/8_0_4	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_4_1	ours UNSAT (0.1 s, 21450 vars)	enc2 UNSAT (0.1 s, 23322 vars)
+ext	m2k5n13/9_4_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/6_2_4	ours UNSAT (0.3 s, 21684 vars)	enc2 UNSAT (0.2 s, 22464 vars)
+ext	m2k5n13/6_2_4	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/6_3_1	ours UNSAT (0.7 s, 21684 vars)	enc2 UNSAT (0.6 s, 22464 vars)
+ext	m2k5n13/6_3_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/7_4_2	ours UNSAT (0.1 s, 21658 vars)	enc2 UNSAT (0.1 s, 22750 vars)
+ext	m2k5n13/7_4_2	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/6_4_1	ours UNSAT (0.2 s, 21684 vars)	enc2 UNSAT (0.3 s, 22464 vars)
+ext	m2k5n13/6_4_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/9_2_0	ours UNSAT (0.5 s, 21450 vars)	enc2 UNSAT (0.7 s, 23322 vars)
+ext	m2k5n13/9_2_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/11_9_1	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 23894 vars)
+ext	m2k5n13/11_9_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m2k5n13/12_6_0	ours UNSAT (0.1 s, 20748 vars)	enc2 UNSAT (0.1 s, 20748 vars)
+ext	m2k5n13/12_6_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/6_2_4	ours UNSAT (1.6 s, 17940 vars)	enc2 UNSAT (1.9 s, 19050 vars)
+ext	m3k6n12/6_2_4	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/6_5_0	ours UNSAT (0.4 s, 17940 vars)	enc2 UNSAT (0.4 s, 19040 vars)
+ext	m3k6n12/6_5_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/7_7_0	ours UNSAT (1.9 s, 17866 vars)	enc2 UNSAT (0.8 s, 19420 vars)
+ext	m3k6n12/7_7_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/8_8_0	ours UNSAT (0.2 s, 17718 vars)	enc2 UNSAT (0.3 s, 19790 vars)
+ext	m3k6n12/8_8_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/11_2_0	ours UNSAT (14.2 s, 16848 vars)	enc2 UNSAT (14.3 s, 16850 vars)
+ext	m3k6n12/11_2_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/8_3_3	ours UNSAT (13.3 s, 17724 vars)	enc2 UNSAT (14.1 s, 19770 vars)
+ext	m3k6n12/8_3_3	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/6_4_2	ours UNSAT (0.3 s, 17940 vars)	enc2 UNSAT (0.3 s, 19050 vars)
+ext	m3k6n12/6_4_2	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/6_0_4	ours UNSAT (0.7 s, 17938 vars)	enc2 UNSAT (0.5 s, 19030 vars)
+ext	m3k6n12/6_0_4	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/7_3_4	ours UNSAT (4.1 s, 17866 vars)	enc2 UNSAT (4.8 s, 19420 vars)
+ext	m3k6n12/7_3_4	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/10_7_1	ours UNSAT (0.4 s, 16854 vars)	enc2 UNSAT (0.3 s, 20510 vars)
+ext	m3k6n12/10_7_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/6_1_3	ours UNSAT (0.8 s, 17938 vars)	enc2 UNSAT (0.7 s, 19030 vars)
+ext	m3k6n12/6_1_3	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/6_4_1	ours UNSAT (0.5 s, 17940 vars)	enc2 UNSAT (0.5 s, 19040 vars)
+ext	m3k6n12/6_4_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/8_7_0	ours UNSAT (0.9 s, 17722 vars)	enc2 UNSAT (1.0 s, 19780 vars)
+ext	m3k6n12/8_7_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/11_3_0	ours UNSAT (2.8 s, 16854 vars)	enc2 UNSAT (3.4 s, 16860 vars)
+ext	m3k6n12/11_3_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/11_5_0	ours UNSAT (0.5 s, 16860 vars)	enc2 UNSAT (0.5 s, 16880 vars)
+ext	m3k6n12/11_5_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/8_5_0	ours UNSAT (20.6 s, 17724 vars)	enc2 UNSAT (17.3 s, 19760 vars)
+ext	m3k6n12/8_5_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/10_5_1	ours UNSAT (3.0 s, 16860 vars)	enc2 UNSAT (3.8 s, 20490 vars)
+ext	m3k6n12/10_5_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/11_6_0	ours UNSAT (0.2 s, 16860 vars)	enc2 UNSAT (0.2 s, 16890 vars)
+ext	m3k6n12/11_6_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/7_6_1	ours UNSAT (2.5 s, 17866 vars)	enc2 UNSAT (2.8 s, 19420 vars)
+ext	m3k6n12/7_6_1	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+B	m3k6n12/11_8_0	ours UNSAT (0.1 s, 16854 vars)	enc2 UNSAT (0.1 s, 16910 vars)
+ext	m3k6n12/11_8_0	10 assignments (0 satisfying) agree on enc2+ours and the direct check
+ext	witness_cube_m2k5n14_d10a0b0.json and its 182 single-arc flips	183 assignments (37 satisfying) agree on enc2+ours and the direct check
+ext	witness_cube_m3k6n13_d11a7b0.json and its 234 single-arc flips	235 assignments (97 satisfying) agree on enc2+ours and the direct check
+# 191 s
+AGREE

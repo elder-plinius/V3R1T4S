@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+schutte-multiple-tournament-dice-bounds,"f(3,6)","13 (exact: no S_6 set of three tournaments on 12 vertices)","<= 13 (Figure 7, unstarred)",2026-11-02T06:27:43Z,object/certificate_m3k6n12.tsv,13fc786c9fb505943034cffe09f67a0534820a9b7f22a81b84361a88d514a695
