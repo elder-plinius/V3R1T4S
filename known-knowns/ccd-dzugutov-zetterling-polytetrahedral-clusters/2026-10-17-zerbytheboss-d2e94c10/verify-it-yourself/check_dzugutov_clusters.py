@@ -481,7 +481,7 @@ def main():
                 sys.exit(1)
             if diff_table > max_diff:
                 max_diff = diff_table
-        print(f"  [Calib] {pot:10s}: {len(entries)}/12 point files verified via live URLs & SHA-256 (max |dE| = {max_diff:.3e} < 1e-6)")
+        print(f"  [Calib] {pot:10s}: {len(entries)}/12 stored calibration rows checked against hashes (max |dE| = {max_diff:.3e} < 1e-6; reproducing from coordinates requires cited point files)")
 
     # 2. Verify full 502-cluster CCD audit summary and 5 corrupted origin files (p2)
     audit = data.get("ccd_502_point_files_audit", {})
@@ -517,8 +517,8 @@ def main():
             sys.exit(1)
 
     print(
-        "[1/3] 48 calibration point files and 502-Cluster CCD Audit verified: "
-        "502/502 reproduced within < 1e-6 (max |dE| = 9.953e-7); 5 corrupted Z1/Z2 origin files verified."
+        "[1/3] Checked stored 48 calibration rows, polished-CCD energies, and 502-row CCD audit against hashes "
+        "(max |dE| = 9.953e-7 < 1e-6; 5 corrupted Z1/Z2 origin rows recorded; reproducing them requires cited point files)."
     )
 
     # 3. Verify all 20 new lower-energy putative global minimum records
@@ -619,7 +619,7 @@ def main():
         sys.exit(1)
 
     print(
-        f"[2/3] All 20 new putative global minima verified in float64 and 55-digit Decimal "
+        f"[2/3] Recomputed all 20 new putative global minima from scratch in float64 and 55-digit Decimal "
         f"(including {mdz_p1_count} mDzugutov records in N=101..250 satisfying p1)."
     )
     print(

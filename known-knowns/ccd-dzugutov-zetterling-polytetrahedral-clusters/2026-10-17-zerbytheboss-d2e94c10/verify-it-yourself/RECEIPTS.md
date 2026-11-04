@@ -4,11 +4,11 @@
 
 ```text
 $ sh verify-it-yourself/run_checks.sh
-  [Calib] Dzugutov  : 12/12 point files verified via live URLs & SHA-256 (max |dE| = 4.587e-07 < 1e-6)
-  [Calib] mDzugutov : 12/12 point files verified via live URLs & SHA-256 (max |dE| = 4.797e-07 < 1e-6)
-  [Calib] Z1        : 12/12 point files verified via live URLs & SHA-256 (max |dE| = 4.761e-07 < 1e-6)
-  [Calib] Z2        : 12/12 point files verified via live URLs & SHA-256 (max |dE| = 4.669e-07 < 1e-6)
-[1/3] 48 calibration point files and 502-Cluster CCD Audit verified: 502/502 reproduced within < 1e-6 (max |dE| = 9.953e-7); 5 corrupted Z1/Z2 origin files verified.
+  [Calib] Dzugutov  : 12/12 stored calibration rows checked against hashes (max |dE| = 4.587e-07 < 1e-6; reproducing from coordinates requires cited point files)
+  [Calib] mDzugutov : 12/12 stored calibration rows checked against hashes (max |dE| = 4.797e-07 < 1e-6; reproducing from coordinates requires cited point files)
+  [Calib] Z1        : 12/12 stored calibration rows checked against hashes (max |dE| = 4.761e-07 < 1e-6; reproducing from coordinates requires cited point files)
+  [Calib] Z2        : 12/12 stored calibration rows checked against hashes (max |dE| = 4.669e-07 < 1e-6; reproducing from coordinates requires cited point files)
+[1/3] Checked stored 48 calibration rows, polished-CCD energies, and 502-row CCD audit against hashes (max |dE| = 9.953e-7 < 1e-6; 5 corrupted Z1/Z2 origin rows recorded; reproducing them requires cited point files).
   [01/20] mDzugutov_74  | E_new = -180.9875532166 | E_CCD =  -180.982763 | dE =  -0.004790 | ||g||_f64 = 1.09e-13 | ||g||_55d = 5.43e-34 | Hessian: PASS
   [02/20] mDzugutov_134 | E_new = -343.3900404390 | E_CCD =  -343.386067 | dE =  -0.003973 | ||g||_f64 = 1.84e-13 | ||g||_55d = 7.74e-34 | Hessian: PASS
   [03/20] mDzugutov_177 | E_new = -462.5826604786 | E_CCD =  -462.579581 | dE =  -0.003079 | ||g||_f64 = 2.57e-13 | ||g||_55d = 9.14e-34 | Hessian: PASS
@@ -29,7 +29,7 @@ $ sh verify-it-yourself/run_checks.sh
   [18/20] Z2_59         | E_new = -157.2398070630 | E_CCD =  -157.230650 | dE =  -0.009157 | ||g||_f64 = 4.15e-13 | ||g||_55d = 1.42e-33 | Hessian: PASS
   [19/20] Z2_69         | E_new = -184.6267084482 | E_CCD =  -184.286813 | dE =  -0.339895 | ||g||_f64 = 4.85e-13 | ||g||_55d = 1.24e-33 | Hessian: PASS
   [20/20] Z2_80         | E_new = -214.1928466438 | E_CCD =  -213.815040 | dE =  -0.377807 | ||g||_f64 = 6.76e-13 | ||g||_55d = 1.31e-33 | Hessian: PASS
-[2/3] All 20 new putative global minima verified in float64 and 55-digit Decimal (including 3 mDzugutov records in N=101..250 satisfying p1).
+[2/3] Recomputed all 20 new putative global minima from scratch in float64 and 55-digit Decimal (including 3 mDzugutov records in N=101..250 satisfying p1).
 [3/3] All 20 analytical 3N x 3N Hessians certified: 6 zero modes (< 1e-6) and 0 negative modes (Cholesky SPD on 3N-6 vibrational subspace with lambda_7 > 0.20).
 PASS: ccd-dzugutov-zetterling-polytetrahedral-clusters verification complete.
 ```
