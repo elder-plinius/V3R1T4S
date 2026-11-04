@@ -1,10 +1,11 @@
 # Criterion Skeptic Audit (`ccd-dzugutov-zetterling-polytetrahedral-clusters`)
 
-context: subagent (fresh invocation)
 target_id: ccd-dzugutov-zetterling-polytetrahedral-clusters
 confirmed_scope: Twenty 3D polytetrahedral cluster configurations in object/dzugutov_zetterling_20_records_and_502_audit.json across the Cambridge Cluster Database (CCD) modified-Dzugutov (N = 3..250) and Zetterling-Dzugutov Z1 and Z2 (N = 3..80) pair-potential tables — 4 on mDzugutov including 3 in N = 101..250 satisfying p1 (mDzugutov_74 at -180.9875532166 vs -180.982763, mDzugutov_134 at -343.3900404390 vs -343.386067, mDzugutov_177 at -462.5826604786 vs -462.579581, mDzugutov_241 at -641.7941625208 vs -641.793084), 10 on Z1 (Z1_38 at -100.1301837463 vs -99.874893, Z1_42 at -111.1739767527 vs -111.113917, Z1_44 at -116.8727164354 vs -116.579062, Z1_54 at -146.3500928888 vs -146.333923, Z1_65 at -176.4054458998 vs -176.220446, Z1_67 at -182.6367678185 vs -182.418355, Z1_68 at -185.3634223842 vs -185.275450, Z1_74 at -202.8773603525 vs -202.558045, Z1_75 at -205.8062213765 vs -205.448065, Z1_76 at -208.6187854827 vs -208.375341), and 6 on Z2 (Z2_35 at -92.2845205483 vs -92.270480, Z2_43 at -113.9462385534 vs -113.534760, Z2_56 at -149.2304029120 vs -148.936593, Z2_59 at -157.2398070630 vs -157.230650, Z2_69 at -184.6267084482 vs -184.286813, Z2_80 at -214.1928466438 vs -213.815040) — each strictly lower by at least 1e-4 than both the live CCD table energy and the polished posted CCD point file, polished in 55-digit arithmetic to gradient norm below 1.45e-33 (float64 gradient norm below 6.76e-13) with 6 rigid-body zero modes (abs(lambda) below 1e-6) and 0 negative Hessian eigenvalues (minimum vibrational eigenvalue lambda_7 >= 0.2423), accompanied by a complete 502-file CCD calibration and p2 discrepancy audit identifying the 10x Table I parameter typo in J. Chem. Phys. 118, 2792 (2003) for Z2 (b = 4.2e6 vs printed 4.2e7) and 5 corrupted central-atom coordinates in Z1_13, Z1_25, Z1_33, Z1_37, and Z2_25.
 
 ## Clause-by-Clause Verification Against `targets.json`
+
+- Context: Clause-by-clause criterion audit against `bank/targets.json` (`ccd-dzugutov-zetterling-polytetrahedral-clusters`).
 
 1. **Per-Potential Calibration Across All Four Tables (`1e-6` Requirement)**:
    - The target requires calibrating the exact potential parameters used for each table by reproducing at least ten posted point-file energies to within `1e-6`.

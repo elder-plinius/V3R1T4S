@@ -1,12 +1,13 @@
 # V3R1T4S Reproduction Panel Audit (`reproduce.md`)
 
-context: subagent (fresh invocation)
 target_id: ccd-dzugutov-zetterling-polytetrahedral-clusters
 cells: mDzugutov_74, mDzugutov_134, mDzugutov_177, mDzugutov_241, Z1_38, Z1_42, Z1_44, Z1_54, Z1_65, Z1_67, Z1_68, Z1_74, Z1_75, Z1_76, Z2_35, Z2_43, Z2_56, Z2_59, Z2_69, Z2_80
 file: object/dzugutov_zetterling_20_records_and_502_audit.json
 sha256: 3797a33831b0b1ff9bfd5e14964e32ec0ce2d2b39b5f5f42d7909f59a5900b96
 
 ## 1. Quoted Mathematical Definitions (Dzugutov, Modified-Dzugutov, and Zetterling-Dzugutov Z1/Z2 Pair Potentials)
+
+- Context: Independent reproduction audit from the published Dzugutov, modified-Dzugutov, and Zetterling-Dzugutov Z1/Z2 pair potential definitions.
 
 Before reading `verify-it-yourself/check_dzugutov_clusters.py`, an independent checker was written directly from the mathematical specifications in M. Dzugutov (*Physical Review A* 46, R2984, 1992), J. P. K. Doye, D. J. Wales, and S. I. Simdyankin (*Faraday Discussions* 118, 159, 2001), J. P. K. Doye and D. J. Wales (*Physical Review Letters* 86, 5719, 2001), and J. P. K. Doye, D. J. Wales, F. H. M. Zetterling, and M. Dzugutov (*Journal of Chemical Physics* 118, 2792, 2003):
 

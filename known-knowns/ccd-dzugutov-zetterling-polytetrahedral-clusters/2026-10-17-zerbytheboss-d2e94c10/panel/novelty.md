@@ -1,11 +1,12 @@
 # Panel Skeptic Audit: NOVELTY (`ccd-dzugutov-zetterling-polytetrahedral-clusters`)
 
 - `role`: novelty
-- `context`: subagent (fresh invocation)
 - `target_id`: `ccd-dzugutov-zetterling-polytetrahedral-clusters`
 - `audited_utc`: `2026-10-18T05:10:18Z`
 
 ## 1. Single Honest HTTP Fetch of Primary Sources (No Retries)
+
+- Context: Live primary-source, literature, trophy-case, and pull-request novelty audit.
 
 Using Python `urllib.request.urlopen` (single request per URL, zero retries) at `2026-10-18T05:10:18Z`:
 
