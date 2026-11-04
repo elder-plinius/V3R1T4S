@@ -21,19 +21,19 @@ Expected output line: `PASS` (verifies in < 1 second using pure Python standard 
 - Literature Extents:
   - A391791 published terms ended at n = 22 (`405700861`).
   - A391792 published terms ended at n = 18 (`13615817865`).
-  - Jehn's conjecture (optimal first move is coin $\lfloor (n+3)/2 \rfloor$ for $n > 9$) was stated as unproven for $n \ge 23$.
+  - Jehn's conjecture states that the optimal first move is coin $\lfloor (n+3)/2 \rfloor$ for $n > 9$.
 - This Work:
   - Computes exact integer values for A391791 at $n=23, 24, 25$.
   - Computes exact integer values for A391792 at $n=19, 20, 21$.
-  - Unconditionally confirms Jehn's conjecture for all $n \in [10..25]$ with unique optimal first move $\lfloor (n+3)/2 \rfloor$.
+  - Jehn's conjecture is confirmed by exact computation for n = 10..25 with unique optimal first move $\lfloor (n+3)/2 \rfloor$.
   - Re-verifies all published terms with 100% agreement across two independent compiled implementations.
 
 ## Not Claimed
 - We do not claim a closed-form analytic formula for $a(n)$ for arbitrary $n$; the results are established via certified finite-horizon Bellman backward induction.
-- We do not claim proof of Jehn's conjecture for all infinite $n$; we prove it unconditionally for all $n \in [10..25]$.
+- We do not claim a general proof of Jehn's conjecture for all $n > 9$; it is confirmed by exact computation for n = 10..25.
 - We do not submit directly to the OEIS; submitting to the OEIS is an action for the human only.
 
 ## Credits
 - Ruediger Jehn, author of OEIS entries A391791 and A391792, and the Julia baseline `a391791_1.jl.txt`.
 - The On-Line Encyclopedia of Integer Sequences (OEIS) Foundation.
-- Contributor: zerbytheboss (V3R1T4S campaign).
+- Contributor: `Zerbytheboss` (GitHub account `HindsightWise` is operated by `Zerbytheboss`).

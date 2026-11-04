@@ -1,6 +1,5 @@
 # Novelty Skeptic Report — `coin-basket-random-expected-values`
 
-context: subagent (fresh invocation)
 target_id: coin-basket-random-expected-values
 review_utc: 2026-10-28T00:46:00Z
 
@@ -17,13 +16,13 @@ review_utc: 2026-10-28T00:46:00Z
 2. **Literature & Repository Audit**:
    - `repo/TROPHY_CASE.md` contains zero prior claims for `coin-basket-random-expected-values`.
    - GitHub open pull requests and branches across the repository contain zero competing claims for this target.
-   - The reference Julia program by Habermann and Jehn (`a391791_1.jl.txt`) reached an uncanonicalized memoization barrier around $n=22$ and $n=18$ due to exponential state explosion without level streaming or difference reduction.
+   - The reference Julia program by Ruediger Jehn (`a391791_1.jl.txt`) computes the published terms up to $n=22$ for A391791 and $n=18$ for A391792.
 
 3. **Strict Novelty Assessment**:
    - The claimed terms strictly exceed all known records:
      - A391791: 3 new terms ($n=23, 24, 25$)
      - A391792: 3 new terms ($n=19, 20, 21$)
-   - Jehn's conjecture (stating that for $n > 9$ the optimal first move is coin $\lfloor (n+3)/2 \rfloor$) was previously only an unverified conjecture for $n \ge 23$; this work strictly settles it through $n=25$.
+   - Jehn's conjecture (stating that for $n > 9$ the optimal first move is coin $\lfloor (n+3)/2 \rfloor$) is confirmed by exact computation for n = 10..25.
    - This submission strictly beats everything known in the public record.
 
 pass: true

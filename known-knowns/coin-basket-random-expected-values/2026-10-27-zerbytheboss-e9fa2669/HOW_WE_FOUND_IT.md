@@ -27,5 +27,5 @@ The published literature records halted at $n=22$ for $k=2$ and $n=18$ for $k=3$
    - Solver 1 (Rust): Multi-threaded layered DP using colexicographical subset ranking.
    - Solver 2 (C++): Multi-threaded C++20 engine using parallel layer transitions.
    Both solvers produced 100% identical outputs on all published terms and all new terms.
-5. **Settling Jehn's Conjecture**:
-   Evaluating turn 1 decisions for $n=10..25$ proves that coin $\lfloor (n+3)/2 \rfloor$ is the strictly unique optimal first move for every $n \in [10..25]$.
+5. **Jehn's Conjecture (n = 10..25)**:
+   Evaluating turn 1 decisions shows that Jehn's conjecture is confirmed by exact computation for n = 10..25, with coin $\lfloor (n+3)/2 \rfloor$ as the strictly unique optimal first move.

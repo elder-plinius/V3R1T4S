@@ -1,6 +1,5 @@
 # Reproduce Skeptic Report — `coin-basket-random-expected-values`
 
-context: subagent (fresh invocation)
 target_id: coin-basket-random-expected-values
 review_utc: 2026-10-28T00:46:00Z
 
@@ -29,7 +28,7 @@ review_utc: 2026-10-28T00:46:00Z
    - $A391792(21) = 492482601295$
 
 4. **Partial Win p2 (Jehn's Conjecture Audit)**:
-   For every $n \in [10..25]$, both independent engines evaluated all initial moves $c \in \{1..n\}$ and proved that the optimal first move is strictly unique and identical to $\lfloor (n+3)/2 \rfloor$:
+   For every $n \in [10..25]$, both independent engines evaluated all initial moves $c \in \{1..n\}$ and confirmed by exact computation for n = 10..25 that the optimal first move is strictly unique and identical to $\lfloor (n+3)/2 \rfloor$:
    $n=10: \{6\}$, $n=11: \{7\}$, $n=12: \{7\}$, $n=13: \{8\}$, $n=14: \{8\}$, $n=15: \{9\}$, $n=16: \{9\}$, $n=17: \{10\}$, $n=18: \{10\}$, $n=19: \{11\}$, $n=20: \{11\}$, $n=21: \{12\}$, $n=22: \{12\}$, $n=23: \{13\}$, $n=24: \{13\}$, $n=25: \{14\}$.
    Zero floating point was used in either solver.
 

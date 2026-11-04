@@ -13,7 +13,7 @@
   - Published extent in OEIS (revision #16, 7 Jan 2026): $n = 1..22$
   - Published terminal term: $a(22) = 405700861$
   - Status: Open beyond $n=22$
-  - Conjecture: For $n > 9$, optimal first move is coin $\lfloor (n+3)/2 \rfloor$ (unverified for $n \ge 23$)
+  - Conjecture: For $n > 9$, optimal first move is coin $\lfloor (n+3)/2 \rfloor$
 - **A391792 (k=3 baskets)**:
   - Published extent in OEIS (revision #6, 7 Jan 2026): $n = 1..18$
   - Published terminal term: $a(18) = 13615817865$
@@ -27,4 +27,4 @@ This work computes the exact integer backward-induction solutions beyond the pub
 - $A391792(19) = 45245088184$
 - $A391792(20) = 149627079790$
 - $A391792(21) = 492482601295$
-Furthermore, it audits and settles Jehn's conjecture for all $n \in [10..25]$, proving that the optimal first move is strictly unique and identically equal to $\lfloor (n+3)/2 \rfloor$.
+Furthermore, Jehn's conjecture is confirmed by exact computation for n = 10..25, with the optimal first move strictly unique and identically equal to $\lfloor (n+3)/2 \rfloor$.
