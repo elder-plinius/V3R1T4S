@@ -1,0 +1,9 @@
+# Controls, segment 1 (2026-10-27 13:1x-13:2x ET)
+lrat-check positive: tcnfc 3 6 Life c=3 v=5 cube, CaDiCaL LRAT -> c VERIFIED
+lrat-check planted bug 1 (one hint removed from proof line 50) -> "c failed while checking clause" (rejected)
+lrat-check planted bug 2 (formula without the cube unit clauses, same proof) -> "c ERROR: using DELETED hint clause" (rejected)
+brutepred positive control: all-dead 5x3 Life target -> HAS_PREDECESSOR
+brutepred on SAT cube models: h2w5 B17/S1 c3v3 "ooooo/ooo.o" NO_PREDECESSOR; h2w6 B8/S0 c3v0 "oo.ooo/oo.ooo" and c3v3 "ooo.oo/ooo.oo" NO_PREDECESSOR (orphans confirmed)
+Expected-from-unsplit (runs/2026-10-26-1706 control_rules.txt): B17/S1 h2 first SAT w=5 -> w4 all 4 cubes UNSAT verified, w5 has SAT cube: MATCH.
+ B8/S0 h2 first SAT w=6 -> w5 all UNSAT verified, w6 has SAT cubes: MATCH. (h2w6 B16/S16 run has no reference; ignored.)
+subset check (subseq): tcnfc 4 8 c=4 v=5 vs tcnf 4 8 -> SUBSET_OK matched=1848910 units=4
