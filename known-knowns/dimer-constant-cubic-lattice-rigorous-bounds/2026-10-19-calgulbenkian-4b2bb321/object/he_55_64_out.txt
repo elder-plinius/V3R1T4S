@@ -1,0 +1,55 @@
+  [(5,4) sector i=10, orbits=  9252] p=4 bound=0.4533641368 (0.30s)
+  [(5,4) sector i= 9, orbits=  8398] p=1 bound=0.4522141221 (0.10s)
+  [(5,4) sector i= 8, orbits=  6310] p=1 bound=0.4456849457 (0.10s)
+  [(5,4) sector i= 7, orbits=  3876] p=0 bound=0.4524078793 (0.02s)
+  [(5,4) sector i= 6, orbits=  1944] p=0 bound=0.4334257707 (0.02s)
+  [(5,4) sector i= 5, orbits=   776] p=0 bound=0.4117635037 (0.01s)
+  [(5,4) sector i= 4, orbits=   245] p=0 bound=0.3816892137 (0.01s)
+  [(5,4) sector i= 3, orbits=    57] p=0 bound=0.3464786388 (0.01s)
+  [(5,4) sector i= 2, orbits=    10] p=0 bound=0.3035670034 (0.00s)
+  [(5,4) sector i= 1, orbits=     1] p=0 bound=0.2510170245 (0.00s)
+  [(5,4) sector i= 0, orbits=     1] p=0 bound=0.1834396936 (0.00s)
+Case (5,4) [N=20, max_orbits=9252, total_time=0.58s]:
+  p=0: bound = 0.4709623513  (ceil_6 = 0.470963) [sector i=10]
+  p=1: bound = 0.4546101562  (ceil_6 = 0.454611) [sector i=10]
+  p=2: bound = 0.4534591257  (ceil_6 = 0.453460) [sector i=10]
+  p=3: bound = 0.4533710806  (ceil_6 = 0.453372) [sector i=10]
+  p=4: bound = 0.4533641368  (ceil_6 = 0.453365) [sector i=10]
+  [(5,5) sector i=12, orbits= 35070] p=4 bound=0.4520105037 (14.50s)
+  [(5,5) sector i=11, orbits= 30064] p=1 bound=0.4505290379 (4.93s)
+  [(5,5) sector i=10, orbits= 22108] p=1 bound=0.4450323150 (5.54s)
+  [(5,5) sector i= 9, orbits= 13868] p=0 bound=0.4519414807 (0.66s)
+  [(5,5) sector i= 8, orbits=  7374] p=0 bound=0.4406561650 (0.54s)
+  [(5,5) sector i= 7, orbits=  3320] p=0 bound=0.4270297114 (0.35s)
+  [(5,5) sector i= 6, orbits=  1252] p=0 bound=0.4056523833 (0.23s)
+  [(5,5) sector i= 5, orbits=   388] p=0 bound=0.3815292248 (0.14s)
+  [(5,5) sector i= 4, orbits=   102] p=0 bound=0.3537193296 (0.11s)
+  [(5,5) sector i= 3, orbits=    24] p=0 bound=0.3210380208 (0.05s)
+  [(5,5) sector i= 2, orbits=     4] p=0 bound=0.2821319216 (0.01s)
+  [(5,5) sector i= 1, orbits=     1] p=0 bound=0.2365872524 (0.00s)
+  [(5,5) sector i= 0, orbits=     1] p=0 bound=0.1787785054 (0.00s)
+Case (5,5) [N=25, max_orbits=35070, total_time=27.39s]:
+  p=0: bound = 0.4692800479  (ceil_6 = 0.469281) [sector i=12]
+  p=1: bound = 0.4533425353  (ceil_6 = 0.453343) [sector i=12]
+  p=2: bound = 0.4521291626  (ceil_6 = 0.452130) [sector i=12]
+  p=3: bound = 0.4520200389  (ceil_6 = 0.452021) [sector i=12]
+  p=4: bound = 0.4520105037  (ceil_6 = 0.452011) [sector i=12]
+  [(6,4) sector i=12, orbits=112800] p=4 bound=0.4526327904 (29.66s)
+  [(6,4) sector i=11, orbits=104006] p=1 bound=0.4525300763 (10.16s)
+  [(6,4) sector i=10, orbits= 81818] p=1 bound=0.4479738021 (10.28s)
+  [(6,4) sector i= 9, orbits= 54484] p=1 bound=0.4403818929 (9.77s)
+  [(6,4) sector i= 8, orbits= 30709] p=0 bound=0.4468251567 (1.13s)
+  [(6,4) sector i= 7, orbits= 14421] p=0 bound=0.4298774085 (0.81s)
+  [(6,4) sector i= 6, orbits=  5639] p=0 bound=0.4121765186 (0.46s)
+  [(6,4) sector i= 5, orbits=  1771] p=0 bound=0.3869072941 (0.20s)
+  [(6,4) sector i= 4, orbits=   452] p=0 bound=0.3589203628 (0.09s)
+  [(6,4) sector i= 3, orbits=    85] p=0 bound=0.3256295457 (0.07s)
+  [(6,4) sector i= 2, orbits=    13] p=0 bound=0.2868390258 (0.01s)
+  [(6,4) sector i= 1, orbits=     1] p=0 bound=0.2394038568 (0.00s)
+  [(6,4) sector i= 0, orbits=     1] p=0 bound=0.1805084494 (0.00s)
+Case (6,4) [N=24, max_orbits=112800, total_time=62.81s]:
+  p=0: bound = 0.4709863836  (ceil_6 = 0.470987) [sector i=12]
+  p=1: bound = 0.4542028401  (ceil_6 = 0.454203) [sector i=12]
+  p=2: bound = 0.4528071815  (ceil_6 = 0.452808) [sector i=12]
+  p=3: bound = 0.4526516815  (ceil_6 = 0.452652) [sector i=12]
+  p=4: bound = 0.4526327904  (ceil_6 = 0.452633) [sector i=12]

@@ -1,0 +1,9 @@
+Titles and dates extracted from the three arXiv API responses (full Atom responses not saved; sha256 in README.md).
+== query 1 (dimer constant AND cubic) 
+2026-07-30T20:13:33Z http://arxiv.org/abs/2607.28810v2 A new upper bound on the dimer constant of $\mathbb{Z}^3$
+2012-06-05T10:35:30Z http://arxiv.org/abs/1206.0872v1 Yang-Lee edge singularities from extended activity expansions of the dimer density for bipartite lattices of dimensionality 2 <= d <= 7
+== query 2 (monomer-dimer AND cubic lattice AND entropy) 
+2013-05-30T08:00:48Z http://arxiv.org/abs/1305.7028v1 Higher order expansions for the entropy of a dimer or a monomer-dimer system on d-dimensional lattices
+== query 3 (dimer AND hypercubic AND upper bound) 
+2015-02-24T09:56:09Z http://arxiv.org/abs/1502.06734v2 Positivity of the virial coefficients in lattice dimer models and upper bounds on the number of matchings on graphs
+2012-08-18T02:26:48Z http://arxiv.org/abs/1208.3720v1 Effect of Dimensionality on the Continuum Percolation of Overlapping Hyperspheres and Hypercubes: II. Simulation Results and Analyses
