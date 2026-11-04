@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+cubic-graphs-graceful-knuth-beyond-14,"largest n such that every connected cubic graph on n vertices is verified graceful, all even orders up to n (DS6 Section 2; Knuth pre-fascicle 7A ex. 96 gives 16)",22,14,2026-11-01T16:56:19Z,object/CERTIFICATES.txt,765276f52743141c9fa508cbe9558c8cd2814e5a7e4711e8992fd5f57d985ffc
