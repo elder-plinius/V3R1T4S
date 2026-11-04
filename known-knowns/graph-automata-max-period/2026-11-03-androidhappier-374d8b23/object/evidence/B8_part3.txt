@@ -1,0 +1,318 @@
+G?zfF_ 8
+G?zfEo 28
+G?zfFo 26
+G?zfEw 24
+G?zfFw 20
+G?zfF{ 11
+G?zef_ 30
+G?zefO 24
+G?zeeo 38
+G?zeeW 20
+G?zedW 24
+G?zecw 20
+G?ze`w 18
+G?zeec 18
+G?zeeS 28
+G?zedS 31
+G?zecs 44
+G?ze`s 26
+G?zec[ 18
+G?ze`[ 24
+G?ze_{ 24
+G?zefo 33
+G?zefW 26
+G?zeew 48
+G?zedw 26
+G?zefc 24
+G?zefS 30
+G?zees 28
+G?zeds 30
+G?zee[ 20
+G?zed[ 33
+G?zec{ 32
+G?ze`{ 22
+G?zefw 28
+G?zefs 33
+G?zef[ 24
+G?zee{ 36
+G?zed{ 32
+G?zef{ 26
+G?zff_ 10
+G?zffO 18
+G?zfeW 16
+G?zffo 21
+G?zffW 14
+G?zfew 52
+G?zffc 15
+G?zffS 27
+G?zffw 16
+G?zffs 28
+G?zff[ 18
+G?zfe{ 24
+G?zff{ 24
+G?zfVg 18
+G?zfVw 30
+G?zfVs 18
+G?zfU{ 24
+G?zfV{ 22
+G?zfvg 18
+G?zfvw 30
+G?zfvs 20
+G?zfvk 24
+G?zfv[ 29
+G?zfv{ 32
+G?zf]w 24
+G?zf^w 22
+G?zf^{ 24
+G?ze}w 14
+G?ze~w 28
+G?ze~s 40
+G?ze~[ 26
+G?ze}{ 26
+G?ze|{ 22
+G?ze~{ 36
+G?zf~w 14
+G?zf~{ 14
+G?zTb_ 6
+G?zTf_ 14
+G?zTbo 24
+G?zTeW 18
+G?zTdW 27
+G?zTbW 25
+G?zT`w 28
+G?zTc[ 18
+G?zTa[ 42
+G?zTfo 24
+G?zTfW 31
+G?zTdw 22
+G?zTbw 26
+G?zTe[ 28
+G?zTb[ 24
+G?zTfw 32
+G?zTf[ 30
+G?zTb{ 13
+G?zTf{ 18
+G?zVf_ 14
+G?zVeo 24
+G?zVeW 16
+G?zV`w 24
+G?zVfo 33
+G?zVfW 24
+G?zVdw 26
+G?zVfc 14
+G?zVfS 27
+G?zVes 30
+G?zVe[ 26
+G?zVfw 28
+G?zVfs 36
+G?zVf[ 43
+G?zVd{ 36
+G?zVf{ 30
+G?zVVg 18
+G?zVUw 38
+G?zVVS 18
+G?zVUs 28
+G?zVTs 32
+G?zVVw 36
+G?zVVs 21
+G?zVV[ 22
+G?zVU{ 24
+G?zVT{ 34
+G?zVV{ 32
+G?zUvo 28
+G?zUvg 28
+G?zUvW 38
+G?zUuw 25
+G?zUtw 36
+G?zUus 24
+G?zUvK 30
+G?zUuk 24
+G?zUvw 34
+G?zUvs 34
+G?zUvk 44
+G?zUv[ 46
+G?zUu{ 36
+G?zUt{ 45
+G?zUv{ 38
+G?zTrg 32
+G?zTvo 44
+G?zTvg 40
+G?zTvW 44
+G?zTuw 35
+G?zTtw 52
+G?zTrw 56
+G?zTus 28
+G?zTrs 12
+G?zTvw 46
+G?zTvs 46
+G?zTv[ 40
+G?zTu{ 30
+G?zTr{ 40
+G?zTv{ 54
+G?zVvg 34
+G?zVvw 40
+G?zVvs 26
+G?zVvk 32
+G?zVv[ 34
+G?zVu{ 33
+G?zVv{ 37
+G?zV]w 16
+G?zV^w 29
+G?zV^[ 24
+G?zV]{ 38
+G?zV^{ 36
+G?zT~W 48
+G?zT|w 28
+G?zTzw 16
+G?zT~w 32
+G?zT~s 63
+G?zT~[ 41
+G?zT|{ 26
+G?zTz{ 22
+G?zT~{ 30
+G?zV~w 22
+G?zV~{ 22
+G?zvf_ 8
+G?zvfo 15
+G?zvfg 16
+G?zvfK 14
+G?zvek 20
+G?zve[ 26
+G?zvc{ 27
+G?zvfw 36
+G?zvfk 18
+G?zvf[ 18
+G?zve{ 23
+G?zvf{ 20
+G?zvvg 16
+G?zvvW 18
+G?zvuw 28
+G?zvvw 32
+G?zvvs 16
+G?zvvk 27
+G?zvv{ 25
+G?zvnk 15
+G?zvn{ 20
+G?zv~{ 20
+G?znfo 22
+G?znfW 14
+G?znew 24
+G?znfc 12
+G?znfS 24
+G?znes 36
+G?zne[ 22
+G?znc{ 28
+G?znfw 14
+G?znfs 30
+G?znf[ 18
+G?zne{ 26
+G?znf{ 24
+G?znvw 27
+G?znvs 20
+G?znvk 24
+G?znv{ 26
+G?zn^w 18
+G?zn]{ 20
+G?zn^{ 13
+G?zm~w 32
+G?zm~s 36
+G?zm}{ 16
+G?zm~{ 25
+G?zn~{ 14
+G?z^fo 31
+G?z^dw 12
+G?z^fc 18
+G?z^fS 29
+G?z^es 28
+G?z^ds 46
+G?z^e[ 22
+G?z^d[ 40
+G?z^`{ 26
+G?z^fw 22
+G?z^fs 48
+G?z^f[ 34
+G?z^d{ 30
+G?z^f{ 24
+G?z^vw 35
+G?z^vs 21
+G?z^vk 38
+G?z^v{ 40
+G?z\~w 68
+G?z\~[ 24
+G?z\z{ 12
+G?z\~{ 18
+G?z^~{ 20
+G?z~vw 18
+G?z~vk 18
+G?z~v[ 12
+G?z~u{ 22
+G?z~v{ 18
+G?z~~{ 12
+GC~vfo 14
+GC~vfW 24
+GC~vew 26
+GC~ve[ 26
+GC~vb[ 14
+GC~vc{ 7
+GC~vfw 20
+GC~vf[ 20
+GC~ve{ 20
+GC~vf{ 12
+GC~vvw 24
+GC~vvs 12
+GC~vv{ 18
+GC~v~w 14
+GC~v~{ 15
+GC~~~{ 7
+GF~~~{ 4
+GU~vvw 24
+GU~vvs 26
+GU~vv{ 38
+GU~v~{ 26
+GU~~~{ 18
+G^~~~{ 4
+n=8 graphs=273 maxperiod=68 witness_graph6=G?z\~w B={1,3,6} S={1,3,6} witness_state=5
+hist 4 2
+hist 6 1
+hist 7 2
+hist 8 2
+hist 10 1
+hist 11 1
+hist 12 8
+hist 13 2
+hist 14 14
+hist 15 4
+hist 16 9
+hist 18 25
+hist 20 15
+hist 21 3
+hist 22 14
+hist 23 1
+hist 24 32
+hist 25 4
+hist 26 20
+hist 27 6
+hist 28 17
+hist 29 3
+hist 30 13
+hist 31 3
+hist 32 11
+hist 33 5
+hist 34 6
+hist 35 2
+hist 36 11
+hist 37 1
+hist 38 7
+hist 40 7
+hist 41 1
+hist 42 1
+hist 43 1
+hist 44 4
+hist 45 1
+hist 46 4
+hist 48 3
+hist 52 2
+hist 54 1
+hist 56 1
+hist 63 1
+hist 68 1
