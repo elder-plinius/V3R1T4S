@@ -1,0 +1,7 @@
+a=9 b=14 cells=102 rows=14 tiles=385 window=24 K=3 NL=4000
+t=0/102 states=5 checks=0 kills=0 undec=0
+t=25/102 states=273 checks=846 kills=443 undec=0
+t=50/102 states=440 checks=3405 kills=1642 undec=0
+t=75/102 states=31 checks=4321 kills=2092 undec=0
+t=100/102 states=1 checks=4401 kills=2119 undec=0
+peak_states=725 sum_states=15688 checks=4401 kills=2119 undecided=0 overflow=0

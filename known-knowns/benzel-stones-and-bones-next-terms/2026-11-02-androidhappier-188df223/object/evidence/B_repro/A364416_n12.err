@@ -1,0 +1,6 @@
+(12,20): cells 192 lines 20 bones 456 stones 325 window 33 Z 3 every 5
+pos 0/192 states 4
+pos 50/192 states 486
+pos 100/192 states 3972
+pos 150/192 states 241
+max states 7976 overflow 0

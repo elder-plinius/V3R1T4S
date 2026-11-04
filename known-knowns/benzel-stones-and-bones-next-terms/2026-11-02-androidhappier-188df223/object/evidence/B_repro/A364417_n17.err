@@ -1,0 +1,11 @@
+(17,31): cells 405 lines 31 bones 1032 stones 718 window 49 Z 3 every 5
+pos 0/405 states 3
+pos 50/405 states 2099
+pos 100/405 states 64149
+pos 150/405 states 503099
+pos 200/405 states 1771574
+pos 250/405 states 138718
+pos 300/405 states 19103
+pos 350/405 states 1501
+pos 400/405 states 2
+max states 3083985 overflow 0

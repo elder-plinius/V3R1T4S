@@ -1,0 +1,4 @@
+a=5 b=7 cells=27 rows=7 tiles=76 window=13 K=3 NL=4000
+t=0/27 states=3 checks=0 kills=0 undec=0
+t=25/27 states=1 checks=88 kills=31 undec=0
+peak_states=41 sum_states=379 checks=88 kills=31 undecided=0 overflow=0

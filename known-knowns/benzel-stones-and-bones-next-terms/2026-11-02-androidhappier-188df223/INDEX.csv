@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+benzel-stones-and-bones-next-terms,"A364417(20) = T113(20,37), stones-and-bones tilings of the (20,37)-benzel (OEIS A364417, offset 3)",225354012176304818,"absent (DATA, b-file and draft end at a(19) = 20915277691567206)",2026-11-02T07:41:24Z,object/VALUE.txt,188df22331bd9b546e473501977f50e762690706bf28a3fad4cd04e7bf712445

@@ -1,0 +1,3 @@
+a=3 b=3 cells=6 rows=3 tiles=7 window=6 K=3 NL=4000
+t=0/6 states=3 checks=0 kills=0 undec=0
+peak_states=3 sum_states=11 checks=1 kills=0 undecided=0 overflow=0

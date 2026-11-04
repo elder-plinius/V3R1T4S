@@ -1,0 +1,12 @@
+(18,33): cells 456 lines 33 bones 1173 stones 814 window 52 Z 3 every 5
+pos 0/456 states 3
+pos 50/456 states 2099
+pos 100/456 states 64149
+pos 150/456 states 693085
+pos 200/456 states 2681155
+pos 250/456 states 2534935
+pos 300/456 states 284691
+pos 350/456 states 20760
+pos 400/456 states 1475
+pos 450/456 states 4
+max states 9446227 overflow 0

@@ -1,0 +1,5 @@
+(9,15): cells 105 lines 15 bones 228 stones 166 window 25 Z 3 every 5
+pos 0/105 states 3
+pos 50/105 states 1107
+pos 100/105 states 2
+max states 1336 overflow 0

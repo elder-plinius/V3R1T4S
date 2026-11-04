@@ -1,0 +1,4 @@
+(7,11): cells 60 lines 11 bones 117 stones 88 window 19 Z 3 every 5
+pos 0/60 states 3
+pos 50/60 states 12
+max states 260 overflow 0

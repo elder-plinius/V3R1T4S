@@ -1,0 +1,6 @@
+a=8 b=12 cells=78 rows=12 tiles=283 window=21 K=3 NL=4000
+t=0/78 states=5 checks=0 kills=0 undec=0
+t=25/78 states=273 checks=613 kills=226 undec=0
+t=50/78 states=42 checks=1882 kills=1011 undec=0
+t=75/78 states=1 checks=1971 kills=1040 undec=0
+peak_states=446 sum_states=5883 checks=1971 kills=1040 undecided=0 overflow=0
