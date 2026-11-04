@@ -1,0 +1,15 @@
+=== Z-L3: Zeng normalisation z=(x3,y3,psi5,x5,y5), psi5 in [0,pi/5] ===
+150 random triples of Euclidean motions (80 with an orientation-reversing pentagon map): max |A(original) - A(z)| = 3.619e-09 (sampling error ~1e-9)
+control: with R5^0 axis at 0.3 rad instead of 0, the reflection psi->-psi is not a symmetry: |A(psi=.4) - A(reflected psi=.2)| = 0.0017480639485876193
+=== Z-L4: far field, one body: A >= G(d_k(r)) for every direction ===
+n=3 r=0.1907: min over theta of area conv(D u body) = 0.913812152 at theta=0.0000; G(d_k(r)) = 0.834000214; diff = 7.981e-02 (>=0 required; inner polygon error ~1e-9)
+n=5 r=0.194601: min over theta of area conv(D u body) = 0.961168387 at theta=0.6283; G(d_k(r)) = 0.834000146; diff = 1.272e-01 (>=0 required; inner polygon error ~1e-9)
+n=3 r=0.08: min over theta of area conv(D u body) = 0.842162398 at theta=0.0000; G(d_k(r)) = 0.810896730; diff = 3.127e-02 (>=0 required; inner polygon error ~1e-9)
+n=5 r=0.08: min over theta of area conv(D u body) = 0.849509900 at theta=0.6283; G(d_k(r)) = 0.802717484; diff = 4.679e-02 (>=0 required; inner polygon error ~1e-9)
+n=3 r=0.15: min over theta of area conv(D u body) = 0.881809460 at theta=0.0000; G(d_k(r)) = 0.824695837; diff = 5.711e-02 (>=0 required; inner polygon error ~1e-9)
+n=5 r=0.12: min over theta of area conv(D u body) = 0.886973890 at theta=0.6283; G(d_k(r)) = 0.812562593; diff = 7.441e-02 (>=0 required; inner polygon error ~1e-9)
+random directions/orientations incl. reflections, r in [0.08,0.2]:
+min (A_one-body - G(d_k(r))) over 400 random placements: 0.03177936242417845
+=== Z-L5: dihedral reduction of the centre direction to [0,pi/n] ===
+max |A(r,theta) - A(r,theta_reduced in [0,pi/n])| over 300 random (n,r,theta): 2.2506647656683754e-09
+(sections Z-L6c/d/e of this run had a test bug (displacement norm); superseded by out/zeng_break_l6.out)

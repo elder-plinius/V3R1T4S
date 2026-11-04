@@ -1,0 +1,112 @@
+{
+ "3,32": {
+  "drop_indices": [
+   5
+  ],
+  "author_only": 0,
+  "mine": 17,
+  "author": 16
+ },
+ "3,64": {
+  "drop_indices": [
+   11
+  ],
+  "author_only": 0,
+  "mine": 33,
+  "author": 32
+ },
+ "3,128": {
+  "drop_indices": [
+   21
+  ],
+  "author_only": 0,
+  "mine": 65,
+  "author": 64
+ },
+ "3,256": {
+  "drop_indices": [
+   43
+  ],
+  "author_only": 0,
+  "mine": 129,
+  "author": 128
+ },
+ "3,512": {
+  "drop_indices": [
+   85
+  ],
+  "author_only": 0,
+  "mine": 257,
+  "author": 256
+ },
+ "3,768": {
+  "drop_indices": [],
+  "author_only": 0,
+  "mine": 387,
+  "author": 386
+ },
+ "3,1024": {
+  "drop_indices": [
+   171
+  ],
+  "author_only": 0,
+  "mine": 513,
+  "author": 512
+ },
+ "5,32": {
+  "drop_indices": [
+   13
+  ],
+  "author_only": 0,
+  "mine": 17,
+  "author": 16
+ },
+ "5,64": {
+  "drop_indices": [
+   26
+  ],
+  "author_only": 0,
+  "mine": 33,
+  "author": 32
+ },
+ "5,128": {
+  "drop_indices": [
+   52
+  ],
+  "author_only": 0,
+  "mine": 65,
+  "author": 64
+ },
+ "5,256": {
+  "drop_indices": [
+   103
+  ],
+  "author_only": 0,
+  "mine": 129,
+  "author": 128
+ },
+ "5,512": {
+  "drop_indices": [
+   205
+  ],
+  "author_only": 0,
+  "mine": 257,
+  "author": 256
+ },
+ "5,768": {
+  "drop_indices": [
+   308
+  ],
+  "author_only": 0,
+  "mine": 385,
+  "author": 384
+ },
+ "5,1024": {
+  "drop_indices": [
+   410
+  ],
+  "author_only": 0,
+  "mine": 513,
+  "author": 512
+ }
+}

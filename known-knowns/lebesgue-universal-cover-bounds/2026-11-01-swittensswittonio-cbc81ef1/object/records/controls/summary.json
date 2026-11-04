@@ -1,0 +1,18 @@
+{
+ "baseline": false,
+ "c1_bitflip": true,
+ "c2_truncate": true,
+ "c3_drop100": true,
+ "c4_dup1": true,
+ "c5_shrink": true,
+ "c6_grow": true,
+ "c8_samples32": true,
+ "c9_psi07": true,
+ "c12_swap_lohi": true,
+ "c14_shift": true,
+ "c15_countlie": true,
+ "tau_up_tight_pass": false,
+ "tau_up_tight_fail": false,
+ "tau_0.84": true,
+ "tau_0.8348": false
+}

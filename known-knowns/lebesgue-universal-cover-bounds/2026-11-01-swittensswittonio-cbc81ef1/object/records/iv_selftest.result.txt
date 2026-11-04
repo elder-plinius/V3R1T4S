@@ -1,0 +1,1 @@
+checked 200000 violations 0 {'add': 20000, 'sub': 20000, 'mul': 20000, 'sqr': 20000, 'div': 20000, 'sqrt': 20000, 'sin': 20000, 'cos': 20000, 'sinI': 20000, 'cosI': 20000}

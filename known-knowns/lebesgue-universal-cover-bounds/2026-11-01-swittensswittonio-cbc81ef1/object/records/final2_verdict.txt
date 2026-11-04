@@ -1,0 +1,5 @@
+PART r3_collar: shards=256/256 leaves=2374 checked=2374 failing=0 min_slack=5.848039E-005 (leaf r3_collar:frontier:00000049:leaf:00000042) cover_and_frontier_partition=EXACT kinds=onebody_inner_polygon:2324,onebody_inner_polygon_pruned:50
+PART r5_collar: shards=256/256 leaves=1029 checked=1029 failing=0 min_slack=4.895557E-005 (leaf r5_collar:frontier:00000225:leaf:00000004) cover_and_frontier_partition=EXACT kinds=onebody_inner_polygon:1014,onebody_inner_polygon_pruned:15
+PART core5d: shards=256/256 leaves=6742989 checked=6742989 failing=0 min_slack=1.551089E-009 (leaf core5d:frontier:00000099:leaf:f3f063e37aab2285c295) cover_and_frontier_partition=EXACT kinds=template_simple_meanvalue:6317602,template_convex_meanvalue:423033,template_simple_meanvalue+altset:2354
+TOTAL leaves=6746392 failing=0 worst_slack_over_0.834=1.551089E-009
+VERDICT: ACCEPT (all leaf proofs pass with interval lower bound > 0.834; exact box partitions; counts equal shipped summaries)

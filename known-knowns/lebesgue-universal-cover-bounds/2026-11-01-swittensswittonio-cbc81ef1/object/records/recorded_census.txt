@@ -1,0 +1,3 @@
+r3_collar {'leaves': 2374, 'min_recorded_lower': 0.8340000596222135, 'min_leaf': 'r3_collar:frontier:00000032:leaf:00000005', 'min_str': '[0.83400005962221344318146035438 +/- 2.69e-30]', 'leaves_touching_float_pi_top': 10}
+r5_collar {'leaves': 1029, 'min_recorded_lower': 0.8340004455429716, 'min_leaf': 'r5_collar:frontier:00000008:leaf:00000002', 'min_str': '[0.83400044554297158787148326419 +/- 4.31e-30]', 'leaves_touching_float_pi_top': 19}
+core5d {'leaves': 6742989, 'min_recorded_lower': 0.8340000000267627, 'min_leaf': 'core5d:frontier:00000092:leaf:932eb01fa1084c5c3d9d', 'min_str': '[0.83400000002676268383535687490 +/- 6.97e-31]', 'leaves_touching_float_pi_top': 8829}
