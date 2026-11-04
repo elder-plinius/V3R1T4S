@@ -1,0 +1,21 @@
+ICRbnr]zw A 366 B 366 python 366 
+I?BDNj{]o A 367 B 367 python 367 
+I?o~dvsxW A 367 B 367 python 367 
+ICRc|uz~o A 367 B 367 python 367 
+I?qadbgzw A 368 B 368 python 368 
+ICRVVNw~o A 368 B 368 python 368 
+I?`EVHynW A 369 B 369 python 369 
+ICpevbZ~W A 370 B 370 python 370 
+I?`DVfe^w A 376 B 376 python 376 
+I?`adbg|W A 376 B 376 python 376 
+I?bNEVlvw A 376 B 376 python 376 
+I?bNBbZnw A 388 B 388 python 388 
+I?`DUJeuw A 391 B 391 python 391 
+I?bB@pk~O A 392 B 392 python 392 
+I?bBVIw~W A 410 B 410 python 410 
+I?bB@bB}o A 413 B 413 python 413 
+I?B@mRgno A 429 B 429 python 429 
+I?AADJOIg A 464 B 464 python 464 
+ICQfRh|z_ A 470 B 470 python 470 
+I?AAD@oIg A 624 B 624 python 624 
+graphs 20 mismatches 0
