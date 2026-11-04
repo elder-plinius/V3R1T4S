@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+windmill-kn2-harmonious-graham-sloane,"n = 8: is the windmill K_8^(2) (15 vertices, q = 56) harmonious? (DS6 Table 2, windmills, m = 2)","not harmonious (0 labelings, exhaustive search by two programs)","open (m = 2, H? iff n = 4)",2026-11-02T00:22:54Z,object/DECISION.txt,4376025039cb3b56a2ab755a9220f65111fb9ff3aea2340a64c1b4e0becba26e

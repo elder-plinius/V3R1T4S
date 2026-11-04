@@ -1,0 +1,4 @@
+n=8 q=56 sum_distinct_sets_containing_0=449472
+d=14 distinct_vectors=8608 sets_with_compatible_partner_vector=0
+n=8 solutions_ordered_pairs=0
+VERDICT n=8: NOT HARMONIOUS

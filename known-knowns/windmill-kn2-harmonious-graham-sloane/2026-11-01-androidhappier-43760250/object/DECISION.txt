@@ -1,0 +1,56 @@
+# Decision certificate: harmonious labelings of the windmill K_8^(2)
+target: windmill-kn2-harmonious-graham-sloane
+cell: n = 8
+graph: K_8^(2) = two copies of K_8 sharing one vertex c; 15 vertices; q = 56 edges
+definition: harmonious = distinct labels in Z_q on the vertices with the q edge sums f(u)+f(v) mod q pairwise distinct (Graham and Sloane 1980)
+decision: NOT HARMONIOUS
+criterion_branch: (b) exhaustive search by two independent programs (P1 wsearch.c, P2 mitm.py)
+reduction: translation only, f -> f - f(c), so f(c) = 0; no unit multiplier, no swap of the two cliques
+search_space: ordered pairs (A, B) of 8-subsets of Z_56 with 0 in both, A and B meeting only in 0, each with 28 distinct pair sums, the two sum sets disjoint
+
+# Expected values. verify-it-yourself/check_decision.py compares each line with fresh program output.
+# Format: expect PROGRAM N FIELD VALUE (one fresh-output field per line)
+expect P1 3 sum_distinct_sets_containing_0 10
+expect P1 3 solutions_ordered_pairs 0
+expect P1 4 sum_distinct_sets_containing_0 120
+expect P1 4 solutions_ordered_pairs 48
+expect P1 5 sum_distinct_sets_containing_0 1460
+expect P1 5 solutions_ordered_pairs 0
+expect P1 6 sum_distinct_sets_containing_0 13608
+expect P1 6 solutions_ordered_pairs 0
+expect P1 7 sum_distinct_sets_containing_0 90888
+expect P1 7 solutions_ordered_pairs 0
+expect P1 8 sum_distinct_sets_containing_0 449472
+expect P1 8 solutions_ordered_pairs 0
+expect P1 8 nodesB 270416160
+expect P2 3 sum_distinct_sets_containing_0 10
+expect P2 3 solutions_ordered_pairs 0
+expect P2 4 sum_distinct_sets_containing_0 120
+expect P2 4 distinct_masks 91
+expect P2 4 solutions_ordered_pairs 48
+expect P2 5 sum_distinct_sets_containing_0 1460
+expect P2 5 solutions_ordered_pairs 0
+expect P2 6 sum_distinct_sets_containing_0 13608
+expect P2 6 solutions_ordered_pairs 0
+expect P2 7 sum_distinct_sets_containing_0 90888
+expect P2 7 solutions_ordered_pairs 0
+expect P2 8 sum_distinct_sets_containing_0 449472
+expect P2 8 distinct_masks 407352
+expect P2 8 solutions_ordered_pairs 0
+expect BRUTE 4 brute_force_labelings 20736
+expect N4LIST 4 ordered_pairs 48
+
+# Pinned files (sha256, path relative to the package folder). check_decision.py recomputes every hash.
+pin 515a12c208c2b3d7a8623d41870791cee61e4113e41c0c92f4abd1330cd4d26c  object/evidence/P1_wsearch_n8.txt
+pin 4289ca75204add540eabb66617fa528533e50755ee15b7c3fee85848a610b179  object/evidence/P2_mitm_n8.txt
+pin 35b808ca2b07d5f1683f71e34f55e6f632717567890fe31f0ab473bbeba8d0de  object/evidence/P3_wjoin_n8.txt
+pin 6c20bb8b569e585e3c52576e95036e66d7b67cabfe91d9fc4cfc54884b0de039  object/evidence/brute_n4.txt
+pin aed402e1211fa87f0d116b61b5aaab051529675e542f2fbcd9e51a207f94c04b  object/evidence/mod_multiset_n8.txt
+pin 5be48197780aa2cb5e0d920b4653b1eb5734b5791c501bb8b781f7d684a6e257  object/evidence/mod_projection_n8.txt
+pin 7aa7211a5ecf860b480093eea2b18db1716c61bba84a8c8623cda35df026e6ef  object/evidence/n4_solutions_P1.txt
+pin 7aa7211a5ecf860b480093eea2b18db1716c61bba84a8c8623cda35df026e6ef  object/evidence/n4_solutions_P2.txt
+pin cf86fa6ae1a1afdea4ee8466dc4a209b88ac28e27b358eae515211e9c66895f3  object/evidence/run_DECISION.txt
+pin 16cec8d28461af78a4907986a0954603aabe1a13f68f7f8fddfe8cde30285309  verify-it-yourself/wsearch.c
+pin 8721646656ef20c8618a8e23b0cd02ef4c25014b0628dd27492df167a8d5e8a5  verify-it-yourself/mitm.py
+pin dcf62f46cfa256d3f82dfd94976b088d920019b6a26ff95eded9b01cdf4e4bc7  verify-it-yourself/brute_n4.py
+pin bf27e7e2248fdc2bd2be90216c86185c714fcfa1a17b58d18a147834567b7cb0  verify-it-yourself/check_label.py
