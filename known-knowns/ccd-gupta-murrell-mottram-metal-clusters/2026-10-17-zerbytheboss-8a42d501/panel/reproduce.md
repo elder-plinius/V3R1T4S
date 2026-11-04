@@ -1,6 +1,5 @@
 # V3R1T4S Reproduction Panel Audit (`reproduce.md`)
 
-context: subagent (fresh invocation)
 target_id: ccd-gupta-murrell-mottram-metal-clusters
 cells: Zn_106, Cd_71, Cd_84, Cd_94, Cd_106
 file: object/gupta_zn_cd_5_records_and_780_audit.json
@@ -24,6 +23,7 @@ Before reading `verify-it-yourself/check_gupta_clusters.py`, an independent chec
 ## 2. Independent Verification Results on `object/gupta_zn_cd_5_records_and_780_audit.json`
 
 1. **File Integrity & `INDEX.csv` Verification**:
+   - Context: Independent verification of the 5 Gupta Zn/Cd structures from the Cleri-Rosato Gupta specification and hash verification of the stored calibration, polished-CCD, and 780-row audit records.
    - All 5 rows in `INDEX.csv` (`Zn_106`, `Cd_71`, `Cd_84`, `Cd_94`, `Cd_106`) reference `object/gupta_zn_cd_5_records_and_780_audit.json` with exact SHA-256 match `50c4a29c08cbe9c1e2a9a0790ce53e5a65e9cb2c11de0e78ea3199d1ba7db44c`.
 
 2. **Parameter Calibration on 48 Cited Point Files & 780-Row Audit (`ccd_780_point_files_audit`)**:
@@ -40,7 +40,7 @@ Before reading `verify-it-yourself/check_gupta_clusters.py`, an independent chec
 | **`Cd_94`** | `94` | `-109.048698` | `-109.0486983843` | `-109.0494558230` | `-109.04945582298477224` | **`-0.000758`** | `1.871e-14` | `5.677e-35` | `6 / 0 / 276` | `0.0584 .. 52.3866` |
 | **`Cd_106`** | `106` | `-123.000416` | `-123.0004155585` | `-123.0018760970` | `-123.00187609704602258` | **`-0.001460`** | `2.346e-14` | `6.019e-35` | `6 / 0 / 312` | `0.0388 .. 51.9185` |
 
-   - **Distinct-Basin Verification**: For each of the 5 clusters, Newton-polishing the cited CCD reference point file (`jon/structures/Gupta/<metal>/points/<N>`) gives a gradient norm below `1e-13` and remains within `5e-7 eV` of the 6-decimal CCD table value, whereas our new local minimum lies `-0.000207 eV` to `-0.004692 eV` lower (`2.07x` to `46.9x` the `1e-4 eV` Full Win threshold).
+   - **Distinct-Basin Verification**: For each of the 5 clusters, the stored polished-CCD energy (checked against its cited `jon/structures/Gupta/<metal>/points/<N>` SHA-256 hash; reproducing from coordinates requires the cited points archive) remains within `5e-7 eV` of the 6-decimal CCD table value, whereas our recomputed new local minimum lies `-0.000207 eV` to `-0.004692 eV` lower (`2.07x` to `46.9x` the `1e-4 eV` Full Win threshold).
    - **Stationarity & Strict Local Minima**: Every new minimum has gradient norm at or below `2.346e-14` in `float64` (`2.66e-14` in pure-Python summation order) and `6.585e-35` in 55-digit arithmetic (well below `1e-10`), and its exact $3N \times 3N$ analytical Hessian has `6` near-zero rigid-body modes (`|\lambda| \le 3.80e-15`, well below `1e-6`), `0` negative eigenvalues, and all $3N - 6$ vibrational eigenvalues strictly positive (`\lambda_7 \ge 0.0388`).
 
 ## 3. Execution of `verify-it-yourself/run_checks.sh`
