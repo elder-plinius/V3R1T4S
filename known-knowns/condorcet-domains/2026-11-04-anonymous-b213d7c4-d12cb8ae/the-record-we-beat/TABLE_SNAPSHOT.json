@@ -1,0 +1,105 @@
+{
+  "target_id": "condorcet-domains",
+  "n": 25,
+  "paper_version": "v1",
+  "table": "Table4 f(n)&h(n) construction lower bound",
+  "table_value": 160316046,
+  "table_url": "https://arxiv.org/html/2601.07336v1",
+  "table_fetched_utc": "2026-11-04T02:30:05.952223+00:00",
+  "table_http_status": 200,
+  "table_sha256": "a018d41785d2594aca2ffb57a28eb3e596acda1469395452e565aa4c268fb93a",
+  "table_response_headers": {
+    "server": [
+      "Google Frontend"
+    ],
+    "last-modified": [
+      "Mon, 24 Aug 2026 19:00:14 GMT"
+    ],
+    "etag": [
+      "\"CIHJiMX5uZYDEAE=\""
+    ],
+    "via": [
+      "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+    ],
+    "age": [
+      "1050848"
+    ],
+    "date": [
+      "Wed, 04 Nov 2026 02:30:05 GMT"
+    ],
+    "x-cache": [
+      "MISS, HIT, HIT"
+    ]
+  },
+  "latest_version_metadata_url": "https://export.arxiv.org/api/query?id_list=2601.07336",
+  "metadata_fetched_utc": "2026-11-04T02:29:33.436710+00:00",
+  "metadata_http_status": 200,
+  "metadata_sha256": "72bfe80d3374c180f74482a80b48c9746b3ea786c9af567930e56b0a11992178",
+  "metadata_response_headers": {
+    "server": [
+      "Google Frontend"
+    ],
+    "via": [
+      "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+    ],
+    "age": [
+      "0"
+    ],
+    "date": [
+      "Wed, 04 Nov 2026 02:29:33 GMT"
+    ],
+    "x-cache": [
+      "MISS, MISS, MISS"
+    ]
+  },
+  "metadata_entry": {
+    "id": "http://arxiv.org/abs/2601.07336v1",
+    "title": "Improved lower bounds for the maximum size of Condorcet domains",
+    "updated": "2026-01-12T09:03:12Z",
+    "published": "2026-01-12T09:03:12Z"
+  },
+  "metadata_query_semantics_documentation": "https://info.arxiv.org/help/api/user-manual.html#511-a-note-on-article-versions",
+  "abstract_cache_note": "The normal abstract response remained stale: Age385746>max-age3600; no origin revalidation is claimed. Fresh official unversioned API metadata identified latestv1. Fixedv1 table content is cache-served; its cachedAge1050848 does not select the latest version.",
+  "formula_column_excluded": 195312500,
+  "public_unmerged_claims": [
+    {
+      "number": 762,
+      "url": "https://github.com/elder-plinius/V3R1T4S/pull/762",
+      "title": "[claim] condorcet-domains: n=25, 180,870,896 orders (above published Table 4: 160,316,046)",
+      "state": "open",
+      "merged": false,
+      "head_sha": "651a2f7872214ef33728f32c08e4e1d89a9c177d",
+      "updated_at": "2026-11-03T23:58:16Z",
+      "n": 25,
+      "claimed_size": 180870896
+    },
+    {
+      "number": 389,
+      "url": "https://github.com/elder-plinius/V3R1T4S/pull/389",
+      "title": "[claim] condorcet-domains: n = 25, 178950728 linear orders vs published 160316046 (arXiv:2601.07336v1 Table 4)",
+      "state": "open",
+      "merged": false,
+      "head_sha": "9573bcf8d98bebff42c6d82fe1e7c481dd103c27",
+      "updated_at": "2026-10-24T16:14:46Z",
+      "n": 25,
+      "claimed_size": 178950728
+    },
+    {
+      "number": 388,
+      "url": "https://github.com/elder-plinius/V3R1T4S/pull/388",
+      "title": "[claim] condorcet-domains: n = 24, 81912986 linear orders vs published 73279872 (arXiv:2601.07336v1 Table 4)",
+      "state": "open",
+      "merged": false,
+      "head_sha": "abc5220fd79f75651d5faadb71df365566201121",
+      "updated_at": "2026-10-24T16:14:45Z",
+      "n": 24,
+      "claimed_size": 81912986
+    }
+  ],
+  "literature_window": [
+    "2024-11-04",
+    "2026-11-04"
+  ],
+  "scope": "dated bounded source checks; no assertion about unpublished/unindexed/subsequent work",
+  "raw_pages_included": false
+}
