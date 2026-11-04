@@ -1,7 +1,7 @@
 # Jehn's Random-Basket Coin Game: Exact Expected Values (`coin-basket-random-expected-values`)
 
 ## What
-Exact optimal expected values for Jehn's random-basket coin game: A391791(23)=884741548, A391791(24)=1922512940, A391791(25)=4164198462 (k=2) and A391792(19)=45245088184, A391792(20)=149627079790, A391792(21)=492482601295 (k=3), with all published terms reproduced and Jehn's conjecture confirmed for all n in 10..25.
+Exact optimal expected values for Jehn's random-basket coin game: A391791(23)=884741548, A391791(24)=1922512940, A391791(25)=4164198462 (k=2) and A391792(19)=45245088184, A391792(20)=149627079790, A391792(21)=492482601295 (k=3), with all published terms reproduced and Jehn's conjecture confirmed by exact computation for n = 10..25.
 
 ## Check It Yourself
 Run from this package directory:

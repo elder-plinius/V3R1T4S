@@ -6,6 +6,7 @@ review_utc: 2026-10-28T00:46:00Z
 ## Novelty & Prior Art Audit
 
 1. **Status Source Verification**:
+   - Context: Primary-source status check of OEIS A391791 and A391792 and repository prior-art check.
    - Status source URL: `https://oeis.org/A391791`
    - Secondary source: `https://oeis.org/A391792`
    - Fetched: 2026-10-28T00:31:50Z (HTTP 200, SHA256 `f4ca4c77d1c41c96dab40e5f51e2756147aba06cdbd83067bfd5e1d807f79b59`)
@@ -14,7 +15,7 @@ review_utc: 2026-10-28T00:46:00Z
    - Neither the OEIS sequence entries, their official b-files (`b391791.txt`, `b391792.txt`), nor their edit histories contain the terms $n \ge 23$ for A391791 or $n \ge 19$ for A391792.
 
 2. **Literature & Repository Audit**:
-   - `repo/TROPHY_CASE.md` contains zero prior claims for `coin-basket-random-expected-values`.
+   - `TROPHY_CASE.md` contains zero prior claims for `coin-basket-random-expected-values`.
    - GitHub open pull requests and branches across the repository contain zero competing claims for this target.
    - The reference Julia program by Ruediger Jehn (`a391791_1.jl.txt`) computes the published terms up to $n=22$ for A391791 and $n=18$ for A391792.
 

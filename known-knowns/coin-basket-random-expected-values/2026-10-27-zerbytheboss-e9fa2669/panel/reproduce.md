@@ -6,6 +6,7 @@ review_utc: 2026-10-28T00:46:00Z
 ## Reproduction Audit
 
 1. **Independent Verification from First Principles**:
+   - Context: Independent exact verification of A391791(1..25) and A391792(1..21) from the published recurrence.
    The game is defined by $k$ exchangeable baskets and coins $1, \dots, n$. On each turn one basket is selected uniformly at random ($1/k$ probability), and the player chooses a remaining coin $c \in R$ to place into that basket. The final payoff is $\max(s_1, \dots, s_k)$.
    Under the backward induction recurrence:
    $$W(R, s) = \sum_{b=1}^k \max_{c \in R} W(R \setminus \{c\}, s + c \cdot e_b)$$
