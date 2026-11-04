@@ -1,0 +1,26 @@
+n=12 holes=78 jumps=330 regions=21 uncovered=24 B=200000 W=3
+layer 1: cand=35 kept=35 minpegs=76 keyrange=532..544
+layer 2: cand=189 kept=189 minpegs=75 keyrange=516..552
+layer 3: cand=1838 kept=1838 minpegs=72 keyrange=492..548
+layer 4: cand=22485 kept=22485 minpegs=70 keyrange=472..544
+layer 5: cand=316998 kept=200000 minpegs=67 keyrange=448..504
+layer 6: cand=1195812 kept=200000 minpegs=64 keyrange=424..464
+layer 7: cand=1445041 kept=200000 minpegs=59 keyrange=400..436
+layer 8: cand=1056768 kept=200000 minpegs=56 keyrange=376..408
+layer 9: cand=1306776 kept=200000 minpegs=53 keyrange=352..380
+layer 10: cand=482220 kept=200000 minpegs=49 keyrange=324..356
+layer 11: cand=599945 kept=200000 minpegs=46 keyrange=304..336
+layer 12: cand=628194 kept=200000 minpegs=43 keyrange=284..312
+layer 13: cand=521441 kept=200000 minpegs=39 keyrange=264..292
+layer 14: cand=742097 kept=200000 minpegs=35 keyrange=244..272
+layer 15: cand=895874 kept=200000 minpegs=32 keyrange=220..252
+layer 16: cand=947864 kept=200000 minpegs=29 keyrange=200..228
+layer 17: cand=865571 kept=200000 minpegs=24 keyrange=180..208
+layer 18: cand=630174 kept=200000 minpegs=21 keyrange=156..188
+layer 19: cand=1295566 kept=200000 minpegs=18 keyrange=132..164
+layer 20: cand=1057378 kept=200000 minpegs=13 keyrange=112..144
+layer 21: cand=606918 kept=200000 minpegs=10 keyrange=84..120
+layer 22: cand=1167768 kept=200000 minpegs=8 keyrange=64..96
+layer 23: cand=1329790 kept=200000 minpegs=5 keyrange=40..72
+layer 24: cand=849590 kept=200000 minpegs=2 keyrange=28..56
+layer 25: cand=584191 kept=200000 minpegs=1 keyrange=8..44

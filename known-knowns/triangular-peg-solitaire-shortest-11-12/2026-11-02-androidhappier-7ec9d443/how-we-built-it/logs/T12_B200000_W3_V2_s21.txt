@@ -1,0 +1,3 @@
+SOLVED n=12 moves=25
+start a3
+a1-a3, a4-a2, a6-a4, a8-a6, a10-a8, a12-a10, c3-a1-a3-a5-a7-a9-a11, c7-a7, c5-c3-a3-c5-c7-a5, e7-c5, c10-a8-a6-a4-c6-c4, e5-c5-c3-e5-e7-c7, e12-c10, d9-b9-b7-d7-d9-d11-b9, c12-a12-a10-c10, g12-e12-c12, f10-d10-b10-b12-d12-b10-b8-d8-f10-f12, g8-e6, g7-e5-e7-e9, i12-g12-e12-e10-e8-g8, k12-i12, h10-j12-h12-f10-f8-h10, i9-g7-g9-g11, k11-i11-g9-i9-k11, l12-j10-h10-h12-f10

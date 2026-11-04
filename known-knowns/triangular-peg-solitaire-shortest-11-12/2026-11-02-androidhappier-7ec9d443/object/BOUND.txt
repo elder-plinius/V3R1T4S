@@ -1,0 +1,12 @@
+object: an explicit solution of triangular peg solitaire on Triangle(12), OEIS A127500, cell a(12)
+solution_file: object/T12_25moves.txt
+solution_sha256: 7ec9d443efe7b234fb31c6d427820f067f3815e99dea8750a547bc1b53a6c78b
+board: Triangle(12), 78 holes, G. I. Bell's notation (a1 = top corner, row r holds a..(r-th letter))
+start: full board minus a3
+finish: one peg at j12
+jumps: 76
+moves: 25
+bound: a(12) <= 25
+published_upper_bound: 29 (OEIS A127500 comment and G. I. Bell, Large Triangular Boards, both fetched 2026-11-02T17:31:50Z)
+published_lower_bound: 21
+claim: upper bound only; the exact value of a(12) is not claimed
