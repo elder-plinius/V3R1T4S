@@ -321,7 +321,7 @@ def main():
         if err > max_cal_err[metal]:
             max_cal_err[metal] = err
     assert cal_counts["Mo"] == 98 and cal_counts["Fe"] == 98
-    print(f"Calibrated Mo ({cal_counts['Mo']} files, max |dE|={max_cal_err['Mo']:.2e} eV) and Fe ({cal_counts['Fe']} files, max |dE|={max_cal_err['Fe']:.2e} eV) < 1e-7 eV.")
+    print(f"Checked stored calibration/audit rows for Mo ({cal_counts['Mo']} files, max |dE|={max_cal_err['Mo']:.2e} eV) and Fe ({cal_counts['Fe']} files, max |dE|={max_cal_err['Fe']:.2e} eV) < 1e-7 eV (reproducing from coordinates needs cited points.tgz archives).")
 
     # 2. Verify all 11 putative global-minimum clusters
     recs = data["records"]
@@ -367,7 +367,7 @@ def main():
         assert r["hessian_zero_modes_count"] == 6 and r["hessian_negative_modes_count"] == 0
         assert r["hessian_min_positive_eigenvalue"] > 0.35
         zm_res = verify_hessian_inertia(coords_f64, params, min_eig_bound=0.35)
-        print(f"Verified {lbl:6s}: E* = {E_f64:15.10f} eV (CCD = {exp_tab_e:15.10f}, dE = {r['delta_vs_ccd_table_eV']:+10.6f} eV, ||g||_f64={g_l2:.2e}, ||g||_dec={float(gnorm_dec):.2e}, ||H Q0||={zm_res:.2e})")
+        print(f"Recomputed {lbl:6s}: E* = {E_f64:15.10f} eV (CCD = {exp_tab_e:15.10f}, dE = {r['delta_vs_ccd_table_eV']:+10.6f} eV, ||g||_f64={g_l2:.2e}, ||g||_dec={float(gnorm_dec):.2e}, ||H Q0||={zm_res:.2e})")
 
     for row in audit:
         lbl = row["label"]
@@ -375,7 +375,7 @@ def main():
             assert row["new_record_energy_eV"] == recs[lbl]["energy_eV"]
             assert row["new_record_delta_eV"] == recs[lbl]["delta_vs_ccd_table_eV"]
 
-    print("Verified all 11 Finnis-Sinclair putative global minimum records + all 196 CCD Mo/Fe cluster point files.")
+    print("Recomputed only the 11 new Finnis-Sinclair putative global minimum structures; calibration, polished-CCD energies, and 196-row audit are stored values checked against hashes (reproducing them needs the cited points.tgz archives).")
     print("PASS")
 
 if __name__ == "__main__":
