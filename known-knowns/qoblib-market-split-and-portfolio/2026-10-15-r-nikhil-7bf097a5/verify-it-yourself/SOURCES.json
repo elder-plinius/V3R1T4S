@@ -1,0 +1,12 @@
+{
+  "stock_prices.txt.gz": {
+    "url": "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/54d8b9d99ea382f8002f960e71e45f559e4c332a/06-portfolio/instances/po_a400_t10_s00/stock_prices.txt.gz",
+    "sha256": "faed9a53c7717686e2b4e664d4bc89a0dbda15e195811acd5a09aed4c717471b",
+    "bytes": 47179
+  },
+  "covariance_matrices.txt.gz": {
+    "url": "https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/54d8b9d99ea382f8002f960e71e45f559e4c332a/06-portfolio/instances/po_a400_t10_s00/covariance_matrices.txt.gz",
+    "sha256": "efaeb65dfa0c727cd1b7b0ba44f92c18a8c4c1e8cf9c14a13effea1d8ba0d6ed",
+    "bytes": 20518660
+  }
+}
