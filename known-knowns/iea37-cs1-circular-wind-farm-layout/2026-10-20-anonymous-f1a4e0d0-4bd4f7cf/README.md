@@ -3,7 +3,8 @@
 ## What
 The 16-turbine layout in object/iea37-v3r1t4s-opt16.yaml satisfies the IEA37 case study 1 constraints with no tolerance (all hubs within 1300 m of (0,0), all pairs at least 260 m apart). The unmodified official iea37-aepcalc.py scores it at 424131.9503 MWh, strictly above every 16-turbine value in table/iea37-cs1-results (maximum 421561.89715, par12, infeasible), arXiv 2212.00742 Table 4 (maximum 419935.7905), Baker et al. 2019 Table 2 (maximum 418924.4064), and Pérez-Rúa et al. 2023 Case I (about 418 GW h).
 
-Target: clean-energy-records (charter quarry), instance iea37-cs1-opt16. Status: CONFIRMED_SOLUTION (three
+Target: iea37-cs1-circular-wind-farm-layout (bank target; first submitted under the charter quarry clean-energy-records),
+instance iea37-cs1-opt16. Status: CONFIRMED_SOLUTION (three
 fresh-context skeptics passed; see panel/).
 
 ## Check it yourself
