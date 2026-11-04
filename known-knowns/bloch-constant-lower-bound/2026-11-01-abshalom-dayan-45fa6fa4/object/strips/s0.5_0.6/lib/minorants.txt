@@ -1,0 +1,3 @@
+0x1.02b7c00843fc5p-1 0x1.d53b825036530p-5 0x1.3fbe913aa4ab2p-6 plus
+0x1.01ba876d0c1bbp-1 0x1.c66172e36dce5p-5 0x1.cb453d3eab078p-7 minus
+0x1.02bf5687a4907p-1 0x1.d28eaa80c6ab1p-5 0x1.146c5a1ae4debp-6 center

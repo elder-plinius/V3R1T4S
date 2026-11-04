@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+bloch-constant-lower-bound,lower bound of B (constant 57a),sqrt(3)/4+0.0155=0.44851270189,sqrt(3)/4+0.0153=0.44831270189 (largest found; page itself shows sqrt(3)/4+2e-4),2026-11-01T02:18:50Z,object/PROOF.md,45fa6fa4cedfe7c3fa0ac217e874ea3afeee0876c7804a1e99eaa6308c7b6f56
