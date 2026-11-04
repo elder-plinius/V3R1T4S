@@ -1,0 +1,5 @@
+# Contributor text, unverified
+
+Earlier runs searched the 64-turbine case from fresh ring and random starts, then ruin-and-recreate and a four-hub vacancy method (Codex), reaching 1538890.72 MWh; that search was still improving at its deadline. This run resumed the byte-identical four-hub vacancy code from that own layout with five seeds sharing only their own best layouts. It first exceeded PR #938 after about four minutes (1539609.20 MWh) and reached 1543800.47 MWh by 20:44:47Z, when it was stopped early to leave time for review. Published coordinates, including PR #938's, were never used as starts.
+
+A separate check re-evaluated the frozen object with a standard-library evaluator and the unmodified official evaluator, checked geometry in exact rational arithmetic, and compared it with every posted layout and PR #938 under rotations and mirror images (at least 50 of 64 hubs stay more than 50 m from any of them). Three fresh review contexts then checked reproduction, novelty and the literal criterion. Panel reports are copied without edits.
