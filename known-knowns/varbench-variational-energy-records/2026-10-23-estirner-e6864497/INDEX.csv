@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+varbench-variational-energy-records,J1J2/square_100_P_0.9.md,-253.753424311,-253.668 (arXiv:2606.04558v2 Table I; best VarBench row -250.78657331066935),2026-10-23T15:08:00Z,object/r10_J0.9_B1.pt,e68644979db4d9764ac1787d1c064fe18c4750cb4cb47ee573e40588bcd9c485

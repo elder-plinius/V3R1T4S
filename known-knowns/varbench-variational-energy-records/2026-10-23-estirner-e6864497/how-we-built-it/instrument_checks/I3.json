@@ -1,0 +1,25 @@
+{
+ "lattice": {
+  "L": 10,
+  "n_nn": 200,
+  "n_diag": 200,
+  "nn_degree": [
+   4
+  ],
+  "diag_degree": [
+   4
+  ],
+  "unique": true,
+  "ok": true
+ },
+ "start": "2026-10-23T15:43:48Z",
+ "n_kept": 250,
+ "max_dlogabs": 4.0234118415583e-05,
+ "max_dphase": 0.0011146516260528132,
+ "max_dEloc": 0.1804498122588985,
+ "tol_Eloc": 0.00025366799999999997,
+ "max_abs_Eloc": 775.5499982974617,
+ "w_le_16": true,
+ "I3_pass": false,
+ "end": "2026-10-23T15:44:02Z"
+}

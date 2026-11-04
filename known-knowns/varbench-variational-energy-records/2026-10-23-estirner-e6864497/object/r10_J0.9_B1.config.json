@@ -1,0 +1,12 @@
+{
+ "L": 10,
+ "net": {
+  "channels": 16,
+  "blocks": 3,
+  "kernel": 3
+ },
+ "prior": "stripe",
+ "irrep": "B1",
+ "flip": true,
+ "sym": true
+}
