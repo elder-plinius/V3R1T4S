@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+lebesgue-universal-cover-bounds,p1,"245496952/245496952 leaves of Mishra's tau=0.8344 certificate accepted by independent interval-arithmetic checker (486799600 nodes, 0 failing)","none (no table cell; page lists lower bound 0.832)",2026-10-31T22:24:42Z,object/LebVerifyI/Core.cs,d401fa22ab8dfe4bed90c6e7239cab138bdefd1c1e5b01cab7e34699d146135d

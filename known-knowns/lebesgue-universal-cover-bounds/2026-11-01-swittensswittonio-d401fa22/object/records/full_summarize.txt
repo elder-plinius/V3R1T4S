@@ -1,0 +1,25 @@
+  claim decimal 8344/10000 = enclosure [0.8343999999999999,0.8344000000000001]; header tau double 0.8344 is inside it
+  header: tau=0.8344 thresh=0.8344160021170217 tmax=0.7 m=1024 K=1024 depth=22 nseed=4194304 inflate=1E-11 nblk=4194304
+  acceptance threshold TauThr = 0.8344000000010002 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6938309388801657  (interval-certified f(d0) >= 0.8344001005881776 >= TauThr + 1e-7)  tmax=0.7
+  seed rho-coverage (Iv): seeds at top end 524,288, of which not certified to reach true 2pi/5: 0; bottom-end seeds not certified to reach 0: 0; seed-split coverage failures: 0
+  plan: 4,200,730 work units (68 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 6,426
+  plan: 3,596 jobs
+====================================================================================================
+  jobs covered 3,596 of 3,596  (FULL)
+  nodes 486,799,600 (incl. 6,426 pre-walk prefix split nodes)  leaves 245,496,952   (a-priori leaves 1,208,576, hull leaves 244,288,376)
+  forest identity 2L - nseed = 486,799,600 vs nodes 486,799,600: OK
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  hull leaves accepted at tier 0/1/2: 244,288,376 / 0 / 0; failed after last tier: 0
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 3.426674E-006
+  worst leaf box (at the tier where it was accepted): [0.05468749999551566,0.010937500000656245,0.05468749999551566,0.010937500000656245,0.4516039439554963,0.019634954085917956,0.032812499994859405,0.010937500000656245,0.032812499994859405,0.010937500000656245]
+  worst slack after re-evaluating the 11,009,232 leaves with accepted slack < 2E-005 at the finest tier N=4096 (max of accepted and fine LB): 1.577153E-005
+  worst-fine leaf box: [-0.002734374993246136,0.0027343750002187485,-0.04648437499499613,0.0027343750002187485,0.893390410865481,0.009817477043057153,0.008203124993628946,0.0027343750002187485,0.027343749994531284,0.00546875000038281]
+  max erosion delta3 3.093592E-002 delta5 9.019420E-002;  min half-width over splits: translation 8.544922E-005 rho 3.067962E-004;  max stack depth 31
+  leaf extents  t3x[-0.700000000007,0.700000000007] t3y[-0.700000000007,0.700000000007] rho[-0.000000000006280,1.256637061442197] t5x[-0.700000000007,0.700000000007] t5y[-0.700000000007,0.700000000007]
+  edge-refinement insertions 28,904,110,681 (118.32 per hull leaf)
+  interval child-covers-parent checks at every split (incl. seed splits and pre-walk): failures 0  => OK
+  (leaf extents above are informational bookkeeping in plain doubles; domain coverage is certified by the Iv split checks + Iv seed rho checks, not by them)
+====================================================================================================
+RESULT VERIFIED  (interval mode)  a >= 0.8344 nodes 486,799,600 leaves 245,496,952 failing 0

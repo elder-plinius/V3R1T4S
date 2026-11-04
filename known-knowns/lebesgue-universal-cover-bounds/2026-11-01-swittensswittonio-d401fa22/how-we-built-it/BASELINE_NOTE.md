@@ -1,0 +1,1 @@
+No empirical benchmark score is claimed. The comparator is the previous run's rigorous-double replay (runs/2026-10-31-1549/attempts/evaluator): nodes 486,799,600, leaves 245,496,952, 0 failing, worst slack 3.426673e-6 (accepting tier). The author's Python verifier (data/mishra_repo/src/verifyB.py) reports about 15 h on 8 cores.

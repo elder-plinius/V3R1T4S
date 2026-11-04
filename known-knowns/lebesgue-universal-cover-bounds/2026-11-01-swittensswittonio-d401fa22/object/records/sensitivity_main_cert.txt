@@ -1,0 +1,19 @@
+== tau 0.8344034 job 3431
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 2.667362E-008
+RESULT: SLICE OK (not a full verification)
+== tau 0.8344035 job 3431
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 4.015103E-006
+RESULT: SLICE OK (not a full verification)
+== tau 0.83441 job 3431
+  hull leaves accepted at tier 0/1/2: 63,647 / 0 / 0; failed after last tier: 0
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 4.446315E-009
+RESULT: SLICE OK (not a full verification)
+== tau 0.83442 job 3431
+  hull leaves accepted at tier 0/1/2: 63,453 / 0 / 0; failed after last tier: 194
+  failing leaves 194  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): -4.221951E-006
+  first failure: LEAF-FAIL lb=0.8344170328111399 seed 3932169 box [0.005468749993437541,0.00546875000038281,0.038281249995187526,0.00546875000038281,0.2552544031045634,0.019634954085917956,0.049218749995187536,0.00546875000038281,0.005468749993437541,0.0054687
+RESULT: VERIFICATION FAILED

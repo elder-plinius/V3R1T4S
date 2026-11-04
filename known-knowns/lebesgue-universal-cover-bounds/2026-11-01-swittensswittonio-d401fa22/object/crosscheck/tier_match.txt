@@ -1,0 +1,6 @@
+25
+128 interval-mine: min 1.123e-04 max 1.727e-04 mean 1.433e-04
+256 interval-mine: min 2.029e-05 max 4.290e-05 mean 3.371e-05
+512 interval-mine: min 2.303e-06 max 6.002e-06 mean 4.330e-06
+1024 interval-mine: min -4.352e-06 max -3.161e-06 mean -3.673e-06
+2048 interval-mine: min -5.885e-06 max -5.289e-06 mean -5.571e-06

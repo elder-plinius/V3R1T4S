@@ -1,0 +1,1 @@
+max |area(original, arbitrary motions incl. reflections) - area(reduced placement)| over 200 trials, fine sampling: 3.4795488712546785e-09 (trials with >=1 reflection: 2.7110449440925777e-09 )

@@ -1,0 +1,16 @@
+certB_test exit=0 : RESULT VERIFIED  (interval mode)  a >= 0.83 nodes 2,141,360 leaves 1,071,192 failing 0 
+accept_m_K_2048 exit=0 : RESULT VERIFIED  (interval mode)  a >= 0.83 nodes 2,141,360 leaves 1,071,192 failing 0 
+accept_m_K_4096 exit=0 : RESULT VERIFIED  (interval mode)  a >= 0.83 nodes 2,141,360 leaves 1,071,192 failing 0 
+bad_magic exit=1 :   REJECTED: bad magic / short file RESULT: REJECTED 
+flip_first_bit exit=1 : RESULT: VERIFICATION FAILED 
+flip_mid_bit exit=1 : RESULT: VERIFICATION FAILED 
+inflate_negative exit=1 :   REJECTED: inflate = -0.001 not in (0,1e-3); (coverage itself is certified per split by Iv) RESULT: REJECTED 
+inflate_zero exit=1 :   REJECTED: inflate = 0 not in (0,1e-3); (coverage itself is certified per split by Iv) RESULT: REJECTED 
+tau_0.8301 exit=1 : RESULT: VERIFICATION FAILED 
+tau_0.8348 exit=1 : RESULT: VERIFICATION FAILED 
+tmax_0.60 exit=1 :   REJECTED: domain |t|<=0.6 is smaller than d0=0.6810069056427346: placements with d0<=|t|<=tmax would be uncovered/unchecked (f(tmax) < tau+1e-7 => outside placements not excluded) RESULT: REJECTED
+tmax_0.65 exit=1 :   REJECTED: domain |t|<=0.65 is smaller than d0=0.6810069056427346: placements with d0<=|t|<=tmax would be uncovered/unchecked (f(tmax) < tau+1e-7 => outside placements not excluded) RESULT: REJECTED
+trailing_byte exit=1 :   REJECTED: trailing bytes after last block RESULT: REJECTED 
+truncated_block exit=1 : RESULT: VERIFICATION FAILED 
+truncated_file exit=1 :   REJECTED: truncated: block sizes exceed file RESULT: REJECTED 
+DONE

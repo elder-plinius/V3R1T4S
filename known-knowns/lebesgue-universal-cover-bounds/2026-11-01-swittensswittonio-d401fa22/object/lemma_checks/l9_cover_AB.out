@@ -1,0 +1,20 @@
+CIRC5 (as float in verifyB) = 0.5257311121191336 ; double(1+1e-11) - 1 = 1.000000082740371e-11
+=== A. split schedule ===
+coordinate order for the first 30 splits: [0, 1, 3, 4, 0, 1, 3, 4, 2, 0, 1, 3, 4, 2, 0, 1, 3, 4, 2, 0, 1, 3, 4, 2, 0, 1, 3, 4, 2, 0]
+  depth 0: split coord 0, h_split = 7.0000e-01, sufficient condition holds: True
+  depth 10: split coord 1, h_split = 1.7500e-01, sufficient condition holds: True
+  depth 22: split coord 4, h_split = 4.3750e-02, sufficient condition holds: True
+  depth 40: split coord 1, h_split = 2.7344e-03, sufficient condition holds: True
+  depth 60: split coord 1, h_split = 1.7090e-04, sufficient condition holds: True
+  depth 62: split coord 4, h_split = 1.7090e-04, sufficient condition holds: True
+  depth 64: split coord 0, h_split = 8.5449e-05, sufficient condition holds: True
+  depth 70: split coord 1, h_split = 4.2725e-05, sufficient condition holds: True
+  depth 76: split coord 3, h_split = 2.1362e-05, sufficient condition holds: True
+  depth 80: split coord 1, h_split = 1.0681e-05, sufficient condition holds: False
+  depth 89: split coord 0, h_split = 2.6703e-06, sufficient condition holds: False
+FIRST DEPTH AT WHICH THE SUFFICIENT CONDITION FAILS: 79
+  threshold h* (translations, |c|+h<=0.7+h): 1.5543466192961032e-05
+=== B. exact check of the 22 root splits with virtual domain ends ===
+splits checked: 4194303 (expected 2^22-1 = 4194303); seeds reached: 4194304; failures: 0; time 116s
+min over splits of: (virtual lo - left child lo) = 1.0937500904972808e-12 ; (right child hi - virtual hi) = 2.1870005806334802e-13 ; (left hi - right lo) overlap = 4.3748338285354293e-13
+ALL 22 ROOT SPLITS COVER THE TRUE DOMAIN [-7/10,7/10]^2 x [0, 2pi/5] x [-7/10,7/10]^2 EXACTLY (virtual ends: 7/10 and Machin upper bound of 2pi/5 rounded outward)

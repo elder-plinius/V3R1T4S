@@ -1,0 +1,43 @@
+VERIFY work/cert_B_08344.bin  tiers N=256/1024/4096  threads=6  2026-11-01T01:32:43.2663170Z  pid=35388
+  claim decimal 8344/10000 = enclosure [0.8343999999999999,0.8344000000000001]; header tau double 0.8344 is inside it
+  header: tau=0.8344 thresh=0.8344160021170217 tmax=0.7 m=1024 K=1024 depth=22 nseed=4194304 inflate=1E-11 nblk=4194304
+  acceptance threshold TauThr = 0.8344000000010002 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6938309388801657  (interval-certified f(d0) >= 0.8344001005881776 >= TauThr + 1e-7)  tmax=0.7
+  seed rho-coverage (Iv): seeds at top end 524,288, of which not certified to reach true 2pi/5: 0; bottom-end seeds not certified to reach 0: 0; seed-split coverage failures: 0
+  plan: 4,200,730 work units (68 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 6,426
+  plan: 3,596 jobs
+  jobs 0..3596 of 3596; already done (checkpoint): 0; to run: 353
+  [0.5 min] jobs 24/353  leaves 1,332,348  44,114 leaves/s  working set 1109 MB
+  [1.0 min] jobs 40/353  leaves 2,451,572  39,147 leaves/s  working set 1109 MB
+  [1.6 min] jobs 53/353  leaves 3,308,792  35,397 leaves/s  working set 1109 MB
+  [2.1 min] jobs 74/353  leaves 4,845,543  39,259 leaves/s  working set 1124 MB
+  [2.6 min] jobs 88/353  leaves 5,827,360  37,233 leaves/s  working set 1124 MB
+  [3.1 min] jobs 110/353  leaves 7,370,430  39,469 leaves/s  working set 1124 MB
+  [3.6 min] jobs 138/353  leaves 9,242,004  42,776 leaves/s  working set 1124 MB
+  [4.1 min] jobs 160/353  leaves 10,863,886  44,081 leaves/s  working set 1124 MB
+  [4.6 min] jobs 183/353  leaves 12,323,579  44,647 leaves/s  working set 1124 MB
+  [5.2 min] jobs 208/353  leaves 14,199,793  45,789 leaves/s  working set 1125 MB
+  [5.7 min] jobs 229/353  leaves 15,734,709  46,099 leaves/s  working set 1124 MB
+  [6.2 min] jobs 261/353  leaves 17,630,623  47,443 leaves/s  working set 1124 MB
+  [6.7 min] jobs 282/353  leaves 19,063,998  47,504 leaves/s  working set 1124 MB
+  [7.2 min] jobs 300/353  leaves 20,477,435  47,094 leaves/s  working set 1124 MB
+  [7.7 min] jobs 329/353  leaves 22,305,341  48,021 leaves/s  working set 1124 MB
+  [8.2 min] jobs 353/353  leaves 24,002,319  48,724 leaves/s  working set 1124 MB
+  wall time this run: 8.21 min
+====================================================================================================
+  jobs covered 353 of 3,596  (PARTIAL SLICE)
+  nodes 47,601,642 (incl. 0 pre-walk prefix split nodes)  leaves 24,002,319   (a-priori leaves 122,666, hull leaves 23,879,653)
+  forest identity: only checked on the full run (each processed subtree already ended exactly at its pre-walk bit position)
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  hull leaves accepted at tier 0/1/2: 23,879,653 / 0 / 0; failed after last tier: 0
+  failing leaves 0  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): 4.910190E-006
+  worst leaf box (at the tier where it was accepted): [-0.016406249994093784,0.00546875000038281,-0.0765624999966094,0.010937500000656245,0.9228428419939652,0.019634954085917956,-0.010937499993765663,0.010937500000656245,-0.032812499994859405,0.010937500000656245]
+  worst slack after re-evaluating the 1,062,407 leaves with accepted slack < 2E-005 at the finest tier N=4096 (max of accepted and fine LB): 1.582303E-005
+  worst-fine leaf box: [0.0013671874931367616,0.001367187500123046,-0.01914062499428519,0.0027343750002187485,0.6037748381166971,0.004908738521577664,-0.03007812499472269,0.0027343750002187485,0.002734374993246136,0.0027343750002187485]
+  max erosion delta3 3.093592E-002 delta5 9.019420E-002;  min half-width over splits: translation 8.544922E-005 rho 3.067962E-004;  max stack depth 31
+  leaf extents  t3x[-0.700000000007,0.700000000007] t3y[-0.700000000007,0.700000000007] rho[-0.000000000006280,1.256637061442197] t5x[-0.700000000007,0.700000000007] t5y[-0.700000000007,0.700000000007]
+  edge-refinement insertions 2,834,817,870 (118.71 per hull leaf)
+  interval child-covers-parent checks at every split (incl. seed splits and pre-walk): failures 0  => OK
+====================================================================================================
+RESULT: SLICE OK (not a full verification)

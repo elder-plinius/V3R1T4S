@@ -1,0 +1,6 @@
+VERIFY work/tamper/tmax_0.65.bin  tiers N=256/1024/4096  threads=1  2026-11-01T00:57:23.1045928Z  pid=33688
+  header: tau=0.83 thresh=0.8300160021170216 tmax=0.65 m=1024 K=1024 depth=10 nseed=1024 inflate=1E-11 nblk=1024
+  acceptance threshold TauThr = 0.830000000001 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6810069056427346  (interval-certified f(d0) >= 0.8300001005716394 >= TauThr + 1e-7)  tmax=0.65
+  REJECTED: domain |t|<=0.65 is smaller than d0=0.6810069056427346: placements with d0<=|t|<=tmax would be uncovered/unchecked (f(tmax) < tau+1e-7 => outside placements not excluded)
+RESULT: REJECTED

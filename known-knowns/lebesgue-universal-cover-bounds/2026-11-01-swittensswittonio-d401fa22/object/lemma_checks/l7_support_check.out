@@ -1,0 +1,6 @@
+n=3 max|h-brute|=3.430e-08 width range [1.000000000000000,1.000000000000000] diam(sample)=1.000000000000000 max(dist to corner)-1=6.66e-16 R_n=0.577350269190 max|h(th)-R_n|-excess=0.00e+00
+n=5 max|h-brute|=1.235e-08 width range [1.000000000000000,1.000000000000000] diam(sample)=1.000000000000000 max(dist to corner)-1=2.22e-16 R_n=0.525731112119 max|h(th)-R_n|-excess=0.00e+00
+n=7 max|h-brute|=6.301e-09 width range [1.000000000000000,1.000000000000000] diam(sample)=1.000000000000000 max(dist to corner)-1=2.22e-16 R_n=0.512858431636 max|h(th)-R_n|-excess=0.00e+00
+n=9 max|h-brute|=3.811e-09 width range [1.000000000000000,1.000000000000000] diam(sample)=1.000000000000000 max(dist to corner)-1=2.22e-16 R_n=0.507713305943 max|h(th)-R_n|-excess=0.00e+00
+n=11 max|h-brute|=2.552e-09 width range [1.000000000000000,1.000000000000000] diam(sample)=1.000000000000000 max(dist to corner)-1=4.44e-16 R_n=0.505141613269 max|h(th)-R_n|-excess=0.00e+00
+A_inner 0.8347806842176269 A_outer 0.8347841156416406 0.8347820222985245

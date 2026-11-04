@@ -1,0 +1,33 @@
+VERIFY work/tamper/flip_mid_bit.bin  tiers N=256/1024/4096  threads=1  2026-10-31T23:29:50.8461686Z  pid=17168
+  header: tau=0.83 thresh=0.8300160021170216 tmax=0.7 m=1024 K=1024 depth=10 nseed=1024 inflate=1E-11 nblk=1024
+  acceptance threshold TauThr = 0.830000000001 (>= tau + 1e-12, interval upper bound)
+  a-priori threshold d0 = 0.6810069056427346  (interval-certified f(d0) >= 0.8300001005716394 >= TauThr + 1e-7)  tmax=0.7
+  seed rho-coverage (Iv): seeds at top end 512, of which not certified to reach true 2pi/5: 0; bottom-end seeds not certified to reach 0: 0; seed-split coverage failures: 0
+  plan: 1,024 work units (0 heavy seeds cut into subtrees of <= 150,000 nodes), prefix split nodes 0
+  plan: 17 jobs
+  jobs 0..17 of 17; already done (checkpoint): 0; to run: 17
+  [0.6 min] jobs 3/17  leaves 205,116  5,479 leaves/s  working set 30 MB
+  [1.2 min] jobs 7/17  leaves 477,863  6,425 leaves/s  working set 31 MB
+  [1.8 min] jobs 10/17  leaves 671,494  6,351 leaves/s  working set 31 MB
+  [2.3 min] jobs 15/17  leaves 1,004,346  7,140 leaves/s  working set 31 MB
+  [2.5 min] jobs 17/17  leaves 1,071,193  7,200 leaves/s  working set 31 MB
+  wall time this run: 2.48 min
+====================================================================================================
+  jobs covered 17 of 17  (FULL)
+  nodes 2,141,362 (incl. 0 pre-walk prefix split nodes)  leaves 1,071,193   (a-priori leaves 0, hull leaves 1,071,193)
+  forest identity 2L - nseed = 2,141,362 vs nodes 2,141,362: OK
+  bit-stream desync/trailing-bit units 0  (nonzero padding 0)
+  hull leaves accepted at tier 0/1/2: 1,071,191 / 0 / 0; failed after last tier: 2
+  failing leaves 2  (angular-order-certificate failures 0)
+  worst HULL-leaf INTERVAL slack above TauThr (lb.lo - TauThr): -3.412632E-002
+  worst leaf box (at the tier where it was accepted): [-0.04374999999518753,0.043750000001749986,-0.04374999999518753,0.043750000001749986,0.5497787143813554,0.07853981634210103,-0.04374999999518753,0.043750000001749986,-0.04374999999518753,0.043750000001749986]
+  worst slack after re-evaluating the 6,869 leaves with accepted slack < 2E-005 at the finest tier N=4096 (max of accepted and fine LB): -3.412632E-002
+  worst-fine leaf box: [-0.04374999999518753,0.043750000001749986,-0.04374999999518753,0.043750000001749986,0.5497787143813554,0.07853981634210103,-0.04374999999518753,0.043750000001749986,-0.04374999999518753,0.043750000001749986]
+  max erosion delta3 1.956559E-001 delta5 4.119723E-001;  min half-width over splits: translation 1.708984E-004 rho 6.135923E-004;  max stack depth 31
+  leaf extents  t3x[-0.700000000006,0.700000000006] t3y[-0.700000000005,0.700000000005] rho[-0.000000000006234,1.256637061442151] t5x[-0.700000000006,0.700000000006] t5y[-0.700000000005,0.700000000005]
+  edge-refinement insertions 135,679,064 (126.66 per hull leaf)
+  interval child-covers-parent checks at every split (incl. seed splits and pre-walk): failures 0  => OK
+  first failure: LEAF-FAIL lb=0.8071256304685591 seed 61 box [-0.010937499993765663,0.010937500000656245,-0.021874999994312534,0.021875000001093742,0.43196898986977467,0.03926990817144321,-0.021874999994312534,0.021875000001093742,-0.021874999994312534,0.021875000001093742]
+  (leaf extents above are informational bookkeeping in plain doubles; domain coverage is certified by the Iv split checks + Iv seed rho checks, not by them)
+====================================================================================================
+RESULT: VERIFICATION FAILED

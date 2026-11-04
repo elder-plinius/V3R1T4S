@@ -1,0 +1,9 @@
+h-range            trials  exact-cover failures   sufficient-cond holds for all?
+[1.0e-08,1.0e-07]  200000  195336   (cases where sufficient cond holds but cover FAILS: 0)
+[1.0e-07,1.0e-06]  200000  170445   (cases where sufficient cond holds but cover FAILS: 0)
+[1.0e-06,1.0e-05]  200000  71141   (cases where sufficient cond holds but cover FAILS: 0)
+[1.0e-05,1.5e-05]  200000  751   (cases where sufficient cond holds but cover FAILS: 0)
+[1.5e-05,3.0e-05]  200000  0   (cases where sufficient cond holds but cover FAILS: 0)
+[3.0e-05,1.0e-04]  200000  0   (cases where sufficient cond holds but cover FAILS: 0)
+[1.0e-04,1.0e-03]  200000  0   (cases where sufficient cond holds but cover FAILS: 0)
+[1.0e-03,7.0e-01]  200000  0   (cases where sufficient cond holds but cover FAILS: 0)
