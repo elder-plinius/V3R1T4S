@@ -1,0 +1,18 @@
+# PREREG — Stage K (finite seed evaluation, <= 90 min TOTAL): per-seed hit rate of the plateau walk from the immutable 8,732, A(25,6,11)
+Authority: Manager 6263866201 (09:18:23Z), conditional pre-authorisation, conditions met: live channel (this session, cron 5725018d), wrapper corrected and controlled (Stage W, REPORT_W.md 1fab89dd..., j7 0c012a49..., micro-tests T1-T5 AS_DESIGNED 09:51:45-09:52:31Z), resources measured at launch.
+T0 = 2026-10-19T09:53:19Z (first real preparation of K). Useful cut T0+72 = 2026-10-19T11:05:19Z. Close reserve >= 18 min; everything done by T0+90 = 2026-10-19T11:23:19Z. Costs (JIT, file writes, checks) are inside these clocks; no per-run reset.
+Question: does the operator still reach M > 8,732 from the immutable 8,732 in short independent runs, and how often? Not a record attempt; any M >= 8,733 is a CANDIDATE PENDING LIVE COMPARISON; nothing is published for beating 8,732.
+
+## Runs (sequential, one at a time under ONE pte-eval supervisor; never other batches)
+Input CANDIDATE_M8732.npy sha256 0f9c84b89764187cd6780bf7fe234b8de08d7f48e5156d157ca2b3145b2c4868 (copied as attempts/seeds/output/input_8732.npy, hash verified at launch). Same operator and parameters as F/G/H/J (engine copied from J: lb_lns_gen.py, --rounds 1000000), wrapper j7_run.py 0c012a49..., bar 8,733, 4 numba threads.
+ R0 CONTROL: seed 105, --seconds 120, --stop-at-M 8733 (stop as soon as >= 8,733 is frozen and both checkers pass). Recovery control only: it must reproduce >= 8,733 (I1 reached it at engine t ~23 s). Its object is NOT counted as a new hit.
+ R1..R5 NEW SEEDS (fixed here, never used before): 201, 202, 203, 204, 205; --seconds 600 each; no stop-at (full 600 s, to record time-to-first-hit and the final best).
+ Per-run wrapper last-start cutoff: R0 2026-10-19T10:08:19Z; R1-R5 2026-10-19T10:54:19Z (= cut - 600 s - 60 s cushion). A run that cannot start by its cutoff exits 3 and is reported as NOT RUN (censored, not a miss).
+## Decision rule (Manager 6263866201, verbatim intent)
+Control NOT recovered -> stop K for diagnosis; no inference of a demonstrated regression. Control OK: 0/5 new runs with M >= 8,733 -> practical NO-GO of this sampling; 1/5 -> inconclusive; >= 2/5 -> evidence to present for a decision, never an automatic next stage. Report counts, times to first hit (censored at 600 s), final bests, and the uncertainty of only five trials (no precise rate, no local-optimum claim, 0/5 is not impossibility).
+## Infrastructure
+ONLY pte-eval tools/supervise.py (ef630889...) + winjob.py (a6291443...), --mem-gib 8 --job-rss-gib 4 --sys-floor-gib 12 --checkpoint-min 1 --threads-cap 4 --deadline-utc 2026-10-19T11:06:19Z, six jobs threads 4 each (the supervisor queues them: one at a time), low priority, host available memory and first supervisor state recorded before launch. Checkers single-threaded with the engine suspended (j7); fail-closed paths per W. 8,732/8,728/8,721 never overwritten (each run writes into its own output/sNNN/ folder). 0 GET.
+## Hypotheses (before any run)
+K1 control recovers 8,733 within 120 s (0.9). K2 at least one of 5 new seeds reaches >= 8,733 within 600 s (0.45). K3 >= 2/5 (0.2). K4 any run reaches >= 8,735 (0.05).
+Ownership: Tess (lead model Opus 5.5). Roster: owner launches and reads; no subagent runs an engine. GLM may be consulted on the reading.
+null_test: not needed because K computes no statistical estimator beyond raw counts of a preregistered binary outcome over five seeds; the decision rule is fixed above and the uncertainty is reported qualitatively; each object is checked by two deterministic exact checkers.

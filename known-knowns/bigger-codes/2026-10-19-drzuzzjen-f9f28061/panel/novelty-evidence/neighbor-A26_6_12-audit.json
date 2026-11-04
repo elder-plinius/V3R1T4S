@@ -1,0 +1,47 @@
+{
+  "source_url": "https://aeb.win.tue.nl/codes/cwc/d6/a26.6.12.14854H",
+  "sha256": "cde1edf846a27f1eb3d65aab7df65f0759ff0707b00b309b3b025fd2037b0e97",
+  "n": 26,
+  "w": 12,
+  "M": 14854,
+  "source_format_count_distinct_weight": "PASS",
+  "results": [
+    {
+      "target_weight": 11,
+      "fixed_ones": 1,
+      "fixed_zeros": 0,
+      "maximum_survivors": 6868,
+      "argmax": {
+        "ones": [
+          19
+        ],
+        "zeros": []
+      },
+      "patterns": 26,
+      "sum": 178248,
+      "expected_sum": 178248,
+      "excluded": true
+    },
+    {
+      "target_weight": 14,
+      "fixed_ones": 0,
+      "fixed_zeros": 3,
+      "maximum_survivors": 2103,
+      "argmax": {
+        "ones": [],
+        "zeros": [
+          0,
+          12,
+          15
+        ]
+      },
+      "patterns": 2600,
+      "sum": 5406856,
+      "expected_sum": 5406856,
+      "excluded": true
+    }
+  ],
+  "wall_seconds": 1.5364301250083372,
+  "max_rss_bytes": 22396928,
+  "threads": 1
+}
