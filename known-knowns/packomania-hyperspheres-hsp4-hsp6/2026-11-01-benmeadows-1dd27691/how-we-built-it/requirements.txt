@@ -1,0 +1,6 @@
+# Python 3 with numpy, scipy (HiGHS via scipy.optimize.linprog), numba and mpmath (check.py only).
+# Exact versions were not recorded by the search run.
+numpy
+scipy
+numba
+mpmath
