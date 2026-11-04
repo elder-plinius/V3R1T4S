@@ -1,0 +1,7 @@
+URL: https://arxiv.org/abs/2609.25573
+fetch_utc: 2026-11-03T07:02:12Z
+http_status: 200
+sha256: e8f65b7be0ac47c453feddab01a7875c01792a8d77681dd44bb89fa63d1764d2
+selected_header: date: Tue, 03 Nov 2026 07:02:12 GMT
+cell: length 70 is not given a pair on this page
+page_value: a quaternary Legendre pair of length 64, revised 30 Oct 2026 (v2), Harshit Verma
