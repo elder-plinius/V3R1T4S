@@ -1,0 +1,7 @@
+python==3.12
+torch==2.14.1+cpu
+mace-torch==0.3.16
+ase
+jarvis-tools
+numpy
+scipy

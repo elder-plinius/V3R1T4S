@@ -1,0 +1,22 @@
+{
+ "element": "Mo",
+ "benchmark_member": "mlearn_Mo_forces.json",
+ "predictions": "object/predictions_Mo_forces_test.csv",
+ "models": [
+  "object/models/mace_Mo_seed1.model",
+  "object/models/mace_Mo_seed2.model",
+  "object/models/mace_Mo_seed3.model"
+ ],
+ "inputs": [
+  {
+   "name": "benchmark.json.zip",
+   "url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/benchmarks/AI/MLFF/mlearn_Mo_forces.json.zip",
+   "sha256": "71f06783ae0baa3183f30548d20fad9cdc6662cf66aaea72c7ecf8868160f6c3"
+  },
+  {
+   "name": "mlearn_figshare.zip",
+   "url": "https://ndownloader.figshare.com/files/40357663",
+   "sha256": "f731b3ad5ac3e1b083a7ce12936a9e0e6aa2704de2a1b95150429823c1398a28"
+  }
+ ]
+}
