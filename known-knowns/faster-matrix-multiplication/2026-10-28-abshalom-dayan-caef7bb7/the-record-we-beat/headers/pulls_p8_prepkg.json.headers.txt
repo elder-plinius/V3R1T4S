@@ -1,0 +1,5 @@
+HTTP/2 200 
+date: Wed, 28 Oct 2026 22:29:18 GMT
+content-type: application/json; charset=utf-8
+etag: W/"8a41e7bad22b3e16d91b996e030e847c9f0b431462a7f18dea1e6ba24421b7d2"
+x-ratelimit-remaining: 21
