@@ -1,0 +1,5 @@
+# Python 3 with numpy, scipy (HiGHS via scipy.optimize.linprog) and mpmath (check_lane.py only); a C compiler.
+# Exact versions were not recorded by the search run.
+numpy
+scipy
+mpmath
