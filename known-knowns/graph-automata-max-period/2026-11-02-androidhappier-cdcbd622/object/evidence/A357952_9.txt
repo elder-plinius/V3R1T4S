@@ -1,0 +1,5 @@
+A357952(9) = 200
+witness graph6: H?o|]|~
+witness rule: {1,3,5} (node ON next iff #ON in closed neighbourhood in {1,3,5})
+witness start: 1 (node 0 ON, others OFF; lies on the cycle; first return at step 200)
+graphs enumerated: 261080 (geng -cq 9, nauty 2.8.8)

@@ -1,0 +1,42 @@
+# A357952(9) = 200
+cell: A357952(9)
+value: 200
+witness_graph6: H?o|]|~
+witness_rule: {1,3,5}
+witness_start: 1
+graph_class: connected simple graphs on 9 nodes (nauty geng -cq 9)
+graph_count: 261080
+graph_count_oeis: A001349(9)=261080
+rules: all 2^(9+1) self-counting totalistic subsets of {0..9}
+starts: all 2^9 states
+programs: totA.c (self mode), totB.go (independent Go); both reproduce a(1..8)=2,2,4,6,8,18,42,112
+direct_simulation: cycle_length=200 (start 1 on the cycle); also rule {1,3,5,9} reaches 200
+unique_optimum: yes (next best 198 on HEjfayn)
+
+# sha256 pins of saved artifacts (relative to package object/)
+code/diff_AB.py  24f95b21f20c674711a09475483b2f1fa2a7f356e940020f2d2f80497863827c
+code/stepper.py  e7172ca3ccc37c1f79c644b66ed16043a91748091164fe3a26eadb854464532f
+code/totA.c  51fd638b5d192e8932edc73c23daa2c15e1b9a4fc11b249eab74d6ef017ef40a
+code/totA_pg.c  0cee0e5339b5b10742cce15deff1d0c22373939dbd1bfaddbd7727d0024b126c
+code/totB.go  26afc409ec96861704ab3fc088221e8f681ba48579defef6098d3c00d259a100
+evidence/A357952_9.txt  c5a8ffaf42a75e6521cceff754a296a10f73e8513d7d93bc8b57183e3ea5f998
+evidence/A9_part0.txt  6a643a007622be2663110dfcd9f38d86d0fec93335c1630250f14c1d18ab69bb
+evidence/A9_part1.txt  0ca292214004e818fbfeec12813c70a00331f55beacc67172fa8902bd1be4caf
+evidence/A9_part2.txt  36dbd90ea04cae9c9580c82047be2ef8decfb15a07597545640c7fcf4598d524
+evidence/A9_part3.txt  c763d63a5d56fa931e6550d8f404057d5c6216a79bb5286e9515472ad49fece4
+evidence/A9_part4.txt  6685e8480fba106aa3d8370efa1422915305146bbe20e0097c1b79e44fb790e0
+evidence/A9_part5.txt  cb3add7f1aa746d526af6ea0a9bb24c1a99af9826a105bff6d734134f0b65292
+evidence/A9_part6.txt  89035f5eb3c48f03513a41becc5d767f488423a94fae07e2ae8ad121a36b42d8
+evidence/A9_part7.txt  bef96f753d2e9db4d4556453467e0c8d2465b46ac0443e9e81b80f3d161a0696
+evidence/A_n1_8.txt  35f6a112632f611d67f6369c51fa801146389d4bb1e0ef7d0d790d3b9b5b217a
+evidence/B9_part0.txt  5d8692b01651691f8ac4bcadaaa7c8d5056c283eaaf9b920145627cb6f395b51
+evidence/B9_part1.txt  449d261f9a0fd31414f66d8b95380821cc4d6ac30a535ae3b682734e9c8ab52e
+evidence/B9_part2.txt  726d04cfd88ccb3a599e62c2778785edd2049c93470c4433e70132723cf7e83c
+evidence/B9_part3.txt  3b2fb9070f7ade9cd8ac8447a55aa264ca2da5b75d1e7253b7be7b2d6c3d2f1d
+evidence/B9_part4.txt  bd65055ed15f80807c8b820b423cec5c519b454d4c25ffb4aa6c3e34b2a91835
+evidence/B9_part5.txt  ab173db03a2fa73fabc7dab5ca72215982c4cde4a0abf3439a57957d92e2b5b1
+evidence/B9_part6.txt  eb189cef45a9549482cc46e098e026ae3c332c606a3cc0e28f5dbc51e64ed89e
+evidence/B9_part7.txt  6990cf49dc4a90ebfe67d7372dac0abc08a8b21eae9d8d4cd33bc012ed3931b4
+evidence/B_n1_8.txt  28a4168fb981e614bc0f94b4bd5dc3a821d1df7f81377ab0179f026eda82cf53
+evidence/witness_simulation.txt  75f37fe2902f1be480f2fb2793d5f69ac6527768a06cf932935a6e6c2a50f6d7
+tools/geng  75d1bf016a93b090ca471254605b735865162a864e4682c544df90a81e91f450
