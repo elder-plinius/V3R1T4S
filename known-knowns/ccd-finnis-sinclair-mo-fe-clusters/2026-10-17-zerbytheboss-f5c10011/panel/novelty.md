@@ -1,11 +1,12 @@
 # Panel Skeptic Audit: NOVELTY (`ccd-finnis-sinclair-mo-fe-clusters`)
 
 - `role`: novelty
-- `context`: subagent (fresh invocation)
 - `target_id`: `ccd-finnis-sinclair-mo-fe-clusters`
 - `audited_utc`: `2026-10-17T22:55:19Z`
 
 ## 1. Single Honest HTTP Fetch of Primary Sources (No Retries)
+
+- Context: Live primary-source, literature, trophy-case, and pull-request novelty audit.
 
 Using Python `urllib.request.urlopen` (single request per URL, zero retries) at `2026-10-17T22:55:19Z`:
 
@@ -66,6 +67,6 @@ Using Python `urllib.request.urlopen` (single request per URL, zero retries) at 
   9. **`Fe_97` (`N = 97`)**: `E* = -355.1385265715 eV` vs CCD `-354.9919830214 eV`, change **`-0.146544 eV`** (`-0.1465435501 eV`; float64 `||grad E||_2 = 2.76e-14`, 55-digit `||grad E||_2 = 1.18e-28`).
   10. **`Fe_98` (`N = 98`)**: `E* = -359.0082985625 eV` vs CCD `-358.8031191667 eV`, change **`-0.205179 eV`** (`-0.2051793958 eV`; float64 `||grad E||_2 = 2.26e-14`, 55-digit `||grad E||_2 = 1.00e-28`).
   11. **`Fe_100` (`N = 100`)**: `E* = -366.6082856510 eV` vs CCD `-366.5806583336 eV`, change **`-0.027627 eV`** (`-0.0276273174 eV`, `276x` the `1e-4 eV` threshold; float64 `||grad E||_2 = 2.64e-14`, 55-digit `||grad E||_2 = 1.14e-28`).
-- **Complete 196-Point-File Audit (`p1`)**: All 196 posted `FS_Mo` (`N = 3..100`) and `FS_Fe` (`N = 3..100`) point files are reproduced to 10 decimal places (within `9.77e-11 eV`) and Newton-polished in `object/fs_mo_fe_11_records_and_196_audit.json`, confirming that every posted CCD structure is already stationary within `1.0e-10 eV` (stored audit values checked against hashes, reproducible from the cited `points.tgz` archives) and that all 11 new minima occupy genuinely distinct lower-energy basins.
+- **Complete 196-Point-File Audit (`p1`)**: The 196 stored audit rows for `FS_Mo` (`N = 3..100`) and `FS_Fe` (`N = 3..100`) in `object/fs_mo_fe_11_records_and_196_audit.json` (checked against SHA-256 by `verify-it-yourself/check_fs_clusters.py`; reproducing them from coordinates requires the cited `points.tgz` archives) record 10-decimal agreement (within `9.77e-11 eV` on Mo and `9.42e-11 eV` on Fe) and confirm that every posted CCD structure is a stationary point within `1.0e-10 eV` and that all 11 new minima occupy genuinely distinct lower-energy basins.
 
 pass: true

@@ -1,12 +1,13 @@
 # V3R1T4S Reproduction Panel Audit (`reproduce.md`)
 
-context: subagent (fresh invocation)
 target_id: ccd-finnis-sinclair-mo-fe-clusters
 cells: Mo_75, Mo_90, Fe_86, Fe_87, Fe_90, Fe_91, Fe_92, Fe_96, Fe_97, Fe_98, Fe_100
 file: object/fs_mo_fe_11_records_and_196_audit.json
 sha256: 215c879357f5bbbcc335e6dece2dc7ad12248abd428ef6b1c5ff9a4ba23af249
 
 ## 1. Quoted Mathematical Definition (Finnis-Sinclair 1984 Mo and 1986 Modified Fe)
+
+- Context: Independent reproduction audit from the published Finnis-Sinclair (1984 Mo and 1986 modified Fe) potential definitions.
 
 Before reading `verify-it-yourself/check_fs_clusters.py`, an independent checker was written directly from the mathematical specification in M. W. Finnis and J. E. Sinclair (*"A simple empirical N-body potential for transition metals"*, *Philosophical Magazine A* 50, 45-55, 1984; erratum *Philosophical Magazine A* 53, 161, 1986) and J. A. Elliott, Y. Shibuta, and D. J. Wales (*"Global minima of transition metal clusters described by Finnis-Sinclair potentials: a comparison with semi-empirical molecular orbital theory"*, *Philosophical Magazine* 89, 3311-3332, 2009):
 
