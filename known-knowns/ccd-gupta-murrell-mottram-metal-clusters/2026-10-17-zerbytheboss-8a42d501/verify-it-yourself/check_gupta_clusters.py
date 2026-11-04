@@ -317,9 +317,9 @@ def main():
             assert diff < 1e-5
             if diff > max_err:
                 max_err = diff
-        print(f"Calibrated {metal:8s} ({len(rows)} files, max |dE| = {max_err:.2e} eV < 1e-5 eV)")
+        print(f"Checked stored calibration for {metal:8s} ({len(rows)} files, max |dE| = {max_err:.2e} eV < 1e-5 eV; reproducing needs cited points archives)")
 
-    # 2. Verify all 5 new putative global minimum records
+    # 2. Recompute all 5 new putative global minimum records from coordinates
     recs = {r["label"]: r for r in data["new_global_minima_records"]}
     assert set(recs.keys()) == set(EXPECTED_RECORDS.keys())
 
@@ -334,7 +334,7 @@ def main():
         coords_dec = r["coords_decimal_str"]
         assert len(coords_f64) == exp_n and len(coords_dec) == exp_n
 
-        # Verify no vendored CCD coordinates and verify cited points URL + sha256
+        # Verify no vendored CCD coordinates and check stored polished-CCD values + cited points URL/sha256
         assert "ccd_raw_coords_float64" not in r and "ccd_polished_coords_float64" not in r
         assert r["ccd_points_url"] == exp_url
         assert r["ccd_points_sha256"] == exp_sha
@@ -363,9 +363,9 @@ def main():
         assert r["hessian_zero_modes_count"] == 6 and r["hessian_negative_modes_count"] == 0
         assert r["hessian_min_positive_eigenvalue"] > 0.030
         zm_res = verify_hessian_inertia(coords_f64, params, min_eig_bound=0.030)
-        print(f"Verified {lbl:8s}: E* = {E_f64:14.10f} eV (CCD = {exp_tab_e:11.6f}, dE = {r['delta_vs_ccd_table_eV']:+10.6f} eV, ||g||_f64={g_l2:.2e}, ||g||_dec={float(gnorm_dec):.2e}, ||H Q0||={zm_res:.2e})")
+        print(f"Recomputed {lbl:8s}: E* = {E_f64:14.10f} eV (CCD = {exp_tab_e:11.6f}, dE = {r['delta_vs_ccd_table_eV']:+10.6f} eV, ||g||_f64={g_l2:.2e}, ||g||_dec={float(gnorm_dec):.2e}, ||H Q0||={zm_res:.2e})")
 
-    # 3. Verify 780-point-file audit metadata
+    # 3. Check stored 780-point-file audit rows against SHA-256
     aud = data["ccd_780_point_files_audit"]
     assert hashlib.sha256(json.dumps(data_str["ccd_780_point_files_audit"], sort_keys=True).encode()).hexdigest() == EXPECTED_AUD_SHA256
     rows = aud["rows"]
@@ -381,7 +381,7 @@ def main():
             assert row["new_record_energy_eV"] == recs[row["label"]]["energy_eV"]
             assert row["new_record_delta_eV"] == recs[row["label"]]["delta_vs_ccd_table_eV"]
 
-    print("Verified all 5 Gupta putative global minimum records + all 780 CCD point files.")
+    print("Recomputed only the 5 new putative global minimum structures; calibration, polished-CCD energies, and 780-row audit are stored values checked against hashes (reproducing them needs the cited points archives).")
     print("PASS")
 
 if __name__ == "__main__":
