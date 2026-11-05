@@ -1,0 +1,4 @@
+context: fresh grok subagent given only the claim directory plus the reproduce instruction
+
+Independent exhaustive check, standard-library Decimal, working precision 60, every pair after Euclidean normalization: N=651, d=25, 211575 inner products, every coordinate has 21 significant digits. c* = 0.242691253762562135545707550182693361492524224855682048498146. Delta against 0.245484258816 is 0.002793005053437864454292449817306638507475775144317951501854. Zero-based pair indices: 553 and 649 (unique maximum at this precision). The same pair at 80 digits is 0.24269125376256213554570755018269336149252422485568204849814812, still about 0.002793005053 below 0.245484258816, which clears 1e-10. The runner-up seen during the scan sat near 2e-9 lower, so the maximizing pair is not a rounding tie. Last line printed by check_one.py: PASS
+pass: true
