@@ -2,7 +2,7 @@
 
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
-Role: criterion skeptic. Cell A(27,8,10), claim M = 1740. Read only the package; one live fetch of Andw.html (2026-10-18T17:54:36Z, HTTP 200, sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, same as the author's recorded fetch, so the table is unchanged since the author's check). The contributor's hash list: all 10 files verified OK.
+Role: criterion skeptic. Cell A(27,8,10), claim M = 1740. Read only the package; one live fetch of Andw.html (2026-10-18T17:54:36Z, HTTP 200, sha256 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349, same as the author's recorded fetch, so the table is unchanged since the author's check). The contributor's hash list: all 19 listed files verified OK.
 
 ## Criterion clauses, checked literally
 - Explicit list of M distinct binary vectors: met. Own script (fresh, not the author's) read the object file: 1740 non-empty lines, each a 0/1 string of length 27, all distinct (set of ints has size 1740).

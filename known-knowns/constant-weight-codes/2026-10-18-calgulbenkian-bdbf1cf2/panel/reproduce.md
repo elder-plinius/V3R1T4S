@@ -36,19 +36,24 @@ RESULT: PASS
 ```
 
 ## Author's run_checks.sh (run only after my own checker)
-Command: sh verify-it-yourself/run_checks.sh (from a private copy of the package). Output:
+Command: sh verify-it-yourself/run_checks.sh (from the package folder, with numpy installed so both checkers run). Updated 2026-11-05: the output below is a fresh run of the shipped script, with its three negative controls. The reviewer's original run predates the third control. `verify-it-yourself/RECEIPTS.md` records a run without numpy, where the second checker is skipped.
 ```
 sha256 matches INDEX.csv (bdbf1cf2b34d5a2771172cea5d11fe6abcff25a0de03cc60808796fbe6e0acbe)
-== check_cw.py on object/A27_8_10_1740.txt (count, distinct, weight, all pairwise distances)
-A27_8_10_1740.txt: M=1740 n=27 w=10 min distance 8 >= 8 PASS
+== check_cw_std.py (standard library): count, distinct, weight, no two words share 7 ones
+A27_8_10_1740.txt: M=1740 n=27 w=10 distinct, weight w, no two words share 7 ones, so min distance >= 8 PASS
 checker verdict: PASS
+== check_cw.py (needs numpy; the panel's checker): count, distinct, weight, all pairwise distances
+A27_8_10_1740.txt: M=1740 n=27 w=10 min distance 8 >= 8 PASS
+second checker verdict: PASS
 == negative control 1: a copy whose last word is replaced by a copy of the first word must FAIL
 negative control 1 rejected as expected
 == negative control 2: the same object checked against a claim of one more word must FAIL
 negative control 2 rejected as expected
+== negative control 3: a copy with the last word moved to a word sharing 7 ones with the first must FAIL
+negative control 3 rejected as expected
 ALL CHECKS PASS
 ```
-Comparison: my checker and the author's agree (PASS on count, distinctness, weight, all pairs, sha256, both negative controls rejected). No mismatch, no missing object, no non-determinism seen (the check is exhaustive over all pairs, not a sample).
+Comparison: my checker and the author's agree (PASS on count, distinctness, weight, all pairs, sha256, all three negative controls rejected in the run above). No mismatch, no missing object, no non-determinism seen (the check is exhaustive over all pairs, not a sample).
 
 ## Doubts
 None about the object. Whether 1740 still beats the live table, and whether arXiv papers hold a better value, is for the novelty skeptic.

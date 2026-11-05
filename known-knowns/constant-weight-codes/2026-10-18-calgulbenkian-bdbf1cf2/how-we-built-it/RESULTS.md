@@ -1,23 +1,25 @@
 # Constant-Weight Codes (`Andw.html`) Attack — Verified Results (`p2` + `p1` + Full Win)
 
+> Note added 2026-11-05, not contributor text: this is the contributor's working record. Paths such as `results/...` name files in the contributor's own workspace and are not shipped. The shipped object is `object/A27_8_10_1740.txt`, and the shipped checkers are in `verify-it-yourself/`. In the table below, the Echols value for A(27, 8, 10) was corrected from 1719 to 1727, the value printed in arXiv:2608.13906v1 (its table row reads 27 8 10 1721 1727 +6). The other rows of the table are the contributor's and were not re-checked here.
+
 ## Executive Summary
 
-Against the frozen baseline snapshot [`data/Andw.html`]({WORKDIR}/data/Andw.html) (`SHA-256: bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`), we achieved **all three goals (`p2` + `p1` + Full Win)** with 100% standalone exact verification via [`verify_cwc.py`]({WORKDIR}/verify_cwc.py):
+Against the contributor's frozen copy of https://aeb.win.tue.nl/codes/Andw.html (not shipped; `SHA-256: bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`), we achieved **all three goals (`p2` + `p1` + Full Win)** with 100% standalone exact verification by the contributor's own verifier (not shipped; the shipped checkers are in `verify-it-yourself/`):
 
 1. **Goal A — Partial Win `p2` (21 Cells / 22 Certificates in `results/certificates/`)**:
-   - **Family A1 (11 cells / 12 certificates)**: Exact rational Delsarte + support-split ($R_x$) + shortening ($M_{1,s}$) LP upper-bound certificates strictly beating explicitly printed `lo-hi` upper bounds in `data/Andw.html` (excluding `(31,10,7)` and the 5 already-merged `L` cells).
-   - **Family A2 (10 cells / 10 certificates)**: Pure Delsarte LP certificates ($D_1, \dots, D_w$ **only**, zero table inputs) strictly beating the iterated Johnson upper bound on unmarked $n > 28$ cells in `data/Andw.html`.
+   - **Family A1 (11 cells / 12 certificates)**: Exact rational Delsarte + support-split ($R_x$) + shortening ($M_{1,s}$) LP upper-bound certificates strictly beating explicitly printed `lo-hi` upper bounds in the frozen Andw.html snapshot (excluding `(31,10,7)` and the 5 already-merged `L` cells).
+   - **Family A2 (10 cells / 10 certificates)**: Pure Delsarte LP certificates ($D_1, \dots, D_w$ **only**, zero table inputs) strictly beating the iterated Johnson upper bound on unmarked $n > 28$ cells in the frozen Andw.html snapshot.
 2. **Goal B — Partial Win `p1` (8 Explicit Codes in `results/codes_p1/`)**:
-   - First explicit binary constant-weight code files matching $M = L_{\text{table}}$ for **8 cells** in `data/Andw.html` whose lower bounds are unlinked 1990 `[BSSS]` citations (neither $(n, d, w)$ nor $(n, d, n-w)$ has an `href="cwc/..."` link in `data/Andw.html`, and none appear in `arXiv:2607.19550` or `arXiv:2608.13906`).
+   - First explicit binary constant-weight code files matching $M = L_{\text{table}}$ for **8 cells** in the frozen Andw.html snapshot whose lower bounds are unlinked 1990 `[BSSS]` citations (neither $(n, d, w)$ nor $(n, d, n-w)$ has an `href="cwc/..."` link in the frozen Andw.html snapshot, and none appear in `arXiv:2607.19550` or `arXiv:2608.13906`).
 3. **Goal C — Full Win (13 Explicit Record-Breaking Codes in `results/codes_full_win/`)**:
-   - **13 explicit constant-weight codes** strictly beating today's live `data/Andw.html` lower bounds ($M > \max(L_{\text{table}}(n,d,w), L_{\text{table}}(n,d,n-w))$), also strictly beating `arXiv:2608.13906` (Echols) and `arXiv:2607.19550` (Lysenstoen).
-   - Includes **4 brand-new record cells** discovered via degree-sorted coordinate relabeling + LNS (`A(28,8,11) >= 3802` [+17], `A(51,6,6) >= 11187` [+3], `A(25,6,11) >= 8720` [+2], `A(27,8,11) >= 2422` [+1]) that were untouched in `cg_repo.git`, plus **3 further improvements** strictly above prior unmerged LNS records (`A(54,8,7) >= 4205` [+12], `A(45,8,7) >= 1913` [+6], `A(55,8,7) >= 4432` [+6]).
+   - **13 explicit constant-weight codes** strictly beating today's live Andw.html lower bounds ($M > \max(L_{\text{table}}(n,d,w), L_{\text{table}}(n,d,n-w))$), also strictly beating `arXiv:2608.13906` (Echols) and `arXiv:2607.19550` (Lysenstoen).
+   - Includes **4 brand-new record cells** discovered via degree-sorted coordinate relabeling + LNS (`A(28,8,11) >= 3802` [+17], `A(51,6,6) >= 11187` [+3], `A(25,6,11) >= 8720` [+2], `A(27,8,11) >= 2422` [+1]) that were untouched in the contributor's local copy of prior-art code files (not shipped; its contents were not recorded), plus **3 further improvements** strictly above prior unmerged LNS records (`A(54,8,7) >= 4205` [+12], `A(45,8,7) >= 1913` [+6], `A(55,8,7) >= 4432` [+6]).
 
 ---
 
 ## Goal C — Full Win: 13 Explicit Constant-Weight Codes Strictly Beating Live `Andw.html` Lower Bounds
 
-All 13 codes are stored in `results/codes_full_win/` (and mirrored in `results/`) and verified by `python3 verify_cwc.py results/codes_full_win/*.txt`:
+All 13 codes are stored in `results/codes_full_win/` (and mirrored in `results/`) and verified by the contributor's own verifier:
 
 | # | Cell $(n, d, w)$ | Live `Andw.html` | Echols `2608.13906` | Lysenstoen `2607.19550` | **New Verified $M$** | **Gain vs `Andw.html`** | File (`results/codes_full_win/`) | SHA-256 (prefix) |
 |---|---|---:|---:|---:|---:|---:|---|---|
@@ -30,7 +32,7 @@ All 13 codes are stored in `results/codes_full_win/` (and mirrored in `results/`
 | 7 | `A(53, 8, 7)` | `3987Pl-8003` | — | `3973` | **`3992`** | **`+5`** | `A53_8_7_3992.txt` | `7be7a08730ebb932` |
 | 8 | `A(51, 6, 6)` | `11184Pl-19937` | — | `11157` | **`11187`** | **`+3`** (New cell!) | `A51_6_6_11187.txt` | `3684474037a4c998` |
 | 9 | `A(52, 8, 7)` | `3799Pl-7577` | — | `3787` | **`3802`** | **`+3`** | `A52_8_7_3802.txt` | `4743db7cec4929d0` |
-| 10 | `A(27, 8, 10)` | `1737Pl-4986` | `1719` | — | **`1740`** | **`+3`** | `A27_8_10_1740.txt` | `bdbf1cf2b34d5a27` |
+| 10 | `A(27, 8, 10)` | `1737Pl-4986` | `1727` | — | **`1740`** | **`+3`** | `A27_8_10_1740.txt` | `bdbf1cf2b34d5a27` |
 | 11 | `A(25, 6, 11)` | `8718Pl-22575` | `8665` | — | **`8720`** | **`+2`** (New cell!) | `A25_6_11_8720.txt` | `46ae5613f60a668e` |
 | 12 | `A(27, 8, 11)` | `2421Pl-12266` | `2386` | — | **`2422`** | **`+1`** (New cell!) | `A27_8_11_2422.txt` | `1ce741658d4881c2` |
 | 13 | `A(35, 6, 6)` | `2217Pl-3249` | — | `2204` | **`2218`** | **`+1`** | `A35_6_6_2218.txt` | `dd2eb057e40bc19b` |
@@ -39,7 +41,7 @@ All 13 codes are stored in `results/codes_full_win/` (and mirrored in `results/`
 
 ## Goal A — Partial Win `p2`: 21 Cells (22 Certificates) Beating `Andw.html` Upper Bounds in Exact Rational Arithmetic
 
-All 22 certificates in `results/certificates/` are verified in 100% exact `fractions.Fraction` arithmetic (`python3 verify_cwc.py --delsarte results/certificates/*.json`), including $P Q = \binom{n}{w} I$ orthogonality and primal==dual LP optimality.
+All 22 certificates in `results/certificates/` are verified in 100% exact `fractions.Fraction` arithmetic (checked by the contributor's own verifier), including $P Q = \binom{n}{w} I$ orthogonality and primal==dual LP optimality.
 
 ### Family A1 — 11 Cells (12 Certificates) Beating Explicitly Printed `lo-hi` Upper Bounds in `Andw.html`
 
@@ -77,7 +79,7 @@ All 22 certificates in `results/certificates/` are verified in 100% exact `fract
 
 ## Goal B — Partial Win `p1`: 8 Explicit Constant-Weight Codes for Unlinked 1990 `[BSSS]` Citations
 
-All 8 codes in `results/codes_p1/` match $M = L_{\text{table}}$ on cells where neither $(n, d, w)$ nor $(n, d, n-w)$ has an `href="cwc/..."` link in `data/Andw.html` (and none are in `arXiv:2607.19550` or `arXiv:2608.13906`):
+All 8 codes in `results/codes_p1/` match $M = L_{\text{table}}$ on cells where neither $(n, d, w)$ nor $(n, d, n-w)$ has an `href="cwc/..."` link in the frozen Andw.html snapshot (and none are in `arXiv:2607.19550` or `arXiv:2608.13906`):
 
 | # | Cell $(n, d, w)$ | Printed in `Andw.html` | **Verified $M$** | Actual $\min d_H$ | Algebraic / Combinatorial Construction | File (`results/codes_p1/`) | SHA-256 (prefix) |
 |---|---|---|---:|---:|---|---|---|
