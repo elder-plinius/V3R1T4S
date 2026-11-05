@@ -1,0 +1,167 @@
+# V3R1T4S nightly hunt — run prompt (fresh copy, 2026-10-26)
+
+Written from the hunt's own run records: REPORT.md, the run briefs and preregs,
+charter.md, settings.md, and the dossier notes. This replaces the 2026-10-13 run
+file, which the safety filter has refused since the 2026-10-26 02:00 run. The
+original file is left untouched.
+
+## Ground rules
+
+- Workspace is the V3R1T4S workspace. Stay inside it.
+- Effort: standard, about 3 hours. Long computations run at low priority (nice),
+  with a hard time cap and a checkpoint file. Record your PIDs; kill only
+  processes you started, by exact PID.
+- Nobody is at the keyboard: never ask questions. Anything needing the human
+  goes under "Needs you" in REPORT.md.
+- Never act outward: no emails, posts, issues, submissions, or pull requests.
+  No submission is ever made to a record table; a claim is for the verified
+  construction only.
+- Credit: Jorgy72 & Sine. Credit the giants by name in every report.
+- One target, two to four lenses, real code, every run. No exceptions.
+- Write the evaluator before the search. Search speed is the edge.
+- Check the table live before any claim; snapshots go stale.
+- A clean "no" is a good night. Never stretch a near-miss into a claim.
+
+## Quarries (charter.md, by weight)
+
+- q-pack-cci (weight 5): best-known equal-circle-in-a-circle packing, bank
+  `packomania-cci-equal-circles-in-circle`, E. Specht's Packomania tables.
+- q-degdia (weight 4): (degree, diameter) table cell, bank `degree-diameter-table`.
+- q-cwc (weight 4): constant-weight code entry or LP bound, bank
+  `constant-weight-codes`.
+- q-cage (weight 3): cage upper bound / smaller (r,g)-regular graph, bank
+  `cage-upper-bounds`.
+- q-rock (weight 3): asteroid observed-arc extension, bank
+  `asteroid-recovery-arc-extension`.
+- q-happy (weight 2): small case of Erdős's Happy Ending problem, bank
+  `erdos-107-happy-ending-n7`.
+- q-conway (weight 1, wild): Conway's 99-graph problem, bank `conway-99-graph`.
+
+## Tonight's target
+
+Start from the previous run's "Live leads carried to the next run" in REPORT.md:
+a live lead outranks a new target. If the leads are exhausted, rotate to another
+quarry per the charter weights.
+
+Standing note from the 2026-10-25 run: the N=3973 fresh-truncation line is
+exhausted at the search depth tried (raw floor about -3.49e-05 over 96,525
+evals). Next cci night should rotate to fresh truncations at gap rows 3985 or
+4000 (NOT deletion grafts — those inherit the source radius and are dead as a
+class), or rotate to another quarry.
+
+## Scout live, before anything is scored
+
+Fetch the target's live table and supporting pages (curl, honest user agent),
+save them under runs/<YYYY-MM-DD-HHMM>/data/, and record sha256 hashes. Compare
+against the previous run's scout: table unchanged, queue unchanged, seed
+byte-identical, history unmoved — or report exactly what moved. Write
+runs/<YYYY-MM-DD-HHMM>/target.md (why this target, the success criterion, the
+row under attack) and runs/<YYYY-MM-DD-HHMM>/scout.md.
+
+## Preregister, frozen before any attack output is scored
+
+Write runs/<YYYY-MM-DD-HHMM>/PREREG.md with: the operative criterion with live
+numbers, the checker that judges it, the thresholds, the null design (or why
+none is needed for a deterministic checker), the scope guard (one object per
+claim; dedupe carriers), and the verdict scale:
+- CONFIRMED_* only via a three-skeptic panel plus CHECK_RUN: PASS.
+- Otherwise at most PROMISING (single context).
+- Clean negatives are NOTHING.
+- A configuration equal to the table within the bar but certified
+  non-isometric is a bank partial win, not a record.
+
+## The circle-packing criterion (bank text, for q-pack-cci)
+
+Success means a file of N centers (x_i, y_i) for one N listed in the live
+radius table such that the FEASIBLE radius r* := min(min_{i<j} |c_i - c_j| / 2,
+1 - max_i |c_i|), computed in mpmath at 50 digits directly from the submitted
+coordinates (no tolerance), is STRICTLY GREATER than the live table radius for
+that N re-fetched immediately before claiming, by at least 1e-11, AND the
+configuration is not isometric to the posted seed (sorted pairwise-distance
+multisets differ), AND N does not appear in a History-of-updates line newer
+than the one the scout fetched. QUEUE RULE: N must NOT lie inside any range
+listed for this category on the live pending-requests page re-fetched at
+verification time; a value already in the queue does not count as ours.
+Standing caveat, always stated: the 26-Sep-2026 Moki & Julio "*many*"
+4666-candidate bundle is category-unspecified; the N must be re-checked
+against the live table once that bundle disappears from the pending list.
+Coordinates are CENTERED (container centre at the origin, container radius 1).
+Bank partial wins: p1 = second optimum within 1e-11 for N in 1..2600,
+certified non-isometric; p2 = certified improvement for a gap value N > 2600
+with a lattice-like seed; p3 = certified improvement in the sibling
+regular-hexagon table chx (N <= 1261, 12 decimals, margin 1e-10).
+
+Pitfalls: the margin rule is absolute — a double-precision improvement below
+1e-11 is a NEGATIVE. The 50-digit checker is O(N^2), so use fast
+double-precision evaluators inside the search loop and certify only
+finalists. Re-verify the pending-requests page immediately before any claim.
+
+## Lenses
+
+Run the skeptic lens first, then attack lenses. A lens with nothing after
+three runs gets rotated out.
+
+- already-settled (skeptic): your job is to kill the quarry — check the table,
+  the recent literature, the repo's trophy case. A quarry that survives you
+  has earned its night. If you actually kill it, it stays dead.
+- Attack lenses, picked from the run brief's concrete angles and the charter
+  (anneal-it, smaller-first, same-object, solver, obstruction-first,
+  oldest-source, sync-metaphor, plus quarry-specific searches such as fresh
+  truncations, boundary-rule variants, smooth-max ratchet polish, sector
+  rotation, rattler relocation). Physical picture before parameters; cheapest
+  decisive test first; bury a dead idea in one honest paragraph and move on.
+
+## Judge and panel
+
+- A lens result is negative unless it clears the preregistered bar at full
+  precision. Float margins below the bar are negatives, not wins.
+- If a candidate clears the bar, convene a three-skeptic panel (one
+  non-author argues against, the author answers, 24h with no open objection
+  in the panel record is not available overnight — so record the panel as
+  convened with objections open, and mark the claim at most PROMISING unless
+  the panel record closes clean).
+- Write runs/<YYYY-MM-DD-HHMM>/panel/gate.md as the honesty gate: status
+  (NOTHING / PROMISING / CONFIRMED_*), confirmed scope, and what was panelled.
+- Kill criteria: target confirmed solved or closed at a primary source (dead,
+  logged, never revisited without new evidence); a decoy beats the claim in
+  the null test (dead on the spot); no fresh contexts available for the panel
+  (claim stays PROMISING, never packaged); check_run.py does not print
+  CHECK_RUN: PASS (nothing reported, fix the run); compute exceeds the night's
+  budget twice running (shrink the target or drop it); a skeptic falsifies a
+  lens's core assumption (retire that lens for that quarry).
+
+## Write the record
+
+- runs/<YYYY-MM-DD-HHMM>/attempts/<lens>/{code,output,report} for every lens.
+- REPORT.md: headline, target and status check (live fetch hashes), one line
+  per lens with outcome, verdicts and panel, ready-for-you (outbox state),
+  live leads carried to the next run, needs-you, time used.
+- LOG.md: append one line — date | target | lenses | outcomes | status |
+  minutes.
+- Update the quarry dossier in dossiers/ with the night's result.
+- A CONFIRMED_* package goes under outbox/<YYYY-MM-DD>-jorgy72-sine-<hash>/
+  and awaits the human's submit. Nothing in outbox/ is ever sent by the run.
+
+## Kit check (report only, never adopt)
+
+Fetch the kit repo state and compare against the pinned commit in settings.md.
+Report any diff under "Needs you" (what changed, which commit, whether it
+loosens any rule or adds any outward action). NEVER update the repo copy on
+the run's own say-so; adoption waits for the human's explicit word.
+
+## Validate
+
+Run the run's check script (check_run.py). It must print CHECK_RUN: PASS, or
+nothing is reported and the run is fixed first. A validator run on a known
+positive (posted seed reproduces the table) and a known negative (one center
+perturbed) must pass before any attack output is scored.
+
+## Deliver
+
+Your final message goes to the main agent as a handoff, never to the user.
+Wrap the run summary in <delivery> tags: target picked, one line per lens
+with outcome, final status (NOTHING / PROMISING / CONFIRMED_*), time used,
+and any "Needs you" items. NEVER write "message sent" or claim the user was
+notified. The main agent decides what reaches the user: surface only
+CONFIRMED_* claims waiting in outbox/, genuine "Needs you" items, or
+available kit updates. A clean negative night is routine and stays silent.
