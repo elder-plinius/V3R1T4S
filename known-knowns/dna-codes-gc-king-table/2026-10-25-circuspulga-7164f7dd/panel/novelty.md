@@ -1,16 +1,16 @@
 # NOVELTY skeptic — dna-codes-gc-king-table, A_4^GC(15,11,7)
 
-context: subagent (fresh knowledgeWork context, inputs claim/ only, plus public web)
+context: subagent (fresh knowledgeWork context, inputs the claim folder (not included in this package) only, plus public web)
 injection_suspected: no (no page read contained instructions aimed at the reviewer)
 
 ## Claim under test
-claim/CLAIM.md: objects/A4GC_15_11_7_M42.txt has 42 words, n=15, GC weight w=7, pairwise Hamming distance >= 11,
+CLAIM.md (not included; see README.md): object/A4GC_15_11_7_M42.txt has 42 words, n=15, GC weight w=7, pairwise Hamming distance >= 11,
 so A_4^GC(15,11,7) >= 42 vs. the King/Gaborit GC-only table entry 34. The GC,RC table is not claimed.
 
 ## 1. Status source — one honest fetch (no retries)
 - URL: https://rambutan.umassmed.edu/king/dnacodes.html
 - Fetched once with curl at 2026-10-25T08:42:10Z (09:42 Europe/Madrid): HTTP 200, 18096 bytes,
-  sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5 — identical to claim/data/dnacodes.html.
+  sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5 — identical to the claim's copy of King's page (not included; URL and sha256 in the-record-we-beat/record.md).
 - First table, heading "Lower bounds for A_4^GC(n,d,w):", row 15, 9th cell (d=11), raw HTML:
   `<td>  34<sup>v </sup></td>` -> value **34**, superscript v ("variable neighborhood search from [MS] or [MS2]"),
   no '.' or ':' (so not marked optimal). Row neighbours: d=10 "124 x", d=12 "15 v".
@@ -34,8 +34,8 @@ Repo checks: this repo's TROPHY_CASE.md has no DNA / GC entry. Open pull request
 (10,7), (13,9), (13,10); nothing at (15,11).
 
 ## 3. Spot check (not this skeptic's job; REPRODUCE does the real check)
-objects/A4GC_15_11_7_M42.txt: 42 distinct words, all of length 15 over {A,C,G,T}, all with GC=7, min pairwise distance 11;
-sha256 7164f7dd…5089 matches claim/REPRODUCE.md.
+object/A4GC_15_11_7_M42.txt: 42 distinct words, all of length 15 over {A,C,G,T}, all with GC=7, min pairwise distance 11;
+sha256 7164f7dd…5089 matches REPRODUCE.md (not included; see RUN_IT_YOURSELF.md).
 
 ## Verdict
 The best value at (n=15, d=11) in the live table is 34 (fetched 2026-10-25T08:42:10Z), and it matches every source I could

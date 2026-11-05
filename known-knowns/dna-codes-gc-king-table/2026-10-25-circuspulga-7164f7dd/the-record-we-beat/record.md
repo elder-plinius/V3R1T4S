@@ -4,4 +4,4 @@
 - Extracted cell (first table, GC-content only, w = floor(n/2)): row n=15, d=11: "34 v" (no '.' or ':', i.e. not proven optimal)
 - Row 15 as parsed: 6589440c 1647360c 103680x 27840x 6960v 1920x 240x 124x 34v 15v 6.m 4.m 3.p
 - Literature read: N. A. Aboluion PhD thesis (Glamorgan 2011), best known max_w A_4^GC table, n=15 d=11: 34 (m2); Montemanni-Smith-Koul 2014 (LNMS 6) Table 1: 34.
-- Not opened (HTTP 403): Smith-Aboluion-Montemanni-Perkins, Discrete Math 311 (2011); Aboluion-Smith-Perkins, Discrete Math 312 (2012): PENDING STATUS CHECK.
+- Not opened (HTTP 403): Smith-Aboluion-Montemanni-Perkins, Discrete Math 311 (2011); Aboluion-Smith-Perkins, Discrete Math 312 (2012): full text not readable on 2026-10-25 (HTTP 403).
