@@ -1,7 +1,7 @@
 # Improved circle packing: 4153 equal circles in a circle
 
 ## What
-polished03.txt's 50-digit feasible radius exceeds the live Packomania value for N=4153 by 2.706e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4153 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
+object/candidate_n4153.txt's 50-digit feasible radius exceeds the live Packomania value for N=4153 by 2.706e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4153 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
 
 In numbers: r* = 0.01459912804413632909680425838614465154649 (50 digits, no tolerance) vs the live Packomania
 cci table value 0.014596422226478759387097611060 — a strict improvement of +2.706e-06,
@@ -24,6 +24,9 @@ object is rejected.
 - Queue: https://packomania.com/pending-requests.html — cci candidates queued only in
   652–3943 (Vidit Patankar, 15-Oct-2026) and 126–4141 (Karl Desfontaines,
   03-Nov-2026); N=4153 is outside both. No other cci line exists on the live page.
+- 2026-11-05: Moki & Julio's csq bundle line (26-Sep-2026, 2213 candidates, range
+  385–9996) is gone from the live pending-requests listing (now inside an HTML
+  comment); the live N = 4153 row is unchanged at 0.014596422226478759387097611060.
 - Posted seed compared against: https://packomania.com/cci/txt/cci4153.txt
   (sha256 bca1f6739e2a898d6862658e092f0e105667652dac18340da863a8d2eb94ffae);
   sorted pairwise-distance multisets differ (max diff 3.178732e-03) — not isometric.

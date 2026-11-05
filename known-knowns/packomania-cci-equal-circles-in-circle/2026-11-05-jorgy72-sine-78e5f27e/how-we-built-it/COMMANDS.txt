@@ -15,11 +15,11 @@ python3 wide_search.py
 
 # 2. Regenerate the two non-saved diverse candidates
 python3 gen_cands.py
-# -> cand01.txt (theta 7.5074), cand02.txt (theta 25.0394)
+# -> deep-polish-4153-output/cand01.txt (theta 7.5074), cand02.txt (theta 25.0394)
 
 # 3. Smooth-max bottleneck polish with ratcheting (polish.py: L-BFGS-B on
 #    logsumexp(alpha * overlaps) / alpha; after each round set r := feasible_r)
-python3 deep_polish.py ../fresh-trunc-4153-output/random_best.txt cand01.txt cand02.txt ../fresh-trunc-4153-output/refine_best.txt
+python3 deep_polish.py fresh-trunc-4153-output/random_best.txt deep-polish-4153-output/cand01.txt deep-polish-4153-output/cand02.txt fresh-trunc-4153-output/refine_best.txt
 # NOTE: in the original run the four inputs were the saved best files
 # (random_best, cand01, cand02, refine_best); the packaged deep_polish.py
 # writes polished00..03.txt to ./deep-polish-4153-output/.
@@ -37,10 +37,9 @@ python3 noniso.py ../object/candidate_n4153.txt seed-cci4153.txt
 #    posted seed at https://packomania.com/cci/txt/cci4153.txt
 #    (sha256 bca1f6739e2a898d6862658e092f0e105667652dac18340da863a8d2eb94ffae).
 
-# 5. 50-digit certification (run-folder checker, mpmath)
-python3 verify.py ../object/candidate_n4153.txt
-# -> margin r*-r_table = 2.706e-06 (need >= 1e-11 to beat). The standalone
-#    verifier above (decimal, stdlib only) is the same computation.
+# 5. 50-digit certification (standalone verifier, decimal, stdlib only)
+python3 ../verify-it-yourself/verify.py ../object/candidate_n4153.txt
+# -> margin r*-r_table = 2.706e-06 (need >= 1e-11 to beat).
 
 Known blemish, not fatal: the polish loop's tracked margins read
 1.2e-07-2.2e-07 better than the saved files recompute to on 3 of 4

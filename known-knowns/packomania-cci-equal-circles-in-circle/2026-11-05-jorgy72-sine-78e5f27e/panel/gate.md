@@ -1,7 +1,7 @@
 # Honesty gate — 2026-11-05
 
 status: CONFIRMED_PARTIAL
-confirmed_scope: polished03.txt's 50-digit feasible radius exceeds the live Packomania value for N=4153 by 2.706e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4153 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
+confirmed_scope: object/candidate_n4153.txt's 50-digit feasible radius exceeds the live Packomania value for N=4153 by 2.706e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4153 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
 
 ## Panel tally
 - panel/reproduce.md: pass: true (own mpmath 50-digit script from the
@@ -15,7 +15,7 @@ confirmed_scope: polished03.txt's 50-digit feasible radius exceeds the live Pack
   claimed value is the recomputed/certified one). context: subagent.
 - panel/criterion.md: pass: true (literal (a)–(d) judgment; all four
   PASS; bank FULL CRITERION MET, p2 also fits but subsumed; scope
-  guard respected — carrier polished03.txt only). context: subagent.
+  guard respected — carrier object/candidate_n4153.txt only). context: subagent.
 - Main-session verification: SURVIVES (own 50-digit checker run:
   margin 2.706e-06; two independent double evaluators agree
   +2.705818e-06; own non-isometry max diff 3.179e-03; queue/table
@@ -32,9 +32,11 @@ confirmed_scope: polished03.txt's 50-digit feasible radius exceeds the live Pack
   (270,582x headroom).
 - Stretched criterion / hidden quantifier: none found.
 - Scope wider than reproduced: no; confirmed_scope is the single
-  object polished03.txt at N=4153.
+  object/candidate_n4153.txt at N=4153.
 - Sample presented as complete: no (full O(N^2) checks, not samples).
-- Table value obtained by evasion: no (single honest curls, honest UA).
+- Table value obtained by evasion: no (single plain curls of the public table
+  files; the reproduce fetch used a browser UA, the novelty fetch used an
+  honest V3R1T4S-skeptic UA — no login, no bypass).
 - Panel table fetch age at gate: under 1 h. No re-fetch needed.
 - Bundling: one object, one cell (N=4153); the three other above-bar
   polished files are cited, not bundled.
