@@ -1,8 +1,8 @@
 # REPRODUCE — A_4^GC(19,14,9)
-context: fresh subagent (knowledgeWork) for the REPRODUCE role, given only claim/ and the step-6 instruction, working in its own temporary folder
+context: fresh subagent (knowledgeWork) for the REPRODUCE role, given only claim/ (not included in this package) and the step-6 instruction, working in its own temporary folder
 
 ## definition used (own checker written before reading code/check_gc_code.py)
-"all words have length n over {A,C,G,T}, exactly the table's GC-content w (w = floor(n/2)), pairwise Hamming distance >= d, are distinct" (bank criterion, quoted in CLAIM.md). Here n=19, d=14, w=9.
+"all words have length n over {A,C,G,T}, exactly the table's GC-content w (w = floor(n/2)), pairwise Hamming distance >= d, are distinct" (bank criterion, quoted in CLAIM.md (not included in this package)). Here n=19, d=14, w=9.
 
 ## own checker on objects/A4GC_19_14_9_M44.txt
 - sha256 8b28d53b3639dc0cc9d1a1afd37dfca139f5c3852c66003db5ee118b476c1a1a (matches CLAIM.md and PREREG.md)
@@ -11,7 +11,7 @@ context: fresh subagent (knowledgeWork) for the REPRODUCE role, given only claim
 - result: OK
 
 ## table cell (read directly from data/dnacodes.html)
-- data/dnacodes.html sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5 (matches CLAIM.md)
+- data/dnacodes.html (not included in this package) sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5 (matches CLAIM.md)
 - first table "Lower bounds for A4GC(n,d,w)", row 19, column d=14: `38<sup>v </sup>` — no '.' or ':' after it (unmarked; v = VNS, [MS]/[MS2])
 - 44 > 38
 
@@ -21,7 +21,7 @@ context: fresh subagent (knowledgeWork) for the REPRODUCE role, given only claim
 - the generator opens only its output file (no read of the object)
 
 ## freeze
-- `sha256sum -c PREREG.sha256` in claim/: PREREG.md: OK
+- `sha256sum -c PREREG.sha256` in claim/ (here how-we-built-it/): PREREG.md: OK
 
 ## author's checker (run after own check)
 - `python3 code/check_gc_code.py objects/A4GC_19_14_9_M44.txt 19 14 data/dnacodes.html`: "VERDICT: VALID, beats_table=True", cell 38 marker ''

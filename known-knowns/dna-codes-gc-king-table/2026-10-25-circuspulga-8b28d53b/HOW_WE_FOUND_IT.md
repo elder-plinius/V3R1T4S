@@ -1,2 +1,4 @@
 # How we found it (contributor text, unverified)
 A pre-registered sweep of every unmarked cell of King's GC table tried GF(4) projective-geometry slices: take the [21,3,16] simplex code, puncture it, and map each column to letters so that the most codewords have constant GC-content. Then it tried min-conflicts augmentation. Most cells failed, because a slice holds at most 64 words, and augmentation did not reach table values. Three cells beat the table: (15,11), (19,14) and (20,15). This package is (19,14), formalized in its own run with a frozen PREREG, a deterministic rebuild and a 400-control random-greedy null (best 25).
+
+Run history (from panel/gate.md): this result was first seen in an exploratory sweep (folder named by hand, started 2026-10-25T08:51:32Z) and in an earlier formalization run whose CRITERION failed; a later attempt was aborted before any measurement. This run re-froze a PREREG before regenerating the object.

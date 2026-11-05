@@ -1,10 +1,10 @@
-# NOVELTY review: A_4^GC(19,14,9) >= 44 (claim/CLAIM.md)
-context: fresh knowledgeWork subagent started for the NOVELTY role, given only claim/ and the step-6 NOVELTY instruction, with its own private scratch folder and public web access
+# NOVELTY review: A_4^GC(19,14,9) >= 44 (claim/CLAIM.md (not included in this package))
+context: fresh knowledgeWork subagent started for the NOVELTY role, given only claim/ (not included in this package) and the step-6 NOVELTY instruction, with its own private scratch folder and public web access
 
 ## Status source (one honest request, no retries)
-- URL: https://rambutan.umassmed.edu/king/dnacodes.html (from claim/CLAIM.md)
+- URL: https://rambutan.umassmed.edu/king/dnacodes.html (from claim/CLAIM.md (not included in this package))
 - fetched: 2026-10-25T10:28:03Z (11:28 CET), one plain curl, HTTP 200, 18096 bytes
-- sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5, identical to claim/data/dnacodes.html
+- sha256 25d6e9f88262fbb07c95841225cb3202aa29eb31f7f72d24b43e9c595bdb18c5, identical to claim/data/dnacodes.html (not included in this package)
 - page says "Last updated June 23, 2010"
 - live value, GC-only table "Lower bounds for A4^GC(n,d,w)", row 19, column d=14: `38` with superscript `v` (VNS from [MS] or [MS2]); no '.' or ':' after it, so it is not marked optimal
 - for reference, the GC,RC table gives 18 at (19,14) and 39 at (19,13). That 39 belongs to a different cell and a different constraint set, and it does not apply here
