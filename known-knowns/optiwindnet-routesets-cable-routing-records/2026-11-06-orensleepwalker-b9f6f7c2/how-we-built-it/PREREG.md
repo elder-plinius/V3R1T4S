@@ -1,0 +1,5 @@
+Frozen UTC: 2026-11-06T14:42:02Z
+Method: attempts/lns/code/lns_branched.py, window k uniform in [k-6, k+6] with k = 28 (16-40 turbines; 22 for Belwind/CECEP with T = 55), sub-solve 30 s, 1 CP-SAT worker, one process per instance, nice 10, deadline 2026-11-06T16:05:00Z: London Array cap 12; Belwind cap 10; Belwind cap 8; Hornsea One.1_OSS cap 8; CECEP Yangjiang Nanpeng Island cap 11.
+Counting rule (bank criterion): topology X = branched; final Euclidean length (detours included) < (1 - 1e-6) x the shortest stored set of topology branched or more restrictive (i.e. the shortest stored set of any topology); validate_routeset no violations; segments inside border and outside obstacles; feeders per substation <= that shortest set's feeders_per_root.
+A record candidate gets its own claim and three fresh skeptics if time permits (package locally; no filing).
+null_test: not needed because only deterministic properties of explicit route sets would be claimed (no search-yield or statistical inference)
