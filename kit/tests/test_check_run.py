@@ -67,7 +67,8 @@ class Base(unittest.TestCase):
         shutil.rmtree(self.tmp, ignore_errors=True)
 
     def attack(self, levels=("nothing", "negative"), null="not needed because a deterministic checker decides"):
-        w(os.path.join(self.R, "PREREG.md"), "frozen: 2026-10-12T03:01:00Z\nnull_test: %s\n" % null)
+        w(os.path.join(self.R, "PREREG.md"), "frozen: 2026-10-12T03:01:00Z\nnull_test: %s\n"
+          "baseline_test: not needed because an exact object is checked\n" % null)
         for i, lv in enumerate(levels):
             A = os.path.join(self.R, "attempts", "lens%d" % i)
             dead = "" if lv.endswith("_claim") else "dead lines:\n" + "".join(
@@ -106,6 +107,8 @@ class Base(unittest.TestCase):
         w(os.path.join(P, "verify-it-yourself", "run_checks.sh"), "python3 verify-it-yourself/check.py\n")
         w(os.path.join(P, "verify-it-yourself", "RECEIPTS.md"), "PASS\n")
         w(os.path.join(P, "how-we-built-it", "search.py"), "print('search')\n")
+        w(os.path.join(P, "how-we-built-it", "PREREG.md"),
+          "baseline_test: not needed because an exact object is checked\n")
         w(os.path.join(P, "HOW_WE_FOUND_IT.md"), "Contributor text, unverified. Two lenses.\n")
         w(os.path.join(P, "the-record-we-beat", "table.md"), "url: http://example.org/table\nfetched: 2026-10-12T03:00:00Z\nsha256: %s\n" % HEX)
         panel(os.path.join(P, "panel"))
@@ -527,4 +530,3 @@ class CommitOnlyBaseline(Base):
 
 if __name__ == "__main__":
     unittest.main(verbosity=1)
-
