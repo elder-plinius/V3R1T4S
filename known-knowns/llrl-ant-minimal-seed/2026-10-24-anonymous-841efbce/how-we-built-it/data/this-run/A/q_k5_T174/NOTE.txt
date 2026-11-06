@@ -1,0 +1,2 @@
+NOTE: second independent A pass at TMAX=174, 40 pieces SPLITD=8. At panel launch (2026-10-24T17:07:15Z) pieces 26 and 34 were still running; all finished pieces are NONE except the one containing the 174 minimiser. The 4-way TMAX=175 run (k5_T175_w*.txt) is the complete A result.
+Update 2026-10-24T17:24Z (after panel launch): p34 and p26 finished NONE and were added here. The queue is complete: 40/40 pieces, 285,750,820 nodes, minimum 174 with one minimiser (piece 10), identical to the 4-way run.

@@ -1,0 +1,2 @@
+SOL onset=556 k=2 found_t=560 phase=12 cells: (0,0,3) (-1,-1,1)
+RESULT split=4/5@4 subtrees=67 rule=LLRL K=2 NONE onset<=555 nodes=1330 tests=52383 maxR=11 Dmin=238

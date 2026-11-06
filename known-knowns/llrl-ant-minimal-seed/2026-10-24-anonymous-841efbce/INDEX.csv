@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+llrl-ant-minimal-seed,least H384 onset g(k) for k=0..5 and K0 (ant at 0 0 facing north),256241 555 318 245 195 174; K0=12,none published (known point g(0): GLR 256100 rounded),2026-10-24T16:05:56Z,object/minimisers.txt,841efbce0e7faac881698a90fb4f313e5815533053782bcb70866de35328480c

@@ -1,0 +1,9 @@
+SOL onset=319 k=3 found_t=320 phase=335 cells: (0,0,3) (-1,-1,2) (-2,-1,1)
+# new best 317
+SOL onset=317 k=3 found_t=320 phase=337 cells: (0,1,1) (0,2,2) (1,2,1)
+# new best 314
+SOL onset=314 k=3 found_t=320 phase=340 cells: (1,0,2) (1,-1,1) (2,2,1)
+SOL onset=314 k=3 found_t=320 phase=340 cells: (1,0,2) (1,-1,1) (3,1,3)
+# new best 245
+SOL onset=245 k=3 found_t=248 phase=264 cells: (1,0,2) (1,-1,1) (0,2,3)
+RESULT rule=LLRL K=3 best_onset=245 minimisers=1 nodes=724891 tests=8339672 maxR=14 Dmin=238 flagged=0
