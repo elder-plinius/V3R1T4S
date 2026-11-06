@@ -1,0 +1,29 @@
+{
+  "records": [
+    {
+      "data_file": "short_combinations_v5.json",
+      "sha256": "7f6e8676b32a262d3780934007b40cb717411068da19f55c096d2079af548063",
+      "version": "v5",
+      "requested_basis_width": 12,
+      "coefficient_set": [
+        -1,
+        0,
+        1
+      ],
+      "cube_order": "itertools.product lexicographic order",
+      "sign_filter": "first nonzero coefficient is positive",
+      "minimum_l1": 3,
+      "ranking": "numpy float64 einsum of normalized Gram form",
+      "selection": "numpy.argpartition(scores,min(take,len(scores)-1))[:take], unsorted partition order",
+      "take": 2048,
+      "basis_order": "FLINT LLL row order",
+      "replay": "Recorded integer basis_combination directly reconstructs the selected polynomial; enumeration ranking/order need not be rerun."
+    }
+  ],
+  "source_files_sha256": {
+    "lattice_search.py": "91c6e9c0faa54e59a8c26b82f1887dd20e61a319a5069338e13df492dca6cc2b",
+    "reproduce_all_provenance.py": "88b139f46aacd77cee68db97f72242a174b9b3b030514c493f9a100a83cf85dd",
+    "irls_search.py": "551da87cbf5ad8375cf204cb97f6d38fd18531a085e63d90aba13b8cee4b2897",
+    "short_combinations.py": "9d1463b083e1e344542b383769acc9bd7c280f2ba20888c5c6c5c19cc47632b5"
+  }
+}

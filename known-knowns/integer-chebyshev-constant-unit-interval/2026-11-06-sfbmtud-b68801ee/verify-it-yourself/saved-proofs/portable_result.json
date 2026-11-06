@@ -1,0 +1,38 @@
+{
+  "core_controls": "PASS",
+  "log_precision_bits": 128,
+  "log_series_terms": 48,
+  "claim_level": "PROVED-HERE",
+  "certificate_sha256": "b68801eed7ca3043a7b817aa6567d92b6d73519c3be888936589519de71055ce",
+  "threshold_exact": "422640947/1000000000",
+  "threshold_decimal_input": "0.422640947",
+  "factor_count": 213,
+  "w_degree": 1000000000026,
+  "x_degree": 2000000000052,
+  "unweighted_degree_sum": 4293,
+  "real_rootedness": "not assumed or tested",
+  "checker_variant": "portable_v1",
+  "site_packages_disabled": true,
+  "visited": 19217,
+  "accepted_leaves": 9609,
+  "pending_cells": 0,
+  "maximum_depth": 22,
+  "accepted_methods": {
+    "hull": 2658,
+    "taylor2": 6951
+  },
+  "finite_cover_complete": true,
+  "max_accepted_upper_scaled": "-586124321139279012674695748190385178949983936335288",
+  "comparison_target_scaled": "-586124321139190743389294925489611514861266810588520",
+  "minimum_acceptance_margin_scaled": "88269285400822700773664088717125746768",
+  "worst_accepted_cell": [
+    19,
+    239550
+  ],
+  "common_scale_denominator": "340282366920938463463374607431768211456",
+  "normalization": 2000000000052,
+  "elapsed_seconds": 222.18361902499964,
+  "peak_rss_kib": 26720,
+  "python_version": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "mode": "taylor2"
+}

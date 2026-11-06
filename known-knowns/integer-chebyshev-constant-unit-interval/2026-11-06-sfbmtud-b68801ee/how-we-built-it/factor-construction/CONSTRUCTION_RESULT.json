@@ -1,0 +1,13 @@
+{
+  "candidate_sha256": "b68801eed7ca3043a7b817aa6567d92b6d73519c3be888936589519de71055ce",
+  "complete": true,
+  "factor_count": 213,
+  "x_degree": 2000000000052,
+  "generated_factors_replayed": 153,
+  "known_origins_checked": 60,
+  "construction_jobs": 134,
+  "construction_elapsed_seconds": 430.9869363559992,
+  "construction_maxrss_kib": 45320,
+  "known_origin_elapsed_seconds": 0.003879096999298781,
+  "all_frozen_search_source_hashes_match": true
+}

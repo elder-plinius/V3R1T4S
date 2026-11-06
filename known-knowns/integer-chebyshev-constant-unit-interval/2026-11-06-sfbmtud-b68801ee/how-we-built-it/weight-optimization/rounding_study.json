@@ -1,0 +1,73 @@
+{
+  "classification": "HEURISTIC; all norms need rigorous continuum verification",
+  "rows": [
+    {
+      "scale": 100000,
+      "actual_x_degree": 199732,
+      "factor_count": 153,
+      "heuristic_normalized_norm": 0.42270978294016626
+    },
+    {
+      "scale": 1000000,
+      "actual_x_degree": 2000332,
+      "factor_count": 210,
+      "heuristic_normalized_norm": 0.4226641884728088
+    },
+    {
+      "scale": 10000000,
+      "actual_x_degree": 19999976,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.4226412460727902
+    },
+    {
+      "scale": 100000000,
+      "actual_x_degree": 199999828,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.42264100416710243
+    },
+    {
+      "scale": 1000000000,
+      "actual_x_degree": 1999999802,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.42264095383019923
+    },
+    {
+      "scale": 10000000000,
+      "actual_x_degree": 19999999764,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.42264094747628084
+    },
+    {
+      "scale": 100000000000,
+      "actual_x_degree": 200000000298,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.42264094701267124
+    },
+    {
+      "scale": 1000000000000,
+      "actual_x_degree": 2000000000052,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.4226409468251039
+    },
+    {
+      "scale": 10000000000000,
+      "actual_x_degree": 20000000000162,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.4226409468250441
+    },
+    {
+      "scale": 100000000000000,
+      "actual_x_degree": 200000000000466,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.42264094682526404
+    },
+    {
+      "scale": 1000000000000000,
+      "actual_x_degree": 1999999999999990,
+      "factor_count": 213,
+      "heuristic_normalized_norm": 0.422640946825315
+    }
+  ],
+  "elapsed_seconds": 12.06117004800035,
+  "peak_rss_kib": 77744
+}

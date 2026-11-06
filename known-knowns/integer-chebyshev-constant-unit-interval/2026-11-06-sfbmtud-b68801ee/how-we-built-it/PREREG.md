@@ -1,0 +1,26 @@
+# Preregistration
+frozen_utc: 2026-11-05T22:30:24.535507+00:00
+
+target: integer-chebyshev-constant-unit-interval
+null_test: not needed because every proposed result is an explicit integer polynomial or a deterministic interval/exact-arithmetic certificate; no statistical significance, language inference or beats-chance claim is made
+
+## Literal criterion
+Either of the following. (A) An explicit integer polynomial P (or a list of integer factors Q_j with positive integer exponents e_j, P = prod Q_j^e_j) with ||P||_[0,1]^(1/deg P) STRICTLY BELOW 0.422684697505 (direction: min), proved by rigorous interval arithmetic: a bisection of [0,1] (or of w = x(1-x) in [0,1/4] for factors symmetric under x -> 1-x) in which every subinterval carries an outward-rounded upper bound on sum_j e_j log|Q_j| / deg P. (B) A certified lower bound STRICTLY ABOVE 0.422228600019 (direction: max): a measure and polynomial library satisfying the hypotheses of Theorem 7 of arXiv:2610.00386 (pairwise distinct, primitive, irreducible Q_j; budget B <= 1; inf A, the leading-coefficient term and every G_i bounded rigorously), or a certificate for Pritsker's (2005) method. In both cases the value is compared with the best bound on either side published at verification time (re-read the abstract page, its version history and the 2026 literature). For (B) the skeptic must also re-derive Theorem 7 from the paper, since it is new and unrefereed. Floating-point maxima without rigorous enclosures do not count.
+
+## Literal p1
+An independent rigorous re-verification of Niedbala Giraudin's shipped upper certificate (0.422684697505) or lower certificate (0.422228600019). It must use interval or exact arithmetic written from the paper's description, not the ancillary scripts. Report a confirmation or a located error. A located error counts as a win only if the skeptic reproduces it.
+
+## Frozen primary objective
+Independently verify the shipped upper certificate at the rational decimal bound 0.422684697505. Build the verifier from the paper's mathematical description and the factor/exponent data only, without reading the author's ancillary verifier scripts. Check integer coefficients, positive integer exponents, exact degree, and a finite partition covering w in [0,1/4], with outward enclosures of the normalized log absolute product. Since w=x(1-x), use x-degree 2 times w-degree. Acceptance requires every covering cell's rigorous upper enclosure <= log of the claimed rational decimal. Rounded floats and sampled maxima never suffice.
+
+## Frozen improvement objective
+An explicit rationalized factor product with rigorous normalized norm strictly below the currently best published upper bound, including 0.422684697505. Search heuristics may adapt, but scoring/acceptance cannot. The best numerical estimate is only HEURISTIC until certified. Keep unsuccessful candidates and measured residuals.
+
+## Independent verification and controls
+Two separately written certificate checkers using different interval/polynomial representations. Calibrate x(1-x), normalized norm 0.5, and elementary constant/linear/quadratic polynomials with known exact extrema. Include corrupted exponents, coefficients, degree and uncovered partitions as negative controls. Validate interval enclosures at exact rational points and roots; finite samples are controls only, not proof of the continuum bound. Three fresh skeptic contexts for any p1/full claim, with reproduction, novelty and literal-criterion verdicts. They see only the isolated claim package.
+
+## Secondary lower-side exploration
+Independently derive Theorem 7 and inspect certificate schema. A lower claim needs exact arithmetic and rigorous interval checks of all hypotheses and all terms, not simply an optimizer score. If this cannot be completed, report it as an open lead without implying the known bound is wrong.
+
+## Resource and stop rules
+28800 seconds maximum wall-clock planning budget from this preregistration; start no new line after 23040 seconds. Batch computations with checkpoint, timeout and recorded PID. Pilot memory first, then aggregate resident memory below half free memory. No network or paid compute is delegated to search programs. No automatic submission. A session/environment interruption is reported as such, not as a completed eight-hour run.
