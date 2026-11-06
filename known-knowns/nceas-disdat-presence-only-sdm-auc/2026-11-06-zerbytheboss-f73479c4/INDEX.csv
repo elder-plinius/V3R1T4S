@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+nceas-disdat-presence-only-sdm-auc,6-region mean AUC & 217-species median AUC (tgb_hybrid_v3),"mean6=0.77336, med217=0.78457","mean6=0.768 (DeepMaxent TGB, bar >0.773), med217=0.774 (Anand et al. 2026)",2026-11-06T07:10:00Z,object/disdat_225_species_auc.csv,f73479c4d59bfba890f9a1248543c67e909f48f62ee842fa6f4743bdd75492fd
