@@ -1,0 +1,100 @@
+# Table snapshot
+URL: https://raw.githubusercontent.com/jrc-rodec/FJSSP-W-Benchmarking/main/instances/InstanceData/FJSSP-W/best_known.csv
+fetched_utc: 2026-10-31T10:24:20Z
+http_status: 200
+sha256 of the page: 74f982d5fdbdd7ebf6b889b0a57106474f9dd677a3813cf5762fc54afdfe30cf
+(The NOVELTY panelist re-fetched it independently; see panel/novelty.md.)
+
+| instance file | row | listed UB (rounded) |
+|---|---|---|
+| Behnke1.fjs | behnkegeiger1 | 85 |
+| Behnke2.fjs | behnkegeiger2 | 86 |
+| Behnke4.fjs | behnkegeiger4 | 90 |
+| Behnke5.fjs | behnkegeiger5 | 85 |
+| BrandimarteMk4.fjs | brandimarte4 | 56 |
+| ChambersBarnes1.fjs | chambersbarnes1 | 880 |
+| ChambersBarnes10.fjs | chambersbarnes10 | 893 |
+| ChambersBarnes11.fjs | chambersbarnes11 | 871 |
+| ChambersBarnes12.fjs | chambersbarnes12 | 859 |
+| ChambersBarnes13.fjs | chambersbarnes13 | 890 |
+| ChambersBarnes14.fjs | chambersbarnes14 | 874 |
+| ChambersBarnes2.fjs | chambersbarnes2 | 860 |
+| ChambersBarnes3.fjs | chambersbarnes3 | 863 |
+| ChambersBarnes5.fjs | chambersbarnes5 | 805 |
+| ChambersBarnes6.fjs | chambersbarnes6 | 888 |
+| ChambersBarnes7.fjs | chambersbarnes7 | 846 |
+| ChambersBarnes8.fjs | chambersbarnes8 | 896 |
+| ChambersBarnes9.fjs | chambersbarnes9 | 892 |
+| Fattahi19.fjs | fattahi19 | 1024 |
+| Hurinkedata10.fjs | hurinkedata10 | 741 |
+| Hurinkedata11.fjs | hurinkedata11 | 817 |
+| Hurinkedata12.fjs | hurinkedata12 | 855 |
+| Hurinkedata17.fjs | hurinkedata17 | 1077 |
+| Hurinkedata2.fjs | hurinkedata2 | 825 |
+| Hurinkedata25.fjs | hurinkedata25 | 850 |
+| Hurinkedata26.fjs | hurinkedata26 | 942 |
+| Hurinkedata44.fjs | hurinkedata44 | 1117 |
+| Hurinkedata45.fjs | hurinkedata45 | 884 |
+| Hurinkedata49.fjs | hurinkedata49 | 6007 |
+| Hurinkedata50.fjs | hurinkedata50 | 6223 |
+| Hurinkedata51.fjs | hurinkedata51 | 6524 |
+| Hurinkedata57.fjs | hurinkedata57 | 924 |
+| Hurinkedata58.fjs | hurinkedata58 | 826 |
+| Hurinkedata59.fjs | hurinkedata59 | 910 |
+| Hurinkedata60.fjs | hurinkedata60 | 948 |
+| Hurinkedata61.fjs | hurinkedata61 | 812 |
+| Hurinkedata62.fjs | hurinkedata62 | 916 |
+| Hurinkedata63.fjs | hurinkedata63 | 366 |
+| Hurinkedata64.fjs | hurinkedata64 | 832 |
+| Hurinkedata65.fjs | hurinkedata65 | 885 |
+| Hurinkedata66.fjs | hurinkedata66 | 893 |
+| Hurinkrdata2.fjs | hurinkrdata2 | 651 |
+| Hurinkrdata20.fjs | hurinkrdata20 | 593 |
+| Hurinkrdata21.fjs | hurinkrdata21 | 624 |
+| Hurinkrdata22.fjs | hurinkrdata22 | 663 |
+| Hurinkrdata23.fjs | hurinkrdata23 | 709 |
+| Hurinkrdata49.fjs | hurinkrdata49 | 4857 |
+| Hurinkrdata51.fjs | hurinkrdata51 | 5426 |
+| Hurinkrdata53.fjs | hurinkrdata53 | 5581 |
+| Hurinkrdata54.fjs | hurinkrdata54 | 5895 |
+| Hurinkrdata56.fjs | hurinkrdata56 | 5423 |
+| Hurinkrdata57.fjs | hurinkrdata57 | 722 |
+| Hurinkrdata59.fjs | hurinkrdata59 | 671 |
+| Hurinkrdata60.fjs | hurinkrdata60 | 702 |
+| Hurinkrdata62.fjs | hurinkrdata62 | 710 |
+| Hurinkrdata63.fjs | hurinkrdata63 | 289 |
+| Hurinkrdata64.fjs | hurinkrdata64 | 595 |
+| Hurinkrdata65.fjs | hurinkrdata65 | 660 |
+| Hurinkrdata66.fjs | hurinkrdata66 | 712 |
+| Hurinkrdata8.fjs | hurinkrdata8 | 444 |
+| Hurinksdata19.fjs | hurinksdata19 | 907 |
+| Hurinksdata2.fjs | hurinksdata2 | 894 |
+| Hurinksdata22.fjs | hurinksdata22 | 800 |
+| Hurinksdata23.fjs | hurinksdata23 | 847 |
+| Hurinksdata24.fjs | hurinksdata24 | 1031 |
+| Hurinksdata25.fjs | hurinksdata25 | 869 |
+| Hurinksdata27.fjs | hurinksdata27 | 924 |
+| Hurinksdata28.fjs | hurinksdata28 | 909 |
+| Hurinksdata44.fjs | hurinksdata44 | 1135 |
+| Hurinksdata45.fjs | hurinksdata45 | 886 |
+| Hurinksdata51.fjs | hurinksdata51 | 7141 |
+| Hurinksdata53.fjs | hurinksdata53 | 7376 |
+| Hurinksdata55.fjs | hurinksdata55 | 6244 |
+| Hurinksdata56.fjs | hurinksdata56 | 7916 |
+| Hurinksdata57.fjs | hurinksdata57 | 1033 |
+| Hurinksdata58.fjs | hurinksdata58 | 837 |
+| Hurinksdata59.fjs | hurinksdata59 | 976 |
+| Hurinksdata6.fjs | hurinksdata6 | 574 |
+| Hurinksdata60.fjs | hurinksdata60 | 960 |
+| Hurinksdata62.fjs | hurinksdata62 | 951 |
+| Hurinksdata64.fjs | hurinksdata64 | 855 |
+| Hurinksdata65.fjs | hurinksdata65 | 882 |
+| Hurinksdata66.fjs | hurinksdata66 | 877 |
+| Hurinkvdata4.fjs | hurinkvdata4 | 549 |
+| Hurinkvdata50.fjs | hurinkvdata50 | 5612 |
+| Hurinkvdata51.fjs | hurinkvdata51 | 5474 |
+| Hurinkvdata56.fjs | hurinkvdata56 | 4264 |
+| Hurinkvdata58.fjs | hurinkvdata58 | 565 |
+| Hurinkvdata6.fjs | hurinkvdata6 | 458 |
+| Hurinkvdata7.fjs | hurinkvdata7 | 486 |
+| Hurinkvdata8.fjs | hurinkvdata8 | 439 |
