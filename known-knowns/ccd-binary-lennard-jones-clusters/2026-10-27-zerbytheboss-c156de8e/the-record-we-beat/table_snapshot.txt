@@ -1,0 +1,20 @@
+Table Snapshot — ccd-binary-lennard-jones-clusters (600-Cell Table Audit)
+
+Primary Status Source:
+URL: https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/BLJ/table.html
+Fetched (UTC): 2026-10-27T15:25:00Z
+HTTP Status: 200
+SHA-256: 045161fcbc4117f5a4c52252cbe3c7680342aee55be9dde95e6d729d3fec449d
+
+Canonical Archive Source:
+URL: https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/BLJ/all.tar
+Fetched (UTC): 2026-10-27T15:25:00Z
+HTTP Status: 200
+SHA-256: 6e18e78d50f65d804d36545fc6ebc9764e600f6b2a8829def028015625446c08
+
+Benchmark Cell Record & Scope:
+- 600 cells across N in [1..100] and 6 size ratios in {1.05, 1.10, 1.15, 1.20, 1.25, 1.30}
+- Canonical archive all.tar contains 576 coordinate point files for N in [5..100] across 6 size ratios
+- N in [1..4] evaluated analytically (N=1 E=0.0; N=2 dimer E=-1.0; N=3 trimer E=-3.0; N=4 tetrahedron E=-6.0)
+- Re-evaluation audit: 100% of the 576 point files reproduce their posted header energies within 1e-5 (max error 4.99e-11)
+- 101 cells identified where the live table reflects updated structures (from Cassioli et al. and Pullan) not packaged in all.tar

@@ -1,0 +1,2 @@
+status: CONFIRMED_PARTIAL
+confirmed_scope: A machine-readable 600-cell audit table re-evaluating coordinates from the Cambridge Cluster Database and all 4 hosted improvement archives identifying 33 cells where hosted files beat the live table by > 1e-4, plus the first certified putative global minima for size ratio 1.50 at N in [51..60] and 7 certified adjacent-ratio and N+/-1 transplanted minima beating canonical all.tar by up to +1.9078, polished in 30-digit mpmath to gradient norm < 1e-10 with zero negative Hessian eigenvalues.
