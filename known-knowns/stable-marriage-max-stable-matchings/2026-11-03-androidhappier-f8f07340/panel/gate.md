@@ -1,0 +1,4 @@
+status: CONFIRMED_SOLUTION
+confirmed_scope: The order-9 instance claim/instance_n9.prefs (sha256 f8f0734081c8c613267257d617d9393d5ad591782b802beaa72c8b1639f35de1) has exactly 412 stable matchings, counted by brute force and by the rotation-poset method, which is strictly more than every published order-9 instance (max 365, Ong et al.) and every composition of published instances found (max 366, Z2^3 Latin order-8 ⊕ one pair block sum), and it contains no published order-7 or order-8 instance as a sub-instance.
+panel: reproduce pass: true; novelty pass: true; criterion pass: true
+honesty: no downgrade — all three skeptics passed without hedging that fails the claim; novelty independently found a stronger composition lower bound of 378 which 412 still clears; count verified by reproduce's own exhaustive 9! counter.
