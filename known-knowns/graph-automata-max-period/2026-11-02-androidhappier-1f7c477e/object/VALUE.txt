@@ -1,0 +1,45 @@
+object: A384209(10), maximum period of Conway's Game of Life over all simple graphs on 10 vertices
+value: 46
+witness_graph6: I?zUvYujw
+witness_rule: Life (live vertex survives with 2 or 3 live neighbours; dead vertex born with exactly 3)
+witness_start_state: 62 (bit v of the integer = vertex v alive, vertices in graph6 order)
+second_graph_reaching_46: IEhffT{^w (start state 842)
+graphs_enumerated: 12005168 (all simple graphs on 10 vertices, geng from nauty 2.8.8) = OEIS A000088(10)
+connected_graphs_enumerated_by_program_B: 11716571 = OEIS A001349(10)
+published_terms_reproduced: a(1..9) = 1,1,1,1,2,4,8,14,27 by both programs
+pinned files (sha256, path relative to the package folder):
+944783eeb40c64cf2f354692cbed90b0f1f7682052359506e2267570c478ca8e  object/evidence/A_n10_merged.txt
+e0d16a18c81fe7d64a3836bfae3a15fe4a309e5c23ce03e5a789cee88aca9cfb  object/evidence/A_n10_part0.txt
+d234909e25d9011fe1a88accdbdf004b4a0f443ba06fa8099fa5ab7f11492cbe  object/evidence/A_n10_part1.txt
+4acd45e93b777d3926c1fe1c3bef7fbeb8a7561d444c467e80921d0e0fc9be21  object/evidence/A_n10_part2.txt
+4e22406d94467e4ab809f27746ae8c9f9e70a9855fe94b592c2ed26ccc8c5728  object/evidence/A_n10_part3.txt
+02a0b9196753bdbab82c670f0441122c2c3fd18c45da2d0132c533cdb9dd1ad4  object/evidence/A_n10_part4.txt
+c9a6f419b3b05340f1f6214a8480df1748d31b3811016f5aa230ae452508bed6  object/evidence/A_n10_part5.txt
+81c8cf7975d1ac30eb58e2e6985bc421b46eb50026a0f8968f6bafc815bb37c9  object/evidence/A_n10_part6.txt
+e4094e7ac3d67ea155f0796a66f6bd4c24c1650c2989aefb8229c901e8f1c689  object/evidence/A_n10_part7.txt
+dd3121ac16491d1c672d8c352cfef807df9f661af891c1e0a2f9e6d307a62cf4  object/evidence/A_n1_9.txt
+8c5d29c8d23e02b8640b5bc0b9c4482a0d9579b1748b3a49bd57e26c59752def  object/evidence/B_order1.txt
+1fd470840267a9266679baea315a1bd06fe7ff90abcf87743c5864759c7ea22a  object/evidence/B_order10.txt
+a9640def51ecc5906ebf2f4e41e46f26b1206da8f4381647e08c7dcf5e2b3cec  object/evidence/B_order10_part0.txt
+c6cdb5ea980522f9acfc5a44cbe39981c366fc13dfd2bab89adfeb1efff13841  object/evidence/B_order10_part1.txt
+6776934bee15eb4548daebf3708e42aa1b72a4363520c572951b9f2b7dce925f  object/evidence/B_order10_part2.txt
+a20ddc338b60df884a488bc39789fab0bd1df706632d4f0d216afd1107ef41e2  object/evidence/B_order10_part3.txt
+9d88a4d92ba50f489e9e9d5a957158799fccc0f737cba52e98dee759fb4468cc  object/evidence/B_order10_part4.txt
+daa96b328dfb6c6458dec5b0400ef0d49bd2d21d6996665e1392b724f7f34d90  object/evidence/B_order10_part5.txt
+c16d4ab9025bcac288c0fcb042212ed4c29147cfe4b164207e7d85b3fe456f9a  object/evidence/B_order10_part6.txt
+8355622d7a950d44603a443026e6aed374e748e3f857ba12798bc940784f9ca0  object/evidence/B_order10_part7.txt
+556e3e92de975705675df38297b16419bf5274bb07a1c80227b7fd37b5600a78  object/evidence/B_order2.txt
+fab9868d1313d68ed8525ecd7638ba4d4f516bb4e83da427c1f2d30232c24161  object/evidence/B_order3.txt
+076a8eac56597a3bf63d2f536cc7718293543c7f167cb34e58ae7964c74bc4d7  object/evidence/B_order4.txt
+20c23190310685669deb8ef8e4ec42e438d34bba6f261b9c986663b95bd6cc26  object/evidence/B_order5.txt
+95b881fd08df1588dae65ef486f4962aa9ce8e5e02ef39436b014159753a6378  object/evidence/B_order6.txt
+9b7ad62fe08c0ef646bfb673447030fdb5bdb37bc4ea469651caf2d6851db063  object/evidence/B_order7.txt
+ea3681c6f908ff21272be2e1d3bb3408e79dc2a1e69f077225f01614763606cb  object/evidence/B_order8.txt
+5bf776255190475f4e6561ccb0ea0d584ca6f55012b2fb36200879550e5504eb  object/evidence/B_order9.txt
+c2401ad9a7350792a084a068cb3e5d31889156a658699caec9ff09d68e3424ee  object/evidence/combine_n1_10.txt
+73999ec31ec8201299b101646dfe026f3c86a669ef6dde3187cfe595ba187f49  object/evidence/witness_simulation.txt
+75c38ab2bca0425b5f5c1d5e268b483a2ac6d4802f9c6afd99f1f0216fc3f82a  verify-it-yourself/lifeA.c
+c43399dd1a77d4d290dad437072fb1528f0ba6c16ded94e4329e0d01bc750945  verify-it-yourself/lifeB.c
+7b92b648c875881d66ed1d3a725acfe9f0dd78a4695ad0fb6e97e075d2c1cbe2  verify-it-yourself/stepper.py
+1db60448ef3d40e865382a7b79ac7d7772b050240975d108f77cad6b5782497c  how-we-built-it/combine.py
+affc42e807942738be04e13af92576fe5ba8d1b7fb368a450f315328e271f26f  how-we-built-it/merge_parts.py

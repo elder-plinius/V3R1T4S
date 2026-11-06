@@ -1,0 +1,35 @@
+n=10 graphs=1426606 maxperiod=39 witness_graph6=ICRduvs]W witness_state=23
+hist 1 440412
+hist 2 642002
+hist 3 108588
+hist 4 116717
+hist 5 26509
+hist 6 43945
+hist 7 16699
+hist 8 13073
+hist 9 7457
+hist 10 4524
+hist 11 1998
+hist 12 1516
+hist 13 782
+hist 14 889
+hist 15 419
+hist 16 393
+hist 17 166
+hist 18 146
+hist 19 87
+hist 20 101
+hist 21 28
+hist 22 65
+hist 23 18
+hist 24 28
+hist 25 11
+hist 26 4
+hist 27 15
+hist 28 6
+hist 29 1
+hist 30 3
+hist 31 1
+hist 32 2
+hist 39 1
+exit 0
