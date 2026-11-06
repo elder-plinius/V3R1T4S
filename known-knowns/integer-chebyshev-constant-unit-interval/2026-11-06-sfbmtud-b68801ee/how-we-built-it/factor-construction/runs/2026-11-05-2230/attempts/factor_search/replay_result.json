@@ -1,0 +1,775 @@
+{
+  "candidate_sha256": "b68801eed7ca3043a7b817aa6567d92b6d73519c3be888936589519de71055ce",
+  "complete": true,
+  "all_reproduced": true,
+  "factors": [
+    {
+      "candidate_factor_index": 51,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 52,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 53,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 54,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 55,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 56,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 57,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 58,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 59,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 64,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 60,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 115,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 61,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 62,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 63,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 65,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 69,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 203,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 67,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 68,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 70,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 71,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 72,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 73,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 74,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 75,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 76,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 77,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 78,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 79,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 207,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 80,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 81,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 82,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 83,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 84,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 85,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 86,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 87,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 88,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 89,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 90,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 169,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 91,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 92,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 93,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 94,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 116,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 95,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 96,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 211,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 97,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 98,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 99,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 100,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 101,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 102,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 103,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 104,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 105,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 132,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 106,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 107,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 108,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 111,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 112,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 113,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 114,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 117,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 118,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 119,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 120,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 121,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 191,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 122,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 123,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 124,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 125,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 126,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 127,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 128,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 129,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 153,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 130,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 131,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 133,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 134,
+      "reproduced": true,
+      "method": "weighted_lll_short_combination"
+    },
+    {
+      "candidate_factor_index": 135,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 136,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 137,
+      "reproduced": true,
+      "method": "weighted_lll_short_combination"
+    },
+    {
+      "candidate_factor_index": 141,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 142,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 143,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 144,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 145,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 146,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 155,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 147,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 148,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 149,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 171,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 192,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 150,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 151,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 152,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 154,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 156,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 157,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 158,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 159,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 188,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 160,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 161,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 162,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 163,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 164,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 165,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 173,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 166,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 167,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 168,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 176,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 170,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 172,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 174,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 175,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 179,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 180,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 181,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 182,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 183,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 184,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 185,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 186,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 187,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 208,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 189,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 190,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 193,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 194,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 195,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 196,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 197,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 198,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 199,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 200,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 201,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 202,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 204,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 205,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 206,
+      "reproduced": true,
+      "method": "dual_reciprocal_value_lll"
+    },
+    {
+      "candidate_factor_index": 209,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    },
+    {
+      "candidate_factor_index": 210,
+      "reproduced": true,
+      "method": "weighted_exact_sample_lll"
+    }
+  ],
+  "job_count_total": 134,
+  "elapsed_seconds": 430.9869363559992,
+  "maxrss_kib": 45320
+}

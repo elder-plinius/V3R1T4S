@@ -1,0 +1,21 @@
+{
+  "tested_versions": {
+    "python": "3.12.14",
+    "python_flint": "0.9.0",
+    "numpy": "2.3.5"
+  },
+  "compatibility": {
+    "legacy_node_bits": 18,
+    "legacy_node_jitter": 2,
+    "new_node_bits": 22,
+    "parameter_source": "recorded origin fields, with legacy defaults only when absent",
+    "short_vector_replay": "exact recorded basis_combination in FLINT LLL row order; ranking is not re-executed"
+  },
+  "source_files_sha256": {
+    "lattice_search.py": "91c6e9c0faa54e59a8c26b82f1887dd20e61a319a5069338e13df492dca6cc2b",
+    "reproduce_all_provenance.py": "88b139f46aacd77cee68db97f72242a174b9b3b030514c493f9a100a83cf85dd",
+    "irls_search.py": "551da87cbf5ad8375cf204cb97f6d38fd18531a085e63d90aba13b8cee4b2897",
+    "short_combinations.py": "9d1463b083e1e344542b383769acc9bd7c280f2ba20888c5c6c5c19cc47632b5",
+    "check_known_origins.py": "74d8f75e95a7135155b2e18cd7b304b479670545c241eeef89b43b7b4c02ef17"
+  }
+}
