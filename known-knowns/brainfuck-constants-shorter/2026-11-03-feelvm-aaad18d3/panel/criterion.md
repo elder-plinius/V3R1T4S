@@ -1,13 +1,13 @@
 # CRITERION
 context: subagent
 
-## 1. The criterion and the named partial win (quoted from CLAIM.md)
+## 1. The criterion and the named partial win (quoted from README.md)
 
-Success criterion (CLAIM.md, "Criterion (verbatim from bank/targets.json)"):
+Success criterion (README.md, "Criterion (verbatim from bank/targets.json)"):
 
 "A Brainfuck string for some n listed on https://esolangs.org/wiki/Brainfuck_constants (re-fetched live immediately before claiming) such that a reference interpreter with unbounded right tape, 8-bit cells (wrapping only if claimed in the wrapping category), starting at all zeros, halts with the pointer on a cell holding n (mod 256 rules exactly as the page defines), never moves left of the start cell, and whose instruction count is strictly less than the smallest listed count for n in that category (and for numbers > 255, the page's stated cell-size conventions)."
 
-Enumerated partial win (CLAIM.md, line 4): `over-255` — "A shorter program for one of the listed constants above 255."
+Enumerated partial win (README.md, line 4): `over-255` — "A shorter program for one of the listed constants above 255."
 
 ## 2. The object
 
@@ -19,19 +19,19 @@ Hand-trace of the full run: the preamble seeds cells 1..8 with 2,3,3,3,1,2,2,1; 
 
 ## 4. The comparison — every reading of "smallest listed count for n in that category"
 
-I fetched https://esolangs.org/wiki/Brainfuck_constants once (HTTP 200). Its sha256 d78c05da7dbb20b80f70cceea943fdd429372ae6abfbb3fe810cc29471db0dd4 is byte-identical to the snapshot recorded in table_record.md (fetched 2026-11-03T19:45:41Z), so the recorded table is authentic and unmodified. The page contains exactly one 114514 section (3 text occurrences of "114514", all inside it). It lists, in the page's "(instructions, cells)" notation:
+I fetched https://esolangs.org/wiki/Brainfuck_constants once (HTTP 200). Its sha256 d78c05da7dbb20b80f70cceea943fdd429372ae6abfbb3fe810cc29471db0dd4 is byte-identical to the snapshot recorded in the-record-we-beat/record.md (fetched 2026-11-03T19:45:41Z), so the recorded table is authentic and unmodified. The page contains exactly one 114514 section (3 text occurrences of "114514", all inside it). It lists, in the page's "(instructions, cells)" notation:
 
 - "Generate using power series." `+++[>++++++++<-]>+++[<++++++++>-]<+++++++[>++++++++<-]>+++++[<++++++++>-]<++[>++++++++<-]>++` — (92, 2) non-wrapping; leaves 114514 in a cell (hand-verified: accumulate 3x8=24, +3, x8 -> 216+7*8... fold reaches intermediate 14314, then 114512 + 2 = 114514 in cell 1).
 - "Printing the pistol emoji in UTF-8" `>++++++[<+++++>-]<+[>+++++>++++++>++++++++<<<-]>>>--------.<<.>+++.<---------.` — (78, 4) non-wrapping; printer (ends in `.`).
 - "Printing the pistol emoji in UTF-8 using signed chars (no wrapping)" `++++[->----<]>.-[+<------>]<+.-[+++>--<]>+.+[+++<----->]<.` — (58, 2) non-wrapping; printer; its first loop drives a cell to -16 (later cells reach -102), so under the page's rule "for numbers greater than 255 'soft' means that it uses negative cells" it is soft, even though the page tags it "signed chars" rather than "(soft)".
-- Unnumbered "Other versions": `62+[>1847+<-]>.` (BF-RLE notation; the page lists no instruction count for it, and it is not a valid BF string since digits are not BF instructions) and a CESU-8 printer (no count listed on the page itself; table_record.md measures 468 expanded).
+- Unnumbered "Other versions": `62+[>1847+<-]>.` (BF-RLE notation; the page lists no instruction count for it, and it is not a valid BF string since digits are not BF instructions) and a CESU-8 printer (no count listed on the page itself; the-record-we-beat/record.md measures 468 expanded).
 
 Readings of "smallest listed count for n in that category":
 
 - All numbered listings: min = 58; 41 < 58 (by 17).
-- Value-in-cell listings only (92; BF-RLE expansion 1916 per table_record.md): min = 92; 41 < 92 (by 51).
+- Value-in-cell listings only (92; BF-RLE expansion 1916 per the-record-we-beat/record.md): min = 92; 41 < 92 (by 51).
 - Non-soft listings only: min = 78 (92 among value-in-cell); 41 < 78.
-- Including the unnumbered blocks under table_record.md's counts (468, 1916): min still 58; 41 < 58.
+- Including the unnumbered blocks under the-record-we-beat/record.md's counts (468, 1916): min still 58; 41 < 58.
 - Adversarial reading of the RLE form as ~15 characters: rejected — the page lists no count for it, it is explicitly a compression encoding ("encoded in BF-RLE"), and the criterion compares against a "listed count" under the page's "number of program instructions" convention.
 
 Under every reading, 41 is strictly less than the smallest listed count for 114514; the verdict does not depend on resolving the category question.
@@ -44,12 +44,12 @@ The object is non-wrapping, non-soft (MINCELL=0), leaves the value in a cell, an
 
 ## 6. Hidden quantifiers and null models
 
-- "re-fetched live immediately before claiming": table_record.md documents the claim-time fetch (2026-11-03T19:45:41Z, HTTP 200, sha256 recorded); my independent fetch returned byte-identical content, so the comparison target is real and current.
+- "re-fetched live immediately before claiming": the-record-we-beat/record.md documents the claim-time fetch (2026-11-03T19:45:41Z, HTTP 200, sha256 recorded); my independent fetch returned byte-identical content, so the comparison target is real and current.
 - "instruction count": 41 is the count of actual BF instructions (41 bytes, no comment padding; the checker rejects non-BF characters and passed).
 - "halts": the fold provably terminates (drains to cell 0 = 0); 305379 steps, finite.
 - Null model "a shorter listing exists somewhere on the page": none — the only 114514 section lists nothing at or below 41 (shortest 58).
 - Null model "the win is an artifact of a gamed checker": ruled out — my hand-derived step count (305379) matched object/expected.txt exactly before I ran anything.
-- Subsumption: CLAIM.md names exactly one partial win for this target (`over-255`); the object meets it literally (114514 is a listed constant above 255, and 41 is shorter than every count listed for it) and also satisfies the full criterion's literal wording for n = 114514. Nothing wider is claimed: CLAIM.md's "Not claimed" section disclaims optimality, exhaustive search, and novelty of the construction, and the claim is scoped to this one constant and its listed sequences.
+- Subsumption: README.md names exactly one partial win for this target (`over-255`); the object meets it literally (114514 is a listed constant above 255, and 41 is shorter than every count listed for it) and also satisfies the full criterion's literal wording for n = 114514. Nothing wider is claimed: README.md's "Not claimed" section disclaims optimality, exhaustive search, and novelty of the construction, and the claim is scoped to this one constant and its listed sequences.
 
 ## 7. Scope
 

@@ -2,14 +2,14 @@
 
 context: subagent
 
-Scope: I read only the claim package (CLAIM.md, object/program.bf, object/expected.txt,
-table_record.md, prior_art.md, status_source.txt, REPRODUCE.md, checker.py). I did not open
+Scope: I read only the claim package (README.md, object/program.bf, object/expected.txt,
+the-record-we-beat/record.md, prior_art.md, README.md, REPRODUCE.md, checker.py). I did not open
 attempts/, runs/, other panel files, or other panel_work directories. Paths below are relative
-to claim/ for claim files; my own artifacts are under panel_work/reproduce/ (run-dir relative).
+to the package root for claim files; my own artifacts are under panel_work/reproduce/ (run-dir relative).
 The cross-check named in REPRODUCE.md (`attempts/independent-verify/code/verify.exe`) points
 outside the claim package, so I did not run it; all verification below is independent of it.
 
-## 1. Criterion quoted (verbatim from CLAIM.md)
+## 1. Criterion quoted (verbatim from README.md)
 
 > A Brainfuck string for some n listed on https://esolangs.org/wiki/Brainfuck_constants (re-fetched live
 > immediately before claiming) such that a reference interpreter with unbounded right tape, 8-bit cells
@@ -27,7 +27,7 @@ the target itself exceeds 255), no cell may go negative, pointer never left of c
 pointer cell holding n exactly. I additionally confirmed the object does not depend on wrapping by running
 an 8-bit-wrapping variant (section 3).
 
-## 2. My own checker, written before reading claim/checker.py
+## 2. My own checker, written before reading verify-it-yourself/checker.py
 
 Written from the quoted definition only: panel_work/reproduce/mycheck.py (Python 3, standard library
 only). Semantics: unbounded right tape, arbitrary-precision integer cells, no mod-256 wrapping, hard fail
@@ -37,7 +37,7 @@ bracket passes, ',' treated as non-determinism. Run twice for determinism.
 Command and real output:
 
 ```
-$ python -I mycheck.py check .../claim/object/program.bf 114514
+$ python -I mycheck.py check .../object/program.bf 114514
 file bytes: 41
 trailing newline: False
 instruction count: 41
@@ -83,15 +83,15 @@ $ od -c object/program.bf           -> ends '> ]   >' at offset 0000051 (41 = 0o
 $ sha256sum object/program.bf       -> aaad18d3b875c2161656c60a353a587def4b40a74f8646f650e67f37ce38cf38
 ```
 
-Extracting the backticked string from CLAIM.md (its CRLF stripped; first extraction kept a trailing
-\r\n from CLAIM.md line endings, which cmp flagged as 2 extra bytes beyond byte 41) and comparing:
+Extracting the backticked string from README.md (its CRLF stripped; first extraction kept a trailing
+\r\n from README.md line endings, which cmp flagged as 2 extra bytes beyond byte 41) and comparing:
 
 ```
 $ cmp claimed_string_clean.txt object/program.bf   -> identical
 $ sha256sum claimed_string_clean.txt               -> aaad18d3b875c2161656c60a353a587def4b40a74f8646f650e67f37ce38cf38
 ```
 
-The string quoted in CLAIM.md is byte-identical to object/program.bf: 41 bytes, no trailing newline.
+The string quoted in README.md is byte-identical to object/program.bf: 41 bytes, no trailing newline.
 
 ## 5. Live page fetch (one attempt, honest client)
 
@@ -104,9 +104,9 @@ $ sha256sum page.html
 d78c05da7dbb20b80f70cceea943fdd429372ae6abfbb3fe810cc29471db0dd4
 ```
 
-No 401/403/429/503, no challenge page, no retry. The sha256 equals the one in table_record.md
+No 401/403/429/503, no challenge page, no retry. The sha256 equals the one in the-record-we-beat/record.md
 (d78c05da...dd4), so the claim was made against a byte-identical page, and my checks below are against
-that same live revision (oldid=160357, "last edited on 25 June 2025, at 15:33" — matches table_record.md).
+that same live revision (oldid=160357, "last edited on 25 June 2025, at 15:33" — matches the-record-we-beat/record.md).
 
 114514 cell on the live page (extracted verbatim):
 - "Generate using power series." — `+++[>++++++++<-]>+++[<++++++++>-]<+++++++[>++++++++<-]>+++++[<++++++++>-]<++[>++++++++<-]>++` **(92, 2) non-wrapping**
@@ -126,7 +126,7 @@ Counts and behaviour, all measured with my own interpreter (section 2 code, `run
 
 So: no listed sequence for 114514 is ≤ 41; the smallest listed count is 58 and 41 < 58; the smallest
 listed value-in-cell sequence is 92 and 41 < 92. The claim's length comparisons hold under either
-category reading. The two "Other versions" lengths match table_record.md (1916 and 468).
+category reading. The two "Other versions" lengths match the-record-we-beat/record.md (1916 and 468).
 
 Page conventions quote verified verbatim on the live page: "The shortest known Brainfuck code sequences
 are listed for each constant, along with number of program instructions and cells taken. Cells for values
@@ -154,7 +154,7 @@ produce (101,973).
 
 ## 6. Author's checker.py (read only after my own was written and run)
 
-claim/checker.py implements the same definition: unbounded right tape (list append), arbitrary-precision
+verify-it-yourself/checker.py implements the same definition: unbounded right tape (list append), arbitrary-precision
 non-wrapping cells, fail on pointer < 0, fail on any negative cell, step limit 10^7, value must equal the
 target exactly, same step convention. Differences from mine: it treats '.'/',' as no-ops (moot here — the
 object has neither), and it does not run twice (mine does). Run per REPRODUCE.md:
@@ -191,6 +191,6 @@ Identical result to my independent checker, and identical to the expected line i
 
 All properties in section 3 pass; every claimed value (41, 305379, 114514, min_ptr 0, max_ptr 9,
 min_cell 0, page counts 92/78/58/1916/468, sha256 d78c05da...dd4) was reproduced from the saved files
-and the live page with my own code written before reading claim/checker.py.
+and the live page with my own code written before reading verify-it-yourself/checker.py.
 
 pass: true

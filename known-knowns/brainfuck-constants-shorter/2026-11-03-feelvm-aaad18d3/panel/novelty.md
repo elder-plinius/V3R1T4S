@@ -8,7 +8,7 @@ context: subagent
 - HTTP status: 200
 - User-Agent: `V3R1T4S-novelty-panel/1.0 (one-shot fetch; no retries)`
 - Page sha256: `d78c05da7dbb20b80f70cceea943fdd429372ae6abfbb3fe810cc29471db0dd4` — byte-identical to the
-  sha256 recorded in table_record.md (fetched 2026-11-03T19:45:41Z). Current revision confirmed as oldid
+  sha256 recorded in the-record-we-beat/record.md (fetched 2026-11-03T19:45:41Z). Current revision confirmed as oldid
   160357, "last edited on 25 June 2025, at 15:33".
 
 ## The 114514 cell as fetched (quoted)
