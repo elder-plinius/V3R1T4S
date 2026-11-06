@@ -1,0 +1,28 @@
+# The record we beat (table snapshot — the page itself is NOT included)
+
+Primary table page: https://packomania.com/cci/cci.html
+  fetched: 2026-11-05T09:58:13Z, HTTP 200, 1310659 bytes,
+  sha256 de37305f030c7380a1f92f2039c0a5a8a937a9b81a1efa2b16c0a3652dcae5e0
+  (moved by one cosmetic line vs 2026-11-04: reference [31] year 2024 -> 2026)
+Values file: https://packomania.com/cci/txt/radius.txt
+  fetched: 2026-11-05T09:58:13Z, HTTP 200, 96415 bytes, 2735 rows,
+  sha256 6c60da0a2feb2ad01f2bed8dd99646021bcfd4cbfecb5ea2a7b332ecfa0beead
+  re-fetched: 2026-11-05T10:26:45Z, HTTP 200, identical sha256 (table unchanged)
+Extracted cell: N=4153 → 0.014596422226478759387097611060 (line 4153 of radius.txt)
+Author of the row: https://packomania.com/cci/txt/author.txt → N=4153: Eckard Specht
+Posted configuration compared against: https://packomania.com/cci/txt/cci4153.txt
+  sha256 bca1f6739e2a898d6862658e092f0e105667652dac18340da863a8d2eb94ffae
+  (reproduces its table row to -8.274e-31 at 50 digits)
+Queue page: https://packomania.com/pending-requests.html
+  fetched: 2026-11-05T09:58:13Z and re-fetched 2026-11-05T10:26:45Z, HTTP 200,
+  scout sha256 5bdaeb2c9f5ade3e629bc2ba63fb429999bbd823ac3769c8c530dcbf4caefe7e,
+  verify sha256 d3d58d3213208ddf652aaeb712a07ba13826f0492b9ee6c130743617b77d9b61
+  (verify move: header/footer dates 04-Nov -> 05-Nov-2026, plus one Moki &
+  Julio csq line moved inside an HTML comment — cci-irrelevant)
+  only cci entries: "15-Oct-2026 12:44, Vidit Patankar, cci, 193 candidates in
+  the range 652–3943" and "03-Nov-2026 20:33, Karl Desfontaines, cci, 487
+  candidates in the range 126–4141" → N=4153 is outside every listed cci range
+History of updates on live cci.html: newest line 11-Oct-2026 (Zii Fave N=15
+  computer-assisted proofs); nothing touches N=4153. The live cci.html at
+  verification time is byte-identical to the scout fetch (sha256 de37305f...).
+Credit: E. Specht (Packomania, https://packomania.com/cci/).

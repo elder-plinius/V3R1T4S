@@ -1,0 +1,55 @@
+# Exact build commands (from the fresh-trunc-4153 and deep-polish-4153 lenses)
+
+Run from how-we-built-it/ (numpy/scipy needed). The packaged code has
+machine-specific paths replaced with relative ones; the search itself
+is unchanged.
+
+# 1. Hexagonal truncation search (96,525 evaluations of the raw-truncation
+#    objective F = min(s/2, 1 - max radius of the innermost N points))
+python3 wide_search.py
+# grid (63,525 evals: theta 0-30 deg, 21 spacings, 5x5 offsets) best
+#   raw -2.043e-05; refine (3,000 evals) -2.042e-05; full-cell random
+#   (30,000 evals, rng seed 20261105) best raw -1.903e-05 at theta
+#   21.8037 deg. Three further basins in the top 20: theta ~7.51,
+#   ~9.51-10.25, ~25.04 deg.
+
+# 2. Regenerate the two non-saved diverse candidates
+python3 gen_cands.py
+# -> deep-polish-4153-output/cand01.txt (theta 7.5074), cand02.txt (theta 25.0394)
+
+# 3. Smooth-max bottleneck polish with ratcheting (polish.py: L-BFGS-B on
+#    logsumexp(alpha * overlaps) / alpha; after each round set r := feasible_r)
+python3 deep_polish.py fresh-trunc-4153-output/random_best.txt deep-polish-4153-output/cand01.txt deep-polish-4153-output/cand02.txt fresh-trunc-4153-output/refine_best.txt
+# NOTE: in the original run the four inputs were the saved best files
+# (random_best, cand01, cand02, refine_best); the packaged deep_polish.py
+# writes polished00..03.txt to ./deep-polish-4153-output/.
+# Recomputed margins from the saved files (two independent evaluators):
+#   polished03 +2.705818e-06 (best; refine/grid best, theta 9.51)
+#   polished00 +2.349101e-06 (random best, theta 21.80)
+#   polished02 +2.476255e-06 (theta 25.04)
+#   polished01 +1.987954e-06 (theta 7.51)
+# All four basins clear the 1e-11 bar. The claim carrier is polished03
+# alone (object/candidate_n4153.txt).
+
+# 4. Non-isometry vs the posted seed
+python3 noniso.py ../object/candidate_n4153.txt seed-cci4153.txt
+# -> NON-ISOMETRIC (max sorted-distance diff 3.178732e-03). Fetch the
+#    posted seed at https://packomania.com/cci/txt/cci4153.txt
+#    (sha256 bca1f6739e2a898d6862658e092f0e105667652dac18340da863a8d2eb94ffae).
+
+# 5. 50-digit certification (standalone verifier, decimal, stdlib only)
+python3 ../verify-it-yourself/verify.py ../object/candidate_n4153.txt
+# -> margin r*-r_table = 2.706e-06 (need >= 1e-11 to beat).
+
+Known blemish, not fatal: the polish loop's tracked margins read
+1.2e-07-2.2e-07 better than the saved files recompute to on 3 of 4
+candidates (tracked feasible radius kept when a final ratchet degrades).
+All verdicts in this package use recomputed values only.
+
+Dead lines killed along the way (see the run's lens reports):
+- boundary-rule variants (worse than plain truncation at 3973/3985; not
+  re-tried here — the plain recipe already reached polish range)
+- deletion grafts from neighbouring rows (inherit the source radius)
+- bottleneck patches and jitter walks at N=4000 (saturated; and N=4000
+  is queue-blocked by the Karl Desfontaines cci 126-4141 pending line,
+  which is why this run rotated to N=4153)
