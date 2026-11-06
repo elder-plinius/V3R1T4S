@@ -1,3 +1,5 @@
+> Publication note (2026-11-06, maintainer-requested path clarification): The reviewer environment and working files named below are not included in this package. This includes `../../../.venv-research/bin/python`, `../review-reproduce/`, and the captured checks, outputs and replay logs there. The historical reproduction command below depends on that unavailable environment and is not a package verification command. The runnable package verifier is `sh verify-it-yourself/run_checks.sh`, executed from the package folder. The original review follows verbatim; its findings and verdict are unchanged.
+
 context: subagent
 
 Evidence was restricted to claim/, plus applicable panel instructions. I wrote ../review-reproduce/independent_check.py from criterion.txt, PREREG.md, the YAML definitions, and references/iea37-aepcalc.py before reading author-code/. No previous run, author notes, or other panel verdict was consulted.

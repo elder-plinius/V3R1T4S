@@ -1,3 +1,5 @@
+> Publication note (2026-11-06, maintainer-requested path clarification): The reviewer working files named below are not included in this package. This includes `../review-criterion/`, `../data/review-criterion/`, their checker and audit files, and `symmetry_checker.py`. These are historical review-environment locations. The runnable package verifier is `sh verify-it-yourself/run_checks.sh`, executed from the package folder. The original review follows verbatim; its findings and verdict are unchanged.
+
 context: subagent
 
 confirmed_scope: The fixed 16-turbine layout in object/layout.json satisfies p2 against the complete live V3R1T4S comparator inventory checked on 2026-11-01, with strict feasibility, fixed-model AEP 421304.60329359624 MWh, and all 16 matched displacements above 50 m versus participant 12 and the sole relevant open claim PR #578.

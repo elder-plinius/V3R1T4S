@@ -1,3 +1,5 @@
+> Publication note (2026-11-06, maintainer-requested path clarification): The reviewer environment and working files named below are not included in this package. This includes `/root/wind_novelty_nov1`, `check_independent.py`, `review-novelty/`, `data/review-novelty/`, and their source captures, downloads and hash logs. These are historical review-environment locations. The runnable package verifier is `sh verify-it-yourself/run_checks.sh`, executed from the package folder. The original review follows verbatim; its findings and verdict are unchanged.
+
 # Independent NOVELTY review — p2 only
 
 context: subagent
