@@ -1,0 +1,3 @@
+Instruction set [1mAVX-512[0m detected
+rot180 shinjuku_cost 11 result xs26_08ehmkk8z6a87066 ok True
+wrote attempts/compose_tmp/xs26_08ehmkk8z6a87066.p32.rle pop0 60
