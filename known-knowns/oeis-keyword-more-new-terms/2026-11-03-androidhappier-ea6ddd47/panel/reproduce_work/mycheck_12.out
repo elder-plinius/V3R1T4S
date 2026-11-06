@@ -1,0 +1,23 @@
+brute 1 1 1 1
+brute 2 1 1 1
+brute 3 2 2 1
+brute 4 5 4 2
+brute 5 14 9 3
+brute 6 42 20 4
+brute 7 132 48 6
+brute 8 429 115 12
+brute 9 1430 286 24
+brute 10 4862 719 40
+brute 11 16796 1842 60
+enum 1 1 True 1 1
+enum 2 1 True 1 1
+enum 3 2 True 1 2
+enum 4 4 True 2 1
+enum 5 9 True 3 1
+enum 6 20 True 4 2
+enum 7 48 True 6 5
+enum 8 115 True 12 3
+enum 9 286 True 24 1
+enum 10 719 True 40 1
+enum 11 1842 True 60 6
+enum 12 4766 True 120 4

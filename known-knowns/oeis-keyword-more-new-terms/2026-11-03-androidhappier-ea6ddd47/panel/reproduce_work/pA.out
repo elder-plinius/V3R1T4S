@@ -1,0 +1,21 @@
+1 1 ordered=1 classes=1 argmax=1
+2 1 ordered=1 classes=1 argmax=1
+3 1 ordered=2 classes=2 argmax=2
+4 2 ordered=5 classes=4 argmax=1
+5 3 ordered=14 classes=9 argmax=1
+6 4 ordered=42 classes=20 argmax=2
+7 6 ordered=132 classes=48 argmax=5
+8 12 ordered=429 classes=115 argmax=3
+9 24 ordered=1430 classes=286 argmax=1
+10 40 ordered=4862 classes=719 argmax=1
+11 60 ordered=16796 classes=1842 argmax=6
+12 120 ordered=58786 classes=4766 argmax=4
+13 240 ordered=208012 classes=12486 argmax=2
+14 420 ordered=742900 classes=32973 argmax=3
+15 840 ordered=2674440 classes=87811 argmax=3
+16 1680 ordered=9694845 classes=235381 argmax=3
+17 3360 ordered=35357670 classes=634847 argmax=1
+
+real	0m16.400s
+user	0m16.120s
+sys	0m0.084s
