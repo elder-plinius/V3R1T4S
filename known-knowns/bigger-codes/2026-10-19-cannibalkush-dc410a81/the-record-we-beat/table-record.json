@@ -1,0 +1,28 @@
+{
+  "url": "https://aeb.win.tue.nl/codes/Andw.html",
+  "utc": "2026-10-19T06:22:55.085106+00:00",
+  "status": 200,
+  "headers": {
+    "Server": "nginx",
+    "Date": "Mon, 19 Oct 2026 06:22:56 GMT",
+    "Content-Type": "text/html",
+    "Content-Length": "127477",
+    "Connection": "close",
+    "Vary": "Accept-Encoding",
+    "Last-Modified": "Sun, 18 Oct 2026 16:30:06 GMT",
+    "ETag": "\"1f1f5-65e1fe9058490\"",
+    "Accept-Ranges": "bytes",
+    "Alt-Svc": "h3=\":443\"; ma=86400"
+  },
+  "sha256": "15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349",
+  "bytes": 127477,
+  "fetch_attempts": 1,
+  "extracted_cell": {
+    "n": 35,
+    "d": 6,
+    "w": 6,
+    "lower": 2217,
+    "upper": 3249
+  },
+  "strongest_located_pending_lower": 2218
+}
