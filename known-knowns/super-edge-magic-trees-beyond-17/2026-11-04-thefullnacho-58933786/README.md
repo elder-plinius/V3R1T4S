@@ -1,8 +1,5 @@
 # Every tree on at most 22 vertices is super edge-magic
 
-**Status: CONFIRMED_PARTIAL.** Confirmed by a fresh-context three-skeptic panel (REPRODUCE, NOVELTY, CRITERION)
-and the honesty gate; see panel/gate.md.
-
 Target: `super-edge-magic-trees-beyond-17`, partial win p2. Extends the p1 package of pull request #917 (at most 20
 vertices). Credit: GitHub [thefullnacho](https://github.com/thefullnacho).
 
