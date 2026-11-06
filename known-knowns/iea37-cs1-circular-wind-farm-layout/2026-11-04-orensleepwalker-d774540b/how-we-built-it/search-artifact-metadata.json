@@ -1,0 +1,46 @@
+{
+  "aep_MWh": 1543800.4664981721,
+  "geometry": {
+    "max_radius_m": 2999.999900000135,
+    "min_spacing_m": 307.51364081707464,
+    "strictly_feasible": true
+  },
+  "utc": "2026-11-04T20:44:17.591680+00:00",
+  "trial": 53,
+  "polish": 317,
+  "pair_proposal": {
+    "vacated": [
+      16,
+      56,
+      57,
+      39
+    ],
+    "inserted": [
+      [
+        1012.9846893360761,
+        -814.7772819431659
+      ],
+      [
+        2323.8555995398247,
+        -1649.9076193797644
+      ],
+      [
+        2483.5875834038816,
+        -1397.9601981322883
+      ],
+      [
+        1761.9545502060982,
+        -368.12520018062645
+      ]
+    ],
+    "screen_error_MWh": 4.656612873077393e-10
+  },
+  "source_sha256": "31fe8b1d389c3e4b86aadc611fcdb45ecd5bddbeda61f85125adc38facd1286b",
+  "seed": 2026110422,
+  "code_sha256": "e44007208315b6e083bf1544b81821beeed04f1d98cd9ab667d86e65ae90fdc9",
+  "nit": 65,
+  "solver_success": true,
+  "seconds": 3.809495687484741,
+  "artifact_sha256": "c925040436225fb6da53146ccfc16e33036f3d9a338a2fcc23cff3241977a198",
+  "search_artifact_sha256": "3c1f4f76052e398c5865759097e9d64d274d3339dceb7dbd6794126dcc60815e"
+}
