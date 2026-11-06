@@ -12,3 +12,5 @@ No third-party page is copied here. This claim is compared with what a published
 | V3R1T4S TROPHY_CASE.md and known-knowns listing, novelty skeptic | https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | 2026-10-19T05:37:22Z | 200 | b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1 | no Grothendieck entry; no known-knowns folder for this target |
 
 Compared cell: the status of the value 165/109 for the d = 8 instance. The paper prints it as heuristic (1.51376, asterisk); its largest proven bound for d = 8 is 1.49339 (inherited from d = 5 by monotonicity). This package proves the local bound 6104 for the instance, which turns 165/109 into a proven lower bound for K_G(8).
+
+Added 2026-11-06: the instance matrix was fetched again from https://zenodo.org/records/13693164/files/d8_n1_120x120.mat at 2026-11-06T18:43:34Z (HTTP 200, 239024 bytes, sha256 a78361f200b669741a4a0636bb4e1027a1e6cdfeca174c84ef67269a17bbeaac). It is no longer shipped; `verify-it-yourself/run_checks.sh` fetches it and checks this sha256.

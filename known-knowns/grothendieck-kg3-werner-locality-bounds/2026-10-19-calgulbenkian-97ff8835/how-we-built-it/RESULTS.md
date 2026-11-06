@@ -1,18 +1,20 @@
 # Certified Lower Bounds on Grothendieck Constants $K_G(8)$ and $K_G(9)$ via Exact $E_8$ Weyl-Chamber Reduction
 
+> Note added 2026-11-06, not contributor text: this package claims only partial win p2 for the d = 8 E8 instance: the local bound is exactly 6104, so K_G(8) >= 165/109. Everything marked **[Not claimed]** below is the contributor's and is not claimed here: the partial win p1, the d = 9 row (K_G(9) by monotonicity) and the E7 63 x 63 instance. The comparison with the certified bound 1.49339 is context only. Paths such as `results/...` name files in the contributor's workspace and are not shipped.
+
 ## Summary of Achievements
 - **Target**: `grothendieck-kg3-werner-locality-bounds`
 - **Partial Win `p2` Achieved**: Exact certification of the local bound $\mathrm{SDP}_1(A) = 6104$ for the $120 \times 120$ symmetric $E_8$ root-system instance (`d8_n1_120x120.mat`, $d = 8, m = 120$) listed as an uncertified heuristic (`1.51376*`) in Table 1 and Table 2a of Designolle, Vértesi & Pokutta ([arXiv:2409.03739v3](https://arxiv.org/abs/2409.03739)). Our independent exact method certifies $\mathrm{SDP}_1(A) = 6104$ in **0.10 seconds** (well under the 1-hour verification budget).
-- **Partial Win `p1` Achieved**: Certified improvement of the lower bound on $K_G(d)$ for $d \in \{8, 9\}$ over Table 2 of [arXiv:2409.03739v3](https://arxiv.org/abs/2409.03739):
+- **[Not claimed]** **Partial Win `p1` Achieved**: Certified improvement of the lower bound on $K_G(d)$ for $d \in \{8, 9\}$ over Table 2 of [arXiv:2409.03739v3](https://arxiv.org/abs/2409.03739):
   $$K_G(9) \ge K_G(8) \ge \frac{\mathrm{SDP}_8(A)}{\mathrm{SDP}_1(A)} = \frac{9240}{6104} = \frac{165}{109} \approx 1.5137614678899083,$$
   improving the best certified bound in Table 2 of `arXiv:2409.03739v3` ($1.49339$, inherited from $d=5$ by monotonicity) by **$+0.0203757$** (more than $2000\times$ the $10^{-5}$ minimum margin).
-- **Additional Certification**: The same Weyl-chamber parity reduction certifies the $63 \times 63$ symmetric $E_7$ positive-root instance (`d7_n1_63x63.mat`, $d = 7, m = 63$, $A = 3 G_{E_7} - 7 I_{63}$), proving $\mathrm{SDP}_1(A) = 1991$ and $\mathrm{SDP}_7(A) = 2961$ in **0.02 seconds**.
+- **[Not claimed]** **Additional Certification**: The same Weyl-chamber parity reduction certifies the $63 \times 63$ symmetric $E_7$ positive-root instance (`d7_n1_63x63.mat`, $d = 7, m = 63$, $A = 3 G_{E_7} - 7 I_{63}$), proving $\mathrm{SDP}_1(A) = 1991$ and $\mathrm{SDP}_7(A) = 2961$ in **0.02 seconds**.
 
 | Dimension $d$ | Instance | Size $m_1 \times m_2$ | $\mathrm{SDP}_d(A)$ (Exact) | $\mathrm{SDP}_1(A)$ (Certified Exact) | Certified Lower Bound on $K_G(d)$ | Previous Certified Bound (`2409.03739` Table 2) | Improvement | Verification Time |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | $d = 8$ | `d8_n1_120x120.mat` ($E_8$) | $120 \times 120$ | $9240$ | $6104$ | $\mathbf{165/109 \approx 1.51376147}$ | $1.49339$ | **$+0.0203757$** | $0.10\text{ s}$ |
-| $d = 9$ | Monotonicity from $d = 8$ | $120 \times 120$ | $9240$ | $6104$ | $\mathbf{165/109 \approx 1.51376147}$ | $1.49339$ | **$+0.0203757$** | $0.10\text{ s}$ |
-| $d = 7$ | `d7_n1_63x63.mat` ($E_7$) | $63 \times 63$ | $2961$ | $1991$ | $2961/1991 \approx 1.48719237$ | $1.49339$ | (Confirming Table 2a) | $0.02\text{ s}$ |
+| $d = 9$ **[Not claimed]** | Monotonicity from $d = 8$ | $120 \times 120$ | $9240$ | $6104$ | $\mathbf{165/109 \approx 1.51376147}$ | $1.49339$ | **$+0.0203757$** | $0.10\text{ s}$ |
+| $d = 7$ **[Not claimed]** | `d7_n1_63x63.mat` ($E_7$) | $63 \times 63$ | $2961$ | $1991$ | $2961/1991 \approx 1.48719237$ | $1.49339$ | (Confirming Table 2a) | $0.02\text{ s}$ |
 
 ---
 
@@ -83,4 +85,4 @@ Run the self-contained exact verification script:
 ```bash
 python3 results/verify_grothendieck.py
 ```
-The script verifies the exact integer matrices, explicit lower-bound vectors, quantum values, and exhaustive Weyl-chamber certificates for both `d8_n1_120x120.mat` ($d=8, m=120$) and `d7_n1_63x63.mat` ($d=7, m=63$) in under $0.2$ seconds, saving the full certificate data to `results/e8_120x120_certificate.json`.
+The script verifies the exact integer matrices, explicit lower-bound vectors, quantum values, and exhaustive Weyl-chamber certificates for both `d8_n1_120x120.mat` ($d=8, m=120$) and `d7_n1_63x63.mat` ($d=7, m=63$; **[Not claimed]**) in under $0.2$ seconds, saving the full certificate data to `results/e8_120x120_certificate.json`.

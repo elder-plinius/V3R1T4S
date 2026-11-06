@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+grothendieck-kg3-werner-locality-bounds,E8 120x120 d=8 local bound 6104 (K_G(8) >= 165/109),6104,heuristic 1.51376 (paper),2026-10-19T04:46:03Z,object/dual_certificates.txt,97ff88355b6542938db25f60fd5b414856f5026d2501a02f705caa0e134e7cf6

@@ -12,7 +12,7 @@ From this package folder, run:
 sh verify-it-yourself/run_checks.sh
 ```
 
-- **Requirements**: `python3` 3.8 or later, standard library only.
+- **Requirements**: `python3` 3.8 or later, standard library only, and `curl`. The instance matrix is not shipped: the script fetches it from Zenodo record 10.5281/zenodo.13693164 and checks its sha256 (`MAT=/path/to/d8_n1_120x120.mat` uses a local copy instead; see `RUN_IT_YOURSELF.md`).
 - **Rough laptop time**: about 10 seconds.
 - **Expected last line**: `ALL CHECKS PASS`
 
@@ -24,7 +24,7 @@ sh verify-it-yourself/run_checks.sh
 | Same paper, table of heuristic bounds | d = 8, 120 x 120 | 1.51376, heuristic (state of the art before the paper: 1.48217) | https://arxiv.org/e-print/2409.03739v4 | 2026-10-19T04:46:13Z |
 | Same paper, table of exact bounds | d = 5, 65 x 385 | 1.49339, the largest proven bound for d at least 5, inherited by d = 8 through monotonicity | https://arxiv.org/e-print/2409.03739v4 | 2026-10-19T04:46:13Z |
 | Same paper, abstract | d in {4, 7, 8} | the highly symmetric instances can only be solved heuristically | https://arxiv.org/abs/2409.03739 | 2026-10-19T05:39:14Z |
-| Supplementary files, Zenodo record 13693164 | d8_n1_120x120.mat | same size (239024 bytes) and md5 (59e20586d208c78d49c73fa9bb99c796) as the object file here, version 0.0.2 of 2024-09-06 | https://zenodo.org/api/records/13693164 | 2026-10-19T05:39:59Z (HTTP 200) |
+| Supplementary files, Zenodo record 13693164 | d8_n1_120x120.mat | the instance matrix (239024 bytes, md5 59e20586d208c78d49c73fa9bb99c796, sha256 a78361f200b669741a4a0636bb4e1027a1e6cdfeca174c84ef67269a17bbeaac), version 0.0.2 of 2024-09-06; not shipped here, fetched by `run_checks.sh` | https://zenodo.org/api/records/13693164 (file: https://zenodo.org/records/13693164/files/d8_n1_120x120.mat) | 2026-10-19T05:39:59Z (HTTP 200); file re-fetched 2026-11-06T18:43:34Z (HTTP 200, same sha256) |
 | arXiv 2609.35399v1 (28 Sep 2026) | d = 8 instance | cites 165/109 = 1.513761 as a candidate ratio; its own bounds are conditional on conjectured binary optima; no proof of 6104 | https://arxiv.org/pdf/2609.35399v1 | 2026-10-19T05:39:14Z (HTTP 200) |
 
 This package: the maximum over sign vectors a, b of a^T A b for A = 3G - 13I (G the Gram matrix of the 120 positive roots of E8) is exactly 6104, and Q = 9240, so K_G(8) >= 9240/6104 = 165/109 = 1.5137614678899083 is proven. Snapshot metadata with HTTP status and page sha256: `the-record-we-beat/README.md`. The panel's novelty report is `panel/novelty.md`.
@@ -33,13 +33,13 @@ This package: the maximum over sign vectors a, b of a^T A b for A = 3G - 13I (G 
 
 - Partial win p2 only. What is new is the proof that the local bound is 6104, which turns the paper's heuristic value into a proven one. The number 165/109 is not new: the paper already prints it, as a heuristic value. This is not an improvement of any table and not a new numerical bound; the contributor's gain of 0.0204 over 1.49339 is not what is credited.
 - Nothing is claimed about K_G(3) or the main criterion of the target (a K_G(3) lower bound above 1.43670).
-- The matrix is the paper authors' own supplementary file (same md5 as the Zenodo record); the contribution is the proof, not the instance. Whether the authors' supplementary data files already contain a certificate that this argument reproduces could not be settled (the panel did not open the Julia data files).
+- The matrix is the paper authors' own supplementary file (Zenodo record 10.5281/zenodo.13693164, sha256 a78361f200b669741a4a0636bb4e1027a1e6cdfeca174c84ef67269a17bbeaac). It is not shipped in this package; the contribution is the proof (the certificate in `object/`), not the instance. Whether the authors' supplementary data files already contain a certificate that this argument reproduces could not be settled (the panel did not open the Julia data files).
 - The upper bound 6104 rests on a symmetry reduction (Weyl-group action, vertices of the root zonotope, vectors in twice the root lattice) written out in `verify-it-yourself/UPPER_BOUND.md`. The shipped checker verifies the 18454 dual certificates in exact integer arithmetic and the lower-bound sign vector directly on the matrix, but it does not re-derive the reduction steps; the panel re-derived them independently (`panel/criterion.md`). The dual vectors were found with floating-point linear programs and are verified exactly. It is one method (a symmetry reduction with dual certificates), not two independent algorithms.
 - Newer literature was searched in arXiv only (the 25 newest hits plus one full text); a paper outside those words could already prove this instance.
 - Not peer reviewed. It was checked by a three-skeptic panel (`panel/`) and by the standalone checker shipped here.
 
 ## Credits
 
-- **Sébastien Designolle, Tamás Vértesi and Sebastian Pokutta**, *Better bounds on finite-order Grothendieck constants*, arXiv:2409.03739 (v4, 5 Oct 2026), Phys. Rev. A 113, 022401 (2026), https://arxiv.org/abs/2409.03739: the instance (the 120 x 120 E8 matrix), the heuristic value 165/109 and the table this proof completes. Their supplementary files are on Zenodo, https://doi.org/10.5281/zenodo.13693164; the object file here is theirs, unchanged.
+- **Sébastien Designolle, Tamás Vértesi and Sebastian Pokutta**, *Better bounds on finite-order Grothendieck constants*, arXiv:2409.03739 (v4, 5 Oct 2026), Phys. Rev. A 113, 022401 (2026), https://arxiv.org/abs/2409.03739: the instance (the 120 x 120 E8 matrix), the heuristic value 165/109 and the table this proof completes. Their supplementary files are on Zenodo, https://doi.org/10.5281/zenodo.13693164; the instance matrix `d8_n1_120x120.mat` is theirs, and `run_checks.sh` fetches it from that record.
 - arXiv:2609.35399 (28 Sep 2026), https://arxiv.org/abs/2609.35399: read to check whether the instance had been proven; it had not.
 - Contributor credit: `calgulbenkian`. The proof was found by an AI search agent (Gemini) working for the contributor.

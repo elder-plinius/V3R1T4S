@@ -7,8 +7,6 @@
     "SDP1_exact": 6104,
     "ratio_fraction": "165/109",
     "ratio_float": 1.5137614678899083,
-    "table2_prev_bound": 1.49338574,
-    "improvement": 0.02037572788990838,
     "verification_time_sec": 0.5273878574371338,
     "dominant_vectors_ge_6090": [
       {
@@ -541,11 +539,5 @@
       1,
       1
     ]
-  },
-  "e7_63x63": {
-    "instance": "d7_n1_63x63.mat",
-    "SDP7_exact": 2961,
-    "SDP1_exact": 1991,
-    "time_sec": 6.306660890579224
   }
 }

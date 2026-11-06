@@ -1,9 +1,11 @@
 # Receipts
 
-Real output of `sh verify-it-yourself/run_checks.sh`, run from the package folder by the packager on 2026-10-19 (python3 3.9.6, Darwin). Wall time about 7 seconds. Exit status 0.
+Output of `sh verify-it-yourself/run_checks.sh` run from the package folder on 2026-11-06 (macOS, system python3 3.9, standard library only; the instance matrix was fetched from Zenodo by the script):
 
 ```
-sha256 of object/d8_n1_120x120.mat matches INDEX.csv (a78361f200b669741a4a0636bb4e1027a1e6cdfeca174c84ef67269a17bbeaac)
+sha256 of object/dual_certificates.txt matches INDEX.csv (97ff88355b6542938db25f60fd5b414856f5026d2501a02f705caa0e134e7cf6)
+== fetching the instance matrix from Zenodo: https://zenodo.org/records/13693164/files/d8_n1_120x120.mat
+sha256 of the instance matrix d8_n1_120x120.mat matches Zenodo record 10.5281/zenodo.13693164 (a78361f200b669741a4a0636bb4e1027a1e6cdfeca174c84ef67269a17bbeaac)
 == e8_check.py: identification with the E8 roots, Q, lower bound, 18454 dual certificates (about 5 s)
 == Phase A: matrix from the MATLAB file
 matrix found (byte offset 0, element 322): 120 x 120, symmetric, diagonal all -7, entries [-7, -3, 0, 3]
@@ -23,7 +25,7 @@ dominant w = 2v with v = sum c_k omega_k, |v|^2 <= 620: 18454 vectors
 certificate lines read: 18454
 dominant vectors without a certificate: 0; certificates with dual value above 6104: 0; with dual value exactly 6104: 2
 largest certified dual value: 6104 at c = (0, 0, 0, 0, 5, 0, 1, 0)
-elapsed 3.2 s
+elapsed 2.7 s
 RESULT PASS: L = 6104, Q = 9240, Q/L = 165/109 = 1.5137614678899083
 == negative control 1: one symmetric pair of matrix entries changed; the check must FAIL
 negative control 1 rejected as expected: RESULT FAIL
