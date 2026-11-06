@@ -1,0 +1,7 @@
+# Verify
+From this folder: `sh verify-it-yourself/run_checks.sh` (last line PASS). It checks the frozen object hash, downloads the release once (pinned sha256 c78c8f3c0543468a48c24d02a08a9a71f9b385389b1e82b6af6bd5bbfdd05e3a), reads the nodeset and stored route sets with sqlite3, and checks: total Euclidean length 129717.3657 m; every turbine connected; radial strings of at most 11 turbines; feeders as in the panel reports; no proper crossings; every segment inside the closed border and outside every obstacle interior; strictly shorter than the stored radial best (and reports the stored overall best).
+Offline: put the release file in a folder and run `python3 verify-it-yourself/check_route.py --reference-dir <folder>`.
+Official validator (optional, needs optiwindnet 0.3.2 and its dependencies; see how-we-built-it/requirements-optiwindnet-env.txt): rebuild the route-set graph from object/routeset-packed.json with optiwindnet's storage functions (as G_from_routeset does for database rows) and run optiwindnet.validating.validate_routeset(G); expect [].
+
+# How the object was produced (provenance, not a replay guarantee)
+how-we-built-it/hgs_p2.py ran optiwindnet's HGSRouter on the instance (radial, segmented feeders, max substation feeders = the stored radial best's, time limit 240 s, seed 101) in a batch over candidate instances; how-we-built-it/checks.py are the criterion checks it applied. HGS-CVRP is time-limited, so replays may differ; the frozen object is authoritative.
