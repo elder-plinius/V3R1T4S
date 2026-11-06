@@ -2,6 +2,8 @@
 
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
+> Note added 2026-11-06, not skeptic text: this report says the skeptic's own C program is "not shipped in this package". That was true when the report was written. The program was added to the package afterwards, with the skeptic's analysis script, as the optional full check `verify-it-yourself/full-check/mycw.c` and `analyse.py`, which is what README.md and `verify-it-yourself/full-check/FULL_CHECK.md` describe.
+
 ## Hash check
 The package folder matched the contributor's hash list (22 entries, all OK). The folder was copied to a private location and the work done on the copy. The parts were concatenated and the whole file has sha256 d225ef1cf4f8f3c335620d5c7e37c5d96afa60cdc47b228acce51b66065a91e1, equal to PARTS.txt.
 

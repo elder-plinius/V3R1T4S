@@ -8,12 +8,9 @@ The bank text said larger transfer matrices with symmetry compression were lapto
 pre-registration (how-we-built-it/PREREG.md).
 
 What worked: a matrix-free product with the orbit-quotient transfer matrix, built site by site, so that the quotient matrix (more than 85 percent dense) is never stored.
-That reached the cycle C_%(m)d for %(q)d colours (%(states)s states, %(orbits)s orbits). A power iteration with a precision ladder produced a positive vector v;
+That reached the cycle C_14 for 5 colours (268435460 states, 81433 orbits). A power iteration with a precision ladder produced a positive vector v;
 then y = C v was computed exactly in 256-bit integers and the bound read off from the largest ratio y_i / v_i.
 
 What failed or was wrong: the snapshot records one wrong table entry (the q = 4 open strip of width 3), which does not matter here, and it does not record a
 failure log. The claim folder cited the key inequality as "Theorem 2.2" of the paper; the panel found the correct label is equation (6). The first criterion run of the panel could not
 read the paper (abstract only) and failed; the second run read it and passed. The snapshot gives no run times and no command log for this width.
-
-The orchestrator that passed the claim to the panel did not run a checker of its own on the large file; the panel's reproduce skeptic did, with its own program,
-on the full transfer matrix.

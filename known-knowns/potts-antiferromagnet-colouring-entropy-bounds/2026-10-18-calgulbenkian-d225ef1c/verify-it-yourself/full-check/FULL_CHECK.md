@@ -1,4 +1,4 @@
-# Optional full check: the panel's own independent C checker (about about 25 minutes on 28 threads)
+# Optional full check: the panel's own independent C checker (about 25 minutes on 28 threads)
 
 What it adds. The quick check (../run_checks.sh) reads the shipped vector pair (v, y) and trusts that y is the transfer matrix applied
 to v. This check recomputes y itself. It lifts v to every proper 5-colouring of the cycle C_14 and applies the FULL transfer matrix of the
@@ -38,7 +38,7 @@ Program log (progress lines removed):
     orbits where own S != certificate y: 0
 
 Command: python -I analyse.py out_q5_14.txt 14 3.250407145038276
-Output (also in rep_ws/skeptic/output.txt):
+Output:
     orbits: 81433 ids contiguous: True
     all v > 0: True  min v bits: 223  max v bits: 224
     argmax orbit 80146 argmin orbit 74525
