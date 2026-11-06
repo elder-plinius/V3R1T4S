@@ -13295,7 +13295,15 @@
    ],
    "status_source": "https://github.com/cdli-gh/data",
    "status_checked": "2026-10-03",
-   "disclosure": "open"
+   "disclosure": "open",
+   "pitfalls": [
+    "Eligibility: this entry's text excludes only damaged numerals (no [ ] # ? x in entry or total numerals); with the total read as the last reverse numeral line that admits about 120 tablets among the 1,729 cdli-gh/data catalogue rows dated Proto-Elamite. One negative run added its own conditions (no lost-text lines, no damage $-lines, exactly one reverse numeral line, no numerals on other surfaces, variant signs rejected) and was left with 30 eligible tablets, 10 held out, so the gain bar of 5 was out of reach on its split before any rule was tried. Report N_eligible under the entry's own rule, and what each added condition costs.",
+    "Check the bar is reachable before searching: count the eligible held-out tablets that are not baseline-balanced but balance under some per-numeral choice of Algorithm-1-valid system. If that count is below the bar, no system-assignment rule can pass on that split.",
+    "Numerals without a delimiter: 225 numbered lines in the Proto-Elamite ATF carry a numeral with no ' , ' between text and numeral (e.g. '1. 1(N34)' under @top on P008003, '12. 2(N14) x' on P009382). A parser that splits only on ' , ' reads them as having no numeral and silently skips the layout and damage tests on them.",
+    "Unknown counts: 'n' counts occur inside numerals (e.g. the reverse total '1(n) 3(N39B)' on P009432). A parser that matches only digit counts can push '1(n)' into the text and count a damaged total as intact.",
+    "Variant signs: forms such as N14@b, N34@b and N01@c are not in Born et al. 2025 v2 Figure 1. Rejecting them or reading them as their base sign changes N_eligible (30 vs 33 in one run); pre-register the choice.",
+    "Baseline: Born et al.'s per-numeral disambiguation is not released, so every run uses a proxy for it and the gain is measured against that proxy; in one run 7 of the 11 baseline-balanced tablets balanced only because of the proxy's system choice. Name the proxy in the pre-registration and report results as conditional on it."
+   ]
   },
   {
    "id": "rongorongo-graphemes-parallels",
