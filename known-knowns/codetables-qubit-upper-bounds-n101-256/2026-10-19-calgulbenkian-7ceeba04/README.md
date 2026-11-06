@@ -27,7 +27,6 @@ The quick check verifies the object's hash against INDEX.csv, rebuilds every row
 | QECC qubit table, n 1..256 | QECC qubit table, n 1..256 | [[104,2]]: lower 22, upper 35; neighbours in neighbours.csv | https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 | 2026-10-19T04:34:26Z (triage); 2026-10-19T05:16:36Z (novelty skeptic) |
 | GitHub pull-request list of elder-plinius/V3R1T4S (merged and open pull requests for this target) | upper-bound values already claimed | 56 values in `the-record-we-beat/pr_claims.csv` | https://api.github.com/repos/elder-plinius/V3R1T4S/pulls | 2026-10-19T04:30:31Z |
 | V3R1T4S TROPHY_CASE.md and known-knowns folders | this cell | no competing value (see `panel/novelty.md`) | https://github.com/elder-plinius/V3R1T4S | 2026-10-19T05:15:21Z (novelty skeptic) |
-| arXiv, four generic queries plus the named work 2609.37056 | this cell | no newer claim found (queries were generic, not exhaustive; see `panel/novelty.md`) | https://arxiv.org/abs/2609.37056 | 2026-10-19 (novelty skeptic) |
 
 Ours: [[104,2]] upper bound, value 34; the table value in `INDEX.csv` is "lower 22 upper 35". Each page was fetched once, with a plain GET and no retry; snapshot metadata (HTTP status, sha256 of the page, the extracted cell) is in `the-record-we-beat/README.md`. The panel's reports are in `panel/`.
 
@@ -37,7 +36,7 @@ Ours: [[104,2]] upper bound, value 34; the table value in `INDEX.csv` is "lower 
 - The certificate is an exact integer Farkas certificate of the quantum weight-enumerator linear program with shadow constraints, with no purity assumption. Nothing is numerical.
 - The bar is a propagation closure fixed on 2026-10-19: the live table, plus the 56 merged and open pull-request values listed in `the-record-we-beat/pr_claims.csv`, plus the other claimed cells of this batch at their claimed values. Pull requests merged or opened after that, and bounds in the literature, are not counted. The new bound is only 1 below the live value.
 - The table page itself says that for n above 100 its upper bounds are weak; the claim does not say that no stronger argument exists, only that this certificate is valid and the cell is below the closure above.
-- Unresolved from the panel: the table's n above 100 upper bounds are called 'weak' on the page and the full quantum LP with shadow constraints may have been run privately by the maintainers; no public record of that was found. The literature search was generic (four queries).
+- Unresolved from the panel: the table's n above 100 upper bounds are called 'weak' on the page and the full quantum LP with shadow constraints may have been run privately by the maintainers; no public record of that was found. The literature search was generic (two quantum-code queries; see `panel/novelty.md`).
 - Not peer reviewed. The package was checked by three fresh Claude Code subagents (reproduce, novelty, criterion) and by the standalone checker shipped here. The object was built by a different model family (Gemini, the contributor's search agent); the skeptics and the packager are Claude.
 
 ## Filing history
