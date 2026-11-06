@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+grothendieck-kg3-werner-locality-bounds,E8 120x120 d=8 local bound 6104 (K_G(8) >= 165/109),6104,heuristic 1.51376 (paper),2026-10-19T04:46:03Z,object/d8_n1_120x120.mat,a78361f200b669741a4a0636bb4e1027a1e6cdfeca174c84ef67269a17bbeaac
