@@ -1,0 +1,49 @@
+arc numbering check: ok
+at_most exhaustive check L<=6: ok
+base m=2 k=3 n=2  vars=2      clauses=1       UNSAT      0.00s
+base m=2 k=3 n=3  vars=6      clauses=1       UNSAT      0.00s
+base m=1 k=1 n=2  vars=3      clauses=4       UNSAT      0.00s
+base m=1 k=1 n=3  vars=9      clauses=9       SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=1 k=2 n=6  vars=75     clauses=135     UNSAT      0.00s
+base m=1 k=2 n=7  vars=126    clauses=231     SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=2 n=3  vars=12     clauses=15      UNSAT      0.00s
+base m=2 k=2 n=4  vars=36     clauses=54      SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=2 n=5  vars=80     clauses=130     SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=2 n=6  vars=150    clauses=255     SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=2 n=7  vars=252    clauses=441     SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=4  vars=20     clauses=28      UNSAT      0.00s
+base m=2 k=3 n=5  vars=60     clauses=130     UNSAT      0.00s
+base m=2 k=3 n=6  vars=150    clauses=380     SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=7  vars=322    clauses=875     SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=8  vars=616    clauses=1736    SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=9  vars=1080   clauses=3108    SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=10 vars=1770   clauses=5160    SAT        0.00s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=11 vars=2750   clauses=8085    SAT        0.01s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=12 vars=4092   clauses=12100   SAT        0.01s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=13 vars=5876   clauses=17446   SAT        0.01s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=14 vars=8190   clauses=24388   SAT        0.01s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=15 vars=11130  clauses=33215   SAT        0.02s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=16 vars=14800  clauses=44240   SAT        0.02s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=17 vars=19312  clauses=57800   SAT        0.03s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=18 vars=24786  clauses=74256   SAT        0.04s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=19 vars=31350  clauses=93993   SAT        0.05s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=20 vars=39140  clauses=117420  SAT        0.06s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=21 vars=48300  clauses=144970  SAT        0.08s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=22 vars=58982  clauses=177100  SAT        0.09s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=23 vars=71346  clauses=214291  SAT        0.12s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=24 vars=85560  clauses=257048  SAT        0.15s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=25 vars=101800 clauses=305900  SAT        0.17s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=26 vars=120250 clauses=361400  SAT        0.21s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=27 vars=141102 clauses=424125  SAT        0.25s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=28 vars=164556 clauses=494676  SAT        0.28s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=29 vars=190820 clauses=573678  SAT        0.32s has_Sk=True flips=6 mismatches=0
+base m=2 k=3 n=30 vars=220110 clauses=661780  SAT        0.38s has_Sk=True flips=6 mismatches=0
+base m=2 k=4 n=9  vars=1332   clauses=5166    UNSAT     58.32s
+base m=2 k=4 n=10 vars=2610   clauses=10290   SAT        0.01s has_Sk=True flips=6 mismatches=0
+cube m=1 k=2 n=7  d=3 a=0 b=0 vars=231    SAT        0.00s model checks (S_k + cube i-iv): ok
+cube m=2 k=2 n=6  d=3 a=1 b=1 vars=294    SAT        0.00s model checks (S_k + cube i-iv): ok
+cube m=2 k=2 n=7  d=4 a=2 b=2 vars=532    SAT        0.00s model checks (S_k + cube i-iv): ok
+cube m=3 k=2 n=6  d=3 a=1 b=2 vars=453    SAT        0.00s model checks (S_k + cube i-iv): ok
+cube m=3 k=3 n=9  d=5 a=2 b=2 vars=2593   SAT        0.00s model checks (S_k + cube i-iv): ok
+cube m=2 k=3 n=10 d=6 a=3 b=2 vars=2730   SAT        0.00s model checks (S_k + cube i-iv): ok
+PASS
