@@ -1,0 +1,5 @@
+repo_tag: none
+repo_commit: d14b0098c7dc3c372fa861a00175d3775aa097e7 (at the start of this run)
+note: during the run (2026-10-24T18:49Z) the workspace copy was moved to 1ebdef41c30414cd2a036b00f5e81d0fc4c1dc25 by a
+process outside the run; that commit adds a matrix-multiplication policy section to kit/POLICY.md and bank
+corrections that do not touch cap-set-dim7-dim8.
