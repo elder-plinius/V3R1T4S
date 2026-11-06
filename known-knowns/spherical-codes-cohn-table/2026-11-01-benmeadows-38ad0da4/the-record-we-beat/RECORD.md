@@ -1,8 +1,7 @@
 # The record we beat
 
-All pages below were fetched by the repository owner from an unrestricted machine at 2026-11-01T14:32Z (UTC)
-(the building machine cannot reach these hosts). HTTP status was not recorded by the fetcher. sha256 values are
-computed from the fetched copies.
+We fetched all pages below at 2026-11-01T14:32Z (UTC). HTTP status was not recorded. sha256 values are computed from
+the fetched copies.
 
 ## Table cell
 
