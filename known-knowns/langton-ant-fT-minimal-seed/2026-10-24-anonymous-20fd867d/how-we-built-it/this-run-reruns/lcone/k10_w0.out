@@ -1,0 +1,5 @@
+S0=9977 D=(-2,2) cback=18 Hp[0]=472 Hp[103]=369
+DONE K=10 T=17 wid=0 leaves=5419 viol=0 mins=1
+MIN t=17 p=0 k=10 cells: (-2,2)* (-3,0)* (-3,3)* (-3,4)* (-2,5)* (-1,6)* (-1,5)* (-1,4)* (0,3)* (0,2)*
+DONE K=10 T=17 wid=0 leaves=5419 viol=0 mins=1
+exit=0

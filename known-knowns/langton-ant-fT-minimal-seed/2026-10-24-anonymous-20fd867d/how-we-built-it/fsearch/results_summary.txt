@@ -1,0 +1,10 @@
+RESULT K=1 best_t=310 minimisers=1 nodes=95 maxR=9 Dmin=159 flagged=0
+RESULT K=2 best_t=162 minimisers=1 nodes=1831 maxR=11 Dmin=159 flagged=0
+RESULT K=3 best_t=126 minimisers=1 nodes=21334 maxR=13 Dmin=159 flagged=0
+RESULT K=4 best_t=67 minimisers=1 nodes=50002 maxR=13 Dmin=159 flagged=0
+RESULT K=5 best_t=62 minimisers=1 nodes=227403 maxR=13 Dmin=159 flagged=0
+RESULT K=6 best_t=49 minimisers=1 nodes=620222 maxR=13 Dmin=159 flagged=0
+RESULT K=7 best_t=45 minimisers=2 nodes=1533708 maxR=13 Dmin=159 flagged=0
+RESULT K=8 best_t=40 minimisers=1 nodes=1971129 maxR=12 Dmin=159 flagged=0
+RESULT K=9 best_t=24 minimisers=1 nodes=1377148 maxR=12 Dmin=159 flagged=0
+RESULT K=10 best_t=17 minimisers=1 nodes=909233 maxR=12 Dmin=159 flagged=0

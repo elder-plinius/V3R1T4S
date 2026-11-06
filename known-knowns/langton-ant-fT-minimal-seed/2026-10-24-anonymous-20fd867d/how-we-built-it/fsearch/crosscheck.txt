@@ -1,0 +1,22 @@
+k=1 fsearch_t=310 phase=phase=0 cells: (0,-2)
+ONSET=309 cells=1 final_dist_from_touched=3837
+k=2 fsearch_t=162 phase=phase=0 cells: (-1,3) (1,3)
+ONSET=161 cells=2 final_dist_from_touched=3841
+k=3 fsearch_t=126 phase=phase=0 cells: (1,-3) (0,-2) (3,-5)
+ONSET=125 cells=3 final_dist_from_touched=3841
+k=4 fsearch_t=67 phase=phase=0 cells: (-2,1) (-1,2) (0,3) (-4,-1)
+ONSET=66 cells=4 final_dist_from_touched=3843
+k=5 fsearch_t=62 phase=phase=0 cells: (-1,-1) (-2,0) (-3,1) (-1,1) (1,-3)
+ONSET=61 cells=5 final_dist_from_touched=3842
+k=6 fsearch_t=49 phase=phase=0 cells: (-1,1) (-3,0) (-3,2) (-2,4) (0,2) (1,4)
+ONSET=48 cells=6 final_dist_from_touched=3844
+k=7 fsearch_t=45 phase=phase=0 cells: (-1,1) (-3,0) (-3,1) (-3,2) (-2,4) (0,2) (1,4)
+ONSET=44 cells=7 final_dist_from_touched=3844
+k=7 fsearch_t=45 phase=phase=0 cells: (-1,1) (-3,0) (-3,2) (-3,3) (-2,4) (0,2) (1,4)
+ONSET=44 cells=7 final_dist_from_touched=3844
+k=8 fsearch_t=40 phase=phase=103 cells: (-1,1) (-3,0) (-3,2) (-2,4) (0,3) (0,2) (0,4) (1,4)
+ONSET=39 cells=8 final_dist_from_touched=3844
+k=9 fsearch_t=24 phase=phase=0 cells: (-2,1) (0,3) (-2,4) (1,4) (2,4) (3,3) (4,2) (3,2) (2,2)
+ONSET=23 cells=9 final_dist_from_touched=3842
+k=10 fsearch_t=17 phase=phase=0 cells: (-2,2) (-3,0) (-3,3) (-3,4) (-2,5) (-1,6) (-1,5) (-1,4) (0,3) (0,2)
+ONSET=16 cells=10 final_dist_from_touched=3842

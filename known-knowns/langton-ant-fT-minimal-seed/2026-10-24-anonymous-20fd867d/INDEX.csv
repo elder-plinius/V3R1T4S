@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+langton-ant-fT-minimal-seed,least highway onset g(k) for k=0..11 (ant at 0 0 facing north),9977 310 162 126 67 62 49 45 40 24 17 0,none published (known points 9977 A126978; 4-cell tail from 182 in Ke's boundary-port setting; 11-cell seed Jillhewar),2026-10-24T01:39:03Z,object/minimisers.txt,20fd867d0c50ab9c124f2bcc0f731878d52c1de1217ea9f29ed4bca3e6083bcc
