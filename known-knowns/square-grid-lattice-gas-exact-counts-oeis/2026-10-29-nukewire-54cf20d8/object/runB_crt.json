@@ -1,0 +1,5 @@
+{"run": "B (2026-10-27-28)", "method": "COLUMN-sweep broken-profile DP (mdp_dp_col.py, separately written); modular traces; CRT over 21 DIFFERENT proven primes",
+ "primes": "runs/2026-10-28-0734/code/primesB.txt (disjoint from Run A's set; sympy-proven)",
+ "crt_result": "identical to Run A — see object/a28_value.txt", "modulus_bits": 1282,
+ "residues_files": ["runs/2026-10-28-0734/code/runB_residues.txt", "runs/2026-10-28-0734/code/runB_residues_help.txt"],
+ "two_run_check": "runs/2026-10-28-1031/code/crt_two_run_final.txt (EXACT MATCH, overlap 0)"}

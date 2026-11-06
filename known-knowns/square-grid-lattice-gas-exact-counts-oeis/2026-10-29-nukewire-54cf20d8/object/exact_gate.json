@@ -1,0 +1,5 @@
+{"gate": "exact reproduction n=21..27 (the criterion panel's demanded clause)",
+ "method": "column-sweep DP over fresh primes disjoint from both runs; per-term full CRT == published b-file value",
+ "checkpoint": "runs/2026-10-29-0733/code/exact_gate_residues.txt (115 lines)",
+ "outputs": "runs/2026-10-29-0733/code/exact_gate_output.txt (n=21..26) + runs/2026-10-29-1031/code/n27_crt_check.txt (n=27, 20 primes, 1221-bit, EXACT MATCH)",
+ "coverage_note": "n<=20 exact by object-dtype gates in both runs (Run A: n=0..20; standalone checker covers small n)"}
