@@ -2,6 +2,8 @@
 
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
+> Note added 2026-11-06, not skeptic text: this report was run against the page fetched on 2026-10-18, where the cell read 3785 (label Pl). On maintainer review (#440) the live cell was fetched again at 2026-11-06T20:26:09Z (HTTP 200, sha256 91479623612b85a1782b729dc88563c3a944c65f7181b7965964a08de1a52e82). It now reads 3791Ol-11896KT: lower bound 3791, label Ol (Antoine Olivier, emails 2026-10-10/19/22, per the page legend). The bar is therefore 3791 and the margin 11, not 17. Nothing else in this report was re-checked.
+
 role: novelty (skeptic 2 of 3, cwc group, code cells)
 
 claim under test: A(28,8,11) >= 3802, versus live Brouwer table lower bound 3785.

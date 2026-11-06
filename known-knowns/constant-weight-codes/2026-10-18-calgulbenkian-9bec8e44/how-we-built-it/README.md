@@ -4,7 +4,7 @@ Contents of this folder, copied from the contributor's search snapshot (read-onl
 
 - `cwc_search.c`: the search program (C, POSIX threads). Co-blocking cluster large-neighbourhood search with an exact bit-parallel maximum-independent-set repair; coordinates are relabelled in descending order of ones-frequency in the seed code first. Its command line, from the source: `cwc_search seed_txt n d w out_results_dir [rounds] [kb] [rmax] [clusters] [max4] [plateau_frac] [seed] [max_seconds] [switch_kb4_round]`; the seed file is a code in the same 0/1-per-line format as `object/`.
 - `PREREG.md`: the run's pre-registration (all goals of the run; this package is one cell of its Goal C).
-- `RESULTS.md`: the run's results file (all cells of the run, including cells that are not part of this package).
+- `RESULTS.md`: the run's results file, trimmed on 2026-11-06 (maintainer review, #440) to this package's cell.
 
 For this cell (A(28,8,11), target size 3802): the seed was the code already listed in Brouwer's table (live value 3785, label Pl), or, where the contributor had an earlier unmerged record for the cell, that record (see README.md, Filing history).
 
