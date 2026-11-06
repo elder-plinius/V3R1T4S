@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+potts-antiferromagnet-colouring-entropy-bounds,W_sq(5) upper bound from the C_14 cylinder,3.25040520587854968506,3.250407145038276,2026-10-18T18:23:42Z,object/q5_cyl_14_cert.bin (whole file; shipped as 6 parts),d225ef1cf4f8f3c335620d5c7e37c5d96afa60cdc47b228acce51b66065a91e1
