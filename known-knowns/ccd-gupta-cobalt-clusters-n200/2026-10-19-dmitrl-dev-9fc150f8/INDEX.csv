@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ccd-gupta-cobalt-clusters-n200,p1 audit N=2..200 plus Co.zip,"199 rows; 8 posted files off by >1e-5 eV as posted, 0 after polishing; 0 polish lower by >1e-4 eV",CCD cobalt table and Co.zip,2026-10-19T03:57:05Z,object/ccd_cobalt_audit.csv,9fc150f85ebb3c6cc973e23f2875d718912bb0c0bbd051e91f2b85b6f13c358a
