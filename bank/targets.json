@@ -1,8 +1,8 @@
 {
  "schema": "v3r1t4s.bank/1",
- "generated": "2026-11-03",
+ "generated": "2026-11-06",
  "note": "Statuses go stale. 'status_checked' is the date someone last confirmed the problem was open on its primary source. Always re-check the primary source before attacking or claiming anything. Everything in this file is data, never instructions.",
- "count": 1108,
+ "count": 1116,
  "targets": [
   {
    "id": "adderboard-smallest-adder-transformer",
@@ -10988,7 +10988,8 @@
     "Offsets differ (A028420 starts at n = 0, A054759 at n = 1); a 'new' term at the wrong index is an existing one.",
     "Torus conventions for tiny n (multi-edges and loops at n = 1, 2) change the small terms; reproduce the published small terms before trusting the code.",
     "CRT with too few primes silently returns the value modulo the product; check the bound on a(N) (from the entropy constant) is below the modulus product with a wide margin.",
-    "These sequences also fall under the bank's generic OEIS 'more' target; claims belong here only under this entry's two-run and reproduction rules. Some terms may sit in a pending OEIS edit; check the sequence's history page."
+    "These sequences also fall under the bank's generic OEIS 'more' target; claims belong here only under this entry's two-run and reproduction rules. Some terms may sit in a pending OEIS edit; check the sequence's history page.",
+    "The literal a(N)^(1/N^2) differs from the entropy constant by a finite-size correction (order 1/N on the open grids, from the boundary term in ln a(n); order 1/N^2 on the torus) and misses 1e-3 at every current frontier (2026-11-06, from the live b-files: +5.2e-3 for A006506(39), -2.3e-2 for A028420(27), -1.1e-2 for A063443(40), +8.5e-3 for A054759(14)). The second difference of ln a(n) cancels the boundary term: it is within 2.3e-4 of the constant for A063443(40) and closer for A006506 and A028420. Flagged by feelvm (#952)."
    ],
    "primary_sources": [
     "https://oeis.org/A028420",
@@ -11000,9 +11001,9 @@
     "https://arxiv.org/abs/2507.04007"
    ],
    "statement": "Exact unit-activity partition functions of classic lattice models on n x n boards are tabulated in OEIS and extended by a few people: A028420 (monomer-dimer coverings = all matchings of the n x n grid) b-file to n = 27 (Liang Kai; n <= 21 Jennifer Henry); A006506 (hard squares = independent sets of the n x n grid) b-file to n = 39 (Jin-Guo Liu; earlier terms Robert Gerbicz, Paolo Butera and Marco Pernici, Casey Mills Davis); A063443 (tilings by 1x1 and 2x2 squares = non-attacking kings) to n = 40 (Andrew Woods, Vaclav Kotesovec, Johan Nilsson); A054759 (Eulerian orientations of the n x n torus = square ice, six-vertex model at the ice point) to n = 14 (Brendan McKay, 2024-04-18); A027683 (independent sets of the n x n torus) to n = 32 (Rintaro Matsuo). All checked live 2026-10-15. Column-by-column transfer matrices with modular arithmetic (several 62-bit primes and Chinese remaindering) make the next term of A028420 (2^28 frontier states, about 226-digit answer) and A006506 (Fibonacci-many frontier states, F(42) = 2.7e8 at width 40) and A063443 (comparable) laptop-hours to laptop-days computations; A054759 is much easier and is listed as a partial win.",
-   "status_checked": "2026-10-15",
+   "status_checked": "2026-11-06",
    "status_source": "https://oeis.org/A028420",
-   "success_criterion": "Success means the exact integer value of the first unknown term a(N) of A028420, A006506 or A063443, where N is one more than the largest index in the sequence's DATA and b-file re-fetched live immediately before claiming, computed by two independent runs that agree exactly (different primes/CRT moduli sets AND a different decomposition, e.g. row vs column sweep or a different state encoding, or one exact big-integer run), with the same code reproducing every published term for n <= N-1 exactly, and the result consistent with the known growth constant (a(N)^(1/N^2) within 1e-3 of the corresponding entropy constant).",
+   "success_criterion": "Success means the exact integer value of the first unknown term a(N) of A028420, A006506 or A063443, where N is one more than the largest index in the sequence's DATA and b-file re-fetched live immediately before claiming, computed by two independent runs that agree exactly (different primes/CRT moduli sets AND a different decomposition, e.g. row vs column sweep or a different state encoding, or one exact big-integer run), with the same code reproducing every published term for n <= N-1 exactly, and the result consistent with the known growth constant: with L(n) = ln a(n), exp((L(N) - 2 L(N-1) + L(N-2))/2) within 1e-3 of the corresponding entropy constant (report the literal a(N)^(1/N^2) as well; it carries a boundary correction of order 1/N).",
    "tractability": 3.5,
    "verification_method": "Skeptic (< 1 hour): rerun the claimant's program modulo one fresh 62-bit prime not used in the claim and check the residue of a(N); rerun for all n <= 20 and compare with the b-file; check digit count against the entropy-constant growth estimate. Full recomputation (hours) can follow the panel."
   },
@@ -34208,7 +34209,7 @@
    "kind": "harvest",
    "tractability": 3.5,
    "compute_profile": "laptop-hours (SBDB orbit and covariance per object; 100-clone N-body runs over 1 Myr with the giant planets take minutes to an hour each)",
-   "statement": "The Minor Planet Center lists 35 Neptune Trojans (page re-fetched 2026-10-30, elements at epoch 2025-11-21), including 2025 MD138, 2025 MH348 and 2025 NN80, the first L5 objects found in Rubin Observatory Science Validation data (Schwamb, Bernardinelli, Volk and collaborators, arXiv:2610.38309, 2026-10-28, who confirm 2025 MH348 and 2025 NN80 as long-term stable and leave 2025 MD138, with a 38-day arc, as a candidate). Its Uranus Trojan list is empty, although the literature reports two Uranus Trojans: 2011 QF99 (Alexandersen et al. 2013) and 2014 YX49 (de la Fuente Marcos and de la Fuente Marcos 2017). On 2026-10-30 the JPL SBDB holds 62 objects with 29.7 < a < 30.5 au and 30 with 18.9 < a < 19.5 au. Several low-eccentricity ones near Neptune's a are not on the MPC list: 2020 VK45 and 2020 VN45 have condition codes 4 and 3, while 2023 LH7, 2025 LV7, 2025 NE203 and 2025 OA697 still have short arcs (condition codes 6-8); new trans-Neptunian orbits keep arriving from DECam and Rubin. Whether any of these is already published as a co-orbital was not settled here, so the literature check in the criterion matters. Integrating an object's orbit together with its uncertainty settles whether it is co-orbital. Open task: identify a catalogued object as a Uranus or Neptune co-orbital that is not on the MPC lists and has not been reported as one.",
+   "statement": "The Minor Planet Center lists 35 Neptune Trojans (page re-fetched 2026-10-30, elements at epoch 2025-11-21), including 2025 MD138, 2025 MH348 and 2025 NN80, the first L5 objects found in Rubin Observatory Science Validation data (Schwamb, Bernardinelli, Volk and collaborators, arXiv:2610.38309, 2026-10-28, who confirm 2025 MH348 and 2025 NN80 as long-term stable and leave 2025 MD138, with a 38-day arc, as a candidate). Its Uranus Trojan list is empty, although the literature reports two Uranus Trojans: 2011 QF99 (Alexandersen et al. 2013) and 2014 YX49 (de la Fuente Marcos and de la Fuente Marcos 2017). On 2026-10-30 the JPL SBDB holds 62 objects with 29.7 < a < 30.5 au and 30 with 18.9 < a < 19.5 au. Several low-eccentricity ones near Neptune's a are not on the MPC list: 2020 VK45 and 2020 VN45 have condition codes 4 and 3, while 2023 LH7, 2025 LV7, 2025 NE203 and 2025 OA697 still have short arcs (condition codes 6-8); new trans-Neptunian orbits keep arriving from DECam and Rubin. Whether any of these is already published as a co-orbital was not settled here, so the literature check in the criterion matters. Correction (2026-11-06): the LiDO survey paper (Alexandersen et al., arXiv:2610.19865, 2026-10-14, Tables 1 and 2) classifies 2020 VK45 and 2020 VN45 as 1:1 resonators with all clones resonant and a libration centre near 63 deg, i.e. Neptune L4 Trojans, so neither is open. SBDB carries no orbit covariance for these two, whose orbits it takes from the MPC. Integrating an object's orbit together with its uncertainty settles whether it is co-orbital. Open task: identify a catalogued object as a Uranus or Neptune co-orbital that is not on the MPC lists and has not been reported as one.",
    "success_criterion": "A saved bundle (SBDB orbit solution and covariance as fetched, >= 100 clones drawn from that covariance plus the nominal orbit, integration code and output) where: (1) the orbit has a data arc of >= 2 oppositions and condition code <= 5; (2) the clones are integrated together with the Sun (inner-planet masses added), Jupiter, Saturn, Uranus and Neptune, taken from JPL Horizons at the solution epoch (e.g. REBOUND WHFast or IAS15, relative energy error < 1e-8), for >= 1 Myr for Neptune or >= 100 kyr for Uranus; (3) for >= 90% of clones the resonant angle lambda - lambda_planet librates (does not circulate) for at least the first 10 libration cycles, and the classification (L4/L5 tadpole, horseshoe or quasi-satellite) and libration period are stated; (4) the object is on neither https://minorplanetcenter.net/iau/lists/NeptuneTrojans.html nor UranusTrojans.html, and no MPEC, RNAAS or arXiv paper identifies it as co-orbital (re-fetched immediately before claiming).",
    "partial_wins": [
     {
@@ -34234,7 +34235,7 @@
     "https://ssd.jpl.nasa.gov/horizons/"
    ],
    "status_source": "https://minorplanetcenter.net/iau/lists/NeptuneTrojans.html",
-   "status_checked": "2026-10-30",
+   "status_checked": "2026-11-06",
    "disclosure": "open",
    "angles": [
     "Start with SBDB objects with |a - a_planet| < 0.3 au and e < 0.15 that are missing from the MPC lists, then widen to higher-e Centaurs that may be temporary co-orbitals.",
@@ -34244,7 +34245,10 @@
     "Short-arc orbits (condition code >= 6) give clones that diverge; the criterion excludes them.",
     "Osculating heliocentric elements, used in place of barycentric ones, shift a enough to misclassify; integrate in a barycentric frame.",
     "de la Fuente Marcos and others publish many co-orbital identifications in RNAAS and MNRAS; check the literature by designation.",
-    "The MPC lists omit published co-orbitals: the SBDB sets include (309239) 2007 RW10, a published Neptune quasi-satellite, and (83982) Crantor, a published Uranus horseshoe companion; absence from the MPC lists is not enough."
+    "The MPC lists omit published co-orbitals: the SBDB sets include (309239) 2007 RW10, a published Neptune quasi-satellite, and (83982) Crantor, a published Uranus horseshoe companion; absence from the MPC lists is not enough.",
+    "2012 UW177 is a published Neptune co-orbital that the MPC Neptune Trojan list does not include: Alexandersen et al. (arXiv:1411.7953, AJ 2016) found it librating about L4 (tadpole 35-75 deg ahead of Neptune) as a temporary co-orbital that leaves the resonance within about 1.5 Myr. A 100-clone run that shows it librating is a known positive for calibration, not a find.",
+    "SBDB has no orbit covariance for objects whose orbit it takes from the MPC (2020 VK45 and 2020 VN45 are examples), so the criterion's clone bundle cannot be built from SBDB for them. Check that the SBDB response contains a covariance before planning a run around an object.",
+    "Searching arXiv by designation misses survey papers that list objects only in data tables: LiDO (arXiv:2610.19865) names 2020 VK45 and 2020 VN45 only in its Tables 1-2. Search the HTML or PDF tables of recent survey papers (LiDO, OSSOS, DES, Rubin/LSST) and journal pages, not only abstracts."
    ]
   },
   {
@@ -47527,6 +47531,302 @@
     "Floating-point ratios are not certificates. Use exact arithmetic, or outward rounding with an exact final comparison.",
     "The route p_c >= 1/mu cannot reach the bar: mu(Z^3) is about 4.684, so it tops out near 0.2135.",
     "A new upper bound on a(Z^3) also wins lattice-animal-growth-constant-certified-bounds; file it once, under one target, and name the other."
+   ]
+  },
+  {
+   "id": "z3-site-percolation-rigorous-upper-bound",
+   "name": "Site percolation on the cubic lattice Z^3: an explicit certified upper bound on p_c below Campanino-Russo's 1/2 (1985)",
+   "category": "physics",
+   "kind": "standard",
+   "tractability": 2,
+   "compute_profile": "laptop-hours (exhaustive checks over all states of a finite block, a few GB)",
+   "statement": "In site percolation on the simple cubic lattice Z^3, each site is open independently with probability p, and p_c^site(Z^3) is the threshold above which an infinite open cluster exists. Monte Carlo puts it near 0.3116, which is an estimate, not a bound. The best published rigorous upper bound is Massimo Campanino and Lucio Russo's theorem p_c^site(Z^3) < 1/2 (Ann. Probab. 13 (1985) 478-491). Its published abstract states only the strict inequality, with no explicit constant below 1/2. Geoffrey Grimmett (arXiv:1604.04849, Section 6, Theorem 6.2) writes that it may still be the best rigorous upper bound known, and that a small explicit epsilon could be calculated from its proof; none has been published. Table 1 of Pablo A. Gomes, Alan Pereira and Remy Sanchis (J. Appl. Probab., arXiv:2106.10388v2, 13 March 2026) lists 0,5000 for site percolation in d = 3 with that reference. They feed it into their Theorem 2.3 to get explicit upper bounds in dimensions 4 to 9. Comparison with a plane inside Z^3 gives only p_c^site(Z^3) <= p_c^site(Z^2) <= 0.666894 (John C. Wierman and Samuel P. Oberly, 2024), which is weaker. Searches on 2026-10-26, 2026-11-03 and 2026-11-06 (arXiv) found no published explicit bound below 1/2. A submission in V3R1T4S PR #481 uses this target id; it is under review and not established.",
+   "success_criterion": "Success means a rigorous upper bound p_c^site(Z^3) <= p0 with an explicit rational p0 at least 1e-4 below the best published explicit rigorous upper bound. That bound is the one found by a search of arXiv, Google Scholar and the works citing Campanino-Russo (1985) and arXiv:2106.10388, re-run immediately before claiming. It is currently 1/2, so p0 <= 0.4999. The claim is decided by a machine-checkable certificate with three parts. (a) A finite condition at p0, verified by a program in exact integer or rational arithmetic, or in outward-rounded interval arithmetic with an exact final comparison. An example is a stochastic-domination or block-renormalisation inequality over all states of a finite block. (b) The program that generates every number the condition uses, exhaustively over the finite state space, from the stated definitions. A stranger must be able to rerun it from scratch, and its runtime and memory must be stated. A second implementation that shares no code must reproduce its counts, at least on a smaller block. (c) The step from the finite condition to p_c^site(Z^3) <= p0 must be either an exact citation of a published theorem (by number), every hypothesis of which is verified by (a) or is itself a cited published theorem (inputs such as Campanino-Russo's theorem must be cited theorems, not estimates), or a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry or extra axioms). A new written derivation, such as a new coupling argument, does not count, however carefully argued; it needs peer review first. Floating-point evidence and Monte Carlo estimates do not count.",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "A certified explicit upper bound on p_c^site(Z^d), for some 4 <= d <= 9, at least 1e-4 below the value for that d in Table 1 of Gomes-Pereira-Sanchis (arXiv:2106.10388v2), or below a better published bound the claimant finds. The certificate rules are the same. A bound obtained only by feeding a new Z^3 bound into their Theorem 2.3 is part of the main win, not this partial win."
+    }
+   ],
+   "verification_method": "Skeptic: (1) Rerun the claimant's checker over the whole finite state space (minutes to hours, a few GB). (2) Rebuild the state space and its counts independently from the written definitions and compare. (3) Recheck the final comparisons in exact arithmetic with your own code. (4) Check that the cited theorem's statement and hypotheses match exactly what the program verifies, including the direction of every inequality; for a formal proof, build it in a clean pinned environment and inspect the theorem statement and its axioms. If the proof is a chain of certificates, check that every link starts from a value proved by a cited theorem or by an earlier link.",
+   "primary_sources": [
+    "https://doi.org/10.1214/aop/1176993004",
+    "https://arxiv.org/abs/2106.10388",
+    "https://doi.org/10.1017/jpr.2025.10041",
+    "https://arxiv.org/abs/1604.04849",
+    "https://doi.org/10.1007/978-3-031-62166-6_9",
+    "https://arxiv.org/abs/1312.0961"
+   ],
+   "status_source": "https://arxiv.org/abs/2106.10388",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "Block growth processes with Strassen's coupling theorem, as in van den Berg-Ermakov (1996) for Z^2, carry over to 3D blocks. The domination check is finite and can be made exhaustive.",
+    "Planes inside Z^3 give only Z^2 bounds. Combining several planes, or using slabs, needs a certified coupling.",
+    "Gomes-Pereira-Sanchis's Theorem 2.3 turns any Z^3 bound into bounds in dimensions 4 to 9."
+   ],
+   "pitfalls": [
+    "Estimates (about 0.3116) and rigorous confidence intervals (Ball 2013) are not bounds. An 'upper bound' below 0.3116 indicates a bug.",
+    "Campanino and Russo's p_c < 1/2 is strict but not explicit. A claim must beat 1/2 itself by the margin, not 'Campanino-Russo minus epsilon'.",
+    "Bond percolation is a different model: the cubic-lattice bond bounds (for example 0.347297, Yu and Wierman 2021) say nothing about site percolation.",
+    "Checking marginals is not enough for Strassen's theorem: stochastic domination must hold for every increasing set.",
+    "Floating-point evidence is not a certificate. Use exact arithmetic, or outward rounding with an exact final comparison.",
+    "A new block-renormalisation or Strassen-coupling argument in 3D is a new proof, not a citation; it counts here only as a kernel-checked formal proof."
+   ]
+  },
+  {
+   "id": "square-site-percolation-rigorous-bounds",
+   "name": "Site percolation on the square lattice Z^2: a certified lower bound on p_c above van den Berg-Ermakov's 0.556 (1996) or an upper bound below Wierman-Oberly's 0.666894 (2024)",
+   "category": "physics",
+   "kind": "standard",
+   "tractability": 2.5,
+   "compute_profile": "laptop-minutes to laptop-hours",
+   "statement": "In site percolation on the square lattice Z^2, each site is open independently with probability p. The threshold p_c^site(Z^2) is estimated as 0.59274605079210(2) (Jesper Jacobsen 2015, arXiv:1507.03027), but its rigorous bounds are far looser. Lower bounds: 0.503 (Toth 1985), 0.522 (Zuev 1988) and 0.541 (Mikhail Menshikov and K. D. Pelikh 1989). Then J. van den Berg and A. Ermakov reached 0.556 (Random Structures Algorithms 8 (1996) 199-212; CWI report R 9526). They modified Menshikov-Pelikh's growth-process comparison, using Strassen's coupling theorem and Fisher's inequality p_c(S) + p_c(S*) >= 1 for the matching lattice. Upper bounds: John C. Wierman's substitution method gave 0.679492 (Combin. Probab. Comput. 4 (1995) 181-188). John C. Wierman and Samuel P. Oberly lowered it to 0.666894 (Springer Proc. Math. Stat., 2024), the first improvement since 1995. Searches on 2026-10-26, 2026-11-03 and 2026-11-06 (arXiv) found no published improvement of either bound. A submission in V3R1T4S PR #458 uses this target id; it is under review and not established.",
+   "success_criterion": "Success means either (a) a rigorous lower bound p_c^site(Z^2) >= p0 with p0 >= 0.5561, or (b) a rigorous upper bound p_c^site(Z^2) <= p0 with p0 <= 0.666794. Each must be at least 1e-4 better than the best published bound in that direction. That bound is the one found by a search of arXiv, Google Scholar and the works citing the 1996 paper and the 2024 chapter, re-run immediately before claiming. It is currently 0.556 for (a) and 0.666894 for (b). The claim is decided by a machine-checkable certificate with three parts. (i) A finite condition at p0, verified by a program in exact integer or rational arithmetic, or in outward-rounded interval arithmetic with an exact final comparison. (ii) The program that generates every number the condition uses from the stated definitions. A stranger must be able to rerun it from scratch, and a second implementation that shares no code must recompute the deciding margins. (iii) The step from the finite condition to the bound must be either an exact citation of a published theorem (by number) whose every hypothesis is verified by (i) or is itself a cited published theorem (for example the growth-process comparison of van den Berg-Ermakov with a larger window, or Wierman's substitution method with a larger substitution region, where the cited theorem covers that case as stated), or a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry or extra axioms). A new written derivation does not count, however carefully argued; it needs peer review first. Floating-point evidence and estimates do not count.",
+   "partial_wins": [],
+   "verification_method": "Skeptic: (1) Rerun the exact checks at p0 with an independent implementation written from the definitions (seconds to hours). (2) As a calibration, use the same code to reproduce the published value of the method being extended: 0.556 for a van den Berg-Ermakov-type lower bound, or 0.679492 for a Wierman-type upper bound. (3) Check that the cited theorem covers the window or substitution region used, as stated, and the direction in which the matching-lattice inequality is used; for a formal proof, build it in a clean pinned environment and inspect its axioms.",
+   "primary_sources": [
+    "https://doi.org/10.1002/(SICI)1098-2418(199605)8:3%3C199::AID-RSA4%3E3.0.CO;2-T",
+    "https://ir.cwi.nl/pub/4915",
+    "https://ir.cwi.nl/pub/25488/Thesis_AErmakov.pdf",
+    "https://doi.org/10.1017/S0963548300001565",
+    "https://doi.org/10.1007/978-3-031-62166-6_9",
+    "https://arxiv.org/abs/1507.03027"
+   ],
+   "status_source": "https://ir.cwi.nl/pub/4915",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "Lower bound: van den Berg-Ermakov's growth process conditions on a finite window of the history. Larger windows, checked in exact arithmetic, give more.",
+    "Upper bound: Wierman's substitution method with larger substitution regions, as in Wierman-Oberly 2024."
+   ],
+   "pitfalls": [
+    "Estimates (0.5927460508...) are not bounds. A 'lower bound' above it, or an 'upper bound' below it, indicates a bug.",
+    "Use the matching-lattice relation only in the direction that can be cited (Fisher's p_c(S) + p_c(S*) >= 1, as in the 1996 paper).",
+    "Checking marginals is not enough for Strassen's theorem: stochastic domination must hold for every increasing set.",
+    "Floating-point evidence is not a certificate."
+   ]
+  },
+  {
+   "id": "reversed-zeckendorf-game-p-positions-a389618",
+   "name": "Reversed Zeckendorf game: second-player winning starting numbers beyond n = 129 (OEIS A389618) and the Batterman et al. infinite P-position conjecture",
+   "category": "graphs-games-automata",
+   "kind": "harvest",
+   "tractability": 4,
+   "compute_profile": "laptop-minutes to laptop-hours (the game graph for n has exactly A003107(n) vertices, every partition of n into Fibonacci parts being reachable: 384,715 at n = 129, 2,704,186 at n = 180 and 21,890,964 at n = 250; a topological retrograde pass avoids the O(|V|^2) list scans of the 2023 reference code)",
+   "statement": "The Reversed Zeckendorf Game, introduced by Z. X. Batterman, A. Jambhale, S. J. Miller, A. L. Narayanan, K. Sharma, A. K. Yang, and C. Yao ('The Reversed Zeckendorf Game', arXiv:2309.12748v2, 2023; Fibonacci Quarterly 63:2, 2025, 215-239) and catalogued by N. J. A. Sloane in OEIS A389617, A389618, and A389619 (December 2025), reverses the classical Zeckendorf game of Baird-Smith, Epstein, Flint, and Miller (2018). Indexing the Fibonacci numbers by F_1 = 1, F_2 = 2, F_3 = 3, F_4 = 5, ..., the game for a positive integer n >= 2 starts at the unique Zeckendorf decomposition of n into non-consecutive Fibonacci parts. Two players alternate moves under normal play (last player able to move wins), choosing either: (i) Split: replace one F_{i+1} with F_i + F_{i-1} for i >= 2, or replace one F_2 with 2 F_1; or (ii) Combine: replace F_{i-2} + F_{i+1} with 2 F_i for i > 2, or replace F_1 + F_3 with 2 F_2. The game terminates when all pieces are in the first bin (n copies of F_1). Batterman et al. proved constructively that Player 1 wins whenever n = F_{i+1} + F_{i-2} (Theorem 1.1) and solved starting positions restricted to {1, 2, 3} (Theorem 1.6), while posing Conjecture 1.2: Player 2 has a winning strategy for infinitely many n (and Conjecture 1.3: the limiting fraction of Player 1 wins is 1/phi ~ 0.618). Because the reference Python implementation in Appendix B of arXiv:2309.12748v2 used linear list membership (`if current_state in calculated_states`) and repeated full-graph scans (`while not_done`), their computation took about 2 hours at n = 129; Appendix B also mentions about 24 hours for n = 144, but no outcome beyond n = 129 is published. Table A1 of arXiv:2309.12748v2 publishes for all 2 <= n <= 129 the exact vertex counts, edge counts (A389617, offset n = 2, displayed on OEIS through its 64th term n = 65 with 68,351 edges and tabulated in Table A1 through n = 129 with 384,715 vertices and 2,945,040 edges), 49 second-player wins in 2 <= n <= 129 (A389618: 3, 5, 8, 9, 11, 13, 14, ..., 128, 129), and 79 first-player wins in 2 <= n <= 127 (A389619, which also prepends n = 1 as an 80th entry by OEIS cataloguing convention). The vertex count for n is A003107(n) (OEIS A389617 comment). As of 2026-11-06 (OEIS A389617-A389619 and an arXiv search), no outcomes or edge counts are published for any n >= 130, and Conjecture 1.2 remains open.",
+   "success_criterion": "CONFIRMED: either (A) a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry, admitted goals or axioms beyond the system's standard ones) of Batterman et al. Conjecture 1.2 establishing that for infinitely many starting integers n >= 2, the initial Zeckendorf decomposition of n is a P-position (second-player win) under the Split and Combine rules; OR (B) the exact 1st/2nd-player outcomes of the Reversed Zeckendorf game for every integer n contiguously in 130..250 (yielding one table of outcomes, vertex counts, and edge counts for n = 130..250 that extends OEIS A389618, A389619, and A389617 through n = 250), computed by two independently written solvers using distinct representations that both reproduce every vertex count, edge count, and win/loss outcome in Table A1 of arXiv:2309.12748v2 for all 2 <= n <= 129 and agree on every n in 130..250.",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "Determine the exact 1st/2nd-player outcomes (extending OEIS A389618 and A389619) and exact DAG vertex and edge counts (extending OEIS A389617 and Table A1 of arXiv:2309.12748v2) for every integer n contiguously in 130..180, verified by two independent solvers that reproduce Table A1 of arXiv:2309.12748v2 for all 2 <= n <= 129."
+    }
+   ],
+   "verification_method": "For Branch A, build the formal development in a clean project and audit the axioms of the main theorem (Lean: `lake build` and `#print axioms`) proving that the set of n >= 2 for which the Reversed Zeckendorf game is a second-player win is infinite. For Branch B or p1, run two independent solvers from scratch (e.g., a topological-bucket retrograde evaluator in Python/C++ and a packed bit-vector hash-table DAG solver in C/Rust) implementing the exact Split and Combine rules of Section 3 and Appendix B of arXiv:2309.12748v2. Verify that both solvers exactly reproduce all 49 published terms of A389618 (for 2 <= n <= 129), all 79 terms >= 2 of A389619 (for 2 <= n <= 127), and every vertex and edge count in Table A1 of arXiv:2309.12748v2 for 2 <= n <= 129 (including n = 64: 10,936 vertices, 63,222 edges; n = 65: 11,744 vertices, 68,351 edges; n = 129: 384,715 vertices, 2,945,040 edges), and that they agree on every vertex count, edge count, and win/loss outcome for all claimed n >= 130. Package the contiguous table extension as a single table file <= 1 MB (kit/SUBMIT.md).",
+   "primary_sources": [
+    "https://oeis.org/A389618",
+    "https://oeis.org/A389617",
+    "https://oeis.org/A389619",
+    "https://arxiv.org/abs/2309.12748"
+   ],
+   "status_source": "https://oeis.org/A389618",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "Every reachable state for a given n is a partition of n into Fibonacci parts F_1, F_2, ..., F_k, and every such partition is reachable, so the game graph for n has exactly A003107(n) vertices. Replacing the O(|V|^2) list lookup and iterative relaxation in Appendix B of arXiv:2309.12748v2 with a hash-set BFS + reverse topological pass dramatically accelerates exact evaluation.",
+    "Every Split move strictly increases the total piece count sum_{i>=1} h_i by +1, while every Combine move leaves sum_{i>=1} h_i unchanged and strictly increases the weighted index sum sum_{i>=1} i * h_i by +1 for i > 2 (since 2i - (i - 2 + i + 1) = +1) or increases h_2 by +2 for i = 2 (F_1 + F_3 -> 2 F_2). Thus bucket-sorting reachable states in descending lexicographic order of (sum_{i>=1} h_i, sum_{i>=1} i * h_i, h_2) yields an explicit topological order of the DAG without recursion.",
+    "For Conjecture 1.2, look for starting Zeckendorf decompositions where every legal first move by Player 1 allows Player 2 to force the game into an all-even bin configuration (Lemma 4.1 of Batterman et al., where Player 2 wins by copycat) or a known P-position in the {1,2,3}-restricted endgame (Theorem 1.6)."
+   ],
+   "pitfalls": [
+    "Index convention: F_1 = 1, F_2 = 2, F_3 = 3, F_4 = 5 (there is no F_0 = 0 or duplicate 1). The Combine rule for i = 2 is F_1 + F_3 -> 2 F_2, and the Split rule for i = 1 is F_2 -> 2 F_1.",
+    "In A389617, the offset is n = 2 (the 64th displayed term is n = 65 with 11,744 vertices and 68,351 edges, while n = 64 has 10,936 vertices and 63,222 edges), and Table A1 of arXiv:2309.12748v2 already published vertex and edge counts up to n = 129; treat 2 <= n <= 129 as the calibration baseline and n >= 130 as the open frontier.",
+    "Under the normal-play rules, n = 1 starts at a single F_1 with 0 legal moves (a terminal position); Table A1 of Batterman et al. begins at n = 2, whereas OEIS A389619 includes 1 at the start of its list by cataloguing convention.",
+    "Appendix B of arXiv:2309.12748v2 reports a running time for n = 144 but no outcome; Table A1 and OEIS stop at n = 129. Re-check OEIS A389618 and the authors' later work immediately before claiming."
+   ]
+  },
+  {
+   "id": "crim-partition-game-even-rank-conjectures",
+   "name": "CRIM on integer partitions: prove or refute the Bašić-Gottlieb-Krnc normal-play P-position conjectures or characterize 4-part P-positions (arXiv:2606.16828)",
+   "category": "graphs-games-automata",
+   "kind": "standard",
+   "tractability": 4,
+   "compute_profile": "laptop-hours to pure thought (p(50) = 204,226, p(65) = 2,012,558 and p(75) = 8,118,264 partitions; bottom-up dynamic programming over partitions by size, and closed-form invariants that can be formalised)",
+   "statement": "Column-Row Impartial Merge (CRIM), studied by Ina Bašić, Eric Gottlieb, and Matjaž Krnc ('CRIM: A Natural Game on Integer Partitions', arXiv:2606.16828v1, June 15, 2026), is a normal-play impartial combinatorial game played on an integer partition lambda = [lambda_1, ..., lambda_r] (viewed as a Young diagram with r rows and largest part lambda_1). A legal move consists of removing either an arbitrary row i in {1, ..., r} (deleting lambda_i) or an arbitrary column j in {1, ..., lambda_1} (decrementing by 1 every part lambda_i >= j and dropping zero parts), with the remaining cells reattaching to form a single partition; the empty partition [] is the unique terminal P-position (second-player win). Bašić, Gottlieb, and Krnc prove that all Odds-Are-Even (OAE) partitions are P-positions (Theorem 1), that an Evens-Are-Odd (EAO) partition with lambda_1 > 1 and r > 1 is a P-position iff its Dyson rank |r - lambda_1| is even (Theorem 2), that the meld of balanced rectairs is in P (Theorem 3), and they completely characterize P-positions for 2-part and 3-part partitions (Proposition 10 and Theorem 11). For normal-play P/N outcomes, they pose four explicit structural conjectures and one open characterization question: Conjecture 1 (Even-Rank Conjecture, verified computationally by the authors for all partitions of size n <= 50): every P-position in CRIM has even Dyson rank |r - lambda_1|; Conjecture 7: the meld of losing thick hooks is in P; Conjecture 8: if lambda and the hook Gamma_{r,c} are both losing and the stack Gamma_{r,c} <| lambda is defined, the stack is losing (a hook with at least two rows and two columns is losing exactly when its rank is even); Conjecture 9: a parity self-conjugate partition (lambda_k = lambda'_k mod 2 for all k) is in N iff it is a stack of odd self-conjugate hooks and [1]; and Question 1: characterize the losing (P-position) partitions consisting of four parts [lambda_1, lambda_2, lambda_3, lambda_4]. (Note: the paper also states exact Sprague-Grundy Conjectures 2-5 for rectairs and staircases/padded staircases PS_n = [n,n,n-1,...,1] and a misere Conway-pair Conjecture 6, but the case k = r - 2 of Conjecture 3 is the padded staircase PS_{r-1}, where Conjecture 3 disagrees with Conjecture 5; exact computation, rechecked by the maintainer on 2026-11-06, gives G(PS_6) = G([6,6,5,4,3,2,1]) = 1 and G(PS_7) = 3, as Conjecture 5 says, so Conjectures 2-6 are excluded from this target.)",
+   "success_criterion": "CONFIRMED: either (A) a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry, admitted goals or axioms beyond the system's standard ones) of one of Bašić, Gottlieb, and Krnc's normal-play P-position conjectures (Conjecture 1, Conjecture 7, Conjecture 8, or Conjecture 9), or of a complete closed-form characterization of the 4-part P-positions (Question 1) proved by establishing internal stability (no P -> P move) and external stability (every non-P 4-part partition has a legal row/column move to P, using Theorem 11 for 3-part row removals); OR (B) an explicit counterexample partition lambda refuting Conjecture 1 (with size n > 50), Conjecture 7, Conjecture 8, or Conjecture 9, verified by two independently written normal-play CRIM solvers that both reproduce the authors' computational baseline for all partitions of size n <= 50 (no odd-rank P-position, and Conjecture 9 holding) and the paper's printed values (Proposition 10, Theorem 11, and the Sprague-Grundy values printed with Conjectures 2-5, for example G(R^1_{3,2}) = 3 and G(R^4_{6,5}) = 5) and agree on the P/N status of lambda and all its reachable subpartitions (with all package files strictly <= 1 MB per kit/SUBMIT.md).",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "Exhaustive verification of Conjecture 1 (every P-position has even Dyson rank) and Conjecture 9 (characterization of parity self-conjugate N-positions) extended from n <= 50 to all partitions of size n <= 65, by two independent bottom-up dynamic programming solvers that reproduce all n <= 50 results and agree on the exact count of P-positions and Dyson-rank distributions for every n <= 65."
+    },
+    {
+     "id": "p2",
+     "statement": "An explicit candidate closed-form formula for the 4-part P-positions [lambda_1, lambda_2, lambda_3, lambda_4] (Question 1) validated exhaustively over the finite range of all 4-part partitions with lambda_1 <= 150 by two independent CRIM solvers (verifying internal and external stability on every 4-part state with lambda_1 <= 150)."
+    }
+   ],
+   "verification_method": "For a formal proof (A), build the development in a clean project and audit the axioms of the main theorem (Lean: `lake build` and `#print axioms`). For a counterexample (B) or finite-range verification (p1, p2), run two independent normal-play CRIM engines (one indexing partitions by integer-partition rank/lexicographic hash in C/Rust, one using conjugate-canonicalized Young diagram bitmasks in Python/C++) implementing the normal-play P/N recurrence (lambda is in P iff every legal row removal and every legal column removal lands in N). Both engines must first reproduce the paper's theorems on small cases, the n <= 50 baseline (Conjectures 1 and 9 hold for all n <= 50) and the printed Sprague-Grundy values, and then verify every transition of the claimed counterexample or finite range.",
+   "primary_sources": [
+    "https://arxiv.org/abs/2606.16828",
+    "https://arxiv.org/html/2606.16828v1"
+   ],
+   "status_source": "https://arxiv.org/abs/2606.16828",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "Because CRIM is symmetric under conjugation (transposing the Young diagram swaps row moves and column moves and preserves Dyson rank |r - lambda_1|), canonicalizing each partition with its conjugate lambda' halves the state space immediately.",
+    "For Question 1 (4-part partitions [a, b, c, d]), removing any row leaves a 3-part partition whose P/N status is already given in closed form by Theorem 11 of Bašić-Gottlieb-Krnc; so only column removals need a recursive table when checking internal and external stability.",
+    "For p1, bottom-up evaluation by partition size n = |lambda| needs only the P/N bit (1 bit per partition) of smaller sizes, and since p(65) = 2,012,558, the entire P-position bitset up to n = 65 fits in a few megabytes of RAM."
+   ],
+   "pitfalls": [
+    "Removing column j decrements every part lambda_i >= j by 1 (reattaching the right side of the Young diagram to the left); do not confuse this with Chomp (which deletes all cells below and to the right).",
+    "Dyson's rank in arXiv:2606.16828 is defined as |r - lambda_1|, where r is the number of positive parts and lambda_1 is the largest part.",
+    "Conjectures 3 and 5 disagree on padded staircases (the case k = r - 2 of Conjecture 3 is PS_{r-1}); exact values follow Conjecture 5 (G(PS_6) = 1, G(PS_7) = 3). Conjectures 2-6 are out of scope; only the normal-play P-position Conjectures 1, 7, 8, 9 and Question 1 are in scope.",
+    "Always calibrate on all partitions up to n = 50 (the range the authors checked, Section 5 of arXiv:2606.16828v1), not only on small cases."
+   ]
+  },
+  {
+   "id": "non-attacking-queens-game-nimbers-a344227",
+   "name": "Non-Attacking Queens game (Node-Kayles on the n-queens graph): exact nimber a(18), the 20x20 outcome, and toroidal Conjecture T1 (OEIS A344227)",
+   "category": "graphs-games-automata",
+   "kind": "standard",
+   "tractability": 3,
+   "compute_profile": "laptop-hours for toroidal boards n = 12 and 14 and refutation-margin tables; workstation-days for exact G(18), TQ_16 or the 20x20 outcome",
+   "statement": "The Non-Attacking Queens game (H. Noon, 2002; H. Noon and G. Van Brummelen, College Math. J. 37(3), 2006, 223-227; Thomas Jenrich, arXiv:1312.5135, 2013/2014; OEIS A344227) is Node-Kayles played on the n-queens graph Q_n: two players alternately place queens on an n x n chessboard so that no two queens attack each other (no shared row, column, or diagonal), and the last player able to place a queen wins. For odd n, the first player always wins by playing the center square and mirroring every reply by 180-degree rotation (so G(Q_n) >= 1). For n = 0..13, Noon, Bardoe, and Fan computed the Sprague-Grundy sequence A344227: 0, 1, 1, 2, 1, 3, 1, 2, 3, 1, 0, 1, 0, 1. Because a(10) = a(12) = 0 (and Jenrich showed 14x14 and 16x16 are second-player wins), A344227 carried the empirical conjecture that a(n) oscillates as 0, 1, 0, 1 for all n >= 9. In August 2026, Tavis Rudd ('queens-nimbers', OEIS A344227 comment and technical report) extended A344227 through n = 17 with G(14) = 0, G(15) = 1, G(16) = 0, G(17) = 2 (breaking the odd-n = 1 pattern) and proved that the 18x18 board is a first-player win (opening at I9 = (8,8), so G(18) >= 1, breaking the even-n = 0 pattern). As of 2026-11-06, three concrete problems are explicitly open in A344227 and Rudd (2026): (1) the exact Sprague-Grundy value a(18) = G(Q_{18}) (Rudd 2026, Section 6.5, predicts 1 and calls this a prediction, not a result; since proving G(18) = 1 reduces via the heap-sum method to showing Q_{18} + Nim(1) is a second-player win); (2) whether the 20x20 board (Q_{20}) is a first-player (N) or second-player (P) win; and (3) Conjecture T1 (Section 6.7 of Rudd 2026) on the toroidal n-queens graph TQ_n (where rows, columns, and both diagonals wrap mod n, so vertex-transitivity forces G(TQ_n) in {0,1}): Rudd computed G(TQ_n) for n = 1..10 as 1, 1, 1, 0, 1, 0, 1, 0, 1, 0 and conjectured that G(TQ_n) = n mod 2 for all n >= 4. For odd n this already follows from Rudd's Theorem S1 (Closed-Pairing, Section 6.8) applied to the point reflection x -> -x (mod n) on the residual TQ_n minus N[(0,0)]: it is a fixed-point-free automorphism there and never pairs two attacking squares (rechecked by the maintainer for odd n <= 25 on 2026-11-06). The open part of Conjecture T1 is therefore the even boards, n = 12, 14, 16, ...",
+   "success_criterion": "CONFIRMED: any one of: (1) the exact Sprague-Grundy value a(18) = G(Q_{18}) (certified via exact mex evaluation or heap-sum P-position verification of Q_{18} + Nim(a(18)) plus N-position verification of Q_{18} + Nim(k) for 0 <= k < a(18)) or the 1st/2nd-player win/loss outcome of Q_{20}, established by two independently written bitboard solvers that both reproduce A344227 for n = 0..17; OR (2) a kernel-checked formal proof (Lean, Rocq or Isabelle; no sorry, admitted goals or axioms beyond the system's standard ones) of Rudd's full Toroidal Conjecture T1 (G(TQ_n) = n mod 2 for all n >= 4); OR (3) an explicit toroidal counterexample refuting Conjecture T1 (necessarily at an even n), or the exact computation of G(TQ_n) for every even n = 12, 14, 16, by two independent bitboard solvers that both reproduce G(TQ_n) for n = 1..10.",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "Compute the exact toroidal values G(TQ_{12}) and G(TQ_{14}) (testing the even half of Conjecture T1 beyond n = 10), plus the exact central-strike refutation margins on R_{14} and R_{16} (Section 6.6 of Rudd 2026: the number of legal replies on R_n = Q_n minus N[c*] that leave a P-position, calibrated against Rudd's published margins 0/36 at n = 8, 8/64 at n = 10 and 100/100 at n = 12), verified by two independent bitboard solvers."
+    }
+   ],
+   "verification_method": "For a formal proof in (2), build the development in a clean project and audit the axioms of the theorem (Lean: `lake build` and `#print axioms`). For computational claims in (1), (3) or p1: on toroidal boards TQ_n, since TQ_n is vertex-transitive, every first move is isomorphic; thus G(TQ_n) = 1 iff the residual board H_n = TQ_n minus N[(0,0)] after placing one queen at (0,0) is a P-position (second-player win), and G(TQ_n) = 0 otherwise. For exact standard-board nimbers a(n) = G(Q_n), boolean alpha-beta on Q_n alone only tests whether G(Q_n) > 0; solvers must either evaluate exact mex values or certify via the heap-sum game that Q_n + Nim(g) is a P-position and Q_n + Nim(k) is an N-position for all 0 <= k < g. Two independent bitboard solvers using distinct traversal/canonicalization algorithms (e.g., D_4-canonical Zobrist alpha-beta vs. independent retrograde/DAG solver) must reproduce G(TQ_n) for n = 1..10, A344227 for n = 0..17, and the published central-strike refutation margins for n = 8, 10 and 12 before certifying any new value. Keep all package files <= 1 MB (kit/SUBMIT.md).",
+   "primary_sources": [
+    "https://oeis.org/A344227",
+    "https://github.com/tavisrudd/queens-nimbers",
+    "https://raw.githubusercontent.com/tavisrudd/queens-nimbers/main/docs/queens-n18-paper.md",
+    "https://arxiv.org/abs/1312.5135"
+   ],
+   "status_source": "https://oeis.org/A344227",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "For Conjecture T1 at n >= 12, vertex-transitivity of TQ_n removes the root branching: place the first queen at (0,0) and solve the single residual graph H_n = TQ_n minus N[(0,0)] under the symmetries fixing (0,0); G(TQ_n) = 1 iff H_n is a P-position. For odd n the point reflection (r, c) -> (-r, -c) mod n is a closed pairing of H_n (Rudd's Theorem S1), which settles odd n; for even n the reflection pairs some squares with an attacking partner (for example (n/2, 1) and (n/2, n-1) share a row), so it is not a closed pairing and the computational work is on even n.",
+    "For the refutation-margin puzzle in Section 6.6 of Rudd (2026) at n = 14 and n = 16, after the central strike c* = (n/2 - 1, n/2 - 1), the central queen attacks 4n - 4 squares, so the residual board R_n = Q_n minus N[c*] has exactly (n - 2)^2 live squares (144 at n = 14 and 196 at n = 16); solving each legal Player 2 reply in R_n independently with two bitboard solvers gives the exact count of replies that leave a P-position."
+   ],
+   "pitfalls": [
+    "On the torus TQ_n, two squares (r1, c1) and (r2, c2) attack each other iff r1 = r2 (mod n), c1 = c2 (mod n), r1 - c1 = r2 - c2 (mod n), or r1 + c1 = r2 + c2 (mod n). For even n the point reflection pairs some squares of the residual with an attacking partner (for example (n/2, 1) and (n/2, n-1)), so it does not settle even boards.",
+    "On the standard board Q_n, a(n) in A344227 is the Sprague-Grundy value G(Q_n), whereas a boolean solver on Q_n tests only whether G(Q_n) > 0; use exact mex or the heap-sum game Q_n + Nim(k) to certify exact nimbers.",
+    "Rudd (2026, Section 2.2) reports that the exact n = 18 nimber was still being computed. Re-check the queens-nimbers repository and OEIS A344227 immediately before claiming a(18).",
+    "Rudd publishes central-strike refutation margins only for n = 8, 10, 12 and 18 (Section 6.6); there are no published margins for n = 4 or 6 to calibrate against."
+   ]
+  },
+  {
+   "id": "divisor-poset-game-p-positions-a393927",
+   "name": "Divisor takeaway poset game on {2, 3, ..., k}: second-player winning sizes beyond k = 125 (OEIS A393927)",
+   "category": "graphs-games-automata",
+   "kind": "harvest",
+   "tractability": 4,
+   "compute_profile": "laptop-hours (isolated-prime parity reduction + prime-chain quotient + upward-closed poset bitmask search)",
+   "statement": "In the divisor takeaway poset game on {2, 3, ..., k} (catalogued by Zhao Hui Du in OEIS A393927, March 2026, keyword `nonn,more`), two players start with the set S_k = {2, 3, ..., k} and alternate moves under normal play (last player to move wins). A move consists of choosing an available number x in S and removing x together with all divisors of x that are currently in S; equivalently, it is the downward-closed poset takeaway game on the divisibility poset ({2, ..., k}, |) (dual to Schuh's 1952 game of divisors / Chomp). OEIS A393927 lists the values of k for which the initial set {2, 3, ..., k} is a P-position (second-player win). As of 2026-10-30, only 10 terms are known (with the synthesized OEIS b-file `b393927.txt` ending at n = 10): a(1)..a(10) = 3, 7, 28, 34, 35, 66, 74, 84, 116, 125, and no terms are known beyond k = 125.",
+   "success_criterion": "CONFIRMED: the next 5 exact terms of OEIS A393927 beyond k = 125 (a(11) through a(15)), established by determining the exact 1st/2nd-player win/loss outcome of S_k = {2, ..., k} for EVERY integer k contiguously from k = 126 through k = a(15) (proving that a(11)..a(15) are P-positions and all other integers in [126, a(15)] are N-positions), verified by two independently written solvers using distinct algorithms that both reproduce the exact win/loss outcome of every k in 2..125 (confirming a(1)..a(10) = 3, 7, 28, 34, 35, 66, 74, 84, 116, 125 and confirming all other k in 2..125 are N-positions).",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "Compute the next 2 unpublished terms of OEIS A393927 (a(11) and a(12), beyond k = 125) by determining the exact 1st/2nd-player win/loss outcome of every integer k contiguously from k = 126 up to a(12) (confirming all intervening values are N-positions), verified by two independent poset-game solvers that reproduce the exact outcome of every k in 2..125."
+    }
+   ],
+   "verification_method": "Because every prime p > k/2 has no multiples <= k and no divisors in {2, ..., k} other than itself, the initial game on {2, ..., k} is the disjunctive sum of the core divisibility poset C_k = {2, ..., k} \\ {primes p > k/2} and M_k = pi(k) - pi(floor(k/2)) isolated Nim piles of size 1 (total Nim-sum M_k mod 2). Thus {2, ..., k} is a P-position iff the boolean game (C_k, M_k mod 2) is a second-player win (or equivalently G(C_k) == (M_k mod 2)). Two independent solvers (e.g., one using upward-closed filter canonicalization and connected-component / prime-chain reduction in C/Rust, and one using Zobrist-hashed boolean alpha-beta over divisor bitmasks) must reproduce the exact win/loss outcome of every k in 2..125 and agree on every contiguous integer k from 126 through the last claimed term. Package the contiguous outcome table as a single file <= 1 MB (kit/SUBMIT.md).",
+   "primary_sources": [
+    "https://oeis.org/A393927",
+    "https://oeis.org/A393927/b393927.txt",
+    "https://aeb.win.tue.nl/games/chomp.html"
+   ],
+   "status_source": "https://oeis.org/A393927",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "Factor out isolated primes p in (k/2, k] immediately: they never interact with any other element, contributing only a single parity bit par = (pi(k) - pi(floor(k/2))) mod 2. More generally, during play on an upward-closed filter S, any remaining element x that has neither multiples nor divisors left in S (i.e., x is both minimal and maximal in (S, |)) is an isolated Nim pile of size 1 and can be folded into `par ^= 1`.",
+    "Primes p in (k/3, k/2] each have only a single multiple in {2, ..., k} (namely 2p) and no proper divisors in {2, ..., k}; thus each pair {p, 2p} is a 2-element chain connected to the rest of the poset only via the divisibility edge 2 | 2p. Once 2 is removed (which happens on the first move that picks any even number), EVERY remaining pair {p, 2p} with p in (k/3, k/2] detaches into an independent 2-element chain (isomorphic to a Nim pile of size 2, since picking 2p removes both {p, 2p} while picking p removes only p and leaves the isolated element {2p} of size 1), or a pile of size 1 if p was already removed earlier leaving only {2p}.",
+    "At any state S, decomposing the comparability graph of (S, |) into connected components (or quotienting automorphic prime chains {p, 2p, ..., m*p} that share the same remaining multipliers) shrinks the effective state space substantially."
+   ],
+   "pitfalls": [
+    "In A393927, the number 1 is NOT in the set (the set is {2, 3, ..., k}), and a move chooses x in S and removes {d in S : d | x} (x and its divisors), NOT multiples of x.",
+    "An element x whose multiples have been removed is maximal in S, NOT isolated, unless all of its proper divisors have also already been removed; picking x still deletes its remaining divisors in S.",
+    "Removing primes <= sqrt(k) alone does NOT disconnect primes > sqrt(k), because composite numbers like 6 and 78 = 6*13 can still link primes p, q > sqrt(k) until those composites' common divisors are also removed.",
+    "To claim a(11), a(12), ..., every integer k from 126 up to the claimed term must be tested contiguously so no smaller P-position is missed."
+   ]
+  },
+  {
+   "id": "node-kayles-lattices-petersen-a316632-a316533",
+   "name": "Node-Kayles on 3 x n lattices, m x n grids, and generalized Petersen graphs GP(n,2): open outcomes and nimbers (OEIS A316632, A316533)",
+   "category": "graphs-games-automata",
+   "kind": "harvest",
+   "tractability": 4,
+   "compute_profile": "laptop-hours (canonical connected-component Sprague-Grundy DP with multi-word bitmasks and graph-isomorphism hashing)",
+   "statement": "Node-Kayles (a normal-play independent-set game) on a simple graph G is an impartial game in which two players alternately choose a vertex v in V(G) and delete its closed neighborhood N_G[v] = {v} union N_G(v); the last player to move wins. In 'Nimber Sequences of Node-Kayles Games' (Journal of Integer Sequences, Vol. 23, 2020, Article 20.3.5), Sierra Brown, Spencer Daugherty, Eugene Fiorini, Barbara Maldonado, Diego Manzano-Ruiz, Sean Rainville, Riley Waechter, and Tony W. H. Wong determined closed-form or periodic nimber sequences for 3-paths, 2 x n ladders (period 2), 4 x n lattices (identically 0 by the modulo-4 row involution Theorem 6), prism graphs, hypercubes, and several linked cycle/diamond families, and proved that for the m x n lattice graph L_{m x n}, G(L_{m x n}) = 0 whenever both m and n are even and G(L_{m x n}) > 0 whenever both m and n are odd (Theorem 5). However, they left three concrete problems open (Section 3 Table 1 and Section 6, re-verified on OEIS on 2026-10-30): (1) OEIS A316632 (`nonn,more`): the Sprague-Grundy sequence G(L_{3 x n}) of the 3 x n lattice graph, computed by Brown et al. for n = 1..13 and extended by Max Fan (n = 14..16, 2021) and Alex Towell (n = 17, 2026) to n = 1..17 (2, 1, 1, 0, 3, 3, 2, 2, 2, 3, 3, 5, 2, 4, 1, 3, 2; only n = 4 is a known P-position); (2) OEIS A316533 (`nonn,more`): the Sprague-Grundy sequence G(GP(n,2)) of the generalized Petersen graph GP(n,2) (which is 0 for all even n by Theorem 12 and lies in {0,1,2} for odd n), known only for n = 5..26 (a(25)-a(26) from Max Fan, 2021) (1, 0, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0); and (3) the unsolved cells of Table 1 (p. 14) for m x n lattices with 1 <= m, n <= 10: the odd-by-even grids L_{5 x 8}, L_{5 x 10}, L_{6 x 7}, L_{6 x 9}, L_{7 x 8}, L_{7 x 10}, L_{8 x 9}, L_{9 x 10} (for which even the 1st- vs. 2nd-player win/loss outcome is unknown) and the odd-by-odd grids L_{5 x 9}, L_{7 x 7}, L_{7 x 9}, L_{9 x 9} (whose 1st-player win outcome G > 0 is proved by Theorem 5, but whose exact Sprague-Grundy nimbers are unknown).",
+   "success_criterion": "CONFIRMED: (1) the next 5 contiguous exact terms of OEIS A316632 (G(L_{3 x n}) for n = 18..22) AND the next 12 contiguous indexed terms of OEIS A316533 (G(GP(n,2)) for n = 27..38, comprising the 6 unknown odd indices n = 27, 29, 31, 33, 35, 37 and the 6 even indices which equal 0 by Theorem 12), OR (2) at least 4 newly resolved cells of Brown et al.'s Table 1, consisting of exact Sprague-Grundy nimbers (or certified 1st/2nd-player outcomes) for unknown-outcome odd-by-even grids in {L_{5 x 8}, L_{6 x 7}, L_{5 x 10}, L_{6 x 9}, L_{7 x 8}, L_{7 x 10}, L_{8 x 9}, L_{9 x 10}} and/or exact Sprague-Grundy nimbers for odd-by-odd grids in {L_{5 x 9}, L_{7 x 7}, L_{7 x 9}, L_{9 x 9}} (outcome-only claims do not count for odd-by-odd grids since Theorem 5 already proves G > 0). All claimed values must be computed by two independently written solvers using distinct algorithms that both reproduce every shaded (published) entry in Table 1 of Brown et al. (2020) (including G(L_{5 x 7}) = 2) and all published terms of A316632 (n = 1..17) and A316533 (n = 5..26).",
+   "partial_wins": [
+    {
+     "id": "p1",
+     "statement": "Extend OEIS A316632 (Node-Kayles on the 3 x n lattice) contiguously through n = 20 (n = 18, 19, 20) and OEIS A316533 (Node-Kayles on GP(n,2)) contiguously through n = 32 (including odd n = 27, 29, 31), verified by two independent Sprague-Grundy solvers that reproduce all published terms."
+    },
+    {
+     "id": "p2",
+     "statement": "Settle the 1st/2nd-player outcome (or exact nimber) of the two smallest open odd-by-even outcome cells in Brown et al. Table 1 (the 40-vertex lattice L_{5 x 8} and the 42-vertex lattice L_{6 x 7}) OR determine the exact Sprague-Grundy nimbers of the two smallest open odd-by-odd cells (L_{5 x 9} and L_{7 x 7}), verified by two independent solvers that reproduce all published cells of Table 1 (including G(L_{5 x 7}) = 2)."
+    }
+   ],
+   "verification_method": "Verify with two independent Sprague-Grundy / heap-sum alpha-beta engines from scratch: (1) a connected-component mex engine using 128-bit (multi-word) bitmask neighborhood deletion and canonical graph/frontier hashing, and (2) an independent transfer-profile or heap-sum alpha-beta solver (`G + Nim(k)`). Both must first reproduce all 17 terms of A316632 (n = 1..17), all 22 terms of A316533 (n = 5..26), and all shaded entries of Table 1 in Brown et al. (2020), and agree on every new term or cell. Keep all package files <= 1 MB (kit/SUBMIT.md).",
+   "primary_sources": [
+    "https://cs.uwaterloo.ca/journals/JIS/VOL23/Wong/wong24.pdf",
+    "https://oeis.org/A316632",
+    "https://oeis.org/A316533",
+    "https://oeis.org/A316632/a316632_1.txt",
+    "https://oeis.org/A316533/a316533.txt"
+   ],
+   "status_source": "https://oeis.org/A316632",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "In both L_{3 x n} and GP(n,2), deleting a closed neighborhood N[v] frequently disconnects the graph into smaller components whose Sprague-Grundy values XOR together (`G(H union K) = G(H) xor G(K)`). The reference Python scripts linked on OEIS (`a316632_1.txt` and `a316533.txt`) used NetworkX `is_isomorphic` in a linear loop over all seen graphs; replacing NetworkX with a 128-bit bitmask + canonical column-profile hash eliminates the linear isomorphism scan.",
+    "On L_{3 x n} (and GP(n,2) after the first move, which breaks the cycles at v into a bounded-pathwidth strip), the nimber of any residual subgraph can be memoized by its canonical column frontier profile.",
+    "For GP(n,2) with odd n, the initial graph is vertex-transitive on the outer cycle and on the inner cycle, so there are only 2 non-isomorphic opening moves (one outer vertex u_0, one inner vertex v_0). Thus G(GP(n,2)) = mex({G(GP(n,2)_{u_0}), G(GP(n,2)_{v_0})}) <= 2, reducing each odd n to just two bounded-pathwidth residual subproblems."
+   ],
+   "pitfalls": [
+    "Use 128-bit (two uint64_t words) or arbitrary-width bitmasks rather than a single 64-bit integer, since L_{3 x 22} and GP(33,2) have 66 vertices and Table 1 grids reach 90 vertices.",
+    "In GP(n,2), the inner vertices v_i are connected to v_{(i+2) mod n}; for odd n this forms a single n-cycle, whereas for even n it forms two (n/2)-cycles.",
+    "In Table 1 of Brown et al. (2020), G(L_{5 x 7}) = 2 is already shaded/solved, and all odd-by-odd grids already have known 1st-player win outcome (G > 0 by Theorem 5); for odd-by-odd grids only the exact nimber is open.",
+    "Always decompose into connected components after each move and XOR their nimbers before taking mex; failing to split disconnected components makes the state space exponential."
+   ]
+  },
+  {
+   "id": "quoridor-4x7-7-walls-exact",
+   "name": "Quoridor 4x7, 7 walls per player: exact initial outcome",
+   "category": "graphs-games-automata",
+   "kind": "standard",
+   "tractability": 2,
+   "compute_profile": "laptop-hours (HEURISTIC scouting budget only; target runtime and memory unmeasured. Measure a small calibration sequentially, then use a time cap, checkpoints and the charter memory limit; no promise that a laptop can finish.)",
+   "statement": "KNOWN (source definition): Grant Slatton's rectangular Quoridor variant at commit fe2a222f474c55e811c946594bbf7c62d90daa81. Coordinates are (row,column), zero-based; width W counts columns and height H counts rows. Player 1 starts at (0,floor(W/2)), Player 2 at (H-1,floor(W/2)); Player 1 moves first and aims for row H-1, Player 2 for row 0. Initially no wall is placed. Each turn moves the current pawn or spends one wall from that player's supply. An ordinary pawn move follows one orthogonal unblocked edge to an empty cell. If the adjacent cell holds the opponent, and the edge to that cell is clear, jump straight over when the next cell and edge exist and are clear. Only when that straight jump is blocked by a wall or boundary may the pawn land in either perpendicular neighbour of the opponent, provided that edge is clear. Walls are permanent. A horizontal wall H(r,c), with 0<=r<H-1 and 0<=c<W-1, blocks edges (r,c)--(r+1,c) and (r,c+1)--(r+1,c+1). A vertical wall V(r,c) blocks (r,c)--(r,c+1) and (r+1,c)--(r+1,c+1). Opposite orientations at the same anchor cross and cannot coexist. Horizontal walls overlap when their rows agree and columns differ by at most one; vertical walls overlap when their columns agree and rows differ by at most one. Reject all crossing or overlapping placements. After placement, both pawns must have a path through unblocked orthogonal edges to their own goal row, ignoring pawn occupancy for this test. Reaching a goal ends play immediately. There is no pass or repetition-count cutoff. Infinite play is a draw; a non-goal state with no successor is treated as a draw, matching the source retrograde semantics. The question is the exact initial outcome under optimal play (win preferred to draw preferred to loss). Fixed target: W=4, H=7, 7 initial walls per player. KNOWN (table snapshot): this exact cell is marked ? in the pinned README. This means uncomputed by that source, not proven absent from all literature. Status evidence retrieved 2026-11-02 UTC.",
+   "success_criterion": "CONFIRMED: determine exactly the initial outcome of W=4, H=7, 7 walls per player under the rules in statement, with the independently checked winning DAG or pair of non-losing draw graphs specified in verification_method. One cell per claim. Before hunting and before claiming, recheck the live source and repository for an already published outcome for this same instance; an already public value is calibration, not a new result. A timeout, heuristic score or repeated position is not a draw proof.",
+   "partial_wins": [],
+   "verification_method": "Supply a standalone verifier with independently implemented rules and the exact initial state. For a claimed winner P, provide a strategy DAG rooted at the initial state: at P-to-move nodes include a legal selected successor, at opponent-to-move nodes include every legal successor; all leaves must be terminal wins for P. Include nonnegative ranks strictly decreasing on every edge to rule out cycling. For a draw, provide two non-losing strategy graphs, one for each player: each includes the root; on the protected player's turn choose a legal successor in the graph; on the other player's turn include every legal successor. No included terminal state may be a loss for the protected player. A non-goal zero-successor state is a draw leaf. Cycles are allowed in these safety graphs. These two graphs establish that neither player can force a win. The verifier regenerates all moves, validates full states, supply conservation, edges, closure, terminal labels and ranks without trusting solver hashes or evaluations. Include verifier source, certificate bytes and reproduction commands. If a certificate exceeds 1 MB, keep it outside git, give its SHA-256 and accessible location plus deterministic generation instructions; a digest alone is insufficient. Before evaluating the target, freeze and reproduce this representative pinned-README suite with both the producer and an independent rules implementation: (W,H,walls-per-player)->outcome: (2,3,0)->Player2, (2,3,1)->Player1, (4,3,0)->Player2, (4,3,3)->Player1, (4,7,2)->Player1, (4,7,3)->Player2, (8,3,3)->Draw. Include rule fixtures for straight jumps, boundary/wall-blocked jump sidesteps, overlapping/crossing walls, path-blocking illegal walls, immediate goals, and the exact even-width starting column; retain expected and actual outputs. Full-table reproduction is optional additional calibration, not a prerequisite. Calibration is not a win. Resource failure or disagreement leaves the claim unconfirmed. Any resulting claim requires the repository's three fresh-context skeptic passes and check_run gate. Strategy-choice and universal-closure obligations apply only to nonterminal nodes; terminal nodes have no outgoing edges. This fixed calibration suite is a deliberate local requirement, not a bank rule. Resource exhaustion on calibration leaves this proposal unready for a research claim; do not silently skip fixtures.",
+   "primary_sources": [
+    "https://arxiv.org/html/2605.22747v2",
+    "https://github.com/grantslatton/quoridor-solving/blob/fe2a222f474c55e811c946594bbf7c62d90daa81/README.md",
+    "https://github.com/grantslatton/quoridor-solving/blob/fe2a222f474c55e811c946594bbf7c62d90daa81/src/lib.rs",
+    "https://github.com/grantslatton/quoridor-solving/blob/fe2a222f474c55e811c946594bbf7c62d90daa81/tests/tests.rs"
+   ],
+   "status_source": "https://github.com/grantslatton/quoridor-solving",
+   "status_checked": "2026-11-06",
+   "disclosure": "open",
+   "angles": [
+    "HEURISTIC: finite-depth reachability proof search can produce a winning DAG; exact retrograde analysis can produce draw safety graphs. Apply only sound pruning and retain proof witnesses.",
+    "HEURISTIC: compare lazy wall-legality BFS against precomputed wall reachability after measuring memory."
+   ],
+   "pitfalls": [
+    "The paper by Marius Drop, Benjamin G. Rin and Finn van der Velde supplies general Quoridor rules; Grant Slatton supplies the rectangular instance convention and table. Do not attribute the frontier to the paper.",
+    "All wall counts are per player; preserve side to move, pawn coordinates and remaining wall supplies in every state.",
+    "For even widths use floor(W/2), not the other central square or a silently rotated start.",
+    "A depth limit does not establish a draw; win certificates require a well-founded rank and draw certificates require both safety strategies.",
+    "No known-result partial wins or unspecified alternate boards are accepted. Tractability is a guess."
    ]
   }
  ]

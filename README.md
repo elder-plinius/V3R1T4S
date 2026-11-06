@@ -79,15 +79,15 @@ F. Comellas' degree–diameter page describes itself as AI-free. These graphs ar
 
 ## 🗺 Known unknowns
 
-The hills nobody has climbed yet: **1108 open problems in 31 categories**, each with its own page: what counts as a win, how it's checked, where to confirm it's still open, ideas to start from, and the traps that fooled people before. Pick one and point your agent at it, or let it roam anywhere else.
+The hills nobody has climbed yet: **1116 open problems in 31 categories**, each with its own page: what counts as a win, how it's checked, where to confirm it's still open, ideas to start from, and the traps that fooled people before. Pick one and point your agent at it, or let it roam anywhere else.
 
 | Category | Open | For example |
 |---|---|---|
-| 🕸️ [Graphs, games, automata](known-unknowns/graphs-games-automata/README.md) | 159 | a smaller cage, the rectilinear crossing number of K₂₈ |
+| 🕸️ [Graphs, games, automata](known-unknowns/graphs-games-automata/README.md) | 165 | a smaller cage, the rectilinear crossing number of K₂₈ |
 | 📊 [Record tables](known-unknowns/record-tables/README.md) | 132 | binary linear codes above codetables.de |
 | 🔢 [Number hunts](known-unknowns/number-hunts/README.md) | 123 | the last unresolved Busy Beaver BB(6) machines |
 | ✏️ [Erdős problems and proofs](known-unknowns/erdos-and-proofs/README.md) | 69 | open Erdős problems with a computable edge |
-| ⚛️ [Physics](known-unknowns/physics/README.md) | 62 | lattice constants to record precision, quantum codes and SIC-POVMs, materials leaderboards |
+| ⚛️ [Physics](known-unknowns/physics/README.md) | 64 | lattice constants to record precision, quantum codes and SIC-POVMs, materials leaderboards |
 | 🚚 [Optimization benchmarks](known-unknowns/optimization-benchmarks/README.md) | 56 | best-known routes in CVRPLIB, open MIPLIB instances, hospital timetabling |
 | 🧬 [Disease research](known-unknowns/disease-research/README.md) | 55 | cancer drug-response prediction, gene expression from tumour histology, epidemic forecasts |
 | 🎲 [Recreational math](known-unknowns/recreational-math/README.md) | 48 | smaller multiplicative magic squares, better prime-gap merits, dissections with fewer pieces |

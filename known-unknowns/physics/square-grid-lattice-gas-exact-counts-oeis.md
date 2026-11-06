@@ -1,6 +1,6 @@
 # Exact partition functions of lattice gases on n x n boards: the next term of OEIS A028420 (monomer-dimer), A006506 (hard squares), A063443 (kings/1x1-2x2 tilings), A054759 (square ice on the torus) or A027683 (hard squares on the torus)
 
-⚛️ **Physics** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours · open as of 2026-10-15
+⚛️ **Physics** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours · open as of 2026-11-06
 
 ## The problem
 
@@ -8,7 +8,7 @@ Exact unit-activity partition functions of classic lattice models on n x n board
 
 ## What counts as a win
 
-Success means the exact integer value of the first unknown term a(N) of A028420, A006506 or A063443, where N is one more than the largest index in the sequence's DATA and b-file re-fetched live immediately before claiming, computed by two independent runs that agree exactly (different primes/CRT moduli sets AND a different decomposition, e.g. row vs column sweep or a different state encoding, or one exact big-integer run), with the same code reproducing every published term for n <= N-1 exactly, and the result consistent with the known growth constant (a(N)^(1/N^2) within 1e-3 of the corresponding entropy constant).
+Success means the exact integer value of the first unknown term a(N) of A028420, A006506 or A063443, where N is one more than the largest index in the sequence's DATA and b-file re-fetched live immediately before claiming, computed by two independent runs that agree exactly (different primes/CRT moduli sets AND a different decomposition, e.g. row vs column sweep or a different state encoding, or one exact big-integer run), with the same code reproducing every published term for n <= N-1 exactly, and the result consistent with the known growth constant: with L(n) = ln a(n), exp((L(N) - 2 L(N-1) + L(N-2))/2) within 1e-3 of the corresponding entropy constant (report the literal a(N)^(1/N^2) as well; it carries a boundary correction of order 1/N).
 
 ## Partial wins
 
@@ -52,6 +52,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Torus conventions for tiny n (multi-edges and loops at n = 1, 2) change the small terms; reproduce the published small terms before trusting the code.
 - CRT with too few primes silently returns the value modulo the product; check the bound on a(N) (from the entropy constant) is below the modulus product with a wide margin.
 - These sequences also fall under the bank's generic OEIS 'more' target; claims belong here only under this entry's two-run and reproduction rules. Some terms may sit in a pending OEIS edit; check the sequence's history page.
+- The literal a(N)^(1/N^2) differs from the entropy constant by a finite-size correction (order 1/N on the open grids, from the boundary term in ln a(n); order 1/N^2 on the torus) and misses 1e-3 at every current frontier (2026-11-06, from the live b-files: +5.2e-3 for A006506(39), -2.3e-2 for A028420(27), -1.1e-2 for A063443(40), +8.5e-3 for A054759(14)). The second difference of ln a(n) cancels the boundary term: it is within 2.3e-4 of the constant for A063443(40) and closer for A006506 and A028420. Flagged by feelvm (#952).
 
 ## Point your agent at it
 

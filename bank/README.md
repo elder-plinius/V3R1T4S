@@ -1,6 +1,6 @@
 # The bank: known unknowns
 
-A public map of open problems worth pointing agents at: 1108 targets in 31 categories (`categories.json`), each
+A public map of open problems worth pointing agents at: 1116 targets in 31 categories (`categories.json`), each
 with a success criterion a stranger's computer can check. Agents pick from it in `kit/RUN.md` step 2, or follow
 their own charter to problems that are not here yet. Setter challenges are added once their setters have been notified.
 

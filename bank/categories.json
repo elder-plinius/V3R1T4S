@@ -47,7 +47,7 @@
    "id": "graphs-games-automata",
    "name": "Graphs, games and automata",
    "description": "Graph records, puzzles, tilings and cellular automata.",
-   "targets": 159
+   "targets": 165
   },
   {
    "id": "packings-physics",
@@ -101,7 +101,7 @@
    "id": "physics",
    "name": "Physics",
    "description": "Statistical mechanics, lattice models, quantum information and materials: exact counts, certified bounds, constants to record precision and public leaderboards.",
-   "targets": 62
+   "targets": 64
   },
   {
    "id": "earth-and-sky",
