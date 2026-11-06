@@ -1,3 +1,110 @@
+# Current wrapper receipt (2026-10-15)
+
+Real end-to-end run on Linux x86_64, Python 3.12.14, NumPy 2.3.5.
+`OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1`; exit code **0**.
+Release inputs and checker sources were fetched from upstream commit
+`371938deefd77b9e6a95d2a0c3e2d3c6ead7eaac` and verified against its Git blob IDs.
+These are actual scientific checker outputs, not synthetic fixture output.
+
+All seven shipped schemes and all three semantic negative controls ran.
+
+Command (from this family directory, with the stated Python environment):
+
+```sh
+OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 sh verify-it-yourself/run_checks.sh
+```
+
+Exact source and output SHA-256:
+
+- `run_checks.sh`: `361c216d4d66abc43f185be7711f41683a4a8723f8af7e61f85d00b9d3e139ba`
+- `known-knowns/check_harness_contract.py`: `f0f43ba4ab6970001f228affb5a95f9ec5d37b115f8487c7ce4cc11ce9e5a070`
+- Raw combined stdout/stderr below: `0d9cd10d3f6abe9d5cfeec4e505bb71591f47134ae2a3e153ef646d2bbaf53f3`
+
+## Complete current output
+
+```text
+== 13x14x14_r1558_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 182*196*182 = 6492304 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 36.8
+FMMCHECK PASS file=13x14x14_r1558_Q.json format=<13,14,14> sorted=<13,14,14> terms=1558 rank_nonzero_terms=1558 sha256=15e46337bdca5a92090021dbd11a6fcb9d57f352a396ea6b34e1f32888fe0702
+rank 1558 as claimed
+== 13x14x15_r1677_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 182*210*195 = 7452900 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 33.7
+FMMCHECK PASS file=13x14x15_r1677_Q.json format=<13,14,15> sorted=<13,14,15> terms=1677 rank_nonzero_terms=1677 sha256=4230f61d432b627d0624105deb004451e8332ccca32c1834746cff2e11c7d6bc
+rank 1677 as claimed
+== 14x14x15_r1716_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 196*210*210 = 8643600 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 33.7
+FMMCHECK PASS file=14x14x15_r1716_Q.json format=<14,14,15> sorted=<14,14,15> terms=1716 rank_nonzero_terms=1716 sha256=83e880a0ecbab4bc6af7c0105365e9ee69aac2c2dc0ac272073249e856f34a56
+rank 1716 as claimed
+== 14x15x15_r1842_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 210*225*210 = 9922500 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 32.9
+FMMCHECK PASS file=14x15x15_r1842_Q.json format=<14,15,15> sorted=<14,15,15> terms=1842 rank_nonzero_terms=1842 sha256=bb313b876ef9a14b57e72f4deafdae9085bcdad1d1f43d70067788f7e375c6b5
+rank 1842 as claimed
+== 14x15x15_r1843_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 210*225*210 = 9922500 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 32.9
+FMMCHECK PASS file=14x15x15_r1843_Q.json format=<14,15,15> sorted=<14,15,15> terms=1843 rank_nonzero_terms=1843 sha256=c86dba238db8a26bef6a4e8f5e224e8524e5d61cd0b89625fe34b43e27813ac3
+rank 1843 as claimed
+== 15x16x16_r2180_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 240*256*240 = 14745600 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 39.4
+FMMCHECK PASS file=15x16x16_r2180_Q.json format=<15,16,16> sorted=<15,16,16> terms=2180 rank_nonzero_terms=2180 sha256=8365355f0f3ae6bc3efd445517fbd473c91477cd1c2b2aeb08c0b3b85182fd1d
+rank 2180 as claimed
+== 15x16x16_r2196_Q.json
+sha256 matches INDEX.csv
+  mod 1048573: violated Brent equations = 0
+  mod 1048571: violated Brent equations = 0
+  mod 1048559: violated Brent equations = 0
+  mod 1048549: violated Brent equations = 0
+  checked 240*256*240 = 14745600 Brent equations modulo 4 primes; log2(prod primes) = 80.0 > log2(2 L (S+1)) = 39.5
+FMMCHECK PASS file=15x16x16_r2196_Q.json format=<15,16,16> sorted=<15,16,16> terms=2196 rank_nonzero_terms=2196 sha256=11c2649664a1d8d4386b225bb0ba62f3a5f1c819b575f50ce9830c478fb67113
+rank 2196 as claimed
+== negative controls on the smallest scheme (each must FAIL)
+HARNESS CONTROL PASS fmm: expected semantic rejection
+control drop_term: expected semantic rejection
+HARNESS CONTROL PASS fmm: expected semantic rejection
+control bump_coeff: expected semantic rejection
+HARNESS CONTROL PASS fmm: expected semantic rejection
+control swap_vw: expected semantic rejection
+ALL CHECKS PASSED
+```
+
+---
+
+## Historical receipts
+
+The records below are preserved from earlier runs of the former wrapper. Their
+wrapper messages do not describe the current run; use the complete current
+output above for the current wrapper contract. Historical comparison dates and
+optional-runtime coverage remain those stated in the original records.
+
 # Check results (fast matrix multiplication)
 
 ## 2026-10-12: the two new records
