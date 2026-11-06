@@ -1,0 +1,6 @@
+Frozen UTC: 2026-11-05T23:19:31Z
+Instance-level rule (from the bank criterion, verbatim in target.md): a result counts only if, for its (nodeset, capacity, topology X), its recomputed length (sum of Euclidean segment lengths incl. detours) is < (1 - 1e-6) x the shortest stored set of topology X or more restrictive; it uses at each substation <= that shortest set's feeders_per_root; validate_routeset returns no violations; every segment lies inside the border polygon (covers) and outside every obstacle polygon (shapely, no buffer).
+Lens A (full win attempt): warm-started CP-SAT (optiwindnet MILP model, ortools.cp_sat, 3 workers) on Belwind capacity 10, branched, segmented feeders, max feeders [6], until 00:20Z.
+Lens B (p2 attempt): HGS-CVRP via optiwindnet HGSRouter, radial, segmented, max feeders per substation = the radial best's feeders_per_root, time 240 s per instance, seeds 1-3, on p2 candidates (non-'!', radial best without any radial MILP bound) in descending T, 3 processes, until 00:20Z.
+Scope: one instance per claim; a hit is reported per instance; panel only if a hit passes all checks (time permitting, else PROMISING and next session).
+null_test: not needed because only deterministic properties of explicit route sets would be claimed (no search-yield or statistical inference)
