@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+edit-metric-dna-codes-gc,"n=9 d=3 w=4 (E_4^{RC,GC}(n,d,floor(n/2)), Sun 2010 Table 7.1, max size)",1042,939,2026-11-03T20:49Z,object/code_n9_d3_k1042.txt,b51b30e3082648bc6cb0511bd156b71ae51c967f7281a83010d2c0e844e4a93a
