@@ -9,7 +9,7 @@ c7f952d015ea4eea25f78093c164823d118e8187b499ebe46c216f87e15df1cf  CITATION.cff
 d557539df68e771cc1eedcc91d13f70fca930e508d11eedcafa4b15db49e3744  LICENSE-DATA
 c690ca805322add2730094826b7808801d3792b4ccf562b611e27c5eb534e674  LICENSING.md
 0bab914f80b7c15673d115cec6a364dabaad70f7666782d3a0411a62b23ddf2c  README.md
-6777c869ee867ec6db3a82346eb9377493ff2c412786c07a951523c9d39aa27d  READ_BEFORE_CITING.md
+6dc6199718458a00c44ed53a48dbb402bfd89ee197239cb5ddd7fd77423d840e  READ_BEFORE_CITING.md
 83af764f5a6551a5a27bbb135324931659bda04e60b66a2c0e711b991b356113  TROPHY_CASE.md
 1dcddd21bcb7069ba9b2b828535618d12cb425dc666d33d200b1f996744ebfa7  bank/README.md
 635fe5b337e33aadcdc5897ee687dd8cf874df15b25d55033b98c42c68df9022  bank/build_known_unknowns.py
@@ -4088,14 +4088,14 @@ ba753022e863290f7f42c0cbc268a04e955d37e28f0d1fef69509d8e394bc531  known-knowns/s
 965bff5556a533ce67767dbe0bafd947ab954016061ba36be121d987d95a5800  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-98d6ad8f/verify-it-yourself/assert_sc.py
 6f842776c286f9c7674f5756bcff5e901f158980f4b49225c16ffe9c94a78d00  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-98d6ad8f/verify-it-yourself/check_sc.py
 549508d17bf11af3fd142de725d23afd77292d63076c5323e900703ca347301a  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-98d6ad8f/verify-it-yourself/run_checks.sh
-79e9be066b2f0858f50ee8a03a8221c0225be4681957204dcd27d682bb6e3526  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/HOW_WE_FOUND_IT.md
+14ae2dd054d8cbe7a9f57c06254784f3e3590fcdfafa712d3e62b3ec620bae44  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/HOW_WE_FOUND_IT.md
 6a331abe7d82583180d40b5e18bb7190d5096bce84186149ad0a753005c8831a  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/INDEX.csv
 dfa8760df805d77e6bf7eff4c2c8a7854e041cff62141cc311d0ec4ffbcd422c  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/README.md
 1624fdb8b2049390b9802fbfa2b524f291fe729197d184417103ca249bee5e59  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/RUN_IT_YOURSELF.md
-0a5c1b685a3de72bd9ece45b9739578c35e7250bd419900b166ebd2eef82ce67  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/SHA256SUMS
+0de7fc1accaf7547c7050364170adcca8e9b0225b76339c4ad8f9e9ba4327abc  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/SHA256SUMS
 8967148facf0831cfebd937bf3ad29ad9c2e1f2321a40249a3cdc0a7a15cf156  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/how-we-built-it/PREREG.md
-011249fbccbc97ebe2796b6da8fcdfed2a809af2911ff179b4facebe0180af5b  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/how-we-built-it/README.md
-6d4a7a97505ff64f3be1f2a1a70c140c86764306f17ecc1a5e38153f19b65fba  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/how-we-built-it/RESULTS.md
+302156ce651d9c8321ec6095ffca8c253e078df8e2ed4e1a408be1213492b5a9  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/how-we-built-it/README.md
+78baad268245ea756ae680a7a748aac60470772bcb913d4a0f424bcf938baf16  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/how-we-built-it/RESULTS.md
 83146e6446bc31fb8218f73b24aea16d01beabc18d08bc405760c8fbd0f45dd2  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/how-we-built-it/sc_opt.c
 b2aaa05cdd4774c697865c0c821d1e45a33b3992e87fd39b0c6359e5b4e56b0a  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/object/30x62.txt
 776c262b78f66ed98ad3ef4f8b80e07251ac734674171a1f2f20ff66b150909c  known-knowns/spherical-codes-cohn-table/2026-10-18-calgulbenkian-b2aaa05c/panel/criterion.md
