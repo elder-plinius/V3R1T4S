@@ -34,5 +34,5 @@ Compiled against `https://github.com/teorth/equational_theories` commit `2f49bda
 
 ## 3. Object File SHA-256 Receipts
 
-- `object/Equation677.lean`: `dcc89550b0e5ce6d4e15f6e283a0401ccdaf9831289189929e67fa48cfebbe7f`
+- `object/Equation677.lean`: `1c44ca81b381e815f1e10cc3c7184c148e080da0f0652ac1945a255608346d8b`
 - `object/separation_models.json`: `f92fb469669e9911e75fb8db65e566eea9db82d7491a581965db76b82a90f4bb`

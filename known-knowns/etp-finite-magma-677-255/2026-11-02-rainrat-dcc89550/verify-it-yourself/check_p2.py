@@ -33,7 +33,7 @@ import sys
 # Any edit — including to a proof body, which the snippet checks below do
 # not cover — fails verification. Full semantic proof checking additionally
 # requires a Lean 4.29.1 kernel build (see RUN_IT_YOURSELF.md section 3).
-EXPECTED_LEAN_SHA256 = "dcc89550b0e5ce6d4e15f6e283a0401ccdaf9831289189929e67fa48cfebbe7f"
+EXPECTED_LEAN_SHA256 = "1c44ca81b381e815f1e10cc3c7184c148e080da0f0652ac1945a255608346d8b"
 
 
 def valid_table(op):

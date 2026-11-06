@@ -49,9 +49,12 @@ def EveryLeftMulHasFixedPoint (G : Type*) [Magma G] : Prop :=
 def EveryRightMulHasFixedPoint (G : Type*) [Magma G] : Prop :=
   ∀ y : G, ∃ x : G, x ◇ y = x
 
-/-- The translation-conjugacy closure hypothesis of ETP Issue #1517 / PR #1518:
-for all `y₁, y₂`, the conjugate `L_{y₁}⁻¹ ∘ L_{y₂} ∘ L_{y₁}` is again a left translation `L_z`,
-stated without inverses as `∀ x, y₂ ◇ (y₁ ◇ x) = y₁ ◇ (z ◇ x)`. -/
+/-- Translation-conjugacy closure for finite `Equation677` magmas, stated without inverses
+as `∀ x, y₂ ◇ (y₁ ◇ x) = y₁ ◇ (z ◇ x)`. This says `L_{y₁}⁻¹ L_{y₂} L_{y₁}`
+is a left translation; ETP Issue #1517 instead uses `L_{y₁} L_{y₂} L_{y₁}⁻¹`.
+The conditions agree here: `Equation677` makes each `L_y` bijective, and conjugation
+injects the finite set of left translations into itself. Closure in either direction
+therefore gives equality and hence closure in the other direction. -/
 def LeftMulConjugacyClosed (G : Type*) [Magma G] : Prop :=
   ∀ y₁ y₂ : G, ∃ z : G, ∀ x : G, y₂ ◇ (y₁ ◇ x) = y₁ ◇ (z ◇ x)
 
