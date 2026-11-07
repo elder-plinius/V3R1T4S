@@ -11,8 +11,7 @@ N+1 strictly above the best lower bound in DS1 and any newer arXiv paper for tha
 - The object: an explicit r-colouring of K_N (matrix or circulant file) for one cell R(k_1, ..., k_r).
 - Validity: every edge has exactly one colour in 1..r; for each colour c, no clique of size k_c, decided on the
   expanded K_N by two independent exact methods that must agree: (A) exhaustive bitset branch and bound,
-  (B) a SAT encoding ("is there a K_{k_c} in colour c?") that must be UNSAT. RUN/checker/mcheck.py implements both
-  (tested: RUN/checker/checker_tests.out); a faster exact implementation may replace either method only if it gives the
+  (B) a SAT encoding ("is there a K_{k_c} in colour c?") that must be UNSAT. how-we-built-it/code/mcheck.py implements both; a faster exact implementation may replace either method only if it gives the
   same verdicts as mcheck.py on the four test files and on at least one valid Kuznetsov source graph.
 - Score: N. Threshold: N + 1 > B, where B is the cell's best lower bound, read live before claiming as the maximum of
   DS1 (latest revision) and any newer paper or repository found by a fresh search. Bars on 2026-10-25 (DS1 Apr 24, 2026,

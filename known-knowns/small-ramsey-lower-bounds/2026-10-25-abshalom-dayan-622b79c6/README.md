@@ -3,8 +3,6 @@
 ## What
 The circulant 3-colouring of K_182 in object/R_3_3_11.txt (sha256 622b79c6...1270) has no triangle in colours 1 and 2 and no K_11 in colour 3, verified exhaustively by two independent methods, so R(3,3,11) >= 183, strictly above the bound 174 in DS1 revision #18 (April 24, 2026) Table XIb and above every R(3,3,11) lower bound in the arXiv papers my searches found.
 
-Path note: the panel files and how-we-built-it/PREREG.md refer to the run's folders. There, claim/ is this package's folder, CLAIM.md is README.md, table_record.md is the-record-we-beat/README.md, verify_circ.py is verify-it-yourself/verify_circ.py, check_fast.py, alpha.c and RUN/checker/mcheck.py are in how-we-built-it/code/, and repo/bank/targets.json is bank/targets.json in this repository. Work files and folders named there (literature_record.md, the author's search record; work/; panel/.work/; RUN/checker/checker_tests.out; the run's REPORT.md and its "Needs you" section) are not shipped; everything REPORT.md says about this claim is in panel/gate.md. "Run 4" and "the scout" are earlier steps of the same weekend runs.
-
 ## Check it yourself
 ```sh
 sh verify-it-yourself/run_checks.sh

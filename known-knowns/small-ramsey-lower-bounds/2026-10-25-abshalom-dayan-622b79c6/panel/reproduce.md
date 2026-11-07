@@ -1,18 +1,18 @@
-context: headless claude -p session (claude-sonnet-5-5, effort high), fresh, started inside a copy of claim/ 
+context: headless claude -p session (claude-sonnet-5-5, effort high), fresh, started inside a copy of the package folder 
 
 # REPRODUCE verdict (run 2026-10-25, UTC times from `date -u`)
 
-Verdict: the object checks out. Every exhaustive check I ran agrees with the claim. The comparison with DS1 (the 174 bound) rests on the supplied table_record.md, which I did not re-fetch.
+Verdict: the object checks out. Every exhaustive check I ran agrees with the claim. The comparison with DS1 (the 174 bound) rests on the supplied record, the-record-we-beat/README.md, which I did not re-fetch.
 
 ## Object
-- `shasum -a 256 object/R_3_3_11.txt` = 622b79c6646d2617cd7f0b74c224ad3d5bd6cb856c6824ace5a5e30664461270. It matches CLAIM.md, and is unchanged after all runs.
+- `shasum -a 256 object/R_3_3_11.txt` = 622b79c6646d2617cd7f0b74c224ad3d5bd6cb856c6824ace5a5e30664461270. It matches README.md, and is unchanged after all runs.
 - Format: `circulant 182 3`, then colours 1, 2, 3 with 19, 15 and 57 distances (my output: `distance counts {1: 19, 2: 15, 3: 57}`).
 - `partition of 1..91 exact: yes`. The distances are a disjoint cover of 1..91, so every edge of K_182 has exactly one colour.
 
 ## My own checker (written from the definition before I opened verify_circ.py)
 Definition used: edge {i,j} has the colour of distance (j-i) mod 182, with d and 182-d naming the same distance. The claim needs colour 1 K_3-free, colour 2 K_3-free and colour 3 K_11-free.
 
-Method A: `work/my_check.py`. I built the full 182x182 colour matrix, checked it is symmetric, and ran an exhaustive branch-and-bound maximum-clique search from every vertex, with no shortcut from vertex-transitivity. Output (`work/my_check.out`):
+Method A: my own script. I built the full 182x182 colour matrix, checked it is symmetric, and ran an exhaustive branch-and-bound maximum-clique search from every vertex, with no shortcut from vertex-transitivity. Output:
 ```
 colour 1 max clique 2
 colour 2 max clique 2
@@ -20,7 +20,7 @@ colour 3 max clique 10
 ```
 Runtime was 3.8 s.
 
-Method B: `work/my_sat.py`, run with CaDiCaL through python-sat. Because the graph is circulant, a clique of size k exists iff vertex 0 plus a (k-1)-clique in its neighbourhood exists. Each question is encoded as SAT (no edges between non-adjacent neighbours, at-least-(k-1) cardinality constraint). Output (`work/my_sat.out`):
+Method B: my own script, run with CaDiCaL through python-sat. Because the graph is circulant, a clique of size k exists iff vertex 0 plus a (k-1)-clique in its neighbourhood exists. Each question is encoded as SAT (no edges between non-adjacent neighbours, at-least-(k-1) cardinality constraint). Output:
 ```
 colour 1 triangles through 0 (ordered pairs): 0
 colour 2 triangles through 0 (ordered pairs): 0
@@ -46,9 +46,11 @@ Exit code 0. The degrees 37, 30 and 114 (sum 181 = 182-1) match my distance coun
 
 ## Off-by-one and DS1 comparison
 - A K_182 colouring with no forbidden monochromatic clique proves R >= 183. The claim states 183, which is correct.
-- 183 > 174. The 174 is the DS1 Table XIb value quoted in table_record.md, whose text I did not re-fetch. I did not search the arXiv for newer bounds, because novelty belongs to another skeptic. The "strictly above any newer arXiv paper" clause of p1 therefore rests on the author's literature_record.md and is not something I confirmed.
+- 183 > 174. The 174 is the DS1 Table XIb value quoted in the-record-we-beat/README.md, whose text I did not re-fetch. I did not search the arXiv for newer bounds, because novelty belongs to another skeptic. The "strictly above any newer arXiv paper" clause of p1 therefore rests on the author's search record and is not something I confirmed.
 
 ## Not done
 No web access was used. I did not check DS1 or any 2026 paper myself.
+
+amended 2026-11-07 on maintainer request: references to files that are not shipped were removed.
 
 pass: true
