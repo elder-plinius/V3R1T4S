@@ -1,6 +1,6 @@
 # Live re-fetch of the comparison values, 2026-10-18 (novelty skeptic of this panel)
 
-These requests were made by this panel's NOVELTY skeptic, once each, with the honest-client User-Agent, and are recorded in its report (out/novelty.md). The orchestrator copied the values here before the criterion re-check; nothing was re-fetched for this file.
+These requests were made by this panel's NOVELTY skeptic, once each, with the honest-client User-Agent, and are recorded in its report (panel/novelty.md). The orchestrator copied the values here before the criterion re-check; nothing was re-fetched for this file.
 
 | Source | Request | UTC time | HTTP | sha256 of saved response | Value for (57,14,3) |
 |---|---|---|---|---|---|
@@ -11,4 +11,4 @@ These requests were made by this panel's NOVELTY skeptic, once each, with the ho
 | dmgordon.org/covering-designs/ (live LJCR page) | GET https://dmgordon.org/covering-designs/ (orchestrator, 13:46:58Z) | 2026-10-18T13:46:58Z | 200 | a5cc2312afc8dedd... | prose only; the page lists no per-cell values and points to coveringrepository.com |
 | WynandVStaden/covering-design-records RECORDS.md | GET raw RECORDS.md | 2026-10-18T14:24:16Z | 200 | 41ffe04b8e3ce9e4e7db7c5fb5ab6864325b8ef2d5e5c5d7c65dbcf7c2ea70a3 | no (57,14,3) row |
 | thebrockchain/covering-designs README | GET raw README.md | 2026-10-18T14:24:25Z | 200 | 171f9f5e88341cc90576de0f3016d0ed67569c54e33c1ed16ae729d49b066da5 | claims only (28,13,4) and (32,13,4) |
-| arXiv | export API, query for covering design records/upper bounds, newest first | 2026-10-18T14:26:13Z | 200 | d3e3e66cc64dfe8bac5f5939f1c807c299db83f15328ee3bcf7270c0eebf56d8 | see out/novelty.md |
+| arXiv | export API, query for covering design records/upper bounds, newest first | 2026-10-18T14:26:13Z | 200 | d3e3e66cc64dfe8bac5f5939f1c807c299db83f15328ee3bcf7270c0eebf56d8 | see panel/novelty.md, which gives a different hash (d3e001d6...) for this request; the reason for the difference was not recorded |

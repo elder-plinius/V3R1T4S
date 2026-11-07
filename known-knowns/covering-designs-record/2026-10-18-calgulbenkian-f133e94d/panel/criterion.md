@@ -1,6 +1,6 @@
 # Criterion skeptic report: cover-57-14-3-b108 (target covering-designs-record)
 
-context: Claude Code subagent, fresh context [claude-sonnet-5-5]
+context: Claude Code subagent, fresh context
 
 Read: the package folder only (hashes checked first: all 14 files OK against the contributor's hash list). Did not read other panels. My fetches (not shipped in this package) were each URL once, UA 'V3R1T4S-research (honest client; curl)', no retries.
 

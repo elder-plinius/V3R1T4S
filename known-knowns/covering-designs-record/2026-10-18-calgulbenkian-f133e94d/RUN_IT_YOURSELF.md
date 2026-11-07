@@ -19,4 +19,4 @@ Expected: a line starting `C(57,14,3) b=108 blocks_ok=True covered=29260/29260 P
 
 ## 2. Rebuild the design
 
-See `how-we-built-it/README.md`. The program and its start file are included, but the iteration count and thread count of the original run are not recorded, so a rerun may not reach 108 blocks.
+See `how-we-built-it/README.md`. The program is included. The start design is not shipped; that file names its public download link, its sha256 and the block that was dropped. The iteration count and thread count of the original run are not recorded, so a rerun may not reach 108 blocks.
