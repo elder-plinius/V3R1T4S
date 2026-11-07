@@ -1,14 +1,14 @@
-context: headless claude -p session (claude-sonnet-5-5, effort high), fresh, started inside a copy of claim/ 
+context: headless claude -p session (claude-sonnet-5-5, effort high), fresh, started inside a copy of the package folder 
 
 # NOVELTY verdict: R(3,3,12) >= 203 (claimed) vs DS1 >= 194
 
 ## Primary table (one plain request each, User-Agent "V3R1T4S-novelty-skeptic/1.0", no retries)
 - Status page https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1 fetched 2026-10-25T08:54:40Z, HTTP 200, 17621 bytes; page text "DS1: Apr 24, 2026" (latest revision).
-- PDF https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf fetched 2026-10-25T08:53:21Z, HTTP 200, 585821 bytes, sha256 9519a676ee381f02f03269c22e3f101162b2fdcc9d432e4103cb1192fdff91bc (equals table_record.md).
+- PDF https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf fetched 2026-10-25T08:53:21Z, HTTP 200, 585821 bytes, sha256 9519a676ee381f02f03269c22e3f101162b2fdcc9d432e4103cb1192fdff91bc (equals the-record-we-beat/README.md).
 - Table XIb (pdftotext), row k=3, columns m=4..16: 30 45 61 85 103 129 150 174 194 217 242 269 291; the m=12 entry is 194, reference ExT. Item 6.1.2(h) also lists no better value; the text names 261 <= R(3,3,15) as implied, not R(3,3,12).
 
 ## Object re-check (own checker, work/chk.py, written from the definition)
-sha256 of object/R_3_3_12.txt = eeb47c398be7c450cadf8d9b5939d4996761911a1ddba276e6d820b87fd0db1b (matches CLAIM.md). Distances 1..101 are each in exactly one colour. Output:
+sha256 of object/R_3_3_12.txt = eeb47c398be7c450cadf8d9b5939d4996761911a1ddba276e6d820b87fd0db1b (matches README.md). Distances 1..101 are each in exactly one colour. Output:
 ```
 colour 1 has K3: False
 colour 2 has K3: False
@@ -35,5 +35,7 @@ So the colouring on 202 vertices is valid and R(3,3,12) >= 203 (correctness is t
 ## Verdict
 Nothing found in DS1 (Apr 24, 2026), the last 24 months of arXiv, Exoo's page, TROPHY_CASE.md or open PRs reaches 203 for R(3,3,12); the best known value is 194 and no general construction implies more than 194. The claim is strictly above the status table by 9 (203 vs 194).
 Residual risk, honestly stated: Exoo's ExTa/ folder was not readable (403 in the author's record), and the arXiv/web search is keyword-based, so an unpublished or unindexed value cannot be excluded. A caveat on the cell's nature: the object is a direct split of a published 2015 circulant, so it is novel as a number but not as a method; the criterion asks only for the number.
+
+amended 2026-11-07 on maintainer request: references to files that are not shipped were removed.
 
 pass: true

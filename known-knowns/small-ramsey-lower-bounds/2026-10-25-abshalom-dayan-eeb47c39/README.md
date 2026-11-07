@@ -1,12 +1,7 @@
 # A 3-colouring of K_202 proving R(3,3,12) >= 203 (small-ramsey-lower-bounds, partial win p1)
 
 ## What
-The circulant 3-colouring of K_202 in object/R_3_3_12.txt has no monochromatic K_3 in colours 1 and 2 and no K_12 in colour 3 (checked by all-triples brute force, a CaDiCaL UNSAT proof and the author's exhaustive B&B), so R(3,3,12) >= 203, strictly above DS1 (April 24, 2026) Table XIb's 194 and above every bound for this cell I found in arXiv papers newer than that revision.
-
-Path note: the panel files and how-we-built-it/PREREG.md refer to the run's folders. There, claim/ is this package's folder, CLAIM.md is README.md, table_record.md is the-record-we-beat/README.md, verify_circ.py is verify-it-yourself/verify_circ.py, RUN/checker/mcheck.py is how-we-built-it/code/mcheck.py, and repo/bank/targets.json is bank/targets.json in this repository. Work files and folders named there (literature_record.md, the author's search record; work/; panel/.work/; RUN/checker/checker_tests.out; the run's REPORT.md and its "Needs you" section) are not shipped; everything REPORT.md says about this claim is in panel/gate.md. "Run 4" and "the scout" are earlier steps of the same weekend runs.
-
-Corrections to the panel text:
-- The What sentence (from panel/gate.md) says "a CaDiCaL UNSAT proof"; in fact CaDiCaL, called through pysat, returned UNSAT, and no DRAT/LRAT proof certificate was produced or checked. The brute force over all triples and the exhaustive branch and bound establish the claim without it.
+The circulant 3-colouring of K_202 in object/R_3_3_12.txt has no monochromatic K_3 in colours 1 and 2 and no K_12 in colour 3 (checked by all-triples brute force and the author's exhaustive B&B; CaDiCaL (via pysat) returned UNSAT; no DRAT/LRAT certificate was produced), so R(3,3,12) >= 203, strictly above DS1 (April 24, 2026) Table XIb's 194 and above every bound for this cell I found in arXiv papers newer than that revision.
 
 ## Check it yourself
 ```sh

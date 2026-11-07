@@ -1,4 +1,4 @@
-context: headless claude -p session (claude-opus-5-5, effort high), fresh, started inside a copy of claim/
+context: headless claude -p session (claude-opus-5-5, effort high), fresh, started inside a copy of the package folder
 
 # CRITERION verdict: claim R(3,3,12) >= 203, partial win p1
 
@@ -6,13 +6,13 @@ Verdict: the object meets partial win p1 read literally. It is an explicit 3-col
 
 ## Clause by clause (p1)
 
-1. "explicit edge colouring of K_N": object/R_3_3_12.txt is a circulant on Z_202 (sha256 checked: `eeb47c398be7c450cadf8d9b5939d4996761911a1ddba276e6d820b87fd0db1b  object/R_3_3_12.txt`, which matches CLAIM.md). My parser asserts that each distance 1..201 gets exactly one colour, with d and 202-d treated as the same distance. Colour degrees: `colour 1 degree 35`, `colour 2 degree 40`, `colour 3 degree 126` (sum 201).
+1. "explicit edge colouring of K_N": object/R_3_3_12.txt is a circulant on Z_202 (sha256 checked: `eeb47c398be7c450cadf8d9b5939d4996761911a1ddba276e6d820b87fd0db1b  object/R_3_3_12.txt`, which matches README.md). My parser asserts that each distance 1..201 gets exactly one colour, with d and 202-d treated as the same distance. Colour degrees: `colour 1 degree 35`, `colour 2 degree 40`, `colour 3 degree 126` (sum 201).
 2. "no monochromatic forbidden clique in each colour ... verified exhaustively":
-   - I wrote my own checker (work/check.py) from the definition before reading verify_circ.py. Colours 1 and 2: brute force over every triple of the 202 vertices, without relying on symmetry: `all-triples mono triangles colours 1,2: {1: 0, 2: 0}`.
+   - I wrote my own checker from the definition before reading verify_circ.py. Colours 1 and 2: brute force over every triple of the 202 vertices, without relying on symmetry: `all-triples mono triangles colours 1,2: {1: 0, 2: 0}`.
    - Colour 3: a SAT encoding (CaDiCaL 1.5.3, sequential-counter cardinality). Vertex 0 is in the clique, which is fine because translations are automorphisms. Pairwise non-adjacent neighbours give exclusion clauses, plus "at least 11 of the 126 neighbours": `colour 3: 11-clique in N(0) SAT? False` (UNSAT, so no K_12).
    - Non-vacuity control: the same encoding with bound 10 is SAT and finds a K_11, `[0, 3, 6, 11, 14, 17, 43, 61, 64, 67, 75]`. So colour 3's clique number is exactly 11.
    - Second, independent method (the author's B&B, verify_circ.py, stdlib): `colour 3: degree 126, no K_12 (no K_11 among the neighbours of 0, exhaustive)` / `proves R(3,3,12) >= 203` / `PASS`.
-3. "N+1 strictly above the best lower bound in DS1": I re-fetched the DS1 status page (HTTP 200, 17621 bytes, 2026-10-25 08:57:57 UTC; it shows "DS1: Apr 24, 2026"). I also re-fetched the PDF (HTTP 200, 585821 bytes, 08:58:08 UTC, sha256 9519a676ee381f02f03269c22e3f101162b2fdcc9d432e4103cb1192fdff91bc, identical to table_record.md). The Table XIb row k=3 reads `30 45 61 85 103 129 150 174 194 217 242 269 291` for m=4..16, so R(3,3,12) >= 194 [ExT].
+3. "N+1 strictly above the best lower bound in DS1": I re-fetched the DS1 status page (HTTP 200, 17621 bytes, 2026-10-25 08:57:57 UTC; it shows "DS1: Apr 24, 2026"). I also re-fetched the PDF (HTTP 200, 585821 bytes, 08:58:08 UTC, sha256 9519a676ee381f02f03269c22e3f101162b2fdcc9d432e4103cb1192fdff91bc, identical to the-record-we-beat/README.md). The Table XIb row k=3 reads `30 45 61 85 103 129 150 174 194 217 242 269 291` for m=4..16, so R(3,3,12) >= 194 [ExT].
    - Hidden-quantifier check: DS1 says "Lower bounds for higher numbers can be obtained by using general constructive results from Section 6.2". I applied every 6.2 lower-bound item that fits (3,3,12), using DS1 Table Ia values (R(3,11) >= 47, R(3,12) >= 53, R(3,10) >= 40, row k=3 of Table Ia reads `40 47 53 61 67 74` for l=10..15):
      - 6.2.g: 4R(3,11)-3 = 185.
      - 6.2.q: 5*11 = 55 or 2*(53-1) = 104.
@@ -35,6 +35,8 @@ Verdict: the object meets partial win p1 read literally. It is an explicit 3-col
 - The claim is not the main success criterion, which is two-colour R(s,t), and is not claimed as such.
 - Limits: my searches cover arXiv and open web results only. Exoo's ExTa/ folder (403 per the author's record) was not re-requested.
 
-confirmed_scope: The circulant 3-colouring of K_202 in object/R_3_3_12.txt has no monochromatic K_3 in colours 1 and 2 and no K_12 in colour 3 (checked by all-triples brute force, a CaDiCaL UNSAT proof and the author's exhaustive B&B), so R(3,3,12) >= 203, strictly above DS1 (April 24, 2026) Table XIb's 194 and above every bound for this cell I found in arXiv papers newer than that revision.
+confirmed_scope: The circulant 3-colouring of K_202 in object/R_3_3_12.txt has no monochromatic K_3 in colours 1 and 2 and no K_12 in colour 3 (checked by all-triples brute force and the author's exhaustive B&B; CaDiCaL (via pysat) returned UNSAT; no DRAT/LRAT certificate was produced), so R(3,3,12) >= 203, strictly above DS1 (April 24, 2026) Table XIb's 194 and above every bound for this cell I found in arXiv papers newer than that revision.
+
+amended 2026-11-07 on maintainer request: references to files that are not shipped were removed and the CaDiCaL wording was corrected.
 
 pass: true
