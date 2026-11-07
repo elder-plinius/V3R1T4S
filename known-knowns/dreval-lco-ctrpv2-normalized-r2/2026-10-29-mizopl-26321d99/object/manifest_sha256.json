@@ -1,0 +1,51 @@
+{
+  "zenodo_record_id": "23159774",
+  "zenodo_doi": "10.5281/zenodo.23159774",
+  "drevalpy_version": "1.6.0",
+  "created_at_utc": "2026-10-29T15:14:01Z",
+  "air_gap_rule": "STRICT AIR-GAP: BeatAML2, PDX_Bruna, and GDSC2 response values are never read during feature engineering, model design, or hyperparameter selection.",
+  "archives": {
+    "meta.zip": {
+      "size_bytes": 12434846,
+      "zenodo_md5": "658e75f9a0afa95b3c3c88f1f41e305f",
+      "verified_md5": "658e75f9a0afa95b3c3c88f1f41e305f",
+      "sha256": "28d38d084b339c61cdd6d24ed4e4f948f248c7b636cffc3eb46e07170a5b78c4",
+      "url": "https://zenodo.org/api/records/23159774/files/meta.zip/content"
+    },
+    "splits.zip": {
+      "size_bytes": 41426065,
+      "zenodo_md5": "897c5ec8209b920adf585599f90c1f6d",
+      "verified_md5": "897c5ec8209b920adf585599f90c1f6d",
+      "sha256": "9ea787b0657ae9381d357f9267a97abc7e68325b1aaeb0689b0eb71f11b60dc0",
+      "url": "https://zenodo.org/api/records/23159774/files/splits.zip/content"
+    },
+    "CTRPv2.zip": {
+      "size_bytes": 518522899,
+      "zenodo_md5": "a3a6cc49ed57ba1c9b163e56b88cce2f",
+      "verified_md5": "a3a6cc49ed57ba1c9b163e56b88cce2f",
+      "sha256": "5ad3e867d3eda55595a981fd3f6426cb0a6a59218f109e9df68af50ffe2673bd",
+      "url": "https://zenodo.org/api/records/23159774/files/CTRPv2.zip/content"
+    },
+    "BeatAML2.zip": {
+      "size_bytes": 162182280,
+      "zenodo_md5": "6dc9ad77cdf832d9c4b5e065d6536b94",
+      "verified_md5": "6dc9ad77cdf832d9c4b5e065d6536b94",
+      "sha256": "0f8c67e54f377b589b8fb05a55b32947424e84c2da5ff26765a31f1d7e9b7547",
+      "url": "https://zenodo.org/api/records/23159774/files/BeatAML2.zip/content"
+    },
+    "PDX_Bruna.zip": {
+      "size_bytes": 49595207,
+      "zenodo_md5": "ee6d83e01b870a7fea8a76c1c6e6f1ec",
+      "verified_md5": "ee6d83e01b870a7fea8a76c1c6e6f1ec",
+      "sha256": "f3f9f9e573bdb85c8c836f47525b03b34dc706a119cadf0c7f3eb538ac417df9",
+      "url": "https://zenodo.org/api/records/23159774/files/PDX_Bruna.zip/content"
+    },
+    "GDSC2.zip": {
+      "size_bytes": 521509357,
+      "zenodo_md5": "49dc16929c6baa2b5d75c508429fa11f",
+      "verified_md5": "49dc16929c6baa2b5d75c508429fa11f",
+      "sha256": "4b0230cfcf7a670aba386d4af559eebabf3f13190517d9eb0dc67596b84ac031",
+      "url": "https://zenodo.org/api/records/23159774/files/GDSC2.zip/content"
+    }
+  }
+}
