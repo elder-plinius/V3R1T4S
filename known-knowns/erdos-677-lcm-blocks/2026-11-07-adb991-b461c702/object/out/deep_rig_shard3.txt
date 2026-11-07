@@ -1,0 +1,5 @@
+SHARD 3/4
+k=26 admissible_r=5315 enumerated_pairs(q(q rho-p)<U)=497072 window_candidates=122324 product_solutions=0 t=3139s
+k=27 admissible_r=4100 enumerated_pairs(q(q rho-p)<U)=104543 window_candidates=103172 product_solutions=0 t=3609s
+k=28 admissible_r=5315 enumerated_pairs(q(q rho-p)<U)=559985 window_candidates=138529 product_solutions=0 t=5732s
+TOTAL window candidates=364025 product solutions=0 (X0=1000000, QMAX=10^495)
