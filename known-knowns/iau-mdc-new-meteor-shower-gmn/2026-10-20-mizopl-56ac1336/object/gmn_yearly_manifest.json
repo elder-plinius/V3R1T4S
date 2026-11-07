@@ -1,92 +1,173 @@
-[
-  {
-    "year": 2018,
-    "bytes": 460180,
-    "sha256": "c89edd266b847874710f4d89bd0cce8a1a19e5ade57492a92904ae138ee34b52",
-    "total_trajectories": 497,
-    "num_stat_ge_3": 13,
-    "unassigned_ge_3": 12,
-    "num_stat_ge_3_countries_ge_2": 0,
-    "elapsed_sec": 0.01
+{
+  "target_id": "iau-mdc-new-meteor-shower-gmn",
+  "candidate_id": "GMN_NEW_SHOWER_M1_CEPHEUS_MC_163",
+  "member_lines_file": "object/m1_cepheus_mc_gmn_lines.txt",
+  "member_lines_sha256": "4f0bf9a2e5e1c56ac61f582a63923c4af28d6536a00bd1df7bf6203796b5212d",
+  "member_trajectory_ids": [
+    "20230905191934_2YuSb",
+    "20230906022249_hhc3N",
+    "20240906215308_leULY",
+    "20240907011358_DU4pM",
+    "20240908005446_04U3u",
+    "20250904204411_UgwAd",
+    "20250904213132_JGqu4",
+    "20250904233003_0EHCU",
+    "20250905030107_S2X3S",
+    "20260904215007_GPg1D",
+    "20260905002604_C1nyH",
+    "20260906001707_8khWR",
+    "20260906003919_yFT3F",
+    "20260907021357_CscTy",
+    "20260907031956_faRoT",
+    "20260907204502_dfyFL"
+  ],
+  "iau_mdc_sources": {
+    "streamfulldata2026_nov03_live": {
+      "url": "https://www.ta3.sk/IAUC22DB/MDC2022/Etc/streamfulldata2026.txt",
+      "header_last_update_utc": "Nov 03, 20:00:00 UTC, 2026",
+      "retrieved_utc": "2026-11-07T15:14:00Z",
+      "bytes": 1558558,
+      "sha256": "ae1a84a546be1c72ee0cf74835bc5b928a0d1d4c4e01a18a7f17bdaee299e100",
+      "total_rows": 2197,
+      "explicit_orbit_rows": 2004,
+      "radiant_derived_orbit_rows": 172,
+      "nov03_added_lps": [
+        "02646",
+        "02647",
+        "02648",
+        "02649",
+        "02650"
+      ]
+    },
+    "streamfulldata2026_oct20_initial": {
+      "url": "https://www.ta3.sk/IAUC22DB/MDC2022/Etc/streamfulldata2026.txt",
+      "header_last_update_utc": "Oct 20, 2026",
+      "retrieved_utc": "2026-10-20T18:54:36Z",
+      "bytes": 1555028,
+      "sha256": "08409111125e83ef2f033b27e215fb4383e0f15f6e6a3d202f7dda3a27f027fe",
+      "total_rows": 2192
+    },
+    "roje_lista_working_list_html": {
+      "url": "https://www.ta3.sk/IAUC22DB/MDC2022/Roje/roje_lista.php",
+      "retrieved_utc": "2026-11-07T15:13:59Z",
+      "bytes": 370300,
+      "sha256": "3d25556bdd5cc627acab13c4baca7d9df85a30afed0ee5e29e93e80e4724c2ef"
+    },
+    "new_reports_2023_2026_html": {
+      "url": "https://www.ta3.sk/IAUC22DB/MDC2022/Dokumenty/new_reports.php",
+      "retrieved_utc": "2026-11-07T15:14:00Z",
+      "bytes": 9216,
+      "sha256": "f59617319b97414766b119e0abe5922dcb6a11521855d4ee643de9a031336d93"
+    }
   },
-  {
-    "year": 2019,
-    "bytes": 46498742,
-    "sha256": "d78c1a04e131d33e291c413a024e6c6566818046f3322c44411e712b469c8f00",
-    "total_trajectories": 50263,
-    "num_stat_ge_3": 21163,
-    "unassigned_ge_3": 14649,
-    "num_stat_ge_3_countries_ge_2": 2056,
-    "elapsed_sec": 0.73
-  },
-  {
-    "year": 2020,
-    "bytes": 115779832,
-    "sha256": "c2f90b739ac442817103a43ca73ccea7ce6344ad2b4d1cdd92617d852b7dd68c",
-    "total_trajectories": 125098,
-    "num_stat_ge_3": 50622,
-    "unassigned_ge_3": 35483,
-    "num_stat_ge_3_countries_ge_2": 5885,
-    "elapsed_sec": 38.57
-  },
-  {
-    "year": 2021,
-    "bytes": 196153342,
-    "sha256": "cd1526118300abab9234c6c35995253eba364217ea0ba9996147f7b597924c63",
-    "total_trajectories": 211851,
-    "num_stat_ge_3": 91104,
-    "unassigned_ge_3": 61768,
-    "num_stat_ge_3_countries_ge_2": 10132,
-    "elapsed_sec": 48.05
-  },
-  {
-    "year": 2022,
-    "bytes": 311120248,
-    "sha256": "262fb31bd7c4e0cc2e7361d14161397fb131846901d9fd9ded9d00e9e728ef8a",
-    "total_trajectories": 334661,
-    "num_stat_ge_3": 159143,
-    "unassigned_ge_3": 106519,
-    "num_stat_ge_3_countries_ge_2": 19648,
-    "elapsed_sec": 50.61
-  },
-  {
-    "year": 2023,
-    "bytes": 420839167,
-    "sha256": "b1cf267cdd6fc80b3ecb2855bf27739d30b3490cbb139d37afee9f098fee6ca8",
-    "total_trajectories": 451903,
-    "num_stat_ge_3": 233386,
-    "unassigned_ge_3": 161237,
-    "num_stat_ge_3_countries_ge_2": 30547,
-    "elapsed_sec": 153.7
-  },
-  {
-    "year": 2024,
-    "bytes": 657058618,
-    "sha256": "460934bbd0e2a0df296165883dc4a54a241969d7613b2b24451ce19b1a1f72d9",
-    "total_trajectories": 705964,
-    "num_stat_ge_3": 360095,
-    "unassigned_ge_3": 261207,
-    "num_stat_ge_3_countries_ge_2": 46407,
-    "elapsed_sec": 139.69
-  },
-  {
-    "year": 2025,
-    "bytes": 898581735,
-    "sha256": "37ae522d249fcd40af68071ba7a8acd2f8151212327eeb46c7399384cdeb8cd0",
-    "total_trajectories": 966063,
-    "num_stat_ge_3": 466273,
-    "unassigned_ge_3": 333324,
-    "num_stat_ge_3_countries_ge_2": 74289,
-    "elapsed_sec": 226.86
-  },
-  {
-    "year": 2026,
-    "bytes": 701564849,
-    "sha256": "2e0a73dfc02b5e0a04dfd070de5baa3c0d8759de87912e9ae4e3435d3b9f578e",
-    "total_trajectories": 753204,
-    "num_stat_ge_3": 390921,
-    "unassigned_ge_3": 289650,
-    "num_stat_ge_3_countries_ge_2": 99568,
-    "elapsed_sec": 105.66
-  }
-]
+  "gmn_yearly_files": [
+    {
+      "year": 2018,
+      "bytes": 460180,
+      "sha256": "c89edd266b847874710f4d89bd0cce8a1a19e5ade57492a92904ae138ee34b52",
+      "total_trajectories": 497,
+      "num_stat_ge_3": 13,
+      "unassigned_ge_3": 12,
+      "num_stat_ge_3_countries_ge_2": 0,
+      "elapsed_sec": 0.01,
+      "filename": "traj_summary_yearly_2018.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2018.txt"
+    },
+    {
+      "year": 2019,
+      "bytes": 46498742,
+      "sha256": "d78c1a04e131d33e291c413a024e6c6566818046f3322c44411e712b469c8f00",
+      "total_trajectories": 50263,
+      "num_stat_ge_3": 21163,
+      "unassigned_ge_3": 14649,
+      "num_stat_ge_3_countries_ge_2": 2056,
+      "elapsed_sec": 0.73,
+      "filename": "traj_summary_yearly_2019.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2019.txt"
+    },
+    {
+      "year": 2020,
+      "bytes": 115779832,
+      "sha256": "c2f90b739ac442817103a43ca73ccea7ce6344ad2b4d1cdd92617d852b7dd68c",
+      "total_trajectories": 125098,
+      "num_stat_ge_3": 50622,
+      "unassigned_ge_3": 35483,
+      "num_stat_ge_3_countries_ge_2": 5885,
+      "elapsed_sec": 38.57,
+      "filename": "traj_summary_yearly_2020.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2020.txt"
+    },
+    {
+      "year": 2021,
+      "bytes": 196153342,
+      "sha256": "cd1526118300abab9234c6c35995253eba364217ea0ba9996147f7b597924c63",
+      "total_trajectories": 211851,
+      "num_stat_ge_3": 91104,
+      "unassigned_ge_3": 61768,
+      "num_stat_ge_3_countries_ge_2": 10132,
+      "elapsed_sec": 48.05,
+      "filename": "traj_summary_yearly_2021.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2021.txt"
+    },
+    {
+      "year": 2022,
+      "bytes": 311120248,
+      "sha256": "262fb31bd7c4e0cc2e7361d14161397fb131846901d9fd9ded9d00e9e728ef8a",
+      "total_trajectories": 334661,
+      "num_stat_ge_3": 159143,
+      "unassigned_ge_3": 106519,
+      "num_stat_ge_3_countries_ge_2": 19648,
+      "elapsed_sec": 50.61,
+      "filename": "traj_summary_yearly_2022.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2022.txt"
+    },
+    {
+      "year": 2023,
+      "bytes": 420839167,
+      "sha256": "b1cf267cdd6fc80b3ecb2855bf27739d30b3490cbb139d37afee9f098fee6ca8",
+      "total_trajectories": 451903,
+      "num_stat_ge_3": 233386,
+      "unassigned_ge_3": 161237,
+      "num_stat_ge_3_countries_ge_2": 30547,
+      "elapsed_sec": 153.7,
+      "filename": "traj_summary_yearly_2023.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2023.txt"
+    },
+    {
+      "year": 2024,
+      "bytes": 657058618,
+      "sha256": "460934bbd0e2a0df296165883dc4a54a241969d7613b2b24451ce19b1a1f72d9",
+      "total_trajectories": 705964,
+      "num_stat_ge_3": 360095,
+      "unassigned_ge_3": 261207,
+      "num_stat_ge_3_countries_ge_2": 46407,
+      "elapsed_sec": 139.69,
+      "filename": "traj_summary_yearly_2024.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2024.txt"
+    },
+    {
+      "year": 2025,
+      "bytes": 898581735,
+      "sha256": "37ae522d249fcd40af68071ba7a8acd2f8151212327eeb46c7399384cdeb8cd0",
+      "total_trajectories": 966063,
+      "num_stat_ge_3": 466273,
+      "unassigned_ge_3": 333324,
+      "num_stat_ge_3_countries_ge_2": 74289,
+      "elapsed_sec": 226.86,
+      "filename": "traj_summary_yearly_2025.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2025.txt"
+    },
+    {
+      "year": 2026,
+      "bytes": 701564849,
+      "sha256": "2e0a73dfc02b5e0a04dfd070de5baa3c0d8759de87912e9ae4e3435d3b9f578e",
+      "total_trajectories": 753204,
+      "num_stat_ge_3": 390921,
+      "unassigned_ge_3": 289650,
+      "num_stat_ge_3_countries_ge_2": 99568,
+      "elapsed_sec": 105.66,
+      "filename": "traj_summary_yearly_2026.txt",
+      "url": "https://globalmeteornetwork.org/data/traj_summary_data/yearly/traj_summary_yearly_2026.txt"
+    }
+  ]
+}

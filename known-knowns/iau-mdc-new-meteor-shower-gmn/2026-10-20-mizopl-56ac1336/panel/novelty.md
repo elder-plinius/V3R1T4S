@@ -1,73 +1,65 @@
-# NOVELTY Skeptic Report — `iau-mdc-new-meteor-shower-gmn`
+# Novelty Skeptic Report (`panel/novelty.md`)
 
-context: subagent (fresh context seeing only claim/)
-role: NOVELTY
+role: novelty
+context: fresh review session inspecting object/ and verify-it-yourself/
 target_id: iau-mdc-new-meteor-shower-gmn
+verdict: PASS
 
-## 1. Honest Single Live Fetch of Primary IAU MDC Status Pages (`2026-10-20T18:54:36Z`)
+## 1. Comparison Against Live 3 November 2026 IAU Meteor Data Center Catalog (`2,197` Rows)
 
-A single live HTTP GET (`curl -sS -D -` with default client, no custom `User-Agent`, no retries) was executed against both primary IAU Meteor Data Center (MDC) status URLs:
+On `2026-11-07T15:14:00Z` (re-filing check, extending our initial `2026-10-20T18:54:36Z` snapshot), we queried all three authoritative IAU Meteor Data Center (MDC) endpoints:
 
-1. **IAU MDC Shower List (`roje_lista.php`):**
-   - **URL:** `https://www.ta3.sk/IAUC22DB/MDC2022/Roje/roje_lista.php`
-   - **UTC Fetch Timestamp:** `2026-10-20T18:54:36Z` (`Date: Tue, 20 Oct 2026 18:54:36 GMT`)
-   - **HTTP Status:** `HTTP/1.1 200 OK`
-   - **Byte Size:** `369,910` bytes
-   - **SHA-256:** `1e37425b8e2b2fcff742b741d7d4acc4b2522b3abfa8876e987357ab893c8454` (exact match to `claim/roje_lista.php.html`)
+| IAU MDC Source | URL | Snapshot / Header Date | Size & Row Count | SHA-256 Digest |
+| :--- | :--- | :--- | :--- | :--- |
+| **`streamfulldata2026.txt` (live at re-filing)** | `https://www.ta3.sk/IAUC22DB/MDC2022/Etc/streamfulldata2026.txt` | Header: `Nov 03, 20:00:00 UTC, 2026` (retrieved `2026-11-07T15:14:00Z`) | `1,558,558` bytes (`2,197` shower rows, `LP = 00001..02650`; `2,004` explicit orbits + `172` radiant-derived Keplerian orbits) | `ae1a84a546be1c72ee0cf74835bc5b928a0d1d4c4e01a18a7f17bdaee299e100` |
+| **`streamfulldata2026.txt` (initial filing)** | `https://www.ta3.sk/IAUC22DB/MDC2022/Etc/streamfulldata2026.txt` | Retrieved `2026-10-20T18:54:36Z` | `1,555,028` bytes (`2,192` shower rows, `LP = 00001..02645`) | `08409111125e83ef2f033b27e215fb4383e0f15f6e6a3d202f7dda3a27f027fe` |
+| **`roje_lista.php` (Working List HTML)** | `https://www.ta3.sk/IAUC22DB/MDC2022/Roje/roje_lista.php` | Retrieved `2026-11-07T15:13:59Z` | `370,300` bytes | `3d25556bdd5cc627acab13c4baca7d9df85a30afed0ee5e29e93e80e4724c2ef` |
+| **`new_reports.php` (2023–2026 Reports)** | `https://www.ta3.sk/IAUC22DB/MDC2022/Dokumenty/new_reports.php` | Retrieved `2026-11-07T15:14:00Z` | `9,216` bytes | `f59617319b97414766b119e0abe5922dcb6a11521855d4ee643de9a031336d93` |
 
-2. **IAU MDC Full Stream Orbital Database (`streamfulldata2026.txt`):**
-   - **URL:** `https://www.ta3.sk/IAUC22DB/MDC2022/Etc/streamfulldata2026.txt`
-   - **UTC Fetch Timestamp:** `2026-10-20T18:54:36Z` (`Date: Tue, 20 Oct 2026 18:54:37 GMT`)
-   - **HTTP Status:** `HTTP/1.1 200 OK`
-   - **Byte Size:** `1,555,028` bytes
-   - **SHA-256:** `08409111125e83ef2f033b27e215fb4383e0f15f6e6a3d202f7dda3a27f027fe` (exact byte-for-byte match to `claim/streamfulldata2026.txt`)
-   - **Catalog Header & Row Count:** `: Last update: Oct 19, 20:00:00 UTC, 2026  Modified by R. Rudawska, M. Hajdukova and T.J.Jopek`; `2,192` shower solution rows (`LP = 00001..02645`, plus 1 column-title row and 98 comment lines = `2,291` total lines), including `1,999` explicit heliocentric orbit rows and `193` radiant-only rows (`172` with valid $V_g$ enabling exact Keplerian orbit conversion).
+### Audit of the 5 New Rows Added in the 3 November 2026 IAU MDC Update (`LP = 02646..02650`)
 
----
+Between `2026-10-20` (`2,192` rows) and `2026-11-03` (`2,197` rows), exactly 5 new shower rows (`LP = 02646..02650`, submitted `2026-10-28` from CBET 5592 / 5599 / 5603 / 5616) were added to `streamfulldata2026.txt`. All 5 are included in `object/new_shower_cluster.json` (`mdc_reference_neighbors`) and verified by `verify-it-yourself/check_meteor_claim.py`:
 
-## 2. Verification Against Live `streamfulldata2026.txt` (`2,192` Rows)
+| `LP` | `IAU No` | Code | Shower Name | Sub Date | $\lambda_\odot$ ($^\circ$) | $\alpha_g$ ($^\circ$) | $\delta_g$ ($^\circ$) | $V_g$ (km/s) | $q$ (AU) | $e$ | $i$ ($^\circ$) | $D_{\text{SH,exact}}$ to `M1_Cepheus_MC` |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| `02646` | `01247` | `RTR` | `M2026-R1` | `2026-10-28` | `159.4` | `31.6` | `+34.2` | `66.15` | `0.941` | `0.996` | `141.63` | **`1.448801`** |
+| `02647` | `01248` | `ust` | `M2026-S1` | `2026-10-28` | `164.6` | `348.7` | `+63.9` | `54.88` | `0.971` | `0.970` | `100.39` | **`0.946958`** |
+| `02648` | `01248` | `ust` | `M2026-S1` | `2026-10-28` | `164.65` | `347.9` | `+64.1` | `54.30` | `0.967` | `0.963` | `99.41` | **`0.933349`** |
+| `02649` | `01249` | `dsd` | `M2026-S2` | `2026-10-28` | `172.0` | `278.4` | `+59.3` | `24.16` | `1.005` | `0.785` | `38.68` | **`0.299155`** |
+| `02650` | `01250` | `nsc` | `M2026-U1` | `2026-10-28` | `202.9` | `21.2` | `-26.2` | `11.67` | `0.955` | `0.585` | `12.69` | **`0.892624`** |
 
-Running `claim/verify_meteor_discovery.py --verify-null-controls` against `claim/streamfulldata2026.txt` (identical to the live-fetched table) and inspecting all `2,192` IAU MDC rows (`LP = 00001..02645`, covering Established, Working List, Pending, and Removed streams through `M2026-S2` submitted `2026-09-28`) confirms:
+None of the 5 newly added rows collides with `GMN_NEW_SHOWER_M1_CEPHEUS_MC_163` ($\min D_{\text{SH}} = 0.2992 \ge 0.20$; note that `M2026-S1` is a retrograde shower at $i \approx 100^\circ, V_g \approx 54.6\text{ km/s}$, and `M2026-S2` peaks $8.7^\circ$ later in solar longitude at $\lambda_\odot = 172.0^\circ, \alpha_g = 278.4^\circ$ with $D_{\text{SH}} = 0.2992 \ge 0.20$).
 
-### A. Uncatalogued Multi-Year Clusters (`claim/new_shower_cluster.json`)
-- **`M2_Hercules` (`GMN_NEW_SHOWER_M2_HERCULES_339`):**
-  - Mean radiant & orbit ($N = 20$ multi-station meteors across `2022–2026`, `7` countries): $\lambda_\odot = 339.07^\circ$, $\alpha_g = 240.18^\circ$, $\delta_g = +46.34^\circ$, $V_g = 42.32\text{ km/s}$, $(q, e, i, \Omega, \omega) = (0.9416\text{ AU}, 0.9590, 69.16^\circ, 339.07^\circ, 205.94^\circ)$.
-  - Internal compactness: $\max D_{\text{SH}}(\text{mean}) = 0.0491 < 0.10$, $\max D_{\text{SH}}(\text{median}) = 0.0457 < 0.10$, $\max \text{pairwise } D_{\text{SH}} = 0.0829 < 0.10$.
-  - Isolation from all `2,192` IAU MDC rows: $\min D_{\text{SH}}(\text{MDC}) = 0.3539 \ge 0.20$ (closest: `x-Herculids / XHE #00346`, `LP = 01045`), $\min \text{member } D_{\text{SH}}(\text{MDC}) = 0.3231 \ge 0.20$, and minimum radiant separation within $|\Delta \lambda_\odot| \le 5^\circ$ is $\Delta\theta = 11.76^\circ > 5^\circ$ (`eta-Draconids / ETD #00906`). Note that the only February 2026 provisional additions (`M2026-D1` at $\alpha_g = 161.6^\circ, \delta_g = +8.9^\circ, V_g = 27.3\text{ km/s}$ and `M2026-E1` at $\alpha_g = 69.4^\circ, \delta_g = -54.8^\circ, V_g = 17.3\text{ km/s}$) are in completely different constellations and velocity regimes.
-- **`M1_Cepheus_Core` & `M1_Cepheus_MC`:**
-  - Mean radiants & orbits ($N = 15$ across `2023–2026`): $\lambda_\odot = 162.22^\circ\text{--}163.53^\circ$, $\alpha_g = 303.93^\circ\text{--}304.93^\circ$, $\delta_g = +57.42^\circ\text{--}+60.36^\circ$, $V_g = 25.53\text{--}26.51\text{ km/s}$.
-  - Isolation from all `2,192` IAU MDC rows: $\min D_{\text{SH}}(\text{MDC}) = 0.2766 \ge 0.20$ (`M1_Cepheus_Core`) and $0.2829 \ge 0.20$ (`M1_Cepheus_MC`), closest to `53-Draconids / FDR #01206`; minimum matched radiant separation $\Delta\theta = 19.94^\circ$ and $19.45^\circ > 5^\circ$ (`nu-Draconids / NDR #00220`).
-- **`M3_Camelopardalis`:**
-  - Mean radiant & orbit ($N = 16$ across `2021–2026`, `11` countries): $\lambda_\odot = 202.35^\circ$, $\alpha_g = 52.80^\circ$, $\delta_g = +60.57^\circ$, $V_g = 49.01\text{ km/s}$, $(q, e, i, \Omega, \omega) = (0.5708\text{ AU}, 0.9755, 83.79^\circ, 202.36^\circ, 262.29^\circ)$.
-  - Isolation from all `2,192` IAU MDC rows: $\min D_{\text{SH}}(\text{MDC}) = 0.3151 \ge 0.20$ (`October Aurigids / OAC #00813`), minimum matched radiant separation $\Delta\theta = 9.12^\circ > 5^\circ$ (`October Camelopardalids / OBC #00386`, which has $\alpha_g \approx 164^\circ, \delta_g \approx +79^\circ$ or much higher $q \approx 0.99\text{ AU}$).
+### Full-Catalog Closest Neighbors Across All `2,197` Rows (`2026-11-03`)
 
-### B. Uncatalogued Single-Night 4.84h Outburst (`p1`, `claim/p1_outburst_cluster.json`)
-- **`P1_2025_Sep01_Outburst` (`GMN_P1_OUTBURST_2025_SEP01_CYG_DRA`):**
-  - $N = 10$ multi-station meteors within `4.84 hours` on `2025-08-31 21:20:02 UTC` to `2025-09-01 02:10:16 UTC` at $\lambda_\odot = 158.45^\circ$, $\alpha_g = 300.98^\circ$, $\delta_g = +52.84^\circ$, $V_g = 23.46\text{ km/s}$, $\max D_{\text{SH}}(\text{mean}) = 0.0619 < 0.08$, $Z = 10.68\sigma$.
-  - Isolation from all `2,192` IAU MDC rows: $\min D_{\text{SH}}(\text{MDC}) = 0.2521 \ge 0.20$ (`FDR #01206`), minimum matched radiant separation $\Delta\theta = 20.65^\circ > 5^\circ$ (`NDR #00220`). None of the September 2025/2026 provisional MDC additions (`M2025-Q1` at $\lambda_\odot = 153.5^\circ, \alpha_g = 47.5^\circ, \delta_g = +11.5^\circ, V_g = 68.3\text{ km/s}$; `M2025-S1` at $\lambda_\odot = 172.9^\circ, \alpha_g = 308.8^\circ, \delta_g = +9.7^\circ, V_g = 12.5\text{ km/s}$; `M2026-S1` at $\lambda_\odot = 165.0^\circ, \alpha_g = 93.3^\circ, \delta_g = +69.3^\circ, V_g = 54.3\text{ km/s}$) matches this outburst.
-
-### C. Multi-Year Recurrence of Single-Year Working-List Showers (`p2`, `claim/p2_working_list_recurrence.json`)
-- Direct inspection of `claim/streamfulldata2026.txt` confirms that all `17` certified working-list showers in `claim/p2_working_list_recurrence.json` (headlined by `M2025-S1` [`LP=02628`, `act=2025`], `M2025-U1` [`LP=02631`, `act=2025`], `IAU #927 Alpha-Aquariids / AAQ` [`LP=02289`, `act=2017`], `IAU #793 kappa-Cancrids / KCA` [`LP=02035`, `act=2015`], and `IAU #1206 53-Draconids / FDR` [`LP=02582`, `act=2021`]) are currently listed with `status == 0` (Working List) and a single 4-digit detection year in `activity`, with no multi-year solution rows in `streamfulldata2026.txt`.
-- Establishing their `4–6` year annual recurrence across `2019–2026` GMN multi-station orbits with overall mean $D_{\text{SH}} = 0.0023\text{--}0.0292 < 0.030$ (and $< 0.06$ across all 17 streams) provides genuinely novel multi-year orbital evidence toward IAU establishment.
+- **Minimum mean-orbit $D_{\text{SH}}$ across all `2,197` rows (`2,004` explicit + `172` radiant-derived):**
+  $$\min_{\text{MDC}} D_{\text{SH}}(\text{mean}, \text{MDC}) = 0.281872 \ge 0.20$$
+  (closest: `LP = 02584`, `IAU #01206`, `FDR` / `53-Draconids` at $\lambda_\odot = 152.9^\circ, \alpha_g = 290.9^\circ, \delta_g = +57.18^\circ, V_g = 26.86\text{ km/s}, q = 0.9967\text{ AU}, e = 0.722, i = 43.39^\circ, \Omega = 152.9^\circ, \omega = 194.28^\circ$: $D_{\text{SH,exact}} = 0.281872, D_{\text{SH,planar}} = 0.315712$).
+- **Minimum single-member $D_{\text{SH}}$ across all $16 \times 2,176$ pairs:**
+  $$\min_{m \in \text{cluster},\,\text{MDC}} D_{\text{SH}}(m, \text{MDC}) = 0.251127 \ge 0.20$$
+  (trajectory `20260905002604_C1nyH` vs `LP = 02584` `53-Draconids / FDR #01206`).
+- **Minimum radiant separation within $|\Delta\lambda_\odot| \le 5.0^\circ$:**
+  $$\min_{|\Delta\lambda_\odot| \le 5^\circ} \Delta\theta = 19.5245^\circ > 5.0^\circ$$
+  (closest: `LP = 00731`, `IAU #00220`, `NDR` / `nu-Draconids` at $\lambda_\odot = 162.6^\circ, \alpha_g = 265.0^\circ, \delta_g = +56.3^\circ$).
+- **Minimum radiant separation across active intervals $[\lambda_{\odot,b}-5^\circ, \lambda_{\odot,e}+5^\circ]$:**
+  $$\min_{\text{interval}} \Delta\theta = 9.4502^\circ > 5.0^\circ$$
+  (closest: `LP = 00112`, `IAU #00012`, `KCG` / `kappa-Cygnids` at $\alpha_g = 289.9^\circ, \delta_g = +53.5^\circ$, where $D_{\text{SH}} = 0.3266 \ge 0.20$).
 
 ---
 
-## 3. 24-Month Literature Search (*eMeteorNews*, *WGN*, arXiv `2024–2026`)
+## 2. Dated Literature Searches (*eMeteorNews*, *WGN*, CBET, and arXiv)
 
-- **arXiv API & Web Search (`2024–2026`):** Queried arXiv (`export.arxiv.org/api/query`) and web indexes for all `2024–2026` papers mentioning `"meteor shower"`, `"Global Meteor Network"`, `"GMN"`, `"eMeteorNews"`, `"WGN"`, `"Herculids"`, `"Cepheids"`, `"Camelopardalids"`, or the candidate coordinates. Recent arXiv meteor shower papers (`arXiv:2606.25070` on 7P/Pons-Winnecke, `arXiv:2604.22986` on ML classification, `arXiv:2603.17130` on 17P/Holmes, `arXiv:2601.05412` on the 2021 Arids, `arXiv:2509.25639` on 2025 October Draconids, `arXiv:2502.11580` on 2022 tau-Herculids, `arXiv:2402.07769` on 46P/Wirtanen) do not report any of the claimed clusters or the `2025-08-31/09-01` Cygnus–Draco outburst.
-- ***eMeteorNews* & *WGN* (`2024–2026`):** All provisional GMN/CAMS shower discoveries published in *eMeteorNews* and *WGN* through October 2026 (`M2024-H1`..`M2024-Y1`, `M2025-B1`..`M2025-Y1`, `M2026-A1`..`M2026-S2`) have already been ingested into `streamfulldata2026.txt` (updated `2026-10-19 20:00 UTC` through `LP = 02645`). Targeted searches for the radiant coordinates and solar longitudes of `M2_Hercules` ($\lambda_\odot = 339.07^\circ, \alpha_g = 240.18^\circ, \delta_g = +46.34^\circ, V_g = 42.32\text{ km/s}$), `M1_Cepheus_Core` / `M1_Cepheus_MC` ($\lambda_\odot = 162.2^\circ\text{--}163.5^\circ, \alpha_g \approx 304^\circ, \delta_g \approx +57^\circ\text{--}+60^\circ, V_g \approx 26\text{ km/s}$), `M3_Camelopardalis` ($\lambda_\odot = 202.35^\circ, \alpha_g = 52.80^\circ, \delta_g = +60.57^\circ, V_g = 49.01\text{ km/s}$), and `p1` ($\lambda_\odot = 158.45^\circ, \alpha_g = 300.98^\circ, \delta_g = +52.84^\circ, V_g = 23.46\text{ km/s}$) returned zero matches in *eMeteorNews*, *WGN*, or arXiv over the last 24 months.
+We executed systematic literature searches on **`2026-10-20`** (initial filing) and **`2026-11-07`** (re-filing verification) across all venues specified in `target.md`:
 
----
+| Venue / Database | Search Dates | Exact Queries & Coordinate Cones Searched | Findings |
+| :--- | :--- | :--- | :--- |
+| ***eMeteorNews* (eMetN)** (`meteornews.net` & ADS bibcode `eMetN`) | `2026-10-20`, `2026-11-07` | 1. `"Cepheids" OR "Cepheus" AND ("Global Meteor Network" OR "GMN" OR "CAMS") AND ("163" OR "September")`<br>2. `"RA 304" OR "305" AND "Dec +59" OR "+60" AND "26.4"`<br>3. All *eMeteorNews* shower discovery & outburst reports (2018–Nov 2026) by Roggemans, Jenniskens, Segon, Vida, Koseki, Šegon, et al. | **0 matches.** No shower or candidate report within $10^\circ$ of $(\alpha_g = 304.77^\circ, \delta_g = +59.83^\circ)$ at $\lambda_\odot \in [158^\circ, 168^\circ]$, $V_g \in [22, 31]\text{ km/s}$, $i \in [37^\circ, 47^\circ]$. |
+| ***WGN, Journal of the International Meteor Organization*** (`imo.net` & ADS bibcode `JIMO`) | `2026-10-20`, `2026-11-07` | 1. `"Cepheus" OR "Draco" OR "Cygnus" AND ("new meteor shower" OR "working list" OR "GMN")`<br>2. Coordinate cone search around $\lambda_\odot \in [158^\circ, 168^\circ], \alpha_g \in [295^\circ, 315^\circ], \delta_g \in [+54^\circ, +65^\circ]$ across WGN volumes `46–54` (`2018–2026`). | **0 matches.** Closest discussed late-August/September prograde activity is the $\kappa$-Cygnid (`#00012`) / `53-Draconid` (`#01206`) complex at $D_{\text{SH}} \ge 0.2819$. |
+| **IAU Central Bureau Electronic Telegrams (CBET) & `new_reports.php`** | `2026-10-20`, `2026-11-07` | 1. Full scan of `https://www.ta3.sk/IAUC22DB/MDC2022/Dokumenty/new_reports.php` (`2023–2026` list of newly submitted showers).<br>2. Audit of October 2026 CBETs `5592, 5599, 5603, 5616` (`M2026-R1`, `M2026-S1`, `M2026-S2`, `M2026-U1`, `LP = 02646..02650`). | **0 matches.** All 2023–2026 reports in `new_reports.php` and CBET 5592–5616 have $D_{\text{SH}} \ge 0.2819$ from `GMN_NEW_SHOWER_M1_CEPHEUS_MC_163`. |
+| **arXiv (`astro-ph.EP`, `astro-ph.IM`) & NASA ADS** (`arxiv.org`, `ui.adsabs.harvard.edu`) | `2026-10-20`, `2026-11-07` | 1. `abs:("Global Meteor Network" OR "meteor shower" OR "CAMS") AND abs:("Cepheus" OR "streamfulldata" OR "working list")` (2018–Nov 2026)<br>2. Author searches: `Vida, D.`, `Jenniskens, P.`, `Roggemans, P.`, `Jopek, T.`, `Neslušan, L.`, `Hajduková, M.`, `Kornoš, L.` (including Vida et al. 2021 *MNRAS* 506, 5046; Jenniskens et al. 2018–2026 CAMS surveys). | **0 matches.** No preprint or peer-reviewed paper reports a prograde stream at $(\lambda_\odot \approx 163.3^\circ, \alpha_g \approx 304.8^\circ, \delta_g \approx +59.8^\circ, V_g \approx 26.4\text{ km/s}, q \approx 0.957\text{ AU}, i \approx 41.8^\circ)$. |
 
-## 4. Check of `TROPHY_CASE.md` and Open Pull Requests on `elder-plinius/V3R1T4S`
+## Conclusion
 
-- **`TROPHY_CASE.md`:** `TROPHY_CASE.md` has no existing entry for `iau-mdc-new-meteor-shower-gmn`, meteor showers, or GMN.
-- **Open Pull Requests (`https://api.github.com/repos/elder-plinius/V3R1T4S/pulls?state=open`):** Scanned all `282` open pull requests across pages 1–3 (`PR #11` through `PR #596`). Zero open PRs match `iau-mdc-new-meteor-shower-gmn`, `meteor`, `gmn`, or `streamfulldata`.
-
----
-
-## 5. Verdict
-
-All novelty checks pass: the live-fetched IAU MDC tables (`2026-10-20T18:54:36Z`, `HTTP 200`) match the claim snapshot byte-for-byte, none of the claimed new showers (`M2_Hercules`, `M1_Cepheus_Core`, `M1_Cepheus_MC`, `M3_Camelopardalis`) or the `p1` 2025-Sep-01 outburst appears in `streamfulldata2026.txt` or in the last 24 months of *eMeteorNews* / *WGN* / arXiv literature, the `17` `p2` working-list showers are single-year `status == 0` entries in `streamfulldata2026.txt` whose multi-year recurrence in GMN (`2019–2026`) is novel, and no prior `TROPHY_CASE.md` entry or open PR claims this target.
+`GMN_NEW_SHOWER_M1_CEPHEUS_MC_163` (`M1_Cepheus_MC`, $N = 16$) is absent from the live 3 November 2026 IAU MDC catalog (`2,197` rows) and from *eMeteorNews*, *WGN*, CBET, and arXiv through 7 November 2026.
 
 pass: true

@@ -1,8 +1,22 @@
-# Skeptic Panel Gate (`iau-mdc-new-meteor-shower-gmn`)
+# Panel Gate — `2026-10-20-mizopl-56ac1336` (`iau-mdc-new-meteor-shower-gmn`)
 
 status: CONFIRMED_SOLUTION
 target: iau-mdc-new-meteor-shower-gmn
 reproduce_pass: true
 novelty_pass: true
 criterion_pass: true
-confirmed_scope: Across 3,599,504 public GMN trajectories (2018-2026) screened against all 2,192 rows of live-fetched claim/streamfulldata2026.txt (sha256: 08409111125e83ef2f033b27e215fb4383e0f15f6e6a3d202f7dda3a27f027fe), the artifacts in claim/new_shower_cluster.json (sha256: 56ac13361eb045681ffb2dc1cd32a5697dd4a291fdf43826d8f7a7638fdb1937), claim/new_shower_gmn_lines.txt (sha256: 369b2054ebaed1f04c2cc6758eb515cf0fd5c0a15b1f99a3d84a7381968653d2), claim/m1_cepheus_core_gmn_lines.txt (sha256: 379b26fa5b869788a4d7f35e81de93f0227e8a503d9c0c840efb386776a3d085), claim/m1_cepheus_mc_gmn_lines.txt (sha256: 21d82381f78e3adf0638e52e1e4ffd47af8b57652602e7e7803aeff32247b96a), claim/m3_camelopardalis_gmn_lines.txt (sha256: b5ad6728dff488383e601afbba4599ce73eb6cf46a84ae2c45b8796ba2de6069), claim/p1_outburst_cluster.json (sha256: a9691f53685fb5f73c675aaf2362cdd65547a2ae2283048d074ab7671d44d462), claim/p2_working_list_recurrence.json (sha256: baef22e03a7b245ab9a4d643378c26454e9105fc134ef9096588c20c830ea2ac), and claim/null_test_400_controls.json (sha256: cfc3c177265cb2a42c4e57dc0e5b8711e8ed710db89dba9e8b8dd9f85cc10a22) deterministically certify four uncatalogued multi-year meteor shower clusters meeting every clause of the full success_criterion (M2_Hercules N=20 max D_SH=0.0491 pairwise D_SH=0.0829 min MDC D_SH=0.3539 Z=26.81 sigma; M1_Cepheus_Core N=15 max D_SH=0.0468 Z=33.31 sigma; M1_Cepheus_MC N=15 with 100% per-meteor >=2 countries max D_SH=0.0730 Z=13.31 sigma; M3_Camelopardalis N=16 max D_SH=0.0371 Z=45.84 sigma), one single-night 4.84-hour outburst meeting partial win p1 (N=10, max D_SH=0.0619 < 0.08, min MDC D_SH=0.2521, Z=10.68 sigma), and 17 single-year IAU MDC Working List showers recurring across 3-6 GMN years with D_SH < 0.06 < 0.10 meeting partial win p2.
+confirmed_scope: 16-meteor multi-year, per-meteor multi-country September Cepheus shower candidate (`GMN_NEW_SHOWER_M1_CEPHEUS_MC_163`, 2023–2026) in public Global Meteor Network trajectory summary tables (`2018–2026`), where every counted meteor is unique (`min Delta_t = 1,332.4 s`), triangulated by `3..8` independent stations across `2..3` countries (`15` countries and `62` stations total), cohesive within `max D_SH(mean, member) = 0.0730 < 0.10` (`max D_SH(median, member) = 0.0795 < 0.10`), isolated from all `2,197` rows of the 3 November 2026 IAU Meteor Data Center list (`min D_SH = 0.2819 >= 0.20`, minimum radiant separation `19.52 deg > 5.0 deg` within `+-5 deg` solar longitude), and exceeding the local sporadic background above `5 sigma` both before (`14.26 sigma` Gaussian / `7.66 sigma` Poisson) and after look-elsewhere correction across `103` ecliptic `3.5 deg` windows (`7.03 sigma`) and `43,228` MDC-isolated multi-country seed trajectories (`6.11 sigma`).
+
+## Skeptic Panel Votes (Our Own Local 3-Skeptic Check)
+
+Note: The `status: CONFIRMED_SOLUTION` label above records the result of our own local 3-skeptic review panel check (`panel/reproduce.md`, `panel/novelty.md`, `panel/criterion.md`) prior to upstream maintainer review.
+
+| Skeptic | Verdict | Key Verification Check |
+| :--- | :--- | :--- |
+| **Reproduce** (`panel/reproduce.md`) | `PASS` | `sh verify-it-yourself/run_checks.sh` exits `0` in `~0.15 s` (`PASS`), verifying all 16 verbatim GMN lines in `object/m1_cepheus_mc_gmn_lines.txt`, recomputing the $16 \times 16$ pairwise $D_{\text{SH}}$ matrix and 156 IAU MDC neighbor distances from orbital elements, and rejecting mutated inputs (`exit 1`). |
+| **Novelty** (`panel/novelty.md`) | `PASS` | Compared against the live 3 November 2026 IAU MDC `streamfulldata2026.txt` (`2,197` rows, including new entries `LP = 02646..02650`), `roje_lista.php`, `new_reports.php`, and dated searches of *eMeteorNews*, *WGN* (Journal of the IMO), CBET, and arXiv (`2026-10-20` and `2026-11-07`): $\min D_{\text{SH}}(\text{mean}, \text{MDC}) = 0.2819 \ge 0.20$, $\min D_{\text{SH}}(\text{member}, \text{MDC}) = 0.2511 \ge 0.20$, and $\min \Delta\theta = 19.52^\circ > 5.0^\circ$. |
+| **Criterion** (`panel/criterion.md`) | `PASS` | Strictly one claim per package (`kit/SUBMIT.md` §1); each meteor counted once ($\min \Delta t = 1,332.405\text{ s}$); all `16/16` (`100%`) members individually satisfy `num_stat >= 3` (`3..8`) and `n_countries >= 2` (`2..3`); observed across `4 >= 3` years (`2023–2026`); $\max D_{\text{SH}} = 0.0730 < 0.10$; significance $> 5\sigma$ both single-window ($14.26\sigma$ Gaussian / $7.66\sigma$ Poisson) and look-elsewhere corrected across `103` solar-longitude windows ($7.03\sigma$) and `43,228` isolated multi-country seeds ($6.11\sigma$). |
+
+## Gate Decision
+
+All three local review checks return `PASS`. Package is cleared for submission (`SEND`).
