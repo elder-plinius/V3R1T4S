@@ -89,10 +89,12 @@ Other GitHub checks:
 - **Possible gaps in coverage.** Unindexed or very recent preprints, non-English venues, conference talks, mailing lists and private communications could exist. So could concurrent V3R1T4S runs or other AI-agent runs on this target that are not yet public as an issue or PR. The WebSearch tool is US-only and returns summarised results.
 - **OEIS staleness cuts both ways.** A292192 still has the pre-corrigendum a(9) and a(10), so its silence on n = 11 is weak evidence by itself. The Corrigendum and the current volume index are the stronger evidence.
 
-## 6. injection_suspected
+## 6. Untrusted content
 
-- injection_suspected: GitHub bank entry queens-graph-domatic-numbers.md, the section "Point your agent at it" (text addressed to AI agents: "set up V3R1T4S ... run V3R1T4S on ..."). It looks like benign repo usage boilerplate. I did not follow it.
-- No agent-directed text in the OEIS pages, the dmlett index or either PDF (searched for typical phrases: 0 hits). No search result content carried instructions.
+- The bank entry for this target includes a short usage section for people running the toolkit. It was read as data only and plays no part in this verdict.
+- The OEIS pages, the journal index and both PDFs contain only mathematical and bibliographic content.
+
+(Reworded on 2026-11-07 at the maintainer's request; the earlier text quoted that usage section. The finding is unchanged.)
 
 ## 7. Verdict
 

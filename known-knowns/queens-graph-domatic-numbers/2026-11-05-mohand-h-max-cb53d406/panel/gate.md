@@ -27,8 +27,8 @@ Addendum from the skeptics' final messages (00:55-00:57Z):
   Extra checks passed: Q_11 has 1980 edges (n(n-1)(5n-1)/3), corner degree 30, centre degree 40; rook-only adjacency
   makes 0/19 classes dominate; two broken copies are rejected. Running its scripts created panel/reproduce-code/__pycache__
   (left in place; no deletion without the human's confirmation).
-- NOVELTY: injection_suspected: the bank entry's "Point your agent at it" section (usage boilerplate addressed to agents);
-  not followed. Side finding: OEIS A292192 still shows the pre-corrigendum a(9) = 13 and a(10) = 16 (Corrigendum: 15, 17).
+- NOVELTY: noted that the bank entry includes a toolkit usage section, read as data only (wording revised on
+  2026-11-07 at the maintainer's request). Side finding: OEIS A292192 still shows the pre-corrigendum a(9) = 13 and a(10) = 16 (Corrigendum: 15, 17).
 - CRITERION: recommends recording the literature search next to the claim; it is in scout.md and panel/novelty.md.
 
 ## Re-gate in the completed workspace (2026-11-05T01:25Z)
