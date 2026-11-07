@@ -1,0 +1,20 @@
+{
+ "cell": "R(3,5,7)",
+ "table": "DS1 revision of April 24, 2026, Table XIb",
+ "table_value": 241,
+ "reference": "6.2.g",
+ "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf",
+ "fetched_utc": [
+  "2026-10-25T06:19:34Z",
+  "2026-10-25T07:44:20Z"
+ ],
+ "http_status": 200,
+ "sha256": "9519a676ee381f02f03269c22e3f101162b2fdcc9d432e4103cb1192fdff91bc",
+ "status_page": {
+  "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS1",
+  "fetched_utc": "2026-10-25T07:34:37Z",
+  "http_status": 200,
+  "sha256": "9095c60e25308c53990c3c3c3961e9e91b65600f7bf2cd5b191149b55bd70443"
+ },
+ "claimed_value": 252
+}
