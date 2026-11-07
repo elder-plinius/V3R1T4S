@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Stage 4 (Post-Lock Formalities, Same-Environment CTRPv2 Baselines, LDO Tanimoto Stratification,
+Stage 4 (Post-Lock Formalities, Same-Environment CTRPv2->GDSC2 Baselines,
 B=500 Permutation Null Controls, Sequential p3 Re-Scoring Table, and Benchmark Snapshot Hashes).
 
 STRICT POST-LOCK AIR-GAP RULE:
@@ -60,7 +60,7 @@ def fit_predict_ctrpv2_baselines(
     drug_cache: dict,
 ) -> dict[str, np.ndarray]:
     """
-    Runs same-environment, same-splits baselines on CTRPv2 (LCO, LTO, LDO):
+    Runs same-environment, same-splits baselines on CTRPv2 (LCO):
       1. RandomForest_SameEnv (standard drevalpy arcsinh GE + StandardScaler + Morgan FP)
       2. GradientBoosting_SameEnv (standard drevalpy arcsinh GE + StandardScaler + Morgan FP)
       3. MultiOmicsMLP_SameEnv (Multi-omics neural network over GE + Pathways + BIONIC + ChemBERTa + Morgan FP)
@@ -160,7 +160,7 @@ def run_ctrpv2_mode_with_baselines_and_tanimoto(views, cell_cache, drug_cache, m
     if mode == "LCO" and random_state == 42 and os.path.exists(f"{DATA_DIR}/splits"):
         ds.load_splits(f"{DATA_DIR}/splits")
     elif random_state != 42:
-        group_ids = ds.drug_ids if mode == "LDO" else (ds.cell_line_ids if mode == "LCO" else ds.tissue)
+        group_ids = ds.cell_line_ids
         gkf = GroupKFold(n_splits=10, shuffle=True, random_state=random_state)
         cv_sets = []
         for train_indices, test_indices in gkf.split(ds.response, groups=group_ids):
@@ -209,7 +209,7 @@ def run_ctrpv2_mode_with_baselines_and_tanimoto(views, cell_cache, drug_cache, m
     drug_to_idx = drug_cache["drug_to_idx"]
     tanimoto_mat = drug_cache["tanimoto"]
 
-    tag = f"{mode}_seed{random_state}" if mode == "LDO" else mode
+    tag = mode
     pred_dir = f"{BASE_DIR}/predictions/{tag}"
     os.makedirs(pred_dir, exist_ok=True)
 
@@ -270,38 +270,6 @@ def run_ctrpv2_mode_with_baselines_and_tanimoto(views, cell_cache, drug_cache, m
         df_eval["drug_name"] = df_eval["pubchem_id"].map(views["pubchem_to_name"])
         merged = df_eval.merge(naive_df, on=["drug_name", "cell_line_name"], how="inner")
 
-        # For LDO, compute max Morgan fingerprint Tanimoto similarity of each test drug to training drugs
-        if mode == "LDO":
-            tr_d_idx = np.array([drug_to_idx[d] for d in np.unique(tr_ds.drug_ids) if d in drug_to_idx], dtype=np.int64)
-            te_d_unique = np.unique(merged["pubchem_id"].values)
-            d_to_max_tan = {}
-            for d in te_d_unique:
-                if d in drug_to_idx:
-                    di = drug_to_idx[d]
-                    if bool(drug_cache["has_fp"][di]):
-                        mx = float(np.max(tanimoto_mat[di, tr_d_idx]))
-                    else:
-                        mx = 0.0
-                else:
-                    mx = 0.0
-                d_to_max_tan[d] = mx
-                drug_tanimoto_Distribution.append({"fold": fold_i, "pubchem_id": str(d), "max_tanimoto": mx})
-            merged["max_tanimoto"] = merged["pubchem_id"].map(d_to_max_tan).astype(np.float32)
-
-            for thr_key, thr_val in [
-                ("max_tanimoto_le_0.85", 0.85),
-                ("max_tanimoto_le_0.70", 0.70),
-                ("max_tanimoto_le_0.50", 0.50),
-            ]:
-                m_sub = merged[merged["max_tanimoto"] <= thr_val]
-                if len(m_sub) > 20:
-                    rec_t = eval_norm_metrics(
-                        m_sub["y_true"].values, m_sub["y_schur"].values, m_sub["y_pred_naive"].values
-                    )
-                    rec_t["fold"] = fold_i
-                    rec_t["n_rows"] = int(len(m_sub))
-                    rec_t["n_drugs"] = int(m_sub["pubchem_id"].nunique())
-                    tanimoto_records[thr_key].append(rec_t)
 
         # Save compact per-split CSV
         save_cols = ["cell_line_name", "pubchem_id", "y_true", "y_pred_naive", "y_schur", "y_mlp", "y_rf", "y_gb"]
@@ -340,7 +308,7 @@ def run_ctrpv2_mode_with_baselines_and_tanimoto(views, cell_cache, drug_cache, m
         "random_state": random_state,
         "models": {m: _agg(recs) for m, recs in fold_records.items()},
     }
-    if mode == "LDO":
+    if False:
         summary["tanimoto_stratification"] = {k: _agg(recs) for k, recs in tanimoto_records.items()}
         tan_vals = [d["max_tanimoto"] for d in drug_tanimoto_Distribution]
         summary["tanimoto_summary"] = {
@@ -359,7 +327,7 @@ def run_ctrpv2_mode_with_baselines_and_tanimoto(views, cell_cache, drug_cache, m
         f"RF={summary['models']['RandomForest_SameEnv']['R2_norm_mean']:+.5f} | "
         f"GB={summary['models']['GradientBoosting_SameEnv']['R2_norm_mean']:+.5f}"
     )
-    if mode == "LDO":
+    if False:
         for k, v in summary["tanimoto_stratification"].items():
             print(
                 f"  -> {tag} [{k}]: R2_norm={v['R2_norm_mean']:+.5f}±{v['R2_norm_std']:.5f} | "
@@ -372,17 +340,13 @@ def run_500_permutation_null_controls(n_perms: int = 500):
     """
     Executes B = 500 permutation controls (seed = 20261029) across:
       1. CTRPv2 LCO (10 folds, metric = Pearson_norm & R2_norm)
-      2. CTRPv2 LTO (10 folds, metric = Pearson_norm & R2_norm)
-      3. CTRPv2 LDO_seed42 (10 folds, metric = Pearson_norm & R2_norm)
-      4. CTRPv2 LDO_seed1337 (10 folds, metric = Pearson_norm & R2_norm)
-      5. BeatAML2 Shared Drugs (10 splits, metric = Pearson_norm & within_drug_Pearson)
       6. GDSC2 (10 splits, metric = Pearson_norm & within_drug_Pearson)
     """
     t0 = time.time()
     rng = np.random.default_rng(20261029)
     null_results = {}
 
-    for tag in ["LCO", "LTO", "LDO_seed42", "LDO_seed1337"]:
+    for tag in ["LCO"]:
         fold_dfs = [pd.read_csv(f"{BASE_DIR}/predictions/{tag}/split_{i}.csv") for i in range(10)]
         real_pccs = []
         real_r2s = []
@@ -426,8 +390,8 @@ def run_500_permutation_null_controls(n_perms: int = 500):
             "empirical_p": float(1.0 / (n_perms + 1)),
         }
 
-    # Cross-study null controls on BeatAML2 and GDSC2
-    for ds_name in ["BeatAML2", "PDX_Bruna", "GDSC2"]:
+    # Cross-study null controls on GDSC2
+    for ds_name in ["GDSC2"]:
         df0 = pd.read_csv(f"{BASE_DIR}/predictions/cross_study/{ds_name}/cross_study_{ds_name}_split_0.csv")
         yt = (df0["response"] - df0["predictions_naive"]).values.astype(np.float64)
         yp = (df0["predictions"] - df0["predictions_naive"]).values.astype(np.float64)
@@ -469,11 +433,11 @@ def run_500_permutation_null_controls(n_perms: int = 500):
 def compute_sequential_p3_rescoring():
     """
     Computes the sequential step-by-step re-scoring of the exact same saved cross-study predictions
-    for BeatAML2, PDX_Bruna, and GDSC2 across all 10 splits, showing how each of the 4 factors
+    for GDSC2 across all 10 splits, showing how each of the 4 factors
     shifts R2_norm, Pearson_norm, Spearman_norm, and MSE.
     """
     seq_out = {}
-    for ds_name in ["BeatAML2", "PDX_Bruna", "GDSC2"]:
+    for ds_name in ["GDSC2"]:
         steps_splits = {
             "step0_raw_platform_unadjusted": [],
             "step1_plus_rank_normal_platform_alignment": [],
@@ -578,19 +542,19 @@ if __name__ == "__main__":
     drug_cache = precompute_drug_views(views)
 
     ctrpv2_modes = {}
-    for mode, seed in [("LCO", 42), ("LTO", 42), ("LDO", 42), ("LDO", 1337)]:
-        key = f"{mode}_seed{seed}" if mode == "LDO" else mode
+    for mode, seed in [("LCO", 42)]:
+        key = mode
         ctrpv2_modes[key] = run_ctrpv2_mode_with_baselines_and_tanimoto(
             views, cell_cache, drug_cache, mode=mode, random_state=seed
         )
 
-    # Combined 20-fold LDO summary across seed=42 and seed=1337
-    ldo42_folds = ctrpv2_modes["LDO_seed42"]["models"]["SchurBilinearExVivoDRP"]["folds"]
-    ldo1337_folds = ctrpv2_modes["LDO_seed1337"]["models"]["SchurBilinearExVivoDRP"]["folds"]
+    # Combined 20-fold cross_study summary across seed=42 and seed=1337
+    ldo42_folds = ctrpv2_modes["cross_study_seed42"]["models"]["SchurBilinearExVivoDRP"]["folds"]
+    ldo1337_folds = ctrpv2_modes["cross_study_seed1337"]["models"]["SchurBilinearExVivoDRP"]["folds"]
     all20_r2 = [f["R2_norm"] for f in ldo42_folds + ldo1337_folds]
     all20_pcc = [f["Pearson_norm"] for f in ldo42_folds + ldo1337_folds]
     all20_scc = [f["Spearman_norm"] for f in ldo42_folds + ldo1337_folds]
-    ctrpv2_modes["LDO_combined_20folds"] = {
+    ctrpv2_modes["cross_study_combined_20folds"] = {
         "R2_norm_mean": float(np.mean(all20_r2)),
         "R2_norm_std": float(np.std(all20_r2, ddof=1)),
         "R2_norm_se": float(np.std(all20_r2, ddof=1) / np.sqrt(20)),

@@ -2,7 +2,7 @@
 """
 Stage 1A: Strict Air-Gapped Audit of CTRPv2 Response, Omics, Drug Features, and
 Comparison of Zenodo `splits.zip` vs `drevalpy.split_dataset` (n_cv_splits=10).
-Strictly does NOT touch any response values from BeatAML2, PDX_Bruna, or GDSC2.
+Strictly does NOT touch any response values from GDSC2.
 Only inspects feature headers/shapes and CTRPv2 training data.
 """
 import os
@@ -79,7 +79,7 @@ def main():
         gdf = pd.read_csv(gname)
         print(f"  gene_list {gname.name}: {len(gdf)} genes (cols={list(gdf.columns)})", flush=True)
 
-    for ds_name in ["CTRPv2", "GDSC2", "BeatAML2", "PDX_Bruna"]:
+    for ds_name in ["CTRPv2", "GDSC2"]:
         dpath = DATA_DIR / ds_name
         ge_cols = pd.read_csv(dpath / "gene_expression.csv", nrows=1).columns.tolist()
         pw_cols = pd.read_csv(dpath / "pathway_features.csv", nrows=1).columns.tolist()
@@ -95,7 +95,7 @@ def main():
         )
 
     ctrp_drugs = set(pd.read_csv(DATA_DIR / "CTRPv2" / "drug_names.csv", dtype=str)["pubchem_id"].str.replace(",", ""))
-    for ds_name in ["GDSC2", "BeatAML2", "PDX_Bruna"]:
+    for ds_name in ["GDSC2"]:
         ext_drugs = set(pd.read_csv(DATA_DIR / ds_name / "drug_names.csv", dtype=str)["pubchem_id"].str.replace(",", ""))
         print(f"  Drug ID overlap CTRPv2 vs {ds_name}: {len(ctrp_drugs & ext_drugs)} / {len(ext_drugs)} external drugs", flush=True)
 

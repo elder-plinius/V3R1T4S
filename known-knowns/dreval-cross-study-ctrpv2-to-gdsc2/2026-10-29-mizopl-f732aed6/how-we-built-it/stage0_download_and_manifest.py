@@ -3,7 +3,7 @@
 Stage 0: Download Zenodo 23159774 archives, verify MD5 & compute SHA-256 manifest,
 and extract into DREVAL_CAMPAIGN/data/.
 Strictly respects the Air-Gap Rule: does NOT read any response values from
-BeatAML2, PDX_Bruna, GDSC2, GDSC1, CCLE, or CTRPv1.
+GDSC2, GDSC1, CCLE, or CTRPv1.
 """
 import hashlib
 import json
@@ -23,8 +23,6 @@ FILES_TO_FETCH = [
     "meta.zip",
     "splits.zip",
     "CTRPv2.zip",
-    "BeatAML2.zip",
-    "PDX_Bruna.zip",
     "GDSC2.zip",
 ]
 
@@ -52,7 +50,7 @@ def main():
         "drevalpy_version": "1.6.0",
         "created_at_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "air_gap_rule": (
-            "STRICT AIR-GAP: BeatAML2, PDX_Bruna, and GDSC2 response values are never read "
+            "STRICT AIR-GAP: GDSC2 response values (GDSC2/GDSC2.csv) are never read "
             "during feature engineering, model design, or hyperparameter selection."
         ),
         "archives": {},

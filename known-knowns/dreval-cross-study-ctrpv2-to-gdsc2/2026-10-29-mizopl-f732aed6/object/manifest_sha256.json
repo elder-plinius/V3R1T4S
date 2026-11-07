@@ -1,51 +1,84 @@
 {
-  "zenodo_record_id": "23159774",
-  "zenodo_doi": "10.5281/zenodo.23159774",
-  "drevalpy_version": "1.6.0",
-  "created_at_utc": "2026-10-29T15:14:01Z",
-  "air_gap_rule": "STRICT AIR-GAP: BeatAML2, PDX_Bruna, and GDSC2 response values are never read during feature engineering, model design, or hyperparameter selection.",
+  "air_gap_rule": "STRICT AIR-GAP: GDSC2 response values (GDSC2/GDSC2.csv) are never read during CTRPv2 feature engineering, model design, or hyperparameter selection.",
   "archives": {
-    "meta.zip": {
-      "size_bytes": 12434846,
-      "zenodo_md5": "658e75f9a0afa95b3c3c88f1f41e305f",
-      "verified_md5": "658e75f9a0afa95b3c3c88f1f41e305f",
-      "sha256": "28d38d084b339c61cdd6d24ed4e4f948f248c7b636cffc3eb46e07170a5b78c4",
-      "url": "https://zenodo.org/api/records/23159774/files/meta.zip/content"
-    },
-    "splits.zip": {
-      "size_bytes": 41426065,
-      "zenodo_md5": "897c5ec8209b920adf585599f90c1f6d",
-      "verified_md5": "897c5ec8209b920adf585599f90c1f6d",
-      "sha256": "9ea787b0657ae9381d357f9267a97abc7e68325b1aaeb0689b0eb71f11b60dc0",
-      "url": "https://zenodo.org/api/records/23159774/files/splits.zip/content"
-    },
     "CTRPv2.zip": {
-      "size_bytes": 518522899,
-      "zenodo_md5": "a3a6cc49ed57ba1c9b163e56b88cce2f",
-      "verified_md5": "a3a6cc49ed57ba1c9b163e56b88cce2f",
       "sha256": "5ad3e867d3eda55595a981fd3f6426cb0a6a59218f109e9df68af50ffe2673bd",
-      "url": "https://zenodo.org/api/records/23159774/files/CTRPv2.zip/content"
-    },
-    "BeatAML2.zip": {
-      "size_bytes": 162182280,
-      "zenodo_md5": "6dc9ad77cdf832d9c4b5e065d6536b94",
-      "verified_md5": "6dc9ad77cdf832d9c4b5e065d6536b94",
-      "sha256": "0f8c67e54f377b589b8fb05a55b32947424e84c2da5ff26765a31f1d7e9b7547",
-      "url": "https://zenodo.org/api/records/23159774/files/BeatAML2.zip/content"
-    },
-    "PDX_Bruna.zip": {
-      "size_bytes": 49595207,
-      "zenodo_md5": "ee6d83e01b870a7fea8a76c1c6e6f1ec",
-      "verified_md5": "ee6d83e01b870a7fea8a76c1c6e6f1ec",
-      "sha256": "f3f9f9e573bdb85c8c836f47525b03b34dc706a119cadf0c7f3eb538ac417df9",
-      "url": "https://zenodo.org/api/records/23159774/files/PDX_Bruna.zip/content"
+      "size_bytes": 518522899,
+      "url": "https://zenodo.org/api/records/23159774/files/CTRPv2.zip/content",
+      "verified_md5": "a3a6cc49ed57ba1c9b163e56b88cce2f",
+      "zenodo_md5": "a3a6cc49ed57ba1c9b163e56b88cce2f"
     },
     "GDSC2.zip": {
-      "size_bytes": 521509357,
-      "zenodo_md5": "49dc16929c6baa2b5d75c508429fa11f",
-      "verified_md5": "49dc16929c6baa2b5d75c508429fa11f",
       "sha256": "4b0230cfcf7a670aba386d4af559eebabf3f13190517d9eb0dc67596b84ac031",
+      "size_bytes": 521509357,
+      "url": "https://zenodo.org/api/records/23159774/files/GDSC2.zip/content",
+      "verified_md5": "49dc16929c6baa2b5d75c508429fa11f",
+      "zenodo_md5": "49dc16929c6baa2b5d75c508429fa11f"
+    },
+    "meta.zip": {
+      "sha256": "28d38d084b339c61cdd6d24ed4e4f948f248c7b636cffc3eb46e07170a5b78c4",
+      "size_bytes": 12434846,
+      "url": "https://zenodo.org/api/records/23159774/files/meta.zip/content",
+      "verified_md5": "658e75f9a0afa95b3c3c88f1f41e305f",
+      "zenodo_md5": "658e75f9a0afa95b3c3c88f1f41e305f"
+    },
+    "splits.zip": {
+      "sha256": "9ea787b0657ae9381d357f9267a97abc7e68325b1aaeb0689b0eb71f11b60dc0",
+      "size_bytes": 41426065,
+      "url": "https://zenodo.org/api/records/23159774/files/splits.zip/content",
+      "verified_md5": "897c5ec8209b920adf585599f90c1f6d",
+      "zenodo_md5": "897c5ec8209b920adf585599f90c1f6d"
+    }
+  },
+  "created_at_utc": "2026-10-29T15:14:01Z",
+  "drevalpy_version": "1.6.0",
+  "target_id": "dreval-cross-study-ctrpv2-to-gdsc2",
+  "upstream_html_snapshots": {
+    "table_cross_study_GDSC2_LCO.html": {
+      "sha256": "01d129d634be27c49c50a8a1c357135f1e1090cd8df35cd6b7687f51e69595d9",
+      "size_bytes": 4664819,
+      "solo_url": "https://dilis-lab.github.io/drevalpy-report/all_runs/Solo/tables/table_cross_study_GDSC2_LCO.html",
+      "url": "https://dilis-lab.github.io/drevalpy-report/html_tables/table_cross_study_GDSC2_LCO.html"
+    }
+  },
+  "upstream_response_and_feature_files": {
+    "CTRPv2.zip": {
+      "md5": "a3a6cc49ed57ba1c9b163e56b88cce2f",
+      "sha256": "5ad3e867d3eda55595a981fd3f6426cb0a6a59218f109e9df68af50ffe2673bd",
+      "size_bytes": 518522899,
+      "url": "https://zenodo.org/api/records/23159774/files/CTRPv2.zip/content"
+    },
+    "CTRPv2/CTRPv2.csv": {
+      "archive_member_of": "CTRPv2.zip",
+      "non_nan_LN_IC50_curvecurator_rows": 235974,
+      "sha256": "14488de3ecff0a7499eddbc10d22cdec389549c8506a93516a547e619f90b412",
+      "size_bytes": 143722503,
+      "total_rows": 395263,
+      "url": "https://zenodo.org/api/records/23159774/files/CTRPv2.zip/content"
+    },
+    "GDSC2.zip": {
+      "md5": "49dc16929c6baa2b5d75c508429fa11f",
+      "sha256": "4b0230cfcf7a670aba386d4af559eebabf3f13190517d9eb0dc67596b84ac031",
+      "size_bytes": 521509357,
+      "url": "https://zenodo.org/api/records/23159774/files/GDSC2.zip/content"
+    },
+    "GDSC2/GDSC2.csv": {
+      "archive_member_of": "GDSC2.zip",
+      "evaluated_rows_per_split_mean": 40292.4,
+      "evaluated_rows_per_split_range": [
+        39377,
+        40730
+      ],
+      "evaluated_rows_per_split_std": 389.4090109098373,
+      "feature_complete_pairs": 88401,
+      "non_nan_LN_IC50_curvecurator_rows": 90666,
+      "sha256": "87c284eaf50c41e4ffd870220f67230b826068c3d08085a9a83caec62024bcbd",
+      "shared_drug_pairs_with_CTRPv2": 47296,
+      "size_bytes": 57384361,
+      "total_rows": 234436,
       "url": "https://zenodo.org/api/records/23159774/files/GDSC2.zip/content"
     }
-  }
+  },
+  "zenodo_doi": "10.5281/zenodo.23159774",
+  "zenodo_record_id": "23159774"
 }

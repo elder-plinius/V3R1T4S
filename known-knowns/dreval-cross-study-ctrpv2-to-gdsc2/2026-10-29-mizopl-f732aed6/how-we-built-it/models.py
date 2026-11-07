@@ -1,6 +1,6 @@
 """
 SchurBilinearExVivoDRP: Domain-Invariant Multi-Subspace Kernel & Bilinear Drug Response Predictor.
-Engineered under Strict Air-Gap (Stage 2) on CTRPv2 inner validation (LCO, LTO, LDO).
+Engineered under Strict Air-Gap (Stage 2) on CTRPv2 source LCO inner validation splits.
 """
 import os
 import time

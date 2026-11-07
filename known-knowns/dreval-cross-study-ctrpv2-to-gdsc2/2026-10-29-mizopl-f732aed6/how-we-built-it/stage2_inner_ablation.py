@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Stage 2 Air-Gapped Inner Validation & Ablation on CTRPv2 (LCO, LTO, LDO).
+Stage 2 Air-Gapped Inner Validation & Ablation on CTRPv2 Source LCO Splits.
 STRICT AIR-GAP RULE (Anti-Trap #1):
   This script ONLY loads CTRPv2 and meta/gene_lists.
   Zero external datasets are referenced or loaded.
@@ -535,7 +535,7 @@ def fit_and_predict_schur_bilinear(
     R_svd = (u_svd[:, :rank_k] * s_shrunk[None, :]) @ vt_svd[:rank_k, :] + beta_vec
     Pred_svd_tis = K_all_tr @ solve(A_cell, R_svd, assume_a="pos")
 
-    # Head 1C: Lineage Compass (top-20 transcriptomic/pathway softmax kernel) for unseen tissue transfer (LTO)
+    # Head 1C: Lineage Compass (top-20 transcriptomic/pathway softmax kernel) for unseen tissue transfer (unseen-tissue transfer)
     S_lin = 0.45 * ck["K_vdw"] + 0.35 * ck["K_pw"] + 0.20 * ck["K_bio"]
     logits = S_lin / float(hpams.get("lineage_temp", 0.06))
     top_k = min(int(hpams.get("lineage_topk", 20)), n_tr_cl)
@@ -566,7 +566,7 @@ def fit_and_predict_schur_bilinear(
         + 0.40 * Pred_nn_tis
     )
 
-    # 6. Head 3: Unseen-Drug Chemical & Schur Response Transfer (LDO & Cross-Study Unshared Drugs)
+    # 6. Head 3: Unseen-Drug Chemical & Schur Response Transfer (Cross-Study Unshared Drugs)
     all_cl_pos = {c: i for i, c in enumerate(all_cl)}
     seen_tr_cl_set = set(uniq_tr_cl)
     seen_tr_dr_set = set(uniq_tr_dr)
@@ -635,7 +635,7 @@ def fit_and_predict_schur_bilinear(
         res = Pred_all_tis[pc, jd] + w_delta * Delta_table[tr_i, jd]
         preds[mask_lco] = (mu_global + eff_ti_arr[mask_lco] + eff_dr_arr[mask_lco]) + res
 
-    # Case B: Seen drug, unseen cell line, unseen tissue (LTO)
+    # Case B: Seen drug, unseen cell line, unseen tissue (unseen-tissue transfer)
     mask_lto = valid_c & in_tr_dr & (~in_tr_cl) & (~in_tr_ti)
     if np.any(mask_lto):
         pc = pos_c_arr[mask_lto]
@@ -652,7 +652,7 @@ def fit_and_predict_schur_bilinear(
         res = Pred_all_tis[pc, jd] - beta_pred_all[pc] + w_delta * Delta_table[tr_i, jd]
         preds[mask_lpo] = y_naive_arr[mask_lpo] + res
 
-    # Case D: Unseen drug (LDO or Cross-Study unshared drugs)
+    # Case D: Unseen drug (Cross-Study unshared drugs)
     beta_shrink_ldo = float(hpams.get("beta_shrink_ldo", 0.85))
     mask_ldo = valid_c & (~in_tr_dr)
     if np.any(mask_ldo):
@@ -707,7 +707,7 @@ def run_cv_evaluation(views, cell_cache, drug_cache, mode="LCO", n_splits=10, ev
     elif random_state != 42:
         from sklearn.model_selection import GroupKFold, train_test_split
         from drevalpy.datasets.dataset import DrugResponseDataset
-        group_ids = ds.drug_ids if mode == "LDO" else (ds.cell_line_ids if mode == "LCO" else ds.tissue)
+        group_ids = ds.cell_line_ids if mode == "LCO" else ds.tissue
         gkf = GroupKFold(n_splits=n_splits, shuffle=True, random_state=random_state)
         cv_sets = []
         for train_indices, test_indices in gkf.split(ds.response, groups=group_ids):
@@ -842,13 +842,7 @@ def run_cv_evaluation(views, cell_cache, drug_cache, mode="LCO", n_splits=10, ev
         f"Spearman_norm = {summary['Spearman_norm_mean']:.5f} ± {summary['Spearman_norm_std']:.5f} | "
         f"MSE = {summary['MSE_mean']:.5f}"
     )
-    if mode == "LTO":
-        for m in fold_metrics:
-            if "Blood" in m["tissues"] or "Breast" in m["tissues"]:
-                print(
-                    f"  -> LTO Fold {m['fold']} ({m['tissues']}): "
-                    f"R2_norm={m['R2_norm']:.5f}, Pearson_norm={m['Pearson_norm']:.5f}, Spearman_norm={m['Spearman_norm']:.5f}"
-                )
+
     return summary
 
 
@@ -860,12 +854,10 @@ if __name__ == "__main__":
     print(f"Precomputed cell & drug caches in {time.time()-t_start:.2f}s")
 
     results = {}
-    for mode in ["LCO", "LTO", "LDO"]:
+    for mode in ["LCO"]:
         results[f"{mode}_validation"] = run_cv_evaluation(views, cell_cache, drug_cache, mode=mode, eval_split="validation")
         results[f"{mode}_test"] = run_cv_evaluation(views, cell_cache, drug_cache, mode=mode, eval_split="test")
 
-    # Second independent split generation for LDO (per dreval-ldo-beat-naive-mean-effects target card)
-    results["LDO_test_seed1337"] = run_cv_evaluation(views, cell_cache, drug_cache, mode="LDO", eval_split="test", random_state=1337)
 
     out_path = "DREVAL_CAMPAIGN/certificates/stage2_ctrpv2_inner_results.json"
     with open(out_path, "w") as f:

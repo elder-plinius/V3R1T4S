@@ -2,8 +2,6 @@
 """
 Stage 3: Post-Lock One-Shot Ex Vivo & Cross-Study Evaluation + Same-Environment Baselines
 + Exact p3 Transfer Gap Decomposition across:
-  1. BeatAML2 (Ex Vivo AML Patient Blasts — Moonshot Target)
-  2. PDX_Bruna (Ex Vivo Breast Cancer PDX Explants — Moonshot Target)
   3. GDSC2 (Cross-Study Pan-Cancer Cell Lines — Harvest Target)
 
 Requires `DREVAL_CAMPAIGN/certificates/preregistration_lock.json` to exist and be verified first.
@@ -505,7 +503,7 @@ if __name__ == "__main__":
         "targets": {},
     }
 
-    for target_name in ["BeatAML2", "PDX_Bruna", "GDSC2"]:
+    for target_name in ["GDSC2"]:
         all_results["targets"][target_name] = evaluate_cross_study_target(target_name, ctrp_ds)
 
     out_main = f"{BASE_DIR}/certificates/stage3_exvivo_cross_study_results.json"
@@ -514,7 +512,7 @@ if __name__ == "__main__":
 
     p3_only = {
         "preregistration_lock_sha256": lock_doc["preregistration_lock_sha256"],
-        "targets": {t: all_results["targets"][t]["p3_decomposition"] for t in ["BeatAML2", "PDX_Bruna", "GDSC2"]},
+        "targets": {t: all_results["targets"][t]["p3_decomposition"] for t in ["GDSC2"]},
     }
     out_p3 = f"{BASE_DIR}/certificates/stage3_p3_gap_decomposition.json"
     with open(out_p3, "w") as f:

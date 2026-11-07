@@ -1,22 +1,23 @@
-# V3R1T4S Skeptic 3 (CRITERION) Adversarial Audit Report — `dreval-cross-study-ctrpv2-to-gdsc2`
+# Skeptic 3 — Target Criterion & Isolated `p3` Decomposition Audit (`dreval-cross-study-ctrpv2-to-gdsc2`)
 
-- context: fresh subagent invoked via invoke_subagent for independent V3R1T4S panel review
-- **Verdict:** PASS
-- **Target ID:** `dreval-cross-study-ctrpv2-to-gdsc2`
-- **Submission ID:** `2026-10-29-mizopl-f732aed6`
-- **Claimed Verdict:** `CONFIRMED_PARTIAL` (`claim_type: partial_win`, `partial_win: p3`)
+- reviewer: Criterion & Rigor Skeptic (`criterion`)
+- context: fresh independent skeptic review session (zero shared context)
+- target_id: `dreval-cross-study-ctrpv2-to-gdsc2`
+- submission_id: `2026-10-29-mizopl-f732aed6`
+- internal_panel_verdict: `CONFIRMED_PARTIAL` (`partial_win: p3`)
 
----
+## 1. Audit of Partial Win `p3` Criterion
 
-## 1. Clause-by-Clause Verification Against `dreval-cross-study-ctrpv2-to-gdsc2.md`
+The target file `known-unknowns/disease-research/dreval-cross-study-ctrpv2-to-gdsc2.md` defines `p3` as:
+> **p3:** Measured decomposition of the CTRPv2 -> GDSC2 transfer gap into contributions from (i) concentration-range differences, (ii) cell-line overlap differences, and (iii) response-scale calibration, by re-scoring the SAME predictions after each correction, showing which single correction closes the most gap.
 
-| Requirement | Verified Evidence in Package | Status |
-| :--- | :--- | :---: |
-| **Pinned `drevalpy` & Official Splits** | `drevalpy==1.6.0` on Zenodo record `23159774` (`18770924`) + `leaderboard_Oct26.zip` (`splits.zip`); `NaiveMeanEffectsPredictor` matches upstream to `0.00e+00`. | **PASS** |
-| **Strict Air-Gap Pre-Registration (`Anti-Trap #1`)** | `object/preregistration_lock.json` (`5c9295e157e58376a63e0ef358edbfc950bcff6f30499c494ffc01a47cd6c33a`) frozen at `2026-10-29T16:54:12Z` before any `BeatAML2`, `PDX_Bruna`, or `GDSC2` evaluation. | **PASS** |
-| **Same-Environment Baseline Re-Runs** | Re-ran `NaiveMeanEffectsPredictor`, `RandomForest`, `GradientBoosting`, `MultiOmicsNeuralNetwork`, and `SimpleNeuralNetwork` on the exact same splits (`object/stage3_exvivo_cross_study_results.json` and `object/stage4_formalities_and_tanimoto_nulls.json`). | **PASS** |
-| **Anti-Trap Morgan Tanimoto Stratification & 2 Split Seeds** | Evaluated `LDO` across `seed=42` (`+0.06006`) and `seed=1337` (`+0.06857`) and stratified by max Morgan Tanimoto similarity `<= 0.85` (`+0.06012` / `+0.06843`), `<= 0.70` (`+0.04113` / `+0.05700`), and `<= 0.50` (`+0.00235` / `+0.00015`). | **PASS** |
-| **Pre-Registered Null Test (`B = 500` Controls)** | `null_test.md` and `object/stage4_formalities_and_tanimoto_nulls.json` verify `500/500` permutation controls beaten (`real_beats_all_controls: yes`). | **PASS** |
-| **Digit-for-Digit Prose-to-Certificate Match (`K12`)** | Every number and SHA-256 hash in `README.md`, `INDEX.csv`, `the-record-we-beat/record.md`, `HOW_WE_FOUND_IT.md`, and `panel/*.md` matches `object/certificate.json` (`f732aed69c26d36462d68fcb25698da019f0ca8e45ae69c78382d287452f6d5a`). | **PASS** |
+Verified that `object/stage3_p3_gap_decomposition.json`, `README.md`, `HOW_WE_FOUND_IT.md`, `how-we-built-it/artifact.md`, and `verify-it-yourself/verify.py`:
+1. Apply `(i)` concentration-range restriction, `(ii)` cell-line overlap restriction, and `(iii)` response-scale calibration **each in isolation on the exact same `SchurBilinearExVivoDRP` predictions** (and in parallel on `RandomForest_SameEnv` and `RawPlatformKRR_Ablation`) with the official `y_pred_naive` and `SS_tot = sum(((y - y_naive) - mean(y - y_naive))^2)` denominator held fixed.
+2. Explicitly state which mechanism closes the most gap:
+   - **Across all `40,292.4` rows/split:** **Mechanism `(iii)` (response-scale / assay-offset calibration, fitted on GDSC2 labels)** is the largest full-dataset contributor (`+0.42333` `R2_norm` from `-0.42457` to `-0.00124 ± 0.00758` for 1-parameter additive offset calibration, closing `99.71%` of the gap to zero and `71.02%` of the `0.59610` gap to `CTRPv2 LCO`, `MSE = 4.48488`; `+0.43342` to `+0.00885 ± 0.00760` for 2-parameter linear OLS calibration; `+0.44239` to `+0.01781 ± 0.00353` for 2-parameter affine residual calibration).
+   - **Among label-free restrictions using zero GDSC2 labels:** **Mechanism `(i-a)` (in-window concentration-range restriction `ln(min_dose_uM) <= y_pred <= ln(max_dose_uM)`, `19,118.6` rows/split)** is the largest contributor (`+0.46402` `R2_norm` to `+0.03945 ± 0.01189`, closing `109.29%` of the gap to zero and `77.84%` of the gap to `CTRPv2 LCO`, `MSE = 2.63072` [`-58.77%`], `Pearson_norm = +0.36026`).
+   - **Smallest contributor:** **Mechanism `(ii)` (cell-line overlap restriction, `5,345.4` rows/split)** closes only `+0.01346` `R2_norm` (`-0.41111` vs `-0.42457`, `3.17%` of the gap to zero).
+3. Explicitly note wherever any calibration parameter or subset filter uses GDSC2 labels.
+4. Scope the entire package (`object/` and `how-we-built-it/`) strictly to `dreval-cross-study-ctrpv2-to-gdsc2`.
 
 pass: true

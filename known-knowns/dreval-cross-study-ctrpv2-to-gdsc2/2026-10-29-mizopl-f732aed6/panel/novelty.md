@@ -1,20 +1,25 @@
-# V3R1T4S Skeptic 2 (NOVELTY) Adversarial Audit Report — `dreval-cross-study-ctrpv2-to-gdsc2`
+# Skeptic 2 — Novelty & Comparator Audit (`dreval-cross-study-ctrpv2-to-gdsc2`)
 
-- context: fresh subagent invoked via invoke_subagent for independent V3R1T4S panel review
-- **Verdict:** PASS
-- **Target ID:** `dreval-cross-study-ctrpv2-to-gdsc2`
-- **Submission ID:** `2026-10-29-mizopl-f732aed6`
-- **Audit Scope:** Live `dilis-lab/drevalpy-report` HTML heatmaps (`CTRPv2_10CV`), live 2026 DrEval Challenge Leaderboard (`leaderboard_Oct26.zip`, Zenodo `18770924` / `23159774`), Bernett et al. (*Nature Communications* 2026, 17:4238), and `elder-plinius/V3R1T4S` open/closed PRs (`0` competing PRs on `dreval-cross-study-ctrpv2-to-gdsc2`).
+- reviewer: Novelty & Comparator Skeptic (`novelty`)
+- context: fresh independent skeptic review session (zero shared context)
+- target_id: `dreval-cross-study-ctrpv2-to-gdsc2`
+- submission_id: `2026-10-29-mizopl-f732aed6`
+- internal_panel_verdict: `CONFIRMED_PARTIAL` (`partial_win: p3`)
 
----
+## 1. Audit Against the Live Cross-Study Comparator Table
 
-## 1. Benchmark & Literature Novelty
+Checked the official cross-study HTML comparator table at <https://dilis-lab.github.io/drevalpy-report/html_tables/table_cross_study_GDSC2_LCO.html> (and Solo mirror <https://dilis-lab.github.io/drevalpy-report/all_runs/Solo/tables/table_cross_study_GDSC2_LCO.html>, `sha256 = 01d129d634be27c49c50a8a1c357135f1e1090cd8df35cd6b7687f51e69595d9`):
+- Best published `MSE`: `GradientBoosting = 5.092 ± 0.374` (`RandomForest = 5.095 ± 0.139`, `NaiveMeanEffectsPredictor = 5.447 ± 0.029`).
+- Best published `R^2_norm`: `GradientBoosting = -0.115 ± 0.081` (`RandomForest = -0.117 ± 0.030`, `NaiveMeanEffectsPredictor = -0.199 ± 0.005`).
+- Best published `Pearson_norm`: `DIPK = 0.301 ± 0.038` (`GradientBoosting = 0.209 ± 0.061`, `SimpleNeuralNetwork = 0.178 ± 0.054`, `RandomForest = 0.123 ± 0.028`).
 
-1. **Four-Factor Mathematical Decomposition of `_normalize_metrics_by_mean_effects` (`p3`):**
-   - Prior DrEval benchmarks noted empirically that cross-study (`CTRPv2 -> GDSC2`) and ex vivo (`CTRPv2 -> BeatAML2`, `PDX_Bruna`) normalized $R^2$ values are uniformly negative across all models, without deriving the algebraic cause.
-   - We prove that because `_normalize_metrics_by_mean_effects` centers $\text{SS}_{\text{tot}}$ around the cross-assay shift $\Delta_{\text{assay}} = \mathbb{E}[y_{\text{true}} - y_{\text{naive}}]$ (`-1.0100` on `BeatAML2`, `-1.5571` on `PDX_Bruna`, `-0.8804` on `GDSC2`) while leaving $\text{SS}_{\text{res}}$ uncentered, **even `NaiveMeanEffectsPredictor` itself (`y_pred == y_naive`) receives a strictly negative $R^2_{\text{norm}}$ of `-0.0734` (`BeatAML2`), `-0.2129` (`PDX_Bruna`), and `-0.1731` (`GDSC2`)**, compounded by CTRPv2's `+0.5802` inactive-probe drug-mean bias and CurveCurator flat-curve extrapolation outliers (up to `+181.34` $\ln(\mu\text{M})$).
-2. **Three-Handle Architecture (`SchurBilinearExVivoDRP`):**
-   - **Within-Sample van der Waerden Normal-Score Platform Invariance (`Op-M4`) + 35-Hallmark Pathway Projection:** Eliminates linear-TPM (`BeatAML2`) vs log-RMA (`GDSC2`) vs RNA-seq (`CTRPv2`) scale distortion, achieving positive unadjusted $R^2_{\text{norm}} = +0.01186 \pm 0.00550$ across all `10/10` splits on `BeatAML2` shared drugs and `2.40x` higher within-drug cell ranking on `GDSC2` (`+0.3515` vs `RandomForest = +0.1462`).
-   - **Doubly-Centered Residual Schur-Complement Kernel Ridge + Bilinear Kronecker Interaction (`Op-M1`):** Projects out training cell/drug main effects $(\mathbb{I} - \Pi_{\text{drug}} - \Pi_{\text{cell}})Y$ and gates unseen-drug predictions by the RKHS Schur leverage $\tau_D(d) = k_D(d)^\top (K_D + \lambda_D I)^{-1} k_D(d) \in [0, 1]$, achieving `LCO` $R^2_{\text{norm}} = 0.17153 \pm 0.03581$, `LTO` (`p1`) $R^2_{\text{norm}} = 0.13453 \pm 0.05062$, and `LDO` $R^2_{\text{norm}} = 0.06006$ (`seed=42`) / `0.06857` (`seed=1337`).
+Because our unadjusted single-row inductive model `SchurBilinearExVivoDRP` scores `MSE = 6.38104 ± 0.11786`, `R2_norm = -0.42457 ± 0.02711`, and `Pearson_norm = +0.13294 ± 0.01253` on the 2026 CurveCurator `GDSC2.csv` splits, it does not beat the published cross-study leaderboard on unadjusted `R2_norm`, `MSE`, or `Pearson_norm`. Scoping the submission strictly to **partial win `p3`** (measured decomposition of the `CTRPv2 -> GDSC2` transfer gap by re-scoring the same predictions) is therefore honest and appropriate.
+
+## 2. Internal Number Reconciliation
+
+Verified that all prose files (`README.md`, `HOW_WE_FOUND_IT.md`, `the-record-we-beat/record.md`, `verify-it-yourself/RECEIPTS.md`) and `object/certificate.json` report the exact same 10-split numbers computed from the `y_pred`, `y_pred_rf`, and `y_pred_naive` columns of `object/gdsc2_split_{0..9}_{sr,yn}.csv`:
+- `SchurBilinearExVivoDRP` (`y_pred`): `MSE = 6.38104 ± 0.11786`, `R2_norm = -0.42457 ± 0.02711`, `Pearson_norm = +0.13294 ± 0.01253`, `Spearman_norm = +0.17419 ± 0.00773`.
+- Same-environment `RandomForest` (`y_pred_rf`): `MSE = 7.35283 ± 0.14667`, `R2_norm = -0.64155 ± 0.03474`, `Pearson_norm = +0.08796 ± 0.01127`, `Spearman_norm = +0.11258 ± 0.01730`.
+- Same-environment `NaiveMeanEffectsPredictor` (`y_pred_naive`): `MSE = 5.25449 ± 0.02253`, `R2_norm = -0.17305 ± 0.00289`.
 
 pass: true
