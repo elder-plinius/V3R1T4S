@@ -1,0 +1,6 @@
+order=6 connected_graphs=112 max_cycle=4
+periods: 1 2 3 4
+witness 1 E?Bw 0
+witness 2 EErw 35
+witness 3 EF~w 7
+witness 4 E]yw 30
