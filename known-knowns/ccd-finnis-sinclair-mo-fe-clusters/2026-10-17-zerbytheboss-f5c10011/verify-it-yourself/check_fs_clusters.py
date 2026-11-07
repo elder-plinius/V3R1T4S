@@ -3,17 +3,19 @@
 
 Uses only the Python 3 standard library (hashlib, math, decimal.Decimal, json).
 Verifies:
-1. Calibration of Finnis-Sinclair Mo (1984) and Fe (1986) parameters across all 98 posted CCD
-   Mo point files and all 98 posted CCD Fe point files to < 1e-7 eV (actual max error < 1e-10 eV),
-   citing live CCD point-file URLs and SHA-256 digests without vendoring third-party coordinates.
+1. Stored calibration and audit rows for Finnis-Sinclair Mo (1984) and Fe (1986) parameters across all
+   98 posted CCD Mo point files and all 98 posted CCD Fe point files (checked against their SHA-256
+   digests and < 1e-7 eV tolerance; this script recomputes only the 11 new structures from coordinates,
+   while reproducing the 196-row audit from coordinates requires the cited points.tgz archives).
 2. All 11 new putative global-minimum records (Mo_75, Mo_90, Fe_86, Fe_87, Fe_90, Fe_91, Fe_92,
-   Fe_96, Fe_97, Fe_98, Fe_100) in both IEEE 754 float64 and 55-digit decimal.Decimal arithmetic:
+   Fe_96, Fe_97, Fe_98, Fe_100) recomputed from coordinates in both IEEE 754 float64 and 55-digit decimal.Decimal arithmetic:
    - E* strictly lower by >= 1e-4 eV than both the CCD table energy and the polished CCD structure
      (actual improvements: -0.027627 eV to -0.424275 eV, i.e., 276x to 4,242x the 1e-4 eV threshold),
-   - Gradient norm ||grad E||_2 < 1e-10 in both float64 (<= 1.26e-13) and 55-digit Decimal (<= 1.19e-27),
+   - Gradient norm ||grad E||_2 < 1e-10 in both float64 (<= 1.26e-13) and 55-digit Decimal (<= 1.20e-27),
    - Exact 3N x 3N analytical Hessian has 6 near-zero rigid-body modes (||H Q_0||_F < 1e-11 < 1e-6)
      and all 3N - 6 vibrational eigenvalues strictly positive (> 0.35 > 0 via shifted Cholesky inertia).
-3. Complete 196-file CCD reproduction and polishing audit (2 x 98 = 196 point files, Partial Win p1).
+3. Stored 196-row CCD audit table (2 x 98 = 196 rows, Partial Win p1) checked against its SHA-256 digest
+   and consistency invariants (recomputing only the 11 new structures from coordinates).
 """
 import hashlib, json, math, os, sys
 from decimal import Decimal, getcontext
@@ -296,7 +298,7 @@ def main():
     assert (p_mo["d"], p_mo["A"], p_mo["beta"], p_mo["c"], p_mo["c0"], p_mo["c1"], p_mo["c2"]) == EXPECTED_PARAMS["Mo"]
     assert (p_fe["d"], p_fe["A"], p_fe["beta"], p_fe["c"], p_fe["c0"], p_fe["c1"], p_fe["c2"]) == EXPECTED_PARAMS["Fe"]
 
-    # 1. Verify all 196 rows of the CCD audit table & calibrate across all 98 Mo and 98 Fe point files
+    # 1. Check the 196 stored audit rows against their hashes (recomputing only the 11 new structures below)
     audit = data["ccd_196_point_files_audit"]
     assert len(audit) == 196
     audit_sha = hashlib.sha256(json.dumps(raw_str_data["ccd_196_point_files_audit"], sort_keys=True).encode("utf-8")).hexdigest()

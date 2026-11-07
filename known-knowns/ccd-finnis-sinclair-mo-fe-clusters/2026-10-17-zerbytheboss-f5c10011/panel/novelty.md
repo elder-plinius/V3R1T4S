@@ -37,13 +37,13 @@ Using Python `urllib.request.urlopen` (single request per URL, zero retries) at 
    - **URL**: `https://arxiv.org/abs/1708.00096` (Dil K. Limbu and Parthapratim Biswas, *"Structure of transition metal clusters: A force-biased Monte Carlo approach"*, 2017)
    - **HTTP Status**: `200` (`42900` bytes, SHA-256 `eafe2d886829a1570e0b9a40dba72ca2563188091cb53c4813498f8e4f82ae14`)
    - **Fetched UTC**: `2026-10-17T22:55:19Z`
-   - **Scope Check**: Models `Fe_N` for `N = 5..60` and benchmarks against the CCD `FS_Fe` table (with energies within `0.05 eV` above the CCD values and none lower than the CCD entries; does not cover `N = 75..100`).
+   - **Scope Check**: Models `Fe_N` for `N = 5..60` and benchmarks against the CCD `FS_Fe` table; its abstract states only that its energies are very close to the CCD values (in our own reading of its results for `N = 5..60`, its energies lie within `0.05 eV` above the CCD values with none lower, and it does not cover `N = 75..100`).
 
 ## 2. Literature, Trophy Case, and Pull Request Audit
 
-1. **Last 24 Months of Literature (2024-2026)**:
-   - Searched 2024-2026 literature and citations of Elliott, Shibuta, and Wales (2009), Finnis and Sinclair (1984, 1986), and the Cambridge Cluster Database `FS_Mo` and `FS_Fe` tables.
-   - No publication in the last 24 months (or any prior work) reports Finnis-Sinclair `Mo_N` or `Fe_N` energies for `N = 3..100` below the live CCD values for `Mo_75`, `Mo_90`, `Fe_86`, `Fe_87`, `Fe_90`, `Fe_91`, `Fe_92`, `Fe_96`, `Fe_97`, `Fe_98`, or `Fe_100`.
+1. **Checked Primary Sources and Literature (`2026-10-17`)**:
+   - Checked the live Cambridge Cluster Database `FS_Mo/moly_fs.html` and `FS_Fe/iron_fs.html` tables (`2026-10-17`), Finnis and Sinclair (*Phil. Mag. A* 50, 45, 1984; erratum *Phil. Mag. A* 53, 161, 1986), Elliott, Shibuta, and Wales (*Phil. Mag.* 89, 3311, 2009, as tabulated in the CCD `FS_Mo` and `FS_Fe` pages), Limbu and Biswas (`arXiv:1708.00096`, fetched `2026-10-17`), and arXiv queries for `"Finnis-Sinclair"` + `"clusters"` (`2026-10-17`).
+   - None of these checked sources report Finnis-Sinclair `Mo_N` or `Fe_N` energies for `N = 3..100` below the live CCD values for `Mo_75`, `Mo_90`, `Fe_86`, `Fe_87`, `Fe_90`, `Fe_91`, `Fe_92`, `Fe_96`, `Fe_97`, `Fe_98`, or `Fe_100`.
 
 2. **Repository `TROPHY_CASE.md`**:
    - Inspected `TROPHY_CASE.md`: confirmed zero existing entries for `ccd-finnis-sinclair-mo-fe-clusters`.

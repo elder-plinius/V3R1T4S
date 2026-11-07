@@ -31,9 +31,9 @@ Before reading `verify-it-yourself/check_fs_clusters.py`, an independent checker
 2. **Calibration on Posted CCD Point Files & 196-Row Audit (`ccd_196_point_files_audit`, Partial Win `p1`)**:
    - Across all $2 \times 98 = 196$ stored audit rows (`Mo_3` through `Mo_100` and `Fe_3` through `Fe_100`) in `ccd_196_point_files_audit` (checked against SHA-256 by `verify-it-yourself/check_fs_clusters.py` and citing live `FS_Mo/points/<N>` and `FS_Fe/points/<N>` URLs and SHA-256 digests without vendoring third-party coordinates; reproducing them from coordinates requires the cited `points.tgz` archives), every posted CCD energy matches within `9.77e-11 eV` on Mo and `9.42e-11 eV` on Fe (well within the `1e-7 eV` calibration tolerance), and Newton-polishing lowers any posted CCD structure by at most `1.0e-10 eV` (`1.01e-10 eV`).
 
-3. **Independent `float64`, 55-Digit `mpmath`, Gradient, and $3N \times 3N$ Hessian Spectrum Audit across All 11 Putative Global Minimum Clusters**:
+3. **Independent `float64`, 55-digit `decimal.Decimal`, Gradient, and $3N \times 3N$ Hessian Spectrum Audit across All 11 Putative Global Minimum Clusters**:
 
-| Cluster | $N$ | CCD Table $E$ (eV) | `float64` $E^*$ (eV) | 55-Digit `mpmath` $E^*$ (eV) | $\Delta E$ vs CCD (eV) | $\|\nabla E\|_2$ (`float64`) | $\|\nabla E\|_2$ (`mp55`) | Hessian Zero / Neg / Pos Modes | Vibrational $\lambda_{\min} \dots \lambda_{\max}$ |
+| Cluster | $N$ | CCD Table $E$ (eV) | `float64` $E^*$ (eV) | 55-digit `decimal.Decimal` $E^*$ (eV) | $\Delta E$ vs CCD (eV) | $\|\nabla E\|_2$ (`float64`) | $\|\nabla E\|_2$ (`dec55`) | Hessian Zero / Neg / Pos Modes | Vibrational $\lambda_{\min} \dots \lambda_{\max}$ |
 |---|---:|---:|---:|---:|---:|---:|---:|---|---|
 | **`Mo_75`** | `75` | `-439.4197932305` | `-439.5640256673` | `-439.56402566727096373` | **`-0.144232`** | `1.228e-13` | `9.179e-28` | `6 / 0 / 219` | `0.4042 .. 29.2452` |
 | **`Mo_90`** | `90` | `-532.7899433214` | `-533.2142178271` | `-533.21421782713398599` | **`-0.424275`** | `1.262e-13` | `1.201e-27` | `6 / 0 / 264` | `0.4171 .. 28.6913` |
