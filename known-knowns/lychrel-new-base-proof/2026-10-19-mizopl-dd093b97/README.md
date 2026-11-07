@@ -29,7 +29,7 @@ Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.
 
 ## Not claimed
 
-- Base 10 (`196`) is not proved; our Period-4 Carry-Wire Decoupling theorem requires $b \equiv 2 \pmod{24}$ ($b \equiv 2 \pmod{3}$ for the Period-2 Outer Engine and $b \equiv 2 \pmod{8}$ for the Period-4 Inner Core).
+- Base 10 (`196`) is not proved; our specific decoupled carry-wire search ansatz restricts attention to bases $b \equiv 2 \pmod{24}$ (combining $b \equiv 2 \pmod{3}$ from our outer-engine transition constraints and $b \equiv 2 \pmod{8}$ from our inner-core transition constraints, a property of this search family rather than a necessary condition on all Period-4 templates).
 - Not formalized in Lean 4 or Coq; closure for all $m \ge 1$ is reduced to a finite mechanical symbolic run-length block carry computation (`symbolic_rle_rev_add`) plus brute force over $1 \le m \le 500$ and 100,000-step regex-matched orbit simulation, as specified in the target's `success_criterion` and `verification_method`.
 - Not peer reviewed. Checked by a three-skeptic panel (`panel/`) and by the standalone checker shipped here.
 
