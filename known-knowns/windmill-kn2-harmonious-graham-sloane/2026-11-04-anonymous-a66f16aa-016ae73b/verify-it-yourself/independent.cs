@@ -1,0 +1,21 @@
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Numerics;
+using System.Text.Json;
+public static class IndependentReproduce {
+ static int n,q; static UInt128 full; static Stopwatch watch; static long nodes, leaves, pairs; static long[] levels; static Dictionary<UInt128,List<UInt128>> bank; static double nextReport; static int seconds; static bool found; static int[] witnessA,witnessB;
+ static UInt128 Rotate(UInt128 v,int x) {return ((v<<x)&full)|(v>>(q-x));}
+ static int Pop(UInt128 v) { return BitOperations.PopCount((ulong)v)+BitOperations.PopCount((ulong)(v>>64)); }
+ static int Low(UInt128 v) {ulong a=(ulong)v; return a!=0?BitOperations.TrailingZeroCount(a):64+BitOperations.TrailingZeroCount((ulong)(v>>64));}
+ static int[] Labels(UInt128 v) {var a=new List<int>(); while(v!=0){int x=Low(v);a.Add(x);v&=v-1;}return a.ToArray();}
+ static void CheckClique(UInt128 v,UInt128 sums) {int[] a=Labels(v);if(a.Length!=n||a[0]!=0)throw new Exception("clique vertex count");UInt128 actual=0;for(int i=0;i<n;i++)for(int j=i+1;j<n;j++){UInt128 b=(UInt128)1<<((a[i]+a[j])%q);if((actual&b)!=0)throw new Exception("clique duplicate sum");actual|=b;}if(actual!=sums)throw new Exception("clique mask mismatch");}
+ static void CheckGraph(int[] a,int[] b){var labels=new HashSet<int>(a);for(int i=1;i<b.Length;i++)if(!labels.Add(b[i]))throw new Exception("graph duplicate vertex");if(labels.Count!=2*n-1)throw new Exception("graph vertex count");var sums=new HashSet<int>();foreach(var c in new[]{a,b})for(int i=0;i<n;i++)for(int j=i+1;j<n;j++)if(!sums.Add((c[i]+c[j])%q))throw new Exception("graph duplicate sum");if(sums.Count!=q)throw new Exception("graph edge count");}
+ static void Tick(){if((nodes&262143)!=0)return;double t=watch.Elapsed.TotalSeconds;if(t>=seconds)throw new TimeoutException("time cap");var p=Process.GetCurrentProcess();if(p.PrivateMemorySize64>1900L*1024*1024||p.WorkingSet64>1900L*1024*1024)throw new OutOfMemoryException("memory cap");if(t>=nextReport){Console.WriteLine(JsonSerializer.Serialize(new{kind="progress",pid=p.Id,n,q,nodes,leaves,masks=bank.Count,elapsed=t,private_bytes=p.PrivateMemorySize64,working_bytes=p.WorkingSet64}));nextReport=t+10;}}
+ static void Visit(int depth,UInt128 vertices,UInt128 sums,UInt128 candidates){nodes++;levels[depth]++;Tick();if(depth==n){leaves++;CheckClique(vertices,sums);if(bank.TryGetValue(full^sums,out var partners)){foreach(var other in partners){pairs++;if((other&vertices)==1){witnessA=Labels(other);witnessB=Labels(vertices);CheckGraph(witnessA,witnessB);found=true;Console.WriteLine(JsonSerializer.Serialize(new{kind="witness",n,q,a=witnessA,b=witnessB}));return;}}}if(!bank.TryGetValue(sums,out var list)){list=new List<UInt128>();bank.Add(sums,list);}list.Add(vertices);return;}
+ if(Pop(candidates)<n-depth)return;
+ while(candidates!=0){int x=Low(candidates);UInt128 bit=(UInt128)1<<x;candidates^=bit;UInt128 newSums=sums|Rotate(vertices,x);UInt128 newV=vertices|bit;UInt128 next=0;if(depth+1<n){UInt128 scan=candidates;while(scan!=0){int y=Low(scan);UInt128 ybit=(UInt128)1<<y;scan^=ybit;if((Rotate(newV,y)&newSums)==0)next|=ybit;}if(Pop(next)<n-depth-1)continue;}
+ Visit(depth+1,newV,newSums,next);if(found)return;}
+ }
+ public static void Run(int size,int cap){n=size;q=n*(n-1);if(q>=128)throw new Exception("q too large");seconds=cap;full=((UInt128)1<<q)-1;watch=Stopwatch.StartNew();bank=new Dictionary<UInt128,List<UInt128>>();levels=new long[n+1];nextReport=10;var proc=Process.GetCurrentProcess();proc.PriorityClass=ProcessPriorityClass.BelowNormal;Console.WriteLine(JsonSerializer.Serialize(new{kind="start",utc=DateTime.UtcNow.ToString("O"),pid=proc.Id,n,q,cap_seconds=cap,algorithm="complete sorted cliques, complementary sum masks",priority=proc.PriorityClass.ToString()}));string status="COMPLETE";string reason="";try{Visit(1,1,0,full^1);}catch(TimeoutException e){status="INCOMPLETE";reason=e.Message;}catch(OutOfMemoryException e){status="INCOMPLETE";reason=e.Message;}proc.Refresh();Console.WriteLine(JsonSerializer.Serialize(new{kind="result",utc=DateTime.UtcNow.ToString("O"),pid=proc.Id,n,q,status,reason,found,nodes,levels,leaves,masks=bank.Count,complement_pairs=pairs,elapsed=watch.Elapsed.TotalSeconds,peak_working_bytes=proc.PeakWorkingSet64,private_bytes=proc.PrivateMemorySize64}));}
+}
