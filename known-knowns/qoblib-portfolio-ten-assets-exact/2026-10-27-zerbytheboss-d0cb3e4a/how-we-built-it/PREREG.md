@@ -14,5 +14,5 @@ null_test: not needed because deterministic checker evaluates exact integer arit
 - Objective: Exact Zimpl integer rounding round-half-away-from-zero matching `bqp_u3_c10.zpl` and `check_portfolio`.
 - Decision variables: 10 assets, $T=10$ periods, integer unit counts $u_{i, \tau} \in \{0, 1, 2, 3\}$, total units $\sum_{i, \tau} u_{i, \tau} \le 4$.
 - Success bar:
-  - Global Optimality Certificate for $v = -8397$ (proving no feasible schedule has $v < -8397$ via Bellman values $V_t(s)$) -> CONFIRMED_SOLUTION
-  - Feasible schedule with $v \le -8398$ -> Partial Win p1 / CONFIRMED_SOLUTION.
+  - Global optimality certificate for $v = -8397$ (proving no feasible schedule has $v < -8397$ via Bellman values $V_t(s)$) -> full win.
+  - Feasible schedule with $v \le -8398$ -> Partial Win p1.

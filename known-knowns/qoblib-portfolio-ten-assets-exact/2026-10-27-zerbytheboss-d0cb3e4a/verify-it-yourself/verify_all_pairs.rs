@@ -219,7 +219,7 @@ fn parse_solution_path(path: &Path, inst: &Instance, states: &[State]) -> Vec<us
 
 fn main() {
     let t_start = Instant::now();
-    let data_dir = Path::new("runs/2026-10-27-1610/data");
+    let data_dir = Path::new("data");
     let unit_cash = BigRational::from_integer(BigInt::from(100000));
     let lambda = BigRational::new(BigInt::one(), BigInt::from(1000)); // 0.001
     let delta = BigRational::new(BigInt::one(), BigInt::from(1000));  // 0.001
@@ -493,7 +493,7 @@ fn main() {
     if opt_val == -8397 {
         println!("\nCONCLUSION: -8397 IS THE MATHEMATICALLY PROVED GLOBAL OPTIMUM!");
         println!("No schedule in the entire space of 10,606^10 possible trajectories can achieve < -8397.");
-        println!("The Bellman optimality certificate proves global optimality unconditionally.");
+        println!("The Bellman optimality certificate proves global optimality.");
     } else if opt_val < -8397 {
         println!("\nCONCLUSION: STRICT IMPROVEMENT FOUND! New record: {}", opt_val);
     } else {

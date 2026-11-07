@@ -274,7 +274,7 @@ struct HasseVerificationSummary {
 
 fn main() {
     let t_start = Instant::now();
-    let data_dir = Path::new("runs/2026-10-27-1610/data");
+    let data_dir = Path::new("data");
     let unit_cash = BigRational::from_integer(BigInt::from(100000));
     let lambda = BigRational::new(BigInt::one(), BigInt::from(1000));   // 0.001
     let delta = BigRational::new(BigInt::one(), BigInt::from(1000));    // 0.001
@@ -735,10 +735,9 @@ fn main() {
     assert!(d_json.len() < 1_000_000, "Downward tables JSON exceeds 1MB limit!");
     assert!(u_json.len() < 1_000_000, "Upward tables JSON exceeds 1MB limit!");
 
-    // Export to runs/2026-10-27-1610/claim/object/ and runs/2026-10-27-1610/object/
+    // Export to ../object/
     let export_dirs = [
-        PathBuf::from("runs/2026-10-27-1610/claim/object"),
-        PathBuf::from("runs/2026-10-27-1610/object"),
+        PathBuf::from("../object"),
     ];
 
     for dir in &export_dirs {
@@ -749,14 +748,12 @@ fn main() {
             .expect("failed to write d tables json");
         fs::write(dir.join("po_a010_t10_orig_b004_l1e-03_upward_join_tables.json"), &u_json)
             .expect("failed to write u tables json");
-        fs::write(dir.join("po_a010_t10_orig_b004_l1e-03.sol"), &sol_content)
-            .expect("failed to write sol file");
         println!("Exported certificate artifacts to {}", dir.display());
     }
 
     println!("\n=======================================================");
     println!("GLOBAL OPTIMALITY PROOF & ARTIFACT EXPORT COMPLETE!");
-    println!("Global Minimum Objective: -8397 (Unconditionally Certified)");
+    println!("Global Minimum Objective: -8397 (Certified)");
     println!("Total Execution Time:     {:.2?}", t_start.elapsed());
     println!("=======================================================");
 }

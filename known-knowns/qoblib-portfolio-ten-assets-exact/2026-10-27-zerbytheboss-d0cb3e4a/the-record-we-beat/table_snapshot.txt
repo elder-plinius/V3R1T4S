@@ -10,7 +10,8 @@ Extracted Cell Record:
 | a010_t10_orig_b004_l1e-03 | -8397 | best known | reference | — |
 
 Published Solution Metadata:
-- File: solutions/po_a010_t10_orig_b004_l1e-3.bst.sol
+- File: 06-portfolio/solutions/po_a010_t10_orig/po_a010_t10_orig_b004_l1e-3.bst.sol
+- URL: https://raw.githubusercontent.com/ZIB-AOPT/QOBLIB/main/06-portfolio/solutions/po_a010_t10_orig/po_a010_t10_orig_b004_l1e-3.bst.sol
 - SHA-256: d0cb3e4a86d01ac2b2884e3275df8219bb1d38dae908830784417b0d4e4b30ea
-- Published numerical bound: -15342.65126758
-- Closed optimality bound: -8397 (exact integer global optimum)
+- Published Gurobi numerical MIP bound (after 3600.03 s): -15342.65126758
+- Certified exact integer global optimum: -8397
