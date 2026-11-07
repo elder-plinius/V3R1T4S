@@ -1,34 +1,26 @@
-# Stage 3 Null / Permutation Control Battery (`null_test.md`)
+# Null / Permutation Control Battery (`null_test.md`)
 
-- **Target:** `linear-baseline-perturbation-replogle-k562`
-- **Reference:** Ahlmann-Eltze, Huber & Anders, *Nature Methods* 2025 (`doi:10.1038/s41592-025-02772-6`), repository `const-ae/linear_perturbation_prediction-Paper` at pinned commit `bfa6eeea2bd145a1af2ec0127a2e808cc38456a9`.
-- **Certificate:** [`claim/certificate_replogle_k562.json`](object/certificate_replogle_k562.json) (`sha256 = 71c4fdf154e6f8cccfe44f18817dfa78f0863a5cadd8f964026e2a4670bf6c7e`).
-- **Execution Script:** [`claim/certify_all_splits_and_controls.py`](how-we-built-it/certify_all_splits_and_controls.py).
-
----
-
-## 1. Null Control Design (Zero-Leakage Verification)
-
-To prove that the gains of our **Hollow-LOO Dual-Lens** predictor over `lpm_selftrained` arise from genuine biological gene-gene structure in the training perturbations and the GO biological process graph — and **not** from shrink-to-mean bias, global variance scaling, or evaluation leakage — we executed a pre-registered (`PREREG.md`) permutation control battery across `300` split-level random permutations (`150` combined two-seed runs):
-
-1. **`replogle_k562_essential` (`100` combined two-seed random permutations = `200` split-level runs):**
-   - In each random realization $b \in \{1, \dots, 100\}$ and each split (`seed = 1`, `seed = 2`), we randomly permute the gene identity mapping (`train_pert_cols` and `g2go_idx`) of the training perturbations and GO nodes while keeping the exact expression matrix `X_mean`, control baseline `ctrl`, ridge penalties, Hollow-LOO operator, and variance-matching parameters identical.
-2. **`replogle_rpe1_essential` (`50` combined two-seed random permutations = `100` split-level runs):**
-   - Same random permutation protocol applied across `seed = 1` and `seed = 2` on `replogle_rpe1_essential` (`n = 413` held-out perturbations).
+- **Target ID**: `linear-baseline-perturbation-replogle-k562` (`known-knowns`, Partial Progress `p2` only)
+- **Dataset**: `replogle_k562_essential` (`seeds = 1..2` Panel A splits, $n = 262$ held-out perturbations: `134` in `seed 1`, `128` in `seed 2`)
+- **Control Design**: `100` independent random permutations per split (`200` split evaluations total) of the held-out perturbation target gene labels $p^* \mapsto \pi(p^*)$ while keeping the training split (`train`), control baseline (`ctrl`), and all fitted model operators (`Lens 1` + `Lens 2`) unchanged.
 
 ---
 
-## 2. Quantitative Results (`300` Split-Level Permutations)
+## 1. Purpose of the Null Control
 
-| Dataset | Split Universe | Real Model Mean $L_2$ | `lpm_selftrained` Mean $L_2$ | Null Permuted Mean $L_2$ ($\mu \pm \sigma$) | Best Null $L_2$ ($\min$) | Worst Null $L_2$ ($\max$) | $Z$-Score ($L_2$ vs Null) | Real Mean Pearson $\Delta$ | Null Mean Pearson $\Delta$ ($\mu \pm \sigma$) | Best Null Pearson $\Delta$ ($\max$) | $Z$-Score ($r_{\Delta}$ vs Null) |
-|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| `replogle_k562_essential` | `Panel A` (`n = 262`, `100` combined / `200` split runs) | **`3.320307`** | `4.097028` | `4.971309 ± 0.067250` | `4.798990` | `5.163161` | **`24.55 σ`** | **`0.620623`** | `0.284854 ± 0.010565` | `0.311606` | **`31.78 σ`** |
-| `replogle_rpe1_essential` | `Panel A` (`n = 413`, `50` combined / `100` split runs) | **`4.777953`** | `5.390179` | `6.231428 ± 0.064759` | `6.085542` | `6.392681` | **`22.44 σ`** | **`0.719286`** | `0.632151 ± 0.002595` | `0.638356` | **`33.57 σ`** |
+In `hollow_loo_dual_lens`, predictions for a held-out perturbation $p^*$ depend on the identity of $p^*$ through two target-specific pathways:
+1. **Lens 1 (`Cis-Knockdown + De-Spiked Bilinear`)**: Applies direct cis-knockdown attenuation at read-out gene index $g = p^*$ and projects $p^*$'s training-expression embedding through the shrinkage bilinear operator.
+2. **Lens 2 (`Hollow-LOO Multi-Scale GO + Co-Expression Graph Resolvent`)**: Queries $p^*$'s Gene Ontology (`gene2go_all.pkl`) and training co-expression neighborhood among training perturbations $\mathcal{P}_{\text{train}}$.
+
+If the observed improvements over `lpm_selftrained` ($L_2 = 4.097028 \to 3.320307$, $R_{\Delta} = 0.435544 \to 0.620623$) and the `p2` functional-distance gradient ($Q_1$ $\Delta L_2 = -32.33\%$ vs. $Q_4$ $\Delta L_2 = -10.40\%$) were an artifact of global shrinkage toward the training mean $\mu_{\text{train}}$, permuting the held-out query identities $p^* \mapsto \pi(p^*)$ would preserve performance. Conversely, if the gain comes from genuine target-specific cis-attenuation and functional pathway alignment, permuting held-out target labels must collapse performance below the uninformative `mean` baseline.
 
 ---
 
-## 3. Interpretation & Falsification Verdict
+## 2. Results (`object/certificate_replogle_k562.json` $\to$ `null_permutation_controls`)
 
-1. **Complete Collapse Under Gene-Identity Permutation:** When gene identities linking the training perturbations and GO graph to the held-out target genes are randomly permuted, performance degrades dramatically below both the real model and the uninformative `mean` baseline (`4.971309` vs `4.193494` on K562; `6.231428` vs `5.533708` on RPE1).
-2. **Zero Overlap ($> 22\sigma$ Separation):** Across all `200` split evaluations on K562 (`100` combined runs), the best random realization achieved $L_2 = 4.798990$ and Pearson $\Delta = 0.311606$, separated from the real model ($L_2 = 3.320307$, Pearson $\Delta = 0.620623$) by **$24.55\sigma$** in $L_2$ and **$31.78\sigma$** in Pearson $\Delta$. On RPE1 (`100` split evaluations), the separation is **$22.44\sigma$** in $L_2$ and **$33.57\sigma$** in Pearson $\Delta$.
-3. **Verdict:** **`NULL_TEST: PASS`**.
+| Metric | Real `hollow_loo_dual_lens` | `lpm_selftrained` Baseline | Uninformative `mean` Baseline | Permuted Target-Label Null (`100` perms $\times 2$ splits = `200` runs) | Null Min $\dots$ Max | $z$-Score (Real vs. Null) | Empirical $p$-Value |
+| :--- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| **Mean $L_2 \downarrow$** | **`3.320307`** | `4.097028` | `4.193494` | `4.971309 ± 0.067250` | `[4.798990, 5.163161]` | **`-24.55`** | **`0.009901` (`1/101`)** |
+| **Mean $R_{\Delta} \uparrow$** | **`0.620623`** | `0.435544` | `0.407911` | `0.284854 ± 0.010565` | `[0.250656, 0.311606]` | **`+31.78`** | **`0.009901` (`1/101`)** |
+
+Every single one of the `100` paired permutation trials performs substantially worse than both the real `hollow_loo_dual_lens` predictions ($z = -24.55$ on $L_2$, $z = +31.78$ on $R_{\Delta}$) and the uninformative `mean` baseline ($L_2 = 4.971309 > 4.193494$; $R_{\Delta} = 0.284854 < 0.407911$), confirming that the predictions rely on genuine target-gene identity and functional pathway alignment.

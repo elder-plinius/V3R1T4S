@@ -14,12 +14,6 @@ import lens1_lens2_engine as eng
 DATA_DIR = "../data"
 GEARS_DIR = os.path.join(DATA_DIR, "gears_pert_data")
 
-panel_a = pd.read_excel(os.path.join(DATA_DIR, "single_perturbation_prediction.xlsx"), sheet_name="Panel A")
-panel_c = pd.read_excel(os.path.join(DATA_DIR, "single_perturbation_prediction.xlsx"), sheet_name="Panel C")
-
-pert_names = rb.load_pert_names()
-go_genes, g2go_idx, S_go_idf, S_go_jaccard = eng.build_go_idf_features(pert_names)
-
 
 def fit_predict_hollow_loo_dual_lens(
     X_mean,
@@ -354,7 +348,10 @@ def fit_predict_hollow_loo_dual_lens(
 
 
 if __name__ == "__main__":
-    for ds in ["replogle_k562_essential", "replogle_rpe1_essential", "adamson"]:
+    panel_a = pd.read_excel(os.path.join(DATA_DIR, "single_perturbation_prediction.xlsx"), sheet_name="Panel A")
+    pert_names = rb.load_pert_names()
+    go_genes, g2go_idx, S_go_idf, S_go_jaccard = eng.build_go_idf_features(pert_names)
+    for ds in ["replogle_k562_essential"]:
         gene_names, uniq_conds, clean_conds, X_mean, counts, splits_dict = eng.load_cached_dataset(ds)
         print(f"\n==================== {ds} ====================")
         all_lpm, all_dual = [], []

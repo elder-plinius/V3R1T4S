@@ -1,31 +1,28 @@
-# How We Found It (`linear-baseline-perturbation-replogle-k562`)
+# How We Found It (`HOW_WE_FOUND_IT.md` — contributor text, unverified)
 
-## 1. Diagnosing the Linear Baseline Bottleneck in `run_linear_pretrained_model.R`
-
-When we inspected the reference R scripts at `const-ae/linear_perturbation_prediction-Paper` (`commit bfa6eeea2bd145a1af2ec0127a2e808cc38456a9`), we reproduced `mean`, `lpm_selftrained`, `lpm_k562PertEmb`, and `lpm_rpe1PertEmb` to `0.000000–0.000007` across all three datasets (`how-we-built-it/reproduce_baselines.py`) and uncovered why `lpm_selftrained` and `lpm_gearsPertEmb` fail to beat the training mean by more than `2.3%`:
-
-1. **Cis-Knockdown Diagonal Smearing (`Lens 1` Bottleneck):**
-   - In CRISPRi Perturb-seq screens (`replogle_k562_essential`, `replogle_rpe1_essential`, `adamson`), knocking down target gene $q$ directly depletes transcript $q$ at row $i(q)$ ($\Delta_{q,q} \approx -b_q$).
-   - `lpm_selftrained` takes a rank-10 PCA of the raw training matrix (`including` the huge negative diagonal self-knockdown spikes) and fits $Y_{\text{train}} - \bar{y} \approx G W G_{\text{train}}^T$. Because rank-10 PCA cannot isolate diagonal spikes, it simultaneously (a) loses $>80\%$ of the direct cis-knockdown amplitude on target gene $q$ and (b) corrupts the trans-regulatory singular vectors with high-leverage diagonal outliers.
-2. **Spectral Localization Collapse in `lpm_gearsPertEmb` (`Lens 2` Bottleneck):**
-   - In `extract_pert_embedding_from_gears.R`, the authors extracted only $K = 2$ spectral eigenvectors (`svds(A, k = 2)`) from the unnormalized weighted GO graph (`go_essential_all.csv`). On a scale-free graph of $19{,}264$ genes, the top 2 unnormalized eigenvectors localize on a single high-degree hub cluster, assigning near-zero coordinates to $>95\%$ of perturbed genes (`lpm_gearsPertEmb` collapses to `4.193477` vs `mean = 4.193494` on K562 `Panel A`).
+> **Note (`contributor text, unverified`)**: This document records the engineering notes behind our Partial Progress `p2` stratification on `linear-baseline-perturbation-replogle-k562`. For standalone verification of the saved per-perturbation K562 predictions and distances, run `sh verify-it-yourself/run_checks.sh`.
 
 ---
 
-## 2. Closed-Form Solution: Hollow-LOO Dual-Lens Kernel Regression
+## 1. Decomposing the Linear Baseline (`lpm_selftrained`) on Replogle K562
 
-Implemented in [`how-we-built-it/certify_all_splits_and_controls.py`](how-we-built-it/certify_all_splits_and_controls.py) and [`how-we-built-it/lens1_lens2_engine.py`](how-we-built-it/lens1_lens2_engine.py):
+In Ahlmann-Eltze, Huber & Anders (*Nature Methods* 22, 1657–1661, 2025; `const-ae/linear_perturbation_prediction-Paper`, commit `bfa6eeea2bd145a1af2ec0127a2e808cc38456a9`), the self-trained linear baseline (`lpm_selftrained`, implemented in `benchmark/src/run_linear_pretrained_model.R`) computes:
+1. Condition-level pseudobulk averages across single cells for each CRISPRi perturbation condition $p$ and unperturbed control `ctrl`.
+2. Training-set change matrix $Y_{\text{train}} = X_{\text{train}} - x_{\text{ctrl}}\mathbf{1}^{\top}$.
+3. Top $K = 10$ principal components (`irlba::prcomp_irlba(train_X, n = 10)`) over the read-out genes, using $G = U_{10} \Sigma_{10}$ as both the gene embedding and (for perturbations whose target gene is among the read-out genes) the perturbation embedding $P = G^{\top}$.
+4. Ridge regression ($\lambda = 0.1$):
+   $$\hat{Y}_{\text{test}} = x_{\text{ctrl}}\mathbf{1}^{\top} + \mu_{\text{train}}\mathbf{1}^{\top} + G\,(G^{\top}G + \lambda I)^{-1} G^{\top}(Y_{\text{train}} - \mu_{\text{train}}\mathbf{1}^{\top}) P_{\text{train}}^{\top}(P_{\text{train}}P_{\text{train}}^{\top} + \lambda I)^{-1} P_{\text{test}}.$$
 
-1. **Lens 1 (De-Spiked Trans SVD + 6-Feature Cis-Attenuation + Hat-Matrix Hollow-LOO):**
-   - Replaces each training self-knockdown entry $(i(q), q)$ with the non-self training mean $\mu_{\text{trans}, i(q)}$ before extracting a rank-20 trans SVD operator equipped with exact Hat-Matrix Leave-One-Out (`Hollow-LOO`) de-biasing, and predicts direct target-gene cis-depletion via a 6-feature cell-count-weighted ridge regression fitted strictly on `train`.
-2. **Lens 2 (Full-Rank IDF + Jaccard GO Kernel + Training Co-Expression SVD + Multi-Scale Hollow-LOO Stacking):**
-   - Replaces the collapsed 2D spectral embedding with full-rank IDF-weighted cosine similarity ($S_{\text{go, idf}}$) and binary Jaccard similarity ($S_{\text{go, jaccard}}$) across `gene2go_all.pkl`, fused with training-only de-spiked trans co-expression cosine and rank-32 SVD kernels ($S_{\text{coexp, full}}$, $S_{\text{coexp, svd}}$).
-   - Evaluates multi-scale (`sharp` $k \in \{15, 20\}$, `broad` $k \in \{50, 60\}$) cell-count-reliability-weighted Hollow-LOO neighborhood channels ($S_{\text{hollow}}[q, q] = 0$ on `train`) and combines them with Lens 1 via closed-form non-negative LOO ridge stacking fitted 100% on `train`.
+When we inspected the training matrix $Y_{\text{train}}$ and the perturbation geometry on `replogle_k562_essential`, two structural properties stood out:
+1. **Diagonal Cis-Knockdown Impulse vs. Trans Co-Regulation (`Lens 1`)**: In CRISPRi, knocking down target gene $p$ produces a direct cis-attenuation spike $\Delta_{p,p} \ll 0$ on the diagonal entry $g = p$ whose magnitude scales with the baseline `ctrl` expression $b_p = x_{\text{ctrl}}(p)$. Because `lpm_selftrained` leaves the diagonal cis spikes inside $Y_{\text{train}}$ before computing its rank-10 PCA subspace and bilinear fit, the singular vectors and bilinear weights are distorted by diagonal variance, while failing to apply the direct cis-knockdown attenuation law on held-out perturbations $p^*$ whose target gene lies in the read-out panel.
+2. **Multi-Scale Functional Neighborhood Propagation (`Lens 2`)**: In `lpm_selftrained`, replacing $P$ by a 2-dimensional spectral embedding of the GEARS GO graph (`lpm_gearsPertEmb`, $d = 2$) collapses nearly to the training mean because 2 dimensions discard almost all pathway and complex structure. By contrast, constructing a hollow (`leave-one-out` on training targets) multi-scale kernel resolvent from the static 2023 GEARS Gene Ontology dictionary (`gene2go_all.pkl`, TF-IDF cosine `S_go_idf` + Jaccard `S_go_jaccard`) and de-spiked training-split trans co-expression (`S_coexp_svd`, `S_coexp_full`), with channel weights learned via leave-one-out cross-validation on the training split, transfers multi-pathway regulatory responses across functionally related perturbations.
 
 ---
 
-## 3. Compute & Discovery Time (`we*` Single-Thread Architecture)
+## 2. Answering Target `p2`: Functional-Distance Stratification (`Q1` Closest vs. `Q4` Farthest)
 
-Executed on 1 thread of [`we*`](https://github.com/mizopl/we-star) on a 16 GB Apple M1 laptop (CPU-only):
-- **Wall-Clock Discovery Time (1 `we*` thread):** `27 min` (`23:03 -> 23:30`) to first win (`-18.96%` K562 $L_2$, `-11.36%` RPE1 $L_2$); `36 min` (`23:03 -> 23:39`) to complete 5-seed + `p1/p2/p3` + 300-permutation certification.
-- **Single-Core CPU Compute Time:** `7.62 s` GO graph construction + `24.08 s` K562 5-seed & ablation suite + `38.55 s` RPE1 5-seed & ablation suite + `1.99 s` Adamson 5-seed & ablation suite = **`72.24 s` (`1.20 min`)** across all 3 datasets and 5 seeds (`493.51 s` / `8.23 min` including all `300` null permutation evaluations).
+Target `p2` asks us to stratify held-out perturbations by functional distance from the training set and test whether the performance gap between linear and non-linear models widens for out-of-distribution (OOD) perturbations.
+
+Using both the pre-registered hybrid GO + training co-expression distance $d_{\text{NN}}(p) = 1 - \max_{q \in \mathcal{P}_{\text{train}}} S_{\text{hyb}}(p, q)$ and the pure static 2023 `gene2go_all.pkl` Gene Ontology distance $d_{\text{GO}}(p) = 1 - \max_{q \in \mathcal{P}_{\text{train}}} S_{\text{GO}}(p, q)$ (which uses zero expression data of any kind), we partitioned held-out K562 perturbations into four quartiles ($Q_1$ closest to $Q_4$ farthest, under both equiprobable `q = [0.25, 0.50, 0.75]` quantiles and training-set-only `train-LOO` quantile thresholds):
+- In **$Q_1$ (`Q1_closest`, in-distribution functional neighborhoods)**, perturbations share dense Gene Ontology / complex neighborhoods with training perturbations, allowing the non-linear graph resolvent (`Lens 2`) to achieve its largest advantage over `lpm_selftrained`: $\Delta L_2 = -1.404930$ (**$-32.33\%$**) and $\Delta R_{\Delta} = +0.224525$ on hybrid distance ($\Delta L_2 = -1.267239$ or **$-27.68\%$**, $\Delta R_{\Delta} = +0.264148$ on static 2023 GO distance).
+- As functional distance increases from $Q_1 \to Q_2 \to Q_3 \to Q_4$ (**`Q4_farthest`, most out-of-distribution perturbations**), the graph resolvent's neighborhood similarity weights decay and smoothly fall back toward the shrinkage bilinear + direct cis-attenuation channel (`Lens 1`), so the gap **narrows monotonically** rather than widening: in $Q_4$, $\Delta L_2 = -0.404255$ (**$-10.40\%$**) and $\Delta R_{\Delta} = +0.123755$ on hybrid distance ($\Delta L_2 = -0.331111$ or **$-8.94\%$**, $\Delta R_{\Delta} = +0.107679$ on static 2023 GO distance; Spearman $r_s(d_{\text{GO}}, \Delta L_2) = +0.420798, p = 1.1506 \times 10^{-12}$ on `seeds = 1..2` $n = 262$, and $r_s(d_{\text{GO}}, \Delta L_2) = +0.489635, p = 4.1704 \times 10^{-42}$ across `seeds = 1..5` $n = 677$).

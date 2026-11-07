@@ -1,33 +1,45 @@
-# The Record We Beat (`const-ae/linear_perturbation_prediction-Paper`)
+# Reference Links & SHA-256 Digests (`linear-baseline-perturbation-replogle-k562`, Partial Progress `p2`)
 
-- **Paper:** C. Ahlmann-Eltze, W. Huber & S. Anders, *"Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines"*, *Nature Methods* **22**, 1657–1661 (2025), `doi:10.1038/s41592-025-02772-6`.
-- **Pinned Repository Commit:** `bfa6eeea2bd145a1af2ec0127a2e808cc38456a9`.
-- **Published Source Data Spreadsheets (`SHA-256` Verified):**
-  - `source_data/single_perturbation_prediction.xlsx` (`sha256 = 09c6c198aff4e8a827064183f9cff13eb6f33e56f1689940527304bf78957efe`)
-  - `source_data/suppl-pearson_delta_performance_single_pert.xlsx` (`sha256 = 61658661412f385356a383c3ed506f4454c6db79b28c272151bb15a725b0faaa`)
-  - `source_data/suppl-k562_rpe1_transfer.xlsx` (`sha256 = 2e4649e8e9ab4bd91df0e7582805856b5c881b8b2741f319875a27ab5048903d`)
+- **Target ID**: `linear-baseline-perturbation-replogle-k562` (`known-knowns`, **Partial Progress `p2` only**)
+- **Primary Paper**: Constantin Ahlmann-Eltze, Wolfgang Huber, and Simon Anders, *"Deep-learning-based gene perturbation effect prediction does not yet outperform simple linear baselines"*, **Nature Methods** 22, 1657–1661 (2025).
+  - **Article URL**: https://www.nature.com/articles/s41592-025-02772-6
+  - **Preprint URL**: https://www.biorxiv.org/content/10.1101/2024.09.16.613342v4
+- **Upstream Code & Source Data Repository**: https://github.com/const-ae/linear_perturbation_prediction-Paper (commit `bfa6eeea2bd145a1af2ec0127a2e808cc38456a9`)
+- **Zenodo Archive**: https://doi.org/10.5281/zenodo.15300707
+- **Fetched / Verified Timestamp (UTC)**: `2026-10-25T22:03:00Z`
 
 ---
 
-## Published Benchmark Numbers vs Our Certified Numbers (`Panel A`, `seeds = 1:2`)
+## 1. Upstream Source Data Links & SHA-256 Digests
 
-| Dataset | Method | Mean $L_2$ ($\downarrow$) | Across-Split SD ($L_2$) | Median $L_2$ ($\downarrow$) | Mean Pearson $\Delta$ ($\uparrow$) | Across-Split SD ($r_{\Delta}$) | Median Pearson $\Delta$ ($\uparrow$) |
-|---|---|---:|---:|---:|---:|---:|---:|
-| `replogle_k562_essential` (`n = 262`) | `scgpt` (published) | `4.437277` | `0.054868` | `3.924462` | `0.316230` | `0.042009` | `0.282557` |
-| `replogle_k562_essential` (`n = 262`) | `geneformer` (published) | `4.235811` | `0.069633` | `3.779902` | `0.403790` | `0.015805` | `0.419822` |
-| `replogle_k562_essential` (`n = 262`) | `uce` (published) | `4.199545` | `0.061493` | `3.766328` | `0.409348` | `0.018043` | `0.414745` |
-| `replogle_k562_essential` (`n = 262`) | `mean` (published & repro) | `4.193494` | `0.067250` | `3.821091` | `0.407910` | `0.017237` | `0.421438` |
-| `replogle_k562_essential` (`n = 262`) | `scbert` (published) | `4.191708` | `0.068361` | `3.807219` | `0.408183` | `0.017147` | `0.424973` |
-| `replogle_k562_essential` (`n = 262`) | **`lpm_selftrained` (published)** | **`4.097028`** | **`0.013200`** | **`3.805557`** | **`0.435544`** | **`0.024041`** | **`0.426484`** |
-| `replogle_k562_essential` (`n = 262`) | **`lpm_selftrained` (our re-run)** | **`4.097028`** | **`0.013196`** | **`3.805564`** | **`0.435544`** | **`0.024039`** | **`0.426480`** |
-| `replogle_k562_essential` (`n = 262`) | `gears` (published) | `4.078658` | `0.064478` | `3.800663` | `0.388092` | `0.020680` | `0.372622` |
-| `replogle_k562_essential` (`n = 262`) | **`hollow_loo_dual_lens` (Ours)** | **`3.320307`** | **`0.024271`** | **`3.044310`** | **`0.620623`** | **`0.016671`** | **`0.644965`** |
-| `replogle_rpe1_essential` (`n = 413`) | `gears` (published) | `6.113389` | `0.878694` | `6.046423` | `0.636032` | `0.003968` | `0.727245` |
-| `replogle_rpe1_essential` (`n = 413`) | `scgpt` (published) | `5.991379` | `0.230710` | `5.464611` | `0.587962` | `0.026477` | `0.662197` |
-| `replogle_rpe1_essential` (`n = 413`) | `mean` (published & repro) | `5.533708` | `0.137986` | `5.262884` | `0.677688` | `0.030162` | `0.788175` |
-| `replogle_rpe1_essential` (`n = 413`) | `scbert` (published) | `5.527573` | `0.139453` | `5.256178` | `0.678177` | `0.030355` | `0.790121` |
-| `replogle_rpe1_essential` (`n = 413`) | `uce` (published) | `5.506540` | `0.145887` | `5.233965` | `0.680243` | `0.031164` | `0.793957` |
-| `replogle_rpe1_essential` (`n = 413`) | `geneformer` (published) | `5.493516` | `0.182904` | `5.237263` | `0.677785` | `0.032180` | `0.787624` |
-| `replogle_rpe1_essential` (`n = 413`) | **`lpm_selftrained` (published)** | **`5.390179`** | **`0.230746`** | **`5.152959`** | **`0.680388`** | **`0.034730`** | **`0.791594`** |
-| `replogle_rpe1_essential` (`n = 413`) | **`lpm_selftrained` (our re-run)** | **`5.390179`** | **`0.230747`** | **`5.152955`** | **`0.680388`** | **`0.034730`** | **`0.791592`** |
-| `replogle_rpe1_essential` (`n = 413`) | **`hollow_loo_dual_lens` (Ours)** | **`4.777953`** | **`0.182955`** | **`4.514809`** | **`0.719286`** | **`0.024171`** | **`0.820713`** |
+Per review guidance, copied Source Data tables have been removed and replaced with stable links and SHA-256 digests:
+
+| Upstream File | Stable Link (Commit `bfa6eeea2bd145a1af2ec0127a2e808cc38456a9`) | Size (Bytes) | SHA-256 Digest |
+| :--- | :--- | ---: | :--- |
+| `source_data/single_perturbation_prediction.xlsx` (Fig. 1a / Panel A $L_2$ Source Data) | https://github.com/const-ae/linear_perturbation_prediction-Paper/raw/bfa6eeea2bd145a1af2ec0127a2e808cc38456a9/source_data/single_perturbation_prediction.xlsx | `565,586` | `09c6c198aff4e8a827064183f9cff13eb6f33e56f1689940527304bf78957efe` |
+| `source_data/suppl-pearson_delta_performance_single_pert.xlsx` (Suppl. Fig. 4 / Panel C $R_{\Delta}$ Source Data) | https://github.com/const-ae/linear_perturbation_prediction-Paper/raw/bfa6eeea2bd145a1af2ec0127a2e808cc38456a9/source_data/suppl-pearson_delta_performance_single_pert.xlsx | `569,165` | `61658661412f385356a383c3ed506f4454c6db79b28c272151bb15a725b0faaa` |
+| `source_data/suppl-k562_rpe1_transfer.xlsx` (Suppl. Fig. 6 Transfer Source Data) | https://github.com/const-ae/linear_perturbation_prediction-Paper/raw/bfa6eeea2bd145a1af2ec0127a2e808cc38456a9/source_data/suppl-k562_rpe1_transfer.xlsx | `520,256` | `2e4649e8e9ab4bd91df0e7582805856b5c881b8b2741f319875a27ab5048903d` |
+| `source_data/perturbation_prediction.xlsx` (Double Perturbation Source Data) | https://github.com/const-ae/linear_perturbation_prediction-Paper/raw/bfa6eeea2bd145a1af2ec0127a2e808cc38456a9/source_data/perturbation_prediction.xlsx | `238,243` | `e097df99adf72d983c63c4e9293c1abf8d10bff2a06c752a1a20644e95b9d591` |
+
+---
+
+## 2. Public Benchmark Dataset Links & SHA-256 Digests (`replogle_k562_essential` + GEARS GO Annotations)
+
+All K562 single-perturbation evaluations and functional-distance stratifications use the unmodified Harvard Dataverse archives loaded by `gears.PertData` and `benchmark/src/run_linear_pretrained_model.py`:
+
+| Archive / File | Stable Harvard Dataverse URL | Size (Bytes) | SHA-256 Digest |
+| :--- | :--- | ---: | :--- |
+| `gene2go_all.pkl` (Static 2023 GEARS Gene Ontology map, *Nature Biotechnology* 2023) | https://dataverse.harvard.edu/api/access/datafile/6153417 | `9,462,558` | `f145c5e84a53048d87942a417d870a4f2d8db50200b96e492b358c13aba8c771` |
+| `essential_all_data_pert_genes.pkl` (Essential perturbation universe) | https://dataverse.harvard.edu/api/access/datafile/6934320 | `558,811` | `46c3dfe354d8ad5c0da22c69f3d0ca451987b1a61ed9d984279b22b9565ff8d7` |
+| `go_essential_all.tar.gz` (Pre-computed GEARS GO Jaccard graph) | https://dataverse.harvard.edu/api/access/datafile/6934319 | `60,654,049` | `3d2ee2ebbcdf3ca2ca8fd8fb0d3bbf0a63db9dd2ff9fc7587abbd57a55b78998` |
+| `go_essential_all/go_essential_all.csv` (Extracted edge list from `go_essential_all.tar.gz`) | https://dataverse.harvard.edu/api/access/datafile/6934319 | `181,694,556` | `99622d9215462e7bbea99a5f6c0b1e86febfef9f57226269418053484fcb3f9f` |
+| `replogle_k562_essential.zip` (Replogle K562 single-perturbation archive) | https://dataverse.harvard.edu/api/access/datafile/7458695 | `669,703,049` | `ba5dc5eb7cdbb1cc32fb9ed3fd9ddab9f0eb7bc8b72a57a098cefb705d86e92d` |
+| `replogle_k562_essential/perturb_processed.h5ad` (Extracted AnnData matrix from `replogle_k562_essential.zip`) | https://dataverse.harvard.edu/api/access/datafile/7458695 | `692,000,190` | `550fde89ac85c258c9fd517638fe34fb42c0e748c9305fe6355761a2bb754170` |
+
+---
+
+## 3. Target `p2` Definition (`bank/targets.json`)
+
+Under `linear-baseline-perturbation-replogle-k562` in `bank/targets.json`:
+- **`p2`**: *"Stratify perturbations by functional distance from the training set (for example, gene-ontology or pathway distance) and test whether the performance gap between linear and non-linear models widens for out-of-distribution perturbations."*
+- **Scope**: This package claims **Partial Progress (`p2`) only**. Full target win, `p1` (RPE1 transfer), and `p3` (re-running published deep models across all 5 splits of both datasets) are **not claimed**.

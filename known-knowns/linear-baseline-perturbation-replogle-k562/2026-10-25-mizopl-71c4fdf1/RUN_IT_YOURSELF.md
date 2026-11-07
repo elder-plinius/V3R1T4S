@@ -1,14 +1,33 @@
-# Run It Yourself (`2026-10-25-mizopl-71c4fdf1`)
+# Run It Yourself (`RUN_IT_YOURSELF.md`)
 
-1. Ensure `python3` (`>= 3.9`) is installed.
-2. From the root of this package directory, execute:
+## 1. Fast Standalone Verification of Saved Plain-Text Predictions (`~3s`)
+
+From the package root (`known-knowns/linear-baseline-perturbation-replogle-k562/2026-10-25-mizopl-71c4fdf1/`):
+
+```sh
+sh verify-it-yourself/run_checks.sh
+```
+
+This executes `verify-it-yourself/verify.py` against `object/certificate_replogle_k562.json` and the 16 plain-text TSVs in `object/`:
+- Verifies that every held-out K562 perturbation across all 5 splits (`seed = 1..5`, `n = 677` in-readout perturbations; `n = 262` Panel A perturbations in `seeds = 1..2`) appears keyed by `perturbation` ID, each once per split, in `object/k562_seed{1..5}_{dual,lpm}_predictions.tsv` with its nearest training perturbation ID and functional distance (`nn_dist` and `nn_dist_go_only`).
+- Recomputes all `677` per-perturbation $L_2$ errors and Pearson $R_{\Delta}$ correlations directly from the plain-text 1,000-gene predicted expression matrices against `object/k562_seed{1..5}_observed_top1000.tsv`.
+- Recomputes all `p2` functional-distance quartile tables (`Q1_closest` .. `Q4_farthest`), Spearman rank correlations, and paired Wilcoxon tests from `object/k562_p2_per_perturbation_metrics.tsv`.
+- Runs two negative-control corruption checks (corrupting `certificate_replogle_k562.json` and corrupting `k562_seed1_dual_predictions.tsv`) and verifies that `verify.py` exits non-zero on both.
+
+---
+
+## 2. Optional Full Raw-Data Regeneration (`~4.2 min`)
+
+If you wish to regenerate `object/certificate_replogle_k562.json` and all 16 plain-text TSVs in `object/` from the upstream Harvard Dataverse archives and Source Data:
+
+1. Download the upstream files listed in `the-record-we-beat/PAPER_NUMBERS.md` into a local `./data` directory:
+   - `./data/single_perturbation_prediction.xlsx` (`sha256: 09c6c198aff4e8a827064183f9cff13eb6f33e56f1689940527304bf78957efe`)
+   - `./data/suppl-pearson_delta_performance_single_pert.xlsx` (`sha256: 61658661412f385356a383c3ed506f4454c6db79b28c272151bb15a725b0faaa`)
+   - `./data/gears_pert_data/gene2go_all.pkl` (`sha256: f145c5e84a53048d87942a417d870a4f2d8db50200b96e492b358c13aba8c771`)
+   - `./data/gears_pert_data/essential_all_data_pert_genes.pkl` (`sha256: 46c3dfe354d8ad5c0da22c69f3d0ca451987b1a61ed9d984279b22b9565ff8d7`)
+   - `./data/gears_pert_data/go_essential_all/go_essential_all.csv` (`sha256: 99622d9215462e7bbea99a5f6c0b1e86febfef9f57226269418053484fcb3f9f`)
+   - `./data/gears_pert_data/replogle_k562_essential/perturb_processed.h5ad` (`sha256: 550fde89ac85c258c9fd517638fe34fb42c0e748c9305fe6355761a2bb754170`)
+2. Run the certification and export script:
    ```sh
-   sh verify-it-yourself/run_checks.sh
+   REPLOGLE_DATA_DIR=./data python3 how-we-built-it/certify_all_splits_and_controls.py
    ```
-3. The script runs `verify-it-yourself/verify.py`, performing in **`~0.01` seconds** (or **`14.37` seconds** with `--recompute` on the local pseudobulk cache):
-   - **SHA-256 & Provenance Check:** verifies the SHA-256 digest of `object/certificate_replogle_k562.json` (`71c4fdf154e6f8cccfe44f18817dfa78f0863a5cadd8f964026e2a4670bf6c7e`) and all 8 benchmark dataset and Source Data SHA-256 hashes (`single_perturbation_prediction.xlsx`, `suppl-pearson_delta_performance_single_pert.xlsx`, `suppl-k562_rpe1_transfer.xlsx`, `perturbation_prediction.xlsx`, `go_essential_all.csv`, and the three GEARS `perturb_processed.h5ad` files).
-   - **Partial Win `p3` Reproduction of Record (`seeds = 1:2` and `seeds = 1:5`):** verifies agreement (`abs_diff <= 7e-6` for all deterministic baselines) of `mean`, `lpm_selftrained`, `lpm_k562PertEmb`, `lpm_rpe1PertEmb`, and `lpm_gearsPertEmb` across `replogle_k562_essential`, `replogle_rpe1_essential`, and `adamson`.
-   - **Full Win on `replogle_k562_essential` (`Panel A`, `n = 262`):** verifies that `hollow_loo_dual_lens` achieves **Mean $L_2 = 3.320307$** (`-18.96%` vs `lpm_selftrained = 4.097028`, `-18.59%` vs `gears = 4.078658`, `57.47x` `lpm_selftrained` SD / `31.25x` own SD), **Median $L_2 = 3.044310$** (`-20.00%` vs `lpm_selftrained = 3.805564`, `63.87x` SD), **Mean Pearson $\Delta = 0.620623$** (`+42.49%` vs `lpm_selftrained = 0.435544`, `7.70x` SD), and **Median Pearson $\Delta = 0.644965$** (`+51.23%` vs `0.426484`).
-   - **Partial Win `p1` (`replogle_rpe1_essential`, `Panel A`, `n = 413`):** verifies **Mean $L_2 = 4.777953$** (`-11.36%` vs `lpm_selftrained = 5.390179`, `2.65x` SD), **Median $L_2 = 4.514809$** (`-12.38%`, `2.48x` SD), and **Mean Pearson $\Delta = 0.719286$** (`+5.72%` vs `0.680388`).
-   - **Partial Win `p2` (Functional Distance Stratification):** verifies monotonic concentration of gain in `Q1_closest` (`-32.33%` $L_2$ reduction on K562, Spearman $r_s = +0.345058$, $p = 9.7126 \times 10^{-9}$; `-17.39%` on RPE1, $p = 0.027768$).
-   - **Null / Permutation Control Battery (`300` split-level evaluations):** verifies $Z = 24.55\sigma$ separation on K562 (`200` split runs) and $Z = 22.44\sigma$ separation on RPE1 (`100` split runs), printing `PASS` as its final line.
