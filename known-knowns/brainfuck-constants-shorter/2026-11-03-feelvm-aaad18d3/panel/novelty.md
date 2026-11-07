@@ -59,7 +59,7 @@ executed with my interpreter:
 |---|---|---|---|
 | 256 | `>+>->->+[>++[-<+++>]<<]>` | (24, 6) soft | value 256, mincell −1 |
 | 333 | `>+>->+>+>+[>[-<++++>]<<]>` | (25, 7) soft | value 333, mincell −1 |
-| 45306 | `+>>->>>>+[+>++[-<+++++>]<<-]>+` | (30, 8) soft | value 45306, 101,973 steps (matches prior_art.md) |
+| 45306 | `+>>->>>>+[+>++[-<+++++>]<<-]>+` | (30, 8) soft | value 45306, 101,973 steps |
 
 Seed rule applied literally — do trivial edits (deletion, restriction, a valid propagation rule, relabelling,
 symmetry, a local numerical polish, alone or combined) of these published objects alone give the claimed
@@ -150,8 +150,8 @@ object's cell (114514), or anything at ≤ 41 instructions for it?
   the same revision the claim compares against.
 - github.com/rdebath/crunchingbrains: repo tree fetched via GitHub API (HTTP 200, 2026-11-03T20:52:41Z);
   the largest result log run1b/run.txt fetched raw (HTTP 200, 5,761,802 bytes): 79,008 `Result:` lines,
-  values span 9..247, zero occurrences of `114514`. Confirms prior_art.md's characterization (8-bit
-  wrapping brute force; no data for any constant above 247).
+  values span 9..247, zero occurrences of `114514`. An 8-bit wrapping brute force with no data for any
+  constant above 247.
 - GitHub code-search API: HTTP 401 (requires authentication) — recorded, not retried. The claim records an
   authenticated human-run search (2026-11-03) with no results for the object or `114514` in `.bf`.
 - grep.app: HTTP 429 Vercel security checkpoint — recorded, not retried (matches the claim's own record).

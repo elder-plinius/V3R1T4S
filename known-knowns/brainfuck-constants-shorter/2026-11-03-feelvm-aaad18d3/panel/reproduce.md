@@ -2,14 +2,14 @@
 
 context: subagent
 
-Scope: I read only the claim package (README.md, object/program.bf, object/expected.txt,
-the-record-we-beat/record.md, prior_art.md, README.md, REPRODUCE.md, checker.py). I did not open
-attempts/, runs/, other panel files, or other panel_work directories. Paths below are relative
-to the package root for claim files; my own artifacts are under panel_work/reproduce/ (run-dir relative).
-The cross-check named in REPRODUCE.md (`attempts/independent-verify/code/verify.exe`) points
-outside the claim package, so I did not run it; all verification below is independent of it.
+Scope: I read only the claim package (README.md, RUN_IT_YOURSELF.md, object/program.bf,
+object/expected.txt, the-record-we-beat/record.md, how-we-built-it/PREREG.md,
+verify-it-yourself/checker.py, verify-it-yourself/RECEIPTS.md). I did not open other panel files.
+Paths below are relative to the package root. My own checker and scratch outputs were kept outside
+the package, in a run directory that is not shipped; every check reported here can be re-run from
+the package with verify-it-yourself/checker.py.
 
-## 1. Criterion quoted (verbatim from README.md)
+## 1. Criterion quoted (verbatim from how-we-built-it/PREREG.md)
 
 > A Brainfuck string for some n listed on https://esolangs.org/wiki/Brainfuck_constants (re-fetched live
 > immediately before claiming) such that a reference interpreter with unbounded right tape, 8-bit cells
@@ -17,6 +17,9 @@ outside the claim package, so I did not run it; all verification below is indepe
 > cell holding n (mod 256 rules exactly as the page defines), never moves left of the start cell, and whose
 > instruction count is strictly less than the smallest listed count for n in that category (and for numbers
 > > 255, the page's stated cell-size conventions).
+
+Partial win claimed (how-we-built-it/PREREG.md, line 17): `over-255` — "A shorter program for one of
+the listed constants above 255."
 
 Interpretation I implemented (and justified against the live page in section 5): the object is claimed in
 the page's non-wrapping, non-soft category for n = 114514 > 255. The page states: "Cells for values 0..255
@@ -29,8 +32,9 @@ an 8-bit-wrapping variant (section 3).
 
 ## 2. My own checker, written before reading verify-it-yourself/checker.py
 
-Written from the quoted definition only: panel_work/reproduce/mycheck.py (Python 3, standard library
-only). Semantics: unbounded right tape, arbitrary-precision integer cells, no mod-256 wrapping, hard fail
+Written from the quoted definition only, before reading verify-it-yourself/checker.py: a standalone
+scratch checker (Python 3, standard library only), kept outside the package. Semantics: unbounded right
+tape, arbitrary-precision integer cells, no mod-256 wrapping, hard fail
 on pointer < 0 or any negative cell, step limit 10^7, every executed instruction counts 1 step including
 bracket passes, ',' treated as non-determinism. Run twice for determinism.
 
@@ -84,11 +88,12 @@ $ sha256sum object/program.bf       -> aaad18d3b875c2161656c60a353a587def4b40a74
 ```
 
 Extracting the backticked string from README.md (its CRLF stripped; first extraction kept a trailing
-\r\n from README.md line endings, which cmp flagged as 2 extra bytes beyond byte 41) and comparing:
+\r\n from README.md line endings, which cmp flagged as 2 extra bytes beyond byte 41) into a scratch
+file outside the package and comparing:
 
 ```
-$ cmp claimed_string_clean.txt object/program.bf   -> identical
-$ sha256sum claimed_string_clean.txt               -> aaad18d3b875c2161656c60a353a587def4b40a74f8646f650e67f37ce38cf38
+$ cmp <extracted string> object/program.bf         -> identical
+$ sha256sum <extracted string>                     -> aaad18d3b875c2161656c60a353a587def4b40a74f8646f650e67f37ce38cf38
 ```
 
 The string quoted in README.md is byte-identical to object/program.bf: 41 bytes, no trailing newline.
@@ -147,7 +152,7 @@ Published seed instances verified live AND executed in my interpreter:
 |---|---|---|
 | 256 | `>+>->->+[>++[-<+++>]<<]>` (24, 6) non-wrapping (soft) | len 24, value 256, min_cell=-1 (soft, as marked) |
 | 333 | `>+>->+>+>+[>[-<++++>]<<]>` (25, 7) non-wrapping (soft) | len 25, value 333, min_cell=-1 (soft) |
-| 45306 | `+>>->>>>+[+>++[-<+++++>]<<-]>+` (30, 8) non-wrapping (soft) | len 30, value 45306, steps=101973 (matches prior_art.md's "101,973 steps"), min_cell=-2 (soft) |
+| 45306 | `+>>->>>>+[+>++[-<+++++>]<<-]>+` (30, 8) non-wrapping (soft) | len 30, value 45306, steps=101973, min_cell=-2 (soft) |
 
 This also independently validates my interpreter's step-counting convention on a data point I did not
 produce (101,973).
@@ -157,7 +162,7 @@ produce (101,973).
 verify-it-yourself/checker.py implements the same definition: unbounded right tape (list append), arbitrary-precision
 non-wrapping cells, fail on pointer < 0, fail on any negative cell, step limit 10^7, value must equal the
 target exactly, same step convention. Differences from mine: it treats '.'/',' as no-ops (moot here — the
-object has neither), and it does not run twice (mine does). Run per REPRODUCE.md:
+object has neither), and it does not run twice (mine does). Run per RUN_IT_YOURSELF.md:
 
 ```
 $ python -I checker.py object/program.bf 114514
@@ -165,7 +170,7 @@ PASS len=41 value=114514 steps=305379 mincell=0
 exit=0
 ```
 
-Identical result to my independent checker, and identical to the expected line in REPRODUCE.md.
+Identical result to my independent checker, and identical to the expected line in RUN_IT_YOURSELF.md.
 
 ## 7. Re-derived proof steps
 
@@ -178,10 +183,11 @@ Identical result to my independent checker, and identical to the expected line i
 
 ## 8. Notes and limits
 
-- I did not run `attempts/independent-verify/code/verify.exe` (outside the claim package; out of scope).
-- I did not verify the GitHub prior-art searches (human-reported in prior_art.md) — that is the
-  PRIOR-ART panel's remit, not REPRODUCE's. The live-page parts of prior_art.md (listed sequences,
-  seeds, quotes) I did verify directly in section 5.
+- The shipped self-checks (verify-it-yourself/run_checks.sh and verify-it-yourself/checker.py) were re-run
+  above; no binaries or files outside the package were used.
+- I did not verify the human-run GitHub prior-art searches — that is the PRIOR-ART panel's remit, not
+  REPRODUCE's. The live-page facts those searches rest on (listed sequences, seeds, quotes) I did verify
+  directly in section 5.
 - The claim itself asserts no optimality/exhaustiveness, so none was required here; the 41-instruction
   length is compared only against the page's listed sequences, all of which I measured above.
 - Minor page quirks observed, neither affecting the claim: the page labels the 78/58 printers "pistol

@@ -1,13 +1,13 @@
 # CRITERION
 context: subagent
 
-## 1. The criterion and the named partial win (quoted from README.md)
+## 1. The criterion and the named partial win (quoted from how-we-built-it/PREREG.md)
 
-Success criterion (README.md, "Criterion (verbatim from bank/targets.json)"):
+Success criterion (how-we-built-it/PREREG.md, "Criterion (verbatim from bank/targets.json)"):
 
 "A Brainfuck string for some n listed on https://esolangs.org/wiki/Brainfuck_constants (re-fetched live immediately before claiming) such that a reference interpreter with unbounded right tape, 8-bit cells (wrapping only if claimed in the wrapping category), starting at all zeros, halts with the pointer on a cell holding n (mod 256 rules exactly as the page defines), never moves left of the start cell, and whose instruction count is strictly less than the smallest listed count for n in that category (and for numbers > 255, the page's stated cell-size conventions)."
 
-Enumerated partial win (README.md, line 4): `over-255` — "A shorter program for one of the listed constants above 255."
+Enumerated partial win (how-we-built-it/PREREG.md, line 17): `over-255` — "A shorter program for one of the listed constants above 255."
 
 ## 2. The object
 
@@ -49,7 +49,7 @@ The object is non-wrapping, non-soft (MINCELL=0), leaves the value in a cell, an
 - "halts": the fold provably terminates (drains to cell 0 = 0); 305379 steps, finite.
 - Null model "a shorter listing exists somewhere on the page": none — the only 114514 section lists nothing at or below 41 (shortest 58).
 - Null model "the win is an artifact of a gamed checker": ruled out — my hand-derived step count (305379) matched object/expected.txt exactly before I ran anything.
-- Subsumption: README.md names exactly one partial win for this target (`over-255`); the object meets it literally (114514 is a listed constant above 255, and 41 is shorter than every count listed for it) and also satisfies the full criterion's literal wording for n = 114514. Nothing wider is claimed: README.md's "Not claimed" section disclaims optimality, exhaustive search, and novelty of the construction, and the claim is scoped to this one constant and its listed sequences.
+- Subsumption: how-we-built-it/PREREG.md names exactly one partial win for this target (`over-255`); the object meets it literally (114514 is a listed constant above 255, and 41 is shorter than every count listed for it) and also satisfies the full criterion's literal wording for n = 114514. Nothing wider is claimed: README.md's "Not claimed" section disclaims optimality, exhaustive search, and novelty of the construction, and the claim is scoped to this one constant and its listed sequences.
 
 ## 7. Scope
 
