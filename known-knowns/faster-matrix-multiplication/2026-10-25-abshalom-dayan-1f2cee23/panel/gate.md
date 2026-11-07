@@ -22,7 +22,7 @@ No hedging panelist, no mismatch, value strictly below the live table (8828 < 92
 
 Disclosures to carry into the pull request description (the gated claim/ is not edited):
 - Earlier p1 claims using this slice method (#41 to #51) were closed unmerged on 2026-10-14 with no comment on
-  record; no p1 claim of this method has been merged yet.
+  record; amended 2026-11-07: PR #708 (<18,19,19> rank 3424, same method) was merged on 2026-11-05; #714 is still open.
 - The README's sibling-deletion figures count only deleting a column of A and a row of B; counting every single
   coordinate deletion (criterion.md) gives slightly lower numbers, still above this cell's rank where relevant.
 - The scheme is a non-coordinate slice of LITA's published square scheme followed by exact 2-reductions; LITA must be

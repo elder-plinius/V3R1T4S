@@ -70,7 +70,7 @@ summary: 9233 -[slice 1 kills 404]-> 8829 -[2-reduction]-> 8828 -[slice 2 kills 
 closed forms: step 1 removes (N^2+3N)/2 = 405 (measured 405); step 2 removes (N^2+2N-1)/2 = 391 (measured 391)
 ```
 
-In words: 9233 (LITA <27,27,27>) - 404 (slice 1: 364 + 40) = 8829, - 1 (2-reduction) = 8828 (<26,27,27>). For comparison, plain coordinate projections (deleting one index, no reductions) give 9179 from LITA 27^3 (delete row 13: 54 terms vanish); all are above 9233 (the Lille value).
+In words: 9233 (LITA <27,27,27>) - 404 (slice 1: 364 + 40) = 8829, - 1 (2-reduction) = 8828 (<26,27,27>). For comparison, plain coordinate projections (deleting one index, no reductions) give 9179 from LITA 27^3 (delete row 13: 54 terms vanish); all are above 8828.
 
 ## Closed forms (observed, not proved here)
 
