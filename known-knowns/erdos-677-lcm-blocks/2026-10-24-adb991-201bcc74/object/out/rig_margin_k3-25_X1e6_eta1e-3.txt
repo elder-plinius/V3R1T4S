@@ -1,0 +1,25 @@
+rig_margin: k=3..25 X0=1000000 eta=1/1000 CF=1 ivprec=320 rho_bits=256
+k=3 pairs=1 proved=1 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.0 at r=2
+k=4 pairs=1 proved=1 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.0 at r=3
+k=5 pairs=7 proved=7 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.0 at r=4/3
+k=6 pairs=4 proved=4 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.0 at r=2
+k=7 pairs=22 proved=22 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.0 at r=6/5
+k=8 pairs=13 proved=13 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.0 at r=7/5
+k=9 pairs=31 proved=31 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=0.99999999 at r=8/7
+k=10 pairs=37 proved=37 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=0.99999999 at r=7/6
+k=11 pairs=157 proved=157 failures=0 undecided=0 time_s=0.2 worst_rel_margin_lower_bound=0.99999999 at r=36/35
+k=12 pairs=121 proved=121 failures=0 undecided=0 time_s=0.1 worst_rel_margin_lower_bound=0.99999999 at r=22/21
+k=13 pairs=472 proved=472 failures=0 undecided=0 time_s=0.5 worst_rel_margin_lower_bound=0.99999999 at r=56/55
+k=14 pairs=337 proved=337 failures=0 undecided=0 time_s=0.4 worst_rel_margin_lower_bound=0.99999999 at r=66/65
+k=15 pairs=283 proved=283 failures=0 undecided=0 time_s=0.4 worst_rel_margin_lower_bound=0.99999999 at r=78/77
+k=16 pairs=202 proved=202 failures=0 undecided=0 time_s=0.4 worst_rel_margin_lower_bound=0.99999998 at r=65/63
+k=17 pairs=1822 proved=1822 failures=0 undecided=0 time_s=2.7 worst_rel_margin_lower_bound=0.99999998 at r=144/143
+k=18 pairs=850 proved=850 failures=0 undecided=0 time_s=1.5 worst_rel_margin_lower_bound=0.99999998 at r=221/220
+k=19 pairs=5467 proved=5467 failures=0 undecided=0 time_s=10.6 worst_rel_margin_lower_bound=0.99999998 at r=936/935
+k=20 pairs=3037 proved=3037 failures=0 undecided=0 time_s=6.2 worst_rel_margin_lower_bound=0.99999997 at r=1292/1287
+k=21 pairs=3280 proved=3280 failures=0 undecided=0 time_s=7.1 worst_rel_margin_lower_bound=0.99999997 at r=286/285
+k=22 pairs=4252 proved=4252 failures=0 undecided=0 time_s=11.0 worst_rel_margin_lower_bound=0.99999997 at r=456/455
+k=23 pairs=16402 proved=16402 failures=0 undecided=0 time_s=39.7 worst_rel_margin_lower_bound=0.99999996 at r=936/935
+k=24 pairs=9841 proved=9841 failures=0 undecided=0 time_s=26.3 worst_rel_margin_lower_bound=0.99999996 at r=715/714
+k=25 pairs=16402 proved=16402 failures=0 undecided=0 time_s=48.6 worst_rel_margin_lower_bound=0.99999996 at r=2737/2736
+TOTAL pairs=63041 failures=0 undecided=0
