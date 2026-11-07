@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+physlib-restricted-lorentz-connected,Physlib semiformal_result FXNL5 LorentzGroup.restricted_isConnected,"kernel-checked proof (axioms propext, Classical.choice, Quot.sound)",semiformal_result: statement without proof,2026-10-14T06:07:15Z,object/RestrictedIsConnected.lean,8bef4eda0ca4af1b97b2b4911b75917a647fb74d73b3d56273c6779c313dc38d

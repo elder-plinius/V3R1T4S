@@ -1,0 +1,4 @@
+'V3R1T4SConstructExplicit.pair_joined' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V3R1T4SConstructExplicit.SO_pathConnectedSpace' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V3R1T4SConstructExplicit.restricted_isPathConnected' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V3R1T4SConstructExplicit.restricted_isConnected_explicit' depends on axioms: [propext, Classical.choice, Quot.sound]
