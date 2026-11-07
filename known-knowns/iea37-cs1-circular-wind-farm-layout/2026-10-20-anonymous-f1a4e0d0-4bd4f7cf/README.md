@@ -3,6 +3,9 @@
 ## What
 The 16-turbine layout in object/iea37-v3r1t4s-opt16.yaml satisfies the IEA37 case study 1 constraints with no tolerance (all hubs within 1300 m of (0,0), all pairs at least 260 m apart). The unmodified official iea37-aepcalc.py scores it at 424131.9503 MWh, strictly above every 16-turbine value in table/iea37-cs1-results (maximum 421561.89715, par12, infeasible), arXiv 2212.00742 Table 4 (maximum 419935.7905), Baker et al. 2019 Table 2 (maximum 418924.4064), and Pérez-Rúa et al. 2023 Case I (about 418 GW h).
 
+Note: the sentence above is the panel's confirmed_scope, quoted word for word. Its "table/iea37-cs1-results" is the
+panel's local copy of the official results folder, which upstream is cs1-2/iea37-cs1-results.
+
 Target: iea37-cs1-circular-wind-farm-layout (bank target; first submitted under the charter quarry clean-energy-records),
 instance iea37-cs1-opt16. Status: CONFIRMED_SOLUTION (three
 fresh-context skeptics passed; see panel/).
@@ -18,7 +21,7 @@ equations. To use the benchmark's own judge, download the official files (see RU
 | table | cell | value | URL | fetched (UTC) |
 |---|---|---|---|---|
 | IEA37 case study 1 official results folder | best 16-turbine AEP (participant 12) | 421561.89715 (layout 3.518 m outside the boundary) | https://github.com/IEAWindSystems/iea37-wflo-casestudies/tree/master/cs1-2/iea37-cs1-results | 2026-10-20T02:24:14Z (NOVELTY skeptic; scout 01:08:33Z, same tree 267f6e5d) |
-| arXiv 2212.00742 (DPCRO-SL), Table 4 | best feasible 16-turbine AEP known | 419935.7905 | https://arxiv.org/abs/2212.00742 | 2026-10-18 (scout of runs/2026-10-18-0107) |
+| arXiv 2212.00742 (DPCRO-SL), Table 4 | best feasible 16-turbine AEP known | 419935.7905 | https://arxiv.org/abs/2212.00742 | 2026-10-18 |
 | Baker et al. 2019, Table 2 | best 16-turbine AEP (SNOPT+WEC) | 418924.4064 | https://docs.nlr.gov/docs/fy19osti/72935.pdf | 2026-10-18T01:09:42Z |
 Details in the-record-we-beat/record.md.
 
