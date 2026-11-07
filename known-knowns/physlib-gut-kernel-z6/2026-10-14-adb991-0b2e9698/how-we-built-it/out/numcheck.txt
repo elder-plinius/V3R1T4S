@@ -1,0 +1,10 @@
+random checks (2000 pairs), worst errors: {'unitary': 1.44e-15, 'det': 1.92e-15, 'hom': 6.47e-16, 'su_in': 1.34e-15}
+sixth roots: alpha, ||M(gaugeGroupZ6OfRoot alpha) - I||_max, det(alpha^2 I3), det(conj(alpha)^3 I2)
+  k=0  0  0  0
+  k=1  1.83e-17  8.62e-16  7.77e-16
+  k=2  4.44e-16  1.45e-15  1.3e-15
+  k=3  0  7.35e-16  7.35e-16
+  k=4  7.97e-18  3.11e-15  3.11e-15
+  k=5  1.83e-17  8.62e-16  7.77e-16
+grid points (N=600000) where the forced kernel candidate lies in SU(3)xSU(2): [0, 100000, 200000, 300000, 400000, 500000] -> angles/(2pi) = [0.0, 0.16666666666666666, 0.3333333333333333, 0.5, 0.6666666666666666, 0.8333333333333334]
+random elements mapping to I5 (expect 0): 0
