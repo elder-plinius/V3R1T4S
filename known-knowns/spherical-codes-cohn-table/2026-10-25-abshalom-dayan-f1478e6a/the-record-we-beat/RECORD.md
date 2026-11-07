@@ -42,3 +42,13 @@ The 2026-10-25 records above are kept as history. Before filing, each page was r
 | /data/6/256 (re-read before filing) | https://spherical-codes.org/data/6/256 | 2026-10-28T18:23:52Z | 200 | 30,711 | c5866a15cdabfe6f593fd878d690a9339d502f9720a7122f39d594a60b27992b |
 
 Both the index and /plain changed between 2026-10-25 and 2026-10-28 (different sha256 values); the (6, 256) row (index lines 29331-29336, /plain line 3237) did not: index `<td>6</td>` | `<td><a href="/data/6/256">256</a></td>` (no `&ast;`) | `<td>0.704931969352</td>` | `<td>Pavlos Moros, 2026.</td>` (no "needs more optimization"); /plain `6,256,0.704931969352`. The posted code /data/6/256 has the same sha256 as the copy the polish started from. Among the rows with d' <= 6 and N' >= 256 (2,966 in the index; (6, 256) itself is the lowest, then (6, 257) at 0.705350637779) none is at or below c* + 1e-10.
+
+## Re-read 2026-11-07 (current record)
+
+One GET of the index, User-Agent "V3R1T4S filing check (curl)", no retries. Server `date:` header Sat, 07 Nov 2026 00:08:29 GMT.
+
+| page | URL | UTC fetch time | HTTP | bytes | sha256 of the page |
+|---|---|---|---|---|---|
+| HTML index | https://spherical-codes.org/ | 2026-11-07T00:08:29Z | 200 | 4,564,675 | 0f9353613fea9193f1135cba56c09c0a3c9069d95b5578c5afb7466de31091ff |
+
+The (6, 256) row (index lines 29358-29364) now reads: `<td>6</td>` | `<td><a href="/data/6/256">256</a></td>` (no `&ast;`) | `<td>0.704931961199</td>` | `<td>Christopher Smolen, 2026.</td>` (no "needs more optimization"). This is the current bar, 3.32387e-5 above c* = 0.70489872249744100147 (0.704931961199 - 0.70489872249744100147 = 3.323870156e-5). The 0.704931969352 readings above (Pavlos Moros, 2026) are kept as history. The code now served at https://spherical-codes.org/data/6/256 is not the code with sha256 c5866a15cdabfe6f593fd878d690a9339d502f9720a7122f39d594a60b27992b that this object was polished from; the seed is identified by that hash. In the saved page, 2,959 parsed rows have d' <= 6 and N' >= 256; (6, 256) is the lowest, then (6, 257) at 0.705350637779, and none is at or below c* + 1e-10.

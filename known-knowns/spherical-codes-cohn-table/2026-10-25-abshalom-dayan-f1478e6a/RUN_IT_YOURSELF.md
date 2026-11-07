@@ -15,12 +15,12 @@ fewest significant digits in a coordinate: 26
 zero vectors: 0
 pairs with cosine above c_table - 1e-10 (exact): 0
 c* = 0.7048987224974410014732802770067601805699 at pair (55, 247) (0-based lines)
-c_table - c* = 3.324685e-05
+c_table - c* = 3.323870e-05
 PASS
 ```
 
 The check is exact: coordinates are read as decimals and every one of the 32,640 pairs is compared with the bar
-c_table - 1e-10 = 0.704931969252 in integer arithmetic. The last line is PASS or FAIL.
+c_table - 1e-10 = 0.704931961099 in integer arithmetic. The last line is PASS or FAIL.
 
 To rebuild the object, see how-we-built-it/COMMANDS.md (numpy and scipy, about five minutes on one core in two
 steps, starting from the code posted at https://spherical-codes.org/data/6/256). A rebuild lands near, not exactly on,
