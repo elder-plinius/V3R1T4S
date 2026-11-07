@@ -1,0 +1,380 @@
+{
+  "prepared_utc": "2026-11-04T02:33:37.542317+00:00",
+  "target": "condorcet-domains",
+  "n": 25,
+  "claimed_size": 186310276,
+  "object": {
+    "path": "object/assignment.txt",
+    "sha256": "d12cb8aee658a8e3657c8607ba722531604366ba65a97f8fd357aea7d482131e"
+  },
+  "criterion": {
+    "path": "criterion.md",
+    "sha256": "d057d8759f6ae9daa90bdbabb2fbbc6d8f89c67a9f1b3ce9da0254b6ff936690"
+  },
+  "arxiv_transports": [
+    {
+      "url": "https://arxiv.org/abs/2601.07336",
+      "started_utc": "2026-11-04T02:28:56.793810+00:00",
+      "completed_utc": "2026-11-04T02:28:56.911613+00:00",
+      "http_status_stdout": "200",
+      "response_fields": {
+        "server": [
+          "Google Frontend"
+        ],
+        "via": [
+          "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+        ],
+        "cache-control": [
+          "max-age=3600"
+        ],
+        "last-modified": [
+          "Mon, 24 Aug 2026 21:29:30 GMT"
+        ],
+        "age": [
+          "385746"
+        ],
+        "date": [
+          "Wed, 04 Nov 2026 02:28:56 GMT"
+        ],
+        "x-cache": [
+          "MISS, HIT, HIT"
+        ]
+      },
+      "body_bytes": 40409,
+      "body_sha256": "c1106cdaf31d9faf04e46b9a4ae3f0dca421eab95b4e57cabaff58794cf2f32d",
+      "headers_sha256": "91019f715b73ab6c1e37458df8fa9d5792c9d736c3e73568254462139dacb43c"
+    },
+    {
+      "url": "https://export.arxiv.org/api/query?id_list=2601.07336",
+      "started_utc": "2026-11-04T02:29:33.155071+00:00",
+      "completed_utc": "2026-11-04T02:29:33.436710+00:00",
+      "http_status_stdout": "200",
+      "response_fields": {
+        "server": [
+          "Google Frontend"
+        ],
+        "via": [
+          "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+        ],
+        "age": [
+          "0"
+        ],
+        "date": [
+          "Wed, 04 Nov 2026 02:29:33 GMT"
+        ],
+        "x-cache": [
+          "MISS, MISS, MISS"
+        ]
+      },
+      "body_bytes": 2656,
+      "body_sha256": "72bfe80d3374c180f74482a80b48c9746b3ea786c9af567930e56b0a11992178",
+      "headers_sha256": "cbff1d34738da054b37e74a1ea2232709fa29580d98c01838c8942a9ddc915f2"
+    },
+    {
+      "url": "https://arxiv.org/html/2601.07336v1",
+      "started_utc": "2026-11-04T02:30:05.815403+00:00",
+      "completed_utc": "2026-11-04T02:30:05.952223+00:00",
+      "http_status_stdout": "200",
+      "response_fields": {
+        "server": [
+          "Google Frontend"
+        ],
+        "last-modified": [
+          "Mon, 24 Aug 2026 19:00:14 GMT"
+        ],
+        "etag": [
+          "\"CIHJiMX5uZYDEAE=\""
+        ],
+        "via": [
+          "1.1 google, 1.1 varnish, 1.1 varnish, 1.1 varnish"
+        ],
+        "age": [
+          "1050848"
+        ],
+        "date": [
+          "Wed, 04 Nov 2026 02:30:05 GMT"
+        ],
+        "x-cache": [
+          "MISS, HIT, HIT"
+        ]
+      },
+      "body_bytes": 330995,
+      "body_sha256": "a018d41785d2594aca2ffb57a28eb3e596acda1469395452e565aa4c268fb93a",
+      "headers_sha256": "d46dc5f3918b2053394b1136321c9e234e800837b012d0fb2a401f41c06f0ee4"
+    }
+  ],
+  "arxiv_api": {
+    "query": "https://export.arxiv.org/api/query?id_list=2601.07336",
+    "feed_updated": "2026-11-04T02:29:33Z",
+    "entry": {
+      "id": "http://arxiv.org/abs/2601.07336v1",
+      "title": "Improved lower bounds for the maximum size of Condorcet domains",
+      "updated": "2026-01-12T09:03:12Z",
+      "published": "2026-01-12T09:03:12Z"
+    },
+    "documentation": "https://info.arxiv.org/help/api/user-manual.html#511-a-note-on-article-versions",
+    "documentation_section": "5.1.1",
+    "unversioned_id_list_semantics": "latest version"
+  },
+  "table4": {
+    "url": "https://arxiv.org/html/2601.07336v1",
+    "table": "4",
+    "n": 25,
+    "columns": [
+      "n",
+      "Fishburn",
+      "f(n) & h(n)",
+      "x_n/x_(n-1)",
+      "sqrt(x_n/x_(n-2))",
+      "ceil(4/5^1.5 * sqrt(5)^n)",
+      "g(n)"
+    ],
+    "raw_cells": [
+      "25",
+      "84990640",
+      "\u2265 \\geq 160316046 ks",
+      "2.187",
+      "2.198",
+      "195312500",
+      "",
+      ""
+    ],
+    "f_n_h_n_reported_lower_bound": 160316046,
+    "formula_column_value": 195312500
+  },
+  "public_prs": [
+    {
+      "number": 762,
+      "url": "https://github.com/elder-plinius/V3R1T4S/pull/762",
+      "title": "[claim] condorcet-domains: n=25, 180,870,896 orders (above published Table 4: 160,316,046)",
+      "state": "open",
+      "merged": false,
+      "head_sha": "651a2f7872214ef33728f32c08e4e1d89a9c177d",
+      "updated_at": "2026-11-03T23:58:16Z",
+      "n": 25,
+      "claimed_size": 180870896
+    },
+    {
+      "number": 389,
+      "url": "https://github.com/elder-plinius/V3R1T4S/pull/389",
+      "title": "[claim] condorcet-domains: n = 25, 178950728 linear orders vs published 160316046 (arXiv:2601.07336v1 Table 4)",
+      "state": "open",
+      "merged": false,
+      "head_sha": "9573bcf8d98bebff42c6d82fe1e7c481dd103c27",
+      "updated_at": "2026-10-24T16:14:46Z",
+      "n": 25,
+      "claimed_size": 178950728
+    },
+    {
+      "number": 388,
+      "url": "https://github.com/elder-plinius/V3R1T4S/pull/388",
+      "title": "[claim] condorcet-domains: n = 24, 81912986 linear orders vs published 73279872 (arXiv:2601.07336v1 Table 4)",
+      "state": "open",
+      "merged": false,
+      "head_sha": "abc5220fd79f75651d5faadb71df365566201121",
+      "updated_at": "2026-10-24T16:14:45Z",
+      "n": 24,
+      "claimed_size": 81912986
+    }
+  ],
+  "github_all_state_search": {
+    "query": "repo:elder-plinius/V3R1T4S is:pr condorcet",
+    "total_count": 13,
+    "incomplete_results": false,
+    "items": [
+      {
+        "number": 386,
+        "title": "[claim] condorcet-domains: n = 22, 16571072 linear orders vs published 15037178 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:42Z"
+      },
+      {
+        "number": 385,
+        "title": "[claim] condorcet-domains: n = 20, 3336208 linear orders vs published 3155366 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:40Z"
+      },
+      {
+        "number": 381,
+        "title": "[claim] condorcet-domains: n = 16, 135072 linear orders vs published 131536 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:33Z"
+      },
+      {
+        "number": 378,
+        "title": "[claim] condorcet-domains: n = 21, 7467760 linear orders vs published 6674931 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:28Z"
+      },
+      {
+        "number": 384,
+        "title": "[claim] condorcet-domains: n = 19, 1497276 linear orders vs published 1432836 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:38Z"
+      },
+      {
+        "number": 383,
+        "title": "[claim] condorcet-domains: n = 18, 675512 linear orders vs published 649079 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:36Z"
+      },
+      {
+        "number": 380,
+        "title": "[claim] condorcet-domains: n = 15, 60956 linear orders vs published 59430 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:31Z"
+      },
+      {
+        "number": 379,
+        "title": "[claim] condorcet-domains: n = 14, 27040 linear orders vs published 27026 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:29Z"
+      },
+      {
+        "number": 382,
+        "title": "[claim] condorcet-domains: n = 17, 300388 linear orders vs published 292015 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:35Z"
+      },
+      {
+        "number": 389,
+        "title": "[claim] condorcet-domains: n = 25, 178950728 linear orders vs published 160316046 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:46Z"
+      },
+      {
+        "number": 388,
+        "title": "[claim] condorcet-domains: n = 24, 81912986 linear orders vs published 73279872 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:45Z"
+      },
+      {
+        "number": 387,
+        "title": "[claim] condorcet-domains: n = 23, 36894088 linear orders vs published 33162136 (arXiv:2601.07336v1 Table 4)",
+        "state": "open",
+        "updated_at": "2026-10-24T16:14:43Z"
+      },
+      {
+        "number": 762,
+        "title": "[claim] condorcet-domains: n=25, 180,870,896 orders (above published Table 4: 160,316,046)",
+        "state": "open",
+        "updated_at": "2026-11-03T23:58:16Z"
+      }
+    ]
+  },
+  "upstream_known_knowns": {
+    "requested_path": "known-knowns/condorcet-domains",
+    "http_status": 404,
+    "parent_directory_entries": [
+      "bigger-codes",
+      "biggest-graphs",
+      "codetables-binary-linear",
+      "codetables-qubit-upper-bounds-n101-256",
+      "eaqecc-qutrit-codetables-gaps",
+      "erdos-699-binomial-gcd",
+      "faster-matrix-multiplication",
+      "group-testing-separable-designs",
+      "hadamard-maxdet-records",
+      "lehmer-past-10-to-the-50",
+      "lennard-jones-ccd-doye-table",
+      "minimizer-density-record-tables",
+      "ncbi-pathogen-ast-ecoli-genotype-phenotype-f1",
+      "nucleotide-transformer-benchmark-mcc",
+      "packomania-cci-equal-circles-in-circle",
+      "packomania-hyperspheres-hsp4-hsp6",
+      "packomania-scu-spheres-in-cube",
+      "qoblib-market-split-and-portfolio",
+      "risk-or-safety-exact-optimal-play",
+      "robust-forecast-aggregation-bounds",
+      "robustbench-cifar100-stronger-attack",
+      "spherical-codes-cohn-table",
+      "square-grid-lattice-gas-exact-counts-oeis",
+      "stable-marriage-max-stable-matchings",
+      "sunflower-free-capacity-lower-bound",
+      "thomson-problem-live-tables",
+      "vnncomp-2026-unsolved-instances"
+    ]
+  },
+  "upstream_trophy": {
+    "url": "https://github.com/elder-plinius/V3R1T4S/blob/main/TROPHY_CASE.md",
+    "blob_sha": "18b731d7d4bf99efd323d48740284daccb8501b0",
+    "condorcet_text_match_count": 0
+  },
+  "prior_local_threshold": {
+    "value": 186216544,
+    "source": "claim-initial/CLAIM.md, prior local count; object not supplied to this novelty review"
+  },
+  "local_snapshot": {
+    "repo/TROPHY_CASE.md_sha256": "b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1",
+    "condorcet_text_match_count": 0,
+    "repo/known-knowns/condorcet-domains_exists": false
+  },
+  "differences": [
+    {
+      "comparator": 160316046,
+      "delta": 25994230
+    },
+    {
+      "comparator": 180870896,
+      "delta": 5439380
+    },
+    {
+      "comparator": 178950728,
+      "delta": 7359548
+    },
+    {
+      "comparator": 186216544,
+      "delta": 93732
+    }
+  ],
+  "primary_literature_opened": [
+    {
+      "url": "https://arxiv.org/html/2509.20865v1",
+      "title": "An orderly algorithm for generation of Condorcet Domains",
+      "inspected_section": "5 Computational results; enumerations on 8-10 alternatives"
+    },
+    {
+      "url": "https://arxiv.org/html/2606.01690v1",
+      "title": "Coxeter Condorcet domains",
+      "inspected_section": "abstract, introduction, maximum-size discussion"
+    },
+    {
+      "url": "https://arxiv.org/html/2610.00720v1",
+      "title": "Outer Diversity of Condorcet Domains",
+      "inspected_section": "abstract, introduction, largest-domain discussion"
+    },
+    {
+      "url": "https://www.ipu.ru/node/80126",
+      "title": "Coherent domains and improved lower bounds for the maximum size of Condorcet domains",
+      "publication_year": 2025
+    },
+    {
+      "url": "https://www.hse.ru/sci/diss/1124596639",
+      "title": "Structured preferences in collective choice problems",
+      "defense_date": "2026-09-23",
+      "pdf_posted_date": "2026-05-04",
+      "inspected_pdf_tables": [
+        "2.1 (through n8)",
+        "2.3 (through n20, largest listed 2917604)",
+        "2.4 (through n20)"
+      ]
+    },
+    {
+      "url": "https://micro.econ.kit.edu/downloads/CondorcetDomains_Buch_Puppe_Slinko.pdf",
+      "title": "Condorcet Domains",
+      "draft_date": "2025-11-14",
+      "inspected_section": "Table8.2 through n20, 2917604; growth-rate remark2.1973"
+    },
+    {
+      "url": "https://webspace.eecs.qmul.ac.uk/s.riis/condorcet-data.html",
+      "title": "The Condorcet atlas",
+      "alternatives_in_hosted_archive": 7
+    }
+  ],
+  "literature_search_window": [
+    "2024-11-04",
+    "2026-11-04"
+  ],
+  "connector_response_timestamps": "not supplied; raw returned payloads are retained",
+  "raw_evidence_included_in_public_package": false
+}
