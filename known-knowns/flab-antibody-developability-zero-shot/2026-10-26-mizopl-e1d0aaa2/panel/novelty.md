@@ -2,23 +2,25 @@
 
 - context: fresh subagent invoked via invoke_subagent for independent V3R1T4S panel review
 - **Target ID:** `flab-antibody-developability-zero-shot`
-- **Single Claimed Zero-Shot Method:** **`CLSS_Reg8_AllBP_IMGT_Z`** (frozen at `2026-10-26T00:26:00Z` in commit `654c23f056b932c310723f591bc3fec89102ad73`; see `how-we-built-it/PREREG.md`; all other composite variants reported strictly as exploratory ablations)
+- **Single Frozen Zero-Shot Method:** **`CLSS_Reg8_AllBP_IMGT_Z`** (frozen at `2026-10-26T00:26:00Z` in commit `654c23f056b932c310723f591bc3fec89102ad73`; see `how-we-built-it/PREREG.md`; all other composite variants reported strictly as exploratory ablations)
+- **Claim Scope (`status: CONFIRMED_PARTIAL`):** **Partial Wins `p2` and `p3`** (Full Win, Binding, and `p1` are **not claimed**)
 - **Audited Artifacts:**
   - `the-record-we-beat/target.md`
   - `the-record-we-beat/record.md`
   - `how-we-built-it/PREREG.md`
   - `how-we-built-it/artifact.md`
-  - `null_test.md` (`how-we-built-it/null_test.md`)
+  - `how-we-built-it/null_test.md`
   - `README.md`
-  - `object/certificate.json` (`sha256: d59325d4892db661c638af2d7d2bdf6e35a6c06f95e869d2bc361470def74ecb`)
+  - `object/certificate.json` (`sha256: b6be3abe5d0dcff18fcf18d8e7a16f64164d434290274613f79b76f80f598eb6`)
   - `object/predictions_tm_polyreactivity.csv` (`sha256: 63cf82e9994c98a2dd2a69b47ff154b5ea9344fbfca0c4535ab11626ad0d7a9e`)
-  - `verify-it-yourself/verify.py` (`sha256: 891335835b8ec6cecba04373a4ae820915abdcaac76747884e7905207ec7ee50`)
-  - `how-we-built-it/verify_full_benchmark.py` (`sha256: 88644033fd678cd8f369fb3b60f5977ff96cff39ba849d70268d4cc2c159b85f`)
+  - `object/predictions_binding_part1..8.csv` (`sha256: 8e748b57...` through `f41772d0...`, `104,737` rows)
+  - `verify-it-yourself/verify.py` (`sha256: 3583f9700c89ba0c00bf1d9eaaaaca0566166859880727be705d7b5acf8fbd18`)
+  - `how-we-built-it/verify_full_benchmark.py` (`sha256: 51a3a05a27708532df677cb5c49043998eff57b8fa6edfc12a85b841f50dcf45`)
 - **Audited Benchmark Repository:** `https://github.com/Graylab/FLAb` at commit `e05e3f0135783ffb7de412df6a1467e7a0031911`
 
 ---
 
-## 1. Repository & Codebase Audit: Does `Graylab/FLAb` Already Compute `CLSS_Reg8_AllBP_IMGT_Z`?
+## 1. Repository & Codebase Audit: Does `Graylab/FLAb` Already Compute `CLSS_Reg8_AllBP_IMGT_Z` or the `p3` Confound Decomposition?
 
 I inspected the entire cloned `Graylab/FLAb` repository (`README.md`, `score/`, all 71 Python files in `models/`, `examples/`, and `data/`).
 
@@ -32,49 +34,31 @@ I inspected the entire cloned `Graylab/FLAb` repository (`README.md`, `score/`, 
    - Full `grep` scans across `models/` confirm **zero occurrences** of:
      - conserved immunoglobulin landmark partitioning into $\beta$-sandwich Framework (`FWR1–4`) and hypervariable Complementarity-Determining Loops (`CDR1–3`) (`cdr`, `fwr`, `CDR`, `FWR`, `split_fwr_cdr`),
      - external human IMGT V+J germline repertoire ($24\text{ IGHV} \times 18\text{ IGKV/IGLV} = 432$ Fv pairs) Z-standardization ($\mu_k^{\text{IMGT}}, \sigma_k^{\text{IMGT}}$),
-     - or the 8-descriptor regional equal-weight composite **`CLSS_Reg8_AllBP_IMGT_Z`**.
-
-3. **Mechanistic Novelty of `CLSS_Reg8_AllBP_IMGT_Z`:**
-   - Whole-chain averaging mixes hypervariable CDR loop residues (selected for antigen binding, often enriched in aromatic/hydrophobic side chains) with the conserved $\beta$-sandwich Framework scaffold (which governs cooperative thermal unfolding $T_m$).
-   - By partitioning every heavy and light variable domain at its four invariant vertebrate immunoglobulin landmarks (`Cys22`, `Trp36`, `Cys92/104`, `WGQG/FGQG`) and evaluating conformational flexibility (`fwr_flex`), hydrophilicity (`neg_fwr_gravy`), and dipeptide stability (`neg_fwr_inst`) on the **Framework scaffold (`FWR1–4`)**, while evaluating aromatic density (`neg_cdr_arom`), isoelectric point (`neg_cdr_pI`), and net charge (`neg_cdr_chg`) on the **hypervariable paratope (`CDR1–3`)** alongside molecular weight (`mw`) and human IMGT germline identity (`germ`), standardized against the 432-pair IMGT reference repertoire with strictly equal `1/8` weights, **`CLSS_Reg8_AllBP_IMGT_Z`** introduces a physically grounded, parameter-free zero-shot architecture that includes **all 7** Biopython `ProtParam` descriptors from `FLAb/models/biopython_score.py` with zero feature subset selection.
+     - the 8-descriptor regional equal-weight composite **`CLSS_Reg8_AllBP_IMGT_Z`**, or
+     - rank-residualized partial Spearman ($\perp L$, $\perp G$, $\perp (L,G)$) and matched-stratum `(L_H, L_L, V_H_idx, V_L_idx)` confound controls (`p3`).
 
 ---
 
-## 2. Margin Audit for Single Claimed Method (`CLSS_Reg8_AllBP_IMGT_Z`) Across `score/` Subset, Full `data/` Categories, and Untouched Categories
+## 2. Audit of Claimed Partial Wins (`p2`, `p3`) and Non-Claimed Categories (`Binding`, `p1`, Full Win)
 
-1. **Thermostability (`score/tm` 15 datasets + `data/thermostability/` 20, 21, and 25-dataset universes):**
-   - **`score_tm_15` (`score/tm/`, 15 datasets):** **`CLSS_Reg8_AllBP_IMGT_Z`** achieves unweighted mean **`+0.4636`** (**`14/15 = 93.33% > 0`**), beating the best released model in `score/tm` (`progen/xlarge = +0.2169`) by **`+0.2467`** ($4.93\times$ required `+0.05`) and beating the best single Biopython descriptor (`bp_flexibility = +0.2908`) by **`+0.1728`** ($3.46\times$ required `+0.05`), with $\bar{\rho}_{N\ge 10} = +0.2106$, $\bar{\rho}_{\sqrt{N}} = +0.3001$, $\bar{\rho}_{N} = +0.1666$, and `Wittrup2017_CST_Tm` ($N=137$) = **`+0.0620`**.
-   - **All 4 Thermostability Benchmark Universes (`p1`):**
-     - `score_tm_15` (`15` datasets): **`+0.4636`** (`+0.1728` over `bp_flexibility = +0.2908`)
-     - `data_thermostability_20_standard` (`20` datasets): **`+0.3270`** (`16/20 = 80.0% > 0`, **`+0.1478`** over best single `neg_bp_aromaticity = +0.1792`)
-     - `data_thermostability_21_all` (`21` datasets): **`+0.3048`** (`16/21 = 76.2% > 0`, **`+0.1449`** over best single `neg_bp_aromaticity = +0.1599`)
-     - `combined_thermostability_25` (`25` datasets): **`+0.2834`** (`19/25 = 76.0% > 0`, **`+0.0880`** over best single `bp_flexibility = +0.1954`)
-
-2. **Polyreactivity (`score/polyreactivity` 6 datasets + `data/polyreactivity/` 25 and 26-dataset universes):**
-   - **`score/polyreactivity` (`6` datasets):** **`CLSS_Reg8_AllBP_IMGT_Z`** achieves **`+0.4467`** (**`6/6 = 100.00% > 0`**, $\bar{\rho}_{N\ge 10} = +0.2379$, $\bar{\rho}_{\sqrt{N}} = +0.3073$, $\bar{\rho}_{N} = +0.2569$), beating `progen/xlarge (+ppl) = +0.1936` by **`+0.2531`** ($5.06\times$ required `+0.05`), `mpnn (-ppl) = +0.1906` by **`+0.2561`**, and best single descriptor `neg_bp_isoelectric_point = +0.4354` by **`+0.0113`**.
-   - **Full `data/polyreactivity/` (`25` CSVs, `26` union, and `20` unseen CSVs omitted by `score/`):** **`CLSS_Reg8_AllBP_IMGT_Z`** achieves **`+0.1407`** (`17/25 = 68.0% > 0`), **`+0.1671`** (`18/26 = 69.2% > 0`), and **`+0.0844`** (`12/20 = 60.0% > 0`).
-
-3. **Untouched Categories (Never Loaded Prior to Method Freeze at `2026-10-26T00:26:00Z`):**
-   - **`data/pharmacokinetics/` (`9` datasets):** **`+0.2287`** (`6/9 = 66.7% > 0`, $\bar{\rho}_{N} = +0.2148$).
-   - **`data/expression/` (`4` datasets):** **`+0.1913`** (`4/4 = 100.0% > 0`, $\bar{\rho}_{N} = +0.2266$).
+1. **Claimed Partial Win `p2` ($\ge 80\%$ Sign Consistency):**
+   - **`CLSS_Reg8_AllBP_IMGT_Z`** achieves positive correlation on **`14/15 = 93.3%`** of `score/tm` datasets, **`16/20 = 80.0%`** of standard `data/thermostability` datasets, **`6/6 = 100.0%`** of `score/polyreactivity` datasets, and **`4/4 = 100.0%`** of untouched `data/expression` datasets (whereas no released model in `score/tm` or `score/polyreactivity` exceeds `66.7%` under standard `-ppl`).
+2. **Claimed Partial Win `p3` (Length & Germline Confound Decomposition):**
+   - The `p3` analysis in `how-we-built-it/null_test.md` §3 and `object/certificate.json` computes rank-residualized partial Spearman ($\perp L$, $\perp G$, $\perp (L,G)$) and exact matched-stratum Spearman ($\bar{\rho}_{\text{matched}}$) within `(L_H, L_L, V_H_idx, V_L_idx)` strata across all 12 released models, 9 single descriptors, and 10 CLSS parameter-free methods.
+   - Explains mechanistically why sequence PLM perplexities (`antiberty`, `iglm`, `progen/*`) flip sign between Thermostability (`+0.1674` to `+0.2169`) and Polyreactivity (`-0.1424` to `-0.1936`): human IMGT germline identity correlates positively with thermostability ($+0.1297$) but negatively with favourable low polyreactivity ($-0.2129$).
+   - Confirms that **`CLSS_Reg8_AllBP_IMGT_Z`** retains strong predictive power within exact length-and-germline-matched strata (**`+0.4308`** matched on `score/tm` and **`+0.5262`** matched on `score/polyreactivity`).
+3. **Full Transparency on Non-Claimed Categories (`Binding`, `p1`, Full Win):**
+   - **Binding (`score/binding` 16 datasets and `data/binding` 80 CSVs — not claimed):** Evaluated unchanged from commit `654c23f0`, `CLSS_Reg8_AllBP_IMGT_Z` achieves **`-0.0060`** (`+0.0060` for $+K_d$) on `score/binding` vs `iglm = 0.1742`, **`-0.0987`** across all `80` `data/binding` CSVs, **`-0.1123`** / **`-0.1640`** across the `12` / `15` `score/`-covered `data/binding` CSVs, **`-0.0964`** / **`-0.0837`** across the `68` / `65` excluded `data/binding` CSVs, and **`-0.0809`** across the `84`-dataset `score/binding` plus `data/binding` union.
+   - **Thermostability (`p1` and Full Win — not claimed):** Because `CLSS_Reg8_AllBP_IMGT_Z` was defined at `00:13Z` after looking at `Wittrup2017_CST_Tm` in `score/tm`, `p1` and Full Win are marked as not claimed, and the 25-dataset figure (`+0.2834`) is explicitly labeled as the `score/tm` plus `data/thermostability` union.
 
 ---
 
-## 3. Novelty & Scientific Value of the `p3` Length-and-Germline Confound Decomposition
-
-The `p3` analysis in `null_test.md` §4 and `object/certificate.json` computes rank-residualized partial Spearman ($\perp L$, $\perp G$, $\perp (L,G)$) and exact matched-stratum Spearman ($\bar{\rho}_{\text{matched}}$) within `(L_H, L_L, V_H_idx, V_L_idx)` strata:
-- Explains mechanistically why sequence PLM perplexities (`antiberty`, `iglm`, `progen/*`) flip sign between Thermostability (`+0.1674` to `+0.2169`) and Polyreactivity (`-0.1424` to `-0.1936`): human IMGT germline identity correlates positively with thermostability ($+0.1297$) but negatively with favourable low polyreactivity ($-0.2129$).
-- Confirms that the single claimed method **`CLSS_Reg8_AllBP_IMGT_Z`** retains strong predictive power within exact length-and-germline-matched strata (**`+0.4308`** matched on `score/tm` and **`+0.5262`** matched on `score/polyreactivity`).
-
----
-
-## 4. Summary of Novelty Audit Checks
+## 3. Summary of Novelty Audit Checks
 
 | Audit Criterion | Finding | Status |
 |---|---|---|
-| Absent from `Graylab/FLAb` (`score/`, `models/`, `examples/`)? | Confirmed: no FWR/CDR landmark partitioning, IMGT repertoire Z-standardization, or 8-descriptor composite exists in `FLAb`. | **PASS** |
-| Single claimed method (`CLSS_Reg8_AllBP_IMGT_Z`) beats all 12 released models in `score/` by $\ge +0.05$ across $\ge 2$ categories? | Beats best released by **`+0.2467`** on `score/tm` and **`+0.2531`** on `score/polyreactivity`, and beats all single descriptors on all 4 Thermostability universes (`+0.0880` to `+0.1728`). | **PASS** |
-| Evaluated on untouched categories without modification? | Confirmed: `+0.2287` (`6/9 > 0`) on `data/pharmacokinetics` and `+0.1913` (`4/4 > 0`) on `data/expression`. | **PASS** |
-| Partial wins `p1`, `p2` ($\ge 80\%$ sign consistency), and `p3` (length & germline confound control) novel & verified? | Confirmed for `CLSS_Reg8_AllBP_IMGT_Z`: `93.3%` (`14/15`) on `score/tm`, `80.0%` (`16/20`) on `data/thermostability`, `100.0%` (`6/6`) on `score/polyreactivity`, and `+0.4308` / `+0.5262` matched-stratum Spearman. | **PASS** |
+| Absent from `Graylab/FLAb` (`score/`, `models/`, `examples/`)? | Confirmed: no FWR/CDR landmark partitioning, IMGT repertoire Z-standardization, 8-descriptor composite, or `p3` confound decomposition exists in `FLAb`. | **PASS** |
+| Evaluated on `score/binding` (`16` datasets) and all `80` `data/binding` CSVs without modification from commit `654c23f0`? | Confirmed: all `104,737` binding predictions saved in `object/predictions_binding_part1..8.csv`, with `binding`, `p1`, and Full Win explicitly marked not claimed. | **PASS** |
+| Claimed Partial Wins `p2` ($\ge 80\%$ sign consistency) and `p3` (length & germline confound control) novel & verified? | Confirmed for `CLSS_Reg8_AllBP_IMGT_Z`: `93.3%` (`14/15`) on `score/tm`, `80.0%` (`16/20`) on `data/thermostability`, `100.0%` (`6/6`) on `score/polyreactivity`, `100.0%` (`4/4`) on `data/expression`, and `+0.4308` / `+0.5262` matched-stratum Spearman. | **PASS** |
 
 pass: true

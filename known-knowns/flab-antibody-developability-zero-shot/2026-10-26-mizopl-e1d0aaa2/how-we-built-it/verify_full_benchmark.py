@@ -243,9 +243,24 @@ VG_ANCHORS_H = [(idx, vg, *get_anchors(vg, True)[1:]) for idx, vg in enumerate(H
 VG_ANCHORS_L = [(idx, vg, *get_anchors(vg, False)[1:]) for idx, vg in enumerate(HUMAN_VL_GERMLINES)]
 
 _DESC_CACHE = {}
+_GERM_WIN_CACHE = {}
+_CHAIN_CACHE = {}
+_FWR_BP_CACHE = {}
+_CDR_BP_CACHE = {}
 
 def pure_germline_info(seq, is_heavy=True):
     seq, c1, w, c2, j = get_anchors(seq, is_heavy)
+    L3 = 38 if is_heavy else 34
+    offset = -2 if is_heavy else 0
+    wkey = (
+        is_heavy, len(seq), c1, w, c2, j,
+        seq[:c1 + 9],
+        seq[max(0, w - 5):w + 23],
+        seq[max(0, c2 - L3):c2 + 8],
+        seq[max(0, j + offset):j + offset + 15],
+    )
+    if wkey in _GERM_WIN_CACHE:
+        return _GERM_WIN_CACHE[wkey]
     vg_list = VG_ANCHORS_H if is_heavy else VG_ANCHORS_L
     j_list = HUMAN_JH_GERMLINES if is_heavy else HUMAN_JL_GERMLINES
     best_v = 0.0
@@ -261,7 +276,6 @@ def pure_germline_info(seq, is_heavy=True):
             if 0 <= w + d < len(seq) and 0 <= vw + d < len(vg_s):
                 total += 1
                 if seq[w + d] == vg_s[vw + d]: matches += 1
-        L3 = 38 if is_heavy else 34
         for d in range(-L3, 8):
             if 0 <= c2 + d < len(seq) and 0 <= vc2 + d < len(vg_s):
                 total += 1
@@ -272,7 +286,6 @@ def pure_germline_info(seq, is_heavy=True):
             best_v_idx = v_idx
     best_j = 0.0
     best_j_idx = 0
-    offset = -2 if is_heavy else 0
     for j_idx, jg in enumerate(j_list):
         m4 = 0
         t4 = len(jg)
@@ -283,7 +296,9 @@ def pure_germline_info(seq, is_heavy=True):
         if m4 / t4 > best_j:
             best_j = m4 / t4
             best_j_idx = j_idx
-    return (best_v * 95.0 + best_j * 12.0) / 107.0, best_v_idx, best_j_idx, len(seq)
+    res = ((best_v * 95.0 + best_j * 12.0) / 107.0, best_v_idx, best_j_idx, len(seq))
+    _GERM_WIN_CACHE[wkey] = res
+    return res
 
 def split_fwr_cdr(seq, is_heavy=True):
     seq, c1, w, c2, j = get_anchors(seq, is_heavy)
@@ -296,6 +311,25 @@ def split_fwr_cdr(seq, is_heavy=True):
     fwr4 = seq[j:]
     return fwr1 + fwr2 + fwr3 + fwr4, cdr1 + cdr2 + cdr3
 
+def _single_chain_descriptors(seq, is_heavy):
+    ckey = (seq, is_heavy)
+    if ckey in _CHAIN_CACHE:
+        return _CHAIN_CACHE[ckey]
+    g, v_idx, j_idx, l_seq = pure_germline_info(seq, is_heavy)
+    fwr, cdr = split_fwr_cdr(seq, is_heavy)
+    val = (
+        g, v_idx, j_idx, l_seq, fwr, cdr,
+        bp_average_flexibility(seq),
+        bp_gravy(seq),
+        bp_aromaticity(seq),
+        bp_isoelectric_point(seq),
+        bp_instability_index(seq),
+        bp_charge_at_7_4(seq),
+        bp_molecular_weight(seq),
+    )
+    _CHAIN_CACHE[ckey] = val
+    return val
+
 def raw_descriptors(heavy, light=None):
     sh = clean(heavy)
     has_l = light is not None and pd.notna(light) and len(clean(light)) >= 40
@@ -304,41 +338,69 @@ def raw_descriptors(heavy, light=None):
     if key in _DESC_CACHE:
         return _DESC_CACHE[key]
 
-    gh, vh_idx, jh_idx, lh = pure_germline_info(sh, True)
-    fwr_h, cdr_h = split_fwr_cdr(sh, True)
+    gh, vh_idx, jh_idx, lh, fwr_h, cdr_h, flex_h, gravy_h, arom_h, pi_h, inst_h, chg_h, mw_h = _single_chain_descriptors(sh, True)
     if has_l:
-        gl, vl_idx, jl_idx, ll = pure_germline_info(sl, False)
-        fwr_l, cdr_l = split_fwr_cdr(sl, False)
+        gl, vl_idx, jl_idx, ll, fwr_l, cdr_l, flex_l, gravy_l, arom_l, pi_l, inst_l, chg_l, mw_l = _single_chain_descriptors(sl, False)
         germ = 0.5 * (gh + gl)
         seq_len = lh + ll
         stratum = f"{lh}_{ll}_{vh_idx}_{vl_idx}"
         fwr_seq = fwr_h + fwr_l
         cdr_seq = cdr_h + cdr_l
+        flex = 0.5 * (flex_h + flex_l)
+        neg_gravy = -0.5 * (gravy_h + gravy_l)
+        neg_arom = -0.5 * (arom_h + arom_l)
+        neg_pI = -0.5 * (pi_h + pi_l)
+        neg_inst = -0.5 * (inst_h + inst_l)
+        neg_chg = -0.5 * (chg_h + chg_l)
+        mw = 0.5 * (mw_h + mw_l)
     else:
         germ = gh
         seq_len = lh
         stratum = f"{lh}_0_{vh_idx}_0"
         fwr_seq = fwr_h
         cdr_seq = cdr_h
+        flex = flex_h
+        neg_gravy = -gravy_h
+        neg_arom = -arom_h
+        neg_pI = -pi_h
+        neg_inst = -inst_h
+        neg_chg = -chg_h
+        mw = mw_h
 
-    def avg_hl(fn):
-        return 0.5 * (fn(sh) + fn(sl)) if has_l else fn(sh)
+    if fwr_seq not in _FWR_BP_CACHE:
+        _FWR_BP_CACHE[fwr_seq] = (
+            bp_average_flexibility(fwr_seq),
+            -bp_gravy(fwr_seq),
+            -bp_instability_index(fwr_seq),
+        )
+    fwr_flex, neg_fwr_gravy, neg_fwr_inst = _FWR_BP_CACHE[fwr_seq]
+
+    if cdr_seq:
+        if cdr_seq not in _CDR_BP_CACHE:
+            _CDR_BP_CACHE[cdr_seq] = (
+                -bp_aromaticity(cdr_seq),
+                -bp_isoelectric_point(cdr_seq),
+                -bp_charge_at_7_4(cdr_seq),
+            )
+        neg_cdr_arom, neg_cdr_pI, neg_cdr_chg = _CDR_BP_CACHE[cdr_seq]
+    else:
+        neg_cdr_arom, neg_cdr_pI, neg_cdr_chg = neg_arom, neg_pI, neg_chg
 
     res = {
-        "flex": avg_hl(bp_average_flexibility),
-        "neg_gravy": -avg_hl(bp_gravy),
-        "neg_arom": -avg_hl(bp_aromaticity),
-        "neg_pI": -avg_hl(bp_isoelectric_point),
-        "neg_inst": -avg_hl(bp_instability_index),
-        "neg_chg": -avg_hl(bp_charge_at_7_4),
-        "mw": avg_hl(bp_molecular_weight),
+        "flex": flex,
+        "neg_gravy": neg_gravy,
+        "neg_arom": neg_arom,
+        "neg_pI": neg_pI,
+        "neg_inst": neg_inst,
+        "neg_chg": neg_chg,
+        "mw": mw,
         "germ": germ,
-        "fwr_flex": bp_average_flexibility(fwr_seq),
-        "neg_fwr_gravy": -bp_gravy(fwr_seq),
-        "neg_fwr_inst": -bp_instability_index(fwr_seq),
-        "neg_cdr_arom": -bp_aromaticity(cdr_seq) if cdr_seq else -avg_hl(bp_aromaticity),
-        "neg_cdr_pI": -bp_isoelectric_point(cdr_seq) if cdr_seq else -avg_hl(bp_isoelectric_point),
-        "neg_cdr_chg": -bp_charge_at_7_4(cdr_seq) if cdr_seq else -avg_hl(bp_charge_at_7_4),
+        "fwr_flex": fwr_flex,
+        "neg_fwr_gravy": neg_fwr_gravy,
+        "neg_fwr_inst": neg_fwr_inst,
+        "neg_cdr_arom": neg_cdr_arom,
+        "neg_cdr_pI": neg_cdr_pI,
+        "neg_cdr_chg": neg_cdr_chg,
         "seq_len": float(seq_len),
         "stratum": stratum,
     }
@@ -456,6 +518,7 @@ FAV_SIGN_SCORE = {
         "gsk2023_RSB1_exp": +1,
     },
     "immunogenicity": {"Prihoda2021_mAb_immunogenicity": -1},
+    "binding": {ds: -1 for ds in sorted(os.listdir(f"{FLAB_ROOT}/score/antiberty/binding")) if os.path.isdir(f"{FLAB_ROOT}/score/antiberty/binding/{ds}")},
 }
 
 CLSS_METHODS = {
@@ -515,6 +578,7 @@ score_universe_results = {}
 p3_confound_results = {}
 upstream_file_sha256 = {}
 prediction_rows = []
+binding_prediction_rows = []
 
 for cat, dmap in FAV_SIGN_SCORE.items():
     cat_res = {"datasets": sorted(dmap.keys()), "dataset_sizes": {}, "released_models": {}, "single_descriptors": {}, "clss_methods": {}}
@@ -679,6 +743,18 @@ for cat, dmap in FAV_SIGN_SCORE.items():
                     "exploratory_clss_reg7_mw_imgt_z": f"{s_reg7[idx]:.6f}",
                     "exploratory_clss_eqwt6_imgt_z": f"{s_eq6[idx]:.6f}",
                 })
+    elif cat == "binding":
+        for ds in sorted(ds_frames.keys()):
+            n_rows = len(ds_frames[ds][0])
+            s_reg8 = ds_scores_cache[ds]["CLSS_Reg8_AllBP_IMGT_Z"]
+            for idx in range(n_rows):
+                binding_prediction_rows.append({
+                    "universe": "score/binding",
+                    "category": "binding",
+                    "dataset": ds,
+                    "row_index": idx,
+                    "clss_reg8_allbp_imgt_z": f"{s_reg8[idx]:.6f}",
+                })
 
     # Best baselines in score/
     best_rel_fav = max((v["mean_spearman_fav_confidence"], k) for k, v in cat_res["released_models"].items())
@@ -697,8 +773,9 @@ for cat, dmap in FAV_SIGN_SCORE.items():
     p3_confound_results[cat] = p3_cat
 
 # ============================================================================
-# 5. Evaluate All 4 Thermostability Universes (15, 20, 21, and 25 Datasets, `p1`)
+# 5. Evaluate All 4 Thermostability Universes (15, 20, 21, and 25 Datasets, `p1` Not Claimed)
 #    AND All Polyreactivity Universes (6 `score/`, 25 `data/`, 26 Combined, 20 Unseen)
+#    AND All Binding Universes (16 `score/binding`, 80 `data/binding`, 12/15 Covered, 68/65 Excluded, 84 Union)
 #    AND Untouched Categories (`pharmacokinetics` 9 datasets, `expression` 4 `data/` datasets)
 # ============================================================================
 score_tm_files = {ds: [x for x in glob.glob(f"{FLAB_ROOT}/score/antiberty/tm/{ds}/*.csv") if not x.endswith("_corr.csv")][0]
@@ -746,24 +823,32 @@ EVAL_METHOD_LIST = [
     ("pure_germline_identity", ["germ"]),
 ]
 
-def evaluate_file_universe(umap, default_sgn=+1, record_preds_universe=None, record_preds_cat=None):
+def evaluate_file_universe(umap, default_sgn=+1, record_preds_universe=None, record_preds_cat=None, require_light=True, target_pred_list=None, full_per_dataset=True):
     u_sizes = {}
     u_frames = {}
     for ds, fpath in sorted(umap.items()):
         df = pd.read_csv(fpath)
+        if "heavy" not in df.columns and "VHH_sequence" in df.columns:
+            df = df.rename(columns={"VHH_sequence": "heavy"})
         fit_col = "fitness" if "fitness" in df.columns else [c for c in df.columns if c not in ["heavy", "light"]][-1]
         df[fit_col] = pd.to_numeric(df[fit_col].astype(str).str.replace("\u200b", "", regex=False), errors="coerce")
         has_l = "light" in df.columns
-        sub = df.dropna(subset=["heavy", fit_col] + (["light"] if has_l else [])).reset_index(drop=True)
-        u_frames[ds] = (sub, fit_col)
+        req_cols = ["heavy", fit_col] + (["light"] if (has_l and require_light) else [])
+        sub = df.dropna(subset=req_cols).reset_index(drop=True)
+        rows = [raw_descriptors(h, l if has_l else None) for h, l in zip(sub["heavy"], sub["light"] if has_l else [None]*len(sub))]
+        fdf = pd.DataFrame(rows)
+        u_frames[ds] = (sub, fit_col, fdf)
         u_sizes[ds] = int(len(sub))
 
     u_res = {"n_datasets": len(umap), "dataset_sizes": u_sizes, "methods": {}}
     ds_pred_cache = {ds: {} for ds in u_frames}
     for mname, keys in EVAL_METHOD_LIST:
         per_ds = {}
-        for ds, (sub, fit_col) in u_frames.items():
-            x, _ = score_imgt_z_df(sub, keys)
+        for ds, (sub, fit_col, fdf) in u_frames.items():
+            total = np.zeros(len(sub), dtype=float)
+            for k in keys:
+                total += (fdf[k].values.astype(float) - IMGT_MEAN[k]) / IMGT_STD[k]
+            x = total / len(keys)
             if record_preds_universe and mname in ["CLSS_Reg8_AllBP_IMGT_Z", "CLSS_Reg7_MW_IMGT_Z", "CLSS_EqWt6_IMGT_Z"]:
                 ds_pred_cache[ds][mname] = np.round(x, 6)
             if np.std(x) < 1e-12:
@@ -774,7 +859,7 @@ def evaluate_file_universe(umap, default_sgn=+1, record_preds_universe=None, rec
                 per_ds[ds] = round(float(r), 4)
         vals = list(per_ds.values())
         w_stats = compute_size_weighted_stats(per_ds, u_sizes)
-        u_res["methods"][mname] = {
+        m_entry = {
             "role": "claimed_primary" if mname == "CLSS_Reg8_AllBP_IMGT_Z" else ("single_descriptor" if mname.startswith(("bp_", "neg_bp_", "pure_")) else "exploratory_ablation"),
             "n_defined": len(vals),
             "mean_spearman": round(float(np.mean(vals)), 4) if vals else 0.0,
@@ -783,25 +868,38 @@ def evaluate_file_universe(umap, default_sgn=+1, record_preds_universe=None, rec
             "mean_spearman_n_weighted": w_stats["mean_spearman_n_weighted"],
             "positive_count": int(sum(1 for v in vals if v > 0)),
             "positive_fraction": round(float(sum(1 for v in vals if v > 0) / len(vals)), 4) if vals else 0.0,
-            "per_dataset": per_ds,
         }
+        if full_per_dataset or mname == "CLSS_Reg8_AllBP_IMGT_Z":
+            m_entry["per_dataset"] = per_ds
+        u_res["methods"][mname] = m_entry
 
     if record_preds_universe:
+        out_list = target_pred_list if target_pred_list is not None else prediction_rows
         for ds in sorted(u_frames.keys()):
             n_rows = len(u_frames[ds][0])
             s_reg8 = ds_pred_cache[ds]["CLSS_Reg8_AllBP_IMGT_Z"]
-            s_reg7 = ds_pred_cache[ds]["CLSS_Reg7_MW_IMGT_Z"]
-            s_eq6 = ds_pred_cache[ds]["CLSS_EqWt6_IMGT_Z"]
-            for idx in range(n_rows):
-                prediction_rows.append({
-                    "universe": record_preds_universe,
-                    "category": record_preds_cat,
-                    "dataset": ds,
-                    "row_index": idx,
-                    "clss_reg8_allbp_imgt_z": f"{s_reg8[idx]:.6f}",
-                    "exploratory_clss_reg7_mw_imgt_z": f"{s_reg7[idx]:.6f}",
-                    "exploratory_clss_eqwt6_imgt_z": f"{s_eq6[idx]:.6f}",
-                })
+            if target_pred_list is not None:
+                for idx in range(n_rows):
+                    out_list.append({
+                        "universe": record_preds_universe,
+                        "category": record_preds_cat,
+                        "dataset": ds,
+                        "row_index": idx,
+                        "clss_reg8_allbp_imgt_z": f"{s_reg8[idx]:.6f}",
+                    })
+            else:
+                s_reg7 = ds_pred_cache[ds]["CLSS_Reg7_MW_IMGT_Z"]
+                s_eq6 = ds_pred_cache[ds]["CLSS_EqWt6_IMGT_Z"]
+                for idx in range(n_rows):
+                    out_list.append({
+                        "universe": record_preds_universe,
+                        "category": record_preds_cat,
+                        "dataset": ds,
+                        "row_index": idx,
+                        "clss_reg8_allbp_imgt_z": f"{s_reg8[idx]:.6f}",
+                        "exploratory_clss_reg7_mw_imgt_z": f"{s_reg7[idx]:.6f}",
+                        "exploratory_clss_eqwt6_imgt_z": f"{s_eq6[idx]:.6f}",
+                    })
 
     single_keys = ["bp_flexibility", "neg_bp_gravy", "neg_bp_aromaticity", "neg_bp_isoelectric_point", "neg_bp_instability_index", "bp_molecular_weight", "pure_germline_identity"]
     best_single = max((u_res["methods"][k]["mean_spearman"], k) for k in single_keys)
@@ -851,6 +949,74 @@ polyreactivity_universes = {
     "datasets_in_score_polyreactivity_only": ["Rosace2023_CR3022_CIC"],
 }
 
+# Binding Full-Category & Subset Audit (80 CSVs in data/binding/ + 16 in score/binding/)
+score_binding_files = {ds: [x for x in glob.glob(f"{FLAB_ROOT}/score/antiberty/binding/{ds}/*.csv") if not x.endswith("_corr.csv")][0]
+                       for ds in sorted(os.listdir(f"{FLAB_ROOT}/score/antiberty/binding")) if os.path.isdir(f"{FLAB_ROOT}/score/antiberty/binding/{ds}")}
+data_binding_80 = {fn.replace(".csv", ""): f"{FLAB_ROOT}/data/binding/{fn}"
+                   for fn in sorted(os.listdir(f"{FLAB_ROOT}/data/binding")) if fn.endswith(".csv")}
+for fn_k, fp_v in data_binding_80.items():
+    upstream_file_sha256[os.path.relpath(fp_v, FLAB_ROOT)] = file_sha256(fp_v)
+
+BINDING_NON_STANDARD_CSVS = {
+    "cognano_AVIDa-hTNFa",
+    "kirby2024retrospective_ab-SARSCoV2_binary_kd",
+    "kirby2024retrospective_ab-SARSCoV2_kd",
+}
+data_binding_77_standard = {k: v for k, v in data_binding_80.items() if k not in BINDING_NON_STANDARD_CSVS}
+
+BINDING_DATA_IN_SCORE_12 = {
+    "garbinski2023_kd": "gsk2023_{AM14,D25,MOTA}_Kd",
+    "hie2023efficient_CoV2Beta_C143_Kd": "Hie2022_C143_Kd",
+    "hie2023efficient_MEDIUCA_H1Solomon_Kd": "Hie2022_MEDI8852UCA_Kd",
+    "hie2023efficient_MEDI_H4Hubei_Kd": "Hie2022_MEDI8852_Kd",
+    "hie2023efficient_CoV2Beta_REGN10987_Kd": "Hie2022_REGN10987_Kd",
+    "hie2023efficient_CoV2_S309_Kd": "Hie2022_S309_Kd",
+    "hie2023efficient_ebola_mab114_Kd": "Hie2022_mAb114_Kd",
+    "koenig2017mutational_kd_g6": "Koenig2017_g6_Kd",
+    "rosace2023automated_kd_adalimumab": "Rosace2023_Adalimumab_Kd",
+    "rosace2023automated_kd_golimumab": "Rosace2023_Golimumab_Kd",
+    "shanehsazzadeh2023unlocking_zerokd_trastuzumab": "Shanehsazzadeh2023_trastuzumab_zero_kd",
+    "warszawski2019_d44_Kd": "Warszawski2019_d44_Kd",
+}
+BINDING_DATA_IN_SCORE_15 = dict(BINDING_DATA_IN_SCORE_12)
+BINDING_DATA_IN_SCORE_15.update({
+    "hie2023efficient_MEDIUCA_H4Hubei_Kd": "Hie2022_MEDI8852UCA_Kd (H4Hubei secondary strain)",
+    "hie2023efficient_MEDI_H7HK16_Kd": "Hie2022_MEDI8852_Kd (H7HK16 secondary strain)",
+    "hie2023efficient_CoV2omicron_REGN10987_Kd": "Hie2022_REGN10987_Kd (Omicron secondary strain)",
+})
+
+cov_binding_12 = {k: v for k, v in data_binding_80.items() if k in BINDING_DATA_IN_SCORE_12}
+excl_binding_68 = {k: v for k, v in data_binding_80.items() if k not in BINDING_DATA_IN_SCORE_12}
+cov_binding_15 = {k: v for k, v in data_binding_80.items() if k in BINDING_DATA_IN_SCORE_15}
+excl_binding_65 = {k: v for k, v in data_binding_80.items() if k not in BINDING_DATA_IN_SCORE_15}
+
+comb_binding_84 = {k: v for k, v in data_binding_80.items() if k != "garbinski2023_kd"}
+SCORE_BINDING_ONLY_5 = [
+    "Rosace2023_CR3022_Kd",
+    "Shanehsazzadeh2023_trastuzumab_multi_kd",
+    "gsk2023_AM14_Kd",
+    "gsk2023_D25_Kd",
+    "gsk2023_MOTA_Kd",
+]
+for bds in SCORE_BINDING_ONLY_5:
+    comb_binding_84[bds] = score_binding_files[bds]
+comb_binding_84_sgn = lambda ds: (-1 if ds in SCORE_BINDING_ONLY_5 else +1)
+
+binding_universes = {
+    "score_binding_16_neg_kd": evaluate_file_universe(score_binding_files, default_sgn=-1, require_light=True, full_per_dataset=False),
+    "score_binding_16_raw_kd": evaluate_file_universe(score_binding_files, default_sgn=+1, require_light=True, full_per_dataset=False),
+    "data_binding_80_all": evaluate_file_universe(data_binding_80, default_sgn=+1, record_preds_universe="data/binding", record_preds_cat="binding", require_light=False, target_pred_list=binding_prediction_rows, full_per_dataset=False),
+    "data_binding_77_standard": evaluate_file_universe(data_binding_77_standard, default_sgn=+1, require_light=False, full_per_dataset=False),
+    "data_binding_12_score_mapped": evaluate_file_universe(cov_binding_12, default_sgn=+1, require_light=False, full_per_dataset=False),
+    "data_binding_15_score_family_mapped": evaluate_file_universe(cov_binding_15, default_sgn=+1, require_light=False, full_per_dataset=False),
+    "unseen_data_binding_68_excluded_by_score": evaluate_file_universe(excl_binding_68, default_sgn=+1, require_light=False, full_per_dataset=False),
+    "unseen_data_binding_65_excluded_by_score": evaluate_file_universe(excl_binding_65, default_sgn=+1, require_light=False, full_per_dataset=False),
+    "combined_binding_84_union": evaluate_file_universe(comb_binding_84, default_sgn=comb_binding_84_sgn, require_light=False, full_per_dataset=False),
+    "datasets_excluded_by_score_binding_68": sorted(excl_binding_68.keys()),
+    "datasets_excluded_by_score_binding_65": sorted(excl_binding_65.keys()),
+    "datasets_in_score_binding_only": SCORE_BINDING_ONLY_5,
+}
+
 # Untouched Categories (100% unseen when CLSS_Reg8_AllBP_IMGT_Z was frozen on 2026-10-26):
 data_pk_9 = {fn.replace(".csv", ""): f"{FLAB_ROOT}/data/pharmacokinetics/{fn}"
              for fn in sorted(os.listdir(f"{FLAB_ROOT}/data/pharmacokinetics")) if fn.endswith(".csv")}
@@ -868,6 +1034,26 @@ untouched_data_expression_4 = evaluate_file_universe(data_exp_4, default_sgn=+1)
 # Write object/predictions_tm_polyreactivity.csv (zero copied sequences; keyed by universe, category, dataset, row_index)
 preds_csv_path = os.path.join(obj_dir, "predictions_tm_polyreactivity.csv")
 pd.DataFrame(prediction_rows).to_csv(preds_csv_path, index=False)
+
+# Write sharded <1 MB object/predictions_binding_part1..8.csv (104,737 rows across 16 score/binding + 80 data/binding datasets)
+N_BINDING_SHARDS = 8
+shard_size = (len(binding_prediction_rows) + N_BINDING_SHARDS - 1) // N_BINDING_SHARDS
+binding_shard_summaries = []
+for s_idx in range(N_BINDING_SHARDS):
+    chunk = binding_prediction_rows[s_idx * shard_size : (s_idx + 1) * shard_size]
+    rel_shard = f"object/predictions_binding_part{s_idx + 1}.csv"
+    shard_path = os.path.join(RUN_DIR, rel_shard)
+    pd.DataFrame(chunk).to_csv(shard_path, index=False)
+    sh_sha = file_sha256(shard_path)
+    sh_bytes = os.path.getsize(shard_path)
+    sh_sum = round(sum(float(r["clss_reg8_allbp_imgt_z"]) for r in chunk), 6)
+    binding_shard_summaries.append({
+        "file": rel_shard,
+        "sha256": sh_sha,
+        "bytes": sh_bytes,
+        "rows": len(chunk),
+        "sum_clss_reg8_allbp_imgt_z": sh_sum,
+    })
 
 # ============================================================================
 # 6. Leave-One-Category-Out (LOCO) Zero-Shot Cross-Validation
@@ -1078,11 +1264,32 @@ cert = {
             "data_pharmacokinetics_9_CLSS_Reg8_AllBP_IMGT_Z_positive_count": untouched_pharmacokinetics_9["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
             "data_expression_4_CLSS_Reg8_AllBP_IMGT_Z_mean": untouched_data_expression_4["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
             "data_expression_4_CLSS_Reg8_AllBP_IMGT_Z_positive_count": untouched_data_expression_4["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "score_binding_16_neg_kd_CLSS_Reg8_AllBP_IMGT_Z_mean": score_universe_results["binding"]["clss_methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "score_binding_16_neg_kd_CLSS_Reg8_AllBP_IMGT_Z_positive_count": score_universe_results["binding"]["clss_methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "score_binding_16_raw_kd_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["score_binding_16_raw_kd"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "score_binding_16_raw_kd_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["score_binding_16_raw_kd"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "score_binding_16_best_released_either_sign": score_universe_results["binding"]["best_released_either_sign"],
+            "score_binding_16_margin_vs_best_released": score_universe_results["binding"]["margin_CLSS_Reg8_AllBP_IMGT_Z_vs_best_released_either_sign"],
+            "data_binding_80_all_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["data_binding_80_all"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_binding_80_all_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["data_binding_80_all"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "data_binding_77_standard_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["data_binding_77_standard"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_binding_77_standard_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["data_binding_77_standard"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "data_binding_12_score_mapped_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["data_binding_12_score_mapped"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_binding_12_score_mapped_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["data_binding_12_score_mapped"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "data_binding_15_score_family_mapped_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["data_binding_15_score_family_mapped"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "data_binding_15_score_family_mapped_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["data_binding_15_score_family_mapped"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "unseen_data_binding_68_excluded_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["unseen_data_binding_68_excluded_by_score"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "unseen_data_binding_68_excluded_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["unseen_data_binding_68_excluded_by_score"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "unseen_data_binding_65_excluded_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["unseen_data_binding_65_excluded_by_score"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "unseen_data_binding_65_excluded_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["unseen_data_binding_65_excluded_by_score"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
+            "combined_binding_84_union_CLSS_Reg8_AllBP_IMGT_Z_mean": binding_universes["combined_binding_84_union"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["mean_spearman"],
+            "combined_binding_84_union_CLSS_Reg8_AllBP_IMGT_Z_positive_count": binding_universes["combined_binding_84_union"]["methods"]["CLSS_Reg8_AllBP_IMGT_Z"]["positive_count"],
         },
     },
     "score_universe_results": score_universe_results,
     "thermostability_universes_p1": thermostability_universes,
     "polyreactivity_universes": polyreactivity_universes,
+    "binding_universes": binding_universes,
     "untouched_pharmacokinetics_9": untouched_pharmacokinetics_9,
     "untouched_data_expression_4": untouched_data_expression_4,
     "loco_regional_sets": loco_regional_sets,
@@ -1094,9 +1301,14 @@ cert = {
     "upstream_flab_file_sha256": dict(sorted(upstream_file_sha256.items())),
     "predictions_table_summary": {
         "file": "object/predictions_tm_polyreactivity.csv",
+        "sha256": file_sha256(preds_csv_path),
         "total_rows": len(prediction_rows),
         "contains_copied_sequences": False,
         "columns": ["universe", "category", "dataset", "row_index", "clss_reg8_allbp_imgt_z", "exploratory_clss_reg7_mw_imgt_z", "exploratory_clss_eqwt6_imgt_z"],
+        "binding_prediction_shards": binding_shard_summaries,
+        "binding_total_rows": len(binding_prediction_rows),
+        "binding_columns": ["universe", "category", "dataset", "row_index", "clss_reg8_allbp_imgt_z"],
+        "binding_sum_clss_reg8_allbp_imgt_z": round(sum(float(r["clss_reg8_allbp_imgt_z"]) for r in binding_prediction_rows), 6),
     },
     "runtime": {
         "wall_seconds": elapsed_wall,
