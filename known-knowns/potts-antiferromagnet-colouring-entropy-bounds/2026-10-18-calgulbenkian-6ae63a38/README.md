@@ -11,8 +11,8 @@ Notes on that sentence, which is the panel's gate text word for word:
   snapshot text in how-we-built-it/.
 - Rounding. The bound rounded upward at 20 decimals is 2.33606022655545835815. The sentence above quotes the gate, which truncates the same number at ...814; the claim folder truncated it too. The rigorous value is ...815.
 - Object. The certificate is a pair of vectors (v, y) on the 451929 symmetry orbits (colour permutations and the dihedral group of the cycle) of the
-  proper 4-colourings of the cycle C_18; the full transfer matrix has 387420492 states. It is stored as 33 parts under 1 MB
-  (object/PARTS.txt gives the sha256 of every part and of the whole 28923460-byte file q4_cyl_18_cert.bin, 6ae63a3870e719d855663cc81e6517880c282a8bcb773dc2f26a7d32cd8bdf01).
+  proper 4-colourings of the cycle C_18; the full transfer matrix has 387420492 states. It is stored as 31 xz-compressed parts under 1 MB
+  (object/PARTS.txt gives the sha256 of every part, of the joined 27352400-byte file q4_cyl_18_cert.bin.xz and of the decompressed 28923460-byte file q4_cyl_18_cert.bin, 6ae63a3870e719d855663cc81e6517880c282a8bcb773dc2f26a7d32cd8bdf01).
 - What the panel did that the quick check below does not. The panel's reproduce skeptic recomputed y = C v on the FULL transfer matrix
   (no quotient, no equitable-partition assumption) with its own C program, and matched the shipped y in all 451929 orbits (0 mismatches). That program
   is shipped as an optional second check (verify-it-yourself/full-check/).
@@ -30,7 +30,7 @@ sh verify-it-yourself/run_checks.sh
 - Expected last line: `ALL CHECKS PASS`
 - Optional second check (the panel reproduce skeptic's independent C checker, about 38 minutes on 27 threads): verify-it-yourself/full-check/FULL_CHECK.md.
 
-The quick check reassembles the parts and checks every sha256 first, then reads the vectors, checks v > 0 and computes the largest ratio
+The quick check joins the parts, decompresses them (xz, Python lzma) and checks every sha256 first, then reads the vectors, checks v > 0 and computes the largest ratio
 y_i / v_i as an exact integer fraction, the bound C_hi^(1/18) in 80-digit decimals, and, in exact integers, that the stated 20-decimal value
 is a valid upper bound and is its upward rounding. It also validates the file format and the orbit numbering on three small certificates,
 compares independent small-width eigenvalues with a table, and rejects two corrupted copies. It trusts that y = C v at the claimed width.
@@ -44,7 +44,7 @@ That is the gap the optional full check and the panel's reproduce run close.
 | same paper, Table 2 | C_16 (largest eigenvalue for the cycle of that length) | 786626.0015010700; its 1/16 power is 2.3360682055577727732, the printed bound | same URL | 2026-10-18T18:23:42Z and 2026-10-18T18:25:57Z |
 | Cambridge Core article page | status page for the same paper | no later bound | https://www.cambridge.org/core/journals/lms-journal-of-computation-and-mathematics/article/exact-and-approximate-compression-of-transfer-matrices-for-graph-homomorphisms/DF3F31D5871C39FDAD818685EDA617B3 | 2026-10-18T18:23:02Z |
 | V3R1T4S TROPHY_CASE.md, pull requests, known-knowns | this target | none | https://github.com/elder-plinius/V3R1T4S | 2026-10-18T18:23:03Z to 18:23:12Z |
-| This package | W_sq(4) upper bound | **2.33606022655545835815** (7.979002312e-6 below the printed bound; the criterion asks for at least 1e-9) | object/q4_cyl_18_cert.bin (in parts) | |
+| This package | W_sq(4) upper bound | **2.33606022655545835815** (7.979002312e-6 below the printed bound; the criterion asks for at least 1e-9) | object/q4_cyl_18_cert.bin (xz-compressed, in parts) | |
 
 The table is the paper itself; there is no live table for this target. Details, with HTTP status and sha256, are in the-record-we-beat/README.md,
 and the panel's novelty report (panel/novelty.md) lists the arXiv queries and what they found. The paper's own tables stop at C_16 (q = 4: C_16,

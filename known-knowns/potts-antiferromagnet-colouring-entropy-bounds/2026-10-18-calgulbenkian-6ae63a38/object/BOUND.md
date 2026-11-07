@@ -33,7 +33,7 @@ The published bound the claim is compared with is 2.33606820555777 (C_16^(1/16),
 
 Full transfer matrix: 387420492 states (proper colourings of C_18 with 4 colours). Quotient: 451929 orbits, which is the length n of the vectors in the file.
 
-## File format of the certificate (object/q4_cyl_18_cert.bin, stored as numbered parts)
+## File format of the certificate (object/q4_cyl_18_cert.bin, stored as xz-compressed numbered parts q4_cyl_18_cert.bin.xz.partNN; the format below is that of the decompressed file)
 
 Documented by Argon's source potts_kink_cert.c (the writer) and confirmed here on small cases by verify-it-yourself/orbit_check.py:
 - bytes 0..3: unsigned 32-bit little-endian integer n (number of orbits);
@@ -45,6 +45,6 @@ checked to reproduce the files in object/format_examples/ (widths 6, 8, 9) exact
 
 ## Other files in object/
 
-- PARTS.txt: sha256 of the whole certificate file and of each part.
+- PARTS.txt: sha256 of the decompressed certificate file, of the joined .xz file and of each part.
 - format_examples/: three small certificate files for the same format (byte copies from the snapshot), used only to validate the orbit numbering and the y = C v relation independently.
 - THETA_TABLE_q4.txt: copy of the theta_1 table from Argon's RESULTS.md (first 32 digits), used only as data to compare an independent small-width eigenvalue computation against.

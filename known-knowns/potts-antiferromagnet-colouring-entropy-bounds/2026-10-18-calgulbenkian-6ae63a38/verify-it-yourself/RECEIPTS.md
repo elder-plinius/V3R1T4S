@@ -2,6 +2,8 @@
 
 Output of `sh verify-it-yourself/run_checks.sh` run from the package folder on 2026-10-18T19:33:38Z (UTC), Python 3.9.6 on Darwin arm64, system python3 without numpy, exit status 0.
 
+Note added 2026-11-07: the receipt below is from the original run. Since then the certificate parts are xz-compressed (object/q4_cyl_18_cert.bin.xz.partNN) and step 1 now prints: PASS: 31 xz parts join to q4_cyl_18_cert.bin.xz (27352400 bytes) which decompresses to q4_cyl_18_cert.bin (28923460 bytes), sha256 6ae63a3870e719d855663cc81e6517880c282a8bcb773dc2f26a7d32cd8bdf01. The decompressed file is byte-identical.
+
 ```
 == 1. reassemble the parts and check every sha256 (parts and whole file)
 PASS: 33 parts reassemble to q4_cyl_18_cert.bin (28923460 bytes), sha256 6ae63a3870e719d855663cc81e6517880c282a8bcb773dc2f26a7d32cd8bdf01

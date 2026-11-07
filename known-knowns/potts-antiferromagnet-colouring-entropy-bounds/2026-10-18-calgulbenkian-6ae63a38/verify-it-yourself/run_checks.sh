@@ -9,7 +9,7 @@ V="$HERE/verify-it-yourself"
 fail=0
 TMP=$(mktemp -d 2>/dev/null || mktemp -d -t v3check)
 trap 'rm -f "$TMP/q4_cyl_18_cert.bin" "$TMP/neg.bin" "$TMP/neg2.bin"; rmdir "$TMP" 2>/dev/null' EXIT
-echo "== 1. reassemble the parts and check every sha256 (parts and whole file)"
+echo "== 1. join the xz parts, decompress, and check every sha256 (parts, .xz file, whole file)"
 $PY "$V/reassemble.py" "$HERE/object/PARTS.txt" "$TMP/q4_cyl_18_cert.bin" || fail=1
 echo "== 1b. sha256 of the other object files"
 $PY "$V/check_object_files.py" "$V/object_files.sha256" "$HERE" || fail=1
