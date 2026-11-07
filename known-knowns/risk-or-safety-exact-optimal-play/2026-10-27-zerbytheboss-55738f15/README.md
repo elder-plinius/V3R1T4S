@@ -4,7 +4,7 @@
 
 Exact reduced rationals A387261(n)/A387262(n) = P(0,0,0) and complete n^2(n+1)/2-position Bellman value/action certificates P(a,b,c) for every n = 31..45 in the coin game Risk or Safety, reproducing published terms n = 1..15 and repository terms n = 16..30, verified by independent exact policy iteration and pure-turn-plan minimax solvers.
 
-The main object is the 15-term table `object/values.txt` (sha256 `55738f1571783da777bc9739cb143fa3c858c087a28411f79aacf93ea14c8925`), listing lines "n num/den" for n = 1..45 (n = 1..15 are the published OEIS terms, reproduced; n = 16..30 are the repository terms, reproduced; n = 31..45 are the new exact terms), together with one certificate per n in `object/`: `n31.json.gz` and `n32.json.gz.part*` through `n45.json.gz.part*` (reassembled during check), each containing a JSON table listing the win probability of the player to move and the optimal action at every one of the n^2(n+1)/2 non-terminal positions (a open points, b banked points of mover, c banked points of opponent).
+The main object is the 15-term table `object/values.txt` (sha256 `55738f1571783da777bc9739cb143fa3c858c087a28411f79aacf93ea14c8925`), listing lines "n num/den" for n = 1..45 (n = 1..15 are the published OEIS terms, reproduced; n = 16..30 are the repository terms, reproduced; n = 31..45 are the new exact terms), together with one `xz`-compressed certificate per n in `object/`: `n31.json.xz` through `n45.json.xz` (each 168 KB to 708 KB, unpacked during check), each containing a JSON table listing the win probability of the player to move and the optimal action at every one of the n^2(n+1)/2 non-terminal positions (a open points, b banked points of mover, c banked points of opponent).
 
 ## Check It Yourself
 
@@ -14,7 +14,7 @@ Run from this package directory:
 sh verify-it-yourself/run_checks.sh
 ```
 
-Expected last line: `PASS` (after `15 certificates n=31..45 verified; 30 calibration certificates n=1..30 verified (n=1..15 equal published terms); second verifier agrees`). About 20 seconds on a modern CPU, Python 3 standard library and gzip only. Details: `RUN_IT_YOURSELF.md`; real output: `verify-it-yourself/RECEIPTS.md`.
+Expected last line: `PASS` (after `15 certificates n=31..45 verified; 15 calibration certificates n=1..15 equal published terms; repository terms n=16..30 reproduced; second verifier agrees`). About 20 seconds on a modern CPU, Python 3 standard library only (`lzma`, `fractions`, `json`). Details: `RUN_IT_YOURSELF.md`; real output: `verify-it-yourself/RECEIPTS.md`.
 
 ## Compared To
 
@@ -36,7 +36,7 @@ Full snapshot with hashes: `the-record-we-beat/RECORD.md`. The panel's own fetch
 
 ## Credits
 
-- Contributor: anonymous-sovereign.
+- Contributor: `@HindsightWise`.
 - Rüdiger Jehn, "Optimal strategy in the game Risk or Safety", arXiv:2603.01002 (2026): the game as posed here, the uniqueness argument, the equations of Section 4, Table 1, and OEIS A387260, A387261, A387262 (terms n = 1..15, more terms by Jinyuan Wang) and A394776. https://arxiv.org/abs/2603.01002 · https://oeis.org/A387261 · https://oeis.org/A387262 · https://oeis.org/A394776
 - Todd W. Neller and Clifton G. M. Presser, "Optimal Play of the Dice Game Pig", The UMAP Journal 25(1) (2004) 25-47: the coin game "Piglet" (first to 10 points, same rules) with its exact goal-2 solution (P(0,0,0) = 4/7) and value iteration; they credit Fendel et al. for the independently invented "Pig Tails". https://cs.gettysburg.edu/projects/pig/
 - Fabián Crocce and Ernesto Mordecki, "A non-iterative algorithm for generalized pig games", arXiv:1808.06707 (2018): exact solution of Piglet by the same Bellman equations, with the exact goal-3 table. https://arxiv.org/abs/1808.06707

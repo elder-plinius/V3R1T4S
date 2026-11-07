@@ -1,8 +1,8 @@
 # REPRODUCE Skeptic Report — `risk-or-safety-exact-optimal-play`
 
-context: subagent (fresh verification context)
-target_id: risk-or-safety-exact-optimal-play
-review_utc: 2026-10-28T00:45:00Z
+- Context: independent verification audit
+- Target: `risk-or-safety-exact-optimal-play`
+- Date: `2026-10-28T00:45:00Z`
 
 ## 1. Mathematical Equations (Quoted from Definition)
 In Risk or Safety (arXiv:2603.01002 Sections 1-4):

@@ -1,6 +1,6 @@
 # Run it yourself
 
-From this folder, in a fresh shell. Needs python3 (3.9 or newer, standard library only) and gzip. About 20 s.
+From this folder, in a fresh shell. Needs python3 (3.9 or newer, standard library only). About 20 s.
 
     sh verify-it-yourself/run_checks.sh
 
@@ -15,7 +15,7 @@ Expected output (the real run is in verify-it-yourself/RECEIPTS.md):
     PASS
 
 What it does:
-1. Unpacks object/n31.json.gz and reassembles/unpacks object/n32.json.gz.part* through n45.json.gz.part* in verify-it-yourself/_work/.
+1. Unpacks object/n31.json.xz through object/n45.json.xz into verify-it-yourself/_work/ using Python's standard library `lzma` module.
 2. verify-it-yourself/ros_cert_check.py (written from the definition, exact fractions) checks every certificate n = 31..45:
    every position (a, b, c) with 0 <= b < n, 0 <= c < n, 0 <= a < n - b listed exactly once (n^2(n+1)/2 rows), forced
    toss at a = 0, P(a, b, c) = max(continue, stop) at a >= 1 with continue = (1/2)(1 - P(0, c, b)) + (1/2) P(a+1, b, c),

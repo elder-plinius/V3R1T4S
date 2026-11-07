@@ -1,18 +1,19 @@
 #!/bin/sh
 # Verify the object from a clean copy of this package. Run from the package folder:
 #   sh verify-it-yourself/run_checks.sh
-# Needs python3 (standard library only) and gzip. Last output line: PASS or FAIL.
+# Needs python3 (standard library only). Last output line: PASS or FAIL.
 set -u
 W=verify-it-yourself/_work
 rm -rf "$W"; mkdir -p "$W"
+trap 'rm -rf "$W"' EXIT
 
-for k in $(seq 31 45); do
-  if [ -f "object/n$k.json.gz" ]; then
-    gzip -dc "object/n$k.json.gz" > "$W/n$k.json" || { echo "gunzip failed for object/n$k.json.gz"; echo FAIL; exit 1; }
-  else
-    cat object/n$k.json.gz.part* | gzip -dc > "$W/n$k.json" || { echo "gunzip failed for object/n$k.json.gz.part*"; echo FAIL; exit 1; }
-  fi
-done
+python3 - "$W" << 'PY' || { echo "lzma unpack failed"; echo FAIL; exit 1; }
+import lzma, os, sys
+w = sys.argv[1]
+for k in range(31, 46):
+    with lzma.open(f"object/n{k}.json.xz", "rb") as src, open(os.path.join(w, f"n{k}.json"), "wb") as dst:
+        dst.write(src.read())
+PY
 
 CLAIM=""
 for k in $(seq 31 45); do

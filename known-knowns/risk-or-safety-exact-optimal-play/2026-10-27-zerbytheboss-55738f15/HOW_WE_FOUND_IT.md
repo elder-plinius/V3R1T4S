@@ -13,7 +13,7 @@ What was done:
 3. Both independent solvers solved all 1,035 components for N = 45 in exact rational arithmetic (standard library fractions.Fraction, zero floating point). They agreed identically on all 45 exact rational values P(0, n, n).
 4. Both solvers reproduced all 15 published terms of OEIS A387261/A387262 (n = 1..15), all 15 repository terms from known-knowns (n = 16..30), and all 400 terms of A394776 / Table 1.
 5. Generated complete Bellman value and action certificates P(a, b, c) for every n = 31..45, comprising n^2(n+1)/2 positions per n (46,575 positions for n = 45).
-6. Packaged the certificates in object/ using gzip compression and sharding for files > 1 MB to strictly obey package size constraints.
+6. Packaged the certificates in `object/n31.json.xz` .. `object/n45.json.xz` using `xz` (LZMA) compression so each file is under 1 MB (`168 KB` to `708 KB`).
 7. Verified all 45 certificates in two independent checkers: ros_cert_check.py (fractions.Fraction) and my_verify.py (exact integer cross-multiplication with coprimality checking).
 
 What was dead:

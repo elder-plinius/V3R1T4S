@@ -1,8 +1,8 @@
 # NOVELTY Skeptic Report — `risk-or-safety-exact-optimal-play`
 
-context: subagent (fresh verification context)
-target_id: risk-or-safety-exact-optimal-play
-review_utc: 2026-10-28T00:45:00Z
+- Context: independent novelty audit
+- Target: `risk-or-safety-exact-optimal-play`
+- Date: `2026-10-28T00:45:00Z`
 
 ## 1. Status Source Check
 - Primary status source: `https://oeis.org/A387261`
