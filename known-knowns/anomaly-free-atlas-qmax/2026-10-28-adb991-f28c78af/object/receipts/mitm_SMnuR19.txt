@@ -1,0 +1,10 @@
+bound 19: N(all multiset tuples incl zero) = 8514120350  Fix = 93280  (184.6 s)
+bound 9: N(all multiset tuples incl zero) = 19226326  Fix = 6260  (0.4 s)
+bound 6: N(all multiset tuples incl zero) = 878313  Fix = 1463  (0.0 s)
+bound 3: N(all multiset tuples incl zero) = 8196  Fix = 184  (0.0 s)
+bound 2: N(all multiset tuples incl zero) = 727  Fix = 63  (0.0 s)
+bound 1: N(all multiset tuples incl zero) = 60  Fix = 16  (0.0 s)
+SMnuR Qmax 19: primitive nonzero multiset tuples P = 8494014927, sign-fixed primitive = 85481
+RESULT SMnuR Qmax 19: inequivalent = 4247050205
+maxrss 198300 KB
+exit 0
