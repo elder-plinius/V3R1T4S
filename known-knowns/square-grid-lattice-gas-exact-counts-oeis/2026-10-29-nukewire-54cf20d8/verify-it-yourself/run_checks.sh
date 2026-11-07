@@ -1,5 +1,5 @@
 #!/bin/sh
-# Standalone stdlib check (2-4 min). Last line: PASS or FAIL.
+# Standalone stdlib check, 2-4 minutes; the final output line is PASS or FAIL.
 cd "$(dirname "$0")"
 PY=""
 for c in python3 python py; do

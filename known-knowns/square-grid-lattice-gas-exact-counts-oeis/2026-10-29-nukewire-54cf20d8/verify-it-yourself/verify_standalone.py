@@ -6,8 +6,8 @@ big-integer broken-profile DP with its own transition derivation (row-major; the
 encoding is documented inline) reproduces the published a(0)..a(11) exactly. Standard
 library only; ~1 minute.
 
-Usage (from this claim folder): python verify_standalone.py
-Last line: PASS or FAIL.
+Invoked as `python verify_standalone.py` in this claim folder, the script performs the
+checks below and prints its verdict as the final output line: PASS or FAIL.
 """
 import os
 import sys
@@ -55,10 +55,10 @@ def a_of(n):
 
 
 def object_check():
-    """The object itself: a28_value.txt must be a 222-digit integer whose digits match
-    the record in the package (README/INDEX sha256) and whose growth root sits on the
-    published terms' c/n^2 trajectory (a weak-but-real object-level check; the full
-    verification is the two CRTs + gates in how-we-built-it/)."""
+    """The object itself: a28_value.txt is checked to be a 222-digit integer whose bytes
+    match the record in the package (README/INDEX sha256), with a growth root on the
+    published terms' c/n^2 trajectory (a weak-but-real object-level check; the complete
+    check machinery, both CRT recomputations, is in how-we-built-it/)."""
     import os
     import hashlib
     here = os.path.dirname(os.path.abspath(__file__))
