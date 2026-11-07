@@ -6,8 +6,9 @@ Verifies all 4 record-breaking conformations in object/ab_3d_records_F89_2EWH_1C
 - 2EWH (L=98, D=191): -E* = 257.505676299754 vs Table 10 257.0741 (gain +0.431576, Full Win)
 - 1CRN (L=46, D=87):  -E* = 95.720529801173 vs Table 10 95.3159 (gain +0.404630, Full Win)
 - 1PCH (L=87, D=169): -E* = 166.978883682418 vs Table 10 166.7194 (gain +0.259484, Full Win)
-Plus complete reproduction of all 23 published conformations in Tables 11 and 12 of arXiv:1903.01456
-and the Table 2 1PCH length discrepancy (L=87, D=169 vs printed L=88, D=171; Partial Win p2).
+Checks the stored 23-sequence audit rows (Tables 10, 11, and 12 of arXiv:1903.01456) against their hashes
+and recomputes only the 4 new structures from their angles, plus checks the Table 2 1PCH length discrepancy
+(L=87, D=169 vs printed L=88, D=171; Partial Win p2).
 """
 import json, math, os, sys
 from decimal import Decimal, getcontext

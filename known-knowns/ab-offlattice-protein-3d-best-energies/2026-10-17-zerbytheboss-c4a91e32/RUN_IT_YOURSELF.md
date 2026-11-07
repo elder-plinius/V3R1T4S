@@ -10,7 +10,7 @@ This executes `verify-it-yourself/check_ab_protein.py` using only the Python 3 s
 - Exact 3D coordinate reconstruction with all unit bond lengths equal to `1.0` within `2.22e-16 < 1e-9`,
 - Energies verified in both `float64` and 50-digit arithmetic (`-E* = 87.179252478342` on `F89`, `+0.747452 >= 0.5`; `-E* = 257.505676299754` on `2EWH`, `+0.431576`; `-E* = 95.720529801173` on `1CRN`, `+0.404630`; `-E* = 166.978883682418` on `1PCH`, `+0.259484`),
 - Analytical and 4th-order Richardson finite-difference gradient norms `||grad E||_2 <= 6.69e-12 < 1e-8`,
-- Complete reproduction of all 23 published conformations from Tables 11 and 12 of `arXiv:1903.01456`.
+- Checks the stored 23-sequence audit rows against their hashes (reproducing the stored audit from published angles uses the cited `arXiv:1903.01456` e-print tarball, SHA-256 `ad46b064497e0ab89a137602fd9e5779590bd9e08fa57e36f33b75372393e71b`).
 
 ## 2. Compile the C++17 Basin-Hopping & Newton-Raphson Solver
 ```sh
