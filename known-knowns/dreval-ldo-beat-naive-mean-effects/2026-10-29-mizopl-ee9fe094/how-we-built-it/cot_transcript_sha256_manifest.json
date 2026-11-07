@@ -1,0 +1,33 @@
+{
+  "conversation_id": "828e07e6-b72c-4564-aa60-6e5ff999208c",
+  "archived_at_utc": "2026-10-29T17:32:09.343609+00:00",
+  "total_steps": 435,
+  "thinking_steps_count": 91,
+  "preregistration_lock_step_index": 383,
+  "preregistration_lock_utc": "2026-10-29T16:54:12.009517+00:00",
+  "preregistration_lock_sha256": "5c9295e157e58376a63e0ef358edbfc950bcff6f30499c494ffc01a47cd6c33a",
+  "stage3_vault_open_step_index": 384,
+  "stage3_vault_open_utc": "2026-10-29T17:01:23Z",
+  "files": {
+    "raw_system_transcript_full_jsonl": {
+      "bytes": 1795794,
+      "sha256": "86ffe68c1b25d6bcfb796dbb0978f69cf565ba641df93c84ecf4d43e98f6420d"
+    },
+    "raw_system_transcript_compact_jsonl": {
+      "bytes": 856174,
+      "sha256": "c54ea79afd290f84b119f37b70fdc26cf3d165a8c5e26ad8439491c32e6fc5bb"
+    },
+    "cot_airgap_prereg_transcript_steps_0_to_383.jsonl": {
+      "bytes": 1652857,
+      "sha256": "4e243d359d87a4e6fec2dfce026ff4b114273f63be97e8eaaf4caef3fc3c0f4f"
+    },
+    "cot_full_campaign_transcript.jsonl": {
+      "bytes": 1797338,
+      "sha256": "9e1c506c3897c7438c439c656c47fb9fc36a8ab16e45190c0c33fafabbe32659"
+    },
+    "COT_CHAIN_OF_THOUGHT_AND_AIRGAP_AUDIT.md": {
+      "bytes": 101817,
+      "sha256": "91876168bf1d1c5cede6fab4f9d335b4b94681773fe0c29a4adece6398d3afab"
+    }
+  }
+}
