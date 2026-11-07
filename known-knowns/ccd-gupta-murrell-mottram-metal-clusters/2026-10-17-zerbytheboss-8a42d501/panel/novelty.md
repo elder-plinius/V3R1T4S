@@ -27,20 +27,20 @@ Using Python `urllib.request.urlopen` (single request per URL, zero retries) at 
    - **Fetched UTC**: `2026-10-18T04:03:59Z`
    - **Quoted Live Table Values**:
      - `Cd_71` (`N = 71`, point group `C_1`): `-82.302019 eV` (stored polished-CCD value for `points/71`: `-82.3020188326 eV`, checked against hash)
-     - `Cd_84` (`N = 84`, point group `C_s`): `-97.415006 eV` (stored polished-CCD value for `points/84`: `-97.4150057630 eV`, checked against hash)
-     - `Cd_94` (`N = 94`, point group `C_1`): `-109.048698 eV` (stored polished-CCD value for `points/94`: `-109.0486983843 eV`, checked against hash)
+     - `Cd_84` (`N = 84`, point group `C_1`): `-97.415006 eV` (stored polished-CCD value for `points/84`: `-97.4150057630 eV`, checked against hash)
+     - `Cd_94` (`N = 94`, point group `C_s`): `-109.048698 eV` (stored polished-CCD value for `points/94`: `-109.0486983843 eV`, checked against hash)
      - `Cd_106` (`N = 106`, point group `C_1`): `-123.000416 eV` (stored polished-CCD value for `points/106`: `-123.0004155585 eV`, checked against hash)
 
 4. **Cambridge Cluster Database — Lead (`Pb`) & Sodium (`Na_Gupta`) Tables and arXiv Sources**:
    - **Lead (`Pb`, `N = 3..150`)**: `https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/Gupta/Pb/table.html`, HTTP `200`, `24073` bytes, `Last-Modified: Thu, 25 Jul 2024 14:43:24 GMT`, SHA-256 `0e565f399bb9c9ec29ba7fba60ad07008352c7e3d87b1fc2fc3af2116f0f3f73`.
    - **Sodium (`Na_Gupta`, `N = 3..379`)**: `https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/Gupta/Na/table.html`, HTTP `200`, `59281` bytes, `Last-Modified: Thu, 25 Jul 2024 14:43:20 GMT`, SHA-256 `0c87fb16135bb2cdbab33c3848af87bfb042d1fcedbf560e374035a134652afe`.
-   - **arXiv Sources**: `https://arxiv.org/abs/cond-mat/0306225` (HTTP `200`, `41603` bytes, SHA-256 `7fd51ecf93846b82df6679b44c4e4009dfbea1d92749733b366790fb0f3db234`) and `https://arxiv.org/abs/2505.05989` (HTTP `200`, `42453` bytes, SHA-256 `fc0e01ee942b304b27bac2048da6d828039339b4143038bcf42cd7b47fc0aa88`), fetched at `2026-10-18T04:02:45Z`–`2026-10-18T04:03:59Z`.
+   - **arXiv Sources**: `https://arxiv.org/abs/cond-mat/0306225` (HTTP `200`, `41603` bytes, SHA-256 `7fd51ecf93846b82df6679b44c4e4009dfbea1d92749733b366790fb0f3db234`), fetched at `2026-10-18T04:02:45Z`.
 
 ## 2. Literature, Trophy Case, and Pull Request Audit
 
 1. **Last 24 Months of Literature (2024-2026)**:
    - Searched 2024-2026 literature and citations of Doye (2003, *Phys. Rev. B* 68, 195418), Cleri and Rosato (1993), and the Cambridge Cluster Database `Zn` and `Cd` Gupta tables.
-   - Note that Aguado et al. (*Nanoscale* 2018, *PCCP* 2019) use cluster-refitted Gupta parameters that are non-comparable with the bulk-fitted Cleri-Rosato Doye tables (`p = 9.689, q = 4.602, A = 0.1477 eV, xi = 0.8900 eV` for `Zn`; `p = 10.612, q = 5.206, A = 0.1420 eV, xi = 0.8117 eV` for `Cd`), and Lai et al. (2025) study `Ag` (`N = 141..310`) and binary nanoalloys rather than pure `Zn` or `Cd` clusters.
+   - Note that Aguado et al. (*Nanoscale* 2018, *PCCP* 2019) use cluster-refitted Gupta parameters that are non-comparable with the bulk-fitted Cleri-Rosato Doye tables (`p = 9.689, q = 4.602, A = 0.1477 eV, xi = 0.8900 eV` for `Zn`; `p = 10.612, q = 5.206, A = 0.1420 eV, xi = 0.8117 eV` for `Cd`), and X. Lai, J.-K. Hao, D. Guo, Z. Wen, and Z.-H. Fu, *Comput. Phys. Commun.* 109655 (2025), study silver clusters `Ag11` to `Ag310`, with no Zn or Cd values.
    - No publication in the last 24 months (or any prior work under the Doye / Cleri-Rosato Gupta parameter sets) reports energies lower than the live CCD table values for `Zn_106`, `Cd_71`, `Cd_84`, `Cd_94`, or `Cd_106`.
 
 2. **Repository `TROPHY_CASE.md`**:

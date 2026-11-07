@@ -5,6 +5,6 @@ confirmed_scope: Explicit 3D Cartesian coordinate sets in object/gupta_zn_cd_5_r
 
 ## Gate Audit Summary
 - **REPRODUCE (`panel/reproduce.md`)**: `pass: true` (independent verifier written from mathematical definition of the Gupta potential; recomputed all 5 putative global minimum records in `float64` and 55-digit Decimal arithmetic, 6 zero Hessian modes, and `3N - 6` positive eigenvalues, and checked the stored 48 calibration values, polished-CCD energies, and 780-row audit against SHA-256).
-- **NOVELTY (`panel/novelty.md`)**: `pass: true` (single honest HTTP 200 fetches with zero retries across `jon/structures/Gupta.html`, `jon/structures/Gupta/Zn/table.html`, `jon/structures/Gupta/Cd/table.html`, `jon/structures/Gupta/Pb/table.html`, `jon/structures/Gupta/Na/table.html`, `arXiv:2505.05989`, `TROPHY_CASE.md`, and all open/merged pull requests).
+- **NOVELTY (`panel/novelty.md`)**: `pass: true` (single honest HTTP 200 fetches with zero retries across `jon/structures/Gupta.html`, `jon/structures/Gupta/Zn/table.html`, `jon/structures/Gupta/Cd/table.html`, `jon/structures/Gupta/Pb/table.html`, `jon/structures/Gupta/Na/table.html`, `arXiv:cond-mat/0306225`, `Comput. Phys. Commun. 109655 (2025)`, `TROPHY_CASE.md`, and all open/merged pull requests).
 - **CRITERION (`panel/criterion.md`)**: `pass: true` (literal verification against `bank/targets.json` full `success_criterion`).
 - **Downgrade Checks**: Zero hedging panelists, zero reproduction mismatches, zero stretched criteria, zero path or secret leaks. Final status is `CONFIRMED_SOLUTION`.
