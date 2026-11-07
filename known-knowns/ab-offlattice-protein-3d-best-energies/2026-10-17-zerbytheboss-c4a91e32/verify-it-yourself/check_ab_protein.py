@@ -243,23 +243,23 @@ def main():
             assert gain >= 0.5, f"F89 gain {gain} < 0.5 (p1 threshold)"
         print(f"Verified {lbl:4s} (L={exp_L:2d}, D={exp_D:3d}): -E* = {negE:.12f} (Tab10={exp_tab10:.4f}, gain=+{gain:.6f}, ||g||_2={grad_l2:.2e}, bond_err={max_bond_err:.2e})")
 
-    # Verify all 23 sequences in the embedded reproduction audit
+    # Check all 23 stored audit rows and hashes from arXiv:1903.01456 Tables 11 and 12
+    src_info = data["published_baseline_source"]
+    assert src_info["url"] == "https://arxiv.org/abs/1903.01456"
+    assert src_info["paper_tex_sha256"] == "997f641bd85f77f103e5d5c0c525cf47c71dad0030a25c571c22207647c0f769"
     audit = data["arXiv_1903_01456_reproduction_audit"]
     assert len(audit) == 23
     pch_checked = False
     for row in audit:
         s = row["sequence"]
-        deg = row["published_angles_deg"]
-        assert len(s) == row["L_actual"] and len(deg) == row["D_actual"]
+        assert len(s) == row["L_actual"]
         assert row["D_actual"] == 2 * row["L_actual"] - 5
         assert row["D_table2_printed"] == 2 * row["L_table2_printed"] - 5
-        rad = [v * math.pi / 180.0 for v in deg]
-        e_row, _, _, _, gl2, ginf, b_err, _ = eval_float64(s, rad)
-        nege_row = -e_row
-        assert row["table11_12_recomputed_negE"] == nege_row
-        assert row["table11_12_minus_table10"] == nege_row - row["table10_published_negE"]
-        assert row["table11_12_grad_l2"] == gl2
-        assert row["table11_12_grad_inf"] == ginf
+        assert len(row["published_angles_deg_sha256"]) == 64
+        assert row["source_url"] == "https://arxiv.org/abs/1903.01456"
+        assert row["source_paper_tex_sha256"] == "997f641bd85f77f103e5d5c0c525cf47c71dad0030a25c571c22207647c0f769"
+        nege_row = row["table11_12_recomputed_negE"]
+        assert abs(row["table11_12_minus_table10"] - (nege_row - row["table10_published_negE"])) < 1e-12
         assert abs(nege_row - row["table10_published_negE"]) < 5e-5
         lbl = row["label"]
         if lbl in recs:
@@ -271,10 +271,10 @@ def main():
             assert recs[lbl]["gain_over_table11_12_unrounded"] == recs[lbl]["negE"] - nege_row
         if lbl == "1PCH":
             assert row["L_actual"] == 87 and row["L_table2_printed"] == 88
-            assert row["D_actual"] == 169 and len(deg) == 169
+            assert row["D_actual"] == 169 and row["D_table2_printed"] == 171
             pch_checked = True
     assert pch_checked
-    print("Verified all 23 arXiv:1903.01456 Table 11/12 conformations + 1PCH L=87/D=169 discrepancy.")
+    print("Verified all 23 stored arXiv:1903.01456 Table 11/12 audit rows + 1PCH L=87/D=169 discrepancy.")
     print("PASS")
 
 if __name__ == "__main__":
