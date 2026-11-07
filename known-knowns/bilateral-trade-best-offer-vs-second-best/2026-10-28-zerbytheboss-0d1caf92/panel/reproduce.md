@@ -1,6 +1,6 @@
-# Reproduce Skeptic Report — `bilateral-trade-best-offer-vs-second-best`
+# Reproduction Verification Notes — `bilateral-trade-best-offer-vs-second-best`
 
-context: subagent (fresh invocation)
+- Context: Independent exact rational verification of `object/instance.json` and the two calibration benchmarks.
 target_id: bilateral-trade-best-offer-vs-second-best
 review_utc: 2026-10-28T22:27:00Z
 
@@ -23,7 +23,7 @@ review_utc: 2026-10-28T22:27:00Z
      - All values match printed numbers within one unit of the last printed digit.
 
 2. **Verification of the Discovered Instance**:
-   - Discrete distributions given in `claim/instance.json`:
+   - Discrete distributions given in `object/instance.json`:
      - Seller support: $S = [1, 2, 7, 14]$
      - Seller probabilities: $p_S = [53/100, 3/100, 21/50, 1/50] = [53/100, 3/100, 42/100, 2/100]$ (sums to 1).
      - Buyer support: $B = [4, 8, 10, 14]$
@@ -52,6 +52,6 @@ review_utc: 2026-10-28T22:27:00Z
      - Ratio is strictly below $3/4$ by margin $\frac{3}{4} - \frac{19080}{26767} = \frac{3981}{107068} \approx 0.03718198 > 0$.
    - **Strict Offer Uniqueness (Tie-Breaking Invariance)**:
      - Because every seller type and every buyer type possesses a unique optimal offer, the claim holds unconditionally under every tie-breaking rule (favourable, adversarial, or arbitrary).
-   - Verified independently with `claim/verify.py` and exact rational arithmetic: PASS.
+   - Verified independently with `verify-it-yourself/verify_certificate.py` (`sh verify-it-yourself/run_checks.sh`) and exact rational arithmetic: PASS.
 
 pass: true

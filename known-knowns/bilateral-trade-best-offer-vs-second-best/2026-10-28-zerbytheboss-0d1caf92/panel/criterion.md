@@ -1,6 +1,6 @@
-# Criterion Skeptic Report — `bilateral-trade-best-offer-vs-second-best`
+# Criterion Verification Notes — `bilateral-trade-best-offer-vs-second-best`
 
-context: subagent (fresh invocation)
+- Context: Clause-by-clause criterion audit against `bank/targets.json` (`bilateral-trade-best-offer-vs-second-best`).
 target_id: bilateral-trade-best-offer-vs-second-best
 review_utc: 2026-10-28T22:27:00Z
 
@@ -30,12 +30,10 @@ review_utc: 2026-10-28T22:27:00Z
      - $\max(\text{GFT}_{SO}, \text{GFT}_{BO}) < \frac{3}{4} \text{GFT}_M$:
        $$\frac{1431}{250} = \frac{57240}{10000} < \frac{3}{4} \times \frac{80301}{10000} = \frac{240903}{40000} = 6.022575$$
        $$\iff \frac{228960}{40000} < \frac{240903}{40000} \iff - \frac{11943}{40000} < 0.$$
-     - Ratio: $\frac{19080}{26767} \approx 0.71281802 < 0.75000000$.
+     - Ratio: $\frac{19080}{26767} \approx 0.71281802 < 0.75000000$, placing the worst-case best-offer vs second-best ratio in $[1/2, 19080/26767]$.
    - **Calibration Controls**:
      - BDK 2x2: reports ratio 1 under favourable ties, 3/4 under adversarial ties. Matches exactly.
      - AlphaEvolve: reports $\text{FB} = 1.232226 \approx 1.2322$, $\text{SO} = 0.331178 \approx 0.3312$, $\text{BO} = 0.856511 \approx 0.8565$. Matches within 1 unit of last printed digit.
-   - **Partial Wins**:
-     - Lens 1 additionally computed exact rational primal-dual certificates for BDK Section 2 family ($H = 3..20$) and evaluated Second-Best for AlphaEvolve, settling partial win `p2`.
 
 confirmed_scope: An explicit finite-support bilateral trade instance (|S|=4, |B|=4) with exact rational probabilities and posted price mechanism M=8 certifying max(GFT_SO, GFT_BO) / GFT_M = 19080/26767 approx 0.712818 strictly below the 3/4 bar under GFT-favourable tie-breaking with strictly unique optimal offers for all types.
 
