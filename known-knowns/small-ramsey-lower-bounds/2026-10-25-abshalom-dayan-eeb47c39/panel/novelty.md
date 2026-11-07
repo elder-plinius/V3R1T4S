@@ -7,7 +7,7 @@ context: headless claude -p session (claude-sonnet-5-5, effort high), fresh, sta
 - PDF https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS1/pdf fetched 2026-10-25T08:53:21Z, HTTP 200, 585821 bytes, sha256 9519a676ee381f02f03269c22e3f101162b2fdcc9d432e4103cb1192fdff91bc (equals the-record-we-beat/README.md).
 - Table XIb (pdftotext), row k=3, columns m=4..16: 30 45 61 85 103 129 150 174 194 217 242 269 291; the m=12 entry is 194, reference ExT. Item 6.1.2(h) also lists no better value; the text names 261 <= R(3,3,15) as implied, not R(3,3,12).
 
-## Object re-check (own checker, work/chk.py, written from the definition)
+## Object re-check (own checker, not shipped, written from the definition)
 sha256 of object/R_3_3_12.txt = eeb47c398be7c450cadf8d9b5939d4996761911a1ddba276e6d820b87fd0db1b (matches README.md). Distances 1..101 are each in exactly one colour. Output:
 ```
 colour 1 has K3: False
