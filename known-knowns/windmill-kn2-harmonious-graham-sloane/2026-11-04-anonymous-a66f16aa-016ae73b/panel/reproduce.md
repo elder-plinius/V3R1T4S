@@ -1,4 +1,3 @@
-context: fresh subagent, fork_turns=none; publication edition of original independent review.
 role: REPRODUCE
 verdict: SURVIVES for the finite mathematical n=10 exclusion only
 claim level: PROVED-HERE by complete exact finite enumeration

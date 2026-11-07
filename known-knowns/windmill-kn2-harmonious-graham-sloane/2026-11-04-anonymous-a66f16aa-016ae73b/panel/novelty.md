@@ -1,7 +1,5 @@
 # NOVELTY review: finite K_10^(2) exclusion
 
-context: fresh subagent, fork_turns=none; publication edition of the original independent review and its dated reassessment.
-
 Review and reassessment date: 2026-11-04 UTC. This publication edition consolidates the existing evidence and verdict; it includes no new source access or computation. The reviewer inspected the frozen claim, public prior work, original source documents, and relevant prior programs independently, without reading the author's attempt notes or the other current panel reports.
 
 **Verdict: pass for the single finite n=10 cell.** The claim is nonexistence of an injective harmonious labeling of two copies of K10 sharing exactly one vertex: 19 vertex labels in Z_90 and 90 distinct unordered edge sums modulo 90. This is the enumerated partial win p1. It makes no claim to a new algorithm, the general windmill conjecture, a performance record, or a universal proof of bibliographic absence.

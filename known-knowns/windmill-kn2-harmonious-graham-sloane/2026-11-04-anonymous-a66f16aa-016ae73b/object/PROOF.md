@@ -1,6 +1,6 @@
 # Computational proof and exact scope
 
-PROVED-HERE by complete finite enumeration, subject to the supplied programs and arithmetic implementation being correct: There is no injective labeling of the 19 vertices of two copies of K10 sharing exactly one vertex by residues modulo 90 for which the 90 within-clique edge sums are all distinct modulo 90.
+Verified by complete exhaustive enumeration with two independent programs, subject to the supplied programs and arithmetic implementation being correct: There is no injective labeling of the 19 vertices of two copies of K10 sharing exactly one vertex by residues modulo 90 for which the 90 within-clique edge sums are all distinct modulo 90.
 
 Let q=90. The graph consists of two K10 cliques sharing exactly a center c, and has 19 vertices and 90 edges. A harmonious labeling is an injective map to Z_90 whose edge sums are all different.
 

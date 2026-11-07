@@ -1,5 +1,4 @@
 ---
-context: fresh subagent, fork_turns=none; publication edition of original independent review.
 role: criterion skeptic
 confirmed_scope: There is no injective labeling of the 19 vertices of two copies of K10 sharing exactly one vertex by residues modulo 90 for which the 90 within-clique edge sums are all distinct modulo 90.
 ---

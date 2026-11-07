@@ -15,8 +15,5 @@ Two K10 cliques sharing one vertex. Exactly 19 distinct labels modulo 90 and all
 ## Search design
 Independently widen the prior two authors' own methods to at least 90 bits. Neither author reads the other's implementation. Calibrate against the completed n=8 case and n=4 positive. Benchmark n=10 small prefixes with explicit time/memory caps before scaling. Complement matching stores exact edge masks; direct constraint search builds both cliques. Permitted reductions are center translation, sorted clique vertices and proved necessary parity constraints; any further reduction needs its own proof written before use.
 
-## Original pilot budget retained
-Pilot start 2026-11-04T17:47:28Z. No new line after 2026-11-04T18:35:28Z. Final deadline 2026-11-04T18:47:28Z. Leave time for reports/review. Jobs run BelowNormal with explicit caps, recorded PIDs and regular progress. Parallel jobs together must remain below half free RAM, measured first. Preserve every file; no cleanup, public submission or production write.
-
 ## Novelty status
 DS6 current edition and prior PR894 leave n=10 unclaimed in the checked material. A fresh GitHub API search of all harmonious pull requests returned only PR894 at 18:03 UTC. This is provisional coverage, not proof of novelty. Any claim needs a fresh panel.
