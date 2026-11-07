@@ -14,16 +14,22 @@ What we did this run, in order:
    showed zero-phase pre-ringing moving a sharp 1.5 m onset 29.5 min early).
 3. A positive control on listed 2012-2014 and 2026 tsunamis: event recall 0.27, misses split into rule misses and
    detection misses.
-4. The pre-registered map (v4): 35 of 221 scoreable quakes, fake-origin rate 0.053.
+4. The pre-registered map (v4): 35 of 221 scoreable quakes, fake-origin rate 0.053. This is the headline.
 5. Our own break-it check found 7 passes with strong control-day peaks at the wrong time, sensor-tie dependence and
    two aftershocks inside a mainshock's tsunami coda. A declared post-hoc repair (PREREG.v5: literal control-day rule,
-   every tied sensor, an overlap rule) gives 26 of 188 against a fake rate of 0.027.
+   every tied sensor, an overlap rule) gives 26 of 188 against a fake rate of 0.027; it is kept only as a sensitivity
+   analysis.
 6. A three-skeptic panel in fresh contexts. Its first reproduction rebuilt the headline with its own code but found three
    places where our code departed from the frozen text (the fake origins' control-day window, the stuck-sensor rule,
    long-gap bridging), so it failed the claim. PREREG.v6 corrected the code only; both maps were rerun, no class changed
    at any origin, and a fresh break-it check and a fresh three-skeptic panel judged the corrected map.
 
-What it shows: the open gauges pass the test for about one in seven scoreable quakes, nearly all of them NCEI-listed;
-the two unlisted passes are single-site and at the chance rate. Recall on listed quakes is limited by both amplitude
-and travel-time error (object/map_summary.txt: among listed-quake gauge rows, 136 have r <= 5 and 100 have
-r > 5 but arrive outside the window).
+7. Later (2026-11-07): the v4 classes re-derived from the shipped per-sensor results, with 13 codes' control days
+   recomputed from IOC windows fetched again that day; the LISTED flags re-derived against the live NCEI events API
+   (231 events, no flag changed); every IOC response listed with its sha256 (how-we-built-it/ioc_requests.csv).
+
+What it shows: under the pre-registered rules the open gauges pass the test for about one in six scoreable quakes (35
+of 221), 33 of them NCEI-listed; the two unlisted passes are single-site, fewer than the chance rate predicts. Recall
+on listed quakes is limited by both amplitude and travel-time error (in the PREREG.v5 sensitivity map,
+sensitivity-v5/map_summary.txt: among listed-quake gauge rows, 136 have r <= 5 and 100 have r > 5 but arrive outside
+the window).

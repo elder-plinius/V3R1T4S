@@ -1,7 +1,12 @@
 # Honesty gate (run main session), 2026-10-24T22:07:27Z
 
 status: CONFIRMED_PARTIAL
-confirmed_scope: In a map that reruns byte-for-byte offline from the saved code and data, of the 264 USGS ComCat M >= 6.5, depth <= 70 km earthquakes of 2015-2025 whose epicentre lies in an ETOPO1 2-arcmin water cell, 188 could be scored at open IOC SLSMF tide gauges within 1000 km (model travel time 10-150 min, at least one usable site, and no other M >= 6.5, depth <= 70 km ComCat earthquake, land or sea, within 1000 km in the preceding 24 h; 25 had no gauge in scope, 17 had no usable data and 34 were set aside by that post-hoc 24 h rule), and 26 of the 188 (0.138, Wilson 95 % 0.096-0.195; 26 of 221 = 0.118 without the post-hoc 24 h rule; 35 of 221 = 0.158 under the pre-registered v4 rules) passed, at one or more sites and on every usable tied sensor, the target's per-gauge test (band-passed peak above 5 times the preceding 24 h RMS, arrival within +/-10 min of a model travel time that puts 0.468 of held-out NCEI tide-gauge arrivals outside +/-10 min, and no peak above 5 times RMS in the same hours on any of at least 10 usable control days), which is a test-pass fraction and not the fraction with any observable tsunami signal, against a fake-origin chance rate of 0.027 (best of 400 fake catalogues 0.0495), with 24 of the 26 listed by NCEI (an NCEI event of any validity or cause within +/-1 day and 1000 km, events snapshot of 2026-10-24T19:20Z) and the 2 unlisted ones passing at a single site, as many as chance predicts (2.8 expected among the 102 unlisted scored quakes).
+confirmed_scope: In a map scored under the rules pre-registered before scoring (PREREG.md to PREREG.v4), of the 264 USGS ComCat M >= 6.5, depth <= 70 km earthquakes of 2015-2025 whose epicenter lies in an ETOPO1 2-arcmin water cell, 221 could be scored at open IOC SLSMF tide gauges within 1000 km (model travel time 10-150 min and at least one usable site; 25 had no gauge in scope and 18 had no usable data), and 35 of the 221 (0.158, Wilson 95 % 0.116-0.212; 1 more of the 221 is undecided, with fewer than 10 usable control days) passed, at one or more sites, the target's per-gauge test on the gauge's most-sampled sea-level sensor (band-passed peak above 5 times the preceding 24 h RMS, arrival within +/-10 min of a model travel time that puts 0.468 of held-out NCEI tide-gauge arrivals outside +/-10 min, and the same test passing on none of at least 10 usable control days), which is a test-pass fraction and not the fraction with any observable tsunami signal, against a fake-origin chance rate of 23 of 437 = 0.053 (best of 400 fake catalogs 0.078), with 33 of the 35 listed by NCEI (an NCEI event of any validity or cause dated within 1 calendar day of the origin and within 1000 km, or without coordinates; the same flags against the live events API on 2026-11-07) and the 2 unlisted ones passing at a single site, fewer than chance predicts (5.9 expected among the 113 unlisted scored quakes).
+
+Scope revised 2026-11-07: the headline is now the map under the rules frozen before scoring (PREREG.md to PREREG.v4,
+with the PREREG.v6 implementation corrections). criterion.md (table row "pre-registered v4") and reproduce.md
+(section 5) report the counts of that map. The scope of 2026-10-24 stated the post-hoc PREREG.v5 map (26 of 188 =
+0.138); that map is now the sensitivity analysis in README.md.
 
 Partial win p3 (completeness map) of tsunami-tide-gauge-signal-not-in-ncei. Panel round 2, three fresh Opus contexts run
 one after another: reproduce.md pass: true, novelty.md pass: true, criterion.md pass: true.
@@ -23,7 +28,8 @@ Downgrade checks:
   Every quake at every origin was checked by REPRODUCE's own code (792 origins, 0 class mismatches).
 - Panel table fetch age: under 1 hour (NOVELTY 21:43:20Z), so no re-fetch.
 
-History, disclosed: panel round 1 (panel_round1/reproduce.md) failed the as-run v5 map on three code departures from the
-frozen text; NOVELTY and CRITERION were not started for it. Repair round 2 (PREREG.v6, frozen 20:56:56Z) corrected the code
-only; no class changed at any origin; self-break round 3 SURVIVES (self_break/round3/verdict.md); then this fresh panel.
+History, disclosed: an earlier REPRODUCE panelist (its file is not shipped) failed the as-run v5 map on three code
+departures from the frozen text; NOVELTY and CRITERION were not started for it. Repair round 2 (PREREG.v6, frozen
+20:56:56Z) corrected the code only; no class changed at any origin; then a further break-it round on the corrected map
+(its notes are not shipped) and this fresh panel.
 This status stands only if check_run.py prints CHECK_RUN: PASS.

@@ -8,7 +8,13 @@
   fetched 2026-10-24T19:20:31Z, HTTP 200, 85220 bytes, sha256 bdc6a6b4de4306b71a8f9e2f2992b001f7de93b8a5408166988ae3a43836b0f9;
   page=2 fetched 2026-10-24T19:20:37Z, HTTP 200, 12720 bytes, sha256 64745d27e0122df8646a0552ba6f1445d0095a7027ad58dfb34e97d5553e220a.
   Extracted: 230 events for 2015-2026, newest event id 6193 (2026-10-09). Matched to the 264 quakes: 115 quakes have an
-  NCEI event (any validity) within +/-1 calendar day and 1000 km (object/map.csv, column listed).
+  NCEI event (any validity) within +/-1 calendar day and 1000 km, or without coordinates (object/map.csv, column listed).
+- Live re-check, 2026-11-07: the same two events API URLs fetched again at 2026-11-07T00:12:11Z (page=1, HTTP 200,
+  85220 bytes, sha256 6b1ac6d5d53cea261adc708ffdd57ab029e17c9a4a1e30c2a6e8c92bd4fe3f9c) and 2026-11-07T00:12:18Z (page=2,
+  HTTP 200, 13091 bytes, sha256 865b4ec11de93d6121647e02621cdcab7a54deb2d3f354d94a2560c7f84a9e7b), saved as
+  how-we-built-it/ncei_2026-11-07/events_2015_2026_p1.json and _p2.json. Extracted: 231 events for 2015-2026. With the
+  LISTED rule (README.md, section "LISTED") the same 115 quakes are listed, with the same NCEI ids, as on 2026-10-24
+  (how-we-built-it/ncei_2026-11-07/relist.txt).
 - Per-event tide-gauge rows: runups API, typeMeasurementId=2 (fetch times and sha256 in how-we-built-it/inputs.tsv).
 - Response headers of these fetches are not recorded in this package.
 

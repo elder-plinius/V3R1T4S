@@ -1,15 +1,38 @@
 {
- "S": 26,
- "USABLE": 188,
- "frac": 0.1383,
- "wilson": [
-  0.096,
-  0.195
- ],
- "over264": 0.0985,
- "upper264": 0.3864,
- "listed_signal": 24,
- "listed_usable": 86,
- "unlisted_signal": 2,
- "fake_rate": 0.027
+ "v4": {
+  "S": 35,
+  "USABLE": 221,
+  "frac": 0.1584,
+  "wilson": [
+   0.116,
+   0.212
+  ],
+  "over264": 0.1326,
+  "upper264": 0.2992,
+  "listed_signal": 33,
+  "listed_usable": 108,
+  "unlisted_signal": 2,
+  "fake_signal": 23,
+  "fake_usable": 437,
+  "fake_rate": 0.0526,
+  "fake_worst_case": 0.0872
+ },
+ "v5_sensitivity": {
+  "S": 26,
+  "USABLE": 188,
+  "frac": 0.1383,
+  "wilson": [
+   0.096,
+   0.195
+  ],
+  "over264": 0.0985,
+  "upper264": 0.3864,
+  "listed_signal": 24,
+  "listed_usable": 86,
+  "unlisted_signal": 2,
+  "fake_signal": 11,
+  "fake_usable": 407,
+  "fake_rate": 0.027,
+  "fake_worst_case": 0.0545
+ }
 }
