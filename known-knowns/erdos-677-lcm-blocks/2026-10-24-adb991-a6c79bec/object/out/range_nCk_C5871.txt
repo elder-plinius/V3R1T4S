@@ -1,0 +1,10 @@
+primes up to 2100000: 155805
+Schoenfeld-gap sanity check on (2010760, 2099800): violations 0
+C = 5871: c(C+1) = 16594.3; Schoenfeld excludes m > 2010760 since c(C+1) < 16597: True
+max gap G (primes <= 2010960) = 148 -> k <= 147 -> m < min(c(C+1)(G-1), 2010760) = 2010760
+prime-free (m,k) pairs examined: 1449175 (max k 147); pairs with no prime > k in lcm(B): 0
+candidate N after pinning: 7567449; full lcm comparisons: 7567420
+counterexamples found (n, m, k): []
+validation: triples with N <= 80 reaching the full lcm comparison: 0
+validation: triples with N <= 80, lcm(B) | lcm(A), S1 size bound, reached by the enumeration: 0
+RESULT: no counterexample with n <= 5871 k
