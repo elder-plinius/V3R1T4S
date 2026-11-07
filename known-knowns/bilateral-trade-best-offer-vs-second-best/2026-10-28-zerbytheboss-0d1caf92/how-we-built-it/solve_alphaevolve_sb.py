@@ -128,7 +128,7 @@ def main():
     print(f"SO: {so_calib:.6f}, BO: {bo_calib:.6f}, max(SO, BO): {max_offer:.6f}")
     print(f"Ratio max(SO, BO) / SB: {ratio_sb:.6f}")
     print("-" * 89)
-    print("Conclusion: On AlphaEvolve, max(SO, BO) / SB approx 0.8227 is strictly greater than 3/4 = 0.75.")
+    print(f"Conclusion: On AlphaEvolve, max(SO, BO) / SB approx {ratio_sb:.4f} is strictly greater than 3/4 = 0.75.")
     print("AlphaEvolve does not violate the 3/4 best-offer vs second-best bar.")
     print("=========================================================================================")
 
