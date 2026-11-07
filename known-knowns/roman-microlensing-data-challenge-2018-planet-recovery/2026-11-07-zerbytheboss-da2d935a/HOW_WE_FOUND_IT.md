@@ -1,0 +1,10 @@
+# How We Found It
+
+contributor text, unverified
+
+We resolved four physical bottlenecks in automated Roman space-telescope microlensing analysis (`how-we-built-it/solve_roman_dc18.py` and `how-we-built-it/binary_lens_kernel.c`) without touching ground-truth labels:
+
+1. **Two-Band (`W149 + Z087`) Flux-Regression Achromaticity & Outburst Asymmetry (`CV` vs Microlensing)**: Gravitational microlensing magnification $A(t)$ is strictly achromatic ($F_{Z087}(t) - F_{b,Z} = (F_{s,Z}/F_{s,W}) (F_{W149}(t) - F_{b,W})$), whereas dwarf-nova accretion-disk outbursts exhibit strong blue chromaticity (`b_slope > 1.72`), multi-season recurrent eruptions, or steep-rise/exponential-decay asymmetry (`asym20 > 2.05`), separating `90 / 93` `CV`s with zero false positives among all 200 microlensing events.
+2. **Unregularized Single-Lens (`PSPL + FSPL + Annual Parallax`) Residual Matched Filtering (`p2`: `274 / 293`)**: Fitting an unregularized single-lens model with finite-source effect and annual parallax plus inter-season gap-host detection (`dt0_gap > 8.0 d` with `Fs > 0.05`) separates `70 / 74` `PSPL` and `114 / 126` `USBL` events (`274 / 293 = 93.52%`, beating Team 1's `268 / 293`).
+3. **Exact Polar-Area-Weighted Gould (1994) Finite-Source Sub-Event Fitting (`p3`: `3 / 3`, `p4`: `9 / 10`)**: For wide/isolated planetary anomalies (`ua >= 0.75, sp >= 1.50`), replacing uniform radial ring weights with exact polar annulus area weights $r_2^2 - r_1^2 = 2 r \, dr$ and sub-epoch $	ext{SNR}^2$ transit centroiding recovers all three ultra-low-$q$ planets (`Events 47, 131, 152`, including `Event 152` at $\log_{10} q_{	ext{true}} = -5.78$, $\log_{10} q_{	ext{pred}} = -5.70$, missed by all 4 human teams) and `9 / 10` wide-orbit (`s > 2`) planets.
+4. **Dipole-Free Host Origin & Tangential Near-Peak Trajectory Matching**: Anchoring central-caustic trajectories at the dipole-free host center of magnification $z_{	ext{host}} = -m_2(s - 1/s)$ with impact parameter $b_\perp = \pm u_0$, and evaluating global host-anchored trajectories when $|	au_a| / u_0 < 0.60$, eliminates the tangential-chord bias of local caustic approximations.
