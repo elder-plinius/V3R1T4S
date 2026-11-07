@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+cami2-genome-binning-recovered-genomes,"p1 (strain-madness HQ), p2 (plant-associated HQ), p3 (marine HQ & ARI)","strain_madness=86, plant_associated=135 (90 no-plasmid), marine=328 (ARI=0.936349)","strain_madness=77 (CONCOCT 0.4.1), plant_associated=118 (VAMB 3.0.1), marine ARI>0.887 & HQ>=300 (none)",2026-11-07T06:30:00Z,object/amber_cami2_per_bin_metrics.tsv,c915b077053d8d4bee6bac41088c464d99693097901fcee30b5f948bf9084bb7
