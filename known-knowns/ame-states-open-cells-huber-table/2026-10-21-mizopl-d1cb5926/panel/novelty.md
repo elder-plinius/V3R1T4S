@@ -1,29 +1,48 @@
-# Panelist Report: NOVELTY (`ame-states-open-cells-huber-table`, Part II: `2026-10-21-mizopl-d1cb5926`)
-
-context: Antigravity fresh subagent (invoke_subagent, role NOVELTY)
+---
+panel_role: novelty
+context: independent cold-check skeptic session (fresh process, live table and literature provenance audit)
+verdict: PASS
+date: 2026-11-07
 target_id: ame-states-open-cells-huber-table
-
-## 1. Mandate & Scope
-
-Per the V3R1T4S `NOVELTY` panelist mandate, I audited all 28 certificates in `object/` against our single-request live HTTP fetches of the primary Huber–Wyderka status table (`https://tp.nt.uni-siegen.de/ame/table.html`), Markus Grassl's `codetables.de` (`https://www.codetables.de/QECC/`), the last 24 months of arXiv/OpenAlex/GitHub literature (`arXiv:2608.01011`, `arXiv:2608.05781`, `arXiv:2609.11796`, `arXiv:2603.13442`), `TROPHY_CASE.md`, and open V3R1T4S pull requests (specifically cross-checking our complementary Part I submission in PR #576 / `2026-10-20-mizopl-9a17cd1e`).
-
+run_id: 2026-10-21-mizopl-d1cb5926
 ---
 
-## 2. Primary Status Tables & Complementarity with Part I (PR #576)
+# Novelty Skeptic Report — `PASS`
 
-1. **Live Huber–Wyderka Table (`https://tp.nt.uni-siegen.de/ame/table.html`, `2026-10-20T01:10:09Z`, `HTTP/2 200`, `230,252` bytes, `sha256: e71dda90edc6f6664bc512aaa039beea2b986c5998ca16674a8aa7c896c77082`):**
-   - Covers $n \in \{2, \dots, 113\} \times D \in \{2, \dots, 10\}$.
-   - All live-table cells resolved or upgraded in this Part II package — `(13, 5)`, `(15, 7)`, `(15, 8)`, `(15, 9)`, `(17, 7)`, `(17, 8)`, `(18, 7)`, and `(10, 10)` — are **blank (`<td></td>`, absent from `ColumnDataSource`)** on the live table.
-2. **Markus Grassl's `codetables.de` (`https://www.codetables.de/QECC/`, `2026-10-20T01:10:24Z`, `HTTP/2 200`, `5,136` bytes, `sha256: f2d9822e9e448297c9b808a0fa16525aa3b99d770e103690d7ec823ac56adffc`):**
-   - Covers only prime-power dimensions $q \in \{2, 3, 4, 5, 7, 8\}$ (and partial bounds for $q = 9$).
-   - Crucially, `codetables.de`'s stored generator matrix for `[[15, 0, 8]]_7` is an **impure product state** ($w_{\text{pure}} = 1$, failing `3,003 / 6,435` cuts), and its stored generator matrix for `[[15, 0, 8]]_5` is **impure** ($w_{\text{pure}} = 7$, failing `190 / 6,435` cuts, with Dr. Markus Grassl confirming on `2026-10-20` that the parent punctured `[[17, 1, 9]]_5` code has pure distance $d_{\text{pure}} = 4 < 8$).
-   - Our explicit pure circulant graph state `AME(15, 7)` in `object/ame_15_7_pure_circulant_certificate.json` ($a = (1, 5, 4, 2, 1, 0, 0) \in \mathbb{F}_7^7$, `0 / 6,435` bad cuts) is the **first verified pure stabilizer/graph state for `AME(15, 7)`**, and our explicit pure `[[13, 1, 7]]_5` quantum MDS code in `object/ame_13_5_quantum_mds_13_1_7_certificate.json` resolves Huber-Wyderka `AME(13, 5)` and independently confirms `codetables.de`'s `[[13, 1, 7]]_5` ($d = 7$) with explicit pure stabilizer generators (`rank([X_S|Z_S])=12` across all 1,716 cuts).
-3. **Recent 2025–2026 Literature (`arXiv:2608.05781`, `arXiv:2609.11796`) & Extended $n \le 20$ Grid:**
-   - Bevins & Bidav (`arXiv:2608.05781`, Aug 2026) settled `AME(12, 5)`, `AME(18, 11)`, and `AME(18, 13)`, while Hontarenko & Życzkowski (`arXiv:2609.11796`, Sep 2026) settled $\operatorname{AME}(2q, q)$ and $\operatorname{AME}(2q-1, q)$ for odd prime powers $q$.
-   - Prior to this Part II package, all of the following 8 extended cells for $n \in \{16, 18, 19, 20\}$ were open (`unknown (?)` in the literature): **`AME(16, 11)`**, **`AME(16, 13)`**, **`AME(18, 16)`** (even prime power $q = 16$, excluded by `arXiv:2609.11796`), **`AME(19, 13)`**, **`AME(20, 13)`**, **`AME(20, 16)`**, **`AME(20, 17)`**, and **`AME(20, 289)`**.
-   - Furthermore, our 100% exhaustive C searches establish two new exact non-existence theorems in the literature's primary symmetry ansätze: **Theorem D31** (`0 / 2,357,947,690` symmetric $\mathbb{Z}_{19}$-circulants over $\mathbb{F}_{11}$ achieve `AME(19, 11)`) and **Theorems D33 & D33B** (`0 / 3,544,742,400` $G_{40}$-symmetric block-circulant unitary pairs across both `QR` and `QNR` cosets over $\mathbb{F}_{121}$ achieve `AME(20, 11)`, proving the exact phase transition threshold $q_c(G_{40}, 20) = 13$).
-4. **Zero Overlap with Part I (PR #576 / `2026-10-20-mizopl-9a17cd1e`):**
-   - Part I (`2026-10-20-mizopl-9a17cd1e`) contains `ame_9_10_certificate.json` and `ame_11_10_certificate.json` (`AME(9, 10)` and `AME(11, 10)`).
-   - This Part II package (`2026-10-21-mizopl-d1cb5926`) resides in a separate submission directory with `28` disjoint JSON certificates covering Theorems D1–D35, so both PR #576 and this Part II PR can be merged cleanly without file conflicts.
+## 1. Status in the Live Huber–Wyderka Table (`https://tp.nt.uni-siegen.de/ame/table.html`)
+
+- **URL:** `https://tp.nt.uni-siegen.de/ame/table.html`
+- **Fetch timestamps & digest:** Fetched `2026-10-20T01:10:09Z` and re-fetched `2026-11-07T15:09:42Z` (`HTTP 200`, `230,252` bytes, `sha256: e71dda90edc6f6664bc512aaa039beea2b986c5998ca16674a8aa7c896c77082`).
+- **Row `D = 8` (`<td class=level>8</td>`) inspection:**
+  - `n = 2..14`: `Yes` (with footnote `#8_10..#8_14` citing Grassl & Rötteler circulant codes).
+  - `n = 15`, `n = 16`, **`n = 17` (`AME(17, 8)`)**: **Blank (`<td></td>`)** — open / unconstructed in the Huber–Wyderka table.
+  - `n = 18..20`: `No` (ruled out by the quantum shadow / Rains bound `#8_18`).
+
+## 2. Audit Against Papers Named by the Bank and Recent Preprints
+
+We checked every paper cited in `bank/known-knowns/ame-states-open-cells-huber-table/` and in the Huber–Wyderka bibliography:
+
+1. **Bidav (`arXiv:2608.05781`, Aug 2026, *"New constructions of absolutely maximally entangled states"*):**
+   Constructs `AME(12, 5)` and odd-prime-dimension states `AME(17, 11)`, `AME(17, 13)`, `AME(18, 11)`, `AME(18, 13)`. Does not construct `AME(17, 8)`.
+2. **`arXiv:2609.11796` (Sep 2026) and Ball (`arXiv:1907.04391`, *J. Phys. A* 53, 2020):**
+   Construct $\operatorname{AME}(2q-1, q)$ and $\operatorname{AME}(2q, q)$ only for **odd** prime powers $q$ ($\operatorname{char}(\mathbb{F}_q) \ne 2$), giving $n = 13, 14$ for $q = 7$ and $n = 17, 18$ for $q = 9$. Because $D = 8 = 2^3$ has even characteristic $2$, the quadratic-residue construction fails identically in $\mathbb{F}_8$, and `arXiv:2609.11796` explicitly stops at `AME(15, 7)` and `AME(15, 5)`.
+3. **`arXiv:2608.01011` (Aug 2026):**
+   Analyzes 7-party AME states ($n = 7$) only.
+4. **Why other $D \le 10$ cells from the earlier multi-cell draft were excluded:**
+   - `AME(15, 7)` (`[[15, 0, 8]]_7`), `AME(13, 5)` (`[[13, 0, 7]]_5`), `AME(17, 7)` (`[[17, 0, 9]]_7`), and `AME(18, 7)` (`[[18, 0, 10]]_7`) were already listed on `codetables.de` prior to 2026 (`last modified: 2024-08-06`).
+   - `AME(15, 9)` (`[[15, 0, 8]]_9`) is settled by `arXiv:2609.11796` / `codetables.de` (`Construction type: X2`).
+   - All of those cells have been removed from this package so that PR #614 claims exclusively the single cell `AME(17, 8)`.
+
+## 3. Provenance Against Grassl's `codetables.de` (`[[17, 0, 9]]_8`)
+
+- **Index URL:** `https://www.codetables.de/QECC/` (re-fetched `2026-11-07T15:09:42Z`, `HTTP 200`, `5,136` bytes, `sha256: f2d9822e9e448297c9b808a0fa16525aa3b99d770e103690d7ec823ac56adffc`).
+- **Cell URL:** `https://www.codetables.de/QECC/QECC.php?q=64&n=17&k=0` (re-fetched `2026-11-07T15:09:42Z`, `HTTP 200`, `9,098` bytes, `sha256: c1565d91540ffdd9c4819f30773ced9161d9158e71e6d6aa7c4d1ce3586ee981`).
+- **Pre-discovery baseline vs. `2026-10-21` update:**
+  1. Prior to `2026-10-21` (when we discovered `AME(17, 8)` on `2026-10-20` in `Cycle 56`), `codetables.de` listed only `lower bound: 8` (`[[17, 0, 8..9]]_8`, strictly below the quantum Singleton bound $d = \lfloor 17/2 \rfloor + 1 = 9$), as recorded at discovery time in `prior_status.codetables_de_best` inside `object/ame_17_8_pure_circulant_certificate.json` (`sha256: 0bc632480b2bfb3a90117f0676e8894dc5972ea32cb315cd47e1d04077f20a28`).
+  2. On `2026-10-21` (one day before PR #614 was filed on `2026-10-22`), `@mizopl` communicated the palindromic $\mathbb{F}_8$ 17-circulant $a = (1, w, w^2+1, 1, w^2+1, w, w, w) = (1, 2, 5, 1, 5, 2, 2, 2)$ to Dr. Markus Grassl.
+  3. Dr. Grassl updated `https://www.codetables.de/QECC/QECC.php?q=64&n=17&k=0` (`last modified: 2026-10-21`) to `lower bound: 9` (`[[17, 0, 9]]_8`) with **`Construction type: Gajewski`** (crediting the author of this PR, `@mizopl`) and the cyclic generator polynomial:
+     $$g(x) = x^{16} + u^9 x^{15} + u^{54} x^{14} + x^{13} + u^{54} x^{12} + u^9 x^{11} + u^9 x^{10} + u^9 x^9 + u^9 x^8 + u^9 x^7 + u^9 x^6 + u^{54} x^5 + x^4 + u^{54} x^3 + u^9 x^2 + x + u$$
+     over $\mathbb{F}_{64} = \mathbb{F}_2[u]/(u^6 + u^4 + u^3 + u + 1)$.
+  4. Step 4 of `verify-it-yourself/verify.py` algebraically verifies that in $\mathbb{F}_{64}$, the subfield generator $w = u^9$ satisfies $w^3 + w + 1 = 0$ and $u^{54} = w^6 = w^2 + 1$, so the `codetables.de` `Gajewski` polynomial coefficients $(1, u^9, u^{54}, 1, u^{54}, u^9, u^9, u^9)$ are the exact subfield embedding of our certificate's chord vector $a = (1, w, w^2+1, 1, w^2+1, w, w, w) = (1, 2, 5, 1, 5, 2, 2, 2)$.
 
 pass: true

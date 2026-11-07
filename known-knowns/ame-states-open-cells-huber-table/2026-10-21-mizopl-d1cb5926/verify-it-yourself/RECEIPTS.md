@@ -1,34 +1,42 @@
-=== Verifying 30 Part II AME & Quantum MDS Certificates ===
-  [PASS] ame_10_10_shortened_binary_stabilizer_certificate.json (sha256=b720ce506d18...) -> Shortened [[10, 2, 4]]_2 (256 elements, d_pure=6, A_6=90, A_8=135, A_10=30) + LP bounds PASS
-  [PASS] ame_13_5_quantum_mds_13_1_7_certificate.json (sha256=87f2c3d21cf8...) -> All 1,716 / 1,716 6-party cuts verified full rank 6 mod 5 ([[13, 1, 7]]_5 MDS)
-  [PASS] ame_15_5_impurity_and_circulant_nogo_certificate.json (sha256=cbba73c92693...) -> [[15,0,8]]_5 (d_pure=4, w_pure=7) & [[15,0,8]]_7 (w_pure=1) impurity + Z_15 No-Go (min 105/6435) PASS
-  [PASS] ame_15_7_pure_circulant_certificate.json (sha256=0f52a39f0089...) -> All 429 cyclic orbits (6,435 / 6,435 cuts) verified full rank 7 mod 7
-  [PASS] ame_15_8_pure_circulant_certificate.json (sha256=5748900e8ca8...) -> 15x15 symmetric pure graph-state matrix verified
-  [PASS] ame_15_9_pure_circulant_certificate.json (sha256=86551558a3a4...) -> 15x15 symmetric pure graph-state matrix verified
-  [PASS] ame_16_11_pure_hermitian_constacyclic_graph_certificate.json (sha256=0ea466b6539d...) -> 16x16 F_11 graph state + F_121 constacyclic unitary PASS
-  [PASS] ame_16_13_pure_hermitian_constacyclic_graph_certificate.json (sha256=c344aec0c2f3...) -> 16x16 F_13 graph state + F_169 circulant unitary PASS
-  [PASS] ame_16_16_pure_d8_double_circulant_certificate.json (sha256=4a23dd161482...) -> 16x16 symmetric pure graph-state matrix verified
-  [PASS] ame_16_17_pure_d8_double_circulant_certificate.json (sha256=24d0e8d97217...) -> 16x16 symmetric pure graph-state matrix verified
-  [PASS] ame_16_19_pure_d8_double_circulant_certificate.json (sha256=c868b813122c...) -> 16x16 symmetric pure graph-state matrix verified
-  [PASS] ame_17_7_pure_circulant_certificate.json (sha256=b68f2aac4f1d...) -> 17x17 symmetric pure graph-state matrix verified
-  [PASS] ame_17_8_pure_circulant_certificate.json (sha256=0bc632480b2b...) -> 17x17 symmetric pure graph-state matrix verified
-  [PASS] ame_18_16_pure_circulant_certificate.json (sha256=ff4ecacde996...) -> 18x18 symmetric pure graph-state matrix verified
-  [PASS] ame_18_7_pure_circulant_certificate.json (sha256=59b3292f2583...) -> 18x18 symmetric pure graph-state matrix verified
-  [PASS] ame_19_11_z19_exhaustive_nogo_d31_certificate.json (sha256=24d52c747ca3...) -> Theorem D31: 100% exhaustive Z_19 No-Go for AME(19, 11) (2,357,947,690 matrices, min 6/2494 orbits = 209/92378 cuts) PASS
-  [PASS] ame_19_13_pure_circulant_certificate.json (sha256=274159da339c...) -> 19x19 symmetric pure graph-state matrix verified
-  [PASS] ame_19_16_pure_circulant_certificate.json (sha256=5dac5fa4efd3...) -> 19x19 symmetric pure graph-state matrix verified
-  [PASS] ame_19_17_pure_circulant_certificate.json (sha256=496c619a0465...) -> 19x19 symmetric pure graph-state matrix verified
-  [PASS] ame_19_19_pure_circulant_certificate.json (sha256=afa20e21fc44...) -> 19x19 symmetric pure graph-state matrix verified
-  [PASS] ame_20_11_g40_exhaustive_nogo_d33_certificate.json (sha256=c607322a60f0...) -> Theorems D33/D33B/D34: 100% exhaustive G_40 QR+QNR No-Go for AME(20, 11) (3.545B pairs, sub=0/177, min 12/4970, q_c=13) PASS
-  [PASS] ame_20_11_hermitian_mds_d37a_certificate.json (sha256=cf939c8a509e...) -> Theorem D37/D37A: 20x20 F_11 graph state AME(20,11) + 19x19 F_11 graph state AME(19,11) + U(10,F_121) verified
-  [PASS] ame_20_121_d36_so10_exact_certificate.json (sha256=ce39a07f094c...) -> Theorem D36: Explicit G_40 Frobenius-free SO(10, GF(121)) MDS generator for AME(20, 121) & AME(19, 121) (184,755/184,755 minors) PASS
-  [PASS] ame_20_13_hermitian_mds_d27b_certificate.json (sha256=ba711a679e88...) -> 20x20 symmetric F_13 graph state + G_40 unitary certificate verified (101 sampled cuts full rank 10)
-  [PASS] ame_20_16_hermitian_mds_d29_certificate.json (sha256=b344b023b0d5...) -> 20x20 symmetric F_16 graph state + G_40 char-2 unitary certificate verified (101 sampled cuts full rank 10)
-  [PASS] ame_20_17_hermitian_mds_d28_certificate.json (sha256=d1cb59262b7c...) -> 20x20 symmetric F_17 graph state + G_40 unitary certificate verified (101 sampled cuts full rank 10)
-  [PASS] ame_20_gf289_so10_d25_d26_certificate.json (sha256=81c81257fcb2...) -> Theorems D25/D26: Explicit G_40 SO(10, GF(289)) MDS generator for AME(20, 289) (184,755/184,755 minors) PASS
-  [PASS] ame_table_n2_to_20_status_and_estimates.json (sha256=116c6ab2c232...) -> 266-cell 4-regime audit verified (224/266 resolved, 95/95 = 100% prime-power D>=11 resolved)
-  [PASS] universal_paley_jacobsthal_ame_13_14_17_18_certificate.json (sha256=a442249dde03...) -> Universal Paley-Jacobsthal Z-certificate verified (universal_paley_jacobsthal_ame_13_14_17_18_certificate.json)
-  [PASS] ame_20_81_d36_so10_exact_certificate.json (sha256=0fc32a1ed4d4...) -> Universal Paley-Jacobsthal Z-certificate verified (ame_20_81_d36_so10_exact_certificate.json)
+# Verification Receipts — `AME(17, 8)` (`[[17, 0, 9]]_8`)
 
-VERIFIED: All 30 Part II AME & Quantum MDS Certificates PASS in 0.33s
+## 1. Execution of `sh verify-it-yourself/run_checks.sh`
+
+- **Command:** `sh verify-it-yourself/run_checks.sh`
+- **Working directory:** `known-knowns/ame-states-open-cells-huber-table/2026-10-21-mizopl-d1cb5926`
+- **Timestamp (UTC):** `2026-11-07T15:19:19Z`
+- **Exit code:** `0`
+
+```text
+========================================================================
+V3R1T4S Exhaustive Verifier — AME(17, 8) / [[17, 0, 9]]_8 (Huber Table)
+========================================================================
+Certificate file     : object/ame_17_8_pure_circulant_certificate.json
+Certificate SHA-256  : 0bc632480b2bfb3a90117f0676e8894dc5972ea32cb315cd47e1d04077f20a28 (4176 bytes)
+Field                : GF(8) = GF(2)[w]/(w^3 + w + 1)
+Chord d=1..8 (GF(8)) : [1, 2, 5, 1, 5, 2, 2, 2] = ['1', 'w', 'w^2+1', '1', 'w^2+1', 'w', 'w', 'w']
+GF(8) 8-party cuts   : 24,310 / 24,310 full rank 8 (bad=0, 0.40s)
+GF(2) 51-qubit cuts  : 24,310 / 24,310 full rank 24 (bad=0, 0.66s)
+codetables.de [[17,0,9]]_8 (Gajewski, 2026-10-21) GF(64) subfield match : EXACT
+Controls             : C_5 AME(5,2)=10/10 PASS | AME(4,2)=0/64 | Mutant(edge->0)=184 bad | Mutant(d1->0)=918 bad | BestRandom400(seed=42)=24140/24310 (170 bad)
+Total runtime        : 2.24s
 PASS
+```
+
+## 2. Execution of `how-we-built-it/search_and_verify_ame_17_8_circulant.py`
+
+- **Command:** `/opt/homebrew/bin/python3 how-we-built-it/search_and_verify_ame_17_8_circulant.py`
+- **Exit code:** `0`
+
+```text
+Target AME(17, 8) chord [1, 2, 5, 1, 5, 2, 2, 2]: 24310/24310 full-rank cuts (0 bad cuts)
+Null control (400 random GF(8) 17-circulants, seed=42, 4.63s): pass_count=0/400, best_control=24140/24310 (min_bad_cuts=170, best_chord=[5, 1, 0, 1, 7, 0, 4, 6])
+```
+
+## 3. External Baseline Fetch Receipts (`2026-11-07T15:09:42Z`)
+
+| Resource | URL | HTTP Status | Size (bytes) | SHA-256 Digest |
+| :--- | :--- | :--- | :--- | :--- |
+| **Huber–Wyderka Live Table** | `https://tp.nt.uni-siegen.de/ame/table.html` | `200` | `230,252` | `e71dda90edc6f6664bc512aaa039beea2b986c5998ca16674a8aa7c896c77082` |
+| **Grassl `codetables.de` QECC Index** | `https://www.codetables.de/QECC/` | `200` | `5,136` | `f2d9822e9e448297c9b808a0fa16525aa3b99d770e103690d7ec823ac56adffc` |
+| **Grassl `codetables.de` `[[17,0,9]]_8`** | `https://www.codetables.de/QECC/QECC.php?q=64&n=17&k=0` | `200` | `9,098` | `c1565d91540ffdd9c4819f30773ced9161d9158e71e6d6aa7c4d1ce3586ee981` |
