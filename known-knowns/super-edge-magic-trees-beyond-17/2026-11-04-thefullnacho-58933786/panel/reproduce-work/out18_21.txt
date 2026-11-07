@@ -1,0 +1,8 @@
+n=18 file=object/cert_n18.txt lines=123867 invalid=0 first_invalid=None iso_duplicates=0 distinct=123867 A000055=123867 -> OK
+exit=0
+n=19 file=object/cert_n19.txt lines=317955 invalid=0 first_invalid=None iso_duplicates=0 distinct=317955 A000055=317955 -> OK
+exit=0
+n=20 file=object/cert_n20.txt lines=823065 invalid=0 first_invalid=None iso_duplicates=0 distinct=823065 A000055=823065 -> OK
+exit=0
+n=21 file=object/cert_n21.txt.xz lines=2144505 invalid=0 first_invalid=None iso_duplicates=0 distinct=2144505 A000055=2144505 -> OK
+exit=0

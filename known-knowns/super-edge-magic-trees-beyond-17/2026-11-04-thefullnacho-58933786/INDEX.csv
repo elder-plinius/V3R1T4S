@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+super-edge-magic-trees-beyond-17,partial win p2: every tree on at most n vertices is super edge-magic (verified n),22,17,2026-11-04T03:00:01Z,cert_n22.txt.xz (with cert_n18..n21; hashes in object/certificates.sha256),58933786e80b94272f3a5da81b88a3ed8dafcfe37f9e4f8045b1af2c247b2b8d

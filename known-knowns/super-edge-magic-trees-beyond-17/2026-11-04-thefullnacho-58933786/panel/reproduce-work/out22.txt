@@ -1,0 +1,2 @@
+n=22 file=object/cert_n22.txt.xz lines=5623756 invalid=0 first_invalid=None iso_duplicates=0 distinct=5623756 A000055=5623756 -> OK
+exit=0

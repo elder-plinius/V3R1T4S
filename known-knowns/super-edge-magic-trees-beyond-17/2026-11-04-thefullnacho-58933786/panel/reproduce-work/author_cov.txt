@@ -1,0 +1,10 @@
+n=18 lines=123867 distinct_canonical=123867 A000055=123867 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+exit=0
+n=19 lines=317955 distinct_canonical=317955 A000055=317955 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+exit=0
+n=20 lines=823065 distinct_canonical=823065 A000055=823065 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+exit=0
+n=21 lines=2144505 distinct_canonical=2144505 A000055=2144505 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+exit=0
+n=22 lines=5623756 distinct_canonical=5623756 A000055=5623756 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+exit=0
