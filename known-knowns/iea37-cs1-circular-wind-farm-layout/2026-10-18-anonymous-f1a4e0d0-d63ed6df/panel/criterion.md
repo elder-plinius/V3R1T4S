@@ -77,4 +77,16 @@ official AEP is strictly above every value in the package's table, including the
 
 confirmed_scope: The single 64-turbine layout in claim/object/iea37-v3r1t4s-opt64.yaml (sha256 d63ed6df...dd93c851) lies on or within the 3000 m boundary with every pair at least 260 m apart in float64, and the unmodified iea37-aepcalc.py run on it with the official wind-rose and turbine files gives 1539447.11737 MWh, strictly above every 64-turbine value in the package's table and papers (highest 1526474.80248 for participant 12, published winner 1513311.19361).
 context: subagent (Claude Code Agent tool, fresh context)
+
+---
+Note added 2026-11-07 (UTC) at the maintainer's request on V3R1T4S PR #938, after the gate.
+The text above is unchanged, and so is the closing pass line, which was moved below this note because the kit
+reads it as the file's last line. Its paths are relative to the run folder runs/2026-10-18-0107/, not to this package.
+In this package, claim/object/iea37-v3r1t4s-opt64.yaml and claim/object/layout64.json are object/iea37-v3r1t4s-opt64.yaml
+and object/layout64.json. These are not in this package, by design: claim/evaluator/ (the official IEA37 files,
+including iea37-aepcalc.py; RUN_IT_YOURSELF.md says where to download them) and the run's check_constraints.py (this
+package's own checker is verify-it-yourself/check_layout.py); claim/table/ (the results-folder snapshot, whose URL,
+fetch times and sha256 are in the-record-we-beat/record.md); claim/scratch/; and the run's CLAIM.md and REPRODUCE.md
+(README.md and RUN_IT_YOURSELF.md cover the same ground).
+
 pass: true

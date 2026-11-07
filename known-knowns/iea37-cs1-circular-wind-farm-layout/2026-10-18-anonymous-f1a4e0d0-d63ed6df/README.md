@@ -1,7 +1,7 @@
 # IEA Wind Task 37 case study 1, 64 turbines: a strictly feasible layout with AEP 1539447.11737 MWh
 
 ## What
-The single 64-turbine layout in claim/object/iea37-v3r1t4s-opt64.yaml (sha256 d63ed6df...dd93c851) lies on or within the 3000 m boundary with every pair at least 260 m apart in float64, and the unmodified iea37-aepcalc.py run on it with the official wind-rose and turbine files gives 1539447.11737 MWh, strictly above every 64-turbine value in the package's table and papers (highest 1526474.80248 for participant 12, published winner 1513311.19361).
+The single 64-turbine layout in object/iea37-v3r1t4s-opt64.yaml (sha256 d63ed6df...dd93c851) lies on or within the 3000 m boundary with every pair at least 260 m apart in float64, and the unmodified iea37-aepcalc.py run on it with the official wind-rose and turbine files gives 1539447.11737 MWh, strictly above every 64-turbine value in the package's table and papers (highest 1526474.80248 for participant 12, published winner 1513311.19361).
 
 Target: iea37-cs1-circular-wind-farm-layout (bank target; found and panelled under the charter quarry
 clean-energy-records), instance iea37-cs1-opt64. Status: CONFIRMED_SOLUTION (three
