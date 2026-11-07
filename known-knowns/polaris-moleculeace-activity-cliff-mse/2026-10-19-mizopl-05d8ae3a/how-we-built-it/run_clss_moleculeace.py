@@ -492,7 +492,7 @@ def fit_predict_clss_universal(views_tr, y_tr, views_te, seed=42):
 
     final_oof = oof_mat_stage3 @ w_stage3
     final_te = te_mat_stage3 @ w_stage3
-    return final_te, final_oof, stage2_te, stage2_oof
+    return final_te, final_oof, stage2_te, stage2_oof, base_te, base_oof
 
 
 def run_single_dataset(ds_name: str, b_info: dict, preds_dir: Path):
@@ -511,7 +511,7 @@ def run_single_dataset(ds_name: str, b_info: dict, preds_dir: Path):
     y_te = te_df["y"].to_numpy(dtype=np.float64)
     cliff_te = te_df["cliff_mol"].to_numpy(dtype=np.int32) == 1
 
-    pred_te, oof_pred, _, _ = fit_predict_clss_universal(views_tr, y_tr, views_te)
+    pred_te, oof_pred, stage2_te, _, base_te, _ = fit_predict_clss_universal(views_tr, y_tr, views_te)
 
     svm_cfg = yaml.safe_load((CONFIG_DIR / ds_name / "SVM_ECFP.yml").read_text())
     svm_base = SVR(**svm_cfg)
@@ -528,10 +528,9 @@ def run_single_dataset(ds_name: str, b_info: dict, preds_dir: Path):
     pred_df = pd.DataFrame({
         "test_row_index": np.arange(len(te_df)),
         "csv_row_index": test_global_indices,
-        "smiles": te_df["smiles"],
-        "cliff_mol": te_df["cliff_mol"],
-        "y_true": y_te,
         "y_pred_clss": pred_te,
+        "y_pred_stage1": base_te,
+        "y_pred_stage2": stage2_te,
         "y_pred_svm_ecfp_baseline": pred_svm_base,
     })
     if preds_dir is not None:

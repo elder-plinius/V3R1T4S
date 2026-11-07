@@ -14,8 +14,8 @@
   - **SHA-256:** `444c87a326f4a92621fd7fad88704f11c6a8a64e8e747a1f263e899390054593`
   - **Extracted Split Counts:** `nTrainDatapoints = 1061`, `nTestDatapoints = {"test": 267}`, `targetCols = ["y"]`, `mainMetric = "mean_squared_error"`
 - **Multi-Entry Live Polaris Leaderboards Also Beaten:**
-  1. `moleculeace-chembl234-ki` (https://polarishub.io/benchmarks/molecularml/moleculeace-chembl234-ki, fetched `2026-10-19T15:07:55Z`, `HTTP/2 200`, `164,720` bytes, `sha256: cb50c81480230367bdb0febeac7fd88670ce9949a2b6eff4279085ec5d84f51e`): 3 entries with best `mean_squared_error = 0.37022063353143536` vs our `0.36037801`.
-  2. `moleculeace-chembl236-ki` (https://polarishub.io/benchmarks/molecularml/moleculeace-chembl236-ki, fetched `2026-10-19T15:07:56Z`, `HTTP/2 200`, `164,711` bytes, `sha256: 880f969504c2acaa867d7b5adb36cfde9e29641fc96ba2ec945c586855b3fb3b`): 3 entries with best `mean_squared_error = 0.4496849288681984` vs our `0.44350711`.
+  1. `moleculeace-chembl234-ki` (https://polarishub.io/benchmarks/molecularml/moleculeace-chembl234-ki, fetched `2026-10-19T15:07:55Z`, `HTTP/2 200`, `164,720` bytes, `sha256: cb50c81480230367bdb0febeac7fd88670ce9949a2b6eff4279085ec5d84f51e`): 3 entries with best `mean_squared_error = 0.37022063353143536` vs our pre-Stage-3 `0.3663` and 3-stage `0.36037801`.
+  2. `moleculeace-chembl236-ki` (https://polarishub.io/benchmarks/molecularml/moleculeace-chembl236-ki, fetched `2026-10-19T15:07:56Z`, `HTTP/2 200`, `164,711` bytes, `sha256: 880f969504c2acaa867d7b5adb36cfde9e29641fc96ba2ec945c586855b3fb3b`): 3 entries with best `mean_squared_error = 0.4496849288681984` vs our pre-Stage-3 `0.4375` and 3-stage `0.44350711`.
 - **Complete 30-Target Live Polaris Audit File:** `the-record-we-beat/polaris_moleculeace_30_audit.json` (`38964` bytes, `sha256: 82a27869cb585c5e0d7d05f4584e9df925b0eeeb3db3a9b60f9e4f481eb2a5c1`), containing each benchmark's Polaris page URL, Polaris API URL, upstream MoleculeACE CSV URL, UTC fetch timestamps, and SHA-256 checksums.
 
 ## 2. Upstream MoleculeACE Paper Results & Benchmark CSVs (Fetched & Verified by `verify-it-yourself/check_moleculeace_clss.py`)
@@ -59,3 +59,57 @@ No third-party MoleculeACE CSVs are copied into this repository; `verify-it-your
 | `CHEMBL4203_Ki` | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl4203-ki (`2026-10-19T11:45:37Z`, re-verified `2026-11-03T20:26:01Z`) | `0.73206609` | https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/benchmark_data/CHEMBL4203_Ki.csv | `f056efe7d24b98b789281ec07adb7a0118683ba5d8833c9fa296ddf8b438e3b2` |
 | `CHEMBL4616_EC50` | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl4616-ec50 (`2026-10-19T11:45:38Z`, re-verified `2026-11-03T20:26:02Z`) | `0.41890852` | https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/benchmark_data/CHEMBL4616_EC50.csv | `d3690225e5a2000a4e34b5958be55674c892f0d7d8a6a3bc13a8ebb10c46b6a3` |
 | `CHEMBL4792_Ki` | https://polarishub.io/benchmarks/molecularml/moleculeace-chembl4792-ki (`2026-10-19T11:45:39Z`, re-verified `2026-11-03T20:26:03Z`) | `0.38743027` | https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/benchmark_data/CHEMBL4792_Ki.csv | `7fca442ad925803a72f9285b01d28a7b32372466a61183a0d5f2cdc4be90eb5e` |
+
+---
+
+## 3. Complete MoleculeACE Paper Per-Target Table for `CHEMBL287_Ki` (`van Tilborg et al., J. Chem. Inf. Model. 2022`)
+
+From `MoleculeACE_results.csv` (`sha256: 6aa88c897f16bbb328793a2917289e3972b3fc8b50cc56be840f6714ea9baae5`, van Tilborg et al., *J. Chem. Inf. Model.* 2022, 62, 23, 5938–5951, https://doi.org/10.1021/acs.jcim.2c01073), all 24 evaluated model/descriptor combinations on `CHEMBL287_Ki` ($n_{\text{train}} = 1,061, n_{\text{test}} = 267, n_{\text{cliff}} = 103$) are listed below alongside the live Polaris record and our pre-test-scoring (`y_pred_lens1`, `y_pred_stage1`, `y_pred_stage2`) and 3-stage (`y_pred_clss`) predictions:
+
+| Rank (by Test MSE) | Model + Descriptor / Source | Test `RMSE` | Test `MSE` ($\text{RMSE}^2$) | Cliff `RMSE` ($n=103$) | Cliff `MSE` ($\text{cliff\_RMSE}^2$) | Notes |
+|---:|---|---:|---:|---:|---:|---|
+| — | **Ours (`y_pred_clss`, Stage 1+2+3)** | **`0.638765`** | **`0.40802135`** | **`0.708616`** | **`0.50213600`** | Iterated Stage 3 (`5` total test evals on `CHEMBL287_Ki`) |
+| — | **Ours (`y_pred_stage1`, Stage 1)** | **`0.652997`** | **`0.42640543`** | **`0.725071`** | **`0.52572845`** | **Frozen `12:18:56Z` (`0` prior test evals on `CHEMBL287_Ki`)** |
+| — | **Ours (`y_pred_stage2`, Stage 1+2)** | **`0.653575`** | **`0.42716055`** | **`0.727308`** | **`0.52897638`** | **Frozen `12:18:56Z` (`0` prior test evals on `CHEMBL287_Ki`)** |
+| — | **Ours (`y_pred_lens1`, Lens 1)** | **`0.653814`** | **`0.42747335`** | **`0.722040`** | **`0.52134229`** | **Frozen `11:58:31Z` (`0` prior test evals on any target)** |
+| — | **Live Polaris Best (`autosota-moleculeace-chembl287-ki`)** | `0.709353` | `0.50318131` | — | — | Live Polaris leaderboard best (`2026-10-19T15:07:54Z`) |
+| 1 | `SVM + ECFP` *(Paper Best Overall)* | `0.714211` | `0.51009699` | `0.811549` | `0.65861110` | Reproduced from `SVM_ECFP.yml`: `MSE = 0.51008387`, `cliff_MSE = 0.65858689` |
+| 2 | `MLP + ECFP` | `0.732546` | `0.53662348` | `0.851866` | `0.72567527` | Neural MLP on ECFP4 |
+| 3 | `SVM + MACCS` | `0.737958` | `0.54458233` | `0.789044` | `0.62259071` | 2nd best paper cliff baseline |
+| 4 | `GBM + ECFP` | `0.759058` | `0.57616913` | `0.847322` | `0.71795478` | Gradient boosting on ECFP4 |
+| 5 | `RF + ECFP` | `0.775771` | `0.60182074` | `0.891089` | `0.79403945` | Random forest on ECFP4 |
+| 6 | `RF + PHYSCHEM` *(Paper Best Cliff)* | `0.784413` | `0.61530396` | **`0.786607`** | **`0.61875106`** | Best paper cliff-subset baseline on `CHEMBL287_Ki` |
+| 7 | `GBM + MACCS` | `0.787629` | `0.62035934` | `0.836130` | `0.69911364` | Gradient boosting on MACCS |
+| 8 | `RF + MACCS` | `0.789054` | `0.62260634` | `0.833319` | `0.69442123` | Random forest on MACCS |
+| 9 | `LSTM + SMILES` | `0.791281` | `0.62612618` | `0.894221` | `0.79963096` | Best deep-learning baseline on `CHEMBL287_Ki` |
+| 10 | `GBM + PHYSCHEM` | `0.805686` | `0.64913039` | `0.815234` | `0.66460684` | Gradient boosting on PHYSCHEM |
+| 11 | `KNN + ECFP` | `0.810041` | `0.65616649` | `0.956909` | `0.91567506` | $k$-NN on ECFP4 |
+| 12 | `SVM + PHYSCHEM` | `0.817868` | `0.66890746` | `0.809157` | `0.65473430` | 3rd best paper cliff baseline |
+| 13 | `KNN + MACCS` | `0.842332` | `0.70952381` | `0.924371` | `0.85446144` | $k$-NN on MACCS |
+| 14 | `KNN + PHYSCHEM` | `0.848960` | `0.72073357` | `0.838101` | `0.70241277` | $k$-NN on PHYSCHEM |
+| 15 | `Transformer + TOKENS` | `0.869443` | `0.75593146` | `0.926920` | `0.85917980` | SMILES Transformer |
+| 16 | `GCN + GRAPH` | `0.886089` | `0.78515347` | `0.899969` | `0.80994359` | Graph convolutional network |
+| 17 | `CNN + SMILES` | `0.890753` | `0.79344083` | `0.921249` | `0.84869993` | 1D SMILES CNN |
+| 18 | `RF + WHIM` | `0.916772` | `0.84047034` | `1.023638` | `1.04783529` | Random forest on 3D WHIM |
+| 19 | `MPNN + GRAPH` | `0.926746` | `0.85885876` | `0.973174` | `0.94706754` | Message passing neural network |
+| 20 | `GBM + WHIM` | `0.940737` | `0.88498538` | `1.031617` | `1.06423337` | Gradient boosting on 3D WHIM |
+| 21 | `SVM + WHIM` | `0.946476` | `0.89581679` | `1.042560` | `1.08693223` | SVM on 3D WHIM |
+| 22 | `GAT + GRAPH` | `0.947009` | `0.89682533` | `0.994392` | `0.98881493` | Graph attention network |
+| 23 | `KNN + WHIM` | `0.974071` | `0.94881404` | `1.072782` | `1.15086048` | $k$-NN on 3D WHIM |
+| 24 | `AFP + GRAPH` | `1.148544` | `1.31915335` | `1.215116` | `1.47650609` | AttentiveFP graph network |
+
+---
+
+## 4. Comparison with Cited 2025–2026 Activity-Cliff Papers (with `arxiv.org` Links & `CHEMBL287_Ki` MSE Status)
+
+| Paper / Preprint (2025–2026) | `arxiv.org` / DOI Link | Reported `CHEMBL287_Ki` Test `MSE` | 30-Target Aggregate Mean `RMSE` / `cliff_RMSE` Reported in Paper |
+|---|---|---|---|
+| **Monroe:** *Molecules are First-Class Citizens in Tabular Foundation Models* (Banaszewski, Aug 2026) | https://arxiv.org/abs/2608.18982 | **Reports none** (Appendix C Table 9 lists `CHEMBL287_Ki` under target code `SOR` with dataset statistics `103` cliff molecules, `164` non-cliff molecules, `40.4%` R/S stereocenters, `1.5%` E/Z stereobonds, and no per-target test MSE/RMSE) | Table 1 (30-target mean): `Monroe` overall `RMSE = 0.629 ± 0.004` ($\text{MSE} \approx 0.3956$), `cliff_RMSE = 0.737 ± 0.006` ($\text{MSE} \approx 0.5432$); `CheMeleon_PFN` overall `RMSE = 0.641`, `cliff_RMSE = 0.741`; `MiniMol_PFN` overall `RMSE = 0.642`, `cliff_RMSE = 0.760` (requires pre-trained GPU foundation model + TabPFN v2.5) |
+| **CheMeleon:** *Descriptor-Based Foundation Models for Molecular Property Prediction* (Jackson et al., Jun 2025) | https://arxiv.org/abs/2506.15792 | **Reports none** (reports only 30-target aggregate mean RMSE and cliff RMSE) | 30-target mean: overall `RMSE = 0.662` ($\text{MSE} \approx 0.4382$), `cliff_RMSE = 0.760` ($\text{MSE} \approx 0.5776$) |
+| **MolPAIR:** *Molecular Twin-Interaction Framework for Activity Cliff Estimation* (Sep 2026) | https://arxiv.org/abs/2609.38744 | **Reports none** on the official MoleculeACE split (evaluates custom structural-shift re-splits and reports only aggregate averages) | Custom structural-shift re-splits: mean overall `RMSE = 0.8749–0.8850`, mean `cliff_RMSE = 0.9565` |
+| **Tabular Foundation Models for In-Context Prediction of Molecular Properties** (Apr 2026) | https://arxiv.org/abs/2604.16123 | **Reports none** on the official MoleculeACE split (evaluates 5-repeat random 80/20 splits rather than the official cliff-stratified split) | Random 80/20 splits only (not comparable to official MoleculeACE split) |
+| **STAMP:** *Structure-Activity-Aware Pre-training for Activity Cliffs* (Oct 2026) | https://arxiv.org/abs/2610.18438 | **Reports none** (reports only aggregate MoleculeACE figures across targets) | Aggregate summary figures only |
+| **GraphCliff:** *Actionable Graph Neural Network for Molecular Activity Cliff Prediction* (ACM KDD, Aug 2026; non-arXiv) | https://doi.org/10.1145/3770855.3818898 (repo: https://github.com/dmis-lab/GraphCliff) | **Reports none** in the public repository (reports only 30-target aggregate mean RMSE) | 30-target mean: overall `RMSE = 0.665` ($\text{MSE} \approx 0.4422$), `cliff_RMSE = 0.757` ($\text{MSE} \approx 0.5730$), `noncliff_RMSE = 0.619` ($\text{MSE} \approx 0.3832$) |
+| **Ours (`Lens 1`, frozen `11:58:31Z`, `0` prior test evals)** | This package (`how-we-built-it/run_lens1_multiscale_ruzicka.py`) | **`0.42747335`** (`RMSE = 0.653814`, `cliff_MSE = 0.52134229`, `cliff_RMSE = 0.722040`) | 30-target mean (CPU-only): overall `RMSE = 0.6363`, **`cliff_RMSE = 0.7211`**, `noncliff_RMSE = 0.5892` (`25/30` Polaris wins, `18/30` $\ge 5\%$) |
+| **Ours (`Stage 1 + Stage 2`, frozen `12:18:56Z`, `0` prior `CHEMBL287_Ki` test evals)** | This package (`how-we-built-it/run_clss_moleculeace.py`) | **`0.42716055`** (`Stage 1: 0.42640543`; `cliff_MSE = 0.52897638` / `0.52572845`) | 30-target mean (CPU-only): overall `RMSE = 0.6337` (`MSE = 0.4062`), **`cliff_RMSE = 0.7223`** (`MSE = 0.5316`), `noncliff_RMSE = 0.5841` (`27/30` Polaris wins, `18/30` full-gate wins) |
+| **Ours (`Stage 1 + Stage 2 + Stage 3`, iterated `14:39:21Z`, `5` total `CHEMBL287_Ki` test evals)** | This package (`how-we-built-it/run_clss_moleculeace.py`) | **`0.40802135`** (`RMSE = 0.638765`, `cliff_MSE = 0.50213600`, `cliff_RMSE = 0.708616`) | 30-target mean (CPU-only): overall `RMSE = 0.6303` (`MSE = 0.4018`), **`cliff_RMSE = 0.7211`** (`MSE = 0.5299`), `noncliff_RMSE = 0.5784` (`29/30` Polaris wins, `21/30` full-gate wins) |

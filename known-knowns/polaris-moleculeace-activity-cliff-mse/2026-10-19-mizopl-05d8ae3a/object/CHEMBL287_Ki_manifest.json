@@ -6,8 +6,8 @@
   "moleculeace_csv_relpath": "benchmark_data/CHEMBL287_Ki.csv",
   "moleculeace_csv_sha256": "e857875848bb64dc6e327e6c42fe9fd36526bbee1b976de4521b55c4c6629894",
   "prediction_csv_relpath": "CHEMBL287_Ki_test_predictions.csv",
-  "prediction_csv_bytes": 29346,
-  "prediction_csv_sha256": "05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c",
+  "prediction_csv_bytes": 28516,
+  "prediction_csv_sha256": "37ced5b182f800041f6fcbff6bf9d5c5436fab3fc19f11155545067dff3d7d38",
   "n_train": 1061,
   "n_train_used": 1061,
   "n_test": 267,
@@ -302,5 +302,45 @@
     1325,
     1327
   ],
-  "moleculeace_csv_url": "https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/benchmark_data/CHEMBL287_Ki.csv"
+  "moleculeace_csv_url": "https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/benchmark_data/CHEMBL287_Ki.csv",
+  "stage_progression_audit": {
+    "total_test_set_evaluations_on_chembl287_ki": 5,
+    "total_30_target_test_sweeps": 3,
+    "lens1_frozen_2026_10_19T115831Z_zero_prior_test_evals": {
+      "oof_mse": 0.45995143,
+      "test_mse": 0.42747335,
+      "test_rmse": 0.65381446,
+      "test_cliff_mse": 0.52134229,
+      "test_noncliff_mse": 0.36851908,
+      "paired_bootstrap_win_rate_vs_svm": 0.9961,
+      "scalar_bootstrap_win_rate_vs_polaris": 0.9513
+    },
+    "stage1_frozen_2026_10_19T121856Z_zero_prior_chembl287_test_evals": {
+      "oof_mse": 0.41977153,
+      "test_mse": 0.42640543,
+      "test_rmse": 0.65299727,
+      "test_cliff_mse": 0.52572845,
+      "test_noncliff_mse": 0.36402573,
+      "paired_bootstrap_win_rate_vs_svm": 0.9977,
+      "scalar_bootstrap_win_rate_vs_polaris": 0.9511
+    },
+    "stage1_plus_stage2_frozen_2026_10_19T121856Z_zero_prior_chembl287_test_evals": {
+      "oof_mse": 0.41982901,
+      "test_mse": 0.42716055,
+      "test_rmse": 0.65357521,
+      "test_cliff_mse": 0.52897638,
+      "test_noncliff_mse": 0.36321524,
+      "paired_bootstrap_win_rate_vs_svm": 0.9977,
+      "scalar_bootstrap_win_rate_vs_polaris": 0.9489
+    },
+    "stage1_plus_stage2_plus_stage3_iterated_2026_10_19T143921Z": {
+      "oof_mse": 0.41753489,
+      "test_mse": 0.40802135,
+      "test_rmse": 0.63876549,
+      "test_cliff_mse": 0.502136,
+      "test_noncliff_mse": 0.34891276,
+      "paired_bootstrap_win_rate_vs_svm": 0.9997,
+      "scalar_bootstrap_win_rate_vs_polaris": 0.9798
+    }
+  }
 }

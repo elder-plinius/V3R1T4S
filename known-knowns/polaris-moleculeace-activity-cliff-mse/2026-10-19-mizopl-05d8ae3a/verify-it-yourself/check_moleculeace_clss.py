@@ -2,7 +2,7 @@
 """
 Standalone verifier for polaris-moleculeace-activity-cliff-mse in outbox package.
 Fetches upstream MoleculeACE CSVs from https://raw.githubusercontent.com/molML/MoleculeACE/main/MoleculeACE/Data/
-(caching in ${MOLECULEACE_UPSTREAM_CACHE:-/tmp/moleculeace_upstream_cache}) and fails cleanly if any
+(caching in ${MOLECULEACE_UPSTREAM_CACHE:-tempfile.gettempdir()/moleculeace_upstream_cache}) and fails cleanly if any
 SHA-256 does not match the recorded digest in the-record-we-beat/polaris_moleculeace_30_audit.json.
 """
 import argparse
@@ -10,6 +10,7 @@ import hashlib
 import json
 import os
 import sys
+import tempfile
 import urllib.request
 from pathlib import Path
 import numpy as np
@@ -70,7 +71,10 @@ def main():
     parser.add_argument(
         "--upstream-cache",
         type=str,
-        default=os.environ.get("MOLECULEACE_UPSTREAM_CACHE", "/tmp/moleculeace_upstream_cache"),
+        default=os.environ.get(
+            "MOLECULEACE_UPSTREAM_CACHE",
+            os.path.join(tempfile.gettempdir(), "moleculeace_upstream_cache"),
+        ),
         help="Directory for fetched upstream MoleculeACE CSVs",
     )
     args = parser.parse_args()
@@ -104,8 +108,8 @@ def main():
             assert r.get("utc_fetched_at", "").endswith("Z"), f"Missing utc_fetched_at for {r['dataset']}"
 
         if args.predictions is None:
-            assert sha256_file(p287_file) == m287["prediction_csv_sha256"] == "05d8ae3a3797f666ed320364280c2ba0c099417174d42a0a4736f0366726623c", "Primary prediction sha256 mismatch"
-            assert len(p287_file.read_bytes()) == m287["prediction_csv_bytes"] == 29346, "Primary prediction byte size mismatch"
+            assert sha256_file(p287_file) == m287["prediction_csv_sha256"] == "37ced5b182f800041f6fcbff6bf9d5c5436fab3fc19f11155545067dff3d7d38", "Primary prediction sha256 mismatch"
+            assert len(p287_file.read_bytes()) == m287["prediction_csv_bytes"] == 28516, "Primary prediction byte size mismatch"
 
         # 1. Verify Primary Headline Target (CHEMBL287_Ki) & every field of m287
         raw_287 = ensure_upstream_file(
@@ -120,21 +124,41 @@ def main():
         df_te_287 = df_raw_287[df_raw_287["split"] == "test"].reset_index(drop=True)
         df287 = pd.read_csv(p287_file)
 
+        for forbidden_col in ("smiles", "cliff_mol", "y_true", "y"):
+            assert forbidden_col not in df287.columns, f"df287 contains copied third-party column {forbidden_col}"
+
         expected_idx_287 = df_raw_287.index[df_raw_287["split"] == "test"].tolist()
         assert m287["test_csv_row_indices"] == expected_idx_287, "m287 test_csv_row_indices mismatch"
         assert df287["csv_row_index"].tolist() == expected_idx_287, "df287 csv_row_index mismatch"
-        assert df287["smiles"].tolist() == df_te_287["smiles"].tolist(), "df287 smiles mismatch"
-        assert df287["cliff_mol"].astype(int).tolist() == df_te_287["cliff_mol"].astype(int).tolist(), "df287 cliff_mol mismatch"
-        assert np.max(np.abs(df287["y_true"].to_numpy() - df_te_287["y"].to_numpy())) == 0.0, "df287 y_true mismatch"
+        assert df287["test_row_index"].tolist() == list(range(len(df_te_287))), "df287 test_row_index mismatch"
         assert m287["n_train"] == m287["n_train_used"] == len(df_tr_287) == 1061, "m287 n_train mismatch"
         assert m287["n_test"] == len(df_te_287) == 267, "m287 n_test mismatch"
         assert m287["n_test_cliff"] == 103 and m287["n_test_noncliff"] == 164, "m287 cliff count mismatch"
         assert m287["stereo_stripped_inchikey14_overlap"] == 0 and m287["canonical_smiles_overlap"] == 0, "m287 overlap field mismatch"
 
-        y287 = df287["y_true"].to_numpy(dtype=np.float64)
+        y287 = df_te_287["y"].to_numpy(dtype=np.float64)
         p287 = df287["y_pred_clss"].to_numpy(dtype=np.float64)
         s287 = df287["y_pred_svm_ecfp_baseline"].to_numpy(dtype=np.float64)
-        c287 = df287["cliff_mol"].to_numpy(dtype=np.int32) == 1
+        c287 = df_te_287["cliff_mol"].to_numpy(dtype=np.int32) == 1
+
+        # Also verify pre-test-scoring Stage 1, Stage 1+2, and Lens 1 predictions against m287["stage_progression_audit"]
+        sp_audit = m287["stage_progression_audit"]
+        for col_name, audit_key in [
+            ("y_pred_lens1", "lens1_frozen_2026_10_19T115831Z_zero_prior_test_evals"),
+            ("y_pred_stage1", "stage1_frozen_2026_10_19T121856Z_zero_prior_chembl287_test_evals"),
+            ("y_pred_stage2", "stage1_plus_stage2_frozen_2026_10_19T121856Z_zero_prior_chembl287_test_evals"),
+        ]:
+            pred_stage = df287[col_name].to_numpy(dtype=np.float64)
+            st_mse = float(mean_squared_error(y287, pred_stage))
+            st_cmse = float(mean_squared_error(y287[c287], pred_stage[c287]))
+            st_ncmse = float(mean_squared_error(y287[~c287], pred_stage[~c287]))
+            st_b_svm, st_b_pol = paired_and_scalar_bootstrap(y287, pred_stage, s287, m287["polaris_listed_best_mse"], n_boot=10000, seed=0)
+            info = sp_audit[audit_key]
+            assert abs(round(st_mse, 8) - info["test_mse"]) < 1e-8, f"{col_name} test_mse mismatch"
+            assert abs(round(st_cmse, 8) - info["test_cliff_mse"]) < 1e-8, f"{col_name} test_cliff_mse mismatch"
+            assert abs(round(st_ncmse, 8) - info["test_noncliff_mse"]) < 1e-8, f"{col_name} test_noncliff_mse mismatch"
+            assert abs(st_b_svm - info["paired_bootstrap_win_rate_vs_svm"]) < 1e-12, f"{col_name} paired bootstrap mismatch"
+            assert abs(st_b_pol - info["scalar_bootstrap_win_rate_vs_polaris"]) < 1e-12, f"{col_name} scalar bootstrap mismatch"
 
         mse287 = float(mean_squared_error(y287, p287))
         mse287_cliff = float(mean_squared_error(y287[c287], p287[c287]))
@@ -197,11 +221,12 @@ def main():
             assert len(df_tr) == pol_info["n_train"], f"Train count mismatch on {ds}"
             assert len(df_te) == pol_info["n_test"] == len(df_pred) == r["n_test"], f"Test count mismatch on {ds}"
 
+            for forbidden_col in ("smiles", "cliff_mol", "y_true", "y"):
+                assert forbidden_col not in df_pred.columns, f"df_pred on {ds} contains copied third-party column {forbidden_col}"
+
             expected_csv_idx = df_raw.index[df_raw["split"] == "test"].to_numpy(dtype=np.int32)
             assert np.array_equal(df_pred["csv_row_index"].to_numpy(dtype=np.int32), expected_csv_idx), f"Row index mismatch on {ds}"
-            assert df_pred["smiles"].tolist() == df_te["smiles"].tolist(), f"SMILES mismatch on {ds}"
-            assert np.array_equal(df_pred["cliff_mol"].to_numpy(dtype=np.int32), df_te["cliff_mol"].to_numpy(dtype=np.int32)), f"cliff_mol mismatch on {ds}"
-            assert np.max(np.abs(df_pred["y_true"].to_numpy() - df_te["y"].to_numpy())) == 0.0, f"y_true mismatch on {ds}"
+            assert np.array_equal(df_pred["test_row_index"].to_numpy(dtype=np.int32), np.arange(len(df_te), dtype=np.int32)), f"test_row_index mismatch on {ds}"
 
             te_mols = [Chem.MolFromSmiles(s) for s in df_te["smiles"]]
             te_ik14 = {Chem.MolToInchiKey(m)[:14] for m in te_mols}
@@ -215,10 +240,10 @@ def main():
             assert len(tr_used_ik14 & te_ik14) == 0, f"InChIKey[:14] overlap on {ds}"
             assert len(tr_used_can & te_can) == 0, f"Canonical SMILES overlap on {ds}"
 
-            y_true = df_pred["y_true"].to_numpy(dtype=np.float64)
+            y_true = df_te["y"].to_numpy(dtype=np.float64)
             y_clss = df_pred["y_pred_clss"].to_numpy(dtype=np.float64)
             y_svm = df_pred["y_pred_svm_ecfp_baseline"].to_numpy(dtype=np.float64)
-            cliff = df_pred["cliff_mol"].to_numpy(dtype=np.int32) == 1
+            cliff = df_te["cliff_mol"].to_numpy(dtype=np.int32) == 1
 
             mse_all = float(mean_squared_error(y_true, y_clss))
             mse_cliff = float(mean_squared_error(y_true[cliff], y_clss[cliff]))

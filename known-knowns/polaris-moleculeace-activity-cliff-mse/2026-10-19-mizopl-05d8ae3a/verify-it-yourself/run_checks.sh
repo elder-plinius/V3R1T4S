@@ -24,7 +24,7 @@ echo "=== [2/2] Negative control: constant-mean predictions on CHEMBL287_Ki (mus
 "$PY" -c '
 import pandas as pd, sys
 df = pd.read_csv("object/CHEMBL287_Ki_test_predictions.csv")
-df["y_pred_clss"] = df["y_true"].mean()
+df["y_pred_clss"] = df["y_pred_clss"].mean()
 df.to_csv(sys.argv[1], index=False)
 ' "$TMP_BAD"
 
