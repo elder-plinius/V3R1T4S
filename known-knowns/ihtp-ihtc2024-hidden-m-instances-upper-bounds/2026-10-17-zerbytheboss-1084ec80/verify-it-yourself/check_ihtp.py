@@ -406,13 +406,13 @@ def verify_pkg(pkg_root):
     if res["total_cost"] != 68496 or int(row["value"]) != 68496:
         print(f"FAIL: total_cost={res['total_cost']} != 68496")
         return False
-    if not (res["total_cost"] < 69730):
+    if not (res["total_cost"] < 69715):
         print("FAIL: does not beat BKS")
         return False
 
     print(
         f"VERIFIED: instance=m26 total_violations={res['total_violations']} "
-        f"total_cost={res['total_cost']} bks=69730 delta=-1234 "
+        f"total_cost={res['total_cost']} bks=69715 delta=-1219 "
         f"weighted_costs={json.dumps(res['weighted_costs'], sort_keys=True)}"
     )
     print("PASS")
