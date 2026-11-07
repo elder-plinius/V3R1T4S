@@ -16,7 +16,7 @@ the block in object/construction.json in 77 seconds. Gluing 9 copies gives H: n 
 length below 5/9 (8 copies give exactly 5/9). A 2-vertex cut cannot carry an F7 (each F7 vertex has degree 2 or more
 inside it) and the merged order keeps every edge's middle, so the chain stays in the class.
 
-What failed: H is not the A.P.-hypergraph of any set of numbers (an 8-vertex piece of each copy forces a coincidence
-or an extra progression). A realizability-aware search over 30 anchor classes at n0 = 13 (206 abstract blocks, 1,155
+What failed: H is not the A.P.-hypergraph of any weak Sidon set (an 8-vertex piece forces a coincidence or an extra
+progression; argument in README.md "Not claimed", check in verify-it-yourself/check_not_realizable.py). A realizability-aware search over 30 anchor classes at n0 = 13 (206 abstract blocks, 1,155
 bad-relation cores) and an integer-position model found no realizable growth-6 block within their time caps; those
 searches were capped, so they exclude nothing.

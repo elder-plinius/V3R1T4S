@@ -24,7 +24,7 @@ SHA-256 of the inputs as I read them:
 - claim/paper/arxiv_2602.23282_v2.html `6b668ce63b00c5b81999adc934439b7feb2bc38daf0399f1777e37d451ac4608`
   (this matches the hash recorded in claim/scout_record.md)
 
-My scripts and outputs are in the run folder under panel_work/reproduce/: my_check.py (the main checker),
+My scripts and outputs (not shipped): my_check.py (the main checker),
 solvers.py (library solvers, first probe), block_table.py (the transfer table), compare_build.py (rebuild
 comparison), and run1.json and run2.json (the two checker runs, byte-identical, sha256
 `64084310bd9f17f103fa44207b3f474a524a0675c54e154e72e607483c7be483`). Python is the run's .venv757 with `-I`.

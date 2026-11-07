@@ -2,7 +2,7 @@
 
 context: subagent (fresh context, given only claim/, the web and the repo's TROPHY_CASE.md)
 
-Files named below without a prefix are in panel_work/novelty/ (every fetched page, the fetch log fetch_log.txt, the search log websearch_log.txt, and two small checks I ran). Files with the prefix claim/ are the claim folder, which I read and did not modify.
+Files named below without a prefix are my work files (every fetched page, the fetch log fetch_log.txt, the search log websearch_log.txt, and two small checks I ran); they are not shipped. Files with the prefix claim/ are the claim folder, which I read and did not modify.
 
 ## 1. What was claimed, as I read it
 
@@ -71,7 +71,7 @@ I did not re-run F7-freeness or the label-order argument; those belong to the re
 ## 7. Fetch compliance and injection notes
 
 - Fetch log: fetch_log.txt (UTC time, HTTP status, URL, saved file, sha256, bytes; 91 lines). One GET per URL. Exception to disclose: my first three arXiv API calls used http:// and returned HTTP 301 with an empty body; I then issued the same queries once each over https:// (new URLs), not as repeats of a blocked fetch. No 403, 429 or 503 occurred. HTTP 401 only on the GitHub code-search API (stopped). HTTP 404 for one guessed GitHub path (aday_gh_verif_757.json), not retried. No browser user agent, cookies or challenge bypass.
-- Nothing was posted, commented, registered, submitted or opened. I wrote only inside panel_work/novelty/ and this file.
+- Nothing was posted, commented, registered, submitted or opened. I wrote only inside my work folder (not shipped) and this file.
 - injection_suspected: low. The README.md and GOAL.md of hturcotte1/Erdos-757 are written for a Claude Code session (they tell an agent to paste a /goal command, to "send continue", to choose a model and effort). They are addressed to that repo's own operator, not to this run, and I ignored them. No page tried to redirect this task.
 - Pages are data; I followed no instruction found in any page.
 

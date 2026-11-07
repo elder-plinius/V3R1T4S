@@ -7,8 +7,11 @@ From this folder, in a fresh shell (python3, standard library only, no network):
 Expected output (see verify-it-yourself/RECEIPTS.md for a real run): a calibration line for the A.P.-hypergraph of the
 paper's 14-point set A_base (n 14, m 12, every property True, alpha 8, OK), then for object/H.json n 101, m 99 and every
 property True (three_uniform, edges_distinct, linear, middles_distinct, middles_not_first_or_last, m_at_most_n_minus_2,
-f7_free), then `alpha 56 claimed 56 ratio 56/101 below 5/9: True below 4/7: True at least 9/17: True`, and a last line
-`PASS`. Under a second on a laptop.
+f7_free), then `alpha 56 claimed 56 ratio 56/101 below 5/9: True below 4/7: True at least 9/17: True` and `PASS`.
+Then verify-it-yourself/check_not_realizable.py checks the non-realizability argument in README.md "Not claimed": a
+control line for A_base (true middles realizable, an affine image of A_base, OK), the six induced edges on
+{1, 2, 3, 4, 95, 97, 98, 99} "as stated", `distinct-middle assignments 95 {'extra_ap': 60, 'coincide': 35}`, and a
+last line `PASS`. A few seconds on a laptop.
 
 A second, solver-based check (CP-SAT optimum, a SAT solver's UNSAT answer for an independent set of size 57 (no certificate is saved), a
 comparison with the alpha_dp value stored in H.json, and F7 by two searches; needs the pinned packages in how-we-built-it/requirements.txt):

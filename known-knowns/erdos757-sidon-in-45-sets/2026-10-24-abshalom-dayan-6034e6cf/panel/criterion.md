@@ -59,7 +59,7 @@ linearity) maps e onto f. It found 0 copies.
 Positive controls: both methods find F7 in F7 itself and in a relabelled F7 inside a 20-vertex hypergraph. They agree
 on 300 random linear hypergraphs (108 positives). Both report the A.P.-hypergraph of the paper's A_base as F7-free.
 
-How I certified alpha(H) = 56 exactly (panel_work/criterion/crit_check.py):
+How I certified alpha(H) = 56 exactly (my script crit_check.py, not shipped):
 - RC2 MaxSAT gives 56, with a witness I checked is independent.
 - SCIP MIP gives 56, status OPTIMAL, bound 56.
 - Exact bucket elimination over a min-degree order (induced width 6) gives 56.
@@ -81,7 +81,7 @@ Ratio comparisons in fractions.Fraction:
   (alpha = 8+6K, n = 13+11K; first member below 5/9 at K = 8), but no limit is claimed. Nothing hidden.
 - "Realizable": p2 says "abstract" and asks only for the properties the paper proves. The paper proves no
   realizability criterion beyond them, so realizability is not required by the wording. The claim says plainly that
-  H is not realizable, and I confirmed it with exact rational linear algebra (panel_work/criterion/rebuild_realize.py):
+  H is not realizable, and I confirmed it with exact rational linear algebra (my script rebuild_realize.py, not shipped):
   - The induced subhypergraph on {1,2,3,4,95,97,98,99} has exactly the six edges listed in CLAIM.md.
   - The paper's Lemma 2.4 requires distinct middles. For every one of the 95 choices of middles that respects it, the
     solution space of x_a + x_c = 2 x_b has dimension 2 (the points are fixed up to an affine map). In every case it
@@ -103,7 +103,7 @@ Ratio comparisons in fractions.Fraction:
 ## Null models
 
 - Random ordered hypergraphs with the same constraints (each interior vertex the middle of at most one edge,
-  linear, F7-free; panel_work/criterion/nullmodel.py):
+  linear, F7-free; my script nullmodel.py, not shipped):
   - n = 16, 20, 30 (300 samples each): minimum alpha/n of 0.625, 0.65 and 0.667.
   - n = 101 (1000 samples, all with m = 99): minimum alpha 69 (0.683), mean 71.2.
   - A naive local search minimizing alpha (3 runs x 3000 moves) reached only 5/8, 13/20 and 19/30 at n = 16, 20, 30.
