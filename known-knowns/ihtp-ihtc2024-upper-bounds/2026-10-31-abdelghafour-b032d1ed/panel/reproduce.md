@@ -1,3 +1,14 @@
+> Note added 2026-11-07 (packaging, after maintainer review): paths under `claim/` and `CLAIM.md` below are this panel's local
+> working files and are not included in this package. They correspond to:
+> - claim/sol_i20.json: object/sol_i20.json (same bytes; sha256 in INDEX.csv)
+> - claim/IHTP_Validator.cc: https://ihtc2024.github.io/assets/files/IHTP_Validator.cc (sha256 0b56fa75ea7de1d4a7e3dbd2d5b88e7ac779d69e4287e1247305d873a06a8afa)
+> - claim/i20.json: the i20.json entry of https://ihtc2024.github.io/assets/files/ihtc2024_competition_instances.zip (archive sha256 365a05227c156029d3653d6997ddf28392a728521722f37ad9edf4368ac6f681, entry sha256 f5c19fbd4035d3f6ef4e66a04f73177a496fb141732c268d558df2e60b559540)
+> - claim/published_sol_i20.json: the organisers' i20 solution, https://ihtc2024.github.io/assets/files/solutions/public/IHTP/sol_i20.json
+> - claim/ihtp_table.html: https://ihtc2024.github.io/ihtp/index.html as fetched 2026-10-31T00:02:47Z (sha256 2b69fe2e2b6e0a978472aa3916c8c53a774e223e666f20966156802f9ce2f363); see the-record-we-beat/snapshot.md
+> - claim/json.hpp: nlohmann/json single_include/nlohmann/json.hpp (https://github.com/nlohmann/json)
+> - CLAIM.md: summarised in README.md and INDEX.csv
+> The text below is otherwise unchanged.
+
 # REPRODUCE skeptic report: i20 (claim: 0 violations, cost 28812 < listed 29042)
 
 context: subagent (Claude Code Agent tool, fresh context)

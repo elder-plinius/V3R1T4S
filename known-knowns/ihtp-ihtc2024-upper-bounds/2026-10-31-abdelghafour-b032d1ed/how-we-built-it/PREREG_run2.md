@@ -6,7 +6,7 @@ Statistic: official validator "Total violations" (must be 0) and "Total cost" pe
 Threshold: strictly lower than max-known(table, any PR or paper value for that instance); ties fail.
 Method (fixed settings): runs/2026-10-30-2321/attempts/optimizer/code/anneal.cc, 300 s, seed 2, warm start = our run-1
 best for that instance; instances: i08 i16 i18 i20 m06 m07 m08 m14 m19 m09 m21 m24 m26 m30.
-One table cell per claim; each surviving cell gets its own claim/ and its own three-skeptic panel.
+One table cell per claim; each surviving cell gets its own claim folder and its own three-skeptic panel.
 
 null_test: not needed because each claim is an explicit solution object checked by a deterministic validator against a table value.
 
