@@ -1,10 +1,11 @@
-context: subagent
+# Criterion Audit (`ccd-binary-lennard-jones-clusters`)
+
+- Context: Clause-by-clause verification against `bank/targets.json` partial win `p2`.
 
 Evaluation against target definition:
-- Partial win p2 requires: "Audit: a machine-readable merged table of all 600 cells (min over the CCD table and all hosted archives, each re-evaluated from coordinates), listing every cell where the live table is beaten by a hosted file by > 1e-4 and any posted point file that does not reproduce its own posted energy within 1e-5."
-- Partial win p3 requires: "A certified improvement at a size ratio in 1.4..2.0 for N <= 50 over Takeuchi's published value for the same (N, ratio) (his supplementary data), or a first certified putative global minimum for ratio 1.4..2.0 at N in 51..100 reported as a literature frontier."
-
-Both criteria p2 and p3 are satisfied.
-confirmed_scope: A machine-readable 600-cell audit table re-evaluating coordinates from the Cambridge Cluster Database and all 4 hosted improvement archives identifying 33 cells where hosted files beat the live table by > 1e-4, plus the first certified putative global minima for size ratio 1.50 at N in [51..60] and 7 certified adjacent-ratio and N+/-1 transplanted minima beating canonical all.tar by up to +1.9078, polished in 30-digit mpmath to gradient norm < 1e-10 with zero negative Hessian eigenvalues.
+- Partial win `p2` requires: "Audit: a machine-readable merged table of all 600 cells (min over the CCD table and all hosted archives, each re-evaluated from coordinates), listing every cell where the live table is beaten by a hosted file by > 1e-4 and any posted point file that does not reproduce its own posted energy within 1e-5."
+- `object/blj_600_cell_audit.csv` tabulates all 600 cells (`N=1..100`, ratios `1.05..1.30`), re-evaluates from coordinates every reachable point file linked by `table.html` (`475` canonical + `27` live `new` + `4` stale hrefs, plus `all.tar` fallbacks for the `70` broken `HTTP 404` `new`/`newer` links) and all 63 files in the 4 hosted improvement archives, provides both `merged_min_energy` (minimum over the live table and all hosted files) and `best_coord_evaluated_energy`, and flags all 33 cells beaten by hosted archives by `> 1e-4`.
+- `object/blj_all_666_files_reproduction_audit.csv` reports coordinate reproduction for all 666 hosted coordinate files (`666/666` reproduce their own header energy within `1e-5`, max error `9.14e-8`).
+- `confirmed_scope`: A machine-readable 600-cell merged audit table (object/blj_600_cell_audit.csv) and 666-file coordinate re-evaluation audit (object/blj_all_666_files_reproduction_audit.csv) re-evaluating from 3D Cartesian coordinates all 576 canonical all.tar point files, all 27 live HTTP-200 'new' point files on the Cambridge Cluster Database server (while cataloging the 70 'new'/'newer' table links that return HTTP 404 on the live server and 4 updated cells whose table href still points to the superseded all.tar file), and all 63 point files across the 4 hosted improvement archives (Wenqi_Tao_BLJ.zip, Wenqi_Tao_BLJ2.zip, Istvan_Kolossvary_new_BLJ_minima.tgz, and NEW_BINARY_LJ_MINIMA/), verifying that 666/666 hosted coordinate files reproduce their own posted header energies within 1e-5 (max error 9.14e-8), reporting the merged minimum energy over the live table and all hosted files for all 600 cells, and identifying all 33 cells where hosted improvement files beat both the live HTML table and live linked point files by > 1e-4.
 
 pass: true

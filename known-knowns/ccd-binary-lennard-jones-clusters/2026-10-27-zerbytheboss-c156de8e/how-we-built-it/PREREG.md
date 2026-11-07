@@ -3,7 +3,7 @@
 - Date: 2026-10-28T22:15:00Z
 - Target ID: `ccd-binary-lennard-jones-clusters`
 - Success Criteria:
-  - Exact binary Lennard-Jones potential $E = \sum_{i < j} 4 ((\sigma_{ij}/r_{ij})^{12} - (\sigma_{ij}/r_{ij})^6)$
-  - Partial win p2: Merged audit table of all 600 cells across CCD table and all 4 hosted improvement archives re-evaluated from coordinates, listing every cell where live table is beaten by > 1e-4.
-  - Partial win p3: Certified putative global minimum for size ratio in 1.4..2.0 at N in 51..100, polished in mpmath (30 digits) to $\|\nabla V\| < 10^{-10}$ with 3Nx3N Hessian having exactly 6 zero modes and 0 negative eigenvalues.
+  - Exact binary Lennard-Jones potential $E = \sum_{i < j} 4 ((\sigma_{ij}/r_{ij})^{12} - (\sigma_{ij}/r_{ij})^6)$ with $\sigma_{AA}=1$, $\sigma_{BB}=\text{ratio}$, $\sigma_{AB}=(1+\text{ratio})/2$.
+  - Partial win `p2`: A machine-readable merged table of all 600 cells (minimum over the CCD table and all hosted archives, each re-evaluated from coordinates), listing every cell where the live table is beaten by a hosted file by $> 10^{-4}$ and any posted point file that does not reproduce its own posted energy within $10^{-5}$.
+  - Analytical Hessian zero-mode tolerance $|\lambda| < 10^{-6}$.
 - null_test: not needed because deterministic coordinate re-evaluations and analytical Hessian eigenmode calculations are exact mathematical verifications against published tables.

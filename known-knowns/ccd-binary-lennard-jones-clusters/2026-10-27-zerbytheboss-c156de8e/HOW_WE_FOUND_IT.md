@@ -1,40 +1,27 @@
-# How We Found It: Binary Lennard-Jones Clusters Audit (`p2`), Literature Frontier (`p3`) & Motif Transplantation Upgrade
+# How We Found It: Binary Lennard-Jones Clusters 600-Cell & 666-File Coordinate Audit (`p2`)
 
 _contributor text, unverified_
 
 ## Methodology
 
-### 1. Database & Improvement Archives Recomputation Audit (`p2`)
-We downloaded and parsed raw Cartesian coordinates across all point files from:
-1. Canonical archive `all.tar` (576 structures).
-2. Huang Wenqi & Ye Tao (JCIM 2011) archives: `Wenqi_Tao_BLJ.zip` (12 structures) and `Wenqi_Tao_BLJ2.zip` (17 structures).
-3. Istvan Kolossvary (PRE 2010) archive: `Istvan_Kolossvary_new_BLJ_minima.tgz` (17 structures).
-4. Sicher, Mohr & Goedecker (JCP 2011) archive: `NEW_BINARY_LJ_MINIMA/` (17 cluster structures).
+### 1. Complete Coordinate Harvest Across Live Server & Hosted Archives
+We fetched and parsed every coordinate file linked by or hosted alongside the Cambridge Cluster Database Binary Lennard-Jones page (`https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/BLJ/`):
+1. **Canonical archive `all.tar`** (`576` coordinate point files covering `N = 5..100` across the 6 size ratios `{1.05, 1.10, 1.15, 1.20, 1.25, 1.30}`).
+2. **Live server directory audit for the 97 `new`/`newer` table links**:
+   - Inspecting the live Apache directory indexes (`/1.05/`, `/1.1/`, `/1.15/`, `/1.2/`, `/1.25/`, `/1.3/`) and fetching every `<A HREF="...">` target in `table.html` revealed that **27 `new` coordinate files** (`1.05/43new`, `1.05/90new`, `1.1/47new`, `1.1/62new..65new`, `1.1/67new`, `1.1/70new..81new`, `1.1/83new..89new`) are hosted live (`HTTP 200`) on the server even though they were omitted from `all.tar`.
+   - The remaining **70 `new`/`newer` links** (`1.1/46new` and all 69 `new`/`newer` links in `1.15/`, `1.2/`, `1.25/`, and `1.3/`) return `HTTP 404 Not Found` on the live server, where only the un-suffixed `all.tar` coordinate file (`1.X/N`) is present.
+   - In addition, **4 cells** (`1.05/31`, `1.05/36`, `1.05/97`, `1.1/66`) have updated energies in `table.html` (footnote `c`), while their `<A HREF="1.X/N">` link still points to the superseded `all.tar` file.
+3. **All 4 hosted improvement archives (`63` coordinate files)**:
+   - `Wenqi_Tao_BLJ.zip` (`12` structures, Huang & Ye, *JCIM* 2011)
+   - `Wenqi_Tao_BLJ2.zip` (`17` structures, Huang & Ye, *JCIM* 2011)
+   - `Istvan_Kolossvary_new_BLJ_minima.tgz` (`17` structures, Kolossvary, *PRE* 2010)
+   - `NEW_BINARY_LJ_MINIMA/` (`17` structures, Sicher, Mohr & Goedecker, *JCP* 2011)
 
-For every structure, we computed the pairwise binary Lennard-Jones potential without cutoff:
+### 2. Exact Pairwise BLJ Coordinate Re-Evaluation & Merged Minimum Table
+For all `666` coordinate point files (`576 + 27 + 63`), we evaluated the pairwise binary Lennard-Jones potential without cutoff:
 $$E = \sum_{i < j} 4 \left( \left(\frac{\sigma_{ij}}{r_{ij}}\right)^{12} - \left(\frac{\sigma_{ij}}{r_{ij}}\right)^6 \right)$$
-with Lorentz-Berthelot arithmetic mean $\sigma_{AB} = (1 + \text{ratio}) / 2$, $\sigma_{AA} = 1.0$, $\sigma_{BB} = \text{ratio}$.
+with $\sigma_{AA} = 1.0$, $\sigma_{BB} = \text{ratio}$, and Lorentz-Berthelot arithmetic mean $\sigma_{AB} = (1 + \text{ratio}) / 2$.
 
-We verified:
-- Analytical positive control: dimer $N=2$ at $r = 2^{1/6}$ gives $E = -1.000000000000$.
-- Analytical negative control: perturbed dimer at $r = 1.25$ gives $E = -0.773698093056 > -1.0$.
-- 100% of all posted point files in the canonical archive reproduce their posted header energies within $10^{-5}$ (max discrepancy $4.99 \times 10^{-11}$).
-- Exactly 33 cells across the 600-cell space have hosted archive files that beat the live table by $> 10^{-4}$.
-
-### 2. Literature Frontier Putative Minima Certification (`p3`)
-For size ratio $\sigma_{BB}/\sigma_{AA} = 1.50$ (where no entries exist in the canonical CCD table), we constructed putative global minima across $N \in [51..60]$:
-1. Seeded initial structures with Mackay icosahedral and polytetrahedral cores.
-2. Optimized chemical ordering using distance-from-center-of-mass sorting, placing small A atoms in the core and large B atoms on the surface.
-3. Relaxed with L-BFGS-B and performed analytical Newton-Raphson polish in 30-digit `mpmath` until gradient norm $\|\nabla V\| < 10^{-10}$ in reduced units.
-4. Evaluated and diagonalized the full $3N \times 3N$ analytical Hessian:
-   - Exactly 6 zero modes ($|\lambda| < 10^{-5}$) corresponding to continuous rigid body translations and rotations.
-   - Zero negative eigenvalues, certifying true local minima.
-
-### 3. Adjacent-Ratio & $N \pm 1$ Motif Transplantation Upgrade (`runs/2026-10-28-1910/`)
-To test whether the 33 improved coordinates from hosted archives could yield deeper local minima in neighboring problem instances, we performed systematic motif transplantation:
-1. **Adjacent-ratio transplantation**: Seeded candidate clusters at $N$ using coordinates optimized at adjacent size ratios ($|\Delta \text{ratio}| \in \{0.05, 0.10\}$) for all cells where the live table does not beat canonical archives.
-2. **$N \pm 1$ motif transplantation**: For each improved cluster at $N$, generated candidate configurations at $N-1$ by systematically testing removal of each surface atom (identified by maximal distance from center-of-mass and highest local coordination energy).
-3. **Multi-level optimization**: Applied two-level species exchange ($O(N)$ pair swap delta evaluation), monotonic basin hopping, and L-BFGS-B in native C.
-4. **Arbitrary-precision polish & Hessian certification**: Polished to gradient norm $\|\nabla V\| < 10^{-10}$ in 30-digit `mpmath` Newton-Raphson, and diagonalized the $3N \times 3N$ analytical Hessian to confirm exactly 6 zero eigenvalues ($|\lambda| < 10^{-5}$) and zero negative eigenvalues.
-
-Results certified 7 distinct deeper minima beating the canonical `all.tar` archive by margins up to $+1.9078$ (e.g., $N=99, \text{ratio}=1.20$, $E = -584.823907$ vs canonical $-582.916069$). Simultaneously, this audit confirmed the strength of the updated live table entries by Cassioli, Locatelli, and Schoen, which remain the deepest known configurations for these cells.
+- **100% Header Reproduction (`666/666`)**: Every one of the 666 hosted coordinate files reproduces its own internal header energy within $10^{-5}$ (maximum discrepancy $9.14 \times 10^{-8}$ on `Istvan_Kolossvary/99SBB1.25.txt`; maximum discrepancy across `all.tar` and the 27 live `new` files is $4.99 \times 10^{-11}$).
+- **Live Table Reproduction**: All `475` unchanged canonical links and all `27` live `HTTP 200` `new` files reproduce `table.html` within $5 \times 10^{-7} < 10^{-5}$. Only the `70` broken `HTTP 404` `new`/`newer` links (when falling back to `all.tar`) and the `4` stale un-suffixed hrefs (`1.05/31`, `1.05/36`, `1.05/97`, `1.1/66`) differ from `table.html` by $> 10^{-5}$.
+- **33 Cells Beaten by Hosted Improvement Archives**: Across the 600 cells, `object/blj_600_cell_audit.csv` reports both `merged_min_energy` (the minimum over `table.html`, the live linked file, `all.tar`, and all 4 hosted improvement archives) and `best_coord_evaluated_energy` (the minimum strictly over coordinate-evaluated files), identifying the 33 cells where hosted archive files beat both `table.html` and the live linked point files by $> 10^{-4}$.
