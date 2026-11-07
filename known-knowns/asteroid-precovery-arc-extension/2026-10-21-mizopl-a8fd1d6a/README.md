@@ -18,6 +18,8 @@ sh verify-it-yourself/run_checks.sh
   - Primary URL: `https://ssd.jpl.nasa.gov/ftp/eph/planets/bsp/de421.bsp` (`16,788,480` bytes, `sha256: a20a7139da04cbc462454634918e9a9ca69127044e2cc9d4f9c16e238d2deedc`)
   - NASA NAIF Mirror URL: `https://naif.jpl.nasa.gov/pub/naif/generic_kernels/spk/planets/a_old_versions/de421.bsp` (`16,790,528` bytes, `sha256: 08b20db2ae22488650641c5a9033e5bfda4b1c4b440cfeaf20f621cfa18ecdb3`)
   - The checker (`verify-it-yourself/check_precovery_claim.py` & `verify-it-yourself/nbody_precovery.py`) fetches `de421.bsp`, verifies its exact byte length and SHA-256 digest (stopping immediately with `FAIL` on any hash mismatch), and extracts the 2009–2027 Chebyshev polynomial coefficients in memory.
+- **File Paths inside `object/precovery_2019_QT15/precovery_bundle.json`**:
+  - In `object/precovery_2019_QT15/precovery_bundle.json` (kept byte-identical so its SHA-256 `a8fd1d6acaa5d05e238ca05078cff4fd0522908dabc12cbf6099eca35bfeca15` matches the package ID `2026-10-21-mizopl-a8fd1d6a`), the eight file-reference fields (`sbdb_file`, `mpc_obs80_file`, the three `detections[*].science_cutout_file` fields, and the three `detections[*].reference_epoch_check.ref_cutout_file` fields) begin with `claim/precovery_2019_QT15/` and refer to the packaged files in `object/precovery_2019_QT15/` (`object/precovery_2019_QT15/sbdb_orbit_cov.json`, `object/precovery_2019_QT15/mpc_obs80.txt`, `object/precovery_2019_QT15/science_warp_01..03_*.fits`, and `object/precovery_2019_QT15/ref_warp_01..03_*.fits`). The checker (`resolve_obj_path` in `verify-it-yourself/check_precovery_claim.py`) strips the `claim/` prefix and resolves all eight paths directly under `object/precovery_2019_QT15/`.
 
 ## Compared To
 
