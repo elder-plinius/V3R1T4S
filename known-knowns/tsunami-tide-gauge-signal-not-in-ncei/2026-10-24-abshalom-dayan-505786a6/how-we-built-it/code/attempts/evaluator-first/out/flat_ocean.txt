@@ -1,0 +1,15 @@
+lat0    0 dist    200 km: error % min -1.16 max -0.09 mean -0.50
+lat0    0 dist    800 km: error % min -0.39 max +0.15 mean -0.13
+lat0    0 dist   1500 km: error % min -0.24 max +0.05 mean -0.03
+  grid (921, 921), 0.2 s
+lat0   30 dist    200 km: error % min -1.16 max -0.09 mean -0.50
+lat0   30 dist    800 km: error % min -0.39 max +0.15 mean -0.13
+lat0   30 dist   1500 km: error % min -0.24 max +0.05 mean -0.03
+  grid (921, 921), 0.1 s
+lat0   60 dist    200 km: error % min -1.16 max -0.09 mean -0.50
+lat0   60 dist    800 km: error % min -0.39 max +0.15 mean -0.13
+lat0   60 dist   1500 km: error % min -0.24 max +0.05 mean -0.03
+  grid (921, 921), 0.1 s
+peak RSS MB 138.8125
+        0.71 real         2.02 user         1.23 sys
+           145817600  maximum resident set size

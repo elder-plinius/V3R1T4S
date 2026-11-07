@@ -1,0 +1,10 @@
+{
+ "controls": 400,
+ "best_control": 0.078,
+ "real": 0.1584,
+ "real_beats_all": true,
+ "fake_rate": 0.0526,
+ "S": 35,
+ "USABLE": 221,
+ "N": 264
+}

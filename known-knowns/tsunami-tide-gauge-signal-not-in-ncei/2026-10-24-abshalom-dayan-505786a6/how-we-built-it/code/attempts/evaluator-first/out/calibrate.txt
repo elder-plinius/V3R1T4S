@@ -1,0 +1,14 @@
+cal dmin   1 m: n 196 (47 events), c -9.7 min, within 10 with c 0.454, without c 0.372
+cal dmin  10 m: n 196 (47 events), c -6.1 min, within 10 with c 0.464, without c 0.454
+cal dmin  20 m: n 196 (47 events), c -5.3 min, within 10 with c 0.454, without c 0.454
+cal dmin  50 m: n 193 (47 events), c -3.0 min, within 10 with c 0.440, without c 0.456
+SELECTED dmin 10 m, c -6.1 min
+calibration 2005-2011 (selected model): rows 196 events 47; outside +/-10 0.536 (95% CI 0.444-0.631); within 10 0.464, 15 0.663, 20 0.770; median err (NCEI - ETA) -0.0 min, IQR -11.5..+10.7; events with >=1 row within 10: 26/47, all rows within 10: 9/47
+   M<7.5: rows 62 events 26 outside +/-10 0.532 median +9.3
+   M>=7.5: rows 134 events 21 outside +/-10 0.537 median -5.4
+reported once: 2012-2014: rows 90 events 19; outside +/-10 0.422 (95% CI 0.322-0.568); within 10 0.578, 15 0.767, 20 0.844; median err (NCEI - ETA) +6.2 min, IQR +1.9..+13.1; events with >=1 row within 10: 15/19, all rows within 10: 5/19
+   M<7.5: rows 26 events 9 outside +/-10 0.500 median +10.1
+   M>=7.5: rows 64 events 10 outside +/-10 0.391 median +4.6
+reported once (hold-out): 2015-2026: rows 79 events 25; outside +/-10 0.468 (95% CI 0.366-0.676); within 10 0.532, 15 0.734, 20 0.823; median err (NCEI - ETA) +6.3 min, IQR -4.2..+13.1; events with >=1 row within 10: 14/25, all rows within 10: 8/25
+   M<7.5: rows 21 events 13 outside +/-10 0.667 median +12.9
+   M>=7.5: rows 58 events 12 outside +/-10 0.397 median +3.4

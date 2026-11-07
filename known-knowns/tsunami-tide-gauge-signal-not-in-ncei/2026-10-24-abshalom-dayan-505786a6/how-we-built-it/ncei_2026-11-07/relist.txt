@@ -1,0 +1,27 @@
+NCEI events 2015-2026 in the saved pages: 231
+
+== object/map.csv
+LISTED flag or NCEI id changes against the map: 0
+
+matched pairs with no coordinates, no NCEI clock time or a gap above 24 h:
+  us20007z80 (NO_SIGNAL) ~ NCEI 5632 SOLOMON ISLANDS, SOLOMON ISLANDS, validity 4, cause 1: distance 23 km, NCEI minus ComCat +25.5 h
+  us20007zlq (NO_DATA) ~ NCEI 5630 SOLOMON ISLANDS, SOLOMON ISLANDS, validity 4, cause 1: distance 23 km, NCEI minus ComCat -25.5 h
+  us1000aytk (SIGNAL) ~ NCEI 5664 LOYALTY ISLANDS, NEW CALEDONIA, validity 4, cause 1: distance 30 km, NCEI minus ComCat +25.7 h
+  us1000azjt (NO_SIGNAL) ~ NCEI 5663 LOYALTY ISLANDS, NEW CALEDONIA, validity 4, cause 1: distance 31 km, NCEI minus ComCat -25.7 h
+  us7000gbu4 (NO_SIGNAL) ~ NCEI 6087 RIO DE LA PLATA ESTUARY, ARGENTINA, validity 4, cause 9: distance none (no coordinates), NCEI minus ComCat n/a
+  us7000lfxx (NO_SIGNAL) ~ NCEI 5903 E. MINDANAO ISLAND, PHILIPPINES, validity 4, cause 1: distance 52 km, NCEI minus ComCat -29.2 h
+frozen rule: USABLE 221, listed 108; SIGNAL 35, listed 33
+strict variant (coordinates required, |gap| <= 24 h): USABLE listed 106, SIGNAL listed 33; USABLE quakes that lose the flag: ['us7000gbu4', 'us7000lfxx']
+
+== sensitivity-v5/map.csv
+LISTED flag or NCEI id changes against the map: 0
+
+matched pairs with no coordinates, no NCEI clock time or a gap above 24 h:
+  us20007z80 (NO_SIGNAL) ~ NCEI 5632 SOLOMON ISLANDS, SOLOMON ISLANDS, validity 4, cause 1: distance 23 km, NCEI minus ComCat +25.5 h
+  us20007zlq (OVERLAP) ~ NCEI 5630 SOLOMON ISLANDS, SOLOMON ISLANDS, validity 4, cause 1: distance 23 km, NCEI minus ComCat -25.5 h
+  us1000aytk (SIGNAL) ~ NCEI 5664 LOYALTY ISLANDS, NEW CALEDONIA, validity 4, cause 1: distance 30 km, NCEI minus ComCat +25.7 h
+  us1000azjt (NO_SIGNAL) ~ NCEI 5663 LOYALTY ISLANDS, NEW CALEDONIA, validity 4, cause 1: distance 31 km, NCEI minus ComCat -25.7 h
+  us7000gbu4 (NO_SIGNAL) ~ NCEI 6087 RIO DE LA PLATA ESTUARY, ARGENTINA, validity 4, cause 9: distance none (no coordinates), NCEI minus ComCat n/a
+  us7000lfxx (OVERLAP) ~ NCEI 5903 E. MINDANAO ISLAND, PHILIPPINES, validity 4, cause 1: distance 52 km, NCEI minus ComCat -29.2 h
+frozen rule: USABLE 188, listed 86; SIGNAL 26, listed 24
+strict variant (coordinates required, |gap| <= 24 h): USABLE listed 85, SIGNAL listed 24; USABLE quakes that lose the flag: ['us7000gbu4']

@@ -1,0 +1,1392 @@
+{
+ "about": "v4 control days (PREREG.md section 2: a control day counts when usable; PASSES = DETECTS, >= 10 counted control days and none DETECTS) for the 13 codes whose stage-1 sensor detects at an origin where object/quakes/ holds no control days for it: the PREREG.v5 run computed control days only when every usable tied sensor detects. They decide the class of 6 origins (us1000c2zy, us20003kfj and us60007idc real; us60004yps and us7000ip0l at o-5 h; us10007mn3 at o-7 h) and the passing-site count of 3 more (us6000dg77 real, us20003kfj at o-5 h, us20003kfv at o-7 h). Recomputed 2026-11-07 with lib/det.py (IMPL6 = True; v4 stage-2 sensor choice, the most samples in the window) from IOC windows re-fetched that day, by how-we-built-it/code/recheck_refetch.py.",
+ "codes": [
+  {
+   "quake": "us10007mn3",
+   "origin": "fake7",
+   "code": "corr2",
+   "site": 6,
+   "eta": 117.75,
+   "stage2_window": [
+    "2016-12-17 06:00:00",
+    "2017-01-03 08:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.674,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 3.43,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.158,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 2.569,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 0.915,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 3.266,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.35,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 1.127,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.618,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 3.248,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 2.399,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 3.046,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.721,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 2.579,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=corr2&timestart=2016-12-17T06:00:00&timestop=2017-01-03T08:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:16:01Z",
+    "sha256": "58312dff7b762270a03f215ec6688bf159cd6757fb9d05af7af5e8f132051b58",
+    "bytes": 3575194,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us1000c2zy",
+   "origin": "real",
+   "code": "pumo2",
+   "site": 13,
+   "eta": 48.85,
+   "stage2_window": [
+    "2018-01-02 01:00:00",
+    "2018-01-19 03:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 3.614,
+     "arrival": 89.45,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 2.373,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.263,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 3.138,
+     "arrival": 44.45,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 3.548,
+     "arrival": 22.45,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 3.573,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.82,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.991,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.808,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 2.853,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 3.31,
+     "arrival": 100.45,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 3.039,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 3.99,
+     "arrival": 80.45,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 2.817,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=pumo2&timestart=2018-01-02T01:00:00&timestop=2018-01-19T03:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:16:13Z",
+    "sha256": "c1c74d8d2be892aa428cfc09a7790c0f479bfbe2e2177c24f068ac4a4d3655e6",
+    "bytes": 3558019,
+    "sha256_at_original_fetch": "c1c74d8d2be892aa428cfc09a7790c0f479bfbe2e2177c24f068ac4a4d3655e6"
+   }
+  },
+  {
+   "quake": "us20003kfj",
+   "origin": "fake5",
+   "code": "talt2",
+   "site": 17,
+   "eta": 59.35,
+   "stage2_window": [
+    "2015-09-08 21:00:00",
+    "2015-09-25 23:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 3.984,
+     "arrival": 85.75,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 2.693,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.265,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 2.644,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 2.203,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 3.125,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.045,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.257,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 1.593,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 2.831,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 2.305,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.797,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.936,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 2.184,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=talt2&timestart=2015-09-08T21:00:00&timestop=2015-09-25T23:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:25:16Z",
+    "sha256": "017e5ce55bf2f5a924ee9204ae46a695d86d8d2ee078b80d173c022c09ea06b9",
+    "bytes": 3559104,
+    "sha256_at_original_fetch": "017e5ce55bf2f5a924ee9204ae46a695d86d8d2ee078b80d173c022c09ea06b9"
+   }
+  },
+  {
+   "quake": "us20003kfj",
+   "origin": "real",
+   "code": "meji2",
+   "site": 25,
+   "eta": 76.32,
+   "stage2_window": [
+    "2015-09-09 02:00:00",
+    "2015-09-26 04:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.854,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 2.421,
+     "arrival": 79.75,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.557,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 2.642,
+     "arrival": 93.75,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 3.255,
+     "arrival": 121.75,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 2.09,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.491,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 1.539,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 1.271,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 2.705,
+     "arrival": 54.75,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 2.013,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.458,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.549,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 2.382,
+     "arrival": 108.75,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=meji2&timestart=2015-09-09T02:00:00&timestop=2015-09-26T04:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:15:35Z",
+    "sha256": "2a01fc5f43331c0008b026bad6aba55e27b9c927bd9d7afadd13b549b9005329",
+    "bytes": 3512543,
+    "sha256_at_original_fetch": "2a01fc5f43331c0008b026bad6aba55e27b9c927bd9d7afadd13b549b9005329"
+   }
+  },
+  {
+   "quake": "us20003kfj",
+   "origin": "real",
+   "code": "sho2",
+   "site": 4,
+   "eta": 23.15,
+   "stage2_window": [
+    "2015-09-09 02:00:00",
+    "2015-09-26 04:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 13,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 3.039,
+     "arrival": 31.75,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 1.977,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.687,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 2.109,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 2.497,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.408,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 1.868,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.238,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 2.416,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 3.556,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.478,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 3.969,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 3.019,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=sho2&timestart=2015-09-09T02:00:00&timestop=2015-09-26T04:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:15:31Z",
+    "sha256": "b9fcba785e91241ebc1a65f07f08b866a03754604c367f6a2ba8baff3ebd46e2",
+    "bytes": 3399433,
+    "sha256_at_original_fetch": "b9fcba785e91241ebc1a65f07f08b866a03754604c367f6a2ba8baff3ebd46e2"
+   }
+  },
+  {
+   "quake": "us20003kfv",
+   "origin": "fake7",
+   "code": "anto2",
+   "site": 21,
+   "eta": 68.71,
+   "stage2_window": [
+    "2015-09-08 20:00:00",
+    "2015-09-25 22:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.647,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 3.219,
+     "arrival": 81.55,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.274,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 2.553,
+     "arrival": 53.55,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 3.054,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 2.908,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.212,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 1.496,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 1.845,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 1.185,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 2.11,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.865,
+     "arrival": 92.55,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 1.803,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 2.641,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=anto2&timestart=2015-09-08T20:00:00&timestop=2015-09-25T22:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:25:20Z",
+    "sha256": "18d79a87376b35007a5ba30aef93757c0de27b563aefcf3a0cd47a1489c7e8fb",
+    "bytes": 3575197,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us60004yps",
+   "origin": "fake5",
+   "code": "cons2",
+   "site": 2,
+   "eta": 26.17,
+   "stage2_window": [
+    "2019-07-24 12:00:00",
+    "2019-08-10 14:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.054,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 2.309,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.174,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 3.937,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 1.972,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 2.331,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.53,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.035,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.42,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 2.091,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 3.578,
+     "arrival": 76.88,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 1.84,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.737,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 1.63,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=cons2&timestart=2019-07-24T12:00:00&timestop=2019-08-10T14:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:16:47Z",
+    "sha256": "683103740c0824e89b28cf80ae69ff84d673bf5d27c39c13c1fa47a438c10c84",
+    "bytes": 3513581,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us60004yps",
+   "origin": "fake5",
+   "code": "const",
+   "site": 2,
+   "eta": 26.17,
+   "stage2_window": [
+    "2019-07-24 12:00:00",
+    "2019-08-10 14:00:00"
+   ],
+   "stage2_sensor": "ra2",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.066,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 2.332,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.17,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 4.055,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 1.998,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 2.338,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.554,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.003,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.437,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 2.078,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 3.703,
+     "arrival": 76.88,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 1.868,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.735,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 1.723,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=const&timestart=2019-07-24T12:00:00&timestop=2019-08-10T14:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:16:42Z",
+    "sha256": "5d579be3d076c87c3c228322a76d7959b7d55508d5fb77409ed3ab42dd0bf13e",
+    "bytes": 3521300,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us60004yps",
+   "origin": "fake5",
+   "code": "quir",
+   "site": 7,
+   "eta": 60.82,
+   "stage2_window": [
+    "2019-07-24 12:00:00",
+    "2019-08-10 14:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.507,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 3.296,
+     "arrival": 105.88,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 1.7,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 3.583,
+     "arrival": 67.88,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 2.209,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 2.443,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.719,
+     "arrival": 81.88,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.727,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.844,
+     "arrival": 94.88,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 3.824,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 1.895,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.281,
+     "arrival": 62.88,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.327,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 1.397,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=quir&timestart=2019-07-24T12:00:00&timestop=2019-08-10T14:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:16:51Z",
+    "sha256": "3e7f064b1d6e28614cc823699ee89c98e0542bf319879d90091a611af7c1aaf9",
+    "bytes": 3508041,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us60004yps",
+   "origin": "fake5",
+   "code": "quir2",
+   "site": 7,
+   "eta": 60.82,
+   "stage2_window": [
+    "2019-07-24 12:00:00",
+    "2019-08-10 14:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 2.334,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 3.154,
+     "arrival": 105.88,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 1.632,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 3.788,
+     "arrival": 30.88,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 2.173,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 2.445,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.646,
+     "arrival": 30.88,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.699,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 2.439,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 3.664,
+     "arrival": 67.88,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 1.917,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.191,
+     "arrival": 61.88,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.384,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 1.416,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=quir2&timestart=2019-07-24T12:00:00&timestop=2019-08-10T14:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:16:56Z",
+    "sha256": "82cb623ac22135e30b52938a52586281ade378e6315d7d6f586faea1423325f3",
+    "bytes": 3569858,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us60007idc",
+   "origin": "real",
+   "code": "geor",
+   "site": 2,
+   "eta": 14.75,
+   "stage2_window": [
+    "2020-01-20 18:00:00",
+    "2020-02-06 20:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 11,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -4,
+     "r": 1.227,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 3.286,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 3.293,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 3.487,
+     "arrival": 42.6,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 3.926,
+     "arrival": 37.6,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 76.134,
+     "arrival": -2.4,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 1.326,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 6.059,
+     "arrival": -14.4,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 1.653,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.473,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 3.652,
+     "arrival": 24.6,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=geor&timestart=2020-01-20T18:00:00&timestop=2020-02-06T20:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:17:04Z",
+    "sha256": "dd8f5fa8880e434ba7f9104b1ecf60c28214f9e77091782f5b0db2a962d37292",
+    "bytes": 3728352,
+    "sha256_at_original_fetch": "dd8f5fa8880e434ba7f9104b1ecf60c28214f9e77091782f5b0db2a962d37292"
+   }
+  },
+  {
+   "quake": "us6000dg77",
+   "origin": "real",
+   "code": "thio",
+   "site": 5,
+   "eta": 65.48,
+   "stage2_window": [
+    "2021-02-02 12:00:00",
+    "2021-02-19 14:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 14,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 3.308,
+     "arrival": 116.08,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 1.757,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 1.979,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 3.689,
+     "arrival": 38.08,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 2.454,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 3.132,
+     "arrival": 120.08,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 2.044,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 2.466,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 3.012,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 1.631,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 2.668,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 6,
+     "r": 2.71,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.753,
+     "arrival": 68.08,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 2.389,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=thio&timestart=2021-02-02T12:00:00&timestop=2021-02-19T14:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:25:23Z",
+    "sha256": "e3d0c108b0a445e4c731fe175751bf3301ef22308c0b465e6464ff75435c0c3b",
+    "bytes": 3798424,
+    "sha256_at_original_fetch": null
+   }
+  },
+  {
+   "quake": "us7000ip0l",
+   "origin": "fake5",
+   "code": "wall",
+   "site": 7,
+   "eta": 67.22,
+   "stage2_window": [
+    "2022-11-03 04:00:00",
+    "2022-11-20 06:00:00"
+   ],
+   "stage2_sensor": "prs",
+   "ctrl_n": 13,
+   "ctrl_any_detect": false,
+   "passes": true,
+   "undecided": false,
+   "ctrl": [
+    {
+     "day": -7,
+     "r": 1.017,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -6,
+     "r": 1.744,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -5,
+     "r": 2.226,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -4,
+     "r": 1066.927,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -3,
+     "r": 0.063,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": -2,
+     "r": 3.782,
+     "arrival": 65.23,
+     "detects": false
+    },
+    {
+     "day": -1,
+     "r": 4.218,
+     "arrival": 63.23,
+     "detects": false
+    },
+    {
+     "day": 2,
+     "r": 4.69,
+     "arrival": 49.23,
+     "detects": false
+    },
+    {
+     "day": 3,
+     "r": 3.52,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 4,
+     "r": 3.121,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 5,
+     "r": 7.065,
+     "arrival": 111.23,
+     "detects": false
+    },
+    {
+     "day": 7,
+     "r": 2.482,
+     "arrival": null,
+     "detects": false
+    },
+    {
+     "day": 8,
+     "r": 1.901,
+     "arrival": null,
+     "detects": false
+    }
+   ],
+   "ioc_request": {
+    "url": "https://www.ioc-sealevelmonitoring.org/service.php?query=data&code=wall&timestart=2022-11-03T04:00:00&timestop=2022-11-20T06:00:00&format=json",
+    "fetched_utc": "2026-11-07T00:17:31Z",
+    "sha256": "da79b1dce21fac36e9bfcbe3e6c711b09335cf701bf5af5d34700599dbf39b0e",
+    "bytes": 3509436,
+    "sha256_at_original_fetch": null
+   }
+  }
+ ]
+}
