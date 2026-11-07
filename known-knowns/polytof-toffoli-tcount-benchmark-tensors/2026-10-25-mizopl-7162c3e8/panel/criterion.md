@@ -1,11 +1,8 @@
-context: isolated Antigravity subagent 520fd83c-45f6-4ca5-9f66-e864d73cf31e (V3R1T4S Skeptic CRITERION)
-target_id: polytof-toffoli-tcount-benchmark-tensors
-run_id: 2026-10-25-1935
-
-# Adversarial Skeptic Report: `CRITERION` — Run `2026-10-25-1935`
+# Adversarial Skeptic Report: `CRITERION`
 
 - **Target:** `polytof-toffoli-tcount-benchmark-tensors`
 - **Skeptic Role:** `CRITERION` (Strict adherence to every rule in `target.md`, `PREREG.md`, and `kit/SUBMIT.md`)
+- Context: fresh skeptic review of the packaged files only
 - **Timestamp (UTC):** `2026-10-25T19:49:00Z` (Updated `2026-10-30` for `p3`-only package split `2026-10-25-mizopl-7162c3e8`)
 
 ---

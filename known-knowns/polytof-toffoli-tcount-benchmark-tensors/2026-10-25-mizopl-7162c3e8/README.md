@@ -4,7 +4,11 @@
 
 Confirmed partial win p3 on polytof-toffoli-tcount-benchmark-tensors (indexed in object/p3_audit_certificate.json sha256 7162c3e8cd13709302daf1b50be19ecb1f1bf75e1aa78c6b5050e188e1a42757 and recomputed from scratch by verify-it-yourself/verify.py against ZIB-IOL/polytof pinned commit 0dcac107d15adc34dc646242d222f21ae7d32699): (1) independent re-verification audit of all 185 decomposition files in data/paper/ — all 88 files in data/paper/cpd/topp/ covering all 13,528 stored CP schemes across 74 single-row files and 14 multi-row pool files (13 x 1,000 + 454 = 13,454 pool schemes), all 9 bilinear files in data/paper/cpd/base/ (0525..0533, 9/9 valid, 97/97 total CP files matching docs/tensors.md), and all 88 files in data/paper/waring/ under the full phase-polynomial signature (linear, quadratic, and cubic parities in both BCO and original bases, 88/88 valid) — uncovering 5 posted Waring rank discrepancies against docs/tensors.md (0105-00041.npy rank 41 vs table 39; 0108-00077.npy rank 77 vs table 73; 0115-00055.npy rank 55 vs table 51; 0728-00061.npy rank 61 vs table 59; 0817-00063.npy rank 63 vs table 59) and 2 qubit-dimension discrepancies (0108 actual n=42 vs table 46; 0114 actual n=11 vs table 12); and (2) 4 explicit repaired Waring decompositions matching docs/tensors.md under the full signature in both BCO and original bases (object/waring/0105-00039.npy sha256 b0009293a2f77a19d23a1b913d2339c06dd65608657917b35f85f8840b7dcba5, object/waring/0108-00073.npy sha256 5418608b809f3d09e636e33eebc48b3a2ad92bf7b0f88ecc0a54415f2df0ced8, object/waring/0115-00051.npy sha256 86ca689e0bac48faa178cfef58e239e23db46f0c7521b25445d788d1987ba298, and object/waring/0817-00059.npy sha256 a328bc20a19c46c7de77aa462348ab96f0678c136b249881959c08820dd9eeaa).
 
-### Summary of `p3` Audit Coverage (`ZIB-IOL/polytof` at `0dcac107d15adc34dc646242d222f21ae7d32699`)
+*Note: "Confirmed" in the quoted scope above is our own internal 3-skeptic panel's status (`panel/gate.md`): the partial win `p3` is claimed here, and confirming it is the repository review's decision.*
+
+### Summary of `p3` Audit Coverage (Observed in `ZIB-IOL/polytof` at commit `0dcac107`, `docs/tensors.md` fetched `2026-10-25`)
+
+All audit counts and discrepancies below were observed in `ZIB-IOL/polytof` at pinned commit `0dcac107d15adc34dc646242d222f21ae7d32699` (committed `2026-10-12`; `docs/tensors.md` fetched `2026-10-25T18:37:15Z`, `sha256: f83839d0589888d75fb0ac357f8e251bc3f743d5c1749757cb51beec26676dc3`). Notice that `docs/tensors.md` gives one `Waring` value (and one `n`, `nnz`, and `CP` value) per circuit row, shared by its `08xx` and `01xx` variants (or `07xx` and `01xx` in the multiplier table), so discrepancies are counted per listed variant file in `data/paper/`.
 
 | `data/paper/` Subset | Files Audited | Total Stored Schemes Audited | Valid Reconstruction | Rank Matches `docs/tensors.md` | Discrepancies Found |
 |---|---:|---:|---:|---:|---|
@@ -15,17 +19,20 @@ Confirmed partial win p3 on polytof-toffoli-tcount-benchmark-tensors (indexed in
 | `data/paper/waring/*.npy` (full signature) | `88` | `88` Waring schemes | `88 / 88` (`100%` linear, quadratic & cubic) | `83 / 88` | **`5` Waring rank discrepancies** (`0105`, `0108`, `0115`, `0728`, `0817`) |
 | **Total `data/paper/` Decompositions** | **`185`** | **`13,537` CP + `88` Waring** | **`100%` valid** | **`97/97` CP, `83/88` Waring** | **`5` Waring rank + `2` dimension discrepancies** |
 
-### Five Posted Waring Rank Discrepancies & Four Shipped Repaired Schemes (`object/waring/`)
+### Five Posted Waring Rank Discrepancies & Four Shipped Repaired Schemes (`object/waring/`, Observed at `0dcac107`, Fetched `2026-10-25`)
 
-| Tensor ID | Benchmark Circuit | Actual $n$ (Table $n$) | Orig `nnz` (`BCO nnz`) | Table `CP` | `docs/tensors.md` Waring | Posted `data/paper/waring/` File (Rank) | Excess Over Table | Repaired File in `object/waring/` (Rank) | SHA-256 Digest |
+| Tensor ID | Benchmark Circuit | Actual $n$ (Table $n$) | Orig `nnz` / `BCO nnz` (Table `nnz`) | Table `CP` | `docs/tensors.md` Waring | Posted `data/paper/waring/` File (Rank) | Excess Over Table | Repaired File in `object/waring/` (Rank) | SHA-256 Digest |
 |---|---|---:|---:|---:|---:|---|---:|---|---|
-| **`0105`** | `CSLA MUX_3` (`01xx`) | `21` (`21`) | `61` (`26`) | `8` | `39` | `0105-00041.npy` (`41`) | `+2` | `object/waring/0105-00039.npy` (**`39`**) | `b0009293a2f77a19d23a1b913d2339c06dd65608657917b35f85f8840b7dcba5` |
-| **`0108`** | `Ham15 (low)` (`01xx`) | **`42`** (`46`) | `891` (`80`) | `17` | `73` | `0108-00077.npy` (`77`) | `+4` | `object/waring/0108-00073.npy` (**`73`**) | `5418608b809f3d09e636e33eebc48b3a2ad92bf7b0f88ecc0a54415f2df0ced8` |
-| **`0115`** | `Mod Red_21` (`01xx`) | `28` (`28`) | `365` (`49`) | `11` | `51` | `0115-00055.npy` (`55`) | `+4` | `object/waring/0115-00051.npy` (**`51`**) | `86ca689e0bac48faa178cfef58e239e23db46f0c7521b25445d788d1987ba298` |
-| **`0817`** | `QCLA Com_7` (`08xx`) | `42` (`42`) | `75` (`66`) | `12` | `59` | `0817-00063.npy` (`63`) | `+4` | `object/waring/0817-00059.npy` (**`59`**) | `a328bc20a19c46c7de77aa462348ab96f0678c136b249881959c08820dd9eeaa` |
-| **`0728`** | $\mathrm{GF}(2^5)$ Mult (`07xx`) | `15` (`15`) | `36` (`36`) | `13` | `59` | `0728-00061.npy` (`61`) | `+2` | *(Posted `0128-00059.npy` achieves `59` via BCO transform)* | — |
+| **`0105`** | `CSLA MUX_3` (`01xx`) | `21` (`21`) | `61` / **`8`** (`26`) | `8` | `39` | `0105-00041.npy` (`41`) | `+2` | `object/waring/0105-00039.npy` (**`39`**) | `b0009293a2f77a19d23a1b913d2339c06dd65608657917b35f85f8840b7dcba5` |
+| **`0108`** | `Ham15 (low)` (`01xx`) | **`42`** (`46`) | `891` / **`17`** (`80`) | `17` | `73` | `0108-00077.npy` (`77`) | `+4` | `object/waring/0108-00073.npy` (**`73`**) | `5418608b809f3d09e636e33eebc48b3a2ad92bf7b0f88ecc0a54415f2df0ced8` |
+| **`0115`** | `Mod Red_21` (`01xx`) | `28` (`28`) | `365` / **`11`** (`49`) | `11` | `51` | `0115-00055.npy` (`55`) | `+4` | `object/waring/0115-00051.npy` (**`51`**) | `86ca689e0bac48faa178cfef58e239e23db46f0c7521b25445d788d1987ba298` |
+| **`0817`** | `QCLA Com_7` (`08xx`) | `42` (`42`) | `75` / **`12`** (`66`) | `12` | `59` | `0817-00063.npy` (`63`) | `+4` | `object/waring/0817-00059.npy` (**`59`**) | `a328bc20a19c46c7de77aa462348ab96f0678c136b249881959c08820dd9eeaa` |
+| **`0728`** | $\mathrm{GF}(2^5)$ Mult (`07xx`) | `15` (`15`) | `36` / **`36`** (`36`) | `13` | `59` | `0728-00061.npy` (`61`) | `+2` | *(Posted `0128-00059.npy` achieves `59` via BCO transform)* | — |
 
-### Two Qubit-Dimension Discrepancies vs `docs/tensors.md`
+- **`Orig nnz` vs. `BCO nnz` vs. `Table nnz`:** `Orig nnz` (`61`, `891`, `365`, `75`, `36`) is the number of nonzero cubic monomials ($i < j < k$) in `data/tensors/*.npy`. **`BCO nnz` (`8`, `17`, `11`, `12`, `36`)** is the number of nonzero cubic monomials after applying the basis change `data/paper/transform/*.npy` (`bco_nnz` in `object/p3_audit_certificate.json`), matching the cubic part reconstructed by the shipped Waring schemes. `Table nnz` (`26`, `80`, `49`, `66`, `36`) is the shared `nnz` value printed in `docs/tensors.md` for that circuit row.
+- **Shared Circuit Row vs. Per-Variant Discrepancy Counting:** Because `docs/tensors.md` gives a single `Waring` value per circuit row shared by its `08xx` and `01xx` variants (and `07xx` / `01xx` for multipliers), discrepancies are counted per listed variant file in `data/paper/waring/` (e.g., on `CSLA MUX_3`, `0805-00039.npy` has `39` rows while `0105-00041.npy` has `41`; on `Ham15 (low)`, `0808-00073.npy` has `73` while `0108-00077.npy` has `77`; on `Mod Red_21`, `0815-00051.npy` has `51` while `0115-00055.npy` has `55`; on `QCLA Com_7`, `0117-00059.npy` has `59` while `0817-00063.npy` has `63`; and on $\mathrm{GF}(2^5)$ Mult, `0128-00059.npy` has `59` while `0728-00061.npy` has `61`).
+
+### Two Qubit-Dimension Discrepancies vs `docs/tensors.md` (Observed at `0dcac107`, Fetched `2026-10-25`)
 
 | Tensor ID | Benchmark Circuit | `docs/tensors.md` $n$ | Actual `data/tensors/` $n$ | Counterpart ID (`08xx`) $n$ |
 |---|---|---:|---:|---:|

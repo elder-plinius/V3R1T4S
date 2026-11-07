@@ -1,13 +1,12 @@
 # Pre-Registration (`PREREG.md`) — `polytof-toffoli-tcount-benchmark-tensors`
 
-- **Run ID:** `2026-10-25-1935`
 - **Target ID:** `polytof-toffoli-tcount-benchmark-tensors`
 - **Pre-Registered Prediction ID:** `P0082` (`p = 0.75`)
 - **Timestamp (UTC):** `2026-10-25T18:35:00Z`
 
 ## 1. Frozen Success Criteria
 
-### Full Win (`CONFIRMED_SOLUTION`)
+### Full Target Criterion (Not Claimed in This `p3` Package)
 For one or more tensor IDs listed in the live `ZIB-IOL/polytof` table (`https://github.com/ZIB-IOL/polytof/blob/main/docs/tensors.md`, commit `0dcac107d15adc34dc646242d222f21ae7d32699`), construct an explicit decomposition over $\mathbb{F}_2$ with **strictly fewer terms** (margin $\ge 1$ term) than the listed `CP` value (Toffoli count) or the listed `Waring` value (T-count) for that exact tensor ID (`07xx`, `05xx`, `08xx`, or `01xx`), such that:
 1. **Exact Tensor Reproduction:**
    - For a `CP` claim on a symmetric cubic phase tensor (`07xx`, `08xx`, `01xx`), the $r$ binary vector triples $(u_t, v_t, w_t) \in (\mathbb{F}_2^n)^3$ satisfy

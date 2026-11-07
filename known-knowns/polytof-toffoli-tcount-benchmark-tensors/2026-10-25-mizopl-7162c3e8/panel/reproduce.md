@@ -1,12 +1,8 @@
-context: isolated Antigravity subagent 2c016a51-8957-4d4d-abe3-067d0cb6ef92 (V3R1T4S Skeptic REPRODUCE)
-target_id: polytof-toffoli-tcount-benchmark-tensors
-run_id: 2026-10-25-1935
-
 # Adversarial Skeptic Report: `REPRODUCE`
 
-- **Run ID:** `2026-10-25-1935`
 - **Target ID:** `polytof-toffoli-tcount-benchmark-tensors`
 - **Skeptic Role:** `REPRODUCE` (Independent Bit-Exact Reproduction of the `p3` Audit of `data/paper/` and the `4` Repaired Waring Schemes)
+- Context: fresh skeptic review of the packaged files only
 - **Timestamp (UTC):** `2026-10-25T19:49:00Z` (Updated `2026-10-30` for `p3`-only package split `2026-10-25-mizopl-7162c3e8`)
 
 ---
