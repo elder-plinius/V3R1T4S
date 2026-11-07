@@ -1,0 +1,13 @@
+Real output of the rebuild command in RUN_IT_YOURSELF.md, run with this package's own copy of wieferich_sweep.py
+(Python 3.14.7, gmpy2 2.3.2, numpy 2.5.4; one worker at low priority, on a laptop shared with the panel's checks).
+OUTDIR was an empty folder; DEADLINE was the start time plus 900 s. Lines in order: the start time, the sweep stdout,
+the end time, then OUTDIR/hits.jsonl and the block's record from OUTDIR/blocks.jsonl (its sha256_q equals the one in
+hit_block_record.json).
+
+    python wieferich_sweep.py sweep OUTDIR 1011540000000 20000000 1 DEADLINE 70 10126 65536 1011560000000
+
+start_utc 2026-11-07T15:53:39Z
+{"finished_utc": "2026-11-07T15:54:55Z", "wall_s": 70.6}
+end_utc 2026-11-07T15:55:11Z
+{"b": 28910, "p": 1011548897263, "block_lo": 1011540000000, "found_utc": "2026-11-07T15:54:55Z"}
+{"lo": 1011540000000, "hi": 1011560000000, "n_primes": 723439, "first_p": 1011540000001, "last_p": 1011559999913, "sha256_q": "51841cbede35e60e729b57058a9796493e1c7c9b1c73ce70017e989cbb54d382", "cands": [[28910, 1011548897263]], "hits": [[28910, 1011548897263]], ...}
