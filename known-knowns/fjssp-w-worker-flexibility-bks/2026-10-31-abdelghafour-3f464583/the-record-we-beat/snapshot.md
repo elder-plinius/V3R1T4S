@@ -3,7 +3,7 @@ URL: https://raw.githubusercontent.com/jrc-rodec/FJSSP-W-Benchmarking/main/insta
 fetched_utc: 2026-10-31T10:24:20Z
 http_status: 200
 sha256 of the page: 74f982d5fdbdd7ebf6b889b0a57106474f9dd677a3813cf5762fc54afdfe30cf
-(The NOVELTY panelist re-fetched it independently; see panel/novelty.md.)
+(Re-fetched at 2026-10-31T12:36:55Z with the same sha256; see panel/novelty.md.)
 
 | instance file | row | listed UB (rounded) |
 |---|---|---|

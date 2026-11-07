@@ -1,7 +1,7 @@
 # FJSSP-W: 91 instances below their listed UB
 
 ## What
-For 95 distinct instance files in instances/Example_Instances_FJSSP-WF (sha256-identical to repo commit eb1d283, the current main HEAD), the supplied schedules pass an independently recomputed check of eligibility, pair durations, job precedence and machine/worker no-overlap, with makespans 1 to 171 below the integer UB of the data.csv-confirmed row of best_known.csv as re-fetched live at 2026-10-31T12:37Z (UB > LB in every case), which meets p2's threshold of at least 10 instances; novelty against the literature beyond that table is left to the NOVELTY panelist.
+For the 91 distinct instance files listed in INDEX.csv (from instances/Example_Instances_FJSSP-WF, sha256-identical to repo commit eb1d283), the supplied schedules pass an independently recomputed check of eligibility, pair durations, job precedence and machine/worker no-overlap, with makespans 1 to 171 below the integer UB of the data.csv-confirmed row of best_known.csv as re-fetched live at 2026-10-31T12:37Z (UB > LB in every case), which meets p2's threshold of at least 10 instances. The panel checked 95 candidates; four were dropped on novelty grounds (see Not claimed), leaving these 91.
 
 ## Check it yourself
     sh verify-it-yourself/run_checks.sh
@@ -107,7 +107,11 @@ best_known.csv of jrc-rodec/FJSSP-W-Benchmarking, fetched 2026-10-31T10:24:20Z (
 
 ## Not claimed
 No claim of optimality beyond what CP-SAT reported in its own run. Nothing about the classic FJSP instances these were derived from.
-Not included (tied, or a lower value reported elsewhere; see panel/gate.md): Hurinksdata61, Hurinksdata63, Hurinkedata6, Hurinkrdata50.
+Not included (tied, or a lower value reported elsewhere; see panel/novelty.md):
+- Hurinksdata61 (826) and Hurinksdata63 (373): tied by valid schedules from Yu Sun in FJSSP-W-Competition issue #11 (https://github.com/jrc-rodec/FJSSP-W-Competition/issues/11).
+- Hurinkedata6 (537) and Hurinkrdata50 (5684): lower values (533 and 5681) reported by the HUST Operations Research and Optimization team in issue #14 (https://github.com/jrc-rodec/FJSSP-W-Competition/issues/14). Those schedules failed our worker no-overlap check, but we exclude both instances to be safe.
+
+Closest competition value to a claimed instance: ChambersBarnes10, where the best valid competition value is 856 (Yu Sun, issue #11, https://github.com/jrc-rodec/FJSSP-W-Competition/issues/11); ours is 855.
 
 ## Credits
 - Benchmark, instances and best_known.csv: David Hutter, Thomas Steinberger, Michael Hellwig (and Bianca Kasper),

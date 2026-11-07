@@ -1,3 +1,11 @@
+> Note added 2026-11-07 (packaging, after maintainer review): this panel ran on 2026-10-31 over 95 candidate instances.
+> Four were then dropped (hurinksdata61 and hurinksdata63, tied in FJSSP-W-Competition issue #11; hurinkedata6 and
+> hurinkrdata50, lower values reported in issue #14), so this package claims the 91 instances in INDEX.csv.
+> Paths under `claim/` and `CLAIM.md` are the panel's local working files and are not included. Their contents are in this
+> package as object/ (schedules), verify-it-yourself/fjsspw_check.py (checker), INDEX.csv (claimed makespans and UBs) and
+> the-record-we-beat/snapshot.md (best_known.csv URL and sha256). Instance files come from
+> https://github.com/jrc-rodec/FJSSP-W-Benchmarking at commit eb1d283; the text below is otherwise unchanged.
+
 # CRITERION skeptic verdict: fjssp-w-worker-flexibility-bks, partial win p2 (95 instances)
 
 context: subagent (Claude Code Agent tool, fresh context)
@@ -24,8 +32,7 @@ inputs read: claim/ only (CLAIM.md, REPRODUCE.md, SHA256SUMS, best_known.csv, da
 - No stretching found. The claim does not average, aggregate, or count near-misses, and it does not depend on rounding. Every one of the 95 meets the test individually.
 - Bundling: p2 is defined over a set of at least 10 instances, so a multi-instance bundle is the natural unit. Each instance's evidence (file, row, UB, schedule, recheck) stands alone, so any subset of 10 or more would also meet p2. Bundling 95 is appropriate. It does not mean "95 separate wins"; it is one p2 win.
 - Subsumption: p2 (>= 10 instances) is not implied by the full criterion (which needs one instance). The same evidence also literally meets the full criterion and p1/p3. I have no visibility into any earlier claimed or awarded wins outside claim/, so "not subsumed by an earlier award" is unverified from my side.
-- Literature/novelty (whether these beat published results beyond best_known.csv) is left to the separate NOVELTY panelist and is not part of this scope.
 
-confirmed_scope: For 95 distinct instance files in instances/Example_Instances_FJSSP-WF (sha256-identical to repo commit eb1d283, the current main HEAD), the supplied schedules pass an independently recomputed check of eligibility, pair durations, job precedence and machine/worker no-overlap, with makespans 1 to 171 below the integer UB of the data.csv-confirmed row of best_known.csv as re-fetched live at 2026-10-31T12:37Z (UB > LB in every case), which meets p2's threshold of at least 10 instances; novelty against the literature beyond that table is left to the NOVELTY panelist.
+confirmed_scope: For 95 distinct instance files in instances/Example_Instances_FJSSP-WF (sha256-identical to repo commit eb1d283, the current main HEAD), the supplied schedules pass an independently recomputed check of eligibility, pair durations, job precedence and machine/worker no-overlap, with makespans 1 to 171 below the integer UB of the data.csv-confirmed row of best_known.csv as re-fetched live at 2026-10-31T12:37Z (UB > LB in every case), which meets p2's threshold of at least 10 instances.
 
 pass: true
