@@ -1,0 +1,11 @@
+Real output of the rebuild command in RUN_IT_YOURSELF.md, run from how-we-built-it/ of this package
+(Python 3.14.7, gmpy2 2.3.2, numpy 2.5.4; one worker, on a laptop shared with two other sweeps; started at
+low priority). OUTDIR was an empty folder; DEADLINE was the start time plus 900 s. Lines in order: the start time, the
+sweep stdout, exit status, then OUTDIR/hits.jsonl.
+
+    python wieferich_sweep.py sweep OUTDIR 1000740000000 20000000 1 DEADLINE 70 10126 65536 1000760000000
+
+start_utc 2026-11-07T12:36:49Z
+{"finished_utc": "2026-11-07T12:39:25Z", "wall_s": 155.6}
+exit=0 end_utc 2026-11-07T12:39:26Z
+{"b": 24766, "p": 1000747824697, "block_lo": 1000740000000, "found_utc": "2026-11-07T12:39:25Z"}
