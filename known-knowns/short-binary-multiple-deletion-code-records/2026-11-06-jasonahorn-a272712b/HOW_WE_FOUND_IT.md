@@ -1,0 +1,3 @@
+contributor text, unverified
+
+The cell was (16,3) in the binary multiple-deletion table of Weindel and Heckel. The bold construction size was 42. A ball-size greedy reached 40. Local deletion-and-refill reached 42 and did not beat it. An exact 1-, 2-, and 3-exchange of that 42-word code was empty. A constraint-programming search on all 65536 words, hinted with that unpublished 42-word code and limited to 2400 seconds, returned a feasible solution of size 43. The status was feasible, not optimal. An independent pairwise LCS checker accepted the 43 words and rejected a one-bit mutation. The result shares 31 words with the hint and adds 12. It is not a composition of a published codebook, because the table does not print those words.
