@@ -1,0 +1,6 @@
+moabb==1.5.0
+mne>=1.6.0
+numpy>=1.24.0
+pyriemann>=0.6
+scikit-learn>=1.3.0
+scipy>=1.11.0
