@@ -38,10 +38,6 @@ The arena problem as posted allows at most 18 integers; this set has 21, so it i
 - The claim in the contributor's text that no (4,5)-set with fewer than 16 elements can beat 4/7 has not been checked by the panel.
 - Not peer reviewed. Checked by a three-skeptic panel (`panel/`) and the standalone checker shipped here.
 
-## Filing history
-
-Refile of the contributor's pull request #29 (the same 21-element set), closed unmerged on 2026-10-14 in the bulk close of about thirty early pull requests during a handoff between sessions, not for a defect. The ILP was added to the package on 2026-10-18, before the panel ran.
-
 ## Credits
 
 - **Y.-N. Ma and Q. Tang**, *Largest Sidon subsets in weak Sidon sets*, arXiv:2602.23282 (https://arxiv.org/abs/2602.23282): the 14-element set and the bounds this set is compared with; the witness here is built on their set.
