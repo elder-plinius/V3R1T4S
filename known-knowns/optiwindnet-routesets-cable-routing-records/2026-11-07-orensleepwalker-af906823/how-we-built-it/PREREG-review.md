@@ -1,0 +1,6 @@
+Frozen UTC: 2026-11-07T16:19:10Z
+No search. One existing object: data/HIT-119-12-101-21567.pickle (sha256 4bfa15cafdafe110fbd8cfaae30fb78639a164989de372df8195cb7647895d06), produced 2026-11-05 by optiwindnet's HGSRouter (radial, segmented feeders, max feeders = the stored radial best's [10], 240 s, seed 101) in runs/2026-11-05-2313.
+Counting rule (bank criterion, X = radial): Euclidean length (detours included) < (1 - 1e-6) x the shortest stored radial set (126034.6715 m, id 21567); feeders <= [10]; validate_routeset no violations; inside the border and outside all 17 obstacles. Radial-only scope: the stored branched best (121874.5797 m) is shorter and is not claimed against.
+Novelty pre-check fixed now: published radial sets for this instance (release, DTU's older datasets, literature) must all be longer; a legacy set counts as radial only if its abstract network (optiwindnet S_from_G) has maximum turbine degree <= 2 (calibrated on the release's labelled sets).
+Disclosure: a preliminary legacy-topology check was run before this PREREG (scout.md); attempts/legacy repeats it after the freeze.
+null_test: not needed because only deterministic properties of one explicit route set are claimed (no search-yield or statistical inference)
