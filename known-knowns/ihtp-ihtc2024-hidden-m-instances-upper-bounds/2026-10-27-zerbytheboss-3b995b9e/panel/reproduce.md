@@ -1,9 +1,9 @@
 # Panel Audit — REPRODUCE Skeptic (`ihtp-ihtc2024-hidden-m-instances-upper-bounds` / `m28`)
 
-context: subagent (fresh invocation)
+- Context: Independent reproduction verification from `object/sol_m28_45037.json` and the official `m28.json` instance using both the organisers' compiled C++ `IHTP_Validator` and `verify-it-yourself/check_ihtp.py`
 
 ## 1. Mathematical Definition Quoted Before Inspecting Author Code
-In the Integrated Healthcare Timetabling Competition 2024 (IHTC-2024) formulation (Ceschia et al., 2024), a schedule assigns each mandatory and scheduled elective patient an admission day, room, and operating theater, and assigns each working nurse-shift a subset of rooms over the planning horizon $D$. A schedule is feasible if and only if all 9 hard constraint categories equal zero:
+In the Integrated Healthcare Timetabling Competition 2024 (IHTC-2024) formulation (Sara Ceschia, Roberto Maria Rosati, Andrea Schaerf, and Eugenia Zanazzo with Pieter Smet and Greet Vanden Berghe), a schedule assigns each mandatory and scheduled elective patient an admission day, room, and operating theater, and assigns each working nurse-shift a subset of rooms over the planning horizon $D$. A schedule is feasible if and only if all 9 hard constraint categories equal zero:
 - H1 (`RoomGenderMix`): no room on any day contains patients of different genders.
 - H2 (`PatientRoomCompatibility`): no patient is assigned to an incompatible room.
 - H3 (`SurgeonOvertime`): no surgeon exceeds maximum daily surgery time on any day.
@@ -18,17 +18,38 @@ The total objective is the weighted sum of the 8 soft constraint penalties:
 $$\text{Total cost} = \text{RoomAgeMix} + \text{RoomSkillLevel} + \text{ContinuityOfCare} + \text{ExcessiveNurseWorkload} + \text{OpenOperatingTheater} + \text{SurgeonTransfer} + \text{PatientDelay} + \text{ElectiveUnscheduledPatients}.$$
 
 ## 2. Independent Verification Against Official C++ Validator and Python Standalone Port
-Before inspecting author tooling, `object/sol_m28_45037.json` was independently evaluated by both verification engines:
-1. **Official C++ `IHTP_Validator.cc` Specification**:
-   - Compiled from upstream source with clang++ and executed on the official instance `m28.json` and `object/sol_m28_45037.json`.
-   - Reports `Total violations = 0` across all 9 hard constraint categories.
-   - Exact soft-cost breakdown: `RoomAgeMix 52, RoomSkillLevel 1345, ContinuityOfCare 13495, ExcessiveNurseWorkload 165, OpenOperatingTheater 4880, SurgeonTransfer 410, PatientDelay 16290, ElectiveUnscheduledPatients 8400`.
-   - Total cost = `45037`.
+`object/sol_m28_45037.json` was evaluated by both the organisers' compiled C++ validator and our standalone Python port:
+1. **Official C++ `IHTP_Validator.cc` (`https://ihtc2024.github.io/assets/files/IHTP_Validator.cc`)**:
+   - Compiled with `g++ -O3 -std=c++17 IHTP_Validator.cc -o IHTP_Validator` and executed directly on `m28.json` and `object/sol_m28_45037.json`:
+   ```text
+   VIOLATIONS: 
+   RoomGenderMix.....................0
+   PatientRoomCompatibility..........0
+   SurgeonOvertime...................0
+   OperatingTheaterOvertime..........0
+   MandatoryUnscheduledPatients......0
+   AdmissionDay......................0
+   RoomCapacity......................0
+   NursePresence.....................0
+   UncoveredRoom.....................0
+   Total violations = 0
+
+   COSTS (weight X cost): 
+   RoomAgeMix............................52 (  1 X  52)
+   RoomSkillLevel......................1345 (  5 X 269)
+   ContinuityOfCare...................13495 (  5 X 2699)
+   ExcessiveNurseWorkload...............165 (  5 X  33)
+   OpenOperatingTheater................4880 ( 40 X 122)
+   SurgeonTransfer......................410 ( 10 X  41)
+   PatientDelay.......................16290 ( 10 X 1629)
+   ElectiveUnscheduledPatients.........8400 (350 X  24)
+   Total cost = 45037
+   ```
 2. **Standalone Python Port (`verify-it-yourself/check_ihtp.py`)**:
-   - Executed independently with zero external dependencies.
-   - Yields bit-for-bit identical results: `Total violations = 0`, `Total cost = 45037`.
+   - Executed via `sh verify-it-yourself/run_checks.sh` (which runs `verify-it-yourself/check_ihtp.py` with Python 3 standard library only).
+   - Yields identical results: `Total violations = 0`, `Total cost = 45037`.
 3. **Integrity and Bounds Check**:
    - File SHA-256 matches `INDEX.csv`: `3b995b9e0d524a8a887bbda0d7f20efc5e67128d85a15baadae307078a4e9395`.
-   - Objective cost `45037` strictly beats the published table bound `45913` (margin `-876`) and current live BKS `45873` (margin `-836`).
+   - Objective cost `45037` strictly beats the live table bound `45873` (`sol_m28.json`, margin `-836`).
 
 pass: true
