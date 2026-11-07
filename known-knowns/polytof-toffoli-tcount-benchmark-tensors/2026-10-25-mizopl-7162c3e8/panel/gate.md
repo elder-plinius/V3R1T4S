@@ -1,0 +1,9 @@
+status: CONFIRMED_PARTIAL
+claim_type: partial_win
+partial_win: p3
+partial_id: p3
+target_id: polytof-toffoli-tcount-benchmark-tensors
+reproduce_pass: true
+novelty_pass: true
+criterion_pass: true
+confirmed_scope: Confirmed partial win p3 on polytof-toffoli-tcount-benchmark-tensors (indexed in object/p3_audit_certificate.json sha256 7162c3e8cd13709302daf1b50be19ecb1f1bf75e1aa78c6b5050e188e1a42757 and recomputed from scratch by verify-it-yourself/verify.py against ZIB-IOL/polytof pinned commit 0dcac107d15adc34dc646242d222f21ae7d32699): (1) independent re-verification audit of all 185 decomposition files in data/paper/ — all 88 files in data/paper/cpd/topp/ covering all 13,528 stored CP schemes across 74 single-row files and 14 multi-row pool files (13 x 1,000 + 454 = 13,454 pool schemes), all 9 bilinear files in data/paper/cpd/base/ (0525..0533, 9/9 valid, 97/97 total CP files matching docs/tensors.md), and all 88 files in data/paper/waring/ under the full phase-polynomial signature (linear, quadratic, and cubic parities in both BCO and original bases, 88/88 valid) — uncovering 5 posted Waring rank discrepancies against docs/tensors.md (0105-00041.npy rank 41 vs table 39; 0108-00077.npy rank 77 vs table 73; 0115-00055.npy rank 55 vs table 51; 0728-00061.npy rank 61 vs table 59; 0817-00063.npy rank 63 vs table 59) and 2 qubit-dimension discrepancies (0108 actual n=42 vs table 46; 0114 actual n=11 vs table 12); and (2) 4 explicit repaired Waring decompositions matching docs/tensors.md under the full signature in both BCO and original bases (object/waring/0105-00039.npy sha256 b0009293a2f77a19d23a1b913d2339c06dd65608657917b35f85f8840b7dcba5, object/waring/0108-00073.npy sha256 5418608b809f3d09e636e33eebc48b3a2ad92bf7b0f88ecc0a54415f2df0ced8, object/waring/0115-00051.npy sha256 86ca689e0bac48faa178cfef58e239e23db46f0c7521b25445d788d1987ba298, and object/waring/0817-00059.npy sha256 a328bc20a19c46c7de77aa462348ab96f0678c136b249881959c08820dd9eeaa).
