@@ -1,0 +1,6 @@
+# Python 3.11.16
+ortools==9.15.6755
+python-sat==1.9.dev17
+networkx==3.6.1
+numpy==2.4.6
+# networkx and numpy are pinned but not imported by the shipped code.
