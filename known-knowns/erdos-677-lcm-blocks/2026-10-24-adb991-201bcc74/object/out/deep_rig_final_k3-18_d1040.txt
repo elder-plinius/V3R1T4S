@@ -1,0 +1,17 @@
+k=3 admissible_r=1 enumerated_pairs(q(q rho-p)<U)=0 window_candidates=0 product_solutions=0 t=0s
+k=4 admissible_r=1 enumerated_pairs(q(q rho-p)<U)=4 window_candidates=2 product_solutions=0 t=0s
+k=5 admissible_r=7 enumerated_pairs(q(q rho-p)<U)=13 window_candidates=13 product_solutions=0 t=0s
+k=6 admissible_r=4 enumerated_pairs(q(q rho-p)<U)=25 window_candidates=8 product_solutions=0 t=1s
+k=7 admissible_r=22 enumerated_pairs(q(q rho-p)<U)=43 window_candidates=43 product_solutions=0 t=3s
+k=8 admissible_r=13 enumerated_pairs(q(q rho-p)<U)=149 window_candidates=39 product_solutions=0 t=5s
+k=9 admissible_r=31 enumerated_pairs(q(q rho-p)<U)=108 window_candidates=107 product_solutions=0 t=8s
+k=10 admissible_r=37 enumerated_pairs(q(q rho-p)<U)=551 window_candidates=137 product_solutions=0 t=17s
+k=11 admissible_r=157 enumerated_pairs(q(q rho-p)<U)=799 window_candidates=780 product_solutions=0 t=36s
+k=12 admissible_r=121 enumerated_pairs(q(q rho-p)<U)=2745 window_candidates=678 product_solutions=0 t=73s
+k=13 admissible_r=472 enumerated_pairs(q(q rho-p)<U)=3388 window_candidates=3343 product_solutions=0 t=136s
+k=14 admissible_r=337 enumerated_pairs(q(q rho-p)<U)=10984 window_candidates=2734 product_solutions=0 t=271s
+k=15 admissible_r=283 enumerated_pairs(q(q rho-p)<U)=2418 window_candidates=2365 product_solutions=0 t=316s
+k=16 admissible_r=202 enumerated_pairs(q(q rho-p)<U)=7884 window_candidates=1884 product_solutions=0 t=414s
+k=17 admissible_r=1822 enumerated_pairs(q(q rho-p)<U)=20404 window_candidates=20134 product_solutions=0 t=735s
+k=18 admissible_r=850 enumerated_pairs(q(q rho-p)<U)=42369 window_candidates=10382 product_solutions=0 t=1217s
+TOTAL window candidates=42649 product solutions=0 (X0=1000000, QMAX=10^495)

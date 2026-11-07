@@ -1,0 +1,5 @@
+k=19 admissible_r=5467 enumerated_pairs(q(q rho-p)<U)=79038 window_candidates=77951 product_solutions=0 t=1159s
+k=20 admissible_r=3037 enumerated_pairs(q(q rho-p)<U)=191057 window_candidates=46823 product_solutions=0 t=2424s
+k=21 admissible_r=3280 enumerated_pairs(q(q rho-p)<U)=53594 window_candidates=52854 product_solutions=0 t=2807s
+k=22 admissible_r=4252 enumerated_pairs(q(q rho-p)<U)=286131 window_candidates=70683 product_solutions=0 t=4064s
+TOTAL window candidates=248311 product solutions=0 (X0=1000000, QMAX=10^495)
