@@ -4,7 +4,7 @@
 
 - **Command:** `sh verify-it-yourself/run_checks.sh`
 - **Exit Code:** `0`
-- **Wall-Clock Time:** `0.48s` on CPU (imports zero contributor code; evaluates `object/model_*.onnx` via `onnxruntime` on `object/features_*_part*.csv`)
+- **Wall-Clock Time:** `0.8s` on CPU (imports zero contributor code; evaluates `object/model_*.onnx` via `onnxruntime` on `object/features_*_part*.csv` using named inputs `X_eval` and `X_support`, and verifies test MAE against the official NIST `json.zip` benchmark archives)
 - **Stdout:**
 ```text
 [OK] dft_3d_exfoliation_energy: ONNX max|diff|=4.87e-09, Test MAE = 28.195924 vs 40.88700 (-31.04%), gain = +12.691076 > h90 = 11.132579, p2 5-fold MAE = 32.67274 vs 45.00463 (Wilcoxon p = 1.62e-18)

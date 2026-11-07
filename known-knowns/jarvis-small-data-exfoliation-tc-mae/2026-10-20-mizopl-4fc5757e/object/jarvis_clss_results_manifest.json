@@ -67,7 +67,7 @@
         "empirical_p_value": 0.0024937655860349127
       },
       "prediction_csv": "AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae.csv",
-      "prediction_csv_sha256": "79189386af5ae8c30bc79fb1f7bbc3839536a53616c1b5cb110471dd905a1c19",
+      "prediction_csv_sha256": "10169820be31c96ecdb8f2a08877dcdb1296ba62afabb43afaec59e259a44f82",
       "cv5_oof_csv": "cv5_oof_dft_3d_exfoliation_energy.csv",
       "cv5_oof_csv_sha256": "d3a94e8543c3c3443424dd75d2b2dca17aa43b4bd15320695925ecbb833e2f64",
       "runtime_seconds": 50.13828206062317,
@@ -244,12 +244,31 @@
           "sha256": "cac1b33011c7da04b4e0ff55c8782ae51abdf0925167910e68cd6a858eb3fc0d"
         }
       ],
-      "prediction_csv_zip": "AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae.csv.zip",
-      "prediction_csv_zip_sha256": "ae3e9da2a4346116d9ea43fffead59bf67bb53bb948a5094fc23381e1432f6ac",
       "upstream_benchmark_json_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/benchmarks/AI/SinglePropertyPrediction/dft_3d_exfoliation_energy.json.zip",
       "upstream_benchmark_json_zip_sha256": "d7a3127002098c3da40292bee8d78de0e45ca42bef81adc73a07bc47e900a9a4",
       "upstream_leader_csv_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/contributions/matminer_xgboost/AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae.csv.zip",
-      "upstream_leader_csv_zip_sha256": "e89262451215f98da0eddf327a082787461edfa5f73426baf6c4fd745acacb78"
+      "upstream_leader_csv_zip_sha256": "e89262451215f98da0eddf327a082787461edfa5f73426baf6c4fd745acacb78",
+      "claim_status": "claimed_primary_and_p2_5fold_cv",
+      "prediction_csv_columns": [
+        "id",
+        "prediction"
+      ],
+      "onnx_graph_inputs": {
+        "X_eval": [
+          81,
+          1807
+        ],
+        "X_support": [
+          731,
+          1807
+        ]
+      },
+      "onnx_graph_output": "prediction",
+      "base_only_ablation_w_r_0": {
+        "test_mae": 30.402495679012343,
+        "bootstrap_1000_ci90_half_width": 13.220251518518518,
+        "analytical_loo_mae": 32.72477351275018
+      }
     },
     "tinnet_N_ead": {
       "benchmark_name": "AI-SinglePropertyPrediction-ead-tinnet_N-test-mae",
@@ -316,7 +335,7 @@
         "empirical_p_value": 0.0024937655860349127
       },
       "prediction_csv": "AI-SinglePropertyPrediction-ead-tinnet_N-test-mae.csv",
-      "prediction_csv_sha256": "1328eea4abc72755830ac8d1c848a0e01564aa16ccc0b603941b26d94c4fa570",
+      "prediction_csv_sha256": "707e335f234b093a52fbebda8c649bea30adb40d569753f340a0254a6dd75b6b",
       "cv5_oof_csv": "cv5_oof_tinnet_N_ead.csv",
       "cv5_oof_csv_sha256": "104b07f6c20bf883001ba4567df85bc232de8d30c17077f7bac26a362d8c8b63",
       "runtime_seconds": 12.822763919830322,
@@ -391,12 +410,26 @@
           "sha256": "b9c7f5d2278d5ec927ce950183499296ee4bff7bed8cba2cc378b60c4c8918c1"
         }
       ],
-      "prediction_csv_zip": "AI-SinglePropertyPrediction-ead-tinnet_N-test-mae.csv.zip",
-      "prediction_csv_zip_sha256": "8ffcfb46f7bd52a11428b8f6c8239e0eac367d7956e217701316169a09f17a67",
       "upstream_benchmark_json_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/benchmarks/AI/SinglePropertyPrediction/tinnet_N_ead.json.zip",
       "upstream_benchmark_json_zip_sha256": "14da9466b46ccd69aea116c6d6ef456da2c2cfe955b45b89105bb9f21acdfc49",
       "upstream_leader_csv_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/contributions/alignn_model/AI-SinglePropertyPrediction-ead-tinnet_N-test-mae.csv.zip",
-      "upstream_leader_csv_zip_sha256": "5bc9f63e3016343afc3a5719611ec9335442305a5d752fd5c44fb66ff857ac59"
+      "upstream_leader_csv_zip_sha256": "5bc9f63e3016343afc3a5719611ec9335442305a5d752fd5c44fb66ff857ac59",
+      "claim_status": "uncredited_supplementary_p1_dropped_no_pre_run_dated_file",
+      "prediction_csv_columns": [
+        "id",
+        "prediction"
+      ],
+      "onnx_graph_inputs": {
+        "X_eval": [
+          32,
+          2186
+        ],
+        "X_support": [
+          295,
+          2186
+        ]
+      },
+      "onnx_graph_output": "prediction"
     }
   },
   "total_runtime_seconds": 96.34149885177612

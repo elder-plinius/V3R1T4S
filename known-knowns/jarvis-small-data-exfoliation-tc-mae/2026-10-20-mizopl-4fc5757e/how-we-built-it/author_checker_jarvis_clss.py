@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-Standalone Author Verification & Anti-Leakage Checker for:
+Standalone Author Verification Wrapper for:
   target_id: jarvis-small-data-exfoliation-tc-mae
   tasks:
-    1. dft_3d_exfoliation_energy (AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae)
-    2. tinnet_N_ead              (AI-SinglePropertyPrediction-ead-tinnet_N-test-mae, named p1 task)
+    1. dft_3d_exfoliation_energy (AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae, claimed primary + p2)
+    2. tinnet_N_ead              (AI-SinglePropertyPrediction-ead-tinnet_N-test-mae, uncredited supplementary; p1 dropped)
 """
 import subprocess
 import sys
