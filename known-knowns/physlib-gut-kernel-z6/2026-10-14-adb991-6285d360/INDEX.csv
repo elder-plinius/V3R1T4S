@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+physlib-gut-kernel-z6,Physlib informal_lemma PatiSalam.inclSM_ker (tag 6V2RQ),kernel-checked proof (standard axioms only),informal only (no Lean statement or proof),2026-10-14T07:02:29Z,object/PatiSalamInclSMKer.lean,6285d360e0d0a5a396fb3a5461d732888f314b08dcef13c1eda2bcd63aa3a5bd
