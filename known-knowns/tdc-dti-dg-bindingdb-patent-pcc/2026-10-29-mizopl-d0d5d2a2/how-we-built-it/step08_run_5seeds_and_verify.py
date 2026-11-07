@@ -328,10 +328,19 @@ def main():
     for s_idx, seed in enumerate([1, 2, 3, 4, 5]):
         for track_tag, vec in [("trackA_strict_train", track_a_vecs[s_idx]), ("trackB_trainval_refit", track_b_vecs[s_idx]), ("erm_baseline", erm_vecs[s_idx])]:
             npy_path = PRED_DIR / f"seed_{seed}_{track_tag}.npy"
-            csv_path = PRED_DIR / f"seed_{seed}_{track_tag}.csv"
             np.save(npy_path, vec.astype(np.float32))
-            pd.DataFrame({"y_pred": vec.astype(np.float32)}).to_csv(csv_path, index=False)
-            saved_files[f"seed_{seed}_{track_tag}.csv"] = hashlib.sha256(csv_path.read_bytes()).hexdigest()
+            keyed_df = pd.DataFrame({
+                "row_index": np.arange(len(te_df), dtype=np.int32),
+                "Drug_ID": te_df["Drug_ID"].values,
+                "Target_ID": te_df["Target_ID"].values,
+                "y_pred": vec.astype(np.float32),
+            })
+            p1_path = PRED_DIR / f"seed_{seed}_{track_tag}_part1.csv"
+            p2_path = PRED_DIR / f"seed_{seed}_{track_tag}_part2.csv"
+            keyed_df.iloc[:24514].to_csv(p1_path, index=False, float_format="%.6f")
+            keyed_df.iloc[24514:].to_csv(p2_path, index=False, float_format="%.6f")
+            saved_files[p1_path.name] = hashlib.sha256(p1_path.read_bytes()).hexdigest()
+            saved_files[p2_path.name] = hashlib.sha256(p2_path.read_bytes()).hexdigest()
 
     cert = {
         "benchmark_id": "tdc-dti-dg-bindingdb-patent-pcc",

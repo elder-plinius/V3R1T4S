@@ -3,18 +3,15 @@
   "benchmark_name": "bindingdb_patent",
   "pytdc_version": "1.1.15",
   "created_at_utc": "2026-10-29T03:12:07Z",
+  "official_tdc_dataset_urls": {
+    "harvard_dataverse_direct_download": "https://dataverse.harvard.edu/api/access/datafile/4798216",
+    "tdc_leaderboard_page": "https://tdcommons.ai/benchmark/dti_dg_group/bindingdb_patent/",
+    "pytdc_loader": "from tdc.benchmark_group import dti_dg_group; group = dti_dg_group(path='data/'); bm = group.get('BindingDB_Patent')"
+  },
   "files": {
     "data/dti_dg_group.zip": {
       "sha256": "4708233b8536d856a9ee6522623e4d44bbf7d2efc1c8496e69f6cd2c6482457a",
       "size_bytes": 9515670
-    },
-    "data/dti_dg_group/.DS_Store": {
-      "sha256": "37ce3c79da4b9043c8c97e852bbeb4c54bec46e31214793e8831bbb7e85c4105",
-      "size_bytes": 6148
-    },
-    "data/dti_dg_group/bindingdb_patent/.DS_Store": {
-      "sha256": "d65165279105ca6773180500688df4bdc69a2c7b771752f0a46ef120b7fd8ec3",
-      "size_bytes": 6148
     },
     "data/dti_dg_group/bindingdb_patent/test.csv": {
       "sha256": "3124f012b92c8c00de39a82ae0ef9d3dd5cc135732bd8bfd420629e1a13dec31",
@@ -23,17 +20,16 @@
     "data/dti_dg_group/bindingdb_patent/train_val.csv": {
       "sha256": "1cb713579f1a9f6f5fe0374e8939da8ae0e6b187fd24c0b0197b54c81ec486b6",
       "size_bytes": 167715236
-    },
-    "data/__MACOSX/dti_dg_group/._.DS_Store": {
-      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
-      "size_bytes": 120
-    },
-    "data/__MACOSX/dti_dg_group/bindingdb_patent/._.DS_Store": {
-      "sha256": "2f380f4a3d05a8d90c2106f50da75064e9ce57a598599dc5404f8f69a0223aa9",
-      "size_bytes": 120
     }
   },
+  "split_row_counts": [
+    183430,
+    49028,
+    24514,
+    24514
+  ],
   "test_drug_target_keys_sha256": "b28e09b01f7990c55ede2facbe7b9831c6dc9203d140dc575814361ae649b674",
+  "test_pair_ids_sha256": "0b81510459589882c72484834aec0fac355536645a9b8fd414e1db991d5c51cb",
   "test_full_table_sha256": "7eba0308cddbc74280c61102a99a3b052d9b264e545766380991daa716dfbf75",
   "eda": {
     "train_val_rows": 183430,

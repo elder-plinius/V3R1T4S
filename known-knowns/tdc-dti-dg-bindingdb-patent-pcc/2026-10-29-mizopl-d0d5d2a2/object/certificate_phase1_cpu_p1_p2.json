@@ -1,129 +1,989 @@
 {
-  "benchmark_id": "tdc-dti-dg-bindingdb-patent-pcc",
-  "tdc_group": "DTI_DG_Group",
-  "tdc_benchmark": "BindingDB_Patent",
-  "test_rows": 49028,
-  "test_drug_target_keys_sha256": "b28e09b01f7990c55ede2facbe7b9831c6dc9203d140dc575814361ae649b674",
-  "leaderboard_live_top2": {
-    "rank_1_Otter_Knowledge_Ensemble": {
-      "mean": 0.588,
-      "std": 0.002
-    },
-    "rank_2_OrangeBalls_ProtBertMorgan": {
-      "mean": 0.538,
-      "std": 0.008
-    },
-    "rank_5_ERM_listed": {
-      "mean": 0.427,
-      "std": 0.012
-    }
+  "target_id": "tdc-dti-dg-bindingdb-patent-pcc",
+  "benchmark": "TDC DTI_DG_Group ('BindingDB_Patent')",
+  "status": "CONFIRMED_PARTIAL",
+  "claimed_partial_win": "p1",
+  "timestamp_utc": "2026-10-29T05:43:48Z",
+  "hardware": "Local Apple M1 Mac (16 GB unified RAM, 8 cores, 100% CPU-only execution)",
+  "external_pretraining": "None (0 PLM, 0 external bioactivity data, 100% CPU-only from raw SMILES + AA sequences)",
+  "official_tdc_data": {
+    "harvard_dataverse_url": "https://dataverse.harvard.edu/api/access/datafile/4798216",
+    "leaderboard_url": "https://tdcommons.ai/benchmark/dti_dg_group/bindingdb_patent/",
+    "dti_dg_group_zip_sha256": "4708233b8536d856a9ee6522623e4d44bbf7d2efc1c8496e69f6cd2c6482457a",
+    "train_val_csv_sha256": "1cb713579f1a9f6f5fe0374e8939da8ae0e6b187fd24c0b0197b54c81ec486b6",
+    "test_csv_sha256": "3124f012b92c8c00de39a82ae0ef9d3dd5cc135732bd8bfd420629e1a13dec31",
+    "test_drug_target_keys_sha256": "b28e09b01f7990c55ede2facbe7b9831c6dc9203d140dc575814361ae649b674",
+    "test_pair_ids_sha256": "0b81510459589882c72484834aec0fac355536645a9b8fd414e1db991d5c51cb"
   },
-  "erm_reproduced_5seed": {
-    "evaluate_many": {
-      "bindingdb_patent": [
-        0.513,
-        0.003
-      ]
+  "pre_test_inner_temporal_validation": {
+    "note": "All architectural levels, kernel weights, and hyperparameters of Track A were selected strictly on train_val (2013-2018) inner temporal splits in step02..step07 (2026-10-29 04:12..05:20) prior to the first test-set evaluation in step08 (2026-10-29 05:24).",
+    "inner_split_A_2013_2016_to_2017_2018_n58283": {
+      "step02_smoothed_target_mean": 0.4534,
+      "step02_target_plus_drug_residual": 0.50615,
+      "step05_per_target_multiview_tkrr": 0.57503,
+      "step05b_schur_coupled_homology_tkrr": 0.57548,
+      "step06_4level_universal_kriging_tkrr": 0.60856,
+      "step07_full_4level_cpu_stacker_trackA": 0.62386
     },
-    "seed_pccs": [
-      0.5118276476860046,
-      0.514704704284668,
-      0.5122062563896179,
-      0.5173505544662476,
-      0.5093964338302612
+    "inner_split_B_2013_2017_to_2018_n24499": {
+      "step02_smoothed_target_mean": 0.45172,
+      "step02_target_plus_drug_residual": 0.50157,
+      "step05_per_target_multiview_tkrr": 0.55863,
+      "step05b_schur_coupled_homology_tkrr": 0.56207,
+      "step06_4level_universal_kriging_tkrr": 0.58805,
+      "step07_full_4level_cpu_stacker_trackA": 0.60613
+    },
+    "inner_split_progression_A": [
+      0.4534,
+      0.50615,
+      0.57503,
+      0.57548,
+      0.60856,
+      0.62386
     ],
-    "breakdown": {
-      "per_year": {
-        "2019": {
-          "n_rows": 42009,
-          "mean_pcc": 0.49720370173454287,
-          "std_pcc": 0.002779130173561116,
-          "per_seed": [
-            0.49537020921707153,
-            0.4990403652191162,
-            0.496860146522522,
-            0.5013555288314819,
-            0.4933922588825226
-          ]
+    "inner_split_progression_B": [
+      0.45172,
+      0.50157,
+      0.55863,
+      0.56207,
+      0.58805,
+      0.60613
+    ]
+  },
+  "tracks": {
+    "track_a_strict_train_s": {
+      "role": "claimed_primary",
+      "description": "Primary Claimed Model (Partial Win p1): 100% CPU-Only 4-Level Matryoshka Functional ANOVA + Universal Kriging TKRR + Homology-Gated Stacker (strict per-seed train_s fit; all choices fixed on train_val inner temporal splits in step02..step07 before step08 test evaluation)",
+      "official_evaluate_many_pcc": "0.579 \u00b1 0.003",
+      "mean_5seed_pcc": 0.5794217491800573,
+      "std_5seed_pcc": 0.002989744433113781,
+      "seed_pccs": [
+        0.57855558,
+        0.58064482,
+        0.58093959,
+        0.58286534,
+        0.57410342
+      ],
+      "ensemble_5seed_avg_pcc": 0.5825035983983293,
+      "seen_target_5seed_mean": 0.5971873584313071,
+      "seen_target_5seed_std": 0.0030744401560882863,
+      "unseen_target_5seed_mean": 0.20577492259019828,
+      "unseen_target_5seed_std": 0.005429408868455929,
+      "seen_drug_5seed_mean": 0.7308735625627645,
+      "seen_drug_5seed_std": 0.00235817533765596,
+      "unseen_drug_5seed_mean": 0.5016329554271595,
+      "unseen_drug_5seed_std": 0.004167942947946583,
+      "year_2019_5seed_mean": 0.5562472328671408,
+      "year_2019_5seed_std": 0.0034385220737825606,
+      "year_2020_5seed_mean": 0.7467458581298154,
+      "year_2020_5seed_std": 0.004164236177707237,
+      "year_2021_5seed_mean": 0.8621244509930559,
+      "year_2021_5seed_std": 0.028943517878901696,
+      "cross_seed_dot_matrix": [
+        [
+          1454483.9615727677,
+          1453789.2144174944,
+          1453306.3083619978,
+          1455895.9033441383,
+          1454542.3020246213
+        ],
+        [
+          1453789.2144174944,
+          1458856.7452109205,
+          1455236.37934638,
+          1457964.2926598336,
+          1456698.7333537715
+        ],
+        [
+          1453306.3083619978,
+          1455236.37934638,
+          1457620.307816933,
+          1457440.599750673,
+          1456059.2286036408
+        ],
+        [
+          1455895.9033441383,
+          1457964.2926598336,
+          1457440.599750673,
+          1462989.4108004868,
+          1458873.3703387072
+        ],
+        [
+          1454542.3020246213,
+          1456698.7333537715,
+          1456059.2286036408,
+          1458873.3703387072,
+          1460327.862393518
+        ]
+      ],
+      "seeds": {
+        "1": {
+          "part1_file": "object/seed_1_trackA_strict_train_part1.csv",
+          "part2_file": "object/seed_1_trackA_strict_train_part2.csv",
+          "part1_sha256": "3af8d229da5a2722f8b816f8072da8a1941b133fb472c30381d67c7ceb61673e",
+          "part2_sha256": "e4b3575c94a5085f0f0176b1bb43e126f32abe77999c9511e73bf439f9455e2f",
+          "part1_l1_norm": 126541.03336999999,
+          "part2_l1_norm": 120803.838132,
+          "l1_norm": 247344.871502,
+          "l2_norm": 1206.0198844018973,
+          "pred_mean": 5.023803163049686,
+          "pred_std": 2.104232807551406,
+          "pcc_all": 0.5785555808991127,
+          "pcc_seen_target": 0.5962597264683503,
+          "pcc_unseen_target": 0.2094065072204248,
+          "pcc_seen_drug": 0.7275315747383052,
+          "pcc_unseen_drug": 0.5028794628217954,
+          "pcc_by_year": {
+            "2019": 0.5557473711085654,
+            "2020": 0.7429442770366756,
+            "2021": 0.8939421873963285
+          }
         },
-        "2020": {
-          "n_rows": 6947,
-          "mean_pcc": 0.6416340351104737,
-          "std_pcc": 0.00459600494013455,
-          "per_seed": [
-            0.6443753242492676,
-            0.6419178247451782,
-            0.6356907486915588,
-            0.6484987139701843,
-            0.6376875638961792
-          ]
+        "2": {
+          "part1_file": "object/seed_2_trackA_strict_train_part1.csv",
+          "part2_file": "object/seed_2_trackA_strict_train_part2.csv",
+          "part1_sha256": "c3802527e77240a2be732e3c696e383a89d7381c2731fd6c62edb301ca8b2b6c",
+          "part2_sha256": "95dce33427f9091e8c48e58ab4119bffc106802667002aa79c2dc0a53e9c523c",
+          "part1_l1_norm": 126803.18392899999,
+          "part2_l1_norm": 121072.25331,
+          "l1_norm": 247875.437239,
+          "l2_norm": 1207.831422513473,
+          "pred_mean": 5.033313433894918,
+          "pred_std": 2.1026981054325633,
+          "pcc_all": 0.5806448154651893,
+          "pcc_seen_target": 0.5987433022093493,
+          "pcc_unseen_target": 0.20316417978089274,
+          "pcc_seen_drug": 0.7323996073133328,
+          "pcc_unseen_drug": 0.5037172643705419,
+          "pcc_by_year": {
+            "2019": 0.5572201887356523,
+            "2020": 0.7497354617681189,
+            "2021": 0.8210138806708271
+          }
         },
-        "2021": {
-          "n_rows": 72,
-          "mean_pcc": 0.07610932886600494,
-          "std_pcc": 0.03699676499580702,
-          "per_seed": [
-            0.1308698058128357,
-            0.07246240973472595,
-            0.10262743383646011,
-            0.029702521860599518,
-            0.04488447308540344
-          ]
+        "3": {
+          "part1_file": "object/seed_3_trackA_strict_train_part1.csv",
+          "part2_file": "object/seed_3_trackA_strict_train_part2.csv",
+          "part1_sha256": "96530f40122c1f2a36b22fad1b1ab514eca0c7a20256198be7087ff8f008ba7f",
+          "part2_sha256": "9a277e1d53b5842842312a9c8cc624d8198b30678aa74ed428b3f4737c5db877",
+          "part1_l1_norm": 126616.117409,
+          "part2_l1_norm": 120866.98589400001,
+          "l1_norm": 247483.103303,
+          "l2_norm": 1207.3194721435286,
+          "pred_mean": 5.025477060353268,
+          "pred_std": 2.115406522854678,
+          "pcc_all": 0.5809395886292494,
+          "pcc_seen_target": 0.5974615629309827,
+          "pcc_unseen_target": 0.21232922253320186,
+          "pcc_seen_drug": 0.7316383389826078,
+          "pcc_unseen_drug": 0.5034302156143303,
+          "pcc_by_year": {
+            "2019": 0.5588633236287837,
+            "2020": 0.741013930618199,
+            "2021": 0.8813321747507799
+          }
+        },
+        "4": {
+          "part1_file": "object/seed_4_trackA_strict_train_part1.csv",
+          "part2_file": "object/seed_4_trackA_strict_train_part2.csv",
+          "part1_sha256": "ecc36e1c615c4f0d7e6e9d43fcae2cf9a4e48b6bdc1c49be66f43499b71df72c",
+          "part2_sha256": "a0a2159bbce6efe942151a1dac5f43c70c299785d2992750ce579b55e862660a",
+          "part1_l1_norm": 126947.31208300001,
+          "part2_l1_norm": 121126.22361300001,
+          "l1_norm": 248073.53569600004,
+          "l2_norm": 1209.5409917817947,
+          "pred_mean": 5.038243957330505,
+          "pred_std": 2.110917625130169,
+          "pcc_all": 0.5828653371636567,
+          "pcc_seen_target": 0.6013996286222305,
+          "pcc_unseen_target": 0.20726645126435667,
+          "pcc_seen_drug": 0.7339652617071701,
+          "pcc_unseen_drug": 0.5047514293302293,
+          "pcc_by_year": {
+            "2019": 0.559514355453105,
+            "2020": 0.7521448069568735,
+            "2021": 0.8802765238290686
+          }
+        },
+        "5": {
+          "part1_file": "object/seed_5_trackA_strict_train_part1.csv",
+          "part2_file": "object/seed_5_trackA_strict_train_part2.csv",
+          "part1_sha256": "460d56bbdd9c7b24cd80fc8c5a3918df8674c22ea4045c617a8ed30631378268",
+          "part2_sha256": "c891c6fdabdad0bac875dca61efbf6e54f5ef6cff89cb01232856a8f56d743e3",
+          "part1_l1_norm": 127056.02452899999,
+          "part2_l1_norm": 120887.112501,
+          "l1_norm": 247943.13703,
+          "l2_norm": 1208.440260167427,
+          "pred_mean": 5.034597193685241,
+          "pred_std": 2.1067558466302065,
+          "pcc_all": 0.5741034237430782,
+          "pcc_seen_target": 0.5920725719256229,
+          "pcc_unseen_target": 0.1967082521521153,
+          "pcc_seen_drug": 0.7288330300724066,
+          "pcc_unseen_drug": 0.4933864049989001,
+          "pcc_by_year": {
+            "2019": 0.5498909254095974,
+            "2020": 0.7478908142692098,
+            "2021": 0.8340574883182755
+          }
         }
       },
-      "seen_target": {
-        "n_rows": 45031,
-        "mean_pcc": 0.5259026050567627,
-        "std_pcc": 0.003277608918156349,
-        "per_seed": [
-          0.5237323045730591,
-          0.529547393321991,
-          0.5220711827278137,
-          0.5301027894020081,
-          0.5240593552589417
+      "part_files": {
+        "seed_1_trackA_strict_train_part1.csv": {
+          "seed": 1,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817546,
+          "sha256": "3af8d229da5a2722f8b816f8072da8a1941b133fb472c30381d67c7ceb61673e",
+          "l1_norm": 126541.03336999999,
+          "l2_norm": 880.9452111778162,
+          "mean": 5.133918617769438,
+          "std": 2.302366163475211
+        },
+        "seed_1_trackA_strict_train_part2.csv": {
+          "seed": 1,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827840,
+          "sha256": "e4b3575c94a5085f0f0176b1bb43e126f32abe77999c9511e73bf439f9455e2f",
+          "l1_norm": 120803.838132,
+          "l2_norm": 823.662246600898,
+          "mean": 4.913687708329934,
+          "std": 1.8789493445272827
+        },
+        "seed_2_trackA_strict_train_part1.csv": {
+          "seed": 2,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817609,
+          "sha256": "c3802527e77240a2be732e3c696e383a89d7381c2731fd6c62edb301ca8b2b6c",
+          "l1_norm": 126803.18392899999,
+          "l2_norm": 882.9040428658665,
+          "mean": 5.141463561842213,
+          "std": 2.316097160499264
+        },
+        "seed_2_trackA_strict_train_part2.csv": {
+          "seed": 2,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827840,
+          "sha256": "95dce33427f9091e8c48e58ab4119bffc106802667002aa79c2dc0a53e9c523c",
+          "l1_norm": 121072.25331,
+          "l2_norm": 824.2191433727002,
+          "mean": 4.925163305947621,
+          "std": 1.8587575656756845
+        },
+        "seed_3_trackA_strict_train_part1.csv": {
+          "seed": 3,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817589,
+          "sha256": "96530f40122c1f2a36b22fad1b1ab514eca0c7a20256198be7087ff8f008ba7f",
+          "l1_norm": 126616.117409,
+          "l2_norm": 882.5316766661019,
+          "mean": 5.134398970996165,
+          "std": 2.3259587180000034
+        },
+        "seed_3_trackA_strict_train_part2.csv": {
+          "seed": 3,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827828,
+          "sha256": "9a277e1d53b5842842312a9c8cc624d8198b30678aa74ed428b3f4737c5db877",
+          "l1_norm": 120866.98589400001,
+          "l2_norm": 823.8677973424183,
+          "mean": 4.91655514971037,
+          "std": 1.8751206869947918
+        },
+        "seed_4_trackA_strict_train_part1.csv": {
+          "seed": 4,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817594,
+          "sha256": "ecc36e1c615c4f0d7e6e9d43fcae2cf9a4e48b6bdc1c49be66f43499b71df72c",
+          "l1_norm": 126947.31208300001,
+          "l2_norm": 883.3574077962337,
+          "mean": 5.148743053479644,
+          "std": 2.3069599130297407
+        },
+        "seed_4_trackA_strict_train_part2.csv": {
+          "seed": 4,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827871,
+          "sha256": "a0a2159bbce6efe942151a1dac5f43c70c299785d2992750ce579b55e862660a",
+          "l1_norm": 121126.22361300001,
+          "l2_norm": 826.2379202699459,
+          "mean": 4.927744861181366,
+          "std": 1.8882431780214768
+        },
+        "seed_5_trackA_strict_train_part1.csv": {
+          "seed": 5,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817609,
+          "sha256": "460d56bbdd9c7b24cd80fc8c5a3918df8674c22ea4045c617a8ed30631378268",
+          "l1_norm": 127056.02452899999,
+          "l2_norm": 884.2083220855181,
+          "mean": 5.152629389287754,
+          "std": 2.3115760984318556
+        },
+        "seed_5_trackA_strict_train_part2.csv": {
+          "seed": 5,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827835,
+          "sha256": "c891c6fdabdad0bac875dca61efbf6e54f5ef6cff89cb01232856a8f56d743e3",
+          "l1_norm": 120887.112501,
+          "l2_norm": 823.7132423047666,
+          "mean": 4.916564998082728,
+          "std": 1.8723229255078238
+        }
+      }
+    },
+    "track_b_train_val_refit": {
+      "role": "exploratory_ablation",
+      "description": "CPU-Only Ablation (Track B): Same 4-Level CPU-only stacker with Level-1..4 refit on full train_val (2013-2018)",
+      "official_evaluate_many_pcc": "0.571 \u00b1 0.003",
+      "mean_5seed_pcc": 0.5710590021089568,
+      "std_5seed_pcc": 0.0025965207623204443,
+      "seed_pccs": [
+        0.57186805,
+        0.57245591,
+        0.56799687,
+        0.57475515,
+        0.56821903
+      ],
+      "ensemble_5seed_avg_pcc": 0.5717065588568649,
+      "seen_target_5seed_mean": 0.5899369384555595,
+      "seen_target_5seed_std": 0.002670098035942387,
+      "unseen_target_5seed_mean": 0.2093159409356998,
+      "unseen_target_5seed_std": 2.7755575615628914e-17,
+      "seen_drug_5seed_mean": 0.7400326331953571,
+      "seen_drug_5seed_std": 0.0014528921099136061,
+      "unseen_drug_5seed_mean": 0.4755509039774326,
+      "unseen_drug_5seed_std": 0.00474434592799569,
+      "year_2019_5seed_mean": 0.5472039432835198,
+      "year_2019_5seed_std": 0.0024009101536955776,
+      "year_2020_5seed_mean": 0.7408523301273267,
+      "year_2020_5seed_std": 0.005987021319191223,
+      "year_2021_5seed_mean": 0.9341855212301535,
+      "year_2021_5seed_std": 0.003369395648317396,
+      "cross_seed_dot_matrix": [
+        [
+          1500285.1240845558,
+          1505437.9043319381,
+          1505801.4704463026,
+          1503864.6688846573,
+          1505503.5929055363
+        ],
+        [
+          1505437.9043319381,
+          1512128.5889086223,
+          1511646.4389120121,
+          1509531.8177878796,
+          1511301.4024570726
+        ],
+        [
+          1505801.4704463026,
+          1511646.4389120121,
+          1512668.7791248157,
+          1509923.9561055237,
+          1511639.2352254903
+        ],
+        [
+          1503864.6688846573,
+          1509531.8177878796,
+          1509923.9561055237,
+          1508416.111346543,
+          1509612.1610344008
+        ],
+        [
+          1505503.5929055363,
+          1511301.4024570726,
+          1511639.2352254903,
+          1509612.1610344008,
+          1511831.32631612
         ]
+      ],
+      "seeds": {
+        "1": {
+          "part1_file": "object/seed_1_trackB_trainval_refit_part1.csv",
+          "part2_file": "object/seed_1_trackB_trainval_refit_part2.csv",
+          "part1_sha256": "d72075ba3c1ab19da26604b75e494ffec26e40c43cfda7c683dd90dcb581a044",
+          "part2_sha256": "6e7a1d3c176001b8d674057fa75faa85376a781da2a4f6f74df0b212e2f2e820",
+          "part1_l1_norm": 128525.199133,
+          "part2_l1_norm": 122728.291911,
+          "l1_norm": 251253.491044,
+          "l2_norm": 1224.861267280731,
+          "pred_mean": 5.103692919882516,
+          "pred_std": 2.133751694073539,
+          "pcc_all": 0.571868050539021,
+          "pcc_seen_target": 0.5904431898928663,
+          "pcc_unseen_target": 0.20931594093569983,
+          "pcc_seen_drug": 0.7376558167558953,
+          "pcc_unseen_drug": 0.4788840261074867,
+          "pcc_by_year": {
+            "2019": 0.5485652394950844,
+            "2020": 0.7381022394153676,
+            "2021": 0.9369370004506465
+          }
+        },
+        "2": {
+          "part1_file": "object/seed_2_trackB_trainval_refit_part1.csv",
+          "part2_file": "object/seed_2_trackB_trainval_refit_part2.csv",
+          "part1_sha256": "9f3a285c9534c61063a332d3db824594a363a1f81dc7f3f97792f1f4dcb34a28",
+          "part2_sha256": "70bcdce753f0248797bd2ddcb51307a700e510cdeef9344371e215a1ce9dfed8",
+          "part1_l1_norm": 129431.677861,
+          "part2_l1_norm": 123239.14768099999,
+          "l1_norm": 252670.825542,
+          "l2_norm": 1229.6863782723728,
+          "pred_mean": 5.131043974014848,
+          "pred_std": 2.124742519830017,
+          "pcc_all": 0.5724559144276792,
+          "pcc_seen_target": 0.591589410609322,
+          "pcc_unseen_target": 0.20931594093569983,
+          "pcc_seen_drug": 0.7404624856380407,
+          "pcc_unseen_drug": 0.47877901672236434,
+          "pcc_by_year": {
+            "2019": 0.5476083207865244,
+            "2020": 0.7490169648319782,
+            "2021": 0.9306778747530676
+          }
+        },
+        "3": {
+          "part1_file": "object/seed_3_trackB_trainval_refit_part1.csv",
+          "part2_file": "object/seed_3_trackB_trainval_refit_part2.csv",
+          "part1_sha256": "658251bd78eb9535229b3e21f991b4f35268f802e7180e3bb699a1153c115f6c",
+          "part2_sha256": "2696e484a59c3caa3469eb814517de07379d2f7df84d6c6cf80c0453eb60f350",
+          "part1_l1_norm": 129345.83052399999,
+          "part2_l1_norm": 123073.971828,
+          "l1_norm": 252419.802352,
+          "l2_norm": 1229.9060041827659,
+          "pred_mean": 5.125844330301052,
+          "pred_std": 2.1398319874462084,
+          "pcc_all": 0.567996866888578,
+          "pcc_seen_target": 0.5868117516828032,
+          "pcc_unseen_target": 0.20931594093569983,
+          "pcc_seen_drug": 0.7393919300573955,
+          "pcc_unseen_drug": 0.46962699141193115,
+          "pcc_by_year": {
+            "2019": 0.544961286017629,
+            "2020": 0.7323461742587855,
+            "2021": 0.9296419610284644
+          }
+        },
+        "4": {
+          "part1_file": "object/seed_4_trackB_trainval_refit_part1.csv",
+          "part2_file": "object/seed_4_trackB_trainval_refit_part2.csv",
+          "part1_sha256": "e395de105028c6632915eb4fc29d232a4eba8dc8d52d839be34982ebf0cadd07",
+          "part2_sha256": "6665b48fbd9ac57850591d16635a10c859f117a73565277ff66fedea38987c03",
+          "part1_l1_norm": 129106.247185,
+          "part2_l1_norm": 122793.57216799998,
+          "l1_norm": 251899.819353,
+          "l2_norm": 1228.17592849988,
+          "pred_mean": 5.117368844558212,
+          "pred_std": 2.1398498940020185,
+          "pcc_all": 0.5747551535643354,
+          "pcc_seen_target": 0.5937687775902631,
+          "pcc_unseen_target": 0.20931594093569983,
+          "pcc_seen_drug": 0.742019985614226,
+          "pcc_unseen_drug": 0.48051039810876395,
+          "pcc_by_year": {
+            "2019": 0.5507334782846388,
+            "2020": 0.7461307050828636,
+            "2021": 0.935785999759981
+          }
+        },
+        "5": {
+          "part1_file": "object/seed_5_trackB_trainval_refit_part1.csv",
+          "part2_file": "object/seed_5_trackB_trainval_refit_part2.csv",
+          "part1_sha256": "d7b09fcd24c25878945e52233fc610ab5daa140dfcde5dcd8d2aba9354016541",
+          "part2_sha256": "5a9644f0ec55d24120894c6cd1500d208268e0720cbd69d284d4169a96cbc701",
+          "part1_l1_norm": 129402.08235899999,
+          "part2_l1_norm": 123125.81241000001,
+          "l1_norm": 252527.894769,
+          "l2_norm": 1229.565503060378,
+          "pred_mean": 5.127966854960431,
+          "pred_std": 2.1307359889000272,
+          "pcc_all": 0.5682190251251704,
+          "pcc_seen_target": 0.5870715625025432,
+          "pcc_unseen_target": 0.20931594093569983,
+          "pcc_seen_drug": 0.740632947911228,
+          "pcc_unseen_drug": 0.46995408753661705,
+          "pcc_by_year": {
+            "2019": 0.5441513918337225,
+            "2020": 0.7386655670476381,
+            "2021": 0.9378847701586079
+          }
+        }
       },
-      "unseen_target_p3": {
-        "n_rows": 3997,
-        "mean_pcc": 0.12204361706972122,
-        "std_pcc": 0.03026739179955451,
-        "per_seed": [
-          0.12275109440088272,
-          0.09033259749412537,
-          0.17219838500022888,
-          0.13339167833328247,
-          0.09154433012008667
+      "part_files": {
+        "seed_1_trackB_trainval_refit_part1.csv": {
+          "seed": 1,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817604,
+          "sha256": "d72075ba3c1ab19da26604b75e494ffec26e40c43cfda7c683dd90dcb581a044",
+          "l1_norm": 128525.199133,
+          "l2_norm": 894.0078563487347,
+          "mean": 5.215218737660112,
+          "std": 2.324933046487531
+        },
+        "seed_1_trackB_trainval_refit_part2.csv": {
+          "seed": 1,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827874,
+          "sha256": "6e7a1d3c176001b8d674057fa75faa85376a781da2a4f6f74df0b212e2f2e820",
+          "l1_norm": 122728.291911,
+          "l2_norm": 837.2783747782444,
+          "mean": 4.992167102104919,
+          "std": 1.9171861926301468
+        },
+        "seed_2_trackB_trainval_refit_part1.csv": {
+          "seed": 2,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817626,
+          "sha256": "9f3a285c9534c61063a332d3db824594a363a1f81dc7f3f97792f1f4dcb34a28",
+          "l1_norm": 129431.677861,
+          "l2_norm": 899.1253096528304,
+          "mean": 5.248579316920944,
+          "std": 2.3303568935538594
+        },
+        "seed_2_trackB_trainval_refit_part2.csv": {
+          "seed": 2,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827856,
+          "sha256": "70bcdce753f0248797bd2ddcb51307a700e510cdeef9344371e215a1ce9dfed8",
+          "l1_norm": 123239.14768099999,
+          "l2_norm": 838.8696361475523,
+          "mean": 5.0135086311087536,
+          "std": 1.8896743598168237
+        },
+        "seed_3_trackB_trainval_refit_part1.csv": {
+          "seed": 3,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817597,
+          "sha256": "658251bd78eb9535229b3e21f991b4f35268f802e7180e3bb699a1153c115f6c",
+          "l1_norm": 129345.83052399999,
+          "l2_norm": 899.2172302411311,
+          "mean": 5.2454672599331,
+          "std": 2.3387955446763318
+        },
+        "seed_3_trackB_trainval_refit_part2.csv": {
+          "seed": 3,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827843,
+          "sha256": "2696e484a59c3caa3469eb814517de07379d2f7df84d6c6cf80c0453eb60f350",
+          "l1_norm": 123073.971828,
+          "l2_norm": 839.0930532201337,
+          "mean": 5.006221400669006,
+          "std": 1.9128977961748543
+        },
+        "seed_4_trackB_trainval_refit_part1.csv": {
+          "seed": 4,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817637,
+          "sha256": "e395de105028c6632915eb4fc29d232a4eba8dc8d52d839be34982ebf0cadd07",
+          "l1_norm": 129106.247185,
+          "l2_norm": 897.5024994118315,
+          "mean": 5.23872595671861,
+          "std": 2.3270072841299627
+        },
+        "seed_4_trackB_trainval_refit_part2.csv": {
+          "seed": 4,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827856,
+          "sha256": "6665b48fbd9ac57850591d16635a10c859f117a73565277ff66fedea38987c03",
+          "l1_norm": 122793.57216799998,
+          "l2_norm": 838.3945222245061,
+          "mean": 4.996011732397813,
+          "std": 1.9270436269018851
+        },
+        "seed_5_trackB_trainval_refit_part1.csv": {
+          "seed": 5,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817620,
+          "sha256": "d7b09fcd24c25878945e52233fc610ab5daa140dfcde5dcd8d2aba9354016541",
+          "l1_norm": 129402.08235899999,
+          "l2_norm": 898.505164060807,
+          "mean": 5.248321923431509,
+          "std": 2.3211612033970273
+        },
+        "seed_5_trackB_trainval_refit_part2.csv": {
+          "seed": 5,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827857,
+          "sha256": "5a9644f0ec55d24120894c6cd1500d208268e0720cbd69d284d4169a96cbc701",
+          "l1_norm": 123125.81241000001,
+          "l2_norm": 839.3567754371095,
+          "mean": 5.007611786489353,
+          "std": 1.913977975740229
+        }
+      }
+    },
+    "erm_baseline": {
+      "role": "reproduced_baseline",
+      "description": "Reproduced 5-Seed ERM Baseline: Standard 2-model LightGBM ERM trained on static protein + ligand features per official seed",
+      "official_evaluate_many_pcc": "0.513 \u00b1 0.003",
+      "mean_5seed_pcc": 0.5130971262988835,
+      "std_5seed_pcc": 0.0027120499852423528,
+      "seed_pccs": [
+        0.5118277,
+        0.51470468,
+        0.51220629,
+        0.51735054,
+        0.50939642
+      ],
+      "ensemble_5seed_avg_pcc": 0.5163568034908048,
+      "seen_target_5seed_mean": 0.5259026211664255,
+      "seen_target_5seed_std": 0.0032775971096831603,
+      "unseen_target_5seed_mean": 0.12204360283187195,
+      "unseen_target_5seed_std": 0.030267379650113557,
+      "seen_drug_5seed_mean": 0.5807701460059322,
+      "seen_drug_5seed_std": 0.0014230531739909296,
+      "unseen_drug_5seed_mean": 0.48443873933295556,
+      "unseen_drug_5seed_std": 0.005157677391210395,
+      "year_2019_5seed_mean": 0.4972037033012334,
+      "year_2019_5seed_std": 0.002779136463874276,
+      "year_2020_5seed_mean": 0.6416339768616917,
+      "year_2020_5seed_std": 0.004596009292235274,
+      "year_2021_5seed_mean": 0.07610932670388142,
+      "year_2021_5seed_std": 0.03699673049189187,
+      "cross_seed_dot_matrix": [
+        [
+          1353078.7171194628,
+          1346764.9389935923,
+          1346237.360876956,
+          1347074.6275693816,
+          1349564.4333808315
+        ],
+        [
+          1346764.9389935923,
+          1347411.7868395722,
+          1343253.8977268604,
+          1344336.0499982433,
+          1346920.4192471548
+        ],
+        [
+          1346237.360876956,
+          1343253.8977268604,
+          1346008.897173235,
+          1343714.1983101396,
+          1346382.0532756983
+        ],
+        [
+          1347074.6275693816,
+          1344336.0499982433,
+          1343714.1983101396,
+          1347957.863055002,
+          1347259.2066653403
+        ],
+        [
+          1349564.4333808315,
+          1346920.4192471548,
+          1346382.0532756983,
+          1347259.2066653403,
+          1352974.865553539
         ]
+      ],
+      "seeds": {
+        "1": {
+          "part1_file": "object/seed_1_erm_baseline_part1.csv",
+          "part2_file": "object/seed_1_erm_baseline_part2.csv",
+          "part1_sha256": "cb4343d25306624c4d752aecc32a0c97f728cb0d6ae071fccbdcc73bd52166d6",
+          "part2_sha256": "e04974e2de99ab058d68eac152a4bdf32aa07f46226cade238115ef7f774a3bb",
+          "part1_l1_norm": 124745.02195,
+          "part2_l1_norm": 112348.028742,
+          "l1_norm": 237093.050692,
+          "l2_norm": 1163.2191182745673,
+          "pred_mean": 4.82546798025618,
+          "pred_std": 2.07676185666188,
+          "pcc_all": 0.511827699369974,
+          "pcc_seen_target": 0.5237324019991573,
+          "pcc_unseen_target": 0.12275108374887196,
+          "pcc_seen_drug": 0.578836284419648,
+          "pcc_unseen_drug": 0.4832374166203246,
+          "pcc_by_year": {
+            "2019": 0.4953702408197502,
+            "2020": 0.6443752492827035,
+            "2021": 0.130869769338701
+          }
+        },
+        "2": {
+          "part1_file": "object/seed_2_erm_baseline_part1.csv",
+          "part2_file": "object/seed_2_erm_baseline_part2.csv",
+          "part1_sha256": "bd1678f345ff28ea10532cc44dc845da27496501dc45528355f0aea28c2877a5",
+          "part2_sha256": "552f9493679d63497ccc49f61a6e0d7d3a7dacc9717cba823fef530dd3d1f96d",
+          "part1_l1_norm": 124110.28398899999,
+          "part2_l1_norm": 112291.984215,
+          "l1_norm": 236402.26820400002,
+          "l2_norm": 1160.7806799045075,
+          "pred_mean": 4.8114402500203965,
+          "pred_std": 2.0814749983581735,
+          "pcc_all": 0.5147046777081213,
+          "pcc_seen_target": 0.5295473793939004,
+          "pcc_unseen_target": 0.09033259169767253,
+          "pcc_seen_drug": 0.5801418336793769,
+          "pcc_unseen_drug": 0.4884173343031947,
+          "pcc_by_year": {
+            "2019": 0.4990404111491546,
+            "2020": 0.6419177035971431,
+            "2021": 0.07246233880651412
+          }
+        },
+        "3": {
+          "part1_file": "object/seed_3_erm_baseline_part1.csv",
+          "part2_file": "object/seed_3_erm_baseline_part2.csv",
+          "part1_sha256": "d22d87084f8d6cc5c2fbf0857b80d29d0a5dff41ff729561ba630578fd5c6867",
+          "part2_sha256": "257e717a2ffb6b29fa3684c43aad50bbe989f9af58402dba54bcef3b6fe79d40",
+          "part1_l1_norm": 123943.10132399999,
+          "part2_l1_norm": 112680.756569,
+          "l1_norm": 236623.857893,
+          "l2_norm": 1160.1762353941033,
+          "pred_mean": 4.816080141286611,
+          "pred_std": 2.0637958887795538,
+          "pcc_all": 0.5122062941316501,
+          "pcc_seen_target": 0.522071136915415,
+          "pcc_unseen_target": 0.17219834481080767,
+          "pcc_seen_drug": 0.5802308901934636,
+          "pcc_unseen_drug": 0.48363098583645314,
+          "pcc_by_year": {
+            "2019": 0.4968601043797293,
+            "2020": 0.6356907158006939,
+            "2021": 0.10262743193381754
+          }
+        },
+        "4": {
+          "part1_file": "object/seed_4_erm_baseline_part1.csv",
+          "part2_file": "object/seed_4_erm_baseline_part2.csv",
+          "part1_sha256": "36b241432eac82cf6193144ece4d2c6cbc994d570d7b9e511138d97dfe5718e8",
+          "part2_sha256": "5a91156f0b3c2c8b2f61f68699ce7f6bf8a8f563ec1a62879cf62a7d1ca395ce",
+          "part1_l1_norm": 124366.466473,
+          "part2_l1_norm": 112404.57517600001,
+          "l1_norm": 236771.041649,
+          "l2_norm": 1161.015875453475,
+          "pred_mean": 4.818202227482255,
+          "pred_std": 2.0684682234330927,
+          "pcc_all": 0.5173505446695545,
+          "pcc_seen_target": 0.5301027847961924,
+          "pcc_unseen_target": 0.133391667745994,
+          "pcc_seen_drug": 0.5816535623358334,
+          "pcc_unseen_drug": 0.49097540994860805,
+          "pcc_by_year": {
+            "2019": 0.5013555214830416,
+            "2020": 0.6484987046086734,
+            "2021": 0.029702621852543687
+          }
+        },
+        "5": {
+          "part1_file": "object/seed_5_erm_baseline_part1.csv",
+          "part2_file": "object/seed_5_erm_baseline_part2.csv",
+          "part1_sha256": "f429e972f4c779846ce03c35d7a102c4c9758048ce111dd2a5f8cc1e1a9d9eb6",
+          "part2_sha256": "98414b4c2827fb9de99c4ea7e49e34d5cf99acec1975c66ead6a0f2875cb9b57",
+          "part1_l1_norm": 123969.001751,
+          "part2_l1_norm": 112903.500847,
+          "l1_norm": 236872.502598,
+          "l2_norm": 1163.1744776917767,
+          "pred_mean": 4.820123634331403,
+          "pred_std": 2.088628970931834,
+          "pcc_all": 0.5093964156151172,
+          "pcc_seen_target": 0.5240594027274623,
+          "pcc_unseen_target": 0.0915443261560136,
+          "pcc_seen_drug": 0.582988159401339,
+          "pcc_unseen_drug": 0.47593254995619744,
+          "pcc_by_year": {
+            "2019": 0.4933922386744916,
+            "2020": 0.6376875110192446,
+            "2021": 0.044884471587830696
+          }
+        }
       },
-      "unseen_ligand": {
-        "n_rows": 30959,
-        "mean_pcc": 0.48443875908851625,
-        "std_pcc": 0.005157663675703731,
-        "per_seed": [
-          0.48323744535446167,
-          0.4884173572063446,
-          0.4836309850215912,
-          0.49097540974617004,
-          0.47593259811401367
-        ]
+      "part_files": {
+        "seed_1_erm_baseline_part1.csv": {
+          "seed": 1,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817329,
+          "sha256": "cb4343d25306624c4d752aecc32a0c97f728cb0d6ae071fccbdcc73bd52166d6",
+          "l1_norm": 124745.02195,
+          "l2_norm": 877.0971028741409,
+          "mean": 5.083810350167251,
+          "std": 2.3530644477773586
+        },
+        "seed_1_erm_baseline_part2.csv": {
+          "seed": 1,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827657,
+          "sha256": "e04974e2de99ab058d68eac152a4bdf32aa07f46226cade238115ef7f774a3bb",
+          "l1_norm": 112348.028742,
+          "l2_norm": 764.0545721669695,
+          "mean": 4.567125610345109,
+          "std": 1.7191526293482775
+        },
+        "seed_2_erm_baseline_part1.csv": {
+          "seed": 2,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817330,
+          "sha256": "bd1678f345ff28ea10532cc44dc845da27496501dc45528355f0aea28c2877a5",
+          "l1_norm": 124110.28398899999,
+          "l2_norm": 873.3884978156594,
+          "mean": 5.057370791833239,
+          "std": 2.3537667907948916
+        },
+        "seed_2_erm_baseline_part2.csv": {
+          "seed": 2,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827651,
+          "sha256": "552f9493679d63497ccc49f61a6e0d7d3a7dacc9717cba823fef530dd3d1f96d",
+          "l1_norm": 112291.984215,
+          "l2_norm": 764.5942183425643,
+          "mean": 4.565509708207554,
+          "std": 1.7331747082561297
+        },
+        "seed_3_erm_baseline_part1.csv": {
+          "seed": 3,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817301,
+          "sha256": "d22d87084f8d6cc5c2fbf0857b80d29d0a5dff41ff729561ba630578fd5c6867",
+          "l1_norm": 123943.10132399999,
+          "l2_norm": 869.9136919576234,
+          "mean": 5.050294485355307,
+          "std": 2.316167906705087
+        },
+        "seed_3_erm_baseline_part2.csv": {
+          "seed": 3,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827652,
+          "sha256": "257e717a2ffb6b29fa3684c43aad50bbe989f9af58402dba54bcef3b6fe79d40",
+          "l1_norm": 112680.756569,
+          "l2_norm": 767.6321161323898,
+          "mean": 4.581865797217916,
+          "std": 1.7447522606665655
+        },
+        "seed_4_erm_baseline_part1.csv": {
+          "seed": 4,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817324,
+          "sha256": "36b241432eac82cf6193144ece4d2c6cbc994d570d7b9e511138d97dfe5718e8",
+          "l1_norm": 124366.466473,
+          "l2_norm": 872.9256678243629,
+          "mean": 5.065816601329852,
+          "std": 2.3284648972599684
+        },
+        "seed_4_erm_baseline_part2.csv": {
+          "seed": 4,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827656,
+          "sha256": "5a91156f0b3c2c8b2f61f68699ce7f6bf8a8f563ec1a62879cf62a7d1ca395ce",
+          "l1_norm": 112404.57517600001,
+          "l2_norm": 765.47935407063,
+          "mean": 4.570587853634658,
+          "std": 1.7357266630034691
+        },
+        "seed_5_erm_baseline_part1.csv": {
+          "seed": 5,
+          "part": 1,
+          "row_start": 0,
+          "row_end": 24513,
+          "num_rows": 24514,
+          "size_bytes": 817314,
+          "sha256": "f429e972f4c779846ce03c35d7a102c4c9758048ce111dd2a5f8cc1e1a9d9eb6",
+          "l1_norm": 123969.001751,
+          "l2_norm": 872.4641019457325,
+          "mean": 5.0498105708166765,
+          "std": 2.35601283034718
+        },
+        "seed_5_erm_baseline_part2.csv": {
+          "seed": 5,
+          "part": 2,
+          "row_start": 24514,
+          "row_end": 49027,
+          "num_rows": 24514,
+          "size_bytes": 827649,
+          "sha256": "98414b4c2827fb9de99c4ea7e49e34d5cf99acec1975c66ead6a0f2875cb9b57",
+          "l1_norm": 112903.500847,
+          "l2_norm": 769.2732000853559,
+          "mean": 4.590436697846129,
+          "std": 1.751694414584642
+        }
       }
     }
   },
-  "track_a_strict_train_s": {
-    "evaluate_many": {
-      "bindingdb_patent": [
-        0.58,
-        0.003
-      ]
-    },
-    "seed_pccs": [
-      0.5785555807806814,
-      0.5806448150191759,
-      0.5809395887696687,
-      0.5828653381020527,
-      0.5741034238842688
-    ],
-    "bootstrap_10000": {
+  "bootstrap_10000_resamples": {
+    "track_a_strict_train_s": {
       "n_resamples": 10000,
       "boot_mean_pcc": 0.5825279183899719,
       "boot_std_pcc": 0.003362478216650252,
@@ -132,98 +992,7 @@
       "win_rate_vs_0.538": 1.0,
       "win_rate_vs_0.588": 0.0532
     },
-    "breakdown": {
-      "per_year": {
-        "2019": {
-          "n_rows": 42009,
-          "mean_pcc": 0.5562472330222012,
-          "std_pcc": 0.003438522181430149,
-          "per_seed": [
-            0.5557473708594491,
-            0.5572201883410541,
-            0.5588633237043799,
-            0.5595143565391598,
-            0.5498909256669631
-          ]
-        },
-        "2020": {
-          "n_rows": 6947,
-          "mean_pcc": 0.7467458591252363,
-          "std_pcc": 0.004164235730980698,
-          "per_seed": [
-            0.742944278690569,
-            0.7497354619324796,
-            0.741013932252292,
-            0.7521448079242901,
-            0.7478908148265513
-          ]
-        },
-        "2021": {
-          "n_rows": 72,
-          "mean_pcc": 0.8621244554898636,
-          "std_pcc": 0.02894352368344552,
-          "per_seed": [
-            0.8939421996515744,
-            0.8210138737583159,
-            0.8813321823461954,
-            0.8802765300590031,
-            0.8340574916342296
-          ]
-        }
-      },
-      "seen_target": {
-        "n_rows": 45031,
-        "mean_pcc": 0.5971873587675528,
-        "std_pcc": 0.003074440344233107,
-        "per_seed": [
-          0.5962597264639833,
-          0.5987433020854138,
-          0.5974615631720451,
-          0.6013996298055904,
-          0.5920725723107312
-        ]
-      },
-      "unseen_target_p3": {
-        "n_rows": 3997,
-        "mean_pcc": 0.20577491765137962,
-        "std_pcc": 0.005429410384878393,
-        "per_seed": [
-          0.20940649940517334,
-          0.203164174239552,
-          0.21232922119186032,
-          0.20726644872990735,
-          0.19670824469040513
-        ]
-      },
-      "unseen_ligand": {
-        "n_rows": 30959,
-        "mean_pcc": 0.5016329544722827,
-        "std_pcc": 0.004167943064503295,
-        "per_seed": [
-          0.502879460805207,
-          0.5037172624588242,
-          0.5034302148981826,
-          0.5047514301347101,
-          0.49338640406448997
-        ]
-      }
-    }
-  },
-  "track_b_train_val_refit": {
-    "evaluate_many": {
-      "bindingdb_patent": [
-        0.571,
-        0.003
-      ]
-    },
-    "seed_pccs": [
-      0.5718680518611274,
-      0.5724559141628686,
-      0.5679968669632451,
-      0.5747551540894462,
-      0.5682190250888292
-    ],
-    "bootstrap_10000": {
+    "track_b_train_val_refit": {
       "n_resamples": 10000,
       "boot_mean_pcc": 0.5717123561717578,
       "boot_std_pcc": 0.003389593256487293,
@@ -231,100 +1000,6 @@
       "ci_95_upper": 0.5783255557215204,
       "win_rate_vs_0.538": 1.0,
       "win_rate_vs_0.588": 0.0
-    },
-    "breakdown": {
-      "per_year": {
-        "2019": {
-          "n_rows": 42009,
-          "mean_pcc": 0.5472039435123003,
-          "std_pcc": 0.0024009105576941474,
-          "per_seed": [
-            0.5485652409095277,
-            0.5476083203036264,
-            0.544961285920181,
-            0.5507334788690691,
-            0.5441513915590973
-          ]
-        },
-        "2020": {
-          "n_rows": 6947,
-          "mean_pcc": 0.7408523320604198,
-          "std_pcc": 0.005987021209080791,
-          "per_seed": [
-            0.7381022409970084,
-            0.749016967074968,
-            0.7323461764098466,
-            0.7461307063026963,
-            0.73866556951758
-          ]
-        },
-        "2021": {
-          "n_rows": 72,
-          "mean_pcc": 0.9341855183247428,
-          "std_pcc": 0.0033694014870392793,
-          "per_seed": [
-            0.936937003921638,
-            0.930677859702762,
-            0.9296419546626453,
-            0.9357860024017853,
-            0.9378847709348838
-          ]
-        }
-      },
-      "seen_target": {
-        "n_rows": 45031,
-        "mean_pcc": 0.589936938652303,
-        "std_pcc": 0.002670098182236567,
-        "per_seed": [
-          0.590443191151377,
-          0.591589410165224,
-          0.5868117516335449,
-          0.5937687779668611,
-          0.5870715623445079
-        ]
-      },
-      "unseen_target_p3": {
-        "n_rows": 3997,
-        "mean_pcc": 0.20931594067777226,
-        "std_pcc": 0.0,
-        "per_seed": [
-          0.20931594067777226,
-          0.20931594067777226,
-          0.20931594067777226,
-          0.20931594067777226,
-          0.20931594067777226
-        ]
-      },
-      "unseen_ligand": {
-        "n_rows": 30959,
-        "mean_pcc": 0.47555090383359994,
-        "std_pcc": 0.004744346202422907,
-        "per_seed": [
-          0.4788840272139196,
-          0.4787790151470753,
-          0.469626991963511,
-          0.48051039874219675,
-          0.46995408610129674
-        ]
-      }
     }
-  },
-  "prediction_files_sha256": {
-    "seed_1_trackA_strict_train.csv": "eb49ba53032efbd9fdf65343be9c87bc75ccd25328c01c01b160d50001fedbd9",
-    "seed_1_trackB_trainval_refit.csv": "bf83f07ac62dc812992dfcc0121253e55ac2c7bc1b74962b1ced122c3381a7d2",
-    "seed_1_erm_baseline.csv": "8383bf3de0cb2bfa9ccdcdab9f495eebf59a9666e788c2be812a5a8f1b2884cb",
-    "seed_2_trackA_strict_train.csv": "b268c35762bc4a866a1834a7716c60d2b8faed3eea89b8c9a95b92103a6042c0",
-    "seed_2_trackB_trainval_refit.csv": "e875e943a8395f73eebbd4a15fd6434df5a6adef046b64dee5241465dffbe8e3",
-    "seed_2_erm_baseline.csv": "327edc36b682f0f99f2e654648ae0f2ff121de5619820561620db0d2a7e99413",
-    "seed_3_trackA_strict_train.csv": "23b4520108df3f886b71caa2fe00b40b57447058fd1550d78965310a1a6000f0",
-    "seed_3_trackB_trainval_refit.csv": "66366e0a399054314130ac7863d0214bd12472293454a0ccda8c46a6d6093c2c",
-    "seed_3_erm_baseline.csv": "7d9b3c14fbc6c94077e972a1ae2f8d961a0165fcc7e3321bd45668be30813e16",
-    "seed_4_trackA_strict_train.csv": "ccf32bc98e6a76ce739dad4f3dc048a6c658e640595ae7bc56777caf4695e2c8",
-    "seed_4_trackB_trainval_refit.csv": "5d56b46c5d5aba6c59fbe79489943d1d6f8d31d3b98d28ae837924227d4ae7be",
-    "seed_4_erm_baseline.csv": "1bf1e872442ea84992dc068df353e36dd9bad6efcad0ba0f39b9e8e1aff8e8cb",
-    "seed_5_trackA_strict_train.csv": "c96ed7793ad3e72af297d3a34b2597200ee2358239606b58e5a586f1083a1246",
-    "seed_5_trackB_trainval_refit.csv": "70e956f23c3b0ec9decb07671174f9681d8df4af39af70a742e6b1e9c75bd49d",
-    "seed_5_erm_baseline.csv": "0795f40fd90d0cb758ac547749a4ad9cd569ceb3e36292750e0a3da352ad48bd"
-  },
-  "total_runtime_seconds": 1129.0631649494171
+  }
 }

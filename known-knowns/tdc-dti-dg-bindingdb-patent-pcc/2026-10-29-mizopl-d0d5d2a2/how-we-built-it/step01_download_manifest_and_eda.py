@@ -66,6 +66,8 @@ def main():
     file_hashes = {}
     for root, _, files in os.walk(DATA_DIR):
         for fn in sorted(files):
+            if fn == ".DS_Store" or "__MACOSX" in root:
+                continue
             fpath = Path(root) / fn
             rel = str(fpath.relative_to(BASE_DIR))
             file_hashes[rel] = {
