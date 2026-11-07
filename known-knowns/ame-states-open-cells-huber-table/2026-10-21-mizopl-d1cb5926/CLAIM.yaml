@@ -1,0 +1,26 @@
+target_id: ame-states-open-cells-huber-table
+bucket: known-knowns
+package_id: 2026-10-21-mizopl-d1cb5926
+claimant: "@mizopl"
+claimed_at_utc: "2026-10-21T01:10:09Z"
+updated_at_utc: "2026-11-07T15:20:00Z"
+title: "Single-cell Huber-Wyderka table certificate AME(17, 8) (quantum MDS code [[17, 0, 9]]_8) via a palindrome-symmetric 17-circulant graph state over GF(8), exhaustively verified across all C(17, 8) = 24,310 eight-party cuts"
+checked_scope: "24,310 / 24,310 eight-party cuts over GF(8) (0 bad cuts) and 24,310 / 24,310 eight-qudit (24-qubit) cuts of the 51-qubit binary trace-symplectic graph state over GF(2) (0 bad cuts)"
+claimed_cell:
+  state: "AME(17, 8)"
+  quantum_mds_code: "[[17, 0, 9]]_8"
+  n_parties: 17
+  local_dimension_D: 8
+  huber_wyderka_table_column_range: "D in {2..10} (cell n=17, D=8 is Blank in https://tp.nt.uni-siegen.de/ame/table.html)"
+  field: "GF(8) = GF(2)[w]/(w^3 + w + 1)"
+  chord_vector_d1_to_d8_int: [1, 2, 5, 1, 5, 2, 2, 2]
+  chord_vector_d1_to_d8_poly: ["1", "w", "w^2+1", "1", "w^2+1", "w", "w", "w"]
+  exhaustive_8_party_cuts_gf8: "24310 / 24310 full rank 8 (0 bad cuts)"
+  exhaustive_8_qudit_cuts_gf2_51qubit: "24310 / 24310 full rank 24 (0 bad cuts)"
+  codetables_de_url: "https://www.codetables.de/QECC/QECC.php?q=64&n=17&k=0"
+  codetables_de_status: "Prior to 2026-10-21: [[17, 0, 8..9]]_8 (lower bound 8). Updated 2026-10-21 to [[17, 0, 9]]_8 under 'Construction type: Gajewski' (crediting the submitter of this PR) with the identical GF(8) subset GF(64) 17-circulant polynomial."
+certificate_object:
+  path: "object/ame_17_8_pure_circulant_certificate.json"
+  bytes: 4176
+  sha256: "0bc632480b2bfb3a90117f0676e8894dc5972ea32cb315cd47e1d04077f20a28"
+verification_command: "sh verify-it-yourself/run_checks.sh"
