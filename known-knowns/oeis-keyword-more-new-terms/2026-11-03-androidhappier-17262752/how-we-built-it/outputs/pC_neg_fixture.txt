@@ -1,0 +1,3 @@
+A326249 variant (nesting=any pairs): [0, 0, 0, 0, 0, 0, 0, 0, 0, 0] DATA [0, 0, 0, 0, 0, 1, 9, 55, 283, 1324] reproduces: False
+A326335 variant (nesting=any pairs): [1, 1, 1, 1, 2, 7, 24, 100, 458, 2279] DATA [1, 1, 1, 1, 2, 6, 21, 86, 394, 1974] reproduces: False
+A326336 variant (crossing edges)   : [1, 1, 1, 1, 2, 6, 21, 85, 385, 1907] DATA [1, 1, 1, 1, 2, 7, 24, 100, 458, 2279] reproduces: False
