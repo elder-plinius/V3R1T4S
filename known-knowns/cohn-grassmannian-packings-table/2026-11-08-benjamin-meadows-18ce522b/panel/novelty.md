@@ -14,7 +14,7 @@ verdict_utc: 2026-11-08T02:37:22Z
   - The searches "11-4-66", "(11, 4, 66)" and "11,4,66" return nothing. The search "11 4 66" returns three unrelated claims (#66, #11, #4).
   - A scan of the titles and bodies of all 960 listed PRs (highest number #1008) finds nothing for "grassmann", "cohn-grass", "subspace pack" or 11/4/66.
   - `gh search issues "cohn-grassmannian"` returns nothing. The target file exists at known-unknowns/packings-physics/cohn-grassmannian-packings-table.md.
-  - TROPHY_CASE.md on main (31,306 bytes, sha256 83af764f…356113) has no match for grassmann, cohn or 11-4-66.
+  - TROPHY_CASE.md (https://github.com/elder-plinius/V3R1T4S/blob/main/TROPHY_CASE.md) on main (31,306 bytes, sha256 83af764f…356113) has no match for grassmann, cohn or 11-4-66.
   - No prior claim found.
 - Earlier publication of the same object: https://github.com/TheBenMeadows/packing-records commit d0841ec0f9 (2026-11-08T00:38:48Z, "v1.3: Cohn tables …") adds grassmannian/11-4-66.txt. That file is byte-identical to object/11-4-66.txt (same sha256). Zenodo 10.5281/zenodo.23906181 now resolves to version 1.3.0, published 2026-11-08. This is the same object from the same author line that the table already credits as [24], not a competing value. It is still a public release made before this claim.
 - Literature: I ran arXiv API queries sorted by submittedDate, newest 15 each, for "Grassmannian packing", "Grassmannian packings", "subspace packing", "fusion frame" and "line packing", fetched 2026-11-08T02:35:43Z, all HTTP 200. The 2025–2026 hits are 2606.26464, 2604.19904, 2501.06178, 2610.05302, 2608.13972, 2607.26684, 2606.11454, 2511.20642, 2610.29041, 2609.08531, 2601.17294 and others. Their abstracts are about modulation, beamforming, filter-bank EITFF/ECTFF characterisation, LP relaxations, equi-isoclinic counting bounds and spherical designs. None reports a numerical packing for (m, n, N) = (11, 4, 66) or any real 4-plane packing table.
@@ -30,7 +30,7 @@ verdict_utc: 2026-11-08T02:37:22Z
 - No prior V3R1T4S PR and no TROPHY_CASE.md entry claims this cell — PASS
 - No arXiv result in the searched windows gives a larger value for (11, 4, 66) — PASS
 - Sloane 1997 table has no larger value for this cell (no explicit row) — PASS
-- No steering instructions found in claim/CLAIM.md or the object header (the header is a metadata comment only) — PASS
+- No steering instructions found in CLAIM.md or the object header (the header is a metadata comment only) — PASS
 
 ## Decision
 The object beats the live, unstarred, uncredited-as-optimal Cohn row for (11, 4, 66) by 4.17e-5, stays well below the bound, and I found no prior V3R1T4S claim and no larger published value. The residual novelty risks are these:

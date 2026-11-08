@@ -27,10 +27,10 @@ python3 verify-it-yourself/check_cohn.py grassmannian object/11-4-66.txt 11 4 66
 
 ## Rebuild
 
-The search code is in how-we-built-it/src/ (pinned requirements: how-we-built-it/requirements.txt). It ran in a sandbox whose workspace was `/work`, with Sloane's file `grassc.11.4.66` from https://neilsloane.com/grass/ under `grass/txts/`. The producing command, from the queue driver run14.sh:
+The search code is in how-we-built-it/src/ (pinned requirements: how-we-built-it/requirements.txt). It ran in a container, with Sloane's file `grassc.11.4.66` from https://neilsloane.com/grass/ under `grass/txts/`. The producing command, from the queue driver run14.sh:
 
 ```sh
 timeout 410 python3 refix6.py 11 4 66 320
 ```
 
-then harvest14.py wrote the cell with an mpmath re-orthonormalisation (mkcell.py). Exact log lines: how-we-built-it/src/hit.log; versions and file:line references: how-we-built-it/src/PROVENANCE.md.
+then harvest14.py wrote the cell with an mpmath re-orthonormalisation (mkcell.py). Exact log lines: how-we-built-it/src/hit.log; the scripts are the versions that ran.
