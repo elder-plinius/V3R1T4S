@@ -1,0 +1,2 @@
+target_id,submission_id,status,metric_name,metric_value,metric_sd,baseline_value,object_path
+plmfit-trastuzumab-cdrh3-binding-mcc,2026-11-08-mizopl-465b77e7,CONFIRMED_SOLUTION,MCC,0.421004,0.001735,0.3898,object/certificate.json
