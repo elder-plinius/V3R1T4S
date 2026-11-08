@@ -1,0 +1,8 @@
+Sat Oct 24 18:54:01 UTC 2026
+head: rho1 9 rho0 9 s 3 bound 6 exact 6
+try 0: true hull 3 (bound 6) pts 3 8 5 0 2 teps +-+-- M 0 2 7 7 7 1 6 1 0
+try 7: true hull 4 (bound 6) pts 0 8 5 6 2 teps +---+ M 3 6 2 7 5 6 3 3 7
+try 66: true hull 5 (bound 6) pts 7 0 3 1 6 teps ++-++ M 7 2 2 2 3 2 1 5 1
+try 2511: true hull 6 (bound 6) pts 1 0 6 9 5 teps ----- M 1 3 8 0 7 7 4 1 2
+real: bound 6, exact 6, best true hull 6
+Sat Oct 24 18:54:01 UTC 2026
