@@ -36,7 +36,7 @@ It polishes the posted configuration by L-BFGS-B on row-normalised coordinates a
 
 ## Rebuild
 
-The search code is in how-we-built-it/src/ (pinned requirements: how-we-built-it/requirements.txt). It ran in a sandbox whose workspace was `/work`, with the 2021 data set's configurations as starting points. The producing run:
+The search code is in how-we-built-it/src/ (pinned requirements: how-we-built-it/requirements.txt). It ran in a container with the 2021 data set's configurations as starting points. The producing run:
 
 ```sh
 OMP_NUM_THREADS=1 python3 -u liftseed.py run4/w9 18 555 <row list>
@@ -44,4 +44,4 @@ OMP_NUM_THREADS=1 python3 -u liftseed.py run4/w9 18 555 <row list>
 
 (18 s per row, rng seed 555; 64-20 is one row of the list), seeded from the (64, 19) file made by `OMP_NUM_THREADS=1 python3 -u worker3.py 19 44 64 run2/w0 25 5 1 0`; harvest.py wrote the cell.
 
-Both scripts use wall-clock budgets, so an exact rerun can take a different path. Exact log lines: how-we-built-it/src/hit.log; file:line references: how-we-built-it/src/PROVENANCE.md.
+Both scripts use wall-clock budgets, so an exact rerun can take a different path. Exact log lines: how-we-built-it/src/hit.log; file:line references: the scripts are the versions that ran.
