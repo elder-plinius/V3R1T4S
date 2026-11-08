@@ -2,7 +2,9 @@
 
 ## What
 
-In dimension 7, a code of 365 unit vectors whose largest pairwise inner product, computed at 50 significant digits over all pairs, is 0.670467035142, which is 2.034e-7 below the live /plain cosine 0.670467238587 of the (7, 365) row of Henry Cohn's table. The row is not marked proven optimal and does not carry the "needs more optimization" label; no row with more points in dimension 7 has a cosine at or below this value.
+As of the 2026-11-08 live fetch of spherical-codes.org, object/7x365.txt (365 vectors in R^7, coordinates to at least 26 digits) has a 50-digit maximum pairwise inner product of 0.670467035142 (20 digits: 0.67046703514181086524), 2.0345e-7 below the live /plain cosine 0.670467238587 of the (7, 365) row, on an index row with no proven-optimal mark and no "needs more optimization" text, with no dimension-7 row of larger N at or below this value, while supersession by a newer arXiv result was not checked here.
+
+The sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`), the gate of the fresh three-skeptic panel of 2026-11-08 for this single row.
 
 The object is `object/7x365.txt` (365 lines, 7 comma-separated coordinates each), listed with its sha256 in `INDEX.csv`. The package identifier uses the first 8 hex digits of that file's sha256 (fcb7516bada8a9fe8aee81aca8579d82f739661f0d91e4397cf2bd0804e7cf37).
 
@@ -33,8 +35,8 @@ Page hashes and the saved rows: `the-record-we-beat/README.md`. Our value to 20 
 - Only the (7, 365) row. Nothing is claimed for other N in dimension 7 or for other dimensions.
 - The code is not proven optimal and is not claimed to be converged.
 - The table changes often. The comparison above is with the fetch of 2026-11-03; the row may change again.
-- The panel files in `panel/` were written on 2026-10-18 for the earlier 24-row package and are left as written; see `panel/NOTE_2026-11-03.md`.
-- The Zenodo data set behind arXiv:2610.19988 (https://doi.org/10.5281/zenodo.23270586) was not fetched; an unposted better code could exist there.
+- The panel files in `panel/` are from the fresh panel of 2026-11-08 for this single row. The panel of 2026-10-18, which reviewed the earlier 24-row package, is kept unchanged in `panel/2026-10-18/` with its note of 2026-11-03.
+- The Zenodo data set behind arXiv:2610.19988 (https://doi.org/10.5281/zenodo.23270586) was not fetched by the contributor or the panel; an unposted better code could exist there. The paper's abstract does not name dimension 7 or N = 365, and the live table credits this row to Antoine Jay, not to that paper.
 - Nothing was uploaded to the table (its /upload-code route); that needs the contributor's explicit permission and is a separate step.
 - Not peer reviewed.
 

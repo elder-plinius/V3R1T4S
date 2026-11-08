@@ -1,45 +1,50 @@
-# reproduce report: sc-p2-d7-batch24
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
-Hash check: shasum -a 256 -c on the contributor's hash list run inside the package folder printed no failure (all listed files OK). The package folder was copied to a private workspace; all work done there. No network used.
+# REPRODUCE skeptic report, (7, 365)
 
-Definition (quoted from the target's success criterion): "after normalizing each vector to unit length in mpmath at 50 digits the maximum pairwise inner product c* (cosine of the minimal angle) is STRICTLY LOWER (direction: min) than the table's 12-decimal cosine for (d, N) ... by at least 1e-10, AND ... the (d, N) row has NO '&ast;' (proven optimal) mark AND does NOT contain the text 'needs more optimization'" (for the p2 batch: the rows must instead carry that text; partial win p2 = "A batch of at least 20 certified improvements (margin 1e-10 each) to rows labeled 'needs more optimization' in one dimension d in 4..32").
+## Hash list
+`shasum -a 256 -c SHA256SUMS`, run inside a copy of the claim folder: all 16 files reported OK (object/7x365.txt, the-record-we-beat/*, verify-it-yourself/*, how-we-built-it/*, top-level docs).
 
-My checker (written before opening verify-it-yourself/): my own script, not shipped in this package, kept outside the package copy; its output is shown below. It checks per object file: line count equals N; every line has exactly d comma-separated coordinates; coordinates have at least 20 significant digits; each vector normalised with mpmath at dps=50; ALL N(N-1)/2 pairwise inner products computed in mpmath (no sampling), c* = max; gain = (12-decimal /plain cosine) minus c* >= 1e-10; the plain_rows.csv cosine, the index_rows.html cosine and the cosine in README.md agree as strings; the index row has no &ast; star; the row does contain "needs more optimization"; the kissing-number exclusion (9<=d<=23 and c*<=0.5) does not apply.
+## Definition checked against (CLAIM_AND_CRITERION.md, verbatim)
+"Load the claimed vectors; mpmath mp.dps=50; normalize; compute all N(N-1)/2 inner products; c* = max. Assert c_table - c* >= 1e-10."
+Also: no '&ast;' after the link in the index row, no 'needs more optimization', and "if 9 <= d <= 23 and c* <= 0.5 the claim belongs to the bank target kissing-number-low-dim and is not counted here".
 
-Command: (own checker, run on the private copy of the package; interpreter: the V3R1T4S venv python). Real output (shown below):
+## My checker (written before opening verify-it-yourself/)
+Own script `my_check.py`, run as `python -I my_check.py` (mpmath, mp.dps=50). It reads object/7x365.txt and asserts 365 non-empty lines. Each line must have 7 comma-separated fields, and each field at least 20 significant digits. It normalises each vector at 50 digits and computes all 365*364/2 pairwise inner products (no sampling). It takes the maximum, compares it with the-record-we-beat/plain_rows.csv, searches the-record-we-beat/index_rows.html for '&ast;' and 'needs more optimization', and evaluates the kissing exclusion.
+
+Real output:
 ```
-(d=7,N=177) lines=177 dim_ok=True min_sigdigits~27 c*=0.5700514664903816802551292 angle_deg=55.2461852536696 table=0.570051592256 gain=1.2576562e-7 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=178) lines=178 dim_ok=True min_sigdigits~28 c*=0.5702282703724720414760652 angle_deg=55.2338547255814 table=0.570228301539 gain=3.1166528e-8 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=204) lines=204 dim_ok=True min_sigdigits~26 c*=0.6012957769093946548520905 angle_deg=53.0372426915331 table=0.601295919469 gain=1.4255961e-7 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=212) lines=212 dim_ok=True min_sigdigits~26 c*=0.6119555847043238092434021 angle_deg=52.2689608134133 table=0.611962614152 gain=7.0294477e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=215) lines=215 dim_ok=True min_sigdigits~27 c*=0.6142650149267105285640579 angle_deg=52.1014656405886 table=0.614265846451 gain=8.3152429e-7 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=308) lines=308 dim_ok=True min_sigdigits~27 c*=0.6606990324824640565680363 angle_deg=48.6467932075509 table=0.660836744901 gain=0.00013771242 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=309) lines=309 dim_ok=True min_sigdigits~27 c*=0.6608636601769563020010549 angle_deg=48.6342262705101 table=0.660912967551 gain=4.9307374e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=310) lines=310 dim_ok=True min_sigdigits~27 c*=0.6609354392663909829922261 angle_deg=48.6287462181156 table=0.660953811794 gain=1.8372528e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=312) lines=312 dim_ok=True min_sigdigits~27 c*=0.6615819518702853466470222 angle_deg=48.5793666870016 table=0.661595420972 gain=1.3469102e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=313) lines=313 dim_ok=True min_sigdigits~27 c*=0.6619458229823329548752311 angle_deg=48.5515583140629 table=0.661974195320 gain=2.8372338e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=314) lines=314 dim_ok=True min_sigdigits~25 c*=0.6622805588470151873060209 angle_deg=48.5259660343235 table=0.662290658947 gain=1.01001e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=315) lines=315 dim_ok=True min_sigdigits~28 c*=0.6625396722494407182856544 angle_deg=48.5061485411235 table=0.662675365192 gain=0.00013569294 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=316) lines=316 dim_ok=True min_sigdigits~27 c*=0.6633229534281372814526812 angle_deg=48.4462047743884 table=0.663332152344 gain=9.1989159e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=317) lines=317 dim_ok=True min_sigdigits~27 c*=0.6635929176900946176475293 angle_deg=48.4255317828313 table=0.663597580717 gain=4.6630269e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=318) lines=318 dim_ok=True min_sigdigits~27 c*=0.6638138425236042778067553 angle_deg=48.4086091483718 table=0.663816385482 gain=2.5429584e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=322) lines=322 dim_ok=True min_sigdigits~27 c*=0.6650275665388046022269101 angle_deg=48.3155597424517 table=0.665029616003 gain=2.0494642e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=323) lines=323 dim_ok=True min_sigdigits~27 c*=0.6650278206917356596511928 angle_deg=48.3155402438902 table=0.665046095133 gain=1.8274441e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=325) lines=325 dim_ok=True min_sigdigits~27 c*=0.6654995161348060803477514 angle_deg=48.2793416744357 table=0.665504583307 gain=5.0671722e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=362) lines=362 dim_ok=True min_sigdigits~27 c*=0.6689653544130922429144803 angle_deg=48.0127394972281 table=0.668965357603 gain=3.1899078e-9 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=364) lines=364 dim_ok=True min_sigdigits~27 c*=0.670168019241319285392633 angle_deg=47.9199660684085 table=0.670170636995 gain=2.6177537e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=365) lines=365 dim_ok=True min_sigdigits~26 c*=0.6704670351418108652355548 angle_deg=47.8968789634735 table=0.670487284551 gain=2.0249409e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=366) lines=366 dim_ok=True min_sigdigits~27 c*=0.6709260604117816355079511 angle_deg=47.8614211197464 table=0.670943830170 gain=1.7769758e-5 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=367) lines=367 dim_ok=True min_sigdigits~27 c*=0.6715278961723875417821606 angle_deg=47.8149016390702 table=0.671529770134 gain=1.8739616e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-(d=7,N=368) lines=368 dim_ok=True min_sigdigits~24 c*=0.6715880639584741425717057 angle_deg=47.8102490297682 table=0.671589583556 gain=1.5195975e-6 gain>=1e-10:True ast=False needs_opt=True cos_consistent=True ref='Henry Cohn, 2026, needs more optimization.' kissing_excl=n/a ROW_OK
-rows_ok 24 of 24
+pairs 66430
+c* 0.6704670351418108652355548 (205, 304)
+deg 47.896878963473533666
+gain 2.034451891e-7 True
+ast False needs more False
+kissing excluded? False
 ```
+(The "ast False" and "needs more False" lines mean no `&ast;` mark and no "needs more optimization" text.)
 
-Then the author's checker: PYTHON=venv-python sh verify-it-yourself/run_checks.sh (run in the private copy). Last line: ALL CHECKS PASS. Its sha256 lines: 24 ok, 0 mismatch. Its c* values agree with mine to 20 digits for 24 of 24 rows; mismatches: none.
+- c* to 20 digits: 0.67046703514181086524 (attained by rows 205 and 304, 0-based)
+- Minimal angle: 47.896878963473533666 degrees
+- Saved /plain cosine for (7,365): 0.670467238587. Gain 2.034e-7, against the required 1e-10: met.
+- Saved index row: link /data/7/365, cell 0.670467238587, reference Antoine Jay 2026. No &ast;, no "needs more optimization".
+- Kissing exclusion: not applicable (d=7 is outside 9..23, and c* > 0.5).
 
-Rows passing every checkable condition: 24 of 24 (threshold for p2 is at least 20). Largest improvement reported by my run: see the gain column above.
-Not judged here: whether the table value is current, and novelty (other skeptics).
-Mismatches: none
+## Author's checker (run afterwards, from the copy of the package)
+`sh verify-it-yourself/run_checks.sh`, exit 0:
+```
+sha256 ok object/7x365.txt
+== check_sc.py: 50-digit decimal arithmetic, normalise, all pairs, against the saved live rows
+(7,365) c*=0.67046703514181086524 table=0.670467238587 gain=2.03445e-7 star=False needs_opt=False ref=Antoine Jay, 2026, ... index_cos=0.670467238587 OK
+rows checked: 1 (expected 1); smallest gain 2.03e-07; largest gain 2.03e-07
+assertions: PASS (every row OK, no star, label absent)
+ALL CHECKS PASS
+```
+The script's `tail -30` output also showed the sha256 line for object/7x365.txt only (the INDEX.csv lists one object).
+
+## Agreement
+c* agrees with the author's value to all 20 reported digits. The gain, star and label results agree. The author's checker was run once and mine twice, with identical values, so I saw no non-determinism. I found no mismatch and no missing object.
+
+## Limits
+This was offline. I confirmed the object against the SAVED table rows only (fetched 2026-11-03). I did not check whether the live table has moved, or whether a newer arXiv result supersedes the row. Those are for the NOVELTY skeptic.
 
 pass: true

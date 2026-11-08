@@ -2,8 +2,9 @@
 
 Needs python3 (3.8 or later), standard library only. In a fresh shell:
 
+Run these from this package folder:
+
 ```sh
-cd {WORKDIR}/2026-10-18-calgulbenkian-fcb7516b
 sh verify-it-yourself/run_checks.sh
 ```
 

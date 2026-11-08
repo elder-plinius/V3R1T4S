@@ -8,4 +8,4 @@ The search agent (an AI, Gemini) wrote a preregistration first (`how-we-built-it
 
 What worked: sharpening the smoothing to very large beta and polishing gave gains on rows whose posted codes had not fully converged; for N = 365 the gain against the table at the time was 2.0e-5, and against the live row of 2026-11-03 it is 2.0e-7. What was not recorded: the seeds, restart counts and exact commands per row (see `how-we-built-it/README.md`).
 
-The object was then checked by the orchestrator's own checker and by the three-skeptic panel (`panel/`); the checker in `verify-it-yourself/` was written from the definition and does not use the search code.
+The object was then checked by the three-skeptic panel of 2026-10-18, which reviewed the earlier 24-row package (`panel/2026-10-18/`), and again by the fresh panel for this single row (`panel/`); the checker in `verify-it-yourself/` was written from the definition and does not use the search code.

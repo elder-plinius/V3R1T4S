@@ -1,4 +1,4 @@
-Real output of `sh verify-it-yourself/run_checks.sh` run from the package folder on 2026-11-03 (Python standard library only):
+Real output of `sh verify-it-yourself/run_checks.sh` run from the package folder on 2026-11-08 (Python standard library only):
 
 ```
 sha256 ok object/7x365.txt

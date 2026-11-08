@@ -6,7 +6,7 @@ Contributor text, unverified. Everything here is copied from the search agent's 
 
 - `sc_opt.c`: the search code (only change from the snapshot: the usage string's angle-bracket placeholders were written with braces). Riemannian L-BFGS on the log-sum-exp smoothing of the maximum pairwise inner product, with a continuation in the sharpness beta (30 up to 3e10), tangential basin-hopping kicks, and a final sharp polish. Standard C, no dependencies.
 - `PREREG.md`: the preregistration written before the run (target, goals A, B and C, method).
-- `RESULTS.md`: the agent's results table for all of its rows, including the row(s) in this package. Only the rows named in `../README.md` are claimed here. Links to coordinate files and receipts in it point to the agent's workspace and are not shipped; the objects are in `../object/`.
+- `RESULTS.md`: the agent's results table, trimmed on 2026-11-08 to the (7, 365) row this package claims, with the minimal angle corrected.
 
 ## Commands
 

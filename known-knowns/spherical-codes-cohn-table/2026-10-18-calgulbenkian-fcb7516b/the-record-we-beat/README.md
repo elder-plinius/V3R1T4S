@@ -1,6 +1,6 @@
 # The record we beat
 
-Each source was fetched once with a plain GET (curl, User-Agent naming V3R1T4S, no retries) by the orchestrator on 2026-11-03; the log line is in the orchestrator's FETCHLOG.txt.
+Each source was fetched once with a plain GET (curl, User-Agent naming V3R1T4S, no retries) on 2026-11-03.
 
 | Source | URL | UTC fetch time | HTTP | sha256 of the full page | Bytes |
 |---|---|---|---|---|---|
@@ -18,4 +18,4 @@ Selected headers were not recorded. Only the compared row is saved here (whole t
 
 The claim is compared against the /plain cosine (12 decimals) as the bank's criterion states. Codes with more points in dimension 7 were also checked in the same /plain fetch: no row with N > 365 has a cosine at or below this package's value (the nearest, N = 366, reads 0.670923693486).
 
-The package was first filed on 2026-10-18 as a batch of 24 dimension-7 rows (partial win p2), compared against fetches at 2026-10-18T17:39:49Z and 17:50:10Z. By 2026-11-03 the table had superseded 23 of those rows, and the N = 365 row had lost its "needs more optimization" label, so the package was cut down to that row at the maintainer's request. Those earlier fetches are not repeated here.
+The package was first filed on 2026-10-18 as a batch of 24 dimension-7 rows (partial win p2), compared against fetches at 2026-10-18T17:39:49Z and 17:50:10Z; the 2026-10-18 panel (`panel/2026-10-18/`) reviewed that earlier 24-row package. By 2026-11-03 the table had superseded 23 of those rows, and the N = 365 row had lost its "needs more optimization" label, so the package was cut down to that row at the maintainer's request. Those earlier fetches are not repeated here.
