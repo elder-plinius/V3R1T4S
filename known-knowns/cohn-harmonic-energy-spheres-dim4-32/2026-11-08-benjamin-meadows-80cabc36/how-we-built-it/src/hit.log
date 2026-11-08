@@ -1,7 +1,8 @@
-# Lane: cohn-harmonic. Excerpts copied verbatim; a leading 'N:' (a number and a colon) is the line number in the source file. Log clock is UTC (container); file mtimes below are -0700.
+# Excerpts from the search lane's run logs and saved records, copied verbatim except that container paths are shortened to the file name. The logs themselves are not part of this package; each block names the one it came from, and a leading 'N:' (a number and a colon) is the line number in it.
+
 
 ## Column worker n=21 (worker3.py), lane session 001. init lines = starting configs (posted 2021 data set unless a lower-energy lane npz existed; no 60-21 or 61-21 npz existed before this run)
-### source: work/run2/w2/col21.log lines 16-25
+### from the lane log `col21.log`, lines 16-25
 16: 14:12:56 n=21 init 59-21: E=3.7708150493
 17: 14:12:56 n=21 init 60-21: E=3.8972329293
 18: 14:12:56 n=21 init 61-21: E=4.1191657308
@@ -14,21 +15,14 @@
 25: 14:34:41 n=21 --- round 0 done ---
 
 ## Final energies of the column pass
-### source: work/run2/w2/col21.log lines 42-43
+### from the lane log `col21.log`, lines 42-43
 42: 14:34:41 n=21 final 60-21: E=3.8972329293
 43: 14:34:41 n=21 final 61-21: E=4.1039483024
 
-## Table row (lane-root inputs/cohn_harmonic.tsv): N n table_energy energy_2021 distances universal
+## Table row (the lane's snapshot of the live table, cohn_harmonic.tsv): N n table_energy energy_2021 distances universal
 60	21	3.8972329294	3.89723292930582861910340472896421367493208861158392	25	no
 61	21	4.1191657308	4.11916573078724116241077879314952602324985447507079	126	no
 
-## Lane copies holding this configuration (mtime, energy identical to the claimed object)
-2026-11-06 07:34:41.935328074 -0700 run2/w2/61-21.npz
-2026-11-06 07:44:55.635998942 -0700 run3/w3/61-21.npz
-2026-11-06 12:26:30.928039190 -0700 best/61-21.npz
-2026-11-06 13:12:38.993746213 -0700 cells/61-21.txt
-
 ## Second column pass (worker4.py, session 001) only re-reported it
-### source: work/run3/w3/col21.log lines 5-5
+### from the lane log `col21.log`, lines 5-5
 5: 14:44:55 n=21 done 61-21: E=4.1039483024
-

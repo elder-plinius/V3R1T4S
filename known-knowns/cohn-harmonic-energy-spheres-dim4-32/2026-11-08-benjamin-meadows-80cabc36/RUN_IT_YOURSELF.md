@@ -36,7 +36,7 @@ It polishes the posted configuration by L-BFGS-B on row-normalised coordinates a
 
 ## Rebuild
 
-The search code is in how-we-built-it/src/ (pinned requirements: how-we-built-it/requirements.txt). It ran in a sandbox whose workspace was `/work`, with the 2021 data set's configurations as starting points. The producing run:
+The search code is in how-we-built-it/src/ (pinned requirements: how-we-built-it/requirements.txt). It ran in a container with the 2021 data set's configurations as starting points. The producing run:
 
 ```sh
 OMP_NUM_THREADS=1 python3 -u worker3.py 21 44 64 run2/w2 25 31 1 0
@@ -44,4 +44,4 @@ OMP_NUM_THREADS=1 python3 -u worker3.py 21 44 64 run2/w2 25 31 1 0
 
 (n = 21, N from 44 to 64, 25 s of hops per row, rng seed 31, one round, no two-point deletion); harvest.py wrote the cell.
 
-Both scripts use wall-clock budgets, so an exact rerun can take a different path. Exact log lines: how-we-built-it/src/hit.log; file:line references: how-we-built-it/src/PROVENANCE.md.
+Both scripts use wall-clock budgets, so an exact rerun can take a different path. Exact log lines: how-we-built-it/src/hit.log; file:line references: the scripts are the versions that ran.

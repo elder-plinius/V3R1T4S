@@ -21,8 +21,8 @@ verdict_utc: 2026-11-08T02:41:42Z
   - Abstracts read: 2403.16874 (new optimal codes 56/20, 50/21, 77/21, Kerdock codes, universal optimality of 288 points in R^16) and 2512.25037 (universal polar dual pairs in E8/Leech, 1408 lines in RP^21).
   - None of these concerns 61 points in R^21, and none reports a harmonic energy for (61, 21).
 - Cohn and Kumar, arXiv math/0607446v2 (GET 2026-11-08T02:41:15Z, HTTP 200, sha256 b0d9edd5…f289). Table 1 lists the known sharp configurations. In n = 21 these are 22 and 42 (from the general rows), 162 (kissing), and 112 (isotropic subspaces, q = 3). N = 61 is not listed.
-- V3R1T4S prior claims: TROPHY_CASE.md on main (HTTP 200, sha256 83af764f…6113) has no harmonic or Cohn entry. A GitHub PR search for "cohn-harmonic-energy-spheres" returned 0 results, and a search for "harmonic" returned 3 unrelated PRs.
-- No steering text found in claim/.
+- V3R1T4S prior claims: TROPHY_CASE.md (https://github.com/elder-plinius/V3R1T4S/blob/main/TROPHY_CASE.md) on main (HTTP 200, sha256 83af764f…6113) has no harmonic or Cohn entry. A GitHub PR search for "cohn-harmonic-energy-spheres" returned 0 results, and a search for "harmonic" returned 3 unrelated PRs.
+- No steering text found in CLAIM.md and object/.
 
 ## Clauses checked
 - Clause (a): n in 4..32 and >= 20 significant digits. **PASS.** n = 21; every coordinate has at least 27 significant digits; 61 x 21 entries.
