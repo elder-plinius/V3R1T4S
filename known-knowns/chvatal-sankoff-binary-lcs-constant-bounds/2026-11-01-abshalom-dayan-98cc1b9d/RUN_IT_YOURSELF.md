@@ -20,7 +20,7 @@ Rebuild the three large files (about 15 minutes on one core; mdp3 peak about 1.3
     BIN/mdp3 14 2000 1.5e-4 BIN/Q14.bin 700
     POLISH=150 POLISH_CAP=1500 THETA=0.005,0.003 BIN/prod4 17 14 BIN/Q14.bin BIN/c17 2 20 3 3000 9e8 30
 
-BIN/c17.counts, BIN/c17.states and BIN/c17.V are the certificate. There is no public download of them yet, so this rebuild is the way to get them. Compare with the sha256 values in object/CERTIFICATE.md. On the machine that made them, reruns on 2026-11-01 and 2026-11-07 were byte-identical. Elsewhere float rounding may change them. The runs also have wall-clock caps: mdp3 stops after 700 s (here it converged after 38 s), prod4 after 3000 s, and its polish after POLISH_CAP = 1500 s (here all 150 sweeps ran and prod4 ended at 729 s). On a machine several times slower, a cap can stop a run early. In either case the lowest value printed below could shift.
+BIN/c17.counts, BIN/c17.states and BIN/c17.V are the certificate. They can also be downloaded from https://doi.org/10.5281/zenodo.24051334 instead of rebuilt. Compare with the sha256 values in object/CERTIFICATE.md. On the machine that made them, reruns on 2026-11-01 and 2026-11-07 were byte-identical. Elsewhere float rounding may change them. The runs also have wall-clock caps: mdp3 stops after 700 s (here it converged after 38 s), prod4 after 3000 s, and its polish after POLISH_CAP = 1500 s (here all 150 sweeps ran and prod4 ended at 729 s). On a machine several times slower, a cap can stop a run early. In either case the lowest value printed below could shift.
 
 Check it (under a minute each; check_a17 about 1.7 GB, check_d about 70 MB, check_e a few MB):
 
