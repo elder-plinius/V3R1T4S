@@ -11,3 +11,5 @@
   where the variance lives (97% on 0.09% of the weight) and that the tail is nearly symmetric.
 - Three independent 10x10 measurements (two plain, one DIS; fresh chains and seeds fixed in advance) agree within
   their errors and lie about 0.08 below the bar; a three-skeptic panel checked the claim (panel/).
+- 2026-11-08: at the maintainers' request the state was exported to ONNX (how-we-built-it/export_onnx.py), with a
+  reference table and a new CPU-only checker; the energy figures above are unchanged.
