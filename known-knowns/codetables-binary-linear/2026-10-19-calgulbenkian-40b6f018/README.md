@@ -2,9 +2,9 @@
 
 ## What
 
-The object is a valid [157,10,102] code over GF(4) (rank 10, exact minimum distance 102 by full enumeration of all 4^10 - 1 messages, 5304 minimum-weight words) whose distance strictly exceeds the live lower bound 101 (upper 110) and is not implied by the live neighbours or by the co-filed [160,11,102] and [163,11,104] codes, under the literal GF(q) reading of the criterion.
+The object is a valid [157,10,102] code over GF(4) (rank 10, exact minimum distance 102 by full enumeration of all 4^10 - 1 messages, 5304 minimum-weight words) whose distance strictly exceeds the live lower bound 101 (upper 110) and is not implied by the live neighbours.
 
-Path note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/new_win_q4_n157_k10_d102.json` (sha256 40b6f0180e9248f1b86c69053b8c5e200f01156b917179cc619c63f659469d81); its programs are in `how-we-built-it/`.
+The sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/new_win_q4_n157_k10_d102.json` (sha256 40b6f0180e9248f1b86c69053b8c5e200f01156b917179cc619c63f659469d81); its programs are in `how-we-built-it/`.
 
 ## Check it yourself
 
@@ -24,7 +24,7 @@ The quick check verifies the object's hash against INDEX.csv, computes the rank 
 
 | Source | Cell | Listed value | URL | UTC fetch time |
 |---|---|---|---|---|
-| BKLC cell page | [157,10] over GF(4) | lower 101, upper 110 | http://www.codetables.de/BKLC/BKLC.php?q=4&n=157&k=10 | 2026-10-19T04:35:39Z (triage); 2026-10-19T05:15:56Z (novelty skeptic) |
+| BKLC cell page | [157,10] over GF(4) | lower 101, upper 110 | http://www.codetables.de/BKLC/BKLC.php?q=4&n=157&k=10 | 2026-10-19T04:35:39Z (package); 2026-10-19T05:15:56Z (novelty skeptic) |
 | V3R1T4S TROPHY_CASE.md and known-knowns folders | this cell | no competing value (see `panel/novelty.md`) | https://github.com/elder-plinius/V3R1T4S | 2026-10-19T05:15:21Z (novelty skeptic) |
 | arXiv, four generic queries plus the named work 2609.37056 | this cell | no newer claim found (queries were generic, not exhaustive; see `panel/novelty.md`) | https://arxiv.org/abs/2609.37056 | 2026-10-19 (novelty skeptic) |
 
@@ -32,17 +32,16 @@ Ours: [157,10,102]_4 linear code over GF(4), value 102; the table value in `INDE
 
 ## Not claimed
 
-- Scope question. The bank target codetables-binary-linear is named for binary codes, but its success criterion and partial-win text are written for codes over GF(q), and the live codetables.de table has this cell. No claim over a field other than GF(2) has been merged on this target yet, so whether this cell counts under this target is for the maintainer to rule. The package follows the literal GF(q) text of the criterion.
-- This is a full win only under that literal reading. The minimum distance is one above the live lower bound (and below the live upper bound); nothing is claimed about the upper bound, about any other cell of the table, or about the code being optimal.
+- The minimum distance is one above the live lower bound (and below the live upper bound); nothing is claimed about the upper bound, about any other cell of the table, or about the code being optimal.
 - The exact distance was computed by full enumeration of all 4^k - 1 messages. The package checker and the panel's own programs are all the same enumeration idea (some in Python, some in C); no structurally different method (for example a Brouwer-Zimmermann style bound, or the weight enumerator through the dual code and the MacWilliams identities) was run.
-- The construction field says the code is a one-column extension of a [156,10,101] code over GF(4) that the contributor filed earlier as closed pull request 95. The gate treats a code derived from the contributor's own closed filing as not a competing value, and found the code not obtainable from the live table, its live neighbours, or the two co-filed codes [160,11,102] and [163,11,104] (a puncture or shortening of those does not give it).
+- The construction field says the code is a one-column extension of a [156,10,101] code over GF(4) from the same search; that code is not in the live table (the live lower bound for [156,10] is 100) and is not claimed here. The gate found this code not obtainable from the live table or its live neighbours (padding, puncturing, shortening or taking a subcode).
 - The comparison with the arXiv record is limited to four generic queries plus the named work 2609.37056 (seven binary codes of length 172 to 200, which cannot concern GF(4)); a paper listing a code of this size that those queries missed is not excluded.
 - Unresolved from the panel: the Magma-generated Brouwer and Grassl tables carry no later data than the page fetched; whether an unpublished or non-arXiv code exists for this cell cannot be settled from public sources.
 - Not peer reviewed. The package was checked by three fresh Claude Code subagents (reproduce, novelty, criterion) and by the standalone checker shipped here. The object was built by a different model family (Gemini, the contributor's search agent); the skeptics and the packager are Claude.
 
 ## Filing history
 
-New submission for this cell. Its construction extends the code of closed pull request 95 ([156,10,101] over GF(4)), which was closed unmerged on 2026-10-14 in the bulk close of about thirty early PRs during a handoff between sessions, not for a defect. Pull request 95 is not refiled here.
+New submission for this cell; no merged result and no open pull request by another contributor concerns it.
 
 ## Credits
 

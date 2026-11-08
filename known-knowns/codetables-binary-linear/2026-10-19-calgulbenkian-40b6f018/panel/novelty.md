@@ -2,11 +2,13 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: bklc-q4-n157-k10-d102
 
+[Edited 2026-11-08 at the maintainer's request on the pull request: references to pull requests other than merged results, to unmerged codes of the same batch, to internal review notes and to the scope question (GF(4) results on this target are now settled) were removed; the checks and numbers are unchanged.]
+
 Role: novelty. Cell: [157,10,102] over GF(4), claimed against the live codetables.de lower bound.
 
 ## Primary table (fetched once, honestly)
 - http://www.codetables.de/BKLC/BKLC.php?q=4&n=157&k=10 | fetched 2026-10-19T05:15:56Z | HTTP 200 | sha256 16ce6e96ca31a9d96ed62987ebcb5d13214280eac6c5a1a432d65c997266fe21
-Value read: [157,10] over GF(4): lower bound 101, upper bound 110. The page hash equals the one the triage recorded for the same URL on 2026-10-19T04:35, so the cell was unchanged between the two fetches. The claim d = 102 is strictly greater than the lower bound 101 and at most 110.
+Value read: [157,10] over GF(4): lower bound 101, upper bound 110. The page hash equals the one recorded in the-record-we-beat/README.md for the same URL at 2026-10-19T04:35, so the cell was unchanged between the two fetches. The claim d = 102 is strictly greater than the lower bound 101 and at most 110.
 
 ## Shared sources (fetched once for the whole group, kept as notes)
 - https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | fetched 2026-10-19T05:15:21Z | HTTP 200 | sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1
@@ -22,18 +24,18 @@ Value read: [157,10] over GF(4): lower bound 101, upper bound 110. The page hash
 I wrote my own enumerator from the definition (not shipped in this package: GF(4) symbols as two bit planes, all 4^k nonzero messages by a binary reflected Gray code, weight = popcount of the union of the planes). Output:
 k=10 n=157 nonzero messages=1048575 min weight=102 count_at_min=5304
 zero-weight nonzero messages (rank deficiency indicator)=0
-A rank-deficient generator would give zero-weight nonzero messages; there are none, so the rank is 10 and the minimum distance is exactly 102, with 5304 minimum-weight words (this matches the author's and the triage's count).
+A rank-deficient generator would give zero-weight nonzero messages; there are none, so the rank is 10 and the minimum distance is exactly 102, with 5304 minimum-weight words (this matches the author's count).
 
 ## Derivation and propagation
-Its author's construction field says it is a one-column extension of a [156,10,101]_4 code that is closed pull request 95 (the author's own earlier filing, closed unmerged in the 2026-10-14 bulk close, the contributor's review ruling R1: reported, not a competing value). Pull request 95 is itself below the live table: the live lower bound for [156,10] is 100 per that pull request's title, and nothing in the live table or in a merged or open pull request gives 102 here.
+Its author's construction field says it is a one-column extension of a [156,10,101]_4 code from the same search, which is not in the live table (the live lower bound for [156,10] is 100) and is not claimed. Nothing in the live table or in a merged result gives 102 here.
 
 ## Pull requests, TROPHY_CASE, literature
-- Pull-request search (title and body, cell parameters; in the snapshot of all V3R1T4S pull requests): only closed pull requests 90 to 101 of the same contributor (2026-10-14 bulk close, the contributor's review ruling R1); merged 142, 158, 163 are binary (q = 2) lower bounds at other cells and do not touch GF(4). No open pull request from another contributor concerns a GF(4) cell.
+- Pull-request search (title and body, cell parameters; in the snapshot of all V3R1T4S pull requests): no merged result touches this cell (the merged folders on this target are binary, q = 2, lower bounds at other cells); no open pull request from another contributor concerns a GF(4) cell.
 - arXiv: no GF(4) linear-code record with these parameters in the four queries (see shared sources). unresolved: the arXiv search was four generic queries, not a parameter-specific search of every 2024 to 2026 quaternary-code paper; a paper that lists a [n,k,d]_4 code of this size would most plausibly appear in the Magma-based QC/QT literature, which I could not exhaust.
 
 Answers to the open questions that concern novelty:
-1. The extension is of the author's own closed filing, not of one of the seven LinCodeEvolve codes (those are binary codes, arXiv 2609.37056), so the not-derived-from-LinCodeEvolve condition holds. A code derived from a closed filing of the same contributor is not a competing value under the contributor's review ruling R1, so I do not count it against the cell.
-2. Puncturing this code gives a [156,10,101]_4 code, which is closed pull request 95. Treating pull request 95 as implied by this record is right; it does not make this record implied by anything live.
+1. The extension is of a [156,10,101]_4 code from the same search, not of one of the seven LinCodeEvolve codes (those are binary codes, arXiv 2609.37056), so the not-derived-from-LinCodeEvolve condition holds.
+2. Puncturing this code gives a [156,10,101]_4 code, one above the live lower bound 100 for [156,10]; that does not make this record implied by anything live.
 3. My own enumeration agrees (minimum distance 102, 5304 words of that weight); it is the same enumeration idea, no structurally different method run.
 4. No newer arXiv claim found (see unresolved line).
 5. Nothing further known.
@@ -41,5 +43,5 @@ Answers to the open questions that concern novelty:
 unresolved: the Magma-generated Brouwer and Grassl tables carry no later data than the page fetched; whether an unpublished or non-arXiv code exists for this cell cannot be settled from public sources.
 
 novelty: PASS (with the unresolved literature caveat above)
-verdict: Exact d = 102 (my enumeration) beats live lower bound 101, is not a puncture or shortening of any live, merged, open or batch code, and I found no competing arXiv or pull-request value.
+verdict: Exact d = 102 (my enumeration) beats live lower bound 101, is not a puncture or shortening of any live or merged code, and I found no competing arXiv or pull-request value.
 pass: true

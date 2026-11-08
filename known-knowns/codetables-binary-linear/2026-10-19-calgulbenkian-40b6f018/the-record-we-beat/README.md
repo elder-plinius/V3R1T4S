@@ -1,6 +1,6 @@
 # The record we beat (metadata and the one cell)
 
-Each row is one honest GET (curl, User-Agent naming V3R1T4S, no retries) made by the orchestrator's triage agent on 2026-10-19 (its FETCHLOG.txt). Only the relevant cell or row is copied here, never a whole third-party page.
+Each row is one honest GET (curl, User-Agent naming V3R1T4S, no retries) made on 2026-10-19. Only the relevant cell or row is copied here, never a whole third-party page.
 
 | Source | URL | UTC fetch time | HTTP | sha256 of the whole page | Extracted cell |
 |---|---|---|---|---|---|
