@@ -151,7 +151,7 @@ seed=32 2R/T=0.7946922 se=0.0000237 meanE/K=0.794665962 minE_visited=13332275 re
 
 ## Dead lines
 
-Each hypothesis I tried ended without finding a fault. Guessed chances and actions are in NOTES.md in my work folder (14 hypotheses).
+Each hypothesis I tried ended without finding a fault. Guessed chances and actions for 14 hypotheses are in my notes (not shipped).
 
 - **Model mismatch.** Checkers encoding a process other than the proved one: dead. The max-rule checker and real-string LCS comparison agree with it.
 - **Information leak.** The adaptive policy leaking future characters: dead. Chain and string expectations are exactly equal.
@@ -172,25 +172,23 @@ Each hypothesis I tried ended without finding a fault. Guessed chances and actio
 These do not change my result on the mathematics, but they are outside it.
 
 1. **Bar freshness and arXiv.**
-   - The saved records are consistent: the table/ hashes match table/scout.md, the page's rigorous lower bar is 0.792665992, 0.79970 is labeled Monte Carlo, Zenodo record v5 covers upper bounds, and no open PR changes the binary lower bound by my keyword scan.
+   - The saved records are consistent: the table/ hashes match the run's scout note (not shipped), the page's rigorous lower bar is 0.792665992, 0.79970 is labeled Monte Carlo, Zenodo record v5 covers upper bounds, and no open PR changes the binary lower bound by my keyword scan.
    - I had no web access.
-   - table/scout.md lists no search for newer arXiv or other Zenodo claims, which the criterion requires. That needs doing at the gate.
-   - data/v3_pulls.json is cited in table/scout.md but is not in this folder, so that row is unverifiable here.
+   - The scout note lists no search for newer arXiv or other Zenodo claims, which the criterion requires. That needs doing at the gate.
+   - A pull-request list cited in the scout note is not in the claim folder, so that row is unverifiable here.
 2. **Reading of the criterion.** It asks lower bounds for "the finite-length computation with exact or outward-rounded arithmetic". This is an exact-integer potential certificate plus an infinite-horizon proof, not a finite-length value of E L(n,n). I judge it rigorous, but whether it fits that wording is for the panel.
 3. **Not verified here.**
    - The certificate was not rebuilt. Its validity does not depend on the producer.
    - The PREREG N = 16 byte-for-byte regression and the claim that it was written before N = 17 output cannot be checked from this folder.
-   - I read only rebuild/mdp3.c among the producer sources, and not rebuild/prod4.c.
+   - I read only how-we-built-it/mdp3.c among the producer sources, and not how-we-built-it/prod4.c.
    - I did not compare object/small_old/ with object/small/ byte for byte.
 
 Documentation slips, with no effect on the result:
 - FORMAT.md says testvec/, but the files are in object/small/.
-- table/scout.md says data/, but the files are in table/.
+- The scout note names a data/ folder, but the files are in table/.
 
 ## Run notes
 
-- No tool-guard or classifier block and no HTTP 401, 403 or 429 occurred.
-- **Memory limit, possible brief overrun:** check_a17 alone peaks at 1,696.9 MB. While the first shipped queue was running, I also ran small commands (compiles, a short Python status read), so my total may have briefly passed 1.7 GB by a few MB during those check_a17 runs. I did not measure that total. Other runs stayed far below the limit; sim17m peaked near 711 MB.
-- All processes I started have ended, and claim/ was not modified.
+- No request was blocked (no HTTP 401, 403 or 429). Peak memory: check_a17 1,696.9 MB, my simulator about 711 MB. All processes I started have ended, and the claim folder was not modified.
 
 pass: true

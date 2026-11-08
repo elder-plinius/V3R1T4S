@@ -2,7 +2,7 @@ context: subagent
 
 # Criterion panel file (criterion skeptic)
 
-Files read in claim/: CLAIM.md, PROOF.md, FORMAT.md, PREREG.md, REPRODUCE.md, table/ (scout.md, 31a.md, fetchlog.txt, zenodo_23610945.json), checkers/check_d.c (all), checkers/check_e.c (header), tests/ (lemma1_small.py and exact_small.py run). Not read: rebuild/ (producer code), tests/sim_rate17.c, checkers/check_a17.c (not run, per memory limit), page31a.html, pulls_open.json contents beyond what table/scout.md reports. No tool-guard block and no HTTP 401, 403 or 429 occurred. Two MCP servers (Plane, Slack) needed authorization; I did not use them and they are irrelevant here.
+Files read in claim/: CLAIM.md, PROOF.md, FORMAT.md, PREREG.md, REPRODUCE.md, table/ (the run's fetch records, not shipped; the-record-we-beat/record.md summarizes them), checkers/check_d.c (all), checkers/check_e.c (header), tests/ (lemma1_small.py and exact_small.py run). Not read: how-we-built-it/ (producer code), tests/sim_rate17.c, checkers/check_a17.c (not run, per memory limit), the saved status page and open-pull list beyond what the run's scout note reports. No request was blocked (no HTTP 401, 403 or 429).
 
 ## Clause-by-clause reading
 
@@ -15,7 +15,7 @@ Files read in claim/: CLAIM.md, PROOF.md, FORMAT.md, PREREG.md, REPRODUCE.md, ta
    - Lemma 2 uses McDiarmid's inequality plus a union bound on the exact expectation. It is an analytic step, not a sampled estimate, and leaves no residual failure probability.
    I found no error in the proof.
 
-2. "Strictly better than the best rigorous bound at verification time." The bar is 0.792665992 (Heineman et al., arXiv 2407.10925). The table records show the Tao page 31a, Tomar's Zenodo record 23610945 (version 5, upper bounds only), and the open PRs. Per table/scout.md none changes the lower bound. The 0.79970 entry is labeled Monte Carlo with a Hoeffding margin and is correctly excluded under the criterion. The margin is 0.7946653366 - 0.792665992 = 0.001999345. That is about 2000 times the required 1e-6. My own single WebSearch found no newer binary lower bound than arXiv 2407.10925, but the search index may lag. I did not fetch arXiv directly. The scout's check for newer arXiv or Zenodo claims is only partly documented in table/.
+2. "Strictly better than the best rigorous bound at verification time." The bar is 0.792665992 (Heineman et al., arXiv 2407.10925). The table records show the Tao page 31a, Tomar's Zenodo record 23610945 (version 5, upper bounds only), and the open PRs. Per the run's scout note none changes the lower bound. The 0.79970 entry is labeled Monte Carlo with a Hoeffding margin and is correctly excluded under the criterion. The margin is 0.7946653366 - 0.792665992 = 0.001999345. That is about 2000 times the required 1e-6. My own single WebSearch found no newer binary lower bound than arXiv 2407.10925, but the search index may lag. I did not fetch arXiv directly. The scout's check for newer arXiv or Zenodo claims is only partly documented in table/.
 
 3. "Not probabilistic." The Hoeffding-type tool (McDiarmid) appears only inside the proof of an exact-expectation inequality. The statement has no confidence level and no sampled estimate. The criterion's exclusion targets sampled bounds, so this does not trigger it. tests/sim_rate17.c and my own simulation are labeled numerical sanity checks and are not part of the bound.
 
@@ -26,7 +26,7 @@ Files read in claim/: CLAIM.md, PROOF.md, FORMAT.md, PREREG.md, REPRODUCE.md, ta
    - Negative control, check_e with m=13332273: `C3=3 ... first problem: C3: b=1 h=32865 pol=ROW E=13332272 < m=13332273 ... REJECT`. So the bound is tight at m and not over-claimed.
    - check_a17 was skipped (1.7 GB); the perturb and drop controls were not rerun.
    - Small cases: `python3 -I tests/lemma1_small.py` printed "Lemma 1 small cases hold: True". tests/exact_small.py on N=5 printed "ok=True", the telescoping inequality "True", and "exhaustive T=12: paths=131072, violations of F_p<=LCS: 0".
-   Own test, run as `python3 -I mytest.py <claim dir> 3000 4`:
+   Own test, run as `python3 -I mytest.py <claim dir> 3000 4` (mytest.py not shipped):
    - It reads object/c17.* by pread.
    - It re-implements the transitions independently in increment form.
    - It checks C3 at 3000 random states (1270 ROW, 1730 SHIFT): min E = 13332279 >= m, 0 violations.

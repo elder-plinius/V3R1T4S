@@ -1,6 +1,6 @@
-# Receipts (real output, 2026-11-01 and 2026-11-07)
+# Receipts (real output, 2026-11-01, 2026-11-07 and 2026-11-08)
 
-## sh verify-it-yourself/run_checks.sh
+## sh verify-it-yourself/run_checks.sh (same output on 2026-11-01 and, with the hardened checkers, on 2026-11-08)
 ```
 object hashes ok
 N=3 m=12326115 accepted by three checkers; m+1, perturb and drop refused by all three
@@ -58,7 +58,7 @@ peak footprint 1,421,460,824 bytes
 
 ## Rebuild of 2026-11-07, same machine, commands of RUN_IT_YOURSELF.md, about 14 minutes
 
-check_d and check_e were each written in a fresh context from object/PROOF.md and object/FORMAT.md.
+check_d and check_e were each written in a fresh context (a separate AI agent session) from object/PROOF.md and object/FORMAT.md.
 
 ```
 M=14 rho in [0.3959816,0.3961249] gamma>=[0.7919632,0.7922498] t=38.4
@@ -70,4 +70,35 @@ check_a17: ACCEPT claimed m=13332272, L=m/K=13332272/16777216=0.794665336609
 check_d: ACCEPT m=13332272 K=16777216
 check_e: ACCEPT m=13332272 K=16777216
 m+1, perturb and drop: refused by all three (exit 1)
+```
+
+## Checkers with stricter input checks, 2026-11-08, same machine, the files of 2026-11-07
+
+All three checkers now reject a window count above 2^N and parse N, K and m strictly (whole decimal integers, m within +-2^60, mode exactly perturb or drop); check_a17 decodes counts and V as little-endian bytes. Built as in RUN_IT_YOURSELF.md and run one at a time under nice -n 15, after the sha256 values of c17.counts, c17.states and c17.V matched object/CERTIFICATE.md. Times are wall clock from /usr/bin/time -l, with other jobs running on the machine.
+
+```
+check_a17 17 16777216 13332272: ACCEPT claimed m=13332272, L=m/K=13332272/16777216=0.794665336609 (18.46 s, peak footprint 1,697,334,760 bytes)
+  N=17 states=242084334 row_action_states=107272712 K=16777216 min_E=13332272 Vmin=10073540 Vmax=217519211
+  m+1: exit=1 REJECT min_E 13332272 < claimed 13332273
+  perturb: exit=1 control: V at argmin index 4751 raised by 1; REJECT min_E 13332271 < claimed 13332272
+  drop: exit=1 control: dropped state index 121042167; REJECT closure row: b=37999 h=27126 a=0 next 91126 missing
+check_d 17 16777216 13332272: ACCEPT m=13332272 K=16777216 (37.32 s, maximum resident set 68,124,672 bytes)
+  rowStates=107272712 shiftStates=134811622 minE=13332272 (attained by 3 states, first index 4751) failures: structure=0 C1=0 C2=0 C3=0
+  m+1: exit=1 C3 fail at b=1 h=32865, h=32913, h=33041 (ROW, E=13332272); REJECT m=13332273 K=16777216
+  perturb: exit=1 perturb: V[4751] += 1; mutated: minE=13332271 C3=1; REJECT m=13332272 K=16777216 (mutated, perturb)
+  drop: exit=1 drop: removing middle state index 121042167; C2 fail: state 121039290 (b=37999 h=27126) successor missing (b=37999 h=91126); REJECT m=13332272 K=16777216 (mutated, drop)
+check_e 17 16777216 13332272: ACCEPT m=13332272 K=16777216 (19.94 s, peak footprint 2,949,432 bytes)
+  blocks=65536 states=242084334 maxblock=29082 statesWithE=242084334 minE=13332272 sumE=3227536924871139 meanE=13332283.306160 violations C1=0 C2=0 C3=0
+  m+1: exit=1 first problem: C3: b=1 h=32865 pol=ROW E=13332272 < m=13332273; REJECT C1=0 C2=0 C3=3
+  perturb: exit=1 global state index 4751: V += 1; REJECT (perturb detected) C1=0 C2=0 C3=1
+  drop: exit=1 global state index 121042167 removed; first problem: C2: ROW successor missing from b=37999 h=27126 (a=0); REJECT (drop detected) C1=0 C2=1 C3=0
+```
+
+Input checks on object/small/c3 (N = 3), each checker:
+```
+count 9 (above 2^3) in window 0: REJECT, exit 1
+count 2^31 + 5 in window 0: REJECT, exit 1
+N "3abc", K "16777216abc", empty m, m below -2^63, m = 2*10^18: REJECT, exit 1
+mode "pXX": REJECT, exit 2; an extra ninth argument: usage, exit 2
+shipped m: ACCEPT; m+1, perturb, drop: REJECT, exit 1
 ```

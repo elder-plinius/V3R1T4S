@@ -45,11 +45,11 @@ Claim (CLAIM.md): gamma_2 >= 833267/1048576 = 0.794665336609, from a window-N=17
     - 23610945 and 23610946 (2026-10-24, upper bounds, Tomar).
     - 22051390 (2025-07-10, Portuguese, an empirical simulation with n up to 1000, no bound).
     - No lower bound.
-12. Web searches, English, Chinese and Zenodo/Tomar, run earlier in the session. They found no newer rigorous binary lower bound.
+12. Web searches, English, Chinese and Zenodo/Tomar, run earlier. They found no newer rigorous binary lower bound.
 
 ## Comparison with the published objects
 - The claim exceeds the rigorous bar 0.792665992 by about 0.0020. The 1e-6 margin and the prereg threshold 0.7939155565 are both cleared by a wide margin.
-- Heineman/Lueker at l=17 uses 4^17 states and gives 0.789882. The claim at N=17 uses 242M reachable states and gives 0.794665.
+- Heineman/Lueker at l=17 uses 4^17 states and gives 0.789882. The claim at N=17 uses 242M states and gives 0.794665.
 - Small certificates in the claim's own format are below the Lueker family at N=3 to 5 (0.7347, 0.7523, 0.7615 against 0.7479, 0.7586, 0.7654). The claim passes it only at larger N, so it is not a trivial edit of the Lueker family.
 - Reaching 0.7947 inside the Heineman family would need l far beyond 21.
 - The claim is not a deletion, restriction, relabelling, symmetry or numerical polish of a published object. It is not the same method at a higher window.
@@ -57,7 +57,7 @@ Claim (CLAIM.md): gamma_2 >= 833267/1048576 = 0.794665336609, from a window-N=17
   - Nothing is seeded from a published object as far as CLAIM.md and PROOF.md state.
   - Dančík's 1994 increment automaton (0.77391) and Lueker/Kiwi–Soto are conceptual neighbours with far lower numbers.
 - I found no publication of this adaptive-strip method at any window.
-- NOTES.md lists 10 hypotheses on how this could fail to be new. It has 2 imported from other fields (average-reward MDP/Lyapunov duals, PushTASEP/seaweed strips) and 1 strange (the Tartu 2026 Markov-model thesis). None was confirmed.
+- The novelty skeptic's notes (not shipped) list 10 hypotheses on how this could fail to be new. They include 2 imported from other fields (average-reward MDP/Lyapunov duals, PushTASEP/seaweed strips) and 1 strange (the Tartu 2026 Markov-model thesis). None was confirmed.
 
 ## Not read, not done, blocks
 - No block occurred (no 401, 403 or 429 on any request). The single arXiv 301 redirect is the only non-200 response.
@@ -65,6 +65,6 @@ Claim (CLAIM.md): gamma_2 >= 833267/1048576 = 0.794665336609, from a window-N=17
 - The leandrejack repository and the Zenodo 23735681 archive were not downloaded. Their metadata describe upper bounds only.
 - I ran no checker and did not examine the certificate's correctness.
 - Bars must be re-fetched at the gate. The status page was last modified 2026-10-28.
-- Work files are in attempts/novelty-work/ (NOTES.md, fetch_commands.sh, status/, lit/).
+- Work files (notes, fetch commands, saved pages) are not shipped.
 
 pass: true

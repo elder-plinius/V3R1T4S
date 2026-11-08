@@ -5,6 +5,9 @@
  * ROW successors: same window block, found by binary search.
  * SHIFT successors: blocks (b>>1) and (~(b>>1))&mask, found by a monotone two-pointer walk
  *   (h>>1 is non-decreasing in h, so no per-state search is needed).
+ * Input checks (2026-11-08): N, K and m are parsed strictly as in check_d.c (whole decimal integers,
+ * no empty or trailing text, m within +-2^60), and a window count above 2^N is rejected, since h is
+ * strictly ascending and below 2^N within a window (this also keeps every block count small).
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,6 +38,13 @@ static void rejectfatal(const char *fmt, ...);
 static void rejectfatal(const char *fmt, ...) {
     va_list ap; va_start(ap, fmt);
     printf("REJECT "); vprintf(fmt, ap); printf("\n"); va_end(ap); fflush(stdout); exit(1);
+}
+
+static ll parse_ll(const char *s, const char *what) {
+    char *end; errno = 0;
+    long long v = strtoll(s, &end, 10);
+    if (errno || *s == 0 || *end != 0) rejectfatal("bad %s: %s", what, s);
+    return v;
 }
 
 static void rdfull(int fd, unsigned char *buf, ll len, ll pos) {
@@ -72,7 +82,8 @@ static void load(Blk *B, ll id) {
     }
 }
 
-/* Row of PROOF.md s.2: h'_p = x_p - v_p, v_{p+1} = x_p - h_p, x_p = h_p|v_p|m_p, v_0 = 0 */
+/* Row of PROOF.md s.2: h'_p = x_p - v_p, v_{p+1} = x_p - h_p, x_p = h_p|v_p|m_p, v_0 = 0
+ * (PROOF_v2.md Lemma A writes x_p as z_p and m_p as mu_p) */
 static uint32_t row_inc(uint32_t h, uint32_t b, int a) {
     uint32_t hn = 0; int v = 0;
     for (int p = 0; p < N; p++) {
@@ -164,10 +175,11 @@ static void report(const char *tag, Res *R, ll nstates) {
 
 int main(int argc, char **argv) {
     if (argc < 7 || argc > 8) { fprintf(stderr, "usage: check_e N K m counts states V [perturb|drop]\n"); return 2; }
-    char *e;
-    N = (int)strtol(argv[1], &e, 10); if (*e || N < 1 || N > 18) rejectfatal("N must be an integer in 1..18");
-    K = strtoll(argv[2], &e, 10); if (*e || K <= 0 || K > (1LL << 40)) rejectfatal("bad K");
-    M = strtoll(argv[3], &e, 10); if (*e) rejectfatal("bad m");
+    ll Narg = parse_ll(argv[1], "N");
+    if (Narg < 1 || Narg > 18) rejectfatal("N must be an integer in 1..18");
+    N = (int)Narg;
+    K = parse_ll(argv[2], "K"); if (K <= 0 || K > (1LL << 40)) rejectfatal("bad K");
+    M = parse_ll(argv[3], "m"); if (M < -(1LL << 60) || M > (1LL << 60)) rejectfatal("m out of range");
     int mode = 0;
     if (argc == 8) { if (!strcmp(argv[7], "perturb")) mode = 1; else if (!strcmp(argv[7], "drop")) mode = 2; else { fprintf(stderr, "mode must be perturb or drop\n"); return 2; } }
     NB = 1LL << (N - 1);
@@ -179,6 +191,7 @@ int main(int argc, char **argv) {
     off[0] = 0; maxcnt = 0;
     for (ll b = 0; b < NB; b++) {
         counts[b] = (uint32_t)cb[4*b] | ((uint32_t)cb[4*b+1] << 8) | ((uint32_t)cb[4*b+2] << 16) | ((uint32_t)cb[4*b+3] << 24);
+        if ((ll)counts[b] > (1LL << N)) rejectfatal("count %u above 2^N at b=%lld", counts[b], b);
         off[b+1] = off[b] + counts[b]; if (counts[b] > maxcnt) maxcnt = counts[b];
     }
     free(cb); TOTAL = off[NB];

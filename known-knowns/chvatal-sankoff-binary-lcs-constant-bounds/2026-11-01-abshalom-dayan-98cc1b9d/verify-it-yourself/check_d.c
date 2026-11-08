@@ -7,6 +7,8 @@
  * Tests (PROOF.md section 5): C1, C2, C3 for every state, exact int64 arithmetic.
  * Successors are computed from the max-rule definition with explicit integer
  * frontier values F_0..F_N (no bit tricks).
+ * Input checks (2026-11-08): a window count above 2^N is rejected, since h is
+ * strictly ascending and below 2^N within a window.
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -231,6 +233,7 @@ int main(int argc, char **argv) {
     for (u64 b = 0; b < NB; b++) {
         const unsigned char *q = cb + 4 * b;
         cnt[b] = (uint32_t)q[0] | ((uint32_t)q[1] << 8) | ((uint32_t)q[2] << 16) | ((uint32_t)q[3] << 24);
+        if ((u64)cnt[b] > ((u64)1 << N)) { printf("count %u above 2^N at b=%llu\nREJECT\n", cnt[b], (unsigned long long)b); return 1; }
         off[b] = tot; tot += cnt[b];
     }
     off[NB] = tot; total = tot;
