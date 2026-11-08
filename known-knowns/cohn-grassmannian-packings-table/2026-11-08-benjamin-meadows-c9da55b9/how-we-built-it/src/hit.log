@@ -1,21 +1,22 @@
-# Lane: cohn-grassmannian. Excerpts copied verbatim; a leading 'N:' (a number and a colon) is the line number in the source file.
+# Excerpts from the search lane's run logs and saved records, copied verbatim except that container paths are shortened to the file name. The logs themselves are not part of this package; each block names the one it came from, and a leading 'N:' (a number and a colon) is the line number in it.
+
 
 ## Queue row (weak-seed queue built in lane session 011; 4th field = time budget in s)
-### source: work/q11_weak.txt lines 54-54
+### from the lane log `q11_weak.txt`, lines 54-54
 54: 11 1 62 120
 
 ## Hit: refix5.py result line for (11,1,62) in worker log q11w.log (one JSON line per row; same row index in logs/q11w.prog)
-### source: work/logs/q11w.log lines 54-54
+### from the lane log `q11w.log`, lines 54-54
 54: {"m": 11, "n": 1, "N": 62, "seed": 0.8891150779699251, "src": "re5", "d": 0.88917055455, "gain": 5.53111e-05, "stage": "re5", "acc": 25, "gor": "2.8e-02", "iters": 40, "t": 45.0}
 
-### source: work/logs/q11w.prog lines 54-54
+### from the lane log `q11w.prog`, lines 54-54
 54: done 11-1-62
 
 ## Saved result record
-### source: work/results/11-1-62.pol.json (mtime 2026-11-06 03:21:44.772621678 -0700)
+### from the lane's saved record `11-1-62.pol.json` (written 2026-11-06 03:21:44)
 {"m": 11, "n": 1, "N": 62, "seed": 0.8891150779699251, "src": "re5", "d": 0.8891705545504747, "gain": 5.531105047462681e-05, "stage": "re5", "acc": 25, "gor": 0.027792262073084162, "iters": 40, "t": 45.0}
 
 ## Table row used by the lane
-### source: inputs/grassmannian_2026-11-04.tsv (lane-root inputs/)
+### from the lane's snapshot of the live table, `grassmannian_2026-11-04.tsv`
 m	n	N	value	bound	starred	noted_optimal	credit
 11	1	62	0.8891152435	0.9239940388	no	no	Henry Cohn, 2026

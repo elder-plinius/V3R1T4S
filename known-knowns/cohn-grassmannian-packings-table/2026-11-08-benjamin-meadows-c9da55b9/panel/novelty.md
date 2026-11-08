@@ -21,7 +21,7 @@ verdict_utc: 2026-11-08T02:39:05Z
   - `gh pr list --state all` searches for "grassmannian" (2 hits), "grassmannian in:body", "11-1-62" (14 hits), "(11, 1, 62)" (0), "11,1,62" (0), "cohn-grassmannian-packings-table" (0), "chordal" (0), "cohn" (27 hits) and "line packing" (64 hits).
   - None of the hits is a Grassmannian or real line-packing claim. The "grassmannian" and "11-1-62" hits are polytof, A384209 and other unrelated work. The "cohn" hits are all spherical-codes-cohn-table. The "line packing" hits are Packomania claims and game-of-sloanes complex packings.
   - An issue search for "grassmannian" returned 0.
-- TROPHY_CASE.md on main: blob 18b731d7d4bf99efd323d48740284daccb8501b0, last commit 2026-10-27T16:42:35Z, 31306 bytes after decoding, sha256 83af764f5a6551a5a27bbb135324931659bda04e60b66a2c0e711b991b356113. It has no match for grassmann, cohn, chordal, 11-1-62 or line pack.
+- TROPHY_CASE.md (https://github.com/elder-plinius/V3R1T4S/blob/main/TROPHY_CASE.md) on main: blob 18b731d7d4bf99efd323d48740284daccb8501b0, last commit 2026-10-27T16:42:35Z, 31306 bytes after decoding, sha256 83af764f5a6551a5a27bbb135324931659bda04e60b66a2c0e711b991b356113. It has no match for grassmann, cohn, chordal, 11-1-62 or line pack.
 - arXiv API searches (https://export.arxiv.org/api/query, newest 15 each by submittedDate, fetched 2026-11-08T02:37Z, all HTTP 200):
   - "Grassmannian packing" (15 total results) and "Grassmannian packings" (same set)
   - "line packing" (20 total) and "line packings"
