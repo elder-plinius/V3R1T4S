@@ -1,0 +1,15 @@
+Real output of the rebuild command in RUN_IT_YOURSELF.md, run with this package's own copy of wieferich_sweep.py
+(Python 3.14.7, gmpy2 2.3.2, numpy 2.5.4; one worker at low priority, on a laptop shared with a 30-worker sweep).
+That script's default screen is the exact meet-in-the-middle screen, the one the search used. OUTDIR was an empty
+folder; DEADLINE was the start time plus 900 s. Lines in order: the start time, the sweep stdout, the end time, then
+OUTDIR/hits.jsonl and the block's record from OUTDIR/blocks.jsonl. Every field of that record (prime count, first and
+last prime, sha256_q, candidates, hits, Fermat failures, screen) equals hit_block_record.json, the original run's
+record of the same block.
+
+    python wieferich_sweep.py sweep OUTDIR 4848800000000 20000000 1 DEADLINE 70 1053 10125 4848820000000
+
+start_utc 2026-11-07T22:45:21Z
+{"finished_utc": "2026-11-07T22:46:27Z", "wall_s": 54.0}
+end_utc 2026-11-07T22:46:36Z
+{"b": 5481, "p": 4848813530161, "block_lo": 4848800000000, "found_utc": "2026-11-07T22:46:27Z"}
+{"lo": 4848800000000, "hi": 4848820000000, "n_primes": 685334, "first_p": 4848800000003, "last_p": 4848819999973, "sha256_q": "4e5e53c2afea13ee9a139090b8ceceefbad4555741bddb260552c8a3c1080fdf", "cands": [[5481, 4848813530161]], "hits": [[5481, 4848813530161]], "fermat_fail": [], "screen": "mitm", ...}
