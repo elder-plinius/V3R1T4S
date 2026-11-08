@@ -1,0 +1,39 @@
+input <29,29,29> rank 11203
+
+[coordinate projection, 29^3 -> 28x29x29] best row: delete index 14 -> 11145 terms (58 vanish); vanishing counts over all rows: [30, 42, 43, 58]
+[coordinate projection, 29^3 -> 28x28x29] best pair: delete row 14 and column 14 -> 11087 terms (116 vanish)
+
+star vector e*: entry -12 at index 14, 1 elsewhere; e_0 = unit vector at index 0
+
+step 1, slice axis 0 (row index shared by A and C), e = e* on A, f = e_0 on C:
+  terms with U = e* x^T (killed on the A side): 420; with W = e_0 y^T (killed on the C side): 43; both: 0; total 463
+  after the slice: <28,29,29> rank 10740  (11203 - 463 = 10740)
+  2-reduction(s) (saved step1.json): removed 1 -> rank 10739
+
+[coordinate projection, 28x29x29:10739 -> 28x28x29] best column: delete index 14 -> 10695 terms (44 vanish); range of vanishing counts over all columns: (15, 44)
+
+step 2, slice axis 1 (column index of A = row index of B), e = e_0 on A, f = e* on B:
+  terms with U = x e_0^T (killed on the A side): 29; with V = e* y^T (killed on the B side): 419; both: 0; total 448
+  after the slice: <28,28,29> rank 10291  (10739 - 448 = 10291)
+  2-reduction(s) (saved step2.json): removed 1 -> rank 10290
+
+summary: 11203 -[slice 1 kills 463]-> 10740 -[2-reduction]-> 10739 -[slice 2 kills 448]-> 10291 -[2-reduction]-> 10290; total removed 913
+closed forms: step 1 removes (N^2+3N)/2 = 464 (measured 464); step 2 removes (N^2+2N-1)/2 = 449 (measured 449)
+        8.33 real         8.02 user         0.14 sys
+           763478016  maximum resident set size
+                   0  average shared memory size
+                   0  average unshared data size
+                   0  average unshared stack size
+               48480  page reclaims
+                 360  page faults
+                   0  swaps
+                   0  block input operations
+                   0  block output operations
+                   0  messages sent
+                   0  messages received
+                   0  signals received
+                  64  voluntary context switches
+                1722  involuntary context switches
+        145467449767  instructions retired
+         31754268398  cycles elapsed
+           749634568  peak memory footprint
