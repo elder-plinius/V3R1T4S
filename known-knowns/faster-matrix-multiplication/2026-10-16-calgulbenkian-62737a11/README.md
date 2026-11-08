@@ -1,5 +1,7 @@
 # Fewer additions for <2,5,5> at rank 40: 147 against 153
 
+> **Note (2026-11-06):** the same count, 147, was also published upstream by Perminov on 2026-10-19 (commit 048b6498, `schemes/results/addition_reduced_ZT/2x5x5_m40_cr147_cn283_ZT_reduced.json`), after this package was filed. A lower count followed on 2026-10-22 (commit 7badae2d: 139 for 2x5x5). This package stays here as a dated record.
+
 ## What
 
 claim/object/2x5x5_m40_cr147_ZT_reduced.json (sha256 62737a117df29bc9dc6194509ed47f95a6f763ea3ca21fca84f79a78c44e6e1a) is an exact ternary straight-line program for the rank-40 <2,5,5> scheme with Perminov's product set using 147 reduced additions (U 31, V 54, W 62), strictly below the 153 of his only live addition_reduced_ZT file for that format and rank, with Lille's page citing no operation count and COVERAGE.md's adds column being a naive count under another convention.
@@ -27,7 +29,7 @@ sh verify-it-yourself/run_checks.sh
 | fmm_sota.json (Sedoglavic), best known rank | 2x5x5 | rank 40 | rank 40 (same scheme rank; eligibility) | https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json | 2026-10-15T22:25:36Z |
 | Lille per-format page | 2x5x5 | rank 40; no complexity variant or operation count cited | 147 | https://fmm.univ-lille.fr/2x5x5.html | 2026-10-15T22:25:36Z |
 | matmulcatalog COVERAGE.md, adds column | 2x5x5 | naive count nz(U)+nz(V)+nz(W)-2r-np, not comparable | 147 | https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md | 2026-10-15T22:25:36Z |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 2x5x5 rank 40 | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 255-40       283         156        154          0.29, 0, 0         156 / 255-40        682        323         313      369    54.1       0.1, 0.12, 0.06 / 255-40     546            226       218      328     60.1    0.135, 0.005, 0.055 / 255-40          256      148       144     112   43.8    0.28, 0, 0.01 | 147 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 2x5x5 rank 40 | lowest count listed for 255-40: 154 over Z (Table 3.3); 144 over Z2 (Table 3.6, a scheme with naive count 256, not comparable; below the reference 153 and below our 147, which is over Z); author's reading of a hand-downloaded PDF, not verified by the maintainer (corrected 2026-10-18) | 147 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
 | V3R1T4S TROPHY_CASE.md and open pull requests | this target | none | 147 | https://github.com/elder-plinius/V3R1T4S | 2026-10-15T22:25:36Z |
 
 Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.md`.
