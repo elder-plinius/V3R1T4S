@@ -6,7 +6,7 @@ Contents of this folder, copied from the contributor's search snapshot (read-onl
 - `PREREG.md`: the run's pre-registration (all goals of the run; this package is one cell of its Goal C).
 - `RESULTS.md`: the run's results file, trimmed on 2026-11-06 (maintainer review, #440) to this package's cell.
 
-For this cell (A(28,8,11), target size 3802): the seed was the code already listed in Brouwer's table (live value 3785, label Pl), or, where the contributor had an earlier unmerged record for the cell, that record (see README.md, Filing history).
+For this cell (A(28,8,11), target size 3802): the seed was the merged bigger-codes 3785 code (`codes/A28_8_11_3785.txt` in the merged V3R1T4S bigger-codes family), which Brouwer's table listed for this cell (label Pl) on 2026-10-18.
 
 Exact commands: the snapshot does **not** record the compile command, the seed file used for this cell, or the argument values (rounds, kb, rmax, clusters, max4, plateau_frac, seed, time limit) of the run that produced this object. PREREG.md and RESULTS.md describe the method only. The snapshot's results/codes_search/ folder holds intermediate improvements of this cell with sizes 3786, 3788, 3789, 3790, 3791, 3792, 3793, 3794, 3795, 3796, 3797, 3798, 3799, 3800, 3801, 3802. The search is randomised and time-limited, so rerunning it will not necessarily reproduce this object; the object is checked on its own by `verify-it-yourself/`. To build the program one would compile the single source file with a C compiler and `-pthread` (an assumption; the snapshot gives no build line).
 
