@@ -44035,7 +44035,10 @@
     "The test CSV is in monthly format (24,913 rows); aggregate to point seasonal and annual balances exactly as MBM did and confirm the counts 1065/999/1028 before scoring.",
     "Random row-level cross-validation leaks stake-to-stake correlation within a glacier; split by glacier.",
     "NVE glacier-wide balances and Hugonnet geodetic rates in the repository cover the test glaciers; using them as inputs is leakage.",
-    "Bw and Bs are missing for some stakes and years; compute each RMSE only over its own observed set."
+    "Bw and Bs are missing for some stakes and years; compute each RMSE only over its own observed set.",
+    "Simple winter models already beat MBM on Bw. A 3-parameter linear model (winter precipitation and altitude difference), fitted on the 18 training glaciers and chosen by leave-one-glacier-out CV, gave test Bw 0.533 (n = 999) against MBM's 0.588 in a V3R1T4S run on 2026-11-08. Open PR #1022 (2026-11-08, another contributor) claims partial win p2 with a 3-parameter solid-precipitation winter model at Bw 0.524. Check #1022 and later claims before attempting p2; a small winter-only model is not new by itself.",
+    "Calibrate on MBM itself: scoring the shipped booster JSON gives MBM's test RMSEs exactly (Ba 0.9962, Bw 0.5881, Bs 0.7001; n = 1065 / 999 / 1028), and retraining its selected configuration reproduces them to 4 decimals. Because the bar is compared at 2-decimal rounding, a full win needs unrounded Ba < 0.995, Bw < 0.585 and Bs < 0.695. Do not unpickle the repository's custom_loss_cv_grid.pkl (a dill pickle, i.e. code execution); the booster JSON loads safely.",
+    "Glacier-grouped CV over only 18 training glaciers is a noisy model selector. In one run, 6-fold GroupKFold preferred a richer feature set (CV MSE 1.147 against 1.331) that then tested worse on all three seasons, while a different grid cell scored below all three bars. That cell was seen only after test scores existed, so it could not be claimed. Pre-register one primary model and selection rule; any cell picked after seeing test-glacier scores is a forking path, not a result."
    ]
   },
   {
