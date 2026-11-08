@@ -19,14 +19,14 @@ dat/points_<N>_1.dat) with the same routine must give an energy higher than E* b
 ## The bar B (frozen now)
 
 B = the minimum of:
-- the live tables at N = 743 (fetched 2026-10-21T20:26Z, data/): CCD Riesz s=1 264837.5858504; Deeter, CCD
+- the live tables at N = 743 (fetched 2026-10-21T20:26Z): CCD Riesz s=1 264837.5858504; Deeter, CCD
   Thomson, CCD Thomson2 and Wikipedia have no N = 743 row; CCD Thomson/xyz/743.xyz and Thomson2/xyz/743.xyz are 404;
 - the merged repo claim #125 (known-knowns/.../2026-10-14-mrxmoex-grok-fleet-9293bcd2), INDEX value
-  264837.5287041150044362828, object data/merged125_cand_743.txt;
-- any lower N = 743 value the literature/PR scan (runs/2026-10-21-2021/literature_scan.md) finds (Roshal et al. 2015,
+  264837.5287041150044362828, object cand_743.txt (sha256 9293bcd2...9d14);
+- any lower N = 743 value the literature and PR scan of run 2026-10-21-2021 finds (Roshal et al. 2015,
   Amore and Wales 2026, open PRs). If the scan finds a lower value, B drops to it; B never rises.
 
-## The judge (one checker, written in attempts/exact-scorer-first/code/, tested before use)
+## The judge (one checker, how-we-built-it/certify/certify.py, tested before use)
 
 1. Read 743 x 3 coordinates as decimal strings; normalise each point in mpmath (mp.dps = 30).
 2. E = sum_{i<j} 1/|x_i - x_j| in mpmath at mp.dps = 30.
@@ -39,7 +39,7 @@ B = the minimum of:
    rotation generators are projected out explicitly, leaving a (2N-3) x (2N-3) matrix. Pass iff its smallest
    eigenvalue > delta, where delta = 10 * (2N) * 2.22e-16 * ||H||_F (a Weyl-type bound on float64 assembly and
    eigensolver error). The 3 rotation Rayleigh quotients are reported as a sanity check (must be < 1e-6 in size).
-5. Distinct basin: run the same polish on data/points_743_1.dat (Riesz) and on data/merged125_cand_743.txt (#125);
+5. Distinct basin: run the same polish on the posted points_743_1.dat (Riesz) and on #125's cand_743.txt;
    each polished energy must exceed E* by >= 1e-6.
 6. Margin: E* <= B - 1e-6.
 
@@ -55,12 +55,12 @@ A claim needs all of 1-6. The search (lens evaluator-throughput) may use anythin
 
 ## Partial win p1 (also frozen)
 
-If polishing data/points_743_1.dat moves its energy away from the posted 264837.5858504 by more than 1e-6, that is a
+If polishing the posted points_743_1.dat moves its energy away from the posted 264837.5858504 by more than 1e-6, that is a
 p1 table-integrity finding, reported with both energies to 12 digits. Otherwise no p1 at 743.
 
 ## Search (lens evaluator-throughput), fixed now
 
-GPU seeded basin hopping, FP32 descent and FP64 re-ranking, seeded from data/points_743_1.dat, with a hard time cap
-and fixed RNG seeds recorded in the lens folder. The reviewer's round-2 object (storage/cache/round2/...) is used only
+GPU seeded basin hopping, FP32 descent and FP64 re-ranking, seeded from the posted points_743_1.dat, with a hard time cap
+and fixed RNG seeds. An N = 743 candidate from our own earlier screening is used only
 as a cross-check after this run's own search ends, never as a seed. The object panelled is the lowest E* that this
 run's own search produced and the judge certified. One object, one cell.

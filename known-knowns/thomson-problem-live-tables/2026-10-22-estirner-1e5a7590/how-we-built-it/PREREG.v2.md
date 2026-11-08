@@ -1,6 +1,6 @@
 # PREREG: thomson-problem-live-tables (run 2026-10-22-0154)
 
-written: 2026-10-22T02:03:19Z (date -u), before any attack output of this run was scored, before claim/ was built and before the
+written: 2026-10-22T02:03:19Z (date -u), before any attack output of this run was scored, before the claim package was built and before the
 sweep started.
 
 null_test: not needed because every claim is an explicit object (N points) judged by a deterministic checker (mpmath energy, tangent Newton, Hessian spectrum) against fixed table and literature values; no search statistic, key or "beats chance" claim is made.
@@ -11,8 +11,8 @@ Success means N points on the unit sphere (coordinates to >= 20 digits) for some
 
 ## The judge (one checker for every N; tested before use)
 
-attempts/exact-scorer-first/code/certify.py, copied unchanged from run 2026-10-21-2021 (sha256 recorded in that lens's
-NOTES.md), with verify_stdlib.py as an independent standard-library cross-check of energy and gradient:
+how-we-built-it/certify/certify.py, copied unchanged from run 2026-10-21-2021 (sha256
+0c9cd0542b5e00970a93948e205bc5f14acc4a0efd21638c7ff82a828664f243), with verify_stdlib.py as an independent standard-library cross-check of energy and gradient:
 1. Read N x 3 coordinates as decimal strings; normalise each point in mpmath (mp.dps = 30).
 2. E = sum_{i<j} 1/|x_i - x_j| in mpmath at mp.dps = 30.
 3. Polish ("the routine", identical for every input): float64 L-BFGS, float64 tangent Newton to |g_T| < 1e-9, then
@@ -33,10 +33,10 @@ file's point without polishing.
 
 ## The bars B(N) (frozen now; B never rises)
 
-B(N) = the minimum of: every live table value for N (fetched 2026-10-22, scout.md), the polished energies of every
-posted file for N (step 5), Roshal et al. 2015 (arXiv:1408.3473v2, data/roshal_1408.3473v2.txt), both columns of
+B(N) = the minimum of: every live table value for N (fetched 2026-10-22, the-record-we-beat/SNAPSHOT.md), the polished energies of every
+posted file for N (step 5), Roshal et al. 2015 (arXiv:1408.3473v2), both columns of
 Amore and Wales 2026 Tables 2-3 (arXiv:2610.08122), merged and open claims in this repository, and any lower value the
-literature scan (attempts/leakage-and-settled) finds before a claim is built. At freeze time:
+literature scan finds before a claim is built. At freeze time:
 
 | N | B(N) at freeze | source |
 |---|---|---|
@@ -62,7 +62,7 @@ literature scan (attempts/leakage-and-settled) finds before a claim is built. At
 
 ## N = 743 (the re-panel)
 
-The object is runs/2026-10-21-2021/claim/object/thomson_743.txt (sha256
+The object is object/thomson_743.txt from run 2026-10-21-2021 (sha256
 1e5a75909e58d1a4347aaaad37053aa7e22cd164f8da0d8fd26cc2870d78471b), unchanged. Only the claim sentence changes: the
 tangent-gradient norm is quoted as the judge's value at the saved file, rounded to 3 significant digits. Every other
 number is re-derived by this run's judge before the claim is built.

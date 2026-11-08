@@ -2,7 +2,7 @@
 
 ## What
 
-The 743-point configuration object/thomson_743.txt (30-digit coordinates, unit norm to 8e-31) has mpmath dps-30 Coulomb energy 264837.4538033452076921018, tangent-gradient norm 4.48e-24 at the saved coordinates and 1483 = 2N-3 positive non-rotational tangent-Hessian eigenvalues in float64 (smallest 4.042259), which is 0.1320470548 below 264837.5858504, the only N = 743 row among the fetched tables in inputs/tables/ (ccd_riesz_s1_index.html), while polishing inputs/points_743_1.dat and inputs/merged125_cand_743.txt with tools/certify.py ends 0.1320470169 and 0.0749007698 above it.
+The 743-point configuration object/thomson_743.txt (30-digit coordinates, unit norm to 8e-31) has mpmath dps-30 Coulomb energy 264837.4538033452076921018, tangent-gradient norm 4.48e-24 at the saved coordinates and 1483 = 2N-3 positive non-rotational tangent-Hessian eigenvalues in float64 (smallest 4.042259), which is 0.1320470548 below 264837.5858504, the only N = 743 row among the fetched tables (the CCD Riesz s = 1 page, https://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/site/s_1/index.html, sha256 eeac3235eeba4835d635c6f07f8be6bb54466c2425bceba65ced315460fa649d at 2026-10-22T02:00:05Z), while polishing the posted points_743_1.dat (https://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/site/s_1/dat/points_743_1.dat, sha256 68ac9c8deba352959b12b63fa04ea87aef2cfbb502fe44123437f3e860b3df9a) and the merged #125 configuration (known-knowns/thomson-problem-live-tables/2026-10-14-mrxmoex-grok-fleet-9293bcd2/object/cand_743.txt, sha256 9293bcd225895341338ab2edc3902db1fe1982e512793169788c713768689d14) with how-we-built-it/certify/certify.py ends 0.1320470169 and 0.0749007698 above it.
 
 ## Check it yourself
 

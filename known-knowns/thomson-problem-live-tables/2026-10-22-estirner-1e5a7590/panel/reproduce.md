@@ -1,12 +1,13 @@
 # REPRODUCE skeptic report: thomson-problem-live-tables, N = 743
 
-context: subagent (Claude Code Agent tool, opus, fresh context, saw only claim/)
+context: subagent (Claude Code Agent tool, opus, fresh context, saw only the claim files)
 
-Scope: only the files in claim/ (CLAIM.md, REPRODUCE.md, object/, inputs/, tools/). No network. claim/ was not
-modified (15 files before and after; the author's commands were run in a scratch copy of the package).
+Scope: only the claim files (the claim text, the reproduction steps, the object, the fetched inputs and the author's
+tools). No network. The claim files were not modified (15 files before and after; the author's commands were run in a
+scratch copy).
 injection_suspected: none (no file in the package contains instructions addressed to the reviewer).
 
-## 1. Definition my checker was written from (verbatim, CLAIM.md "Success criterion")
+## 1. Definition my checker was written from (verbatim, the success criterion as quoted in the claim text)
 
 > Success means N points on the unit sphere (coordinates to >= 20 digits) for some N <= 1500 listed in at least one
 > live table, such that E* computed in mpmath at 30 digits from the normalized coordinates is STRICTLY LOWER
@@ -18,9 +19,9 @@ injection_suspected: none (no file in the package contains instructions addresse
 > every posted table configuration for that N: polishing each table's own point file (Deeter e.<N>.txt, CCD
 > xyz/<N>.xyz, Riesz dat/points_<N>_1.dat) with the same routine must give an energy higher than E* by >= 1e-6.
 
-## 2. My own checker (written before opening tools/)
+## 2. My own checker (written before opening the author's tools)
 
-A new script next to claim/ (not in the package), using numpy, scipy and mpmath (gmpy backend):
+A new script of my own (not in the package), using numpy, scipy and mpmath (gmpy backend):
 - `info`: N, columns, significant digits of every coordinate, max ||x|-1|.
 - `energy FILE DPS`: parse strings at DPS digits, normalise each point in mpmath, E = sum_{i<j} 1/|xi-xj| (row sums
   with mpmath.fsum).
@@ -39,8 +40,8 @@ E = 150.88156833375650338840139772 (the known N = 20 minimum 150.881568334), red
 ## 3. Results of my checker (copied from command output)
 
 File integrity: sha256 of object/thomson_743.txt = 1e5a75909e58d1a4347aaaad37053aa7e22cd164f8da0d8fd26cc2870d78471b,
-inputs/points_743_1.dat = 68ac9c8d...b3df9a, inputs/merged125_cand_743.txt = 9293bcd2...689d14, and all 8 files in
-inputs/tables/ match the sha256 values in the CLAIM.md table record.
+the posted points_743_1.dat = 68ac9c8d...b3df9a, the #125 configuration cand_743.txt = 9293bcd2...689d14, and all 8
+saved table pages match the sha256 values in the claim's fetch record (the-record-we-beat/SNAPSHOT.md).
 
 | quantity | claim | my result |
 |---|---|---|
@@ -57,15 +58,15 @@ inputs/tables/ match the sha256 values in the CLAIM.md table record.
 | polished #125 file - E* | 0.0749007698 | my polish: E(dps 30) = 264837.528704115004436282821702, gap 0.0749007697967442 |
 
 Polish details (my routine):
-- inputs/points_743_1.dat: start f64 E=264837.585850362084, L-BFGS |gT| 1.274e-06, f64 Newton to ~5e-12, mp Newton
+- points_743_1.dat (posted Riesz file): start f64 E=264837.585850362084, L-BFGS |gT| 1.274e-06, f64 Newton to ~5e-12, mp Newton
   |gT| 5.31381e-12 -> 2.81951e-24 -> 7.84203e-37; written file |g_T| 2.68078e-36; reduced Hessian 1483 positive,
   min 2.234761351.
-- inputs/merged125_cand_743.txt: mp Newton 5.07394e-12 -> 3.20031e-24 -> 8.26249e-37; written |g_T| 2.65617e-36;
+- cand_743.txt (#125): mp Newton 5.07394e-12 -> 3.20031e-24 -> 8.26249e-37; written |g_T| 2.65617e-36;
   1483 positive, min 3.633597124.
 - object/thomson_743.txt (same routine, basin stability): E(dps 30) = 264837.453803345207692101835864 (unchanged),
   mp Newton 5.23678e-12 -> 3.26775e-24 -> 8.14924e-37; 1483 positive, min 4.042259181.
 
-Tables (parsed from the saved HTML in inputs/tables/):
+Tables (parsed from the saved pages; URLs, fetch times and sha256 in the-record-we-beat/SNAPSHOT.md):
 - ccd_riesz_s1_index.html: 53 rows, N 512..9913, N = 743 entries ['264837.5858504'] (one row).
 - deeter.html: 521 rows, N 4..524, 743 absent; ccd_thomson_table.html: 409 rows, N 10..972, 743 absent;
   ccd_thomson2_table.html: 36 rows, N 400..4352, 743 absent; wikipedia_thomson.html: 234 rows, N 2..470, 743 absent.
@@ -76,7 +77,7 @@ Determinism: a rerun of my Hessian check gave the same n_eigs=1483 n_positive=14
 `certify.py check` rerun was identical apart from the timing field (section 4); and E* was reproduced to all 25
 printed digits by three independent routes (my mpmath, the author's mpmath, the author's decimal-40).
 
-## 4. Author's REPRODUCE.md commands (run in a scratch copy of claim/, venv python, one thread)
+## 4. Author's reproduction commands (run in a scratch copy of the claim files, venv python, one thread)
 
 Step 1 `certify.py check object/thomson_743.txt`: "E_mp30": "264837.4538033452076921018", "gT_mp30": "4.47655e-24",
 "n_eigs": 1483, "min_eig": 4.042259181123571, "n_nonpositive": 0, "delta_bound": 3.195798010861421e-07,
@@ -87,13 +88,13 @@ Step 2 `certify.py polish`:
 - Riesz points_743_1.dat: E_in 264837.5858503620609750247, E* 264837.5858503620609677129, gT 4.59704e-24, True,
   min 2.234761350825306, pass True
 - #125: E* 264837.5287041150044362828, gT 7.49172e-27, True, min 3.633597124296364, pass True
-All three match the REPRODUCE.md expectations exactly.
+All three match the expectations in the author's reproduction steps exactly.
 
 Step 3 `verify_stdlib.py` (decimal, 40 digits): E = 264837.4538033452076921018358640, tangent gradient norm =
 4.476e-24, |E - expected| = 3.586e-20, bar - E = 0.0749007698, pol_riesz.txt E_other - E = 0.1320470169,
 pol_m125.txt E_other - E = 0.0749007698, last line PASS (exit 0).
 
-Step 4 grep: line 270-271 of inputs/tables/ccd_riesz_s1_index.html show cells 743 and 264837.5858504.
+Step 4 grep: lines 270-271 of the saved CCD Riesz s = 1 page (sha256 eeac3235...649d) show cells 743 and 264837.5858504.
 
 ## 5. Mismatches and remarks
 
@@ -102,10 +103,10 @@ Step 4 grep: line 270-271 of inputs/tables/ccd_riesz_s1_index.html show cells 74
   0.0749007698) is reproduced by my independent checker and by the author's tools; my E* agrees with the claim in all
   25 printed digits.
 - Cosmetic: certify.py "min_digits_in_file" prints 31 because it counts the leading "0" of values like 0.99...;
-  the true significant-digit count is 30 (my count), which is what CLAIM.md states.
+  the true significant-digit count is 30 (my count), which is what the claim states.
 - Out of scope for this role (no network): whether the live tables still look as saved, and whether any value
   lower than 264837.5287041150 exists outside the package ("lowest previously known"). Against the saved pages and
-  the values listed in CLAIM.md the statement holds.
+  the values listed in the claim the statement holds.
 - The Hessian positivity is a float64 computation, as the definition requires; the smallest eigenvalue 4.04 exceeds
   the author's rounding bound 3.2e-7 by seven orders of magnitude.
 

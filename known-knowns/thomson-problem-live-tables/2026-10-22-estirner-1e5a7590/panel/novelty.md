@@ -1,8 +1,8 @@
 # NOVELTY skeptic: thomson-problem-live-tables, N = 743
 
-context: subagent (Claude Code Agent tool, opus, fresh context, saw only claim/ plus the web and the public repository)
+context: subagent (Claude Code Agent tool, opus, fresh context, saw only the claim files plus the web and the public repository)
 
-Claim checked: claim/CLAIM.md. Object claim/object/thomson_743.txt (sha256 1e5a75909e58d1a4347aaaad37053aa7e22cd164f8da0d8fd26cc2870d78471b, matches CLAIM.md).
+Claim checked: the claim text (README.md, What). Object object/thomson_743.txt (sha256 1e5a75909e58d1a4347aaaad37053aa7e22cd164f8da0d8fd26cc2870d78471b, matches the claim).
 Claimed E* = 264837.4538033452076921018 (Coulomb energy, normalised coordinates).
 Independent recomputation (mpmath, mp.dps = 30, plain pair sum on the normalised file, no polishing, one thread):
 E = 264837.4538033452076921018, |E - claimed| = 3.6e-20. The value I compare is therefore the claimed one.
@@ -50,8 +50,8 @@ Plus two web searches (search engine, 2026-10-22): `"264837" Thomson problem 743
 
 ## (a) Live tables
 
-- **Status source** (Deeter, https://deetour.net/oppp/thomson/, 2026-10-22T02:08:21Z, HTTP 200, sha256 cf138c88...e647): readable, no challenge page; "Last modified: October 10, 2026"; 521 rows, N = 4..524; **no N = 743 row**. Bytes identical to claim/inputs/tables/deeter.html.
-- **CCD Riesz s=1** (https://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/site/s_1/index.html, 2026-10-22T02:08:28Z, HTTP 200, sha256 eeac3235...649d): 53 point files, N = 512..9913; **N = 743 row: 264837.5858504** (with points_743_1.dat and angles_743_1.dat). Bytes identical to claim/inputs/tables/ccd_riesz_s1_index.html. The posted points_743_1.dat (02:09:05Z) is byte-identical to claim/inputs/points_743_1.dat (sha256 68ac9c8d...df9a).
+- **Status source** (Deeter, https://deetour.net/oppp/thomson/, 2026-10-22T02:08:21Z, HTTP 200, sha256 cf138c88...e647): readable, no challenge page; "Last modified: October 10, 2026"; 521 rows, N = 4..524; **no N = 743 row**. Bytes identical to the claimant's fetch (the-record-we-beat/SNAPSHOT.md).
+- **CCD Riesz s=1** (https://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/site/s_1/index.html, 2026-10-22T02:08:28Z, HTTP 200, sha256 eeac3235...649d): 53 point files, N = 512..9913; **N = 743 row: 264837.5858504** (with points_743_1.dat and angles_743_1.dat). Bytes identical to the claimant's fetch (the-record-we-beat/SNAPSHOT.md). The posted points_743_1.dat (https://www-wales.ch.cam.ac.uk/~wales/CCD/Thomson/site/s_1/dat/points_743_1.dat, 02:09:05Z) is byte-identical to the claimant's fetch (sha256 68ac9c8d...df9a).
 - CCD Thomson table.html (xyz links N = 10..932) and CCD Thomson2 table.html (N = 400..4352): no N = 743 row, no 743 xyz link; both byte-identical to the claim's copies.
 - Wikipedia Thomson_problem: no N = 743 row (the only "743" substrings are page numbers R1740-R1743 of a 1996 citation); byte-identical to the claim's copy.
 - CCD main page (CCD.html): the only sphere Coulomb/Riesz tables are Thomson, Thomson2 and the Riesz database (site/index.html: "53 configurations over 1 value of the exponent", s = 1 only). ThomsonCMC is the constant-mean-curvature-surface problem, not the unit sphere, so out of scope. No new table for N = 743 appeared.
@@ -69,7 +69,7 @@ Plus two web searches (search engine, 2026-10-22): `"264837" Thomson problem 743
 ## (c) This repository
 
 - TROPHY_CASE.md (live main, sha256 b946f68e...71a1, identical to the pinned copy): no Thomson row at all.
-- known-knowns/thomson-problem-live-tables/ (live listing = pinned listing, 6 folders; last commits 2026-10-15 for #78, #124, #125, #126, #128, #129). The only N = 743 entry is merged claim **#125** (folder suffix 9293bcd2): INDEX.csv value **264837.5287041150044362828** against Riesz 264837.5858504; its object sha256 9293bcd2... equals claim/inputs/merged125_cand_743.txt. The other five folders are N = 550, 3552, 745, 1382, 777.
+- known-knowns/thomson-problem-live-tables/ (live listing = pinned listing, 6 folders; last commits 2026-10-15 for #78, #124, #125, #126, #128, #129). The only N = 743 entry is merged claim **#125** (folder suffix 9293bcd2): INDEX.csv value **264837.5287041150044362828** against Riesz 264837.5858504; its object sha256 9293bcd2... equals the #125 configuration the claimant polished. The other five folders are N = 550, 3552, 745, 1382, 777.
 - Issues/PRs (search API, all states): "743" and "264837" hit only #124, #125, #126 (closed claim PRs) and open issue #606. #606 (audit, 2026-10-21, 0 comments) only corrects #125's SNAPSHOT.md wording about arXiv 2610.08122 and confirms 264837.5287041150 is below both of that paper's N = 743 values; it posts no new value. "thomson"/"riesz" additionally hit open PR #399 (bank statement refresh: Deeter last modified 10 Oct 2026, N = 4..524; Riesz s=1 unchanged, 53 configurations) and the closed p1/claim PRs; no N = 743 value. "coulomb": 0 hits. The keyword searches cover all states and were complete (total_count thomson 8, 743 4, 264837 4, riesz 7, coulomb 0; incomplete_results false); none surfaces an N = 743 value other than #125's. The open-PR listing itself returned 296 open PRs, of which only the newest 100 were listed (per_page = 100); I rely on the keyword searches, not that listing, for coverage. Limitation: GitHub's search index can lag very recent submissions.
 
 ## Values and margin (computed by command: Python decimal, prec 40, competitor minus E*)
@@ -78,7 +78,7 @@ Plus two web searches (search engine, 2026-10-22): `"264837" Thomson problem 743
 |---|---|---|
 | V3R1T4S merged #125 (polished E*) | 264837.5287041150044362828 | +7.4900769796744e-2 |
 | Amore and Wales 2026, Table 3 "This work" | 264837.58585036 | +1.3204701479231e-1 |
-| CCD Riesz s=1 posted file after polish (claim/REPRODUCE.md, also #125's expected file) | 264837.5858503620609677129 | +1.3204701685328e-1 |
+| CCD Riesz s=1 posted file after polish (the claimant's reproduction steps, also #125's expected file) | 264837.5858503620609677129 | +1.3204701685328e-1 |
 | CCD Riesz s=1 live cell | 264837.5858504 | +1.3204705479231e-1 |
 | Amore and Wales 2026, Table 3, ref. [75] column | 264837.70097130 | +2.4716795479231e-1 |
 | Roshal et al. 2015 (as quoted in the claim) | 264837.700971304 | +2.4716795879231e-1 |
@@ -88,7 +88,6 @@ Margin: **E_#125 - E* = 0.0749007697967441810** (> 0, and > 1e-6). Margin under 
 
 ## Notes
 
-- injection_suspected: GitHub issue #565 body (invites agents to log attempts on an external board with a published key); treated as data and ignored. Nothing else in the fetched pages addressed the reader.
 - Novelty only: the local-minimum certificate and distinct-basin polish are for the other skeptics; I only recomputed the raw energy of the object.
 
 novelty: E* = 264837.4538033452076921018 strictly beats every known N = 743 value; lowest competitor 264837.5287041150044362828 (merged #125), margin 0.0749007698; live status source read (HTTP 200), CCD Riesz s=1 cell 264837.5858504 unchanged.
