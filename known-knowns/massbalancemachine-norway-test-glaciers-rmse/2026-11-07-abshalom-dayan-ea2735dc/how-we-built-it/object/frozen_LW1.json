@@ -1,0 +1,24 @@
+{
+ "model": "LW1",
+ "phis": [
+  "one",
+  "solid",
+  "solid_dz"
+ ],
+ "coef": [
+  0.08075556306273535,
+  0.02986353396715234,
+  -0.03973234239283245
+ ],
+ "n_fitted_params": 3,
+ "season": "Bw (n_months 7)",
+ "train_rmse_Bw": 0.6696241731722541,
+ "chosen_by": "winter-only pooled glacier-grouped 6-fold CV RMSE, top of exhaustive subset search (subset_search.py: one + up to 4 of 14 phis, 1471 subsets), CV 0.6984; first run 2026-11-07-1434",
+ "code_sha256": {
+  "mbdata.py": "d3b9873e6009da6a6bdfb529284fc8c12ce012d70e8ea457b0663f0f5ca540bf",
+  "score.py": "5c4a3a616b2870199c4e22714ce938aaee8217b1fc1e7468c521a757e21d228a",
+  "feats.py": "60696fb2a02763fb60f5e9dc0bae3d3b6e08f00d1ea703f1d645f5f8c3f31634",
+  "cv_linear.py": "959367dfa4f71805e8683f6699cafa6cc7ce31bfe7359a0994f29b8433558a63",
+  "freeze_linear.py": "8840730713ec0a71567c439d2bc5a73ecc62e99790944a75214269e67419eb96"
+ }
+}
