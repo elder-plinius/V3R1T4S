@@ -1,0 +1,5 @@
+# How we found it (contributor text, unverified)
+
+An unattended search lane (a series of AI coding sessions in a Docker sandbox) worked through the live harmonic energy table at https://cohn.mit.edu/harmonic-energy/ for n from 4 to 32, with the table values as targets. The (64, 20) cell came from `liftseed.py`, which seeds a row from the neighbouring dimension. It lifted the lane's best (64, 19) configuration into R^20 with small Gaussian noise (0.05), relaxed it to 6.69931841 (already below the table 6.7232495038), and one basin hop (a Gaussian kick of all points, then relaxation) reached 6.68546368 (how-we-built-it/src/hit.log, lane log liftseed.log lines 262-265). That (64, 19) configuration was itself the lane's own improvement on the posted (64, 19), found by `worker3.py` with a basin hop that removes the highest-energy points and reinserts them at deep holes.
+
+What failed: two column sweeps for n = 20 (point deletion, addition from (63, 20) and basin hops) left (64, 20) at the table value. After the win an SDP relaxation was far too loose to help. Rerunning the lift sweep with a fresh random seed gave no further gains.
