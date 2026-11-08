@@ -1,0 +1,143 @@
+{
+ "checkpoint_sha256": "e68644979db4d9764ac1787d1c064fe18c4750cb4cb47ee573e40588bcd9c485",
+ "nqs_py_sha256": "79dc6197010a9d4d74732ca674ddf1069639d263b23a88f7660175e62a3e2e1a",
+ "opset": 17,
+ "torch": "2.9.0+cu128",
+ "config": {
+  "L": 10,
+  "net": {
+   "channels": 16,
+   "blocks": 3,
+   "kernel": 3
+  },
+  "prior": "stripe",
+  "irrep": "B1",
+  "flip": true,
+  "sym": true
+ },
+ "step": 648,
+ "parameters": 14114,
+ "wrapper_vs_model_gpu": {
+  "max_abs_log_abs": 0.0,
+  "max_phase": 0.0
+ },
+ "model_vs_measurement_code_gpu": {
+  "max_abs_log_abs": 3.057434675213244e-06,
+  "max_phase": 0.0003842555440645156
+ },
+ "onnx": {
+  "sha256": "51918b654d3417330e96f5118f25b72f3aa6a737547c0c848bd14477ace1d9e0",
+  "bytes": 97834,
+  "ir_version": 8,
+  "opsets": {
+   "ai.onnx": 17
+  },
+  "op_types": [
+   "Add",
+   "Atan",
+   "Concat",
+   "Constant",
+   "Conv",
+   "Cos",
+   "Div",
+   "Erf",
+   "Exp",
+   "Gather",
+   "Greater",
+   "Less",
+   "Log",
+   "MatMul",
+   "Mul",
+   "ReduceMax",
+   "ReduceSum",
+   "Reshape",
+   "Sin",
+   "Slice",
+   "Sub",
+   "Where"
+  ],
+  "node_domains": [
+   "ai.onnx"
+  ],
+  "external_initializers": 0,
+  "inputs": [
+   [
+    "spins",
+    [
+     "batch",
+     100
+    ]
+   ]
+  ],
+  "outputs": [
+   [
+    "log_abs_psi",
+    [
+     "batch"
+    ]
+   ],
+   [
+    "phase",
+    [
+     "batch"
+    ]
+   ]
+  ],
+  "onnxruntime": "1.26.0",
+  "onnx": "1.21.0"
+ },
+ "onnx_cpu_vs_measurement_code_gpu": {
+  "max_abs_log_abs": 0.0005412091340133429,
+  "max_phase": 0.0003842555440645156
+ },
+ "cancellation": {
+  "note": "|sum_g e_g exp(i ph_g)| / sum_g e_g over the 16 images, float64; small = strong cancellation",
+  "median": 0.9957117708961633,
+  "at_worst_onnx_vs_model_row": 0.0022646631987659205,
+  "worst_row_abs_diffs": {
+   "onnx_vs_model": 0.00054168701171875,
+   "onnx_vs_measurement_code": 0.0005412091340133429,
+   "model_vs_measurement_code": 4.778777054070815e-07
+  }
+ },
+ "onnx_cpu_vs_model_gpu": {
+  "1": {
+   "max_abs_log_abs": 3.814697265625e-06,
+   "max_phase": 4.656612873077393e-10
+  },
+  "7": {
+   "max_abs_log_abs": 3.814697265625e-06,
+   "max_phase": 4.656612873077393e-10
+  },
+  "100": {
+   "max_abs_log_abs": 3.814697265625e-06,
+   "max_phase": 9.313225746154785e-10
+  },
+  "333": {
+   "max_abs_log_abs": 0.00019073486328125,
+   "max_phase": 1.862645149230957e-09
+  },
+  "1000": {
+   "max_abs_log_abs": 0.00054168701171875,
+   "max_phase": 7.2177499532699585e-09,
+   "log_abs_range": [
+    -67.98292541503906,
+    -41.90842056274414
+   ],
+   "phase_mod_pi_range": [
+    3.1382755468417933,
+    3.138711452484131
+   ]
+  }
+ },
+ "table": {
+  "rows": 100,
+  "seed": 20261108,
+  "max_abs_log_abs": 7.62939453125e-06,
+  "max_phase": 9.313225746154785e-10,
+  "phase_mod_pi_range": [
+   3.1384129148260733,
+   3.138443946838379
+  ]
+ }
+}
