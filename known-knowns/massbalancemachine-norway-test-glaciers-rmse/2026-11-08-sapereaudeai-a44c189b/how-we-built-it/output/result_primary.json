@@ -1,0 +1,128 @@
+{
+ "tag": "primary",
+ "config": {
+  "tag": "primary",
+  "depth": 5,
+  "lr": 0.05,
+  "rounds": 300,
+  "seed": 0,
+  "nthread": 4,
+  "tree_method": "hist",
+  "keep999": false,
+  "quick": false
+ },
+ "xgboost": "3.2.0",
+ "train_records": {
+  "annual": 2845,
+  "summer": 2901,
+  "winter": 2752
+ },
+ "test_records": {
+  "annual": 1065,
+  "summer": 1028,
+  "winter": 999
+ },
+ "test_monthly_rows": 24913,
+ "dropped_999": 1,
+ "train_999_winter": 0,
+ "score": {
+  "annual": {
+   "rmse": 0.9962432769999511,
+   "n": 1065
+  },
+  "winter": {
+   "rmse": 0.5881431288741465,
+   "n": 999
+  },
+  "summer": {
+   "rmse": 0.7000514608796857,
+   "n": 1028
+  }
+ },
+ "within_tol": {
+  "annual": true,
+  "winter": true,
+  "summer": true
+ },
+ "pass": true,
+ "a_targets_equal_shipped_test_csv": {
+  "annual": true,
+  "winter": true,
+  "summer": true
+ },
+ "b_shipped_booster_on_our_records": {
+  "annual": {
+   "rmse": 0.9962432373221956,
+   "n": 1065
+  },
+  "winter": {
+   "rmse": 0.5881431217550307,
+   "n": 999
+  },
+  "summer": {
+   "rmse": 0.7000514496510468,
+   "n": 1028
+  }
+ },
+ "c_our_model_on_shipped_test_csv": {
+  "annual": {
+   "rmse": 0.9962432769999511,
+   "n": 1065
+  },
+  "winter": {
+   "rmse": 0.5881431288741465,
+   "n": 999
+  },
+  "summer": {
+   "rmse": 0.7000514608796857,
+   "n": 1028
+  }
+ },
+ "d_bit_identical_refit": true,
+ "e_negative_zero": {
+  "annual": {
+   "rmse": 1.8804073764502336,
+   "n": 1065
+  },
+  "winter": {
+   "rmse": 2.337789336741654,
+   "n": 999
+  },
+  "summer": {
+   "rmse": 3.3397055206979767,
+   "n": 1028
+  }
+ },
+ "e_negative_shuffled": {
+  "annual": {
+   "rmse": 2.2177057060633483,
+   "n": 1065
+  },
+  "winter": {
+   "rmse": 1.4065193968558583,
+   "n": 999
+  },
+  "summer": {
+   "rmse": 1.7933725906430966,
+   "n": 1028
+  }
+ },
+ "e_negatives_fail": true,
+ "f_pure_python_score": {
+  "annual": {
+   "rmse": 0.9962432769999511,
+   "n": 1065
+  },
+  "winter": {
+   "rmse": 0.5881431288741463,
+   "n": 999
+  },
+  "summer": {
+   "rmse": 0.700051460879686,
+   "n": 1028
+  }
+ },
+ "f_agree_1e-9": true,
+ "record_predictions_sha256": "a44c189b3573a67eb555cc473444fb7c09e6a87d719d986de96c38a0d3db1164",
+ "model_sha256": "8eb005e47d3fe65ee2510cb7df464dcc79567df2efbd029b953381405626581f"
+}
