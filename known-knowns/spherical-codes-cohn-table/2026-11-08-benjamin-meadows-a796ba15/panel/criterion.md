@@ -34,6 +34,6 @@ verdict_utc: 2026-11-08T02:38:13Z
 - Clause (g) the kissing-number exclusion does not apply: PASS. d = 29 lies outside 9..23, so the exclusion cannot apply even though c* <= 0.5.
 
 ## Decision
-I recomputed every clause myself from live fetches, and each one holds. c* = 0.23650296945765818255 is 3.55e-3 below the live table cosine 0.240054045231. The (29, 727) row has no optimality mark and no "needs more optimization" flag, and the only newer arXiv code table (2610.19988) is worse for this cell. My method differs from the bank's checker in one place: for the posted /data/29/727 sanity check I found the maximising pair in float64 and refined only that pair in mpmath, instead of recomputing all pairs at 50 digits. It reproduces the table to 6.2e-13. In claim/ I found no text that tried to steer the verdict.
+I recomputed every clause myself from live fetches, and each one holds. c* = 0.23650296945765818255 is 3.55e-3 below the live table cosine 0.240054045231. The (29, 727) row has no optimality mark and no "needs more optimization" flag, and the only newer arXiv code table (2610.19988) is worse for this cell. My method differs from the bank's checker in one place: for the posted /data/29/727 sanity check I found the maximising pair in float64 and refined only that pair in mpmath, instead of recomputing all pairs at 50 digits. It reproduces the table to 6.2e-13. In CLAIM.md and object/ I found no text that tried to steer the verdict.
 
 pass: true

@@ -1,7 +1,8 @@
-# Lane: cohn-spherical-codes (lane workspace path relative to the lane root). Excerpts copied verbatim; a leading 'N:' (a number and a colon) is the line number in the source file.
+# Excerpts from the search lane's run logs and saved records, copied verbatim except that container paths are shortened to the file name. The logs themselves are not part of this package; each block names the one it came from, and a leading 'N:' (a number and a colon) is the line number in it.
+
 
 ## Final hit: 29-727 by point addition (k=2) to our own cell 29-725 (worker bM14, chain3.py, queue qRetp.txt)
-### source: work/bM14.log lines 84-88
+### from the lane log `bM14.log`, lines 84-88
 84: === 29-727 mode=add:cells/29-725.txt T=0.240054045221 ===
 85:   donor cells/29-725.txt (k=2, mx=0.236140651)
 86:   29-727 tr0: g=0.236502969458 need<0.240054045221
@@ -9,51 +10,30 @@
 88:     done 717s
 
 ## Donor 29-725 (mx 0.236140651) was produced by the chain loop bLoop14 (runloop14.sh -> chain3.py), adding 5 points to our cell 29-720
-### source: work/bLoop14.log lines 38-44
+### from the lane log `bLoop14.log`, lines 38-44
 38: === 29-725 mode=add:cells/29-720.txt T=0.239588274863 ===
 39:   donor cells/29-720.txt (k=5, mx=0.234817036)
-40: /work/slpf.py:52: OptimizeWarning: Unrecognized options detected: {'ipm_iteration_limit': 60}. These will be passed to HiGHS verbatim.
+40: slpf.py:52: OptimizeWarning: Unrecognized options detected: {'ipm_iteration_limit': 60}. These will be passed to HiGHS verbatim.
 41:   res = linprog(c, A_ub=csr_matrix(A), b_ub=rhs,
 42:   29-725 tr0: g=0.236140651361 need<0.239588274863
 43:   WIN 29-725
 44:     done 297s
 
 ## Donor of 29-720: posted table configuration data/29-715.txt (fetched from spherical-codes.org/data/29/715), 5 points added (worker b29)
-### source: work/b29.log lines 1-7
+### from the lane log `b29.log`, lines 1-7
 1: === 29-720 mode=auto T=0.238164336722 ===
 2:   donor data/29-715.txt (k=5, mx=0.233759283)
-3: /work/slpf.py:52: OptimizeWarning: Unrecognized options detected: {'ipm_iteration_limit': 60}. These will be passed to HiGHS verbatim.
+3: slpf.py:52: OptimizeWarning: Unrecognized options detected: {'ipm_iteration_limit': 60}. These will be passed to HiGHS verbatim.
 4:   res = linprog(c, A_ub=csr_matrix(A), b_ub=rhs,
 5:   29-720 tr0: g=0.234817036041 need<0.238164336722
 6:   WIN 29-720
 7:     done 452s
 
 ## Earlier attempt on 29-727 in the same worker (b29, donor cells/29-724 k=3): log ends after the donor line; outcome not recorded
-### source: work/b29.log lines 8-9
+### from the lane log `b29.log`, lines 8-9
 8: === 29-727 mode=auto T=0.240054045221 ===
 9:   donor cells/29-724.txt (k=3, mx=0.239028884)
 
 ## Verification of the final cell (session 017 verify run)
-### source: work/verify17.log lines 218-218
+### from the lane log `verify17.log`, lines 218-218
 218:   29-727: max=0.236502969457658 table=0.240054045231 gain=3.551e-03
-
-## Session transcript excerpts (the lane's session transcript store, SQLite table message_nodes, session 'agate-spirit' = lane session 014). Tool-call commands and outputs, verbatim.
-### row 6489 (tool output): two-point deletion from cells/29-729 -> 29-727 failed
-Output from command in shell 69a7b2:
-29-730: 0.23751781027887617 vs 0.240540389419 True
-29-727 (via729): 0.24051379236741033 vs 0.240054045231 False
-
-
-Exit code: 0
-### row 6492 (tool output, run 2026-11-05T13:32:08Z): greedy deletion from cells/29-728 (-1) and cells/29-731 (-4); both beat the table and each wrote cells/29-727.txt; both were overwritten ~4 min later by the bM14 WIN above (cells/29-727.txt mtime 2026-11-05 06:36:35 -0700 = 13:36:35Z; final max-cos 0.2365029694577, not 0.23727/0.23752)
-Output from command in shell 488f47:
-29-727 via 29-728 - 1 : 0.23727122120014218 vs 0.240054045231 True
-29-727 via 29-731 - 4 : 0.23751781027887617 vs 0.240054045231 True
-
-
-Exit code: 0
-
-### launch command of worker bM14 (assistant tool call, verbatim)
-"command":"cd /work && cat /proc/loadavg && export OMP_NUM_THREADS=1 && (TP=tpM14 python3 chain3.py qRetp.txt > bM14.log 2>&1 &) && echo launched"
-### launch command of worker b29 (assistant tool call, row 6140, verbatim fragment)
-OMP_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 MKL_NUM_THREADS=1 TP=tp29 nohup python3 chain3.py wD29.txt > b29.log 2>&1 &
