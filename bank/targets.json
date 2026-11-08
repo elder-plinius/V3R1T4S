@@ -12460,7 +12460,14 @@
    ],
    "status_source": "https://www.iacr.org/misc/china/cryptograms.html",
    "status_checked": "2026-10-03",
-   "disclosure": "open"
+   "disclosure": "open",
+   "pitfalls": [
+    "Transcriptions: the two public transcriptions of the 16 lines (the IACR page and the Cipher Foundation page) disagree, for example on the length of the UGMN... line and on the KOW... line. The Cipher Foundation variants are Nick Pelling's 2015 transcription of a single bar face. Settle each disputed letter from the IACR bar photos; most lines are engraved on several faces, so a reading can be cross-checked across faces.",
+    "The IACR page's per-bar descriptions do not list every line visible on that bar's photo (bar B's photo shows lines its description omits). Build the line-by-bar ledger from the photos, not from the descriptions.",
+    "Counting unit: published letter-count tables (e.g. Pelling 2015, 247 letters) count one bar face including its repeated lines. Statistics of the 16 distinct lines differ from those of the engraved text, so state the unit before testing flatness, balance or periodicity.",
+    "Prior observations: the very flat letter statistics (Pelling 2015; Schmeh) and the near-equal count of each letter across the 16 distinct lines (Bowen, 2020, in a comment on Schmeh's top-50 post) are already published. Cite them; do not report them as new.",
+    "Before designing a p1 generator that takes per-bar data (serial number, inscription) as input, check on the photos whether the same lines appear on bars with different serial numbers. If they do, no per-bar input can produce them, and a generator would need inputs common to all bars."
+   ]
   },
   {
    "id": "cryptocellar-enigma-1941-remaining",
