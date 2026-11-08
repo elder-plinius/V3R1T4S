@@ -54,7 +54,7 @@ The LITA slice-and-absorb method is not new in this repository. Earlier p1 claim
 - The Lille page for this format (11340) is older than the index; the claim does not rest on it alone, since 10290 is below every value in every source read.
 
 ## Corrections to the panel text
-README.md, RUN_IT_YOURSELF.md and HOW_WE_FOUND_IT.md were revised after the gate (wording, credits, file names, the join command), and how-we-built-it/PREREG.md had only its run id removed; the object, the What sentence and the panel files are as gated.
+README.md, RUN_IT_YOURSELF.md and HOW_WE_FOUND_IT.md were revised after the gate (wording, credits, file names, the join command), and how-we-built-it/PREREG.md had only its run id removed; the object and the What sentence are as gated, and the panel files are as gated except one dated amendment of 2026-11-07 in panel/gate.md (the #708 merged / #714 open line).
 
 - panel/gate.md says the earlier p1 claims #41 to #51 "were closed unmerged on 2026-10-14 with no comment on record". In fact they were closed by their own author on 2026-10-14 (12:51Z), together with about 115 of that author's other early pull requests, including claims refiled and merged the next day (#130, #164); no maintainer comment or verdict on them exists.
 - panel/reproduce.md ends its caveats with "the provenance (LITA 21x21x21 rank 4723)". That is wrong for this cell: the scheme comes from LITA's 29x29x29 rank 11203 scheme (schemes/29x29x29_r11203.npz, sha256 d54f4f3c63b67dacb3504821fc30d9b5a2b83f3cd45c707683c92b0b7525d1f7; see how-we-built-it/COMMANDS.md and how-we-built-it/slice_accounting_output.txt, which start from "input <29,29,29> rank 11203"). Amended 2026-11-07; panel/reproduce.md is left as gated.
