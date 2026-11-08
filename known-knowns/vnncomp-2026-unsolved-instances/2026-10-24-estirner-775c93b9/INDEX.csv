@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+vnncomp-2026-unsolved-instance-counterexample,challenging_certified_training_2026 (2.0) cifar10_eps8_wide_cnn7+cifar10_eps8_wide_cnn7_idx6249_sample7,correct (Y2-Y5=0.011762857437),-|timeout|timeout|timeout|timeout|timeout|-|timeout,2026-10-24T16:29:21Z,object/cifar10_eps8_wide_cnn7_idx6249_sample7.counterexample.txt,775c93b9b508b63002b8da10ce73cf317537692b3ef7d0e2b84747f67367baca

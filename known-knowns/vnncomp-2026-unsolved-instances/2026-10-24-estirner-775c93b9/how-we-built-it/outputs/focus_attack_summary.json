@@ -1,0 +1,52 @@
+{
+ "onnx": "cifar10_eps8_wide_cnn7.onnx.gz",
+ "vnnlib": "cifar10_eps8_wide_cnn7_idx6249_sample7.vnnlib.gz",
+ "disjuncts": [
+  3,
+  6,
+  2
+ ],
+ "init": "best_x.npy",
+ "seed": 0,
+ "budget": 1800.0,
+ "best_cpu_margin": 0.011762857437133789,
+ "best_cpu_disjunct": 2,
+ "best_gpu_per_disjunct": {
+  "3": -0.005027949810028076,
+  "6": -0.03531759977340698,
+  "2": 0.01175639033317566
+ },
+ "n_candidates": 39,
+ "evals": 768000,
+ "rounds": 1,
+ "wall_s": 134.39274978637695,
+ "history": [
+  {
+   "round": 0,
+   "disjunct": 3,
+   "strategy": "A",
+   "scale": 0.01,
+   "best_gpu_k": -0.005027949810028076,
+   "best_cpu": -0.0050310492515563965,
+   "t": 51.82111191749573
+  },
+  {
+   "round": 0,
+   "disjunct": 6,
+   "strategy": "A",
+   "scale": 0.01,
+   "best_gpu_k": -0.03531759977340698,
+   "best_cpu": -0.0050310492515563965,
+   "t": 84.84487652778625
+  },
+  {
+   "round": 0,
+   "disjunct": 2,
+   "strategy": "A",
+   "scale": 0.01,
+   "best_gpu_k": 0.01175639033317566,
+   "best_cpu": 0.011762857437133789,
+   "t": 134.3927092552185
+  }
+ ]
+}
