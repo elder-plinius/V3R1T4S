@@ -1,0 +1,2 @@
+'V3R1T4S.KF.embedSMℤ₆_injective' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V3R1T4S.KF.embedSMℤ₆_mk' depends on axioms: [propext, Classical.choice, Quot.sound]
