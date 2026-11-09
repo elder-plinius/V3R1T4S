@@ -1,0 +1,27 @@
+Table Snapshot — ccd-binary-lennard-jones-clusters (600-Cell & 666-File Coordinate Audit, p2)
+
+Primary Status Source:
+URL: https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/BLJ/table.html
+Fetched (UTC): 2026-11-07T14:25:00Z
+HTTP Status: 200
+SHA-256: 045161fcbc4117f5a4c52252cbe3c7680342aee55be9dde95e6d729d3fec449d
+
+Canonical Archive Source:
+URL: https://www-wales.ch.cam.ac.uk/~wales/CCD/jon/structures/BLJ/all.tar
+Fetched (UTC): 2026-11-07T14:25:00Z
+HTTP Status: 200
+SHA-256: 6e18e78d50f65d804d36545fc6ebc9764e600f6b2a8829def028015625446c08
+
+Hosted Improvement Archives:
+- Wenqi_Tao_BLJ.zip: SHA-256 69e4ec09081621654d1fdf018dd8ec621062f4e4b9606afb5f4914b180cfcea9 (12 files)
+- Wenqi_Tao_BLJ2.zip: SHA-256 9328552d1a61229984628fb2a33b5398025c1a9fd8a35c700b5df7fc861ed18a (17 files)
+- Istvan_Kolossvary_new_BLJ_minima.tgz: SHA-256 136e27ee131204a41fab707e2da4172c5ed229140dfbe5b79d3f46cfeaa7972e (17 files)
+- NEW_BINARY_LJ_MINIMA/: 17 files
+
+Live Server Coordinate Link Audit (N=5..100, 576 cells):
+- 475 cells: unchanged href (1.X/N), HTTP 200, matches table.html within 5e-7
+- 27 cells: 'new' href in 1.05/ (2 files) and 1.1/ (25 files), HTTP 200 on live server, matches table.html within 5e-7
+- 70 cells: 'new'/'newer' href in 1.1/46new and 1.15..1.30 (69 files), HTTP 404 Not Found on live server (falls back to superseded all.tar)
+- 4 cells: plain href (1.05/31, 1.05/36, 1.05/97, 1.1/66), HTTP 200 on live server but points to superseded all.tar coordinate file
+- 666/666 hosted coordinate point files reproduce their own posted header energies within 1e-5 (max error 9.14e-8)
+- 33 cells identified where the 4 hosted improvement archives beat both table.html and the live linked point files by > 1e-4

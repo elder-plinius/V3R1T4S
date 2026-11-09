@@ -1,0 +1,11 @@
+# Criterion Audit (`ccd-binary-lennard-jones-clusters`)
+
+- Context: Clause-by-clause verification against `bank/targets.json` partial win `p2`.
+
+Evaluation against target definition:
+- Partial win `p2` requires: "Audit: a machine-readable merged table of all 600 cells (min over the CCD table and all hosted archives, each re-evaluated from coordinates), listing every cell where the live table is beaten by a hosted file by > 1e-4 and any posted point file that does not reproduce its own posted energy within 1e-5."
+- `object/blj_600_cell_audit.csv` tabulates all 600 cells (`N=1..100`, ratios `1.05..1.30`), re-evaluates from coordinates every reachable point file linked by `table.html` (`475` canonical + `27` live `new` + `4` stale hrefs, plus `all.tar` fallbacks for the `70` broken `HTTP 404` `new`/`newer` links) and all 63 files in the 4 hosted improvement archives, provides both `merged_min_energy` (minimum over the live table and all hosted files) and `best_coord_evaluated_energy`, and flags all 33 cells beaten by hosted archives by `> 1e-4`.
+- `object/blj_all_666_files_reproduction_audit.csv` reports coordinate reproduction for all 666 hosted coordinate files (`666/666` reproduce their own header energy within `1e-5`, max error `9.14e-8`).
+- `confirmed_scope`: A machine-readable 600-cell merged audit table (object/blj_600_cell_audit.csv) and 666-file coordinate re-evaluation audit (object/blj_all_666_files_reproduction_audit.csv) re-evaluating from 3D Cartesian coordinates all 576 canonical all.tar point files, all 27 live HTTP-200 'new' point files on the Cambridge Cluster Database server (while cataloging the 70 'new'/'newer' table links that return HTTP 404 on the live server and 4 updated cells whose table href still points to the superseded all.tar file), and all 63 point files across the 4 hosted improvement archives (Wenqi_Tao_BLJ.zip, Wenqi_Tao_BLJ2.zip, Istvan_Kolossvary_new_BLJ_minima.tgz, and NEW_BINARY_LJ_MINIMA/), verifying that 666/666 hosted coordinate files reproduce their own posted header energies within 1e-5 (max error 9.14e-8), reporting the merged minimum energy over the live table and all hosted files for all 600 cells, and identifying all 33 cells where hosted improvement files beat both the live HTML table and live linked point files by > 1e-4.
+
+pass: true
