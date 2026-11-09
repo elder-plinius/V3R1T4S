@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
 solve_alphaevolve_sb.py — Compute Second-Best (SB) bounds and ratio for AlphaEvolve (H=20000).
-Settles the second part of partial win p2.
 """
 
 import math

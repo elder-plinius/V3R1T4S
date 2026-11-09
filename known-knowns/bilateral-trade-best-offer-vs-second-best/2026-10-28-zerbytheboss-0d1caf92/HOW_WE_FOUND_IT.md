@@ -6,9 +6,9 @@
 In bilateral trade with independent private values, Babaioff, Dobzinski, and Kupfer (arXiv:2111.07790, Section 3) showed that on a 2x2 instance, the better of seller-offering (SO) and buyer-offering (BO) gains from trade can be at most 3/4 of the second-best (SB) gains from trade under adverse tie-breaking. However, under favourable tie-breaking, that ratio is 1. Brustle et al. (2017) proved a universal lower bound of 1/2. The open problem was whether there exists any bilateral trade instance where max(SO, BO) / SB < 3/4 under GFT-favourable tie-breaking.
 
 ## What Failed
-1. Testing published hard instances for Random-Offerer (RO) vs First-Best (FB): The AlphaEvolve modulated power law instance (arXiv:2603.08679) gives max(SO, BO) / SB strictly above 0.75, failing to beat the 3/4 bar against second-best.
-2. The BDK Section 2 family for H = 3..20 has max(SO, BO) / SB monotonically increasing towards 1 as H grows.
-3. Continuous power law and uniform distributions generally satisfy max(SO, BO) >= 0.82 * SB.
+1. Testing published hard instances for Random-Offerer (RO) vs First-Best (FB): An uncertified numerical Lagrangian estimate (`how-we-built-it/solve_alphaevolve_sb.py`) on the AlphaEvolve modulated power-law instance (arXiv:2603.08679) gave $\max(\text{SO}, \text{BO}) / \text{SB}$ above $0.75$, so we did not pursue a certified bound on that instance.
+2. The BDK Section 2 family for $H = 3..20$ has $\max(\text{SO}, \text{BO}) / \text{SB}$ monotonically increasing towards $1$ as $H$ grows.
+3. Small-grid trials on discretized power-law and uniform distributions did not produce any candidate below $3/4$.
 
 ## What Worked
 1. **Adversarial Rational Search Formulation**:

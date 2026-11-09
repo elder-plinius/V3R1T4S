@@ -15,7 +15,7 @@ review_utc: 2026-10-28T22:27:00Z
 
 2. **Literature Survey (2024–2026)**:
    - Recent 2026 papers on bilateral trade:
-     - arXiv:2603.08679 (AlphaEvolve): focuses on the Random Offerer (RO) vs First-Best (FB) ratio, reporting $\text{FB}/\text{RO} \approx 2.0749$. It does not evaluate Second-Best (SB) or compare best-offer to second-best, and its best-offer vs second-best ratio lies strictly above $3/4$.
+     - arXiv:2603.08679 (AlphaEvolve): focuses on the Random Offerer (RO) vs First-Best (FB) ratio, reporting $\text{FB}/\text{RO} \approx 2.0749$. It does not evaluate Second-Best (SB) or compare best-offer to second-best.
      - arXiv:2607.13959 (M. Jo), arXiv:2609.37997 (Bei et al.), arXiv:2610.06547 (Shang and Chen): establish bounds for RO versus First-Best (FB), pushing $\text{FB}/\text{RO}$ towards $2.2886$.
      - arXiv:2606.03849, 2609.18724, 2609.30702, 2609.37366: investigate second-best efficiency in matching markets or versus first-best.
    - As confirmed by the bank problem description (checked 2026-10-25) and our fresh arXiv status check (2026-10-28T22:15:43Z), no prior work has established a best-offer vs second-best ratio below $3/4$ under favourable ties.

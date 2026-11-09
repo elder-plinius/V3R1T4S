@@ -2,7 +2,6 @@
 """
 solve_bdk_sb.py — Compute exact rational primal-dual Second-Best LP certificates
 for Babaioff, Dobzinski, Kupfer (arXiv:2111.07790, Section 2) family for H = 3..20.
-Settles partial win p2.
 """
 
 from fractions import Fraction
