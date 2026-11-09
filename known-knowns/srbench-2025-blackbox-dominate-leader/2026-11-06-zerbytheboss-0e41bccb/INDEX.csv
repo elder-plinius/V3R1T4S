@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+srbench-2025-blackbox-dominate-leader,579_fri_c0_250_5 (win_and_p1 + p2_size20 on 579/1028/650),"r2_test=0.948589, model_size=38.0","GPZGD r2_test=0.947561, model_size=40.5",2026-11-06T07:05:00Z,object/srbench2025_verified_splits.csv,0e41bccb0306512742eb0b3e961ca6e729dcaf7c6a65b31dcb1c48fb8cde8eb5
