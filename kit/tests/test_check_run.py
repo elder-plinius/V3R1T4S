@@ -318,6 +318,25 @@ class BadFixtures(Base):
         self.assertIn("GitHub token", self.out)
         self.assertIn("email address", self.out)
 
+    def test_package_leaks_inside_binary(self):
+        P = self.package()
+        blob = (b"\x00\x01\x02" + b"C:" + b"\\" + b"Users" + b"\\" + b"alice" + b"\\" + b"work\x00"
+                + "Placeholder Realname".encode("utf-16-le") + b"\xff\x00")
+        os.makedirs(os.path.join(P, "object"), exist_ok=True)
+        with open(os.path.join(P, "object", "blob.bin"), "wb") as f:
+            f.write(blob)
+        self.sums(P)
+        self.assertFail("absolute Windows user path inside binary file", "--package", P, "--workdir", self.W, "--no-exec")
+        self.assertIn("never_publish.txt inside binary file", self.out)
+
+    def test_package_rejects_bytecode_cache(self):
+        P = self.package()
+        os.makedirs(os.path.join(P, "verify-it-yourself", "__pycache__"), exist_ok=True)
+        with open(os.path.join(P, "verify-it-yourself", "__pycache__", "check.cpython-311.pyc"), "wb") as f:
+            f.write(b"\x00\x00\x00\x00clean bytes only")
+        self.sums(P)
+        self.assertFail("is a generated cache file", "--package", P, "--no-exec")
+
     def test_package_never_publish(self):
         P = self.package()
         w(os.path.join(P, "HOW_WE_FOUND_IT.md"), "Contributor text, unverified. Thanks Placeholder Realname.\n")

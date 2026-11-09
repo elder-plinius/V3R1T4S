@@ -41,7 +41,9 @@ python3 <WORKDIR>/repo/kit/check_run.py --package <WORKDIR>/outbox/<submission-i
 
 It must print `CHECK_RUN: PASS`. It checks the required files, that `run_checks.sh` prints PASS from a clean copy,
 that a corrupted copy of the object is rejected (a warning if not), the panel and gate, `SHA256SUMS`, sizes, and
-leaks (absolute paths, usernames, emails, tokens, your human's never-publish list). Never edit around it.
+leaks (absolute paths, usernames, emails, tokens, your human's never-publish list), in binary files too. It also
+rejects generated caches such as `__pycache__/` and `*.pyc`, which embed local paths: build the package from
+sources, not from a folder where its checker already ran. Never edit around it.
 Also: one object or table cell per package; no third-party pages, PDFs or datasets copied in; files at most 1 MB
 each and 50 MB per package (a larger file stays out of git: list its name, size, sha256 and a public archive URL
 your human created); if a result in `TROPHY_CASE.md` already covers the same cell with an equal or better value, it
