@@ -1,0 +1,26 @@
+deep_cf.py sha256 dc74be2f2b68c5618437b9b972f7313621ab556360a33e7e784e5f0dc82e6b85
+k= 3 R=2 levels=1 |S_A|=1 |admissible_r|=1 missing=0 extra=0 |S_cnt|=1 C_subset_A=True narrowed_primes={}
+k= 4 R=3 levels=1 |S_A|=1 |admissible_r|=1 missing=0 extra=0 |S_cnt|=1 C_subset_A=True narrowed_primes={}
+k= 5 R=12 levels=3 |S_A|=7 |admissible_r|=7 missing=0 extra=0 |S_cnt|=7 C_subset_A=True narrowed_primes={}
+k= 6 R=10 levels=2 |S_A|=4 |admissible_r|=4 missing=0 extra=0 |S_cnt|=4 C_subset_A=True narrowed_primes={}
+k= 7 R=60 levels=4 |S_A|=22 |admissible_r|=22 missing=0 extra=0 |S_cnt|=22 C_subset_A=True narrowed_primes={}
+k= 8 R=105 levels=3 |S_A|=13 |admissible_r|=13 missing=0 extra=0 |S_cnt|=13 C_subset_A=True narrowed_primes={}
+k= 9 R=280 levels=5 |S_A|=31 |admissible_r|=31 missing=0 extra=0 |S_cnt|=31 C_subset_A=True narrowed_primes={}
+k=10 R=252 levels=5 |S_A|=37 |admissible_r|=37 missing=0 extra=0 |S_cnt|=37 C_subset_A=True narrowed_primes={}
+k=11 R=2520 levels=7 |S_A|=157 |admissible_r|=157 missing=0 extra=0 |S_cnt|=157 C_subset_A=True narrowed_primes={}
+k=12 R=2310 levels=5 |S_A|=121 |admissible_r|=121 missing=0 extra=0 |S_cnt|=121 C_subset_A=True narrowed_primes={}
+k=13 R=27720 levels=8 |S_A|=472 |admissible_r|=472 missing=0 extra=0 |S_cnt|=472 C_subset_A=True narrowed_primes={}
+k=14 R=25740 levels=7 |S_A|=337 |admissible_r|=337 missing=0 extra=0 |S_cnt|=337 C_subset_A=True narrowed_primes={}
+k=15 R=24024 levels=7 |S_A|=283 |admissible_r|=283 missing=0 extra=0 |S_cnt|=283 C_subset_A=True narrowed_primes={}
+k=16 R=45045 levels=6 |S_A|=202 |admissible_r|=202 missing=0 extra=0 |S_cnt|=202 C_subset_A=True narrowed_primes={}
+k=17 R=720720 levels=10 |S_A|=1822 |admissible_r|=1822 missing=0 extra=0 |S_cnt|=1822 C_subset_A=True narrowed_primes={}
+k=18 R=680680 levels=8 |S_A|=850 |admissible_r|=850 missing=0 extra=0 |S_cnt|=850 C_subset_A=True narrowed_primes={}
+k=19 R=12252240 levels=11 |S_A|=5467 |admissible_r|=5467 missing=0 extra=0 |S_cnt|=5467 C_subset_A=True narrowed_primes={}
+k=20 R=11639628 levels=9 |S_A|=3037 |admissible_r|=3037 missing=0 extra=0 |S_cnt|=3037 C_subset_A=True narrowed_primes={}
+k=21 R=11085360 levels=10 |S_A|=3280 |admissible_r|=3280 missing=0 extra=0 |S_cnt|=3280 C_subset_A=True narrowed_primes={}
+k=22 R=10581480 levels=10 |S_A|=4252 |admissible_r|=4252 missing=0 extra=0 |S_cnt|=4252 C_subset_A=True narrowed_primes={}
+k=23 R=232792560 levels=12 |S_A|=16402 |admissible_r|=16402 missing=0 extra=0 |S_cnt|=16402 C_subset_A=True narrowed_primes={}
+k=24 R=223092870 levels=9 |S_A|=9841 |admissible_r|=9841 missing=0 extra=0 |S_cnt|=9841 C_subset_A=True narrowed_primes={}
+k=25 R=1070845776 levels=12 |S_A|=16402 |admissible_r|=16402 missing=0 extra=0 |S_cnt|=16402 C_subset_A=True narrowed_primes={}
+TOTAL missing over k=3..25: 0
+brute force n<m<=3000: equal-lcm pairs per k {3: 1, 4: 1, 5: 4, 6: 3, 7: 7, 8: 7, 9: 11, 10: 14, 11: 25, 12: 25, 13: 34, 14: 33, 15: 31, 16: 30, 17: 55, 18: 56, 19: 77, 20: 77, 21: 79, 22: 88, 23: 97, 24: 104, 25: 111}; total 970; r outside sets: 0
