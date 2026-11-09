@@ -1,0 +1,8 @@
+n=1 mode=self graphs=1 maxperiod=2 witness_graph6=@ witness_rule_mask=1 witness_state=0 rule={0}
+n=2 mode=self graphs=1 maxperiod=2 witness_graph6=A_ witness_rule_mask=1 witness_state=0 rule={0}
+n=3 mode=self graphs=2 maxperiod=4 witness_graph6=BW witness_rule_mask=2 witness_state=1 rule={1}
+n=4 mode=self graphs=6 maxperiod=6 witness_graph6=CU witness_rule_mask=5 witness_state=1 rule={0,2}
+n=5 mode=self graphs=21 maxperiod=8 witness_graph6=DCw witness_rule_mask=2 witness_state=2 rule={1}
+n=6 mode=self graphs=112 maxperiod=18 witness_graph6=EEjo witness_rule_mask=43 witness_state=63 rule={0,1,3,5}
+n=7 mode=self graphs=853 maxperiod=42 witness_graph6=FCrfw witness_rule_mask=117 witness_state=105 rule={0,2,4,5,6}
+n=8 mode=self graphs=11117 maxperiod=112 witness_graph6=G?bevw witness_rule_mask=21 witness_state=53 rule={0,2,4}
