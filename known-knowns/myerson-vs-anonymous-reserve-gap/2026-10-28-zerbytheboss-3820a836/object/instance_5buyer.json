@@ -1,0 +1,56 @@
+{
+  "target_id": "myerson-vs-anonymous-reserve-gap",
+  "status": "CONFIRMED_SOLUTION",
+  "partial_win": "p1",
+  "num_buyers": 5,
+  "description": "Explicit 5-buyer asymmetric regular auction instance proving Myerson OPT / AR >= 2.1600",
+  "parameters": {
+    "buyer_0": {
+      "type": "Tri(inf)",
+      "cdf": "p / (p + 1)",
+      "v": "inf",
+      "q": "0"
+    },
+    "buyer_1": {
+      "type": "Tri(v1, q1)",
+      "v": "19309/10000",
+      "q": "2682/10000",
+      "v_float": 1.9309,
+      "q_float": 0.2682
+    },
+    "buyer_2": {
+      "type": "Tri(v2, q2)",
+      "v": "10153/10000",
+      "q": "5344/10000",
+      "v_float": 1.0153,
+      "q_float": 0.5344
+    },
+    "buyer_3": {
+      "type": "Tri(v3, q3)",
+      "v": "7575/10000",
+      "q": "7410/10000",
+      "v_float": 0.7575,
+      "q_float": 0.7410
+    },
+    "buyer_4": {
+      "type": "Tri(v4, q4)",
+      "v": "6450/10000",
+      "q": "1/1",
+      "v_float": 0.6450,
+      "q_float": 1.0
+    }
+  },
+  "certified_bounds": {
+    "opt_lower_bound": "2.163096830419998895",
+    "opt_upper_bound": "2.1630968304200011154",
+    "ar_v1_upper": "0.99998298271588992314",
+    "ar_v2_upper": "0.99998379663269254536",
+    "ar_v3_upper": "0.99999527041095892521",
+    "ar_v4_upper": "0.99985982829557551455",
+    "max_ar_upper": "0.99999527041095892521",
+    "certified_ratio_lower_bound": "2.1631070610274489852",
+    "target_threshold": 2.16000000,
+    "separation_margin": 0.00310706,
+    "regularity_verified": true
+  }
+}
