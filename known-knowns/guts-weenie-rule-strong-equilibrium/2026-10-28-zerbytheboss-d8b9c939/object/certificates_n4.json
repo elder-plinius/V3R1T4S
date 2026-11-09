@@ -1,0 +1,49 @@
+{
+  "n": 4,
+  "a_def": "3*a^3 - 1 = 0",
+  "isolating_interval_a": [
+    "11/16",
+    "16/23"
+  ],
+  "hessian_at_symmetric_point": {
+    "matrix": [
+      [
+        "8*a**2",
+        "3*a**2",
+        "3*a**2"
+      ],
+      [
+        "3*a**2",
+        "8*a**2",
+        "3*a**2"
+      ],
+      [
+        "3*a**2",
+        "3*a**2",
+        "8*a**2"
+      ]
+    ],
+    "eigenvalues": [
+      "5*a^2",
+      "14*a^2"
+    ],
+    "strictly_positive_definite": true
+  },
+  "chamber_0_bernstein": {
+    "degree": 4,
+    "min_coefficient": 0.005894089774993283,
+    "all_positive": true,
+    "num_coefficients": 31
+  },
+  "chamber_3_sos_decomposition": {
+    "T1": "1/3 * d2^2 * ((d2 - 2*a)^2 + 2*a^2)",
+    "T2": "d2*d3 * (2/3*(d3 - 3/2*a)^2 + 3/2*a^2)",
+    "T3": "a*d2*d4 * (3*a - 2*d4)",
+    "T4": "3*a*d3*d4 * (a - d2)",
+    "T5": "2*d2*d3*d4^2",
+    "T6": "2/3*a*d3^2 * (3*a - d3)",
+    "T7": "2*a*d4^2 * (a - d3)",
+    "exact_algebraic_identity": true
+  },
+  "global_nonnegativity_certified": true
+}

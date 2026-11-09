@@ -1,0 +1,16 @@
+{
+  "lens": "sos_interval_refutation",
+  "n4": {
+    "p1_certified": true,
+    "refutation_candidates": 0,
+    "sos_identities_verified": true,
+    "local_quadratic_ball_radius": "1/25",
+    "hesian_lambda_min_lower_bound": "605/256"
+  },
+  "n5": {
+    "p2_certified": true,
+    "refutation_candidates": 0,
+    "hessian_lambda_min_lower_bound": "189/64"
+  },
+  "global_conclusion": "No refutation exists. Continuous Guts with Weenie rule strong equilibrium holds for n=4 and n=5."
+}

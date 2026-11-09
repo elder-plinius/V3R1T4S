@@ -1,0 +1,48 @@
+{
+  "n": 5,
+  "a_def": "3*a^4 - 1 = 0",
+  "isolating_interval_a": [
+    "3/4",
+    "4/5"
+  ],
+  "hessian_at_symmetric_point": {
+    "matrix": [
+      [
+        "10*a**3",
+        "3*a**3",
+        "3*a**3",
+        "3*a**3"
+      ],
+      [
+        "3*a**3",
+        "10*a**3",
+        "3*a**3",
+        "3*a**3"
+      ],
+      [
+        "3*a**3",
+        "3*a**3",
+        "10*a**3",
+        "3*a**3"
+      ],
+      [
+        "3*a**3",
+        "3*a**3",
+        "3*a**3",
+        "10*a**3"
+      ]
+    ],
+    "eigenvalues": [
+      "7*a^3",
+      "19*a^3"
+    ],
+    "strictly_positive_definite": true
+  },
+  "chamber_0_bernstein": {
+    "degree": 5,
+    "min_coefficient": 0.0003994959563944356,
+    "all_positive": true,
+    "num_coefficients": 121
+  },
+  "global_nonnegativity_certified": true
+}
