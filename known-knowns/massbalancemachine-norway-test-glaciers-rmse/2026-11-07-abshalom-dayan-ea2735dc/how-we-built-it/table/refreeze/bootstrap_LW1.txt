@@ -1,0 +1,1 @@
+Bw n=999 model 0.5239 MBM 0.5881 diff -0.0642  95% [-0.1523, +0.0248]  share of resamples with diff<0: 0.907

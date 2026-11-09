@@ -1,0 +1,6 @@
+time	model	sha256	Ba	Bw	Bs	note
+2026-11-07T17:46:19Z	PREREG.md	3248684cca5005186cff0dc280c6b17de4c7e950db16949f0174e3d88e45d856	NA	NA	NA	PREREG sealed (written 2026-11-07T17:46:19Z); no score
+2026-11-07T17:47:25Z	BL1	f1b37eb4f5f5af2b502dc28ed1a4deca035ad642d2afdd0a3e66a2420750bc0a	0.9416	0.5146	0.6984	re-score of BL1 (first scored 2026-11-07T15:12:32Z in run 2026-11-07-1434); provenance repair, not a new model; not counted in the cap
+2026-11-07T17:47:26Z	LW1	ea2735dcad5f8bdd1151c263f6db45865e5756314c4a9c37b8fcc2301f9cdff3	NA	0.5239	NA	re-score of LW1 (first scored 2026-11-07T14:42:47Z in run 2026-11-07-1434); provenance repair, not a new model; not counted in the cap
+2026-11-07T17:55:05Z	BL2	a14f88268d5c0ee8d84e3e464a3acc44a11a262ac3e09fcacfccf3e13e11c0f8	0.9073	0.5146	0.6728	NEW model 1 of 2 (cap): lead 1 glacier-balanced blend weights; PREREG.md Part C
+2026-11-07T17:59:11Z	MB1	0b40575a2433941bd8457b5d4eb5683fb724b18c50064eae6b7d8a77a2e428fd	0.9680	0.5186	0.6985	NEW model 2 of 2 (cap reached): lead 2 monotone-constrained GBM blend; PREREG.md Part C

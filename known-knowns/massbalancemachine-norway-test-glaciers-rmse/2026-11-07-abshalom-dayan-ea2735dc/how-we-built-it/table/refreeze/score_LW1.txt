@@ -1,0 +1,1 @@
+TEST LW1 Bw RMSE 0.5239 (n=999), 2-dec 0.52, fitted parameters 3

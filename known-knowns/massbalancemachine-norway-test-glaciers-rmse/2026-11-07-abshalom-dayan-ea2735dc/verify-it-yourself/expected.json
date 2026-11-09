@@ -1,0 +1,16 @@
+{
+ "model": "LW1",
+ "partial_win": "p2",
+ "seasons": [
+  "Bw"
+ ],
+ "claimed_rmse": {
+  "Bw": 0.5239
+ },
+ "predictions": "object/LW1_test_point_predictions.csv",
+ "object_sha256": {
+  "object/LW1_test_point_predictions.csv": "9bec8deb75b21adcd76f0316b089b576a63d6b24970a90e34fc138fc8cd68086",
+  "object/frozen_LW1.json": "ea2735dcad5f8bdd1151c263f6db45865e5756314c4a9c37b8fcc2301f9cdff3"
+ },
+ "linear_winter": "object/frozen_LW1.json"
+}

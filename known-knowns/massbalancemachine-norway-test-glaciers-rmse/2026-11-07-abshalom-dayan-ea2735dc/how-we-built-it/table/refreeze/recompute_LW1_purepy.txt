@@ -1,0 +1,1 @@
+ids 3092 bad groups 0 winter n 999 Bw RMSE 0.5239
