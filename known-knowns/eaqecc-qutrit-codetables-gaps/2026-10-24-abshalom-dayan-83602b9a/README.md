@@ -41,7 +41,7 @@ Published codes that the table does not list: the plain one-point Hermitian EA c
 ## Not claimed
 
 - Optimality for `(n=28, k=5, c=11)` is not claimed; the table's upper bound is 22.
-- Only cell `(n=28, k=5, c=11)` is claimed in this package (one cell per package). Cells that follow from it by the table's propagation rules (for example `[[28, 6, 15; 12]]_3`, `[[29, 5, 15; 11]]_3`) and other members of the same code family (for example `[[28, 7, 14; 11]]_3`, `[[28, 6, 12; 6]]_3`) are not claimed here.
+- Only cell `(n=28, k=5, c=11)` is claimed in this package (one cell per package). Cells that follow from it by lengthening (for example `[[29, 5, 15; 11]]_3`) and other members of the same code family (for example `[[28, 7, 14; 11]]_3`, `[[28, 6, 12; 6]]_3`) are not claimed here.
 - The classical `[28, 11, 15]_9` code is not ours: `codetables.de` has listed an algebraic-geometry code with these parameters from the Hermitian curve since 2003. What is new is the Hermitian hull dimension (6) of the extended code `E_13` used here and the qutrit EA code it gives; the table's own source lists `[[28,4,17;14]]_3` and `[[28,5,16;13]]_3`, exactly the parameters of the neighbors `E_11` and `E_12` at their natural hulls.
 - Not yet submitted to or listed by the table maintainer (`eaqecc.codetables.de`).
 - Not peer reviewed. The standalone checker is in `verify-it-yourself/`; the run's skeptic reports are in `panel/`.
