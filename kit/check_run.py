@@ -18,6 +18,9 @@ TEXT_EXT = {".md", ".txt", ".json", ".csv", ".log", ".tsv", ".yaml", ".yml", ""}
 CODE_EXT = {".py", ".sh", ".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx",
             ".js", ".ipynb", ".rs", ".go", ".java", ".jl", ".r"}
 MAX_SCAN = 2_000_000
+# Generated caches have no place in a package, and Python bytecode embeds the absolute path of its source file.
+CACHE_DIRS = {"__pycache__", ".ipynb_checkpoints", ".pytest_cache", ".mypy_cache"}
+CACHE_EXT = {".pyc", ".pyo"}
 SETTINGS_KEYS = ["credit", "github", "curious_about", "effort", "schedule", "publish_charter", "memory",
                  "capabilities", "agent_run", "repo_tag", "repo_commit", "tag_signature"]
 PANEL = ["reproduce", "novelty", "criterion"]
@@ -247,11 +250,39 @@ def check_null(c, path, label):
     return good and beats in ("yes", "true")
 
 
+def binary_views(path, limit=MAX_SCAN):
+    """Readable views of a non-text file: its bytes as Latin-1 (one character per byte, so any embedded ASCII or
+    UTF-8 string survives) and as UTF-16-LE at both byte alignments (how Windows tools often store paths)."""
+    try:
+        with open(path, "rb") as f:
+            data = f.read(limit)
+    except OSError:
+        return []
+    return [data.decode("latin-1"), data.decode("utf-16-le", "ignore"), data[1:].decode("utf-16-le", "ignore")]
+
+
+def leak_scan_binary(c, p, r, label, never_publish=(), workdir=None):
+    """Binary files (bytecode, archives, notebooks' outputs, images with metadata) can carry the same leaks as text."""
+    found = []
+    for t in binary_views(p):
+        for rx, what in LEAK_RES:
+            if rx.search(t) and what not in found:
+                found.append(what)
+        if workdir and workdir in t and "the workspace's absolute path" not in found:
+            found.append("the workspace's absolute path")
+        low = t.lower()
+        if any(e.lower() in low for e in never_publish) and "an entry of private/never_publish.txt" not in found:
+            found.append("an entry of private/never_publish.txt")
+    for what in found:
+        c.fail("%s: %s inside binary file %s" % (label, what, r))
+
+
 def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
     user = os.environ.get("USER") or os.environ.get("USERNAME") or ""
     for p in walk(root):
         r = rel(p, root)
         if not is_text(p):
+            leak_scan_binary(c, p, r, label, never_publish, workdir)
             continue
         t = read(p)
         for rx, what in LEAK_RES:
@@ -435,6 +466,11 @@ def check_package(c, pkg, workdir=None, execute=True, timeout=900):
             c.fail("%s: %s is larger than 1 MB (kit/SUBMIT.md section 1)" % (label, rel(p, pkg)))
     if total > 50_000_000:
         c.fail("%s: package larger than 50 MB" % label)
+    for p in walk(pkg):
+        r = rel(p, pkg)
+        if set(r.split(os.sep)[:-1]) & CACHE_DIRS or os.path.splitext(p)[1].lower() in CACHE_EXT:
+            c.fail("%s: %s is a generated cache file; delete it and regenerate SHA256SUMS (bytecode embeds local paths)"
+                   % (label, r))
     leak_scan(c, pkg, label, never_publish_list(workdir), workdir)
     if execute and os.path.isfile(os.path.join(pkg, "verify-it-yourself", "run_checks.sh")):
         run_own_checker(c, pkg, label, timeout)
