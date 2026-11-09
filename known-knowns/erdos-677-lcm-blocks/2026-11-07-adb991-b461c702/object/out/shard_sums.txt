@@ -1,0 +1,3 @@
+k=26 shards=4 admissible_r=21262 enumerated_pairs=1989788 window_candidates=490397 product_solutions=0  | unsharded 2026-10-29: (21262, 1989788, 490397, 0) -> EQUAL
+k=27 shards=4 admissible_r=16402 enumerated_pairs=417007 window_candidates=411576 product_solutions=0  | unsharded 2026-10-29: (16402, 417007, 411576, 0) -> EQUAL
+k=28 shards=4 admissible_r=21262 enumerated_pairs=2241996 window_candidates=553418 product_solutions=0
