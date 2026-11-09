@@ -11,4 +11,5 @@ confirmed_scope: As of the 2026-11-08 live fetch of spherical-codes.org, object/
 - Live table at panel time (2026-11-08T14:58Z, novelty and criterion fetches): /plain row 7,365,0.670467238587, unchanged since the 2026-11-03 fetch saved in the-record-we-beat/; the index row has no proven-optimal mark and no "needs more optimization" text; no dimension-7 row with N > 365 is at or below our value.
 - The criterion skeptic left the newer-arXiv clause to the novelty skeptic, who found no arXiv paper naming a (7, 365) code; the Zenodo data set behind arXiv:2610.19988 was not fetched by either, so an unposted better code there is not excluded (README, "Not claimed").
 - The earlier panel of 2026-10-18 reviewed the 24-row package this one was cut from; its files are in panel/2026-10-18/, unchanged.
+- On 2026-11-09, at the maintainer's request on the pull request, the three reports were edited to remove mentions of files that are not in this package and to give the arXiv responses' sha256 values in full; each report carries a dated note. Verdicts, numbers and the confirmed_scope sentence are unchanged.
 - No downgrade triggers found.

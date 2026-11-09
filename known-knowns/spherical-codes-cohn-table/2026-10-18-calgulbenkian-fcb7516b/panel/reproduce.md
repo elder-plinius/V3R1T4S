@@ -2,15 +2,17 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # REPRODUCE skeptic report, (7, 365)
 
+[Edited 2026-11-09 at the maintainer's request on the pull request: mentions of files that are not in this package were removed. The checks, numbers and verdict are unchanged.]
+
 ## Hash list
 `shasum -a 256 -c SHA256SUMS`, run inside a copy of the claim folder: all 16 files reported OK (object/7x365.txt, the-record-we-beat/*, verify-it-yourself/*, how-we-built-it/*, top-level docs).
 
-## Definition checked against (CLAIM_AND_CRITERION.md, verbatim)
+## Definition checked against (the target's verification method, verbatim)
 "Load the claimed vectors; mpmath mp.dps=50; normalize; compute all N(N-1)/2 inner products; c* = max. Assert c_table - c* >= 1e-10."
 Also: no '&ast;' after the link in the index row, no 'needs more optimization', and "if 9 <= d <= 23 and c* <= 0.5 the claim belongs to the bank target kissing-number-low-dim and is not counted here".
 
 ## My checker (written before opening verify-it-yourself/)
-Own script `my_check.py`, run as `python -I my_check.py` (mpmath, mp.dps=50). It reads object/7x365.txt and asserts 365 non-empty lines. Each line must have 7 comma-separated fields, and each field at least 20 significant digits. It normalises each vector at 50 digits and computes all 365*364/2 pairwise inner products (no sampling). It takes the maximum, compares it with the-record-we-beat/plain_rows.csv, searches the-record-we-beat/index_rows.html for '&ast;' and 'needs more optimization', and evaluates the kissing exclusion.
+My own script, written from the definition and not shipped (mpmath, mp.dps=50). It reads object/7x365.txt and asserts 365 non-empty lines. Each line must have 7 comma-separated fields, and each field at least 20 significant digits. It normalises each vector at 50 digits and computes all 365*364/2 pairwise inner products (no sampling). It takes the maximum, compares it with the-record-we-beat/plain_rows.csv, searches the-record-we-beat/index_rows.html for '&ast;' and 'needs more optimization', and evaluates the kissing exclusion.
 
 Real output:
 ```

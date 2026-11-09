@@ -2,7 +2,9 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # Criterion skeptic report, sc436-7x365
 
-Method: own checker written from the definition before reading verify-it-yourself/ (mpmath, 50 digits, normalise, all 66,430 pairs). Live table fetched once each on 2026-11-08 (/plain HTTP 200, index HTTP 200; logged in the watch fetch log).
+[Edited 2026-11-09 at the maintainer's request on the pull request: mentions of files that are not in this package were removed. The checks, numbers and verdict are unchanged.]
+
+Method: own checker written from the definition before reading verify-it-yourself/ (mpmath, 50 digits, normalise, all 66,430 pairs). Live table fetched once each on 2026-11-08 (/plain HTTP 200, index HTTP 200).
 
 ## Clause by clause
 - (a) Row present in /plain: yes. Live /plain (2026-11-08) has "7,365,0.670467238587", identical to the-record-we-beat/plain_rows.csv. Also present in the live index with link /data/7/365.

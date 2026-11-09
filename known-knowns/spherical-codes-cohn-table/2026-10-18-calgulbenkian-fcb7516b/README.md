@@ -27,14 +27,18 @@ sh verify-it-yourself/run_checks.sh
 | Henry Cohn, spherical-codes.org `/plain` | d=7, N=365 | 0.670467238587 | https://spherical-codes.org/plain | 2026-11-03T18:04:22Z |
 | Henry Cohn, spherical-codes.org HTML index | d=7, N=365 | 0.670467238587; no proven-optimal mark, no "needs more optimization" label; credited to Antoine Jay, 2026 | https://spherical-codes.org/ | 2026-11-03T18:04:23Z |
 | Henry Cohn, spherical-codes.org `/plain` | d=7, N > 365 | no row at or below 0.670467035142 (N = 366 reads 0.670923693486) | https://spherical-codes.org/plain | 2026-11-03T18:04:22Z |
+| Henry Cohn, spherical-codes.org `/plain` (panel re-fetch) | d=7, N=365 | 0.670467238587, unchanged | https://spherical-codes.org/plain | 2026-11-08T14:58:11Z |
+| Henry Cohn, spherical-codes.org HTML index (panel re-fetch) | d=7, N=365 | 0.670467238587; no proven-optimal mark, no "needs more optimization" label; credited to Antoine Jay, 2026 | https://spherical-codes.org/ | 2026-11-08T14:58:11Z |
+| Henry Cohn, spherical-codes.org `/plain` (panel re-fetch) | d=7, N > 365 | no row at or below 0.670467035142 (N = 366 reads 0.670923693486) | https://spherical-codes.org/plain | 2026-11-08T14:58:11Z |
 
-Page hashes and the saved rows: `the-record-we-beat/README.md`. Our value to 20 digits: 0.67046703514181086524.
+Page hashes and the saved rows of the 2026-11-03 fetches: `the-record-we-beat/README.md`. Page hashes of the 2026-11-08 fetches: `panel/novelty.md`. Our value to 20 digits: 0.67046703514181086524.
 
 ## Not claimed
 
 - Only the (7, 365) row. Nothing is claimed for other N in dimension 7 or for other dimensions.
 - The code is not proven optimal and is not claimed to be converged.
-- The table changes often. The comparison above is with the fetch of 2026-11-03; the row may change again.
+- The table changes often. The comparison above is with the fetches of 2026-11-03 and 2026-11-08; the row may change again.
+- No arXiv paper is known to give a (7, 365) code: the panel's arXiv search of 2026-11-08 (queries "spherical code" and "Tammes", read by title and abstract, and the record of arXiv:2610.19988) found none. The live (7, 365) row postdates arXiv:2610.19988 (submitted 2026-10-14): the row read 0.670487284551 on 2026-10-18 (`how-we-built-it/RESULTS.md`) and 0.670467238587 on 2026-11-03 and 2026-11-08.
 - The panel files in `panel/` are from the fresh panel of 2026-11-08 for this single row. The panel of 2026-10-18, which reviewed the earlier 24-row package, is kept unchanged in `panel/2026-10-18/` with its note of 2026-11-03.
 - The Zenodo data set behind arXiv:2610.19988 (https://doi.org/10.5281/zenodo.23270586) was not fetched by the contributor or the panel; an unposted better code could exist there. The paper's abstract does not name dimension 7 or N = 365, and the live table credits this row to Antoine Jay, not to that paper.
 - Nothing was uploaded to the table (its /upload-code route); that needs the contributor's explicit permission and is a separate step.
