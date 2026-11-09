@@ -1,0 +1,7 @@
+(13,22): cells 228 lines 22 bones 552 stones 391 window 36 Z 3 every 5
+pos 0/228 states 4
+pos 50/228 states 736
+pos 100/228 states 9021
+pos 150/228 states 1553
+pos 200/228 states 65
+max states 23599 overflow 0

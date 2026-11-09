@@ -1,0 +1,17 @@
+a=16 b=29 cells=357 rows=29 tiles=1528 window=46 K=3 NL=4000
+t=0/357 states=3 checks=0 kills=0 undec=0
+t=25/357 states=338 checks=817 kills=153 undec=0
+t=50/357 states=3571 checks=11518 kills=3104 undec=0
+t=75/357 states=23504 checks=79529 kills=20664 undec=4
+t=100/357 states=62799 checks=526579 kills=212606 undec=22
+t=125/357 states=317930 checks=1958476 kills=790540 undec=1564
+t=150/357 states=499836 checks=5336352 kills=2244622 undec=4461
+t=175/357 states=502781 checks=9233164 kills=4184138 undec=6180
+t=200/357 states=151099 checks=11054731 kills=5054070 undec=6333
+t=225/357 states=34078 checks=11659122 kills=5365383 undec=6382
+t=250/357 states=6973 checks=11812282 kills=5445284 undec=6382
+t=275/357 states=4461 checks=11867879 kills=5472117 undec=6382
+t=300/357 states=666 checks=11880408 kills=5479309 undec=6382
+t=325/357 states=118 checks=11883330 kills=5481008 undec=6382
+t=350/357 states=4 checks=11883620 kills=5481170 undec=6382
+peak_states=950894 sum_states=41914070 checks=11883621 kills=5481170 undecided=6382 overflow=0

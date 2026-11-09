@@ -1,0 +1,10 @@
+(16,28): cells 354 lines 28 bones 894 stones 625 window 45 Z 3 every 5
+pos 0/354 states 4
+pos 50/354 states 2231
+pos 100/354 states 19455
+pos 150/354 states 75418
+pos 200/354 states 56621
+pos 250/354 states 7212
+pos 300/354 states 396
+pos 350/354 states 1
+max states 303671 overflow 0
