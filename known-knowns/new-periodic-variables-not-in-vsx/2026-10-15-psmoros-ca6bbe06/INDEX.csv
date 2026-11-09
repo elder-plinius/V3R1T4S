@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+new-periodic-variables-not-in-vsx,vsx-reproduce-known,"77/80 VSX periods recovered blind; false alarms 0/67 CST and 0/400 controls at S > 54.0",n/a (calibration gate; no record table),2026-10-15T17:42:18Z,object/vsx_reproduce_known_table.csv,ca6bbe06308eb423321aed23dd7d436e40b010b1e27c04cdddf7476196d6ad56

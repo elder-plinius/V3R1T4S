@@ -1,0 +1,4 @@
+repo_tag: none
+repo_commit at run start (2026-10-15T17:38Z): 9b1d444eb864a1475e092047d49612a7410a7c5a
+repo_commit at packaging: 41ff532b74be742afa614fa057fd5c10cee0f3e6 (updated mid-run by the human's own setup
+session at 18:11Z; the change touches kit/check_run.py and its tests only)
