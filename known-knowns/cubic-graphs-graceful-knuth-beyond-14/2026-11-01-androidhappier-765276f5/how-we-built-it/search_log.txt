@@ -1,0 +1,10 @@
+n=4 graphs=1 fails=0 totnodes=3 maxnodes=3
+n=6 graphs=2 fails=0 totnodes=19 maxnodes=14
+n=8 graphs=5 fails=0 totnodes=238 maxnodes=188
+n=10 graphs=19 fails=0 totnodes=703 maxnodes=68
+n=12 graphs=85 fails=0 totnodes=3716 maxnodes=224
+n=14 graphs=509 fails=0 totnodes=39538 maxnodes=1132
+n=16 graphs=4060 fails=0 totnodes=454264 maxnodes=2299
+n=18 graphs=41301 fails=0 totnodes=6495967 maxnodes=5913
+n=20 graphs=510489 fails=0 totnodes=110228634 maxnodes=6927
+n=22 graphs=7319447 fails=0 totnodes=2162456868 maxnodes=10200
