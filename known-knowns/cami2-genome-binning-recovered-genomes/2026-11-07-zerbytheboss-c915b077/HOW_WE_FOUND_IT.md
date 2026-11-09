@@ -1,0 +1,9 @@
+# How We Found It
+
+contributor text, unverified
+
+Naive multi-binner ensembles fail on the CAMI II pooled gold-standard assemblies for three structural reasons that we resolved from first principles (`how-we-built-it/solve_cami2_unsupervised.py`):
+
+1. **Unsupervised Binner Lineage Deduplication via Verbatim Multi-Contig Bin Fingerprinting**: Multiple `.binning` files in the CAMI II repository are parameter sweeps or derivative ensembles of the same underlying tool (for example, 10 `MetaBinner` variants in `strain-madness` share `8%-100%` of their `>= 5`-contig, `>= 300 kbp` bins as verbatim-identical contig sets). Grouping binners into connected components where pairwise verbatim multi-contig bin sharing is `>= 8%` gives each independent algorithmic lineage at most one vote.
+2. **Unsupervised Uniform-Length Circular Replicon Peeling (`Step 0`)**: In the 10-sample pooled short-read assemblies, high-copy circular plasmids and phages assemble into `6 <= n <= 20` circularly permuted contigs of nearly identical length (`CV(L) = sigma_L / mu_L < 0.045`, total bin length `10 kbp <= L < 250 kbp`). Peeling these intrinsic uniform-length circular replicon bins first recovers `46+` high-quality plasmids on `plant-associated` and `101+` circular elements on `marine` while decontaminating `12+` host bacterial chromosome bins whose `precision_bp` was previously dragged below `0.95` by co-binned plasmid contigs.
+3. **Selective Fringe Trimming & Multi-Lineage Chimera Decomposition**: Penalizing chimeric bins only when more independent binner lineages split a bin into `>= 2` substantial sub-bins (`>= 450 kbp`) than strongly agree with it (`F1 >= 0.85`), and trimming fringe contigs only when a candidate bin's length exceeds the median of its high-concordance (`F1 >= 0.80`) partners by `> 1.5%`, preserves complete single-copy contigs while eliminating cross-strain contamination.
