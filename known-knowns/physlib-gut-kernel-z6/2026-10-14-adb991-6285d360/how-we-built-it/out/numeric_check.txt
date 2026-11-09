@@ -1,0 +1,8 @@
+1. f(x) in SU(4)xSU(2)xSU(2): 2000/2000 random x
+2. f(xy) = f(x)f(y): 2000/2000 random pairs
+3a. Z3 elements with f = 1: 3/3
+3b. Z6 elements (k, z^3=1, f=1): [(0, np.True_, np.True_), (1, np.False_, np.False_), (2, np.True_, np.True_), (3, np.False_, np.False_), (4, np.True_, np.True_), (5, np.False_, np.False_)]
+4. grid of 600000 points on U(1): kernel elements found = 3, equal to the Z3 element with b = a: 3
+5. min ||f(x)-1|| over perturbed Z6 points (eps in [1e-6,1e-2]): ['8.14e-07', '2.00e+00', '1.37e-06', '2.00e+00', '1.35e-06', '2.00e+00']
+6. contrast: with h = b 1_3 (wrong reading) f = 1 for 1/3 cube roots (expect 1: only b = 1)
+NUMERIC: CONSISTENT with kernel = Z3 (failures=0)
