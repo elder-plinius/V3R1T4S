@@ -13,7 +13,6 @@ A new exact term of any of the four sequences: any a(n) that is not yet publishe
 ## Partial wins
 
 - **p1:** Any one new term as above (each unpublished term counts once).
-- **p2:** Three or more consecutive unpublished terms of one sequence, each meeting the same two-enumerator rule.
 
 ## How a win is checked
 

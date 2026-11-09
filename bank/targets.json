@@ -37941,10 +37941,6 @@
     {
      "id": "p1",
      "statement": "Any one new term as above (each unpublished term counts once)."
-    },
-    {
-     "id": "p2",
-     "statement": "Three or more consecutive unpublished terms of one sequence, each meeting the same two-enumerator rule."
     }
    ],
    "verification_method": "Re-step every reported object under the stated rule with an independent stepper (lifelib supports arbitrary outer-totalistic rules) and check stability. Check strictness by testing every grouping of the pattern's 8-connected islands into two or more still-life parts (or with Cook's skew-symmetric-graph method adapted to the rule). Canonicalise under the 8 symmetries and count. Compare small n with OEIS.",
