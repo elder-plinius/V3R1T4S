@@ -1,0 +1,3 @@
+content Q_max count_published_convention list_lines list_sha256_uncompressed list_file
+SM 11 37006 37005 723e21fb6c46023dcfe04c77eee556a2759066277d57c7ab092c430b80667d68 object/SM_q11.txt.gz
+SMnuR 11 45378378 45378377 f4e16ec8613a78ef6437fde6c43e56320fbb6bc901fa072c0889667d96dbdaf4 (not included: 417 MB gzip; regenerate with source/acclist.c, see REPRODUCE.md)
