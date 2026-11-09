@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+voynich-generator-heldout-fingerprints,partial win p2 (joint pass rate across Currier A and B on ZL3b-n and IT2a-n over 200 streams/cell),1.000,0.000,2026-10-24T15:15:38Z,object/vbclc.py,14f2e6008b878cdec988eef90afeb4ab9cec0b184877462275db04ebe3171de2

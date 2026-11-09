@@ -1,0 +1,1195 @@
+{
+  "generator_name": "VBCLC-152",
+  "total_table_entries": 152,
+  "per_folio_state_bits": 1,
+  "cells_p2_200streams": {
+    "A/ZL3b": {
+      "vs_clean_ivtff_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.03509835336213,
+          "sd": 1.2464770524821498,
+          "min": 65.94730114072556,
+          "max": 73.65802117254123
+        },
+        "mi_orig": {
+          "mean": 0.4631143231845293,
+          "sd": 0.009852949430485154,
+          "min": 0.426659148194242,
+          "max": 0.4911705016817283
+        },
+        "zipf_r2": {
+          "mean": 0.9221617610396743,
+          "sd": 0.010035425647328943,
+          "min": 0.8842594220162854,
+          "max": 0.9448075238475419
+        },
+        "cv": {
+          "mean": 1.251141837203069,
+          "sd": 0.014457274730126977,
+          "min": 1.212839334233919,
+          "max": 1.2915966209226748
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.995,
+        "shapes": {
+          "Zipfian": 200
+        }
+      },
+      "vs_raw_parisel_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.03509835336213,
+          "sd": 1.2464770524821498,
+          "min": 65.94730114072556,
+          "max": 73.65802117254123
+        },
+        "mi_orig": {
+          "mean": 0.4631143231845293,
+          "sd": 0.009852949430485154,
+          "min": 0.426659148194242,
+          "max": 0.4911705016817283
+        },
+        "zipf_r2": {
+          "mean": 0.9221617610396743,
+          "sd": 0.010035425647328943,
+          "min": 0.8842594220162854,
+          "max": 0.9448075238475419
+        },
+        "cv": {
+          "mean": 1.251141837203069,
+          "sd": 0.014457274730126977,
+          "min": 1.212839334233919,
+          "max": 1.2915966209226748
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.995,
+        "shapes": {
+          "Zipfian": 200
+        }
+      }
+    },
+    "B/ZL3b": {
+      "vs_clean_ivtff_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.29797864461376,
+          "sd": 1.0516023287575527,
+          "min": 65.8551011803674,
+          "max": 71.71521593815449
+        },
+        "mi_orig": {
+          "mean": 0.43118489307106905,
+          "sd": 0.006990227036022534,
+          "min": 0.4170187938658968,
+          "max": 0.454261346442251
+        },
+        "zipf_r2": {
+          "mean": 0.937372900523702,
+          "sd": 0.004890837979425886,
+          "min": 0.9198404030532205,
+          "max": 0.9508410993726674
+        },
+        "cv": {
+          "mean": 1.244345814803308,
+          "sd": 0.0095807441026669,
+          "min": 1.207405802882302,
+          "max": 1.2754223425438276
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 200
+        }
+      },
+      "vs_raw_parisel_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.29797864461376,
+          "sd": 1.0516023287575527,
+          "min": 65.8551011803674,
+          "max": 71.71521593815449
+        },
+        "mi_orig": {
+          "mean": 0.43118489307106905,
+          "sd": 0.006990227036022534,
+          "min": 0.4170187938658968,
+          "max": 0.454261346442251
+        },
+        "zipf_r2": {
+          "mean": 0.937372900523702,
+          "sd": 0.004890837979425886,
+          "min": 0.9198404030532205,
+          "max": 0.9508410993726674
+        },
+        "cv": {
+          "mean": 1.244345814803308,
+          "sd": 0.0095807441026669,
+          "min": 1.207405802882302,
+          "max": 1.2754223425438276
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 200
+        }
+      }
+    },
+    "A/IT2a": {
+      "vs_clean_ivtff_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.09199083104956,
+          "sd": 1.4350704062406991,
+          "min": 65.53916560958204,
+          "max": 72.93885464178106
+        },
+        "mi_orig": {
+          "mean": 0.46347233720597386,
+          "sd": 0.009200869381959005,
+          "min": 0.43693613640159085,
+          "max": 0.4908856475260719
+        },
+        "zipf_r2": {
+          "mean": 0.9225012278397366,
+          "sd": 0.009199682503718278,
+          "min": 0.8964117586730531,
+          "max": 0.9410727136405093
+        },
+        "cv": {
+          "mean": 1.2520121464819298,
+          "sd": 0.013629872876971596,
+          "min": 1.2133438561750474,
+          "max": 1.2877487661803912
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.9969999999999999,
+        "shapes": {
+          "Zipfian": 200
+        }
+      },
+      "vs_raw_parisel_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.09199083104956,
+          "sd": 1.4350704062406991,
+          "min": 65.53916560958204,
+          "max": 72.93885464178106
+        },
+        "mi_orig": {
+          "mean": 0.46347233720597386,
+          "sd": 0.009200869381959005,
+          "min": 0.43693613640159085,
+          "max": 0.4908856475260719
+        },
+        "zipf_r2": {
+          "mean": 0.9225012278397366,
+          "sd": 0.009199682503718278,
+          "min": 0.8964117586730531,
+          "max": 0.9410727136405093
+        },
+        "cv": {
+          "mean": 1.2520121464819298,
+          "sd": 0.013629872876971596,
+          "min": 1.2133438561750474,
+          "max": 1.2877487661803912
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.9969999999999999,
+        "shapes": {
+          "Zipfian": 200
+        }
+      }
+    },
+    "B/IT2a": {
+      "vs_clean_ivtff_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.26819449765053,
+          "sd": 1.099195849919973,
+          "min": 65.65745578131823,
+          "max": 72.01307582076325
+        },
+        "mi_orig": {
+          "mean": 0.4307307933858154,
+          "sd": 0.007111826380584681,
+          "min": 0.41452367099530407,
+          "max": 0.44910295112337284
+        },
+        "zipf_r2": {
+          "mean": 0.9374600140737536,
+          "sd": 0.005111693575258984,
+          "min": 0.9230417673817944,
+          "max": 0.9484994188541215
+        },
+        "cv": {
+          "mean": 1.2427124210484968,
+          "sd": 0.009048619785667213,
+          "min": 1.2153676171794312,
+          "max": 1.2709269163378865
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 200
+        }
+      },
+      "vs_raw_parisel_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.26819449765053,
+          "sd": 1.099195849919973,
+          "min": 65.65745578131823,
+          "max": 72.01307582076325
+        },
+        "mi_orig": {
+          "mean": 0.4307307933858154,
+          "sd": 0.007111826380584681,
+          "min": 0.41452367099530407,
+          "max": 0.44910295112337284
+        },
+        "zipf_r2": {
+          "mean": 0.9374600140737536,
+          "sd": 0.005111693575258984,
+          "min": 0.9230417673817944,
+          "max": 0.9484994188541215
+        },
+        "cv": {
+          "mean": 1.2427124210484968,
+          "sd": 0.009048619785667213,
+          "min": 1.2153676171794312,
+          "max": 1.2709269163378865
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 200
+        }
+      }
+    },
+    "A/RF1b-e": {
+      "vs_clean_ivtff_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.18567622437519,
+          "sd": 1.376747300835029,
+          "min": 65.80620475860763,
+          "max": 72.78140686715135
+        },
+        "mi_orig": {
+          "mean": 0.46844860543383005,
+          "sd": 0.009660442040611176,
+          "min": 0.4379637177385972,
+          "max": 0.48990478145743827
+        },
+        "zipf_r2": {
+          "mean": 0.9213593529365894,
+          "sd": 0.01041644634226399,
+          "min": 0.8907355316847895,
+          "max": 0.9433022009511121
+        },
+        "cv": {
+          "mean": 1.2529869850783877,
+          "sd": 0.014095605023049695,
+          "min": 1.2165173339630442,
+          "max": 1.285047469423759
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.9895,
+        "shapes": {
+          "Zipfian": 200
+        }
+      },
+      "vs_raw_parisel_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.18567622437519,
+          "sd": 1.376747300835029,
+          "min": 65.80620475860763,
+          "max": 72.78140686715135
+        },
+        "mi_orig": {
+          "mean": 0.46844860543383005,
+          "sd": 0.009660442040611176,
+          "min": 0.4379637177385972,
+          "max": 0.48990478145743827
+        },
+        "zipf_r2": {
+          "mean": 0.9213593529365894,
+          "sd": 0.01041644634226399,
+          "min": 0.8907355316847895,
+          "max": 0.9433022009511121
+        },
+        "cv": {
+          "mean": 1.2529869850783877,
+          "sd": 0.014095605023049695,
+          "min": 1.2165173339630442,
+          "max": 1.285047469423759
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.9895,
+        "shapes": {
+          "Zipfian": 200
+        }
+      }
+    },
+    "B/RF1b-e": {
+      "vs_clean_ivtff_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.42547888923387,
+          "sd": 1.191666280704635,
+          "min": 65.65905238576666,
+          "max": 72.13881416848723
+        },
+        "mi_orig": {
+          "mean": 0.43037700588635164,
+          "sd": 0.00656892687217703,
+          "min": 0.41285978745240415,
+          "max": 0.44707522809132494
+        },
+        "zipf_r2": {
+          "mean": 0.937637037970414,
+          "sd": 0.005432678632039173,
+          "min": 0.9167586534286816,
+          "max": 0.9524758942395145
+        },
+        "cv": {
+          "mean": 1.2440805476410028,
+          "sd": 0.008896866554994033,
+          "min": 1.2185843843159545,
+          "max": 1.2653030200521787
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 200
+        }
+      },
+      "vs_raw_parisel_ref": {
+        "n_streams": 200,
+        "table_entries": 152,
+        "adaptive_pass_count": 200,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 200,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 200,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 200,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 200,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.42547888923387,
+          "sd": 1.191666280704635,
+          "min": 65.65905238576666,
+          "max": 72.13881416848723
+        },
+        "mi_orig": {
+          "mean": 0.43037700588635164,
+          "sd": 0.00656892687217703,
+          "min": 0.41285978745240415,
+          "max": 0.44707522809132494
+        },
+        "zipf_r2": {
+          "mean": 0.937637037970414,
+          "sd": 0.005432678632039173,
+          "min": 0.9167586534286816,
+          "max": 0.9524758942395145
+        },
+        "cv": {
+          "mean": 1.2440805476410028,
+          "sd": 0.008896866554994033,
+          "min": 1.2185843843159545,
+          "max": 1.2653030200521787
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 200
+        }
+      }
+    }
+  },
+  "by_language_p2": {
+    "A/ZL3b": {
+      "Latin_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.86370731765317,
+          "sd": 1.2647697226539232,
+          "min": 65.97372380710576,
+          "max": 73.65802117254123
+        },
+        "mi_orig": {
+          "mean": 0.46205183686317314,
+          "sd": 0.009858617432650733,
+          "min": 0.4419811343208022,
+          "max": 0.4911705016817283
+        },
+        "zipf_r2": {
+          "mean": 0.9216500689402634,
+          "sd": 0.009418137846099416,
+          "min": 0.8963601542282408,
+          "max": 0.9448075238475419
+        },
+        "cv": {
+          "mean": 1.2518865917462805,
+          "sd": 0.013219503500007447,
+          "min": 1.2184948382944611,
+          "max": 1.2759131895262141
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.995,
+        "shapes": {
+          "Zipfian": 100
+        }
+      },
+      "Italian_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.20648938907111,
+          "sd": 1.210007610475308,
+          "min": 65.94730114072556,
+          "max": 71.40838299805242
+        },
+        "mi_orig": {
+          "mean": 0.46417680950588536,
+          "sd": 0.009781050023259498,
+          "min": 0.426659148194242,
+          "max": 0.4870377358514908
+        },
+        "zipf_r2": {
+          "mean": 0.9226734531390853,
+          "sd": 0.010639856139115172,
+          "min": 0.8842594220162854,
+          "max": 0.9409254629009572
+        },
+        "cv": {
+          "mean": 1.2503970826598567,
+          "sd": 0.015628852449533635,
+          "min": 1.212839334233919,
+          "max": 1.2915966209226748
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.995,
+        "shapes": {
+          "Zipfian": 100
+        }
+      }
+    },
+    "B/ZL3b": {
+      "Latin_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.2112881553781,
+          "sd": 0.9852606833659929,
+          "min": 65.8551011803674,
+          "max": 71.6236632179713
+        },
+        "mi_orig": {
+          "mean": 0.4307542826713294,
+          "sd": 0.007171924371076363,
+          "min": 0.4170187938658968,
+          "max": 0.454261346442251
+        },
+        "zipf_r2": {
+          "mean": 0.9370681668415684,
+          "sd": 0.004607573659536275,
+          "min": 0.9198404030532205,
+          "max": 0.9508410993726674
+        },
+        "cv": {
+          "mean": 1.2448580448686968,
+          "sd": 0.010994080693543977,
+          "min": 1.207405802882302,
+          "max": 1.2754223425438276
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 100
+        }
+      },
+      "Italian_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.38466913384943,
+          "sd": 1.1121979927041277,
+          "min": 65.85687154077203,
+          "max": 71.71521593815449
+        },
+        "mi_orig": {
+          "mean": 0.4316155034708087,
+          "sd": 0.006812416654280764,
+          "min": 0.4186992489223694,
+          "max": 0.44816504820069725
+        },
+        "zipf_r2": {
+          "mean": 0.9376776342058356,
+          "sd": 0.005163804330177279,
+          "min": 0.9226263143051737,
+          "max": 0.9483401879472014
+        },
+        "cv": {
+          "mean": 1.2438335847379187,
+          "sd": 0.007944093611360212,
+          "min": 1.2232688238043061,
+          "max": 1.260687473747939
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 100
+        }
+      }
+    },
+    "A/IT2a": {
+      "Latin_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.00866362462145,
+          "sd": 1.4802012852138724,
+          "min": 65.53916560958204,
+          "max": 72.93885464178106
+        },
+        "mi_orig": {
+          "mean": 0.46270293199524126,
+          "sd": 0.009177462000134855,
+          "min": 0.43693613640159085,
+          "max": 0.4831905846759149
+        },
+        "zipf_r2": {
+          "mean": 0.9229798336938992,
+          "sd": 0.008766837565299437,
+          "min": 0.9002131393809994,
+          "max": 0.9402905175852508
+        },
+        "cv": {
+          "mean": 1.2528390065347037,
+          "sd": 0.013351398223600626,
+          "min": 1.225673140112208,
+          "max": 1.2877487661803912
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.998,
+        "shapes": {
+          "Zipfian": 100
+        }
+      },
+      "Italian_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.17531803747767,
+          "sd": 1.390911022600436,
+          "min": 65.85834432435618,
+          "max": 71.46415821027325
+        },
+        "mi_orig": {
+          "mean": 0.4642417424167066,
+          "sd": 0.009205724797729554,
+          "min": 0.44465626037704664,
+          "max": 0.4908856475260719
+        },
+        "zipf_r2": {
+          "mean": 0.9220226219855739,
+          "sd": 0.009633431956194795,
+          "min": 0.8964117586730531,
+          "max": 0.9410727136405093
+        },
+        "cv": {
+          "mean": 1.2511852864291557,
+          "sd": 0.01392057207639354,
+          "min": 1.2133438561750474,
+          "max": 1.2810480085426614
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.996,
+        "shapes": {
+          "Zipfian": 100
+        }
+      }
+    },
+    "B/IT2a": {
+      "Latin_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.28998643492791,
+          "sd": 1.0701858467193759,
+          "min": 65.65745578131823,
+          "max": 71.94687251082244
+        },
+        "mi_orig": {
+          "mean": 0.43140059114476487,
+          "sd": 0.007226102181055794,
+          "min": 0.4157245539598923,
+          "max": 0.44910295112337284
+        },
+        "zipf_r2": {
+          "mean": 0.9373569908677417,
+          "sd": 0.005059386491239084,
+          "min": 0.9230417673817944,
+          "max": 0.9479340919458845
+        },
+        "cv": {
+          "mean": 1.2434029372215092,
+          "sd": 0.007942283959212926,
+          "min": 1.2255024211783443,
+          "max": 1.2646905534244017
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 100
+        }
+      },
+      "Italian_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.24640256037311,
+          "sd": 1.132435549789994,
+          "min": 65.77800688502705,
+          "max": 72.01307582076325
+        },
+        "mi_orig": {
+          "mean": 0.4300609956268658,
+          "sd": 0.006967364247440596,
+          "min": 0.41452367099530407,
+          "max": 0.44568760490427267
+        },
+        "zipf_r2": {
+          "mean": 0.9375630372797655,
+          "sd": 0.005186899094037075,
+          "min": 0.9241739649929706,
+          "max": 0.9484994188541215
+        },
+        "cv": {
+          "mean": 1.2420219048754846,
+          "sd": 0.01002691146222642,
+          "min": 1.2153676171794312,
+          "max": 1.2709269163378865
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 100
+        }
+      }
+    },
+    "A/RF1b-e": {
+      "Latin_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.17003353135286,
+          "sd": 1.3999859039312976,
+          "min": 65.83609201470821,
+          "max": 71.53271399547039
+        },
+        "mi_orig": {
+          "mean": 0.46834810159746765,
+          "sd": 0.00967391272022775,
+          "min": 0.4427145381960316,
+          "max": 0.48944503458586935
+        },
+        "zipf_r2": {
+          "mean": 0.9219433366046356,
+          "sd": 0.009556721985147678,
+          "min": 0.896076418814868,
+          "max": 0.9412780616538878
+        },
+        "cv": {
+          "mean": 1.2530333536241878,
+          "sd": 0.014377161873597454,
+          "min": 1.2170889995579013,
+          "max": 1.2839194736467998
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.9930000000000001,
+        "shapes": {
+          "Zipfian": 100
+        }
+      },
+      "Italian_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 68.20131891739751,
+          "sd": 1.35998426009358,
+          "min": 65.80620475860763,
+          "max": 72.78140686715135
+        },
+        "mi_orig": {
+          "mean": 0.46854910927019255,
+          "sd": 0.009694635398157165,
+          "min": 0.4379637177385972,
+          "max": 0.48990478145743827
+        },
+        "zipf_r2": {
+          "mean": 0.9207753692685433,
+          "sd": 0.011228570416352508,
+          "min": 0.8907355316847895,
+          "max": 0.9433022009511121
+        },
+        "cv": {
+          "mean": 1.2529406165325878,
+          "sd": 0.013880632729941288,
+          "min": 1.2165173339630442,
+          "max": 1.285047469423759
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 0.986,
+        "shapes": {
+          "Zipfian": 100
+        }
+      }
+    },
+    "B/RF1b-e": {
+      "Latin_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.46694328349601,
+          "sd": 1.1878302979404458,
+          "min": 65.79656084736214,
+          "max": 70.30116414645394
+        },
+        "mi_orig": {
+          "mean": 0.4304661652923935,
+          "sd": 0.006675476511963311,
+          "min": 0.41285978745240415,
+          "max": 0.44680997305653997
+        },
+        "zipf_r2": {
+          "mean": 0.9371393172652964,
+          "sd": 0.005430483553179712,
+          "min": 0.9167586534286816,
+          "max": 0.9494248018727023
+        },
+        "cv": {
+          "mean": 1.2444458086563195,
+          "sd": 0.009645773226140108,
+          "min": 1.2185843843159545,
+          "max": 1.2653030200521787
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 100
+        }
+      },
+      "Italian_100streams": {
+        "n_streams": 100,
+        "table_entries": 152,
+        "adaptive_pass_count": 100,
+        "adaptive_pass_rate": 1.0,
+        "adaptive_strict_zipf_pass_count": 100,
+        "adaptive_strict_zipf_pass_rate": 1.0,
+        "fixed_pass_count": 100,
+        "fixed_pass_rate": 1.0,
+        "fixed_strict_zipf_pass_count": 100,
+        "fixed_strict_zipf_pass_rate": 1.0,
+        "joint_all_criteria_pass_count": 100,
+        "joint_all_criteria_pass_rate": 1.0,
+        "es_pct": {
+          "mean": 67.38401449497175,
+          "sd": 1.200027930386179,
+          "min": 65.65905238576666,
+          "max": 72.13881416848723
+        },
+        "mi_orig": {
+          "mean": 0.4302878464803097,
+          "sd": 0.006493028655269655,
+          "min": 0.41522382394623225,
+          "max": 0.44707522809132494
+        },
+        "zipf_r2": {
+          "mean": 0.9381347586755316,
+          "sd": 0.005416226309474794,
+          "min": 0.9212820901907618,
+          "max": 0.9524758942395145
+        },
+        "cv": {
+          "mean": 1.2437152866256862,
+          "sd": 0.008111568227128592,
+          "min": 1.224348722386901,
+          "max": 1.2636828908668287
+        },
+        "bilat_full_rate": 1.0,
+        "bilat_chunk_frac_mean": 1.0,
+        "shapes": {
+          "Zipfian": 100
+        }
+      }
+    }
+  },
+  "synthetic_37k_p2": {
+    "A": {
+      "n_streams": 40,
+      "table_entries": 152,
+      "adaptive_pass_count": 0,
+      "adaptive_pass_rate": 0.0,
+      "adaptive_strict_zipf_pass_count": 0,
+      "adaptive_strict_zipf_pass_rate": 0.0,
+      "fixed_pass_count": 40,
+      "fixed_pass_rate": 1.0,
+      "fixed_strict_zipf_pass_count": 40,
+      "fixed_strict_zipf_pass_rate": 1.0,
+      "joint_all_criteria_pass_count": 0,
+      "joint_all_criteria_pass_rate": 0.0,
+      "es_pct": {
+        "mean": 67.00095594983176,
+        "sd": 0.366405277993335,
+        "min": 66.40084805578842,
+        "max": 68.53267411695067
+      },
+      "mi_orig": {
+        "mean": 0.2579300235737086,
+        "sd": 0.005088470640782259,
+        "min": 0.24754122364129416,
+        "max": 0.2701346576735936
+      },
+      "zipf_r2": {
+        "mean": 0.9421539350180279,
+        "sd": 0.0048146208232071495,
+        "min": 0.9274989031927321,
+        "max": 0.9508224259385425
+      },
+      "cv": {
+        "mean": 1.2457908541501463,
+        "sd": 0.006866322803083987,
+        "min": 1.2332603533846274,
+        "max": 1.2619607980234704
+      },
+      "bilat_full_rate": 1.0,
+      "bilat_chunk_frac_mean": 1.0,
+      "shapes": {
+        "Zipfian": 40
+      }
+    },
+    "B": {
+      "n_streams": 40,
+      "table_entries": 152,
+      "adaptive_pass_count": 40,
+      "adaptive_pass_rate": 1.0,
+      "adaptive_strict_zipf_pass_count": 40,
+      "adaptive_strict_zipf_pass_rate": 1.0,
+      "fixed_pass_count": 40,
+      "fixed_pass_rate": 1.0,
+      "fixed_strict_zipf_pass_count": 40,
+      "fixed_strict_zipf_pass_rate": 1.0,
+      "joint_all_criteria_pass_count": 40,
+      "joint_all_criteria_pass_rate": 1.0,
+      "es_pct": {
+        "mean": 67.054644740902,
+        "sd": 0.8541681351745478,
+        "min": 66.07205428404572,
+        "max": 70.11983886410317
+      },
+      "mi_orig": {
+        "mean": 0.3775838689718287,
+        "sd": 0.004587460822173755,
+        "min": 0.3628918773964137,
+        "max": 0.3889529037264795
+      },
+      "zipf_r2": {
+        "mean": 0.9424244475801007,
+        "sd": 0.0029552394398408405,
+        "min": 0.9351755932480534,
+        "max": 0.9479074755306648
+      },
+      "cv": {
+        "mean": 1.2439884814002553,
+        "sd": 0.00906501793698877,
+        "min": 1.2204097651499901,
+        "max": 1.2594099398882936
+      },
+      "bilat_full_rate": 1.0,
+      "bilat_chunk_frac_mean": 1.0,
+      "shapes": {
+        "Zipfian": 40
+      }
+    }
+  },
+  "p1_evaluation": {
+    "A/ZL3b": {
+      "n_streams": 40,
+      "excess_edge_mi_mean": 0.12810389449396187,
+      "excess_edge_mi_sd": 0.005952140599720115,
+      "edge_share_mean": 0.042417071447288304,
+      "singleton_rate_mean": 0.682945145863637,
+      "singleton_rate_sd": 0.005504146125359197,
+      "h2_collapsed_mean": 3.115859373891527,
+      "word_len_collapsed_mean": 4.705106756631851
+    },
+    "B/ZL3b": {
+      "n_streams": 40,
+      "excess_edge_mi_mean": 0.231505822006259,
+      "excess_edge_mi_sd": 0.0060531387415065085,
+      "edge_share_mean": 0.07637884110030638,
+      "singleton_rate_mean": 0.6749714676686305,
+      "singleton_rate_sd": 0.003166759804602038,
+      "h2_collapsed_mean": 3.056271675715732,
+      "word_len_collapsed_mean": 5.115115920310297
+    },
+    "A/IT2a": {
+      "n_streams": 40,
+      "excess_edge_mi_mean": 0.12800190785583607,
+      "excess_edge_mi_sd": 0.006976905717878673,
+      "edge_share_mean": 0.042396265041443996,
+      "singleton_rate_mean": 0.683901809762718,
+      "singleton_rate_sd": 0.004547350658125079,
+      "h2_collapsed_mean": 3.115966376786587,
+      "word_len_collapsed_mean": 4.702263660821968
+    },
+    "B/IT2a": {
+      "n_streams": 40,
+      "excess_edge_mi_mean": 0.23146347863547775,
+      "excess_edge_mi_sd": 0.006643571243362136,
+      "edge_share_mean": 0.07641140487796438,
+      "singleton_rate_mean": 0.6735530838993347,
+      "singleton_rate_sd": 0.004447894296182857,
+      "h2_collapsed_mean": 3.0564689179932856,
+      "word_len_collapsed_mean": 5.114421135785131
+    }
+  }
+}
