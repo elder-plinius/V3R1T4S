@@ -1,0 +1,5 @@
+2026-10-17T00:03:58Z
+L  16x16  blocks 10 samples  175780000  p_L 0.500003764 +- 2.05e-06  p_L - 1/2 +3.76e-06 (+1.83 sigma)  KS(n1, M-n2+1) 1.07e-04  PASS
+L  32x32  blocks 10 samples   43950000  p_L 0.500000492 +- 4.00e-06  p_L - 1/2 +4.92e-07 (+0.12 sigma)  KS(n1, M-n2+1) 1.61e-04  PASS
+L  64x64  blocks 10 samples   10990000  p_L 0.500007151 +- 5.12e-06  p_L - 1/2 +7.15e-06 (+1.40 sigma)  KS(n1, M-n2+1) 5.10e-04  PASS
+TRIANGULAR ESTIMATOR TEST: PASS

@@ -1,0 +1,98 @@
+one look started 2026-10-18T00:02:53Z
+== 1. kagome site, 60-block primary fit (PREREG.v2 kill rule: |p_MC - exact| <= 3 sigma_MC)
+mode site L1 8 L2 8 M 192 blocks 20 samples 468760000  p_L 0.652701727 +- 0.000001543  R0=R2 at crossing 0.3149
+mode site L1 12 L2 12 M 432 blocks 20 samples 208340000  p_L 0.652705741 +- 0.000001948  R0=R2 at crossing 0.3155
+mode site L1 16 L2 16 M 768 blocks 60 samples 351540000  p_L 0.652701600 +- 0.000001277  R0=R2 at crossing 0.3157
+mode site L1 24 L2 24 M 1728 blocks 60 samples 156240000  p_L 0.652705120 +- 0.000001761  R0=R2 at crossing 0.3159
+mode site L1 32 L2 32 M 3072 blocks 60 samples 87900000  p_L 0.652705118 +- 0.000001756  R0=R2 at crossing 0.3159
+mode site L1 48 L2 48 M 6912 blocks 60 samples 39060000  p_L 0.652702723 +- 0.000002266  R0=R2 at crossing 0.3160
+mode site L1 64 L2 64 M 12288 blocks 60 samples 21960000  p_L 0.652702271 +- 0.000002220  R0=R2 at crossing 0.3161
+mode site L1 128 L2 128 M 49152 blocks 60 samples 5520000  p_L 0.652704116 +- 0.000002601  R0=R2 at crossing 0.3162
+sizes with >= 20 blocks: [(8, 8), (12, 12), (16, 16), (24, 24), (32, 32), (48, 48), (64, 64), (128, 128)]
+primary L2>=16     p_MC 0.652704208 +- 0.000000989  A -0.1597  chi2/dof 2.18/4
+                   minus exact: +5.637e-07 (0.57 sigma)
+stability L2>=24   p_MC 0.652703346 +- 0.000001246  A 0.6921  chi2/dof 0.88/3
+                   minus exact: -2.985e-07 (-0.24 sigma)
+stability: |diff| 8.622e-07 vs sigma_MC 9.886e-07 -> STABLE
+free exponent (report only): p 0.652703579 +- 0.000000874, w 8.62 +- 72.57
+== 2. square site (PREREG.v3 A: |p_MC - 0.59274605079210| <= 3 sigma_MC)
+mode site L1 8 L2 8 M 64 blocks 20 samples 1406240000  p_L 0.592637644 +- 0.000001170  R0=R2 at crossing 0.3134
+mode site L1 12 L2 12 M 144 blocks 20 samples 625000000  p_L 0.592727418 +- 0.000002304  R0=R2 at crossing 0.3113
+mode site L1 16 L2 16 M 256 blocks 60 samples 1054680000  p_L 0.592739983 +- 0.000001285  R0=R2 at crossing 0.3106
+mode site L1 24 L2 24 M 576 blocks 60 samples 468720000  p_L 0.592743593 +- 0.000001550  R0=R2 at crossing 0.3100
+mode site L1 32 L2 32 M 1024 blocks 60 samples 263700000  p_L 0.592744957 +- 0.000001581  R0=R2 at crossing 0.3098
+mode site L1 48 L2 48 M 2304 blocks 60 samples 117180000  p_L 0.592745370 +- 0.000002080  R0=R2 at crossing 0.3096
+mode site L1 64 L2 64 M 4096 blocks 60 samples 65940000  p_L 0.592746232 +- 0.000002253  R0=R2 at crossing 0.3096
+sizes with >= 20 blocks: [(8, 8), (12, 12), (16, 16), (24, 24), (32, 32), (48, 48), (64, 64)]
+primary L2>=16     p_MC 0.592745302 +- 0.000000987  A -0.3543  chi2/dof 0.36/3
+                   minus exact: -7.484e-07 (-0.76 sigma)
+stability L2>=24   p_MC 0.592745789 +- 0.000001341  A -0.7427  chi2/dof 0.07/2
+                   minus exact: -2.621e-07 (-0.20 sigma)
+stability: |diff| 4.863e-07 vs sigma_MC 9.870e-07 -> STABLE
+free exponent (report only): p 0.592745156 +- 0.000000934, w 4.40 +- 0.31
+== 3. PREREG.v5 addition 2, common offset (kagome, square, triangular L = 16, 32, 64)
+kagome site      p 0.6527042080 +- 9.89e-07  exact 0.652703644666  offset +5.633e-07 (+0.57 sigma)
+square site      p 0.5927453020 +- 9.87e-07  exact 0.592746050792  offset -7.488e-07 (-0.76 sigma)
+triangular L=16  p 0.5000037640 +- 2.05e-06  exact 0.500000000000  offset +3.764e-06 (+1.84 sigma)
+triangular L=32  p 0.5000004920 +- 4.00e-06  exact 0.500000000000  offset +4.920e-07 (+0.12 sigma)
+triangular L=64  p 0.5000071510 +- 5.12e-06  exact 0.500000000000  offset +7.151e-06 (+1.40 sigma)
+D +4.216e-07 +- 6.472e-07 (+0.65 sigma) -> PASS
+== 4. (3^3,4^2) site (PREREG.v3 B: rule (a) form against the TM ST site series; table = Suding and Ziff 0.550213(3))
+mode site L1 16 L2 8 M 256 blocks 20 samples 351560000  p_L 0.550210798 +- 0.000001800  R0=R2 at crossing 0.3131
+mode site L1 24 L2 12 M 576 blocks 20 samples 156240000  p_L 0.550212654 +- 0.000002697  R0=R2 at crossing 0.3126
+mode site L1 32 L2 16 M 1024 blocks 60 samples 263700000  p_L 0.550212587 +- 0.000001618  R0=R2 at crossing 0.3124
+mode site L1 48 L2 24 M 2304 blocks 60 samples 117180000  p_L 0.550209811 +- 0.000001964  R0=R2 at crossing 0.3123
+mode site L1 64 L2 32 M 4096 blocks 60 samples 65940000  p_L 0.550211442 +- 0.000001891  R0=R2 at crossing 0.3122
+mode site L1 96 L2 48 M 9216 blocks 60 samples 29280000  p_L 0.550217837 +- 0.000002210  R0=R2 at crossing 0.3122
+mode site L1 128 L2 64 M 16384 blocks 60 samples 16500000  p_L 0.550210929 +- 0.000002305  R0=R2 at crossing 0.3122
+sizes with >= 20 blocks: [(16, 8), (24, 12), (32, 16), (48, 24), (64, 32), (96, 48), (128, 64)]
+primary L2>=16     p_MC 0.550212455 +- 0.000001889  A -0.01506  chi2/dof 8.45/3
+stability L2>=24   p_MC 0.550214037 +- 0.000002422  A -1.483  chi2/dof 5.53/2
+stability: |diff| 1.582e-06 vs sigma_MC 1.889e-06 -> STABLE
+free exponent (report only): p 0.550212456 +- 0.000001148, w 4.04 +- 20.92
+TM: n_max 15  p_TM 0.5502121906 +- 8.01e-08   (local exponent 4.090)
+MC: p_MC 0.5502124550 +- 1.89e-06  stability True
+(a) |TM - MC| = 2.644e-07  vs 3 combined sigma 5.672e-06 -> AGREE
+(b) |TM - table| = 8.094e-07 vs 3 sigma 9.003e-06 -> WITHIN
+requirements: sigma_TM <= 2e-7: True; sigma_MC <= 2e-6: True
+== 5. #23 site: rules (a) and (b), TM with every n present (PREREG.v3 D), table 0.5720(2)
+mode site L1 32 L2 8 M 1024 blocks 20 samples 87900000  p_L 0.571765625 +- 0.000002762  R0=R2 at crossing 0.3104
+mode site L1 48 L2 12 M 2304 blocks 20 samples 39060000  p_L 0.571753209 +- 0.000002798  R0=R2 at crossing 0.3104
+mode site L1 64 L2 16 M 4096 blocks 60 samples 65940000  p_L 0.571766140 +- 0.000001740  R0=R2 at crossing 0.3103
+mode site L1 96 L2 24 M 9216 blocks 60 samples 29280000  p_L 0.571763300 +- 0.000002528  R0=R2 at crossing 0.3102
+mode site L1 128 L2 32 M 16384 blocks 60 samples 16500000  p_L 0.571769000 +- 0.000002504  R0=R2 at crossing 0.3103
+mode site L1 192 L2 48 M 36864 blocks 60 samples 7320000  p_L 0.571769524 +- 0.000003307  R0=R2 at crossing 0.3103
+mode site L1 256 L2 64 M 65536 blocks 60 samples 4140000  p_L 0.571765487 +- 0.000002905  R0=R2 at crossing 0.3103
+mode site L1 512 L2 128 M 262144 blocks 60 samples 1020000  p_L 0.571765755 +- 0.000003737  R0=R2 at crossing 0.3105
+sizes with >= 20 blocks: [(32, 8), (48, 12), (64, 16), (96, 24), (128, 32), (192, 48), (256, 64), (512, 128)]
+primary L2>=16     p_MC 0.571766679 +- 0.000001393  A -0.0499  chi2/dof 3.52/4
+stability L2>=24   p_MC 0.571767860 +- 0.000001741  A -1.252  chi2/dof 2.24/3
+stability: |diff| 1.181e-06 vs sigma_MC 1.393e-06 -> STABLE
+free exponent (report only): p 0.571769814 +- 0.000012320, w 0.52 +- 1.37
+TM: n_max 16  p_TM 0.5717645395 +- 1.04e-07   (local exponent 4.079)
+MC: p_MC 0.5717666790 +- 1.39e-06  stability True
+(a) |TM - MC| = 2.139e-06  vs 3 combined sigma 4.191e-06 -> AGREE
+(b) |TM - table| = 2.355e-04 vs 3 sigma 6.000e-04 -> WITHIN
+requirements: sigma_TM <= 2e-7: True; sigma_MC <= 2e-6: True
+== 6. #23 site check torus 2048 x 512 (PREREG.v3 C, not in the fit)
+mode site L1 2048 L2 512 M 4194304 blocks 20 samples 4000  p_L 0.571764522 +- 0.000022729  R0=R2 at crossing 0.3061
+== 7. #23 bond: 60-block primary fit; (c) MC part against the table 0.45844622(40); TM-MC bond check
+mode bond L1 32 L2 8 M 2304 blocks 20 samples 39060000  p_L 0.458446677 +- 0.000003543  R0=R2 at crossing 0.3093
+mode bond L1 48 L2 12 M 5184 blocks 20 samples 17360000  p_L 0.458448800 +- 0.000002968  R0=R2 at crossing 0.3095
+mode bond L1 64 L2 16 M 9216 blocks 60 samples 29280000  p_L 0.458444342 +- 0.000002190  R0=R2 at crossing 0.3096
+mode bond L1 96 L2 24 M 20736 blocks 60 samples 13020000  p_L 0.458445911 +- 0.000002667  R0=R2 at crossing 0.3097
+mode bond L1 128 L2 32 M 36864 blocks 60 samples 7320000  p_L 0.458443925 +- 0.000002674  R0=R2 at crossing 0.3098
+mode bond L1 192 L2 48 M 82944 blocks 60 samples 3240000  p_L 0.458442330 +- 0.000003279  R0=R2 at crossing 0.3096
+mode bond L1 256 L2 64 M 147456 blocks 60 samples 1860000  p_L 0.458449176 +- 0.000003749  R0=R2 at crossing 0.3098
+mode bond L1 512 L2 128 M 589824 blocks 60 samples 480000  p_L 0.458446321 +- 0.000004728  R0=R2 at crossing 0.3098
+sizes with >= 20 blocks: [(32, 8), (48, 12), (64, 16), (96, 24), (128, 32), (192, 48), (256, 64), (512, 128)]
+primary L2>=16     p_MC 0.458445217 +- 0.000001553  A -0.05397  chi2/dof 2.26/4
+stability L2>=24   p_MC 0.458444991 +- 0.000001995  A 0.1554  chi2/dof 2.23/3
+stability: |diff| 2.258e-07 vs sigma_MC 1.553e-06 -> STABLE
+free exponent (report only): p 0.458444939 +- 0.000002409, w 1.88 +- 6.24
+TM: n_max 13  p_TM 0.4584460221 +- 3.75e-08   (local exponent 3.611)
+MC: p_MC 0.4584452170 +- 1.55e-06  stability True
+(a) |TM - MC| = 8.051e-07  vs 3 combined sigma 4.660e-06 -> AGREE
+(b) |TM - table| = 1.979e-07 vs 3 sigma 1.205e-06 -> WITHIN
+requirements: sigma_TM <= 2e-7: True; sigma_MC <= 2e-6: True
+one look finished 2026-10-18T00:04:16Z
