@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+gauss-kuzmin-wirsing-certified-digits,certified decimals of C_83 = |lambda_2| (main criterion),842,175 certified (Nisoli 2026; constants/83a),2026-11-09T08:58:22Z,object/C83_enclosure.txt,70a0e2a90aad523a3815611aae208207deaded8728d49021cb2bcb3991dc7c02
