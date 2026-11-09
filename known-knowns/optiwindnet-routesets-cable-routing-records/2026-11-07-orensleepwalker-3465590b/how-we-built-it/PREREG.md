@@ -1,0 +1,4 @@
+Frozen UTC: 2026-11-07T14:14:14Z
+Method: attempts/lns/code/lns_branched.py (byte copy of runs/2026-11-07-0826's), --start-from-shortest, --k 28 (window 22-34 turbines), --sub-time 30, 1 CP-SAT worker, nice 10, deadline 2026-11-07T14:52:00Z. Processes: Hornsea One.1_OSS cap 7 seeds 7, 8, 9; cap 9 seeds 7, 8.
+Counting rule (bank criterion, X = branched): final Euclidean length (detours included) < (1 - 1e-6) x the shortest stored set of any topology (cap 7: 408102.58; cap 9: 353604.67); validate_routeset no violations; segments inside the border and outside obstacles; feeders per substation <= that set's feeders_per_root ([26]; [20]). Selection per instance: the shortest final result across its processes; ties within 1e-6 m go to the lowest seed.
+null_test: not needed because only deterministic properties of explicit route sets would be claimed (no search-yield or statistical inference)
