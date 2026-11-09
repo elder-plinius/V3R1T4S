@@ -1,0 +1,24 @@
+Table Snapshot — coin-basket-adversarial-games
+
+Primary Status Source:
+URL: https://oeis.org/A392305
+Fetched (UTC): 2026-10-28T00:31:14Z
+HTTP Status: 200
+SHA-256: ca6b94758a63e1b792855461b24cbc261a930f23b039cdcc1a1b8c3eb5d781ee
+
+Secondary Status Source:
+URL: https://oeis.org/A391538
+Fetched (UTC): 2026-10-28T00:31:14Z
+HTTP Status: 200
+SHA-256: 9d84f8723dd470e74956d48af05dbfec0a8d25470bb3eb6a919da8cedb94a7cf
+
+Extracted Cell Record:
+| coin-basket-adversarial-games | A392305(17..20) | open | https://oeis.org/A392305 |
+
+Published Status Metadata:
+- Sequence A392305: "Fill your basket: fair compensation paid to presenter under optimal play", by Ruediger Jehn.
+- Published terms: n = 1..16: 1, 1, 1, 2, 3, 3, 3, 3, 3, 4, 4, 5, 5, 5, 6, 6 (Revision #13, 20 Jan 2026).
+- Terms beyond n=16 are open.
+- Sequence A391538: "Game of Chests: sum the player can guarantee taking the largest of 3 baskets", by Ruediger Jehn.
+- Published terms: n = 1..14: 1, 2, 3, 5, 8, 11, 14, 17, 21, 25, 29, 34, 39, 44 (Revision #18, 30 Dec 2025). Conjectured formula a(n) = floor(n(n-1)/6) + n for n > 4.
+- Closed resolution: A392305 computed and verified for n=17, 18, 19, 20 as 7, 7, 8, 8 under optimal play with two-sided decision-bracket certificates; A391538 verified for n=15..21 as 50, 56, 62, 69, 76, 83, 91, confirming the formula.
