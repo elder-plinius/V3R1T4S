@@ -1,0 +1,411 @@
+{
+  "arithmetic_mode": "exact_integer_rational_and_Fp_linear_algebra",
+  "claim_status": "CONFIRMED_PARTIAL",
+  "confirmed_partials": [
+    "p2"
+  ],
+  "target_id": "moore-graph-57",
+  "track_p2_arxiv_2606_29183_verification": {
+    "existing_moore_graphs_brauer_checks": [
+      {
+        "a0": 1,
+        "a1": 2,
+        "graph": "C_5",
+        "p": 2,
+        "rank_mod_p": 0,
+        "trace": 0
+      },
+      {
+        "a0": 4,
+        "a1": 0,
+        "automorphism": "S5_transposition_(01)",
+        "graph": "Petersen_srg(10,3,0,1)",
+        "idempotent": "E_s",
+        "p": 2,
+        "rank_mod_p": 2,
+        "trace": 2
+      },
+      {
+        "a0": 2,
+        "a1": 4,
+        "automorphism": "S5_double_transposition_(01)(23)",
+        "graph": "Petersen_srg(10,3,0,1)",
+        "idempotent": "E_s",
+        "p": 2,
+        "rank_mod_p": 0,
+        "trace": 0
+      },
+      {
+        "a0": 0,
+        "a1": 5,
+        "automorphism": "S5_5cycle_(01234)",
+        "graph": "Petersen_srg(10,3,0,1)",
+        "idempotent": "E_r",
+        "p": 5,
+        "rank_mod_p": 0,
+        "trace": 0
+      },
+      {
+        "a0": 6,
+        "a1": 12,
+        "automorphism": "involution_Fix_K1_5",
+        "graph": "HoffmanSingleton_srg(50,7,0,1)",
+        "idempotent": "E_r",
+        "p": 2,
+        "rank_mod_p": 4,
+        "trace": 4
+      }
+    ],
+    "paper_verified": "arXiv:2606.29183v2 (Yawara Ishida, 8 July 2026)",
+    "section_8_table_1_branches": [
+      {
+        "Fix": "empty",
+        "a0": 0,
+        "a1_here": "impossible (rank equation gives 18 != 162)",
+        "idempotent": "E_{-6}",
+        "known_a1": "162",
+        "p": 2,
+        "rank_mod_p": 0,
+        "srg": [
+          162,
+          21,
+          0,
+          3
+        ]
+      },
+      {
+        "Fix": "K_{1,3}",
+        "a0": 4,
+        "a1_here": 12,
+        "idempotent": "E_{-6}",
+        "known_a1": "none",
+        "p": 2,
+        "rank_mod_p": 2,
+        "srg": [
+          162,
+          21,
+          0,
+          3
+        ]
+      },
+      {
+        "Fix": "K_2",
+        "a0": 2,
+        "a1_here": 15,
+        "idempotent": "E_3",
+        "known_a1": "15, 60",
+        "p": 5,
+        "rank_mod_p": 0,
+        "srg": [
+          162,
+          21,
+          0,
+          3
+        ]
+      },
+      {
+        "Fix": "empty",
+        "a0": 0,
+        "a1_here": 22,
+        "idempotent": "E_{-6}",
+        "known_a1": "falsely excluded in [22, Lemma 2.2] via w == 8 (mod 10)",
+        "p": 11,
+        "rank_mod_p": 0,
+        "srg": [
+          352,
+          26,
+          0,
+          2
+        ]
+      },
+      {
+        "Fix": "K_1",
+        "a0": 1,
+        "a1_here": 26,
+        "idempotent": "E_{-6}",
+        "known_a1": "falsely claimed 52 in [22, Lemma 2.3(1)]",
+        "p": 13,
+        "rank_mod_p": 0,
+        "srg": [
+          352,
+          26,
+          0,
+          2
+        ]
+      },
+      {
+        "Fix": "K_1",
+        "a0": 1,
+        "a1_here": 50,
+        "idempotent": "E_6",
+        "known_a1": "== 50 (mod 70)",
+        "p": 5,
+        "rank_mod_p": 0,
+        "srg": [
+          1276,
+          50,
+          0,
+          2
+        ]
+      },
+      {
+        "Fix": "Clebsch",
+        "a0": 16,
+        "a1_here": 70,
+        "idempotent": "E_6",
+        "known_a1": "== 0 (mod 70)",
+        "p": 5,
+        "rank_mod_p": 10,
+        "srg": [
+          1276,
+          50,
+          0,
+          2
+        ]
+      },
+      {
+        "Fix": "empty",
+        "a0": 0,
+        "a1_here": 58,
+        "idempotent": "E_6",
+        "known_a1": "58, 464, 870, 1276",
+        "p": 29,
+        "rank_mod_p": 0,
+        "srg": [
+          1276,
+          50,
+          0,
+          2
+        ]
+      },
+      {
+        "Fix": "empty",
+        "a0": 0,
+        "a1_here": 18,
+        "idempotent": "E_3",
+        "known_a1": "18, 39, 60, 81",
+        "p": 3,
+        "rank_mod_p": 0,
+        "srg": [
+          99,
+          14,
+          1,
+          2
+        ]
+      },
+      {
+        "Fix": "K_3",
+        "a0": 3,
+        "a1_here": 6,
+        "idempotent": "E_3",
+        "known_a1": "6, 27, 48",
+        "p": 3,
+        "rank_mod_p": 0,
+        "srg": [
+          99,
+          14,
+          1,
+          2
+        ]
+      },
+      {
+        "Fix": "empty",
+        "a0": 0,
+        "a1_here": 240,
+        "idempotent": "E_{-45}",
+        "known_a1": "240, 480",
+        "p": 5,
+        "rank_mod_p": 0,
+        "srg": [
+          640,
+          243,
+          66,
+          108
+        ]
+      }
+    ],
+    "srg_3250_57_0_1": {
+      "E_r": {
+        "denom": 750,
+        "numerator_I_A_J": [
+          400,
+          50,
+          -1
+        ]
+      },
+      "E_s": {
+        "denom": 975,
+        "numerator_I_A_J": [
+          455,
+          -65,
+          1
+        ]
+      },
+      "eigenvalues": {
+        "k": 57,
+        "r": 7,
+        "s": -8
+      },
+      "multiplicities": {
+        "m_k": 1,
+        "m_r": 1729,
+        "m_s": 1520
+      },
+      "params": [
+        3250,
+        57,
+        0,
+        1
+      ]
+    },
+    "theorem_1_1_involution": {
+      "Fix": "K_{1,55}",
+      "a0": 56,
+      "brauer_forced_a1": -368,
+      "combinatorial_a1_if_exists": 112,
+      "combinatorial_chi_E_s": 22,
+      "involution_excluded": true,
+      "rank_F2_E_s_Fix": 54
+    },
+    "theorem_1_2_odd_primes": {
+      "p_11": {
+        "Fix": "C_5",
+        "a0": 5,
+        "a1_forced": 55,
+        "excluded_macaj_siran_a1": [
+          220,
+          385
+        ],
+        "rank_F11_E_r_Fix": 2,
+        "rank_F11_E_s_Fix": 2
+      },
+      "p_13": {
+        "Fix": "empty",
+        "a0": 0,
+        "a1_forced": 65,
+        "excluded_macaj_siran_a1": [
+          260,
+          455
+        ],
+        "non_13_integral_tr_E_s": -1,
+        "rank_F13_E_r_Fix": 0
+      },
+      "p_19": {
+        "Fix": "K_1",
+        "a0": 1,
+        "a1_forced": 57,
+        "excluded_macaj_siran_a1": [
+          342
+        ],
+        "rank_F19_E_r_Fix": 0,
+        "rank_F19_E_s_Fix": 0
+      },
+      "p_7": {
+        "all_star_candidates": [
+          {
+            "a0": 2,
+            "a1_forced": 49,
+            "disjoint_vertex_lower_bound": 205,
+            "rk_E_r_mod_7": 0,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": true
+          },
+          {
+            "a0": 9,
+            "a1_forced": 98,
+            "disjoint_vertex_lower_bound": 751,
+            "rk_E_r_mod_7": 7,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": true
+          },
+          {
+            "a0": 16,
+            "a1_forced": 147,
+            "disjoint_vertex_lower_bound": 1297,
+            "rk_E_r_mod_7": 14,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": true
+          },
+          {
+            "a0": 23,
+            "a1_forced": 196,
+            "disjoint_vertex_lower_bound": 1843,
+            "rk_E_r_mod_7": 21,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": true
+          },
+          {
+            "a0": 30,
+            "a1_forced": 245,
+            "disjoint_vertex_lower_bound": 2389,
+            "rk_E_r_mod_7": 28,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": true
+          },
+          {
+            "a0": 37,
+            "a1_forced": 294,
+            "disjoint_vertex_lower_bound": 2935,
+            "rk_E_r_mod_7": 35,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": true
+          },
+          {
+            "a0": 44,
+            "a1_forced": 343,
+            "disjoint_vertex_lower_bound": 3481,
+            "rk_E_r_mod_7": 42,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": false
+          },
+          {
+            "a0": 51,
+            "a1_forced": 392,
+            "disjoint_vertex_lower_bound": 4027,
+            "rk_E_r_mod_7": 49,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": false
+          },
+          {
+            "a0": 58,
+            "a1_forced": 441,
+            "disjoint_vertex_lower_bound": 4573,
+            "rk_E_r_mod_7": 56,
+            "rk_E_s_mod_7": 1,
+            "survives_vertex_bound": false
+          }
+        ],
+        "excluded_macaj_siran_a0": [
+          44,
+          51
+        ],
+        "surviving_pairs_a0_a1": [
+          [
+            2,
+            49
+          ],
+          [
+            9,
+            98
+          ],
+          [
+            16,
+            147
+          ],
+          [
+            23,
+            196
+          ],
+          [
+            30,
+            245
+          ],
+          [
+            37,
+            294
+          ]
+        ]
+      }
+    }
+  }
+}
