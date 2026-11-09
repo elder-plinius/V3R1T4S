@@ -1,0 +1,34 @@
+n=10 graphs=1408663 maxperiod=34 witness_graph6=I?o~VaynO witness_state=39
+hist 1 393180
+hist 2 670105
+hist 3 109704
+hist 4 105595
+hist 5 29449
+hist 6 48411
+hist 7 18564
+hist 8 13453
+hist 9 7992
+hist 10 5106
+hist 11 2031
+hist 12 1644
+hist 13 797
+hist 14 1011
+hist 15 465
+hist 16 382
+hist 17 226
+hist 18 185
+hist 19 99
+hist 20 90
+hist 21 37
+hist 22 52
+hist 23 16
+hist 24 27
+hist 25 11
+hist 26 5
+hist 27 17
+hist 28 3
+hist 29 1
+hist 30 2
+hist 32 1
+hist 34 2
+exit 0
