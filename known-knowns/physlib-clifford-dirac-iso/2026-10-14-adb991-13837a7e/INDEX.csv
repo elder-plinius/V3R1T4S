@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+physlib-clifford-dirac-iso,Physlib TODO: injectivity of spaceTime.γ.ofCliffordAlgebra (Physlib/Relativity/CliffordAlgebra.lean),"kernel-checked proof of injectivity (axioms propext, Classical.choice, Quot.sound)","TODO open: surjectivity proved, injectivity not",2026-10-14T06:16:28Z,object/OfCliffordAlgebraInjective.lean,13837a7e226a97b9fef5bd04d6f362c0db869627cfa3a7239d4f54343cde5c8b
