@@ -1,0 +1,6 @@
+repo_tag: none
+repo_commit: ab114dcb1aad5cc1b2a53c58bc3ad3fcacd1107c (pinned in settings at run start and at packaging)
+charter: v4.1 tables lane; prompt/charter.md is charter.md as this run read it at its start (2026-10-18T05:59Z), minus
+the other lane's private quarry (Q16) section and the changelog lines about it, which that quarry's privacy rule
+keeps out of shared files. The human edited charter.md during the run (2026-10-18T06:43Z); that edit touched only
+the private quarry and is not published here.
