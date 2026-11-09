@@ -1,6 +1,6 @@
 # Pre-Registration: Attack on Constant-Weight Code Bounds (`Andw.html`)
 
-> Note added 2026-11-06, not contributor text: this is the contributor's working record. Paths such as `results/...` name files in the contributor's own workspace and are not shipped. The shipped object is `object/A28_8_11_3802.txt`, and the shipped checkers are in `verify-it-yourself/`.
+> Note added 2026-11-06 by the package author: this is the search run's working record. Paths such as `results/...` name files in the contributor's own workspace and are not shipped. The shipped object is `object/A28_8_11_3802.txt`, and the shipped checkers are in `verify-it-yourself/`.
 
 ## 1. Target & Baseline Snapshot
 
