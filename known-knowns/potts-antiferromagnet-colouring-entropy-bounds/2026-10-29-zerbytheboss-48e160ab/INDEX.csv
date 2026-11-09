@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+potts-antiferromagnet-colouring-entropy-bounds,p1_p2_48_eigenvalues_and_20_decimals,48_eigenvalues_and_20_decimals,48_published_eigenvalues_and_brackets,2026-10-29T08:06:00Z,object/lm_reproduced_tables.json,42f0e527d08c8ecf88516400c9c1fe03c5fb4b0eab2d69732df08fecfecdf4d3
