@@ -1,0 +1,25 @@
+increasing events of {0,1}^3 (non-trivial): 18
+== Part A: brute force over the 2 x 48 local events (Proposition 4.2)
+  conf I: min_E P(eps(c)=(1,*) | E) = 43179/105679 ~ 0.408586
+  conf II: min_E P(eps(c)=(1,*) | E) = 43179/77929 ~ 0.554081
+  r0(0.444) = 43179/105679 ~ 0.408586 (Lemma 4.5: equals the conf I minimum; conf II larger)
+  all 1728 inequalities hold at p = 0.444: True; smallest margin 1.622e-04 (conf I, E = ((1, 0), ('0',), ('1', (0, 1))))
+  per-event route: domination holds for p >= 0.4439170868; bound 1 - p = 0.5560829132
+== Part B: mu_hat of (10), table p. 210 at p = 0.444
+  A1                mu_hat 0.573647 (paper 0.573647)  pi 0.556000 (paper 0.556000)  ok
+  A3                mu_hat 0.602653 (paper 0.602653)  pi 0.556000 (paper 0.556000)  ok
+  A1nA2             mu_hat 0.344268 (paper 0.344268)  pi 0.309136 (paper 0.309136)  ok
+  A1nA3             mu_hat 0.335370 (paper 0.335370)  pi 0.309136 (paper 0.309136)  ok
+  A1nA2nA3          mu_hat 0.195740 (paper 0.195740)  pi 0.171880 (paper 0.171880)  ok
+  A1uA2             mu_hat 0.803026 (paper 0.803026)  pi 0.802864 (paper 0.802864)  ok
+  A1uA3             mu_hat 0.840930 (paper 0.840930)  pi 0.802864 (paper 0.802864)  ok
+  A1u(A2nA3)        mu_hat 0.713277 (paper 0.713277)  pi 0.693256 (paper 0.693256)  ok
+  (A1nA2)uA3        mu_hat 0.751181 (paper 0.751181)  pi 0.693256 (paper 0.693256)  ok
+  (A1nA2)u(A1nA3)   mu_hat 0.483898 (paper 0.483898)  pi 0.446392 (paper 0.446392)  ok
+  (A1nA3)u(A2nA3)   mu_hat 0.475001 (paper 0.475001)  pi 0.446392 (paper 0.446392)  ok
+  A1uA2uA3          mu_hat 0.930678 (paper 0.930678)  pi 0.912472 (paper 0.912472)  ok
+  maj               mu_hat 0.623529 (paper 0.623529)  pi 0.583649 (paper 0.583649)  ok
+  table rows reproduced: 13 of 13
+  mu_hat dominates pi_0.556 on all 18 increasing events at p = 0.444: True (min margin 1.621780e-04)
+  mu_hat route: holds for p >= 0.443917086807, so p_c > 1 - p = 0.556082913193
+CERTIFIED (exact rational check at p = 444/1000): p_c^site(Z^2) >= 0.556: True

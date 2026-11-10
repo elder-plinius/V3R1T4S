@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+square-site-percolation-rigorous-bounds,"rigorous lower bound for p_c^site(Z^2)",0.5567,0.556,2026-10-18T18:54:23Z,object/bound.json,5e1a495ad7e31829cad1056df395a0c9aa7303a7434298f877e4f8796b589237

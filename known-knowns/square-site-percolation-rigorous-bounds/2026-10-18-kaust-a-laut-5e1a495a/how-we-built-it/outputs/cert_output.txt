@@ -1,0 +1,5 @@
+depth 0: worst margin -1.207390163e-03 exact -102029606807757393/84504255500000000000 (b2 max, c side min) -> fail
+depth 1: worst margin -4.498328179e-05 exact (long) (b2 max, c side min) -> fail
+depth 2: worst margin 1.362252386e-04 exact (long) (b2 max, c side min) -> PASS
+depth 3: worst margin 1.658527535e-04 exact (long) (b2 max, c side min) -> PASS
+certified p_c >= 5567/10000: True
