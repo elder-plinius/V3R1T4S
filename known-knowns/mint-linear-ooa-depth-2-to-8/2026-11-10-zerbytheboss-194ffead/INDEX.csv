@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+mint-linear-ooa-depth-2-to-8,"b=3, T=2, m=8, s=8 (linear OOA over F_3)","k=7 (t=1; d_RT=8)","k=6 (t=2; lower bound on t is 1)",2026-11-10T18:30:43Z,object/ooa_b3_T2_m8_s8_k7.tsv,194ffead9a4b890088a7fd74dcaacdeb200e2b6f22f70081d38b141a6503e025
