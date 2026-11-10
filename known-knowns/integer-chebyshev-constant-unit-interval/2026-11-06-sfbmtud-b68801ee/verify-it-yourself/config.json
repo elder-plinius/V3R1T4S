@@ -1,0 +1,11 @@
+{
+  "schema": "integer-chebyshev-public-runner-v1",
+  "object_path": "object/candidate.json",
+  "object_sha256": "b68801eed7ca3043a7b817aa6567d92b6d73519c3be888936589519de71055ce",
+  "threshold": "0.422640947",
+  "checker_sha256": "6720628d0e51eb6c20852c5dbbc6b4627b5eace0105b363f3e6d20adbc3527ea",
+  "max_seconds": 800,
+  "process_timeout_seconds": 840,
+  "max_depth": 60,
+  "checkpoint_seconds": 120
+}

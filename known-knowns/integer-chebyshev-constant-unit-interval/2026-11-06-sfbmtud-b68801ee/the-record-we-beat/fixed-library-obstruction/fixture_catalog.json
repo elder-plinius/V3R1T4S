@@ -1,0 +1,577 @@
+{
+  "cases": [
+    {
+      "id": "single_factor_positive",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "pass",
+      "reason": "Exact normalized obstruction is 1/2 >49/100."
+    },
+    {
+      "id": "single_factor_false",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "51/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "not_certified",
+      "reason": "Exact normalized obstruction is 1/2 <51/100."
+    },
+    {
+      "id": "single_factor_equality",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "1/2",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "not_certified",
+      "reason": "Strict threshold comparison must not pass equality."
+    },
+    {
+      "id": "negative_factor",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [-1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "168ab849993dcff2e25eb77f4fa4d99d1f5ade9772918e98a91cb5f5539b01ec",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "pass",
+      "reason": "Sign change preserves all absolute logarithms."
+    },
+    {
+      "id": "degree_two_factor",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0, 0], \"degw\": 2}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "d9721c9f899bc421ea9edfde6d988dd395635ccdf8bfc15ada015de227b8f43d",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "pass",
+      "reason": "Degree normalization: log(w^2)/2=log(w)."
+    },
+    {
+      "id": "two_factor_positive",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}, {\"coeffs_desc_w\": [-4, 1], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "2387b2b38820656e59b94e9b74fdaeefafdbe669f1d2a1041e80c45be28fabe9",
+        "n_factors": 2,
+        "threshold": "44/100",
+        "support": [
+          {
+            "w": "1/5",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "pass",
+      "reason": "Both degree-normalized columns log(1/5); sqrt(1/5)>44/100."
+    },
+    {
+      "id": "two_factor_false",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}, {\"coeffs_desc_w\": [-4, 1], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "2387b2b38820656e59b94e9b74fdaeefafdbe669f1d2a1041e80c45be28fabe9",
+        "n_factors": 2,
+        "threshold": "45/100",
+        "support": [
+          {
+            "w": "1/5",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "not_certified",
+      "reason": "sqrt(1/5)<45/100."
+    },
+    {
+      "id": "weaker_measure_positive",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "1/3",
+        "support": [
+          {
+            "w": "1/16",
+            "mass": "1/2"
+          },
+          {
+            "w": "1/4",
+            "mass": "1/2"
+          }
+        ]
+      },
+      "expected": "pass",
+      "reason": "Certificate bound 1/sqrt(8)>1/3."
+    },
+    {
+      "id": "weaker_measure_insufficient",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "3/8",
+        "support": [
+          {
+            "w": "1/16",
+            "mass": "1/2"
+          },
+          {
+            "w": "1/4",
+            "mass": "1/2"
+          }
+        ]
+      },
+      "expected": "not_certified",
+      "reason": "Certificate bound 1/sqrt(8)<3/8, though true fixed-library optimum is1/2."
+    },
+    {
+      "id": "negative_unit_total_mass",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "3/4",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "2"
+          },
+          {
+            "w": "1/16",
+            "mass": "-1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Negative mass would falsely give normalized obstruction1."
+    },
+    {
+      "id": "mass_not_one",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "3/5",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1/2"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Nonunit mass would falsely give obstruction1/sqrt(2)."
+    },
+    {
+      "id": "mass_almost_one",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "999999999999999999999/1000000000000000000000"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Unit mass must be exact, not within floating tolerance."
+    },
+    {
+      "id": "negative_support",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "-1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Point is outside domain."
+    },
+    {
+      "id": "support_too_large",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "3/5",
+        "support": [
+          {
+            "w": "1/2",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Point is outside domain and would give false larger obstruction."
+    },
+    {
+      "id": "positive_mass_root",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "0",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "not_certified",
+      "reason": "Positive-mass root forces this factor integral to negative infinity."
+    },
+    {
+      "id": "zero_mass_atom",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "0",
+            "mass": "0"
+          },
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Canonical witness schema omits zero-mass atoms; checker rejects before logarithms."
+    },
+    {
+      "id": "duplicate_atoms_valid",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1/3"
+          },
+          {
+            "w": "1/4",
+            "mass": "2/3"
+          }
+        ]
+      },
+      "expected": "pass",
+      "reason": "Duplicates preserve exact probability and all integrals."
+    },
+    {
+      "id": "constant_factor",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1], \"degw\": 0}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "6a63e59277d24f7dc18b0d47536cc34ec38cf11b487adb37740bbccacacc71d6",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Positive factor degree is required for normalized columns."
+    },
+    {
+      "id": "zero_polynomial",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [0, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "5f2c62edd2c78d1ad7c500fb69ca0eaee450711ce70c6a48a0f6d690b3f68877",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Zero polynomial and vanishing leading coefficient are invalid."
+    },
+    {
+      "id": "false_factor_degree",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 2}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "23ec917d020d3b72cd5398bc28dc806c6ef5f0e571c9f201c5916d1591a04cfb",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Declared degree disagrees with actual coefficient list."
+    },
+    {
+      "id": "float_coefficient",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1.0, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "8b0a59977a91d6544ff8b68669308116c3fd78cf97fe66fe39b918c978829ab4",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Exact integer coefficient types are required."
+    },
+    {
+      "id": "boolean_coefficient",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [true, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "8ae7654e283f1a4f2b71270b2a2a947926da03b210b306859341369d32fb110d",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Boolean must not count as an integer coefficient."
+    },
+    {
+      "id": "bad_library_digest",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Certificate must bind the exact finite library."
+    },
+    {
+      "id": "bad_factor_count",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 2,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Library count must match exactly."
+    },
+    {
+      "id": "boolean_factor_count",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": true,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Boolean is not an integer count."
+    },
+    {
+      "id": "floating_mass",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": 1.0
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Mass must be an explicit exact rational string."
+    },
+    {
+      "id": "floating_point",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": 0.25,
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Point must be an explicit exact rational string."
+    },
+    {
+      "id": "floating_threshold",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": 0.49,
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Threshold must be an explicit exact rational string."
+    },
+    {
+      "id": "zero_threshold",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "0",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Positive threshold required for logarithm."
+    },
+    {
+      "id": "invalid_rational",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": [
+          {
+            "w": "1/4",
+            "mass": "1/0"
+          }
+        ]
+      },
+      "expected": "reject",
+      "reason": "Malformed rational mass must reject."
+    },
+    {
+      "id": "empty_support",
+      "library_json": "{\"factors\": [{\"coeffs_desc_w\": [1, 0], \"degw\": 1}]}",
+      "measure": {
+        "format": "fixed-library-dual-v1",
+        "library_sha256": "dcd827d6149f128845da95eee064b4056f6f471931b0243a90dc6095aeec3071",
+        "n_factors": 1,
+        "threshold": "49/100",
+        "support": []
+      },
+      "expected": "reject",
+      "reason": "A probability measure needs at least one atom."
+    }
+  ]
+}

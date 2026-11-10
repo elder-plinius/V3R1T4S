@@ -1,0 +1,20 @@
+[
+  {
+    "file": "optimize.py",
+    "original_source_sha256": "ad133fd13c8e9a39003cb415be498f2c78f0fde01c783f8743287bd275940066",
+    "public_source_sha256": "0d30c4ad33c31af8294719a1cb162c51746953fb0c7f892a4aa95dca783c3e03",
+    "change": "whitespace around matrix multiplication only; identical Python AST"
+  },
+  {
+    "file": "optimize_v1.py",
+    "original_source_sha256": "dc299f15efa369959b845d18ce6614cbdeb1b381ca307b9ba861d6686092bf99",
+    "public_source_sha256": "8c02f40423f8f7eebb015ec6ace33aba79fcbfa1f662350764cb5f360c2e06c8",
+    "change": "whitespace around matrix multiplication only; identical Python AST"
+  },
+  {
+    "file": "optimize_v2.py",
+    "original_source_sha256": "871bbf07a7cb91d691fcd736c7ed397e662243d1c630b013fa266be69c49f35f",
+    "public_source_sha256": "aaa3e966483d945234d109da6272be01cba225ecb63556c40ea36d0248b57ae0",
+    "change": "whitespace around matrix multiplication only; identical Python AST"
+  }
+]

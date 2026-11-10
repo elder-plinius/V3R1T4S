@@ -1,0 +1,3 @@
+Heuristic-only revision at 2026-11-05T22:50:52.936188+00:00: stop after four iterations with objective movement below1e-11 and sampled exchange gap below2e-9. This avoids redundant growing LPs. It does not assert global optimality or certify any bound. Original source preserved as optimize_v1.py.
+
+2026-11-05T23:00:28.559022+00:00: memory-conscious heuristic mesh revision. Retain near-binding old rows, newly estimated extrema and fixed2001point mesh; merge points to14decimal places. This changes only search, never rigorous certification. Source before change preserved as optimize_v2.py. Needs numerical calibration against a completed candidate before production.

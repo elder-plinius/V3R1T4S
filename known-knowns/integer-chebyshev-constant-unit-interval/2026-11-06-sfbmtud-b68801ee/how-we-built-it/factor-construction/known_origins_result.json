@@ -1,0 +1,309 @@
+{
+  "candidate_sha256": "b68801eed7ca3043a7b817aa6567d92b6d73519c3be888936589519de71055ce",
+  "all_known_origins_valid": true,
+  "checked_factors": 60,
+  "factors": [
+    {
+      "candidate_factor_index": 0,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 1,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 2,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 3,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 4,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 5,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 6,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 7,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 8,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 9,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 10,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 11,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 12,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 13,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 14,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 15,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 16,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 17,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 18,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 19,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 20,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 21,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 22,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 23,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 24,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 25,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 26,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 27,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 28,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 29,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 30,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 31,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 32,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 33,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 34,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 35,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 36,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 37,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 38,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 39,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 40,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 41,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 42,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 43,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 44,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 45,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 46,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 47,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 48,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 49,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 50,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 66,
+      "method": "exact_divisibility_in_Qx_times_Q1minusx",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 109,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 110,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 138,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 139,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 140,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 177,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 178,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    },
+    {
+      "candidate_factor_index": 212,
+      "method": "exact_original_coefficient_equality",
+      "pass": true
+    }
+  ],
+  "elapsed_seconds": 0.003879096999298781,
+  "program_sha256": "74d8f75e95a7135155b2e18cd7b304b479670545c241eeef89b43b7b4c02ef17"
+}
