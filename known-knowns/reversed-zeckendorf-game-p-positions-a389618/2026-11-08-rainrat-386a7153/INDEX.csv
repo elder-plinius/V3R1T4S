@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+reversed-zeckendorf-game-p-positions-a389618,n=130..250,121 contiguous outcomes (30 P / 91 N; V(250)=21890964; E(250)=209975689),n=2..129 (Table A1 of arXiv:2309.12748v2; A389617 n<=65),2026-11-08T01:14:31Z,object/reversed_zeckendorf_n2_250.tsv,386a7153a5f084483101a9b9a1eab089f072a8106234535c4bf2b896beab82c1
