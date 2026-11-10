@@ -63,7 +63,6 @@ def main():
         u2 = (ctypes.c_double * 1)(0.0)
         out_m = (ctypes.c_double * 1)(0.0)
         lib.bl_magnification_fs(1, u1, u2, 2.0, 1e-6, 0.001, 0.45, out_m)
-        # In the q -> 0 limit at u = 0.5, A_PSPL(0.5) = 2.25 / (0.5 * sqrt(4.25)) = 2.1828206
         if abs(out_m[0] - 2.1828206) > 0.01:
             fail(f"Binary-lens kernel q->0 PSPL limit check failed: {out_m[0]}")
 
@@ -97,6 +96,8 @@ def main():
     n_cv_ok = 0
     n_pspl_ok = 0
     n_usbl_ok = 0
+    n_false_lowq = 0
+    false_lowq_evs = []
     lowq_rec = []
     p3_rec = []
     p4_rec = []
@@ -123,6 +124,10 @@ def main():
             n_pspl_ok += 1
         elif t_cls == "USBL" and is_3c:
             n_usbl_ok += 1
+
+        if pred_cls == "USBL" and pred_q < 0.03 and not is_low_q:
+            n_false_lowq += 1
+            false_lowq_evs.append(ev)
 
         if t_cls == "USBL" and pred_cls == "USBL" and pred_s > 0.0 and pred_q > 0.0 and t_s > 0.0 and t_q > 0.0:
             ds = min(
@@ -152,16 +157,21 @@ def main():
         if act_row != exp_row:
             fail(f"Row {idx+2} mismatch in object/roman_dc18_predictions.tsv:\n  actual:   {act_row}\n  expected: {exp_row}")
 
-    if not (n_3class > 268 and n_3class == 274):
-        fail(f"p2 check failed: 3-class accuracy = {n_3class}/293 (expected 274 > 268)")
+    if not (len(lowq_rec) > 41 and len(lowq_rec) == 46):
+        fail(f"win/p1 low-q recovery check failed: {len(lowq_rec)}/51 (expected 46 > 41)")
+    if not (n_false_lowq <= 9 and n_false_lowq == 5):
+        fail(f"win/p1 false low-q check failed: {n_false_lowq} (expected 5 <= 9)")
+    if not (n_3class > 268 and n_3class == 280):
+        fail(f"win/p2 3-class accuracy check failed: {n_3class}/293 (expected 280 > 268)")
     if not (len(p3_rec) >= 2 and p3_rec == [47, 131, 152]):
         fail(f"p3 check failed: ultra-low-q recovered = {p3_rec} (expected [47, 131, 152])")
-    if not (len(p4_rec) >= 8 and len(p4_rec) == 9):
-        fail(f"p4 check failed: wide s>2 recovered = {len(p4_rec)}/10 (expected 9/10 >= 8/10)")
+    if not (len(p4_rec) >= 8 and len(p4_rec) == 10):
+        fail(f"p4 check failed: wide s>2 recovered = {len(p4_rec)}/10 (expected 10/10 >= 8/10)")
 
     print(
-        f"Verified 293 Roman DC18 events: p2 3-class={n_3class}/293 (93.52% > 268/293; CV={n_cv_ok}/93, PSPL={n_pspl_ok}/74, USBL={n_usbl_ok}/126), "
-        f"p3 (log10 q < -5)={len(p3_rec)}/3 {p3_rec}, p4 (s > 2)={len(p4_rec)}/10 {p4_rec}, total low-q={len(lowq_rec)}/51"
+        f"Verified 293 Roman DC18 events (WIN + p1 + p2 + p3 + p4): low-q={len(lowq_rec)}/51 (90.20% > 41/51), "
+        f"false_lowq={n_false_lowq} <= 9 {false_lowq_evs}, 3-class={n_3class}/293 (95.56% > 268/293; CV={n_cv_ok}/93, "
+        f"PSPL={n_pspl_ok}/74, USBL={n_usbl_ok}/126), p3 (log10 q < -5)={len(p3_rec)}/3 {p3_rec}, p4 (s > 2)={len(p4_rec)}/10 {p4_rec}"
     )
     print("PASS")
 
