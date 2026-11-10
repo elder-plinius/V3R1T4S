@@ -1,0 +1,23 @@
+{
+  "chaneut_cha200_neut50": [
+    "chan2a_sig_chaneut_cha200_neut50_p0.npz"
+  ],
+  "chaneut_cha250_neut150": [
+    "chan2a_sig_chaneut_cha250_neut150_p0.npz"
+  ],
+  "chaneut_cha300_neut100": [
+    "chan2a_sig_chaneut_cha300_neut100_p0.npz"
+  ],
+  "chaneut_cha400_neut200": [
+    "chan2a_sig_chaneut_cha400_neut200_p0.npz"
+  ],
+  "gluino_1000.0_neutralino_1.0": [
+    "chan2a_sig_gluino_1000.0_neutralino_1.0_p0.npz"
+  ],
+  "pp23mt_50": [
+    "chan2a_sig_pp23mt_50_p0.npz"
+  ],
+  "pp24mt_50": [
+    "chan2a_sig_pp24mt_50_p0.npz"
+  ]
+}

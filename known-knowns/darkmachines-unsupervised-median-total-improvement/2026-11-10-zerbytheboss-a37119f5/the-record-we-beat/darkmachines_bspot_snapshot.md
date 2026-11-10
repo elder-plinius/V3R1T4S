@@ -1,0 +1,23 @@
+# Table Snapshot — `darkmachines-unsupervised-median-total-improvement`
+
+- **Benchmark Repository**: `https://github.com/bostdiek/DarkMachines-UnsupervisedChallenge`
+- **Live Re-Fetch URLs**:
+  - `https://raw.githubusercontent.com/bostdiek/DarkMachines-UnsupervisedChallenge/master/data/Flow.csv`
+  - `https://raw.githubusercontent.com/bostdiek/DarkMachines-UnsupervisedChallenge/master/data/Combined.csv`
+- **UTC Fetch Time**: `2026-11-10T20:12:24Z`
+- **HTTP Status**: `200 OK`
+- **Selected Response Headers**:
+  - `Date: Tue, 10 Nov 2026 20:12:24 GMT`
+  - `Content-Type: text/plain; charset=utf-8`
+- **Fetched SHA-256 Digests**:
+  - `data/Flow.csv` (`4,838` bytes): `e2e17152c3222f6ea089706836a6b0f274a041c717a1138c93669629536098e0`
+  - `data/Combined.csv` (`19,439` bytes): `7754b06b4a820769ac38986e94b299a54c2e1e845ae30e013e99a4bbc3c5f3b6`
+- **Extracted Benchmark Records Across All `1,040` Challenge Detectors**:
+  - `chaneut_cha300_neut100` (Channel `2a`): Best `TI = 1.1000` (`Flow-Efficient_Likelihood`, `eps_S = 0.11, 0.0, 0.0`)
+  - `chaneut_cha400_neut200` (Channel `2a`): Best `TI = 1.0000` (`Combined-AVG-DeepSVDD-Flow`, `Combined-OR-DeepSVDD-Flow`, and `Flow-Efficient-No-E_Likelihood`; `Flow-Efficient_Likelihood` achieves `0.9000`)
+  - Prior Global 27-Invariant POT Submission (`2026-11-07`, `PotHull_Hybrid_Lp3` / `PotStrataZ_Lp3`): `cha300 TI = 1.4000 / 1.6000`, `cha400 TI = 1.6000 / 1.7000`, `Median_TI = 2.8000 / 3.0000`
+  - This BS-POT Package (`object/darkmachines_bspot_results.csv`):
+    - `BSPOT_MaxSec`: `cha300 TI = 6.0000`, `cha400 TI = 7.0000`, `Median_TI = 5.3759` (`Min_TI = 0.2000`)
+    - `BSPOT_Bayes_Full`: `cha300 TI = 4.0000`, `cha400 TI = 5.0000`, `Median_TI = 4.9000` (`Min_TI = 0.3000`)
+    - `BSPOT_Union_OR`: `cha300 TI = 3.0000`, `cha400 TI = 5.0000`, `Median_TI = 5.0000`, `Min_TI = 0.8000`
+    - `BSPOT_FloorGuard`: `cha300 TI = 1.8000`, `cha400 TI = 2.2136`, `Median_TI = 3.1000`, `Min_TI = 0.9000`
