@@ -1,0 +1,10 @@
+# Baseline — leader table recomputed from the live results.feather
+# Fetched 2026-11-10 06:02:13 UTC, sha256 5b428264a346f6bbbeabded219f87454b9206afa70c19c012075c672533f342e
+# Per RUN.md step 3c: an explicit object checked by a deterministic checker against a
+# table value needs no reproduced baseline. This file records the bar itself.
+# Medians over the 30 listed seeds per algorithm; model_size medians exclude -1 rows.
+1028_SWD leader: PS-Tree median r2_test 0.3800, median model_size 3270 (n=30)
+1028_SWD 2nd: EQL median r2_test 0.3736, median model_size 59 (n=30)
+1028_SWD best median model_size<=20: gplearn median r2_test 0.2430, median model_size 14 (n=30)
+full-win bar: median test R2 > 0.3800 AND median complexity <= 3270
+p2 bar: median test R2 > 0.2430 AND median complexity <= 20

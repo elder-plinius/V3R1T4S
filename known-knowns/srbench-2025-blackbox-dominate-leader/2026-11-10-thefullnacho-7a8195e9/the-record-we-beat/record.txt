@@ -1,0 +1,25 @@
+# The record we beat
+
+Table: SRBench 2025 black-box track, results/black-box-tuning/results.feather
+URL: https://github.com/cavalab/srbench/tree/srbench_2025/results/black-box-tuning
+Direct file URL: https://raw.githubusercontent.com/cavalab/srbench/srbench_2025/results/black-box-tuning/results.feather
+Fetched: 2026-11-10T06:02:13Z, HTTP 200, 5,596,634 bytes
+SHA256 of the file: 5b428264a346f6bbbeabded219f87454b9206afa70c19c012075c672533f342e
+(The file is stored with Git LFS; the raw URL returns the 132-byte pointer
+whose oid sha256 is the value above. The full file was fetched from the LFS
+media URL and hashes to the same value.)
+
+Re-fetched by the novelty skeptic: 2026-11-10T06:20:59Z, HTTP 200, pointer oid
+identical — the live table is unchanged since the claim.
+
+Extracted cell (recomputed from the fetched table, 30 splits per algorithm,
+model_size medians excluding -1 rows):
+- Dataset: 1028_SWD
+- Leader: PS-Tree, median test R2 0.3800, median model_size 3270 (n=30)
+- Runner-up: EQL, median test R2 0.3736, median model_size 59 (n=30)
+
+Dataset used for scoring:
+URL: https://github.com/EpistasisLab/pmlb/raw/master/datasets/1028_SWD/1028_SWD.tsv.gz
+Fetched: 2026-11-10T06:02:00Z, HTTP 200, 3,096 bytes
+SHA256: b0526495039ad62169c52a9cf34a957f16b1d02cab995746d3098bbdbfa951cc
+Contents: 1,000 rows, 10 features (In1..In10), target in {2,3,4,5}.
