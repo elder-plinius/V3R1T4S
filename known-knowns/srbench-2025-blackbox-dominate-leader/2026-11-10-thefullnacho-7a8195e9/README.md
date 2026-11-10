@@ -51,6 +51,12 @@ See `RUN_IT_YOURSELF.md` for the full commands and expected output.
   30 splits, the median beats 0.3800 only about 89% of the time, and the 90%
   interval (0.378-0.410) includes the bar; PS-Tree's 0.3800 is just as noisy.
   Split-to-split SD 0.053; bootstrap P(median > 0.3800) ≈ 0.89.
+- Open PR #965 (HindsightWise, opened Nov 6) is on the same target and also
+  claims a 1028_SWD result: a partial win p2, the best model with ≤ 20
+  nodes (median R^2 0.3587, size 18). This package claims only the
+  full-criterion cell on 1028_SWD (beating the table leader); neither point
+  dominates the other — theirs is smaller, this one is more accurate. The
+  panel's novelty check did not cover open PRs; #965 was found afterwards.
 - The expressions are 12-term dictionary sums, not a new symbolic regression
   algorithm; the procedure is a fixed recipe, not a general method.
 - A second lens in the same run (plain dictionary regression on raw targets)
