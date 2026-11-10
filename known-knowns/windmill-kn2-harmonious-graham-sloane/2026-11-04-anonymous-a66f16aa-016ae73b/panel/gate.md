@@ -1,0 +1,8 @@
+status: CONFIRMED_PARTIAL
+confirmed_scope: There is no injective labeling of the 19 vertices of two copies of K10 sharing exactly one vertex by residues modulo 90 for which the 90 within-clique edge sums are all distinct modulo 90.
+
+This submission-stage honesty gate reads the publication editions of the three independent reviews and the dated reassessment of novelty. All three pass for the single enumerated partial win p1. The publication editions preserve each reviewer's scientific opinion, explicitly identify themselves as editorial editions, and disclose the novelty revision. Earlier local reviews remain archived. The mathematical scope above is copied exactly from the CRITERION reviewer.
+
+The two author implementations completed their full domains. The independent checker was written before its reviewer inspected their code, completed the same finite decision, and has been rerun from the self-contained publication candidate. No capped run or sample is treated as complete. The inspected current status and prior-publication comparison do not subsume this cell. Prior generic methods are credited. The unread Levine 1983 and Liu 1994 originals remain disclosed; neither a general conjecture nor universal bibliographic absence is claimed.
+
+This package records a computational result for the single n=10 partial win p1. It passed the unmodified mechanical package check, including clean-copy executable validation and rejection of a deliberately corrupted decision object, before submission. The three contributor-side reviews support the stated finite scope. Maintainer review and the final acceptance decision remain pending.

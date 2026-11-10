@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+windmill-kn2-harmonious-graham-sloane,"p1: K10^(2), n=10, q=90",no harmonious labeling,no decision identified in inspected sources,2026-11-04T18:12:23.972111Z,object/DECISION.json,016ae73bf28cb605b37e3e159c17a7d97b2512ab8ea0a7d31ac5032cbb14c643
