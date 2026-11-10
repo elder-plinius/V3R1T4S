@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+meunier-stable-kneser-odd-s-small-n,"(k,s)=(3,5), n=17..22 (open: n=17 and n=22)","chi = n-10 (7 and 12 at the open n)","open (lower bounds 6 and 11)",2026-11-09T13:04:44Z,object/cnf_sha256.txt,188c50d5c5c0692fc59bc435246ef81920a82b731f65cdad7e7128cbd2a5c9d5

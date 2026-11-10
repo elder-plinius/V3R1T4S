@@ -1,0 +1,6 @@
+# n = 22, C = 11: the DRAT proof is not shipped (too large); regenerate it and check it as follows.
+cnf: n22_k3_s5_c11.cnf (regenerate with tools/gen_cnf.py 22 3 5 11 n22_k3_s5_c11.cnf), sha256 b5caefbad0996e1d8836998e01b134b50edb1a66c14dc3b589d91c87cd544adb
+solver: CaDiCaL 3.0.1 (https://github.com/arminbiere/cadical, tag rel-3.0.1, tarball sha256 0a8ea563b5a25f5aa064634814edab45cc0e45111ea0f5d412a565f806fd7e11)
+command: cadical -q --no-binary n22_k3_s5_c11.cnf n22.drat   -> 's UNSATISFIABLE', exit 20, 312 s on one core here
+proof: text DRAT, 752,653,807 bytes, sha256 d24a47fc195dbc48aa70d8fad7c970c18780a40ab878c08d8ce0a8e088af0c7b (a second run gave the identical file)
+check: drat-trim n22_k3_s5_c11.cnf n22.drat   -> 's VERIFIED' (3,226,808 of 4,971,152 lemmas in core, 0 RAT lemmas), 277 s here

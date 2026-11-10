@@ -1,0 +1,44 @@
+n=9 k=3 s=3 C=2 vertices=3 edges=3 clauses=11
+n9_k3_s3 C=2 cadical exit 20 (s UNSATISFIABLE)
+n9_k3_s3 C=2 drat-trim: s VERIFIED
+n9_k3_s3 C+1=3 cadical: 
+n=10 k=3 s=3 C=3 vertices=10 edges=25 clauses=88
+n10_k3_s3 C=3 cadical exit 20 (s UNSATISFIABLE)
+n10_k3_s3 C=3 drat-trim: s VERIFIED
+n10_k3_s3 C+1=4 cadical: 
+n=11 k=3 s=3 C=4 vertices=22 edges=110 clauses=465
+n11_k3_s3 C=4 cadical exit 20 (s UNSATISFIABLE)
+n11_k3_s3 C=4 drat-trim: s VERIFIED
+n11_k3_s3 C+1=5 cadical: 
+n=12 k=3 s=3 C=5 vertices=40 edges=366 clauses=1874
+n12_k3_s3 C=5 cadical exit 20 (s UNSATISFIABLE)
+n12_k3_s3 C=5 drat-trim: s VERIFIED
+n12_k3_s3 C+1=6 cadical: 
+n=13 k=3 s=3 C=6 vertices=65 edges=1001 clauses=6075
+n13_k3_s3 C=6 cadical exit 20 (s UNSATISFIABLE)
+n13_k3_s3 C=6 drat-trim: s VERIFIED
+n13_k3_s3 C+1=7 cadical: 
+n=14 k=3 s=3 C=7 vertices=98 edges=2373 clauses=16713
+n14_k3_s3 C=7 cadical exit 20 (s UNSATISFIABLE)
+n14_k3_s3 C=7 drat-trim: s VERIFIED
+n14_k3_s3 C+1=8 cadical: 
+n=17 k=3 s=5 C=6 vertices=34 edges=374 clauses=2283
+n17_k3_s5 C=6 cadical exit 20 (s UNSATISFIABLE)
+n17_k3_s5 C=6 drat-trim: s VERIFIED
+n17_k3_s5 C+1=7 cadical: 
+n=18 k=3 s=5 C=7 vertices=60 edges=1140 clauses=8046
+n18_k3_s5 C=7 cadical exit 20 (s UNSATISFIABLE)
+n18_k3_s5 C=7 drat-trim: s VERIFIED
+n18_k3_s5 C+1=8 cadical: 
+n=19 k=3 s=5 C=8 vertices=95 edges=2850 clauses=22901
+n19_k3_s5 C=8 cadical exit 20 (s UNSATISFIABLE)
+n19_k3_s5 C=8 drat-trim: s VERIFIED
+n19_k3_s5 C+1=9 cadical: 
+n=20 k=3 s=5 C=9 vertices=140 edges=6240 clauses=56306
+n20_k3_s5 C=9 cadical exit 20 (s UNSATISFIABLE)
+n20_k3_s5 C=9 drat-trim: s VERIFIED
+n20_k3_s5 C+1=10 cadical: 
+n=21 k=3 s=5 C=10 vertices=196 edges=12390 clauses=124103
+n21_k3_s5 C=10 cadical exit 20 (s UNSATISFIABLE)
+n21_k3_s5 C=10 drat-trim: s VERIFIED
+n21_k3_s5 C+1=11 cadical: 
