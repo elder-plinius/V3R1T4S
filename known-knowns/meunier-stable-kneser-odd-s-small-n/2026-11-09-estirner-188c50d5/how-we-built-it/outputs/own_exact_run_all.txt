@@ -1,0 +1,24 @@
+n=9 k=3 s=3 C=2 vertices=3: NOT colourable, nodes 2, 0.00 s
+n=9 k=3 s=3 C=3 vertices=3: COLOURABLE, nodes 4, 0.00 s
+n=10 k=3 s=3 C=3 vertices=10: NOT colourable, nodes 9, 0.00 s
+n=10 k=3 s=3 C=4 vertices=10: COLOURABLE, nodes 11, 0.00 s
+n=11 k=3 s=3 C=4 vertices=22: NOT colourable, nodes 26, 0.00 s
+n=11 k=3 s=3 C=5 vertices=22: COLOURABLE, nodes 23, 0.00 s
+n=12 k=3 s=3 C=5 vertices=40: NOT colourable, nodes 244, 0.01 s
+n=12 k=3 s=3 C=6 vertices=40: COLOURABLE, nodes 41, 0.00 s
+n=13 k=3 s=3 C=6 vertices=65: NOT colourable, nodes 6598, 0.29 s
+n=13 k=3 s=3 C=7 vertices=65: COLOURABLE, nodes 66, 0.00 s
+n=14 k=3 s=3 C=7 vertices=98: NOT colourable, nodes 534607, 19.55 s
+n=14 k=3 s=3 C=8 vertices=98: COLOURABLE, nodes 8330, 0.22 s
+n=17 k=3 s=5 C=6 vertices=34: NOT colourable, nodes 117, 0.00 s
+n=17 k=3 s=5 C=7 vertices=34: COLOURABLE, nodes 35, 0.00 s
+n=18 k=3 s=5 C=7 vertices=60: NOT colourable, nodes 464, 0.01 s
+n=18 k=3 s=5 C=8 vertices=60: COLOURABLE, nodes 61, 0.00 s
+n=19 k=3 s=5 C=8 vertices=95: NOT colourable, nodes 1114, 0.08 s
+n=19 k=3 s=5 C=9 vertices=95: COLOURABLE, nodes 96, 0.00 s
+n=20 k=3 s=5 C=9 vertices=140: NOT colourable, nodes 9194, 0.52 s
+n=20 k=3 s=5 C=10 vertices=140: COLOURABLE, nodes 141, 0.01 s
+n=21 k=3 s=5 C=10 vertices=196: NOT colourable, nodes 512511, 41.40 s
+n=21 k=3 s=5 C=11 vertices=196: COLOURABLE, nodes 197, 0.01 s
+
+[exited with code 0]
