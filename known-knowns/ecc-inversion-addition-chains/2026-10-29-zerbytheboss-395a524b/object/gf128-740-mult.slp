@@ -1,0 +1,104 @@
+# File compiled by the NIST circuit complexity team:
+# https://csrc.nist.gov/projects/circuit-complexity
+# File timestamp (UTC): 2020-06-26T15:29:51.453Z
+# Repository: https://github.com/usnistgov/Circuits/
+
+begin circuit Mult-GF128-IrredPoly-740
+
+# Description: Multiplication in Galois Field GF(128) with irreducible polynomial X^7 + X^4 + 1
+# References: July 2010: http://cs-www.cs.yale.edu/homes/peralta/CircuitStuff/CMT.html
+# Tally: 14 inputs, 7 outputs, 84 gates, 40 AND, 44 XOR
+# Depth(Gate): 5; Depth(AND): 1
+
+Inputs: A0:A6 B0:B6
+Outputs: C0:C6
+Internal: t1:t77
+GateSyntax: GateName Output Inputs
+
+begin SLP
+XOR t1 A1 A4
+XOR t2 A2 A5
+XOR t3 A3 A6
+XOR t4 B1 B4
+XOR t5 B2 B5
+XOR t6 B3 B6
+AND t7 t1 t6
+AND t8 t2 t5
+AND t9 t3 t4
+AND t10 t2 t6
+AND t11 t3 t5
+AND t12 t3 t6
+AND t13 t1 t4
+AND t14 t1 t5
+AND t15 t2 t4
+AND t16 A0 B0
+AND t17 A1 B3
+AND t18 A2 B2
+AND t19 A3 B1
+AND t20 A0 B1
+AND t21 A1 B0
+AND t22 A2 B3
+AND t23 A3 B2
+AND t24 A4 B4
+AND t25 A0 B2
+AND t26 A1 B1
+AND t27 A2 B0
+AND t28 A3 B3
+AND t29 A4 B5
+AND t30 A5 B4
+AND t31 A0 B3
+AND t32 A1 B2
+AND t33 A2 B1
+AND t34 A3 B0
+AND t35 A4 B6
+AND t36 A5 B5
+AND t37 A6 B4
+AND t38 A0 B4
+AND t39 A4 B0
+AND t40 A5 B6
+AND t41 A6 B5
+AND t42 A0 B5
+AND t43 A5 B0
+AND t44 A6 B6
+AND t45 A0 B6
+AND t46 A6 B0
+XOR t47 t7 t8
+XOR t48 t10 t11
+XOR t49 t32 t33
+XOR t50 t47 t9
+XOR t51 t16 t17
+XOR t52 t18 t19
+XOR t53 t20 t21
+XOR t54 t22 t23
+XOR t55 t12 t25
+XOR t56 t26 t27
+XOR t57 t28 t29
+XOR t58 t31 t34
+XOR t59 t35 t36
+XOR t60 t38 t39
+XOR t61 t40 t41
+XOR t62 t13 t26
+XOR t63 t42 t43
+XOR t64 t12 t14
+XOR t65 t15 t45
+XOR t66 t52 t51
+XOR C0 t66 t50
+XOR t67 t48 t24
+XOR t68 t54 t53
+XOR C1 t68 t67
+XOR t69 t55 t30
+XOR t70 t57 t56
+XOR C2 t70 t69
+XOR t71 t49 t37
+XOR t72 t59 t58
+XOR C3 t72 t71
+XOR t73 t60 t61
+XOR C4 t73 t50
+XOR t74 t48 t44
+XOR t75 t63 t62
+XOR C5 t75 t74
+XOR t76 t49 t46
+XOR t77 t65 t64
+XOR C6 t77 t76
+end SLP
+end circuit
