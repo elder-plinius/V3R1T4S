@@ -1,0 +1,29 @@
+{
+ "fixture": "ssp_3col_12dec.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "ok",
+ "anomaly": null,
+ "N": 3,
+ "columns": 3,
+ "index_stripped": false,
+ "coords": [
+  [
+   "0.123456789012",
+   "-0.234567890123",
+   "0.345678901234"
+  ],
+  [
+   "-0.456789012345",
+   "0.111111111111",
+   "-0.222222222222"
+  ],
+  [
+   "0.000000000000",
+   "0.000000000000",
+   "-0.916666666667"
+  ]
+ ],
+ "compare": "exact decimal string"
+}

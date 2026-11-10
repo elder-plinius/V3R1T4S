@@ -1,0 +1,107 @@
+{
+ "fixture": "ccd_morse13_rho_line.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  1
+ ],
+ "found_columns": 1,
+ "expected_columns": [
+  3,
+  4
+ ],
+ "must_not": [
+  "treat line 1 as a coordinate row",
+  "drop line 1 silently and return 13 atoms"
+ ],
+ "param_line_option": {
+  "requires": "an explicit option to read line 1 as the Morse range parameter (e.g. param_line=True); do not special-case silently",
+  "rho": "6.0",
+  "N": 13,
+  "columns": 3,
+  "coords": [
+   [
+    "0.0000000000",
+    "0.0000000000",
+    "0.0000000000"
+   ],
+   [
+    "0.0000000000",
+    "-0.5257311121",
+    "-0.8506508084"
+   ],
+   [
+    "-0.5257311121",
+    "-0.8506508084",
+    "0.0000000000"
+   ],
+   [
+    "-0.8506508084",
+    "0.0000000000",
+    "-0.5257311121"
+   ],
+   [
+    "0.0000000000",
+    "-0.5257311121",
+    "0.8506508084"
+   ],
+   [
+    "-0.5257311121",
+    "0.8506508084",
+    "0.0000000000"
+   ],
+   [
+    "0.8506508084",
+    "0.0000000000",
+    "-0.5257311121"
+   ],
+   [
+    "0.0000000000",
+    "0.5257311121",
+    "-0.8506508084"
+   ],
+   [
+    "0.5257311121",
+    "-0.8506508084",
+    "0.0000000000"
+   ],
+   [
+    "-0.8506508084",
+    "0.0000000000",
+    "0.5257311121"
+   ],
+   [
+    "0.0000000000",
+    "0.5257311121",
+    "0.8506508084"
+   ],
+   [
+    "0.5257311121",
+    "0.8506508084",
+    "0.0000000000"
+   ],
+   [
+    "0.8506508084",
+    "0.0000000000",
+    "0.5257311121"
+   ]
+  ],
+  "compare": "exact decimal string",
+  "energy": {
+   "potential": "Morse",
+   "epsilon": 1,
+   "r_e": 1,
+   "rho": "6.0",
+   "formula": "E = sum_{i<j} e^{rho(1-r)} (e^{rho(1-r)} - 2)",
+   "E": "-40.798659612040",
+   "E_float64_repr": "-40.79865961204027",
+   "E_decimal50": "-40.79865961204023289456",
+   "abs_tol": 1e-09,
+   "computed_from": "the exact decimal strings in coords (float64), cross-checked with 50-digit Decimal"
+  }
+ },
+ "note": "synthetic ideal icosahedron, centre-vertex distance 1"
+}
