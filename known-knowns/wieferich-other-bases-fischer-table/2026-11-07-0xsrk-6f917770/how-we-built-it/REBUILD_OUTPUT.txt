@@ -1,0 +1,14 @@
+Real output of the rebuild command in RUN_IT_YOURSELF.md, run with this package's own copy of wieferich_sweep.py
+(Python 3.14.7, gmpy2 2.3.2, numpy 2.5.4; one worker at low priority, on a laptop shared with a 30-worker sweep).
+OUTDIR was an empty folder; DEADLINE was the start time plus 900 s. Lines in order: the start time, the sweep stdout,
+the end time, then OUTDIR/hits.jsonl and the block's record from OUTDIR/blocks.jsonl. Every field of that record
+(prime count, first and last prime, sha256_q, candidates, hits, Fermat failures) equals hit_block_record.json, the
+original run's record of the same block.
+
+    python wieferich_sweep.py sweep OUTDIR 1017260000000 20000000 1 DEADLINE 70 10126 65536 1017280000000
+
+start_utc 2026-11-07T20:17:59Z
+{"finished_utc": "2026-11-07T20:20:19Z", "wall_s": 127.2}
+end_utc 2026-11-07T20:20:35Z
+{"b": 28860, "p": 1017279755641, "block_lo": 1017260000000, "found_utc": "2026-11-07T20:20:19Z"}
+{"lo": 1017260000000, "hi": 1017280000000, "n_primes": 723203, "first_p": 1017260000017, "last_p": 1017279999977, "sha256_q": "2f2994887156594cf1bd86f1228fe8fe2f6da2e9c70197aa3f89ba97cddd4de2", "cands": [[28860, 1017279755641]], "hits": [[28860, 1017279755641]], "fermat_fail": [], ...}
