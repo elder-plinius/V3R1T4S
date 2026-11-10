@@ -1,0 +1,2 @@
+target_id,status,claim_type,partial_win,object_path,verifier_command
+magic-state-distillation-fewest-qubits,CONFIRMED_PARTIAL,partial_win,"p1, p2",object/p1_p2_lower_bound_certificates.json,sh verify-it-yourself/run_checks.sh
