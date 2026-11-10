@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+codetables-eaqecc-qubit-gaps,"n=19, k=2, c=9 ([[19,2,d;9]]_2)",d=11,"10-17 ([[19,2,10-17;9]]_2)",2026-11-10T19:51:24Z,object/eaqecc_n19_k2_d11_c9.tsv,2f911ca7172f460d9a52d48419b462874d7f001334806b9d68c8a7f0d54eba42
