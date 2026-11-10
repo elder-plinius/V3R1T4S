@@ -1,0 +1,33 @@
+{
+  "id": "fortunate-number-composite",
+  "name": "Fortune's conjecture: a composite Fortunate number (a(n) not prime)",
+  "category": "number-hunts",
+  "kind": "moonshot",
+  "tractability": 1,
+  "compute_profile": "needs cluster (potentially for both search and full certificate verification): a composite least offset is at least p_(n+1)^2, potentially leaving a very large interval of large-integer compositeness obligations. A compact fast certificate is not known here. No runtime estimate is independently verified; measure end-to-end verification before committing to a search.",
+  "statement": "Let p_n be the n-th prime, n >= 1, and P_n the product of the first n primes. The Fortunate number a(n) is the least integer m > 1 for which P_n + m is prime. Reo Fortune's conjecture asserts that every a(n) is prime. OEIS A005235 defines this sequence, credits the conjecture to Fortune through Martin Gardner and Solomon W. Golomb, and reports that the first 5300 terms are prime (Maik Pickl, 2026-10-02). That comment is a reported computation, not an audited primality-certificate result. No composite counterexample was identified in the primary-source review on 2026-11-10. This proposal asks only for a composite a(n); ordinary sequence extensions and negative search ranges are excluded because they overlap the existing OEIS next-term target.",
+  "success_criterion": "Supply integers n >= 1 and m > 1 such that m is composite and m = a(n). The standalone certificate must establish all of: (1) P_n is exactly the product of the first n primes, checked by reproducible enumeration of those primes; (2) q = P_n + m is prime, with a deterministically checkable primality certificate; (3) every integer P_n + t for 2 <= t < m is composite, by explicit proper divisors, valid Fermat compositeness witnesses, or a complete compressed certificate whose expansion covers every t; and (4) m has an explicit proper divisor 1 < r < m. An independent implementation must reconstruct P_n and recheck the entire certificate. A probable prime, an unverified hash, a composite offset before a later prime, a new sequence term with prime offset, or a sampled check of the interval does not count. Recheck OEIS and later literature before attacking and claiming to exclude a previously published counterexample.",
+  "partial_wins": [],
+  "verification_method": "Enumerate the first n primes with a complete sieve or another independently checked exact method and multiply them using integer arithmetic. Verify q = P_n + m and verify a primality proof for q (for example an ECPP certificate; Pocklington/BLS is applicable only if sufficient factors of q-1 or q+1 are independently certified, not inferred from the factorization of P_n). Check 1 < r < m and m mod r = 0. For every t in [2,m), check a divisor d_t with 1 < d_t < P_n+t and (P_n+t) mod d_t = 0 or a Fermat witness b with gcd(b,P_n+t)=1 and b^(P_n+t-1) not congruent to 1 modulo P_n+t. A gcd strictly between 1 and the candidate is itself a divisor witness. Compressed parity/sieving certificates must cover the complete interval and have their coverage checked independently. Calibrate the least-offset component for n = 1..20 against [3, 5, 7, 13, 23, 17, 19, 23, 37, 61, 67, 61, 71, 47, 107, 59, 61, 109, 89, 103]. Conditions (1)-(3) must pass for these offsets; the full counterexample gate must reject all twenty because condition (4) fails for prime m. Include rejection checks for a prime minimal offset, a composite nonminimal offset, an omitted interval element, invalid divisors 1 and P_n+t, and corrupted primality certificates. Two implementations must agree on exact arithmetic and coverage; a second probable-prime test is not an independent primality proof. Interval exclusion may use a checked sieve rule: if a certified prime p divides P_n and t, it also divides P_n+t and is a proper divisor. Coverage still has to be verified; a rule is not automatically an O(1) proof of the whole interval. Offsets coprime to P_n, including every prime t with p_(n+1) <= t < p_(n+1)^2, require further certificates. A complete compressed proof may reduce verification costs, but no such efficient scheme is supplied here. State and measure full verification time, peak memory and certificate size; use suitable large-integer arithmetic when needed. Python decimal parsers must explicitly handle the interpreter digit limit for large inputs, preferably with a documented bounded limit rather than disabling limits globally. Apply kit/SUBMIT.md section 1: at most 1 MB per file and 50 MB per package; larger artifacts stay outside git with filename, byte size, SHA-256 and a human-created public archive URL.",
+  "primary_sources": [
+    "https://oeis.org/A005235"
+  ],
+  "status_source": "https://oeis.org/A005235",
+  "status_checked": "2026-11-10",
+  "disclosure": "open",
+  "angles": [
+    "A composite least offset has no prime divisor at most p_n, so it is at least p_(n+1)^2. Use this elementary necessary condition when selecting search ranges.",
+    "Keep the full interval-exclusion certificate and the resulting prime certificate separate so each can be checked independently."
+  ],
+  "pitfalls": [
+    "The composite object must be the least offset m; q = P_n+m must be proved prime.",
+    "P_n is the product of the first n primes, not n factorial or the product of primes at most n.",
+    "Checking a sample of smaller offsets does not establish minimality.",
+    "All integers t >= 2 below m must be covered, including even offsets.",
+    "The reported first-5300 computation is not independently certified here.",
+    "Sequence extensions, range extensions and empirical support for the conjecture earn no partial win under this proposal.",
+    "The known factorization is of P_n = q-m, not q-1 or q+1. It does not automatically supply the factored part required by Pocklington/BLS.",
+    "A short counterexample description does not imply a cheap certificate: proving minimality may dominate search, storage and verification at large n. The reported 5300-term prefix does not establish a rigorous lower limit on n for a counterexample.",
+    "The calibration offsets are prime: success of the least-offset component must be followed by rejection at the composite-offset gate."
+  ]
+}
