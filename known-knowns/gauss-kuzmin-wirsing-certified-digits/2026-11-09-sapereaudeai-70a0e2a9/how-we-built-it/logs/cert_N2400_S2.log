@@ -1,0 +1,7 @@
+tables 8.3s
+residual: head [3.6256e-722 +/- 5.00e-727] tail [3.9145e-1301 +/- 4.15e-1306] eta [7.1383e-723 +/- 3.64e-728]  (54.3s)
+eps: a [1.64e-7 +/- 1.82e-10]  b_rows [0.000147 +/- 2.92e-7]  b_tail [4.34e-51 +/- 2.37e-54]  total [0.000147 +/- 4.56e-7]  (55.7s)
+A_K: 1 eigenvalues in Gamma_2, 2 with |z|>rho: ['[1.00000000000 +/- 3e-17] + [+/- 1.23e-618]j', '[-0.303663002899 +/- 2.68e-13] + [+/- 1.23e-618]j']
+resolvent: M_K(G2) [156.5 +/- 0.0476]  M_K(rho) [55.70 +/- 2.56e-3]  gains [0.0231 +/- 1.63e-5] [0.00821 +/- 2.88e-6] (143.1s)
+RESULT: |lambda - mu| <= [1.1439e-722 +/- 1.75e-727]  ->  D = 721 certified decimals; isolation/counting ok = True
+PEAK_RSS_MB 613 ELAPSED_S 143.4 EXIT 0

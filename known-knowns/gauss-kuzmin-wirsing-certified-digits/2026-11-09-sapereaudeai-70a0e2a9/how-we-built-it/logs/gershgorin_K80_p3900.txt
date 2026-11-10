@@ -1,0 +1,4 @@
+K=80 prec=3900  discs pairwise disjoint and no straddle: True  max disc radius [9.42e-1003 +/- 2.02e-1006]
+discs inside |z-mu|<r0: 1   discs with |z|>rho: 2
+GERSHGORIN_COUNT PASS
+PEAK_RSS_MB 107 ELAPSED_S 64.8 EXIT 0

@@ -1,0 +1,14 @@
+setup 20.7s
+warm start from inputs/v_N2000.txt (2000 coefficients)
+cycle 0  mu -0.303663002898732658597448121902  section-residual 1.5181e-606  t=27s
+cycle 5  mu -0.303663002898732658597448121902  section-residual 1.7018e-630  t=52s
+cycle 10  mu -0.303663002898732658597448121902  section-residual 1.9078e-654  t=76s
+cycle 15  mu -0.303663002898732658597448121902  section-residual 2.1386e-678  t=100s
+cycle 20  mu -0.303663002898732658597448121902  section-residual 2.3974e-702  t=123s
+cycle 25  mu -0.303663002898732658597448121902  section-residual 2.6875e-726  t=148s
+cycle 30  mu -0.303663002898732658597448121902  section-residual 3.0127e-750  t=172s
+cycle 35  mu -0.303663002898732658597448121902  section-residual 3.3773e-774  t=196s
+cycle 39  mu -0.303663002898732658597448121902  section-residual 2.3349e-793  t=215s
+saved inputs/v_N2400.txt time 214.6s
+mu (Rayleigh quotient, 1003 digits) saved to inputs/mu_N2400.txt; first 40: -0.3036630028987326585974481219015562331109
+PEAK_RSS_MB 2817 ELAPSED_S 218.2 EXIT 0
