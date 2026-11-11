@@ -1,6 +1,7 @@
 #!/bin/sh
-# Standalone verification for the A210662 row-28 package. From the package folder:
-#   sh verify-it-yourself/run_checks.sh
+# Standalone verification for the A210662 row-28 package, invoked as
+# `sh verify-it-yourself/run_checks.sh` in the package folder; the final output
+# line of the run is PASS or FAIL.
 PY=""
 for c in python3 python py; do
   if command -v "$c" >/dev/null 2>&1; then PY="$c"; break; fi
