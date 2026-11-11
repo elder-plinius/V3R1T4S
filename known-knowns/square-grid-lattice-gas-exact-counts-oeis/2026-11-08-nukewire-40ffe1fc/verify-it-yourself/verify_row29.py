@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 """Standalone checker for the A210662 row-29 claim (k = 12..28). Python 3.8+
-STANDARD LIBRARY ONLY. Run from the package folder. Last line: PASS or FAIL.
+STANDARD LIBRARY ONLY. Invoked as `python verify_row29.py.py` in the package folder, the script performs
+the checks below and prints its verdict as the final output line: PASS or FAIL.
 
 What it verifies, from the definition (monomer-dimer tilings of the k x n
 board = matchings of the k x n grid graph):
