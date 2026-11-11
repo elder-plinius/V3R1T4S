@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+anomaly-free-atlas-qmax,"Allanach-Davighi-Melville atlas (arXiv:1812.04602v5 Table 2), Solutions column, new rows SM Q_max 39 and 40",SM 39: 51237625; SM 40: 58626334 (object/counts.txt),no row past Q_max = 10 (Q_max 10: SM 23800),2026-10-23T19:38:19Z,object/counts.txt,4a46c68e4e655eaf511a4367b399341dbd162251e8b95c94a2af3df67bada066
