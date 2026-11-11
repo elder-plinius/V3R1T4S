@@ -1,0 +1,12 @@
+AMI | real sens95 0.1831 AP 0.1400 | random n 50 min 0.5109 mean 0.5909 max 0.6713  | alt cluster-aware n 10 min 0.1553 mean 0.1961 max 0.2475  | real_beats_all_controls yes margin_mean_minus_real 0.4078 
+BDQ | real sens95 0.2222 AP 0.0511 | random n 50 min 0.1333 mean 0.3730 max 0.5833  | alt cluster-aware n 10 min 0.0000 mean 0.1540 max 0.2857  | real_beats_all_controls no margin_mean_minus_real 0.1507 
+CFZ | real sens95 0.1667 AP 0.0505 | random n 50 min 0.0400 mean 0.2787 max 0.4167  | alt cluster-aware n 10 min 0.0938 mean 0.1812 max 0.2609  | real_beats_all_controls no margin_mean_minus_real 0.1121 
+DLM | real sens95 0.1200 AP 0.0630 | random n 50 min 0.0000 mean 0.2253 max 0.5000  | alt cluster-aware n 10 min 0.0417 mean 0.1612 max 0.2500  | real_beats_all_controls no margin_mean_minus_real 0.1053 
+EMB | real sens95 0.4613 AP 0.6112 | random n 50 min 0.6760 mean 0.7177 max 0.7849  | alt cluster-aware n 10 min 0.3870 mean 0.4597 max 0.6011  | real_beats_all_controls yes margin_mean_minus_real 0.2564 
+INH | real sens95 0.3737 AP 0.7613 | random n 50 min 0.5793 mean 0.6485 max 0.6991  | alt cluster-aware n 10 min 0.2798 mean 0.3445 max 0.4048  | real_beats_all_controls yes margin_mean_minus_real 0.2748 
+KAN | real sens95 0.2678 AP 0.2525 | random n 50 min 0.4785 mean 0.5504 max 0.6183  | alt cluster-aware n 10 min 0.1560 mean 0.2026 max 0.2593  | real_beats_all_controls yes margin_mean_minus_real 0.2826 
+LEV | real sens95 0.3540 AP 0.4663 | random n 50 min 0.4221 mean 0.5013 max 0.5751  | alt cluster-aware n 10 min 0.2119 mean 0.2880 max 0.3851  | real_beats_all_controls yes margin_mean_minus_real 0.1473 
+MXF | real sens95 0.3965 AP 0.5040 | random n 50 min 0.4979 mean 0.5535 max 0.6097  | alt cluster-aware n 10 min 0.2614 mean 0.3416 max 0.4713  | real_beats_all_controls yes margin_mean_minus_real 0.1570 
+RIF | real sens95 0.3360 AP 0.7065 | random n 50 min 0.4972 mean 0.5884 max 0.6696  | alt cluster-aware n 10 min 0.1629 mean 0.2475 max 0.3105  | real_beats_all_controls yes margin_mean_minus_real 0.2524 
+LZD | real sens95 0.2000 AP 0.0183 | random n 50 min 0.0000 mean 0.2185 max 0.4211  | alt cluster-aware n 10 min 0.0000 mean 0.1143 max 0.3636  | real_beats_all_controls no margin_mean_minus_real 0.0185 
+RFB | real sens95 0.4188 AP 0.6845 | random n 50 min 0.5971 mean 0.6411 max 0.6824  | alt cluster-aware n 10 min 0.2702 mean 0.3415 max 0.4041  | real_beats_all_controls yes margin_mean_minus_real 0.2223 

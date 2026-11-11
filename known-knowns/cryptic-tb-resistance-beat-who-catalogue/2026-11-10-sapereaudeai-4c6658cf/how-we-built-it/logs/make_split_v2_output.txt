@@ -1,0 +1,5 @@
+matrix (15228, 15228) int16 labels 15228
+reuse isolates 12287 in matrix 12287
+directed edges 86032 max distance seen 2550 components 7420 singletons 6399 largest {12204: 2539, 3355: 72, 6648: 48, 6637: 38, 5796: 35}
+big components to TRAIN [('site.02.subj.0031.lab.2014234024.iso.1', 2539)]
+TEST isolates 3073 TRAIN isolates 9214 TEST clusters 2282 TRAIN clusters 5138

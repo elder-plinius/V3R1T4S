@@ -1,0 +1,14 @@
+drug ETH phenotyped isolates 8251 R 1189 load s 1.5
+real {'sens95': 0.34962406015037595, 'spec_at_t': 0.9502732240437158, 'threshold': 0.48357513642561073, 'ap': 0.4169851972238189, 'n_test': 2096, 'R_test': 266}
+random 50 elapsed 19 s
+random 100 elapsed 36 s
+random 150 elapsed 53 s
+random 200 elapsed 70 s
+random 250 elapsed 89 s
+random 300 elapsed 106 s
+random 350 elapsed 123 s
+random 400 elapsed 140 s
+drug ETH real sens95 0.3496 AP 0.4170
+random n 400 min 0.5135 mean 0.6003 max 0.6678 AP mean 0.6699 controls_above_real 400
+alt cluster-aware n 100 min 0.1799 mean 0.3259 max 0.4662 AP mean 0.3835
+real_beats_all_controls yes margin_mean_minus_real 0.2507 elapsed 179 s
