@@ -1,0 +1,5 @@
+python==3.11 (CPython; the run used the workspace venv)
+numpy
+scipy
+Java 21 (Temurin JRE 21.0.13+9) and LIRICAL 2.4.1 (lirical-cli-2.4.1.jar) for the reference tool
+The verify-it-yourself checker needs only the Python standard library.
