@@ -1,0 +1,35 @@
+# Criterion skeptic report: claim-ho2
+
+context: OptiWindNet RouteSets r26.10-v4, bank target `optiwindnet-routesets-cable-routing-records`; instance nodeset "Hornsea One.1_OSS" (174 turbines, 1 substation, 25 border vertices, 0 obstacles), capacity 2; claimed FULL success criterion with topology X = radial (which also counts for branched). Every clause was checked with my own scripts in `panel-ho2/work-criterion/` (`own_check.py`: numpy + shapely only, from `object/segments.json` and the SQLite file; `official.py`: optiwindnet 0.3.2 validator on a rebuild from `object/routeset-packed.json` and on `object/G.pickle`). Nothing was written to the claim folder; no `__pycache__` there.
+
+confirmed_scope: For the r26.10-v4 instance (nodeset "Hornsea One.1_OSS", capacity 2), the route set in `object/` is a structurally radial network (87 feeders, each a path of exactly 2 turbines) carrying the release's exact VertexC and border, of total Euclidean length 1030454.2878 m, which is 896.1118 m (8.689e-4 relative) shorter than the shortest of all four route sets stored for that instance (id 42234, radial, 1031350.3996 m, 87 feeders), passes optiwindnet 0.3.2 validate_routeset with no violations and lies entirely inside the site border; nothing is established about optimality, other instances, or releases later than Zenodo record 23537067.
+
+## Clause-by-clause
+
+| Clause | Result | Evidence |
+|---|---|---|
+| Instance of r26.10-v4, nodeset name not starting with '!' | met | `references/optiwindnet-routesets-r26.10-v4.sqlite.xz` sha256 c78c8f3c...5e3a (equals bank value), md5 85faffb2...dd7 (equals the md5 in `status/zenodo-latest.json`); 49,204 route sets and 13,954 (nodeset, capacity) pairs, as the release states. Name "Hornsea One.1_OSS" has no '!'. |
+| Route set of topology X | met for radial and branched | Tree: 269 nodes, 268 edges, connected to the root; all 94 clone nodes have degree 2; max turbine degree 2; 87 feeders, each holding exactly 2 turbines (sum 174, none missing). Validator returns [] when the packed object is rebuilt as radial and as branched. |
+| Strictly shorter than EVERY stored set of topology X or more restrictive, by > 1e-6 relative | met | Exactly 4 stored sets for the instance: 42234 radial 1031350.3996093208; 9595 radial 1031350.3996093209; 8881 radial 1032129.6496; 2782 branched 1032792.2112. Relative margins 8.689e-4, 8.689e-4, 1.623e-3, 2.264e-3. Holds for X = radial (3 sets) and X = branched (all 4). No other nodeset shares this geometry (digest is the key; only one 174-turbine, 1-substation Hornsea One nodeset). |
+| Feeders at EACH substation <= shortest such stored set's feeders_per_root | met | Claim [87]; shortest stored (42234, and its tie 9595) [87]. 87 = 174/2 is also the minimum possible. |
+| Same nodeset | met | Every segment endpoint in `object/segments.json` equals a VertexC row exactly (max deviation 0); node ids are consistent with rows; `object/G.pickle` VertexC and border are identical to the database; the rebuild from `object/routeset-packed.json` was bound to the database nodeset digest and accepted. |
+| validate_routeset no violations | met | [] on the packed rebuild (both topologies) and on the pickle. Positive control: swapping the parents of two distant leaf turbines made the validator report many crossings. Null: all 4 stored sets also return []. |
+| Every segment inside border, outside obstacles | met | 0 of 268 segments outside the border polygon (shapely covers, strict residual length 0.0); the nodeset has no obstacles (constraint_groups = [25]). All turbines and the root are inside. |
+| No crossings (own check) | met | 0 proper crossings between segments at distinct locations; 0 segments through a foreign turbine or root; 0 partial overlaps. The 225 coincident segment pairs are bundled detours sharing the same bend vertices (88 clones sit on turbine positions, 6 on border vertices), which is the release's own convention: stored set 42234 has D = 93 and 222 shared runs. My side-of-path test on the 224 shared runs of the claim found 0 crossings and 0 degenerate cases. That test had no positive control of its own; the validator covers the same ground. |
+| Length = Euclidean sum, and that value is the one compared | met | fsum over `object/segments.json` coordinates = 1030454.2878271756; same from VertexC rows; same as G.size('length') and as the packed `length`. The same pipeline reproduces all 4 stored lengths to within 5e-10 m. |
+| Release identity and latest-ness | met, with a limit | `status/zenodo-latest.json` is record 23537067, published 2026-10-21, `relations.version[0].is_last = true`, single file with matching md5. The file has no retrieval timestamp (mtime is the copy time 2026-11-10), and I did not re-fetch, so latest-ness is as of an unrecorded fetch. |
+
+## Null-model and plausibility checks
+
+- The stored radial MILP bound for the instance is 1026484.83 (straight-line objective; stored relgap 0.178%), the branched bound 1026124.42. The claim's straight-line objective is 1027671.26, above both bounds and 646 m below the stored best's objective 1028317.40. The improvement fits inside the open gap, so it does not contradict the release's bounds.
+- Not subsumed: this is the full criterion, not p1 (no '!') or p2 (the radial best has a MILP bound, so p2 does not apply). The margin is about 870 times the 1e-6 threshold, so it is not a rounding artefact.
+- Scale: the win is small (0.087%) on an instance with a small stored gap (0.18%). The criterion sets no minimum gap, so this counts, but it is not one of the large-gap instances the bank statement highlights.
+
+## Defects that do not change the verdict but must be fixed or disclosed
+
+1. Inconsistent claimed topology. `CLAIM.md` says X = radial; `criterion.txt` and `REPRODUCE.md` step 4 say X = branched; `object/routeset-packed.json` and `object/G.pickle` carry `topology: branched`, while `object/segments.json` says `radial`. Both readings are met, but the claim should state one.
+2. Misleading metadata in the packed object. `object/routeset-packed.json` records `creator: MILP.ortools.cp_sat`, `runtime: 0.138332`, `termination: OPTIMAL`, `relgap: 0.0`, `bound = objective = 1027671.26`, `strategy: OPTIMAL`. These describe the last pinned-window sub-solve of the neighbourhood search, not the instance. Read as a database record, they say the instance was solved to proven optimality in 0.14 s, which is false: the value 1027671.26 is not a lower bound for the instance. `CLAIM.md` disclaims optimality, but the object would mislead if stored or submitted as is.
+3. `handle` in the packed object is "Hornsea_One_1_OSS"; the release uses "hornsea_1" for this nodeset. The packed JSON carries no nodeset name or digest, so on its own it identifies the site only by that non-matching handle. `object/G.pickle` also embeds a local filesystem path in `method_options`.
+4. `CLAIM.md` wording "strictly shorter than every stored route set for that instance of any topology" is accurate for the 4 stored sets. "shortest stored set ... id 42234" omits that id 9595 (HGS) ties it to 1e-10 m with the same 87 feeders; harmless.
+
+pass: true
