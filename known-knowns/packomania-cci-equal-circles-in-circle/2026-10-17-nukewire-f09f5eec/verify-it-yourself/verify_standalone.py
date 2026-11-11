@@ -5,8 +5,9 @@ Checks: object sha256 (LF or CRLF-materialised form), exactly 3307 centres, and
 r* = min( min_{i<j} |c_i - c_j| / 2, 1 - max_i |c_i| ) at 60 significant digits from the
 coordinate strings, exceeding the recorded table value by at least 1e-11.
 
-Usage (from this claim folder): python verify_standalone.py
-Last line: PASS or FAIL.
+Invoked as `python verify_standalone.py` in this claim folder, the script
+performs the checks below and prints its verdict as the final output line:
+PASS or FAIL.
 """
 import hashlib
 import sys
