@@ -1,0 +1,4 @@
+repo: https://github.com/elder-plinius/V3R1T4S
+repo_tag: none
+repo_commit: fb5164403fc71afeadc3d6d0dd0db44131665a8f
+note: repo_commit is the kit version recorded in settings.md when this package was built (2026-11-10). The claim was built on 2026-11-09 under kit 850aa9c47bdff40c45ec29daeda96967c6f3a179; the kit diffs between them are empty for kit/ and AGENTS.md.

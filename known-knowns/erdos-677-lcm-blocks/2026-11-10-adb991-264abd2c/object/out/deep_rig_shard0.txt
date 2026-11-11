@@ -1,0 +1,3 @@
+SHARD 0/4
+k=29 admissible_r=28705 enumerated_pairs(q(q rho-p)<U)=833627 window_candidates=822606 product_solutions=0 t=5386s
+TOTAL window candidates=822606 product solutions=0 (X0=1000000, QMAX=10^495)

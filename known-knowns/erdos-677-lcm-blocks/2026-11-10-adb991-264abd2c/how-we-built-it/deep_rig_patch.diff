@@ -1,0 +1,29 @@
+--- deep_rig_unpatched.py	2026-10-24 08:49:08.289460753 +0000
++++ deep_rig.py	2026-10-24 09:06:59.183524077 +0000
+@@ -103,13 +103,25 @@
+             if s1 - s0 > 100000:
+                 raise RuntimeError("s-range too long at m-index %d r=%d: %d" % (ms[j], int(rr[t]), s1 - s0))
+             cand_cells.append((ms[j], int(rr[t]), s0, s1))
++    # exact u only where float cancellation could exceed 1e-9 relative (Qn small); see NOTES.md (run 2026-10-24-0818)
++    exact_u = [bool(Qn[j] < 1e-4 or 3.4e-16 * (R + 1) / Qn[j] > 1e-9) for j in range(len(ms))]
+     for (i, r, s0, s1) in cand_cells:
+         j = jidx[i]
+         for s in range(s0, s1 + 1):
+             if s == 0 or (r > 0 and s > 0) or (r < 0 and s < 0):
+                 continue
+             if Lf is not None:
+-                g = (r + s * Qn[j]) * (r * D1[j] + s * D0[j])
++                # u = q / q_{m+1} from the exact integer q (no cancellation: r and s have opposite signs, so the float
++                # r + s*Qn can lose all relative accuracy when Qn = q_m/q_{m+1} is tiny); w = r D1 + s D0 has no
++                # cancellation (both terms have the same sign). Patch of run 2026-10-24-0818, see NOTES.md.
++                if exact_u[j]:
++                    qq = r * q_[i + 1] + s * q_[i]
++                    if qq <= 0:
++                        continue
++                    g = float(gmpy2.mpq(qq, q_[i + 1])) * (r * D1[j] + s * D0[j])
++                else:
++                    # float u = r + s Qn: absolute error <= 3 (|r|+1) 2^-53, relative <= 3.4e-16 (R+1)/Qn <= 1e-9
++                    g = (r + s * Qn[j]) * (r * D1[j] + s * D0[j])
+                 if not (Lf * (1 - 1e-6) < g < Uf * (1 + 1e-6)):
+                     continue
+             check_add(i, r, s)

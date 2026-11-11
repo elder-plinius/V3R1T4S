@@ -1,0 +1,11 @@
+SHARD 2/3
+rig_margin_exact: k=5..12 X0=1000000 eta=1/1000 CF=1 rho_bits=96 (exact rational intervals)
+k=5 pairs=2 proved=2 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.00000000 at r=2
+k=6 pairs=1 proved=1 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.00000000 at r=5
+k=7 pairs=7 proved=7 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.00000000 at r=4/3
+k=8 pairs=4 proved=4 failures=0 undecided=0 time_s=0.0 worst_rel_margin_lower_bound=1.00000000 at r=15/7
+k=9 pairs=10 proved=10 failures=0 undecided=0 time_s=0.1 worst_rel_margin_lower_bound=0.99999999 at r=7/5
+k=10 pairs=12 proved=12 failures=0 undecided=0 time_s=0.1 worst_rel_margin_lower_bound=0.99999999 at r=4/3
+k=11 pairs=52 proved=52 failures=0 undecided=0 time_s=0.5 worst_rel_margin_lower_bound=0.99999999 at r=15/14
+k=12 pairs=40 proved=40 failures=0 undecided=0 time_s=0.6 worst_rel_margin_lower_bound=0.99999999 at r=15/14
+TOTAL pairs=128 failures=0 undecided=0
