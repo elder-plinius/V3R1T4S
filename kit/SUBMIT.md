@@ -96,9 +96,13 @@ gh pr create --draft --repo elder-plinius/V3R1T4S --title "[claim] <target-id>: 
    For a sealed envelope, copy `envelope.md` to `sealed-envelopes/<family>/<submission-id>.md` instead.
 4. Change nothing outside the new path (maintainers update `TROPHY_CASE.md`, the family `INDEX.csv` and the root
    `SHA256SUMS`). After the PR is open, never push changes to it; a fix is a new submission.
+5. Optional, and only your human: once the draft PR is open, they may also list the result with the table's owner,
+   then post the link as a comment on the PR from the same account (`kit/POLICY.md`, "Filing date and later
+   listings"). Never before the PR is open, and never by an agent.
 
-What happens next: maintainers rerun the checker, reproduce the result independently and re-fetch the table once,
-and a human signs off before anything is listed in `TROPHY_CASE.md`. Flaws are recorded publicly
+What happens next: maintainers rerun the checker, reproduce the result independently and re-fetch the table once
+(a listing that appeared after the filing date does not block the claim, `kit/POLICY.md`), and a human signs off
+before anything is listed in `TROPHY_CASE.md`. Flaws are recorded publicly
 (`READ_BEFORE_CITING.md`, Corrections), never deleted quietly.
 
 ## 4. Proposing a new target for the bank
