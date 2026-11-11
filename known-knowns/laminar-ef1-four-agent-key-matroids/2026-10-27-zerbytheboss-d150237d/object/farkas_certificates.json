@@ -1,0 +1,370 @@
+{
+  "target_id": "laminar-ef1-four-agent-key-matroids",
+  "total_certificates": 864,
+  "ordered_envy_certificates": 828,
+  "ef1_certificates": 36,
+  "minimum_slack": "1/100",
+  "stable_l_inf_radius": "1/400",
+  "certificates": [
+    {
+      "allocation_idx": 0,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-7/100",
+      "separating_margin": "7/100"
+    },
+    {
+      "allocation_idx": 1,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-7/100",
+      "separating_margin": "7/100"
+    },
+    {
+      "allocation_idx": 2,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-7/100",
+      "separating_margin": "7/100"
+    },
+    {
+      "allocation_idx": 3,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-7/100",
+      "separating_margin": "7/100"
+    },
+    {
+      "allocation_idx": 4,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "evaluated_value": "-19/100",
+      "separating_margin": "19/100"
+    },
+    {
+      "allocation_idx": 5,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "evaluated_value": "-19/100",
+      "separating_margin": "19/100"
+    },
+    {
+      "allocation_idx": 6,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "evaluated_value": "-19/100",
+      "separating_margin": "19/100"
+    },
+    {
+      "allocation_idx": 7,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        -1,
+        0,
+        0
+      ],
+      "evaluated_value": "-19/100",
+      "separating_margin": "19/100"
+    },
+    {
+      "allocation_idx": 8,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "evaluated_value": "-13/50",
+      "separating_margin": "13/50"
+    },
+    {
+      "allocation_idx": 9,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "evaluated_value": "-13/50",
+      "separating_margin": "13/50"
+    },
+    {
+      "allocation_idx": 10,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "evaluated_value": "-13/50",
+      "separating_margin": "13/50"
+    },
+    {
+      "allocation_idx": 11,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        -1,
+        0
+      ],
+      "evaluated_value": "-13/50",
+      "separating_margin": "13/50"
+    },
+    {
+      "allocation_idx": 12,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "evaluated_value": "-7/25",
+      "separating_margin": "7/25"
+    },
+    {
+      "allocation_idx": 13,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "evaluated_value": "-7/25",
+      "separating_margin": "7/25"
+    },
+    {
+      "allocation_idx": 14,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "evaluated_value": "-7/25",
+      "separating_margin": "7/25"
+    },
+    {
+      "allocation_idx": 15,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        -1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        -1
+      ],
+      "evaluated_value": "-7/25",
+      "separating_margin": "7/25"
+    },
+    {
+      "allocation_idx": 16,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-17/100",
+      "separating_margin": "17/100"
+    },
+    {
+      "allocation_idx": 17,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-17/100",
+      "separating_margin": "17/100"
+    },
+    {
+      "allocation_idx": 18,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-17/100",
+      "separating_margin": "17/100"
+    },
+    {
+      "allocation_idx": 19,
+      "type": "ORDERED_ENVY_SEPARATING_FACET",
+      "agent_row": 1,
+      "compared_agent": 2,
+      "normal_vector_row": [
+        1,
+        0,
+        -1,
+        1,
+        -1,
+        0,
+        0,
+        0
+      ],
+      "evaluated_value": "-17/100",
+      "separating_margin": "17/100"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+Table Snapshot — laminar-ef1-four-agent-key-matroids
+
+Primary Status Source:
+URL: https://arxiv.org/abs/2608.31121
+Fetched (UTC): 2026-10-28T00:31:55Z
+HTTP Status: 200
+SHA-256: 4e05efb1c740dd4a99ee9951a054b3bfbbb731da89e5cd800d05eedc1be9a278
+
+Extracted Cell Record:
+| laminar-ef1-four-agent-key-matroids | size-8 key matroid | open | arXiv:2608.31121v1 (Section 5 & Appendix B) |
+
+Published Status Metadata:
+- Paper: Benjamin Cookson and Nisarg Shah, "Constrained Fair Allocations via Partition Matroid Reductions" (arXiv:2608.31121v1, 31 Aug 2026)
+- Status: Section 5 ("Resolving the case of four agents") notes that computer-aided attempts were "unfruitful" and leaves the key matroid existence question open.
+- Closed resolution: Refuted via exact rational 4x8 counterexample valuation matrix under prescribed agent order 1 < 2 < 3 < 4 with 0 valid allocations out of all 864 feasible complete allocations.
