@@ -1,0 +1,4 @@
+SHARD 3/4
+rig_margin_exact: k=29..29 X0=1000000 eta=1/1000 CF=1 rho_bits=96 (exact rational intervals)
+k=29 pairs=28704 proved=28704 failures=0 undecided=0 time_s=3230.3 worst_rel_margin_lower_bound=0.99999994 at r=3060/3059
+TOTAL pairs=28704 failures=0 undecided=0
