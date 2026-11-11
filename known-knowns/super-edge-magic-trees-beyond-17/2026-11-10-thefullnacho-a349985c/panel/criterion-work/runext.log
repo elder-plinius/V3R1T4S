@@ -1,0 +1,22 @@
+EXT order 18->19: children_not_in_cert=0 cert_keys=317955 cert_keys_never_generated=0
+n=18 lines=123867 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=123867 distinct=123867
+1.59 s 6028 KB
+EXT order 19->20: children_not_in_cert=0 cert_keys=823065 cert_keys_never_generated=0
+n=19 lines=317955 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=317955 distinct=317955
+4.44 s 12948 KB
+EXT order 20->21: children_not_in_cert=0 cert_keys=2144505 cert_keys_never_generated=0
+n=20 lines=823065 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=823065 distinct=823065
+12.20 s 32916 KB
+EXT order 21->22: children_not_in_cert=0 cert_keys=5623756 cert_keys_never_generated=0
+n=21 lines=2144505 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=2144505 distinct=2144505
+35.79 s 83604 KB
+EXT order 22->23: children_not_in_cert=0 cert_keys=14828074 cert_keys_never_generated=0
+n=22 lines=5623756 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=5623756 distinct=5623756
+105.00 s 218516 KB
+EXT order 23->24: children_not_in_cert=0 cert_keys=39299897 cert_keys_never_generated=0
+n=23 lines=14828074 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=14828074 distinct=14828074
+309.47 s 576916 KB
+EXT order 24->25: children_not_in_cert=0 cert_keys=104636890 cert_keys_never_generated=0
+n=24 lines=39299897 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=39299897 distinct=39299897
+897.74 s 1532564 KB
+DONE

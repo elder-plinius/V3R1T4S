@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+super-edge-magic-trees-beyond-17,criterion (a): every tree on at most n vertices is super edge-magic (verified n),25,17,2026-11-10T17:24:20Z,cert_n25.txt.xz (with cert_n18..n24; hashes in object/certificates.sha256),a349985cc70fbdc72eaa634d689b708197aaa55768ac68a87b84403092361197

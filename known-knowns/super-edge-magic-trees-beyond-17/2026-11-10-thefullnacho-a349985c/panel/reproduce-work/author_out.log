@@ -1,0 +1,14 @@
+n=18 lines=123867 distinct=123867 A000055(Otter)=123867 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=123867 missing=0 extra=0 -> PASS
+n=18 lines=123867 distinct_canonical=123867 A000055=123867 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=19 lines=317955 distinct=317955 A000055(Otter)=317955 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=317955 missing=0 extra=0 -> PASS
+n=19 lines=317955 distinct_canonical=317955 A000055=317955 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=20 lines=823065 distinct=823065 A000055(Otter)=823065 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=823065 missing=0 extra=0 -> PASS
+n=20 lines=823065 distinct_canonical=823065 A000055=823065 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=21 lines=2144505 distinct=2144505 A000055(Otter)=2144505 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=2144505 missing=0 extra=0 -> PASS
+n=21 lines=2144505 distinct_canonical=2144505 A000055=2144505 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=22 lines=5623756 distinct=5623756 A000055(Otter)=5623756 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=5623756 missing=0 extra=0 -> PASS
+n=22 lines=5623756 distinct_canonical=5623756 A000055=5623756 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=23 lines=14828074 distinct=14828074 A000055(Otter)=14828074 malformed=0 wrong_n=0 not_tree=0 bad_label=0 dup=0 regenerated=14828074 missing=0 extra=0 -> PASS
+n=23 lines=14828074 distinct_canonical=14828074 A000055=14828074 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+n=24 lines=39299897 distinct_canonical=39299897 A000055=39299897 not_tree=0 wrong_n=0 dup=0 unlabeled=0 label_failures=0 -> PASS
+898.56 s 3528064 KB

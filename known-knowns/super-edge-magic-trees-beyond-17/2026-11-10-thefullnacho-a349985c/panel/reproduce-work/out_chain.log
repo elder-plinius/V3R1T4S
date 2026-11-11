@@ -1,0 +1,15 @@
+n=18 lines=123867 invalid=0 distinct_canonical=123867 A000055=123867 -> OK
+n=19 lines=317955 invalid=0 distinct_canonical=317955 A000055=317955 -> OK
+n=20 lines=823065 invalid=0 distinct_canonical=823065 A000055=823065 -> OK
+n=21 lines=2144505 invalid=0 distinct_canonical=2144505 A000055=2144505 -> OK
+n=22 lines=5623756 invalid=0 distinct_canonical=5623756 A000055=5623756 -> OK
+n=23 lines=14828074 invalid=0 distinct_canonical=14828074 A000055=14828074 -> OK
+n=24 lines=39299897 invalid=0 distinct_canonical=39299897 A000055=39299897 -> OK
+cert_n18.txt: OK
+cert_n19.txt: OK
+cert_n20.txt: OK
+cert_n21.txt.xz: OK
+cert_n22.txt.xz: OK
+cert_n23.txt.xz: OK
+cert_n24.txt.xz: OK
+cert_n25.txt.xz: OK
