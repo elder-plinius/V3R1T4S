@@ -1,0 +1,26 @@
+n=18 lines=123867 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=123867 distinct=123867
+0.13 s 2960 KB
+n=19 lines=317955 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=317955 distinct=317955
+0.34 s 5776 KB
+n=20 lines=823065 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=823065 distinct=823065
+0.89 s 13964 KB
+n=21 lines=2144505 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=2144505 distinct=2144505
+2.38 s 34448 KB
+n=22 lines=5623756 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=5623756 distinct=5623756
+6.57 s 88348 KB
+n=23 lines=14828074 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=14828074 distinct=14828074
+17.94 s 231568 KB
+n=24 lines=39299897 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=39299897 distinct=39299897
+49.38 s 613472 KB
+n=25 lines=104636890 blank=0 malformed=0 wrong_n=0 not_tree=0 bad_label=0 valid=104636890 distinct=104636890
+138.05 s 1634704 KB
+--- sha256
+cert_n18.txt: OK
+cert_n19.txt: OK
+cert_n20.txt: OK
+cert_n21.txt.xz: OK
+cert_n22.txt.xz: OK
+cert_n23.txt.xz: OK
+cert_n24.txt.xz: OK
+cert_n25.txt.xz: OK
+DONE
