@@ -1,0 +1,20 @@
+sha256 h2h 4d0f30083447be88d8b9b11104776798e4f2b7ed6a9ff062886041aeb96680a9 expected 4d0f30083447be88d8b9b11104776798e4f2b7ed6a9ff062886041aeb96680a9 -> True
+sha256 run1 C_percase 1e36379c9a57daf665335806b7585c0e165cf5fc918b368c2145daaf67b08b6f expected 1e36379c9a57daf665335806b7585c0e165cf5fc918b368c2145daaf67b08b6f -> True
+cases 10189; run1 cases 10189; n_terms mismatches vs run 1: 0
+p1 subset (n_terms <= 3): 2038 cases; by n_terms {1: 520, 2: 691, 3: 827}
+n 2038 cases, 447 PMIDs
+MRR_method     0.1384 [0.1270, 0.1500] pub [0.0709, 0.2143]
+MRR_lirical    0.1047 [0.0936, 0.1150] pub [0.0531, 0.1606]
+dMRR           0.0337 [0.0257, 0.0420] pub [0.0021, 0.0659]
+MRR_ratio      1.3218 [1.2394, 1.4201] pub [1.0236, 1.6718]
+top1_method    0.0863 [0.0764, 0.0963] pub [0.0348, 0.1416]
+top1_lirical   0.0476 [0.0382, 0.0567] pub [0.0190, 0.0823]
+dTop1          0.0387 [0.0284, 0.0493] pub [-0.0036, 0.0849]
+top10_method   0.2370 [0.2191, 0.2542] pub [0.1343, 0.3507]
+top10_lirical  0.1992 [0.1815, 0.2160] pub [0.0997, 0.3072]
+dTop10         0.0378 [0.0247, 0.0500] pub [-0.0059, 0.0788]
+null N-SF: real 0.033707 best of 400 0.013722 beats all: True (controls >= real: 0)
+GATE {"G1_MRR_ratio_point_ge_1.10": true, "G2_dMRR_case_ci_lower_gt_0": true, "G3_null_real_beats_all_400": true, "P1_MET": true}
+INFO {"strict_ratio_case_ci_lower_ge_1.10": true, "strict_ratio_pub_ci_lower_ge_1.10": false, "dMRR_pub_ci_lower_gt_0": true, "top1_ratio_point": 1.812731136321295, "bootstrap_fraction_ratio_ge_1.10": 1.0}
+L2 sensitivity: MRR_lirical 0.1048 ratio 1.3207 [1.2381, 1.4195] gate {"G1_MRR_ratio_point_ge_1.10": true, "G2_dMRR_case_ci_lower_gt_0": true, "G3_null_real_beats_all_400": true, "P1_MET": true}
+complement > 3 terms (context): {"n": 8151, "MRR_method": 0.101808859205304, "MRR_lirical": 0.0825610015819503, "top1_method": 0.07271154634170654, "top1_lirical": 0.05502596818385474}

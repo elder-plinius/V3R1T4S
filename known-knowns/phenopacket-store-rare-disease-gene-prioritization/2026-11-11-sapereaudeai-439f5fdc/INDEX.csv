@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+phenopacket-store-rare-disease-gene-prioritization,p1 (gene-level MRR on the 2038 cases with <= 3 observed HPO terms; frozen Resnik ranker vs LIRICAL 2.4.1; same cleaned HPOA and 19274 genes),0.1384 (ratio 1.3218),LIRICAL 2.4.1 0.1047 (run by the claimant; status source release 0.1.27),2026-11-11T19:03:25Z,object/p1_subset_cases.tsv,439f5fdcfe13720bf61f201fe3b81c0a806ef3392f93da1491f1ab7fd9c98482
