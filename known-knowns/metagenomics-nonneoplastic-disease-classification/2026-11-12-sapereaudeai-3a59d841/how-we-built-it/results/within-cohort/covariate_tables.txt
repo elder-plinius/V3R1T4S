@@ -1,0 +1,121 @@
+== W1 Qin2012
+y                       0       1
+age_n       count  174.00  170.00
+            mean    41.67   53.52
+            std     12.76   13.76
+            min     14.00   13.00
+            25%     30.25   43.25
+            50%     42.00   54.50
+            75%     52.00   62.00
+            max     72.00   86.00
+cmd_age     count  174.00  170.00
+            mean    41.67   53.52
+            std     12.76   13.76
+            min     14.00   13.00
+            25%     30.25   43.25
+            50%     42.00   54.50
+            75%     52.00   62.00
+            max     72.00   86.00
+bmi_n       count  174.00  170.00
+            mean    23.03   23.67
+            std      3.44    3.52
+            min     15.57   16.00
+            25%     19.65   20.57
+            50%     23.70   24.10
+            75%     25.58   25.78
+            max     32.58   37.50
+cmd_bmi     count  174.00  170.00
+            mean    23.03   23.67
+            std      3.44    3.52
+            min     15.57   16.00
+            25%     19.65   20.57
+            50%     23.70   24.10
+            75%     25.58   25.78
+            max     32.58   37.50
+depth_log10 count  174.00  170.00
+            mean     7.56    7.61
+            std      0.12    0.13
+            min      7.15    7.30
+            25%      7.49    7.50
+            50%      7.56    7.61
+            75%      7.65    7.71
+            max      7.86    7.89
+sex x y:
+ y        0    1
+sex_c          
+female  90   64
+male    84  106
+cmd condition x y:
+ y                0    1
+cmd_condition          
+T2D              0  170
+control        174    0
+age agreement MetAML vs cMD (abs diff <= 1): 1.0
+bmi agreement MetAML vs cMD (abs diff <= 0.5): 1.0
+by dataset (stage) x y, age mean:
+                  count   mean    std
+dataset_name  y                     
+t2dmeta_long  0    136  43.65  12.40
+              1    135  54.37  13.78
+t2dmeta_short 0     38  34.55  11.56
+              1     35  50.26  13.37
+by dataset x y, depth mean:
+                  count   mean    std
+dataset_name  y                     
+t2dmeta_long  0    136  7.576  0.127
+              1    135  7.646  0.118
+t2dmeta_short 0     38  7.499  0.091
+              1     35  7.460  0.057
+== W2 WT2D
+y                      0      1
+age_n       count  43.00  53.00
+            mean   70.32  70.48
+            std     0.70   0.79
+            min    69.03  68.96
+            25%    69.82  69.98
+            50%    70.23  70.52
+            75%    70.74  71.16
+            max    71.84  71.71
+cmd_age     count  43.00  53.00
+            mean   69.93  70.00
+            std     0.74   0.85
+            min    69.00  68.00
+            25%    69.00  69.00
+            50%    70.00  70.00
+            75%    70.00  71.00
+            max    71.00  71.00
+bmi_n       count  43.00  53.00
+            mean   25.77  28.40
+            std     4.35   4.89
+            min    18.20  19.90
+            25%    22.25  25.00
+            50%    25.70  28.00
+            75%    27.95  30.90
+            max    36.90  44.60
+cmd_bmi     count  43.00  53.00
+            mean   25.77  28.40
+            std     4.35   4.89
+            min    18.20  19.90
+            25%    22.25  25.00
+            50%    25.70  28.00
+            75%    27.95  30.90
+            max    36.90  44.60
+depth_log10 count  43.00  53.00
+            mean    7.40   7.48
+            std     0.18   0.21
+            min     6.92   6.90
+            25%     7.30   7.41
+            50%     7.42   7.55
+            75%     7.50   7.63
+            max     7.76   7.79
+sex x y:
+ y         0   1
+sex_c          
+missing  43  53
+cmd condition x y:
+ y               0   1
+cmd_condition        
+T2D             0  53
+control        43   0
+age agreement MetAML vs cMD (abs diff <= 1): 1.0
+bmi agreement MetAML vs cMD (abs diff <= 0.5): 1.0
