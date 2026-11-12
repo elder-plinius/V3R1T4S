@@ -1,0 +1,2 @@
+target_id,submission_id,status,metric_name,metric_value,metric_sd,baseline_value,object_path
+eterna100-v2-vienna2-algorithmic-solve,2026-11-08-mizopl-3aa1af0b,CONFIRMED_SOLUTION,solved_v2_puzzles_d_bp_zero,95,0,92,object/certificate.json
