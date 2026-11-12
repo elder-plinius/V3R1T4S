@@ -11,8 +11,11 @@ Verifies:
    #71 Variation of a crop circle; 96/100 exact MFE ground state de_mfe = 0.00 kcal/mol including
    #68 Taraxacum officinale), verifying exact dot-bracket base-pair sets, Watson-Crick-Wobble compatibility,
    symmetric-difference base-pair distance d_bp, and all 100-element metric vectors.
-3. Machine-checkable Turner 2004 thermodynamic barrier certificates and 3 general mathematical laws in
-   `object/p3_undesignability_certificates.json` for all 5 Sample Solution = None targets (#68, #86, #90, #99, #100).
+3. Internal consistency of the local Turner 2004 motif energy analyses in
+   `object/p3_undesignability_certificates.json` for #68, #86, #90, #99, #100.
+   CORRECTION (2026-11-12, see CORRECTION.md): the p3 claim is WITHDRAWN. These are local motif
+   analyses, NOT undesignability certificates; #68, #86, #90 and #99 have official V2/Vienna2 sample
+   solutions that fold exactly to target under stock ViennaRNA 2.6.4 (only #100 is undisclosed).
 4. Live Turner 2004 MFE folding (`RNA.fold` and `RNA.eval_structure_simple` at T = 37.0 C) across all 100
    sequences and all p3 barrier witness motifs whenever ViennaRNA (`import RNA`) is installed.
 """
@@ -370,8 +373,8 @@ def main() -> None:
 
     verify_p3_certificates(p3, cert, ckpt)
     print(
-        "[OK] p3 Thermodynamic Barrier Certificates & 3 Mathematical Laws verified across all 5 "
-        "Sample Solution = None targets (#68, #86, #90, #99, #100)."
+        "[OK] Local Turner 2004 motif analyses for #68, #86, #90, #99, #100 internally consistent "
+        "(p3 claim WITHDRAWN 2026-11-12: not undesignability certificates; see CORRECTION.md)."
     )
     print("PASS")
 
