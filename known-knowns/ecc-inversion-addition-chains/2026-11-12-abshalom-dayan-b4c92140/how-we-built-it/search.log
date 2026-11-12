@@ -1,0 +1,5 @@
+curve 2 L=256 Jb=129 BW=21 KB=256 init cost 284 (dict 26, main 258) states 38675
+[c2 s1009] it 30065 best 283 (dict 29)
+[c2 s1009] it 140904 best 282 (dict 29)
+[c2 s1009] it 563759 best 281 (dict 29)
+[c2 s1009] done it 841216 evals 495339 best 281 states/eval 18912
