@@ -1,0 +1,7 @@
+gate check 1: upstream identity of drat-trim.c (one GET, pinned commit, body saved next to this file as upstream-body.tmp and hashed)
+fetch time 2026-11-12T03:09:48Z
+url https://raw.githubusercontent.com/marijnheule/drat-trim/2e3b2dc0ecf938addbd779d42877b6ed69d9a985/drat-trim.c
+http_status 200 bytes 59546
+sha256 of the fetched body: d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee
+sha256 of claim/checker/src/drat-trim.c: d834b649f437e091597f5347f259b9f681087f89ca0844d0cee250a1a1a0c2ee
+IDENTICAL bytes
