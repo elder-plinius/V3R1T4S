@@ -1,0 +1,3 @@
+valid solutions: 66526760
+PASS
+pipeline exit 0 (1171 s)

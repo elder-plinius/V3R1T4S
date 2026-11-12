@@ -1,0 +1,9 @@
+SMnuR 12 | RESULT SMnuR Qmax 12: inequivalent = 95067546 | 3 s
+SM 20 | RESULT SM Qmax 20: inequivalent = 1071441 | 0 s
+SM 36 | RESULT SM Qmax 36: inequivalent = 32457211 | 40 s
+SM 37 | RESULT SM Qmax 37: inequivalent = 37347334 | 56 s
+SM 38 | RESULT SM Qmax 38: inequivalent = 42898799 | 44 s
+SM 39 | RESULT SM Qmax 39: inequivalent = 51237625 | 53 s
+SM 40 | RESULT SM Qmax 40: inequivalent = 58626334 | 65 s
+SM 41 | RESULT SM Qmax 41: inequivalent = 66526761 | 80 s
+SM 42 | RESULT SM Qmax 42: inequivalent = 79174540 | 105 s
