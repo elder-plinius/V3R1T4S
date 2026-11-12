@@ -1,0 +1,43 @@
+# one-edit neighbours of the dictionary in seed_dictionary.txt, scored with beam KB=2048
+# candidates: 663 (1 base, deletions, insertions of a sum, replacements by a sum)
+# histogram length:count  282:11 283:183 284:150 285:3 308:1 309:37 310:229 311:49
+282 base
+282 ins 4363
+282 ins 8726
+282 ins 17452
+282 ins 34904
+282 ins 69808
+282 ins 139616
+282 ins 699109
+282 ins 699574
+282 ins 838597
+282 rep 139552->70033
+283 ins 3
+283 ins 6
+283 ins 9
+283 ins 12
+283 ins 18
+283 ins 24
+283 ins 36
+283 ins 48
+283 ins 65
+283 ins 72
+283 ins 96
+283 ins 130
+283 ins 144
+283 ins 192
+283 ins 259
+283 ins 260
+283 ins 261
+283 ins 265
+283 ins 288
+283 ins 289
+283 ins 384
+283 ins 385
+283 ins 512
+283 ins 514
+283 ins 515
+283 ins 521
+283 ins 529
+283 ins 545
+283 ins 770
