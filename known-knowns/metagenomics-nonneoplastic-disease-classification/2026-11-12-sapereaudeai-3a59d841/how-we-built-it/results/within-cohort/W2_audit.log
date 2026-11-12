@@ -1,0 +1,12 @@
+W2 species RF {"auc_mean": 0.7684041666666667, "margin95": 0.12352534962698178, "ci95": [0.6448788170396849, 0.8919295162936485], "repeats": 20, "rep_mean_range95": [0.7247020833333334, 0.8159104166666666], "n_folds_scored": 200} 131s
+W2 cov LR depth 0.6606 [0.5269, 0.7943] frac_pub 0.613
+W2 cov LR age 0.5654 [0.4251, 0.7058] frac_pub 0.25
+W2 cov LR bmi 0.6724 [0.5402, 0.8047] frac_pub 0.658
+W2 cov LR age+bmi 0.6624 [0.5388, 0.786] frac_pub 0.62
+W2 cov LR country 0.5046 [0.4352, 0.574] frac_pub 0.018
+W2 cov LR study 0.5 [0.5, 0.5] frac_pub 0.0
+W2 cov LR ALL 0.6828 [0.5532, 0.8124] frac_pub 0.698
+W2 cov LR ALL+sex 0.683 [0.5537, 0.8123] frac_pub 0.699
+W2 cov RF study 0.5 [0.5, 0.5]
+W2 cov RF ALL 0.5736 [0.4489, 0.6982]
+W2 done 419.4 s

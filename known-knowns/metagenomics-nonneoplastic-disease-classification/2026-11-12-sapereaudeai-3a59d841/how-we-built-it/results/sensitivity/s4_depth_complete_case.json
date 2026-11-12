@@ -1,0 +1,26 @@
+{
+ "auc_mean": 0.6245157157454063,
+ "margin95": 0.04100357727294269,
+ "ci95": [
+  0.5835121384724636,
+  0.665519293018349
+ ],
+ "repeats": 20,
+ "rep_mean_range95": [
+  0.6201056728122953,
+  0.6287580677025831
+ ],
+ "n_folds_scored": 200,
+ "n": 818,
+ "cases": 223,
+ "frac_vs_published": 0.3694828360397814,
+ "by_dataset_depth_median_log10": {
+  "Quin_gut_liver_cirrhosis": 7.606,
+  "WT2D": 7.464,
+  "Zeller_fecal_colorectal_cancer": 7.799,
+  "hmp": 8.031,
+  "metahit": 7.665,
+  "t2dmeta_long": 7.635,
+  "t2dmeta_short": 7.469
+ }
+}

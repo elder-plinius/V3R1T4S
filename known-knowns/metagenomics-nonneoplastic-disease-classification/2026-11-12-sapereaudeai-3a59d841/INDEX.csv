@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+metagenomics-nonneoplastic-disease-classification,p3 (confound audit of the MetAML T2D AUCs: covariate-only and within-study-permutation AUCs and fractions),"study of origin alone 0.840 in the pooled set (101% of the published signal); age alone 0.735 within Qin 2012 (96%); within-study permutation 0.760 (77%)","published RF species AUCs 0.744, 0.762, 0.743, 0.837",2026-11-12T18:27:02Z,object/audit_results.csv,3a59d8419b0ec3f809e9b8f51d0447624da7f34e454d46c6a603ef6b0a57af89

@@ -1,0 +1,32 @@
+{
+ "W1": {
+  "covariate": "age_n",
+  "tolerance": 3.0,
+  "n_matched_pairs": 3572,
+  "n_all_pairs": 29580,
+  "species_score_auc_matched_pairs_mean": 0.7109672452407615,
+  "range95": [
+   0.6868596024636059,
+   0.7220184770436731
+  ],
+  "raw_covariate_auc_matched_pairs": 0.5389137737961927,
+  "species_score_auc_all_pairs_mean": 0.7417604800540906,
+  "spearman_score_vs_cov_controls": 0.20335680177110604,
+  "spearman_score_vs_cov_cases": 0.08905549932938214
+ },
+ "W2": {
+  "covariate": "bmi_n",
+  "tolerance": 1.0,
+  "n_matched_pairs": 273,
+  "n_all_pairs": 2279,
+  "species_score_auc_matched_pairs_mean": 0.7695970695970695,
+  "range95": [
+   0.7296245421245421,
+   0.8131868131868132
+  ],
+  "raw_covariate_auc_matched_pairs": 0.5476190476190477,
+  "species_score_auc_all_pairs_mean": 0.7544866169372532,
+  "spearman_score_vs_cov_controls": 0.2623966253553951,
+  "spearman_score_vs_cov_cases": 0.21664652879599838
+ }
+}
