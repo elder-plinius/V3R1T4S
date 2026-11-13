@@ -1,0 +1,16 @@
+{
+  "target": "node-kayles-lattices-petersen-a316632-a316533",
+  "solver": "nk_solver (128-bit 1-WL canonical graph Sprague-Grundy DP)",
+  "calibration": {
+    "A316632_1_to_17": [2, 1, 1, 0, 3, 3, 2, 2, 2, 3, 3, 5, 2, 4, 1, 3, 2],
+    "A316533_odd_5_to_25": [1, 1, 1, 0, 1, 1, 0, 0, 1, 0, 0],
+    "table1_shaded": {"L_5x5": 3, "L_5x6": 3, "L_5x7": 2}
+  },
+  "newly_resolved_table1_cells": {
+    "L_5x8": {"nimber": 0, "outcome": "second_player_win"},
+    "L_6x7": {"nimber": 3, "outcome": "first_player_win"},
+    "L_5x9": {"nimber": 4, "outcome": "first_player_win"},
+    "L_7x7": {"nimber": 1, "outcome": "first_player_win"},
+    "L_5x10": {"nimber": 1, "outcome": "first_player_win"}
+  }
+}

@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+node-kayles-lattices-petersen-a316632-a316533,"Table 1 (L_{5x8}, L_{6x7}, L_{5x9}, L_{7x7}, L_{5x10})","0, 3, 4, 1, 1","blank, blank, >0, >0, blank",2026-11-13T01:01:20Z,object/table1_cells.json,6b05f2a392c44f27e5fa22338a439003c2fd74327641511a47f7d111902a5bf7
