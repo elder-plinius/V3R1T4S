@@ -1,0 +1,6 @@
+MH1 and MH2 together, 1971 days 36-365, all three types: 39 gaps of 9.487 h or longer (the stretch around the A38 onset is 9.487 h), covering 8.2% of the span; longest 89.122 h; gaps of 8 h or longer: 57
+  start dates of those gaps (35 distinct days): 1971-02-05 1971-03-01 1971-03-02 1971-03-27 1971-03-30 1971-03-31 1971-04-01 1971-04-02 1971-04-03 1971-04-04 1971-04-05 1971-04-10 1971-04-24 1971-04-28 1971-04-29 1971-04-30 1971-05-01 1971-05-03 1971-05-13 1971-05-25 1971-05-26 1971-05-28 1971-06-27 1971-06-29 1971-07-01 1971-08-24 1971-08-28 1971-09-25 1971-10-24 1971-10-26 1971-11-01 1971-11-09 1971-11-21 1971-11-24 1971-12-13
+  the stretch around the onset (9.487 h) ranks 39 of 71272 gaps by length
+MH1, 1971 days 36-365, all three types: 49 gaps of 9.487 h or longer (the stretch around the A38 onset is 9.487 h), covering 10.2% of the span; longest 89.122 h; gaps of 8 h or longer: 76
+MH2, 1971 days 36-365, all three types: 52 gaps of 9.487 h or longer (the stretch around the A38 onset is 9.487 h), covering 11.2% of the span; longest 89.863 h; gaps of 8 h or longer: 78
+days with no catalogued interval of any type: MH1 9, MH2 10 (of 330)
