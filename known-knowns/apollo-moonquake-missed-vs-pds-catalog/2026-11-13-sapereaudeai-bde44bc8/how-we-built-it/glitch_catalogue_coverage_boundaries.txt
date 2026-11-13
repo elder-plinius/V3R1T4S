@@ -1,0 +1,7 @@
+S14_ACC-Spike_MH1_all.csv: last interval before the onset 1971-05-13 08:50:29.433962 to 1971-05-13 08:50:54.641509; first after 1971-05-13 20:42:31.698113 to 1971-05-13 20:42:56.905660; longest interval 40.151 s
+S14_ACC-Spike_MH2_all.csv: last interval before the onset 1971-05-13 09:38:57.660377 to 1971-05-13 09:39:22.867924; first after 1971-05-13 19:30:17.660377 to 1971-05-13 19:30:42.867924; longest interval 40.151 s
+S14_ACC-Step-Up_MH1_all.csv: last interval before the onset 1971-05-13 08:23:51.094340 to 1971-05-13 08:24:16.150944; first after 1971-05-13 20:57:33.132075 to 1971-05-13 20:57:53.358490; longest interval 30.189 s
+S14_ACC-Step-Up_MH2_all.csv: last interval before the onset 1971-05-13 08:04:14.037736 to 1971-05-13 08:04:39.245283; first after 1971-05-13 20:24:57.811321 to 1971-05-13 20:25:28; longest interval 30.189 s
+S14_ACC-Step-Down_MH1_all.csv: last interval before the onset 1971-05-13 09:38:54.339623 to 1971-05-13 09:39:24.528302; first after 1971-05-13 19:30:14.188679 to 1971-05-13 19:30:44.377358; longest interval 50.113 s
+S14_ACC-Step-Down_MH2_all.csv: last interval before the onset 1971-05-13 09:38:53.886792 to 1971-05-13 09:39:19.094339; first after 1971-05-13 19:08:36.981132 to 1971-05-13 19:09:02.188679; longest interval 50.113 s
+all six MH1/MH2 files: last interval end before the onset 1971-05-13 09:39:24.528302 (S14_ACC-Step-Down_MH1_all.csv, 32439.207 s before the onset); first interval start after 1971-05-13 19:08:36.981132 (S14_ACC-Step-Down_MH2_all.csv, 1713.246 s after)

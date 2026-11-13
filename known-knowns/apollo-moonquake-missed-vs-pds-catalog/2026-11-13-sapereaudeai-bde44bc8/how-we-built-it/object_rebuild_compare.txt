@@ -1,0 +1,12 @@
+window_and_template.csv: rebuilt sha256 e02acd9da97601894cb567e0b4cab3090ef6f1ac8eef09fb0d970584cfaf5279, package sha256 e02acd9da97601894cb567e0b4cab3090ef6f1ac8eef09fb0d970584cfaf5279 -> IDENTICAL
+null_full_span_maxima.csv: rebuilt sha256 fdf9a5e636490f3b94348e29cae52885d4aefbe36dcf952dc8fb729c4959657c, package sha256 fdf9a5e636490f3b94348e29cae52885d4aefbe36dcf952dc8fb729c4959657c -> IDENTICAL
+null_daily_maxima.csv: rebuilt sha256 8e93f7d99dca8511e16fe78898d71355a9bd988ffb2bac902681ea4077677b66, package sha256 8e93f7d99dca8511e16fe78898d71355a9bd988ffb2bac902681ea4077677b66 -> IDENTICAL
+NCC MH1 0.726768 MH2 0.756719 D 0.741743 (rounded 0.7268 0.7567 0.7417); null C0 0.21237, best phase-randomised 0.28679, controls 401, best of all 0.28679
+prepped valid fraction in window: MH1 1.0000 MH2 1.0000; window index i0 222513, M 1491
+g2_raw_window.csv: rebuilt sha256 4b2f86d423d6930c24b2aef9b0386ce5c2bd5d677e7165dde27baf63b2e38fdd, package sha256 4b2f86d423d6930c24b2aef9b0386ce5c2bd5d677e7165dde27baf63b2e38fdd -> IDENTICAL
+g2_raw_window.csv: 2981 samples per channel, valid MH1 2981 MH2 2981, sha256 4b2f86d423d6930c24b2aef9b0386ce5c2bd5d677e7165dde27baf63b2e38fdd
+frozen glitch rule on MH1 raw window: MAD 4.000, threshold 32.000, max |x - median| 26.0, flagged samples 0
+frozen glitch rule on MH2 raw window: MAD 6.000, threshold 48.000, max |x - median| 38.0, flagged samples 0
+g2_prepped_window_pm10s.csv: rebuilt sha256 9583c36b476a18e2d3f7d176891c46de719f0130281c0ca50eab9be966474fd1, package sha256 9583c36b476a18e2d3f7d176891c46de719f0130281c0ca50eab9be966474fd1 -> IDENTICAL
+g2_prepped_window_pm10s.csv: offsets -33..1523, sha256 9583c36b476a18e2d3f7d176891c46de719f0130281c0ca50eab9be966474fd1
+central prepped rows equal window_and_template.csv data columns: True
