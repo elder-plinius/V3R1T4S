@@ -12,7 +12,7 @@ A saved bundle (IRSA TAP queries, CatWISE2020 rows, unTimely detections, Legacy 
 
 ## Partial wins
 
-- **p1:** Pipeline recovers >= 90% of the UltracoolSheet T7-Y dwarfs inside a declared region of >= 1000 deg^2 with the same cuts (as written this is unreachable: the criterion's own motion cut, CatWISE2020 total proper motion >= 150 mas/yr at >= 6 sigma, itself recovers only 15 of the 21 such dwarfs in a 2,488 deg^2 high-latitude region, so either the 90% bar or the requirement to use the same cuts has to give), and lists the false positives left after automated vetting (no visual inspection).
+- **p1:** Pipeline recovers >= 90% of the UltracoolSheet T7-Y dwarfs inside a declared region of >= 1000 deg^2 with the same cuts (as written this is unreachable: the criterion's own motion cut, CatWISE2020 total proper motion >= 150 mas/yr at >= 6 sigma, itself recovers only 15 of the 21 such dwarfs in a declared high-latitude region of a few thousand square degrees, so either the 90% bar or the requirement to use the same cuts has to give), and lists the false positives left after automated vetting (no visual inspection).
 - **p2:** A batch of >= 5 new candidates with W1-W2 between 1.5 and 2.0 (mid-T colours) meeting (2)-(4).
 - **p3:** An object of any colour with total motion >= 1 arcsec/yr confirmed in two independent surveys (e.g. CatWISE2020 and Legacy Surveys/Pan-STARRS epochs), absent from SIMBAD and with no Gaia DR3 counterpart of consistent motion: a missing high-proper-motion nearby object.
 
