@@ -1,0 +1,6 @@
+wk inc rsv hosp: published n_units 6032, n_comparison_units 5824; best truth vintage as_of 2026-09-02 (max relative |diff| of the two WIS 0); ensemble units with truth 6032
+  RSVHub-ensemble        n 5824 (published 5824)  WIS 29.00743753 (published 29.00743753)  MAE 45.11206211 (published 45.11206211)
+  UGA_flucast-INFLAenza  n 5824 (published 5824)  WIS 40.80432946 (published 40.80432946)  MAE 66.66105769 (published 66.66105769)
+wk inc rsv prop ed visits: published n_units 5586, n_comparison_units 5350; best truth vintage as_of 2026-09-02 (max relative |diff| of the two WIS 4.84e-14); ensemble units with truth 5586
+  RSVHub-ensemble        n 5350 (published 5350)  WIS 0.00082381104 (published 0.00082381104)  MAE 0.001227394344 (published 0.001227394344)
+  UGA_flucast-INFLAenza  n 5350 (published 5350)  WIS 0.0009037065455 (published 0.0009037065455)  MAE 0.001356583082 (published 0.001356583082)

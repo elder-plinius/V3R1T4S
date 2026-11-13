@@ -1,0 +1,15 @@
+oracle-output: 5145 rows repeat a (target, location, target_end_date) once per output_type (quantile, sample) with the same value; the quantile rows are used.
+wk inc rsv hosp: 38728 model tasks with quantiles, 0 dropped for an incomplete set of the 23 levels.
+wk inc rsv hosp: 0 model tasks have no oracle value (unscored for every model).
+wk inc rsv hosp: max |pinball - interval| WIS over all scored rows = 1.36e-12.
+wk inc rsv hosp: RSVHub-ensemble has 29 files and 6763 scored tasks; horizon -1 present on 12 of its reference dates.
+wk inc rsv hosp: RSVHub-baseline has reference dates without an ensemble file: 2025-09-20.
+wk inc rsv prop ed visits: 26103 model tasks with quantiles, 0 dropped for an incomplete set of the 23 levels.
+wk inc rsv prop ed visits: 0 model tasks have no oracle value (unscored for every model).
+wk inc rsv prop ed visits: TARGET_END_DATE INCONSISTENT: RSVHub-ensemble file 2025-09-27 has 250 tasks whose target_end_date is not reference_date + 7*horizon (offset in weeks: -1); they are scored at the target_end_date they state (task id = reference_date, location, horizon, target_end_date), as a hubverse join on target_end_date would.
+wk inc rsv prop ed visits: TARGET_END_DATE INCONSISTENT: UGA_flucast-INFLAenza file 2025-09-27 has 250 tasks whose target_end_date is not reference_date + 7*horizon (offset in weeks: -1); they are scored at the target_end_date they state (task id = reference_date, location, horizon, target_end_date), as a hubverse join on target_end_date would.
+wk inc rsv prop ed visits: RSVHub-ensemble file 2025-09-27 has 184 tasks sharing a (reference_date, location, horizon) with another task of the same file (different target_end_date); each is a separate task here.
+wk inc rsv prop ed visits: max |pinball - interval| WIS over all scored rows = 5.55e-16.
+wk inc rsv prop ed visits: sensitivity, RSVHub-ensemble mean WIS: 0.000887532 on all 6382 tasks; 0.000918589 on its 6132 date-consistent tasks only; 0.000931546 with every task of its file(s) holding inconsistent rows dropped.
+wk inc rsv prop ed visits: RSVHub-ensemble has 29 files and 6382 scored tasks; horizon -1 present on 12 of its reference dates.
+wk inc rsv prop ed visits: RSVHub-baseline has reference dates without an ensemble file: 2025-09-20.
