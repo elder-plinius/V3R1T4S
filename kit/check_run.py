@@ -464,7 +464,7 @@ def run_own_checker(c, pkg, label, timeout):
             c.warn("%s: no sh found; could not run run_checks.sh" % label)
             return
         last = last_nonempty(out)
-        if rc != 0 or not re.search(r"\bPASS\b", last) or re.search(r"\bFAIL\b", last):
+        if rc != 0 or last != "PASS":
             c.fail("%s: its own checker did not pass from a clean copy (exit %s, last line: %s)" % (label, rc, last[:80]))
             return
         c.ok("%s: run_checks.sh prints PASS from a clean copy" % label)
@@ -486,7 +486,7 @@ def run_own_checker(c, pkg, label, timeout):
             c.warn("%s: could not build a corrupted copy of object/ to test the checker" % label)
             return
         rc2, out2 = _run_checks(bad, timeout)
-        if rc2 == 0 and re.search(r"\bPASS\b", last_nonempty(out2)):
+        if rc2 == 0 and last_nonempty(out2) == "PASS":
             c.warn("%s: the checker still printed PASS after one digit of the object was changed; make sure it really checks the object" % label)
         elif rc2 is not None and rc2 > 0 and last_nonempty(out2) == "FAIL":
             # SUBMIT.md defines terminal PASS/FAIL. Negative statuses are
