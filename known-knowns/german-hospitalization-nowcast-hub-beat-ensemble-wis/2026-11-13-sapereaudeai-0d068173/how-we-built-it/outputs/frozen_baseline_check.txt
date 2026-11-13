@@ -1,0 +1,1 @@
+baseline targets 106053; equal to raw-truncation 7-day sums: 106053; differ: 0; NaN: 0; max |diff| 0.0; sum |diff| 0.0

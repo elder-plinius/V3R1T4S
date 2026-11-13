@@ -1,0 +1,116 @@
+== p3 recomputation start
+assembly rows 7577313 baseline rows 848424 baseline model names ['KIT-frozen_baseline']
+models ['Epiforecasts', 'ILM', 'KIT', 'KIT-frozen_baseline', 'LMU', 'MeanEnsemble', 'MedianEnsemble', 'RIVM', 'RKI', 'SU', 'SZ']
+truth check: published rows 57596 hub-recomputed rows 57596 in both 57596 only published 0 only hub 0 max |diff| on common 0.0
+S1 exclusion: listed keys 4376 rows removed (all models) 38296
+fix_RKI: RKI rows with value > 1e6 or NA replaced: 48
+fix_epiforecasts: Epiforecasts targets with the 0.1 quantile interpolated: 29348
+fix_ILM: rows filled 1008 unfilled (NA) 0
+fix_LMU: rows filled 60291 unfilled (NA) 0
+S2 exclusion rows removed 39176
+
+== S0: cells 31, within 1%: 25, max |rel diff| 1.110e-01
+   level               model  n_rows  n_nan         wis     pub_wis  rel_diff
+national        Epiforecasts   31001      0  434.919319  423.087782  0.027965
+national                 ILM   32151      0  142.236951  142.629049 -0.002749
+national                 KIT   32277      0  256.147627  256.110167  0.000146
+national KIT-frozen_baseline   32277      0 1569.311863 1572.717273 -0.002165
+national                 LMU   32277      0  464.808896  465.845663 -0.002226
+national        MeanEnsemble   32263      0  258.862562  259.594450 -0.002819
+national      MedianEnsemble   32263      0  319.116458  319.914816 -0.002496
+national                RIVM   32277      0  288.264262  289.050644 -0.002721
+national                 RKI   32277      3         NaN  382.935129       NaN
+national                  SU   32277      0  381.448333  382.449575 -0.002618
+national                  SZ   32151      0  522.397096  521.690717  0.001354
+  states        Epiforecasts  495407      0   26.963295   26.436121  0.019941
+  states                 KIT  516432      0   21.967570   21.966840  0.000033
+  states KIT-frozen_baseline  516432      0   98.186795   98.412409 -0.002293
+  states                 LMU  456141      0   32.664707   29.401141  0.111001
+  states        MeanEnsemble  516208      0   22.139173   22.186471 -0.002132
+  states      MedianEnsemble  516208      0   23.712048   23.762139 -0.002108
+  states                RIVM  516432      0   24.308871   24.336784 -0.001147
+  states                 RKI  516432      3         NaN   30.707846       NaN
+  states                  SU  516432      0   25.382832   25.438785 -0.002200
+  states                  SZ  514416      0   36.561367   36.505418  0.001533
+     age        Epiforecasts  186006      0   66.532965   64.845978  0.026015
+     age                 ILM  192906      0   29.219317   29.299157 -0.002725
+     age                 KIT  193662      0   44.004519   44.002534  0.000045
+     age KIT-frozen_baseline  193662      0  261.801959  262.370653 -0.002168
+     age                 LMU  193662      0   76.607056   76.780345 -0.002257
+     age        MeanEnsemble  193578      0   41.361797   41.484004 -0.002946
+     age      MedianEnsemble  193578      0   50.240991   50.372454 -0.002610
+     age                RIVM  193662      0   46.179366   46.283498 -0.002250
+     age                  SU  193662      0   59.367063   59.509585 -0.002395
+     age                  SZ  192906      0   87.547931   87.425626  0.001399
+
+== S1: cells 31, within 1%: 25, max |rel diff| 1.141e-01
+   level               model  n_rows  n_nan         wis     pub_wis      rel_diff
+national        Epiforecasts   30881      0  435.740710  423.087782  2.990615e-02
+national                 ILM   32046      0  142.570126  142.629049 -4.131228e-04
+national                 KIT   32137      0  256.110167  256.110167  0.000000e+00
+national KIT-frozen_baseline   32137      0 1572.717273 1572.717273  0.000000e+00
+national                 LMU   32137      0  465.845663  465.845663  2.220446e-16
+national        MeanEnsemble   32137      0  259.594450  259.594450 -2.220446e-16
+national      MedianEnsemble   32137      0  319.914816  319.914816 -2.220446e-16
+national                RIVM   32137      0  289.050644  289.050644  2.220446e-16
+national                 RKI   32137      3         NaN  382.935129           NaN
+national                  SU   32137      0  382.449575  382.449575  2.220446e-16
+national                  SZ   32137      0  521.690717  521.690717  0.000000e+00
+  states        Epiforecasts  493487      0   27.022264   26.436121  2.217204e-02
+  states                 KIT  513583      0   21.966840   21.966840  0.000000e+00
+  states KIT-frozen_baseline  513583      0   98.412409   98.412409  0.000000e+00
+  states                 LMU  453432      0   32.754392   29.401141  1.140517e-01
+  states        MeanEnsemble  513583      0   22.186471   22.186471  0.000000e+00
+  states      MedianEnsemble  513583      0   23.762139   23.762139  2.220446e-16
+  states                RIVM  513583      0   24.336784   24.336784  0.000000e+00
+  states                 RKI  513583      3         NaN   30.707846           NaN
+  states                  SU  513583      0   25.438785   25.438785  0.000000e+00
+  states                  SZ  513583      0   36.505418   36.505418  2.220446e-16
+     age        Epiforecasts  185286      0   66.661480   64.845978  2.799714e-02
+     age                 ILM  192276      0   29.277264   29.299157 -7.472338e-04
+     age                 KIT  192822      0   44.002534   44.002534 -1.110223e-16
+     age KIT-frozen_baseline  192822      0  262.370653  262.370653  2.220446e-16
+     age                 LMU  192822      0   76.780345   76.780345  2.220446e-16
+     age        MeanEnsemble  192822      0   41.484004   41.484004  2.220446e-16
+     age      MedianEnsemble  192822      0   50.372454   50.372454  2.220446e-16
+     age                RIVM  192822      0   46.283498   46.283498  0.000000e+00
+     age                  SU  192822      0   59.509585   59.509585 -2.220446e-16
+     age                  SZ  192822      0   87.425626   87.425626 -1.110223e-16
+
+== S2: cells 31, within 1%: 31, max |rel diff| 1.031e-04
+   level               model  n_rows  n_nan         wis     pub_wis      rel_diff
+national        Epiforecasts   32137      0  423.131410  423.087782  1.031180e-04
+national                 ILM   32137      0  142.629049  142.629049  0.000000e+00
+national                 KIT   32137      0  256.110167  256.110167  0.000000e+00
+national KIT-frozen_baseline   32137      0 1572.717273 1572.717273  0.000000e+00
+national                 LMU   32137      0  465.845663  465.845663  2.220446e-16
+national        MeanEnsemble   32137      0  259.594450  259.594450 -2.220446e-16
+national      MedianEnsemble   32137      0  319.914816  319.914816 -2.220446e-16
+national                RIVM   32137      0  289.050644  289.050644  2.220446e-16
+national                 RKI   32137      0  382.935129  382.935129  0.000000e+00
+national                  SU   32137      0  382.449575  382.449575  2.220446e-16
+national                  SZ   32137      0  521.690717  521.690717  0.000000e+00
+  states        Epiforecasts  513583      0   26.436459   26.436121  1.278995e-05
+  states                 KIT  513583      0   21.966840   21.966840  0.000000e+00
+  states KIT-frozen_baseline  513583      0   98.412409   98.412409  0.000000e+00
+  states                 LMU  513583      0   29.401141   29.401141  0.000000e+00
+  states        MeanEnsemble  513583      0   22.186471   22.186471  0.000000e+00
+  states      MedianEnsemble  513583      0   23.762139   23.762139  2.220446e-16
+  states                RIVM  513583      0   24.336784   24.336784  0.000000e+00
+  states                 RKI  513583      0   30.707846   30.707846  0.000000e+00
+  states                  SU  513583      0   25.438785   25.438785  0.000000e+00
+  states                  SZ  513583      0   36.505418   36.505418  2.220446e-16
+     age        Epiforecasts  192822      0   64.846022   64.845978  6.732514e-07
+     age                 ILM  192822      0   29.299157   29.299157  2.220446e-16
+     age                 KIT  192822      0   44.002534   44.002534 -1.110223e-16
+     age KIT-frozen_baseline  192822      0  262.370653  262.370653  2.220446e-16
+     age                 LMU  192822      0   76.780345   76.780345  2.220446e-16
+     age        MeanEnsemble  192822      0   41.484004   41.484004  2.220446e-16
+     age      MedianEnsemble  192822      0   50.372454   50.372454  2.220446e-16
+     age                RIVM  192822      0   46.283498   46.283498  0.000000e+00
+     age                  SU  192822      0   59.509585   59.509585 -2.220446e-16
+     age                  SZ  192822      0   87.425626   87.425626 -1.110223e-16
+
+S2 component max abs diffs: 0.06288511245863049 0.1065130882116545 3.291663830395919e-09
+S2 all 31 published cells present: True
+== done

@@ -1,0 +1,3 @@
+numpy==2.4.6
+pandas==3.1.0
+# Python 3.11.15; no R needed
