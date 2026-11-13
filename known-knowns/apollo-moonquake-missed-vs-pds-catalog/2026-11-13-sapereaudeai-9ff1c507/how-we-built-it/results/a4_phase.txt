@@ -1,0 +1,22 @@
+catalogued A100 events: 62
+shortest 95% interval: [46.70, 318.34] width 271.6 deg (k=59 of 62)
+candidate phase 157.15 deg; second candidate 161.49 deg
+A100 phase histogram (30 deg bins): {0: 1, 30: 3, 60: 2, 90: 1, 120: 4, 150: 7, 180: 11, 210: 4, 240: 9, 270: 12, 300: 7, 330: 1}
+circular mean 237.6 deg, resultant length 0.401; candidate offset from mean -80.4 deg
+events within +/- 20 deg of the candidate phase: 7 of 62 (uniform expectation 6.9)
+  1973-01-03T16:47 cat phase  209.8  dt    nan d
+  1973-02-27T06:35 cat phase  202.8  dt  54.58 d
+  1973-03-22T08:22 cat phase  144.3  dt  23.07 d
+  1973-03-26T14:20 cat phase  199.8  dt   4.25 d
+  1973-05-19T22:52 cat phase  190.0  dt  54.36 d
+  1973-07-01T02:50 cat phase   20.8  dt  42.17 d
+  1973-07-09T10:45 cat phase  129.7  dt   8.33 d
+  1973-07-13T12:20 cat phase  182.8  dt   4.07 d
+  1973-08-09T18:30 cat phase  178.9  dt  27.26 d
+  1973-08-20T07:32 cat phase  316.7  dt  10.54 d
+  1973-09-05T21:48 cat phase  173.5  dt  16.59 d
+  1973-10-02T22:53 cat phase  166.8  dt  27.05 d
+  1973-10-30T02:25 NEW phase  161.5  dt  27.15 d
+  1973-11-09T17:05 cat phase  300.1  dt  10.61 d
+  1973-11-26T07:46 NEW phase  157.2  dt  16.61 d
+  1973-12-23T15:53 cat phase  154.3  dt  27.34 d

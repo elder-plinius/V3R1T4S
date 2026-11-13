@@ -1,0 +1,2 @@
+1973-11-26T07:46:28.641 R6 matches (live tables): [] | onodera: [] | nearest rows (min): [(70.5, 'levent 73-330 0636 T2=A N2=203'), (117.5, 'levent 73-330 0549 T2=A N2=252'), (178.5, 'levent 73-330 0448 T2=A N2=20')]
+1973-10-30T02:25:51.509 R6 matches (live tables): [] | onodera: [] | nearest rows (min): [(85.9, 'levent 73-303 0100 T2=A N2=1'), (176.1, 'levent 73-303 0522 T2=C N2=nan'), (313.1, 'levent 73-303 0739 T2=A N2=8')]

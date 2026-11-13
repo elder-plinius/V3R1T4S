@@ -1,0 +1,26 @@
+unparsed row in jgre20429-sup-0003-supinfo__Tabelle1.tsv : ['', '08:22:49.10', '298.9', 'D', 'LPY', '']
+unparsed row in jgre20429-sup-0003-supinfo__Tabelle1.tsv : ['', '23:36:35.90', '576.9', 'I', 'LPX', '']
+unparsed row in jgre20429-sup-0003-supinfo__Tabelle1.tsv : ['', '22:38:55.80', '610.4', 'I', 'LPX', '']
+rows parsed: 287 span 1972-05-06 03:25:06.800000 -> 1975-06-27 07:04:55.300000
+per year: {1972: 43, 1973: 71, 1974: 121, 1975: 52}
+raw bytes jgre20429-sup-0002-supinfo.xls: 8-bit date strings 175, utf-16 date strings 0
+raw bytes jgre20429-sup-0003-supinfo.xls: 8-bit date strings 49, utf-16 date strings 0
+raw bytes jgre20429-sup-0004-supinfo.xls: 8-bit date strings 23, utf-16 date strings 0
+raw date strings total 247 ; TSV rows 287 ; same multiset: False
+raw date strings in 1973-11: ['1973/11/05', '1973/11/06', '1973/11/07', '1973/11/18', '1973/11/28']
+raw date strings in 1973-10-25..11-05: ['1973/10/26', '1973/11/05']
+onset 1973-11-26T07:46:28.641000: rows within +/- 5 min or spanning it: 0
+   nearest 1973-11-28T14:40:37.500000 (+54.9 h) dur 701.0 s class D ch LPX cluster  [jgre20429-sup-0002-supinfo]
+   nearest 1973-11-18T08:25:16.700000 (-191.4 h) dur 472.8 s class D ch LPX cluster A 25 (i) [jgre20429-sup-0002-supinfo]
+   nearest 1973-12-04T20:53:44.800000 (+205.1 h) dur 502.6 s class D ch LPX cluster  [jgre20429-sup-0002-supinfo]
+window_start 1973-11-26T07:45:58.641000: rows within +/- 5 min or spanning it: 0
+   nearest 1973-11-28T14:40:37.500000 (+54.9 h) dur 701.0 s class D ch LPX cluster  [jgre20429-sup-0002-supinfo]
+   nearest 1973-11-18T08:25:16.700000 (-191.3 h) dur 472.8 s class D ch LPX cluster A 25 (i) [jgre20429-sup-0002-supinfo]
+   nearest 1973-12-04T20:53:44.800000 (+205.1 h) dur 502.6 s class D ch LPX cluster  [jgre20429-sup-0002-supinfo]
+second_candidate_onset 1973-10-30T02:25:51.509000: rows within +/- 5 min or spanning it: 0
+   nearest 1973-10-26T09:06:07.600000 (-89.3 h) dur 379.5 s class D ch LPX cluster  [jgre20429-sup-0002-supinfo]
+   nearest 1973-10-24T22:19:15.600000 (-124.1 h) dur 460.1 s class D ch LPX cluster  [jgre20429-sup-0003-supinfo]
+   nearest 1973-11-05T01:11:11.200000 (+142.8 h) dur 242.7 s class D ch LPY cluster  [jgre20429-sup-0002-supinfo]
+N1 pass: True
+raw unique 238 tsv unique 238 equal sets True
+raw time strings 287 any 07:4x on raw: ['07:41:51.40', '07:46:41.15']

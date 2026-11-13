@@ -1,0 +1,6 @@
+A14 1973-01-13T09:22:15.056Z Dt 0.264 best {'s14': 0.3505, 's16': 0.4097} lags -1.811 1.208 - - r9 gap THERMFAIL 
+A100 1973-04-22T18:28:36.943Z Dt 0.410 best {'s14': 0.566, 's16': 0.4098} lags 1.811 1.811 - - r9 gap thermal 
+A100 1973-11-26T07:46:28.641Z Dt 0.343 best {'s14': 0.5621, 's16': 0.6994} lags 1.509 2.113 R7 p1cc r9 gap thermal 
+A100 1973-10-30T02:25:51.509Z Dt 0.298 best {'s14': 0.6211, 's16': 0.6196} lags -1.509 -0.906 R7 p1cc r9 gap thermal 
+A100 1973-01-30T23:06:52.188Z Dt 0.265 best {'s14': 0.5067, 's16': 0.5657} lags -1.509 0.906 R7 - r9 gap thermal ono
+total new above null 5
