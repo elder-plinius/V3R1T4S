@@ -1,0 +1,404 @@
+{
+  "scope": "All main-matching cached binary word lists with M>=8734; coordinate fixing, optional complement/padding; distance assumed from published claim, no new search",
+  "main_commit": "04fdfba48c6e277fe083b6811f1a5deb3c52b74e",
+  "controls": "PASS",
+  "results": [
+    {
+      "file": "A29_6_12_61823.txt",
+      "sha256": "d467400b0827c8db81a1c9348317ca1d645c049d6cb54fdf5b927964490e4d2f",
+      "main_blob_sha1": "0e16b3861ecd42f6134431233524c379a178f978",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A29_6_12_61823.txt"
+      ],
+      "n": 29,
+      "w": 12,
+      "M": 61823,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 1,
+          "required_fixed_zeros": 3,
+          "packing_upper_bound": 37145,
+          "audit": {
+            "fixed_ones": 1,
+            "fixed_zeros": 3,
+            "maximum_survivors": 5368,
+            "argmax": {
+              "ones": [
+                19
+              ],
+              "zeros": [
+                11,
+                21,
+                28
+              ]
+            },
+            "patterns_counted": 95004,
+            "sum": 504475680
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 6,
+          "packing_upper_bound": 17334,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 4,
+            "maximum_survivors": 6243,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                3,
+                5,
+                21,
+                22
+              ]
+            },
+            "patterns_counted": 23751,
+            "sum": 147138740
+          },
+          "excluded": true
+        }
+      ]
+    },
+    {
+      "file": "A26_6_11_12222.txt",
+      "sha256": "0637a3a3ee1fa65d5230bacbf14fb7a88c56a047fc5a24db614ccd795e488961",
+      "main_blob_sha1": "1372217ac69c6a607cd2b7ee8abaa6609e2d1024",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A26_6_11_12222.txt"
+      ],
+      "n": 26,
+      "w": 11,
+      "M": 12222,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 1,
+          "packing_upper_bound": 37145,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 1,
+            "maximum_survivors": 7100,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                22
+              ]
+            },
+            "patterns_counted": 26,
+            "sum": 183330
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 4,
+          "packing_upper_bound": 9044,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 3,
+            "maximum_survivors": 2200,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                21,
+                22,
+                24
+              ]
+            },
+            "patterns_counted": 2600,
+            "sum": 5561010
+          },
+          "excluded": true
+        }
+      ]
+    },
+    {
+      "file": "A29_6_11_41219.txt",
+      "sha256": "505ba4d63b0faab9bf8a4e470cebb3111f5622a40985d3324a34a0b994ebee25",
+      "main_blob_sha1": "c005fbeed9fc36a8fe6e39d9864a863cf14a1dca",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A29_6_11_41219.txt"
+      ],
+      "n": 29,
+      "w": 11,
+      "M": 41219,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 4,
+          "packing_upper_bound": 37145,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 4,
+            "maximum_survivors": 5365,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                1,
+                6,
+                13,
+                15
+              ]
+            },
+            "patterns_counted": 23751,
+            "sum": 126130140
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 7,
+          "packing_upper_bound": 9044,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 4,
+            "maximum_survivors": 5365,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                1,
+                6,
+                13,
+                15
+              ]
+            },
+            "patterns_counted": 23751,
+            "sum": 126130140
+          },
+          "excluded": true
+        }
+      ]
+    },
+    {
+      "file": "A51_6_6_11184.txt",
+      "sha256": "2e6f09bcacc16fa3f0a3bddb450567e52cd405afbb48dadb91f605c2a0701955",
+      "main_blob_sha1": "40c0b7d7a2bf7c208b55a454799ac3757bd94a00",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A51_6_6_11184.txt"
+      ],
+      "n": 51,
+      "w": 6,
+      "M": 11184,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 31,
+          "packing_upper_bound": 323,
+          "excluded_by_packing": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 34,
+          "packing_upper_bound": 158,
+          "excluded_by_packing": true
+        }
+      ]
+    },
+    {
+      "file": "A25_6_12_9895.txt",
+      "sha256": "b2631ed9296e9a0622a535edaba582a715520fe06af36de4d51cd1cf18698519",
+      "main_blob_sha1": "b3b7fd27c25966b5c29909985402a29bccb563b5",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A25_6_12_9895.txt"
+      ],
+      "n": 25,
+      "w": 12,
+      "M": 9895,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 1,
+          "required_fixed_zeros": 0,
+          "packing_upper_bound": 23772,
+          "audit": {
+            "fixed_ones": 1,
+            "fixed_zeros": 0,
+            "maximum_survivors": 4758,
+            "argmax": {
+              "ones": [
+                8
+              ],
+              "zeros": []
+            },
+            "patterns_counted": 25,
+            "sum": 118740
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 2,
+          "packing_upper_bound": 17334,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 2,
+            "maximum_survivors": 2586,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                0,
+                24
+              ]
+            },
+            "patterns_counted": 300,
+            "sum": 771810
+          },
+          "excluded": true
+        }
+      ]
+    },
+    {
+      "file": "A29_6_10_25974.txt",
+      "sha256": "5551204c40538f6b11e53e60414e417d5ff7d8c8c59b40a8185ddd59a9de9cd3",
+      "main_blob_sha1": "edb22920c72101d512bd4de60820eca20c55760c",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A29_6_10_25974.txt"
+      ],
+      "n": 29,
+      "w": 10,
+      "M": 25974,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 5,
+          "packing_upper_bound": 16343,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 3,
+            "maximum_survivors": 7226,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                8,
+                21,
+                27
+              ]
+            },
+            "patterns_counted": 3654,
+            "sum": 25168806
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 8,
+          "packing_upper_bound": 4522,
+          "excluded_by_packing": true
+        }
+      ]
+    },
+    {
+      "file": "A26_6_13_16225.txt",
+      "sha256": "be7b1c9464c67bc9cac8c175214c607291cb427e127534b30994b29eff4f274e",
+      "main_blob_sha1": "79e0644e8db550a0fa09a070408340ca4c306a1c",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/codes/A26_6_13_16225.txt"
+      ],
+      "n": 26,
+      "w": 13,
+      "M": 16225,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 2,
+          "required_fixed_zeros": 0,
+          "packing_upper_bound": 23772,
+          "audit": {
+            "fixed_ones": 2,
+            "fixed_zeros": 0,
+            "maximum_survivors": 3984,
+            "argmax": {
+              "ones": [
+                0,
+                20
+              ],
+              "zeros": []
+            },
+            "patterns_counted": 325,
+            "sum": 1265550
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 2,
+          "packing_upper_bound": 32001,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 2,
+            "maximum_survivors": 4635,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                18,
+                25
+              ]
+            },
+            "patterns_counted": 325,
+            "sum": 1265550
+          },
+          "excluded": true
+        }
+      ]
+    },
+    {
+      "file": "pr28-code.txt",
+      "sha256": "9e824e9f8a92e74226231152fc8e8a972be5ba79549e2a10e512fe63a3934f49",
+      "main_blob_sha1": "b421dde3356b5f7bd2a31c0398d190620e8e0258",
+      "live_main_paths": [
+        "known-knowns/bigger-codes/2026-10-14-freelsgood-9e824e9f/object/A27_6_10_13026.txt"
+      ],
+      "n": 27,
+      "w": 10,
+      "M": 13026,
+      "targets": [
+        {
+          "target_weight": 11,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 3,
+          "packing_upper_bound": 16343,
+          "audit": {
+            "fixed_ones": 0,
+            "fixed_zeros": 3,
+            "maximum_survivors": 3056,
+            "argmax": {
+              "ones": [],
+              "zeros": [
+                0,
+                3,
+                6
+              ]
+            },
+            "patterns_counted": 2925,
+            "sum": 8857680
+          },
+          "excluded": true
+        },
+        {
+          "target_weight": 14,
+          "required_fixed_ones": 0,
+          "required_fixed_zeros": 6,
+          "packing_upper_bound": 4522,
+          "excluded_by_packing": true
+        }
+      ]
+    }
+  ],
+  "wall_seconds": 46.87887304194737,
+  "max_rss_bytes": 49528832,
+  "threads": 1
+}

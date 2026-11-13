@@ -1,0 +1,5 @@
+Historical limitations, not fabricated reconstruction:
+- StageK runtime package versions were not captured; current installed19Oct versions are separately pinned as observed-current only. Origin owner-recheck interpreter/driver was not recorded.
+- Complete historical chain has not been replayed. Exact engine arguments, source/module closure and input8732 are supplied; original raw logs/supervision remain in private audit. All explicit input/output hashes and source commits are recorded in PROVENANCE_WINDOWS.md.
+- F/G/H/K operational deviations and initial gate failures are preserved in original note/INDEX/REPORT. Earlier provisional novelty verdicts are preserved in panel/history; final independent panel reports supersede scientific disposition without erasing history.
+These are disclosed source-history limits. The supplied frozen object is independently and exhaustively verifiable without historical dependencies.

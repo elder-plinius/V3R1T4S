@@ -1,0 +1,31 @@
+[
+  {
+    "file": "extension-01-arxiv-phrase-union.body",
+    "total": 309,
+    "returned": 309,
+    "coverage_complete_for_query": true,
+    "max_updated": "2026-10-12T09:17:17Z",
+    "since_old_intake": [],
+    "new_or_changed_against_cached_union": []
+  },
+  {
+    "file": "extension-03-arxiv-binary-recent.body",
+    "total": 71,
+    "returned": 71,
+    "coverage_complete_for_query": true,
+    "max_updated": "2026-10-16T15:33:22Z",
+    "since_old_intake": [],
+    "new_or_changed_against_cached_union": [
+      {
+        "id": "http://arxiv.org/abs/2610.23626v1",
+        "updated": "2026-10-16T15:33:22Z",
+        "published": "2026-10-16T15:33:22Z",
+        "title": "Four New Single-Error-Correcting Binary Codes",
+        "abstract": "We construct a $(16, 3072, 3)$-code, a $(17,6144,3)$-code, an $(18,12288,3)$-code and a $(19,24576,3)$-code. Consequently, we get four new lower bounds: $A(16,3) \\geq 3072$, $A(17,3) \\geq 6144$, $A(18,3) \\geq 12288$ and $A(19,3) \\geq~24576$. Each of the codes consists of a union of cosets of a linear code. The constructions are the result of a computer search executing a tabu search algorithm.",
+        "authors": [
+          "Moshe Milshtein"
+        ]
+      }
+    ]
+  }
+]

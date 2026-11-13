@@ -1,0 +1,72 @@
+{
+  "request_count": 5,
+  "body_bytes": 903468,
+  "historical_usage": {
+    "GET_count": 9,
+    "GET_bytes": 9660698,
+    "search_HTTP_events": 52,
+    "search_bytes": "UNKNOWN",
+    "manager_scientific_reads": "UNKNOWN"
+  },
+  "requests": [
+    {
+      "number": 1,
+      "name": "arxiv-phrase-union",
+      "url": "https://export.arxiv.org/api/query?search_query=all%3A%22constant+weight%22+OR+all%3A%22constant-weight%22&start=0&max_results=500&sortBy=lastUpdatedDate&sortOrder=descending",
+      "method": "GET",
+      "started_utc": "2026-10-19T11:48:15.268542+00:00",
+      "status": 200,
+      "response_utc": "2026-10-19T11:48:17.975465+00:00",
+      "bytes": 586775,
+      "sha256": "c8720105f95d9999438fe026b5d4b55c19fa5da38495929ed2cdecbad63201f4"
+    },
+    {
+      "number": 2,
+      "name": "trophy-main",
+      "url": "https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md",
+      "method": "GET",
+      "started_utc": "2026-10-19T11:48:46.809745+00:00",
+      "status": 200,
+      "response_utc": "2026-10-19T11:48:47.244978+00:00",
+      "bytes": 31235,
+      "sha256": "b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1"
+    },
+    {
+      "number": 3,
+      "name": "arxiv-binary-recent",
+      "url": "https://export.arxiv.org/api/query?search_query=%28all%3A%22binary+codes%22+AND+%28all%3A%22lower+bounds%22+OR+all%3A%22constructions%22%29%29+AND+submittedDate%3A%5B202501010000+TO+202610192359%5D&start=0&max_results=500&sortBy=lastUpdatedDate&sortOrder=descending",
+      "method": "GET",
+      "started_utc": "2026-10-19T11:48:47.289796+00:00",
+      "status": 200,
+      "response_utc": "2026-10-19T11:48:48.678032+00:00",
+      "bytes": 144851,
+      "sha256": "c4b490c36e486999621aaee7b41cddd66069ef383d2ee03f7eeaa4f65d4a4a7d"
+    },
+    {
+      "number": 4,
+      "name": "milshtein-abs",
+      "url": "https://arxiv.org/abs/2610.23626",
+      "method": "GET",
+      "started_utc": "2026-10-19T11:49:34.869593+00:00",
+      "status": 200,
+      "response_utc": "2026-10-19T11:49:35.072279+00:00",
+      "bytes": 38842,
+      "sha256": "1d74319c754e104b8942d9c2530149ed6548eb2053f15c5b89e5468fd04786cb"
+    },
+    {
+      "number": 5,
+      "name": "milshtein-html",
+      "url": "https://arxiv.org/html/2610.23626v1",
+      "method": "GET",
+      "started_utc": "2026-10-19T11:49:43.662751+00:00",
+      "status": 200,
+      "response_utc": "2026-10-19T11:49:43.724199+00:00",
+      "bytes": 101765,
+      "sha256": "eb2949c5d995f28e91e714522fcd887afab35f7fcb8cef41b1039f202a996f3b"
+    }
+  ],
+  "previous_batch": {
+    "requests": 20,
+    "body_bytes": 13406940
+  }
+}

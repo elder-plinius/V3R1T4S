@@ -1,0 +1,18 @@
+{
+  "target_bound": 8718,
+  "origin": {
+    "source": {
+      "n": 25,
+      "d": 6,
+      "w": 11,
+      "M": 8718,
+      "text": "8718-24630"
+    },
+    "steps": []
+  },
+  "grid_cells": 670,
+  "echols_rows": 124,
+  "echols_max_M": 4386,
+  "echols_direct_target": [],
+  "scope": "All captured n\\w grids for d>=6 plus Echols124; complement, pigeonhole shortening, constant padding, distance relaxation. Other constructions not exhaustively excluded."
+}
