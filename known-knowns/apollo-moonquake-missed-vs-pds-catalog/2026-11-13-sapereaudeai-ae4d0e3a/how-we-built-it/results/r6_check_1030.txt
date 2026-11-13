@@ -1,0 +1,28 @@
+dated rows loaded: 13239; unparsed (malformed in the source): ['lognonne_2003 M 761142313', 'lognonne_2003 M 7704712332', 'lognonne_2003 A16 721081524']
+onset 1973-10-30T02:25:51.509: catalogue rows within +/- 5 min or spanning it: 0 []; Onodera windows: 0 []
+   nearest: 1973-10-30T01:00 (start -85.9 min, stop -25.9 min) levent 73-303 0100 T2=A N2=1
+   nearest: 1973-10-30T05:22 (start +176.1 min, stop +214.1 min) levent 73-303 0522 T2=C N2=nan
+   nearest: 1973-10-30T07:39 (start +313.1 min, stop +344.1 min) levent 73-303 0739 T2=A N2=8
+   nearest: 1973-10-29T19:22 (start -423.9 min, stop -375.9 min) levent 73-302 1922 T2=C N2=nan
+   nearest Onodera: 1973-10-30T06:06-06:50 (+220.1 min) onodera S16 id 2014 type 4
+   nearest Onodera: 1973-10-29T19:59-20:38 (-386.9 min) onodera S14 id 3372 type 2
+window_start 1973-10-30T02:25:21.509: catalogue rows within +/- 5 min or spanning it: 0 []; Onodera windows: 0 []
+   nearest: 1973-10-30T01:00 (start -85.4 min, stop -25.4 min) levent 73-303 0100 T2=A N2=1
+   nearest: 1973-10-30T05:22 (start +176.6 min, stop +214.6 min) levent 73-303 0522 T2=C N2=nan
+   nearest: 1973-10-30T07:39 (start +313.6 min, stop +344.6 min) levent 73-303 0739 T2=A N2=8
+   nearest: 1973-10-29T19:22 (start -423.4 min, stop -375.4 min) levent 73-302 1922 T2=C N2=nan
+   nearest Onodera: 1973-10-30T06:06-06:50 (+220.6 min) onodera S16 id 2014 type 4
+   nearest Onodera: 1973-10-29T19:59-20:38 (-386.4 min) onodera S14 id 3372 type 2
+levent and other rows on 1973 days 302-304:
+   1973-10-29T07:50 -> 1973-10-29T08:08 levent 73-302 0750 T2=C N2=nan
+   1973-10-29T08:08 -> 1973-10-29T08:50 levent 73-302 0808 T2=A N2=20
+   1973-10-29T19:22 -> 1973-10-29T20:10 levent 73-302 1922 T2=C N2=nan
+   1973-10-30T01:00 -> 1973-10-30T02:00 levent 73-303 0100 T2=A N2=1
+   1973-10-30T05:22 -> 1973-10-30T06:00 levent 73-303 0522 T2=C N2=nan
+   1973-10-30T07:39 -> 1973-10-30T08:10 levent 73-303 0739 T2=A N2=8
+   1973-10-30T22:06 -> 1973-10-30T22:30 levent 73-303 2206 T2=M N2=nan
+   1973-10-30T23:42 -> 1973-10-31T00:10 levent 73-303 2342 T2=A N2=285
+   1973-10-31T00:30 -> 1973-10-31T01:00 levent 73-304 0030 T2=A N2=427
+   1973-10-31T03:22 -> 1973-10-31T04:10 levent 73-304 0322 T2=A N2=33
+   1973-10-31T19:00 -> 1973-10-31T19:30 levent 73-304 1900 T2=A N2=73
+R6 pass: True
