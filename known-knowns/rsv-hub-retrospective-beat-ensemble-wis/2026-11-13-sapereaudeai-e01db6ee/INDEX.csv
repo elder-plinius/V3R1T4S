@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+rsv-hub-retrospective-beat-ensemble-wis,"p3: per-model season WIS, CDCgov/rsv-forecast-hub 2025-26 (e947ca8), wk inc rsv hosp and wk inc rsv prop ed visits","13 (target, model) rows; RSVHub-ensemble hosp mean WIS 27.72865565 on 6763 tasks","none: the hub repository has no score file",2026-11-13T05:24:10Z,object/p3_table.csv,e01db6ee9d55baf24c06fa801c2fdfee27d9c1f70d1d513b9e98b75bd6d2f804

@@ -1,0 +1,12 @@
+command: python -I baseline/reproduce_era_table.py data/cdcgov/hub   (run 2026-11-13T02:48:17Z)
+incomplete quantile sets dropped: 0
+truth: oracle e947ca8  max |pinball - interval| = 2.27e-13
+  Google_SAI-RSVEns    tasks  4576 dates 22  mean WIS  14.635 (published 14.7, |diff| 0.065, tol 0.344: WITHIN)  MAE  21.15 (pub 21.2)  cov95 0.849 (pub 0.85)
+  RSVHub-ensemble      tasks  4576 dates 22  mean WIS  16.422 (published 16.4, |diff| 0.022, tol 0.378: WITHIN)  MAE  25.29 (pub 25.3)  cov95 0.874 (pub 0.87)
+  CEPH-Rtrend_rsv      tasks  4576 dates 22  mean WIS  19.804 (published 19.8, |diff| 0.004, tol 0.446: WITHIN)  MAE  28.47 (pub 28.4)  cov95 0.776 (pub 0.78)
+  RSVHub-baseline      tasks  4576 dates 22  mean WIS  18.306 (published 18.3, |diff| 0.006, tol 0.416: WITHIN)  MAE  27.75 (pub 27.8)  cov95 0.934 (pub 0.93)
+truth: time-series as_of 2026-06-03  max |pinball - interval| = 2.27e-13
+  Google_SAI-RSVEns    tasks  4264 dates 22  mean WIS  15.453 (published 14.7, |diff| 0.753, tol 0.344: MISS)  MAE  22.28 (pub 21.2)  cov95 0.838 (pub 0.85)
+  RSVHub-ensemble      tasks  4264 dates 22  mean WIS  17.276 (published 16.4, |diff| 0.876, tol 0.378: MISS)  MAE  26.60 (pub 25.3)  cov95 0.866 (pub 0.87)
+  CEPH-Rtrend_rsv      tasks  4264 dates 22  mean WIS  20.836 (published 19.8, |diff| 1.036, tol 0.446: MISS)  MAE  30.01 (pub 28.4)  cov95 0.766 (pub 0.78)
+  RSVHub-baseline      tasks  4264 dates 22  mean WIS  19.096 (published 18.3, |diff| 0.796, tol 0.416: MISS)  MAE  29.13 (pub 27.8)  cov95 0.929 (pub 0.93)

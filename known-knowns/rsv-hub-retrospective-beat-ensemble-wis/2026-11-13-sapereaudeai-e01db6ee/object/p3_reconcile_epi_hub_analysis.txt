@@ -1,0 +1,13 @@
+published rows: 26248, models: CEPH-Rtrend_rsv, CFA_Pyrenew-Pyrenew_HE_RSV, CFA_Pyrenew-Pyrenew_H_RSV, Google_SAI-RSVEns, RSVHub-baseline, RSVHub-ensemble, UM-DeepOutbreak, reference dates 2026-01-03..2026-05-30 (22), targets ['wk inc rsv hosp']
+published rows without a matching hub forecast: 0
+our WIS with the PUBLISHED truth_value vs the published wis, all 26248 rows: max |diff| 9.09e-13, rows with |diff| > 1e-6: 0
+truth values: published truth_value differs from the pinned oracle-output on 171 of 1378 (location, target_end_date) pairs
+per model on the published summary task set (52 states, horizons 0-3): published mean WIS | ours with published truth | ours with pinned oracle
+  CEPH-Rtrend_rsv              tasks  4576  19.75763996 | 19.75763996 | 19.803893
+  CFA_Pyrenew-Pyrenew_HE_RSV   tasks  1984  (no row) | 15.01005508 | 14.933485
+  CFA_Pyrenew-Pyrenew_H_RSV    tasks  2234  (no row) | 16.80060365 | 16.901411
+  Google_SAI-RSVEns            tasks  4576  14.65155295 | 14.65155295 | 14.634641
+  RSVHub-baseline              tasks  4576  18.34533023 | 18.34533023 | 18.305849
+  RSVHub-ensemble              tasks  4576  16.40276131 | 16.40276131 | 16.422096
+  UM-DeepOutbreak              tasks   912  (no row) | 35.95413849 | 36.003880
+UGA_flucast-INFLAenza: absent from the published rows; the published loader keeps only .csv model-output files and UGA_flucast-INFLAenza submits .parquet files (28 of its in-season files are .parquet).
