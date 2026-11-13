@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+square-grid-lattice-gas-exact-counts-oeis,"A210662 row 29 cells T(29,k), k=12..28 (17 integers)","see object/a210662_row29.txt (largest T(29,28), 230 digits)","378-term triangular b-file rows 1..27; row 29 absent; no published column k>=12",2026-11-08T21:10:19Z,object/a210662_row29.txt,40ffe1fc5dd3a32c5df858f95b30da659de2ec80ba7fca1f87396a890bc4c490
