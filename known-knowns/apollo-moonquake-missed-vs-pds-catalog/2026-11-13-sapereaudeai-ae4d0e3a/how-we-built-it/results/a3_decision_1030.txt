@@ -1,0 +1,41 @@
+candidate: R_MH1 2.179 R_MH2 1.050 r2 0.0424
+nearest reference before: {'event': 'levent 73-303 0100 T2=A N2=1', 't0': '1973-10-30T01:00:00', 'R1': 23.741, 'R2': 1.679, 'r2': 0.0299, 'window_h': 12}
+nearest reference after: {'event': 'levent 73-303 0739 T2=A N2=8', 't0': '1973-10-30T07:39:00', 'R1': 1.698, 'R2': 0.965, 'r2': -0.0506, 'window_h': 12}
+all reference events within +/- 12 h (R_MH1 >= 1.5, valid):
+   1973-10-30T01:00:00 levent 73-303 0100 T2=A N2=1 R1 23.74 R2 1.68 r2 0.030 flags16 {'LPX': '1', 'LPY': '1', 'LPZ': '1'}
+   1973-10-30T07:39:00 levent 73-303 0739 T2=A N2=8 R1 1.70 R2 0.96 r2 -0.051 flags16 {'LPX': '1', 'LPY': '', 'LPZ': ''}
+A3 verdict: S16 MH2 unresponsive at the candidate time: its S16 MH2 null is explained, no contradiction (C3 does not hold)
+
+r2 of 1973 levent rows with R_MH1 >= 1.5 (valid), by 30-day block: n, median, fraction r2 <= 0.25
+   days   1- 30: n  71 median  0.328 frac<=0.25 0.37
+   days  31- 60: n  81 median  0.336 frac<=0.25 0.41
+   days  61- 90: n  51 median  0.618 frac<=0.25 0.35
+   days  91-120: n  52 median  0.705 frac<=0.25 0.38
+   days 121-150: n  68 median  1.011 frac<=0.25 0.22
+   days 151-180: n  54 median  0.818 frac<=0.25 0.37
+   days 181-210: n  58 median  0.253 frac<=0.25 0.50
+   days 211-240: n  37 median  0.268 frac<=0.25 0.49
+   days 241-270: n  58 median  0.861 frac<=0.25 0.36
+   days 271-300: n  59 median  0.472 frac<=0.25 0.39
+   days 301-330: n  32 median  0.137 frac<=0.25 0.59
+   days 331-360: n  46 median  0.972 frac<=0.25 0.17
+   days 361-390: n  10 median  0.564 frac<=0.25 0.30
+1973-01-30 23:06 (new, A100-like): reference events within +/- 24 h: n 8, r2 values [0.2, 0.16, 0.05, 0.16, 0.29, 0.03, 0.93, 0.08]
+1973-10-30 02:25 (candidate of this run): reference events within +/- 24 h: n 6, r2 values [-0.02, 0.02, 0.03, -0.05, 0.07, 0.08]
+1973-11-26 07:46 (first claimed event): reference events within +/- 24 h: n 5, r2 values [0.02, 0.13, 0.02, 0.11, -0.05]
+
+catalogued 1973 A100 events: R_MH1, R_MH2, r2, and the median r2 of reference events within +/- 24 h
+   1973-01-03T16:47:00 R1 2.05 R2 1.45 r2 0.4297 | nearby median r2 0.271 (n 8)
+   1973-02-27T06:35:00 R1 1.3 R2 1.43 r2 None | nearby median r2 0.306 (n 8)
+   1973-03-22T08:22:00 R1 15.7 R2 17.18 r2 1.1005 | nearby median r2 2.218 (n 3)
+   1973-03-26T14:20:00 R1 2.85 R2 4.05 r2 None | nearby median r2 0.753 (n 11)
+   1973-05-19T22:52:00 R1 0.91 R2 1.86 r2 None | nearby median r2 1.44 (n 4)
+   1973-07-01T02:50:00 R1 1.3 R2 1.06 r2 None | nearby median r2 0.061 (n 5)
+   1973-07-09T10:45:00 R1 2.35 R2 3.15 r2 None | nearby median r2 None (n 0)
+   1973-07-13T12:20:00 R1 3.39 R2 4.29 r2 None | nearby median r2 1.026 (n 12)
+   1973-08-09T18:30:00 R1 2.17 R2 3.09 r2 None | nearby median r2 0.094 (n 1)
+   1973-08-20T07:32:00 R1 3.29 R2 2.96 r2 0.8565 | nearby median r2 1.502 (n 2)
+   1973-09-05T21:48:00 R1 2.33 R2 2.38 r2 1.0374 | nearby median r2 1.026 (n 1)
+   1973-10-02T22:53:00 R1 None R2 None r2 None | nearby median r2 -0.006 (n 3)
+   1973-11-09T17:05:00 R1 5.19 R2 6.74 r2 None | nearby median r2 0.661 (n 4)
+   1973-12-23T15:53:00 R1 2.71 R2 3.0 r2 1.1739 | nearby median r2 0.852 (n 7)

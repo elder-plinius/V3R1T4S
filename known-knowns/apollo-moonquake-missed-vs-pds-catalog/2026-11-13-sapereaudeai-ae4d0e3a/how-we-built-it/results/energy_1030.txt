@@ -1,0 +1,10 @@
+candidate 1973-10-30
+  S14 MH1: R 1.589, percentile among 301 random onsets of the day 92.4 (random median 1.020); raw window std 0.529 DU, MAD 0.0, frac at median 0.673; raw 20-min noise std 0.723 DU
+  S14 MH2: R 1.859, percentile among 351 random onsets of the day 91.2 (random median 1.014); raw window std 0.618 DU, MAD 0.0, frac at median 0.587; raw 20-min noise std 0.536 DU
+  S16 MH1: R 2.179, percentile among 346 random onsets of the day 95.4 (random median 1.016); raw window std 0.898 DU, MAD 1.0, frac at median 0.430; raw 20-min noise std 0.737 DU
+  S16 MH2: R 1.050, percentile among 336 random onsets of the day 70.5 (random median 1.006); raw window std 1.308 DU, MAD 1.0, frac at median 0.277; raw 20-min noise std 1.335 DU
+first claim 1973-11-26
+  S14 MH1: R 25.253, percentile among 302 random onsets of the day 65.2 (random median 3.528); raw window std 0.204 DU, MAD 0.0, frac at median 0.964; raw 20-min noise std 0.100 DU
+  S14 MH2: R 2.450, percentile among 302 random onsets of the day 86.8 (random median 1.004); raw window std 1.265 DU, MAD 0.0, frac at median 0.583; raw 20-min noise std 0.559 DU
+  S16 MH1: R 2.493, percentile among 188 random onsets of the day 82.4 (random median 1.101); raw window std 0.970 DU, MAD 1.0, frac at median 0.388; raw 20-min noise std 0.650 DU
+  S16 MH2: R 1.270, percentile among 198 random onsets of the day 90.4 (random median 1.008); raw window std 1.236 DU, MAD 1.0, frac at median 0.304; raw 20-min noise std 1.184 DU
