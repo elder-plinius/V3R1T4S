@@ -1,0 +1,16 @@
+season 2024-25; hub wide tasks 17586 (incomplete dropped 0); ours wide tasks 15155 (incomplete 0)
+max |pinball - interval| hub 2.73e-12 ours 1.36e-12
+                            comparator  tasks  missing_ours  dates  wis_ours  wis_comp     rel  rel_lo  rel_hi       dif     dif_lo   dif_hi  signflip_p
+MAIN hub-ensemble (all ensemble tasks)   3065             0     14   72.2386   99.7021 -0.2755 -0.3578 -0.1984  -27.4635   -35.1231 -19.0583      0.0038
+         P2 hub-ensemble (0-0.99, 1-4)   1390             0     13   48.1374   64.6925 -0.2559 -0.3310 -0.1752  -16.5550   -21.9394 -10.8386      0.0051
+         descr hub-ensemble 0-130 only    980             0     14  126.8202  179.7678 -0.2945 -0.3889 -0.2130  -52.9476   -69.1525 -35.7236      0.0027
+                    P1 CEPH-Rtrend_rsv   1680             0     24  108.0979  106.0856  0.0190 -0.1725  0.2436    2.0123   -20.1196  21.4838      0.5751
+                       P1 CU-RSV_SVIRS   5840             0     23   64.2594   89.4240 -0.2814 -0.3623 -0.1784  -25.1646   -38.1393 -12.2955      0.0011
+                       P1 JHU_CSSE-RSV   1163             0     19  124.0460  269.3898 -0.5395 -0.6004 -0.4624 -145.3437  -199.7692 -88.2800      0.0000
+                       P1 Metaculus-cp     76             0     19 1037.4091 1729.6471 -0.4002 -0.6338 -0.0114 -692.2380 -1376.3022 -13.3236      0.0082
+              P1 UGA_flucast-INFLAenza   1613             0     24  112.1558  222.7081 -0.4964 -0.5746 -0.4082 -110.5522  -147.1909 -70.1528      0.0000
+                    P1 UM-DeepOutbreak   1196             0     23  127.2797  245.2604 -0.4810 -0.5551 -0.3749 -117.9807  -179.4478 -61.9136      0.0000
+                       P1 hub-baseline    798             0     16   97.3331  191.0367 -0.4905 -0.5724 -0.2048  -93.7037  -161.1465 -17.9956      0.0027
+MAIN criterion (R7: rel <= -0.03 and rel_hi < 0): MET (rel -0.2755, 90% [-0.3578, -0.1984])
+P2 (R9: rel < 0 and rel_hi < 0): MET (rel -0.2559, 90% [-0.3310, -0.1752])
+P1 (R8: every model rel < 0 and rel_hi < 0): NOT MET; failing: P1 CEPH-Rtrend_rsv

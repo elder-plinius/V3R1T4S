@@ -1,0 +1,32 @@
+== 1. block length (final truth, PREREG uses L = 3)
+MAIN L=1                                                   tasks  3065  ours    72.239  ens    99.702  rel -0.2755  90% [-0.3746, -0.1579]
+P2   L=1                                                   tasks  1390  ours    48.137  ens    64.692  rel -0.2559  90% [-0.3493, -0.1298]
+MAIN L=2                                                   tasks  3065  ours    72.239  ens    99.702  rel -0.2755  90% [-0.3698, -0.1866]
+P2   L=2                                                   tasks  1390  ours    48.137  ens    64.692  rel -0.2559  90% [-0.3401, -0.1617]
+MAIN L=3                                                   tasks  3065  ours    72.239  ens    99.702  rel -0.2755  90% [-0.3578, -0.1984]
+P2   L=3                                                   tasks  1390  ours    48.137  ens    64.692  rel -0.2559  90% [-0.3310, -0.1752]
+MAIN L=4                                                   tasks  3065  ours    72.239  ens    99.702  rel -0.2755  90% [-0.3521, -0.2088]
+P2   L=4                                                   tasks  1390  ours    48.137  ens    64.692  rel -0.2559  90% [-0.3253, -0.1831]
+MAIN L=6                                                   tasks  3065  ours    72.239  ens    99.702  rel -0.2755  90% [-0.3444, -0.2154]
+P2   L=6                                                   tasks  1390  ours    48.137  ens    64.692  rel -0.2559  90% [-0.3177, -0.1945]
+== 3. breakdowns (final truth)
+MAIN horizon 0                                             tasks   613  ours    56.885  ens    75.772  rel -0.2493  90% [-0.3888, -0.0849]
+MAIN horizon 1                                             tasks   613  ours    64.522  ens    91.468  rel -0.2946  90% [-0.4128, -0.1731]
+MAIN horizon 2                                             tasks   613  ours    72.446  ens   102.399  rel -0.2925  90% [-0.3898, -0.1944]
+MAIN horizon 3                                             tasks   613  ours    78.591  ens   109.425  rel -0.2818  90% [-0.3695, -0.2170]
+MAIN horizon 4                                             tasks   613  ours    88.749  ens   119.446  rel -0.2570  90% [-0.3452, -0.1900]
+MAIN age 0-0.99                                            tasks   695  ours    37.780  ens    47.905  rel -0.2114  90% [-0.3429, -0.0449]
+MAIN age 0-130                                             tasks   980  ours   126.820  ens   179.768  rel -0.2945  90% [-0.3889, -0.2130]
+MAIN age 1-4                                               tasks   695  ours    58.495  ens    81.480  rel -0.2821  90% [-0.3497, -0.2035]
+MAIN age 5-64                                              tasks   695  ours    43.477  ens    56.823  rel -0.2349  90% [-0.3434, -0.1112]
+MAIN US only                                               tasks   265  ours   464.796  ens   839.440  rel -0.4463  90% [-0.5247, -0.3673]
+MAIN states only                                           tasks  2800  ours    35.086  ens    29.691  rel +0.1817  90% [+0.0827, +0.2634]
+MAIN leave-one-date-out rel: min -0.3225 (2025-01-12) max -0.2400 (2025-02-09)
+MAIN dates where ours < ensemble: 12 of 14
+== 2. alternative truths (same task keys, ours vs hub-ensemble)
+MAIN truth=first                                           tasks  2941  ours    71.446  ens    56.580  rel +0.2627  90% [+0.0283, +0.4938]
+P2   truth=first                                           tasks  1342  ours    45.031  ens    35.449  rel +0.2703  90% [+0.0121, +0.5023]
+MAIN truth=plus4w                                          tasks  3023  ours    70.552  ens    95.728  rel -0.2630  90% [-0.3497, -0.1811]
+P2   truth=plus4w                                          tasks  1390  ours    45.576  ens    58.735  rel -0.2240  90% [-0.3190, -0.1186]
+MAIN truth=season_end                                      tasks  3065  ours    69.794  ens    93.530  rel -0.2538  90% [-0.3413, -0.1661]
+P2   truth=season_end                                      tasks  1390  ours    45.621  ens    58.158  rel -0.2156  90% [-0.3150, -0.1072]
