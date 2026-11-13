@@ -1,0 +1,26 @@
+{
+ "published": {
+  "annual": [
+   1.0,
+   1065
+  ],
+  "winter": [
+   0.59,
+   999
+  ],
+  "summer": [
+   0.7,
+   1028
+  ]
+ },
+ "tolerance": 0.01,
+ "reimplementation_printed": {
+  "annual": 0.9962432769999511,
+  "winter": 0.5881431288741465,
+  "summer": 0.7000514608796857
+ },
+ "source_published": "khsjursen/ML_MB_Norway @ 32d8175adab27963c6ca2766f2420f24cdb72a6b, src/3.1.1_ML_model_performance_test.ipynb, cell 36 output",
+ "source_printed": "how-we-built-it/output/result_primary.json (score.*.rmse)",
+ "object_sha256": "a44c189b3573a67eb555cc473444fb7c09e6a87d719d986de96c38a0d3db1164",
+ "source_object_sha256": "sha256 of the record-predictions file written by how-we-built-it/code/reimpl_p3.py in run 2026-11-08-1729 (also in INDEX.csv)"
+}
