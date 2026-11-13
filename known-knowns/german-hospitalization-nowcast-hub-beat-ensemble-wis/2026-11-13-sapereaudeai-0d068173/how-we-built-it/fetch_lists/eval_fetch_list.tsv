@@ -1,0 +1,12 @@
+eval_data/submissions.csv.gz	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submissions.csv.gz
+eval_data/submissions_KIT-frozen_baseline.csv.gz	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submissions_KIT-frozen_baseline.csv.gz
+eval_data/truth_2022-08-08.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/truth_2022-08-08.csv
+eval_data/submission_check_fixed_Epiforecasts-missing.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submission_check/fixed/Epiforecasts-missing.csv
+eval_data/submission_check_fixed_MeanEnsemble-missing.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submission_check/fixed/MeanEnsemble-missing.csv
+eval_data/submission_check_fixed_MedianEnsemble-missing.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submission_check/fixed/MedianEnsemble-missing.csv
+eval_data/submission_check_fixed_SZ-missing.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submission_check/fixed/SZ-missing.csv
+eval_data/submission_check_ILM-missing.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submission_check/ILM-missing.csv
+eval_data/submission_check_LMU-missing.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/submission_check/LMU-missing.csv
+evalrepo/data_scores_wis_national.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/scores/wis_national.csv
+evalrepo/data_scores_wis_states.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/scores/wis_states.csv
+evalrepo/data_scores_wis_age.csv	https://raw.githubusercontent.com/dwolffram/hospitalization-nowcast-hub-evaluation/main/data/scores/wis_age.csv

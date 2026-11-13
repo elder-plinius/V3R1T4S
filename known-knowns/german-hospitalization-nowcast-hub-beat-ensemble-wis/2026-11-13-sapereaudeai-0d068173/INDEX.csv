@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+german-hospitalization-nowcast-hub-beat-ensemble-wis,p3 (reproduction of the published per-model mean WIS: 31 cells of wis_national/states/age.csv),"31/31 within 1%; 28 to < 1e-9 relative; Epiforecasts +1.03e-4 / +1.28e-5 / +6.7e-7; MeanEnsemble 259.594450 / 22.186471 / 41.484004","published MeanEnsemble 259.594450 / 22.186471 / 41.484004 (31 cells in the-record-we-beat/record.md)",2026-11-13T04:23:56Z,object/p3_reproduction_table.csv,0d068173581343468b7a4ef6f28861c18a8fbf83a5e2aa2b8808272fe7283ee4
