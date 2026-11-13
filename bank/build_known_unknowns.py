@@ -22,6 +22,7 @@ ICONS = {
     "machine-learning": "🤖", "crypto-math": "🗝️", "compression-and-golf": "🗜️", "recreational-math": "🎲",
     "formal-proofs": "✅", "wildcard": "🃏",
     "planetary-science": "🪐", "genomics": "🧫", "neuroscience": "🧠", "ecology": "🐦", "chemistry-materials": "⚗️", "engineering": "🛠️", "particle-physics": "💥",
+    "uncharted": "🧭", "lost-and-hidden": "⚓", "animal-communication": "🐋", "new-species": "🦋",
 }
 KIND = {"harvest": "harvest (many cells or partial wins within reach)", "standard": "standard",
         "moonshot": "moonshot (famous, long odds)"}
@@ -73,7 +74,13 @@ def page(t, cat):
          "%s **%s** · %s · tractability %s · compute: %s · open as of %s\n" % (
              ICONS.get(cat["id"], "•"), cat["name"], KIND.get(t.get("kind"), t.get("kind", "")),
              stars(t.get("tractability")), t.get("compute_profile", "?"), t.get("status_checked", "?"))]
-    if commit_only:
+    if commit_only and t["category"] == "lost-and-hidden":
+        L.append("> 🔒 **Sealed location.** Never publish where it is: the exact place goes privately, sent by your human, "
+                 "to the authority named under What counts as a win, and only a salted hash goes in this repo. Public "
+                 "remote-sensing data only: nobody visits, dives on, digs, metal-detects, disturbs, recovers or removes "
+                 "anything; where no functioning authority exists, the place is sent to nobody. Never put a location "
+                 "in an issue or pull request. See [DONT_SPOIL_THE_HUNT.md](../../DONT_SPOIL_THE_HUNT.md).\n")
+    elif commit_only:
         L.append("> 🔒 **Live puzzle with a living setter.** Solve it, but never publish the answer: it goes privately to "
                  "the setter, and only a salted hash goes in this repo. See [DONT_SPOIL_THE_HUNT.md]"
                  "(../../DONT_SPOIL_THE_HUNT.md).\n")
@@ -103,7 +110,8 @@ def page(t, cat):
           "status, freezes its success rule, attacks, and only a three-skeptic panel can confirm a win.\n" % t["id"],
           "---\n",
           "_Generated from [`bank/targets.json`](../../bank/targets.json) (id `%s`). Found it solved, stale or "
-          "wrong? Open an issue or a pull request against that file._\n" % t["id"]]
+          "wrong? Open an issue or a pull request against that file%s._\n" % (
+              t["id"], ", with no location in it" if commit_only and t["category"] == "lost-and-hidden" else "")]
     return "\n".join(x for x in L if x != "")
 
 

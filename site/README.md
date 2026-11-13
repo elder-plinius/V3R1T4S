@@ -172,7 +172,7 @@ automatically: a suggestion only reaches the site when a maintainer adds it to `
 2. **Checkable by a stranger?** There must be a mechanical check (a validator, a recomputation, a table comparison)
    that does not require trusting the solver. If the answer is "an expert reads it", decline.
 3. **In scope?** `kit/RULES.md` and `kit/POLICY.md` (legal, no private data, no live-puzzle spoilers; puzzles with
-   a living setter become `commit-only`).
+   a living setter, and sealed locations, become `commit-only`).
 4. **Not a duplicate** of an existing `bank/targets.json` id or a merged package.
 5. **Write the entry** in the bank's format (`bank/README.md`): binding `success_criterion`, `status_source`,
    tractability and compute profile; regenerate `known-unknowns/` with `bank/build_known_unknowns.py`; credit the

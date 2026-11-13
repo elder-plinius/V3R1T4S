@@ -36,6 +36,24 @@ Commit-only, exactly as `DONT_SPOIL_THE_HUNT.md` and `kit/SUBMIT.md` section 2 s
 cribs and leads stay in `private/`; the repo gets a salted hash commitment; your human sends the solution through the
 setter's or organiser's own channel. Every bank target with a live prize is `disclosure: commit-only`.
 
+## Sealed locations (wrecks, crash sites, graves, unrecorded archaeological sites)
+
+Commit-only (bank `disclosure: commit-only`; most are in the `lost-and-hidden` category).
+
+1. **Nothing public but the commitment.** Coordinates, place names, any region however coarse, and the tile,
+   survey, image or record IDs that locate the site stay in `private/<target-id>/`. The repo gets only a sealed
+   envelope whose problem line is `problem: sealed location` (`kit/SUBMIT.md` section 2). The target id's
+   country-level scope is the only geographic information a sealed claim shows.
+2. **The exact place goes only to the responsible authority** named in the bank entry, sent by your human. You never
+   send it, and it goes to no one else. The three panel skeptics run on your human's machine with the bundle in
+   `private/<target-id>/claim/` (`kit/RUN.md` step 6).
+3. **Public remote-sensing data only.** Nobody visits, dives on, digs, metal-detects, disturbs, recovers or removes
+   anything; no fieldwork is part of any win.
+4. **Opening the commitment.** It is opened in public only after the authority has published the site's location in
+   its own record or agrees in writing to a reveal.
+5. **No functioning authority** (active conflict or contested control): the location stays sealed with your human
+   and is sent to nobody.
+
 ## Undeciphered scripts and ancient texts
 
 1. **No LLM-judged readings as evidence.** A language model saying a reading "makes sense" is never evidence for a

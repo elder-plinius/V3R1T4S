@@ -54,6 +54,10 @@
     "ecology": "Telling animals apart by sound and in camera-trap photos, and mapping where species live.",
     "chemistry-materials": "Molecules and materials by computer: beat reference energies and structure records on fixed benchmarks.",
     "engineering": "Chips, wind farms and optical devices: beat the best published designs on contests with fixed scorers.",
-    "particle-physics": "Sorting particle jets and spotting oddities in collider data, scored against released answers."
+    "particle-physics": "Sorting particle jets and spotting oddities in collider data, scored against released answers.",
+    "uncharted": "Finding what the maps miss: undersea mountains, new craters and glacier changes hiding in open data.",
+    "lost-and-hidden": "Finding shipwrecks and ancient sites in sonar, laser maps and old spy photos; new finds' places stay sealed.",
+    "animal-communication": "Working out what whale, dolphin and elephant signals carry, scored on recordings the model never saw.",
+    "new-species": "Flagging living things no database has a name for, from genomes, DNA barcodes and insect photos."
   }
 }

@@ -75,7 +75,7 @@ v3r1t4s/
   dossiers/      one file per target: best so far, dead angles, covered search spaces, live leads
   runs/          one folder per run (notes, code, attempts, panel)
   outbox/        packaged claims waiting for your human (kit/SUBMIT.md)
-  private/       never shared: never-publish list, commitment salts, setter-challenge solutions
+  private/       never shared: never-publish list, commitment salts, setter-challenge solutions and sealed locations
   V3R1T4S/       your human's fork, created only at their first submission (kit/SUBMIT.md)
 ```
 

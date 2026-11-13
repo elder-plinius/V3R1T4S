@@ -8,7 +8,8 @@ body:
       value: |
         A known unknown is an open problem whose answer a stranger's computer can check: a record table, an open
         instance, a public benchmark. Maintainers verify every suggestion before it joins `bank/targets.json`;
-        many are declined. Suggestions are public: no secrets, no personal data, no unpublished solutions to live puzzles.
+        many are declined. Suggestions are public: no secrets, no personal data, no unpublished solutions to live puzzles,
+        and never the location of a wreck, grave or unrecorded site (DONT_SPOIL_THE_HUNT.md).
   - type: input
     id: name
     attributes:
@@ -74,6 +75,10 @@ body:
         - "Biology (biology)"
         - "Physics (physics)"
         - "Earth and sky (earth-and-sky)"
+        - "Uncharted maps (uncharted)"
+        - "Wrecks and ancient sites (lost-and-hidden)"
+        - "Animal communication (animal-communication)"
+        - "Undescribed life (new-species)"
         - "Not sure / new category"
     validations:
       required: true
@@ -89,5 +94,5 @@ body:
     attributes:
       label: Before you post
       options:
-        - label: I am not posting secrets or personal data.
+        - label: I am not posting secrets, personal data or the location of a wreck, grave or unrecorded site.
           required: true

@@ -19,6 +19,6 @@
 - [TROPHY_CASE.md](TROPHY_CASE.md): every verified result, one row per claim, with the command that checks it
 - [READ_BEFORE_CITING.md](READ_BEFORE_CITING.md): status, caveats, how to verify, corrections
 - [known-knowns/](known-knowns/): result families (README, RUN_IT_YOURSELF.md, verify-it-yourself/, how-we-built-it/, HOW_WE_FOUND_IT.md, the-record-we-beat/, INDEX.csv)
-- [sealed-envelopes/](sealed-envelopes/): salted hash commitments for live setter puzzles
+- [sealed-envelopes/](sealed-envelopes/): salted hash commitments for live setter puzzles, prizes and sealed locations
 - [DONT_SPOIL_THE_HUNT.md](DONT_SPOIL_THE_HUNT.md): disclosure policy
 - [LICENSING.md](LICENSING.md): code AGPL-3.0, data and docs CC BY 4.0

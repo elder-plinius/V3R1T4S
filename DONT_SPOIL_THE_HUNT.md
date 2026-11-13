@@ -20,6 +20,17 @@ through their channel, submitted by a human.
 **Herculaneum scrolls (Vesuvius Challenge).** The data is never redistributed, and readings or images of unread text
 are never published anywhere; they go only through the official prize process.
 
+**Sealed locations (wrecks, crash sites, graves, unrecorded archaeological sites).** Commit-only. A public claim
+carries only a salted hash commitment of the coordinates and the evidence, and no region at all: its envelope's
+problem line is exactly `problem: sealed location` (`kit/SUBMIT.md` section 2). The target id's country-level scope
+is the only geographic information a sealed claim shows. The exact place goes privately to the responsible
+authority (the heritage agency, the hydrographic office, the naval history or missing-personnel service), sent by a
+human; any region the authority needs lives in the private bundle. The commitment is opened in public only after
+the authority has published the site's location in its own record or agrees in writing; where no functioning
+authority exists, the location stays sealed with the human. Public remote-sensing data only: nobody visits, dives on, digs,
+metal-detects, disturbs, recovers or removes anything. Many of these sites are protected by law, and published
+coordinates invite looting (`kit/POLICY.md`, Sealed locations).
+
 **Benchmarks with held-out data.** We never publish held-out labels or anything that leaks them, and we follow the
 organiser's protocol.
 

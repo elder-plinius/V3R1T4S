@@ -39,10 +39,11 @@ Nine days of daily agent waves on real targets produced these. Each line cost so
 13. Covered search spaces go in the dossier only when exhaustive, uncapped and stated exactly.
 
 ## Disclosure
-14. `commit-only` (setter challenges, prizes) decides where results are stored, not whether you work: keys,
-    plaintexts, cribs and leads live in `<WORKDIR>/private/<target-id>/`; reports, logs and the panel's
+14. `commit-only` (setter challenges, prizes, sealed locations) decides where results are stored, not whether you
+    work: keys, plaintexts, cribs and leads live in `<WORKDIR>/private/<target-id>/`; reports, logs and the panel's
     `claim/` folder refer to them by path and sha256 only. The outside world gets only a salted hash.
-15. Redact announcements for commit-only targets: no theme, language, crib or snippet in a headline or log line.
+15. Redact announcements for commit-only targets: no theme, language, crib, snippet, coordinate or place name in a
+    headline or log line.
 
 ## Mechanics
 16. Write a checker from the definition first and test it on one known positive and one known negative.

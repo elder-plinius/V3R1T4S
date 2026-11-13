@@ -13,6 +13,7 @@ import check_run  # noqa: E402
 BANK = {"schema": "v3r1t4s.bank/1", "targets": [
     {"id": "toy-record", "category": "record-tables", "disclosure": "open"},
     {"id": "toy-cipher", "category": "unbroken-ciphers", "disclosure": "commit-only"},
+    {"id": "toy-wreck", "category": "lost-and-hidden", "disclosure": "commit-only"},
 ]}
 HEX = "ab" * 32
 PLAINTEXT = "MEETMEATTHEOLDMILLATMIDNIGHTBRINGTHELANTERNANDTHEMAPOFTHERIVER"
@@ -339,6 +340,66 @@ class BadFixtures(Base):
         w(E, "# Sealed envelope x\ntarget: toy-cipher\nproblem: Problem 7\n"
              "| file | frozen (UTC) | commitment |\n|---|---|---|\n| solution file 1 (key) | 2026-10-12T03:14:15Z | `7:3,1,4,2,5,6,1,7` |\n")
         self.assertFail("not part of the sealed-envelope template", "--package", os.path.dirname(E))
+
+    def envelope_with_problem(self, problem_line, target="toy-cipher"):
+        E = os.path.join(self.W, "outbox", "x", "envelope.md")
+        w(E, "# Sealed envelope x\ntarget: %s\n%s\n"
+             "| file | frozen (UTC) | commitment |\n|---|---|---|\n| solution file 1 (other) | 2026-10-12T03:14:15Z | `%s` |\n"
+          % (target, problem_line, HEX))
+        return os.path.dirname(E)
+
+    def test_sealed_location_target_rejects_grid_reference(self):
+        P = self.envelope_with_problem("problem: NT 2573 7394", target="toy-wreck")
+        self.assertFail("must be exactly `problem: sealed location`", "--package", P, "--workdir", self.W)
+
+    def test_sealed_location_target_rejects_place_name(self):
+        P = self.envelope_with_problem("problem: Galway Bay", target="toy-wreck")
+        self.assertFail("must be exactly `problem: sealed location`", "--package", P, "--workdir", self.W)
+
+    def test_sealed_location_target_accepts_exact_line(self):
+        P = self.envelope_with_problem("problem: sealed location", target="toy-wreck")
+        self.run_check("--package", P, "--workdir", self.W)
+        self.assertNotIn("must be exactly `problem: sealed location`", self.out)
+        self.assertNotIn("not part of the sealed-envelope template", self.out)
+
+    def sealed_location_envelope(self, submission_id):
+        E = os.path.join(self.W, "outbox", submission_id, "envelope.md")
+        w(E, "# Sealed envelope %s\ntarget: toy-wreck\nproblem: sealed location\n"
+             "| file | frozen (UTC) | commitment |\n|---|---|---|\n| solution file 1 (other) | 2026-10-12T03:14:15Z | `%s` |\n"
+             "| solution file 2 (verification output) | 2026-10-12T03:14:15Z | `%s` |\n" % (submission_id, HEX, "cd" * 32))
+        return os.path.dirname(E)
+
+    def test_sealed_location_submission_id_from_unsalted_hash_is_rejected(self):
+        P = self.sealed_location_envelope("2026-10-12-tester-0123abcd")
+        self.assertFail("the submission-id must end with -abababab", "--package", P, "--workdir", self.W)
+
+    def test_sealed_location_submission_id_from_first_commitment_is_accepted(self):
+        P = self.sealed_location_envelope("2026-10-12-tester-abababab")
+        self.run_check("--package", P, "--workdir", self.W)
+        self.assertNotIn("the submission-id must end with", self.out)
+        self.assertNotIn("not part of the sealed-envelope template", self.out)
+        self.assertNotIn("must be exactly `problem: sealed location`", self.out)
+
+    def test_setter_target_keeps_its_own_label(self):
+        P = self.envelope_with_problem("problem: Galway Bay", target="toy-cipher")
+        self.run_check("--package", P, "--workdir", self.W)
+        self.assertNotIn("must be exactly `problem: sealed location`", self.out)
+
+    def test_envelope_problem_line_with_decimal_coordinates(self):
+        self.assertFail("problem line looks like coordinates", "--package", self.envelope_with_problem("problem: 53.2741 -9.0512"))
+
+    def test_envelope_problem_line_with_compass_letters(self):
+        self.assertFail("problem line looks like coordinates", "--package", self.envelope_with_problem("problem: 53N 9W"))
+
+    def test_envelope_problem_line_with_degree_sign(self):
+        self.assertFail("problem line looks like coordinates", "--package", self.envelope_with_problem("problem: 53° 16 N"))
+
+    def test_envelope_sealed_location_problem_line_is_accepted(self):
+        P = self.envelope_with_problem("problem: sealed location")
+        self.run_check("--package", P)
+        self.assertNotIn("looks like coordinates", self.out)
+        self.assertNotIn("not part of the sealed-envelope template", self.out)
+        self.assertNotIn("needs exactly one title", self.out)
 
 
 class WindowsPortability(Base):

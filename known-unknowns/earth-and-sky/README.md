@@ -2,7 +2,7 @@
 
 Missed events in open geophysical and space archives, checked against live catalogs.
 
-**33 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
+**34 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
 
 | Odds | Problem | Kind | Compute |
 |---|---|---|---|
@@ -38,6 +38,7 @@ Missed events in open geophysical and space archives, checked against live catal
 | ★★☆☆☆ | [MLGWSC-1 gravitational-wave search challenge: beat the best published sensitive distance…](mlgwsc1-dataset3-sensitive-distance.md) | standard | laptop-days (one month of two-detector simulated Gaussian noise per test set, tens of GB; generation and evaluation scripts in the repository; ML inference on CPU/Apple GPU) |
 | ★★☆☆☆ | [NASA/Radiant Earth tropical-storm wind-speed challenge: beat the winning RMSE from GOES i…](nasa-tropical-storm-wind-speed-rmse.md) | standard | laptop-days (about 70k train and 45k test single-band 366x366 IR images, ~20 GB; CNN training on Apple-silicon GPU or CPU for days) |
 | ★★☆☆☆ | [New compact-binary merger candidate in public O4a/O4b LIGO-Virgo strain that GWTC-4.1, GW…](gwosc-o4-missed-cbc-candidate.md) | standard | laptop-days for one month of data to needs cluster for a whole run (H1+L1 4 kHz strain is roughly 100 GB per month, our estimate from 4096-s HDF5 files; a broad BBH template bank over all of O4a and O4b is cluster-scale; re-ranking the released sub-threshold triggers needs only data around each one and takes laptop-hours) |
+| ★★☆☆☆ | [Open-Canopy: beat PVTv2's 2.52 m test MAE for 1.5 m canopy height from SPOT 6-7 images ag…](open-canopy-france-canopy-height-test-mae.md) | standard | needs cluster (or one GPU workstation for several days; about 360 GB of SPOT imagery and lidar canopy heights, 423 GB with all files) |
 | ★★☆☆☆ | [Terrestrial gamma-ray flash in public Fermi GBM TTE data, absent from the GBM TGF catalog](fermi-gbm-offline-tgf-missed.md) | standard | laptop-hours |
 
 ← [All categories](../README.md)

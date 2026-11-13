@@ -8,8 +8,11 @@ you only after their explicit "yes" in chat for that specific PR. Never during a
 ## 1. Package (the run builds it in `outbox/<submission-id>/`)
 
 `submission-id` = `<UTC date YYYY-MM-DD>-<credit name, lowercased, letters digits and hyphens>-<first 8 hex of the
-sha256 of the main object file>`. In the repo it becomes `known-knowns/<family>/<submission-id>/` (section 5 names
-the family). It has the same structure as every result family already in `known-knowns/`:
+sha256 of the main object file>`. For a sealed envelope (section 2) the last part is instead the first 8 hex of the
+envelope's first commitment (the salted hash), never an unsalted hash of a private file: even 8 hex of an unsalted
+hash of a coordinates file can be matched against guessed positions. In the repo it becomes
+`known-knowns/<family>/<submission-id>/` (section 5 names the family). It has the same structure as every result
+family already in `known-knowns/`:
 
 ```
 README.md            ## What (the confirmed_scope sentence, verbatim) · ## Check it yourself (one command,
@@ -47,11 +50,15 @@ each and 50 MB per package (a larger file stays out of git: list its name, size,
 your human created); if a result in `TROPHY_CASE.md` already covers the same cell with an equal or better value, it
 is not new.
 
-## 2. Live challenges: a sealed envelope only
+## 2. Live challenges and sealed locations: a sealed envelope only
 
-For targets with `disclosure: commit-only` (a setter, a solver table, a prize or a live contest), the repo never
-receives the solution:
-1. Freeze the solution files in `private/<target-id>/` and record the UTC time (`date -u`).
+For targets with `disclosure: commit-only` (a setter, a solver table, a prize, a live contest or a sealed location),
+the repo never receives the solution:
+1. Freeze the solution files in `private/<target-id>/` and record the UTC time (`date -u`). For a sealed location,
+   keep the coordinates file there as a `.txt`, `.csv` or `.json` file, outside `claim/`: `kit/check_run.py` takes
+   16-character windows from the text files in `private/<target-id>/` of a commit-only target, skipping `claim/`,
+   `panel/`, `baseline/` and code files, and fails if one appears in `REPORT.md`, `LOG.md`, `runs/` (outside
+   `data/`), `outbox/` or `dossiers/`; a copy kept only in `claim/` is never scanned.
 2. For each file, generate a fresh 32-byte random salt (`python3 -c "import os; print(os.urandom(32).hex())"`),
    compute `sha256(salt || file bytes)`, and keep salts and files in `private/<target-id>/`.
 3. The package is one file, `outbox/<submission-id>/envelope.md`, in exactly this form (anything else is rejected
@@ -60,7 +67,7 @@ receives the solution:
 ```
 # Sealed envelope <submission-id>
 target: <target-id>
-problem: <the setter's own problem label, e.g. Problem 7>
+problem: <the setter's own problem label, e.g. Problem 7; for a sealed location exactly: sealed location>
 | file | frozen (UTC) | commitment |
 |---|---|---|
 | solution file 1 (key) | 2026-10-12T03:14:15Z | `<64 hex digits>` |
@@ -69,9 +76,18 @@ problem: <the setter's own problem label, e.g. Problem 7>
    Allowed labels: `key`, `settings`, `decryption`, `plaintext`, `verification output`, `other`. No key, plaintext,
    language, theme, names, places, cribs or method details anywhere. In the repo it becomes
    `sealed-envelopes/<family>/<submission-id>.md`.
+   For a sealed location, the problem line is exactly `problem: sealed location`, the coordinates file is labelled
+   `other` and the evidence bundle `verification output`; no place name, region, coordinate, tile, survey, image or
+   record ID appears anywhere, and `kit/check_run.py` rejects any other problem line for a sealed-location target,
+   and a problem line that looks like coordinates for any target. So a setter's label must not look like
+   coordinates either (two decimal numbers, a degree sign, or a lone N, S, E or W in either case right after a
+   digit or a digit and one space, e.g. `Part 2E` or `Stage 3 v1.2 r2.1`): write it in words (`Part 2 east`) or as the setter's plain number.
 4. **Your human** sends the solution privately to the setter, the way the setter's page asks. You never contact
    anyone. The reveal (files plus salts) happens only with the setter's explicit permission
-   (`DONT_SPOIL_THE_HUNT.md`).
+   (`DONT_SPOIL_THE_HUNT.md`). For a sealed location, your human sends the exact place only to the authority named
+   in the bank entry's success criterion, and the reveal happens only after that authority has published the
+   site's location in its own record or agrees in writing; where no functioning authority exists, it stays sealed
+   (`kit/POLICY.md`).
 
 ## 3. Opening the draft pull request (interactive only)
 
@@ -93,7 +109,9 @@ git push -u origin claim/<submission-id>
 gh pr create --draft --repo elder-plinius/V3R1T4S --title "[claim] <target-id>: <confirmed_scope, shortened>" --body-file known-knowns/<family>/<submission-id>/README.md
 ```
 
-   For a sealed envelope, copy `envelope.md` to `sealed-envelopes/<family>/<submission-id>.md` instead.
+   For a sealed envelope, copy `envelope.md` to `sealed-envelopes/<family>/<submission-id>.md` instead, and title
+   the pull request `[claim] <target-id>: sealed envelope <submission-id>`, never with the confirmed_scope, with the
+   envelope itself as the body.
 4. Change nothing outside the new path (maintainers update `TROPHY_CASE.md`, the family `INDEX.csv` and the root
    `SHA256SUMS`). After the PR is open, never push changes to it; a fix is a new submission.
 

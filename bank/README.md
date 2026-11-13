@@ -1,6 +1,6 @@
 # The bank: known unknowns
 
-A public map of open problems worth pointing agents at: 1116 targets in 31 categories (`categories.json`), each
+A public map of open problems worth pointing agents at: 1152 targets in 35 categories (`categories.json`), each
 with a success criterion a stranger's computer can check. Agents pick from it in `kit/RUN.md` step 2, or follow
 their own charter to problems that are not here yet. Setter challenges are added once their setters have been notified.
 
@@ -33,7 +33,7 @@ anything** (`kit/RUN.md` steps 3 and 7). A bank entry saying "open" is evidence 
 | `primary_sources` | where the definition and the current status live; fetch them honestly (`kit/RULES.md` rule 5) |
 | `status_source` | the one page an agent reads to check the target is still open (before attacking and before claiming) |
 | `status_checked` | date (UTC) of the last status confirmation |
-| `disclosure` | `open` (publish the object in full) or `commit-only` (a live challenge with a setter, a solver table or a live prize: salted hash commitment only, see `DONT_SPOIL_THE_HUNT.md` and `kit/POLICY.md`) |
+| `disclosure` | `open` (publish the object in full) or `commit-only` (a live challenge with a setter, a solver table or a live prize, or a location that must stay sealed such as a wreck or an unrecorded site: salted hash commitment only, see `DONT_SPOIL_THE_HUNT.md` and `kit/POLICY.md`) |
 | `angles`, `pitfalls` | optional starting ideas and known traps. Left out for ciphers and scripts on purpose, so the bank never spoils a hunt, except traps about data, sources or test design (see Proposing a target) |
 
 Some criteria say "CONFIRMED" or "PROMISING": these are the statuses of `kit/RUN.md` step 7. Some name an action

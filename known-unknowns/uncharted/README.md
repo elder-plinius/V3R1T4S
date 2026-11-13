@@ -1,0 +1,23 @@
+# 🧭 Uncharted maps
+
+Features missing from the maps of Earth, the ocean floor and other worlds, or events missing from their inventories, found in open sonar, LiDAR, altimetry, satellite and orbiter data and checked against live catalogs; a claim is a candidate, never a discovery.
+
+**13 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
+
+| Odds | Problem | Kind | Compute |
+|---|---|---|---|
+| ★★★★☆ | [Retrogressive thaw slump seen in open Sentinel-2 imagery and ArcticDEM strips but absent…](thaw-slump-not-in-arts-darts.md) | harvest | laptop-hours (Sentinel-2 L2A chips of a few MB and 2 m ArcticDEM strip windows of tens of MB; ARTS v6.0.0 is 53.8 MB) |
+| ★★★★☆ | [Uncharted shoal: ICESat-2 ATL24 laser soundings of seafloor at least 20 m shallower than…](icesat2-shoal-not-in-gebco-2026.md) | harvest | laptop-hours (ATL24 granules are HDF5 files of a few MB to tens of MB each; the GEBCO_2026 grid page gives the TID grid as a single 3.5 GB file, depth tiles fetched per region; Sentinel-2 chips are MBs) |
+| ★★★☆☆ | [Glacier lake outburst flood seen in open Sentinel-2 and Landsat imagery but absent from t…](glof-not-in-potsdam-glof-database.md) | harvest | laptop-hours (windowed cloud-optimized GeoTIFF reads of Sentinel-2 L2A and Landsat Collection 2 scenes; a few MB per lake chip; the database itself is 1.6 MB) |
+| ★★★☆☆ | [New dated impact on Mars in public CTX before-and-after images, absent from the Daubar 20…](mars-new-dated-impact-not-in-catalogs.md) | harvest | laptop-days (CTX images are about 50 to 300 MB each; a regional search of a few hundred image pairs is tens of GB; the HiRISE RDR index table is about 169 MB) |
+| ★★★☆☆ | [New lunar impact crater formed during the LRO mission, in public LROC NAC before-and-afte…](lunar-new-crater-not-in-lroc-new-craters.md) | harvest | laptop-days (LROC NAC frames are 100 to 500 MB each; finding pairs with matched lighting needs only the PDS index tables, but checking hundreds of pairs is tens to hundreds of GB) |
+| ★★★☆☆ | [Seafloor gas seep (bubble flare) in public water-column sonar data off the US Atlantic co…](atlantic-margin-gas-seep-not-in-ncei-database.md) | harvest | laptop-days (raw multibeam water-column files are several GB per survey day on the public noaa-wcsd-pds bucket; a targeted search reads tens to hundreds of GB) |
+| ★★☆☆☆ | [Glacier surge in open ITS_LIVE velocities and DEM elevation change at a glacier absent fr…](glacier-surge-not-in-global-surge-inventories.md) | harvest | laptop-hours (ITS_LIVE Zarr datacubes read per glacier, MB to a few hundred MB each; ArcticDEM or REMA strip windows; RGI 7.0 outlines) |
+| ★★☆☆☆ | [New Mars cave-entrance candidate (skylight or atypical pit crater) in public HiRISE and C…](mars-cave-candidate-not-in-mgc3.md) | harvest | laptop-days (HiRISE RDR images are 0.1 to 2 GB each and CTX images 50 to 300 MB; searches restricted to volcanic plains, lava-tube chains and pit-crater chains) |
+| ★★☆☆☆ | [Phantom seamount: a peak of at least 1,000 m relief in the GEBCO_2026 grid that satellite…](phantom-seamount-in-gebco-2026.md) | standard | laptop-hours (the GEBCO_2026 grid page gives the global grid as a single 7.0 GB file and the TID grid as a single 3.5 GB file; SDUST2025GRA_SWOT gravity 1.8 GB; DTU21 gravity about 1 GB; catalogs a few MB) |
+| ★★☆☆☆ | [Seamount or knoll at least 300 m tall in public multibeam sonar data, absent from every g…](seamount-in-multibeam-not-in-seamount-catalogs.md) | harvest | laptop-hours (catalogs are small: SDUST2026SM 12.7 MB, SIO 2023 zip 4.1 MB, Yesson list 5.3 MB, Souche GeoPackages from PANGAEA; GMRT multibeam tiles are fetched per region, tens of MB each) |
+| ★★☆☆☆ | [Active subglacial lake in ICESat-2 ATL15 height change, confirmed in REMA or CryoSat-2, a…](antarctic-active-subglacial-lake-not-in-inventories.md) | standard | laptop-hours (ATL15 1 km Antarctic grids read region by region, file sizes not stated on the NSIDC page; REMA 2 m strip windows of tens of MB) |
+| ★★☆☆☆ | [MOONSHOT - New surface-change candidate on Venus between Magellan radar cycles, beyond th…](venus-magellan-cycle-surface-change-candidate.md) | moonshot | laptop-days (Magellan F-BIDR swaths and F-MIDR mosaics at about 75 m/pixel are tens to hundreds of MB each; a regional search over the areas imaged twice is tens of GB) |
+| ★★☆☆☆ | [Predict unmapped seafloor: a depth grid built only from data public before a cutoff that…](unmapped-seafloor-depth-forecast-beat-gebco-2026.md) | standard | laptop-days (GEBCO_2026 grid 7 GB uncompressed; SWOT and conventional gravity grids 1 to 2 GB each; evaluation surveys tens of GB of multibeam) |
+
+← [All categories](../README.md)

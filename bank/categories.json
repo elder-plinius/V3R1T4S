@@ -71,7 +71,7 @@
    "id": "sky-archives",
    "name": "Sky archives",
    "description": "New vetted candidates in public astronomy archives (never 'a planet', only 'a candidate').",
-   "targets": 29
+   "targets": 34
   },
   {
    "id": "ml-robustness",
@@ -107,7 +107,7 @@
    "id": "earth-and-sky",
    "name": "Earth and sky",
    "description": "Missed events in open geophysical and space archives, checked against live catalogs.",
-   "targets": 33
+   "targets": 34
   },
   {
    "id": "machine-learning",
@@ -149,7 +149,7 @@
    "id": "planetary-science",
    "name": "Planets and moons",
    "description": "Solar-system and exoplanet problems with checkable wins: new moons and minor bodies as vetted candidates, surface benchmarks, orbit and shape records, exoplanet challenges with released truth.",
-   "targets": 10
+   "targets": 11
   },
   {
    "id": "genomics",
@@ -186,6 +186,30 @@
    "name": "Particle physics",
    "description": "Open-data and simulation benchmarks from high-energy physics: tagging, tracking, anomaly detection and fast simulation, scored against released truth.",
    "targets": 5
+  },
+  {
+   "id": "uncharted",
+   "name": "Uncharted maps",
+   "description": "Features missing from the maps of Earth, the ocean floor and other worlds, or events missing from their inventories, found in open sonar, LiDAR, altimetry, satellite and orbiter data and checked against live catalogs; a claim is a candidate, never a discovery.",
+   "targets": 13
+  },
+  {
+   "id": "lost-and-hidden",
+   "name": "Wrecks and ancient sites",
+   "description": "Wrecks and ancient built features as candidates in open bathymetry, LiDAR and imagery, checked against the public wreck and site records, and benchmarks with released labels. Exact locations of candidates stay sealed and go only to the responsible authority.",
+   "targets": 8
+  },
+  {
+   "id": "animal-communication",
+   "name": "Animal communication",
+   "description": "Whale, dolphin, elephant and other animal signals: structure, context and prediction problems scored on held-out public recordings; never a translation.",
+   "targets": 4
+  },
+  {
+   "id": "new-species",
+   "name": "Undescribed life",
+   "description": "Candidate new species and lineages in open genome, barcode and image archives, checked against the reference databases, and benchmarks with released labels for placing and flagging unseen species; a candidate, never a described species.",
+   "targets": 4
   }
  ]
 }

@@ -36,10 +36,11 @@ bind the same way.
    post, email, comment, open issues, sign up, log in, accept terms or pay on your human's behalf. Your human does
    every outward action. A pull request to this repo is opened by your human, or by you only after their explicit
    "yes" in chat for that PR (`kit/SUBMIT.md`). Never handle passwords, tokens or keys.
-8. **Don't spoil the hunt.** For live challenges with a setter, solver table or prize (bank `disclosure:
-   commit-only`), keys, plaintexts, themes, cribs and leads stay in the private folder of the workspace. They leave
-   the machine only as a salted hash commitment; the human sends the solution privately to the setter. Policy:
-   `DONT_SPOIL_THE_HUNT.md`.
+8. **Don't spoil the hunt.** For live challenges with a setter, solver table or prize, and for sealed locations
+   (bank `disclosure: commit-only`), keys, plaintexts, themes, cribs, leads and coordinates stay in the private
+   folder of the workspace. They leave the machine only as a salted hash commitment; the human sends the solution
+   privately to the setter, or for a sealed location to the authority the bank entry names. Policy:
+   `DONT_SPOIL_THE_HUNT.md` and `kit/POLICY.md`.
 9. **Processes.** Kill only processes you started, by the exact process id you recorded. Never use `pkill`,
    `killall`, or any name- or pattern-based kill. If a process you need gone is not yours, leave it.
 10. **Machine.** Stay inside the workspace folder. No `sudo`, no system or security settings, no installs beyond

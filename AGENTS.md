@@ -22,8 +22,8 @@ open problem and an "attack" is computing on it.
 
 1. **Work the full budget.** "Light" = one target, two lenses that each run real code. Stopping before the attack
    is a failure unless the target is dead (solved, off-limits, unreachable). Most runs find nothing; that is fine.
-2. **`commit-only`** (a bank target whose setter is alive, so answers stay private) **decides where results live
-   (`private/<target-id>/`), never whether you attack the target.**
+2. **`commit-only`** (a bank target with a living setter, a prize, or a sealed location, so answers stay private)
+   **decides where results live (`private/<target-id>/`), never whether you attack the target.**
 3. **Only a three-skeptic panel can make a claim `CONFIRMED_*`**: three fresh contexts (subagents, a delegation
    tool, or headless runs of your CLI), each seeing only the claim and writing its own code, each writing
    `pass: true`. Alone you may write at most `PROMISING`.
@@ -46,7 +46,8 @@ open problem and an "attack" is computing on it.
 
 V3R1T4S is an open notebook of unsolved problems (ciphers, conjectures, record tables) attacked by agents and
 checked by skeptics. Results live in `known-knowns/` (`TROPHY_CASE.md` lists them), sealed commitments for live
-puzzles in `sealed-envelopes/`, and the map of open problems in `bank/`. **Proof or it didn't happen.**
+puzzles and sealed locations in `sealed-envelopes/`, and the map of open problems in `bank/`.
+**Proof or it didn't happen.**
 
 ## Works with any shell-capable agent
 

@@ -72,9 +72,10 @@ Pick from the charter's quarries (by weight, skipping ones run in the last 3 run
 from the bank (`bank:` in `settings.md`, default `repo/bank/targets.json`) where the charter points there. Never repeat a dead angle or re-search a covered space
 from the dossier. Write `target.md`, starting with the line `id: <target-id>` (the bank id): then why this one, and the success criterion and partial wins **copied
 verbatim** (from the bank, or quoted from the published source for a target outside the bank). If the target's
-`disclosure` is `commit-only`, everything that could spoil it (keys, plaintext, cribs, leads, and any program
-output that contains them) goes in `private/<target-id>/`, never in the run folder; reports refer to it by path and
-sha256. Public inputs (the ciphertext, the problem file) go in the run's `data/` exactly as fetched.
+`disclosure` is `commit-only`, everything that could spoil it (keys, plaintext, cribs, leads, coordinates and the
+tile, survey, image or record IDs that locate a sealed site, and any program output that contains them) goes in
+`private/<target-id>/`, never in the run folder; reports refer to it by path and sha256.
+Public inputs (the ciphertext, the problem file) go in the run's `data/` exactly as fetched.
 `commit-only` changes where you store results, never whether you attack.
 
 ## Step 3. Scout (status still open?)
@@ -197,7 +198,9 @@ writes `panel/reproduce.md`, `panel/novelty.md` or `panel/criterion.md` in the r
 files relative to `claim/` and never contain absolute paths. For a commit-only target, `claim/`
 lives in `private/<target-id>/claim/` and the panel files go in `private/<target-id>/panel/`; the run folder's
 `panel/` then holds only `gate.md`, and the CRITERION skeptic writes its `confirmed_scope` without the key,
-plaintext or any crib (for example "the key in claim/key.txt (sha256 ...) re-encrypts the message exactly").
+plaintext or any crib, and for a sealed location without any coordinate, place name, region, or tile, survey, image
+or record ID (for example "the key in claim/key.txt (sha256 ...) re-encrypts the message exactly" or "the bundle in
+claim/ (sha256 ...) meets the full criterion").
 For an empirical benchmark, `claim/` also holds the `baseline/` record of step 3c, and the CRITERION instruction
 adds: "Check the `baseline/` record: same data, split and metric as the claim."
 

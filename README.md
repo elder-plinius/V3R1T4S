@@ -79,7 +79,7 @@ F. Comellas' degree–diameter page describes itself as AI-free. These graphs ar
 
 ## 🗺 Known unknowns
 
-The hills nobody has climbed yet: **1116 open problems in 31 categories**, each with its own page: what counts as a win, how it's checked, where to confirm it's still open, ideas to start from, and the traps that fooled people before. Pick one and point your agent at it, or let it roam anywhere else.
+The hills nobody has climbed yet: **1152 open problems in 35 categories**, each with its own page: what counts as a win, how it's checked, where to confirm it's still open, ideas to start from, and the traps that fooled people before. Pick one and point your agent at it, or let it roam anywhere else.
 
 | Category | Open | For example |
 |---|---|---|
@@ -94,8 +94,8 @@ The hills nobody has climbed yet: **1116 open problems in 31 categories**, each 
 | 🦠 [Biology](known-unknowns/biology/README.md) | 47 | protein and RNA fitness benchmarks, RNA design, single-cell analysis |
 | 🃏 [Wildcard](known-unknowns/wildcard/README.md) | 37 | unknotting numbers and smooth 4-genera KnotInfo still lists as intervals |
 | ⚪ [Packings and physics](known-unknowns/packings-physics/README.md) | 36 | sphere packings in a cube or a 4D ball, metal-cluster energy minima |
-| 🌍 [Earth and sky](known-unknowns/earth-and-sky/README.md) | 33 | missed marsquakes, bolides and tsunamis in open archives, solar-flare forecasts |
-| 🔭 [Sky archives](known-unknowns/sky-archives/README.md) | 29 | variable stars and transits hiding in public survey data |
+| 🌍 [Earth and sky](known-unknowns/earth-and-sky/README.md) | 34 | missed marsquakes, bolides and tsunamis in open archives, solar-flare forecasts |
+| 🔭 [Sky archives](known-unknowns/sky-archives/README.md) | 34 | variable stars and transits hiding in public survey data |
 | ⚡ [Algorithms](known-unknowns/algorithms/README.md) | 27 | fewer additions for fast matrix multiplication |
 | 🤖 [Machine learning](known-unknowns/machine-learning/README.md) | 27 | the smallest network with 99 % on MNIST, time-series classification records |
 | 🔐 [Unbroken ciphers](known-unknowns/unbroken-ciphers/README.md) | 20 | the remaining unbroken 1941 German Army Enigma messages |
@@ -103,16 +103,20 @@ The hills nobody has climbed yet: **1116 open problems in 31 categories**, each 
 | 📜 [Undeciphered scripts](known-unknowns/undeciphered-scripts/README.md) | 17 | Linear A, the Indus script, unplaced cuneiform fragments |
 | 🏺 [Ancient texts](known-unknowns/ancient-texts/README.md) | 16 | restoring damaged Akkadian signs |
 | 💊 [Drug discovery](known-unknowns/drug-discovery/README.md) | 14 | ADMET, activity-cliff and docking leaderboards |
+| 🧭 [Uncharted maps](known-unknowns/uncharted/README.md) | 13 | seamounts no catalog lists, new craters on Mars and the Moon, glacier floods missing from the inventories |
 | 🛡️ [ML robustness](known-unknowns/ml-robustness/README.md) | 12 | stronger attacks on RobustBench models |
-| 🪐 [Planets and moons](known-unknowns/planetary-science/README.md) | 10 | new moons in archival images, asteroid spin and shape gaps, microlensing planet recovery |
+| 🪐 [Planets and moons](known-unknowns/planetary-science/README.md) | 11 | new moons in archival images, asteroid spin and shape gaps, microlensing planet recovery |
 | 🧫 [Genomes](known-unknowns/genomics/README.md) | 10 | variant calling against GIAB truth sets, CAMI metagenome binning |
 | 🐦 [Ecology and bioacoustics](known-unknowns/ecology/README.md) | 9 | animal sounds, camera traps, species distribution models |
 | 🌋 [Herculaneum scrolls](known-unknowns/herculaneum-scrolls/README.md) | 8 | ink detection on carbonized papyrus |
 | ⚗️ [Chemistry and materials](known-unknowns/chemistry-materials/README.md) | 8 | quantum-chemistry benchmark sets, lowest-energy structures |
 | 🛠️ [Engineering and chips](known-unknowns/engineering/README.md) | 8 | chip placement and routing contests, wind-farm layouts, photonic inverse design |
+| ⚓ [Wrecks and ancient sites](known-unknowns/lost-and-hidden/README.md) | 8 | uncharted wrecks in open sonar, earthworks and desert kites in open LiDAR and old satellite photos (locations sealed) |
 | 🧠 [Neuroscience](known-unknowns/neuroscience/README.md) | 7 | spike sorting with ground truth, whole-brain activity forecasting |
 | 🗜️ [Compression and code golf](known-unknowns/compression-and-golf/README.md) | 5 | shorter Brainfuck constants, new LODA programs for OEIS sequences |
 | 💥 [Particle physics](known-unknowns/particle-physics/README.md) | 5 | jet tagging and anomaly detection against released truth |
+| 🐋 [Animal communication](known-unknowns/animal-communication/README.md) | 4 | a sperm whale's next coda, dolphin signature whistles, who an elephant rumble is for |
+| 🦋 [Undescribed life](known-unknowns/new-species/README.md) | 4 | genomes and fungal lineages no reference database holds, insects nobody has named |
 | 🗝️ [Crypto math](known-unknowns/crypto-math/README.md) | 1 | a new APN function in dimension 9 or 10 |
 
 Browse them all → [known-unknowns/](known-unknowns/README.md). To aim your agent at one:
@@ -134,7 +138,7 @@ Start here → [READ_BEFORE_CITING.md](READ_BEFORE_CITING.md)
 
 These results predate the contributor kit. Before release, two or three independent reviewer agents re-checked each one; the checkers shipped here re-check them today. If one is wrong, tell us and we will correct it in the open.
 
-Puzzles with a living setter stay puzzles: the solution goes privately to the setter, and only a sealed hash (a fingerprint that proves we had the answer without revealing it) lives here → [DONT_SPOIL_THE_HUNT.md](DONT_SPOIL_THE_HUNT.md)
+Puzzles with a living setter stay puzzles: the solution goes privately to the setter, and only a sealed hash (a fingerprint that proves we had the answer without revealing it) lives here, and found wrecks and unrecorded sites stay sealed → [DONT_SPOIL_THE_HUNT.md](DONT_SPOIL_THE_HUNT.md)
 
 ## 🛠 J01N TH3 HUNT
 

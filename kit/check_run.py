@@ -283,10 +283,14 @@ def never_publish_list(workdir):
 
 # ---------- envelope ----------
 
+# A problem line that looks like a position: two decimal numbers, a degree sign, or N/S/E/W right after a number.
+COORD_LIKE = re.compile(r"\d\.\d+\D+\d+\.\d|\u00b0|\d\s?[NSEWnsew]\b")
+
 def check_envelope(c, path, workdir=None, bank=None):
     label = "envelope %s" % os.path.basename(os.path.dirname(path)) if os.path.basename(path) == "envelope.md" else "envelope %s" % os.path.basename(path)
     t = read(path)
     rows, target, problem, title = 0, None, None, 0
+    title_id, first_commit = None, None
     allowed_static = {"| file | frozen (UTC) | commitment |", "|---|---|---|"}
     row_re = re.compile(r"^\| solution file \d+ \((%s)\) \| \d{4}-\d\d-\d\dT\d\d:\d\d:\d\dZ \| `[0-9a-f]{64}` \|$" % ENVELOPE_LABELS)
     for i, line in enumerate(t.splitlines(), 1):
@@ -295,18 +299,33 @@ def check_envelope(c, path, workdir=None, bank=None):
             continue
         if re.match(r"^# Sealed envelope [a-z0-9][a-z0-9-]*$", s):
             title += 1
+            title_id = s.rsplit(" ", 1)[1]
         elif re.match(r"^target: [a-z0-9][a-z0-9-]*$", s):
             target = s.split(": ", 1)[1]
+        elif s.startswith("problem:") and COORD_LIKE.search(s[len("problem:"):]):
+            c.fail("%s: line %d: the problem line looks like coordinates; a sealed location uses exactly "
+                   "`problem: sealed location`" % (label, i))
         elif re.match(r"^problem: [A-Za-z0-9 .#()-]{1,40}$", s):
             problem = s
         elif s in allowed_static:
             pass
         elif row_re.match(s):
             rows += 1
+            if first_commit is None:
+                first_commit = re.search(r"`([0-9a-f]{64})`", s).group(1)
         else:
             c.fail("%s: line %d is not part of the sealed-envelope template (only hashes and labels may appear)" % (label, i))
     if title != 1 or not target or not problem or rows < 1:
         c.fail("%s: needs exactly one title, a target line, a problem line and at least one commitment row" % label)
+    if bank and target in bank and bank[target].get("category") == "lost-and-hidden" \
+            and bank[target].get("disclosure") == "commit-only" and problem != "problem: sealed location":
+        c.fail("%s: %s is a sealed location; its problem line must be exactly `problem: sealed location`" % (label, target))
+    # An unsalted hash of a coordinates file, even 8 hex of it, can be matched against guessed positions.
+    if bank and target in bank and bank[target].get("category") == "lost-and-hidden" \
+            and bank[target].get("disclosure") == "commit-only" and title_id and first_commit \
+            and not title_id.endswith("-" + first_commit[:8]):
+        c.fail("%s: %s is a sealed location; the submission-id must end with -%s, the first 8 hex of the first "
+               "commitment, never an unsalted hash of a private file" % (label, target, first_commit[:8]))
     if bank and target and target not in bank:
         c.warn("%s: target %s is not in the bank" % (label, target))
     if bank and target in (bank or {}) and bank[target].get("disclosure") != "commit-only":
