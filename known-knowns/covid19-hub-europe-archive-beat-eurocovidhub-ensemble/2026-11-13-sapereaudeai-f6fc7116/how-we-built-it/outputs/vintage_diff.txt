@@ -1,0 +1,10 @@
+distinct published truth keys (target_variable, location, target_end_date): 1862
+inc case: keys 1049; ecdc present 1049; final0927 present 1049; owid present 0
+   ecdc vs final0927: compared 1049, differ 0
+   ecdc vs owid: compared 0, differ 0
+inc death: keys 776; ecdc present 776; final0927 present 776; owid present 0
+   ecdc vs final0927: compared 776, differ 0
+   ecdc vs owid: compared 0, differ 0
+inc hosp: keys 37; ecdc present 37; final0927 present 0; owid present 37
+   ecdc vs final0927: compared 0, differ 0
+   ecdc vs owid: compared 37, differ 36

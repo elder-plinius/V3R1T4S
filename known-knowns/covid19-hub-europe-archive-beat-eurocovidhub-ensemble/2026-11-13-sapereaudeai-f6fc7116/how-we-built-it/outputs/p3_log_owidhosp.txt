@@ -1,0 +1,20 @@
+truth: owidhosp | published rows: 31256 | covered: 31256 | rows exact on all 4 (rounded): 31253 | missing files: 0
+                     model  rows_pub  rows_covered  rows_exact_all4  wis_pub_on_covered  wis_rec  wis_reldiff  sharpness_reldiff  underprediction_reldiff  overprediction_reldiff  over_1pct
+        ECDC-norrsken_blue      2310          2310             2310             525.278  525.278            0                  0                        0                       0      False
+       ECDC-norrsken_green      2390          2390             2390             610.362  610.362            0                  0                        0                       0      False
+         ECDC-soca_simplex      1315          1315             1315             173.639  173.639            0                  0                        0                       0      False
+     EuroCOVIDhub-baseline      3988          3988             3987             705.469  705.469  3.55441e-07                  0                        0                       0      False
+     EuroCOVIDhub-ensemble      3379          3379             3378               350.4    350.4            0       -1.87556e-06                        0                       0      False
+            ICM-agentModel       152           152              152             922.395  922.395            0                  0                        0                       0      False
+               ISI-BLModel       690           690              690             6.67391  6.67391            0                  0                        0                       0      False
+               ISI-SMtrend       862           862              862             4.93039  4.93039            0                  0                        0                       0      False
+              Lydia-SARIMA      3369          3369             3369             1550.95  1550.95            0                  0                        0                       0      False
+         Lydia-simpleARIMA      2066          2066             2066             1604.24  1604.24            0                  0                        0                       0      False
+PL_GRedlarski-DistrictsSum        96            96               96             1493.75  1493.75            0                  0                        0                       0      False
+      epiforecasts-EpiNow2      2949          2949             2948             391.867  391.867            0        3.19904e-06                        0                       0      False
+   epiforecasts-tsensemble      4913          4913             4913             307.038  307.038            0                  0                        0                       0      False
+ epiforecasts-weeklygrowth       543           543              543             3496.58  3496.58            0                  0                        0                       0      False
+        fjordhest-ensemble      2234          2234             2234             363.715  363.715            0                  0                        0                       0      False
+contrast: rows whose rounded 1/(K+1)-form WIS equals the published wis: 13252 of 31256
+rows whose rounded ae_median matches: 31256 | rows whose cov_50 and cov_95 match: 31256
+models over 1% (or <95% rows covered): []

@@ -1,0 +1,49 @@
+rows with horizon 0 ('0 wk ahead') dropped (not a hub target): 5382
+rows in fetched files (hub targets, horizons 1-4): 40762
+published rows: 31256
+rows failing has_truth: 7642
+rows failing scorable_q: 0
+rows with status != final: 222
+rows on an anomaly week (truth anti-join): 0
+rows of forecasts made directly after an anomaly: 0
+rows kept by the re-derived rules: 32898
+published rows found in fetched files: 31256; published rows not in any fetched file: 0
+kept AND published: 31256
+kept but NOT published: 1642
+published but NOT kept: 0
+kept-but-not-published by model/target_variable:
+model                      target_variable
+ECDC-norrsken_green        inc hosp            20
+ECDC-soca_simplex          inc hosp            40
+EuroCOVIDhub-baseline      inc hosp           311
+EuroCOVIDhub-ensemble      inc hosp           116
+Lydia-SARIMA               inc hosp           358
+Lydia-simpleARIMA          inc hosp           319
+epiforecasts-EpiNow2       inc hosp           187
+epiforecasts-tsensemble    inc hosp           161
+epiforecasts-weeklygrowth  inc hosp            50
+fjordhest-ensemble         inc hosp            80
+kept-but-not-published by target_end_date (first 20):
+target_end_date
+2023-11-04     25
+2023-11-11     55
+2023-11-18     80
+2023-11-25     94
+2023-12-02    102
+2023-12-09    110
+2023-12-16    111
+2023-12-23     99
+2023-12-30     80
+2024-01-06     78
+2024-01-13     72
+2024-01-20     75
+2024-01-27     73
+2024-02-03     74
+2024-02-10     65
+2024-02-17     58
+2024-02-24     44
+2024-03-02     49
+2024-03-09     40
+2024-03-16     35
+all fetched-file rows NOT published, by reason (a row may have several):
+  no truth: 7642; status != final: 222; anomaly: 0; after anomaly: 0; not 23 quantiles/point: 0
