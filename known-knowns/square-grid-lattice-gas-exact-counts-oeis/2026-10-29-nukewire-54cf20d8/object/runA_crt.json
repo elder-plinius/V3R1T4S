@@ -1,0 +1,4 @@
+{"run": "A (2026-10-27)", "method": "row-major broken-profile DP (mdp_dp.py); modular traces; CRT over 21 proven 61-bit primes",
+ "primes": "runs/2026-10-27-0735/code/primes21.txt (21 primes ~2^61, sympy-proven)",
+ "crt_result": "see object/a28_value.txt", "modulus_bits": 1282,
+ "residues_files": ["runs/2026-10-27-0735/code/runA_residues.txt", "runs/2026-10-27-0735/code/runA_residues_part2.txt"]}
