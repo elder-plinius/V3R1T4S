@@ -1,0 +1,2013 @@
+{
+ "summary": {
+  "18": {
+   "c0": 0.21863573789596558,
+   "best_shift": 0.51392,
+   "best_control": 0.51392,
+   "n_peaks": 66288,
+   "n_above": 2,
+   "phase_interval": [
+    161.36978884181008,
+    323.2515195281303
+   ],
+   "n_above_new": 0
+  },
+  "10": {
+   "c0": 0.2756602168083191,
+   "best_shift": 0.41912,
+   "best_control": 0.41912,
+   "n_peaks": 66250,
+   "n_above": 1,
+   "phase_interval": [
+    56.10205717905774,
+    330.92556233509094
+   ],
+   "n_above_new": 0
+  },
+  "9": {
+   "c0": 0.15304645895957947,
+   "best_shift": 0.17576,
+   "best_control": 0.17576,
+   "n_peaks": 66176,
+   "n_above": 2,
+   "phase_interval": [
+    36.48940703047265,
+    286.0799238571344
+   ],
+   "n_above_new": 0
+  },
+  "14": {
+   "c0": 0.18518602848052979,
+   "best_shift": 0.24329,
+   "best_control": 0.24329,
+   "n_peaks": 66069,
+   "n_above": 11,
+   "phase_interval": [
+    224.7937561860308,
+    77.90087898765341
+   ],
+   "n_above_new": 1
+  },
+  "204": {
+   "c0": 0.2463241070508957,
+   "best_shift": 0.57462,
+   "best_control": 0.57462,
+   "n_peaks": 65913,
+   "n_above": 3,
+   "phase_interval": [
+    184.02754042427114,
+    298.37358084062
+   ],
+   "n_above_new": 0
+  },
+  "23": {
+   "c0": 0.2106427103281021,
+   "best_shift": 0.31467,
+   "best_control": 0.31467,
+   "n_peaks": 66145,
+   "n_above": 4,
+   "phase_interval": [
+    281.0697819160996,
+    138.86028576735407
+   ],
+   "n_above_new": 0
+  },
+  "20": {
+   "c0": 0.2657199203968048,
+   "best_shift": 0.62465,
+   "best_control": 0.62465,
+   "n_peaks": 66001,
+   "n_above": 0,
+   "phase_interval": [
+    121.93091093833209,
+    74.15417666040594
+   ],
+   "n_above_new": 0
+  },
+  "201": {
+   "c0": 0.2279641330242157,
+   "best_shift": 0.61006,
+   "best_control": 0.61006,
+   "n_peaks": 66249,
+   "n_above": 1,
+   "phase_interval": [
+    6.744469787052367,
+    162.13433254715346
+   ],
+   "n_above_new": 0
+  },
+  "100": {
+   "c0": 0.15744133293628693,
+   "best_shift": 0.19062,
+   "best_control": 0.19062,
+   "n_peaks": 65910,
+   "n_above": 11,
+   "phase_interval": [
+    46.700625008903444,
+    318.3373941780301
+   ],
+   "n_above_new": 4
+  },
+  "210": {
+   "c0": 0.24036124348640442,
+   "best_shift": 0.44694,
+   "best_control": 0.44694,
+   "n_peaks": 66438,
+   "n_above": 1,
+   "phase_interval": [
+    328.66031925723655,
+    68.61522794814664
+   ],
+   "n_above_new": 0
+  },
+  "25": {
+   "c0": 0.2259528934955597,
+   "best_shift": 0.53543,
+   "best_control": 0.53543,
+   "n_peaks": 66068,
+   "n_above": 4,
+   "phase_interval": [
+    70.7988228052418,
+    301.94411089974164
+   ],
+   "n_above_new": 0
+  },
+  "257": {
+   "c0": 0.2627396583557129,
+   "best_shift": 0.4432,
+   "best_control": 0.4432,
+   "n_peaks": 66145,
+   "n_above": 1,
+   "phase_interval": [
+    214.62546129649854,
+    348.2445510053076
+   ],
+   "n_above_new": 0
+  }
+ },
+ "candidates": {
+  "100": [
+   {
+    "onset": "1973-05-19T22:54:02.075Z",
+    "Dc": 0.77601,
+    "above_null": true,
+    "ccs": [
+     0.7571,
+     0.7949,
+     0.7878,
+     0.7765
+    ],
+    "best_cc": {
+     "s14": 0.7949,
+     "s16": 0.7878
+    },
+    "lag12_s": 0.604,
+    "lag14_s": 0.604,
+    "r7": true,
+    "p1_cc": true,
+    "catalogued": [
+     "levent 73-139 2252 T2=A N2=100"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 189.97155900842336,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 74.32496326372033,
+     "s16": 41.146520694654505
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-12-23T15:53:32.188Z",
+    "Dc": 0.64744,
+    "above_null": true,
+    "ccs": [
+     0.6518,
+     0.7592,
+     0.6221,
+     0.6728
+    ],
+    "best_cc": {
+     "s14": 0.7592,
+     "s16": 0.6728
+    },
+    "lag12_s": 1.208,
+    "lag14_s": 1.509,
+    "r7": true,
+    "p1_cc": true,
+    "catalogued": [
+     "levent 73-357 1540 T2=A N2=276",
+     "levent 73-357 1553 T2=A N2=100"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 154.3248524574301,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -59.08484047488888,
+     "s16": -80.74796358500538
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-09-05T21:47:03.358Z",
+    "Dc": 0.60377,
+    "above_null": true,
+    "ccs": [
+     0.7487,
+     0.6916,
+     0.5053,
+     0.7023
+    ],
+    "best_cc": {
+     "s14": 0.7487,
+     "s16": 0.7023
+    },
+    "lag12_s": -0.302,
+    "lag14_s": -0.302,
+    "r7": true,
+    "p1_cc": true,
+    "catalogued": [
+     "levent 73-248 2148 T2=A N2=100"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 173.4480857066228,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -6.5063150495454165,
+     "s16": 26.10586942727971
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-22T18:28:36.943Z",
+    "Dc": 0.40982,
+    "above_null": true,
+    "ccs": [
+     0.566,
+     null,
+     null,
+     0.4098
+    ],
+    "best_cc": {
+     "s14": 0.566,
+     "s16": 0.4098
+    },
+    "lag12_s": 1.811,
+    "lag14_s": 1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 194.80863084855082,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 46.02094425891809,
+     "s16": 13.00328770805284
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-01-03T16:48:51.132Z",
+    "Dc": 0.40194,
+    "above_null": true,
+    "ccs": [
+     0.3953,
+     0.4086,
+     0.6615,
+     0.5527
+    ],
+    "best_cc": {
+     "s14": 0.4086,
+     "s16": 0.6615
+    },
+    "lag12_s": -2.113,
+    "lag14_s": -1.509,
+    "r7": false,
+    "p1_cc": true,
+    "catalogued": [
+     "levent 73-003 1647 T2=A N2=100"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 209.81926764950913,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -63.98347025345883,
+     "s16": -78.51402180370583
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-13T12:20:45.094Z",
+    "Dc": 0.35716,
+    "above_null": true,
+    "ccs": [
+     0.3572,
+     null,
+     0.5904,
+     0.5975
+    ],
+    "best_cc": {
+     "s14": 0.3572,
+     "s16": 0.5975
+    },
+    "lag12_s": -2.113,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-194 1220 T2=A N2=100"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 182.80044338472362,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 50.245982865264466,
+     "s16": 78.85122355204504
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-11-26T07:46:28.641Z",
+    "Dc": 0.34329,
+    "above_null": true,
+    "ccs": [
+     0.4264,
+     0.5621,
+     0.6994,
+     -0.0128
+    ],
+    "best_cc": {
+     "s14": 0.5621,
+     "s16": 0.6994
+    },
+    "lag12_s": 1.509,
+    "lag14_s": 2.113,
+    "r7": true,
+    "p1_cc": true,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 157.1510017919063,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -84.59488660773903,
+     "s16": -59.77769141938344
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-06-16T06:12:10.075Z",
+    "Dc": 0.32777,
+    "above_null": true,
+    "ccs": [
+     0.2487,
+     0.4069,
+     0.5064,
+     0.5848
+    ],
+    "best_cc": {
+     "s14": 0.4069,
+     "s16": 0.5848
+    },
+    "lag12_s": 0.604,
+    "lag14_s": 1.208,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-167 0555 T2=C N2=nan"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 186.7015102689329,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 77.57663464777463,
+     "s16": 67.16052087179676
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-10-30T02:25:51.509Z",
+    "Dc": 0.29806,
+    "above_null": true,
+    "ccs": [
+     0.4936,
+     0.6211,
+     0.6196,
+     -0.0235
+    ],
+    "best_cc": {
+     "s14": 0.6211,
+     "s16": 0.6196
+    },
+    "lag12_s": -1.509,
+    "lag14_s": -0.906,
+    "r7": true,
+    "p1_cc": true,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 161.48724883938849,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -65.60156967259547,
+     "s16": -32.432313104309415
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-01-30T23:06:52.188Z",
+    "Dc": 0.26484,
+    "above_null": true,
+    "ccs": [
+     0.2237,
+     0.5067,
+     0.5657,
+     -0.036
+    ],
+    "best_cc": {
+     "s14": 0.5067,
+     "s16": 0.5657
+    },
+    "lag12_s": -1.509,
+    "lag14_s": 0.906,
+    "r7": true,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S14 id 2176 type 1",
+     "onodera S15 id 2266 type 5"
+    ],
+    "new": true,
+    "phase": 206.00379421343678,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -36.486897273733646,
+     "s16": -67.7415355516638
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-08-09T18:30:30.754Z",
+    "Dc": 0.26208,
+    "above_null": true,
+    "ccs": [
+     0.2935,
+     0.2306,
+     0.5802,
+     0.6473
+    ],
+    "best_cc": {
+     "s14": 0.2935,
+     "s16": 0.6473
+    },
+    "lag12_s": -0.302,
+    "lag14_s": -0.906,
+    "r7": false,
+    "p1_cc": true,
+    "catalogued": [
+     "levent 73-221 1830 T2=A N2=100"
+    ],
+    "onodera": [
+     "onodera S14 id 3170 type 3"
+    ],
+    "new": false,
+    "phase": 178.91005857985874,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 22.617938061804164,
+     "s16": 54.6271491513938
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-06-20T23:31:14.830Z",
+    "Dc": 0.15939,
+    "above_null": false,
+    "ccs": [
+     0.1666,
+     null,
+     null,
+     0.1594
+    ],
+    "best_cc": {
+     "s14": 0.1666,
+     "s16": 0.1594
+    },
+    "lag12_s": 1.509,
+    "lag14_s": -0.906,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 248.3889557857765,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 44.21211424702789,
+     "s16": 11.21034445742735
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-10-29T17:19:36.264Z",
+    "Dc": 0.1565,
+    "above_null": false,
+    "ccs": [
+     0.156,
+     0.2364,
+     0.2451,
+     0.0679
+    ],
+    "best_cc": {
+     "s14": 0.2364,
+     "s16": 0.2451
+    },
+    "lag12_s": 2.113,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 156.5311337414605,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -70.15897388826835,
+     "s16": -36.97264228756092
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-09-19T09:59:51.962Z",
+    "Dc": 0.155,
+    "above_null": false,
+    "ccs": [
+     0.1841,
+     null,
+     0.155,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1841,
+     "s16": 0.155
+    },
+    "lag12_s": 2.113,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-262 0932 T2=C N2=nan"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 349.9417134049145,
+    "r9": false,
+    "gap_ok": true,
+    "elev": {
+     "s14": 21.789573772166058,
+     "s16": -10.999920478482588
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-22T11:55:16.339Z",
+    "Dc": 0.15223,
+    "above_null": false,
+    "ccs": [
+     0.1855,
+     null,
+     null,
+     0.1522
+    ],
+    "best_cc": {
+     "s14": 0.1855,
+     "s16": 0.1522
+    },
+    "lag12_s": -1.811,
+    "lag14_s": 0.906,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 191.23986095377768,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 49.33601686655507,
+     "s16": 16.289657839086892
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-01-17T22:04:16.716Z",
+    "Dc": 0.15123,
+    "above_null": false,
+    "ccs": [
+     0.176,
+     null,
+     null,
+     0.1512
+    ],
+    "best_cc": {
+     "s14": 0.176,
+     "s16": 0.1512
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S14 id 2153 type 2",
+     "onodera S15 id 2204 type 3"
+    ],
+    "new": true,
+    "phase": 35.59100315197429,
+    "r9": false,
+    "gap_ok": true,
+    "elev": {
+     "s14": 57.381323318878465,
+     "s16": 81.00829926693584
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-01-23T20:08:37.547Z",
+    "Dc": 0.14944,
+    "above_null": false,
+    "ccs": [
+     0.1586,
+     null,
+     null,
+     0.1494
+    ],
+    "best_cc": {
+     "s14": 0.1586,
+     "s16": 0.1494
+    },
+    "lag12_s": 2.113,
+    "lag14_s": 1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S16 id 903 type 3"
+    ],
+    "new": true,
+    "phase": 112.93165216574562,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 50.13218092927464,
+     "s16": 17.079017513120213
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-20T16:59:41.396Z",
+    "Dc": 0.14851,
+    "above_null": false,
+    "ccs": [
+     0.1524,
+     null,
+     0.1485,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1524,
+     "s16": 0.1485
+    },
+    "lag12_s": -0.906,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 276.7861762987304,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 41.81360423549578,
+     "s16": 8.83312893378244
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-03-25T06:22:56.113Z",
+    "Dc": 0.14728,
+    "above_null": false,
+    "ccs": [
+     0.1473,
+     null,
+     0.1615,
+     0.1338
+    ],
+    "best_cc": {
+     "s14": 0.1473,
+     "s16": 0.1615
+    },
+    "lag12_s": -0.604,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 182.40479670926288,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 33.54880993279661,
+     "s16": 0.6438335289694931
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-10-02T14:14:56.113Z",
+    "Dc": 0.14617,
+    "above_null": false,
+    "ccs": [
+     0.1567,
+     0.2023,
+     0.2164,
+     0.0759
+    ],
+    "best_cc": {
+     "s14": 0.2023,
+     "s16": 0.2164
+    },
+    "lag12_s": 0.0,
+    "lag14_s": 0.302,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 162.10084028907295,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -41.09554463060454,
+     "s16": -8.121494887571176
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-06-03T10:27:00.037Z",
+    "Dc": 0.1454,
+    "above_null": false,
+    "ccs": [
+     0.1326,
+     0.1846,
+     0.0898,
+     0.201
+    ],
+    "best_cc": {
+     "s14": 0.1846,
+     "s16": 0.201
+    },
+    "lag12_s": 1.811,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 19.168678189147613,
+    "r9": false,
+    "gap_ok": true,
+    "elev": {
+     "s14": -77.66449568692009,
+     "s16": -44.53014329928762
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-06-16T01:18:20.792Z",
+    "Dc": 0.14449,
+    "above_null": false,
+    "ccs": [
+     0.1473,
+     0.1417,
+     0.2,
+     0.2363
+    ],
+    "best_cc": {
+     "s14": 0.1473,
+     "s16": 0.2363
+    },
+    "lag12_s": -2.113,
+    "lag14_s": -1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 184.03569480456645,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 75.18231059325086,
+     "s16": 69.41516914589046
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-12T15:20:08.867Z",
+    "Dc": 0.14403,
+    "above_null": false,
+    "ccs": [
+     0.144,
+     null,
+     null,
+     0.1565
+    ],
+    "best_cc": {
+     "s14": 0.144,
+     "s16": 0.1565
+    },
+    "lag12_s": 0.0,
+    "lag14_s": 0.302,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 171.36309667967726,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 39.617575494670305,
+     "s16": 70.56274634077333
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-20T14:02:40.113Z",
+    "Dc": 0.14365,
+    "above_null": false,
+    "ccs": [
+     0.165,
+     null,
+     null,
+     0.1437
+    ],
+    "best_cc": {
+     "s14": 0.165,
+     "s16": 0.1437
+    },
+    "lag12_s": 1.509,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 275.1800769188703,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 43.30663933524391,
+     "s16": 10.312878168068734
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-21T21:23:17.245Z",
+    "Dc": 0.14277,
+    "above_null": false,
+    "ccs": [
+     0.1593,
+     null,
+     0.1428,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1593,
+     "s16": 0.1428
+    },
+    "lag12_s": -1.811,
+    "lag14_s": 1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 183.32841891645512,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 56.676396388253885,
+     "s16": 23.569145737812537
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-06-13T09:40:27.283Z",
+    "Dc": 0.1419,
+    "above_null": false,
+    "ccs": [
+     0.1454,
+     null,
+     0.1202,
+     0.1636
+    ],
+    "best_cc": {
+     "s14": 0.1454,
+     "s16": 0.1636
+    },
+    "lag12_s": 0.906,
+    "lag14_s": 1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 149.3962994719477,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 43.197137928608456,
+     "s16": 73.65230742564113
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-05-19T17:52:33.924Z",
+    "Dc": 0.14143,
+    "above_null": false,
+    "ccs": [
+     0.2385,
+     0.1074,
+     0.0999,
+     0.1829
+    ],
+    "best_cc": {
+     "s14": 0.2385,
+     "s16": 0.1829
+    },
+    "lag12_s": 1.509,
+    "lag14_s": 1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 187.23635574155196,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 76.79218626190415,
+     "s16": 43.6410652371069
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-02-23T16:09:44.264Z",
+    "Dc": 0.14122,
+    "above_null": false,
+    "ccs": [
+     0.1412,
+     null,
+     null,
+     0.1449
+    ],
+    "best_cc": {
+     "s14": 0.1412,
+     "s16": 0.1449
+    },
+    "lag12_s": -1.509,
+    "lag14_s": -1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S14 id 2239 type 5"
+    ],
+    "new": true,
+    "phase": 155.77901945111807,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 34.30131472074018,
+     "s16": 1.3893111311502604
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-06-12T09:58:40.716Z",
+    "Dc": 0.14103,
+    "above_null": false,
+    "ccs": [
+     0.1453,
+     null,
+     0.1818,
+     0.1002
+    ],
+    "best_cc": {
+     "s14": 0.1453,
+     "s16": 0.1818
+    },
+    "lag12_s": 2.113,
+    "lag14_s": 0.906,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 136.49665047827875,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 31.199445343269844,
+     "s16": 62.82581896463553
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-04-25T16:31:39.886Z",
+    "Dc": 0.14091,
+    "above_null": false,
+    "ccs": [
+     0.1425,
+     null,
+     0.1634,
+     0.1184
+    ],
+    "best_cc": {
+     "s14": 0.1425,
+     "s16": 0.1634
+    },
+    "lag12_s": -0.906,
+    "lag14_s": 0.906,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-115 1630 T2=A N2=21"
+    ],
+    "onodera": [
+     "onodera S15 id 2613 type 2"
+    ],
+    "new": false,
+    "phase": 232.94252373550262,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 10.537632148952325,
+     "s16": -22.12568966907892
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-06-14T15:04:30.301Z",
+    "Dc": 0.13919,
+    "above_null": false,
+    "ccs": [
+     0.1647,
+     null,
+     null,
+     0.1392
+    ],
+    "best_cc": {
+     "s14": 0.1647,
+     "s16": 0.1392
+    },
+    "lag12_s": 0.302,
+    "lag14_s": -1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 165.4013721790252,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 58.053664502233104,
+     "s16": 80.9431210445228
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-04-22T13:49:34.603Z",
+    "Dc": 0.13899,
+    "above_null": false,
+    "ccs": [
+     0.139,
+     null,
+     null,
+     0.1495
+    ],
+    "best_cc": {
+     "s14": 0.139,
+     "s16": 0.1495
+    },
+    "lag12_s": 1.509,
+    "lag14_s": -1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 192.27693470273516,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 48.37286572882121,
+     "s16": 15.334786780137994
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-03-24T21:48:58.679Z",
+    "Dc": 0.13854,
+    "above_null": false,
+    "ccs": [
+     0.1385,
+     null,
+     0.1473,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1385,
+     "s16": 0.1473
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -0.906,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 177.74170812859666,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 37.886495934754905,
+     "s16": 4.9414574017184965
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-06-20T02:12:10.075Z",
+    "Dc": 0.1377,
+    "above_null": false,
+    "ccs": [
+     0.1524,
+     null,
+     null,
+     0.1377
+    ],
+    "best_cc": {
+     "s14": 0.1524,
+     "s16": 0.1377
+    },
+    "lag12_s": -0.604,
+    "lag14_s": -1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 236.78398275798827,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 54.98752158281134,
+     "s16": 21.893840406462
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-20T19:51:47.433Z",
+    "Dc": 0.13763,
+    "above_null": false,
+    "ccs": [
+     0.1376,
+     null,
+     0.1432,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1376,
+     "s16": 0.1432
+    },
+    "lag12_s": 0.604,
+    "lag14_s": -1.208,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-201 1902 T2=A N2=1"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 278.34763010562165,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 40.361826828972475,
+     "s16": 7.39436716706251
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-24T04:17:47.886Z",
+    "Dc": 0.13717,
+    "above_null": false,
+    "ccs": [
+     0.1469,
+     null,
+     0.1372,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1469,
+     "s16": 0.1372
+    },
+    "lag12_s": -1.811,
+    "lag14_s": 1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 213.21922345976054,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 28.898636585762976,
+     "s16": -3.9620736993110306
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-06-20T23:49:17.094Z",
+    "Dc": 0.13594,
+    "above_null": false,
+    "ccs": [
+     0.1424,
+     null,
+     null,
+     0.1359
+    ],
+    "best_cc": {
+     "s14": 0.1424,
+     "s16": 0.1359
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 248.5526105700701,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 44.060010553003444,
+     "s16": 11.059583488622023
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-06-21T12:37:44.264Z",
+    "Dc": 0.13564,
+    "above_null": false,
+    "ccs": [
+     0.1755,
+     null,
+     null,
+     0.1356
+    ],
+    "best_cc": {
+     "s14": 0.1755,
+     "s16": 0.1356
+    },
+    "lag12_s": -1.208,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S15 id 2902 type 0"
+    ],
+    "new": true,
+    "phase": 255.5247152308002,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 37.57751379133454,
+     "s16": 4.635295164930453
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-05-16T11:37:02.000Z",
+    "Dc": 0.13524,
+    "above_null": false,
+    "ccs": [
+     0.1578,
+     null,
+     0.1264,
+     0.1441
+    ],
+    "best_cc": {
+     "s14": 0.1578,
+     "s16": 0.1441
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -0.302,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 144.63420791838143,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 62.72614116348573,
+     "s16": 79.25771511015128
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-10-27T03:27:06.679Z",
+    "Dc": 0.1352,
+    "above_null": false,
+    "ccs": [
+     0.1139,
+     0.1567,
+     0.1691,
+     0.1013
+    ],
+    "best_cc": {
+     "s14": 0.1567,
+     "s16": 0.1691
+    },
+    "lag12_s": -0.906,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 122.84801188319398,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -77.55016871600083,
+     "s16": -67.18588217586435
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-21T00:41:05.320Z",
+    "Dc": 0.13516,
+    "above_null": false,
+    "ccs": [
+     0.1352,
+     null,
+     null,
+     0.1376
+    ],
+    "best_cc": {
+     "s14": 0.1352,
+     "s16": 0.1376
+    },
+    "lag12_s": -0.906,
+    "lag14_s": -0.604,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 280.9724063368194,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 37.92093055898116,
+     "s16": 4.975578060848145
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-01-25T08:48:57.169Z",
+    "Dc": 0.13512,
+    "above_null": false,
+    "ccs": [
+     0.1422,
+     null,
+     0.1351,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1422,
+     "s16": 0.1351
+    },
+    "lag12_s": 0.906,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 132.89502510656894,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 31.572499867812517,
+     "s16": -1.3138492420994299
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-18T11:11:16.943Z",
+    "Dc": 0.1351,
+    "above_null": false,
+    "ccs": [
+     0.1353,
+     0.173,
+     0.128,
+     0.1423
+    ],
+    "best_cc": {
+     "s14": 0.173,
+     "s16": 0.1423
+    },
+    "lag12_s": -2.113,
+    "lag14_s": 2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 138.58077284962928,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 80.65876116925057,
+     "s16": 64.12717783301848
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-03-24T21:24:27.886Z",
+    "Dc": 0.13507,
+    "above_null": false,
+    "ccs": [
+     0.1351,
+     null,
+     null,
+     0.1626
+    ],
+    "best_cc": {
+     "s14": 0.1351,
+     "s16": 0.1626
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 177.51930196145258,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 38.09334370222949,
+     "s16": 5.146420089782849
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-05-08T21:38:30.452Z",
+    "Dc": 0.13427,
+    "above_null": false,
+    "ccs": [
+     0.1103,
+     0.1664,
+     null,
+     0.1343
+    ],
+    "best_cc": {
+     "s14": 0.1664,
+     "s16": 0.1343
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -1.208,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-128 2123 T2=A N2=9"
+    ],
+    "onodera": [
+     "onodera S14 id 2606 type 0"
+    ],
+    "new": false,
+    "phase": 45.57138775767817,
+    "r9": false,
+    "gap_ok": false,
+    "elev": {
+     "s14": -29.416335791895637,
+     "s16": 3.4493808146865916
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-08-06T15:39:22.679Z",
+    "Dc": 0.13395,
+    "above_null": false,
+    "ccs": [
+     0.135,
+     0.1329,
+     null,
+     0.1348
+    ],
+    "best_cc": {
+     "s14": 0.135,
+     "s16": 0.1348
+    },
+    "lag12_s": -1.208,
+    "lag14_s": -1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 138.162391076301,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": -15.322903240197952,
+     "s16": 17.396610831836604
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-01-14T22:39:52.264Z",
+    "Dc": 0.13334,
+    "above_null": false,
+    "ccs": [
+     0.2012,
+     null,
+     0.1411,
+     0.1255
+    ],
+    "best_cc": {
+     "s14": 0.2012,
+     "s16": 0.1411
+    },
+    "lag12_s": -2.113,
+    "lag14_s": 1.208,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-014 2229 T2=A N2=40"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 356.71895186927577,
+    "r9": false,
+    "gap_ok": false,
+    "elev": {
+     "s14": 21.247114402414876,
+     "s16": 53.30231402632991
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-07-20T21:10:04.490Z",
+    "Dc": 0.13326,
+    "above_null": false,
+    "ccs": [
+     0.1333,
+     null,
+     null,
+     0.1486
+    ],
+    "best_cc": {
+     "s14": 0.1333,
+     "s16": 0.1486
+    },
+    "lag12_s": -0.302,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S15 id 3030 type 8"
+    ],
+    "new": true,
+    "phase": 279.05789643454773,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 39.701375748208875,
+     "s16": 6.739869535732848
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-07-20T19:07:38.377Z",
+    "Dc": 0.13321,
+    "above_null": false,
+    "ccs": [
+     0.1411,
+     null,
+     null,
+     0.1332
+    ],
+    "best_cc": {
+     "s14": 0.1411,
+     "s16": 0.1332
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-201 1902 T2=A N2=1"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 277.9470524954377,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 40.734289647413114,
+     "s16": 7.763481506418595
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-09-19T09:38:07.207Z",
+    "Dc": 0.13294,
+    "above_null": false,
+    "ccs": [
+     0.1682,
+     null,
+     0.1329,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1682,
+     "s16": 0.1329
+    },
+    "lag12_s": -1.208,
+    "lag14_s": -1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-262 0932 T2=C N2=nan"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 349.74441466631833,
+    "r9": false,
+    "gap_ok": true,
+    "elev": {
+     "s14": 21.973237840856278,
+     "s16": -10.81816263294225
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-02-22T17:28:03.132Z",
+    "Dc": 0.13279,
+    "above_null": false,
+    "ccs": [
+     0.1328,
+     null,
+     null,
+     0.1472
+    ],
+    "best_cc": {
+     "s14": 0.1328,
+     "s16": 0.1472
+    },
+    "lag12_s": 0.0,
+    "lag14_s": -1.208,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 143.42456685745856,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 45.788836726483225,
+     "s16": 12.773210275284056
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-02-22T20:03:26.301Z",
+    "Dc": 0.13262,
+    "above_null": false,
+    "ccs": [
+     0.1356,
+     null,
+     null,
+     0.1326
+    ],
+    "best_cc": {
+     "s14": 0.1356,
+     "s16": 0.1326
+    },
+    "lag12_s": -1.208,
+    "lag14_s": 1.509,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 144.83437179563043,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 44.478720886878804,
+     "s16": 11.474600099936692
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-02-16T17:31:29.622Z",
+    "Dc": 0.13251,
+    "above_null": false,
+    "ccs": [
+     0.1325,
+     null,
+     0.1834,
+     0.0861
+    ],
+    "best_cc": {
+     "s14": 0.1325,
+     "s16": 0.1834
+    },
+    "lag12_s": -1.811,
+    "lag14_s": 1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 65.06583443848649,
+    "r9": true,
+    "gap_ok": false,
+    "elev": {
+     "s14": 60.768173860310796,
+     "s16": 80.19990906978646
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-03-24T07:06:13.849Z",
+    "Dc": 0.13242,
+    "above_null": false,
+    "ccs": [
+     0.1394,
+     null,
+     0.1324,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1394,
+     "s16": 0.1324
+    },
+    "lag12_s": -0.604,
+    "lag14_s": 0.906,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-083 0645 T2=A N2=20"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 169.73262101932778,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 45.3324692497898,
+     "s16": 12.320841712327315
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-03-25T02:09:03.509Z",
+    "Dc": 0.1324,
+    "above_null": false,
+    "ccs": [
+     0.1324,
+     null,
+     0.1346,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.1324,
+     "s16": 0.1346
+    },
+    "lag12_s": -1.509,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 180.10139556383365,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 35.69165591714938,
+     "s16": 2.766757054162075
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-19T14:42:47.660Z",
+    "Dc": 0.1324,
+    "above_null": false,
+    "ccs": [
+     0.192,
+     0.0824,
+     0.1182,
+     0.1466
+    ],
+    "best_cc": {
+     "s14": 0.192,
+     "s16": 0.1466
+    },
+    "lag12_s": 0.906,
+    "lag14_s": -1.208,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [
+     "levent 73-109 1441 T2=A N2=17"
+    ],
+    "onodera": [],
+    "new": false,
+    "phase": 153.56479491128994,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 83.50926009563729,
+     "s16": 50.772999252393596
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-05-18T12:02:38.603Z",
+    "Dc": 0.13202,
+    "above_null": false,
+    "ccs": [
+     0.132,
+     null,
+     null,
+     0.1431
+    ],
+    "best_cc": {
+     "s14": 0.132,
+     "s16": 0.1431
+    },
+    "lag12_s": 2.113,
+    "lag14_s": -2.113,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [],
+    "new": true,
+    "phase": 170.99655140282994,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 85.6097558675922,
+     "s16": 58.30568190073594
+    },
+    "thermal_ok": true
+   },
+   {
+    "onset": "1973-02-12T00:08:32.716Z",
+    "Dc": 0.13136,
+    "above_null": false,
+    "ccs": [
+     0.1227,
+     0.14,
+     0.1377,
+     null
+    ],
+    "best_cc": {
+     "s14": 0.14,
+     "s16": 0.1377
+    },
+    "lag12_s": 2.113,
+    "lag14_s": 0.0,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S14 id 2212 type 0"
+    ],
+    "new": true,
+    "phase": 3.3432841791654937,
+    "r9": false,
+    "gap_ok": true,
+    "elev": {
+     "s14": 3.3770884306563347,
+     "s16": 35.84317007422418
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-04-09T10:09:34.301Z",
+    "Dc": 0.13136,
+    "above_null": false,
+    "ccs": [
+     0.1465,
+     0.1163,
+     null,
+     0.1421
+    ],
+    "best_cc": {
+     "s14": 0.1465,
+     "s16": 0.1421
+    },
+    "lag12_s": 0.0,
+    "lag14_s": 0.604,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S14 id 2414 type 0",
+     "onodera S14 id 2415 type 0",
+     "onodera S16 id 1173 type 1"
+    ],
+    "new": true,
+    "phase": 20.435941791380174,
+    "r9": false,
+    "gap_ok": true,
+    "elev": {
+     "s14": -28.7821375487522,
+     "s16": 4.077443208246368
+    },
+    "thermal_ok": false
+   },
+   {
+    "onset": "1973-07-11T07:50:46.754Z",
+    "Dc": 0.13132,
+    "above_null": false,
+    "ccs": [
+     0.1704,
+     null,
+     null,
+     0.1313
+    ],
+    "best_cc": {
+     "s14": 0.1704,
+     "s16": 0.1313
+    },
+    "lag12_s": 1.208,
+    "lag14_s": -1.811,
+    "r7": false,
+    "p1_cc": false,
+    "catalogued": [],
+    "onodera": [
+     "onodera S14 id 3093 type 4"
+    ],
+    "new": true,
+    "phase": 154.22102265748254,
+    "r9": true,
+    "gap_ok": true,
+    "elev": {
+     "s14": 23.667842013572763,
+     "s16": 55.63961084372494
+    },
+    "thermal_ok": true
+   }
+  ]
+ }
+}

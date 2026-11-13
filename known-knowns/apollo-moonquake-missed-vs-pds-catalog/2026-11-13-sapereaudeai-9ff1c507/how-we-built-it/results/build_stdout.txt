@@ -1,0 +1,25 @@
+A18 events 21 members 10 onset 17.2 s max|t|/rms [3.6, 3.3, 3.5, 3.2]
+A10 events 9 members 4 onset 29.9 s max|t|/rms [6.6, 3.2, 3.4, 3.0]
+A9 events 6 members 3 onset 119.8 s max|t|/rms [3.0, 3.4, 4.0, 3.3]
+A6 dropped: no clean reference
+A218 dropped: members 1, max|t|/rms [3.0, 3.7, 3.5, 3.2]
+A14 events 50 members 8 onset 152.8 s max|t|/rms [3.8, 3.6, 3.8, 3.6]
+A204 events 8 members 5 onset 81.2 s max|t|/rms [4.5, 3.5, 4.8, 2.8]
+A39 dropped: members 1, max|t|/rms [5.9, 4.2, 4.0, 2.9]
+A23 events 14 members 7 onset 86.0 s max|t|/rms [3.2, 3.3, 3.6, 3.2]
+A36 dropped: no clean reference
+A7 dropped: members 1, max|t|/rms [3.1, 3.7, 3.5, 3.5]
+A26 dropped: no clean reference
+A16 dropped: no clean reference
+A20 events 44 members 11 onset 271.1 s max|t|/rms [3.4, 4.1, 3.6, 2.7]
+A201 events 9 members 4 onset 192.9 s max|t|/rms [3.3, 4.5, 3.2, 2.8]
+A100 events 14 members 5 onset 122.6 s max|t|/rms [3.8, 3.4, 3.6, 3.6]
+A210 events 4 members 4 onset 67.6 s max|t|/rms [3.4, 4.2, 3.9, 2.8]
+A29 dropped: no clean reference
+A25 events 11 members 6 onset 29.6 s max|t|/rms [3.9, 3.4, 3.8, 3.3]
+A216 dropped: no clean reference
+A86 dropped: members 1, max|t|/rms [3.7, 3.5, 3.9, 3.4]
+A38 dropped: no clean reference
+A257 events 8 members 5 onset 29.9 s max|t|/rms [3.8, 4.8, 4.0, 3.7]
+A22 dropped: no clean reference
+A319 dropped: no clean reference

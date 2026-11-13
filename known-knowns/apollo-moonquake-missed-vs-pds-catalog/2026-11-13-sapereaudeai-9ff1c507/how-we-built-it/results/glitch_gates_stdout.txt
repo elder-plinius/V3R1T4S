@@ -1,0 +1,175 @@
+{
+ "G1": {
+  "s14": {
+   "n_overlap_all": 0,
+   "n_overlap_used": 0,
+   "on_day": 47,
+   "nearest": [
+    [
+     1090.0,
+     1115.21,
+     "Step-Down",
+     "MH2",
+     "peaked mode",
+     "0.95",
+     "69.0"
+    ],
+    [
+     1090.45,
+     1120.64,
+     "Step-Down",
+     "MH1",
+     "peaked mode",
+     "0.98",
+     "26.0"
+    ],
+    [
+     1093.77,
+     1118.98,
+     "Spike",
+     "MH2",
+     "peaked mode",
+     "0.92",
+     "69.0"
+    ]
+   ]
+  },
+  "s16": {
+   "n_overlap_all": 0,
+   "n_overlap_used": 0,
+   "on_day": 40,
+   "nearest": [
+    [
+     774.38,
+     799.43,
+     "Step-Down",
+     "MH1",
+     "peaked mode",
+     "0.92",
+     "15.0"
+    ],
+    [
+     1400.79,
+     1425.85,
+     "Step-Down",
+     "MH1",
+     "peaked mode",
+     "0.93",
+     "10.0"
+    ],
+    [
+     -1604.19,
+     -1579.13,
+     "Step-Down",
+     "MH1",
+     "peaked mode",
+     "0.97",
+     "108.0"
+    ]
+   ]
+  }
+ },
+ "flagged": {
+  "s14.mh1": {
+   "n": 0,
+   "mad": 0.0,
+   "first_s": null,
+   "last_s": null
+  },
+  "s14.mh2": {
+   "n": 49,
+   "mad": 0.0,
+   "first_s": 238.79,
+   "last_s": 256.3
+  },
+  "s16.mh1": {
+   "n": 0,
+   "mad": 1.0,
+   "first_s": null,
+   "last_s": null
+  },
+  "s16.mh2": {
+   "n": 0,
+   "mad": 1.0,
+   "first_s": null,
+   "last_s": null
+  }
+ },
+ "n_spans": {
+  "s14": 49,
+  "s16": 0
+ },
+ "unmuted": {
+  "s14": {
+   "lag_samples": 5,
+   "lag_s": 1.509,
+   "ccs": [
+    0.4264,
+    0.5621
+   ],
+   "mean": 0.4942,
+   "muted": 0
+  },
+  "s16": {
+   "lag_samples": 7,
+   "lag_s": 2.113,
+   "ccs": [
+    0.6994,
+    -0.0128
+   ],
+   "mean": 0.3433,
+   "muted": 0
+  },
+  "Dt": 0.3433,
+  "R7": true
+ },
+ "muted": {
+  "s14": {
+   "lag_samples": 5,
+   "lag_s": 1.509,
+   "ccs": [
+    0.4513,
+    0.6475
+   ],
+   "mean": 0.5494,
+   "muted": 91
+  },
+  "s16": {
+   "lag_samples": 7,
+   "lag_s": 2.113,
+   "ccs": [
+    0.6994,
+    -0.0128
+   ],
+   "mean": 0.3433,
+   "muted": 0
+  },
+  "Dt": 0.3433,
+  "R7": true
+ },
+ "muted10": {
+  "s14": {
+   "lag_samples": 5,
+   "lag_s": 1.509,
+   "ccs": [
+    0.4513,
+    0.6475
+   ],
+   "mean": 0.5494,
+   "muted": 91
+  },
+  "s16": {
+   "lag_samples": 7,
+   "lag_s": 2.113,
+   "ccs": [
+    0.6994,
+    -0.0128
+   ],
+   "mean": 0.3433,
+   "muted": 0
+  },
+  "Dt": 0.3433,
+  "R7": true
+ },
+ "G2_pass": true
+}
