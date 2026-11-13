@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
 # SPDX-License-Identifier: AGPL-3.0-or-later
+# Known defects (noted 2026-11-13): negative control 2 cannot fail, and the seeded ten-file table calibration
+# described below never runs; see ../README.md. No result in this package depends on this file.
 """Independent checker for a claimed Gupta Co_N minimum (bank target ccd-gupta-cobalt-clusters-n200).
 
     python3 check_claim.py CLAIM.xyz N TABLE_E_eV DATA_DIR

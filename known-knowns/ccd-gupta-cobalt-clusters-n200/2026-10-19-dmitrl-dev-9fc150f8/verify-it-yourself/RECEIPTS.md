@@ -13,3 +13,6 @@ posted structures that polish lower by more than 1e-4 eV: none
 rows whose best known energy is the Co.zip one: 84, 95, 101, 113, 121, 122, 196, 197, 198, 200
 PASS
 ```
+
+Note (2026-11-13): the line "posted structures that polish lower by more than 1e-4 eV" covers the 199 table structures;
+check_p1.py polishes the ten Co.zip structures only to choose E_best (README.md, Not claimed).

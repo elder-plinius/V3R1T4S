@@ -18,4 +18,10 @@ subfolder net/ with points.tgz and Co.zip:
 
 code/check_claim.py is the separate certifier written for any candidate (mpmath 30-digit gradient, Hessian spectrum,
 distinct-basin test); it was only exercised on the known Co.zip 197 structure, because no candidate was found.
+Known defects of code/check_claim.py (noted 2026-11-13, after the maintainer's review of 2026-11-03; no result in this
+package depends on the file): (1) negative control 2 cannot fail: it tests len(xc[:-3]) != 3N, which holds for every
+input, and its outcome does not enter the verdict; (2) the seeded calibration on ten table files that the docstring
+describes never runs: the ten sizes are drawn (random.Random(20261019)) but never used, because the posted table
+energies are not in DATA_DIR. The calibration on all 199 table files is done by code/audit_ccd_cobalt.py and checked
+by verify-it-yourself/check_p1.py.
 PREREG.md was frozen before any download; PREREG.v2.md to PREREG.v5.md record each later change of plan, with times.

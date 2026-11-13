@@ -1,10 +1,12 @@
 # REPRODUCE: claim p1 of bank target ccd-gupta-cobalt-clusters-n200
 
-context: subagent (fresh-context delegation)
+> Edit 2026-11-13 (packaging, at the maintainer's request; no finding, number or verdict changed): this review read the claim archive claim_p1.zip. Its CLAIM.md, REPRODUCE.md and TABLE_RECORD.md are not included in this package (the sha256 pins of TABLE_RECORD.md are repeated in the-record-we-beat/README.md), its verify/check_p1.py is verify-it-yourself/check_p1.py here, and its data/ folder held the three CCD files, which the package does not ship; below they are named by URL and sha256. Internal filing notes were removed and the context line was reworded.
+
+context: fresh context, given only the claim archive and its kit/RUN.md instruction
 
 Role (kit/RUN.md, step 6): "Before reading the author's code, write your own checker from the definition (quote it). Verify every property and the claimed value from the saved files; re-derive every proof step. For an exhaustive search, a sample is a spot check and cannot pass. Fail on any mismatch, missing object or non-determinism."
 
-Input: the claim archive (sha256 `b700d809cbe05fb1feeb02bea1fd5b8ef9c266231b33fcefe60de5f63279c285`) containing CLAIM.md, REPRODUCE.md, TABLE_RECORD.md, data/cobalt.html, data/points.tgz, data/Co.zip, object/ccd_cobalt_audit.csv and verify/check_p1.py. File names below are relative to claim/.
+Input: the claim archive (sha256 `b700d809cbe05fb1feeb02bea1fd5b8ef9c266231b33fcefe60de5f63279c285`) containing CLAIM.md, REPRODUCE.md, TABLE_RECORD.md, copies of https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/cobalt.html (sha256 b1033b4142e8db518d0e9ef448c5e9d9e7fe651bc2088a0d54aad671eec030ef), https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/points.tgz (sha256 bd568d308fc3944501e97fae1eb64d536769b59f0677f0e080246416c3c5f561) and https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/Co.zip (sha256 28141c13e9658f901e6fa49228b38f3eca69a206f904a34043280f2ecebde9ca), object/ccd_cobalt_audit.csv and verify/check_p1.py. File names below are relative to claim/.
 
 Order of work: I wrote and ran my own checker, then compared its output with the CSV and checked every statement of the claim. Only after that did I open verify/check_p1.py and run it.
 
@@ -22,7 +24,7 @@ The data support this form independently:
 - After polishing, 198 of 199 table energies match the posted values within 6e-8 eV.
 
 ## 2. Data integrity
-- **Pinned hashes.** The sha256 of data/cobalt.html, data/points.tgz and data/Co.zip equal the pins in TABLE_RECORD.md (b1033b41…030ef, bd568d30…5f561, 28141c13…e9ca).
+- **Pinned hashes.** The sha256 of the claim archive's copies of cobalt.html, points.tgz and Co.zip equal the pins in TABLE_RECORD.md (b1033b41…030ef, bd568d30…5f561, 28141c13…e9ca).
 - **Live re-fetch.** I made one GET per URL with the default urllib User-Agent and no retries, at 2026-10-19T05:01:12Z–05:01:22Z, against https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/. All three returned HTTP 200 with the same byte counts (40715, 276791, 25979), the same Last-Modified headers as TABLE_RECORD.md, and sha256 values identical to the pins. The saved files are therefore the files currently served.
 - **points.tgz.** It holds exactly 199 files, points/2 … points/200. Each has exactly N non-empty lines of 3 numbers.
 - **Co.zip.** It holds 10 coordinate files, Co84, Co95, Co101, Co113, Co121, Co122, Co196, Co197, Co198 and Co200, each with exactly N lines. Co/Energy.txt lists the same 10 sizes.
@@ -102,7 +104,6 @@ From claim/, I ran `python3 verify/check_p1.py object/ccd_cobalt_audit.csv data`
 - **CPU.** My two full runs used about 82 s and 77 s of CPU. The steepest-descent check used 22.6 s. The author's checker ran for 23 s and 44 s of wall time. In total this is well under the 20-minute limit, with one heavy process at a time.
 - **Memory.** Measured peak RSS was 132.8 MB for the second full run and 125.8 MB for the steepest-descent check. Peak memory was not measured for the first run or for the author's checker.
 - **Network.** Three GETs, one per URL, with no retries.
-- **Outward actions.** None.
 
 ## Verdict
 Every row and field of object/ccd_cobalt_audit.csv matches my recomputation. All six statements of the one-sentence claim are confirmed on all 199 table files and all 10 Co.zip files, with no sampling. The polished energies are certified minima with gradient norms of about 1e-13 eV/r0. Both checkers are deterministic, and the author's checker prints PASS.

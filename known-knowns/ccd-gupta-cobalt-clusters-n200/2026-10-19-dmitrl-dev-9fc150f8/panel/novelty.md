@@ -1,12 +1,14 @@
 # NOVELTY panel report: claim p1, target `ccd-gupta-cobalt-clusters-n200`
 
-context: subagent (fresh-context delegation)
+> Edit 2026-11-13 (packaging, at the maintainer's request; no finding, number or verdict changed): this review read the claim archive claim_p1.zip. Its CLAIM.md, REPRODUCE.md and TABLE_RECORD.md are not included in this package (the sha256 pins of TABLE_RECORD.md are repeated in the-record-we-beat/README.md), its verify/check_p1.py is verify-it-yourself/check_p1.py here, and its data/ folder held the three CCD files, which the package does not ship; below they are named by URL and sha256. Internal filing notes were removed and the context line was reworded.
 
-Role: NOVELTY (kit/RUN.md step 6). Input: only the claim archive `claim_p1.zip` (sha256 `b700d809cbe05fb1feeb02bea1fd5b8ef9c266231b33fcefe60de5f63279c285`, 314438 bytes, 12 entries), plus independent public sources. No outward action was taken. File names below are relative to `claim/` unless marked `repo:`.
+context: fresh context, given only the claim archive and its kit/RUN.md instruction
+
+Role: NOVELTY (kit/RUN.md step 6). Input: only the claim archive `claim_p1.zip` (sha256 `b700d809cbe05fb1feeb02bea1fd5b8ef9c266231b33fcefe60de5f63279c285`, 314438 bytes, 12 entries), plus independent public sources. File names below are relative to `claim/` unless marked `repo:`.
 
 ## Bottom line
 
-- **The live status page is unchanged.** One GET at 2026-10-19T04:56:43Z returned HTTP 200 and 40715 bytes, with a sha256 identical to `TABLE_RECORD.md` and the same bytes as `data/cobalt.html`. All 199 live rows (N, point group, energy) equal the `point_group` / `E_table_posted` columns of `object/ccd_cobalt_audit.csv` (0 mismatches).
+- **The live status page is unchanged.** One GET at 2026-10-19T04:56:43Z returned HTTP 200 and 40715 bytes, with a sha256 identical to `TABLE_RECORD.md` and the same bytes as the claim archive's copy of https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/cobalt.html (sha256 b1033b4142e8db518d0e9ef448c5e9d9e7fe651bc2088a0d54aad671eec030ef). All 199 live rows (N, point group, energy) equal the `point_group` / `E_table_posted` columns of `object/ccd_cobalt_audit.csv` (0 mismatches).
 - **No existing p1 claim for this target is in the repo.** Checked: `repo:TROPHY_CASE.md`, `repo:known-knowns/` on main (HEAD = the commit named in `CLAIM.md`), all 176 open pull requests, and a GitHub issue/PR search over all states.
 - **No published audit or merged table of the CCD cobalt table was found** in arXiv, Crossref, forward citations of the table's source paper, or web search. The closest prior art is J. Chem. Inf. Model. 63, 6727 (2023), an independent re-search of Co_N, N = 3-200, compared against the CCD. It falls outside the 24-month window and is not a file-level audit or a merged table (details in section 4). The literature absence call is **provisional** because of the search limits in section 5.
 - **This is not a tie.** No equivalent audit exists to tie with. p1 makes no lower-energy (record) claim.
@@ -22,10 +24,10 @@ Role: NOVELTY (kit/RUN.md step 6). Input: only the claim archive `claim_p1.zip` 
 | Content-Type | text/html |
 | sha256 (live) | `b1033b4142e8db518d0e9ef448c5e9d9e7fe651bc2088a0d54aad671eec030ef` |
 | sha256 in `TABLE_RECORD.md` (fetched 2026-10-19T03:57:05Z) | `b1033b4142e8db518d0e9ef448c5e9d9e7fe651bc2088a0d54aad671eec030ef`: **identical** |
-| live bytes == `data/cobalt.html` | True |
+| live bytes == claim archive copy of https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/cobalt.html (sha256 b1033b4142e8db518d0e9ef448c5e9d9e7fe651bc2088a0d54aad671eec030ef) | True |
 | User-Agent sent | python-requests/2.34.2 |
 
-Values quoted from the live page (N, point group, E/eV): 163 Cs -635.6974681; 175 Cs -684.4569924; 179 Cs -700.5051534; 183 C2v -717.2330494; 185 C1 -725.0514853; 188 Cs -737.5849134; 189 Cs -741.7933500; 190 D5h -746.1251704; 200 C1 -786.4906393. The page credits Zhan, Chen, Liu and Lai, J. Chem. Phys. 122, 244707 (2005). Its note on improved minima lists sizes "84, 95, 101, 113, 121, 122, 196, 107, 198, 200". However, `data/Co.zip` contains Co197, not Co107. The bank's own pitfalls already record this discrepancy, and the claim's merged table uses N = 197. The local sha256 of all three files in `data/` matches `TABLE_RECORD.md` (3/3). Only the status page was re-fetched; points.tgz and Co.zip were not re-downloaded, per this role.
+Values quoted from the live page (N, point group, E/eV): 163 Cs -635.6974681; 175 Cs -684.4569924; 179 Cs -700.5051534; 183 C2v -717.2330494; 185 C1 -725.0514853; 188 Cs -737.5849134; 189 Cs -741.7933500; 190 D5h -746.1251704; 200 C1 -786.4906393. The page credits Zhan, Chen, Liu and Lai, J. Chem. Phys. 122, 244707 (2005). Its note on improved minima lists sizes "84, 95, 101, 113, 121, 122, 196, 107, 198, 200". However, https://www-wales.ch.cam.ac.uk/~wales/CCD/CoCCD/Co.zip (sha256 28141c13e9658f901e6fa49228b38f3eca69a206f904a34043280f2ecebde9ca) contains Co197, not Co107. The bank's own pitfalls already record this discrepancy, and the claim's merged table uses N = 197. The local sha256 of the claim archive's copies of all three files matches `TABLE_RECORD.md` (3/3). Only the status page was re-fetched; points.tgz and Co.zip were not re-downloaded, per this role.
 
 ## 2. Repository checks (github.com/elder-plinius/V3R1T4S, read-only, unauthenticated)
 
