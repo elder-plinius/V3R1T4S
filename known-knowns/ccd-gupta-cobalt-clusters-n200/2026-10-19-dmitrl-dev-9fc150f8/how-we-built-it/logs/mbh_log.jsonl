@@ -1,0 +1,22 @@
+{"event": "start", "steps": 250, "range": [200, 150], "t": 0.1}
+{"event": "size", "N": 200, "E_ref": -786.6384643, "E_found": -786.6384643, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 66.3, "t": 66.9}
+{"event": "size", "N": 199, "E_ref": -782.4498541, "E_found": -782.4498541, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 60.5, "t": 127.6}
+{"event": "size", "N": 198, "E_ref": -778.4027431, "E_found": -778.4027431, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 57.1, "t": 185.1}
+{"event": "size", "N": 197, "E_ref": -774.3476489, "E_found": -774.3476489, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 54.4, "t": 239.7}
+{"event": "size", "N": 196, "E_ref": -770.5720245, "E_found": -770.5720245, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 52.4, "t": 292.3}
+{"event": "size", "N": 195, "E_ref": -766.370344, "E_found": -766.370344, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 50.5, "t": 342.8}
+{"event": "size", "N": 194, "E_ref": -762.3625498, "E_found": -762.3625498, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 48.0, "t": 390.9}
+{"event": "size", "N": 193, "E_ref": -758.3111302, "E_found": -758.3111302, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 48.4, "t": 439.4}
+{"event": "size", "N": 192, "E_ref": -754.5413203, "E_found": -754.5413203, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 48.6, "t": 488.1}
+{"event": "size", "N": 191, "E_ref": -750.3333012, "E_found": -750.3333012, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 48.3, "t": 536.5}
+{"event": "size", "N": 190, "E_ref": -746.1251704, "E_found": -746.1251704, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 46.1, "t": 582.8}
+{"event": "size", "N": 189, "E_ref": -741.79335, "E_found": -741.79335, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 45.9, "t": 628.9}
+{"event": "size", "N": 188, "E_ref": -737.5849134, "E_found": -737.5849134, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 45.4, "t": 674.4}
+{"event": "size", "N": 187, "E_ref": -733.3760918, "E_found": -733.3760918, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 44.9, "t": 719.4}
+{"event": "size", "N": 186, "E_ref": -729.1129869, "E_found": -729.1129869, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 40.3, "t": 759.8}
+{"event": "size", "N": 185, "E_ref": -725.0514853, "E_found": -725.0514853, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 45.8, "t": 805.7}
+{"event": "size", "N": 184, "E_ref": -721.0009837, "E_found": -721.0009837, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 46.2, "t": 852.1}
+{"event": "size", "N": 183, "E_ref": -717.2330494, "E_found": -717.2330494, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 47.6, "t": 899.8}
+{"event": "size", "N": 182, "E_ref": -713.0250346, "E_found": -713.0250346, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 44.3, "t": 944.2}
+{"event": "size", "N": 181, "E_ref": -708.8456888, "E_found": -708.8456888, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 44.6, "t": 988.8}
+{"event": "size", "N": 180, "E_ref": -704.7117734, "E_found": -704.7117734, "gain": 0.0, "accepted": 0, "steps": 250, "sec": 54.0, "t": 1042.9}
