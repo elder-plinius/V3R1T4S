@@ -1,0 +1,2 @@
+# Verify
+From this folder: `sh verify-it-yourself/run_checks.sh` (last line PASS). Needs python3 (standard library), curl and sha256sum. verify-it-yourself/expected.txt lists, per row: instance file, schedule sha256, instance sha256 (at commit eb1d28381c34525b58736965cddbeb89e095f88a), our makespan and the listed UB (rounded). To re-search: how-we-built-it/solve.py with OR-Tools 9.15 (`python3 solve.py <instance.fjs> 300 3 1 out.json`; 600 for the 600 s group).
