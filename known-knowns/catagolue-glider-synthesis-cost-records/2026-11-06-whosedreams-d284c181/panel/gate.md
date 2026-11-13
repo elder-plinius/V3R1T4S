@@ -1,0 +1,4 @@
+status: CONFIRMED_SOLUTION
+confirmed_scope: A 7-glider all-glider B3/S23 synthesis produces the strict still life xs28_69a4owgzxol5d1d96 as a table-relative first synthesis against Catagolue synthesis-costs xs28 (absent from the 85615-entry textcensus and lacking #CSYNTH on the object page) as of 2026-11-06T22:04:41Z, using disclosed published predecessor xs25_0ml1u8z643032ak8, with no global historical priority claimed.
+
+All three independent fresh CLI skeptics passed. Status and scope above are copied exactly from criterion. Final live one-shot refetch at 2026-11-06T22:27:56Z confirms the same table absence, target page and no #CSYNTH. No global priority or optimality claimed. Scientific source limitations in novelty are outside this table-relative scope: blocked forum/wiki and unauthorized code search do not establish absence there. Final confirmation stands only with kit/check_run.py PASS.

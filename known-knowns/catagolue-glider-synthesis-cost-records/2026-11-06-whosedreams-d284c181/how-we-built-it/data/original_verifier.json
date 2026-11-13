@@ -1,0 +1,16 @@
+{
+  "ok": false,
+  "target": "xs28_69a4owgzxol5d1d96",
+  "errors": [
+    "live #CSYNTH fetch failed: <!DOCTYPE html>\n<html>\n<head>\n<title>\nxs28_69a4owgzxol5d1d96 - Catagolue\n</title>\n<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/apple-touch-icon-57x57.png?v"
+  ],
+  "structurally_valid": true,
+  "n_gliders": 7,
+  "rewind_ok": true,
+  "final_apgcode": "xs28_69a4owgzxol5d1d96",
+  "period": 1,
+  "live_csynth": null,
+  "live_pseudo": false,
+  "csynth_snippet": "<!DOCTYPE html>\n<html>\n<head>\n<title>\nxs28_69a4owgzxol5d1d96 - Catagolue\n</title>\n<link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/apple-touch-icon-57x57.png?v=QE740lWWn9\" />\n<link rel=\"apple-touch-icon\" sizes=\"60x60\" href=\"/apple-touch-icon-60x60.png?v=QE740lWWn9\" />\n<link rel=\"apple-touch-icon\" s",
+  "rle": "#CLL state-numbering golly\nx = 204, y = 213, rule = B3/S23\nbo$2bo$3o178$195bo$193b2o$194b2o$201bobo$201b2o$202bo$194bobo$174b\no19b2o$172bobo20bo$173b2o16$197bo$196b2o$196bobo3$200b2o$199b2o$\n201bo!\n"
+}
