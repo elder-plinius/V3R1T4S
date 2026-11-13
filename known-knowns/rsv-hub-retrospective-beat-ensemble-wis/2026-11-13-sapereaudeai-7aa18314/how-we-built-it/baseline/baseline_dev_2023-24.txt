@@ -1,0 +1,13 @@
+season 2023-24 wide tasks 29705 dropped incomplete 0
+max |pinball - interval| over all scored hub tasks: 1.8189894035458565e-12
+                model  retro  origins  scored_tasks                  ages  mean_wis  mean_ae  cov50  cov90
+         hub-ensemble  False       12          3744 0-0.99,0-130,1-4,5-64    16.110   21.108  0.630  0.804
+         CU-RSV_SVIRS  False       12          3744 0-0.99,0-130,1-4,5-64    17.507   21.466  0.657  0.822
+             PSI-PROF  False       11           715                 0-130    23.659   36.098  0.571  0.860
+      CEPH-Rtrend_rsv  False       12           780                 0-130    55.456   79.597  0.415  0.673
+UGA_flucast-INFLAenza  False       35          2275                 0-130    80.399  121.132  0.622  0.887
+         hub-ensemble   True       20          6240 0-0.99,0-130,1-4,5-64    64.182   94.724  0.600  0.853
+         CU-RSV_SVIRS   True       20          6240 0-0.99,0-130,1-4,5-64    71.688  111.853  0.578  0.840
+      CEPH-Rtrend_rsv   True       15           975                 0-130   163.171  223.887  0.626  0.891
+ensemble vs mean of members (retro=True): tasks 7800, max abs diff 0, tasks with diff > 1e-6: 0
+ensemble vs mean of members (retro=False): tasks 4680, max abs diff 4.23e+03, tasks with diff > 1e-6: 780

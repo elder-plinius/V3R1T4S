@@ -1,0 +1,3 @@
+files 31 rows 348565 problems none
+horizons produced [np.int64(-1), np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(4), np.int64(5)] (-1 is outside tasks.json; used only to cover hub-baseline tasks; hub-ensemble uses 0..4)
+hub-ensemble 2024-25 tasks 3760 covered by ours 3760 missing 0

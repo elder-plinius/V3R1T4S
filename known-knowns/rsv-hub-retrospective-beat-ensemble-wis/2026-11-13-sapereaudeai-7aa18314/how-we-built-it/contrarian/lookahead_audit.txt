@@ -1,0 +1,17 @@
+2024-10-27 vintages_kept 36 truncated 0 identical True 2024-10-27 2024-10-25 2024-10-19 11270
+2024-11-03 vintages_kept 37 truncated 0 identical True 2024-11-03 2024-11-01 2024-10-26 11270
+2024-11-10 vintages_kept 38 truncated 0 identical True 2024-11-10 2024-11-08 2024-11-02 11270
+2024-11-17 vintages_kept 39 truncated 0 identical True 2024-11-17 2024-11-15 2024-11-09 11270
+2024-11-24 vintages_kept 40 truncated 0 identical True 2024-11-24 2024-11-22 2024-11-16 11270
+2024-12-08 vintages_kept 43 truncated 0 identical True 2024-12-08 2024-12-06 2024-11-30 11270
+2024-12-15 vintages_kept 44 truncated 0 identical True 2024-12-15 2024-12-13 2024-12-07 11270
+2024-12-29 vintages_kept 47 truncated 0 identical True 2024-12-29 2024-12-27 2024-12-21 11270
+2025-01-05 vintages_kept 48 truncated 0 identical True 2025-01-05 2025-01-03 2024-12-28 11270
+2025-01-12 vintages_kept 49 truncated 0 identical True 2025-01-12 2025-01-10 2024-12-28 11270
+2025-01-26 vintages_kept 51 truncated 0 identical True 2025-01-26 2025-01-24 2025-01-11 11270
+2025-02-09 vintages_kept 58 truncated 0 identical True 2025-02-09 2025-02-08 2025-02-01 11270
+2025-02-16 vintages_kept 60 truncated 0 identical True 2025-02-16 2025-02-15 2025-02-08 11270
+2025-04-06 vintages_kept 74 truncated 0 identical True 2025-04-06 2025-04-04 2025-03-29 11270
+2024-10-13 vintages_kept 33 truncated 0 identical True 2024-10-13 2024-10-11 2024-10-05 10465
+2024-10-20 vintages_kept 34 truncated 0 identical True 2024-10-20 2024-10-18 2024-10-12 11270
+2025-03-02 vintages_kept 64 truncated 0 identical True 2025-03-02 2025-02-28 2025-02-22 11270
