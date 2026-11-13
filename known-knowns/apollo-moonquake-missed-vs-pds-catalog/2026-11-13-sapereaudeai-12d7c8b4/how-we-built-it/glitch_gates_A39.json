@@ -1,0 +1,106 @@
+{
+ "G1": {
+  "window": [
+   "1971-09-05T01:25:44.150Z",
+   450.0
+  ],
+  "overlapping": [],
+  "pass_": true,
+  "nearest_spike_starts_s_from_onset": [
+   [
+    1487.133,
+    "MH1"
+   ],
+   [
+    -2944.112,
+    "MH1"
+   ],
+   [
+    9183.737,
+    "MH1"
+   ],
+   [
+    -12473.924,
+    "MH1"
+   ]
+  ]
+ },
+ "G2": {
+  "spans": [
+   [
+    223.53,
+    233.53,
+    "rule-flagged MH1 sample +228.5 s"
+   ],
+   [
+    223.68,
+    233.68,
+    "rule-flagged MH1 sample +228.7 s"
+   ]
+  ],
+  "unmuted_ccs": [
+   0.5952,
+   0.6925
+  ],
+  "both_muted_lag0": {
+   "lag_s": 0.0,
+   "ccs": [
+    0.5883,
+    0.6936
+   ],
+   "D": 0.641,
+   "muted_samples": 34
+  },
+  "both_muted_best": {
+   "lag_s": 1.208,
+   "ccs": [
+    0.557,
+    0.7254
+   ],
+   "D": 0.6412,
+   "muted_samples": 34
+  },
+  "data_only_lag0": {
+   "lag_s": 0.0,
+   "ccs": [
+    0.5767,
+    0.6896
+   ],
+   "D": 0.6332,
+   "muted_samples": 34
+  },
+  "data_only_best": {
+   "lag_s": 1.208,
+   "ccs": [
+    0.5498,
+    0.7202
+   ],
+   "D": 0.635,
+   "muted_samples": 34
+  },
+  "pass_": true
+ },
+ "G3": {
+  "A39": {
+   "events": 61,
+   "with_spike": 12,
+   "fraction": 0.1967
+  },
+  "A201": {
+   "events": 66,
+   "with_spike": 5,
+   "fraction": 0.0758
+  },
+  "all type A": {
+   "events": 6607,
+   "with_spike": 898,
+   "fraction": 0.1359
+  },
+  "random times": {
+   "events": 20000,
+   "with_spike": 3327,
+   "fraction": 0.1663
+  }
+ },
+ "note": "G3 counts any catalogued S14 MH1/MH2 ACC-Spike (all modes) overlapping [start - 60 s, start + 450 s]; levent start times are minute-resolution."
+}

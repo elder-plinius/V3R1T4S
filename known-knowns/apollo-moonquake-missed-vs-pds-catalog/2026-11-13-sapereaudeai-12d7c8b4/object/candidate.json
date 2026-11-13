@@ -1,0 +1,49 @@
+{
+ "nest": "A39 (levent.1008weber.csv T2 = A, N2 = 39)",
+ "station": "S14",
+ "channels": [
+  "MH1",
+  "MH2"
+ ],
+ "location": "00 (peaked mode)",
+ "window_start_utc": "1971-09-05T01:25:44.150Z",
+ "onset_utc": "1971-09-05T01:26:14.150Z",
+ "window_s": 450.0,
+ "sample_rate_hz": 3.3125,
+ "ncc_mh1": 0.5952,
+ "ncc_mh2": 0.6925,
+ "detection_statistic_D": 0.6439,
+ "null_c0_time_reversed_full_span_max": 0.22055,
+ "null_best_phase_randomised_full_span_max": 0.31803,
+ "null_controls": 401,
+ "null_span": "1971 days 36-365",
+ "templates_from": "16 aligned catalogued 1971 A39 events (S14)",
+ "nearest_catalogue_rows_min": [
+  [
+   1589.2,
+   "levent 71-246 2257 T2=A N2=1",
+   "1971-09-03T22:57:00.000Z"
+  ],
+  [
+   1698.2,
+   "levent 71-246 2108 T2=nan N2=nan",
+   "1971-09-03T21:08:00.000Z"
+  ],
+  [
+   2203.2,
+   "levent 71-246 1243 T2=A N2=15",
+   "1971-09-03T12:43:00.000Z"
+  ]
+ ],
+ "checks": {
+  "gap_ok": true,
+  "glitch_ok": true,
+  "half_D": [
+   0.6023951731621648,
+   0.6780447342118172
+  ],
+  "solar_elevation_s14_deg": 71.36026677391716,
+  "thermal_ok": true,
+  "anomalistic_phase_deg": 331.861941478448
+ }
+}
