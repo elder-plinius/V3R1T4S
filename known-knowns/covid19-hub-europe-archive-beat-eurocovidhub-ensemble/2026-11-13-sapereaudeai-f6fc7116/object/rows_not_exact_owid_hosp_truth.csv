@@ -1,0 +1,4 @@
+model,target_variable,forecast_date,horizon,location,target_end_date,true_value_owid_or_ecdc,wis_pub,wis_rec,sharpness_pub,sharpness_rec,underprediction_pub,underprediction_rec,overprediction_pub,overprediction_rec
+EuroCOVIDhub-ensemble,inc case,2024-02-19,2,BG,2024-03-02,121,45,45.1521739,36,35.5,0,0,10,9.65217391
+epiforecasts-EpiNow2,inc case,2024-05-20,2,LU,2024-06-01,39,12,12.4130435,2,2.5,10,9.91304348,0,0
+EuroCOVIDhub-baseline,inc case,2023-12-11,4,NL,2024-01-06,1010,4504,4504.5,4476,4475.63043,29,28.8695652,0,0
