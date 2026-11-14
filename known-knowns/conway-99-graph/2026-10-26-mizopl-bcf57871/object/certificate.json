@@ -1,0 +1,240 @@
+{
+  "target_id": "conway-99-graph",
+  "parameters": [
+    99,
+    14,
+    1,
+    2
+  ],
+  "tracks_addressed": [
+    "p2"
+  ],
+  "summary": {
+    "total_theorems_certified": 5,
+    "track_p2_propositions": 5,
+    "total_independent_encodings": 2,
+    "encoding_A_name": "Sinz_2005_Sequential_Counter",
+    "encoding_B_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+    "total_unsat_proofs": 10,
+    "total_rat_lemmas": 0,
+    "total_core_clauses_encoding_A": 2862,
+    "total_core_clauses_encoding_B": 2848,
+    "total_lrat_rup_lemmas_encoding_A": 983,
+    "total_lrat_rup_lemmas_encoding_B": 896,
+    "total_lrat_rup_lemmas_combined": 1879,
+    "positive_control_srg_9_4_1_2_encoding_A_sat": true,
+    "positive_control_srg_9_4_1_2_encoding_B_sat": true
+  },
+  "track_p2_forced_structure_reduction": [
+    {
+      "proposition_id": "p2_1_inner_matching_k14",
+      "description": "Forced 1-regular perfect matching on Gamma_1(0) under lambda=1 for k=14",
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "full_variables": 273,
+        "full_clauses": 716,
+        "core_clauses": 4,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0223,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "3953b0731311394fac348033c3bb18926a1da3ebfbb7b0faecaf25c6d42ee44e",
+        "core_lrat_sha256s": [
+          "1c4bc12af81bd8a4eb19861a6772174526fdd4603737964bd520534dad9071e8"
+        ],
+        "core_cnf_file": "p2_1_inner_matching_k14_encA_core.cnf",
+        "core_lrat_files": [
+          "p2_1_inner_matching_k14_encA_core.lrat"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "full_variables": 259,
+        "full_clauses": 688,
+        "core_clauses": 4,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0118,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "95efa70b10303bc1cddc07be9f049a7419a3f8479d1b98f2be5b84a99d336a07",
+        "core_lrat_sha256s": [
+          "1c4bc12af81bd8a4eb19861a6772174526fdd4603737964bd520534dad9071e8"
+        ],
+        "core_cnf_file": "p2_1_inner_matching_k14_encB_core.cnf",
+        "core_lrat_files": [
+          "p2_1_inner_matching_k14_encB_core.lrat"
+        ]
+      }
+    },
+    {
+      "proposition_id": "p2_2_outer_bijection_k14",
+      "description": "Forced bijection between Gamma_2(0) (M=84) and non-matched pairs of Gamma_1(0) for k=14",
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "full_variables": 1598,
+        "full_clauses": 1578,
+        "core_clauses": 13,
+        "lrat_rup_lemmas": 3,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0123,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "b0a80b007c2e122718d2d858b644107b7c4160ea0084ec687689d3dd6d58ba8f",
+        "core_lrat_sha256s": [
+          "fd7a5549fac3ce28e62762995ac5b31c53bb4b254da60fb7e6d51a8d7bff6372"
+        ],
+        "core_cnf_file": "p2_2_outer_bijection_k14_encA_core.cnf",
+        "core_lrat_files": [
+          "p2_2_outer_bijection_k14_encA_core.lrat"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "full_variables": 1585,
+        "full_clauses": 1576,
+        "core_clauses": 12,
+        "lrat_rup_lemmas": 3,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0118,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "a3e6c972f20098bda0a022b86a4c3205bd53b94f91b1f69db39cb2e9cc5a5e6e",
+        "core_lrat_sha256s": [
+          "d0c17ce9b2c58dbdebf9e450601e063ce470eda4bdb191c64e0e5c06b14c4788"
+        ],
+        "core_cnf_file": "p2_2_outer_bijection_k14_encB_core.cnf",
+        "core_lrat_files": [
+          "p2_2_outer_bijection_k14_encB_core.lrat"
+        ]
+      }
+    },
+    {
+      "proposition_id": "p2_3_inner_outer_balance_k14",
+      "description": "Forced inner-outer coordinate balance [m(a) in P_u] + deg_{N(a)}(u) = 2 (Constraint 4 of arXiv:2608.11211 / Lemma 4.8 of arXiv:2308.02978) for k=14",
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "full_variables": 548,
+        "full_clauses": 2733,
+        "core_clauses": 2487,
+        "lrat_rup_lemmas": 836,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0175,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "dfe16f56af409831ffc41df350d8d17124cc2e304f6ab1d0ae9038e14e9d05fe",
+        "core_lrat_sha256s": [
+          "7635a89d1e9d90e9bd3974cf7e5f77be3a1462f4dfd258535857556a28389cc3"
+        ],
+        "core_cnf_file": "p2_3_inner_outer_balance_k14_encA_core.cnf",
+        "core_lrat_files": [
+          "p2_3_inner_outer_balance_k14_encA_core.lrat"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "full_variables": 522,
+        "full_clauses": 2717,
+        "core_clauses": 2483,
+        "lrat_rup_lemmas": 780,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0194,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "de0dd2a1b06f83e3a634e7b5f4a42e8485897658abdef9de524dad0b1aaef344",
+        "core_lrat_sha256s": [
+          "17b82351e3f27c714b67ebeb00117b1b77af4300932d7c962afc8538448faa7c"
+        ],
+        "core_cnf_file": "p2_3_inner_outer_balance_k14_encB_core.cnf",
+        "core_lrat_files": [
+          "p2_3_inner_outer_balance_k14_encB_core.lrat"
+        ]
+      }
+    },
+    {
+      "proposition_id": "p2_4_outer_pair_cn_k14",
+      "description": "Forced outer pair common-neighbor reduction E(u,v) + |CN_{Gamma_2(0)}(u,v)| = 2 - |P_u cap P_v| (Constraints 2 & 3 of arXiv:2608.11211)",
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "full_variables": 91,
+        "full_clauses": 407,
+        "core_clauses": 345,
+        "lrat_rup_lemmas": 142,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0131,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "330cfb68031d44dabe7fa120c1f9f71d4748e2b89a3982a5790f195a9473cd1d",
+        "core_lrat_sha256s": [
+          "4920beabffc789db1b164ae15a79560a5ef7b116b052c43252163306f683dcab"
+        ],
+        "core_cnf_file": "p2_4_outer_pair_cn_k14_encA_core.cnf",
+        "core_lrat_files": [
+          "p2_4_outer_pair_cn_k14_encA_core.lrat"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "full_variables": 87,
+        "full_clauses": 407,
+        "core_clauses": 342,
+        "lrat_rup_lemmas": 111,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0119,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "45a00b07d8410fdc3272be3482f853d57d2de0f88206cacdb9b93f544152b6ae",
+        "core_lrat_sha256s": [
+          "f71e4652d10a05cce2d20d4f6f1063294a4b3167acb3c7587dfac1e35db14d02"
+        ],
+        "core_cnf_file": "p2_4_outer_pair_cn_k14_encB_core.cnf",
+        "core_lrat_files": [
+          "p2_4_outer_pair_cn_k14_encB_core.lrat"
+        ]
+      }
+    },
+    {
+      "proposition_id": "p2_5_srg9_uniqueness",
+      "description": "Exactness and uniqueness of the forced-structure reduction on the validation benchmark srg(9, 4, 1, 2) (blocking the unique K_3 box K_3 outer 4-cycle)",
+      "encoding_A": {
+        "encoding_name": "Sinz_2005_Sequential_Counter",
+        "full_variables": 66,
+        "full_clauses": 201,
+        "core_clauses": 13,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0114,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "193537bcac6ddbb6537be9e48abcb6e00c694c676d1fd7c93ce93f5977b66ca7",
+        "core_lrat_sha256s": [
+          "7b93f9359315a69bacc0521ab93ee7090af395c0099e798f08efc05ae2f27aad"
+        ],
+        "core_cnf_file": "p2_5_srg9_uniqueness_encA_core.cnf",
+        "core_lrat_files": [
+          "p2_5_srg9_uniqueness_encA_core.lrat"
+        ]
+      },
+      "encoding_B": {
+        "encoding_name": "Bailleux_Boufkhad_2003_Binary_Tree_Totalizer",
+        "full_variables": 42,
+        "full_clauses": 147,
+        "core_clauses": 7,
+        "lrat_rup_lemmas": 1,
+        "rat_lemmas": 0,
+        "solve_seconds": 0.0117,
+        "drat_trim_verified": true,
+        "python_lrat_verified": true,
+        "core_cnf_sha256": "3489836f917c391c5dcba0f388fc9f61bb0ab4b12614649588d80d8c1390e416",
+        "core_lrat_sha256s": [
+          "3f08fcbf4d7a6b7fa7f0376cc8d5fb3503caed234add438b836766b533cc7dff"
+        ],
+        "core_cnf_file": "p2_5_srg9_uniqueness_encB_core.cnf",
+        "core_lrat_files": [
+          "p2_5_srg9_uniqueness_encB_core.lrat"
+        ]
+      }
+    }
+  ]
+}
