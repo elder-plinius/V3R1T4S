@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+minlplib-finance-open-instances,pricing050-dual,-1813.829075713452,"best primal -1813.829078; bestdual -1153.003281; SCIP dual -1534.3281",2026-11-05T19:50:42Z,object/cert_arb_leaves.json,6c5196dd180aad61b9f7d0b6b489418bfa4ac7aa28ba5fd5c07a205ecbcb9348
