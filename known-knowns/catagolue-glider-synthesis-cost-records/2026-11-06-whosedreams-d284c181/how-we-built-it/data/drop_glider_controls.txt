@@ -1,0 +1,15 @@
+gen0: population 35, 7 components, all gliders
+rewind T=852: ok
+rewind T=1180: ok
+forward: exact repeat from generation 759, period 1, population 28
+final object: matches xs28_69a4owgzxol5d1d96 exactly, nothing else live
+result: {'ok': True, 'target': 'xs28_69a4owgzxol5d1d96', 'n_gliders': 7, 'rewind_ok': True, 'periodic_from': 759, 'period': 1, 'final_population': 28, 'final_matches_target': True}
+control drop glider  0 at (0, 2): target built? False; builds xs25_0ml1u8z643032ak8 (positive control)
+control drop glider  1 at (172, 188): target built? False
+control drop glider  2 at (193, 181): target built? False
+control drop glider  3 at (194, 186): target built? False
+control drop glider  4 at (196, 206): target built? False
+control drop glider  5 at (199, 211): target built? False
+control drop glider  6 at (201, 183): target built? False
+positive controls found: 1
+PASS

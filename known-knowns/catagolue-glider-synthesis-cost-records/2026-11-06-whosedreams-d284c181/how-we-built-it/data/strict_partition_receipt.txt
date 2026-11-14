@@ -1,0 +1,5 @@
+control block {'population': 4, 'full_stable': True, 'nodes': 17, 'stable_subsets_total': 2, 'proper_stable_subsets': 0, 'stable_complement_partitions': 0, 'strict': True}
+control two_blocks {'population': 8, 'full_stable': True, 'nodes': 49, 'stable_subsets_total': 4, 'proper_stable_subsets': 2, 'stable_complement_partitions': 1, 'strict': False}
+control single_cell {'population': 1, 'full_stable': False, 'nodes': 2, 'stable_subsets_total': 1, 'proper_stable_subsets': 0, 'stable_complement_partitions': 0, 'strict': False}
+target xs28_69a4owgzxol5d1d96 {'population': 28, 'full_stable': True, 'nodes': 538, 'stable_subsets_total': 7, 'proper_stable_subsets': 5, 'stable_complement_partitions': 0, 'strict': True}
+PASS
