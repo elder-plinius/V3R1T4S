@@ -1,0 +1,41 @@
+# NOVELTY verdict: cohn-harmonic-energy-spheres-dim4-32, cell 64-20
+
+context: subagent (fresh context; one skeptic, one role, one claim; no access to the claimant's search or checker code)
+verdict_utc: 2026-11-08T02:39:36Z
+
+## Value computed here
+- Object: object/64-20.txt, sha256 968ebd541209b17fcf58284178aa4a81b6e3562ef520328e8520e250625e9c71 (matches CLAIM.md). 64 rows × 20 coordinates, ~33 significant digits; max | |x_i| − 1 | before normalising = 7.1e-31. Its one `#` header line states an energy, which I ignored and recomputed. Nothing in the claim folder or the fetched pages tried to steer the review.
+- E* (mpmath 40 dps, normalised, all 2016 pairs, s = 18) = **6.68546368135722749098338583854**.
+- https://cohn.mit.edu/harmonic-energy fetched 2026-11-08T02:34:23Z: HTTP 200 (redirect to the trailing-slash URL), 201605 bytes, sha256 fa396170815c8cd53fa628d7519c9f66186e1dcf97b5d220458998330ae2a95c. Row n = 20, N = 64 (the only row for this pair): **6.7232495038**, not starred, credit [4] Ballinger, Blekherman, Cohn, Giansiracusa, Kelly, Schürmann, Experiment. Math. 18 (2009). The page now links its archive as https://dspace.mit.edu/handle/1721.1/178121 ("Table of harmonic energy bounds", 2026). Its energies.txt (MD5 a601ca5c3e884b38a480f681fa30b3c7, matching DSpace) gives (20, 64) = 6.72324950377381423345573086039160747170057188514606, the same as the 2021 value.
+- Margin below the table: 6.7232495038 − E* = **0.0377858224428** (0.56 %). Below the 2021 data-set energy: **0.0377858224166**. The threshold max(1e-9, 1e-12·E) = 1e-9, so the margin is about 3.8e7 times the threshold.
+- https://cohn.mit.edu/harmonic-optima fetched 2026-11-08T02:34:25Z: **HTTP 404**, 40449 bytes, sha256 a30c11566654c3b608eba10e8972fadecb8c3504b4ba0d69e43c437d13ce9f61 ("Page not found"). The trailing-slash URL also returned 404 at 02:38:39Z. Fallback: the Wayback copy http://web.archive.org/web/20240604174053id_/https://cohn.mit.edu/harmonic-optima/ (HTTP 200, sha256 1eb7bd01cdcc7db447c1bae2a8835a962af8378bbba195713972ebf84c0b0013). It lists universal optima only for regular polygons, simplices and cross polytopes, plus 14 sporadic rows (n ∈ {3,4,5,6,7,8,21,22,23,24}); none has n = 20. Its conjectural optima for n = 20 are N = 56 and N = 120, not N = 64. I could not see the page's live state between 2024-06 and 2026-11-03.
+- 2021 data set: https://hdl.handle.net/1721.1/130937 resolved to the DSpace SPA. I fetched data.txt directly from the DSpace REST bitstream https://dspace.mit.edu/server/api/core/bitstreams/a63220a6-9453-406a-b94a-8df1224202ef/content at 2026-11-08T02:35:22Z: HTTP 200, 78263492 bytes, MD5 4a7ef6653bc2851df40f2d6625f92f18 (matches the DSpace checksum), sha256 792eebd56d1178f6a7fef559b8d30159cac11299bcdd60ef4679d626ae7f5c8e. That is identical to the fallback copy named in CLAIM.md, but I used my own download. Block "64 points in R^20": Energy 6.72324950377381423345573086039…, max cosine 0.19053, 96 symmetries, 78 distinct distances, "Universal: no". Recomputing it from the coordinates at 40 dps gives exactly the posted energy.
+- Basin test (my own routine: L-BFGS on the unconstrained parameterisation x = y/|y|, analytic gradient projected onto the tangent space, float64, gtol 1e-14, then the energy at the polished coordinates in mpmath):
+  - Posted configuration: already a critical point (max |grad| 6.7e-16). Polished energy 6.723249503773814233455731. **Polished posted − E* = +0.0377858224166**, far above the 1e-9 bar.
+  - Stability: I perturbed the posted configuration by Gaussian noise of size 1e-4, 1e-3, 1e-2 and 3e-2 (4 seeds each) and re-polished. All 16 runs returned 6.723249503774, so it is a genuine local minimum, not a saddle. The same test on the object returned 6.685463681357 in all 16 runs.
+  - Object polished with the same routine: 6.685463681357226774 (max |grad| 1.8e-9); polished − E* = −7.2e-16, so the object is already at its local minimum.
+  - Rotation-invariant fingerprint (sorted 2016 pairwise distances): object vs polished posted differ by max 0.1126 (L2 0.808). Minimum distance: object 1.32366 vs posted 1.27238. Inner-product range: object [−0.4819, 0.1240] vs posted [−0.6453, 0.1905]. These are different configurations.
+  - Object structure (informational): 21 distinct inner products with multiplicities 7, 14, 21, 42, 84, 168 (a highly symmetric configuration), Gram rank 20, |Σx_i| = 0.0845 (not balanced).
+- Prior claims at https://github.com/elder-plinius/V3R1T4S (gh, 2026-11-08T02:37:02Z). `--search "harmonic"` (state all, limit 200) returns 3 PRs: #881 and #914 (CCD Ne harmonic-ZPE) and #972 (MOABB). None concerns this target. Extra searches for "cohn", "cohn-harmonic-energy-spheres-dim4-32", "spheres", "Riesz", "64 points" and "R^20" found only spherical-codes-cohn-table, Thomson, Packomania and unrelated claims, and nothing for harmonic energy at (64, 20). An issue search for "cohn harmonic" returned nothing. A code search finds only the target's own bank page.
+- TROPHY_CASE.md (https://github.com/elder-plinius/V3R1T4S/blob/main/TROPHY_CASE.md) on main (contents API, blob sha 18b731d7d4bf99efd323d48740284daccb8501b0, 31306 bytes, decoded sha256 83af764f5a6551a5a27bbb135324931659bda04e60b66a2c0e711b991b356113) contains no mention of "harmonic", "cohn", "Riesz" or "energy".
+- The table credits B. Meadows packing-records [31] on 31 other rows, including (20, 57) and (20, 63), but not (20, 64).
+- Literature (arXiv export API, newest 15, 2026-11-08T02:37:43Z to 02:38:16Z): queries were `all:"harmonic energy" AND all:sphere` (5 hits), `all:"universal optimality"` (351), `all:"Riesz energy" AND all:sphere` (25), `abs:"harmonic energy"` (61), `abs:"energy-minimizing" AND abs:sphere` (67) and `abs:"universally optimal"` (320). Relevant recent items: 2611.06278 (uniqueness of the hexagonal lattice's universal optimality, planar), 2607.08049 (small Riesz energy on S^2), 2609.22077 (eight points on S^2) and 2610.41660 (elliptic Fekete points). None gives a value or an optimality proof for 64 points in R^20. A web search (seek) found only the Ballinger et al. paper and the table pages.
+- Limits: the arXiv API's phrase matching is loose (the "universal optimality" results were mostly off-topic), only the newest 15 per query were read, no full-text search was done, and journal-only papers were not covered.
+
+## Clauses checked
+- Live table re-fetched (HTTP 200) and the (64, 20) row read: smallest energy 6.7232495038, credit [4] Ballinger et al. 2009 — PASS
+- E* computed independently (40 dps, normalised, all pairs) = 6.685463681357227 — PASS
+- E* below the smallest table energy by at least max(1e-9, 1e-12 E) (margin 3.78e-2) — PASS
+- E* below the 2021 data-set energy for (64, 20) (margin 3.78e-2) — PASS
+- (N, n) not a simplex (21) or cross polytope (40) — PASS
+- Not a listed universal optimum. The live harmonic-optima page is 404; the 2024-06 Wayback copy has no n = 20 universal optimum and does not list (64, 20); the live table row carries no optimality asterisk — PASS (with residual risk, see Decision)
+- No optimality proof for (64, 20) found in the arXiv searches — PASS
+- Different basin: the posted 2021 configuration polishes to 6.72324950377381 (a stable local minimum under 16 perturbed restarts), +0.0378 above E*, against a 1e-9 bar — PASS
+- The fingerprint (sorted pairwise distances) differs from the polished posted configuration (max diff 0.113) — PASS
+- No prior V3R1T4S claim (open, merged or closed) for this target or cell, and nothing in TROPHY_CASE.md — PASS
+- No lower published value found in the arXiv or web searches — PASS
+
+## Decision
+The object's harmonic energy, 6.685463681357227, is 0.0378 below both the live Cohn table minimum and the 2021 data set for (64, 20). That margin is far above the 1e-9 bar. The object sits in a separate, stable basin from the posted configuration, and I found no prior claim, proof of optimality or lower published value. Residual novelty risk: the harmonic-optima page is currently 404, so I checked it only through its 2024 archive. The arXiv check covered only the newest 15 results per query, so a lower (64, 20) value in a paper or private communication I did not find cannot be ruled out. Given how large the improvement is over a 2009 entry, someone may have found it before without reporting it to the table.
+
+pass: true

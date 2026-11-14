@@ -1,0 +1,32 @@
+# Excerpts from the search lane's run logs and saved records, copied verbatim except that container paths are shortened to the file name. The logs themselves are not part of this package; each block names the one it came from, and a leading 'N:' (a number and a colon) is the line number in it.
+
+
+## Hit: liftseed.py worker w9 (lane session 002). start = best saved (64,20) config (energy equal to the table); lift0.05 = lift of best saved (64,19) config; hop = liftseed basin hop
+### from the lane log `liftseed.log`, lines 262-265
+262: 17:02:38 64-20: start E=6.72324950 tgt=6.72324950
+263: 17:02:39 64-20 lift0.05: E=6.69931841 *
+264: 17:02:52 64-20 hop: E=6.68546368 *
+265: 17:02:56 64-20: done E=6.68546368
+
+## Source of the lift: lane's own improved 64-19 (worker3.py column n=19, session 001: hop12 move 2 = remove worst-contribution points, relax, reinsert at deep holes)
+### from the lane log `col19.log`, lines 21-22
+21: 14:11:38 n=19 init 64-19: E=9.6271369221
+22: 14:12:02 n=19 64-19 r0 hop12 m2: E=9.6249972657 *
+
+### from the lane log `col19.log`, lines 46-46
+46: 14:33:10 n=19 final 64-19: E=9.6249972657
+
+## Earlier failed attempts on 64-20 (session 001): worker3.py column n=20 (no 65-20 config exists, so no del-1 at N=64; augment from 63-20 and 25 s hops) and worker4.py second pass: no improvement
+### from the lane log `col20.log`, lines 21-21
+21: 14:14:34 n=20 init 64-20: E=6.7232495038
+
+### from the lane log `col20.log`, lines 45-45
+45: 14:31:36 n=20 final 64-20: E=6.7232495038
+
+### from the lane log `col20.log`, lines 1-2
+1: 14:33:08 n=20 done 64-20: E=6.7232495038
+2: 14:37:14 n=20 done 64-20: E=6.7232495038
+
+## Table rows (the lane's snapshot of the live table, cohn_harmonic.tsv): N n table_energy energy_2021 distances universal
+64	19	9.6271369221	9.62713692209367943197112348037138152146574361109398	323	no
+64	20	6.7232495038	6.72324950377381423345573086039160747170057188514606	78	no
