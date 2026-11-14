@@ -1,0 +1,13 @@
+# Honesty Gate Verdict (`minimizer-density-record-tables` — `(w = 12, k = 4)`)
+
+- `target_id`: `minimizer-density-record-tables`
+- `status`: `CONFIRMED_SOLUTION`
+- `confirmed_scope`: An explicit 256-entry 4-ary DNA minimizer rank order object/w12_k4_4ary.gm (2,056 bytes, sha256 956170573df55e04f43e55c20d6bba0b134c9b8054a92f995428dc9df4410ddb) and companion CSV table object/w12_k4_4ary.csv (4,518 bytes, sha256 72557c44cc3c4b10d4735faeee9d6745f40872674c54118a311e258f775431d1) for (w, k) = (12, 4) with exact expected DNA density 570,244,411 / 2^32 = 0.1327703733 (density factor 1.7260148523), strictly lowering the smallest listed value in OrensteinLab/Minimizers lowest-density/binary/best-orders.csv (k4-w12.txt, 574,313,157 / 2^32 = 0.1337177020) by 0.7085% relative and lowering OrensteinLab/10-minimizers w12_k4.gm (584,312,429 / 2^32 = 0.1360458389) by 2.4076% relative.
+
+## Panel Summary
+
+| Role | Context | Verdict | Key Findings |
+|---|---|---|---|
+| `REPRODUCE` | fresh skeptic review of the packaged files only | `pass: true` | Verified `object/w12_k4_4ary.gm` (`2,056` bytes, `sha256: 956170573df55e04f43e55c20d6bba0b134c9b8054a92f995428dc9df4410ddb`) and `object/w12_k4_4ary.csv` (`4,518` bytes, `sha256: 72557c44cc3c4b10d4735faeee9d6745f40872674c54118a311e258f775431d1`) from the mathematical definition using two independent exact 4-ary de Bruijn DP algorithms (`570,244,411 / 2^32 = 0.1327703733`), plus small-case brute-force and corrupted-object negative controls. |
+| `NOVELTY` | fresh skeptic review of the packaged files only | `pass: true` | Audited live fetches of `OrensteinLab/Minimizers` `best-orders.csv` (`sha256: 57a369a010498cb6ab3ba0bce73ed015980a11a8c8c29f09d537db34e3e32313`) and `k4-w12.txt` (`sha256: 9a8f7447e569399a594588e695a963da59078b34cf4aac23a6fd3d998d06d877`, `574,313,157 / 2^32 = 0.1337177020`) as well as `OrensteinLab/10-minimizers` `k_extension_k16_w12.csv` (`sha256: 88c4f8fcd0ea6d4308f4e1fc716bb901ea78d3c6112b7e70d4af42bb631bf2fa`) and `w12_k4.gm` (`sha256: 7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131`, `584,312,429 / 2^32 = 0.1360458389`), confirming a `-0.7085%` relative improvement over `OrensteinLab/Minimizers` and `-2.4076%` over `OrensteinLab/10-minimizers`. |
+| `CRITERION` | fresh skeptic review of the packaged files only | `pass: true` | Audited all clauses of the target's `success_criterion`, verified the `<= 0.1330491135` (`-0.5%` relative) threshold against `OrensteinLab/Minimizers` `k4-w12.txt`, checked the 400-permutation null-model control (`how-we-built-it/null_test.md`, `z = -12.6013`), and established `confirmed_scope`. |
