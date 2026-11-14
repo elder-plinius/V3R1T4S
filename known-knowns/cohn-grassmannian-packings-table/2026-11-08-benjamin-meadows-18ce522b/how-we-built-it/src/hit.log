@@ -1,0 +1,26 @@
+# Excerpts from the search lane's run logs and saved records, copied verbatim except that container paths are shortened to the file name. The logs themselves are not part of this package; each block names the one it came from, and a leading 'N:' (a number and a colon) is the line number in it.
+
+
+## Earlier attempt (lane session 007, narrow-tolerance polish screen): verdict 'fixpt', gain 1e-10 (no improvement)
+### from the lane log `q7s2.log`, lines 16-16
+16: {"m": 11, "n": 4, "N": 66, "seed": 2.5777278197507463, "src": "sloane", "d": 2.577727819751, "gain": 1e-10, "stage": "fixpt", "t": 5.5}
+
+## Queue row (lane session 014 worker 3; 4th field = time budget in s)
+### from the lane log `q14_w3.txt`, lines 37-37
+37: 11 4 66 320
+
+## Hit: refix6.py result line for (11,4,66) in worker log q14_3.log (same row index in logs/q14_3.prog)
+### from the lane log `q14_3.log`, lines 37-37
+37: {"m": 11, "n": 4, "N": 66, "seed": 2.5777278197507463, "src": "re5", "d": 2.577769552477, "gain": 4.17328e-05, "stage": "re5", "acc": 1, "gor": "1.1e-01", "iters": 3, "t": 180.6}
+
+### from the lane log `q14_3.prog`, lines 37-37
+37: done 11-4-66
+
+## Saved result record
+### from the lane's saved record `11-4-66.pol.json` (written 2026-11-06 08:50:41)
+{"m": 11, "n": 4, "N": 66, "seed": 2.5777278197507463, "src": "re5", "d": 2.577769552477308, "gain": 4.1732777307679214e-05, "stage": "re5", "acc": 1, "gor": 0.11287266999874626, "iters": 3, "t": 180.6}
+
+## Table row used by the lane
+### from the lane's snapshot of the live table, `grassmannian_2026-11-04.tsv`
+m	n	N	value	bound	starred	noted_optimal	credit
+11	4	66	2.5777278197	2.5846153847	no	no	[31]
