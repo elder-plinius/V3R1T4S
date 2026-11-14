@@ -1,0 +1,7 @@
+status: CONFIRMED_PARTIAL
+confirmed_scope: For the single cell N = 3307 of the Packomania circles-in-a-circle equal-circles table (row "3307 0.016314899796158766989004378524" of the live radius.txt fetched 2026-10-17T09:45:15Z and re-fetched unchanged by this skeptic on 2026-10-17), the submitted 3307-centre container-centred configuration (sha256 f09f5eecbb7b14f10607e97c3a74829129931cc0e0285e4372a5b4c4f61b0194) has feasible radius r* = 0.0163193001009681407709767792724368962804100804902253419885095 computed at 60 decimal digits directly from the coordinate strings, exceeding that live table value by 4.4003048093738e-6 (>= 1e-11) and non-isometric to the posted lattice-like configuration — a certified improvement meeting partial win p2 for a listed gap row N > 2600, for this one cell only, subject to the mandatory caveat that the category-unspecified 26-Sep-2026 "Moki & Julio *many*" 4666-candidate bundle is still on the pending-requests page and N = 3307 must be re-checked against the live table once that bundle disappears.
+panel: reproduce.md (pass: true), novelty.md (pass: true), criterion.md (pass: true); all three
+fresh Agent-tool subagent contexts seeing only claim/. Honesty gate (run main session): no
+hedging, no mismatch, live fetches within 6 h (09:50:05Z), one cell, one object, no evasion.
+Claim level: partial_win_claim (p2). Provenance: object found in run 2026-10-16-0945 (with the
+already-submitted N=4141 cell); verified and panelled in this run against today's live table.
