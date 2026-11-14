@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+asteroid-precovery-arc-extension,2019_QT15_ps1_2014_11_11_precovery_20.93x_arc_and_87.38pct_sigma_a_reduction,1841.82d_arc_20.93x_and_0.1176_arcsec_postfit_rms_and_87.38pct_sigma_a_reduction,first_obs_2019-08-31_data_arc_88d_n_obs_41_sigma_a_2.1185e-5_AU,2026-10-21T13:49:08Z,object/precovery_2019_QT15/precovery_bundle.json,a8fd1d6acaa5d05e238ca05078cff4fd0522908dabc12cbf6099eca35bfeca15
