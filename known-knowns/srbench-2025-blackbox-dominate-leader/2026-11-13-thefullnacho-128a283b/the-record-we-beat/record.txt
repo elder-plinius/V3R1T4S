@@ -1,0 +1,21 @@
+# The record we beat
+
+Table: SRBench 2025 black-box track, results/black-box-tuning/results.feather
+URL: https://github.com/cavalab/srbench/tree/srbench_2025/results/black-box-tuning
+Direct file URL: https://raw.githubusercontent.com/cavalab/srbench/srbench_2025/results/black-box-tuning/results.feather
+Fetched: 2026-11-13T06:02:15Z, HTTP 200, 5,596,634 bytes
+SHA256 of the file: 5b428264a346f6bbbeabded219f87454b9206afa70c19c012075c672533f342e
+(The file is stored with Git LFS; the raw URL returns the 132-byte pointer whose oid sha256 is the value above. The full file was fetched from the LFS media URL and hashes to the same value.)
+
+Re-fetched by the novelty skeptic: 2026-11-13T06:21:11Z, HTTP 200, pointer oid identical — the live table is unchanged since the claim.
+
+Extracted cell (recomputed from the fetched table, 30 splits per algorithm, model_size medians excluding -1 rows):
+- Dataset: 522_pm10
+- Leader: PS-Tree, median test R2 0.300852, median model_size 4996.5 (n=30)
+- Runner-up: QLattice, median test R2 0.276510, median model_size 35 (n=30)
+
+Dataset used for scoring:
+URL: https://github.com/EpistasisLab/pmlb/raw/master/datasets/522_pm10/522_pm10.tsv.gz
+Fetched: 2026-11-10T06:02:00Z (original fetch; the file was copied unchanged into this run's data/ folder and its sha256 re-verified), HTTP 200, 13,373 bytes
+SHA256: ecbabaa5a989a8c11f5a57e874c135f386da5379d6689ae6d5d4264a652fa5e0
+Contents: 500 rows, 7 features (cars_per_hour, temperature_at_2m, wind_speed, temperature_diff_2m_25m, wind_direction, hour_of_day, day).
