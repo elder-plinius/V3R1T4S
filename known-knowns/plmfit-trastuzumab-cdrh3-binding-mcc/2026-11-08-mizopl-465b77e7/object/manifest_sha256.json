@@ -1,0 +1,55 @@
+{
+  "target_id": "plmfit-trastuzumab-cdrh3-binding-mcc",
+  "upstream_repository": "https://github.com/LSSI-ETH/plmfit",
+  "upstream_main_commit": "9264ba768861d50e9ff7b4be9027f6c2d85d5cc6",
+  "scoreboard_status_url": "https://raw.githubusercontent.com/LSSI-ETH/plmfit/main/README.md",
+  "scoreboard_status_utc_fetched": "2026-11-08T14:42:30Z",
+  "scoreboard_status_bytes": 14780,
+  "scoreboard_status_sha256": "51b672d563c778ae40a435cad51424a5b8e0f82294211642d2bfff4983792f0b",
+  "scoreboard_listed_mcc_bar": 0.3898,
+  "scoreboard_listed_model": "ProGen2-XL + LoRA- (25%, CLS, Linear)",
+  "dataset_url": "https://raw.githubusercontent.com/LSSI-ETH/plmfit/main/data/herH3/herH3_data_full.csv",
+  "dataset_relative_path": "data/herH3/herH3_data_full.csv",
+  "dataset_bytes": 17149024,
+  "dataset_sha256": "5137572eec7ce2689283854fefacd8bcd7c5cb2547d57f5ffc7c53c9fed4070f",
+  "total_rows": 36560,
+  "split_row_counts": [
+    173,
+    1,
+    36386
+  ],
+  "split_row_counts_sum": 36560,
+  "split_positive_counts": [
+    73,
+    0,
+    11273
+  ],
+  "split_positive_counts_sum": 11346,
+  "varying_cdr3_indices_0based": [
+    98,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107
+  ],
+  "varying_cdr3_indices_sum": 1025,
+  "wild_type_cdr3_10aa": "WGGDGFYAMD",
+  "test_row_keys_sha256": "0ace8e36377e1829550529d43341d4bd59b6fecbb2bdebdd40384cb67c92a05c",
+  "test_no_mut_2_to_10_histogram": [
+    7,
+    69,
+    666,
+    2537,
+    5606,
+    8466,
+    9567,
+    7062,
+    2406
+  ],
+  "test_no_mut_2_to_10_histogram_sum": 36386
+}
