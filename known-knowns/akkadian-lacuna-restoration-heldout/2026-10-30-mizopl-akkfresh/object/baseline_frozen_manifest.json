@@ -1,0 +1,29 @@
+{
+  "stage": "Stage II — Frozen MBERT+Akk Baseline Predictions (Committed Before Stage III CLSS-Akk-v3 Run)",
+  "split_seed": 20261031,
+  "mask_seed": 20261031,
+  "n_train_docs_clean": 9221,
+  "n_test_docs_heldout": 2886,
+  "n_masked_positions": 38151,
+  "mbert_akk_baseline_top5_predictions_csv_sha256": "cbc4e1803b1933d03c7162c190ae5c077b0cb323f41d82d1016e0c38cc2a4c7e",
+  "mbert_baseline_top128_npz_sha256": "8ccae4404c30475cfed188f9020a9a71e25269c4d47cd549d8a3544e62f8821e",
+  "mbert_prior_bin_sha256": "be2fe1fc859fb2583e6f39ba91e40b6fb65aac6a8b58ae461ea3b7adecf07768",
+  "metrics_with_attention_mask": {
+    "mrr": 0.83160,
+    "hit_at_1": 0.78732,
+    "hit_at_5": 0.88158,
+    "hit_at_10": 0.91403,
+    "hits_1": 30037,
+    "hits_5": 33633,
+    "hits_10": 34871
+  },
+  "metrics_without_attention_mask": {
+    "mrr": 0.82906,
+    "hit_at_1": 0.78409,
+    "hit_at_5": 0.87969,
+    "hit_at_10": 0.91253,
+    "hits_1": 29914,
+    "hits_5": 33561,
+    "hits_10": 34814
+  }
+}
