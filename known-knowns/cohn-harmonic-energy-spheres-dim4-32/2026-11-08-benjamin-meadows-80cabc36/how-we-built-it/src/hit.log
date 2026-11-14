@@ -1,0 +1,28 @@
+# Excerpts from the search lane's run logs and saved records, copied verbatim except that container paths are shortened to the file name. The logs themselves are not part of this package; each block names the one it came from, and a leading 'N:' (a number and a colon) is the line number in it.
+
+
+## Column worker n=21 (worker3.py), lane session 001. init lines = starting configs (posted 2021 data set unless a lower-energy lane npz existed; no 60-21 or 61-21 npz existed before this run)
+### from the lane log `col21.log`, lines 16-25
+16: 14:12:56 n=21 init 59-21: E=3.7708150493
+17: 14:12:56 n=21 init 60-21: E=3.8972329293
+18: 14:12:56 n=21 init 61-21: E=4.1191657308
+19: 14:12:56 n=21 init 62-21: E=4.2792719311
+20: 14:12:56 n=21 init 63-21: E=4.4876312158
+21: 14:12:56 n=21 init 64-21: E=4.6923257616
+22: 14:20:07 n=21 61-21 r0 aug: E=4.1068451763 *
+23: 14:20:08 n=21 61-21 r0 aug: E=4.1039483024 *
+24: 14:21:56 n=21 59-21 r0 del1[0]: E=3.7200330031 *
+25: 14:34:41 n=21 --- round 0 done ---
+
+## Final energies of the column pass
+### from the lane log `col21.log`, lines 42-43
+42: 14:34:41 n=21 final 60-21: E=3.8972329293
+43: 14:34:41 n=21 final 61-21: E=4.1039483024
+
+## Table row (the lane's snapshot of the live table, cohn_harmonic.tsv): N n table_energy energy_2021 distances universal
+60	21	3.8972329294	3.89723292930582861910340472896421367493208861158392	25	no
+61	21	4.1191657308	4.11916573078724116241077879314952602324985447507079	126	no
+
+## Second column pass (worker4.py, session 001) only re-reported it
+### from the lane log `col21.log`, lines 5-5
+5: 14:44:55 n=21 done 61-21: E=4.1039483024
