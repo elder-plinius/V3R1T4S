@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # Criterion skeptic report: bklc-q4-n160-k11-d102
 
+[Edited 2026-11-15 at the maintainer's request on the pull request: the confirmed_scope sentence now ends at "and is not obtainable from the live neighbours."; the clause about a co-filed code and the wording about a literal GF(q) reading were dropped. The checks, numbers and verdict are unchanged.]
+
 Cell: [160,11] over GF(4), claimed d = 102. Target id named by README.md: codetables-binary-linear. Win claimed: Full. The contributor's hash list checked from inside the package folder: all files OK.
 
 ## Target coverage 
@@ -33,6 +35,6 @@ Open question 1: the cell pages for [157,11] and [158,11] (closed PRs #98 and #9
 
 Open questions 3 to 5 (structure of the check, newer arXiv, why #90-#101 closed): Q3: my enumeration is the same full-enumeration idea as the triage's, written separately in a different representation (bit-planes, numpy); the criterion itself names full enumeration for this size, so a structurally different method is optional, not required; I did not run one. Q4: not decided (see clause 4). Q5: nothing known beyond ruling R1 (bulk close of 2026-10-14, no comments).
 
-confirmed_scope: The object is a valid [160,11,102] code over GF(4) (rank 11, exact minimum distance 102 by full enumeration of all 4^11 - 1 messages, 2958 minimum-weight words) whose distance strictly exceeds the live lower bound 101 (upper 111) and is not obtainable from the live neighbours or by puncturing the co-filed [163,11,104] code, under the literal GF(q) reading of the criterion.
+confirmed_scope: The object is a valid [160,11,102] code over GF(4) (rank 11, exact minimum distance 102 by full enumeration of all 4^11 - 1 messages, 2958 minimum-weight words) whose distance strictly exceeds the live lower bound 101 (upper 111) and is not obtainable from the live neighbours.
 
 pass: true
