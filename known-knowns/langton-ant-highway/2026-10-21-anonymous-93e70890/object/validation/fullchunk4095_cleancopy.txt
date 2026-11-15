@@ -1,0 +1,8 @@
+user : chunk 4095 first 68702699520 last 68719476735 lines 16777216 CAP 16777216 UNCAP 0 OOB 0 maxtcap 213277 maxtcap_mask 68707411148 distinct_classes 16 overflow_fixups 0 sha256 4b0717c097ba70629f33a87ef731ccc5d388f7eea55e2d0486f34f429c676296 engine lant4
+lant4 sha256 4b0717c097ba70629f33a87ef731ccc5d388f7eea55e2d0486f34f429c676296
+SHA256 MATCH
+lantx2 lines 16777216 CAP 16777216 maxtcap 213277 first mask at max 68707411148
+
+real	16m38.775s
+user	16m41.645s
+sys	0m2.291s

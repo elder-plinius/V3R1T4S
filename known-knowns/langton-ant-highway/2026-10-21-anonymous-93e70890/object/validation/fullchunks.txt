@@ -1,0 +1,8 @@
+user: chunk 0 first 0 last 16777215 lines 16777216 CAP 16777216 UNCAP 0 OOB 0 maxtcap 217479 maxtcap_mask 10505436 distinct_classes 16 overflow_fixups 0 sha256 5b5c957272cd24f347e3ead38b870c9cae421a021f672bd9d61b5dd23f2dd40d engine lant4
+box lant4 sha256 5b5c957272cd24f347e3ead38b870c9cae421a021f672bd9d61b5dd23f2dd40d
+lantx2 chunk 0 lines 16777216 CAP 16777216 maxtcap 217479 masks_at_max 10505436 distinct_classes 16
+SHA256 MATCH (user chunk output == box lant4 output)
+user: chunk 2439 first 40919629824 last 40936407039 lines 16777216 CAP 16777216 UNCAP 0 OOB 0 maxtcap 375545 maxtcap_mask 40920836116 distinct_classes 16 overflow_fixups 0 sha256 290eb1a3320f92051d43d7fba0a6efa8e1fc6f7b68bf3dc168fb0fb9048d1805 engine lant4
+box lant4 sha256 290eb1a3320f92051d43d7fba0a6efa8e1fc6f7b68bf3dc168fb0fb9048d1805
+lantx2 chunk 2439 lines 16777216 CAP 16777216 maxtcap 375545 masks_at_max 40920836116 distinct_classes 16
+SHA256 MATCH (user chunk output == box lant4 output)
