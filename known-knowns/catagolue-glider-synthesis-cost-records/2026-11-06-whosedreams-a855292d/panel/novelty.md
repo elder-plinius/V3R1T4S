@@ -1,4 +1,5 @@
 # NOVELTY skeptic: xs26_08ehmkk8z6a87066 (claimed 12 gliders)
+> Layout note (2026-11-15): this review was written on 2026-11-06 against an earlier layout of the claim, before it was packaged. Its file names map to this package as follows: claim/CLAIM.md -> README.md (title and '## What'; the claim sentence was rewritten on 2026-11-06 to the main criterion); claim/TARGET_CRITERION.md -> how-we-built-it/TARGET_CRITERION.md (byte-identical); claim/METHOD.md -> HOW_WE_FOUND_IT.md and how-we-built-it/COMMANDS.md; claim/REPRODUCE.md -> RUN_IT_YOURSELF.md; claim/STATUS.md -> not carried over (status is in panel/gate.md); claim/result/xs26_08ehmkk8z6a87066.rle -> object/xs26_08ehmkk8z6a87066.rle (byte-identical); claim/result/xs26_08ehmkk8z6a87066.json -> how-we-built-it/data/xs26_08ehmkk8z6a87066.p32.json (byte-identical); data/status_source_syntheses_2026-11-05-18.html -> not carried over (its URL, fetch time and sha256 a7ce33218e7445660d0c84323de44e6f52447bddc6d1b6235ed5ed2fc61658ee are in the-record-we-beat/RECORD.md).
 context: subagent
 
 Fresh context. I read only claim/ (CLAIM.md, METHOD.md, STATUS.md, REPRODUCE.md, TARGET_CRITERION.md, result/xs26_08ehmkk8z6a87066.rle, result/xs26_08ehmkk8z6a87066.json, data/status_source_syntheses_2026-11-05-18.html) plus the kit's TROPHY_CASE.md, known-knowns/, bank/ and PRs. I did not reproduce the synthesis. I only ran the RLE far enough to name the intermediate stages, so the seed could be identified (see "Seed").
@@ -42,18 +43,18 @@ Trivial-edit check: deletion, restriction, relabelling or symmetry applied to th
 - The GitHub API search of elder-plinius/V3R1T4S PRs (925 open and closed) returns 0 hits for the apgcode, "glider synthesis", "glider" and "catagolue". The only Life-related PRs (#911, #613, #709, #641 and others) are unrelated targets.
 
 ## Literature and code search (last 24 months)
-- ConwayLife forums search for "08ehmkk8z6a87066" shows "Search found 0 matches". curl was blocked by Cloudflare, so I read the page through the fetch tool.
+- ConwayLife forums search for "08ehmkk8z6a87066": not run. The plain request was refused (Cloudflare), so no forum result is recorded. (Edited 2026-11-15: a result read afterwards by another route was dropped.)
 - LifeWiki full-text search returns "no results matching the query".
 - Web search finds nothing relevant.
 - GitHub global code search needs a login and was not run (inconclusive). I did not log in as the user.
 - Shinjuku and Catagolue are covered above.
 
 Caveats:
-- The forum search matches the apgcode only. A post giving an RLE without the code would be missed, but anything accepted into Shinjuku would have lowered the table cost.
+- The ConwayLife forum search was not run, so a forum post giving this synthesis would be missed here; anything accepted into Shinjuku would have lowered the table cost.
 - The claim package should name the seed, xs28_651ugmmz69706221 at 11 gliders, and the new 1-glider transfer. I have named both here.
 - p1 needs a listed cost of at least 60, and 58 is below that. Whether p1 applies is for CRITERION, not NOVELTY. The main success rule (strictly below the live cost) is met.
 
 ## Verdict
-novelty: PASS. 12 strictly beats the live true cost of 58. No published synthesis of this object at 12 or fewer was found in Catagolue, Shinjuku master or its open MRs, LifeWiki, the ConwayLife forums, TROPHY_CASE, known-knowns or the kit PRs. The construction is the published xs28_651ugmmz69706221 path (11 gliders) plus one new transfer glider, and that transfer is not in Shinjuku as of 2026-10-27.
+novelty: PASS. 12 strictly beats the live true cost of 58. No published synthesis of this object at 12 or fewer was found in Catagolue, Shinjuku master or its open MRs, LifeWiki, TROPHY_CASE, known-knowns or the kit PRs. The construction is the published xs28_651ugmmz69706221 path (11 gliders) plus one new transfer glider, and that transfer is not in Shinjuku as of 2026-10-27. The ConwayLife forum search was not run.
 
 pass: true

@@ -1,4 +1,5 @@
 # CRITERION — xs26_08ehmkk8z6a87066
+> Layout note (2026-11-15): this review was written on 2026-11-06 against an earlier layout of the claim, before it was packaged. Its file names map to this package as follows: claim/CLAIM.md -> README.md (title and '## What'; the claim sentence was rewritten on 2026-11-06 to the main criterion); claim/TARGET_CRITERION.md -> how-we-built-it/TARGET_CRITERION.md (byte-identical); claim/METHOD.md -> HOW_WE_FOUND_IT.md and how-we-built-it/COMMANDS.md; claim/REPRODUCE.md -> RUN_IT_YOURSELF.md; claim/STATUS.md -> not carried over (status is in panel/gate.md); claim/result/xs26_08ehmkk8z6a87066.rle -> object/xs26_08ehmkk8z6a87066.rle (byte-identical); claim/result/xs26_08ehmkk8z6a87066.json -> how-we-built-it/data/xs26_08ehmkk8z6a87066.p32.json (byte-identical).
 context: subagent
 
 ## What was judged

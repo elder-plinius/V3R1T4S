@@ -1,4 +1,5 @@
 # REPRODUCE skeptic: xs26_08ehmkk8z6a87066
+> Layout note (2026-11-15): this review was written on 2026-11-06 against an earlier layout of the claim, before it was packaged. Its file names map to this package as follows: claim/CLAIM.md -> README.md (title and '## What'; the claim sentence was rewritten on 2026-11-06 to the main criterion); claim/TARGET_CRITERION.md -> how-we-built-it/TARGET_CRITERION.md (byte-identical); claim/METHOD.md -> HOW_WE_FOUND_IT.md and how-we-built-it/COMMANDS.md; claim/REPRODUCE.md -> RUN_IT_YOURSELF.md; claim/STATUS.md -> not carried over (status is in panel/gate.md); claim/result/xs26_08ehmkk8z6a87066.rle -> object/xs26_08ehmkk8z6a87066.rle (byte-identical); claim/result/xs26_08ehmkk8z6a87066.json -> how-we-built-it/data/xs26_08ehmkk8z6a87066.p32.json (byte-identical); claim/code/verify_synthesis.py -> how-we-built-it/code/verify_synthesis.py (byte-identical). The claim sentence quoted below named partial win p1; that p1 wording was withdrawn on 2026-11-06, and this package does not claim p1.
 
 context: subagent
 
@@ -7,6 +8,8 @@ I read only the claim package: claim/CLAIM.md, claim/TARGET_CRITERION.md, claim/
 
 ## Claim under test (claim/CLAIM.md)
 "A verified all-glider synthesis builds `xs26_08ehmkk8z6a87066` with **12** gliders, strictly below the live Catagolue true cost of **58** (saving 46), meeting partial win p1 (≥60 listed cost)."
+
+> Note (2026-11-15): the p1 part of this quoted wording was withdrawn on 2026-11-06 (58 is below p1's threshold of 60). The package claims the main success criterion only; see panel/criterion.md.
 
 ## Definition quoted (claim/TARGET_CRITERION.md, success criterion)
 "Success means an RLE pattern in rule B3/S23 that (1) at generation 0 consists ONLY of gliders, each a separate connected component, (2) is a valid synthesis: rewinding every glider backwards by at least 4*(bounding box diameter) generations along its own trajectory produces a pattern with no glider-glider interaction during the rewound interval (so the gliders genuinely come in from infinity), (3) after running forward until the population is periodic, contains exactly the target object (apgcode match, via lifelib or an independent simulator) with NO other live cells and no escaping gliders or spaceships (unless the page's own synthesis convention for that object explicitly allows outgoing gliders, in which case follow it literally), and (4) uses STRICTLY fewer gliders than the cost shown for that apgcode on its Catagolue object page and tabulation ..., re-fetched live immediately before claiming."
