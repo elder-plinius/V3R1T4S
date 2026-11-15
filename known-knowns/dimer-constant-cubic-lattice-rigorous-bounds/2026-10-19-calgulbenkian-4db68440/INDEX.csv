@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+dimer-constant-cubic-lattice-rigorous-bounds,p2,h3 <= 0.7859681 (unrounded 0.785968076809 rounded up),"0.7862023450 (FKLM, citing the numerical computations in FP)",2026-10-19T05:30:56Z,object/cert_md_h3_54.txt (parts 00 and 01),4db684405f609065a95ffe192fcdf672742b3910e7dfff37ed80b02ec0f74c0c
