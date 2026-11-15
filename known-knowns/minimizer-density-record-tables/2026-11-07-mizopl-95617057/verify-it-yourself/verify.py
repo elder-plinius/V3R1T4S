@@ -19,10 +19,11 @@ Verifies:
    and fetched k_extension_k16_w12.csv.
 3. Exact expected DNA density over all 4^16 = 4,294,967,296 DNA contexts via two independent exact 4-ary
    de Bruijn transfer-matrix DP algorithms (active-set forward/backward de Bruijn DP and full matrix-power DP),
-   plus exact bit-plane enumeration for the published binary-projected baselines.
-4. Strict improvement by -0.7085% relative over OrensteinLab/Minimizers k4-w12.txt (574,313,157 / 2^32 =
-   0.1337177020) and by -2.4076% relative over OrensteinLab/10-minimizers w12_k4.gm (584,312,429 / 2^32 =
-   0.1360458389), exceeding the >= 0.5% relative threshold (<= 0.1330491135).
+   plus exact bit-plane enumeration for the binary-projected baselines.
+4. Strict improvement by -0.7085% relative over the exact DNA density of the listed binary order in
+   OrensteinLab/Minimizers best-orders.csv and k4-w12.txt, extended as the GreedyMini README describes
+   (574,313,157 / 2^32 = 0.1337177020), and by -2.4076% relative over OrensteinLab/10-minimizers w12_k4.gm
+   (584,312,429 / 2^32 = 0.1360458389), exceeding the >= 0.5% relative threshold (<= 0.1330491135).
 """
 
 import sys
@@ -294,10 +295,10 @@ def main():
     assert pub_gc_bp == pub_gc_dp == 584312429
 
     print("\n--- Exact Expected DNA Density (over all 4^16 = 4,294,967,296 DNA windows) ---")
-    print(f"OrensteinLab/10-minimizers w12_k4.gm          : {pub_gc_bp} / 2^32 = {pub_den_bp:.10f}")
-    print(f"OrensteinLab/Minimizers    k4-w12.txt         : {min_gc_bp} / 2^32 = {min_den_bp:.10f}")
-    print(f"Claimed 4-ary DNA order    w12_k4_4ary (DP 1) : {imp_gc_1} / 2^32 = {imp_den_1:.10f} (pref={imp_pref_gc}, suff={imp_suff_gc})")
-    print(f"Claimed 4-ary DNA order    w12_k4_4ary (DP 2) : {imp_gc_2} / 2^32 = {imp_den_2:.10f}")
+    print(f"OrensteinLab/10-minimizers w12_k4.gm                        : {pub_gc_bp} / 2^32 = {pub_den_bp:.10f}")
+    print(f"OrensteinLab/Minimizers    k4-w12.txt (DNA-ext. per GM doc) : {min_gc_bp} / 2^32 = {min_den_bp:.10f}")
+    print(f"Claimed 4-ary DNA order    w12_k4_4ary (DP 1)               : {imp_gc_1} / 2^32 = {imp_den_1:.10f} (pref={imp_pref_gc}, suff={imp_suff_gc})")
+    print(f"Claimed 4-ary DNA order    w12_k4_4ary (DP 2)               : {imp_gc_2} / 2^32 = {imp_den_2:.10f}")
 
     rel_vs_minimizers = (min_den_bp - imp_den_1) / min_den_bp * 100.0
     rel_vs_10min = (pub_den_bp - imp_den_1) / pub_den_bp * 100.0
@@ -306,7 +307,7 @@ def main():
         csv_sha = sha256_file(table_csv_path)
         assert csv_sha == EXPECTED_CSV_SHA256, f"k_extension_k16_w12.csv sha256 mismatch: {csv_sha}"
         assert os.path.getsize(table_csv_path) == 1644
-        print(f"k_extension_k16_w12.csv sha256               : {csv_sha} (1644 bytes)")
+        print(f"k_extension_k16_w12.csv sha256                             : {csv_sha} (1644 bytes)")
         table_vals = {}
         with open(table_csv_path, "r", encoding="utf-8") as f:
             reader = csv.DictReader(f)
@@ -314,17 +315,17 @@ def main():
                 val_str = row["4"].strip()
                 if val_str and val_str.lower() != "nan":
                     table_vals[row["method"].strip()] = float(val_str)
-        print("\n--- Comparison vs All Listed Methods at (w=12, k=4) ---")
-        print(f"  {'Minimizers (k4-w12)':20s}: {min_den_bp:.10f}  (our order improves by -{rel_vs_minimizers:.4f}%)")
+        print("\n--- Comparison vs Extended Binary Order & Listed Methods at (w=12, k=4) ---")
+        print(f"  {'k4-w12.txt (DNA-ext. GM doc)':28s}: {min_den_bp:.10f}  (our order improves by -{rel_vs_minimizers:.4f}%)")
         for m, v in sorted(table_vals.items(), key=lambda x: x[1]):
             rel_m = (v - imp_den_1) / v * 100.0
-            print(f"  {m:20s}: {v:.9f}   (our order improves by -{rel_m:.4f}%)")
+            print(f"  {m:28s}: {v:.9f}   (our order improves by -{rel_m:.4f}%)")
 
-    print(f"\nSmallest published DNA density (k4-w12.txt) : {min_den_bp:.10f} (574,313,157 / 2^32)")
-    print(f"Required <= 0.5% relative threshold         : 0.1330491135 (571,441,591 / 2^32)")
-    print(f"Our exact DNA density (w12_k4_4ary.gm)      : {imp_den_1:.10f} (570,244,411 / 2^32)")
-    print(f"Relative reduction vs OrensteinLab/Minimizers: -{rel_vs_minimizers:.4f}% (required >= 0.5000%)")
-    print(f"Relative reduction vs OrensteinLab/10-minim. : -{rel_vs_10min:.4f}% (required >= 0.5000%)")
+    print(f"\nExact DNA density of listed binary order (k4-w12.txt, extended per GreedyMini README): {min_den_bp:.10f} (574,313,157 / 2^32)")
+    print(f"Required <= 0.5% relative threshold                                                  : 0.1330491135 (571,441,591 / 2^32)")
+    print(f"Our exact DNA density (w12_k4_4ary.gm)                                               : {imp_den_1:.10f} (570,244,411 / 2^32)")
+    print(f"Relative reduction vs DNA-extended k4-w12.txt                                        : -{rel_vs_minimizers:.4f}% (required >= 0.5000%)")
+    print(f"Relative reduction vs OrensteinLab/10-minimizers w12_k4.gm                           : -{rel_vs_10min:.4f}% (required >= 0.5000%)")
 
     assert imp_gc_1 <= 571441591
     assert rel_vs_minimizers >= 0.5, f"Relative improvement {rel_vs_minimizers}% < 0.5%"

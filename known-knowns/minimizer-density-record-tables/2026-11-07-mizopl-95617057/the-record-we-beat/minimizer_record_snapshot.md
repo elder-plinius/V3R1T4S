@@ -8,11 +8,12 @@ No third-party tables or precomputed minimizer files are copied into this direct
    - Pinned Commit URL (`7b9430fce07a1fcf6b0fe023e9c7c135d6a5bf46`): `https://raw.githubusercontent.com/OrensteinLab/Minimizers/7b9430fce07a1fcf6b0fe023e9c7c135d6a5bf46/lowest-density/binary/individual-orders/ranks/k4-w12.txt`
    - Fetched UTC: `2026-11-07T15:17:43Z` (`HTTP 200`, `58` bytes, `sha256: 9a8f7447e569399a594588e695a963da59078b34cf4aac23a6fd3d998d06d877`)
    - Rank vector (UHS size 7): `[3, 16, 2, 16, 16, 4, 1, 0, 16, 16, 16, 16, 16, 16, 5, 6]`
-   - Exact expected DNA density (`prob_gc_dna`): `574,313,157 / 2^32 = 0.1337177020` (required `>= 0.5%` relative threshold: `<= 571,441,591 / 2^32 = 0.1330491135`)
+   - Exact expected DNA density of this listed binary order, extended as the `GreedyMini` README describes (`prob_gc_dna`): `574,313,157 / 2^32 = 0.1337177020` (required `>= 0.5%` relative threshold: `<= 571,441,591 / 2^32 = 0.1330491135`)
 2. **`OrensteinLab/Minimizers` Master Table (`lowest-density/binary/best-orders.csv`):**
    - Pinned Commit URL (`7b9430fce07a1fcf6b0fe023e9c7c135d6a5bf46`): `https://raw.githubusercontent.com/OrensteinLab/Minimizers/7b9430fce07a1fcf6b0fe023e9c7c135d6a5bf46/lowest-density/binary/best-orders.csv`
    - Fetched UTC: `2026-11-07T15:17:50Z` (`HTTP 200`, `14,275,872` bytes, `sha256: 57a369a010498cb6ab3ba0bce73ed015980a11a8c8c29f09d537db34e3e32313`)
    - Row for `k = 4, w = 12`: `4,12,"['0111', '0110', '0010', '0000', '0101', '1110', '1111']","[3, 16, 2, 16, 16, 4, 1, 0, 16, 16, 16, 16, 16, 16, 5, 6]",7`
+   - Exact expected DNA density of this listed binary order, extended as the `GreedyMini` README describes (`prob_gc_dna`): `574,313,157 / 2^32 = 0.1337177020`
 
 ## 2. Live Fetches from `OrensteinLab/10-minimizers` & `OrensteinLab/GreedyMini` (`2026-10-18T15:59:53Z` – `2026-10-18T15:59:54Z`)
 

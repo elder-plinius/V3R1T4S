@@ -1,8 +1,8 @@
-# DNA Minimizer Density Improvement at `(w = 12, k = 4)`: `0.133718 -> 0.132770` (`-0.7085%` vs `Minimizers`, `-2.4076%` vs `10-minimizers`)
+# DNA Minimizer Density Improvement at `(w = 12, k = 4)`: `0.133718 -> 0.132770` (`-0.7085%` vs DNA-extended `Minimizers` `k4-w12.txt`, `-2.4076%` vs `10-minimizers` `w12_k4.gm`)
 
 ## What
 
-An explicit 256-entry 4-ary DNA minimizer rank order object/w12_k4_4ary.gm (2,056 bytes, sha256 956170573df55e04f43e55c20d6bba0b134c9b8054a92f995428dc9df4410ddb) and companion CSV table object/w12_k4_4ary.csv (4,518 bytes, sha256 72557c44cc3c4b10d4735faeee9d6745f40872674c54118a311e258f775431d1) for (w, k) = (12, 4) with exact expected DNA density 570,244,411 / 2^32 = 0.1327703733 (density factor 1.7260148523), strictly lowering the smallest listed value in OrensteinLab/Minimizers lowest-density/binary/best-orders.csv (k4-w12.txt, 574,313,157 / 2^32 = 0.1337177020) by 0.7085% relative and lowering OrensteinLab/10-minimizers w12_k4.gm (584,312,429 / 2^32 = 0.1360458389) by 2.4076% relative.
+An explicit 256-entry 4-ary DNA minimizer rank order object/w12_k4_4ary.gm (2,056 bytes, sha256 956170573df55e04f43e55c20d6bba0b134c9b8054a92f995428dc9df4410ddb) and companion CSV table object/w12_k4_4ary.csv (4,518 bytes, sha256 72557c44cc3c4b10d4735faeee9d6745f40872674c54118a311e258f775431d1) for (w, k) = (12, 4) with exact expected DNA density 570,244,411 / 2^32 = 0.1327703733 (density factor 1.7260148523), strictly lowering the exact DNA density of the listed binary order in OrensteinLab/Minimizers lowest-density/binary/best-orders.csv and k4-w12.txt, extended as the GreedyMini README describes (574,313,157 / 2^32 = 0.1337177020), by 0.7085% relative and lowering OrensteinLab/10-minimizers w12_k4.gm (584,312,429 / 2^32 = 0.1360458389) by 2.4076% relative.
 
 - **Target ID:** `minimizer-density-record-tables` (`biology`)
 - **Parameters:** $w = 12, k = 4$ (DNA alphabet $\sigma = 4$, $4^4 = 256$ DNA 4-mers)
@@ -24,8 +24,8 @@ This fetches the upstream precalculated order `k4-w12.txt` (`sha256: 9a8f7447e56
 
 ## Compared To
 
-- **`OrensteinLab/Minimizers` Lowest-Density Order (`lowest-density/binary/best-orders.csv` `sha256: 57a369a010498cb6ab3ba0bce73ed015980a11a8c8c29f09d537db34e3e32313` and `lowest-density/binary/individual-orders/ranks/k4-w12.txt` `sha256: 9a8f7447e569399a594588e695a963da59078b34cf4aac23a6fd3d998d06d877`, recorded in `the-record-we-beat/minimizer_record_snapshot.md`):**
-  - Precalculated binary order for $k=4, w=12$ (UHS size 7: `[3, 16, 2, 16, 16, 4, 1, 0, 16, 16, 16, 16, 16, 16, 5, 6]`), extended to DNA as described in the `GreedyMini` README (`136` bytes in `.gm` format, or `16` bytes unpacked): exact expected DNA density `574,313,157 / 2^32 = 0.1337177020`.
+- **`OrensteinLab/Minimizers` Lowest-Density Binary Order (`lowest-density/binary/best-orders.csv` `sha256: 57a369a010498cb6ab3ba0bce73ed015980a11a8c8c29f09d537db34e3e32313` and `lowest-density/binary/individual-orders/ranks/k4-w12.txt` `sha256: 9a8f7447e569399a594588e695a963da59078b34cf4aac23a6fd3d998d06d877`, recorded in `the-record-we-beat/minimizer_record_snapshot.md`):**
+  - Listed binary order for $k=4, w=12$ (UHS size 7: `[3, 16, 2, 16, 16, 4, 1, 0, 16, 16, 16, 16, 16, 16, 5, 6]`): exact expected DNA density when extended as the `GreedyMini` README describes (`136` bytes in `.gm` format, or `16` bytes unpacked) is `574,313,157 / 2^32 = 0.1337177020`.
   - Required `>= 0.5%` relative threshold below `0.1337177020`: `<= 0.1330491135` (`<= 571,441,591 / 2^32`).
   - Our direct 4-ary DNA order `object/w12_k4_4ary.gm` achieves `570,244,411 / 2^32 = 0.1327703733`, reducing gamechanger contexts by `-4,068,746` out of $4^{16} = 4,294,967,296$ (**`-0.7085%` relative**, clearing the `0.5%` relative bar by `1,197,180` contexts).
 - **`OrensteinLab/GreedyMini` & `OrensteinLab/10-minimizers` Precomputed `w12_k4.gm` (`sha256: 7c04487e1489e8d37302230424f32522f3c9af537680c6319009fb49ef180131`, recorded in `the-record-we-beat/minimizer_record_snapshot.md`):**
@@ -38,7 +38,7 @@ This fetches the upstream precalculated order `k4-w12.txt` (`sha256: 9a8f7447e56
   - `double decycling`: `0.145236` (`-8.5830%` relative)
   - `miniception`, `mod-minimizer`, `open-close-syncmer`: `0.156164` (`-14.9802%` relative)
 - **Additional Baselines Computed by Us (not listed in `k_extension_k16_w12.csv`):**
-  - Optimal binary-projected `.gm` order `[15, 6, 7, 12, 10, 4, 11, 3, 0, 1, 8, 9, 14, 2, 13, 5]` (our own computation within the 16-entry binary-projected subspace): `573,933,439 / 2^32 = 0.1336292920` (`-0.6428%` relative)
+  - The best binary-projected order we found (`[15, 6, 7, 12, 10, 4, 11, 3, 0, 1, 8, 9, 14, 2, 13, 5]`, `.gm` format, from our non-exhaustive search within the 16-entry binary-projected subspace): `573,933,439 / 2^32 = 0.1336292920` (`-0.6428%` relative)
   - `ABB+` (our own exact 4-ary DP computation from the scheme definition in `OrensteinLab/10-minimizers`): `591,565,027 / 2^32 = 0.1377344660` (`-3.6041%` relative)
   - `One-zero` / `10-minimizer` (our own exact 4-ary DP computation from the scheme definition in `OrensteinLab/10-minimizers`): `606,522,331 / 2^32 = 0.1412169847` (`-5.9813%` relative)
 

@@ -30,11 +30,11 @@ We verified file integrity, rank representations, and exact gamechanger counts o
 | Order & Verification Method | Gamechanger Contexts (out of $2^{32}$) | Exact Expected DNA Density |
 | :--- | :--- | :--- |
 | `OrensteinLab/10-minimizers` `w12_k4.gm` (bit-plane exact & 4-ary DP) | `584,312,429` | `0.1360458389` |
-| `OrensteinLab/Minimizers` `k4-w12.txt` (bit-plane exact & 4-ary DP) | `574,313,157` | `0.1337177020` |
+| `OrensteinLab/Minimizers` `k4-w12.txt` binary order, extended as the `GreedyMini` README describes (bit-plane exact & 4-ary DP) | `574,313,157` | `0.1337177020` |
 | `object/w12_k4_4ary.gm` (Active-Set Forward/Backward 4-ary DP) | `570,244,411` (`283,110,423` pref + `287,133,988` suff) | `0.1327703733` |
 | `object/w12_k4_4ary.csv` (Transition-Matrix Power 4-ary DP) | `570,244,411` | `0.1327703733` |
 
-- **Exact Gamechanger Reduction vs. `OrensteinLab/Minimizers` (`k4-w12.txt`):** `574,313,157 - 570,244,411 = 4,068,746` fewer gamechanger contexts (**`-0.7085%` relative**, clearing the `>= 0.5%` threshold `<= 571,441,591 / 2^32 = 0.1330491135`).
+- **Exact Gamechanger Reduction vs. the listed `OrensteinLab/Minimizers` `k4-w12.txt` binary order (extended as the `GreedyMini` README describes):** `574,313,157 - 570,244,411 = 4,068,746` fewer gamechanger contexts (**`-0.7085%` relative**, clearing the `>= 0.5%` threshold `<= 571,441,591 / 2^32 = 0.1330491135`).
 - **Exact Gamechanger Reduction vs. `OrensteinLab/10-minimizers` (`w12_k4.gm`):** `584,312,429 - 570,244,411 = 14,068,018` fewer gamechanger contexts (**`-2.4076%` relative**).
 - **Adversarial Corruption Checks:** Corrupting any byte or digit in either `object/w12_k4_4ary.gm` or `object/w12_k4_4ary.csv` causes `sh verify-it-yourself/run_checks.sh` to exit non-zero and print `FAIL`.
 
