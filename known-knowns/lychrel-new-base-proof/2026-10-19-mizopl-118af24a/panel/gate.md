@@ -1,0 +1,11 @@
+# Honesty Gate (lychrel-new-base-proof)
+
+> **Dated Note (2026-11-03):** This panel record derives from the three-skeptic evaluation conducted for [PR #517](https://github.com/elder-plinius/V3R1T4S/pull/517) (`2026-10-19-mizopl-dd093b97`), from which this single-object base-146 package (`object/lychrel_base146_certificate.json`, `sha256: 118af24a34557dbba72c36eb478019f1f4bed84999e23dc46367c5865ba55945`) was split. All statements below are scoped strictly to this base-146 package.
+
+status: CONFIRMED_SOLUTION
+confirmed_scope: Mechanical template-closure proof that Lychrel numbers exist in new base b = 146 = 2 * 73 (object/lychrel_base146_certificate.json, sha256 118af24a34557dbba72c36eb478019f1f4bed84999e23dc46367c5865ba55945, Period-4 templates T_1(m)..T_4(m) with |L_0|=|R_0|=80, |M_0|=6, and 168-digit start integer n = T_1(1) plus 1-step pre-template seed n_seed), outside {2^k, 11, 17, 20, 26}, verified by block-by-block symbolic carry computation for all integer parameters m at least 1, symbolic mirrored-block non-palindromicity, brute force over m from 1 to 500, and 2,000-step orbit simulation (t = 0..2,000) with compiled regex matching to 1,168 digits in base 146.
+
+## Gate Notes
+- Panel, each in a fresh isolated context (recorded during the [PR #517](https://github.com/elder-plinius/V3R1T4S/pull/517) evaluation): `reproduce` (Antigravity fresh subagent, role REPRODUCE), `novelty` (Antigravity fresh subagent, role NOVELTY), `criterion` (Antigravity fresh subagent, role CRITERION). All three end `pass: true`.
+- Full success criterion met for base $b = 146$. The live Wikipedia status page (`https://en.wikipedia.org/wiki/Lychrel_number`), OEIS sequences (`A023108`, `A060382`), and MathPages (`https://www.mathpages.com/home/dseal.htm`) were fetched honestly at `2026-10-19T06:30:18Z`–`2026-10-19T06:30:48Z`, under 15 minutes before the gate.
+- No downgrade triggers found: all three panelists pass without hedging, and both the independent checker and `verify-it-yourself/check_lychrel.py` verify all-$m$ symbolic carry-transducer closure across all 8 symbolic blocks in base 146, symbolic mirrored-block non-palindromicity, brute-force verification over $1 \le m \le 500$, and 2,000-step orbit simulation (`t = 0..2,000`) in base 146 with `re.Pattern.fullmatch` at every iterate.
