@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+qrac-n-to-1-shared-randomness-optimality,n=4 shared-randomness 1-qubit QRAC upper bound,0.741481799559635048,0.75 (open optimality of 0.741481456572...),2026-11-15T16:06:29Z,object/certificate_qrac4.json,8ca3d435fdd22f906e7113aadfa38c09762836b6077d27a8b301a77e91847788
