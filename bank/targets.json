@@ -47721,8 +47721,8 @@
    "name": "Divisor takeaway poset game on {2, 3, ..., k}: second-player winning sizes beyond k = 125 (OEIS A393927)",
    "category": "graphs-games-automata",
    "kind": "harvest",
-   "tractability": 4,
-   "compute_profile": "laptop-hours (isolated-prime parity reduction + prime-chain quotient + upward-closed poset bitmask search)",
+   "tractability": 2.5,
+   "compute_profile": "laptop-days to needs cluster (isolated-prime parity + Nim-2 chain folding + connected-component Sprague-Grundy DP reaches k = 118 in ~1 hour at 4.44B nodes for k = 116 and stalls > 4,200 s at k = 119; reaching k >= 126 requires deeper poset-automorphism canonicalization)",
    "statement": "In the divisor takeaway poset game on {2, 3, ..., k} (catalogued by Zhao Hui Du in OEIS A393927, March 2026, keyword `nonn,more`), two players start with the set S_k = {2, 3, ..., k} and alternate moves under normal play (last player to move wins). A move consists of choosing an available number x in S and removing x together with all divisors of x that are currently in S; equivalently, it is the downward-closed poset takeaway game on the divisibility poset ({2, ..., k}, |) (dual to Schuh's 1952 game of divisors / Chomp). OEIS A393927 lists the values of k for which the initial set {2, 3, ..., k} is a P-position (second-player win). As of 2026-10-30, only 10 terms are known (with the synthesized OEIS b-file `b393927.txt` ending at n = 10): a(1)..a(10) = 3, 7, 28, 34, 35, 66, 74, 84, 116, 125, and no terms are known beyond k = 125.",
    "success_criterion": "CONFIRMED: the next 5 exact terms of OEIS A393927 beyond k = 125 (a(11) through a(15)), established by determining the exact 1st/2nd-player win/loss outcome of S_k = {2, ..., k} for EVERY integer k contiguously from k = 126 through k = a(15) (proving that a(11)..a(15) are P-positions and all other integers in [126, a(15)] are N-positions), verified by two independently written solvers using distinct algorithms that both reproduce the exact win/loss outcome of every k in 2..125 (confirming a(1)..a(10) = 3, 7, 28, 34, 35, 66, 74, 84, 116, 125 and confirming all other k in 2..125 are N-positions).",
    "partial_wins": [
@@ -47749,7 +47749,9 @@
     "In A393927, the number 1 is NOT in the set (the set is {2, 3, ..., k}), and a move chooses x in S and removes {d in S : d | x} (x and its divisors), NOT multiples of x.",
     "An element x whose multiples have been removed is maximal in S, NOT isolated, unless all of its proper divisors have also already been removed; picking x still deletes its remaining divisors in S.",
     "Removing primes <= sqrt(k) alone does NOT disconnect primes > sqrt(k), because composite numbers like 6 and 78 = 6*13 can still link primes p, q > sqrt(k) until those composites' common divisors are also removed.",
-    "To claim a(11), a(12), ..., every integer k from 126 up to the claimed term must be tested contiguously so no smaller P-position is missed."
+    "To claim a(11), a(12), ..., every integer k from 126 up to the claimed term must be tested contiguously so no smaller P-position is missed.",
+    "Direct recursive game-tree search with isolated-element Nim-1 folding, (k/3, k/2] Nim-2 chain folding, connected-component decomposition, and p > sqrt(k) prime-bucket symmetry breaking reproduces k = 2..118 but takes 3,624.5 s (4.44B nodes) at k = 116 and stalls > 4,200 s at k = 119; a stronger poset-automorphism or core-ideal reduction is needed before k = 126.",
+    "Move ordering matters: branching on remaining elements with the most divisors first reaches k = 116, whereas small-element-first (ctz) ordering is > 10x slower at k = 74 (1,172 ms, 2.38M nodes) and times out before k = 84."
    ]
   },
   {

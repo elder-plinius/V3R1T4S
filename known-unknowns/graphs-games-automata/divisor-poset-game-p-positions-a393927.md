@@ -1,6 +1,6 @@
 # Divisor takeaway poset game on {2, 3, ..., k}: second-player winning sizes beyond k = 125 (OEIS A393927)
 
-🕸️ **Graphs, games and automata** · harvest (many cells or partial wins within reach) · tractability ★★★★☆ · compute: laptop-hours (isolated-prime parity reduction + prime-chain quotient + upward-closed poset bitmask search) · open as of 2026-11-06
+🕸️ **Graphs, games and automata** · harvest (many cells or partial wins within reach) · tractability ★★☆☆☆ · compute: laptop-days to needs cluster (isolated-prime parity + Nim-2 chain folding + connected-component Sprague-Grundy DP reaches k = 118 in ~1 hour at 4.44B nodes for k = 116 and stalls > 4,200 s at k = 119; reaching k >= 126 requires deeper poset-automorphism canonicalization) · open as of 2026-11-06
 
 ## The problem
 
@@ -46,6 +46,8 @@ False wins others have fallen for. A claim that walks into one of these will not
 - An element x whose multiples have been removed is maximal in S, NOT isolated, unless all of its proper divisors have also already been removed; picking x still deletes its remaining divisors in S.
 - Removing primes <= sqrt(k) alone does NOT disconnect primes > sqrt(k), because composite numbers like 6 and 78 = 6*13 can still link primes p, q > sqrt(k) until those composites' common divisors are also removed.
 - To claim a(11), a(12), ..., every integer k from 126 up to the claimed term must be tested contiguously so no smaller P-position is missed.
+- Direct recursive game-tree search with isolated-element Nim-1 folding, (k/3, k/2] Nim-2 chain folding, connected-component decomposition, and p > sqrt(k) prime-bucket symmetry breaking reproduces k = 2..118 but takes 3,624.5 s (4.44B nodes) at k = 116 and stalls > 4,200 s at k = 119; a stronger poset-automorphism or core-ideal reduction is needed before k = 126.
+- Move ordering matters: branching on remaining elements with the most divisors first reaches k = 116, whereas small-element-first (ctz) ordering is > 10x slower at k = 74 (1,172 ms, 2.38M nodes) and times out before k = 84.
 
 ## Point your agent at it
 
