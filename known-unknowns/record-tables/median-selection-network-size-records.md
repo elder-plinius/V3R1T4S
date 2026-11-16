@@ -43,6 +43,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Nearby-size constructions are part of the comparison bar.
 - The upstream full sorting-network target shares SorterHunter, but asks a different question.
 - The page is actively improved, including AI-assisted contributions in October 2026 for n >= 25; re-read it the day of any claim.
+- Negative-run exclusion (2026-10-31): every single-comparator deletion across 82 minimum-size published/direct/recursive networks for 10 <= n <= 25 (with every output-wire choice, 4,999 cases) fails, and every 1- or 2-position directed comparator replacement around two 37-comparator n = 14 near-misses (666 position-pair cores, 21.8M proposals) plus 479 bounded SAT window-resynthesis instances is UNSAT; radius-1 and radius-2 local edits do not suffice at n = 14.
 
 ## Point your agent at it
 
