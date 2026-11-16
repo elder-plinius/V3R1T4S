@@ -1,0 +1,72 @@
+
+==========================================
+Processing Row (d=5, n=47) from 5x47_oai.txt
+==========================================
+Starting SQP equalizer: d=5, n=47, initial mu = 0.5366069930
+Iter  20: mu = 0.5365763324, drop = 3.07e-05
+Iter  40: mu = 0.5365659182, drop = 4.11e-05
+Iter  60: mu = 0.5365586182, drop = 4.84e-05
+Iter  80: mu = 0.5365483511, drop = 5.86e-05
+SQP finished: final mu = 0.5365483511, total reduction = 5.86e-05
+--- 40-Digit mpmath Certification ---
+Table Best Coherence : 0.53660699
+Theoretical LB       : 0.50395263
+V3R1T4S mpmath mu    : 0.536548351067276445052901429721100407095
+Strict Lowering      : 5.863893272355494709857027889959290503538e-05
+Passes >= 1e-8       : True
+Passes >= LowerBound : True
+Saved verified packing to /v3r1t4s/runs/2026-10-30-1055/attempts/lens2_complex_line_packings_sqp/result/5x47_v3r1t4s.txt
+
+==========================================
+Processing Row (d=6, n=40) from 6x40_oai.txt
+==========================================
+Starting SQP equalizer: d=6, n=40, initial mu = 0.4251124348
+Iter  20: mu = 0.4250978468, drop = 1.46e-05
+Iter  40: mu = 0.4250882288, drop = 2.42e-05
+Iter  60: mu = 0.4250741681, drop = 3.83e-05
+Iter  80: mu = 0.4250606621, drop = 5.18e-05
+SQP finished: final mu = 0.4250606621, total reduction = 5.18e-05
+--- 40-Digit mpmath Certification ---
+Table Best Coherence : 0.42511243
+Theoretical LB       : 0.40824829
+V3R1T4S mpmath mu    : 0.4250606621335811484626453407176610072757
+Strict Lowering      : 5.176786641885153735465928233899272430204e-05
+Passes >= 1e-8       : True
+Passes >= LowerBound : True
+Saved verified packing to /v3r1t4s/runs/2026-10-30-1055/attempts/lens2_complex_line_packings_sqp/result/6x40_v3r1t4s.txt
+
+==========================================
+Processing Row (d=6, n=41) from 6x41_oai.txt
+==========================================
+Starting SQP equalizer: d=6, n=41, initial mu = 0.4305498690
+Iter  20: mu = 0.4305281262, drop = 2.17e-05
+Iter  40: mu = 0.4305119571, drop = 3.79e-05
+Iter  60: mu = 0.4304999636, drop = 4.99e-05
+Iter  80: mu = 0.4304818428, drop = 6.80e-05
+SQP finished: final mu = 0.4304818428, total reduction = 6.80e-05
+--- 40-Digit mpmath Certification ---
+Table Best Coherence : 0.43054987
+Theoretical LB       : 0.40824829
+V3R1T4S mpmath mu    : 0.4304818428126353967365032583538256502351
+Strict Lowering      : 6.802718736460326349674164617434976488126e-05
+Passes >= 1e-8       : True
+Passes >= LowerBound : True
+Saved verified packing to /v3r1t4s/runs/2026-10-30-1055/attempts/lens2_complex_line_packings_sqp/result/6x41_v3r1t4s.txt
+
+==========================================
+Processing Row (d=4, n=11) from 4x11_bmem.txt
+==========================================
+Starting SQP equalizer: d=4, n=11, initial mu = 0.4251472723
+Iter  20: mu = 0.4251470388, drop = 2.33e-07
+Iter  40: mu = 0.4251470381, drop = 2.34e-07
+Iter  60: mu = 0.4251470379, drop = 2.34e-07
+Iter  80: mu = 0.4251470378, drop = 2.35e-07
+SQP finished: final mu = 0.4251470378, total reduction = 2.35e-07
+--- 40-Digit mpmath Certification ---
+Table Best Coherence : 0.42514727
+Theoretical LB       : 0.41833001
+V3R1T4S mpmath mu    : 0.4251470377558724661963325976495955891772
+Strict Lowering      : 2.322441275338036674023504044108227538459e-07
+Passes >= 1e-8       : True
+Passes >= LowerBound : True
+Saved verified packing to /v3r1t4s/runs/2026-10-30-1055/attempts/lens2_complex_line_packings_sqp/result/4x11_v3r1t4s.txt
