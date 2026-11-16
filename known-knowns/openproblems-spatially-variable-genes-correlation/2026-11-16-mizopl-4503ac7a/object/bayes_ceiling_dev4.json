@@ -1,0 +1,597 @@
+{
+  "schema_version": "2.0.0",
+  "scope_note": "Strictly offline Dev-4 theoretical ceiling & error-stratum dissection (4 Dev datasets ONLY; 46 holdout datasets untouched).",
+  "total_runtime_sec": 46.51,
+  "dev4_datasets": [
+    {
+      "dataset_id": "42_slide_tag_human_skin_melanoma",
+      "n_spots": 4804,
+      "n_cols": 1050,
+      "n_ref_genes": 50,
+      "runtime_sec": 17.67,
+      "tau_ams_svg_v1": 0.797905,
+      "per_scale_taus_v1": {
+        "knn_0": 0.556952,
+        "knn_1": 0.715238,
+        "knn_2": 0.776381,
+        "mercer_0.14": 0.800762,
+        "mercer_0.26": 0.803048,
+        "mercer_0.50": 0.774667
+      },
+      "best_single_scale_v1": {
+        "scale": "mercer_0.26",
+        "tau": 0.803048
+      },
+      "offline_loao_template_ceiling_tau": 0.835238,
+      "parametric_exact_mu_bayes_ceiling_tau": 0.811167,
+      "blind_headroom_to_loao": 0.037333,
+      "blind_headroom_to_exact_bayes": 0.013262,
+      "scale_dilution_fraction_alpha_ge_0p3": 0.1227,
+      "strata": {
+        "umi_stratum": {
+          "high_UMI": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.80336,
+            "tau_loao_template": 0.83754,
+            "tau_mc_exact_bayes": 0.80259,
+            "headroom_to_loao": 0.03417
+          },
+          "low_UMI": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.79552,
+            "tau_loao_template": 0.82409,
+            "tau_mc_exact_bayes": 0.81652,
+            "headroom_to_loao": 0.02857
+          },
+          "mid_UMI": {
+            "n_ref_genes": 16,
+            "tau_v1": 0.79464,
+            "tau_loao_template": 0.84464,
+            "tau_mc_exact_bayes": 0.81458,
+            "headroom_to_loao": 0.05
+          }
+        },
+        "disp_stratum": {
+          "high_overdisp_low_theta": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.80112,
+            "tau_loao_template": 0.82969,
+            "tau_mc_exact_bayes": 0.79979,
+            "headroom_to_loao": 0.02857
+          },
+          "mid_theta": {
+            "n_ref_genes": 16,
+            "tau_v1": 0.79226,
+            "tau_loao_template": 0.83631,
+            "tau_mc_exact_bayes": 0.8157,
+            "headroom_to_loao": 0.04405
+          },
+          "poisson_like_high_theta": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.8,
+            "tau_loao_template": 0.83978,
+            "tau_mc_exact_bayes": 0.81828,
+            "headroom_to_loao": 0.03978
+          }
+        },
+        "scale_regime": {
+          "macro_mercer": {
+            "n_ref_genes": 50,
+            "tau_v1": 0.79791,
+            "tau_loao_template": 0.83524,
+            "tau_mc_exact_bayes": 0.81117,
+            "headroom_to_loao": 0.03733
+          }
+        }
+      },
+      "worst_5_genes_in_v1": [
+        {
+          "gene": "LRRK1",
+          "mean_umi": 0.71399,
+          "zero_frac": 0.7398,
+          "theta_hat": 0.1715,
+          "dom_scale": "mercer_0.50",
+          "z_a1_max": 8.795,
+          "z_a1_min": 3.451,
+          "tau_v1": 0.60952,
+          "tau_loao_template": 0.66667,
+          "tau_mc_exact_bayes": 0.80714
+        },
+        {
+          "gene": "AL050338.2",
+          "mean_umi": 0.02477,
+          "zero_frac": 0.9805,
+          "theta_hat": 0.0467,
+          "dom_scale": "mercer_0.26",
+          "z_a1_max": 13.136,
+          "z_a1_min": 3.601,
+          "tau_v1": 0.61905,
+          "tau_loao_template": 0.71429,
+          "tau_mc_exact_bayes": 0.70238
+        },
+        {
+          "gene": "LINC01470",
+          "mean_umi": 0.06078,
+          "zero_frac": 0.9751,
+          "theta_hat": 0.02,
+          "dom_scale": "mercer_0.50",
+          "z_a1_max": 13.486,
+          "z_a1_min": 1.455,
+          "tau_v1": 0.6381,
+          "tau_loao_template": 0.6381,
+          "tau_mc_exact_bayes": 0.73333
+        },
+        {
+          "gene": "CDH19",
+          "mean_umi": 5.03185,
+          "zero_frac": 0.7644,
+          "theta_hat": 0.055,
+          "dom_scale": "mercer_0.50",
+          "z_a1_max": 24.437,
+          "z_a1_min": 4.603,
+          "tau_v1": 0.67619,
+          "tau_loao_template": 0.68571,
+          "tau_mc_exact_bayes": 0.74643
+        },
+        {
+          "gene": "TENM3",
+          "mean_umi": 1.51811,
+          "zero_frac": 0.8071,
+          "theta_hat": 0.0635,
+          "dom_scale": "mercer_0.50",
+          "z_a1_max": 13.573,
+          "z_a1_min": 1.952,
+          "tau_v1": 0.68571,
+          "tau_loao_template": 0.80952,
+          "tau_mc_exact_bayes": 0.5619
+        }
+      ]
+    },
+    {
+      "dataset_id": "44_stereo_seq_Drosophila_embryo_E7",
+      "n_spots": 1039,
+      "n_cols": 1050,
+      "n_ref_genes": 50,
+      "runtime_sec": 3.89,
+      "tau_ams_svg_v1": 0.807619,
+      "per_scale_taus_v1": {
+        "knn_0": 0.771048,
+        "knn_1": 0.774476,
+        "knn_2": 0.802286,
+        "mercer_0.14": 0.805905,
+        "mercer_0.26": 0.803619,
+        "mercer_0.50": 0.764
+      },
+      "best_single_scale_v1": {
+        "scale": "mercer_0.14",
+        "tau": 0.805905
+      },
+      "offline_loao_template_ceiling_tau": 0.847238,
+      "parametric_exact_mu_bayes_ceiling_tau": 0.7775,
+      "blind_headroom_to_loao": 0.039619,
+      "blind_headroom_to_exact_bayes": -0.030119,
+      "scale_dilution_fraction_alpha_ge_0p3": 0.0227,
+      "strata": {
+        "umi_stratum": {
+          "high_UMI": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.71541,
+            "tau_loao_template": 0.77199,
+            "tau_mc_exact_bayes": 0.80497,
+            "headroom_to_loao": 0.05658
+          },
+          "low_UMI": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.84202,
+            "tau_loao_template": 0.85882,
+            "tau_mc_exact_bayes": 0.69447,
+            "headroom_to_loao": 0.01681
+          },
+          "mid_UMI": {
+            "n_ref_genes": 16,
+            "tau_v1": 0.86905,
+            "tau_loao_template": 0.91488,
+            "tau_mc_exact_bayes": 0.83653,
+            "headroom_to_loao": 0.04583
+          }
+        },
+        "disp_stratum": {
+          "high_overdisp_low_theta": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.8465,
+            "tau_loao_template": 0.86219,
+            "tau_mc_exact_bayes": 0.67409,
+            "headroom_to_loao": 0.01569
+          },
+          "mid_theta": {
+            "n_ref_genes": 16,
+            "tau_v1": 0.87143,
+            "tau_loao_template": 0.91369,
+            "tau_mc_exact_bayes": 0.85766,
+            "headroom_to_loao": 0.04226
+          },
+          "poisson_like_high_theta": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.70868,
+            "tau_loao_template": 0.76975,
+            "tau_mc_exact_bayes": 0.80546,
+            "headroom_to_loao": 0.06107
+          }
+        },
+        "scale_regime": {
+          "local_meso_knn": {
+            "n_ref_genes": 2,
+            "tau_v1": 0.43333,
+            "tau_loao_template": 0.50477,
+            "tau_mc_exact_bayes": 0.70715,
+            "headroom_to_loao": 0.07144
+          },
+          "macro_mercer": {
+            "n_ref_genes": 48,
+            "tau_v1": 0.82321,
+            "tau_loao_template": 0.86151,
+            "tau_mc_exact_bayes": 0.78043,
+            "headroom_to_loao": 0.03829
+          }
+        }
+      },
+      "worst_5_genes_in_v1": [
+        {
+          "gene": "mt:lrRNA",
+          "mean_umi": 3.97209,
+          "zero_frac": 0.0177,
+          "theta_hat": 10000.0,
+          "dom_scale": "mercer_0.14",
+          "z_a1_max": 1.106,
+          "z_a1_min": -0.624,
+          "tau_v1": -0.06667,
+          "tau_loao_template": 0.0381,
+          "tau_mc_exact_bayes": 0.49167
+        },
+        {
+          "gene": "RpL39",
+          "mean_umi": 3.1309,
+          "zero_frac": 0.0462,
+          "theta_hat": 10000.0,
+          "dom_scale": "knn_2",
+          "z_a1_max": -0.119,
+          "z_a1_min": -0.587,
+          "tau_v1": 0.08571,
+          "tau_loao_template": 0.11429,
+          "tau_mc_exact_bayes": 0.52381
+        },
+        {
+          "gene": "nur",
+          "mean_umi": 2.31569,
+          "zero_frac": 0.099,
+          "theta_hat": 59.9998,
+          "dom_scale": "mercer_0.14",
+          "z_a1_max": 1.757,
+          "z_a1_min": -0.193,
+          "tau_v1": 0.49524,
+          "tau_loao_template": 0.6,
+          "tau_mc_exact_bayes": 0.63333
+        },
+        {
+          "gene": "Cyp304a1",
+          "mean_umi": 0.0616,
+          "zero_frac": 0.9462,
+          "theta_hat": 0.325,
+          "dom_scale": "mercer_0.14",
+          "z_a1_max": 19.678,
+          "z_a1_min": 5.618,
+          "tau_v1": 0.61905,
+          "tau_loao_template": 0.71429,
+          "tau_mc_exact_bayes": 0.82024
+        },
+        {
+          "gene": "CG15282",
+          "mean_umi": 1.17228,
+          "zero_frac": 0.3263,
+          "theta_hat": 5.6308,
+          "dom_scale": "mercer_0.14",
+          "z_a1_max": 17.584,
+          "z_a1_min": 4.432,
+          "tau_v1": 0.72381,
+          "tau_loao_template": 0.87619,
+          "tau_mc_exact_bayes": 0.8881
+        }
+      ]
+    },
+    {
+      "dataset_id": "34_MERFISH_Human_cortex",
+      "n_spots": 9259,
+      "n_cols": 525,
+      "n_ref_genes": 25,
+      "runtime_sec": 15.65,
+      "tau_ams_svg_v1": 0.869333,
+      "per_scale_taus_v1": {
+        "knn_0": 0.719619,
+        "knn_1": 0.817143,
+        "knn_2": 0.858286,
+        "mercer_0.14": 0.868571,
+        "mercer_0.26": 0.86781,
+        "mercer_0.50": 0.834286
+      },
+      "best_single_scale_v1": {
+        "scale": "mercer_0.14",
+        "tau": 0.868571
+      },
+      "offline_loao_template_ceiling_tau": 0.891048,
+      "parametric_exact_mu_bayes_ceiling_tau": 0.850905,
+      "blind_headroom_to_loao": 0.021714,
+      "blind_headroom_to_exact_bayes": -0.018429,
+      "scale_dilution_fraction_alpha_ge_0p3": 0.0773,
+      "strata": {
+        "umi_stratum": {
+          "high_UMI": {
+            "n_ref_genes": 8,
+            "tau_v1": 0.85833,
+            "tau_loao_template": 0.90476,
+            "tau_mc_exact_bayes": 0.90536,
+            "headroom_to_loao": 0.04643
+          },
+          "low_UMI": {
+            "n_ref_genes": 9,
+            "tau_v1": 0.84233,
+            "tau_loao_template": 0.85185,
+            "tau_mc_exact_bayes": 0.7504,
+            "headroom_to_loao": 0.00952
+          },
+          "mid_UMI": {
+            "n_ref_genes": 8,
+            "tau_v1": 0.91072,
+            "tau_loao_template": 0.92143,
+            "tau_mc_exact_bayes": 0.90952,
+            "headroom_to_loao": 0.01071
+          }
+        },
+        "disp_stratum": {
+          "high_overdisp_low_theta": {
+            "n_ref_genes": 9,
+            "tau_v1": 0.85397,
+            "tau_loao_template": 0.87513,
+            "tau_mc_exact_bayes": 0.86587,
+            "headroom_to_loao": 0.02116
+          },
+          "mid_theta": {
+            "n_ref_genes": 8,
+            "tau_v1": 0.85119,
+            "tau_loao_template": 0.87143,
+            "tau_mc_exact_bayes": 0.74494,
+            "headroom_to_loao": 0.02024
+          },
+          "poisson_like_high_theta": {
+            "n_ref_genes": 8,
+            "tau_v1": 0.90476,
+            "tau_loao_template": 0.92857,
+            "tau_mc_exact_bayes": 0.94003,
+            "headroom_to_loao": 0.02381
+          }
+        },
+        "scale_regime": {
+          "macro_mercer": {
+            "n_ref_genes": 25,
+            "tau_v1": 0.86933,
+            "tau_loao_template": 0.89105,
+            "tau_mc_exact_bayes": 0.8509,
+            "headroom_to_loao": 0.02171
+          }
+        }
+      },
+      "worst_5_genes_in_v1": [
+        {
+          "gene": "COBLL1",
+          "mean_umi": 0.51528,
+          "zero_frac": 0.8334,
+          "theta_hat": 0.0984,
+          "dom_scale": "mercer_0.50",
+          "z_a1_max": 4.606,
+          "z_a1_min": 1.258,
+          "tau_v1": 0.40952,
+          "tau_loao_template": 0.49524,
+          "tau_mc_exact_bayes": 0.77738
+        },
+        {
+          "gene": "CTGF",
+          "mean_umi": 2.92397,
+          "zero_frac": 0.8101,
+          "theta_hat": 0.0385,
+          "dom_scale": "mercer_0.14",
+          "z_a1_max": 11.918,
+          "z_a1_min": 2.805,
+          "tau_v1": 0.64762,
+          "tau_loao_template": 0.80952,
+          "tau_mc_exact_bayes": 0.79167
+        },
+        {
+          "gene": "PDGFRA",
+          "mean_umi": 1.35987,
+          "zero_frac": 0.8257,
+          "theta_hat": 0.0567,
+          "dom_scale": "mercer_0.50",
+          "z_a1_max": 10.516,
+          "z_a1_min": 0.639,
+          "tau_v1": 0.69524,
+          "tau_loao_template": 0.62857,
+          "tau_mc_exact_bayes": 0.77024
+        },
+        {
+          "gene": "KIAA0513",
+          "mean_umi": 4.6721,
+          "zero_frac": 0.3671,
+          "theta_hat": 0.3598,
+          "dom_scale": "mercer_0.26",
+          "z_a1_max": 31.52,
+          "z_a1_min": 6.633,
+          "tau_v1": 0.80952,
+          "tau_loao_template": 0.89524,
+          "tau_mc_exact_bayes": 0.93214
+        },
+        {
+          "gene": "WIF1",
+          "mean_umi": 1.40544,
+          "zero_frac": 0.8154,
+          "theta_hat": 0.0583,
+          "dom_scale": "mercer_0.26",
+          "z_a1_max": 27.5,
+          "z_a1_min": 3.148,
+          "tau_v1": 0.81905,
+          "tau_loao_template": 0.82857,
+          "tau_mc_exact_bayes": 0.86071
+        }
+      ]
+    },
+    {
+      "dataset_id": "01_10x_Visium_mouse_brain",
+      "n_spots": 2688,
+      "n_cols": 1050,
+      "n_ref_genes": 50,
+      "runtime_sec": 9.3,
+      "tau_ams_svg_v1": 0.969524,
+      "per_scale_taus_v1": {
+        "knn_0": 0.96419,
+        "knn_1": 0.969143,
+        "knn_2": 0.970476,
+        "mercer_0.14": 0.965524,
+        "mercer_0.26": 0.963048,
+        "mercer_0.50": 0.941333
+      },
+      "best_single_scale_v1": {
+        "scale": "knn_2",
+        "tau": 0.970476
+      },
+      "offline_loao_template_ceiling_tau": 0.972381,
+      "parametric_exact_mu_bayes_ceiling_tau": 0.748048,
+      "blind_headroom_to_loao": 0.002857,
+      "blind_headroom_to_exact_bayes": -0.221476,
+      "scale_dilution_fraction_alpha_ge_0p3": 0.0,
+      "strata": {
+        "umi_stratum": {
+          "high_UMI": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.99664,
+            "tau_loao_template": 0.9972,
+            "tau_mc_exact_bayes": 0.89083,
+            "headroom_to_loao": 0.00056
+          },
+          "low_UMI": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.92997,
+            "tau_loao_template": 0.93501,
+            "tau_mc_exact_bayes": 0.56352,
+            "headroom_to_loao": 0.00504
+          },
+          "mid_UMI": {
+            "n_ref_genes": 16,
+            "tau_v1": 0.98274,
+            "tau_loao_template": 0.98572,
+            "tau_mc_exact_bayes": 0.79241,
+            "headroom_to_loao": 0.00298
+          }
+        },
+        "disp_stratum": {
+          "high_overdisp_low_theta": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.92773,
+            "tau_loao_template": 0.93333,
+            "tau_mc_exact_bayes": 0.52864,
+            "headroom_to_loao": 0.0056
+          },
+          "mid_theta": {
+            "n_ref_genes": 16,
+            "tau_v1": 0.98333,
+            "tau_loao_template": 0.98572,
+            "tau_mc_exact_bayes": 0.78475,
+            "headroom_to_loao": 0.00238
+          },
+          "poisson_like_high_theta": {
+            "n_ref_genes": 17,
+            "tau_v1": 0.99832,
+            "tau_loao_template": 0.99888,
+            "tau_mc_exact_bayes": 0.93291,
+            "headroom_to_loao": 0.00056
+          }
+        },
+        "scale_regime": {
+          "local_meso_knn": {
+            "n_ref_genes": 14,
+            "tau_v1": 0.92109,
+            "tau_loao_template": 0.92925,
+            "tau_mc_exact_bayes": 0.58291,
+            "headroom_to_loao": 0.00816
+          },
+          "macro_mercer": {
+            "n_ref_genes": 36,
+            "tau_v1": 0.98836,
+            "tau_loao_template": 0.98915,
+            "tau_mc_exact_bayes": 0.81227,
+            "headroom_to_loao": 0.00079
+          }
+        }
+      },
+      "worst_5_genes_in_v1": [
+        {
+          "gene": "Kcnj13",
+          "mean_umi": 0.14286,
+          "zero_frac": 0.9446,
+          "theta_hat": 0.02,
+          "dom_scale": "knn_2",
+          "z_a1_max": 113.23,
+          "z_a1_min": 22.817,
+          "tau_v1": 0.87619,
+          "tau_loao_template": 0.92381,
+          "tau_mc_exact_bayes": 0.37857
+        },
+        {
+          "gene": "Calml4",
+          "mean_umi": 0.30841,
+          "zero_frac": 0.9018,
+          "theta_hat": 0.0212,
+          "dom_scale": "knn_2",
+          "z_a1_max": 109.917,
+          "z_a1_min": 18.853,
+          "tau_v1": 0.88571,
+          "tau_loao_template": 0.93333,
+          "tau_mc_exact_bayes": 0.54286
+        },
+        {
+          "gene": "Pou4f1",
+          "mean_umi": 0.05246,
+          "zero_frac": 0.9858,
+          "theta_hat": 0.02,
+          "dom_scale": "knn_1",
+          "z_a1_max": 80.174,
+          "z_a1_min": 25.66,
+          "tau_v1": 0.88571,
+          "tau_loao_template": 0.88571,
+          "tau_mc_exact_bayes": 0.77619
+        },
+        {
+          "gene": "Prr32",
+          "mean_umi": 0.0904,
+          "zero_frac": 0.9598,
+          "theta_hat": 0.02,
+          "dom_scale": "knn_2",
+          "z_a1_max": 111.617,
+          "z_a1_min": 28.287,
+          "tau_v1": 0.88571,
+          "tau_loao_template": 0.84762,
+          "tau_mc_exact_bayes": 0.37619
+        },
+        {
+          "gene": "Tmem72",
+          "mean_umi": 0.09412,
+          "zero_frac": 0.9458,
+          "theta_hat": 0.0335,
+          "dom_scale": "knn_2",
+          "z_a1_max": 100.328,
+          "z_a1_min": 19.585,
+          "tau_v1": 0.89524,
+          "tau_loao_template": 0.91429,
+          "tau_mc_exact_bayes": 0.75
+        }
+      ]
+    }
+  ]
+}
