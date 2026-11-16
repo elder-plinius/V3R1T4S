@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+fc-finite-witness-sorries,RamseyNumbers.ramsey_number_six_six_lower_bound,Lean 4 kernel proof (0 sorry),sorry,2026-11-15T15:07:07Z,object/Solution.lean,53b1ce2a8a0e258b3fed499681bbb63ce796625b6bd2f38e093340f483a55275
