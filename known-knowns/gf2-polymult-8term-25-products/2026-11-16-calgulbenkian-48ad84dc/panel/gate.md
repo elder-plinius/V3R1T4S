@@ -9,3 +9,4 @@ confirmed_scope: The file object/gf128_0x91_82gates.slp.txt is a valid 82-gate (
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
 - The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini) is a different model family from every skeptic.
 - Partial win p2 of the target (x^7 + x^4 + 1 branch). The novelty skeptic re-read the NIST list of circuits and Peralta's CMT page (84 gates) on 2026-11-16; Swapnil Jain's repository lists 87 gates for this modulus; the claim is 82.
+- The criterion skeptic's sentence leaves the literature comparison to the novelty skeptic; that skeptic passed (panel/novelty.md), so the condition in the sentence is met.
