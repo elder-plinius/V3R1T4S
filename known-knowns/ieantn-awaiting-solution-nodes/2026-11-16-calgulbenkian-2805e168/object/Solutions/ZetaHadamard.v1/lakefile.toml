@@ -1,0 +1,75 @@
+name = "solution_ZetaHadamard_v1"
+defaultTargets = ["RealAsymptotic", "Periodic", "GaussSeries", "Recurrence", "ComplexToReal", "Oscillation", "RealIdentity", "Analytic", "Strip", "RectanglePort", "ResiduePort", "ZetaConjPort", "DigammaTrivial", "ZetaZerosBasic", "ZetaGrowth", "LocalZeros", "Solution"]
+
+[[require]]
+name = "IEANTN"
+path = "../.."
+
+[[lean_lib]]
+name = "RealAsymptotic"
+roots = ["RealAsymptotic"]
+
+[[lean_lib]]
+name = "Periodic"
+roots = ["Periodic"]
+
+[[lean_lib]]
+name = "GaussSeries"
+roots = ["GaussSeries"]
+
+[[lean_lib]]
+name = "Recurrence"
+roots = ["Recurrence"]
+
+[[lean_lib]]
+name = "ComplexToReal"
+roots = ["ComplexToReal"]
+
+[[lean_lib]]
+name = "Oscillation"
+roots = ["Oscillation"]
+
+[[lean_lib]]
+name = "RealIdentity"
+roots = ["RealIdentity"]
+
+[[lean_lib]]
+name = "Analytic"
+roots = ["Analytic"]
+
+[[lean_lib]]
+name = "Strip"
+roots = ["Strip"]
+
+[[lean_lib]]
+name = "RectanglePort"
+roots = ["RectanglePort"]
+
+[[lean_lib]]
+name = "ResiduePort"
+roots = ["ResiduePort"]
+
+[[lean_lib]]
+name = "ZetaConjPort"
+roots = ["ZetaConjPort"]
+
+[[lean_lib]]
+name = "DigammaTrivial"
+roots = ["DigammaTrivial"]
+
+[[lean_lib]]
+name = "ZetaZerosBasic"
+roots = ["ZetaZerosBasic"]
+
+[[lean_lib]]
+name = "ZetaGrowth"
+roots = ["ZetaGrowth"]
+
+[[lean_lib]]
+name = "LocalZeros"
+roots = ["LocalZeros"]
+
+
+[[lean_lib]]
+name = "Solution"
+roots = ["Solution"]

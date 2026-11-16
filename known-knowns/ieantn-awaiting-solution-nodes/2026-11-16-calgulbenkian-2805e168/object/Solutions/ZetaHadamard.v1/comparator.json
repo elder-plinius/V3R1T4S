@@ -1,0 +1,13 @@
+{
+  "challenge_module": "IEANTN.Nodes.ZetaHadamard.v1.Challenge",
+  "solution_module": "Solution",
+  "theorem_names": [
+    "ZetaHadamard.v1.challenge_logDeriv_partial_fractions"
+  ],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ieantn-awaiting-solution-nodes,ZetaHadamard.v1 (logDeriv_partial_fractions),lean-comparator verified,literature (unproved),2026-11-15T18:38:17Z,object/Solutions/ZetaHadamard.v1/Solution.lean,2805e1685be99c2dc1adc74bbcd69e74aef77bb69054393c3f842a9cf12cc228
