@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ghz-nonlocality-robustness-below-049143,N=3 GHZ white-noise critical visibility v*,0.4913971114274656713239022,0.49143,2026-11-15T16:06:29Z,object/bell_ghz3_18x24x72.json,2a251193be2909afcb89ec74c13e10ef52aadf6b4cad148b6f82f7e4221a4b68
