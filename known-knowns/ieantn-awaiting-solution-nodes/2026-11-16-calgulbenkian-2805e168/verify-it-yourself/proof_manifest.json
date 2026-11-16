@@ -1,0 +1,128 @@
+{
+  "target_id": "ieantn-awaiting-solution-nodes",
+  "node_version": "ZetaHadamard.v1",
+  "challenge_module": "IEANTN.Nodes.ZetaHadamard.v1.Challenge",
+  "conclusions_module": "IEANTN.Nodes.ZetaHadamard.v1.Conclusions",
+  "solution_module": "Solution",
+  "theorem_name": "ZetaHadamard.v1.challenge_logDeriv_partial_fractions",
+  "conclusion_def": "ZetaHadamard.v1.logDeriv_partial_fractions",
+  "ieantn_commit": "d60421f10c16f5f6c2cb75f1067a72e24e616391",
+  "lean_toolchain": "leanprover/lean4:v4.34.0-rc2",
+  "mathlib_rev": "71a80585ee495fc24472fd0eaffc89d94e4fd8d6",
+  "conclusions_relpath": "IEANTN/Nodes/ZetaHadamard/v1/Conclusions.lean",
+  "conclusions_sha256": "7059789de0f72dcaf892319fc7579709698ae7cb2abcc3ac122e548a3ac5af8b",
+  "challenge_relpath": "IEANTN/Nodes/ZetaHadamard/v1/Challenge.lean",
+  "challenge_sha256": "3893a9c73633da712806800cd004278a36be0d9ef29454e178211e82fad1fc94",
+  "permitted_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "files": [
+    {
+      "path": "Solutions/ZetaHadamard.v1/Analytic.lean",
+      "bytes": 12250,
+      "sha256": "998a44738939152ea62a75be9b6b8009abd9190ea972b12633e4cc332c35c4b6"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/ComplexToReal.lean",
+      "bytes": 3603,
+      "sha256": "ec2ae426aca56223a17f9bd568c2191685dcca7632918d3bc626879920e45c31"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/DigammaTrivial.lean",
+      "bytes": 4670,
+      "sha256": "1680b1d8a8fb90e0f0866af98e8b3a2f05ef68a7c94dd7aa5b1366f1b11435ae"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/GaussSeries.lean",
+      "bytes": 3554,
+      "sha256": "6e947437b267b5dbb2c3299b93a8ca477c487579f084817a13d2881ce5f6b7d0"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/LocalZeros.lean",
+      "bytes": 61247,
+      "sha256": "a1527148f153c18fea89ae1449d8bcabe02e0616d48679a031cc80919f29e295"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/Oscillation.lean",
+      "bytes": 12643,
+      "sha256": "b65e0827a00f2542913424f39f593a1a01042d4a8537bdd783cd3b70c168db52"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/Periodic.lean",
+      "bytes": 4798,
+      "sha256": "2242fc4f9284f7d08c2e98df269edb2f211d00090d6315219b037c9cca4f1692"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/RealAsymptotic.lean",
+      "bytes": 5936,
+      "sha256": "289bf36620d96d8d10eec86bac6bcfaa0619f8dfe354e48a9644cdd5aa8b24db"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/RealIdentity.lean",
+      "bytes": 3160,
+      "sha256": "ad1ed50ac37f6f1b82fa468b486163f80b994e0b07e4eede9e56c918c7a19b2b"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/RectanglePort.lean",
+      "bytes": 13460,
+      "sha256": "6d8dde78b8c8d8835d1f64efe5d23a60807f2385382d62f1c7994bacc57463e9"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/Recurrence.lean",
+      "bytes": 6648,
+      "sha256": "1181d39b1bbc89c50cf3779765db95a110dd92ccbc26f9bcc9311adbdb150e66"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/ResiduePort.lean",
+      "bytes": 60993,
+      "sha256": "e7e418e9327b23efc8b69cd4c3ea7483bbe92e0373058f9876894f18e87d9632"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/Solution.lean",
+      "bytes": 65575,
+      "sha256": "2805e1685be99c2dc1adc74bbcd69e74aef77bb69054393c3f842a9cf12cc228"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/Strip.lean",
+      "bytes": 11116,
+      "sha256": "60da3df00beeb280010eb1e89b75528afc858a4c3560313f8824f2249f13985f"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/ZetaConjPort.lean",
+      "bytes": 1338,
+      "sha256": "451943ff81dd14dde98c1edbafa72872161cab5ce67f1a32dbff0389f4975017"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/ZetaGrowth.lean",
+      "bytes": 26579,
+      "sha256": "b475db824b28ea7e5f6786dab1eca2c4192ba05e6d4cb83977a3e987142637d0"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/ZetaZerosBasic.lean",
+      "bytes": 35869,
+      "sha256": "6cb27fcebe9904a20d3423cc560509e9ddd4a7649581f8166f838bad8476c3ef"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/comparator.json",
+      "bytes": 295,
+      "sha256": "d609519ac67c36722fa1307a3677e18a67f883fa9f1d6113411e2a577b751977"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/lake-manifest.json",
+      "bytes": 3750,
+      "sha256": "a5b135b066a0b111aa24a7a925b439e4b496f9956a3f099583589761e12e3525"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/lakefile.toml",
+      "bytes": 1346,
+      "sha256": "2f343d4b0037592145b8a4591b2466a9852b5fdfa628d186b02c3473391095a8"
+    },
+    {
+      "path": "Solutions/ZetaHadamard.v1/lean-toolchain",
+      "bytes": 29,
+      "sha256": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88"
+    }
+  ]
+}
