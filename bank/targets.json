@@ -19763,7 +19763,7 @@
    "partial_wins": [
     {
      "id": "p1",
-     "statement": "A complete, reproducible catalog-wide pair search that independently recovers >= 90% of the Cook et al. new repeaters with the same false-alarm machinery (validates the method; checkable against their table)."
+     "statement": "A complete, reproducible catalogue-wide pair search that recovers >= 85% of the Cook et al. new repeaters THAT CONDITIONS (1) AND (2) OF THIS CRITERION ADMIT AT ALL, at a stated catalogue-wide false-alarm rate of at most one expected false source pair, with the same false-alarm machinery used for the main criterion and its calibration shown (validates the method; checkable against their table). The admissible set, and the reason each excluded source is excluded, must be reported with the recall. Measured from Catalog 2 version 20251231: 25 of the 30 new repeaters have two or more bursts in the criterion's clean set, and 20 of 30 (Gaussian reading of (1)) or 21 of 30 (the criterion's 95%-region option) have an internal pair that passes (1) and (2), so a 90% bar on all 30 cannot be met by any pair search, statistic or threshold. Five sources lack a second unflagged burst (FRB 20180907D, 20191026A, 20210330B, 20220207A, 20220211A); one fails (1) (FRB 20190208C, best |dRA cos dec| 0.798 deg against a 0.141 deg limit, 95% regions disjoint); three fail (2) on dispersion measure (FRB 20190716C, 20211030A, 20211120C: smallest |dDM| 4.43, 5.07 and 2.15 against limits of 2.11, 2.00 and 2.04 pc/cm^3), which is the drift this criterion's per-burst errors do not allow for. A search that instead uses the baseband or outrigger localisations the discovery paper used is outside what Catalog 2's released columns support."
     },
     {
      "id": "p2",
@@ -19798,7 +19798,11 @@
     "Low-DM Galactic-plane bursts and RRAT-like Galactic sources contaminate; check DM against the NE2001/YMW16 Galactic maximum.",
     "Some 'new' groupings are already merged in Cook et al. or later CHIME repeater papers under a different source name; compare TNS names, not internal IDs.",
     "Sidelobe detections are assigned wrong positions; the catalog flags them - exclude flagged events.",
-    "Do not post to TNS or contact CHIME; the claim is a vetted candidate only."
+    "Do not post to TNS or contact CHIME; the claim is a vetted candidate only.",
+    "Partial win p1 is measured against a subset the criterion itself defines: compute the admissible set first (sources with two or more bursts passing conditions (1) and (2)) and report recall against it, with the excluded sources named. A recall quoted against all 30 Cook sources cannot exceed 70% and says more about the criterion than about the method.",
+    "Repeater dispersion measures drift by about 0.1 to 12 pc/cm^3 per year, so a DM agreement test built from per-burst measurement errors (about 2 pc/cm^3 here) rejects genuine repeats years apart. The discovery paper used a 13 pc/cm^3 window for that reason.",
+    "CHIME header localisation errors have heavy tails: in an injection test, a second burst planted at a real same-source offset passed the 1.96-sigma box only 51.6% of the time against the 90% a Gaussian reading predicts. Any false-alarm machinery calibrated on Gaussian errors will mis-state both recall and significance.",
+    "Count candidate sources, not pairs. An apparent catalogue-wide excess of coincident one-off pairs (24 observed against 3.8 to 6.0 expected) collapsed to 9 against 3.8 to 5.3, and to non-significance, once 16 of the 24 pairs were seen to belong to one connected component sitting on a known repeater."
    ]
   },
   {
