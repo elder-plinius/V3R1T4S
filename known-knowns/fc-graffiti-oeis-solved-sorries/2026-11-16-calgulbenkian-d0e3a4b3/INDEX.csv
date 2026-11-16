@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+fc-graffiti-oeis-solved-sorries,WrittenOnTheWallII.GraphConjecture25.conjecture25,Lean 4 kernel proof (0 sorry),sorry,2026-11-15T15:07:08Z,object/Solution.lean,d0e3a4b3ef31bab45d3fb0a942cb1cb804b321d7d6e1004cdac8f5b01a85b31d

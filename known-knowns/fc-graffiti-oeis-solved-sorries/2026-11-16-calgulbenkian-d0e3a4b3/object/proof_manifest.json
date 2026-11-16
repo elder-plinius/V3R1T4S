@@ -1,0 +1,22 @@
+{
+  "target_id": "fc-graffiti-oeis-solved-sorries",
+  "solution_file": "Solution.lean",
+  "solution_sha256": "d0e3a4b3ef31bab45d3fb0a942cb1cb804b321d7d6e1004cdac8f5b01a85b31d",
+  "solution_bytes": 17593,
+  "theorem_full_name": "WrittenOnTheWallII.GraphConjecture25.conjecture25",
+  "theorem_short_name": "conjecture25",
+  "namespace": "WrittenOnTheWallII.GraphConjecture25",
+  "upstream_repo": "https://github.com/google-deepmind/formal-conjectures",
+  "upstream_commit": "e028240a61822d970c933f4656f51da025cf200b",
+  "upstream_relpath": "FormalConjectures/WrittenOnTheWallII/GraphConjecture25.lean",
+  "upstream_sha256": "4e107c778baacb7178f63608f320a5dd047d8c868face022f9612394ff57298c",
+  "lean_toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "witness_vertices": 15,
+  "expected_check_prefix": "WrittenOnTheWallII.GraphConjecture25.conjecture25.{u_1} : \u00ac\u2200 {\u03b1 : Type u_1} [inst : Fintype.{u_1} \u03b1]",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
