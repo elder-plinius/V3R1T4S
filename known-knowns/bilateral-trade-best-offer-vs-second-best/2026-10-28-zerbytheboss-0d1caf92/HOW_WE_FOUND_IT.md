@@ -7,7 +7,7 @@ In bilateral trade with independent private values, Babaioff, Dobzinski, and Kup
 
 ## What Failed
 1. Testing published hard instances for Random-Offerer (RO) vs First-Best (FB): An uncertified numerical Lagrangian estimate (`how-we-built-it/solve_alphaevolve_sb.py`) on the AlphaEvolve modulated power-law instance (arXiv:2603.08679) gave $\max(\text{SO}, \text{BO}) / \text{SB}$ above $0.75$, so we did not pursue a certified bound on that instance.
-2. The BDK Section 2 family for $H = 3..20$ has $\max(\text{SO}, \text{BO}) / \text{SB}$ monotonically increasing towards $1$ as $H$ grows.
+2. An uncertified floating-point LP estimate (`how-we-built-it/solve_bdk_sb.py`) on the BDK Section 2 family for $H = 3..20$ gave estimated $\max(\text{SO}, \text{BO}) / \text{SB}$ values remaining above $3/4 = 0.75$ (decreasing from $1.000000$ at $H = 3$ to $0.838265$ at $H = 20$), so we did not pursue a certified bound on that family.
 3. Small-grid trials on discretized power-law and uniform distributions did not produce any candidate below $3/4$.
 
 ## What Worked

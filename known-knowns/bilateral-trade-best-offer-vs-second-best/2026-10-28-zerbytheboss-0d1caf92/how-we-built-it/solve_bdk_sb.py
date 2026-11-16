@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-solve_bdk_sb.py — Compute exact rational primal-dual Second-Best LP certificates
-for Babaioff, Dobzinski, Kupfer (arXiv:2111.07790, Section 2) family for H = 3..20.
+solve_bdk_sb.py — Compute uncertified floating-point LP estimates of Second-Best (SB)
+for the Babaioff, Dobzinski, Kupfer (arXiv:2111.07790, Section 2) family for H = 3..20.
 """
 
 from fractions import Fraction
@@ -64,7 +64,7 @@ def evaluate_offers(S, p_S, B, p_B, favourable=True):
             
     return gft_so, gft_bo
 
-def solve_exact_sb(H):
+def estimate_sb_lp(H):
     S, p_S, B, p_B = bdk_family(H)
     m = len(S)
     n = len(B)
@@ -142,24 +142,24 @@ def solve_exact_sb(H):
 
 def main():
     print("=========================================================================================")
-    print("Exact Second-Best (SB) LP Certificates for BDK Section 2 Family (H = 3..20)")
+    print("Uncertified Floating-Point LP Second-Best (SB) Estimates for BDK Section 2 (H = 3..20)")
     print("=========================================================================================")
-    print(f"{'H':>2} | {'SO = BO (Exact)':<22} | {'SB (Exact)':<20} | {'max(SO,BO)/SB':<20} | {'Decimal Ratio':<12}")
+    print(f"{'H':>2} | {'SO = BO (Exact)':<22} | {'SB (LP Est.)':<20} | {'max(SO,BO)/SB Est.':<20} | {'Est. Ratio':<12}")
     print("-" * 89)
 
     records = []
     for H in range(3, 21):
         S, p_S, B, p_B = bdk_family(H)
         so, bo = evaluate_offers(S, p_S, B, p_B, favourable=True)
-        sb_frac, sb_val = solve_exact_sb(H)
+        sb_frac, sb_val = estimate_sb_lp(H)
         ratio_frac = so / sb_frac
         ratio_dec = float(ratio_frac)
         records.append((H, so, sb_frac, ratio_frac, ratio_dec))
         print(f"{H:2d} | {str(so):<22} | {str(sb_frac):<20} | {str(ratio_frac):<20} | {ratio_dec:<12.6f}")
 
     print("=========================================================================================")
-    print("Conclusion: For all H in 3..20, max(SO, BO)/SB is strictly greater than 3/4 = 0.750000.")
-    print("The BDK Section 2 instances are NOT second-best-hard below 3/4 under favourable ties.")
+    print("Conclusion (uncertified floating-point LP estimates): For H in 3..20, the estimated")
+    print("max(SO, BO)/SB ratios remain above 3/4 = 0.750000 (from 1.000000 at H=3 to 0.838265 at H=20).")
     print("=========================================================================================")
 
 if __name__ == "__main__":
