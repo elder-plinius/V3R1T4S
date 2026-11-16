@@ -9,3 +9,4 @@ confirmed_scope: Under the wiki convention (size |A|+sum|w_a|, start 00, halt be
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
 - The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini) is a different model family from every skeptic.
 - The novelty skeptic read the BusyBeaverWiki status page on 2026-11-16: it lists BB_PT(8) >= 19 with 7 holdouts, so the exact value was open.
+- The criterion skeptic's sentence leaves the literature comparison to the novelty skeptic; that skeptic passed (panel/novelty.md), so the condition in the sentence is met.
