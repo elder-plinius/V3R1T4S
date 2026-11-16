@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+gf2-polymult-8term-25-products,p2: GF(2^7) mod x^7+x^4+1 standard-basis multiplier gates,82,84 (NIST/CMT),2026-11-15T16:29:25Z,object/gf128_0x91_82gates.slp.txt,48ad84dc1afddd567bcccf6574447aa229e3371548afa57f386fe2779897f100
