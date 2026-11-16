@@ -1,0 +1,39 @@
+{
+  "id": "kissing-numbers-dims-5-7",
+  "name": "Kissing numbers in dimensions 5-7: exact determination or a certified upper-bound improvement",
+  "category": "record-tables",
+  "kind": "moonshot",
+  "tractability": 1,
+  "compute_profile": "pure thought; numerical SDP exploration may need cluster resources, while verification cost depends on the certificate. No search runtime has been measured.",
+  "statement": "The kissing number tau(d) is the largest number of equal, non-overlapping spheres that can touch a central sphere in R^d. Equivalently it is the largest number of unit vectors with pairwise inner products at most 1/2. Exact values in dimensions 5, 6 and 7 remain undetermined in the primary literature reviewed on 2026-11-10. The D5, E6 and E7 root configurations give lower bounds 40, 72 and 126, credited in Cohn's table to A. Korkine and G. Zolotareff, Sur les formes quadratiques (1873). Tejasvi Singh Tomar's 2026 paper 'The kissing numbers in dimensions five and seven are at most 43 and 132' states certified upper bounds 43 and 132; de Laat, Leijenhorst and de Muinck Keizer's 'Optimality and uniqueness of the D4 root system' (arXiv:2404.18794) gives the dimension-six upper bound 77. These cited bounds leave intervals [40,43], [72,77] and [126,132]. Henry Cohn's maintained table and its November 8, 2026 archive give the same intervals. This target concerns exact determination and upper bounds only; a construction alone belongs to an applicable existing spherical-code target.",
+  "success_criterion": "For one d in {5,6,7} whose exact kissing number is not already established in the literature at claim time, determine tau(d) = K exactly. K may equal the known lower bound (40, 72 or 126 respectively) when the matching upper bound is new. Supply (a) K distinct vectors in R^d, represented by rational coordinates or exact real algebraic numbers with specified embeddings, with identical positive squared norm N and every off-diagonal inner product at most N/2; and (b) a standalone machine-checkable certificate proving tau(d) <= K for ALL kissing configurations in R^d. Two independently written implementations must check the construction. An independent verifier must check every inequality and theorem hypothesis used for the upper bound, using exact arithmetic or rigorous outward-rounded intervals. Any new mathematical reduction beyond a cited published upper-bound theorem must have a kernel-checked formal proof without sorry or additional unproved axioms. Recheck primary literature and the maintained table before attacking and claiming. A construction alone, a bound restricted to lattices/symmetric configurations, or numerical SDP feasibility alone does not satisfy this criterion.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "For one d in {5,6,7}, supply a certificate satisfying the full criterion's upper-bound verification requirements that proves tau(d) <= U, where U is an integer strictly smaller than the strongest published general upper bound for that dimension at claim time. Compare against the minimum of the cited primary papers, the accessible maintained table, and newer primary literature; already published bounds do not count. No construction-only partial win is included. Require U to be at least the strongest established lower bound at claim time (in particular 40, 72 or 126 respectively); a smaller U contradicts a known construction and must be rejected as a certificate or verifier error. A matching upper bound qualifies for the full criterion if all full-win requirements are met; do not count it twice."
+    }
+  ],
+  "verification_method": "For the construction, compute all norms and pairwise inner products exactly; for real algebraic numbers supply defining polynomials, isolating intervals and certified sign comparisons. Check distinctness and N > 0. Calibrate the geometry checkers on D5, E6 and E7 configurations with 40, 72 and 126 vectors. For an SDP certificate, identify the published bound theorem by number and check its complete polynomial identities, coefficient constraints, positive-semidefiniteness and objective inequality. Use exact rational factorizations or rigorous interval certificates with proved error bounds; rounding eigenvalues is insufficient. The verifier must check the reduction from these conditions to the claimed unrestricted upper bound, not merely trust solver status or logs. Include commands, certificate format and resource use so an independent skeptic can rerun verification. Exercise the algebraic-coordinate path during E6 calibration: an exact six-dimensional realization can use Q(sqrt(3)); do not assume that E6 can be scaled into rational coordinates in R^6 with the standard dot product. A supplied weighted rational inner product must be converted by a certified isometry to the standard Euclidean metric before applying the coordinate criterion. Reject bounds below the strongest established construction. For result packaging follow kit/SUBMIT.md section 1: files at most 1 MB each and packages at most 50 MB; larger artifacts stay outside git with filename, byte size, SHA-256 and a human-created public archive URL. A small generator alone does not replace a required certificate or its verification.",
+  "primary_sources": [
+    "https://www.mefyi.com/papers/kissing-numbers-five-seven/kissing-numbers-five-seven.pdf",
+    "https://arxiv.org/abs/2404.18794",
+    "https://cohn.mit.edu/kissing-numbers/",
+    "https://dspace.mit.edu/entities/product/ad2b4535-57ab-43dc-8b6e-6a18c4001c0d",
+    "https://doi.org/10.1007/BF01442795",
+    "https://doi.org/10.5281/zenodo.23638108"
+  ],
+  "status_source": "https://cohn.mit.edu/kissing-numbers/",
+  "status_checked": "2026-11-10",
+  "disclosure": "open",
+  "angles": [
+    "Start with the published SDP bounds and their certificate conditions; investigate whether higher-degree relaxations can exclude the next integer.",
+    "Separate numerical discovery from rigorous certificate reconstruction and verification."
+  ],
+  "pitfalls": [
+    "Only unrestricted kissing-number upper bounds qualify; bounds assuming antipodality, lattice structure or a prescribed symmetry group do not.",
+    "Tomar's 43 and 132 and the published dimension-six 77 are comparison bounds, not new results. Recheck for later improvements.",
+    "Use the maintained table and its dated archive together with later primary literature; a saved snapshot establishes the comparator on its checked date, not its future status.",
+    "A floating-point configuration or SDP solution is not a rigorous certificate.",
+    "A construction-only result is excluded to avoid overlap with existing spherical-code entries."
+  ]
+}
