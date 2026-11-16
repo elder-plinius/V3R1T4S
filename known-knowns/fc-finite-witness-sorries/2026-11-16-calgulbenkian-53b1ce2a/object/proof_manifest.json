@@ -1,0 +1,22 @@
+{
+  "target_id": "fc-finite-witness-sorries",
+  "solution_file": "Solution.lean",
+  "solution_sha256": "53b1ce2a8a0e258b3fed499681bbb63ce796625b6bd2f38e093340f483a55275",
+  "solution_bytes": 17579,
+  "theorem_full_name": "RamseyNumbers.ramsey_number_six_six_lower_bound",
+  "theorem_short_name": "ramsey_number_six_six_lower_bound",
+  "namespace": "RamseyNumbers",
+  "upstream_repo": "https://github.com/google-deepmind/formal-conjectures",
+  "upstream_commit": "e028240a61822d970c933f4656f51da025cf200b",
+  "upstream_relpath": "FormalConjectures/Wikipedia/RamseyNumbers.lean",
+  "upstream_sha256": "36d0764d496b8a96b5dd9eaa804dfe4fccffbf8cb4744b9de146cfdaa9def43d",
+  "lean_toolchain": "leanprover/lean4:v4.33.1",
+  "mathlib_rev": "0df444a360eaa60ab8c11dca51a86af692955474",
+  "witness_vertices": 101,
+  "expected_check_prefix": "RamseyNumbers.ramsey_number_six_six_lower_bound : \u2203 G,\n  SimpleGraph.CliqueFree.{0} G 6 \u2227 SimpleGraph.CliqueFree.{0} (Compl.compl.{0} G) 6",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
