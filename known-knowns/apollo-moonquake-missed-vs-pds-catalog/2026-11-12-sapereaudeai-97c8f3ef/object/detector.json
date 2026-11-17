@@ -1,0 +1,28 @@
+{
+ "nest": "A1 (levent.1008weber.csv T2=A, N2=1)",
+ "station": "S12",
+ "channels": [
+  "MH1",
+  "MH2",
+  "MHZ"
+ ],
+ "location": "00 (peaked mode)",
+ "sample_rate_hz": 6.625,
+ "decimation": 2,
+ "band_hz": [
+  0.25,
+  1.0
+ ],
+ "whitening_running_mean_hz": 0.1,
+ "despike": "Hampel k=7, max(3 DU, 5*1.4826*MAD)",
+ "window_s": 450.0,
+ "template_samples": 1491,
+ "templates_from": "21 aligned 1972 A1 events (dev year only)",
+ "theta": 0.10897762490606308,
+ "theta_rule": "time-reversed 1972 dev data, declustered +/-5 min, <= 1 detection per scanned day",
+ "statistic": "mean over valid components of single-channel normalised cross-correlation at a common lag",
+ "onset": "window start + 30 s",
+ "recovery_window_s": 300,
+ "declustering_s": 300,
+ "templates_npz_sha256": "4b0794805c2d8b720bd68363df0a120c29ecd0337c9247b54a5ade0ce5e6b635"
+}

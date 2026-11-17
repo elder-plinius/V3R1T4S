@@ -1,0 +1,10 @@
+{
+ "n_events": 67,
+ "n_scanned": 67,
+ "recovered": 63,
+ "recall": 0.940299,
+ "reversed_detections_ge_theta": 400,
+ "scanned_day_equivalents": 334.5444,
+ "false_alarm_rate_per_day": 1.1957,
+ "p2_bar": 0.9
+}
