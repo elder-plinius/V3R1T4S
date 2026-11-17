@@ -1,0 +1,8 @@
+uncatalogued detections above their nest null (N0 rerun, 12 nests): 5
+A100  1973-04-22T18:28:36.943Z Dt 0.4098 best {'s14': 0.566, 's16': 0.4098} ccs [0.566, None, None, 0.4098] R7 False R9 True gap True thermal True elev {'s14': 46.0, 's16': 13.0} onodera []
+A100  1973-11-26T07:46:28.641Z Dt 0.3433 best {'s14': 0.5621, 's16': 0.6994} ccs [0.4264, 0.5621, 0.6994, -0.0128] R7 True R9 True gap True thermal True elev {'s14': -84.6, 's16': -59.8} onodera []
+A100  1973-10-30T02:25:51.509Z Dt 0.2981 best {'s14': 0.6211, 's16': 0.6196} ccs [0.4936, 0.6211, 0.6196, -0.0235] R7 True R9 True gap True thermal True elev {'s14': -65.6, 's16': -32.4} onodera []
+A100  1973-01-30T23:06:52.188Z Dt 0.2648 best {'s14': 0.5067, 's16': 0.5657} ccs [0.2237, 0.5067, 0.5657, -0.036] R7 True R9 True gap True thermal True elev {'s14': -36.5, 's16': -67.7} onodera ['onodera S14 id 2176 type 1', 'onodera S15 id 2266 type 5']
+A14   1973-01-13T09:22:15.056Z Dt 0.2638 best {'s14': 0.3505, 's16': 0.4097} ccs [0.1771, 0.3505, 0.3227, 0.4097] R7 False R9 True gap True thermal False elev {'s14': 2.3, 's16': 34.8} onodera []
+of these meeting R7 (best single channel >= 0.5 at both stations): 3 -> [('A100', '1973-11-26T07:46:28.641Z'), ('A100', '1973-10-30T02:25:51.509Z'), ('A100', '1973-01-30T23:06:52.188Z')]
+meeting R7, R9, gap, thermal and outside Onodera SP windows: 2 -> [('A100', '1973-11-26T07:46:28.641Z'), ('A100', '1973-10-30T02:25:51.509Z')]

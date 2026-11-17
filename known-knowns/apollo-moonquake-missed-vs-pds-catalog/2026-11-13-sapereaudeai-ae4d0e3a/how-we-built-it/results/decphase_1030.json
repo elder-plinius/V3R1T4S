@@ -1,0 +1,104 @@
+{
+ "phase0_frozen_stack": {
+  "candidate": {
+   "Dt": 0.2981,
+   "common_lag_offset_samples": -3,
+   "s14_lag_s": -0.604,
+   "s16_lag_s": 0.0,
+   "ccs": [
+    0.4936,
+    0.6211,
+    0.6196,
+    -0.0235
+   ],
+   "s14_best": 0.6211,
+   "s16_best": 0.6196,
+   "R7": true
+  },
+  "first_claim": {
+   "Dt": 0.3433,
+   "common_lag_offset_samples": 7,
+   "s14_lag_s": -0.604,
+   "s16_lag_s": 0.0,
+   "ccs": [
+    0.4264,
+    0.5621,
+    0.6994,
+    -0.0128
+   ],
+   "s14_best": 0.5621,
+   "s16_best": 0.6994,
+   "R7": true
+  }
+ },
+ "phase0_rebuilt": {
+  "stack": {
+   "members": [
+    "1973-03-26T14:20",
+    "1973-05-19T22:52",
+    "1973-07-13T12:20",
+    "1973-09-05T21:48",
+    "1973-12-23T15:53"
+   ],
+   "n_members": 5,
+   "onset_rel_s": 122.56603773584905,
+   "glitchiness": [
+    3.8,
+    3.4,
+    3.6,
+    3.6
+   ]
+  },
+  "identical_to_frozen": true,
+  "max_abs_diff": 0.0
+ },
+ "phase1_rebuilt": {
+  "stack": {
+   "members": [
+    "1973-03-26T14:20",
+    "1973-05-19T22:52",
+    "1973-07-13T12:20",
+    "1973-09-05T21:48",
+    "1973-12-23T15:53"
+   ],
+   "n_members": 5,
+   "onset_rel_s": 122.56603773584905,
+   "glitchiness": [
+    4.2,
+    3.3,
+    3.5,
+    3.3
+   ]
+  },
+  "candidate": {
+   "Dt": 0.2822,
+   "common_lag_offset_samples": -3,
+   "s14_lag_s": -0.604,
+   "s16_lag_s": 0.0,
+   "ccs": [
+    0.4936,
+    0.621,
+    0.5867,
+    -0.0222
+   ],
+   "s14_best": 0.621,
+   "s16_best": 0.5867,
+   "R7": true
+  },
+  "first_claim": {
+   "Dt": 0.348,
+   "common_lag_offset_samples": 7,
+   "s14_lag_s": -0.604,
+   "s16_lag_s": 0.0,
+   "ccs": [
+    0.4264,
+    0.5622,
+    0.7091,
+    -0.0131
+   ],
+   "s14_best": 0.5622,
+   "s16_best": 0.7091,
+   "R7": true
+  }
+ }
+}

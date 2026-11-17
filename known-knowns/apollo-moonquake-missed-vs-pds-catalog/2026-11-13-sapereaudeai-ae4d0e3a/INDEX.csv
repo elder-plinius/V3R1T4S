@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+apollo-moonquake-missed-vs-pds-catalog,full criterion nest A100 S14+S16 1973-10-30T02:25:51.5Z,"best NCC 0.621 (S14 MH2) / 0.620 (S16 MH1), S16-S14 0.71 s vs nest 0.82 s, Dt 0.298 > 401 controls (best 0.191; max-T over 12 templates p <= 1/402)","no catalogue row within 5 min (nearest 85.9 min, levent A1)",2026-11-13T17:31:07Z,object/candidate.json,ae4d0e3ae24af20f501f5f4ae32a89687c3327298de39cb45ad21da85ac328ca

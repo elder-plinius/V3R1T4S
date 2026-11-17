@@ -1,0 +1,72 @@
+days scanned: 365 (doy 1..365); nests: ['18', '10', '9', '14', '204', '23', '20', '201', '100', '210', '25', '257']
+determinism: days identical to the saved lens scan in fwd_peaks, rev_max, shift_max for all 12 nests: 365 of 365; differing days: []
+A18   controls 401  C0 0.2186  best shift 0.5139  best control 0.5139  median 0.3757
+A10   controls 401  C0 0.2757  best shift 0.4191  best control 0.4191  median 0.3304
+A9    controls 401  C0 0.1530  best shift 0.1758  best control 0.1758  median 0.1507
+A14   controls 401  C0 0.1852  best shift 0.2433  best control 0.2433  median 0.1826
+A204  controls 401  C0 0.2463  best shift 0.5746  best control 0.5746  median 0.4292
+A23   controls 401  C0 0.2106  best shift 0.3147  best control 0.3147  median 0.2262
+A20   controls 401  C0 0.2657  best shift 0.6247  best control 0.6247  median 0.3846
+A201  controls 401  C0 0.2280  best shift 0.6101  best control 0.6101  median 0.3771
+A100  controls 401  C0 0.1574  best shift 0.1906  best control 0.1906  median 0.1603
+A210  controls 401  C0 0.2404  best shift 0.4469  best control 0.4469  median 0.3607
+A25   controls 401  C0 0.2260  best shift 0.5354  best control 0.5354  median 0.3768
+A257  controls 401  C0 0.2627  best shift 0.4432  best control 0.4432  median 0.3138
+
+candidate A100 peak: window start 1973-10-30T02:25:21.509 Dt 0.29806 ccs [0.4936, 0.6211, 0.6196, -0.0235] lags S14 -1.509 s S16 -0.906 s
+N0: real 0.29806 vs best of 401 A100 controls 0.19062 (C0 0.15744): real beats all controls: True
+candidate rank among 65910 A100 forward peaks of 1973: 9; peaks above the null: 11
+
+A100 forward peaks above the null (0.1906):
+  1973-05-19T22:54:02.075 Dt 0.7760 ccs [0.7571, 0.7949, 0.7878, 0.7765] lags +0.604 +0.604 | 73-139 2252 T2=A N2=100
+  1973-12-23T15:53:32.188 Dt 0.6474 ccs [0.6518, 0.7592, 0.6221, 0.6728] lags +1.208 +1.509 | 73-357 1553 T2=A N2=100
+  1973-09-05T21:47:03.358 Dt 0.6038 ccs [0.7487, 0.6916, 0.5053, 0.7023] lags -0.302 -0.302 | 73-248 2148 T2=A N2=100
+  1973-04-22T18:28:36.943 Dt 0.4098 ccs [0.566, None, None, 0.4098] lags +1.811 +1.811 | uncatalogued
+  1973-01-03T16:48:51.132 Dt 0.4019 ccs [0.3953, 0.4086, 0.6615, 0.5527] lags -2.113 -1.509 | 73-003 1647 T2=A N2=100
+  1973-07-13T12:20:45.094 Dt 0.3572 ccs [0.3572, None, 0.5904, 0.5975] lags -2.113 -2.113 | 73-194 1220 T2=A N2=100
+  1973-11-26T07:46:28.641 Dt 0.3433 ccs [0.4264, 0.5621, 0.6994, -0.0128] lags +1.509 +2.113 | uncatalogued  <- first claim
+  1973-06-16T06:12:10.075 Dt 0.3278 ccs [0.2487, 0.4069, 0.5064, 0.5848] lags +0.604 +1.208 | uncatalogued
+  1973-10-30T02:25:51.509 Dt 0.2981 ccs [0.4936, 0.6211, 0.6196, -0.0235] lags -1.509 -0.906 | uncatalogued  <- this candidate
+  1973-01-30T23:06:52.188 Dt 0.2648 ccs [0.2237, 0.5067, 0.5657, -0.036] lags -1.509 +0.906 | uncatalogued
+  1973-08-09T18:30:30.754 Dt 0.2621 ccs [0.2935, 0.2306, 0.5802, 0.6473] lags -0.302 -0.906 | 73-221 1830 T2=A N2=100
+
+M1 max-T: A100 median 0.1603 robust sd 0.0079; candidate z 17.47; family-wise control maxima T: max 14.36, 99th pct 9.77; #T >= z_c: 0; p_FW = 0.0025
+   per-nest z of the largest control: {'A18': 7.89, 'A10': 5.1, 'A9': 3.89, 'A14': 8.84, 'A204': 9.77, 'A23': 7.88, 'A20': 14.36, 'A201': 6.52, 'A100': 3.85, 'A210': 2.49, 'A25': 12.83, 'A257': 6.76}
+M2 GEV fit to the 401 A100 maxima: shape -0.000 loc 0.1569 scale 0.0066; tail P(max >= 0.2981) = 4.655e-10; Sidak over 12 templates 5.587e-09; Bonferroni over 55 parent-run template-year scans 2.560e-08
+   GEV per nest (shape, max, tail at own max): {'A18': (0.183, 0.5139, '7.10e-06'), 'A10': (0.181, 0.4191, '6.23e-06'), 'A9': (0.082, 0.1758, '4.21e-03'), 'A14': (-0.068, 0.2433, '7.17e-04'), 'A204': (1.135, 0.5746, '8.70e-15'), 'A23': (-0.141, 0.3147, '2.20e-03'), 'A20': (0.064, 0.6247, '3.63e-07'), 'A201': (0.11, 0.6101, '1.86e-05'), 'A100': (-0.0, 0.1906, '5.86e-03'), 'A210': (0.256, 0.4469, '4.54e-03'), 'A25': (0.152, 0.5354, '1.61e-07'), 'A257': (0.132, 0.4432, '2.74e-04')}
+   empirical Bonferroni over 55 parent-run template-year scans: 55/402 = 0.1368; over the 26 of 1973: 0.0647; GEV x 26: 1.210e-08
+
+A6: A100 phase interval [46.70, 318.34]
+A6: catalogued 1973 deep moonquakes: 14 A100, 984 other. Passing null + R7 + R9 against the A100 stack: A100 3 of 14; other nests 0 of 984
+   top non-A100 by Dt: 73-115 1630 A21 Dt 0.1409 S14 0.142 S16 0.163 R7 False R9 True
+   top non-A100 by Dt: 73-201 1902 A1 Dt 0.1332 S14 0.141 S16 0.133 R7 False R9 True
+   top non-A100 by Dt: 73-109 1441 A17 Dt 0.1324 S14 0.192 S16 0.147 R7 False R9 True
+   top non-A100 by Dt: 73-290 0026 A15 Dt 0.1308 S14 0.168 S16 0.131 R7 False R9 False
+   top non-A100 by Dt: 73-083 0645 A20 Dt 0.1281 S14 0.173 S16 0.128 R7 False R9 True
+   top non-A100 by Dt: 73-085 0424 A203 Dt 0.1257 S14 0.157 S16 0.156 R7 False R9 True
+   top non-A100 by Dt: 73-013 0527 A104 Dt 0.1237 S14 0.130 S16 0.179 R7 False R9 False
+   top non-A100 by Dt: 73-023 0353 A229 Dt 0.1220 S14 0.132 S16 0.122 R7 False R9 True
+   top non-A100 by Dt: 73-365 1811 A21 Dt 0.1210 S14 0.141 S16 0.166 R7 False R9 True
+   top non-A100 by Dt: 73-195 0655 A33 Dt 0.1197 S14 0.120 S16 0.133 R7 False R9 True
+   non-A100 above the null alone: 0; with R7: 0
+
+A3b (forward part): catalogued 1973 A100 events, best A100 forward peak in [start - 5 min, start + 10 min]: Dt, ccs [S14 MH1, MH2, S16 MH1, MH2]
+   73-003 1647 A100 Dt 0.4019 ccs [0.3953, 0.4086, 0.6615, 0.5527] phase 209.8
+   73-058 0635 A100 Dt 0.1246 ccs [0.1944, 0.0549, 0.5956, 0.5183] phase 202.8
+   73-081 0822 A100 Dt 0.0751 ccs [0.0685, 0.0816, 0.0809, 0.0728] phase 144.4
+   73-085 1420 A100 Dt 0.0924 ccs [0.1587, None, 0.0941, 0.0908] phase 199.8
+   73-139 2252 A100 Dt 0.7760 ccs [0.7571, 0.7949, 0.7878, 0.7765] phase 190.0
+   73-182 0250 A100 Dt 0.0897 ccs [0.1173, 0.1586, 0.0537, 0.1258] phase 20.8
+   73-190 1045 A100 Dt 0.0711 ccs [0.1096, 0.0326, 0.0428, 0.1008] phase 129.8
+   73-194 1220 A100 Dt 0.3572 ccs [0.3572, None, 0.5904, 0.5975] phase 182.8
+   73-221 1830 A100 Dt 0.2621 ccs [0.2935, 0.2306, 0.5802, 0.6473] phase 178.9
+   73-232 0732 A100 Dt 0.1028 ccs [0.0848, 0.1335, 0.0565, 0.1491] phase 316.7
+   73-248 2148 A100 Dt 0.6038 ccs [0.7487, 0.6916, 0.5053, 0.7023] phase 173.4
+   73-313 1705 A100 Dt 0.0619 ccs [0.074, 0.0908, 0.0635, 0.0604] phase 300.1
+   73-357 1553 A100 Dt 0.6474 ccs [0.6518, 0.7592, 0.6221, 0.6728] phase 154.3
+
+null_test lines:
+controls: 401
+best_control: 0.1906
+real: 0.2981
+real_beats_all_controls: yes

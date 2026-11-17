@@ -1,0 +1,8 @@
+T2=?: rows 454, with a forward peak 418, above the A100 null 0, + R7 0, + R9 0 []
+T2=A: rows 998, with a forward peak 922, above the A100 null 6, + R7 3, + R9 3 ['73-003 1647 T2=A N2=100 Dt 0.4019 S14 0.409 S16 0.661 R9 True', '73-139 2252 T2=A N2=100 Dt 0.7760 S14 0.795 S16 0.788 R9 True', '73-194 1220 T2=A N2=100 Dt 0.3572 S14 0.357 S16 0.598 R9 True', '73-221 1830 T2=A N2=100 Dt 0.2621 S14 0.293 S16 0.647 R9 True', '73-248 2148 T2=A N2=100 Dt 0.6038 S14 0.749 S16 0.702 R9 True', '73-357 1553 T2=A N2=100 Dt 0.6474 S14 0.759 S16 0.673 R9 True']
+T2=C: rows 250, with a forward peak 226, above the A100 null 0, + R7 0, + R9 0 []
+T2=H: rows 4, with a forward peak 3, above the A100 null 0, + R7 0, + R9 0 []
+T2=M: rows 57, with a forward peak 46, above the A100 null 0, + R7 0, + R9 0 []
+T2=T: rows 84, with a forward peak 78, above the A100 null 0, + R7 0, + R9 0 []
+T2=X: rows 2, with a forward peak 2, above the A100 null 0, + R7 0, + R9 0 []
+T2=Z: rows 47, with a forward peak 45, above the A100 null 0, + R7 0, + R9 0 []

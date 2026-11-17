@@ -1,0 +1,97 @@
+variant b: days scanned 365, peaks >= 0.10: 12326
+scored 1973 deep moonquakes (T2 = A): 998; with a peak >= 0.10: 462
+
+Top 20 catalogued deep moonquakes by similarity to the candidate:
+  73-139 2252 A100  score 0.4862  peak onset 1973-05-19T22:54:04  ccs [0.4177, 0.5546, 0.5234, -0.0155]  A4=4
+  73-248 2148 A100  score 0.4815  peak onset 1973-09-05T21:47:03  ccs [0.4358, 0.5271, 0.5642, -0.0801]  A4=nan
+  73-357 1553 A100  score 0.4173  peak onset 1973-12-23T15:53:32  ccs [0.3505, 0.484, 0.4642, -0.0241]  A4=3.5
+  73-003 1647 A100  score 0.3323  peak onset 1973-01-03T16:48:49  ccs [0.2855, 0.3791, 0.6409, 0.104]  A4=4.5
+  73-194 1220 A100  score 0.3227  peak onset 1973-07-13T12:20:44  ccs [0.3227, None, 0.6434, 0.003]  A4=4
+  73-221 1830 A100  score 0.2309  peak onset 1973-08-09T18:30:28  ccs [0.1705, 0.2913, 0.5823, -0.054]  A4=5
+  73-252 0256 A21   score 0.1480  peak onset 1973-09-09T02:57:59  ccs [0.1599, None, 0.148, -0.018]  A4=5
+  73-198 2240 A21   score 0.1471  peak onset 1973-07-17T22:42:51  ccs [0.1471, None, 0.1621, -0.0076]  A4=5
+  73-115 0712 A32   score 0.1423  peak onset 1973-04-25T07:17:47  ccs [0.1423, None, 0.1582, -0.0247]  A4=3
+  73-029 1324 A386  score 0.1410  peak onset 1973-01-29T13:19:55  ccs [0.1694, 0.1126, 0.1458, 0.3956]  A4=nan
+  73-137 1142 A53   score 0.1399  peak onset 1973-05-17T11:46:02  ccs [0.1399, None, 0.1482, -0.0114]  A4=nan
+  73-342 1941 A41   score 0.1379  peak onset 1973-12-08T19:37:53  ccs [None, 0.1381, 0.1379, -0.1039]  A4=2.7
+  73-023 0353 A229  score 0.1372  peak onset 1973-01-23T04:02:21  ccs [0.1376, None, 0.1372, -0.0024]  A4=nan
+  73-354 0753 A235  score 0.1363  peak onset 1973-12-20T08:01:34  ccs [0.0865, 0.188, 0.1363, 0.0418]  A4=4
+  73-041 0956 A38   score 0.1352  peak onset 1973-02-10T10:02:41  ccs [None, 0.1352, 0.1572, -0.0429]  A4=nan
+  73-136 1616 A256  score 0.1351  peak onset 1973-05-16T16:23:42  ccs [0.1464, None, 0.1351, -0.02]  A4=6.2
+  73-241 0610 A1    score 0.1344  peak onset 1973-08-29T06:08:53  ccs [0.1752, 0.0936, 0.1367, 0.0818]  A4=6
+  73-034 0055 A69   score 0.1340  peak onset 1973-02-03T00:54:43  ccs [0.1226, 0.1502, 0.134, -0.2893]  A4=2.2
+  73-204 0745 A208  score 0.1339  peak onset 1973-07-23T07:48:16  ccs [0.1343, None, 0.1339, -0.0036]  A4=2.8
+  73-330 0636 A203  score 0.1310  peak onset 1973-11-26T06:43:38  ccs [0.1363, 0.1258, 0.1718, -0.266]  A4=6
+
+top-10 nests: {'100': np.int64(6), '21': np.int64(2), '32': np.int64(1), '386': np.int64(1)} | A100 in top 10: True | C6 holds: False
+nest shares of all scored deep moonquakes (top 8): {'1': 0.057, '14': 0.05, '20': 0.044, '8': 0.027, '44': 0.026, '51': 0.021, '18': 0.021, '284': 0.021}
+
+A100 events (1973): rank / score
+  73-139 2252 rank 1 of 998 score 0.4862 ccs [0.4177, 0.5546, 0.5234, -0.0155]
+  73-248 2148 rank 2 of 998 score 0.4815 ccs [0.4358, 0.5271, 0.5642, -0.0801]
+  73-357 1553 rank 3 of 998 score 0.4173 ccs [0.3505, 0.484, 0.4642, -0.0241]
+  73-003 1647 rank 4 of 998 score 0.3323 ccs [0.2855, 0.3791, 0.6409, 0.104]
+  73-194 1220 rank 5 of 998 score 0.3227 ccs [0.3227, None, 0.6434, 0.003]
+  73-221 1830 rank 6 of 998 score 0.2309 ccs [0.1705, 0.2913, 0.5823, -0.054]
+  73-085 1420 rank 24 of 998 score 0.1286 ccs [0.1286, None, 0.2549, -0.0025]
+  73-058 0635 rank 436 of 998 score 0.1008 ccs [0.1831, 0.0184, 0.6063, 0.2513]
+  73-182 0250 rank 548 of 998 score 0.0000 ccs None
+  73-190 1045 rank 580 of 998 score 0.0000 ccs None
+  73-232 0732 rank 725 of 998 score 0.0000 ccs None
+  73-081 0822 rank 741 of 998 score 0.0000 ccs None
+  73-275 2253 rank 791 of 998 score 0.0000 ccs None
+  73-313 1705 rank 932 of 998 score 0.0000 ccs None
+
+moveout-indistinguishable nests (Nakamura 2005 16S-14S within 5 s of A100): A35, A244, A7
+  A35 73-087 1701 rank 81 score 0.1180 ccs [0.076, 0.1815, 0.118, 0.47]
+  A35 73-354 0252 rank 153 score 0.1121 ccs [0.0471, 0.1771, 0.1235, 0.0413]
+  A35 73-060 0524 rank 189 score 0.1102 ccs [0.0972, 0.1233, 0.1346, -0.1045]
+  A35 73-180 2100 rank 330 score 0.1047 ccs [0.1033, 0.1062, 0.1387, -0.3322]
+  A35 73-275 0345 rank 433 score 0.1009 ccs [0.0872, 0.1146, 0.1169, 0.1519]
+  A35 73-029 1757 rank 585 score 0.0000 ccs None
+  A35 73-095 1833 rank 629 score 0.0000 ccs None
+  A35 73-194 1808 rank 632 score 0.0000 ccs None
+  A35 73-138 0804 rank 695 score 0.0000 ccs None
+  A35 73-124 0916 rank 750 score 0.0000 ccs None
+  A7 73-035 0058 rank 639 score 0.0000 ccs None
+
+per-nest median score (nests with >= 3 scored 1973 events; 0 = no peak >= 0.10): top 12
+      n  median    mean     max
+N2                             
+235   4  0.1150  0.0916  0.1363
+100  14  0.1147  0.1786  0.4862
+21   17  0.1138  0.0723  0.1480
+311   5  0.1096  0.0670  0.1146
+224  20  0.1093  0.0856  0.1289
+201   9  0.1079  0.0637  0.1194
+266   3  0.1067  0.0723  0.1101
+213   4  0.1064  0.1107  0.1258
+33   16  0.1063  0.0822  0.1233
+258   9  0.1054  0.0632  0.1243
+96    5  0.1049  0.0697  0.1221
+23   14  0.1046  0.0640  0.1211
+A100 median rank among 98 nests: 2
+
+random-window baseline (3000 windows): fraction with a peak >= 0.10: 0.274; quantiles 50/90/99/max: 0.0000 0.1090 0.1267 0.1522
+top-10 catalogued scores: [0.4862, 0.4815, 0.4173, 0.3323, 0.3227, 0.2309, 0.148, 0.1471, 0.1423, 0.141]
+
+C6b (A35/A244/A7 event above every A100 event and above the random 99th percentile 0.1267): none -> C6b holds: False
+support level: SUPPORTED (A100 events in the top 10: 6; A100 is 14 of 998 scored deep moonquakes; P(>= 6 of top 10 under random ranking) = 4.54e-10)
+mutual similarity (not independent confirmation): score at the first claimed event 1973-11-26 07:46:28.6 = 0.4021, peak onset 1973-11-26T07:46:32, ccs [0.332, 0.4722, 0.5749, -0.1465]; rank among catalogued deep moonquakes would be 4
+
+15 highest reverse-search peaks of 1973 (any, catalogued or not):
+  1973-05-19T22:54:04 Dt 0.4862 ccs [0.4177, 0.5546, 0.5234, -0.0155] | 73-139 2252 T2=A N2=100
+  1973-09-05T21:47:03 Dt 0.4815 ccs [0.4358, 0.5271, 0.5642, -0.0801] | 73-248 2148 T2=A N2=100
+  1973-12-23T15:53:32 Dt 0.4173 ccs [0.3505, 0.484, 0.4642, -0.0241] | 73-357 1553 T2=A N2=100
+  1973-11-26T07:46:32 Dt 0.4021 ccs [0.332, 0.4722, 0.5749, -0.1465] | no levent row in [onset-5 min, onset+10 min]
+  1973-01-30T23:06:52 Dt 0.3932 ccs [0.3163, 0.4702, 0.6541, 0.2789] | no levent row in [onset-5 min, onset+10 min]
+  1973-01-03T16:48:49 Dt 0.3323 ccs [0.2855, 0.3791, 0.6409, 0.104] | 73-003 1647 T2=A N2=100
+  1973-07-13T12:20:44 Dt 0.3227 ccs [0.3227, None, 0.6434, 0.003] | 73-194 1220 T2=A N2=100
+  1973-06-16T06:12:12 Dt 0.2786 ccs [0.2308, 0.3263, 0.5716, 0.0036] | no levent row in [onset-5 min, onset+10 min]
+  1973-08-09T18:30:28 Dt 0.2309 ccs [0.1705, 0.2913, 0.5823, -0.054] | 73-221 1830 T2=A N2=100
+  1973-05-14T23:01:53 Dt 0.1648 ccs [0.1676, None, 0.1648, -0.0146] | no levent row in [onset-5 min, onset+10 min]
+  1973-02-12T14:09:46 Dt 0.1580 ccs [0.1768, None, 0.158, 0.0139] | 73-043 1414 T2=C N2=nan
+  1973-03-25T22:04:33 Dt 0.1560 ccs [0.1686, None, 0.156, 0.0716] | no levent row in [onset-5 min, onset+10 min]
+  1973-07-16T10:17:31 Dt 0.1525 ccs [0.1525, None, 0.154, -0.0723] | no levent row in [onset-5 min, onset+10 min]
+  1973-08-21T13:01:10 Dt 0.1522 ccs [0.1537, None, 0.1522, 0.0008] | no levent row in [onset-5 min, onset+10 min]
+  1973-08-22T19:15:00 Dt 0.1521 ccs [0.1521, None, 0.1546, -0.3506] | no levent row in [onset-5 min, onset+10 min]

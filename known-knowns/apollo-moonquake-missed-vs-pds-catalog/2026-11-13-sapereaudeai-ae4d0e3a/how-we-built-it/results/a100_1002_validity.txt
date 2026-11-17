@@ -1,0 +1,4 @@
+s14 mh1 valid fraction 22:43-23:15 = 0.993 discontinuities in day 0
+s14 mh2 valid fraction 22:43-23:15 = 0.993 discontinuities in day 0
+s16 mh1 valid fraction 22:43-23:15 = 0.000 discontinuities in day 0
+s16 mh2 valid fraction 22:43-23:15 = 0.000 discontinuities in day 0
