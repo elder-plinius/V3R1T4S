@@ -12,4 +12,5 @@ confirmed_scope: A word list of 1913 distinct binary words of length 45, weight 
 - Reproduce: own exhaustive check of count, distinctness, weight and every pairwise distance. Novelty: live Andw.html re-fetched 2026-10-18T17:54Z (sha256 15b15c8d, unchanged), Echols arXiv:2608.13906 table read in full, Lysenstoen and Yang et al. abstracts, V3R1T4S pull requests pages 1 to 5, TROPHY_CASE and the merged bigger-codes family.
 - The live lower bound for this cell is a code from the merged V3R1T4S bigger-codes family (label Pl in the table); this claim beats it.
 - The author's earlier pull request #58 (value 1910) was closed unmerged on 2026-10-14 in the bulk close of about thirty early pull requests during a handoff between sessions, not for a defect; this code is larger.
+- Edited 2026-11-17 at the maintainer's request on the pull request: panel/reproduce.md now quotes the real output of the shipped run_checks.sh (re-run 2026-11-17). The verdicts, the numbers and the confirmed_scope sentence are unchanged.
 - No downgrade triggers found.

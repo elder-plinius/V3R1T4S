@@ -2,7 +2,9 @@
 
 ## Executive Summary
 
-Against the frozen baseline snapshot [`data/Andw.html`]({WORKDIR}/data/Andw.html) (`SHA-256: bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`), we achieved **all three goals (`p2` + `p1` + Full Win)** with 100% standalone exact verification via [`verify_cwc.py`]({WORKDIR}/verify_cwc.py):
+Note on files: this results file and the pre-registration describe a working folder that is not part of this package. The files `data/Andw.html` (the frozen copy of the table), `verify_cwc.py` and everything under `results/` are not shipped here, and the `results/...` paths below name files in that working folder only. What is shipped for this cell is `object/A45_8_7_1913.txt` and the checkers in `verify-it-yourself/`.
+
+Against the frozen baseline snapshot `data/Andw.html` (a working-folder file, not shipped) (`SHA-256: bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`), we achieved **all three goals (`p2` + `p1` + Full Win)** with 100% standalone exact verification via `verify_cwc.py` (a working-folder script, not shipped):
 
 1. **Goal A — Partial Win `p2` (21 Cells / 22 Certificates in `results/certificates/`)**:
    - **Family A1 (11 cells / 12 certificates)**: Exact rational Delsarte + support-split ($R_x$) + shortening ($M_{1,s}$) LP upper-bound certificates strictly beating explicitly printed `lo-hi` upper bounds in `data/Andw.html` (excluding `(31,10,7)` and the 5 already-merged `L` cells).
@@ -24,7 +26,7 @@ All 13 codes are stored in `results/codes_full_win/` (and mirrored in `results/`
 | 1 | `A(28, 8, 11)` | `3785Pl-16354` | `3716` | — | **`3802`** | **`+17`** (New cell!) | `A28_8_11_3802.txt` | `9bec8e442ef7b35e` |
 | 2 | `A(54, 8, 7)` | `4193Pl-8447` | — | `4176` | **`4205`** | **`+12`** (+1 over LNS) | `A54_8_7_4205.txt` | `765069602e766f6c` |
 | 3 | `A(26, 6, 9)` | `5986Pl-16122` | `5909` | — | **`5997`** | **`+11`** | `A26_6_9_5997.txt` | `6be5a215f0b66249` |
-| 4 | `A(45, 8, 7)` | `1907Pl-4050` | — | `1901` | **`1913`** | **`+6`** (+3 over LNS) | `A45_8_7_1913.txt` | `7da959051e830cb6` |
+| 4 | `A(45, 8, 7)` | `1907Pl-4050` | `1885` | not listed | **`1913`** | **`+6`** | `A45_8_7_1913.txt` | `7da959051e830cb6` |
 | 5 | `A(55, 8, 7)` | `4426Pl-9617` | — | `4410` | **`4432`** | **`+6`** (+1 over LNS) | `A55_8_7_4432.txt` | `50a6e273e744067f` |
 | 6 | `A(56, 8, 7)` | `4685Pl-10264` | — | `4669` | **`4691`** | **`+6`** | `A56_8_7_4691.txt` | `e12d11fa604fd790` |
 | 7 | `A(53, 8, 7)` | `3987Pl-8003` | — | `3973` | **`3992`** | **`+5`** | `A53_8_7_3992.txt` | `7be7a08730ebb932` |

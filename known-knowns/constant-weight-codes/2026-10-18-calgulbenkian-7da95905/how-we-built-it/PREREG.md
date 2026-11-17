@@ -2,8 +2,10 @@
 
 ## 1. Target & Baseline Snapshot
 
+Note on files: this results file and the pre-registration describe a working folder that is not part of this package. The files `data/Andw.html` (the frozen copy of the table), `verify_cwc.py` and everything under `results/` are not shipped here, and the `results/...` paths below name files in that working folder only. What is shipped for this cell is `object/A45_8_7_1913.txt` and the checkers in `verify-it-yourself/`.
+
 - **Target Table**: Andries E. Brouwer's *Bounds for binary constant weight codes* (`https://aeb.win.tue.nl/codes/Andw.html`).
-- **Frozen Local Snapshot**: [`data/Andw.html`]({WORKDIR}/data/Andw.html)
+- **Frozen Local Snapshot**: a local copy of the table, `data/Andw.html` in the working folder (not shipped in this package)
   - **SHA-256**: `bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`
   - **Size**: `261,806` bytes (`6,999` lines)
 - **Prior-Art Cross-Check Corpora**:

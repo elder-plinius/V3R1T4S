@@ -5,7 +5,7 @@ https://aeb.win.tue.nl/codes/Andw.html returned the same page.
 
 | Source | URL | UTC fetch time | HTTP | sha256 | Extracted cell |
 |---|---|---|---|---|---|
-| Andw.html (orchestrator, builds the claim folder) | https://aeb.win.tue.nl/codes/Andw.html | 2026-10-18T17:39:47Z | 200 | 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349 | A(45,8,7) = 1907Pl-4050; mirror A(45,8,38) = None |
+| Andw.html (fetched by calgulbenkian while assembling this package) | https://aeb.win.tue.nl/codes/Andw.html | 2026-10-18T17:39:47Z | 200 | 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349 | A(45,8,7) = 1907Pl-4050; mirror A(45,8,38) = None |
 | Andw.html (panel novelty skeptic, re-fetch) | https://aeb.win.tue.nl/codes/Andw.html | 2026-10-18T17:54:24Z | 200 | 15b15c8df1a507e2403b84b322dfb2268f16c8597794b9ece23dd03532513349 | anchor a45.8.7.1907H, shown as 1907 with source label Pl |
 
 Compared cell: A(45,8,7). Live lower bound 1907 (label Pl: a code from the merged V3R1T4S bigger-codes family); live upper bound 4050. This object: 1913.

@@ -1,5 +1,7 @@
 # Reproduce report: A(45,8,7) >= 1913
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the quoted run_checks.sh output was replaced by the real output of the shipped script, re-run on 2026-11-17 from a clean copy of the package (the earlier quote was from an earlier version of the script). The checks, numbers and verdict are unchanged.]
+
 context: Claude Code subagent, fresh context
 
 Role: reproduce skeptic. Scope: only this cell. Currency of the table value and novelty are not judged here.
@@ -36,19 +38,24 @@ RESULT: PASS
 ```
 
 ## Author's run_checks.sh (run only after my own checker)
-Command: sh verify-it-yourself/run_checks.sh (from a private copy of the package). Output:
+Command: sh verify-it-yourself/run_checks.sh (from a private copy of the package). The output below is from a re-run on 2026-11-17 of the script exactly as shipped (clean copy of the package, with numpy available so that the second checker runs). The output the panel first quoted here came from an earlier version of the script, which had one checker and two negative controls; the shipped script has two checkers and three. Output:
 ```
 sha256 matches INDEX.csv (7da959051e830cb64dbc8466a3ed10b049e7f648249222311b652cd3d261c8da)
-== check_cw.py on object/A45_8_7_1913.txt (count, distinct, weight, all pairwise distances)
-A45_8_7_1913.txt: M=1913 n=45 w=7 min distance 8 >= 8 PASS
+== check_cw_std.py (standard library): count, distinct, weight, no two words share 4 ones
+A45_8_7_1913.txt: M=1913 n=45 w=7 distinct, weight w, no two words share 4 ones, so min distance >= 8 PASS
 checker verdict: PASS
+== check_cw.py (needs numpy; the panel's checker): count, distinct, weight, all pairwise distances
+A45_8_7_1913.txt: M=1913 n=45 w=7 min distance 8 >= 8 PASS
+second checker verdict: PASS
 == negative control 1: a copy whose last word is replaced by a copy of the first word must FAIL
 negative control 1 rejected as expected
 == negative control 2: the same object checked against a claim of one more word must FAIL
 negative control 2 rejected as expected
+== negative control 3: a copy with the last word moved to a word sharing 4 ones with the first must FAIL
+negative control 3 rejected as expected
 ALL CHECKS PASS
 ```
-Comparison: my checker and the author's agree (PASS on count, distinctness, weight, all pairs, sha256, both negative controls rejected). No mismatch, no missing object, no non-determinism seen (the check is exhaustive over all pairs, not a sample).
+Comparison: my checker and the author's agree (PASS on count, distinctness, weight, all pairs, sha256, all negative controls rejected, in the 2026-11-17 re-run of the shipped script). No mismatch, no missing object, no non-determinism seen (the check is exhaustive over all pairs, not a sample).
 
 ## Doubts
 None about the object. Whether 1913 still beats the live table, and whether arXiv papers hold a better value, is for the novelty skeptic.
