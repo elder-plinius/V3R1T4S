@@ -1,6 +1,8 @@
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # Criterion skeptic report
+[Edited 2026-11-17 at the maintainer's request on the pull request: removed the clause about the novelty skeptic's search from the confirmed_scope sentence, and dropped the mention of an unshipped working copy. The checks, numbers and verdict are unchanged.]
+
 
 Conditions checked against the full success criterion (full win, not a partial):
 
@@ -11,9 +13,9 @@ Conditions checked against the full success criterion (full win, not a partial):
 - Kind of nonlocality: the criterion asks for a Bell-inequality violation by a finite-setting projective strategy (a full local-bound notion). That is what is certified. It is not a weaker notion such as steering or a one-sided bound. OK.
 - Hidden quantifiers: none found. The target says "some Bell inequality with finitely many projective settings", so asymmetric setting counts (18,24,72) are allowed. v* is computed as stated, and the threshold is the strict-by-1e-5 one on the Table III value 0.49143. The README's "Not claimed" section correctly stays above the planar lower bound 0.49129 (0.491397 > 0.49129, so no contradiction with the paper).
 - Null models: the pre-registered null is "not needed, exact certificate". That is reasonable here, since the result is deterministic arithmetic and not a statistical claim.
-- Status source: the live arXiv API query (fetched 2026-11-16, recorded in a working copy (not shipped)) still returns only arXiv:2310.20677v3 (updated 2026-10-05) for GHZ nonlocality robustness. I could not settle the 0.49143 table cell from the page itself, so I took it from the claim folder and from the target text; the sole paper returned is consistent with them. A full literature, GitHub and PR search is the NOVELTY skeptic's job and I did not do it. I also did not check whether the result follows by restriction from an already-merged package.
+- Status source: the live arXiv API query (fetched 2026-11-16) still returns only arXiv:2310.20677v3 (updated 2026-10-05) for GHZ nonlocality robustness. I could not settle the 0.49143 table cell from the page itself, so I took it from the claim folder and from the target text; the sole paper returned is consistent with them. A full literature, GitHub and PR search is the NOVELTY skeptic's job and I did not do it. I also did not check whether the result follows by restriction from an already-merged package.
 - Not run: the package's own run_checks.sh, because mpmath is not installed here. I replaced its interval step with my own Decimal computation, which does not provide outward-rounded interval arithmetic, but 70-digit agreement with the claimed enclosure is strong evidence.
 
-confirmed_scope: The 18x24x72 integer full-correlation Bell functional in object/bell_ghz3_18x24x72.json with planar projective qubit settings has exact local bound L = 130692616 (confirmed by two independent orbit-enumeration programs that agree) and Q_GHZ = 265961302.90703046706895787151..., so the white-noise-mixed three-qubit GHZ state is nonlocal for every v > 0.4913971114274656713239022, which beats the 0.49143 Table III value by more than 1e-5 and meets the stated full criterion for N = 3, subject to the NOVELTY skeptic's search finding no equal or better prior result.
+confirmed_scope: The 18x24x72 integer full-correlation Bell functional in object/bell_ghz3_18x24x72.json with planar projective qubit settings has exact local bound L = 130692616 (confirmed by two independent orbit-enumeration programs that agree) and Q_GHZ = 265961302.90703046706895787151..., so the white-noise-mixed three-qubit GHZ state is nonlocal for every v > 0.4913971114274656713239022, which beats the 0.49143 Table III value by more than 1e-5 and meets the stated full criterion for N = 3.
 
 pass: true

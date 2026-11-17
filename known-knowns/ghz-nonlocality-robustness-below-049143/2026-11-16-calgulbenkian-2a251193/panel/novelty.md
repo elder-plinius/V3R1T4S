@@ -1,8 +1,10 @@
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 NOVELTY SKEPTIC REPORT. Claim: certified 3-qubit GHZ white-noise critical visibility v* <= 0.4913971114 (18 x 24 x 72 planar functional, exact L = 130692616) versus the target bar 0.49143.
+[Edited 2026-11-17 at the maintainer's request on the pull request: dropped the mention of an unshipped working file. The checks, numbers and verdict are unchanged.]
 
-Status source (fetched once, no retries; see a working file (not shipped))
+
+Status source (fetched once, no retries)
 - 2026-11-16T02:46:40Z https://arxiv.org/abs/2310.20677 : HTTP 200, sha256 57cf2fd4...6174c35. This is byte-identical to the package's own snapshot (the-record-we-beat/README.md). The page shows v1, v2 and v3 (submitted 31 Oct 2023).
 - 2026-11-16T02:47:23Z https://arxiv.org/html/2310.20677v3 : HTTP 200, sha256 dfdc7344...0c62 (matches the package's snapshot). Table III, N=3: certified m=22, v = 0.49143. Uncertified m = 224: 0.49132. Putative XY-plane lower bound v_XY >= 0.49129.
 - 2026-11-16T02:46:41Z https://arxiv.org/abs/1108.1998 : HTTP 200 (Vertesi and Pal, 0.496057 with 5x5x5 settings).

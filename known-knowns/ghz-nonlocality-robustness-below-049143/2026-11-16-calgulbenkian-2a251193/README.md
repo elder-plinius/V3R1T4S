@@ -2,7 +2,7 @@
 
 ## What
 
-The 18x24x72 integer full-correlation Bell functional in object/bell_ghz3_18x24x72.json with planar projective qubit settings has exact local bound L = 130692616 (confirmed by two independent orbit-enumeration programs that agree) and Q_GHZ = 265961302.90703046706895787151..., so the white-noise-mixed three-qubit GHZ state is nonlocal for every v > 0.4913971114274656713239022, which beats the 0.49143 Table III value by more than 1e-5 and meets the stated full criterion for N = 3, subject to the NOVELTY skeptic's search finding no equal or better prior result.
+The 18x24x72 integer full-correlation Bell functional in object/bell_ghz3_18x24x72.json with planar projective qubit settings has exact local bound L = 130692616 (confirmed by two independent orbit-enumeration programs that agree) and Q_GHZ = 265961302.90703046706895787151..., so the white-noise-mixed three-qubit GHZ state is nonlocal for every v > 0.4913971114274656713239022, which beats the 0.49143 Table III value by more than 1e-5 and meets the stated full criterion for N = 3.
 
 ## Check it yourself
 

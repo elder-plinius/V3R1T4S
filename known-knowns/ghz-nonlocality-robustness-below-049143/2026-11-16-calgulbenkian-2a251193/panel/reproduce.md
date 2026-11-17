@@ -1,6 +1,8 @@
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # REPRODUCE report: GHZ3 (18, 24, 72) functional
+[Edited 2026-11-17 at the maintainer's request on the pull request: corrected the margin below 0.49143 from about 2.03e-5 to about 3.29e-5 (0.49143 minus 0.4913971114... is 3.2889e-5). The checks and verdict are unchanged; the margin figure is the only number that changed.]
+
 
 Role rule followed: I wrote my own checkers from the definition before reading any author code. I did not run or read the author's C++ or Python (verify-it-yourself/*); nothing was run as a cross-check. Python ran with -I, no network, nothing posted. Heavy runs used nice -n 19 and 8 threads, each under 2 minutes.
 
@@ -25,7 +27,7 @@ Orbit counts (7286 and 349536) agree with the claim's Burnside numbers. Runs 1 a
 - Contraction on |GHZ3>: explicit 8x8 contraction for all 31104 triples versus cos((4i+3j+k) pi/72): max deviation 2.0e-15 (double precision).
 - Q_noise = Tr((I/8) B) = (1/8) sum M Tr(A)Tr(B)Tr(C) = 0 exactly (each factor traceless).
 - Q_GHZ in 80-digit Decimal arithmetic (own Machin pi and Taylor cosine, truncation 1e-85; about 31104 terms of size at most 2e5, so rounding error is below 1e-60): `Q_GHZ 265961302.9070304670689578715170022035851420082093`. This lies inside the claimed 55-digit interval [265961302.907030467068957871517, ...518] and matches the JSON Q_GHZ_45d to 44 characters.
-- v* = L/Q_GHZ = `0.491397111427465671323902139112596694367765925619`. This matches the claimed 0.4913971114274656713239021 to 0.4913971114274656713239022 and the JSON v_star digits. Test v* <= 0.49142: True. Margin below 0.49143 is about 2.03e-5 (above the 1e-5 requirement).
+- v* = L/Q_GHZ = `0.491397111427465671323902139112596694367765925619`. This matches the claimed 0.4913971114274656713239021 to 0.4913971114274656713239022 and the JSON v_star digits. Test v* <= 0.49142: True. Margin below 0.49143 is about 3.29e-5 (above the 1e-5 requirement).
 - Noise model: white noise is I/8 (value 0 on every term), as required.
 
 ## Limits of this check

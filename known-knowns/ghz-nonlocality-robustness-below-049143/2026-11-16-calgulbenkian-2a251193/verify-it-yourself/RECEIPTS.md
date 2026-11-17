@@ -14,7 +14,7 @@
 
 ## Clean-Copy Execution Output
 
-Command executed from `attacks/ghz-nonlocality-robustness-below-049143/`:
+Command executed from this package folder:
 
 ```sh
 sh verify-it-yourself/run_checks.sh
