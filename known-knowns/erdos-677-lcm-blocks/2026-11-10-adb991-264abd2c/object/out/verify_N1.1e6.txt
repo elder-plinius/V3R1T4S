@@ -1,0 +1,7 @@
+# search677b N0=1100000 seed=20261109 Y=3400000 maxgap(primes<3N0)=148 at 2010733 => K=147 ; kmin=3 kmax=147 test=0 SHIFT=0 FORCE=auto CHUNK=16777216
+# COMPLETE kmin=3 kmax=147 total_candidates=2 elapsed=5s
+candidates: 2 exact-equal: 0 disjoint candidates: 2 disjoint exact-equal: 0
+mismatch prime-sets among disjoint non-equal candidates (top 15):
+   (2,) 1
+   (2, 3) 1
+disjoint candidates whose mismatch involves a prime outside the small range (hash collision?): 0

@@ -1,0 +1,3 @@
+rig_margin: k=29..29 X0=1000000 eta=1/1000 CF=1 ivprec=320 rho_bits=256
+k=29 pairs=114817 proved=114817 failures=0 undecided=0 time_s=451.4 worst_rel_margin_lower_bound=0.99999994 at r=21736/21735
+TOTAL pairs=114817 failures=0 undecided=0

@@ -1,0 +1,1 @@
+k=29 shards=4 admissible_r=114817 enumerated_pairs=3332527 window_candidates=3288852 product_solutions=0

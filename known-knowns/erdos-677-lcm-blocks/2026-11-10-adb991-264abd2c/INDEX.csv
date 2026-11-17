@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+erdos-677-lcm-blocks,"Erdős Problem 677 = Justin Sun Prize JSP-000550 (M(m,k) != M(n,k) for m >= n+k): verified range of (n, k) with every m","no counterexample with k = 29, 0 <= n <= 10^494, every m >= n + k (computer-assisted, not kernel-checked)","Open (catalog JSP-000550, Lean proof No); best posted computation m + k <= 10^8 for k <= 100",2026-11-10T09:20:41Z,object/PROOF.md,264abd2c67286ea32fdde54b1b01e2a956b4ac9891ee229f22665e0dec71e132
