@@ -1,6 +1,8 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 cell: qubit-ub-n111-k3-d36   role: reproduce
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the open-question labels were replaced by plain statements. The checks, numbers and verdict are unchanged.]
+
 The contributor's hash list: 13 files listed, 0 not OK (checked from inside the package folder).
 
 ## Definition (quoted)
@@ -35,7 +37,7 @@ ALL CHECKS PASS
 Agreement: PASS, same verdict, all 112 columns at most 0, right-hand side positive. No mismatch.
 
 ## Notes
-Open question 1 (does the checker's constraint set equal the criterion's LP, and does it exclude impure codes): the rows are exactly the ones the criterion lists (MacWilliams link, A_i <= B_i, equality below d, nonnegativity, shadow); B_j = A_j below D and B_j >= A_j above are the correct conditions for impure codes too (the test is on N(S) minus S, so low-weight stabilizer elements are allowed). Open question 4: a second Krawtchouk implementation is supplied by this report. Open question 2: the closure includes open PR values as above; deeper cells beyond the extracted table were not available. Whether open unmerged PR values should count as known is a ruling, not judged here.
+The checker's constraint set equals the criterion's LP and excludes impure codes too: the rows are exactly the ones the criterion lists (MacWilliams link, A_i <= B_i, equality below d, nonnegativity, shadow); B_j = A_j below D and B_j >= A_j above are the correct conditions for impure codes too (the test is on N(S) minus S, so low-weight stabilizer elements are allowed). This report's checker is a second, independent Krawtchouk implementation. The closure includes the open pull-request values as above; deeper cells beyond the extracted table were not available. Whether open unmerged PR values should count as known is a ruling, not judged here.
 Scope: this role confirms the certificate is exact and valid for the LP as defined; the shadow inequalities are the standard Rains shadow inequalities for stabilizer codes (not re-proved here).
 
 pass: true

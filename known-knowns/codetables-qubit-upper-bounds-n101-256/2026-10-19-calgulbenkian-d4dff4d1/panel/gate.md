@@ -8,3 +8,4 @@ confirmed_scope: Exact integer Farkas certificate (quantum weight-enumerator LP 
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
 - The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the package folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- On 2026-11-17, at the maintainer's request on the pull request, the three reports were edited (dated notes in each): plain statements replace the open-question labels and the open-questions heading. Verdicts, numbers and the confirmed_scope sentence are unchanged.

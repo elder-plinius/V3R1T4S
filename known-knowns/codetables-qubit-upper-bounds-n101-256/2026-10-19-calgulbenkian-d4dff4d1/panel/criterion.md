@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # Criterion skeptic report: qubit-ub-n111-k3-d36
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the open-question labels were replaced by plain statements. The checks, numbers and verdict are unchanged.]
+
 Cell: [[111,3]] qubit stabilizer codes, claimed new upper bound 36 (certificate excludes d = 37, the live upper bound). Target id: codetables-qubit-upper-bounds-n101-256. Win claimed: Full. The contributor's hash list checked from inside the package folder: all files OK.
 
 ## Full success criterion, clause by clause
@@ -15,10 +17,10 @@ My output for this cell: [[111,3]] excluded d=37 claimed ub 36: live lower/upper
 - n between 101 and 256: met (111).
 - d equals the live upper bound, lowering it by at least 1: met. Live cell fetched once by me: https://codetables.de/QECC.php?q=4&n=111&k=3 at 2026-10-19T05:22:31Z, HTTP 200, page sha256 5f84c54c08cf7de5521cce4915189a1602472c45987c4bbc2c84b6cb285af74d; it reads lower bound 25 upper bound 37. Excluding d = 37 lowers the upper bound by exactly 1, to 36.
 - Exact integer Farkas certificate: met. Multiplier signs (G, H at least 0; E, Q free), index ranges, right-hand side u_E0 + u_E1 * 2^(n-k) strictly positive, and the combined coefficient of every variable A_0..A_111 at most 0, all verified in Python integers.
-- LP is the one the criterion names and is not over-constrained: I tested the constraint set (B at least A, B = A below d, shadow nonnegative) on real codes: [[5,1,3]], [[7,1,3]], [[6,0,4]] (my own sanity script, not shipped in this package): all satisfy it, so a feasible code is not excluded by a wrong row. The rows use no purity assumption (B = A is imposed only below d), so the certificate also excludes impure codes (Open question 1).
-- Not implied by the standard rules applied to other live cells: met. I took the full live table extract (33152 cells), applied the three rules to a fixed point (rule 1 for k at least 2): the closure value of this cell is 37 from the live table alone and 37 after adding the 56 merged and open pull-request values listed in the folder. 36 is strictly below both. Open question 2: counting or not counting open pull requests gives the same closure here.
+- LP is the one the criterion names and is not over-constrained: I tested the constraint set (B at least A, B = A below d, shadow nonnegative) on real codes: [[5,1,3]], [[7,1,3]], [[6,0,4]] (my own sanity script, not shipped in this package): all satisfy it, so a feasible code is not excluded by a wrong row. The rows use no purity assumption (B = A is imposed only below d), so the certificate also excludes impure codes.
+- Not implied by the standard rules applied to other live cells: met. I took the full live table extract (33152 cells), applied the three rules to a fixed point (rule 1 for k at least 2): the closure value of this cell is 37 from the live table alone and 37 after adding the 56 merged and open pull-request values listed in the folder. 36 is strictly below both. Counting or not counting open pull requests gives the same closure here.
 - Neighbours listed in the folder (for the three one-step rules): "R1: U(n,k) <= U(n,k-1), k >= 2",111,2,25,37,0; "R2: U(n,k) <= U(n+1,k)",112,3,25,37,0; "R3: U(n,k) <= U(n-1,k+1) + 1",110,4,24,37,1.
-- Open question 4 (second Krawtchouk implementation): my checker is that second implementation and it agrees.
+- My checker is a second, independent Krawtchouk implementation, and it agrees.
 - No newer-paper or pull-request conflict that I know of: no pull request in a snapshot of all V3R1T4S pull requests (titles and bodies; 473, fetched 2026-10-19T04:30:31Z) carries this cell; merged siblings of the same kind exist for other cells (for example #269, #297).
 
 Fetch note: I fetched each page below once (curl with the honest user agent, no retry); times are UTC from the machine clock, status 200 for all.

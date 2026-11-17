@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: qubit-ub-n111-k3-d36
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the heading "Answers to the open questions" and the numbered open-question answers were replaced by plain statements. The checks, numbers and verdict are unchanged.]
+
 Role: novelty. Cell: qubit table upper bound for [[111,3]] lowered to 36, an exact Farkas certificate of the quantum weight-enumerator LP with shadow constraints.
 
 ## Primary table (fetched once, honestly)
@@ -32,9 +34,9 @@ The claim is strictly below the closure in every variant (also if the closed pul
 - Pull requests for the target: 57 values from one other contributor (52 merged, open pull requests 296, 302, 326, 328, and the closed 260). The pull-request search for [[111,3]] in titles and bodies is empty: no one else has filed this cell. The merged cells nearest in parameters are listed in the closure test, which includes them.
 - arXiv: the two quantum-bound papers found (2610.09900 Quantizing Delsarte Theory, 2601.15446 check-weight-constrained codes) do not publish cell values for n = 111.
 
-## Answers to the open questions that concern novelty
-2. Should values of open, unmerged pull requests count as known bounds? I tested both ways; the answer is the same either way, so it does not matter for this cell: closure of everything else is 37, the claim is 36.
-4. A second Krawtchouk implementation: my checker builds K by polynomial products, a different construction from the explicit-sum checker in the folder, and it agrees.
+## Two further points
+- Whether values of open, unmerged pull requests count as known bounds does not matter for this cell: I tested both ways, and the answer is the same either way; the closure of everything else is 37, the claim is 36.
+- My checker builds the Krawtchouk polynomials by polynomial products, a different construction from the explicit-sum checker in the folder, and it agrees.
 
 unresolved: the table's n above 100 upper bounds are called 'weak' on the page and the full quantum LP with shadow constraints may have been run privately by the maintainers; no public record of that was found. The literature search was generic (four queries).
 
