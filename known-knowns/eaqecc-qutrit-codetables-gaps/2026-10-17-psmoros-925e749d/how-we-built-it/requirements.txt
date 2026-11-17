@@ -1,0 +1,1 @@
+numpy (any recent version; tested with numpy 2.5.4 on Python 3.13). Only the builder needs it; the checker is standard library.
