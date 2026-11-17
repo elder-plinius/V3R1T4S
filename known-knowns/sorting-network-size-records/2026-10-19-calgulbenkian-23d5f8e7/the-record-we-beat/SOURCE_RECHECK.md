@@ -1,6 +1,6 @@
 # Source check made while packaging (names and credits)
 
-Before the Credits section of README.md was written, the packager fetched the pages below once more (plain GET, User-Agent naming V3R1T4S, HTTP 200 each time) to read the names and titles the credits rely on. The page checksums equal the ones in README.md of this folder, so the pages were unchanged since the first fetch. The pages themselves are not copied.
+Before the Credits section of README.md was written, the packager fetched the pages below once more (plain GET, User-Agent naming V3R1T4S, HTTP 200 each time) to read the names and titles the credits rely on. This check belongs to the earlier snapshot of 2026-10-19: the page checksums equal the 2026-10-19 snapshot row in README.md of this folder, so the pages were unchanged since the first fetch of that day. The live table of 2026-11-17 is described in README.md of this folder. The pages themselves are not copied.
 
 | URL | UTC fetch time | HTTP | sha256 of the page |
 |---|---|---|---|

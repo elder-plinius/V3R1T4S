@@ -1,12 +1,16 @@
 {
  "url": "https://bertdobbelaere.github.io/sorting_networks_extended.html",
- "fetched_utc": "2026-10-19T04:32:30Z",
+ "fetched_utc": "2026-11-17T17:41:47Z",
  "http": "200",
- "page_sha256": "5515e5d7862caaf31058225ff215850c1987704f6bcd9b5920590e2478d41a53",
- "page_says": "updated on Tue Oct 13 20:10:24 2026",
+ "page_sha256": "b0e87a7df41391d63fcc2b00be41e23e1c52c2667962154c935fd8953405d4e5",
+ "page_says": "updated on Sun Nov 8 16:24:50 2026",
  "n": 53,
- "row_text": "53 (411, 22) (412, 21) (414, 20) (423, 19) 285\u2026411 11\u202619 Size ubound: Van Voorhis (4,4) merge, depth ubound: Batcher odd-even merge .",
+ "row_text": "53 (410, 23) (411, 22) (412, 21) (414, 20) (423, 19) 285\u2026410 11\u202619 Size ubound: SorterHunter, depth ubound: Batcher odd-even merge .",
  "listed_pairs": [
+  [
+   410,
+   23
+  ],
   [
    411,
    22
@@ -23,5 +27,33 @@
    423,
    19
   ]
- ]
+ ],
+ "earlier_snapshot": {
+  "url": "https://bertdobbelaere.github.io/sorting_networks_extended.html",
+  "fetched_utc": "2026-10-19T04:32:30Z",
+  "http": "200",
+  "page_sha256": "5515e5d7862caaf31058225ff215850c1987704f6bcd9b5920590e2478d41a53",
+  "page_says": "updated on Tue Oct 13 20:10:24 2026",
+  "n": 53,
+  "row_text": "53 (411, 22) (412, 21) (414, 20) (423, 19) 285\u2026411 11\u202619 Size ubound: Van Voorhis (4,4) merge, depth ubound: Batcher odd-even merge .",
+  "listed_pairs": [
+   [
+    411,
+    22
+   ],
+   [
+    412,
+    21
+   ],
+   [
+    414,
+    20
+   ],
+   [
+    423,
+    19
+   ]
+  ],
+  "label": "earlier snapshot, 2026-10-19 (page then stated: updated on Tue Oct 13 20:10:24 2026)"
+ }
 }

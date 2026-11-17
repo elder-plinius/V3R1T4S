@@ -1,5 +1,7 @@
 # Criterion report: sortnet-n53-s413-d20
 
+[Edited 2026-11-17 at the maintainer's request on the pull request (same wording asked for on a sibling package): a mention of an internal triage step was replaced with plain wording. The checks, numbers and verdict are unchanged.]
+
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 Method. I read the package and wrote my own checker, a C++ program that proves sorting exactly by reachable-set propagation: it keeps, for each group of wires that no comparator has yet joined, the exact set of 0-1 vectors reachable at those wires (groups are independent, so the set for a joined group is the comparator applied to the product of the two sets), and at the end requires the set to be exactly the n+1 sorted vectors. This is a complete method (no sampling). Calibration: it passes the listed networks N38 (250, 17), N38 (254, 16) and N51 (389, 20) from the live table, reproducing their sizes and greedy depths, and a negative control (the listed N38 network with one comparator deleted) is correctly reported as not sorting. I fetched the live table once: https://bertdobbelaere.github.io/sorting_networks_extended.html (2026-10-19T05:32:58Z, HTTP 200, sha256 5515e5d7862caaf31058225ff215850c1987704f6bcd9b5920590e2478d41a53, same hash as in the-record-we-beat/README.md; page says updated Oct 13 2026), and parsed all 122 networks on it (sizes and greedy depths all match their labels). The open pull requests in a snapshot of all V3R1T4S pull requests (fetched 2026-10-19T04:30:31Z, used instead of the API pages) contain no sorting-network submission; PR #393 is a bank-values note, not a network. My outputs are not shipped in this package.
@@ -20,7 +22,7 @@ Hidden quantifiers and null models. The main criterion's range (13..32) excludes
 
 Open questions in the claim record (not shipped) that concern this role.
 - Is a non-dominated pair that matches one listed coordinate while improving the other a p1 improvement? Answer: yes. It is non-dominated, dominates a listed pair, and extends the Pareto front; criterion (c) for the main target uses the same non-domination test.
-- Is the triage's propagation test sufficient? Answer: my own, independent test (above) agrees with its conclusion within the limits listed; it is not a proof against every possible derivation.
+- Is the package's own propagation test sufficient? Answer: my own, independent test (above) agrees with its conclusion within the limits listed; it is not a proof against every possible derivation.
 - Is the Oct 13 2026 table state the one to compare with? Answer: it is the state I fetched; I saw no newer state.
 
 confirmed_scope: A standard-form network on 53 channels with 413 comparators and greedy depth 20 that sorts all 2^53 binary inputs (proved by exact reachable-set propagation), whose pair (413, 20) is non-dominated by the pairs [(411, 22), (412, 21), (414, 20), (423, 19)] on the Oct 13 2026 table and dominates the listed pair (414, 20), and is not obtained by the wire-deletion reductions I tried; this is the partial win p1 only, outside the 13..32 range of the main criterion.
