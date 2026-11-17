@@ -1,0 +1,7 @@
+program: >++>+++>+++>+++>+>++>++>+[>+[-<++++>]<<]>
+instruction count: 41
+target constant n: 114514
+final pointer cell must equal 114514 exactly (arbitrary-precision cells, no wrapping)
+cell values must never go below 0 (this program is non-soft)
+pointer must never go below cell 0
+expected: STEPS=305379 PTR=1 VALUE=114514 MINPTR=0 MAXPTR=9 MINCELL=0 LEN=41 HALTED=1 OK=1
