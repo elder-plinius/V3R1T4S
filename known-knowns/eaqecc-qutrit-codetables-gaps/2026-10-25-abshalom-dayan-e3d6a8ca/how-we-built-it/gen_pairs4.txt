@@ -1,0 +1,74 @@
+23:21:15Z
+pair place 0: C1 = L(1Q + 12P) [28,14], C2 = L(0Q + 12P) [28,10], natural hulls 1, 5
+q=0 a=1 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 1 
+q=0 a=1 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 0: C1 = L(2Q + 8P) [28,14], C2 = L(1Q + 8P) [28,10], natural hulls 4, 2
+q=0 a=2 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=1 0 
+q=0 a=2 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 1
+pair place 0: C1 = L(3Q + 4P) [28,14], C2 = L(2Q + 4P) [28,10], natural hulls 1, 5
+q=0 a=3 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=0 a=3 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 0: C1 = L(4Q + 0P) [28,14], C2 = L(3Q + 0P) [28,10], natural hulls 4, 4
+q=0 a=4 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=0 a=4 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=1 0
+pair place 0: C1 = L(5Q + -4P) [28,14], C2 = L(4Q + -4P) [28,10], natural hulls 1, 5
+q=0 a=5 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 1 
+q=0 a=5 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 0: C1 = L(6Q + -8P) [28,14], C2 = L(5Q + -8P) [28,10], natural hulls 4, 2
+q=0 a=6 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=1 0 
+q=0 a=6 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 1
+pair place 18: C1 = L(1Q + 12P) [28,14], C2 = L(0Q + 12P) [28,10], natural hulls 1, 5
+q=18 a=1 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=18 a=1 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 18: C1 = L(2Q + 8P) [28,14], C2 = L(1Q + 8P) [28,10], natural hulls 4, 2
+q=18 a=2 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=18 a=2 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 18: C1 = L(3Q + 4P) [28,14], C2 = L(2Q + 4P) [28,10], natural hulls 1, 0
+q=18 a=3 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=18 a=3 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 18: C1 = L(4Q + 0P) [28,14], C2 = L(3Q + 0P) [28,10], natural hulls 4, 4
+q=18 a=4 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=18 a=4 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=1 0
+pair place 18: C1 = L(5Q + -4P) [28,14], C2 = L(4Q + -4P) [28,10], natural hulls 1, 5
+q=18 a=5 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=18 a=5 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 18: C1 = L(6Q + -8P) [28,14], C2 = L(5Q + -8P) [28,10], natural hulls 4, 2
+q=18 a=6 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=18 a=6 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 36: C1 = L(1Q + 12P) [28,14], C2 = L(0Q + 12P) [28,10], natural hulls 1, 5
+q=36 a=1 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=4 7 
+q=36 a=1 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 36: C1 = L(2Q + 8P) [28,14], C2 = L(1Q + 8P) [28,10], natural hulls 4, 2
+q=36 a=2 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=1 0 
+q=36 a=2 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 36: C1 = L(3Q + 4P) [28,14], C2 = L(2Q + 4P) [28,10], natural hulls 0, 0
+q=36 a=3 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=36 a=3 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=1 0
+pair place 36: C1 = L(4Q + 0P) [28,14], C2 = L(3Q + 0P) [28,10], natural hulls 4, 4
+q=36 a=4 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=36 a=4 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 36: C1 = L(5Q + -4P) [28,14], C2 = L(4Q + -4P) [28,10], natural hulls 0, 0
+q=36 a=5 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=4 6 
+q=36 a=5 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 36: C1 = L(6Q + -8P) [28,14], C2 = L(5Q + -8P) [28,10], natural hulls 4, 2
+q=36 a=6 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=1 0 
+q=36 a=6 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 54: C1 = L(1Q + 12P) [28,14], C2 = L(0Q + 12P) [28,10], natural hulls 1, 5
+q=54 a=1 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=54 a=1 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 54: C1 = L(2Q + 8P) [28,14], C2 = L(1Q + 8P) [28,10], natural hulls 4, 2
+q=54 a=2 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=54 a=2 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 6
+pair place 54: C1 = L(3Q + 4P) [28,14], C2 = L(2Q + 4P) [28,10], natural hulls 0, 0
+q=54 a=3 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=54 a=3 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 54: C1 = L(4Q + 0P) [28,14], C2 = L(3Q + 0P) [28,10], natural hulls 4, 4
+q=54 a=4 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=54 a=4 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 1
+pair place 54: C1 = L(5Q + -4P) [28,14], C2 = L(4Q + -4P) [28,10], natural hulls 0, 0
+q=54 a=5 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=54 a=5 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 0
+pair place 54: C1 = L(6Q + -8P) [28,14], C2 = L(5Q + -8P) [28,10], natural hulls 4, 2
+q=54 a=6 C1: K=14 n=28 d=12 sets=14,14 maxw=5 words=17473484 witness=0 0 
+q=54 a=6 C2: K=10 n=28 d=16 sets=10,10,8 maxw=5 words=3443286 witness=0 2
+23:23:36Z

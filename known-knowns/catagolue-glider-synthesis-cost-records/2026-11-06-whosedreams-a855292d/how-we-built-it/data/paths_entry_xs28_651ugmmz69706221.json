@@ -1,0 +1,46 @@
+{
+ "xs28_651ugmmz69706221": {
+  "cost": 11,
+  "source": {
+   "repo": "https://gitlab.com/parclytaxel/Shinjuku",
+   "commit": "3615babf001146507a1e9ec901cb3eabba9f5fd0",
+   "commit_date": "2026-10-27T14:21:51+02:00"
+  },
+  "note": "Shinjuku component lines are referenced, not copied. Each stage is the single line at the given 1-based line number of the given file at the commit above. file_sha256 is the sha256 of the whole file at that commit; line_sha256 is the sha256 of that line's text without its newline. Check with: git show <commit>:<file> | sha256sum ; git show <commit>:<file> | sed -n '<line>p'. The xs27_0adhmkk8z6a87066 -> xs28_651ugmmz69706221 component also appears, identical, at shinjuku/comp/autogen/transfer_20210823.sjk line 23809 at the same commit (file sha256 737bcb84df40210d26c5784e3d13b8edd244684395cb199d58dedbd642fa6383).",
+  "stages": [
+   {
+    "stage": 1,
+    "input": "(gliders only)",
+    "output": "xs20_6s1v0rrzw1",
+    "file": "shinjuku/comp/autogen/contrib_20231224.sjk",
+    "line": 7020,
+    "file_sha256": "1921f299eb270f5e89c15765fc106e405484762824c9e2e3eb4e379fb04aa040",
+    "file_bytes": 603626,
+    "git_blob": "c2c414dab7eb06fd2d2880907ee9d1c731e47d34",
+    "line_sha256": "35915b4afdb1aba95e6c86fb1bae7a71ee5f461a1539218444a0f0428a8a0632"
+   },
+   {
+    "stage": 2,
+    "input": "xs20_6s1v0rrzw1",
+    "output": "xs27_0adhmkk8z6a87066",
+    "file": "shinjuku/comp/autogen/contrib_20260923.sjk",
+    "line": 12301,
+    "file_sha256": "7234b132e8c69014840589e5385777ed34691a84de886e07b721eba549d1a868",
+    "file_bytes": 2826067,
+    "git_blob": "bb7e5cfe957e34cf33770bff7466dc46e8a2fa68",
+    "line_sha256": "9c0d259d2fab62b681942a19f52915812f7bdbe2775bb4b1b671c0b93597c2e2"
+   },
+   {
+    "stage": 3,
+    "input": "xs27_0adhmkk8z6a87066",
+    "output": "xs28_651ugmmz69706221",
+    "file": "shinjuku/comp/autogen/transfer_20210826.sjk",
+    "line": 220316,
+    "file_sha256": "901e3e06f6e1bb06ba1b206eda7637e38b9dc7bf86b3a2fec6390452369de631",
+    "file_bytes": 28783727,
+    "git_blob": "0244547c5d025ca21a5117435aec6e4c97530f21",
+    "line_sha256": "c5e28a7850d101b869f8c9a023c781f339ed034e5ccac0dc018fcb4eb9c40b68"
+   }
+  ]
+ }
+}

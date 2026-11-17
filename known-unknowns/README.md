@@ -1,6 +1,6 @@
 # 🗺 Known unknowns
 
-The hills nobody has climbed yet: **1152 open problems in 35 categories**. Each page says what the problem is, what counts as a win, how a win is checked, where to check it is still open, ideas to start from, and the traps that produced false wins before.
+The hills nobody has climbed yet: **1153 open problems in 35 categories**. Each page says what the problem is, what counts as a win, how a win is checked, where to check it is still open, ideas to start from, and the traps that produced false wins before.
 
 Pick one, then tell your agent:
 
@@ -25,7 +25,7 @@ Or don't pick: your agent can roam anywhere, as long as a stranger's computer ca
 | ⚪ [Packings and physics](packings-physics/README.md) | 36 | Circle, sphere and point configurations and energy minima vs live tables. |
 | 🔭 [Sky archives](sky-archives/README.md) | 34 | New vetted candidates in public astronomy archives (never 'a planet', only 'a candidate'). |
 | 🌍 [Earth and sky](earth-and-sky/README.md) | 34 | Missed events in open geophysical and space archives, checked against live catalogs. |
-| ⚡ [Algorithms](algorithms/README.md) | 27 | Fast matrix multiplication schemes and other algorithmic records. |
+| ⚡ [Algorithms](algorithms/README.md) | 28 | Fast matrix multiplication schemes and other algorithmic records. |
 | 🤖 [Machine learning](machine-learning/README.md) | 27 | Small leaderboards and efficiency records a laptop can top with open models run locally. |
 | 🔐 [Unbroken ciphers](unbroken-ciphers/README.md) | 20 | Historical and challenge ciphers nobody has read yet. |
 | ✅ [Formal proofs](formal-proofs/README.md) | 18 | Statements waiting for a machine-checked proof: Lean's kernel is the referee. |

@@ -2,7 +2,7 @@
 
 Fast matrix multiplication schemes and other algorithmic records.
 
-**27 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
+**28 open problems**, easiest first. Tractability is a rough guess at the odds for one agent on one machine (★ long shot, ★★★★★ likely).
 
 | Odds | Problem | Kind | Compute |
 |---|---|---|---|
@@ -17,6 +17,7 @@ Fast matrix multiplication schemes and other algorithmic records.
 | ★★★☆☆ | [Shorter addition chains for elliptic-curve field and scalar inversion exponents (Curve255…](ecc-inversion-addition-chains.md) | harvest | laptop-hours (laptop-days for the field-inversion cells); verification takes milliseconds |
 | ★★★☆☆ | [Small symmetric Boolean functions over the full binary basis: smaller circuits for SUM_n…](small-symmetric-function-circuit-size.md) | harvest | laptop-hours to laptop-days (SAT-based exact synthesis and local subcircuit improvement); verification laptop-minutes |
 | ★★★☆☆ | [Two-item auction determinism threshold: a density pair for which Thirumulanathan's c2*(c1…](auction-deterministic-threshold-monotonicity.md) | standard | laptop-hours to laptop-days for polynomial-density search, algebraic root isolation and exact inequality certificates; a general positive proof requires additional analysis |
+| ★★★☆☆ | [Whirlwind M0/M1: beat the 2026 XOR-count records of 159 and 169](whirlwind-linear-layer-xor-records.md) | harvest | laptop-hours to laptop-days for randomized linear-circuit synthesis; verification uses 32-bit coefficient vectors and takes well under a second |
 | ★★☆☆☆ | [Gray codes with long bit runs: an 8-bit Gray code whose bit runs all have length at least…](long-run-gray-code-r8.md) | standard | laptop-days (SAT/CP or clever backtracking; naive DFS does not even reproduce r(7) = 5 in 30 s) |
 | ★★☆☆☆ | [Online bin stretching: a computer-certified adversary tree beating the best lower bound f…](online-bin-stretching-computer-lower-bounds.md) | harvest | laptop-days (minimax game-tree search with DP feasibility caching; LRCB reached 15/11 for m = 6-8 on desktop hardware, harder cells may need a cluster as in Bohm's parallel runs; Rocq certification of a large tree takes hours and several GB) |
 | ★★☆☆☆ | [Shorthand universal tori for permutations of [7]: an R x C torus with 2x3 windows for som…](shorthand-universal-tori-permutations-n7.md) | standard | laptop-days (backtracking or SAT over 5040 cells; a torus checks instantly) |
