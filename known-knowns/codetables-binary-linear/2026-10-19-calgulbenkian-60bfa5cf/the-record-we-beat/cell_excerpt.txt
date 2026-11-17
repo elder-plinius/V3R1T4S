@@ -1,0 +1,7 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=4&n=160&k=11 (fetched 2026-10-19T04:35:33Z, HTTP 200, page sha256 66940d1d63a32c585d0466f9bfc9bdbccacc4ec0b8448439efd301b3fb0ed955)
+Bounds on linear codes [160,11] over GF(4): lower bound 101, upper bound 111
+Table lines about this cell (copied from the page):
+Lb(160,11) = 100 is found by taking a subcode of:
+Lb(160,12) = 100 BZ 
+Ub(160,11) = 111 is found by considering truncation to:
+Ub(157,11) = 108 Da1
