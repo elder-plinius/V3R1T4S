@@ -1,0 +1,74 @@
+{
+  "target_id": "leanapap-kelley-meka-integer-bound",
+  "claim_scope": "full_solution",
+  "solution_file": "Integer.lean",
+  "solution_sha256": "e82f63b5324cb2854fa6bfe9c92ec853d49798d350068e10957738abce223240",
+  "solution_bytes": 4429,
+  "theorem_full_name": "int",
+  "secondary_theorems": [
+    "BohrIter.zmod_prime_threeAPFree",
+    "BohrSet.regularity"
+  ],
+  "upstream_repo": "https://github.com/YaelDillies/LeanAPAP",
+  "upstream_commit": "fb5cb9c4f594cbeeb160c715618d13640984c521",
+  "upstream_relpath": "APAP/Integer.lean",
+  "upstream_sha256": "79d85781dde7385ab3f6a4f35fe41eac43a2f27c8d0c72aa23b7d652e95ea7d4",
+  "upstream_bytes": 347,
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "mathlib_rev": "2d833a68a3d6bad4dfdb7cbbcacaa978580247d2",
+  "addcombi_rev": "8c647dc91adab8a3c46061c5227b32816f872ff4",
+  "checkdecls_rev": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "proof_files": [
+    {
+      "object_file": "Regular.lean",
+      "repo_relpath": "APAP/Prereqs/Bohr/Regular.lean",
+      "is_new": false,
+      "bytes": 27124,
+      "sha256": "13587d0f890c704c34243686cebfdc322b44447020faf6aabd99e679053f980c",
+      "upstream_bytes": 924,
+      "upstream_sha256": "9cb56796f469db210068a9064c7812237abc3bc43e0fba7470dadb7714b41fca"
+    },
+    {
+      "object_file": "BohrBasic.lean",
+      "repo_relpath": "APAP/BohrBasic.lean",
+      "is_new": true,
+      "bytes": 65445,
+      "sha256": "b660304d9a2d9bfe20e81e92dd82bc926e01aa69a31ee84eccce239c034a441d"
+    },
+    {
+      "object_file": "BohrFourier.lean",
+      "repo_relpath": "APAP/BohrFourier.lean",
+      "is_new": true,
+      "bytes": 118763,
+      "sha256": "99cd40b27395c20cb9bf1b074109099be6c1c985e2028ed2109dd0284cfca7f2"
+    },
+    {
+      "object_file": "BohrStep.lean",
+      "repo_relpath": "APAP/BohrStep.lean",
+      "is_new": true,
+      "bytes": 76608,
+      "sha256": "cae2c5dda62dc24ad04228b81f200eeceb322bdf52436d0650fa6552eca03c45"
+    },
+    {
+      "object_file": "BohrIter.lean",
+      "repo_relpath": "APAP/BohrIter.lean",
+      "is_new": true,
+      "bytes": 68698,
+      "sha256": "08abbf8e8244e712988ba55db13f430b8063709e04cdb78cd7dd6566839264a6"
+    },
+    {
+      "object_file": "Integer.lean",
+      "repo_relpath": "APAP/Integer.lean",
+      "is_new": false,
+      "bytes": 4429,
+      "sha256": "e82f63b5324cb2854fa6bfe9c92ec853d49798d350068e10957738abce223240",
+      "upstream_bytes": 347,
+      "upstream_sha256": "79d85781dde7385ab3f6a4f35fe41eac43a2f27c8d0c72aa23b7d652e95ea7d4"
+    }
+  ]
+}
