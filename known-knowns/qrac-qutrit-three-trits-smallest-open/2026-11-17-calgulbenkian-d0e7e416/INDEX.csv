@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+qrac-qutrit-three-trits-smallest-open,(n d D)=(3 3 3) general-POVM upper bound (p1),4368312591/6250000000 = 0.69893001456,0.71823 proven (~0.699 float plot uncertified),2026-11-16T19:42:27Z,object/qrac_333_naimark_dual_p1.json,d0e7e416ae05f09145419e9f54da3bf13d17408fdc3245a94c87ecdd40ab8b85
