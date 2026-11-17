@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+anomaly-free-atlas-qmax,"Allanach-Davighi-Melville atlas (arXiv:1812.04602v5 Tables 2-3, erratum JHEP08(2019)064 Table 1), Solutions column, new row Q_max = 11 for SM and SMnuR","SM 37006; SMnuR 45378378","no row past Q_max = 10 (Q_max 10: SM 23800, SMnuR 21546920)",2026-10-23T19:38:19Z,object/counts.txt,99e267ca14fc30433b2679902e6e9da10e7ecd9bc9a0fbc8b9b06d15b372bc5f
