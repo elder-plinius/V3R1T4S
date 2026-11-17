@@ -1,0 +1,13 @@
+season 2023-24; hub wide tasks 29705 (incomplete dropped 0); ours wide tasks 13195 (incomplete 0)
+max |pinball - interval| hub 1.82e-12 ours 1.82e-12
+                            comparator  tasks  missing_ours  dates  wis_ours  wis_comp     rel  rel_lo  rel_hi     dif   dif_lo   dif_hi  signflip_p
+MAIN hub-ensemble (all ensemble tasks)   8736             0     28   59.0170   49.7559  0.1861 -0.0507  0.3181  9.2612  -1.5618  21.9164      0.9786
+         P2 hub-ensemble (0-0.99, 1-4)   4368             0     28   31.0928   31.4853 -0.0125 -0.1323  0.0547 -0.3925  -2.8220   2.1415      0.4022
+         descr hub-ensemble 0-130 only   2184             0     28  139.0441  103.7240  0.3405  0.0437  0.5079 35.3201   2.7141  73.4941      0.9965
+                    P1 CEPH-Rtrend_rsv   1755             0     27  143.6062  115.2975  0.2455 -0.1767  0.5187 28.3088 -14.7788  77.1461      0.9343
+                       P1 CU-RSV_SVIRS   8736             0     28   59.0170   55.7164  0.0592 -0.1466  0.1707  3.3006  -5.2165  13.0476      0.8066
+                           P1 PSI-PROF    715             0     11   21.8083   23.6595 -0.0782 -0.1861  0.0986 -1.8511  -5.3280   1.7959      0.1948
+              P1 UGA_flucast-INFLAenza   1755           520     27  144.5336   91.0623  0.5872  0.1565  0.8748 53.4712   9.1376 105.7318      0.9980
+MAIN criterion (R7: rel <= -0.03 and rel_hi < 0): NOT MET (rel 0.1861, 90% [-0.0507, 0.3181])
+P2 (R9: rel < 0 and rel_hi < 0): NOT MET (rel -0.0125, 90% [-0.1323, 0.0547])
+P1 (R8: every model rel < 0 and rel_hi < 0): NOT MET; failing: P1 CEPH-Rtrend_rsv, P1 CU-RSV_SVIRS, P1 PSI-PROF, P1 UGA_flucast-INFLAenza
