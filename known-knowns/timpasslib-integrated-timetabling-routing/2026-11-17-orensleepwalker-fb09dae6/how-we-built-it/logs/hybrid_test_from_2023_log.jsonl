@@ -1,0 +1,96 @@
+{"it": 1, "mode": "fixed", "kind": "bfs", "free": 153, "status": "OPTIMAL", "affected": 0, "model_gain": 9567, "sec": 0.0, "t": 0.0, "total": 141619738}
+{"it": 2, "mode": "fixed", "kind": "bfs", "free": 157, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 0.1}
+{"it": 3, "mode": "fixed", "kind": "line", "free": 179, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 0.1}
+{"it": 4, "mode": "fixed", "kind": "random", "free": 200, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 0.1}
+{"it": 5, "mode": "fixed", "kind": "line", "free": 243, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 0.2}
+{"it": 6, "mode": "fixed", "kind": "bfs", "free": 272, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 0.2}
+{"it": 7, "mode": "fixed", "kind": "bfs", "free": 310, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 0.2}
+{"it": 8, "mode": "joint", "kind": "stop", "free": 60, "status": "OPTIMAL", "affected": 721, "model_gain": 0, "sec": 0.2, "t": 0.4}
+{"it": 9, "mode": "joint", "kind": "stop", "free": 90, "status": "OPTIMAL", "affected": 1121, "model_gain": 0, "sec": 0.4, "t": 0.8}
+{"it": 10, "mode": "joint", "kind": "bfs", "free": 99, "status": "OPTIMAL", "affected": 989, "model_gain": 0, "sec": 0.3, "t": 1.1}
+{"it": 11, "mode": "joint", "kind": "line", "free": 108, "status": "OPTIMAL", "affected": 760, "model_gain": 0, "sec": 0.3, "t": 1.4}
+{"it": 12, "mode": "joint", "kind": "stop", "free": 157, "status": "OPTIMAL", "affected": 1220, "model_gain": 0, "sec": 0.4, "t": 1.8}
+{"it": 13, "mode": "joint", "kind": "random", "free": 154, "status": "OPTIMAL", "affected": 1327, "model_gain": 0, "sec": 0.4, "t": 2.2}
+{"it": 14, "mode": "fixed", "kind": "line", "free": 150, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 2.2}
+{"it": 15, "mode": "fixed", "kind": "stop", "free": 191, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 2.2}
+{"it": 16, "mode": "fixed", "kind": "bfs", "free": 199, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 2.2}
+{"it": 17, "mode": "fixed", "kind": "stop", "free": 235, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 2.3}
+{"it": 18, "mode": "fixed", "kind": "bfs", "free": 264, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 2.3}
+{"it": 19, "mode": "fixed", "kind": "line", "free": 306, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 2.4}
+{"it": 20, "mode": "joint", "kind": "stop", "free": 185, "status": "OPTIMAL", "affected": 1345, "model_gain": 0, "sec": 0.4, "t": 2.7}
+{"it": 21, "mode": "joint", "kind": "bfs", "free": 230, "status": "OPTIMAL", "affected": 1520, "model_gain": 0, "sec": 0.4, "t": 3.2}
+{"it": 22, "mode": "joint", "kind": "line", "free": 274, "status": "OPTIMAL", "affected": 1792, "model_gain": 0, "sec": 0.5, "t": 3.6}
+{"it": 23, "mode": "joint", "kind": "bfs", "free": 324, "status": "OPTIMAL", "affected": 1801, "model_gain": 0, "sec": 0.5, "t": 4.2}
+{"it": 24, "mode": "joint", "kind": "random", "free": 390, "status": "OPTIMAL", "affected": 2017, "model_gain": 0, "sec": 0.6, "t": 4.8}
+{"it": 25, "mode": "joint", "kind": "bfs", "free": 470, "status": "OPTIMAL", "affected": 2029, "model_gain": 0, "sec": 8.8, "t": 13.6}
+{"it": 26, "mode": "fixed", "kind": "bfs", "free": 173, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 13.6}
+{"it": 27, "mode": "fixed", "kind": "random", "free": 183, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 13.6}
+{"it": 28, "mode": "fixed", "kind": "line", "free": 202, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 13.7}
+{"it": 29, "mode": "fixed", "kind": "line", "free": 229, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 13.7}
+{"it": 30, "mode": "fixed", "kind": "bfs", "free": 270, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 13.7}
+{"it": 31, "mode": "fixed", "kind": "bfs", "free": 304, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 13.8}
+{"it": 32, "mode": "joint", "kind": "line", "free": 508, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 30.3, "t": 44.1}
+{"it": 33, "mode": "joint", "kind": "random", "free": 415, "status": "OPTIMAL", "affected": 2002, "model_gain": 0, "sec": 0.7, "t": 44.8}
+{"it": 34, "mode": "joint", "kind": "bfs", "free": 474, "status": "OPTIMAL", "affected": 2025, "model_gain": 0, "sec": 16.9, "t": 61.7}
+{"it": 35, "mode": "joint", "kind": "line", "free": 472, "status": "OPTIMAL", "affected": 2018, "model_gain": 0, "sec": 7.4, "t": 69.0}
+{"it": 36, "mode": "joint", "kind": "stop", "free": 482, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 26.8, "t": 95.9}
+{"it": 37, "mode": "joint", "kind": "line", "free": 418, "status": "OPTIMAL", "affected": 2007, "model_gain": 0, "sec": 0.8, "t": 96.7}
+{"it": 38, "mode": "fixed", "kind": "bfs", "free": 152, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 96.7}
+{"it": 39, "mode": "fixed", "kind": "line", "free": 182, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 96.7}
+{"it": 40, "mode": "fixed", "kind": "stop", "free": 199, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 96.8}
+{"it": 41, "mode": "fixed", "kind": "line", "free": 254, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 96.8}
+{"it": 42, "mode": "fixed", "kind": "random", "free": 277, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 96.9}
+{"it": 43, "mode": "fixed", "kind": "random", "free": 307, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 96.9}
+{"it": 44, "mode": "joint", "kind": "stop", "free": 480, "status": "OPTIMAL", "affected": 2029, "model_gain": 0, "sec": 11.6, "t": 108.5}
+{"it": 45, "mode": "joint", "kind": "bfs", "free": 480, "status": "OPTIMAL", "affected": 2029, "model_gain": 40312, "sec": 10.9, "t": 119.5, "total": 141543458}
+{"it": 46, "mode": "fixed", "kind": "bfs", "free": 357, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 119.5}
+{"it": 47, "mode": "fixed", "kind": "line", "free": 409, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 119.6}
+{"it": 48, "mode": "fixed", "kind": "line", "free": 465, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 119.7}
+{"it": 49, "mode": "fixed", "kind": "bfs", "free": 490, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.2, "t": 119.9}
+{"it": 50, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 120.0}
+{"it": 51, "mode": "fixed", "kind": "random", "free": 508, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.4, "t": 120.4}
+{"it": 52, "mode": "joint", "kind": "bfs", "free": 492, "status": "FEASIBLE", "affected": 2030, "model_gain": 193400, "sec": 30.4, "t": 150.8, "total": 141033424}
+{"it": 53, "mode": "fixed", "kind": "bfs", "free": 490, "status": "OPTIMAL", "affected": 0, "model_gain": 2845, "sec": 0.1, "t": 150.9, "total": 141030579}
+{"it": 54, "mode": "fixed", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 1400, "sec": 0.1, "t": 151.1, "total": 141029179}
+{"it": 55, "mode": "fixed", "kind": "random", "free": 500, "status": "OPTIMAL", "affected": 0, "model_gain": 5572, "sec": 0.2, "t": 151.3, "total": 140958431}
+{"it": 56, "mode": "fixed", "kind": "stop", "free": 490, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 151.4}
+{"it": 57, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 151.6}
+{"it": 58, "mode": "fixed", "kind": "bfs", "free": 500, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.2, "t": 151.7}
+{"it": 59, "mode": "fixed", "kind": "stop", "free": 500, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.2, "t": 151.9}
+{"it": 60, "mode": "fixed", "kind": "random", "free": 500, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.2, "t": 152.0}
+{"it": 61, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.2, "t": 152.2}
+{"it": 62, "mode": "joint", "kind": "random", "free": 500, "status": "FEASIBLE", "affected": 2030, "model_gain": 3355, "sec": 30.4, "t": 182.6, "total": 140855116}
+{"it": 63, "mode": "fixed", "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.3, "t": 183.0}
+{"it": 64, "mode": "fixed", "kind": "bfs", "free": 484, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.3, "t": 183.3}
+{"it": 65, "mode": "fixed", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.4, "t": 183.8}
+{"it": 66, "mode": "fixed", "kind": "random", "free": 508, "status": "OPTIMAL", "affected": 0, "model_gain": 622, "sec": 0.4, "t": 184.1, "total": 140854494}
+{"it": 67, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 184.3}
+{"it": 68, "mode": "fixed", "kind": "bfs", "free": 490, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 184.4}
+{"it": 69, "mode": "fixed", "kind": "line", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 184.6}
+{"it": 70, "mode": "fixed", "kind": "stop", "free": 482, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 184.7}
+{"it": 71, "mode": "fixed", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.2, "t": 184.8}
+{"it": 72, "mode": "fixed", "kind": "stop", "free": 464, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 185.0}
+{"it": 73, "mode": "joint", "kind": "random", "free": 508, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 30.3, "t": 215.2}
+{"it": 74, "mode": "joint", "kind": "bfs", "free": 412, "status": "OPTIMAL", "affected": 1951, "model_gain": 0, "sec": 1.4, "t": 216.6}
+{"it": 75, "mode": "joint", "kind": "stop", "free": 489, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 11.2, "t": 227.9}
+{"it": 76, "mode": "joint", "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 2018, "model_gain": 0, "sec": 6.7, "t": 234.5}
+{"it": 77, "mode": "joint", "kind": "line", "free": 492, "status": "OPTIMAL", "affected": 2030, "model_gain": 3574, "sec": 7.4, "t": 242.0, "total": 140850920}
+{"it": 78, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 242.1}
+{"it": 79, "mode": "fixed", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 242.3}
+{"it": 80, "mode": "fixed", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 242.4}
+{"it": 81, "mode": "fixed", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 242.5}
+{"it": 82, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 242.6}
+{"it": 83, "mode": "fixed", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.1, "t": 242.8}
+{"it": 84, "mode": "joint", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 15.5, "t": 258.3}
+{"it": 85, "mode": "joint", "kind": "line", "free": 498, "status": "OPTIMAL", "affected": 2029, "model_gain": 0, "sec": 6.6, "t": 264.9}
+{"it": 86, "mode": "joint", "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 14.0, "t": 278.9}
+{"it": 87, "mode": "joint", "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 9.4, "t": 288.3}
+{"it": 88, "mode": "joint", "kind": "stop", "free": 482, "status": "OPTIMAL", "affected": 2024, "model_gain": 0, "sec": 5.9, "t": 294.2}
+{"it": 89, "mode": "joint", "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 2024, "model_gain": 0, "sec": 3.6, "t": 297.8}
+{"it": 90, "mode": "fixed", "kind": "line", "free": 161, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 297.8}
+{"it": 91, "mode": "fixed", "kind": "line", "free": 176, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 297.8}
+{"it": 92, "mode": "fixed", "kind": "bfs", "free": 213, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 297.9}
+{"it": 93, "mode": "fixed", "kind": "stop", "free": 235, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 297.9}
+{"it": 94, "mode": "fixed", "kind": "line", "free": 272, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 298.0}
+{"it": 95, "mode": "fixed", "kind": "line", "free": 306, "status": "OPTIMAL", "affected": 0, "model_gain": 0, "sec": 0.0, "t": 298.0}
+{"it": 96, "mode": "joint", "kind": "random", "free": 508, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 2.3, "t": 300.3}

@@ -1,0 +1,2 @@
+{"start_total": 141629305, "events": 508, "groups": 59, "K": 3, "seed": 1}
+{"start_total": 141629305, "best_total": 140850920, "improved_by": 778385, "iterations": 96, "accepted": 9, "seconds": 300.3, "seed": 1}

@@ -1,0 +1,3 @@
+Hamburg-140850920-Timetable.csv          differs in 285 of 508 events ( 56.1%) after global shift 2; lines containing a differing event: 5 of 7
+141610697_Timetable.csv                  differs in 284 of 508 events ( 55.9%) after global shift 5; lines containing a differing event: 6 of 7
+LBRTimetable.csv                         differs in 280 of 508 events ( 55.1%) after global shift 7; lines containing a differing event: 6 of 7

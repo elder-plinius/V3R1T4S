@@ -1,0 +1,8 @@
+H01 feasible True total 140833625  sha256 ee98c69c9e108b4d
+H02 feasible True total 140833625  sha256 19b197103e8ff810
+H03 feasible True total 140850920  sha256 0a2e38ec367ead14
+H04 feasible True total 140833625  sha256 fb09dae618a0397f
+H05 feasible True total 140833625  sha256 fb09dae618a0397f
+H06 feasible True total 140833625  sha256 fb09dae618a0397f
+H07 feasible True total 140850920  sha256 aee78b5fc0d1015d
+H08 feasible True total 140850920  sha256 aee78b5fc0d1015d

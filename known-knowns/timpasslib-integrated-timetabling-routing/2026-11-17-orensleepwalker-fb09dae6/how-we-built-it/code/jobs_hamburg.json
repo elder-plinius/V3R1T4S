@@ -1,0 +1,69 @@
+{
+ "note": "TimPassLib batch part 1 for Charlie, frozen 2026-11-16 (Boss: start with Hamburg only). 8 Hamburg jobs x 10 min = 80 min. Starts verified in starts/manifest.json.",
+ "jobs": [
+  {
+   "id": "H01",
+   "instance": "Hamburg",
+   "engine": "joint",
+   "start": "starts/Hamburg/prev_2023_schiewe_141629305.csv",
+   "seconds": 600,
+   "seed": 101
+  },
+  {
+   "id": "H02",
+   "instance": "Hamburg",
+   "engine": "joint",
+   "start": "starts/Hamburg/prev_2023_schiewe_141629305.csv",
+   "seconds": 600,
+   "seed": 102
+  },
+  {
+   "id": "H03",
+   "instance": "Hamburg",
+   "engine": "joint",
+   "start": "starts/Hamburg/prev_2023_schiewe_141629305.csv",
+   "seconds": 600,
+   "seed": 103
+  },
+  {
+   "id": "H04",
+   "instance": "Hamburg",
+   "engine": "joint",
+   "start": "candidates/Hamburg_140833937_Timetable.csv",
+   "seconds": 600,
+   "seed": 201
+  },
+  {
+   "id": "H05",
+   "instance": "Hamburg",
+   "engine": "joint",
+   "start": "candidates/Hamburg_140833937_Timetable.csv",
+   "seconds": 600,
+   "seed": 202
+  },
+  {
+   "id": "H06",
+   "instance": "Hamburg",
+   "engine": "hybrid",
+   "start": "candidates/Hamburg_140833937_Timetable.csv",
+   "seconds": 600,
+   "seed": 203
+  },
+  {
+   "id": "H07",
+   "instance": "Hamburg",
+   "engine": "joint",
+   "start": "starts/Hamburg/record_ramos_140850920.csv",
+   "seconds": 600,
+   "seed": 301
+  },
+  {
+   "id": "H08",
+   "instance": "Hamburg",
+   "engine": "hybrid",
+   "start": "starts/Hamburg/record_ramos_140850920.csv",
+   "seconds": 600,
+   "seed": 302
+  }
+ ]
+}
