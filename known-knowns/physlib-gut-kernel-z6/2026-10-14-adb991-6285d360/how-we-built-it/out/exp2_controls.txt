@@ -1,0 +1,6 @@
+requested: 2026-10-14T07:25:35Z  file: [workdir]/runs/2026-10-14-0701/attempts/kernel-first/lean/Exp2_controls.lean
+slot acquired: 2026-10-14T07:25:35Z
+'V3R1T4S.KF.inclSM_ker_ne_Z6' depends on axioms: [propext, Classical.choice, Quot.sound]
+'V3R1T4S.KF.inclSM_ker_ne_bot' depends on axioms: [propext, Classical.choice, Quot.sound]
+lean exit: 0
+finished: 2026-10-14T07:25:46Z
