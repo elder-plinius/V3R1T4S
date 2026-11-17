@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: bklc-q4-n160-k11-d102
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the clause about a co-filed code was removed from the final verdict line. The checks, numbers and verdict are unchanged.]
+
 Role: novelty. Cell: [160,11,102] over GF(4), claimed against the live codetables.de lower bound.
 
 ## Primary table (fetched once, honestly)
@@ -41,5 +43,5 @@ Answers to the open questions that concern novelty:
 unresolved: the Magma-generated Brouwer and Grassl tables carry no later data than the page fetched; whether an unpublished or non-arXiv code exists for this cell cannot be settled from public sources.
 
 novelty: PASS (with the unresolved literature caveat above)
-verdict: Exact d = 102 (my enumeration) beats live lower bound 101; not implied by the [163,11,104] claim by puncturing (column test) and no other value for this cell exists in pull requests or arXiv results I could find.
+verdict: Exact d = 102 (my enumeration) beats live lower bound 101; no other value for this cell exists in pull requests or arXiv results I could find.
 pass: true
