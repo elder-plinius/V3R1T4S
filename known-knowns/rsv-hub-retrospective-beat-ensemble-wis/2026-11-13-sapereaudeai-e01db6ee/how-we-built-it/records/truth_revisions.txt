@@ -1,0 +1,7 @@
+in-season window target_end_date 2025-09-13..2026-06-20; rows in 2026-11-12 vintage: 4305 (wk inc rsv hosp 2173, wk inc rsv prop ed visits 2132)
+rows only in one vintage: {'both': 4305, 'left_only': 0, 'right_only': 0}
+rows whose value changed 2026-11-04 -> 2026-11-12: 50 of 4305 (wk inc rsv hosp 43, wk inc rsv prop ed visits 7)
+largest relative change: 0.1220 relative to the 2026-11-04 value (0.1087 relative to the 2026-11-12 value): wk inc rsv hosp 48 2026-06-13 41 -> 46
+max relative change over changed rows: 0.1220 (vs 11-04 value), 0.1373 (vs 11-12 value)
+changed target_end_date range: 2025-11-29..2026-06-20
+oracle-output quantile rows: 5145; matched in the 2026-11-12 vintage: 5140; equal values: 5140

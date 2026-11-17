@@ -1,0 +1,1 @@
+hosp units shared by RSVHub-ensemble and UGA_flucast-INFLAenza at horizons 0-3: 5936, of which location 72 (Puerto Rico): 112, outside Puerto Rico: 5824

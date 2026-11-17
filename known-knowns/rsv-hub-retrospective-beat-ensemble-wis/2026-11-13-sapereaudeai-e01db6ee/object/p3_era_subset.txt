@@ -1,0 +1,13 @@
+published (arXiv 2605.16238 v2, Supp. Table 6; 52 states, horizons 0-3, reference dates 2026-01-03..2026-05-30):
+  Google_SAI-RSVEns 14.7 (MAE 21.2, cov95 85%); RSVHub-ensemble 16.4 (25.3, 87%); CEPH-Rtrend_rsv 19.8 (28.4, 78%); RSVHub-baseline 18.3 (27.8, 93%)
+recomputed on the same subset (every model directory with tasks there):
+CEPH-Rtrend_rsv              tasks  4576 dates 22 mean WIS   19.804 MAE   28.47 cov95 0.776
+CFA_Pyrenew-Pyrenew_HE_RSV   tasks  1984 dates 22 mean WIS   14.933 MAE   23.21 cov95 0.909
+CFA_Pyrenew-Pyrenew_H_RSV    tasks  2234 dates 22 mean WIS   16.901 MAE   25.79 cov95 0.897
+Google_SAI-RSVEns            tasks  4576 dates 22 mean WIS   14.635 MAE   21.15 cov95 0.849
+RSVHub-baseline              tasks  4576 dates 22 mean WIS   18.306 MAE   27.75 cov95 0.934
+RSVHub-ensemble              tasks  4576 dates 22 mean WIS   16.422 MAE   25.29 cov95 0.874
+UGA_flucast-INFLAenza        tasks  4576 dates 22 mean WIS   22.657 MAE   37.78 cov95 0.884
+UM-DeepOutbreak              tasks   912 dates 19 mean WIS   36.004 MAE   46.33 cov95 0.716
+eligible by the published rule (>= 3,660 scorable tasks on this set): CEPH-Rtrend_rsv, Google_SAI-RSVEns, RSVHub-baseline, RSVHub-ensemble, UGA_flucast-INFLAenza
+DISCREPANCY: UGA_flucast-INFLAenza meets the published eligibility count (4576 tasks) but has no row in the published table (cause: see p3_reconcile_epi_hub_analysis.txt).

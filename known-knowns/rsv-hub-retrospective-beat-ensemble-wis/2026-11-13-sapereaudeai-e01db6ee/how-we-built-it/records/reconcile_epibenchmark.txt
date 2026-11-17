@@ -1,0 +1,19 @@
+EpiBenchmark rows: 11648 (RSVHub-baseline 5824, RSVHub-ensemble 5824); rows without a matching hub forecast: 0
+rows without a pinned oracle value: 0
+(a) pinned oracle truth: rows with |5-level WIS - published wis| <= 1e-6: 11200 of 11648
+    (location, target_end_date) pairs whose rows imply more than one truth value: 0 of 1612
+(b) implied truth (median +- ae_median): rows where both candidates reproduce the wis (ae > 0; bias sign used): 5164
+    rows reproduced within 1e-6 by the chosen implied truth: 11648 of 11648; max |diff| 6.82e-13
+    implied truth vs pinned oracle: 61 of 1612 (location, target_end_date) pairs differ
+    time-series vintages covering all 1612 pairs, best matches with the implied truth (as_of: matching pairs):
+      2026-09-16: 1612 of 1612
+      2026-09-23: 1598 of 1612
+      2026-09-30: 1598 of 1612
+      2026-10-07: 1596 of 1612
+      2026-09-09: 1592 of 1612
+(c) truth = time-series.parquet as_of 2026-09-16 (no use of ae_median): rows with |5-level WIS - published wis| <= 1e-6: 11648 of 11648; max |diff| 6.82e-13
+per model on EpiBenchmark's task set (52 locations incl. US, horizons 0-3, 28 dates):
+  model             n     published mean wis | ours 5-level, pinned oracle | ours 5-level, implied truth | ours 23-level, pinned oracle (object's metric)
+  RSVHub-baseline   5824   32.291779 | 32.278621 | 32.291779 | 35.555594
+  RSVHub-ensemble   5824   26.688404 | 26.743111 | 26.688404 | 29.194413
+published coverage: RSVHub-baseline cov50 0.410543 cov95 0.933894; RSVHub-ensemble cov50 0.424622 cov95 0.888565
