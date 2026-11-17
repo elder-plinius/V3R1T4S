@@ -1,6 +1,7 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: lpub-q2-n161-k17-d71
+[Edited 2026-11-17 at the maintainer's request on the pull request: removed the references to open pull requests and to other cells. The checks, numbers and verdict are unchanged.]
 
 Role: novelty. Cell: upper bound d at most 71 for [161,17] over GF(2) (the claim: no [161,17,72]_2 code), a Delsarte linear-programming certificate.
 
@@ -11,7 +12,7 @@ Role: novelty. Cell: upper bound d at most 71 for [161,17] over GF(2) (the claim
 - http://www.codetables.de/BKLC/BKLC.php?q=2&n=161&k=16 | fetched 2026-10-19T05:15:25Z | HTTP 200 | sha256 c013894fcc0afa07c88e7ce6e37db1fd8e57f9dc3a3cf5d3fb2d9b93d5a44658
 - http://www.codetables.de/BKLC/BKLC.php?q=2&n=162&k=17 | fetched 2026-10-19T05:15:29Z | HTTP 200 | sha256 04fbb498b8389f15481b0c9d93aade872ff757fd6a3b12608f7359846419ecea
 (2, 161, 17) live L/U 64 72 claim Ub 71 one-step neighbour bounds {'shorten U(n-1,k-1)': 72, 'puncture U(n-1,k)+1': 72, 'subcode U(n,k-1)': 72, 'pad U(n+1,k)': 72} closure bound 72 STRICTLY BELOW | claim >= lower: True
-Page values: see the closure line (live lower and upper bound of the cell, and the four one-step neighbour bounds). Page hashes equal those recorded by the triage for the same URLs. Live reason for the 72: Ub(161,17) = 72 follows by a one-step Griesmer bound (page text). So the table's 72 comes from the Griesmer bound, not from a linear-programming run. The binary parity argument (question 4): a [161,17,71] code has odd distance, so its parity extension is a [162,17,72] code; the live table has Ub(162,17) = 72, so the new bound is consistent with the live neighbour and creates no conflict.
+Page values: see the closure line (live lower and upper bound of the cell, and the four one-step neighbour bounds). Page hashes equal those recorded in `the-record-we-beat/README.md` for the same URLs. Live reason for the 72: Ub(161,17) = 72 follows by a one-step Griesmer bound (page text). So the table's 72 comes from the Griesmer bound, not from a linear-programming run. The binary parity argument (question 4): a [161,17,71] code has odd distance, so its parity extension is a [162,17,72] code; the live table has Ub(162,17) = 72, so the new bound is consistent with the live neighbour and creates no conflict.
 
 ## Shared sources (fetched once for the whole group, kept as notes)
 - https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | fetched 2026-10-19T05:15:21Z | HTTP 200 | sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1
@@ -29,7 +30,7 @@ lpub-q2-n161-k17-d71 q,n,k 2 161 17 D 72 m 5 f(0)/q^k=0.878545 max f(w>=D) nonpo
 So the certificate is valid and excludes distance D = 72; the new upper bound 71 follows by Delsarte's bound for any code of size q^k.
 
 ## Propagation closure (the claim must be strictly below it)
-One step of each rule (shortening U(n-1,k-1), puncturing U(n-1,k)+1, subcode U(n,k-1), padding U(n+1,k)) applied to the fetched neighbour pages gives the bound shown in the closure line above; the claim is strictly below it. Merged and open pull requests contain no upper-bound value for any linear-code cell (the merged codetables-binary-linear pull requests 142, 158, 163 are binary lower bounds at other cells), so they lower nothing here.
+One step of each rule (shortening U(n-1,k-1), puncturing U(n-1,k)+1, subcode U(n,k-1), padding U(n+1,k)) applied to the fetched neighbour pages gives the bound shown in the closure line above; the claim is strictly below it. The merged codetables-binary-linear pull requests (142, 158, 163) are binary lower bounds at other cells and contain no upper-bound value for this cell, so they lower nothing here.
 
 ## Literature
 Maruta's page of Griesmer-bound results (fetched once, see http://mars39.lomo.jp/opu/griesmer.htm) gives full tables only for q = 3 (k up to 6), q = 4 (k = 4, 5), q = 5 (k = 4, 5), q = 7 and 8 (k = 4), q = 9 (k = 4) and all q for k = 3. This cell (q = 2, k = 17) is outside those tables, so it is neither confirmed nor refuted by that source. unresolved: papers on optimal codes of dimension 17 over GF(2) (and the Daskalov and Daskalov-Metodieva papers the table itself cites) could contain a stronger bound that the table did not pick up; I could not search them within the four-query arXiv allowance, and the four generic arXiv queries found none.

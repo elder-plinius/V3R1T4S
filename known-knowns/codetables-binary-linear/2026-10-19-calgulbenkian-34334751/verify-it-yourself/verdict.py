@@ -75,19 +75,15 @@ def main(mode, rf):
         D = lv['upper']
         ok = r['VALID'] and r['d'] == D and claimed == D - 1
         msgs.append('certificate excludes d >= %d = live upper bound; new upper bound %d' % (D, claimed))
-        pr = {(int(p['n']), int(p['k'])): int(p['value']) for p in rows('pr_claims.csv')}
         best = None
         for nb in rows('neighbours.csv'):
             n, k = int(nb['n']), int(nb['k'])
             u = int(nb['live_upper'])
-            if (n, k) in pr:
-                u = min(u, pr[(n, k)])
             v = u + int(nb['offset'])
             best = v if best is None else min(best, v)
         notimp = best >= D
         ok = ok and notimp
-        msgs.append('one-step bound implied by live neighbours and merged/open PR values = %d (>= %d: %s)' % (best, D, notimp))
-        msgs.append('triage closure of everything else (all rules iterated, live table + 56 merged/open PR values + other cells of the batch) = %s' % idx['closure_of_others'])
+        msgs.append('one-step bound implied by the live neighbours = %d (>= %d: %s)' % (best, D, notimp))
     elif mode == 'audit':
         ok = r['VALID'] and r['violations'] == claimed
         msgs.append('violations recomputed = %d, claimed %d' % (r['violations'], claimed))

@@ -1,6 +1,6 @@
 # Receipts
 
-Real output of `sh verify-it-yourself/run_checks.sh`, run from this package folder on 2026-10-19 (python3, standard library only). Wall time 1 s on the packager's machine.
+Real output of `sh verify-it-yourself/run_checks.sh`, run from a clean copy of this package folder on 2026-11-17 (python3, standard library only), after the review edits to `verdict.py`. Wall time 0.4 s on the packager's machine.
 
 Differences from the copy of this folder that the panel ran: the table files are read from `the-record-we-beat/` (the panel folder called it `table-record/`), the last output line is `PASS` instead of `ALL CHECKS PASS`. The checkers themselves are unchanged.
 

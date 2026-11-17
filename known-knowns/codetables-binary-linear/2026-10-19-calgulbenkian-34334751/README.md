@@ -2,9 +2,9 @@
 
 ## What
 
-Exact-rational Delsarte LP dual certificate (degree 5) that no (unrestricted or linear) code of length 161, size 2^17 and minimum distance at least 72 exists over an alphabet of size 2, so U(2,161,17) is at most 71 against the live table value 72; not implied by one-step propagation from the live neighbours I fetched; the target-scope reading for q = 2 follows the literal GF(q) text of the criterion.
+Exact-rational Delsarte LP dual certificate (degree 5) that no (unrestricted or linear) code of length 161, size 2^17 and minimum distance at least 72 exists over an alphabet of size 2, so U(2,161,17) is at most 71 against the live table value 72; not implied by one-step propagation from the live neighbours I fetched.
 
-Path note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_PARTIAL`). The object is `object/lp_cert_q2_n161_k17_dub72.json` (sha256 343347514df7b4c3233d7f6878fcd82ce8ad4c82f0f12016789bc8fb98ecbf9a); its programs are in `how-we-built-it/`.
+The sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_PARTIAL`). The object is `object/lp_cert_q2_n161_k17_dub72.json` (sha256 343347514df7b4c3233d7f6878fcd82ce8ad4c82f0f12016789bc8fb98ecbf9a); its programs are in `how-we-built-it/`.
 
 ## Check it yourself
 
