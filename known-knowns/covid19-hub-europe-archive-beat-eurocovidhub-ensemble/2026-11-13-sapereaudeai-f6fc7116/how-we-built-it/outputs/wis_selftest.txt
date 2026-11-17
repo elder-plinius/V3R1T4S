@@ -1,0 +1,5 @@
+max |wis - pinball form| = 3.637978807091713e-12
+max |components - wis| = 0.0
+known positive (point mass): True
+known negative (1/(K+1) form differs): True
+SELFTEST PASS

@@ -1,0 +1,27 @@
+== primary: rows not exact on all 4 rounded components: 534
+target_variable  location
+inc case         BG            1
+                 LU            1
+                 NL            1
+inc hosp         CZ          531
+rows outside inc hosp (unrounded recomputed values shown):
+                       model target_variable location forecast_date  horizon  true_value  wis_pub     wis_rec  sharpness_pub  sharpness_rec  underprediction_pub  underprediction_rec  overprediction_pub  overprediction_rec
+1567   EuroCOVIDhub-ensemble        inc case       BG    2024-02-19        2  121.000000       45   45.152174             36      35.500000                    0             0.000000                  10            9.652174
+16586   epiforecasts-EpiNow2        inc case       LU    2024-05-20        2   39.000000       12   12.413043              2       2.500000                   10             9.913043                   0            0.000000
+18652  EuroCOVIDhub-baseline        inc case       NL    2023-12-11        4 1010.000000     4504 4504.500000           4476    4475.630435                   29            28.869565                   0            0.000000
+   EuroCOVIDhub-ensemble BG 2024-02-19 h2 sharpness: rec 35.500000000 pub 36 |frac-0.5| 7.11e-15
+   epiforecasts-EpiNow2 LU 2024-05-20 h2 sharpness: rec 2.500000000 pub 2 |frac-0.5| 4.44e-16
+   EuroCOVIDhub-baseline NL 2023-12-11 h4 wis: rec 4504.500000000 pub 4504 |frac-0.5| 9.09e-13
+== owidhosp: rows not exact on all 4 rounded components: 3
+target_variable  location
+inc case         BG          1
+                 LU          1
+                 NL          1
+rows outside inc hosp (unrounded recomputed values shown):
+                       model target_variable location forecast_date  horizon  true_value  wis_pub     wis_rec  sharpness_pub  sharpness_rec  underprediction_pub  underprediction_rec  overprediction_pub  overprediction_rec
+1567   EuroCOVIDhub-ensemble        inc case       BG    2024-02-19        2  121.000000       45   45.152174             36      35.500000                    0             0.000000                  10            9.652174
+16586   epiforecasts-EpiNow2        inc case       LU    2024-05-20        2   39.000000       12   12.413043              2       2.500000                   10             9.913043                   0            0.000000
+18652  EuroCOVIDhub-baseline        inc case       NL    2023-12-11        4 1010.000000     4504 4504.500000           4476    4475.630435                   29            28.869565                   0            0.000000
+   EuroCOVIDhub-ensemble BG 2024-02-19 h2 sharpness: rec 35.500000000 pub 36 |frac-0.5| 7.11e-15
+   epiforecasts-EpiNow2 LU 2024-05-20 h2 sharpness: rec 2.500000000 pub 2 |frac-0.5| 4.44e-16
+   EuroCOVIDhub-baseline NL 2023-12-11 h4 wis: rec 4504.500000000 pub 4504 |frac-0.5| 9.09e-13

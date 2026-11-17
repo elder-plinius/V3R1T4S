@@ -1,0 +1,3 @@
+numpy
+pandas
+# tested with Python 3.11; any recent numpy/pandas

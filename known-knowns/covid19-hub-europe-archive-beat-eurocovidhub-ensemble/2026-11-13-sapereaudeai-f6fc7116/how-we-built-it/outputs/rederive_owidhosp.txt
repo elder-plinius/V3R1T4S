@@ -1,0 +1,15 @@
+rows with horizon 0 ('0 wk ahead') dropped (not a hub target): 5382
+rows in fetched files (hub targets, horizons 1-4): 40762
+published rows: 31256
+rows failing has_truth: 9284
+rows failing scorable_q: 0
+rows with status != final: 222
+rows on an anomaly week (truth anti-join): 0
+rows of forecasts made directly after an anomaly: 0
+rows kept by the re-derived rules: 31256
+published rows found in fetched files: 31256; published rows not in any fetched file: 0
+kept AND published: 31256
+kept but NOT published: 0
+published but NOT kept: 0
+all fetched-file rows NOT published, by reason (a row may have several):
+  no truth: 9284; status != final: 222; anomaly: 0; after anomaly: 0; not 23 quantiles/point: 0
