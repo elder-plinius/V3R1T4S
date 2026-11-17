@@ -1,0 +1,3 @@
+gene clusters 289: dMRR 95% [0.0041, 0.0621]; ratio 95% [1.0698, 1.9916]; P(ratio>=1.10) 0.966
+pmid clusters 447: dMRR 95% [0.0032, 0.0635]; ratio 95% [1.0312, 1.6853]; P(ratio>=1.10) 0.929
+genes in subset 289; top 5 gene contributions (cases, sum dRR): [('HGNC:7765', 277, 28.444), ('HGNC:4392', 51, 19.885), ('HGNC:3603', 38, 8.457), ('HGNC:21316', 56, 8.078), ('HGNC:2201', 10, 5.297)]; total 68.695

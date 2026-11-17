@@ -1,0 +1,16 @@
+independent n_terms re-derivation: 10189 cases, mismatches vs table: 0
+plain-Python p1: n 2038 MRR_M 0.138444 MRR_L 0.104737 ratio 1.321825
+p1 primary (mapped <= 3)     n  2038 MRR 0.1384 vs 0.1047 ratio 1.3218 [1.2394, 1.4201] dMRR CI [0.0257, 0.0420] null best 0.01372 real 0.03371 beats True
+S1 raw observed <= 3         n  2038 MRR 0.1384 vs 0.1047 ratio 1.3218 [1.2394, 1.4201] dMRR CI [0.0257, 0.0420] null best 0.01372 real 0.03371 beats True
+S2 observed+excluded <= 3    n   493 MRR 0.0345 vs 0.0352 ratio 0.9816 [0.8742, 1.1141] dMRR CI [-0.0045, 0.0038] null best 0.00720 real -0.00065 beats False
+n_terms == 1                 n   520 MRR 0.0896 vs 0.0978 ratio 0.9167 [0.8037, 1.0523] dMRR CI [-0.0207, 0.0044] null best 0.01530 real -0.00815 beats False
+n_terms == 2                 n   691 MRR 0.1433 vs 0.1086 ratio 1.3192 [1.1747, 1.5039] dMRR CI [0.0204, 0.0494] null best 0.02678 real 0.03466 beats True
+n_terms == 3                 n   827 MRR 0.1651 vs 0.1059 ratio 1.5594 [1.4149, 1.7454] dMRR CI [0.0460, 0.0738] null best 0.02657 real 0.05922 beats True
+p1 excluding run-3 DEV cases n  1920 MRR 0.1386 vs 0.1054 ratio 1.3153 [1.2273, 1.4206] dMRR CI [0.0248, 0.0422] null best 0.01386 real 0.03322 beats True
+p1, method gene score > 0    n  1471 MRR 0.1918 vs 0.1450 ratio 1.3221 [1.2330, 1.4220] dMRR CI [0.0351, 0.0583] null best 0.01838 real 0.04672 beats True
+total dMRR*n 68.695; top 5 PMID contributions: [('PMID:26178382', 123, 23.309), ('PMID:25802881', 51, 19.885), ('PMID:29290338', 77, 12.413), ('PMID:36446582', 56, 8.078), ('PMID:36189931', 10, 5.297)]
+bottom 3 PMID contributions: [('PMID:17160901', 34, -4.203), ('PMID:20513137', 38, -5.353), ('PMID:21533187', 10, -6.792)]
+leave-one-PMID-out ratio: min 1.2360 (drop PMID:25802881) max 1.4044 (drop PMID:20513137)
+p1 minus top-5 PMIDs         n  1721 MRR 0.0687 vs 0.0688 ratio 0.9976 [0.9144, 1.0948] dMRR CI [-0.0064, 0.0062] null best 0.00864 real -0.00017 beats False
+largest PMIDs in subset (cases): [('PMID:26178382', 123), ('PMID:29290338', 77), ('PMID:35190816', 70), ('PMID:34890546', 60), ('PMID:36446582', 56)]
+subset cases where both RR < 0.001: 702

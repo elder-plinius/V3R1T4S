@@ -1,0 +1,28 @@
+=== arxiv_2607.24878v1.txt: 668 lines, 1 term-count hits
+  L138 [rankers in window: -] For each eligible target disease g_{i} , GraphRareBench constructs a model-visible phenotype query Q_{i} together with a source-traceable evidence record. Across the 2,365 released cases, the visible queries contain 9,42
+=== arxiv_2608.14683.txt: 2843 lines, 7 term-count hits
+  L183 [rankers in window: -] per-input nuisance: by query length, an impostor cohort, the number of query terms in phenotype-driven
+  L378 [rankers in window: -] Qwen-specific, the two sharpest ratios being Mistral’s and InternLM’s. Five medical-specialised models split 2 over the feasibility bar of §5.2 and 3 under it,
+  L1484 [rankers in window: -] explain R^{2}\!=\!0.92 of the raw top score’s variance, and the raw score correlates with matched-term count
+  L1651 [rankers in window: -] correct. Stratifying on matched-term count does not explain the gap away: it shrinks to +11.1 pp among
+  L1882 [rankers in window: -] 74 – 83\% accuracy, versus 2 – 18\% for the bare LLM under its own confidence (base Recall@1 \leq\!5\% ).
+  L2348 [rankers in window: -] ColBERTv2 checkpoint under its own configuration ( 128 -dimensional projection, queries padded to 32
+  L2790 [rankers in window: -] HPO and HPOA, Orphanet, SciFact, BC5CDR and MedMentions, each used under its own published terms. The model
+=== arxiv_2609.02473v1.txt: 1687 lines, 7 term-count hits
+  L1044 [rankers in window: -] Median HPO terms per case |
+  L1169 [rankers in window: -] cases over the cap (n=681) |
+  L1176 [rankers in window: -] cases at or under it (n=1,546) |
+  L1183 [rankers in window: -] Table 8: Recall@1 with the native 10-term cap and with the diagnostic uncapped variant.
+  L1350 [rankers in window: -] rank-1 profile size
+  L1354 [rankers in window: -] mean profile size, top 10
+  L1443 [rankers in window: lirical] ranx 0.3.21, RareBench under its stated terms, and the licenses distributed with the open
+=== arxiv_2610.33592v1.txt: 1162 lines, 1 term-count hits
+  L674 [rankers in window: -] To perform RD diagnosis on sparse phenotype features, we implemented three representative classes of classifiers: a linear model, a non-linear tree-based ensemble, and a deep feed-forward neural network.
+=== readme_P2GX_esid4hpo-analysis.md: 187 lines, 3 term-count hits
+  L40 [rankers in window: lirical] ehr_ic.py                        EHR arm: IC per individual and source from the Southampton term counts
+  L56 [rankers in window: -] Figure S2, Supplementary Table S5) from the Southampton term counts, which are not distributed.
+  L67 [rankers in window: lirical] | Table S7 (disease profile sizes) | `tables/tableS7_profile_sizes.csv` |
+=== readme_P2GX_hpoadj.md: 149 lines, 0 term-count hits
+=== readme_TechieGoku2623_phenorank.md: 256 lines, 1 term-count hits
+  L206 [rankers in window: phenomizer,resnik] | Overlap-count ranking (baseline) | top-1 0.955; MRR 0.977 | 22 | Shared-term count |
+TOTAL term-count hits: 20

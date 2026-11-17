@@ -1,0 +1,291 @@
+{
+ "subset_definition": "included cases with n_terms <= 3 (distinct observed HPO terms mapped by hp.obo v2026-06-06 under HP:0000118; run 1 definition)",
+ "inputs_sha256": {
+  "h2h": "4d0f30083447be88d8b9b11104776798e4f2b7ed6a9ff062886041aeb96680a9",
+  "c1": "1e36379c9a57daf665335806b7585c0e165cf5fc918b368c2145daaf67b08b6f"
+ },
+ "n_terms_histogram": {
+  "1": 520,
+  "2": 691,
+  "3": 827
+ },
+ "vs_LIRICAL": {
+  "n_cases": 2038,
+  "n_pmids": 447,
+  "stats": {
+   "MRR_method": {
+    "point": 0.13844429613937836,
+    "ci95_case_paired": [
+     0.12701733130622944,
+     0.14996004674091762
+    ],
+    "ci95_pub_cluster": [
+     0.07091970414905478,
+     0.21429194926864006
+    ]
+   },
+   "MRR_lirical": {
+    "point": 0.10473723428575904,
+    "ci95_case_paired": [
+     0.09361596875002302,
+     0.11502002174295493
+    ],
+    "ci95_pub_cluster": [
+     0.053148049087973284,
+     0.16056982157260735
+    ]
+   },
+   "dMRR": {
+    "point": 0.033707061853619324,
+    "ci95_case_paired": [
+     0.025725755638300343,
+     0.0420144737831565
+    ],
+    "ci95_pub_cluster": [
+     0.002148509213774682,
+     0.06589430768589197
+    ]
+   },
+   "MRR_ratio": {
+    "point": 1.3218250136494432,
+    "ci95_case_paired": [
+     1.2394271616746484,
+     1.4201199971399217
+    ],
+    "ci95_pub_cluster": [
+     1.0236067079473292,
+     1.6718489351490669
+    ]
+   },
+   "top1_method": {
+    "point": 0.08628542615811614,
+    "ci95_case_paired": [
+     0.07642043125633267,
+     0.09629738716614795
+    ],
+    "ci95_pub_cluster": [
+     0.034798725920365106,
+     0.1416088918991267
+    ]
+   },
+   "top1_lirical": {
+    "point": 0.04759968228560432,
+    "ci95_case_paired": [
+     0.038194578989163744,
+     0.05671229423143044
+    ],
+    "ci95_pub_cluster": [
+     0.019015524728866893,
+     0.08230715005734435
+    ]
+   },
+   "dTop1": {
+    "point": 0.03868574387251182,
+    "ci95_case_paired": [
+     0.028394337067817504,
+     0.049315436352392515
+    ],
+    "ci95_pub_cluster": [
+     -0.0036344370768560137,
+     0.08494600683258187
+    ]
+   },
+   "top10_method": {
+    "point": 0.23703767352696614,
+    "ci95_case_paired": [
+     0.21905639561908516,
+     0.2541697265387582
+    ],
+    "ci95_pub_cluster": [
+     0.1342639899280941,
+     0.3506589311690845
+    ]
+   },
+   "top10_lirical": {
+    "point": 0.19919505583979683,
+    "ci95_case_paired": [
+     0.18154480059199796,
+     0.21600630399981377
+    ],
+    "ci95_pub_cluster": [
+     0.09965235110343994,
+     0.3072163226894505
+    ]
+   },
+   "dTop10": {
+    "point": 0.037842617687169317,
+    "ci95_case_paired": [
+     0.02468746082125025,
+     0.0500269739415015
+    ],
+    "ci95_pub_cluster": [
+     -0.005873173460711367,
+     0.07881028440792015
+    ]
+   }
+  },
+  "gate": {
+   "G1_MRR_ratio_point_ge_1.10": true,
+   "G2_dMRR_case_ci_lower_gt_0": true,
+   "G3_null_real_beats_all_400": true,
+   "P1_MET": true
+  },
+  "info_not_gates": {
+   "strict_ratio_case_ci_lower_ge_1.10": true,
+   "strict_ratio_pub_ci_lower_ge_1.10": false,
+   "dMRR_pub_ci_lower_gt_0": true,
+   "top1_ratio_point": 1.812731136321295,
+   "bootstrap_fraction_ratio_ge_1.10": 1.0
+  },
+  "null_NSF_dMRR": {
+   "controls": 400,
+   "best_control": 0.013722297330450883,
+   "real": 0.033707061853619324,
+   "real_beats_all_controls": true,
+   "n_controls_ge_real": 0
+  }
+ },
+ "vs_LIRICAL_L2_sensitivity": {
+  "n_cases": 2038,
+  "n_pmids": 447,
+  "stats": {
+   "MRR_method": {
+    "point": 0.13844429613937836,
+    "ci95_case_paired": [
+     0.12701733130622944,
+     0.14996004674091762
+    ],
+    "ci95_pub_cluster": [
+     0.07091970414905478,
+     0.21429194926864006
+    ]
+   },
+   "MRR_lirical": {
+    "point": 0.10482383510182389,
+    "ci95_case_paired": [
+     0.09367817783668271,
+     0.115103068022747
+    ],
+    "ci95_pub_cluster": [
+     0.05318076831853252,
+     0.16057730832327644
+    ]
+   },
+   "dMRR": {
+    "point": 0.03362046103755448,
+    "ci95_case_paired": [
+     0.025644161259157968,
+     0.04191446212233013
+    ],
+    "ci95_pub_cluster": [
+     0.002040991589322155,
+     0.06569439467195971
+    ]
+   },
+   "MRR_ratio": {
+    "point": 1.3207329802892271,
+    "ci95_case_paired": [
+     1.2380500486341,
+     1.4195163474278534
+    ],
+    "ci95_pub_cluster": [
+     1.0221884358012128,
+     1.6696685022679774
+    ]
+   },
+   "top1_method": {
+    "point": 0.08628542615811614,
+    "ci95_case_paired": [
+     0.07642043125633267,
+     0.09629738716614795
+    ],
+    "ci95_pub_cluster": [
+     0.034798725920365106,
+     0.1416088918991267
+    ]
+   },
+   "top1_lirical": {
+    "point": 0.04759507170003911,
+    "ci95_case_paired": [
+     0.03819023144726106,
+     0.056707980726152525
+    ],
+    "ci95_pub_cluster": [
+     0.01901044161021379,
+     0.08230230918958892
+    ]
+   },
+   "dTop1": {
+    "point": 0.03869035445807703,
+    "ci95_case_paired": [
+     0.028378296374457,
+     0.04932318242192224
+    ],
+    "ci95_pub_cluster": [
+     -0.0036296738104431314,
+     0.08494921164759224
+    ]
+   },
+   "top10_method": {
+    "point": 0.23703767352696614,
+    "ci95_case_paired": [
+     0.21905639561908516,
+     0.2541697265387582
+    ],
+    "ci95_pub_cluster": [
+     0.1342639899280941,
+     0.3506589311690845
+    ]
+   },
+   "top10_lirical": {
+    "point": 0.19807913243223454,
+    "ci95_case_paired": [
+     0.18022631192721336,
+     0.21458617381059233
+    ],
+    "ci95_pub_cluster": [
+     0.09881997272518742,
+     0.3063813676030972
+    ]
+   },
+   "dTop10": {
+    "point": 0.0389585410947316,
+    "ci95_case_paired": [
+     0.026046639699612396,
+     0.050870954342577386
+    ],
+    "ci95_pub_cluster": [
+     -0.005112428666506323,
+     0.0801896455173202
+    ]
+   }
+  },
+  "gate": {
+   "G1_MRR_ratio_point_ge_1.10": true,
+   "G2_dMRR_case_ci_lower_gt_0": true,
+   "G3_null_real_beats_all_400": true,
+   "P1_MET": true
+  },
+  "info_not_gates": {
+   "strict_ratio_case_ci_lower_ge_1.10": true,
+   "strict_ratio_pub_ci_lower_ge_1.10": false,
+   "dMRR_pub_ci_lower_gt_0": true,
+   "top1_ratio_point": 1.8129067375277268,
+   "bootstrap_fraction_ratio_ge_1.10": 1.0
+  },
+  "null_NSF_dMRR": {
+   "controls": 400,
+   "best_control": 0.013659666525995096,
+   "real": 0.033620461037554464,
+   "real_beats_all_controls": true,
+   "n_controls_ge_real": 0
+  }
+ },
+ "complement_gt3_context": {
+  "n": 8151,
+  "MRR_method": 0.101808859205304,
+  "MRR_lirical": 0.0825610015819503,
+  "top1_method": 0.07271154634170654,
+  "top1_lirical": 0.05502596818385474
+ }
+}
