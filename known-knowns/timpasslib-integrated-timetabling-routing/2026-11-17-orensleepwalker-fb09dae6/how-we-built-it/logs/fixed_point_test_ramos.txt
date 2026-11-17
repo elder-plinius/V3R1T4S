@@ -1,0 +1,1 @@
+total 140850920; all 508 events free, routes fixed: status OPTIMAL, fixed-route objective 133131875 -> 133131875 (gain 0), 0.2 s
