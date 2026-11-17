@@ -1,0 +1,8 @@
+order=1 connected_graphs=1 max_cycle=1 witness @ rule_mask 0 state 0
+order=2 connected_graphs=1 max_cycle=2 witness A_ rule_mask 1 state 0
+order=3 connected_graphs=2 max_cycle=2 witness BW rule_mask 1 state 0
+order=4 connected_graphs=6 max_cycle=6 witness CU rule_mask 2 state 1
+order=5 connected_graphs=21 max_cycle=7 witness D]w rule_mask 6 state 3
+order=6 connected_graphs=112 max_cycle=18 witness ECrw rule_mask 5 state 3
+order=7 connected_graphs=853 max_cycle=38 witness FQzuo rule_mask 5 state 4
+order=8 connected_graphs=11117 max_cycle=96 witness GCz^nw rule_mask 21 state 3

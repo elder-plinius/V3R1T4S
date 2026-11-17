@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+graph-automata-max-period,"A357953(9), maximum period of a neighbours-only totalistic cellular automaton over connected graphs with 9 nodes",180,"absent (DATA ends at a(8) = 96)",2026-11-02T20:50:20Z,object/VALUE.txt,474e2771c5ee7d80d0d71427747d4731c56fad594bf3da1bcd7ee56e80dfd76b

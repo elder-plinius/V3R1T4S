@@ -1,0 +1,1 @@
+graph6=H?`DBbS n=9 degrees=[3, 3, 2, 2, 1, 2, 2, 3, 4] rule=[0, 2] start=175 preperiod=0 cycle_length=180
