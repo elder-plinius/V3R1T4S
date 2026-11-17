@@ -1,0 +1,13 @@
+v2022-02-14.phenotype.hpoa {'rows': 236094, 'kept': 236000, 'remapped': 2243, 'dropped': 94, 'cell_blank': 0} live_terms 19810
+v2022-06-11.phenotype.hpoa {'rows': 239031, 'kept': 239028, 'remapped': 2166, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2022-10-05.phenotype.hpoa {'rows': 249190, 'kept': 249187, 'remapped': 1683, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2023-01-27.phenotype.hpoa {'rows': 253363, 'kept': 253360, 'remapped': 1673, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2023-06-06.phenotype.hpoa {'rows': 256260, 'kept': 256257, 'remapped': 1633, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2023-10-09.phenotype.hpoa {'rows': 258165, 'kept': 258162, 'remapped': 1545, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2024-02-08.phenotype.hpoa {'rows': 258693, 'kept': 258690, 'remapped': 1050, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2024-06-25.phenotype.hpoa {'rows': 265263, 'kept': 265260, 'remapped': 913, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2024-12-12.phenotype.hpoa {'rows': 271096, 'kept': 271093, 'remapped': 400, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2025-05-06.phenotype.hpoa {'rows': 272060, 'kept': 272057, 'remapped': 292, 'dropped': 3, 'cell_blank': 0} live_terms 19810
+v2025-10-22.phenotype.hpoa {'rows': 272855, 'kept': 272855, 'remapped': 175, 'dropped': 0, 'cell_blank': 0} live_terms 19810
+v2026-02-16.phenotype.hpoa {'rows': 282723, 'kept': 282723, 'remapped': 54, 'dropped': 0, 'cell_blank': 0} live_terms 19810
+v2026-06-06.phenotype.hpoa {'rows': 284703, 'kept': 284703, 'remapped': 0, 'dropped': 0, 'cell_blank': 0} live_terms 19810

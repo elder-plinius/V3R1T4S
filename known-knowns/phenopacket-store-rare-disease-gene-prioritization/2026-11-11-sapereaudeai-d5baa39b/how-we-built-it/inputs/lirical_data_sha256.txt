@@ -1,0 +1,24 @@
+5e149f4e1fff0dd670fba0dd94f7ecc56ee681a0b9c8506f3cc8cf1c7e15d8d8 *shared/hg19_ensembl.ser
+ce3635d85b9465e1bcf0e6290cdeedeadb5f7a5ea365d5055c1968714f4c6308 *shared/hg19_refseq.ser
+624a87d093ccb682890a0e2b593ddb260ca869350b5fe5927fc8b5b17fd3e58b *shared/hg19_refseq_curated.ser
+c1f6f3bb670b234e5d6bd5da00312f72c2108f22d6b390b65e70cfeb46609c92 *shared/hg38_ensembl.ser
+b2a2fdb8eb9e52abfc748f55c61db3dbfc77ed1d76d81913c70d6b4db821c9b8 *shared/hg38_refseq.ser
+2066e7fedf2f3218fd3b5f425efdfef38262cfcda32d9d5497d492db367947e0 *shared/hg38_refseq_curated.ser
+86cc190fcae1abcd77a13ddba9a34327150477f4e3c6bcadd7f445b26dd31246 *shared/hgnc_complete_set.txt
+f9ed035dc1e74e511653edfcf36891144742e8e4b44c78d893b7e7982c15bd01 *shared/hp.json
+55027b87e82bca9f7c428b68f0770c4b880f041a6b475b7d522fe433242b276a *shared/mim2gene_medgen
+ac2146fc00fe78c5a1645ac1de0b2b13c82d30c8c1b4f35cabe976f0816aae49 *../../raredisease-run-2026-11-11-0916/hpo/v2022-02-14.phenotype.hpoa
+26403cb652fd8ce0f4bb80a245583a306a975fef01d393edf958daf3542ed5c0 *../../raredisease-run-2026-11-11-0916/hpo/v2022-06-11.phenotype.hpoa
+c6432abeb304c61b6d781baeee6d411e17adbbfbf57b87987ad25cb67f18a4fc *../../raredisease-run-2026-11-11-0916/hpo/v2022-10-05.phenotype.hpoa
+50fd4cdbf50bf663a17c99599707e44fafcdf3bfb9d7d18253434c12954e62a8 *../../raredisease-run-2026-11-11-0916/hpo/v2023-01-27.phenotype.hpoa
+27483a513d23276d21799803390b6aebc3194242a9996e7225262133a8f2ff7c *../../raredisease-run-2026-11-11-0916/hpo/v2023-06-06.phenotype.hpoa
+b654dac338a33225834919ac99f62a2ae54710d051042fbc5eacdf19b44e54e2 *../../raredisease-run-2026-11-11-0916/hpo/v2023-10-09.phenotype.hpoa
+009ef07404ef2df8455a8a9c42fd66250c37b35a4a67909ea252022257900da9 *../../raredisease-run-2026-11-11-0916/hpo/v2024-02-08.phenotype.hpoa
+96024f6455ace57b7471ca5c953024a85a321c23b595458b89659b059f72280f *../../raredisease-run-2026-11-11-0916/hpo/v2024-06-25.phenotype.hpoa
+6f658af1616dfc3036d99984aa3da8f1d1b7cb61563e3a63d3417f62bc92a3eb *../../raredisease-run-2026-11-11-0916/hpo/v2024-12-12.phenotype.hpoa
+c58e5296828054d5e9eca80297944e05b4b72f8610d58dc51405fdc99284cad3 *../../raredisease-run-2026-11-11-0916/hpo/v2025-05-06.phenotype.hpoa
+8773f392accefc103f4c8e80702816a1088205bc3dc0423248156a791282d36c *../../raredisease-run-2026-11-11-0916/hpo/v2025-10-22.phenotype.hpoa
+5d7aedee5f6218e9952fceba5f883df2cc4a0c1938e55d8d2616c15c517964fb *../../raredisease-run-2026-11-11-0916/hpo/v2026-02-16.phenotype.hpoa
+9e10da9c4b92c2d58f65e2fbd005a8511b5bfde43dd4a026564c72cf2918fbb3 *../../raredisease-run-2026-11-11-0916/hpo/v2026-06-06.phenotype.hpoa
+f3051e4aa6fac82166e1c26638d0077a95b0f66ab62a03e18bb35eb613e40a90 *cache/raredisease-run-2026-11-11-1032/lirical/hgnc_complete_set_2026-06-05.txt
+NOTE: the hgnc_complete_set.txt inside every LIRICAL data directory was the HGNC archive hgnc_complete_set_2026-06-05.txt, sha256 f3051e4aa6fac82166e1c26638d0077a95b0f66ab62a03e18bb35eb613e40a90 (last line above). The 86cc19... line for shared/hgnc_complete_set.txt is the current HGNC file fetched first; LIRICAL 2.4.1 could not read it and it was replaced before any audit run.
