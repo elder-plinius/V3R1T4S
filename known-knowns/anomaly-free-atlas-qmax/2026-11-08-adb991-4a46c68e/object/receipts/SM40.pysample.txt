@@ -1,0 +1,3 @@
+valid solutions: 200000
+PASS
+first 200000 lines of a fresh stream; sha256 of the sample e5ab38b3360942ba4f25537103c5d757a52d06746d57dddd38353e58208f3530; 9 s
