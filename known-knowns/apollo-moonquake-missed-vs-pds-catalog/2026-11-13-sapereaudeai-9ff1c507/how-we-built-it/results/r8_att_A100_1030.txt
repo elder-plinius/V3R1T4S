@@ -1,0 +1,6 @@
+nest A100: reference events 6 (above null: True), ATT-corrected S14-S12 differences: [-0.48, 0.89, 0.92, 0.74, -0.3, 0.95]
+missing ATT: []
+candidate 1973-11-26T07:46:28.641Z: S14-S12 = 0.93 s; nest median 0.82 s; within 2 s: True
+nest A100: reference events 6 (above null: True), ATT-corrected S14-S12 differences: [-0.48, 0.89, 0.92, 0.74, -0.3, 0.95]
+missing ATT: []
+candidate 1973-10-30T02:25:51.509Z: S14-S12 = 0.71 s; nest median 0.82 s; within 2 s: True

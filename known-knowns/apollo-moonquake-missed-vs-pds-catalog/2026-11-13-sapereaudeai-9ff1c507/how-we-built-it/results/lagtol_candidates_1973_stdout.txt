@@ -1,0 +1,77 @@
+A18: null C0 0.219, best shift 0.514, best control 0.514; peaks above: 2 (new 0); phase interval (161.36978884181008, 323.2515195281303)
+    1973-12-29T15:10:55.207Z Dc=0.633 ABOVE bestcc {'s14': 0.7595, 's16': 0.6491} ['levent 73-363 1508 T2=A N2=18']  r9 gap elev {'s14': -48, 's16': -15}
+    1973-07-16T21:58:42.528Z Dc=0.521 ABOVE bestcc {'s14': 0.7793, 's16': 0.6007} ['levent 73-197 2157 T2=A N2=18']  r9 gap elev {'s14': 86, 's16': 54}
+    1973-02-01T13:51:19.358Z Dc=0.512 - bestcc {'s14': 0.8469, 's16': 0.6697} ['levent 73-032 1351 T2=A N2=18']  r9 gap elev {'s14': -56, 's16': -81}
+    1973-01-05T22:56:01.622Z Dc=0.492 - bestcc {'s14': 0.6526, 's16': 0.5031} ['levent 73-005 2252 T2=A N2=18'] onodera r9 gap elev {'s14': -86, 's16': -54}
+    1973-12-28T16:15:33.245Z Dc=0.452 - bestcc {'s14': 0.6021, 's16': 0.6398} ['levent 73-362 1612 T2=A N2=18'] onodera r9 gap elev {'s14': -59, 's16': -26}
+A10: null C0 0.276, best shift 0.419, best control 0.419; peaks above: 1 (new 0); phase interval (56.10205717905774, 330.92556233509094)
+    1973-01-30T20:46:30.754Z Dc=0.557 ABOVE bestcc {'s14': 0.7415, 's16': 0.6069} ['levent 73-030 2046 T2=A N2=10'] onodera r9 gap elev {'s14': -35, 's16': -67}
+    1973-01-05T21:48:26.075Z Dc=0.408 - bestcc {'s14': 0.7411, 's16': 0.4638} ['levent 73-005 2145 T2=A N2=10']  r9 gap elev {'s14': -86, 's16': -55}
+    1973-02-26T20:40:33.018Z Dc=0.282 - bestcc {'s14': 0.2821, 's16': 0.5602} new onodera r9 gap-fail elev {'s14': -4, 's16': -37}
+    1973-11-18T15:30:03.886Z Dc=0.279 - bestcc {'s14': 0.2859, 's16': 0.5766} new  r9 gap elev {'s14': 8, 's16': -25}
+    1973-03-27T10:57:22.528Z Dc=0.267 - bestcc {'s14': 0.267, 's16': 0.512} new onodera r9 gap elev {'s14': 7, 's16': -26}
+A9: null C0 0.153, best shift 0.176, best control 0.176; peaks above: 2 (new 0); phase interval (36.48940703047265, 286.0799238571344)
+    1973-06-06T20:51:58.905Z Dc=0.502 ABOVE bestcc {'s14': 0.5748, 's16': 0.9952} ['levent 73-157 2050 T2=A N2=9']  r9 gap elev {'s14': -36, 's16': -3}
+    1973-01-21T00:52:50.830Z Dc=0.377 ABOVE bestcc {'s14': 0.6357, 's16': 0.6891} ['levent 73-021 0053 T2=A N2=9']  r9 gap elev {'s14': 83, 's16': 51}
+    1973-06-14T13:53:58.150Z Dc=0.147 - bestcc {'s14': 0.1683, 's16': 0.1467} new onodera r9 gap-fail elev {'s14': 57, 's16': 81}
+    1973-04-15T16:25:27.056Z Dc=0.144 - bestcc {'s14': 0.1441, 's16': 0.1459} new onodera r9 gap-fail elev {'s14': 47, 's16': 77}
+    1973-03-26T01:51:07.283Z Dc=0.144 - bestcc {'s14': 0.1438, 's16': 0.152} new  r9 gap elev {'s14': 24, 's16': -9}
+A14: null C0 0.185, best shift 0.243, best control 0.243; peaks above: 11 (new 1); phase interval (224.7937561860308, 77.90087898765341)
+    1973-01-13T09:22:15.056Z Dc=0.264 ABOVE bestcc {'s14': 0.3505, 's16': 0.4097} new  r9 gap elev {'s14': 2, 's16': 35}
+    1973-11-08T15:30:46.754Z Dc=0.717 ABOVE bestcc {'s14': 0.7201, 's16': 0.8693} ['levent 73-312 1530 T2=A N2=14'] onodera r9 gap elev {'s14': 50, 's16': 79}
+    1973-01-11T18:17:03.207Z Dc=0.476 ABOVE bestcc {'s14': 0.4858, 's16': 0.6539} ['levent 73-011 1815 T2=A N2=14']  r9 gap elev {'s14': -17, 's16': 15}
+    1973-09-15T21:45:58.150Z Dc=0.457 ABOVE bestcc {'s14': 0.7113, 's16': 0.5877} ['levent 73-258 2144 T2=A N2=14']  r9 gap elev {'s14': 64, 's16': 31}
+    1973-08-20T02:20:36.943Z Dc=0.445 ABOVE bestcc {'s14': 0.4495, 's16': 0.5295} ['levent 73-232 0218 T2=A N2=14']  r9 gap-fail elev {'s14': 31, 's16': -2}
+    1973-05-27T10:04:55.660Z Dc=0.439 ABOVE bestcc {'s14': 0.4695, 's16': 0.6178} ['levent 73-147 1003 T2=A N2=14']  r9 gap elev {'s14': -16, 's16': -48}
+A204: null C0 0.246, best shift 0.575, best control 0.575; peaks above: 3 (new 0); phase interval (184.02754042427114, 298.37358084062)
+    1973-01-06T18:46:57.924Z Dc=0.751 ABOVE bestcc {'s14': 0.7533, 's16': 0.8579} ['levent 73-006 1845 T2=A N2=204']  r9 gap elev {'s14': -78, 's16': -45}
+    1973-01-08T00:33:26.452Z Dc=0.670 ABOVE bestcc {'s14': 0.6822, 's16': 0.8219} ['levent 73-008 0030 T2=A N2=204']  r9 gap elev {'s14': -63, 's16': -30}
+    1973-02-02T13:50:22.000Z Dc=0.636 ABOVE bestcc {'s14': 0.7765, 's16': 0.7734} ['levent 73-033 1349 T2=A N2=204']  r9 gap elev {'s14': -68, 's16': -76}
+    1973-12-30T12:12:28.490Z Dc=0.436 - bestcc {'s14': 0.4972, 's16': 0.6337} new  r9 gap elev {'s14': -37, 's16': -4}
+    1973-11-30T11:09:50.301Z Dc=0.381 - bestcc {'s14': 0.462, 's16': 0.5267} ['levent 73-334 1110 T2=C N2=nan']  r9 gap elev {'s14': -43, 's16': -10}
+A23: null C0 0.211, best shift 0.315, best control 0.315; peaks above: 4 (new 0); phase interval (281.0697819160996, 138.86028576735407)
+    1973-05-28T20:55:27.509Z Dc=0.602 ABOVE bestcc {'s14': 0.713, 's16': 0.6351} ['levent 73-148 2054 T2=A N2=23']  r9 gap elev {'s14': -34, 's16': -65}
+    1973-04-05T07:05:11.660Z Dc=0.527 ABOVE bestcc {'s14': 0.776, 's16': 0.5979} ['levent 73-095 0644 T2=A N2=348'] onodera r9 gap elev {'s14': -79, 's16': -45}
+    1973-11-09T04:01:34.000Z Dc=0.511 ABOVE bestcc {'s14': 0.6524, 's16': 0.5778} ['levent 73-313 0330 T2=A N2=356'] onodera r9 gap elev {'s14': 57, 's16': 81}
+    1973-05-28T13:13:57.245Z Dc=0.429 ABOVE bestcc {'s14': 0.746, 's16': 0.6672} ['levent 73-148 1313 T2=A N2=23']  r9 gap-fail elev {'s14': -30, 's16': -62}
+    1973-02-09T14:05:03.207Z Dc=0.253 - bestcc {'s14': 0.5414, 's16': 0.2533} new  r9 gap elev {'s14': -26, 's16': 7}
+A20: null C0 0.266, best shift 0.625, best control 0.625; peaks above: 0 (new 0); phase interval (121.93091093833209, 74.15417666040594)
+    1973-10-29T08:09:51.207Z Dc=0.552 - bestcc {'s14': 0.6317, 's16': 0.6203} ['levent 73-302 0750 T2=C N2=nan']  r9 gap elev {'s14': -75, 's16': -42}
+    1973-05-05T19:34:33.773Z Dc=0.505 - bestcc {'s14': 0.6327, 's16': 0.6714} ['levent 73-125 1934 T2=A N2=20']  r9 gap elev {'s14': -67, 's16': -34}
+    1973-11-25T16:21:50.301Z Dc=0.467 - bestcc {'s14': 0.6461, 's16': 0.5304} ['levent 73-329 1621 T2=A N2=20']  r9 gap-fail elev {'s14': -78, 's16': -67}
+    1973-08-23T22:30:13.849Z Dc=0.454 - bestcc {'s14': 0.7092, 's16': 0.5223} ['levent 73-235 2229 T2=A N2=20']  r9 gap elev {'s14': -15, 's16': -48}
+    1973-07-27T14:07:38.075Z Dc=0.446 - bestcc {'s14': 0.5352, 's16': 0.5056} ['levent 73-208 1408 T2=A N2=20']  r9 gap elev {'s14': -42, 's16': -73}
+A201: null C0 0.228, best shift 0.610, best control 0.610; peaks above: 1 (new 0); phase interval (6.744469787052367, 162.13433254715346)
+    1973-07-02T13:53:11.660Z Dc=0.650 ABOVE bestcc {'s14': 0.655, 's16': 0.7104} ['levent 73-183 1350 T2=A N2=201']  r9 gap elev {'s14': -82, 's16': -49}
+    1973-04-09T03:18:26.830Z Dc=0.599 - bestcc {'s14': 0.7318, 's16': 0.8455} ['levent 73-099 0318 T2=A N2=201']  r9 gap elev {'s14': -32, 's16': 1}
+    1973-08-01T12:42:18.377Z Dc=0.492 - bestcc {'s14': 0.4977, 's16': 0.8156} ['levent 73-213 1102 T2=C N2=nan'] onodera r9 gap elev {'s14': -77, 's16': -44}
+    1973-07-05T02:16:45.396Z Dc=0.370 - bestcc {'s14': 0.4744, 's16': 0.4534} new onodera r9 gap elev {'s14': -52, 's16': -19}
+    1973-03-16T14:56:28.188Z Dc=0.317 - bestcc {'s14': 0.4906, 's16': 0.511} ['levent 73-075 1453 T2=A N2=201']  r9 gap elev {'s14': 41, 's16': 72}
+A100: null C0 0.157, best shift 0.191, best control 0.191; peaks above: 11 (new 4); phase interval (46.700625008903444, 318.3373941780301)
+    1973-04-22T18:28:36.943Z Dc=0.410 ABOVE bestcc {'s14': 0.566, 's16': 0.4098} new  r9 gap elev {'s14': 46, 's16': 13}
+    1973-11-26T07:46:28.641Z Dc=0.343 ABOVE bestcc {'s14': 0.5621, 's16': 0.6994} new  r9 gap elev {'s14': -85, 's16': -60}
+    1973-10-30T02:25:51.509Z Dc=0.298 ABOVE bestcc {'s14': 0.6211, 's16': 0.6196} new  r9 gap elev {'s14': -66, 's16': -32}
+    1973-01-30T23:06:52.188Z Dc=0.265 ABOVE bestcc {'s14': 0.5067, 's16': 0.5657} new onodera r9 gap elev {'s14': -36, 's16': -68}
+    1973-05-19T22:54:02.075Z Dc=0.776 ABOVE bestcc {'s14': 0.7949, 's16': 0.7878} ['levent 73-139 2252 T2=A N2=100']  r9 gap elev {'s14': 74, 's16': 41}
+    1973-12-23T15:53:32.188Z Dc=0.647 ABOVE bestcc {'s14': 0.7592, 's16': 0.6728} ['levent 73-357 1540 T2=A N2=276']  r9 gap elev {'s14': -59, 's16': -81}
+    1973-09-05T21:47:03.358Z Dc=0.604 ABOVE bestcc {'s14': 0.7487, 's16': 0.7023} ['levent 73-248 2148 T2=A N2=100']  r9 gap elev {'s14': -7, 's16': 26}
+    1973-04-22T18:28:36.943Z Dc=0.410 ABOVE bestcc {'s14': 0.566, 's16': 0.4098} new  r9 gap elev {'s14': 46, 's16': 13}
+    1973-01-03T16:48:51.132Z Dc=0.402 ABOVE bestcc {'s14': 0.4086, 's16': 0.6615} ['levent 73-003 1647 T2=A N2=100']  r9 gap elev {'s14': -64, 's16': -79}
+A210: null C0 0.240, best shift 0.447, best control 0.447; peaks above: 1 (new 0); phase interval (328.66031925723655, 68.61522794814664)
+    1973-07-28T03:46:08.415Z Dc=0.502 ABOVE bestcc {'s14': 0.6167, 's16': 0.8146} ['levent 73-209 0345 T2=A N2=210']  r9 gap elev {'s14': -49, 's16': -78}
+    1973-08-24T03:51:56.792Z Dc=0.317 - bestcc {'s14': 0.4619, 's16': 0.4855} new  r9 gap elev {'s14': -18, 's16': -50}
+    1973-08-25T03:01:58.150Z Dc=0.280 - bestcc {'s14': 0.3469, 's16': 0.6305} ['levent 73-237 0245 T2=C N2=nan']  r9 gap elev {'s14': -30, 's16': -61}
+    1973-04-08T04:40:08.566Z Dc=0.275 - bestcc {'s14': 0.5217, 's16': 0.3408} new  r9 gap elev {'s14': -44, 's16': -11}
+    1973-02-26T15:08:22.754Z Dc=0.231 - bestcc {'s14': 0.2315, 's16': 0.4995} new  r9-fail gap elev {'s14': -2, 's16': -34}
+A25: null C0 0.226, best shift 0.535, best control 0.535; peaks above: 4 (new 0); phase interval (70.7988228052418, 301.94411089974164)
+    1973-07-06T05:20:29.094Z Dc=0.773 ABOVE bestcc {'s14': 0.8136, 's16': 0.8968} ['levent 73-187 0520 T2=A N2=25']  r9 gap elev {'s14': -38, 's16': -5}
+    1973-08-02T07:15:18.150Z Dc=0.745 ABOVE bestcc {'s14': 0.7707, 's16': 0.9131} ['levent 73-214 0715 T2=A N2=25']  r9 gap elev {'s14': -68, 's16': -35}
+    1973-07-05T07:35:34.150Z Dc=0.634 ABOVE bestcc {'s14': 0.6591, 's16': 0.678} ['levent 73-186 0735 T2=A N2=25'] onodera r9 gap elev {'s14': -49, 's16': -16}
+    1973-06-25T01:53:48.490Z Dc=0.622 ABOVE bestcc {'s14': 0.7113, 's16': 0.737} ['levent 73-176 0154 T2=A N2=25'] onodera r9 gap elev {'s14': -6, 's16': -38}
+    1973-06-07T05:12:25.773Z Dc=0.489 - bestcc {'s14': 0.6119, 's16': 0.8262} ['levent 73-158 0511 T2=C N2=nan'] onodera r9-fail gap elev {'s14': -32, 's16': 1}
+A257: null C0 0.263, best shift 0.443, best control 0.443; peaks above: 1 (new 0); phase interval (214.62546129649854, 348.2445510053076)
+    1973-01-05T09:47:27.811Z Dc=0.636 ABOVE bestcc {'s14': 0.6683, 's16': 0.6954} ['levent 73-005 0947 T2=A N2=257']  r9 gap elev {'s14': -84, 's16': -61}
+    1973-06-17T01:55:04.264Z Dc=0.300 - bestcc {'s14': 0.6112, 's16': 0.5862} ['levent 73-168 0156 T2=A N2=257']  r9-fail gap elev {'s14': 86, 's16': 58}
+    1973-12-01T14:04:36.037Z Dc=0.268 - bestcc {'s14': 0.4433, 's16': 0.4866} ['levent 73-335 1401 T2=A N2=257'] onodera r9 gap elev {'s14': -30, 's16': 3}
+    1973-11-01T00:56:14.905Z Dc=0.261 - bestcc {'s14': 0.281, 's16': 0.5097} new  r9-fail gap elev {'s14': -42, 's16': -9}
+    1973-08-12T12:04:54.452Z Dc=0.255 - bestcc {'s14': 0.5394, 's16': 0.5096} ['levent 73-224 1207 T2=A N2=257'] onodera r9-fail gap-fail elev {'s14': 56, 's16': 81}

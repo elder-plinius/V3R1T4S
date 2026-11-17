@@ -1,0 +1,85 @@
+{
+ "target_id": "apollo-moonquake-missed-vs-pds-catalog",
+ "claim": "full success criterion (deep moonquake, nest A100)",
+ "nest": "A100 (levent.1008weber.csv T2 = A, N2 = 100)",
+ "stations": [
+  "S14",
+  "S16"
+ ],
+ "channels": {
+  "S14": [
+   "MH1",
+   "MH2"
+  ],
+  "S16": [
+   "MH1",
+   "MH2"
+  ]
+ },
+ "location": "00",
+ "time_base": "MiniSEED (Earth-received, nominal-rate) times of the PDS restoration",
+ "window_start_utc": "1973-11-26T07:45:58.641Z",
+ "onset_utc": "1973-11-26T07:46:28.641Z",
+ "window_s": 450.0,
+ "sample_rate_hz": 3.3125,
+ "lag_tolerance_samples": 7,
+ "frozen_scan_peak": {
+  "Dt": 0.34329,
+  "ccs": [
+   0.4264,
+   0.5621,
+   0.6994,
+   -0.0128
+  ],
+  "lag_s14_s": 1.509,
+  "lag_s16_s": 2.113
+ },
+ "null_controls": 401,
+ "null_span": "1973 days 1-365 (all of 1973)",
+ "null_c0_time_reversed_full_span_max": 0.15744,
+ "null_best_shift_full_span_max": 0.19062,
+ "r8": {
+  "att_offset_s14_s": -1.3892,
+  "att_offset_s16_s": -1.0659,
+  "candidate_s16_minus_s14_s": 0.9272,
+  "reference_values_s": [
+   -0.4845,
+   0.8871,
+   0.92,
+   0.7438,
+   -0.296,
+   0.9452
+  ],
+  "reference_median_s": 0.8155,
+  "tolerance_s": 2.0
+ },
+ "r9": {
+  "anomalistic_phase_deg": 157.151,
+  "interval_deg": [
+   46.701,
+   318.337
+  ],
+  "definition": "shortest circular interval holding 95% of the 62 catalogued A100 events (Meeus mean anomaly)"
+ },
+ "thermal": {
+  "solar_elevation_deg": {
+   "s14": -84.6,
+   "s16": -59.8
+  },
+  "rule": "|elevation| > 12 deg"
+ },
+ "nearest_catalogue_rows_min": [
+  [
+   -70.5,
+   "levent 73-330 0636 T2=A N2=203"
+  ],
+  [
+   -117.5,
+   "levent 73-330 0549 T2=A N2=252"
+  ],
+  [
+   -178.5,
+   "levent 73-330 0448 T2=A N2=20"
+  ]
+ ]
+}
