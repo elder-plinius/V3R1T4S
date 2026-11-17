@@ -1,0 +1,5 @@
+Control: plain improving-or-equal local search (same binary, T0 = 1e-6, so only moves with delta <= 0 are accepted), 30 s from the bank file.
+Command (from the scout folder): nice -n 10 ./code/sa_bin data/inst/set5.exam data/sol/set5/set5.sol 30 <seed> 0.000001 <out.sol>
+seed 1: {"start": 2327, "best": 2327, "full": 2327, "hard": 0, "iters": 28789760, "acc": 5431883, "kempe": 12089429, "kempe_acc": 1218454, "T0": 1e-06, "secs": 30.0, "seed": 1}
+seed 2: {"start": 2327, "best": 2326, "full": 2326, "hard": 0, "iters": 26046464, "acc": 4904570, "kempe": 10940794, "kempe_acc": 1101184, "T0": 1e-06, "secs": 30.0, "seed": 2}
+Difference between bank file and claimed object (1018 exams): period changed 774, room changed 674, any change 926.
