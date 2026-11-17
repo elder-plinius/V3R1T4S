@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+odd-graceful-trees-beyond-12,every tree on n vertices is odd-graceful (verified n),23,12,2026-11-17T16:46:26Z,cert_n23.txt (in archive odd-graceful-trees-10-23-certificates.tar.xz; hashes in object/certificates.sha256),d25faee17d7c798dbe7f6d4acc882cb82f924a537de4c8620ed61264f79ecf0e
