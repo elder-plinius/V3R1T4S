@@ -1,0 +1,4 @@
+n=8 seed=middle best=80 valid=True steps=337722
+n=8 seed=greedy best=79 valid=True steps=353365
+n=8 seed=empty best=79 valid=True steps=345348
+best 80

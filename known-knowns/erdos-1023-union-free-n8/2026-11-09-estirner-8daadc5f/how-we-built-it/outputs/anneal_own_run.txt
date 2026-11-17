@@ -1,0 +1,9 @@
+n=8 seed=1 best=80 iterations=38362112 seconds=100
+n=8 seed=2 best=80 iterations=36919910 seconds=100
+n=8 seed=3 best=80 iterations=38666375 seconds=100
+n=8 seed=4 best=80 iterations=50935886 seconds=100
+n=8 seed=5 best=80 iterations=48358358 seconds=100
+n=8 seed=6 best=80 iterations=41085346 seconds=100
+n=9 seed=1 best=139 iterations=56201170 seconds=200
+n=9 seed=2 best=139 iterations=65280878 seconds=200
+n=9 seed=3 best=139 iterations=67043070 seconds=200
