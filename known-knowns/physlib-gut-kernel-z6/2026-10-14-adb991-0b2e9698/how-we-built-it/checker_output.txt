@@ -1,0 +1,6 @@
+spec compile: exit 0
+candidate compile: exit 0
+check file: exit 0
+'V3R1T4S_check' depends on axioms: [propext, Classical.choice, Quot.sound]
+axioms: ['Classical.choice', 'Quot.sound', 'propext']
+PASS

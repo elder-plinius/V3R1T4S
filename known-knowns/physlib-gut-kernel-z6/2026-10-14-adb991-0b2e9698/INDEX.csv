@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+physlib-gut-kernel-z6,"Physlib informal_lemma GeorgiGlashow.inclSM_ker (tag 6V2W2), with inclSM (6V2WS) and GaugeGroupI (6V2WM)","kernel-checked proof of the frozen statement (axioms propext, Classical.choice, Quot.sound)","informal_lemma: docstring only, no Lean statement or proof",2026-10-14T06:16:29Z,object/InclSMKer.lean,0b2e9698935d6a53381d1015fdac67779ff1d6b9761358e79767391d12c1663d
