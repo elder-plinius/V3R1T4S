@@ -1,0 +1,20 @@
+context: Claude Code subagent, fresh context [Sonnet 5.5]
+
+novelty: PASS (conjecture open as stated and covers this case; no equal or larger counterexample found)
+
+Status source (read once, no retries, all HTTP 200; times UTC 2026-11-17):
+- 09:49:37 https://arxiv.org/abs/2508.15655 and 09:49:38 https://arxiv.org/pdf/2508.15655. This is Volkov's living list, latest version v4, dated 13 Jan 2026, "state of the art as of January 14, 2026". Item A6 (Eulerian automata): upper bound n^2-3n+3 (Kari); lower bound floor((n^2-3)/2) from Szykula-Vorel; it says they "have conjectured that for n >= 3, floor((n^2-3)/2) is also an upper bound ... [62, Conjecture 19]", verified by exhaustive search for two letters with n <= 11, four letters with n <= 7, eight letters with n <= 5, and all DFAs with n <= 4. Binary: Martyugin's unpublished series conjectured at (n^2-5)/2, confirmed for n = 5, 7, 9, 11; best published binary lower bound (n^2-3n+4)/2 (Gusev). The list does not say anything is refuted. The entry is marked "August 2025 update".
+- 09:49:38 https://arxiv.org/pdf/1604.02879 (Szykula-Vorel). Conjecture 19, quoted exactly: "For n >= 3, (n^2 - 3)/2 is an upper bound for the reset threshold of an n-state Eulerian synchronizing automaton. If |Sigma| = 2, then the bound can be improved to (n^2 - 5)/2." So the general bound is stated for every alphabet size and every n >= 3; only the binary case has the tighter bound. A 5-letter, 7-state automaton falls under the general statement. Their searches did NOT cover 5 letters at n = 7 (only 2 letters n<=11, 4 letters n<=7, 8 letters n<=5, all n<=4), so the claim lies in unexplored territory, not in an exhausted range. At n = 7 they found 2 ternary and 12 quaternary automata meeting the bound (n^2-3)/2 = 23, none exceeding it.
+- 09:49:37 https://arxiv.org/abs/2608.24245 (Szykula, Open Problems, submitted 25 Aug 2026). Text in section 2.8 still says the best known Eulerian lower bound is floor((n^2-3)/2) "(conjectured to be tight) [29]", and Corollary 20 gives the improved upper bound n^2 - n log2 n + O(n). No counterexample or update.
+
+Literature search (last 24 months and earlier):
+- Web searches: "Eulerian synchronizing automata reset threshold counterexample Szykula Vorel conjecture"; "slowly synchronizing Eulerian automata exhaustive search 7 states 5 letters (n^2-3)/2". Results were only the 2016 paper, Volkov's list, 1805.06723 (random generation of slowly synchronizing automata), and aggregator pages saying the conjecture is open. No counterexample, no 5-letter n = 7 search.
+- arXiv API query all:Eulerian AND all:synchronizing sorted by date (09:50:31, https://export.arxiv.org/api/query?..., HTTP 200; one earlier http request returned 301 and was replaced by the https form). Recent relevant hits: 2609.21603 (Sep 2026, certificates for short extending words; about Kari's lemma, not a counterexample), 2607.17335 (Jul 2026, totally synchronizing graphs; not relevant). Nothing refutes or ties the claim. Search is limited to what these engines index; I could not search code release assets or Google Scholar directly.
+
+V3R1T4S repository (read-only gh): TROPHY_CASE.md has no Eulerian or synchronizing mention; known-knowns has no matching folder; pull request searches for "eulerian-synchronizing" and "szykula-vorel" (open and closed) returned none. The only hits are the target definition under known-unknowns/graphs-games-automata and unrelated lattice-gas pull requests. No prior claim on this target.
+
+Conclusion: Conjecture 19 is still open as stated per the January 2026 list and the August 2026 survey, it covers all alphabet sizes (so 5 letters, n = 7), the published exhaustive searches did not reach 5 letters at n = 7, and nothing equal or larger is published or claimed. A reset threshold of 24 would strictly beat 23. This verdict covers novelty only; correctness of the automaton is for the other skeptics.
+
+Fetch log is in a working file (not shipped) in my scratch folder (work-novelty).
+
+pass: true
