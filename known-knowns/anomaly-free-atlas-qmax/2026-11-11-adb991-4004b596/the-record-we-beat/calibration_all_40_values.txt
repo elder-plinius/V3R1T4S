@@ -1,0 +1,21 @@
+SM    Q= 1  solutions ours         8 paper         8 | symmetry ours     8 paper     8  OK
+SM    Q= 2  solutions ours        22 paper        22 | symmetry ours    14 paper    14  OK
+SM    Q= 3  solutions ours        82 paper        82 | symmetry ours    32 paper    32  OK
+SM    Q= 4  solutions ours       251 paper       251 | symmetry ours    56 paper    56  OK
+SM    Q= 5  solutions ours       626 paper       626 | symmetry ours   114 paper   114  OK
+SM    Q= 6  solutions ours      1983 paper      1983 | symmetry ours   144 paper   144  OK
+SM    Q= 7  solutions ours      3902 paper      3902 | symmetry ours   252 paper   252  OK
+SM    Q= 8  solutions ours      7068 paper      7068 | symmetry ours   336 paper   336  OK
+SM    Q= 9  solutions ours     14354 paper     14354 | symmetry ours   492 paper   492  OK
+SM    Q=10  solutions ours     23800 paper     23800 | symmetry ours   582 paper   582  OK
+SMnuR Q= 1  solutions ours        38 paper        38 | symmetry ours    16 paper    16  OK
+SMnuR Q= 2  solutions ours       358 paper       358 | symmetry ours    48 paper    48  OK
+SMnuR Q= 3  solutions ours      4116 paper      4116 | symmetry ours   154 paper   154  OK
+SMnuR Q= 4  solutions ours     24552 paper     24552 | symmetry ours   338 paper   338  OK
+SMnuR Q= 5  solutions ours    111152 paper    111152 | symmetry ours   796 paper   796  OK
+SMnuR Q= 6  solutions ours    435305 paper    435305 | symmetry ours  1218 paper  1218  OK
+SMnuR Q= 7  solutions ours   1358388 paper   1358388 | symmetry ours  2332 paper  2332  OK
+SMnuR Q= 8  solutions ours   3612734 paper   3612734 | symmetry ours  3514 paper  3514  OK
+SMnuR Q= 9  solutions ours   9587085 paper   9587085 | symmetry ours  5648 paper  5648  OK
+SMnuR Q=10  solutions ours  21546920 paper  21546920 | symmetry ours  7540 paper  7540  OK
+ALL 40 VALUES MATCH
