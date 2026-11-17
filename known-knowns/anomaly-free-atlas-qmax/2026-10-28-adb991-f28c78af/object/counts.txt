@@ -1,0 +1,6 @@
+# columns: content Q_max count(published convention) list_lines sha256_of_uncompressed_list lister checker independent_counters (all recomputed in run 2026-10-28-0820 after its PREREG)
+SMnuR 19 4247050205 4247050204 0fc9e8b841f69b7825c4de8c8ff1b987f29a2314edce997157069e0b48216f81 csenum2 checklist:PASS mitm.c:4247050205
+SM 32 15866882 15866881 3a5d7d1695cd98e6aa70ecc3c0ff9121f9312a11f0123ec6e6cec7a8ad408a07 acclist checklist:PASS mitm.c:15866882
+SM 33 19550225 19550224 fab3aded0a00e3dfeedf3c45386728a3d9bd3f6bf22f748c58c0dcea7f1ee86c acclist checklist:PASS mitm.c:19550225
+SM 34 22847889 22847888 e22875f7b3ded06eeb05e00464da98b943e60db7afac2d673357e1da1e72c74b acclist checklist:PASS mitm.c:22847889
+SM 35 26469950 26469949 f3a6b7ff8fd4abe877c3d3f867877a811a27eb0fe3317495978f6c631a02fa9f acclist checklist:PASS mitm.c:26469950

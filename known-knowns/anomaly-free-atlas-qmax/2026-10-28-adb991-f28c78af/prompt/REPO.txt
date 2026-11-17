@@ -1,0 +1,4 @@
+repo: https://github.com/elder-plinius/V3R1T4S
+repo_tag: none
+repo_commit: c027ca3e0c8d1fc475d8e39cccd4b146fd50ffb8
+note: repo_commit is the kit version recorded in settings.md when this package was built (2026-10-28); the workspace follows upstream main, and each run updates the repo copy at its start.

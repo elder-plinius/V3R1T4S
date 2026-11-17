@@ -1,0 +1,13 @@
+bound 32: N(all multiset tuples incl zero) = 32403781  Fix = 20109  (22.4 s)
+bound 16: N(all multiset tuples incl zero) = 634863  Fix = 2803  (0.2 s)
+bound 10: N(all multiset tuples incl zero) = 48379  Fix = 787  (0.0 s)
+bound 6: N(all multiset tuples incl zero) = 4003  Fix = 209  (0.0 s)
+bound 5: N(all multiset tuples incl zero) = 1188  Fix = 148  (0.0 s)
+bound 4: N(all multiset tuples incl zero) = 489  Fix = 83  (0.0 s)
+bound 3: N(all multiset tuples incl zero) = 146  Fix = 46  (0.0 s)
+bound 2: N(all multiset tuples incl zero) = 37  Fix = 21  (0.0 s)
+bound 1: N(all multiset tuples incl zero) = 8  Fix = 8  (0.0 s)
+SM Qmax 32: primitive nonzero multiset tuples P = 31717361, sign-fixed primitive = 16401
+RESULT SM Qmax 32: inequivalent = 15866882
+maxrss 14304 KB
+exit 0
