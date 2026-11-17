@@ -1,0 +1,3 @@
+# How We Built It
+
+Starting from Kunisky's `4x4` non-tree regular unsatisfiable matrix (`arXiv:2111.02974`, Example 2.2) and its recursive lift `phi(Ex. 2.2)` (`8x8`), naive deletion or uniform column normalization of `phi^2(Ex. 2.2)` (`16x16`) to `15` columns drops the discrepancy to `1.49578 < 2.0`, while 15-leaf binary tree SOCPs reach `2.04653`. Taking a 7-row partial lift of `phi(Ex. 2.2)` to `15x15` and solving a coupled 2-orbit asymmetric Weiszfeld second-order cone program (`mu_split12 = 0.06398163`, `mu_split2 = 0.06591871`, `mu_unsplit1 = 0.10038305`), followed by inward rationalization to denominator `D = 10^{12}`, yields exact discrepancy `205956508661 / 100000000000 = 2.05956508661 > 2.006` across all `32,768` sign vectors.

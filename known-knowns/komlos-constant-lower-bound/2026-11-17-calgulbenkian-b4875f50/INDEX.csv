@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+komlos-constant-lower-bound,Partial win p2 (n <= 15 nonzero unit-norm-bounded columns exact Komlos discrepancy),205956508661 / 100000000000 = 2.05956508661 > 2.006 (15x15 rational matrix),Spielman unpublished 15-column numerical bound in [2.005 2.006] (arXiv:2111.02974 Sec. 1),2026-11-17T11:45:20Z,object/komlos_15x15_p2.txt,b4875f5077ae1c70895dcf38764ff27746fc573ffd284c10dd08723097de5113
