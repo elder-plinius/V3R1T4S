@@ -1,0 +1,3 @@
+A201: phase 0 CC [0.5642, 0.7036] (D 0.634); phase 1 (10 members) CC [0.5661, 0.7066] (D 0.636) at -0.15 s; min over phases of best CC 0.7036
+A39: phase 0 CC [0.5952, 0.6925] (D 0.644); phase 1 (16 members) CC [0.6003, 0.69] (D 0.645) at +0.15 s; min over phases of best CC 0.6900
+declared rule -> claimed seed: A201

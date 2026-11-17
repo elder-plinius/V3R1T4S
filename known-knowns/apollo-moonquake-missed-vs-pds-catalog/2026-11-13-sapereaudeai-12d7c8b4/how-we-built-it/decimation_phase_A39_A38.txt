@@ -1,0 +1,4 @@
+A39 phase 0: lag +0.00 s, MH1 0.5952, MH2 0.6925, mean 0.6439
+A39 phase 1: lag -0.15 s, MH1 0.6131, MH2 0.3492, mean 0.4811
+A38 phase 0: lag +0.00 s, MH1 0.7268, MH2 0.7567, mean 0.7417
+A38 phase 1: lag +0.15 s, MH1 0.6060, MH2 0.6170, mean 0.6115

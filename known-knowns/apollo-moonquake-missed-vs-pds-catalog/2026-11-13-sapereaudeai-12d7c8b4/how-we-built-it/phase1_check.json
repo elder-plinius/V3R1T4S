@@ -1,0 +1,39 @@
+{
+ "results": {
+  "201": {
+   "seed_window_start_phase0": "1971-08-17T05:55:22.566",
+   "phase0_ccs": [
+    0.5642,
+    0.7036
+   ],
+   "phase0_D": 0.6339,
+   "phase1_members": 10,
+   "phase1_D": 0.6363,
+   "phase1_window_start": "1971-08-17T05:55:22.415Z",
+   "phase1_ccs": [
+    0.5661,
+    0.7066
+   ],
+   "phase1_offset_s": -0.15,
+   "min_best_cc_over_phases": 0.7036
+  },
+  "39": {
+   "seed_window_start_phase0": "1971-09-05T01:25:44.150",
+   "phase0_ccs": [
+    0.5952,
+    0.6925
+   ],
+   "phase0_D": 0.6439,
+   "phase1_members": 16,
+   "phase1_D": 0.6452,
+   "phase1_window_start": "1971-09-05T01:25:44.300Z",
+   "phase1_ccs": [
+    0.6003,
+    0.69
+   ],
+   "phase1_offset_s": 0.15,
+   "min_best_cc_over_phases": 0.69
+  }
+ },
+ "choice": "201"
+}
