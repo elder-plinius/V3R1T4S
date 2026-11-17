@@ -4,11 +4,11 @@
   "category": "number-hunts",
   "kind": "moonshot",
   "tractability": 1,
-  "compute_profile": "needs cluster for broad searches; no finite search bound is known for the exponent or base, while verifying a candidate witness is milliseconds",
+  "compute_profile": "needs cluster for broad searches; no finite search bound is known for the exponent or base, while exact verification cost depends on the bit length of b^n; no runtime has been measured",
   "statement": "OEIS A062286 lists the smallest decimal palindromic n-th power greater than 1 for n = 1, 2, 3, and 4: 2, 4, 8, and 14641 = 11^4 (the smallest multi-digit cube palindrome in the entry's example is 343 = 7^3). Its comment (checked live 2026-11-15) notes that it is still unknown whether any multi-digit decimal palindromic n-th power exists for any n >= 5; for every n >= 5 and integer b >= 2, b^n >= 32 has at least two decimal digits. A062286 carries keywords nonn,base,hard and does not carry keyword more, so it does not fall under oeis-keyword-more-new-terms. Credit: Amarnath Murthy and Dean Hickerson.",
   "success_criterion": "Supply integers b >= 2 and n >= 5 together with the exact base-10 integer p = b^n such that p is a decimal palindrome (reads identically forwards and backwards in base 10 without leading zeros), not previously published in OEIS A062286, OEIS A002780/A002778-related comments/links, or later number-theory literature re-checked at claim time. An independent implementation must recompute p = b^n in exact arbitrary-precision integer arithmetic, confirm b >= 2 and n >= 5, and verify the digit-reversal equality. This target seeks a verified counterexample witness (b, n) and does not require proving b^n is minimal among all palindromic n-th powers.",
   "partial_wins": [],
-  "verification_method": "Compute p = b^n in exact arbitrary-precision integer arithmetic using two independent implementations, convert p to decimal string, check b >= 2, n >= 5, len(str(p)) >= 2, and str(p) == str(p)[::-1]. Calibrate the checker positively on A062286's known smallest terms 2^1 = 2, 2^2 = 4, 2^3 = 8, 11^4 = 14641 as well as multi-digit powers 11^1 = 11, 11^2 = 121, 7^3 = 343, 11^3 = 1331; include negative calibration checks rejecting b = 1, n <= 4 (such as 11^4 = 14641), and non-palindromic powers (such as 2^5 = 32 and 11^5 = 161051). For packages, keep files <= 1 MB and packages <= 50 MB per kit/SUBMIT.md section 1.",
+  "verification_method": "Compute p = b^n in exact arbitrary-precision integer arithmetic using two independent implementations, convert p to decimal string, check b >= 2, n >= 5, len(str(p)) >= 2, and str(p) == str(p)[::-1]. Calibrate the exponentiation and palindrome subroutines, without the target-domain gate, positively on A062286's known smallest terms 2^1 = 2, 2^2 = 4, 2^3 = 8, 11^4 = 14641 as well as multi-digit powers 11^1 = 11, 11^2 = 121, 7^3 = 343, 11^3 = 1331. Then exercise the full target-domain gate: it must reject b = 1, all n <= 4 (including every preceding calibration), and non-palindromic powers such as 2^5 = 32 and 11^5 = 161051. No positive full-target witness is known; these component tests do not establish that the target has been met. For packages, keep files <= 1 MB and packages <= 50 MB per kit/SUBMIT.md section 1.",
   "primary_sources": [
     "https://oeis.org/A062286"
   ],
@@ -17,7 +17,7 @@
   "disclosure": "open",
   "angles": [
     "Prune last digits first via congruences of b^n mod 10^k: any palindromic n-th power ending in d must have leading digit d, restricting allowed base residues b mod 10 (e.g. b mod 10 != 0) and limiting digit-prefix intervals [d * 10^m, (d + 1) * 10^m) whose n-th roots match the trailing residue.",
-    "For fixed n >= 5 and digit length L, test only bases b whose lower d digits modulo 10^d reverse to the leading d digits of b^n before computing full-precision powers."
+    "For fixed n >= 5 and digit length L, test only bases b for which the lower d digits of b^n modulo 10^d, zero-padded to d digits, reverse to its leading d digits before computing full-precision powers."
   ],
   "pitfalls": [
     "One-digit powers 1^n = 1 are excluded by b >= 2 and p > 1; every b^n with b >= 2 and n >= 5 is automatically multi-digit.",
