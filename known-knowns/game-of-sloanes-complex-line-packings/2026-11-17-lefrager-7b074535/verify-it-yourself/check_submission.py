@@ -13,6 +13,15 @@ THRESHOLD = Decimal("1e-8")
 EXPECTED_SHA256 = "7b0745355c9f502a7eb731c0ec7541db1d21edfabe543f6274eacda06f2b0597"
 EXPECTED_MU_MAX = Decimal("0.75649479818227171")
 
+BASELINE_URL = (
+    "https://raw.githubusercontent.com/gnikylime/GameofSloanes/main/"
+    "CurrentBestPackings/3x34_jrr.txt"
+)
+BASELINE_SHA256 = "159cb51fdd209252b1b4c2a190b8fccefed7415e5254a3226160d4218082cf1e"
+RECORDED_BASELINE_MU_60 = Decimal(
+    "0.756834797253628206097823785778147954374744559786819000003653"
+)
+
 
 def fail(msg: str) -> None:
     print(f"ERROR: {msg}")
@@ -73,7 +82,7 @@ def main():
 
     pkg = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     cand = pos[0] if pos else os.path.join(pkg, "object", "3x34_new.txt")
-    base = pos[1] if len(pos) > 1 else os.path.join(pkg, "the-record-we-beat", "3x34_jrr.txt")
+    base = pos[1] if len(pos) > 1 else None
 
     if not os.path.isfile(cand):
         fail(f"Missing candidate file: {cand}")
@@ -86,19 +95,48 @@ def main():
 
     mu_new, pair_new = eval_mu_60(cand, enforce_sigfigs=True)
     imp_table = TABLE_MU - mu_new
-    print(f"candidate={cand} mu={mu_new} worst={pair_new} imp_vs_table={imp_table}")
+    imp_recorded_base = RECORDED_BASELINE_MU_60 - mu_new
+
+    try:
+        cand_label = os.path.relpath(os.path.abspath(cand), pkg)
+        if cand_label.startswith(".."):
+            cand_label = os.path.basename(cand)
+    except ValueError:
+        cand_label = os.path.basename(cand)
+
+    print(
+        f"candidate={cand_label} mu={mu_new} worst={pair_new} "
+        f"imp_vs_table={imp_table}"
+    )
+    print(
+        f"upstream_baseline_url={BASELINE_URL} "
+        f"upstream_baseline_sha256={BASELINE_SHA256} "
+        f"recorded_baseline_mu_60={RECORDED_BASELINE_MU_60} "
+        f"imp_vs_recorded_baseline={imp_recorded_base}"
+    )
 
     if mu_new < LOWER_BOUND:
         fail(f"mu {mu_new} < lower_bound {LOWER_BOUND}")
     if imp_table < THRESHOLD:
         fail(f"improvement vs table {imp_table} < 1e-8")
+    if imp_recorded_base < THRESHOLD:
+        fail(f"improvement vs recorded baseline {imp_recorded_base} < 1e-8")
     if not skip_hash and mu_new > EXPECTED_MU_MAX:
         fail(f"mu {mu_new} exceeds expected {EXPECTED_MU_MAX}")
 
-    if os.path.isfile(base):
+    if base is not None:
+        if not os.path.isfile(base):
+            fail(f"Missing optional baseline file: {base}")
+        with open(base, "rb") as f:
+            bh = hashlib.sha256(f.read()).hexdigest()
+        if not skip_hash and bh != BASELINE_SHA256:
+            fail(f"Baseline SHA-256 mismatch: {bh} != {BASELINE_SHA256}")
         mu_base, _ = eval_mu_60(base, enforce_sigfigs=False)
         imp_base = mu_base - mu_new
-        print(f"baseline={base} mu={mu_base} imp_vs_baseline={imp_base}")
+        print(
+            f"baseline={os.path.basename(base)} sha256={bh} "
+            f"mu={mu_base} imp_vs_baseline={imp_base}"
+        )
         if imp_base < THRESHOLD:
             fail(f"improvement vs baseline {imp_base} < 1e-8")
 
