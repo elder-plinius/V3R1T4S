@@ -490,7 +490,10 @@ def run_own_checker(c, pkg, label, timeout):
         # corrupt one digit of the first object file and expect a FAIL
         bad = os.path.join(tmp, "bad")
         shutil.copytree(pkg, bad)
-        objs = [p for p in walk(os.path.join(bad, "object")) if is_text(p)]
+        # pick by content, not by extension: this step only needs an ASCII digit to flip, and objects are often
+        # domain formats (.xyz, .fasta, .pdb, .vcf) that are plain text but not in TEXT_EXT
+        objs = [p for p in walk(os.path.join(bad, "object"))
+                if is_text(p) or b"\0" not in rbytes(p)[:4096]]
         changed = False
         for p in objs:
             t = rbytes(p)
@@ -502,7 +505,10 @@ def run_own_checker(c, pkg, label, timeout):
                 changed = True
                 break
         if not changed:
-            c.warn("%s: could not build a corrupted copy of object/ to test the checker" % label)
+            if objs:
+                c.warn("%s: object/ is text but holds no digit to flip; the tamper test did NOT run" % label)
+            else:
+                c.warn("%s: object/ is binary; the tamper test was skipped (no digit-flip possible)" % label)
             return
         rc2, out2 = _run_checks(bad, timeout)
         if rc2 == 0 and re.search(r"\bPASS\b", last_nonempty(out2)):
