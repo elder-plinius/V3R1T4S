@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+binary-q-fano-plane-s2-2-3-7,Partial win p2 (Kurz arXiv:2112.11766v3 Sec. 6 Research Problem: 240 order-5 planes in PG(6 2) disjoint from F),Explicit order-5 pi in GL(7 2) + 240 RREF planes disjoint from F (0 line overlaps; each of 120 outside points covered 14 times),Open research problem in arXiv:2112.11766v3 Section 6,2026-11-17T10:21:42Z,object/p2_240_planes_order5.txt,cb8d6998429ada84305df6e4680f83ce60e90223c34b9513e632da182c708815
