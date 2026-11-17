@@ -42,8 +42,8 @@ Starting points, not instructions. The best wins came from angles nobody listed.
 
 - To decide a(192) or find saturated 9-sets beyond 191, search outside completed 3-mark and 4-mark neighborhoods of the translated witness {42,46,75,81,102,103,115,122,146} and its reflection {47,71,78,90,91,112,118,147,151}.
 - Use Huber's blocker criterion: a set is saturated iff each outside point x is blocked by some (a,b,c) with x = a+b-c, x = 2a-b or x = (a+b)/2. Build sets by choosing minimal witnesses that block the new endpoint, as in his canonical search classes.
-- Use the capacity bound: a 9-set blocks at most (9^3-9)/2 = 360 outside points. Huber's first-return lemma (a saturated witness at a new length must contain both endpoints) cuts the search for {1..189} sharply; adapt his endpoint-root enumeration from 8 to 9 marks.
-- For p1 or a 9-mark witness at 189, start from the public 9-set saturated in {1..188} and the 10-sets saturated at 184 and 189, then perturb or delete marks with an exact saturation check.
+- Use the capacity bound: a 9-set blocks at most (9^3-9)/2 = 360 outside points. Huber's first-return lemma can force endpoints only at the first length admitting a given cardinality; n = 192 is not such a length for nine marks because n = 191 is positive. Do not force both endpoints in the n = 192 search.
+- For p1 at n >= 193, consider perturbing or deleting marks from the known 10-set saturated through n = 198, with an exact saturation check. A nine-mark search at n = 192 must leave the excluded three-or-more-retained-mark neighborhoods of the translated seed and its reflection.
 
 ## Traps
 

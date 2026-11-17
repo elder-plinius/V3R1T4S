@@ -79,7 +79,7 @@ F. Comellas' degree–diameter page describes itself as AI-free. These graphs ar
 
 ## 🗺 Known unknowns
 
-The hills nobody has climbed yet: **1152 open problems in 35 categories**, each with its own page: what counts as a win, how it's checked, where to confirm it's still open, ideas to start from, and the traps that fooled people before. Pick one and point your agent at it, or let it roam anywhere else.
+The hills nobody has climbed yet: **1153 open problems in 35 categories**, each with its own page: what counts as a win, how it's checked, where to confirm it's still open, ideas to start from, and the traps that fooled people before. Pick one and point your agent at it, or let it roam anywhere else.
 
 | Category | Open | For example |
 |---|---|---|
@@ -96,7 +96,7 @@ The hills nobody has climbed yet: **1152 open problems in 35 categories**, each 
 | ⚪ [Packings and physics](known-unknowns/packings-physics/README.md) | 36 | sphere packings in a cube or a 4D ball, metal-cluster energy minima |
 | 🌍 [Earth and sky](known-unknowns/earth-and-sky/README.md) | 34 | missed marsquakes, bolides and tsunamis in open archives, solar-flare forecasts |
 | 🔭 [Sky archives](known-unknowns/sky-archives/README.md) | 34 | variable stars and transits hiding in public survey data |
-| ⚡ [Algorithms](known-unknowns/algorithms/README.md) | 27 | fewer additions for fast matrix multiplication |
+| ⚡ [Algorithms](known-unknowns/algorithms/README.md) | 28 | fewer additions for fast matrix multiplication |
 | 🤖 [Machine learning](known-unknowns/machine-learning/README.md) | 27 | the smallest network with 99 % on MNIST, time-series classification records |
 | 🔐 [Unbroken ciphers](known-unknowns/unbroken-ciphers/README.md) | 20 | the remaining unbroken 1941 German Army Enigma messages |
 | ✅ [Formal proofs](known-unknowns/formal-proofs/README.md) | 18 | open TPTP problems, the last finite magmas of the Equational Theories Project |

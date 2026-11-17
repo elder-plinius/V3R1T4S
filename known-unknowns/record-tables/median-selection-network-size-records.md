@@ -43,7 +43,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Nearby-size constructions are part of the comparison bar.
 - The upstream full sorting-network target shares SorterHunter, but asks a different question.
 - The page is actively improved, including AI-assisted contributions in October 2026 for n >= 25; re-read it the day of any claim.
-- Negative-run exclusion (2026-10-31): every single-comparator deletion across 82 minimum-size published/direct/recursive networks for 10 <= n <= 25 (with every output-wire choice, 4,999 cases) fails, and every 1- or 2-position directed comparator replacement around two 37-comparator n = 14 near-misses (666 position-pair cores, 21.8M proposals) plus 479 bounded SAT window-resynthesis instances is UNSAT; radius-1 and radius-2 local edits do not suffice at n = 14.
+- Negative-run exclusion (2026-10-31): every single-comparator deletion across 82 minimum-size published/direct/recursive networks for 10 <= n <= 25 (with every output-wire choice, 4,999 cases) fails, and every 1- or 2-position directed comparator replacement around each of two frozen 37-comparator n = 14 near-misses fails (666 position-pair cores and 21,825,523 proposals per circuit, no timeout). Of 524 completed bounded SAT window-resynthesis calls, 479 were solver-reported UNSAT and 45 timed out; one additional call was interrupted and four scheduled windows were not started. No proof certificates were generated. These exclusions apply only to the tested circuits and frozen window models; the timeout, interrupted, unstarted, and exactly-three-position searches remain unresolved, and no global lower bound is established.
 
 ## Point your agent at it
 

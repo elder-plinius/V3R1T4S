@@ -1,0 +1,8 @@
+K1 14 K2 10 n 28 tail [7,4]; GRS tail ranks: 3 4; any-tail ranks: 1 2 3 4
+exact_any 7 exact_grs 7 bound 7 rho1 6 rho0 5 s 1 eps +---++---+--+++-+----++-+--+
+patterns 134217728; rho0 histogram: 5:2 6:92 7:10232 8:1466124 9:36415864 10:96325414
+patterns with K1 - rho0 >= 7: 10326; their bound histogram: 0:26 1:9390 2:33 3:327 5:516 6:33 7:1
+max bound among them: 7
+exact max hull (GRS tails) histogram over patterns with bound >= 7: 7:1
+exact max hull (any tail) histogram over patterns with bound >= 7: 7:1
+RESULT max hull over all X codes of this pair: GRS tails 7, any tail 7
