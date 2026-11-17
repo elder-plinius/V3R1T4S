@@ -1,0 +1,2 @@
+target_id,status,claim_type,partial_win,object_path,verifier_command
+magic-state-stabilizer-rank-exponents,CONFIRMED_PARTIAL,partial_win,"p2, p3",object/constructive_witnesses.json,sh verify-it-yourself/run_checks.sh
