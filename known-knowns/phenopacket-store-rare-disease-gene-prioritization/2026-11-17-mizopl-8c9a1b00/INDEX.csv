@@ -1,0 +1,3 @@
+target_id,status,claim_type,partial_win,cell,value,table_value,table_fetched_utc,file,sha256
+phenopacket-store-rare-disease-gene-prioritization,CONFIRMED_PARTIAL,partial_win,p2,p2_raw_127_mrr,0.001089,0.000083,2026-11-17T10:07:09Z,object/00_p2_benchmark_certificate.json,4bc37f92cb3bd7040e4d66807c4b4d95053f1a1d19caa04f53ae6dfce855da9e
+phenopacket-store-rare-disease-gene-prioritization,CONFIRMED_PARTIAL,partial_win,p2,p2_holdout_988_mrr,0.008803,0.000089,2026-11-17T10:07:09Z,object/00_p2_benchmark_certificate.json,4bc37f92cb3bd7040e4d66807c4b4d95053f1a1d19caa04f53ae6dfce855da9e

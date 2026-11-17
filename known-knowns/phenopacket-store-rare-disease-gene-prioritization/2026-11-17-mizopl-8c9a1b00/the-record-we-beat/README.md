@@ -1,0 +1,9 @@
+# The record we beat (metadata only)
+
+No third-party release archive or compiled knowledge graph is copied into `object/`. Each row below records the canonical upstream URL, UTC fetch timestamp, HTTP status, exact `sha256` digest, and extracted baseline summary.
+
+| Source | URL | UTC fetch time | HTTP status | sha256 of fetched document | Extracted baseline / note |
+|---|---|---|---:|---|---|
+| `phenopacket-store` `0.1.27` release API metadata | https://api.github.com/repos/monarch-initiative/phenopacket-store/releases/tags/0.1.27 | 2026-11-17T10:07:09Z | 200 | `2c942661b5cb539ed320852717d2d6b51b51c0bb2de7ef98d15df49cbd878b6b` | Pinned corpus release `0.1.27` (`2026-06-09`), asset `all_phenopackets.zip` (`sha256: d0c70005bb09b87035087516252b6b539fbc0415be7c664b73c9cde7eedf205a`, `10,377` JSONs -> `10,189` included single-gene protein-coding cases) |
+| `human-phenotype-ontology` `v2026-06-06` release API metadata | https://api.github.com/repos/obophenotype/human-phenotype-ontology/releases/tags/v2026-06-06 | 2026-11-17T10:07:10Z | 200 | `e6f8c11cb0503934de7eb7ddd821833528bbb04dcaa6811b68340310bf149eb2` | Pre-corpus `HPO/HPOA v2026-06-06` (`2026-06-08T05:38:59Z < 2026-06-09`), including `genes_to_disease.txt` (`sha256: 81e8d2e0bc1c1052c383614ad85388325deeacb4b9478c6d9585597f45602bac`) |
+| `LIRICAL` `v2.4.1` release API metadata | https://api.github.com/repos/TheJacksonLaboratory/LIRICAL/releases/tags/v2.4.1 | 2026-11-17T10:07:10Z | 200 | `4cf52b29cef2179cacb5d4106e708fc8b8950e60c1619bf8cb13e8b4566f1942` | Reference tool `LIRICAL 2.4.1` (`lirical-cli-2.4.1.jar` `sha256: 3cad929d98b6d56c4dd4046d999f5688c952a6abf3ee92093f7dd3f61481fe55`, `benchmark --phenotype-only` on pre-corpus `2026-06-06` OMIM/Orphanet tables): `Pos-40` `MRR = 0.132031`, `P2-Raw` (`127` cases) `MRR = 0.000083` (`Top-100 = 0.0000`, `Median Rank = 12109.0`), `P2-Holdout` (`988` cases) `MRR = 0.000089` |
