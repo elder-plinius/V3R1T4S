@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+alternating-prm-plus-ergodic-convergence,Partial win p2 (Simultaneous PRM+ Algorithm 2 on 3x3 Cai et al. game A),Lean 4 kernel proof DualGap >= 1/20 for all t >= 13203 (119 modules 1398472 B; 0 sorry),Empirical Figure 1 simulation only (no analytical or formal proof),2026-11-16T22:02:00Z,object/PRMPlus/Main.lean,964893f95e6fee87437002a8274f74b21ace1cd899e366e16fd40f9cb3dc598c
