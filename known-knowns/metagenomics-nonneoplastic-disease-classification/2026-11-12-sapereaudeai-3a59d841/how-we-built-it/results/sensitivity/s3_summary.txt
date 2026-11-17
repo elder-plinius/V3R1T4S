@@ -1,0 +1,2 @@
+P2 linear: n 400 mean 0.6743 p2.5/97.5 [0.6209 0.7289] max 0.7499 real 0.787916 beats all True frac mean 0.517
+W1 linear: n 400 mean 0.4967 p2.5/97.5 [0.4164 0.5857] max 0.6069 real 0.699116 beats all True frac mean -0.014

@@ -1,0 +1,15 @@
+P2 species RF {"auc_mean": 0.8559906725356331, "margin95": 0.030856314599515176, "ci95": [0.8251343579361179, 0.8868469871351483], "repeats": 20, "rep_mean_range95": [0.8507288119489206, 0.8619846354238647], "n_folds_scored": 200} 283s
+P2 cov LR depth 0.6612 [0.6239, 0.6985] frac_pub 0.478
+P2 cov LR age 0.7758 [0.7415, 0.81] frac_pub 0.818
+P2 cov LR bmi 0.6985 [0.6592, 0.7378] frac_pub 0.589
+P2 cov LR age+bmi 0.7733 [0.7386, 0.808] frac_pub 0.811
+P2 cov LR country 0.7634 [0.7381, 0.7887] frac_pub 0.782
+P2 cov LR study 0.8404 [0.8173, 0.8635] frac_pub 1.01
+P2 cov LR ALL 0.903 [0.8808, 0.9252] frac_pub 1.196
+P2 cov LR ALL+sex 0.9098 [0.8875, 0.932] frac_pub 1.216
+P2 cov RF study 0.842 [0.8193, 0.8646]
+P2 cov RF ALL 0.9105 [0.8902, 0.9307]
+P2 decomp species_rf {"same_study_pairs_auc_mean": 0.7350811387676951, "same_study_pairs_auc_range95": [0.7271669700869456, 0.7406447157789008], "diff_study_pairs_auc_mean": 0.8882213418130636, "diff_study_pairs_auc_range95": [0.8848922222801439, 0.8923636813845592], "n_same_pairs": 31859, "n_diff_pairs": 115098, "pooled_oof_auc_mean": 0.8550218771477371}
+P2 decomp cov_lr_study {"same_study_pairs_auc_mean": 0.43888383188423996, "same_study_pairs_auc_range95": [0.42248658149973317, 0.45624941146928655], "diff_study_pairs_auc_mean": 0.9351192027663382, "diff_study_pairs_auc_range95": [0.9307490138838207, 0.9364889051069524], "n_same_pairs": 31859, "n_diff_pairs": 115098, "pooled_oof_auc_mean": 0.8275396884803037}
+P2 decomp cov_lr_ALL {"same_study_pairs_auc_mean": 0.717159986189146, "same_study_pairs_auc_range95": [0.7106900718792178, 0.7208818544210427], "diff_study_pairs_auc_mean": 0.9528962275625987, "diff_study_pairs_auc_range95": [0.951512841230951, 0.9541616709239084], "n_same_pairs": 31859, "n_diff_pairs": 115098, "pooled_oof_auc_mean": 0.9017906598528821}
+P2 done 676.1 s

@@ -1,0 +1,2 @@
+W1 n 400 mean 0.5 p2.5/97.5 [0.422  0.5752] max 0.6127 real 0.738197 beats all True folds<10: 0
+W2 n 400 mean 0.5024 p2.5/97.5 [0.3595 0.6547] max 0.7372 real 0.775917 beats all True folds<10: 16
