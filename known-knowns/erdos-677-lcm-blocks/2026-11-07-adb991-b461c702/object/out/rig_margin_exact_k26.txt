@@ -1,0 +1,3 @@
+rig_margin_exact: k=26..26 X0=1000000 eta=1/1000 CF=1 rho_bits=96 (exact rational intervals)
+k=26 pairs=21262 proved=21262 failures=0 undecided=0 time_s=2198.0 worst_rel_margin_lower_bound=0.99999995 at r=3060/3059
+TOTAL pairs=21262 failures=0 undecided=0

@@ -1,0 +1,6 @@
+deep_cf.py sha256 dc74be2f2b68c5618437b9b972f7313621ab556360a33e7e784e5f0dc82e6b85
+k=26 R=1029659400 levels=12 |S_A|=21262 |admissible_r|=21262 missing=0 extra=0 |S_cnt|=21262 C_subset_A=True narrowed_primes={}
+k=27 R=2974571600 levels=12 |S_A|=16402 |admissible_r|=16402 missing=0 extra=0 |S_cnt|=16402 C_subset_A=True narrowed_primes={}
+k=28 R=2868336900 levels=12 |S_A|=21262 |admissible_r|=21262 missing=0 extra=0 |S_cnt|=21262 C_subset_A=True narrowed_primes={}
+TOTAL missing over k=26..28: 0
+brute force n<m<=400: equal-lcm pairs per k {26: 88, 27: 93, 28: 109}; total 290; r outside sets: 0
