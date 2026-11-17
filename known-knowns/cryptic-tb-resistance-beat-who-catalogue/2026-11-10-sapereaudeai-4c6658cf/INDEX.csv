@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+cryptic-tb-resistance-beat-who-catalogue,partial win p2 (leakage demonstration; ETH; fixed 10-NN on SNP distances; sensitivity at 95% specificity),cluster-aware split v2 0.3496 vs 400 random splits 0.5135-0.6678 (mean 0.6003); inflation 0.2507 mean (>= 0.1639),no published value for this table (status source unchanged),2026-11-10T11:38:39Z,object/p2_knn_ETH_metrics.csv,4c6658cfc2a0b212af072273305c1cbc35fc10a38ffc406f73724303a4c202d4

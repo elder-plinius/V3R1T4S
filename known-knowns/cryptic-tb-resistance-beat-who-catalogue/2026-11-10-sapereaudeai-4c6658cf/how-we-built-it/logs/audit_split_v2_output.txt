@@ -1,0 +1,31 @@
+negative entries in reuse x reuse block 0
+min TRAIN-TEST distance (TEST rows) 13 (TRAIN rows) 13 pairs <= 12: 0 0
+nearest-TRAIN distance of TEST isolates percentiles 0/1/5/10/25/50: [13.0, 13.0, 14.0, 16.0, 22.0, 51.0]
+  TEST isolates with a TRAIN isolate within 12 SNPs: 0
+  TEST isolates with a TRAIN isolate within 20 SNPs: 671
+  TEST isolates with a TRAIN isolate within 30 SNPs: 1075
+  TEST isolates with a TRAIN isolate within 50 SNPs: 1530
+  TEST isolates with a TRAIN isolate within 100 SNPs: 2349
+clusters under the rule spanning TRAIN and TEST: 0 of 7420
+TEST cluster sizes: n 2282 singletons 1993 largest [72, 48, 35, 25, 21]
+major lineage by split:
+SPLIT              test  train
+MAJOR                         
+Unknown               3      5
+clade_animal_A3       1      3
+lineage1            217    504
+lineage1/lineage2     0      1
+lineage2            860   3521
+lineage2/lineage4     0      2
+lineage3            312    744
+lineage3/lineage4     4      6
+lineage4           1666   4418
+lineage6              2      4
+lineageBovis          7      6
+lineageCaprae         1      0
+overlap with run-1 split (rows: v2, cols: run 1):
+R1     test  train
+SPLIT             
+test    918   2155
+train  2787   6427
+run-1 hub-removed 12-SNP clusters spanning v2 TRAIN/TEST: 0
