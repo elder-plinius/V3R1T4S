@@ -59,7 +59,7 @@
    "id": "algorithms",
    "name": "Algorithms",
    "description": "Fast matrix multiplication schemes and other algorithmic records.",
-   "targets": 27
+   "targets": 28
   },
   {
    "id": "optimization-benchmarks",
