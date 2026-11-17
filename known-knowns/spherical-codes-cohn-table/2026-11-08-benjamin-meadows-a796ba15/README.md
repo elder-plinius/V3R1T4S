@@ -12,7 +12,7 @@ This package contains one object only: object/29_727.txt. Its first line is a `#
 sh verify-it-yourself/run_checks.sh
 ```
 
-Expected last line: `PASS`. Python 3 standard library; about two seconds on a laptop. It checks the object's sha256, the number of vectors and the digits per coordinate, recomputes the maximum pairwise cosine from the definition in Decimal at 60 digits, and compares it with the claimed value and with the table value (`table cos - c* = 3.551075773341817e-3  (need >= 1e-10)`). Details and the basin test: RUN_IT_YOURSELF.md.
+Expected last line: `PASS`. Python 3 standard library; about two seconds on a laptop. It checks the object's sha256, the number of vectors and the digits per coordinate, recomputes the maximum pairwise cosine from the definition in Decimal at 60 digits, and compares it with the claimed value and with the table value (`table cos - c* = 3.551075773341817e-3  (need >= 1e-10)`). Details: RUN_IT_YOURSELF.md.
 
 ## Compared to
 
@@ -32,5 +32,5 @@ Details in the-record-we-beat/.
 ## Credits
 
 - Henry Cohn and co-maintainers, Table of spherical codes, https://spherical-codes.org/
-- Azmi C. Özgen, the posted (29, 727) code the table lists (2026)
+- Azmi C. Özgen, the posted (29, 715) code that starts our point-addition chain (https://spherical-codes.org/data/29/715; see HOW_WE_FOUND_IT.md), and the posted (29, 727) code the table lists (2026)
 - Benjamin Meadows (search lane, checking and packaging).
