@@ -1,0 +1,41 @@
+{
+ "id": "nogo-28-point-boards",
+ "name": "NoGo: solve the first open rectangular boards (2x14 and 4x7, 28 points) with a checkable proof tree",
+ "category": "graphs-games-automata",
+ "kind": "harvest",
+ "tractability": 2,
+ "compute_profile": "laptop-days (the 2023 solver did all boards up to 27 points on a 32 GB machine; one 5x5 opening visited about 2.4e8 distinct positions; 28 points may need disk plus memory)",
+ "statement": "NoGo: Black and White alternately place a stone on an empty point; passing is forbidden; every block must keep at least one liberty, so both capturing and suicide are illegal; the player with no legal move loses. Du, Wei and Müller's SBHSolver (ACG 2023) solved every rectangular board with up to 27 points (3x9 the largest; previously unknown results for 3x9, 1xn with n = 10..27 and 2xn with n = 10..13), after She (2013) first solved 5x5 by brute force and Cazenave (2021) solved many rectangular boards, and Du (2024) solved all 1xn boards up to 1x39. Müller's status page (last modified 2025-09-05) lists nothing beyond these, so the first open boards are the 28-point boards 2x14 and 4x7, then 2x15, 3x10 and 5x6 (30 points), 2x16 and 4x8 (32 points) and 6x6 (36). Known pattern: Black wins most boards; the exceptions are 1x1, 4xn with n <= 4 and several 2xn boards. The 2xn row of the 2023 table reads, for n = 2..13, 1,0,0,1,1,1,1,0,0,1,1,1 (1 = Black win); a period-6 pattern would predict a Black win on 2x14, but nothing is proven.",
+ "success_criterion": "CONFIRMED: the game-theoretic value (Black or White wins, Black moving first on the empty board) of 2x14 or 4x7 NoGo, or of any rectangular board not listed as solved on Müller's NoGo solving page at verification time, with a complete proof tree (or proof DAG with transpositions) in a documented format: at every node where the winner moves, one legal move; at every node where the loser moves, every legal move; every leaf a position where the player to move has no legal move. A checker that shares no code with the solver, implementing the four NoGo rules from the paper (including the no-capture and no-suicide rule for every block after each move), must accept the tree, and the claimant must report its node count and hash. Symmetry reductions are allowed only if the checker verifies the stated board symmetry for every merged node.",
+ "partial_wins": [
+  {
+   "id": "p1",
+   "statement": "A complete, independently checked proof tree for one opening move of 4x7 or 2x14 (a Black win from that opening, or all White refutations of it), recorded as a solved opening while the whole board is still open."
+  },
+  {
+   "id": "p2",
+   "statement": "The first independent proof-tree verification of 3x9 NoGo (the largest board solved in 2023) or of 2x13, by a checker sharing no code with SBHSolver, confirming the published value."
+  }
+ ],
+ "verification_method": "Implement NoGo in about 100 lines (blocks by flood fill; a move is legal only if afterwards every block of both colours has a liberty). Test it on the published 3x3 (first-player win, all three openings win), 4x4 (second-player win; White's symmetric replies 1.B1 D3, 1.A1 D4, 1.B2 C3 win) and 5x5 (all six openings win for Black, in at most 21 moves) results. Then stream the claimed proof tree: at each loser-to-move node regenerate the legal moves and check that each child is present; at each winner-to-move node check that the given move is legal; check that leaves have no legal moves; check transposition links by recomputing the position hash.",
+ "primary_sources": [
+  "https://webdocs.cs.ualberta.ca/~mmueller/nogo/solving.html",
+  "https://webdocs.cs.ualberta.ca/~mmueller/ps/2023/ACG_2023_NoGo.pdf"
+ ],
+ "status_source": "https://webdocs.cs.ualberta.ca/~mmueller/nogo/solving.html",
+ "status_checked": "2026-10-14; historical proposal date preserved. No fresh source request was made during final preparation.",
+ "disclosure": "open",
+ "angles": [
+  "Rebuild the SBHSolver ideas (boolean negamax, sorted-bucket hash transposition table storing all solved positions, perfect-hash encoding) and add what its authors list as future work: a better hash spread, compressed empty bucket runs, and a two-tier disk-plus-memory table for searches that exceed main memory.",
+  "Use 2xn structure: on two rows NoGo positions decompose into nearly independent segments once a column is filled; a combinatorial-game-theory sum solver (the 1xn work in Du 2024 used one) could cut 2x14 down to small components.",
+  "Exploit the board's symmetry group (4 symmetries for non-square rectangles) to merge positions, and order moves with the strategy observations of the 2023 paper (making eyes, long separating blocks).",
+  "Solve 4x7 opening by opening across many cores; a won Black opening ends the search, while a White win needs every opening refuted."
+ ],
+ "pitfalls": [
+  "NoGo forbids capturing as well as suicide: a move that would leave any block of either colour without liberties is illegal. Go-style capture code gives wrong results.",
+  "Passing is forbidden; the player with no legal move loses (not the player with fewer stones).",
+  "Board orientation: 2x14 and 14x2 are the same game; say which is meant and which side moves first (Black).",
+  "Proof trees here can have 1e8 to 1e10 nodes; plan the format and a streaming checker before the search, not after.",
+  "Crowding: Müller's group extended linear NoGo to 1x39 in 2024 and may be on 28-point boards; check the status page and arXiv before and after a run."
+ ]
+}
