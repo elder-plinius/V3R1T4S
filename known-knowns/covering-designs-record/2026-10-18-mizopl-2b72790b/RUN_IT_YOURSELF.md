@@ -22,7 +22,7 @@ sh verify-it-yourself/run_checks.sh
    - Every block contains $k = 14$ distinct integers in $\{1, \dots, 68\}$
    - All $15,675$ blocks are distinct
    - Schonheim lower bound $L(68, 14, 5) = 5,785 \le 15,675$
-   - Strictly improves on the Covering Repository record ($16,004$) and La Jolla Covering Repository record ($16,004$) by $329$ blocks
+   - Strictly improves on the current Covering Repository record ($16,001$, Wynand van Staden, 22 October 2026; $16,004$ on our dated 18 October 2026 fetch, reflected in the frozen checker constant `cr_record = 16004`) by $326$ blocks, and on the La Jolla Covering Repository v1.2 value ($16,004$)
    - Exhaustively checks all $\binom{68}{5} = 10,424,128$ $5$-subsets of $\{1, \dots, 68\}$ via colexicographic ranking and confirms `uncovered = 0`.
 4. Prints `PASS` on the final line and exits with status `0` (or prints `FAIL` and exits `1` if any check fails or if a single digit in `object/design_68_14_5.txt` is corrupted).
 

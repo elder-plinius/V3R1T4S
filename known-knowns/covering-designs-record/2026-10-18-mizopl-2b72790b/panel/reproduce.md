@@ -63,9 +63,9 @@ Every claimed property is independently confirmed:
 - **Exhaustive coverage:** All $\binom{68}{5} = 10,424,128$ $5$-subsets are covered (`uncovered=0`), with coverage multiplicity ranging from `min_cov=1` to `max_cov=398` and total incidences $15,675 \times \binom{14}{5} = 15,675 \times 2,002 = 31,381,350$.
 - **$1$-minimality:** `redundant_blocks=0`, and every block uniquely covers between `6` and `826` of the $5$-subsets, confirming the claim (stated in `README.md`) that every block uniquely covers at least $6$ of the $5$-subsets.
 - **Comparison against the record (see `the-record-we-beat/RECORD.md`):**
-  - The Covering Repository plain $(v,k,t)$ archive (`https://coveringrepository.com/download_archive_vkt.aspx`) contains the line `68	14	05	05		16004`.
-  - The La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`) lists the same record, $16,004$.
-  - Our verified block count $15,675$ improves on $16,004$ by $16,004 - 15,675 = 329$ blocks ($-2.0557\% \approx -2.06\%$).
+  - The current live Covering Repository cell for $(68, 14, 5)$ lists $16,001$ blocks (Wynand van Staden, 22 October 2026, posted after our initial filing; our dated 18 October 2026 fetch of `https://coveringrepository.com/download_archive_vkt.aspx` read the line `68	14	05	05		16004`).
+  - The La Jolla Covering Repository v1.2 (`https://dmgordon.org/covering-designs/`, Zenodo `19735294`) lists $16,004$.
+  - Our verified block count $15,675$ improves on the current previous best $16,001$ by $16,001 - 15,675 = 326$ blocks ($-2.0374\% \approx -2.04\%$).
 
 ## 4. Inspection and Execution of Author's Checker
 
@@ -84,7 +84,7 @@ COVER_CHECK: PASS
 
 The output matches the author's stated expected output line-for-line and exits with code `0`.
 
-Re-run on the packaged files, `sh verify-it-yourself/run_checks.sh` (which runs `verify-it-yourself/check_68_14_5.py`) prints:
+Re-run on the packaged files, `sh verify-it-yourself/run_checks.sh` (which runs `verify-it-yourself/check_68_14_5.py`; its embedded constant `cr_record = 16004` reflects our dated 18 October 2026 fetch, whereas against the current 22 October 2026 Covering Repository bound of `16,001` the margin is `326` blocks) prints:
 
 ```
 control_positive_fano_7_3_2: PASS (21/21 covered, uncovered=0)

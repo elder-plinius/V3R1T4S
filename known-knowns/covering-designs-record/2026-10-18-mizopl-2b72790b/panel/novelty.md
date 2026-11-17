@@ -4,7 +4,7 @@ role: NOVELTY
 target_id: covering-designs-record
 cell: C(68, 14, 5)
 claimed_bound: 15675
-previous_best_bound: 16004
+previous_best_bound: 16001
 
 ## 1. Mandate
 
@@ -19,7 +19,7 @@ previous_best_bound: 16004
   - `blocks=15675`, `distinct=15675`, `base=1`, `schonheim=5785`, `C_v_t=10424128`, `uncovered=0`, `COVER_CHECK: PASS`
 - Re-run on the packaged files, `sh verify-it-yourself/run_checks.sh` (running `verify-it-yourself/check_68_14_5.py`) prints:
   - `v=68 k=14 t=5 blocks=15675 distinct=15675`, `schonheim_lower_bound=5785`, `total_5_subsets=10424128 uncovered=0`, `PASS`
-- The claimed upper bound is `C(68, 14, 5) \le 15,675`, which exceeds the Schonheim lower bound `L(68, 14, 5) = 5,785` and improves upon the previously known bound `16,004` by `329` blocks (`-2.06%`).
+- The claimed upper bound is `C(68, 14, 5) \le 15,675`, which exceeds the Schonheim lower bound `L(68, 14, 5) = 5,785` and improves upon the current previous best bound `16,001` in the Covering Repository (Wynand van Staden, `2026-10-22`; `16,004` on our dated `2026-10-18` fetch and in LJCR v1.2) by `326` blocks (`-2.04%`).
 
 ## 3. Honest Single-GET Verification of Primary Tables
 
@@ -40,8 +40,9 @@ Every primary source was fetched once via `curl -sS -A "V3R1T4S-research-agent (
   4079:68	14	05	05		16004
   4165:68	14	06	06		135839
   ```
-- Live Covering Repository record for `(68, 14, 5)`: **`16004`**.
-- Note: Per-cell `history.aspx` pages were not queried because they are behind a Cloudflare 403 block, whereas the full plain-text `(v, k, t)` archive returns HTTP 200 on a single GET.
+- Dated `2026-10-18` Covering Repository archive reading for `(68, 14, 5)`: `16004`.
+- Current live Covering Repository cell for `(68, 14, 5)` (posted after our initial filing; confirmed in browser on `2026-11-17`): **`16,001`** blocks (Wynand van Staden, `22 October 2026`), so `15,675` improves on the current previous best by **`326` blocks** (`-2.04%`).
+- Note: Per-cell `history.aspx` pages were not queried by our automated script on `2026-10-18` because they are behind a Cloudflare 403 challenge, whereas the full plain-text `(v, k, t)` archive returned HTTP 200 on a single GET.
 
 ### 3.2 La Jolla Covering Repository (`dmgordon.org`, Zenodo, and GitHub `dmgordo/LJCR`)
 
@@ -64,7 +65,7 @@ Every primary source was fetched once via `curl -sS -A "V3R1T4S-research-agent (
      - Fetch UTC timestamp: `2026-10-18T10:41:52Z`, HTTP status: `200`, SHA-256: `9e7da3710921066b10234fdc95379a18df3a7d3ae0f8a08ae188ea6bbca92f87`
      - Exact entry for `C(68,14,5)`:
        `{'size': 16004, 'low_bd': 5785, 'imps': [['16004', 'Dynamic programming construction', 'LJCR', '2026-03-06 15:13:23'], ['16152', 'Private Tools', 'Jan de Heer and Steve Muir', '2026-02-28 23:37:26'], ['16192', 'Local search', 'A. West', '2023-12-21 09:38:15'], ...]}`
-     - Live LJCR Zenodo v1.2 record for `C(68, 14, 5)`: **`16004`** (set `2026-03-06` via dynamic programming construction).
+     - LJCR Zenodo v1.2 value for `C(68, 14, 5)`: `16004` (set `2026-03-06` via dynamic programming construction).
 
 3. **GitHub `dmgordo/LJCR` Repository:**
    - URL (directory listing): `https://api.github.com/repos/dmgordo/LJCR/contents/coverings`
@@ -73,7 +74,7 @@ Every primary source was fetched once via `curl -sS -A "V3R1T4S-research-agent (
      - Fetch UTC timestamp: `2026-10-18T10:39:53Z`, HTTP status: `200`, SHA-256: `0984bb8b4c89fe07268569b9814794e3c8852302d075f0794140f202e83d7fef` (`6,517,686` bytes)
      - Entry for `C(68,14,5)`: `{'size': 16194, 'low_bd': 5785, 'imps': [['16194', 'Local search', 'Dietmar Pree', '2021-08-29 09:36:58'], ...]}` (older snapshot prior to the `2026-03-06` Zenodo v1.2 update to `16004`).
 
-Both primary tables (`coveringrepository.com` and LJCR Zenodo v1.2) list **`16,004`** as the best known upper bound for `C(68, 14, 5)`. Our claimed bound **`15,675`** strictly beats `16,004` by **`329` blocks**.
+The current previous best across primary tables is **`16,001`** in the live Covering Repository (`coveringrepository.com`, Wynand van Staden, `22 October 2026`; `16,004` on our dated `18 October 2026` fetch and in LJCR Zenodo v1.2). Our claimed bound **`15,675`** strictly beats `16,001` by **`326` blocks** (`-2.04%`).
 
 ## 4. Literature, Repository, Trophy Case, and Pull Request Audit (Last 24 Months)
 
@@ -104,7 +105,7 @@ Both primary tables (`coveringrepository.com` and LJCR Zenodo v1.2) list **`16,0
 - URL: `https://export.arxiv.org/api/query?search_query=all:%22covering+design%22&sortBy=submittedDate&sortOrder=descending&max_results=50`
 - Fetch UTC timestamp: `2026-10-18T10:39:10Z`, HTTP status: `200`, SHA-256: `f74b966d73ae8ea6b663e58589bb9a361a4a6e4975a6d4c4376b8be308148a30`
 - Returned `50` entries (including `27` preprints from `2024-01-13` through `2026-09-29`, such as `2607.10978v2` on tight single-change covering designs with block size 6, `2603.24170v3` on the 6/49 lottery, and `2502.12897v1` on fractional-repetition codes from covering designs).
-- Zero entries mention `(68, 14, 5)` or `16004` / `16,004`.
+- Zero entries mention `(68, 14, 5)` or `16001` / `16,001` (or `16004` / `16,004`).
 
 ### 4.3 V3R1T4S `TROPHY_CASE.md` and Open Pull Requests
 
@@ -127,6 +128,6 @@ Both primary tables (`coveringrepository.com` and LJCR Zenodo v1.2) list **`16,0
 
 ## 5. Verdict
 
-The claimed explicit covering design `object/design_68_14_5.txt` (`15,675` blocks) strictly improves the best known upper bound `C(68, 14, 5) \le 16,004` in both the Covering Repository (`coveringrepository.com`) and the La Jolla Covering Repository (`dmgordon.org` / Zenodo v1.2 `19735294`) by `329` blocks (`-2.06%`), with no prior or competing improvement in the literature, GitHub repositories, `TROPHY_CASE.md`, or open pull requests.
+The claimed explicit covering design `object/design_68_14_5.txt` (`15,675` blocks) strictly improves the current previous best upper bound `C(68, 14, 5) \le 16,001` in the Covering Repository (`coveringrepository.com`, Wynand van Staden, `22 October 2026`; `16,004` on our dated `18 October 2026` fetch) by `326` blocks (`-2.04%`) and the La Jolla Covering Repository v1.2 (`dmgordon.org` / Zenodo `19735294`) value of `16,004`, with no prior or competing improvement below `16,001` in the literature, GitHub repositories, `TROPHY_CASE.md`, or open pull requests.
 
 pass: true

@@ -2,7 +2,7 @@
 
 ## What
 
-An explicit (68,14,5) covering design with 15,675 blocks (sha256 2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07), exhaustively verified over all 10,424,128 5-subsets of a 68-set, strictly improving on the Covering Repository record of 16,004 and the La Jolla Covering Repository record of 16,004 for C(68,14,5).
+An explicit (68,14,5) covering design with 15,675 blocks (sha256 2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07), exhaustively verified over all 10,424,128 5-subsets of a 68-set, strictly improving on the Covering Repository record of 16,001 (Wynand van Staden, 22 October 2026; 16,004 when fetched on 18 October 2026) by 326 blocks and on the La Jolla Covering Repository v1.2 value of 16,004 for C(68,14,5).
 
 - **Target:** `covering-designs-record` (`combinatorics-covering`)
 - **Claim level:** `solution_claim` (`CONFIRMED_SOLUTION`)
@@ -22,8 +22,8 @@ It checks positive and negative Fano-plane controls ($C(7, 3, 2) = 7$), verifies
 
 ## Compared To
 
-- **Covering Repository (`https://coveringrepository.com/download_archive_vkt.aspx`, fetched `2026-10-18T10:33:16Z`, `sha256: f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277`):** `16,004` blocks (`68 14 05 05  16004`). Our design improves this upper bound by **$329$ blocks** ($-2.06\%$).
-- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T10:33:20Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv` / v1.2 `19735294`):** `16,004` blocks. Our design improves this upper bound by **$329$ blocks** ($-2.06\%$).
+- **Covering Repository (`https://coveringrepository.com`, live cell `C(68, 14, 5)`):** current previous best `16,001` blocks (Wynand van Staden, `2026-10-22`, posted after our initial filing; our dated `2026-10-18T10:33:16Z` fetch of `https://coveringrepository.com/download_archive_vkt.aspx`, `sha256: f02f5fc233aa66ca835b8f0b1b4d751fd35ad721c5264043ceb515ee95da9277`, read `68 14 05 05  16004`). Our design improves on `16,001` by **$326$ blocks** ($-2.04\%$).
+- **La Jolla Covering Repository (`https://dmgordon.org/covering-designs/`, fetched `2026-10-18T10:33:20Z`, `sha256: a5cc2312afc8dedd17c52410c34d518396d0a42982b2af429c8dc54f9e7170e3`; Zenodo record `19735294`, v1.2, https://doi.org/10.5281/zenodo.19735294; not vendored here: `how-we-built-it/fetch_ingredients.py` downloads each one and checks it against the sha256 in `how-we-built-it/INGREDIENTS.tsv` / v1.2 `19735294`):** `16,004` blocks in LJCR v1.2 ($329$ blocks above our $15,675$; vs the current overall previous best of `16,001` in the Covering Repository, our margin is **$326$ blocks**).
 
 ## Not Claimed
 

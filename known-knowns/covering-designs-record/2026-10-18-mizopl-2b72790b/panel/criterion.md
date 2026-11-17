@@ -3,7 +3,7 @@
 role: CRITERION
 target_id: covering-designs-record
 claim_level: solution_claim
-confirmed_scope: An explicit (68,14,5) covering design with 15,675 blocks (sha256 2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07), exhaustively verified over all 10,424,128 5-subsets of a 68-set, strictly improving on the Covering Repository record of 16,004 and the La Jolla Covering Repository record of 16,004 for C(68,14,5).
+confirmed_scope: An explicit (68,14,5) covering design with 15,675 blocks (sha256 2b72790b8149daebd293b91cddae0105bc2a19b798b414d405e66f81828bcf07), exhaustively verified over all 10,424,128 5-subsets of a 68-set, strictly improving on the Covering Repository record of 16,001 (Wynand van Staden, 22 October 2026; 16,004 when fetched on 18 October 2026) by 326 blocks and on the La Jolla Covering Repository v1.2 value of 16,004 for C(68,14,5).
 
 ## 1. Clause-by-Clause Verification of the Bank Success Criterion
 
@@ -31,17 +31,15 @@ Every clause was independently tested against `object/design_68_14_5.txt` using 
    - Result: `redundant_blocks = 0`. Every single block in `object/design_68_14_5.txt` uniquely covers at least `6` $5$-subsets (`min = 6` at 0-based block index `2678` / line `2679`, `median = 444.0`, `mean = 399.84`, `max = 826` at 0-based block index `12981` / line `12982`). Deleting any single block from the design leaves at least `6` uncovered $5$-subsets.
 
 4. **Strictly smaller than the Covering Repository record (`coveringrepository.com`):**
-   - The Covering Repository plain $(v,k,t)$ archive (`https://coveringrepository.com/download_archive_vkt.aspx`, fetch recorded in `the-record-we-beat/RECORD.md`), line `4079`, records the upper bound for $(68, 14, 5)$:
-     `68	14	05	05		16004`
-   - Our block count $b = 15,675$ is strictly smaller than $16,004$ by $329$ blocks ($-2.0557\%$).
+   - The current live Covering Repository cell for $(68, 14, 5)$ lists $16,001$ blocks (Wynand van Staden, 22 October 2026, posted after our initial filing; our dated 18 October 2026 fetch of `https://coveringrepository.com/download_archive_vkt.aspx`, recorded in `the-record-we-beat/RECORD.md` line `4079`, read `68	14	05	05		16004`).
+   - Our block count $b = 15,675$ is strictly smaller than the current previous best $16,001$ by $326$ blocks ($-2.0374\% \approx -2.04\%$).
 
 5. **Strictly smaller than the La Jolla Covering Repository (LJCR) value and recent literature:**
-   - The LJCR landing page (`https://dmgordon.org/covering-designs/`, fetch recorded in `the-record-we-beat/RECORD.md`) states that `coveringrepository.com` incorporates all coverings in the LJCR database plus subsequent improvements; the LJCR record for $(68, 14, 5)$ is $16,004$.
-   - Web and literature checks over the last 6 months show no GitHub repository or arXiv preprint improving $C(68, 14, 5)$ below $16,004$.
+   - The LJCR landing page (`https://dmgordon.org/covering-designs/`, fetch recorded in `the-record-we-beat/RECORD.md`) states that `coveringrepository.com` incorporates all coverings in the LJCR database plus subsequent improvements; the LJCR v1.2 (`19735294`) value for $(68, 14, 5)$ is $16,004$ ($15,675$ is $329$ blocks below LJCR v1.2 and $326$ blocks below the current Covering Repository best of $16,001$).
+   - Web and literature checks over the last 6 months show no GitHub repository or arXiv preprint improving $C(68, 14, 5)$ below $16,001$.
 
-6. **Parameter bounds and full-solution vs. partial-win classification:**
+6. **Parameter bounds:**
    - Table range: $v = 68 \le 99$, $k = 14 \le 25$, $t = 5 \le 8$ (all satisfied).
-   - Because $v = 68$ exceeds $50$ and $k = 14$ exceeds $12$, this parameter tuple lies outside the smaller partial-win sub-range ($v \le 50, k \le 12, t \le 6$) and qualifies directly for the full `solution_claim` criterion.
 
 7. **Schonheim lower bound check:**
    - Bottom-up evaluation of $L(v, k, t) = \lceil (v / k) L(v-1, k-1, t-1) \rceil$ from $L(63, 9, 0) = 1$:
