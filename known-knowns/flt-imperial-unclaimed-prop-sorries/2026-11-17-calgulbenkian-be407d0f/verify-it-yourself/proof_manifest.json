@@ -1,0 +1,21 @@
+{
+  "target_id": "flt-imperial-unclaimed-prop-sorries",
+  "solution_file": "CompactHausdorffRings.lean",
+  "solution_sha256": "be407d0f4d9d2b6bac5c1b7b64f7ac9361ad711a3c8c4bcf05d8713729bc8bbd",
+  "solution_bytes": 47848,
+  "theorem_full_name": "Group.subsingleton_of_pow_prime_eq_one",
+  "additive_theorem_full_name": "AddGroup.subsingleton_of_nsmul_prime_eq_zero",
+  "downstream_theorem_full_name": "Group.totallyDisconnected_of_pow_prime_eq_one",
+  "upstream_repo": "https://github.com/ImperialCollegeLondon/FLT",
+  "upstream_commit": "a3210204ad8876e851e32f73dd97d882bf1ccd0a",
+  "upstream_relpath": "FLT/Patching/Utils/CompactHausdorffRings.lean",
+  "upstream_sha256": "72b11ca144f518793a167af9109a5b31fa4e3b03377ef4ecd3e99bcf9c002eda",
+  "lean_toolchain": "leanprover/lean4:v4.35.0",
+  "mathlib_rev": "56a005855ea17e0b0958f73ec801ae140b0a1679",
+  "checkdecls_rev": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}
