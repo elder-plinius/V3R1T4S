@@ -13,6 +13,7 @@ was stitched with the extra glider into one all-glider pattern (later stages' gl
 previous stage settles), and the result was checked with lifelib and a live re-read of the Catagolue cost. This
 object came out of that sweep on the evening of 2026-11-05: xs27_8ehf8bbgz6430321 (31 gliders) plus one glider on
 lane 4 gives xs27_0ca1ugmicz651346, listed at 66. Three fresh reviewers then checked it separately (reproduction with
-their own simulator, novelty against Catagolue, Shinjuku and the forums, and the criterion wording).
+their own simulator, novelty against Catagolue, Shinjuku and LifeWiki, with the ConwayLife forums only web-searched, not read, and the
+criterion wording).
 
 The plan file how-we-built-it/PREREG.md was written after the search, when this claim was packaged; it says so.

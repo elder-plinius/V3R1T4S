@@ -1,4 +1,5 @@
 # CRITERION — xs27_0ca1ugmicz651346
+> Layout note (2026-11-17): this review was written on 2026-11-06 against an earlier layout of the claim, before it was packaged. Its file names map to this package as follows: claim/CLAIM.md -> README.md (title and '## What'); claim/TARGET_CRITERION.md -> how-we-built-it/TARGET_CRITERION.md (byte-identical); claim/METHOD.md -> HOW_WE_FOUND_IT.md and how-we-built-it/COMMANDS.md; claim/REPRODUCE.md -> RUN_IT_YOURSELF.md; claim/STATUS.md -> not carried over (status is in panel/gate.md); claim/result/xs27_0ca1ugmicz651346.rle -> object/xs27_0ca1ugmicz651346.rle (byte-identical); claim/result/xs27_0ca1ugmicz651346.json -> how-we-built-it/data/xs27_0ca1ugmicz651346.p32.json (byte-identical).
 
 context: subagent
 

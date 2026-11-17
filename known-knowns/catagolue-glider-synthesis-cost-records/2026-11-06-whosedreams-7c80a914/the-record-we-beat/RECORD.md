@@ -19,7 +19,7 @@ Each URL fetched once with curl (user agent "V3R1T4S-kit (whosedreams)"), no ret
   (how-we-built-it/data/verify_xs27_rerun.json). Earlier read by the panel: 2026-11-06T15:20:34Z, 66 (true).
 Cell compared: synthesis cost of xs27_0ca1ugmicz651346; listed 66 (true), at least 60; ours 32.
 
-- Pre-submit refetch (credit recast to whosedreams): object page https://catagolue.hatsya.com/object/xs27_0ca1ugmicz651346/b3s23
+- Pre-submit refetch: object page https://catagolue.hatsya.com/object/xs27_0ca1ugmicz651346/b3s23
   fetched 2026-11-06T17:44:48Z, HTTP 200, 9335 bytes, sha256 4b7dc9f79fc6a5f604327d4127d0a3b7a482393d76d327a3ddd057c4c069a697.
   Extracted cell: `#CSYNTH xs27_0ca1ugmicz651346 costs 66 gliders (true).`
   Class CSV https://catagolue.hatsya.com/textcensus/b3s23/synthesis-costs/xs27 fetched 2026-11-06T17:44:48Z, HTTP 200, 3918082 bytes, sha256 72df1a672800a1d091a27fdedae6b43da5e345282ff9d864dcbd7151f0f9c582.
