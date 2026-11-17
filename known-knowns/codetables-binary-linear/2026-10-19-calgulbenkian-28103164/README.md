@@ -2,7 +2,7 @@
 
 ## What
 
-The object is a valid [163,11,104] code over GF(4) (rank 11, exact minimum distance 104 by full enumeration of all 4^11 - 1 messages, 7956 minimum-weight words) whose distance strictly exceeds the live lower bound 103 (upper 113); it is a refile of closed PR #101 (not a prior record by ruling R1), under the literal GF(q) reading of the criterion.
+The object is a valid [163,11,104] code over GF(4) (rank 11, exact minimum distance 104 by full enumeration of all 4^11 - 1 messages, 7956 minimum-weight words) whose distance strictly exceeds the live lower bound 103 (upper 113); it is a refile of closed PR #101.
 
 Path note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/win_q4_n163_k11_d104.json` (sha256 28103164e334b8d35cdcb6e2d2dac8be21a26b82a9acaad2b53d835d25456b8f); its programs are in `how-we-built-it/`.
 
@@ -24,7 +24,7 @@ The quick check verifies the object's hash against INDEX.csv, computes the rank 
 
 | Source | Cell | Listed value | URL | UTC fetch time |
 |---|---|---|---|---|
-| BKLC cell page | [163,11] over GF(4) | lower 103, upper 113 | http://www.codetables.de/BKLC/BKLC.php?q=4&n=163&k=11 | 2026-10-19T04:35:36Z (triage); 2026-10-19T05:15:59Z (novelty skeptic) |
+| BKLC cell page | [163,11] over GF(4) | lower 103, upper 113 | http://www.codetables.de/BKLC/BKLC.php?q=4&n=163&k=11 | 2026-10-19T04:35:36Z (first fetch); 2026-10-19T05:15:59Z (novelty skeptic) |
 | V3R1T4S TROPHY_CASE.md and known-knowns folders | this cell | no competing value (see `panel/novelty.md`) | https://github.com/elder-plinius/V3R1T4S | 2026-10-19T05:15:21Z (novelty skeptic) |
 | arXiv, four generic queries plus the named work 2609.37056 | this cell | no newer claim found (queries were generic, not exhaustive; see `panel/novelty.md`) | https://arxiv.org/abs/2609.37056 | 2026-10-19 (novelty skeptic) |
 
@@ -32,19 +32,16 @@ Ours: [163,11,104]_4 linear code over GF(4), value 104; the table value in `INDE
 
 ## Not claimed
 
-- Scope question. The bank target codetables-binary-linear is named for binary codes, but its success criterion and partial-win text are written for codes over GF(q), and the live codetables.de table has this cell. No claim over a field other than GF(2) has been merged on this target yet, so whether this cell counts under this target is for the maintainer to rule. The package follows the literal GF(q) text of the criterion.
-- This is a full win only under that literal reading. The minimum distance is one above the live lower bound (and below the live upper bound); nothing is claimed about the upper bound, about any other cell of the table, or about the code being optimal.
+- The minimum distance is one above the live lower bound (and below the live upper bound); nothing is claimed about the upper bound, about any other cell of the table, or about the code being optimal.
 - The exact distance was computed by full enumeration of all 4^k - 1 messages. The package checker and the panel's own programs are all the same enumeration idea (some in Python, some in C); no structurally different method (for example a Brouwer-Zimmermann style bound, or the weight enumerator through the dual code and the MacWilliams identities) was run.
-- This is a refile of an earlier filing of the same code (see Filing history); the gate counts it as not a prior record by the orchestrator's ruling that a refile of a closed, unmerged filing is a refile and not a duplicate. Shortening or puncturing this code gives neighbouring cells of the table that the contributor also filed earlier; those cells are not claimed here.
+- This is a refile of an earlier filing of the same code (see Filing history).
 - The comparison with the arXiv record is limited to four generic queries plus the named work 2609.37056 (seven binary codes of length 172 to 200, which cannot concern GF(4)); a paper listing a code of this size that those queries missed is not excluded.
 - Unresolved from the panel: the Magma-generated Brouwer and Grassl tables carry no later data than the page fetched; whether an unpublished or non-arXiv code exists for this cell cannot be settled from public sources.
 - Not peer reviewed. The package was checked by three fresh Claude Code subagents (reproduce, novelty, criterion) and by the standalone checker shipped here. The object was built by a different model family (Gemini, the contributor's search agent); the skeptics and the packager are Claude.
 
 ## Filing history
 
-This is a refile. The same code (its sha256 begins 28103164, which is the fragment in that pull request's title) was filed by the contributor as pull request 101 ("[163, 11, 104]_4 vs d_lower=103"). Pull request 101 was closed unmerged on 2026-10-14 in the bulk close of about thirty early PRs during a handoff between sessions, not for a defect.
-
-Pull requests 99 and 100, which filed neighbouring cells of the same family, were closed in the same bulk close. They are not refiled here.
+This package refiles closed pull request #101 ("[163, 11, 104]_4 vs d_lower=103"), which filed the same code (its sha256 begins 28103164, the fragment in that title).
 
 ## Credits
 

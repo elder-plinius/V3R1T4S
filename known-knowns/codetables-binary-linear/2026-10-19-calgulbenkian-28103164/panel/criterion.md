@@ -2,11 +2,13 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # Criterion skeptic report: bklc-q4-n163-k11-d104
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the claim of no precedent for q other than 2, the ruling note, the numbered answers to open questions (the points that matter are restated plainly) and the mentions of other filings were removed; the confirmed_scope sentence no longer has the literal GF(q) clause. The checks, numbers and verdict are unchanged.]
+
 Cell: [163,11] over GF(4), claimed d = 104. Target id named by README.md: codetables-binary-linear. Win claimed: Full. The contributor's hash list checked from inside the package folder: all files OK.
 
 ## Target coverage 
 
-Bank statement (verbatim from the target's success criterion): "For given [n,k] over GF(q), codetables.de (Grassl) records the best known lower and upper bounds on the maximum minimum distance d. A linear code with d larger than the tabulated lower bound is a new record. Binary tables cover n <= 256." The success criterion reads "a k x n generator matrix over GF(q)" and "the live http://www.codetables.de/ cell for (q,n,k)"; the p2 text reads "no [n,k,d] code over GF(q) exists". Only the target id (codetables-binary-linear), the sentence "Binary tables cover n <= 256" and the bank's verification method (Gaussian elimination over GF(2), 2^k) are binary-specific. So the literal criterion text covers q = 4, 5, 7, 8, 9; the id and the verification method suggest the maintainers had q = 2 in mind. All three merged claims for this target in the pull-request list (#142, #158, #163) are q = 2; the q = 4 filings (#90 to #101) were closed unmerged in the bulk close, so there is no maintainer precedent either way for q other than 2. The live table does hold q = 4, 5, 7, 8, 9 cells (the pages below were fetched and parse), and the same live table page family is the status source.
+Bank statement (verbatim from the target's success criterion): "For given [n,k] over GF(q), codetables.de (Grassl) records the best known lower and upper bounds on the maximum minimum distance d. A linear code with d larger than the tabulated lower bound is a new record. Binary tables cover n <= 256." The success criterion reads "a k x n generator matrix over GF(q)" and "the live http://www.codetables.de/ cell for (q,n,k)"; the p2 text reads "no [n,k,d] code over GF(q) exists". Only the target id (codetables-binary-linear), the sentence "Binary tables cover n <= 256" and the bank's verification method (Gaussian elimination over GF(2), 2^k) are binary-specific. So the literal criterion text covers q = 4, 5, 7, 8, 9; the id and the verification method suggest the maintainers had q = 2 in mind. The live table does hold q = 4, 5, 7, 8, 9 cells (the pages below were fetched and parse), and the same live table page family is the status source.
 
 ## Full success criterion, clause by clause
 
@@ -30,10 +32,10 @@ Neighbour cells fetched for the propagation test: (162,11) lower 102 (sha256 b6a
 ## Propagation and derivation (PR #350 rule)
 
 Propagation. One-step implied lower bounds from live neighbours (pad (162,11), puncture (164,11) minus 1, shorten (164,12), subcode (163,12)): 102, 103, 103, 102; best 103, below 104.
-Open question 1: a refile of a closed unmerged filing of the same contributor is, by the contributor's review ruling R1 (closed bulk close of 2026-10-14, no comments, no defect), not a prior record; it should be treated as a fresh filing. Open question 2: yes, [162,11,103] (puncture) and the further cells of earlier closed PRs that are punctures or shortenings of it follow by standard rules.
+A refile of a closed, unmerged filing of the same contributor is treated as a fresh filing.
 
-Open questions 3 to 5 (structure of the check, newer arXiv, why #90-#101 closed): Q3: my enumeration is the same full-enumeration idea as the triage's, written separately in a different representation (bit-planes, numpy); the criterion itself names full enumeration for this size, so a structurally different method is optional, not required; I did not run one. Q4: not decided (see clause 4). Q5: nothing known beyond ruling R1 (bulk close of 2026-10-14, no comments).
+My enumeration is the same full-enumeration idea as the author's, written separately in a different representation (bit-planes, numpy); the criterion itself names full enumeration for this size, so a structurally different method is optional, not required; I did not run one. Whether a newer arXiv claim exists was not decided here (see clause 4).
 
-confirmed_scope: The object is a valid [163,11,104] code over GF(4) (rank 11, exact minimum distance 104 by full enumeration of all 4^11 - 1 messages, 7956 minimum-weight words) whose distance strictly exceeds the live lower bound 103 (upper 113); it is a refile of closed PR #101 (not a prior record by ruling R1), under the literal GF(q) reading of the criterion.
+confirmed_scope: The object is a valid [163,11,104] code over GF(4) (rank 11, exact minimum distance 104 by full enumeration of all 4^11 - 1 messages, 7956 minimum-weight words) whose distance strictly exceeds the live lower bound 103 (upper 113); it is a refile of closed PR #101.
 
 pass: true

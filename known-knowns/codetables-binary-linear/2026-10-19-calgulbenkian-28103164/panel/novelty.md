@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: bklc-q4-n163-k11-d104
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the ruling note, the numbered answers to open questions (the points that matter are restated plainly), the mentions of other filings and the wording of the final verdict line about them were removed. The checks, numbers and verdict are unchanged.]
+
 Role: novelty. Cell: [163,11,104] over GF(4), claimed against the live codetables.de lower bound.
 
 ## Primary table (fetched once, honestly)
@@ -25,21 +27,19 @@ zero-weight nonzero messages (rank deficiency indicator)=0
 A rank-deficient generator would give zero-weight nonzero messages; there are none, so the rank is 11 and the minimum distance is exactly 104, with 7956 minimum-weight words (this matches the author's and the triage's count).
 
 ## Derivation and propagation
-This is the refile of closed pull request 101 (title fragment 28103164 matches the object's sha256 prefix), closed unmerged in the 2026-10-14 bulk close; under the contributor's review ruling R1 that is an earlier filing of the author, reported here and not counted against the cell. The pull-request search finds no other value for this cell; the only hit is pull request 101 itself. 
+This is the refile of closed pull request 101 (title fragment 28103164 matches the object's sha256 prefix), closed unmerged. It is an earlier filing of the author, reported here and not counted against the cell. The pull-request search finds no other value for this cell; the only hit is pull request 101 itself. 
 
 ## Pull requests, TROPHY_CASE, literature
-- Pull-request search (title and body, cell parameters; in the snapshot of all V3R1T4S pull requests): only closed pull requests 90 to 101 of the same contributor (2026-10-14 bulk close, the contributor's review ruling R1); merged 142, 158, 163 are binary (q = 2) lower bounds at other cells and do not touch GF(4). No open pull request from another contributor concerns a GF(4) cell.
+- Pull-request search (title and body, cell parameters; in the snapshot of all V3R1T4S pull requests): the only hit for this cell is closed pull request 101, which this package refiles. No open pull request from another contributor concerns a GF(4) cell.
 - arXiv: no GF(4) linear-code record with these parameters in the four queries (see shared sources). unresolved: the arXiv search was four generic queries, not a parameter-specific search of every 2024 to 2026 quaternary-code paper; a paper that lists a [n,k,d]_4 code of this size would most plausibly appear in the Magma-based QC/QT literature, which I could not exhaust.
 
-Answers to the open questions that concern novelty:
-1. Under ruling R1 a refile of a bulk-closed filing is judged like any other claim; I judged it on the live table, the pull requests and arXiv, as for any claim.
-2. Cells filed in earlier closed pull requests are punctures or shortenings of this code; they follow from it, not the other way round, so they do not affect this cell.
-3. My own enumeration agrees (104, 7956 words); same enumeration idea.
-4. No newer arXiv claim found (see unresolved line).
-5. Nothing further known.
+Notes:
+- A refile of a closed filing is judged like any other claim: I judged it on the live table, the pull requests and arXiv.
+- My own enumeration agrees (104, 7956 words); same enumeration idea.
+- No newer arXiv claim found (see unresolved line).
 
 unresolved: the Magma-generated Brouwer and Grassl tables carry no later data than the page fetched; whether an unpublished or non-arXiv code exists for this cell cannot be settled from public sources.
 
 novelty: PASS (with the unresolved literature caveat above)
-verdict: Exact d = 104 (my enumeration) beats live lower bound 103 and is not derivable from any live, merged, open or batch value; the earlier closed pull request 101 is the author's own bulk-closed filing (ruling R1).
+verdict: Exact d = 104 (my enumeration) beats live lower bound 103 and is not derivable from any live, merged or open value; the earlier closed pull request 101 is the author's own filing.
 pass: true

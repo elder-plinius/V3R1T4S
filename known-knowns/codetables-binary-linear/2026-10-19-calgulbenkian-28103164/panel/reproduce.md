@@ -1,6 +1,9 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 cell: bklc-q4-n163-k11-d104   role: reproduce
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the numbered wording of an open-question answer was replaced by a plain statement. The checks, numbers and verdict are unchanged.]
+
+
 The contributor's hash list: 13 files listed, 0 not OK (checked from inside the package folder).
 
 ## Definition (quoted from the claim's own criterion, verbatim)
@@ -32,6 +35,6 @@ Agreement with mine: min distance, A_d and rank identical. No mismatch, no missi
 
 ## Notes
 The live lower bound is 103.
-Open question on a structurally different method (MacWilliams or Brouwer-Zimmermann): not run; my C program is a third implementation of full enumeration (own GF(4) arithmetic and own packing), so it is independent code but the same idea. Full enumeration of all 4^k codewords is exact, and the criterion allows it when feasible (4^11 is about 4.2 million).
+A structurally different method (MacWilliams or Brouwer-Zimmermann) was not run; my C program is a third implementation of full enumeration (own GF(4) arithmetic and own packing), so it is independent code but the same idea. Full enumeration of all 4^k codewords is exact, and the criterion allows it when feasible (4^11 is about 4.2 million).
 
 pass: true
