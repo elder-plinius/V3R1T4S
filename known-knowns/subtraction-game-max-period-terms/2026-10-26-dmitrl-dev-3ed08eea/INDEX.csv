@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+subtraction-game-max-period-terms,A389690(23),3570,"not listed (OEIS lists n = 1..22; a(22) = 4464)",2026-10-26T09:59:52Z,object/A389690_23.txt,3ed08eead6e5ea1301ec09aaa499b0baeac472b4c423dcf0f56ea398ef220ee4
