@@ -1,0 +1,20 @@
+inputs: sha256 match for 2023-08-28_stake_mb_norway_cleaned_ids_latlon_wattributes_climate_svf.csv, 2023-08-28_stake_mb_norway_cleaned_ids_latlon_wattributes_climate_test_svf.csv, custom_loss_best_model.json
+xgboost 3.2.0 | config {'tag': 'primary', 'depth': 5, 'lr': 0.05, 'rounds': 300, 'seed': 0, 'nthread': 4, 'tree_method': 'hist', 'keep999': False, 'quick': False}
+wide rows 4171, glaciers 32; train glaciers 18, test glaciers 14; test winter records dropped by the 9.99 rule: 1
+train records {'annual': 2845, 'summer': 2901, 'winter': 2752} | test records {'annual': 1065, 'summer': 1028, 'winter': 999} | test monthly rows 24913
+OUR MODEL on OUR test records: annual 0.9962 (n=1065) / winter 0.5881 (n=999) / summer 0.7001 (n=1028)
+  annual: RMSE 0.9962 published 1.00 |diff| 0.0038 <= 0.01: True; n 1065 == 1065
+  winter: RMSE 0.5881 published 0.59 |diff| 0.0019 <= 0.01: True; n 999 == 999
+  summer: RMSE 0.7001 published 0.70 |diff| 0.0001 <= 0.01: True; n 1028 == 1028
+(a) record targets equal the shipped test CSV per season: {'annual': True, 'winter': True, 'summer': True} | shipped monthly rows 24913
+(b) shipped MBM booster, our records, our scorer: annual 0.9962 (n=1065) / winter 0.5881 (n=999) / summer 0.7001 (n=1028) | within tol: True
+(c) our model on the shipped monthly test CSV: annual 0.9962 (n=1065) / winter 0.5881 (n=999) / summer 0.7001 (n=1028) | max |diff| vs primary 0.00e+00
+(d) second identical fit gives bit-identical predictions: True
+(e) zero prediction: annual 1.8804 (n=1065) / winter 2.3378 (n=999) / summer 3.3397 (n=1028) | pass? False
+    record-shuffled predictions: annual 2.2177 (n=1065) / winter 1.4065 (n=999) / summer 1.7934 (n=1028) | pass? False
+(f) pure-Python scorer on test_record_predictions_primary.csv : annual 0.9962 (n=1065) / winter 0.5881 (n=999) / summer 0.7001 (n=1028) | max |diff| 2.2e-16
+P3_PASS: yes
+
+real	0m3.886s
+user	0m0.015s
+sys	0m0.015s

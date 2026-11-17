@@ -1,0 +1,5 @@
+test RGIIDs 14 ['RGI60-08.00434', 'RGI60-08.00449', 'RGI60-08.01013', 'RGI60-08.01026', 'RGI60-08.01258', 'RGI60-08.01286', 'RGI60-08.01484', 'RGI60-08.01598', 'RGI60-08.02384', 'RGI60-08.02650', 'RGI60-08.02916', 'RGI60-08.02918', 'RGI60-08.02920', 'RGI60-08.02969']
+wide rows 4171 -> after deleting test-glacier rows 3064 | RGIIDs left that are test RGIIDs: 0
+train monthly rows: split 67909 | deleted-input 67909
+test predictions bit-identical (split vs deleted-input training): True
+deleted-input model on test records: annual 0.9962 (n=1065) / winter 0.5881 (n=999) / summer 0.7001 (n=1028)

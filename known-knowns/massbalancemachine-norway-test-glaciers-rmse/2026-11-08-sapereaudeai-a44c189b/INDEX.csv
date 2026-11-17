@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+massbalancemachine-norway-test-glaciers-rmse,p3 (reproduce MBM test RMSEs Ba/Bw/Bs within 0.01),0.9962/0.5881/0.7001,1.00/0.59/0.70,2026-11-08T17:30:39Z,object/test_record_predictions_primary.csv,a44c189b3573a67eb555cc473444fb7c09e6a87d719d986de96c38a0d3db1164
