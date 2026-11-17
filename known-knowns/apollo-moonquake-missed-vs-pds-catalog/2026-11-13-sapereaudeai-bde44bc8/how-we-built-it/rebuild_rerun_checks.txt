@@ -1,0 +1,24 @@
+# Reproduction checks of the rebuild run (2026-11-13), all from command output
+
+## Glitch-gate code rerun (2026-11-13T08:35:24Z-08:35:32Z, frozen glitch_gates_a38.py, same inputs)
+
+e8b43f4836993d60d62d91636f509026b22d842a8f9d395ba521a1660ce38d3c rerun glitch_gates_A38_rerun.json
+e8b43f4836993d60d62d91636f509026b22d842a8f9d395ba521a1660ce38d3c original glitch_gates_A38.json
+byte-identical: yes
+
+## Full A38 null rerun (fast_null.py, 1971 days 36-365, 400 controls, seed base 20261112; started 2026-11-13T08:33:08Z, ended 2026-11-13T08:55:57Z)
+
+original null_A38_1971.jsonl: 330 day records, sha256 cd98f66742f6d0f4201881b2c970e214fed6a92cf670e01a59ec38bf6615c3eb
+rerun null_A38_1971_rerun.jsonl: 330 day records, sha256 c7a783834497f20f887239577c023d3dd3776421339eefa3edb8e2754887fff5
+record keys: ['ctrl_max', 'doy', 'rev_max', 'seconds', 'year']; fields ignored as run timing: ['seconds']
+same set of days: True; days whose record differs outside the timing fields: 0
+C0 time-reversed full-span max: original 0.21237, rerun 0.21237
+best phase-randomised full-span max: original 0.28679, rerun 0.28679
+all 400 control maxima equal: True; C0 equal: True; best of all 401: original 0.28679, rerun 0.28679
+
+## Object files rebuilt from the waveforms with the rerun null (original builder code), compared with the object/ files of the unsubmitted package 2026-11-13-[credit]-dd93c774 ("package sha256")
+
+window_and_template.csv: rebuilt sha256 e02acd9da97601894cb567e0b4cab3090ef6f1ac8eef09fb0d970584cfaf5279, package sha256 e02acd9da97601894cb567e0b4cab3090ef6f1ac8eef09fb0d970584cfaf5279 -> IDENTICAL
+null_full_span_maxima.csv: rebuilt sha256 fdf9a5e636490f3b94348e29cae52885d4aefbe36dcf952dc8fb729c4959657c, package sha256 fdf9a5e636490f3b94348e29cae52885d4aefbe36dcf952dc8fb729c4959657c -> IDENTICAL
+null_daily_maxima.csv: rebuilt sha256 8e93f7d99dca8511e16fe78898d71355a9bd988ffb2bac902681ea4077677b66, package sha256 8e93f7d99dca8511e16fe78898d71355a9bd988ffb2bac902681ea4077677b66 -> IDENTICAL
+NCC MH1 0.726768 MH2 0.756719 D 0.741743 (rounded 0.7268 0.7567 0.7417); null C0 0.21237, best phase-randomised 0.28679, controls 401, best of all 0.28679

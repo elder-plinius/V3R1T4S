@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+apollo-moonquake-missed-vs-pds-catalog,p1 nest A38 S14 1971-05-13T18:40Z,"NCC 0.757 (MH2) / 0.727 (MH1), D 0.742 > 401 controls (best 0.287); no Liu et al. 2025 S14 ACC-Spike interval in the window (gates G1, G2, added after the original panel; weak evidence, see README)","no catalogue row within 5 min (nearest 157 min)",2026-11-13T09:18:15Z,object/candidate.json,bde44bc8eb77b87184d2fed2a682cb8021dbf97ebc3526fc903d06472941184c

@@ -1,0 +1,110 @@
+{
+ "S14_ACC-Spike_MH1_all.csv": {
+  "rows": 52458,
+  "rows_1971_days_36_365": 9361,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   7347.963,
+   10690.001,
+   15812.114
+  ],
+  "nearest_after": 7347.963,
+  "nearest_before_end": -35349.093
+ },
+ "S14_ACC-Spike_MH2_all.csv": {
+  "rows": 50810,
+  "rows_1971_days_36_365": 11394,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   3013.925,
+   7309.02,
+   8761.246
+  ],
+  "nearest_after": 3013.925,
+  "nearest_before_end": -32440.867
+ },
+ "S14_ACC-Spike_MHZ_all.csv": {
+  "rows": 28754,
+  "rows_1971_days_36_365": 15152,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   7347.963,
+   9238.831,
+   25697.85
+  ],
+  "nearest_after": 7347.963,
+  "nearest_before_end": -38155.282
+ },
+ "S14_ACC-Step-Up_MH1_all.csv": {
+  "rows": 187802,
+  "rows_1971_days_36_365": 30104,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   8249.397,
+   14127.435,
+   18594.303
+  ],
+  "nearest_after": 8249.397,
+  "nearest_before_end": -36947.584
+ },
+ "S14_ACC-Step-Up_MH2_all.csv": {
+  "rows": 141474,
+  "rows_1971_days_36_365": 24358,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   6294.076,
+   7412.265,
+   8248.19
+  ],
+  "nearest_after": 6294.076,
+  "nearest_before_end": -38124.49
+ },
+ "S14_ACC-Step-Up_MHZ_all.csv": {
+  "rows": 522,
+  "rows_1971_days_36_365": 322,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   88070.831,
+   -107360.565,
+   152636.869
+  ],
+  "nearest_after": 88070.831,
+  "nearest_before_end": -107330.377
+ },
+ "S14_ACC-Step-Down_MH1_all.csv": {
+  "rows": 160766,
+  "rows_1971_days_36_365": 25635,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   3010.454,
+   4345.548,
+   5313.85
+  ],
+  "nearest_after": 3010.454,
+  "nearest_before_end": -32439.207
+ },
+ "S14_ACC-Step-Down_MH2_all.csv": {
+  "rows": 106460,
+  "rows_1971_days_36_365": 21470,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   1713.246,
+   3010.152,
+   7305.246
+  ],
+  "nearest_after": 1713.246,
+  "nearest_before_end": -32444.641
+ },
+ "S14_ACC-Step-Down_MHZ_all.csv": {
+  "rows": 462,
+  "rows_1971_days_36_365": 263,
+  "overlapping_window": 0,
+  "nearest_starts_s_from_onset": [
+   87982.68,
+   -107460.943,
+   152541.623
+  ],
+  "nearest_after": 87982.68,
+  "nearest_before_end": -107435.735
+ }
+}

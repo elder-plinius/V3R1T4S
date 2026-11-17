@@ -1,0 +1,146 @@
+{
+ "nest": "A38 (levent.1008weber.csv T2 = A, N2 = 38)",
+ "station": "S14",
+ "channels": [
+  "MH1",
+  "MH2"
+ ],
+ "location": "00 (peaked mode)",
+ "window_start_utc": "1971-05-13T18:39:33.735Z",
+ "onset_utc": "1971-05-13T18:40:03.735Z",
+ "window_s": 450.0,
+ "sample_rate_hz": 3.3125,
+ "ncc_mh1": 0.7268,
+ "ncc_mh2": 0.7567,
+ "detection_statistic_D": 0.7417,
+ "null_c0_time_reversed_full_span_max": 0.21237,
+ "null_best_phase_randomised_full_span_max": 0.28679,
+ "null_controls": 401,
+ "null_span": "1971 days 36-365",
+ "templates_from": "6 aligned catalogued 1971 A38 events (S14)",
+ "nearest_catalogue_rows_min": [
+  [
+   157.1,
+   "levent 71-133 1603 T2=C N2=nan",
+   "1971-05-13T16:03:00.000Z"
+  ],
+  [
+   349.9,
+   "levent 71-134 0030 T2=A N2=209",
+   "1971-05-14T00:30:00.000Z"
+  ],
+  [
+   409.1,
+   "levent 71-133 1151 T2=C N2=nan",
+   "1971-05-13T11:51:00.000Z"
+  ]
+ ],
+ "checks": {
+  "gap_ok": true,
+  "glitch_ok": true,
+  "half_D": [
+   0.7431839870987516,
+   0.7418329927435642
+  ],
+  "solar_elevation_s14_deg": 61.26390772666325,
+  "thermal_ok": true,
+  "anomalistic_phase_deg": 278.76758362626424
+ },
+ "replaces": "2026-11-13-[credit]-dd93c774 (unsubmitted package; same object and numbers; glitch-catalogue gates added)",
+ "glitch_catalogue_gates": {
+  "catalogue": "X. Liu, Z. Xiao and J. Li (2025), Acceleration-Related Glitch Patterns in Apollo Seismic Data and Implications for Future Lunar Seismic Observation, JGR Planets 130, e2025JE009277, https://doi.org/10.1029/2025JE009277",
+  "catalogue_files": "https://doi.org/10.5281/zenodo.15715187 (lunar_ACC-v1.0.1.zip, CC BY 4.0), folder catalogs/",
+  "source_sha256": {
+   "catalogs/S14_ACC-Spike_MH1_all.csv": "78e91b83ff3f80c51706b044786420dcd41dddfa359099ac1e1123503b6ac0a1",
+   "catalogs/S14_ACC-Spike_MH2_all.csv": "1219c0fa43fc26ff08950a217407d0b5b5c9daadcb56900565f8af08733bc9f9"
+  },
+  "extracts": {
+   "glitch_catalogue_s14_acc_spike_mh1_onset_pm24h.csv": {
+    "rows": 48,
+    "sha256": "1790975279fd0548ed0b0864685b76f400382a19e290698e53e02555dc63129f"
+   },
+   "glitch_catalogue_s14_acc_spike_mh2_onset_pm24h.csv": {
+    "rows": 65,
+    "sha256": "6609a7ebc72c65c48c82e038be7868add87aae16bac367647db49f9c52ab2708"
+   }
+  },
+  "extract_rule": "'Start time' and 'End time' of every row whose interval overlaps the onset +/- 24 h, copied verbatim in source order (how-we-built-it/code/scripts/extract_spike_subset.py, mode window); only this window is shipped because the package must not carry a copy of a third-party dataset; the same script in mode year regenerates the full scanned-span extract (1971 days 36-365: 9361 MH1 rows, sha256 7ceff7e10c0f28d83a2dd1f84ba56ced5538533d4c66d146549f98e321ac6fa4; 11394 MH2 rows, sha256 f3b6fb225730fd614ab9fc1de4e2592f874027d1e90b17520345fb005aa1f4ce) from the archive",
+  "source_archive_sha256": "7278ac65c926e88d14748ee6a2ff32c17fb6fde84b3ecf20fbec5a6fcd12566d",
+  "timing": "The glitch-catalogue gates G1 and G2 were not part of this claim's original pre-registration: they were pre-registered at the lens level at 2026-11-13T05:59:12Z, after the claim's own three-skeptic panel (run 2026-11-12-2317), with G1 already seen (a post-panel check, run 2026-11-13-0514) and G2 not yet computed at the time of the freeze.",
+  "G1": {
+   "definition": "no catalogued S14 MH1 or MH2 ACC-Spike interval [start, end] overlaps [window start, window start + 450 s]",
+   "overlapping_intervals": 0,
+   "nearest_spike_start_after_onset_s": {
+    "MH1": 7347.963,
+    "MH2": 3013.925
+   },
+   "last_spike_end_before_window_s_from_onset": {
+    "MH1": -35349.093,
+    "MH2": -32440.867
+   },
+   "pass": true
+  },
+  "G2": {
+   "definition": "mute +/- 5 s every overlapping catalogued spike and every raw sample with |x - median| > 8 max(MAD, 0.5) in the raw 450 s window (either channel), template and data muted at the same samples; NCC over unmuted samples, best lag within +/- 10 s; pass if best single-channel CC >= 0.6 and D > 0.2868",
+   "rule_flagged_raw_samples": {
+    "MH1": 0,
+    "MH2": 0
+   },
+   "raw_mad_counts": {
+    "MH1": 4.0,
+    "MH2": 6.0
+   },
+   "muted_samples": 0,
+   "lag0_ncc": [
+    0.7268,
+    0.7567
+   ],
+   "lag0_D": 0.7417,
+   "best_lag_s": 0.0,
+   "best_ncc": [
+    0.7268,
+    0.7567
+   ],
+   "best_D": 0.7417,
+   "threshold_best_cc": 0.6,
+   "threshold_D": 0.2868,
+   "pass": true
+  },
+  "G3_descriptive": {
+   "note": "fraction with a catalogued S14 MH1/MH2 ACC-Spike in [start - 60 s, start + 450 s], 1971-02-05..1977-09-30 (levent start times are minute-resolution); no gate; NOT reproducible from the shipped files: regenerated from the source archive and levent by how-we-built-it/code/scripts/g3_base_rates.py",
+   "random_times": {
+    "events": 20000,
+    "with_spike": 3327,
+    "fraction": 0.1663
+   },
+   "all_type_A": {
+    "events": 6607,
+    "with_spike": 898,
+    "fraction": 0.1359
+   }
+  },
+  "descriptive": {
+   "note": "computed after the gates were frozen and known; decides nothing; only the spike count below is reproducible from the shipped files, the rest needs the source archive (RUN_IT_YOURSELF.md)",
+   "gap_context": {
+    "note": "stretches of 9.487 h or longer with no S14 MH1/MH2 interval of any type, 1971 days 36-365 (how-we-built-it/code/scripts/daily_counts.py)",
+    "gaps": 39,
+    "start_days": 35,
+    "percent_of_span": 8.2,
+    "rank_of_onset_stretch": [
+     39,
+     71272
+    ]
+   },
+   "spike_intervals_starting_1971_05_13_10_to_19_utc": 0,
+   "no_mh1_mh2_interval_of_any_type_between_utc": [
+    "1971-05-13 09:39:24.528302",
+    "1971-05-13 19:08:36.981132"
+   ],
+   "other_seven_s14_files_overlapping_window": 0,
+   "nearest_step_start_after_onset_s": [
+    1713.246,
+    "S14_ACC-Step-Down_MH2_all.csv"
+   ]
+  }
+ }
+}
