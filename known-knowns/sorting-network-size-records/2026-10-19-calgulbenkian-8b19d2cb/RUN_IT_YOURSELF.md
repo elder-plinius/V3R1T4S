@@ -16,6 +16,4 @@ Expected: The checker prints one JSON line with `"SORTS": true`, `"size": 387`, 
 
 Rough time: a few seconds.
 
-The claim folder called `the-record-we-beat/` here `table-record/`; the checker file's own comments may still use the old name.
-
 How to rebuild the object: The object is a plain list of comparators (first line `n size`, then `i j` per line). It came out of the contributor's search programs described in `how-we-built-it/README.md`; the exact command lines were not recorded in the snapshot, so a rebuild is not promised to give the same file. The check does not depend on how the file was found.

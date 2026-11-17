@@ -8,4 +8,5 @@ confirmed_scope: A standard-form network on 51 channels with 387 comparators and
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
 - The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim package; the object's builder (Gemini, Argon) is a different model family from every skeptic.
+- Edited 2026-11-17 at the maintainer's request on the pull request: the novelty and criterion reports were trimmed (review-ruling bullet, open-questions section, remarks about other networks and pull requests). Verdicts, numbers and the confirmed_scope sentence are unchanged.
 - The propagation test (removing wires from listed networks) covered top and bottom wire fixings, any-wire fixings for up to two deletions, and removal of inactive comparators; deeper reductions were not tried.

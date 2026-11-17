@@ -14,8 +14,8 @@ snapshot of 2026-10-19. Local absolute paths were replaced by {WORKDIR}, {HOME} 
 
 ## This object
 
-The snapshot records which programs were run on this target but not which program produced which of the eight networks of the
-run (the results file lists only the final comparator lists and their checker lines). This object, n=51 (size,depth)=(387,21), is the file
+The snapshot records which programs were run on this target but not which program produced this network
+(the results file lists only its final comparator list and checker line). This object, n=51 (size,depth)=(387,21), is the file
 `N51_S387_D21.txt` of that run. Its parents are networks of the live Dobbelaere table, as the driver scripts read them from the
 table's data file; the exact command lines are not recorded. The driver scripts show the compile lines (`clang++ -O3 -std=c++17 ...`
 for the optimiser, `clang -O3 sn_reduce_scan.c` for the reduction scan) and the job lists; the paths in them point to scratch
