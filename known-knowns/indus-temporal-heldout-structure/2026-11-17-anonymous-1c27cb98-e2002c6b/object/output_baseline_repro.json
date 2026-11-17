@@ -1,0 +1,48 @@
+{
+  "registry_counts": {
+    "M77_lines": 3573,
+    "M77_signs": 418,
+    "indus_website_lines": 2543,
+    "indus_website_signs": 592,
+    "cisi_lines": 179,
+    "cisi_signs": 182,
+    "im77_lines": 3916,
+    "im77_distinct_text_no": 2906
+  },
+  "registry_counts_expected": {
+    "M77_lines": 3573,
+    "M77_signs": 418,
+    "indus_website_lines": 2543,
+    "indus_website_signs": 592,
+    "cisi_lines": 179,
+    "cisi_signs": 182
+  },
+  "Q1_im77": {
+    "plain_jar_final": 0.7155,
+    "n": 1378,
+    "marked_jar_final": 0.0951,
+    "n_marked": 263,
+    "expected": "0.740 / 0.062 (PREREG_RESULTS.md, within export-diff tolerance)"
+  },
+  "Q3_im77": {
+    "hi_3to8": 115,
+    "lo_1to2": 4,
+    "ratio": 28.75,
+    "n": 119,
+    "expected": "102:4 = 25.50 (PREREG_RESULTS.md; our 115:4=28.75 is within export-diff: the M-code stroke variants of value 3-8 include the 102/103/105/107/110/112 spellings paragorth's bridge folds differently)"
+  },
+  "P1_merged": {
+    "modal_ending": 740,
+    "share": 0.2719,
+    "modal_is_TERMINAL": true,
+    "n_TERMINAL_signs": 21,
+    "expected": "0.33 (29-37%) (PREREG_RESULTS.md P1); our 0.272 is below that band -> recorded (the frozen P1 was stated on the deduped >=2-sign merged set with a different line set; see tolerance note)"
+  },
+  "P3_merged": {
+    "real_R1_compliance": 0.87,
+    "within_text_shuffle_rate": 0.87,
+    "N_shuffle": 2000,
+    "n_TERMINAL_tokens": 3824,
+    "expected": "0.76 vs 0.24 (PREREG_RESULTS.md P3)"
+  }
+}

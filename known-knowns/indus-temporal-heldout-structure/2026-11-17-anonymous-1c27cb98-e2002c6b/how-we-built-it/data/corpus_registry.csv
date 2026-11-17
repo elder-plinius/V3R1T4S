@@ -1,0 +1,11 @@
+corpus_id,category,n_full,n_non_damaged,signs_full,signs_non_damaged,unit,site_metadata,motif_metadata,direction_status,access,verification_status,source
+M77,real_indus,3573,3573,418,418,line,none,none,as-stored (verified),authenticated_not_public_bulk,verified,indusscript.in
+indus_website,real_indus,2543,2543,592,592,inscription,52_sites,1622_of_2543,as-stored_corrected_bug,public_github,verified,yajnadevam/indus-website
+cisi_primary,real_indus,179,104,182,142,inscription,1_site,179_of_179,reversed_corrected,public_github_mit,verified,mayig/indus-valley-script-corpus
+cisi_hierarchical,real_indus,179,104,234,185,inscription,1_site,179_of_179,reversed_corrected,public_github_mit,verified,mayig/indus-valley-script-corpus
+cisi_allograph,real_indus,179,104,337,230,inscription,1_site,179_of_179,reversed_corrected,public_github_mit,verified,mayig/indus-valley-script-corpus
+wucs,real_indus,1821,,593,,sequence,not_accessed,not_accessed,not_tested,published_statistics_only,external_statistics_only,"Sinha Izhar Pan Wells 2010"
+ebuds,real_indus,1548,,377,,text,n/a,n/a,n/a,not_reconstructed,not_attempted,"Rao et al 2009 Yadav et al 2010 (published figures only)"
+etcsl,external_language,33338,33338,4168,4168,line,393_compositions,none,left_to_right_natural,not_public_bulk,verified,"Black et al ETCSL"
+dcs_sanskrit,external_language,21231,21231,8764,8764,sentence,1028_hymns,none,left_to_right_natural,public_github,verified,"Hellwig DCS Rigveda"
+sangam_tamil,external_language,33711,33711,35301,35301,line,19_works,29447_of_33711,left_to_right_natural,public_huggingface,"verified_but_flagged_unreliable",starhopp3r/sangam
