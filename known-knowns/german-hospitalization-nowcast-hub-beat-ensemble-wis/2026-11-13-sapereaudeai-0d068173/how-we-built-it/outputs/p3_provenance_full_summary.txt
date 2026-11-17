@@ -1,0 +1,3 @@
+full/data-processed/SZ-hosp_nowcast/2022-04-29-SZ-hosp_nowcast.csv	hub_rows=5336	asm_rows=5336	only_hub=0	only_asm=0	value_mismatch=0
+
+files_checked=1593 hub_rows=7592953 key_mismatches=0 value_mismatches=0 files_with_any_difference=0

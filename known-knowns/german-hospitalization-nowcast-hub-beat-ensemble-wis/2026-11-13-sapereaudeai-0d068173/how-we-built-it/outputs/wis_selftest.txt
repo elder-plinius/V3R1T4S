@@ -1,0 +1,4 @@
+max |pinball - interval| = 2.842170943040401e-14
+known positive (point forecast WIS = |y-m|): True
+known negative (wrong normalisation differs): True
+SELFTEST PASS

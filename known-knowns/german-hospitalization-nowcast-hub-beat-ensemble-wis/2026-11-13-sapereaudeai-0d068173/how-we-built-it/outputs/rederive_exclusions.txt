@@ -1,0 +1,6 @@
+template keys 848424
+Epiforecasts 0.1 rows added by the repair: 29348
+Epiforecasts: re-derived missing 696, released list 696, equal sets: True, only re-derived 0, only list 0
+MeanEnsemble: re-derived missing 368, released list 368, equal sets: True, only re-derived 0, only list 0
+MedianEnsemble: re-derived missing 368, released list 368, equal sets: True, only re-derived 0, only list 0
+SZ: re-derived missing 3312, released list 3312, equal sets: True, only re-derived 0, only list 0
