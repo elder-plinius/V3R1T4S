@@ -1,0 +1,12 @@
+drift per period (-2, 2)
+first-read times/cells translate by drift each period from 9977+104 to 9977+11440: True
+max Chebyshev radius of black debris about the ant over the 104 phases: 48
+period j: min Chebyshev over phases, min (u.dx+v.dy)/2 lower bound
+80 159 158.5
+81 161 160.5
+82 163 162.5
+83 165 164.5
+84 167 166.5
+85 169 168.5
+107 213 212.5
+108 215 214.5

@@ -1,0 +1,5 @@
+phases built: forced-set size min 11 max 22, Dmin(after 80 periods)=159
+# new best t=126
+t=126 cells=3 placed=2 forced_unread=1 phase=0 cells: (1,-3) (0,-2) (3,-5)*
+RESULT K=3 best_t=126 minimisers=1 nodes=20708 maxR=13 Dmin=159 flagged=0
+exit=0

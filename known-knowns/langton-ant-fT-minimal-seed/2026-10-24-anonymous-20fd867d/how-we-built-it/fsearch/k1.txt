@@ -1,0 +1,5 @@
+# new best t=313
+t=313 cells=1 placed=1 forced_unread=0 phase=0 cells: (1,3)
+# new best t=310
+t=310 cells=1 placed=1 forced_unread=0 phase=0 cells: (0,-2)
+RESULT K=1 best_t=310 minimisers=1 nodes=95 maxR=9 Dmin=159 flagged=0

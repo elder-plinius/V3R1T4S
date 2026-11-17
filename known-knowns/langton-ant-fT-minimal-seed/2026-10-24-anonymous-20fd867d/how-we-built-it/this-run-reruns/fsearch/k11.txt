@@ -1,0 +1,6 @@
+phases built: forced-set size min 11 max 22, Dmin(after 80 periods)=159
+# new best t=0
+t=0 cells=11 placed=0 forced_unread=11 phase=4 cells: (-1,0)* (-2,1)* (-2,2)* (1,2)* (2,2)* (3,1)* (4,0)* (3,0)* (2,0)* (1,-1)* (0,-1)*
+t=0 cells=11 placed=0 forced_unread=11 phase=37 cells: (0,-1)* (-1,-2)* (-2,-3)* (-2,-2)* (-2,-1)* (-2,0)* (-3,0)* (-3,1)* (-2,2)* (-1,2)* (2,1)*
+RESULT K=11 best_t=0 minimisers=2 nodes=1 maxR=0 Dmin=159 flagged=0
+exit=0

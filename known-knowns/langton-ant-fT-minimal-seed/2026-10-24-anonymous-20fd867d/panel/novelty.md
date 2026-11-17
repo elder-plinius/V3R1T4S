@@ -1,0 +1,49 @@
+# NOVELTY skeptic verdict: Langton's ant g(k) table, target langton-ant-fT-minimal-seed
+context: fresh headless Grok Build CLI session (grok -p), started with no prior conversation in a copy of claim/
+
+## What I read
+- `claim/CLAIM.md`, `claim/TARGET_CRITERION.md`, `claim/NOVELTY_RECORD.md`, `claim/data/TABLE.txt`, `claim/data/minimisers.txt`. The prior novelty notes were treated as a checklist of places to re-check, not as evidence.
+- Claimed table (onset convention blank = 9977): k = 0..11 gives g(k) = 9977, 310, 162, 126, 67, 62, 49, 45, 40, 24, 17, 0. Alternate convention used by some checkers is one less while the onset is positive (blank 9976; so 309, 161, 125, 66, 61, 48, 44, 39, 23, 16).
+- Jillhewar PDF text (Research Square `rs-10516269/v1`, DOI 10.21203/rs.3.rs-10516269/v1), Appendix A: blank orbit enters the repeating trace at step 9977, and one explicit 11-cell black seed (plus a 13-cell seed for a different phase). No g(k) or f(T) table and no onset smaller than the claimed g(k).
+- Hao Ke, `github.com/kehao95/langtons-ant-core` at `22e0c9edcc` (pushed 2026-10-16T05:32:07Z, only branch `main`, 993 paths). Read the repo README, `one_black/README.md`, `one_black/lean/generate.py`, `one_black/langtons_ant/highway.py`, `one_black/lean/OneBlack/PrefixData.lean`, and `four_cell_port/paper/main.tex`. No file states the g(k) table. `prefixTimes` is a 1376-long witness list of one-black terminal times; its minimum is 310 and its maximum is 106258, with nothing strictly below 310. The four-cell theorem is the inward half-plane port G = {(0,-1),(1,1),(1,3),(2,2)}, ant at (0,0) facing east, standard tail from update 182, and the manuscript says that lower bound “does not assert minimality among all possible exterior modifications.”
+- Public pages listed below.
+
+## What I ran
+OEIS `fmt=text` (the `fmt=json` endpoint returned the body `null`). Every one of these searches returned `No results.`:
+- `310,162,126,67` and `309,161,125,66`
+- `9977,310,162,126` and `9976,309,161,125`
+- `67,62,49,45,40,24,17` and `66,61,48,44,39,23,16`
+- `162,126,67,62,49`, `161,125,66,61,48`, `126,67,62,49,45`, `125,66,61,48,44`, `49,45,40,24,17`, `48,44,39,23,16`, `45,40,24,17`, `40,24,17,0`, `310,162,126,67,62`, `309,161,125,66,61`, `62,49,45,40,24`, `17,24,40,45,49,62,67`, `16,23,39,44,48,61,66`
+Keyword search `langton ant` returns black-cell-count and variant-tiling sequences (A255938, A269757, A326167, A308590, A326352, …). A126978 is `a(n) = 104*n + 9977`, comment “Langton's Ant Superhighway, the start point (9977th iteration)”, not a minimal-seed table. A255938 records `a(n+104) = a(n)+12` for `n > 9976`.
+
+Other commands and outputs:
+- GitHub API: `kehao95/langtons-ant-core` size 38675 KB, `pushed_at` 2026-10-16T05:32:07Z, one branch `main` at `22e0c9edcc`. User repos sorted by push: no later Langton repository (next push is `quine`, 2026-10-14).
+- Downloaded the repo tarball and grepped text. No `310,162` / `9977,310` / `162,126,67` table. The string `g(k)` appears only as an unrelated inequality in `factor_language`. Parsed `prefixTimes`: `count 1376`, `min 310`, `max 106258`, `count < 310` = 0, `count == 310` = 1.
+- `pdftotext` on the Jillhewar PDF: hits on 310/162/67/17/40/24 are equation numbers, a search-count `40,418,033`, or bibliography pages, not the onset table. The 11-cell seed is in Appendix A.
+- arXiv API `ti:Langton AND all:highway` returned Boon, “How fast does Langton's ant move?” (cond-mat/0004331, blank highway at 9977, speed √2/52) and a straight-step variant (1807.08789). Web search of arXiv HTML for 2409.10124, 2505.05426, and 2506.10482 is about generalised multi-letter ants, not an RL minimal-onset table.
+- OpenAlex search `Langton's ant highway` (47 works). Relevant 2026 titles: Ke one-black highway proof; Ke/Zenodo “Four Black Cells Force an Outgoing Highway”; Jillhewar finite-support highways (listed twice); “How Long Can The Escaping Ant Be Confined?” (bounded-domain escape, not this g(k)); “NLS vs. Langton” (DOI 10.5281/zenodo.21761814) which keeps the classical blank transient near 10,400 steps and then changes the topology. OpenAlex query for the exact onset phrase returned one unrelated hit.
+- GitHub repository search `langton ant highway onset`: `total_count` 0. Zenodo JSON API and Semantic Scholar returned 403 and 429; DOI `10.5281/zenodo.23341609` and `10.5281/zenodo.23402414` redirect to Zenodo and then 403 on the HTML. Those records were read from the public GitHub tree that cites them.
+
+## Findings
+The table, the equivalent f(T) step function, and the list of fastest seeds for k = 2..10 are not in OEIS, arXiv, the Ke repository or the Zenodo manuscripts mirrored there, Jillhewar 2026, Wikipedia, MathWorld, LifeWiki, the ConwayLife threads sampled, MathOverflow/MathStackExchange threads sampled, the Reddit post below, or the web queries for the numeric signature.
+
+What is already public, and does not fail the stated test:
+- g(0) = 9977. OEIS A126978 (https://oeis.org/A126978); Wikipedia https://en.wikipedia.org/wiki/Langton%27s_ant (chaos until 9,977 steps, then period 104); MathWorld https://mathworld.wolfram.com/LangtonsAnt.html (period 104, no seed table); LifeWiki https://conwaylife.com/wiki/OCA:Langton%27s_ant (“around 10,000 steps”); langtonsant.es (blank highway after 9,977 steps, but that project classifies multi-colour rule highways).
+- f(0) ≤ 11. Jillhewar, https://doi.org/10.21203/rs.3.rs-10516269/v1 and the PDF at https://assets-eu.researchsquare.com/files/rs-10516269/v1_covered_da08809c-483d-4862-baa6-b92de7d9bf8c.pdf : an 11-cell seed already on one phase of the period-104 highway, and a 13-cell seed for another phase. The paper does not claim that 11 is minimal, so it does not publish g(10) = 17 or a 10-cell onset of 0.
+- Four-cell boundary port, tail from 182, not a free-grid onset below g(4) = 67. Ke, https://github.com/kehao95/langtons-ant-core/blob/main/four_cell_port/paper/main.tex , public record https://doi.org/10.5281/zenodo.23402414 (and concept 23402413). One-black “every configuration reaches the highway”: https://doi.org/10.5281/zenodo.23341609 . That paper does not state a least-onset theorem. The witness list’s smallest terminal time is 310, so it does not publish a one-black onset smaller than 310.
+- One illustrated 1-cell case at 310, not the rest of the table. YouTube “Nobody Can Prove This Ant Always Does THIS” (https://www.youtube.com/watch?v=22dfYC_q_ho , 2026-10-15) says the blank road starts after 9,977 steps, “one painted tile, just below the ant” gives a road after 310 steps, and another single tile runs until step 106,258 (the same maximum as Ke’s `prefixTimes`). The transcript then switches to several ants and multi-colour rules. It does not give 162, 126, 67, 62, 49, 45, 40, 24, 17, or a minimiser list.
+- Reddit https://www.reddit.com/r/cellular_automata/comments/1emq8r5/fastest_langston_ant_to_make_a_highway/ asks which multi-letter rule forms a highway fastest. Comments name LLR/RRL (period 18), straight “S”, and RS. No RL seed and no onset table.
+- ConwayLife: https://conwaylife.com/forums/viewtopic.php?t=4851 and https://conwaylife.com/forums/viewtopic.php?t=5515 discuss other rules and long transients, not this g(k). MathOverflow https://mathoverflow.net/questions/277040/intermediate-results-for-langtons-ant-highway-conjecture and MathStackExchange https://math.stackexchange.com/questions/3217312/is-langtons-ant-really-turing-complete discuss the highway conjecture and universality, not minimal onsets.
+- A Numberphile comment (https://www.youtube.com/watch?v=xU072T4V12A) gives a 15-cell pattern that “just” builds the highway. That is a larger instant seed than Jillhewar’s 11 cells, not a smaller onset for any k ≤ 11. Tim Hutton’s log https://timclicks.github.io/turmite-autoresearch/ says a Langton highway seed in his dependence census has 12 cells (trail plus extra cells). That is a different count and is not smaller than 11.
+- Gajardo–Moreira–Goles and Gale/Propp are the classical complexity and 9977 sources already cited by A126978. Generalised-ant papers (https://arxiv.org/abs/2409.10124 , https://arxiv.org/abs/2505.05426 , https://arxiv.org/abs/2506.10482) tabulate highway periods of other rule words. MrCamoga’s project (https://github.com/MrCamoga/Langton-s-Ant , https://langtonsant.es/) classifies multi-colour highways.
+
+No published onset for a fixed k was found that is strictly smaller than the claimed g(k). The middle of the table (k = 2..10) and the paired minimisers did not show up as a published list.
+
+## Caveats
+- Zenodo HTML and Semantic Scholar were blocked (403 / 429). Ke’s manuscripts were read from the public GitHub tree that records those Zenodo DOIs, not from the Zenodo file bytes themselves. A Zenodo upload after the 2026-10-16 GitHub push, if it is not in that tree and not indexed by OpenAlex, would have been missed.
+- OEIS was checked by subsequence search, not by reading every Langton-related sequence in full. `fmt=json` did not return records; `fmt=text` did.
+- The YouTube item and Ke’s `prefixTimes` minimum make the single number 310, for one black cell just below the ant, publicly visible. That is one matching example, not the table and not a smaller onset. Ke’s timer matches four rotations of the blank step-9977 phase, so those witness times are not by themselves a published proof of the claim’s 104-phase minimum.
+- This review did not re-simulate the ants and does not certify that the claimed numbers are correct. It only checks whether the table, or a smaller onset, is already public.
+
+scope: Verified by independent web, OEIS, arXiv, OpenAlex, GitHub, Jillhewar PDF, and Ke-repo checks that the g(k) table for k=0..11 and the k=2..10 fastest seeds are not published, and that no smaller onset for any of these k was found; did not re-prove the onsets and did not read Zenodo file bytes past the GitHub copies and DOI redirects.
+pass: true
