@@ -1,0 +1,2 @@
+Source: https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 (fetched 2026-10-19T04:34:26Z, HTTP 200, page sha256 26245491ba119789eb338424ade4e6b5a74dd46e12df7cec47dd79845de4b0b6)
+Cell n=108, k=3: lower 23, upper 36
