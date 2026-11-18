@@ -1,5 +1,7 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 cell: lpub-q2-n161-k17-d71   role: reproduce
+[Edited 2026-11-17 at the maintainer's request on the pull request: removed the sentence that said open pull request values were not consulted. The checks, numbers and verdict are unchanged.]
+
 
 The contributor's hash list: 12 files listed, 0 not OK (checked from inside the package folder).
 
@@ -30,7 +32,6 @@ puncture 160 17 live ub 71 offset 1 -> implied 72
 subcode 161 16 live ub 72 offset 0 -> implied 72
 pad with a zero column 162 17 live ub 72 offset 0 -> implied 72
 live ub 72 neighbour closure 72 claimed 71 strictly below closure: True
-Open PR values were not consulted by this role (they belong to the novelty skeptic); the closure above is the four live neighbours only.
 
 ## Author's checker, run only after mine
 == lp_delsarte_check.py (exact Fractions, excluded distance D = live upper bound 72) and neighbour propagation

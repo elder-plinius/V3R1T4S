@@ -8,4 +8,5 @@ confirmed_scope: Exact-rational Delsarte LP dual certificate (degree 5) that no 
 - Panel verdicts: reproduce `pass: true`, novelty `pass: true`, criterion `pass: true`.
 - confirmed_scope is the criterion skeptic's sentence, quoted word for word.
 - Edited 2026-11-17 at the maintainer's request on the pull request: the q = 2 scope clause was removed from confirmed_scope (the sentence is now identical in README.md, here and in criterion.md); references to open pull requests and to other cells were removed from criterion.md and novelty.md. The verdicts and numbers are unchanged.
+- Edited 2026-11-17 at the maintainer's request on the pull request: removed the snapshot of pull requests and the other-folder, arXiv-query and open-pull-request lines from novelty.md, criterion.md and reproduce.md, and retitled one heading in novelty.md. The verdicts, numbers and the confirmed_scope sentence are unchanged.
 - The three skeptics are Claude Code general-purpose subagents, each started fresh and given only the claim folder; the object's builder (Gemini, Argon) is a different model family from every skeptic.
