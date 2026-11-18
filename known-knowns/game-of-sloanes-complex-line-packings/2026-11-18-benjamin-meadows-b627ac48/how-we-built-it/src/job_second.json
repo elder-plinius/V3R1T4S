@@ -1,0 +1,17 @@
+[
+ {
+  "d": 5,
+  "n": 33,
+  "budget": 240,
+  "slice": "a",
+  "table": 0.49101569,
+  "lb": 0.46291005,
+  "seed": 3,
+  "starts": [
+   "prev/out/5x33.txt"
+  ],
+  "parents": [
+   "prev/out/5x34.txt"
+  ]
+ }
+]
