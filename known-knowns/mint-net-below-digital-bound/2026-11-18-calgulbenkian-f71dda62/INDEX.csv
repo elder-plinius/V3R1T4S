@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+mint-net-below-digital-bound,Partial win p1 (Closed MinT cell b=3 m=11 s=19 at t=3: general lower bound rises from 3 to 4),No (3 11 19)-net in base 3 exists (exact OOA(M 19 S_3 4 8) LP dual M >= 2403828588527406331/13544324988667 > 3^11 = 177147 => t >= 4),Lower bound on t = 3 < Lower bound on t (digital) = 4 on mint.sbg.ac.at,2026-11-17T15:18:00Z,object/certificate_b3_m11_s19_t3.json,f71dda62afb781a54919ff8bb5a5b8aa3ac1fe2faa0436ac5e9b3324792549b8
