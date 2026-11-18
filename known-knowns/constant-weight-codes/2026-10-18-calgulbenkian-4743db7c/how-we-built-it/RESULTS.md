@@ -1,8 +1,10 @@
 # Constant-Weight Codes (`Andw.html`) Attack — Verified Results (`p2` + `p1` + Full Win)
 
+> Note: `data/Andw.html`, `verify_cwc.py`, `results/` (with its subfolders) and `cg_repo.git`, named in this file, are working files of the contributor's run. They are not shipped in this package.
+
 ## Executive Summary
 
-Against the frozen baseline snapshot [`data/Andw.html`]({WORKDIR}/data/Andw.html) (`SHA-256: bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`), we achieved **all three goals (`p2` + `p1` + Full Win)** with 100% standalone exact verification via [`verify_cwc.py`]({WORKDIR}/verify_cwc.py):
+Against the frozen baseline snapshot `data/Andw.html` (an unshipped working file) (`SHA-256: bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`), we achieved **all three goals (`p2` + `p1` + Full Win)** with 100% standalone exact verification via `verify_cwc.py` (an unshipped working file):
 
 1. **Goal A — Partial Win `p2` (21 Cells / 22 Certificates in `results/certificates/`)**:
    - **Family A1 (11 cells / 12 certificates)**: Exact rational Delsarte + support-split ($R_x$) + shortening ($M_{1,s}$) LP upper-bound certificates strictly beating explicitly printed `lo-hi` upper bounds in `data/Andw.html` (excluding `(31,10,7)` and the 5 already-merged `L` cells).
@@ -11,7 +13,7 @@ Against the frozen baseline snapshot [`data/Andw.html`]({WORKDIR}/data/Andw.html
    - First explicit binary constant-weight code files matching $M = L_{\text{table}}$ for **8 cells** in `data/Andw.html` whose lower bounds are unlinked 1990 `[BSSS]` citations (neither $(n, d, w)$ nor $(n, d, n-w)$ has an `href="cwc/..."` link in `data/Andw.html`, and none appear in `arXiv:2607.19550` or `arXiv:2608.13906`).
 3. **Goal C — Full Win (13 Explicit Record-Breaking Codes in `results/codes_full_win/`)**:
    - **13 explicit constant-weight codes** strictly beating today's live `data/Andw.html` lower bounds ($M > \max(L_{\text{table}}(n,d,w), L_{\text{table}}(n,d,n-w))$), also strictly beating `arXiv:2608.13906` (Echols) and `arXiv:2607.19550` (Lysenstoen).
-   - Includes **4 brand-new record cells** discovered via degree-sorted coordinate relabeling + LNS (`A(28,8,11) >= 3802` [+17], `A(51,6,6) >= 11187` [+3], `A(25,6,11) >= 8720` [+2], `A(27,8,11) >= 2422` [+1]) that were untouched in `cg_repo.git`, plus **3 further improvements** strictly above prior unmerged LNS records (`A(54,8,7) >= 4205` [+12], `A(45,8,7) >= 1913` [+6], `A(55,8,7) >= 4432` [+6]).
+   - Includes **4 brand-new record cells** discovered via degree-sorted coordinate relabeling + LNS (`A(28,8,11) >= 3802` [+17], `A(51,6,6) >= 11187` [+3], `A(25,6,11) >= 8720` [+2], `A(27,8,11) >= 2422` [+1]) that were untouched in `cg_repo.git` (an unshipped working repository), plus **3 further improvements** strictly above prior unmerged LNS records (`A(54,8,7) >= 4205` [+12], `A(45,8,7) >= 1913` [+6], `A(55,8,7) >= 4432` [+6]).
 
 ---
 
@@ -29,11 +31,13 @@ All 13 codes are stored in `results/codes_full_win/` (and mirrored in `results/`
 | 6 | `A(56, 8, 7)` | `4685Pl-10264` | — | `4669` | **`4691`** | **`+6`** | `A56_8_7_4691.txt` | `e12d11fa604fd790` |
 | 7 | `A(53, 8, 7)` | `3987Pl-8003` | — | `3973` | **`3992`** | **`+5`** | `A53_8_7_3992.txt` | `7be7a08730ebb932` |
 | 8 | `A(51, 6, 6)` | `11184Pl-19937` | — | `11157` | **`11187`** | **`+3`** (New cell!) | `A51_6_6_11187.txt` | `3684474037a4c998` |
-| 9 | `A(52, 8, 7)` | `3799Pl-7577` | — | `3787` | **`3802`** | **`+3`** | `A52_8_7_3802.txt` | `4743db7cec4929d0` |
+| 9 | `A(52, 8, 7)` | `3799Pl-7577` (as of 2026-10-18; the live table now lists `3801Wu-7577`) | unverified | unverified | **`3802`** | **`+3`** against 3799 (`+1` against the live 3801) | `A52_8_7_3802.txt` | `4743db7cec4929d0` |
 | 10 | `A(27, 8, 10)` | `1737Pl-4986` | `1719` | — | **`1740`** | **`+3`** | `A27_8_10_1740.txt` | `bdbf1cf2b34d5a27` |
 | 11 | `A(25, 6, 11)` | `8718Pl-22575` | `8665` | — | **`8720`** | **`+2`** (New cell!) | `A25_6_11_8720.txt` | `46ae5613f60a668e` |
 | 12 | `A(27, 8, 11)` | `2421Pl-12266` | `2386` | — | **`2422`** | **`+1`** (New cell!) | `A27_8_11_2422.txt` | `1ce741658d4881c2` |
 | 13 | `A(35, 6, 6)` | `2217Pl-3249` | — | `2204` | **`2218`** | **`+1`** | `A35_6_6_2218.txt` | `dd2eb057e40bc19b` |
+
+For row 9, the Echols and Lysenstoen values of this run's working notes could not be checked from the files shipped here and are marked unverified. README.md and `panel/novelty.md` give 3796 for Echols (arXiv:2608.13906) and no value for Lysenstoen (arXiv:2607.19550) for this cell, which that panel report read from the Echols table and from the abstracts.
 
 ---
 

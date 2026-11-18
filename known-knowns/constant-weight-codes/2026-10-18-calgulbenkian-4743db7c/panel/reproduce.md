@@ -1,5 +1,7 @@
 # Reproduce report: A(52,8,7) >= 3802
 
+[Edited 2026-11-17 at the maintainer's request on the pull request: the previous best is now the live table value 3801 (Ken Wu, email of 2026-11-11), margin 1; 3799 stays in this report only as the value dated 2026-10-18. The checks, numbers and verdict are unchanged; they describe the table as fetched on 2026-10-18, when the cell listed 3799. The live table now lists 3801 (Wu), so the margin over the live value is 1.]
+
 context: Claude Code subagent, fresh context
 
 Role: reproduce skeptic. Scope: only this cell. Currency of the table value and novelty are not judged here.

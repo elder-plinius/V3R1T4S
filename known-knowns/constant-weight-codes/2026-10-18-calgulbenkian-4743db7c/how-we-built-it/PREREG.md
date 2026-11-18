@@ -1,23 +1,25 @@
 # Pre-Registration: Attack on Constant-Weight Code Bounds (`Andw.html`)
 
+> Note: `data/Andw.html`, `verify_cwc.py`, `results/` (with its subfolders) and `cg_repo.git`, named in this file, are working files of the contributor's run. They are not shipped in this package.
+
 ## 1. Target & Baseline Snapshot
 
 - **Target Table**: Andries E. Brouwer's *Bounds for binary constant weight codes* (`https://aeb.win.tue.nl/codes/Andw.html`).
-- **Frozen Local Snapshot**: [`data/Andw.html`]({WORKDIR}/data/Andw.html)
+- **Frozen Local Snapshot**: `data/Andw.html` (an unshipped working file)
   - **SHA-256**: `bc8822714c5d0f6414f158e6f0dad6529b9253aaf33b6b4a4c620105ee7e3653`
   - **Size**: `261,806` bytes (`6,999` lines)
 - **Prior-Art Cross-Check Corpora**:
   1. `bigger-codes` (`[Pl]` in `Andw.html`): 30 lower-bound codes and 5 Delsarte LP upper-bound certificates already merged into the live `data/Andw.html` snapshot.
   2. Lysenstoen (`arXiv:2607.19550v1`): 45 cells with improved lower bounds (44 already merged into `data/Andw.html` as `Ly`, 1 superseded by `Pl`).
   3. Echols (`arXiv:2608.13906v1`): 124 cells with improved lower bounds on `n <= 28`.
-  4. Draft PR `#351` (`A(31, 10, 7) <= 106` / `108`): explicitly excluded from Goal A (`p2`).
+  4. An earlier upper-bound claim (`A(31, 10, 7) <= 106` / `108`): explicitly excluded from Goal A (`p2`).
 
 ---
 
 ## 2. Three Pre-Registered Goals & Acceptance Criteria
 
 ### Goal A — Partial Win `p2`: Exact Rational Delsarte LP Upper-Bound Certificates Beating `Andw.html`
-- **Exclusion List**: Exclude `(31, 10, 7)` (draft PR `#351`) and the 5 `bigger-codes` cells already merged as `L` in `Andw.html` (`(31,12,10)`, `(31,12,11)`, `(32,12,10)`, `(32,12,15)`, `(32,12,16)`).
+- **Exclusion List**: Exclude `(31, 10, 7)` (an earlier upper-bound claim) and the 5 `bigger-codes` cells already merged as `L` in `Andw.html` (`(31,12,10)`, `(31,12,11)`, `(32,12,10)`, `(32,12,15)`, `(32,12,16)`).
 - **Success Criterion**: Certify in 100% exact rational arithmetic (`fractions.Fraction`, zero floating-point reliance) at least 5–10 cells $(n, d, w)$ where $A(n, d, w) \le U < U_{\text{table}}$ (mirror-aware across $(n, d, w)$ and $(n, d, n-w)$).
 - **Two Pre-Registered Families**:
   - **Family A1 (Extended Delsarte LP on Printed `lo-hi` Ranges)**: Combines the Johnson scheme Delsarte inequalities ($D_k$: $-\sum_{x=\delta}^w a_x Q_k(x) \le Q_k(0) = m_k$), the per-distance support-split bound ($R_x$: $a_x \le \binom{w}{x} A(n-w, d, x)$), and the $(t, s)$-shortening moment inequality ($M_{t,s}$: $\sum_{x=\delta}^w \binom{w-x}{s}\binom{n-w-x}{t-s} a_x \le \binom{w}{s}\binom{n-w}{t-s}(A(n-t, d, w-s)-1)$), using **only** explicitly printed `lo-hi` upper bounds from `data/Andw.html`.
@@ -34,9 +36,9 @@
 
 ---
 
-## 3. Standalone Verification Protocol (`verify_cwc.py`)
+## 3. Standalone Verification Protocol (`verify_cwc.py`, an unshipped working file)
 
-Every artifact produced in `results/` must pass `verify_cwc.py` with exit code `0`:
+Every artifact produced in `results/` (an unshipped working folder) must pass `verify_cwc.py` with exit code `0`:
 ```bash
 python3 verify_cwc.py --delsarte results/certificates/*.json
 python3 verify_cwc.py results/codes_p1/*.txt
