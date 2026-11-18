@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+elliptic-quadric-q7-3-spread,"automorphisms of spreads of Q^-(7,3) (partial win p1)","no automorphism of order 3 (and Aut(S) cap PO^-(8,3) = {1}, |Aut(S)| in {1,2})","only primes 2 and 3 can divide automorphism order",2026-11-18T03:58:25Z,object/q7_3_ord3_certificate.json,2dc45a6304721dfd1612d2111c4902ad4a690d862b127568e9c7e84d299dbd65
