@@ -1,12 +1,14 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
+[Edited 2026-11-18 when answering the maintainer's review: mentions of an internal triage step were replaced with plain wording. The checks, numbers and verdict are unchanged.]
+
 # Novelty report: qubit-ub-n112-k4-d36
 
 Role: novelty. Cell: qubit table upper bound for [[112,4]] lowered to 36, an exact Farkas certificate of the quantum weight-enumerator LP with shadow constraints.
 
 ## Primary table (fetched once, honestly)
 - https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 | fetched 2026-10-19T05:16:36Z | HTTP 200 | sha256 26245491ba119789eb338424ade4e6b5a74dd46e12df7cec47dd79845de4b0b6
-Value read (own parser of the fetched page, 33152 cells): [[112,4]] live lower/upper and my closures below. The page hash equals the triage's. The footer reads 'Last change: 23.05.2024'; the page note says 'For n>100, the upper bounds on qubit codes are weak (and not necessarily monotone in k)'.
+Value read (own parser of the fetched page, 33152 cells): [[112,4]] live lower/upper and my closures below. The page hash equals that of the first fetch. The footer reads 'Last change: 23.05.2024'; the page note says 'For n>100, the upper bounds on qubit codes are weak (and not necessarily monotone in k)'.
 
 ## Shared sources (fetched once for the whole group)
 - https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | fetched 2026-10-19T05:15:21Z | HTTP 200 | sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1

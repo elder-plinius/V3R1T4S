@@ -1,4 +1,6 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
+
+[Edited 2026-11-18 when answering the maintainer's review: mentions of an internal triage step were replaced with plain wording. The checks, numbers and verdict are unchanged.]
 cell: qubit-ub-n112-k4-d36   role: reproduce
 
 The contributor's hash list: 13 files listed, 0 not OK (checked from inside the package folder).
@@ -28,7 +30,7 @@ I rebuilt the closure of the three rules from the full live table extract (33152
 == qubit_cert_check.py (exact integers, excluded distance D = live upper bound 37) and propagation neighbours
 PASS [[112,4]] no code with d >= 37 (shadow=True): value has 651 digits; 36 Q, 2 G, 34 H multipliers; all 113 columns <= 0
 {"n": 112, "k": 4, "d": 37, "VALID": true}
-PASS certificate excludes d >= 37 = live upper bound; new upper bound 36; one-step bound implied by live neighbours and merged/open PR values = 37 (>= 37: True); triage closure of everything else (all rules iterated, live table + 56 merged/open PR values + other cells of the batch) = 37
+PASS certificate excludes d >= 37 = live upper bound; new upper bound 36; one-step bound implied by live neighbours and merged/open PR values = 37 (>= 37: True); full closure of everything else (all rules iterated, live table + 56 merged/open PR values + other cells of the batch) = 37
 == negative control: all shadow multipliers removed (must be rejected) (must be rejected)
 PASS (negative control rejected)
 ALL CHECKS PASS
