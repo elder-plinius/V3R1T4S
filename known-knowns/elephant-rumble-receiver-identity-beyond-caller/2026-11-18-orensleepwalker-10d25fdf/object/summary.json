@@ -1,0 +1,139 @@
+{
+ "n_calls": 437,
+ "draws": 100,
+ "mean": {
+  "habit": 0.49224256292906177,
+  "rf": 0.26954233409610984,
+  "pa": 0.4901830663615561
+ },
+ "sd": {
+  "habit": 0.007430320236049277,
+  "rf": 0.00793564225013197,
+  "pa": 0.009936316879192423
+ },
+ "pa_minus_habit": {
+  "mean": -0.0020594965675057213,
+  "min": -0.029748283752860483,
+  "max": 0.02745995423340969,
+  "draws_pa_better": 42
+ },
+ "null_pa": {
+  "n": 1000,
+  "mean": 0.48876201372997713,
+  "p99_9": 0.517162471395881,
+  "max": 0.517162471395881
+ },
+ "null_rf": {
+  "n": 1000,
+  "mean": 0.2106681922196796,
+  "sd": 0.011929932296222334,
+  "p99_9": 0.24256521739130454,
+  "max": 0.2448512585812357
+ },
+ "context": {
+  "habit": 0.48416475972540035,
+  "pa": 0.48935926773455374
+ },
+ "multi_receiver_callers_accuracy": {
+  "habit": 0.5321141889554294,
+  "rf": 0.3255877051384326,
+  "pa": 0.5293674581144566
+ },
+ "share_calls_pa_differs_from_habit": 0.15633867276887872,
+ "chosen_top": [
+  [
+   [
+    "spectral",
+    "centroid",
+    8.0
+   ],
+   236
+  ],
+  [
+   [
+    "spectral",
+    "nn",
+    8.0
+   ],
+   197
+  ],
+  [
+   [
+    "spectral",
+    "centroid",
+    4.0
+   ],
+   70
+  ],
+  [
+   [
+    "spectral",
+    "nn",
+    0.0
+   ],
+   43
+  ],
+  [
+   [
+    "spectral",
+    "nn",
+    4.0
+   ],
+   30
+  ],
+  [
+   [
+    "cepstral",
+    "nn",
+    0.25
+   ],
+   29
+  ],
+  [
+   [
+    "spectral",
+    "nn",
+    2.0
+   ],
+   14
+  ],
+  [
+   [
+    "cepstral",
+    "centroid",
+    2.0
+   ],
+   13
+  ],
+  [
+   [
+    "spectral",
+    "centroid",
+    2.0
+   ],
+   12
+  ],
+  [
+   [
+    "cepstral",
+    "centroid",
+    0.25
+   ],
+   11
+  ]
+ ],
+ "full_win_criteria": {
+  "c1": true,
+  "c2": false,
+  "c3": false
+ },
+ "full_win": false,
+ "p3": {
+  "within_0_02_of_0_275": true,
+  "paper_0_275_exceeds_habit": false,
+  "rf_mean_exceeds_habit": false,
+  "paper_0_275_exceeds_null_p99_9": true,
+  "rf_mean_exceeds_null_p99_9": true,
+  "rf_mean_exceeds_all_1000_controls": true
+ }
+}

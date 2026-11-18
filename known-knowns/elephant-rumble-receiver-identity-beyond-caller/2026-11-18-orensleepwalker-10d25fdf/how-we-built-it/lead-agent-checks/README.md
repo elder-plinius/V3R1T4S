@@ -1,0 +1,6 @@
+# Lead agent's step-5 check (author evidence, not panel evidence)
+
+independent_check.py (output: independent_check.output.txt) is written from the bank's definitions with the csv module and does not import code/core.py. Findings:
+- All 100 saved real draws: folds follow the caller x receiver stratification (no stratum's fold counts differ by more than 1); every saved accuracy equals the one recomputed from the per-call predictions; every habit prediction is a modal receiver of its caller in the training folds (or an overall modal receiver for unseen callers); every forest prediction is a receiver present in the training folds; every pa prediction lies among its caller's training receivers.
+- Null files: 1,000 controls, rerun ids 0-999, each on the folds of real draw j mod 100; mean 0.210668, 99.9th percentile 0.242565, maximum 0.244851; the real forest mean 0.269542 is above the maximum.
+- A different forest implementation (scikit-learn RandomForestClassifier: bootstrap WITH replacement, 60% samples, 500 trees, 6 features per split) on the saved folds of draws 0-19: mean 0.2581 (sd 0.0087); on 50 within-caller shuffles of the saved folds: mean 0.2036, maximum 0.2288. Same qualitative picture: above the within-caller shuffle null, far below the caller-habit baseline (0.4922).
