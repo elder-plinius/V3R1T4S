@@ -1,0 +1,18 @@
+{
+ "model": "SVM/ECFP repo config CHEMBL244_Ki (C=10, eps=0.1, gamma=0.01, rbf)",
+ "mse": 0.511448965569374,
+ "rmse": 0.7151566021294735,
+ "mse_cliff": 0.634573831368627,
+ "rmse_cliff": 0.7966014256631901,
+ "mse_noncliff": 0.39931062625682384,
+ "rmse_noncliff": 0.6319102992172416,
+ "expected_rmse_paper": 0.715,
+ "expected_rmse_cliff_paper": 0.797,
+ "tolerance": [
+  0.6435,
+  0.7865
+ ],
+ "reproduced": true,
+ "n_cliff_test": 296,
+ "n_noncliff_test": 325
+}

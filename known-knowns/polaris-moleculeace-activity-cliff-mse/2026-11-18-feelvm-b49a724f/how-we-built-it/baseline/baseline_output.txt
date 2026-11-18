@@ -1,0 +1,6 @@
+expected RMSE from repo results CSV: {'RF': 0.387563669, 'SVM': 0.419799387}
+RF_ECFP: per-seed MSE [0.155, 0.1577, 0.1498, 0.1581, 0.1505], 5-seed mean RMSE 0.3927, expected 0.387563669
+SVM_ECFP: per-seed MSE [0.1762, 0.1762, 0.1762, 0.1762, 0.1762], 5-seed mean RMSE 0.4198, expected 0.419799387
+RF_ECFP: reproduced=YES (|diff| 0.0052 vs tol 0.0388)
+SVM_ECFP: reproduced=YES (|diff| 0.0000 vs tol 0.0420)
+WROTE baseline/baseline_results.json
