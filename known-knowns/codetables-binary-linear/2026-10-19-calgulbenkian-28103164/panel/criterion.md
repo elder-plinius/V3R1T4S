@@ -3,12 +3,13 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 # Criterion skeptic report: bklc-q4-n163-k11-d104
 
 [Edited 2026-11-17 at the maintainer's request on the pull request: the claim of no precedent for q other than 2, the ruling note, the numbered answers to open questions (the points that matter are restated plainly) and the mentions of other filings were removed; the confirmed_scope sentence no longer has the literal GF(q) clause. The checks, numbers and verdict are unchanged.]
+[Edited 2026-11-18 at the maintainer's request on the pull request: in Target coverage, the sentences about which parts of the bank text are binary-specific were replaced with a plain statement that this is a GF(4) result and the live table holds the GF(4) cell. The checks, numbers and verdict are unchanged.]
 
 Cell: [163,11] over GF(4), claimed d = 104. Target id named by README.md: codetables-binary-linear. Win claimed: Full. The contributor's hash list checked from inside the package folder: all files OK.
 
 ## Target coverage 
 
-Bank statement (verbatim from the target's success criterion): "For given [n,k] over GF(q), codetables.de (Grassl) records the best known lower and upper bounds on the maximum minimum distance d. A linear code with d larger than the tabulated lower bound is a new record. Binary tables cover n <= 256." The success criterion reads "a k x n generator matrix over GF(q)" and "the live http://www.codetables.de/ cell for (q,n,k)"; the p2 text reads "no [n,k,d] code over GF(q) exists". Only the target id (codetables-binary-linear), the sentence "Binary tables cover n <= 256" and the bank's verification method (Gaussian elimination over GF(2), 2^k) are binary-specific. So the literal criterion text covers q = 4, 5, 7, 8, 9; the id and the verification method suggest the maintainers had q = 2 in mind. The live table does hold q = 4, 5, 7, 8, 9 cells (the pages below were fetched and parse), and the same live table page family is the status source.
+Bank statement (verbatim from the target's success criterion): "For given [n,k] over GF(q), codetables.de (Grassl) records the best known lower and upper bounds on the maximum minimum distance d. A linear code with d larger than the tabulated lower bound is a new record. Binary tables cover n <= 256." The success criterion reads "a k x n generator matrix over GF(q)" and "the live http://www.codetables.de/ cell for (q,n,k)"; the p2 text reads "no [n,k,d] code over GF(q) exists". This is a GF(4) result, and the live table holds the GF(4) cell for [163,11]. The live table does hold q = 4, 5, 7, 8, 9 cells (the pages below were fetched and parse), and the same live table page family is the status source.
 
 ## Full success criterion, clause by clause
 
