@@ -1,0 +1,111 @@
+%NCFF-0.1-2026 (NIST Circuit File Format)
+
+## Index of circuits (circuitName numOutputs numInputs)
+  % aes-invmixcols-xor92-depth10 32 32
+
+## Circuit
+begin circuit aes-invmixcols-xor92-depth10
+  % Description: AES MixColumns Inverse, compatible with NIST-FIPS 197
+  % Tally of gates (92): 92 XOR
+  % Gate depth 10
+
+Inputs: x0:x31
+Outputs: y0:y31
+Internal: t1:t60
+GateSyntax: GateName Output Inputs
+
+begin SLP
+XOR t1 x1 x9
+XOR t2 x5 x13
+XOR t3 x0 x16
+XOR t4 x9 x17
+XOR t5 x2 x18
+XOR t6 x13 x21
+XOR t7 x7 x23
+XOR t8 x8 x24
+XOR t9 x11 x27
+XOR t10 x4 x28
+XOR t11 x5 x29
+XOR t12 x14 x30
+XOR t13 x7 x31
+XOR t14 x15 x31
+XOR t15 x17 t5
+XOR t16 x0 t8
+XOR t17 t4 t8
+XOR t18 t1 x25
+XOR t19 t5 x26
+XOR t20 x3 t9
+XOR t21 x12 t10
+XOR t22 t6 t11
+XOR t23 x22 t12
+XOR t24 t7 t14
+XOR t25 t15 t18
+XOR t26 x10 t19
+XOR t27 x19 t20
+XOR t28 x6 t23
+XOR t29 t22 t12
+XOR t30 x4 t24
+XOR t31 t3 t24
+XOR t32 x19 t25
+XOR t33 t26 t9
+XOR t34 t7 t28
+XOR t35 t1 t31
+XOR t36 t27 t30
+XOR t37 t29 t13
+XOR t38 t32 x27
+XOR t39 t33 t10
+XOR t40 t17 t34
+XOR t41 x20 t36
+XOR t42 t33 t24
+XOR t43 t21 t36
+XOR t44 t34 t37
+XOR t45 t34 t35
+XOR t46 x24 t37
+XOR y10 t19 t40
+XOR t47 t39 t34
+XOR y8 t31 t46
+XOR t48 t27 t42
+XOR t49 t2 t41
+XOR y16 t16 t44
+XOR t50 t11 t43
+XOR t51 x2 t45
+XOR t52 x16 t46
+XOR t53 t38 t37
+XOR t54 t45 t52
+XOR y0 t31 y16
+XOR t55 x29 t47
+XOR t56 y10 t51
+XOR y2 t26 t51
+XOR y6 t23 t49
+XOR y24 t16 t52
+XOR y17 t18 t52
+XOR t57 x30 t50
+XOR y20 t21 t53
+XOR y25 x17 t54
+XOR t58 y6 t57
+XOR y29 t22 t55
+XOR y4 t41 y20
+XOR t59 t20 t56
+XOR y9 t40 y17
+XOR y30 t28 t57
+XOR y18 t25 y2
+XOR y21 t55 t49
+XOR y19 t59 t44
+XOR y28 t47 y4
+XOR t60 x15 t58
+XOR y26 t56 y18
+XOR y1 y9 t45
+XOR y27 t59 t53
+XOR y14 t29 y30
+XOR y5 y29 t50
+XOR y13 t49 y5
+XOR y31 t60 t34
+XOR y7 t60 t44
+XOR y3 y19 t48
+XOR y15 t60 t24
+XOR y12 y28 t43
+XOR y23 t60 t37
+XOR y22 t58 y14
+XOR y11 y27 t42
+end SLP
+end circuit

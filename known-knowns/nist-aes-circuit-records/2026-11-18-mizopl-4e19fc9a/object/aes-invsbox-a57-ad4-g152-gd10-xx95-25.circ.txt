@@ -1,0 +1,171 @@
+%NCFF-0.1-2026 (NIST Circuit File Format)
+
+## Index of circuits (circuitName numOutputs numInputs)
+  % aes-invsbox-a57-ad4-g152-gd10-xx95-25 8 8
+
+## Circuit
+begin circuit aes-invsbox-a57-ad4-g152-gd10-xx95-25
+  % Description: AES Sbox Inverse, compatible with NIST-FIPS 197
+  % Tally of gates (152): 57 AND; 70 XOR; 25 XNOR
+  % Gate depth 10; AND depth 4
+
+Inputs: x0:x7
+Outputs: y0:y7
+Internal: a1:a57 t1:t87
+GateSyntax: GateName Output Inputs
+
+begin SLP
+XNOR t1 x1 x3
+AND a1 x6 t1
+XNOR t2 x2 x3
+XOR t3 x3 x4
+AND a2 t2 t3
+XOR t4 a1 a2
+XNOR t5 x0 x1
+XNOR t6 x5 x6
+AND a3 t5 t6
+XNOR t7 x2 x6
+XNOR t8 x6 x7
+AND a4 t7 t8
+XOR t9 a3 a4
+XNOR t10 t4 t9
+XOR t11 t4 t9
+AND a5 x2 t5
+XOR t12 x0 x2
+XNOR t13 x3 x4
+AND a6 t12 t13
+XOR t14 a5 a6
+XOR t15 x0 x7
+XOR t16 x4 x5
+AND a7 t15 t16
+XOR t17 x1 x6
+XNOR t18 x5 x7
+AND a8 t17 t18
+XOR t19 a7 a8
+XNOR t20 t14 t19
+XNOR t21 x0 x2
+AND a9 t18 t21
+XNOR t22 x1 x5
+AND a10 t2 t22
+XOR t23 a9 a10
+AND a11 x6 t13
+XOR t24 x2 x6
+AND a12 t15 t24
+XOR t25 a11 a12
+XNOR t26 t23 t25
+XOR t27 t23 t25
+XOR t28 x1 x3
+AND a13 t24 t28
+AND a14 t3 t22
+XOR t29 a13 a14
+XOR t30 x0 x4
+XOR t31 x3 x7
+AND a15 t30 t31
+AND a16 x1 x4
+AND a17 x6 x7
+XOR t32 a16 a17
+XOR t33 a15 t32
+XNOR t34 t29 t33
+XOR t35 t29 t33
+XOR t36 t10 t20
+AND a18 t10 t20
+AND a19 t11 t27
+AND a20 t26 t35
+AND a21 t20 t34
+XOR t37 a19 a20
+XOR t38 t36 a19
+XOR t39 t26 a21
+XOR t40 t34 a18
+AND a22 t35 a18
+AND a23 t26 a21
+AND a24 t26 a18
+AND a25 t10 a20
+XNOR t41 t37 a22
+XNOR t42 t38 a23
+XOR t43 t39 a24
+XOR t44 t40 a25
+XOR t45 x0 t16
+XNOR t46 x1 t6
+XOR t47 x1 t8
+XOR t48 t30 t47
+XOR t49 x0 x3
+XNOR t50 x2 t48
+XOR t51 x3 t18
+XOR t52 t18 t50
+XNOR t53 x2 t3
+XOR t54 t50 t51
+XNOR t55 t15 t53
+XNOR t56 x4 t7
+XOR t57 t6 t48
+XNOR t58 t5 t8
+XOR t59 t51 t53
+XOR t60 t5 t55
+XOR t61 t6 t60
+XNOR t62 x2 x4
+XOR t63 x4 t60
+XOR t64 t3 t17
+XOR t65 t51 t56
+XOR t66 x3 t16
+XOR t67 x4 t54
+XOR t68 t1 t62
+XNOR t69 x1 t67
+XOR t70 x2 x7
+XNOR t71 x1 t17
+AND a26 t41 t71
+AND a27 t2 t42
+AND a28 t43 t51
+AND a29 t44 t70
+XOR t72 a26 a27
+XOR t73 a28 a29
+XOR y0 t72 t73
+AND a30 t41 t46
+AND a31 t42 t56
+AND a32 t43 t52
+AND a33 t21 t44
+XOR t74 a30 a31
+XOR t75 a32 a33
+XOR y1 t74 t75
+AND a34 t41 t57
+AND a35 t42 t60
+AND a36 t43 t59
+AND a37 t44 t62
+XOR t76 a34 a35
+XOR t77 a36 a37
+XOR y2 t76 t77
+AND a38 t41 t48
+AND a39 t42 t64
+AND a40 t16 t43
+AND a41 t44 t65
+XOR t78 a38 a39
+XOR t79 a40 a41
+XOR y3 t78 t79
+AND a42 t41 t50
+AND a43 t42 t45
+AND a44 t43 t55
+AND a45 t44 t69
+XOR t80 a42 a43
+XOR t81 a44 a45
+XOR y4 t80 t81
+AND a46 t41 t66
+AND a47 t42 t47
+AND a48 t43 t61
+AND a49 t44 t67
+XOR t82 a46 a47
+XOR t83 a48 a49
+XOR y5 t82 t83
+AND a50 t41 t63
+AND a51 t42 t54
+AND a52 t43 t68
+AND a53 t44 t53
+XOR t84 a50 a51
+XOR t85 a52 a53
+XOR y6 t84 t85
+AND a54 t41 t49
+AND a55 t5 t42
+AND a56 t3 t43
+AND a57 t44 t58
+XOR t86 a54 a55
+XOR t87 a56 a57
+XOR y7 t86 t87
+end SLP
+end circuit
