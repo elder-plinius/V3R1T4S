@@ -52,13 +52,20 @@ The first run is always light. Run `date -u` at the start and before each new li
 exactly them later. Before running jobs in parallel, measure one job's peak memory on a small input; all jobs
 together, across every lens, stay under half of the free memory (`kit/RULES.md` rule 10).
 
+Disk-backed searches share the same discipline: the run's budget covers everything it adds across lenses —
+generated scratch, shards, retained checkpoints and their copies, and retained data. Record the pilot's
+generated-byte peak, the planned worker count and the budget in the attempt's `NOTES.md`; relaunch a stopped
+job only after deleting its stale scratch, and finish by removing disposable files and recording what was kept
+and its size.
+
 ## Step 0. Preflight
 
 Stop with a one-line report if `PAUSE` exists. Create `runs/<YYYY-MM-DD-HHMM>/` (from `date -u`). Write a stub
 `<WORKDIR>/REPORT.md` (the workspace root, not the run folder) now, whose first line is
 `STATUS: IN PROGRESS (run started <time from date -u>)`, so a run cut off by a time limit still leaves a report.
 The final report replaces it. Check free disk space (at least
-10 GB). If a dossier lists a claim labelled `single-context, unpanelled` and you can now start fresh contexts, its
+10 GB) and set the run's budget for the bytes it adds (`kit/RULES.md` rule 10), sized to the target's needs.
+If a dossier lists a claim labelled `single-context, unpanelled` and you can now start fresh contexts, its
 panel (step 6) is this run's first job.
 
 ## Step 1. Read
