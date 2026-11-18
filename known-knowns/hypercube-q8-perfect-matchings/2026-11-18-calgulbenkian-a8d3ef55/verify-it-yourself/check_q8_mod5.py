@@ -1,0 +1,354 @@
+#!/usr/bin/env python3
+"""
+Standalone Dual-Engine Checker for hypercube-q8-perfect-matchings (p2):
+Verifies A005271(8) == 3 (mod 5) and |Fix_{M(Q_8)}(P_5)| = 743,141,892,135,168
+from scratch using ONLY the Python 3 standard library.
+
+Runs TWO completely independent algorithms from mathematical definitions:
+  - Engine 1 (Stabilizer-Stratified Orbit-Quotient Permanent): constructs the
+    exact fixed-vertex and free-orbit weighted biadjacency matrices W_fixed, W_free
+    for P_5 = <(0 1 2 3 4)> on Q_5..Q_8, verifies every matrix entry in the
+    certificate, and computes exact permanents via subset/frontier permanent DP
+    (plus full-cube bipartite permanent on Q_1..Q_5).
+  - Engine 2 (Direct 2^n-Bit Hypercube Vertex-Mask DP): operates directly on the
+    2^n-vertex hypercube graph Q_n (256-bit vertex masks on Q_8) without using
+    permanents or quotient matrices, forming P_5-orbits of edges on Q_n, checking
+    zero vertex collisions, and counting P_5-invariant perfect matchings directly.
+
+Exits 0 and prints PASS iff every structural, baseline, and Q_8 assertion holds;
+otherwise prints FAIL and exits 1.
+"""
+
+import json
+import os
+import sys
+
+
+def fail(msg: str) -> None:
+    print(f"CHECK ERROR: {msg}")
+    print("FAIL")
+    sys.exit(1)
+
+
+def popcount(x: int) -> int:
+    return bin(x).count("1")
+
+
+def apply_coord_perm(perm, n: int, v: int) -> int:
+    out = 0
+    for c in range(n):
+        if (v >> c) & 1:
+            out |= 1 << perm[c]
+    return out
+
+
+def exact_sparse_permanent(W) -> int:
+    """Exact integer permanent of an m x m non-negative integer matrix W via row-by-row column-mask DP."""
+    m = len(W)
+    if m == 0:
+        return 1
+    if any(len(row) != m for row in W):
+        fail("Non-square matrix in permanent")
+    # Sort rows by fewest non-zero entries / smallest column span for tight DP state count
+    nz_rows = []
+    for i in range(m):
+        entries = [(j, W[i][j]) for j in range(m) if W[i][j] != 0]
+        if not entries:
+            return 0
+        nz_rows.append((entries[0][0], entries[-1][0], entries))
+    nz_rows.sort(key=lambda t: (t[0], t[1]))
+
+    dp = {0: 1}
+    for _, _, entries in nz_rows:
+        nxt = {}
+        for mask, ways in dp.items():
+            for col, weight in entries:
+                bit = 1 << col
+                if not (mask & bit):
+                    nm = mask | bit
+                    nxt[nm] = nxt.get(nm, 0) + ways * weight
+        dp = nxt
+    return dp.get((1 << m) - 1, 0)
+
+
+def engine1_quotient_permanent(n: int, perm_n):
+    """Engine 1: Stabilizer-stratified orbit-quotient bipartite permanent on Q_n."""
+    N = 1 << n
+    fixed_even, fixed_odd = [], []
+    free_even_reps, free_odd_reps = [], []
+    free_odd_of_v = {}
+    seen = set()
+
+    for v in range(N):
+        orb = []
+        cur = v
+        for _ in range(len(perm_n) + 2):
+            if cur in orb:
+                break
+            orb.append(cur)
+            cur = apply_coord_perm(perm_n, n, cur)
+        if len(orb) == 1:
+            if popcount(v) % 2 == 0:
+                fixed_even.append(v)
+            else:
+                fixed_odd.append(v)
+        elif len(orb) == 5:
+            rep = min(orb)
+            if rep not in seen:
+                seen.add(rep)
+                if popcount(rep) % 2 == 0:
+                    free_even_reps.append(rep)
+                else:
+                    idx = len(free_odd_reps)
+                    free_odd_reps.append(rep)
+                    for u in orb:
+                        free_odd_of_v[u] = idx
+        else:
+            fail(f"Unexpected orbit size {len(orb)} for prime order 5")
+
+    if len(fixed_even) != len(fixed_odd) or len(free_even_reps) != len(free_odd_reps):
+        return 0, None
+
+    fixed_idx = {v: i for i, v in enumerate(fixed_odd)}
+    W_fixed = [[0] * len(fixed_odd) for _ in range(len(fixed_even))]
+    for i, u in enumerate(fixed_even):
+        for b in range(n):
+            v = u ^ (1 << b)
+            if v in fixed_idx:
+                W_fixed[i][fixed_idx[v]] += 1
+
+    W_free = [[0] * len(free_odd_reps) for _ in range(len(free_even_reps))]
+    for i, u in enumerate(free_even_reps):
+        for b in range(n):
+            v = u ^ (1 << b)
+            if v in free_odd_of_v:
+                W_free[i][free_odd_of_v[v]] += 1
+
+    p_fixed = exact_sparse_permanent(W_fixed)
+    p_free = exact_sparse_permanent(W_free)
+    details = {
+        "fixed_even": fixed_even,
+        "fixed_odd": fixed_odd,
+        "W_fixed": W_fixed,
+        "p_fixed": p_fixed,
+        "free_even_reps": free_even_reps,
+        "free_odd_reps": free_odd_reps,
+        "W_free": W_free,
+        "p_free": p_free,
+    }
+    return p_fixed * p_free, details
+
+
+def engine2_hypercube_bitmask_dp(n: int, perm_n) -> int:
+    """Engine 2: Direct 2^n-bit hypercube vertex-mask DP on Q_n (zero permanent/quotient assumptions)."""
+    N = 1 << n
+    # Build cyclic group generated by perm_n directly on V(Q_n)
+    g1 = tuple(apply_coord_perm(perm_n, n, v) for v in range(N))
+    group = []
+    cur = tuple(range(N))
+    while cur not in group:
+        group.append(cur)
+        cur = tuple(g1[v] for v in cur)
+
+    edges = set()
+    for u in range(N):
+        for b in range(n):
+            v = u ^ (1 << b)
+            if u < v:
+                edges.add((u, v))
+
+    # Verify every group element is an automorphism of Q_n
+    for g in group:
+        if len(set(g)) != N:
+            fail("Generator does not induce a bijection on Q_n")
+        for u, v in edges:
+            a, b = g[u], g[v]
+            if a > b:
+                a, b = b, a
+            if (a, b) not in edges:
+                fail("Generator does not preserve Q_n adjacency")
+
+    seen_edges = set()
+    valid_orbits = []
+    for u, v in sorted(edges):
+        if (u, v) in seen_edges:
+            continue
+        orb = set()
+        for g in group:
+            a, b = g[u], g[v]
+            if a > b:
+                a, b = b, a
+            orb.add((a, b))
+        seen_edges |= orb
+
+        vmask = 0
+        collision = False
+        for a, b in orb:
+            ba = 1 << a
+            bb = 1 << b
+            if (vmask & ba) or (vmask & bb):
+                collision = True
+                break
+            vmask |= ba | bb
+        if not collision:
+            valid_orbits.append(vmask)
+
+    adj_v = [0] * N
+    orbits_at_v = [[] for _ in range(N)]
+    for om in valid_orbits:
+        x = om
+        vs = []
+        while x:
+            lsb = x & -x
+            vs.append(lsb.bit_length() - 1)
+            x ^= lsb
+        for v in vs:
+            adj_v[v] |= om
+            orbits_at_v[v].append(om)
+
+    visited = 0
+    total = 1
+    for start in range(N):
+        if (visited >> start) & 1:
+            continue
+        comp = 1 << start
+        stack = [start]
+        while stack:
+            u = stack.pop()
+            nbrs = adj_v[u] & ~comp
+            while nbrs:
+                lsb = nbrs & -nbrs
+                comp |= lsb
+                stack.append(lsb.bit_length() - 1)
+                nbrs ^= lsb
+        visited |= comp
+
+        verts = []
+        x = comp
+        while x:
+            lsb = x & -x
+            verts.append(lsb.bit_length() - 1)
+            x ^= lsb
+        verts.sort(key=lambda v: (popcount(v), v))
+
+        states = {0: 1}
+        for piv in verts:
+            nxt = {}
+            cands = orbits_at_v[piv]
+            for cov, ways in states.items():
+                if (cov >> piv) & 1:
+                    nxt[cov] = nxt.get(cov, 0) + ways
+                else:
+                    for om in cands:
+                        if (cov & om) == 0:
+                            nm = cov | om
+                            nxt[nm] = nxt.get(nm, 0) + ways
+            states = nxt
+        total *= states.get(comp, 0)
+        if total == 0:
+            return 0
+    return total
+
+
+def main() -> None:
+    here = os.path.dirname(os.path.abspath(__file__))
+    cert_path = os.path.join(here, "..", "object", "q8_perfect_matchings_mod5_certificate.json")
+    try:
+        with open(cert_path, "r", encoding="utf-8") as f:
+            cert = json.load(f)
+    except Exception as exc:
+        fail(f"Could not parse certificate JSON: {exc}")
+
+    if cert.get("target_id") != "hypercube-q8-perfect-matchings":
+        fail("Unexpected target_id")
+    if cert.get("partial_win_id") != "p2":
+        fail("Unexpected partial_win_id")
+    if cert.get("prime_modulus") != 5:
+        fail("prime_modulus must be 5")
+    if cert.get("sylow_5_group_order") != 5:
+        fail("sylow_5_group_order must be 5")
+
+    perm8 = cert.get("sylow_5_generator_coord_perm")
+    if perm8 != [1, 2, 3, 4, 0, 5, 6, 7]:
+        fail("Unexpected sylow_5_generator_coord_perm")
+
+    # 1. Verify full-cube calibration values A005271(1..5) and known A005271(6..7)
+    expected_cal = {
+        "1": 1,
+        "2": 2,
+        "3": 9,
+        "4": 272,
+        "5": 589185,
+        "6": 16332454526976,
+        "7": 391689748492473664721077609089,
+    }
+    if cert.get("known_a005271_calibration") != expected_cal:
+        fail("known_a005271_calibration mismatch in certificate")
+
+    for n in range(1, 6):
+        id_perm = list(range(n))
+        full_dp = engine2_hypercube_bitmask_dp(n, id_perm)
+        ev = [v for v in range(1 << n) if popcount(v) % 2 == 0]
+        od = [v for v in range(1 << n) if popcount(v) % 2 == 1]
+        od_idx = {v: i for i, v in enumerate(od)}
+        A = [[0] * len(od) for _ in range(len(ev))]
+        for i, u in enumerate(ev):
+            for b in range(n):
+                A[i][od_idx[u ^ (1 << b)]] = 1
+        full_perm = exact_sparse_permanent(A)
+        if full_dp != expected_cal[str(n)] or full_perm != expected_cal[str(n)]:
+            fail(f"Full-cube A005271({n}) check failed: dp={full_dp}, perm={full_perm}")
+    print("OK: Full-cube A005271(1..5) reproduced by both Engine 1 and Engine 2 (1, 2, 9, 272, 589185)")
+
+    # 2. Verify P_5-fixed perfect matchings on Q_5, Q_6, Q_7, Q_8 by BOTH independent engines
+    fixed_dict = cert.get("fixed_matchings_by_dimension", {})
+    if set(fixed_dict.keys()) != {"5", "6", "7", "8"}:
+        fail("fixed_matchings_by_dimension keys mismatch")
+
+    q8_details = None
+    for n in range(5, 9):
+        perm_n = perm8[:n]
+        c_e1, det = engine1_quotient_permanent(n, perm_n)
+        c_e2 = engine2_hypercube_bitmask_dp(n, perm_n)
+        if c_e1 != c_e2:
+            fail(f"Engine 1 ({c_e1}) != Engine 2 ({c_e2}) at n={n}")
+        if fixed_dict.get(str(n)) != c_e1:
+            fail(f"Certificate fixed_matchings_by_dimension['{n}'] = {fixed_dict.get(str(n))} != {c_e1}")
+        if n <= 7:
+            known_mod5 = expected_cal[str(n)] % 5
+            if (c_e1 % 5) != known_mod5:
+                fail(f"Burnside mod-5 check failed on Q_{n}: {c_e1} % 5 != {known_mod5}")
+            print(f"OK: Q_{n} |Fix(P_5)| = {c_e1} (Engine 1 == Engine 2), mod 5 = {c_e1 % 5} == A005271({n}) mod 5")
+        else:
+            q8_details = det
+            print(f"OK: Q_8 |Fix(P_5)| = {c_e1} (Engine 1 == Engine 2), mod 5 = {c_e1 % 5}")
+
+    # 3. Verify every field of q8_fixed_stratum and q8_free_orbit_stratum against recomputed matrices
+    fs = cert.get("q8_fixed_stratum", {})
+    if (
+        fs.get("even_vertices") != q8_details["fixed_even"]
+        or fs.get("odd_vertices") != q8_details["fixed_odd"]
+        or fs.get("biadjacency_matrix") != q8_details["W_fixed"]
+        or fs.get("permanent") != q8_details["p_fixed"]
+    ):
+        fail("q8_fixed_stratum mismatch against recomputed Q_8 fixed stratum")
+
+    fos = cert.get("q8_free_orbit_stratum", {})
+    if (
+        fos.get("even_orbit_min_reps") != q8_details["free_even_reps"]
+        or fos.get("odd_orbit_min_reps") != q8_details["free_odd_reps"]
+        or fos.get("weighted_biadjacency_matrix") != q8_details["W_free"]
+        or fos.get("permanent") != q8_details["p_free"]
+    ):
+        fail("q8_free_orbit_stratum mismatch against recomputed Q_8 free-orbit stratum")
+
+    q8_fixed_total = q8_details["p_fixed"] * q8_details["p_free"]
+    if cert.get("a8_mod_5") != (q8_fixed_total % 5):
+        fail(f"Certificate a8_mod_5 = {cert.get('a8_mod_5')} != {q8_fixed_total % 5}")
+
+    print(f"VERIFIED: A005271(8) == {cert['a8_mod_5']} (mod 5) via |Fix_{{M(Q_8)}}(P_5)| = {q8_fixed_total}")
+    print("PASS")
+
+
+if __name__ == "__main__":
+    main()
