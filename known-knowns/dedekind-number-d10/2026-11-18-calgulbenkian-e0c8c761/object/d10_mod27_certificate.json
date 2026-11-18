@@ -1,0 +1,463 @@
+{
+  "target_id": "dedekind-number-d10",
+  "partial_win_id": "p1",
+  "modulus": 27,
+  "prime_base": 3,
+  "prime_exponent": 3,
+  "d10_mod_27": 16,
+  "d10_mod_9": 7,
+  "d10_mod_3": 1,
+  "d9_mod_27": 24,
+  "d9_mod_9": 6,
+  "d9_mod_3": 0,
+  "d0_to_d8_calibration": [
+    2,
+    3,
+    6,
+    20,
+    168,
+    7581,
+    7828354,
+    2414682040998,
+    56130437228687557907788
+  ],
+  "d9_exact_reference": 286386577668298411128469151667598498812366,
+  "d6_to_d8_mod_9_calibration": [
+    1,
+    3,
+    1
+  ],
+  "published_d10_references": {
+    "phi_10_cycle9": 1702659955,
+    "p3_to_q24_p81": 6526,
+    "d10_mod_3_published": 1
+  },
+  "p81_group_order": 81,
+  "p81_total_subgroups": 50,
+  "p81_generators": [
+    [
+      1,
+      2,
+      0,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    [
+      0,
+      1,
+      2,
+      4,
+      5,
+      3,
+      6,
+      7,
+      8
+    ],
+    [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7,
+      8,
+      6
+    ],
+    [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      0,
+      1,
+      2
+    ]
+  ],
+  "raw_burnside_sums": {
+    "d9_m3": 132,
+    "d9_m9": 233853,
+    "d9_m27": 108762390411,
+    "d10_m3": 6526,
+    "d10_m9": 6188420707,
+    "d10_m27": 77588088181555989940
+  },
+  "s9_classes": [
+    {
+      "class_index": 0,
+      "subgroup_order": 9,
+      "num_subgroups_in_p81": 3,
+      "quotient_b9_size": 128,
+      "weight_mod3": 0,
+      "weight_mod9": 0,
+      "weight_mod27": 3,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6,
+          7,
+          8
+        ]
+      ],
+      "fix_d9": 36035591703,
+      "fix_d10": 25861677069383652640
+    },
+    {
+      "class_index": 1,
+      "subgroup_order": 9,
+      "num_subgroups_in_p81": 6,
+      "quotient_b9_size": 96,
+      "weight_mod3": 0,
+      "weight_mod9": 0,
+      "weight_mod27": 6,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          6
+        ],
+        [
+          1,
+          2,
+          0,
+          5,
+          3,
+          4,
+          6,
+          7,
+          8
+        ]
+      ],
+      "fix_d9": 103930332,
+      "fix_d10": 506885470393492
+    },
+    {
+      "class_index": 2,
+      "subgroup_order": 9,
+      "num_subgroups_in_p81": 4,
+      "quotient_b9_size": 80,
+      "weight_mod3": 0,
+      "weight_mod9": 0,
+      "weight_mod27": 4,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          8,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          0,
+          3,
+          4,
+          5,
+          7,
+          8,
+          6
+        ]
+      ],
+      "fix_d9": 8405574,
+      "fix_d10": 3925342826836
+    },
+    {
+      "class_index": 3,
+      "subgroup_order": 9,
+      "num_subgroups_in_p81": 6,
+      "quotient_b9_size": 60,
+      "weight_mod3": 0,
+      "weight_mod9": 0,
+      "weight_mod27": 6,
+      "rep_generators": [
+        [
+          1,
+          2,
+          0,
+          4,
+          5,
+          3,
+          7,
+          8,
+          6
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          1,
+          2,
+          0
+        ]
+      ],
+      "fix_d9": 97830,
+      "fix_d10": 1702659955
+    },
+    {
+      "class_index": 4,
+      "subgroup_order": 9,
+      "num_subgroups_in_p81": 3,
+      "quotient_b9_size": 64,
+      "weight_mod3": 0,
+      "weight_mod9": 0,
+      "weight_mod27": 3,
+      "rep_generators": [
+        [
+          1,
+          2,
+          0,
+          4,
+          5,
+          3,
+          7,
+          8,
+          6
+        ],
+        [
+          3,
+          4,
+          5,
+          8,
+          6,
+          7,
+          1,
+          2,
+          0
+        ]
+      ],
+      "fix_d9": 207471,
+      "fix_d10": 7751544283
+    },
+    {
+      "class_index": 5,
+      "subgroup_order": 27,
+      "num_subgroups_in_p81": 1,
+      "quotient_b9_size": 64,
+      "weight_mod3": 0,
+      "weight_mod9": 1,
+      "weight_mod27": -12,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      ],
+      "fix_d9": 232848,
+      "fix_d10": 6188212000
+    },
+    {
+      "class_index": 6,
+      "subgroup_order": 27,
+      "num_subgroups_in_p81": 2,
+      "quotient_b9_size": 28,
+      "weight_mod3": 0,
+      "weight_mod9": 2,
+      "weight_mod27": -6,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          8,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          0,
+          3,
+          4,
+          5,
+          8,
+          6,
+          7
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          2,
+          0,
+          1
+        ]
+      ],
+      "fix_d9": 324,
+      "fix_d10": 31798
+    },
+    {
+      "class_index": 7,
+      "subgroup_order": 27,
+      "num_subgroups_in_p81": 1,
+      "quotient_b9_size": 32,
+      "weight_mod3": 0,
+      "weight_mod9": 1,
+      "weight_mod27": -3,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          8,
+          6,
+          7
+        ],
+        [
+          1,
+          2,
+          0,
+          3,
+          4,
+          5,
+          8,
+          6,
+          7
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0,
+          1,
+          2
+        ]
+      ],
+      "fix_d9": 753,
+      "fix_d10": 164689
+    },
+    {
+      "class_index": 8,
+      "subgroup_order": 81,
+      "num_subgroups_in_p81": 1,
+      "quotient_b9_size": 24,
+      "weight_mod3": 1,
+      "weight_mod9": -3,
+      "weight_mod27": 0,
+      "rep_generators": [
+        [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          7,
+          8,
+          6
+        ],
+        [
+          0,
+          1,
+          2,
+          4,
+          5,
+          3,
+          6,
+          7,
+          8
+        ],
+        [
+          1,
+          2,
+          0,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          0,
+          1,
+          2
+        ]
+      ],
+      "fix_d9": 132,
+      "fix_d10": 6526
+    }
+  ]
+}
