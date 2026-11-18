@@ -19,7 +19,7 @@ Independent Python verification (60-digit `Decimal` and `float64` Hermitian Jaco
 | Token count / format | `204` (`34x3` Re then `34x3` Im) | `204` (`34x3` Re then `34x3` Im) |
 | Entry precision | `0..15` sig. digits | `20..21` sig. digits |
 | Max `\|\|phi_j\|\|_2 - 1` | `6.916e-16` | `7.695e-20` |
-| Exact `mu` (60-digit `Decimal`) | `0.756834797253628206097823785778147954374744559786819000003653` | `0.756494798182271705164224601239675096749550724764985832115081` |
+| Exact `mu` (60-digit `Decimal`) | `0.756834797253628206097823785778147954374744559786819000003660` | `0.756494798182271705164224601239675096749550724764985832115081` |
 | Worst pair `(j, k)` | `(2, 27)` | `(1, 21)` |
 | Active pairs (`mu - ov <= 1e-12`) | `129` | `119` |
 | Active pairs (`mu - ov <= 1e-8`) | `129` | `129` |

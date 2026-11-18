@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Standalone 60-digit verifier for the submitted (3, 34) complex line packing."""
+"""Standalone 60-digit verifier for the submitted (3, 34) complex line packing.
+
+Arithmetic runs at 80 significant digits (20 guard digits); coherences are
+rounded to 60 significant digits before they are printed or compared.
+"""
 from decimal import Decimal, getcontext
 import hashlib
 import os
@@ -19,7 +23,7 @@ BASELINE_URL = (
 )
 BASELINE_SHA256 = "159cb51fdd209252b1b4c2a190b8fccefed7415e5254a3226160d4218082cf1e"
 RECORDED_BASELINE_MU_60 = Decimal(
-    "0.756834797253628206097823785778147954374744559786819000003653"
+    "0.756834797253628206097823785778147954374744559786819000003660"
 )
 
 
@@ -30,7 +34,7 @@ def fail(msg: str) -> None:
 
 
 def eval_mu_60(path: str, enforce_sigfigs: bool = True):
-    getcontext().prec = 60
+    getcontext().prec = 80
     with open(path, "r", encoding="utf-8") as f:
         toks = f.read().split()
     expected = 2 * D * N
@@ -72,7 +76,9 @@ def eval_mu_60(path: str, enforce_sigfigs: bool = True):
             if ov_sq > max_sq:
                 max_sq = ov_sq
                 worst = (j, k)
-    return max_sq.sqrt(), worst
+    mu = max_sq.sqrt()
+    getcontext().prec = 60
+    return +mu, worst
 
 
 def main():

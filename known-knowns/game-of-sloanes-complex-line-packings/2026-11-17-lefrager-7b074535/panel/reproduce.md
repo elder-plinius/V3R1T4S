@@ -9,7 +9,7 @@ Independent verification of `object/3x34_new.txt`, `verify-it-yourself/check_sub
 Verified `object/3x34_new.txt` (`68` lines, `204` whitespace-separated floats, `SHA-256: 7b0745355c9f502a7eb731c0ec7541db1d21edfabe543f6274eacda06f2b0597`) using `verify-it-yourself/check_submission.py` at 60-digit `Decimal` precision:
 - `mu = 0.756494798182271705164224601239675096749550724764985832115081`, worst pair `(1, 21)`.
 - Strict improvement over table (`0.75683480`): `+0.000340001817728294835775398760324903250449275235014167884919`.
-- Strict improvement over upstream [`CurrentBestPackings/3x34_jrr.txt`](https://raw.githubusercontent.com/gnikylime/GameofSloanes/main/CurrentBestPackings/3x34_jrr.txt) (`SHA-256: 159cb51fdd209252b1b4c2a190b8fccefed7415e5254a3226160d4218082cf1e`, 60-digit `Decimal` `mu = 0.756834797253628206097823785778147954374744559786819000003653`): `+0.000339999071356500933599184538472857625193835021833167888572`.
+- Strict improvement over upstream [`CurrentBestPackings/3x34_jrr.txt`](https://raw.githubusercontent.com/gnikylime/GameofSloanes/main/CurrentBestPackings/3x34_jrr.txt) (`SHA-256: 159cb51fdd209252b1b4c2a190b8fccefed7415e5254a3226160d4218082cf1e`, 60-digit `Decimal` `mu = 0.756834797253628206097823785778147954374744559786819000003660`): `+0.000339999071356500933599184538472857625193835021833167888579`.
 - `sh verify-it-yourself/run_checks.sh` exits `0` ending with `PASS`.
 
 ## 2. Adversarial Tamper Test
