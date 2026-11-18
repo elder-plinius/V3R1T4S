@@ -1,0 +1,257 @@
+{
+  "description": "Canonical partition-refinement SHA256 fingerprints of Sulanke K_6+C_5 (n=11) and all 40 nine-critical biplanar graphs in Boutin, Gethner, and Sulanke (J. Graph Theory 57(3):198-214, 2008).",
+  "graphs": [
+    {
+      "name": "17_bgs12_56_1_12v_56e_p7c0",
+      "n": 12,
+      "e": 56,
+      "canonical_sha256": "6c24931bc1d75fdb34cafc73e0546780629239627a4d8a4ec9f66051619568e7"
+    },
+    {
+      "name": "17_bgs12_57_1_12v_57e_p7c1",
+      "n": 12,
+      "e": 57,
+      "canonical_sha256": "589099fb50549d3c8f43bae7b39278456af41456c079cfe258293c561c32d342"
+    },
+    {
+      "name": "17_bgs13_61_1_13v_61e_p7c2",
+      "n": 13,
+      "e": 61,
+      "canonical_sha256": "e57becd6f5b8b4a9fa83f9552521604a222760167f0ee1bda362456b94702d4f"
+    },
+    {
+      "name": "17_bgs13_61_2_13v_61e_p7c3",
+      "n": 13,
+      "e": 61,
+      "canonical_sha256": "58d33e147638b4959600c9ba5140a61d4467d67b4fabfd356b0fc214fd073a05"
+    },
+    {
+      "name": "17_bgs13_62_1_13v_62e_p8c0",
+      "n": 13,
+      "e": 62,
+      "canonical_sha256": "1b4c814c8be707ea1f11ce018fbba2ed3d3df1db29260a02aa23c2c814255b72"
+    },
+    {
+      "name": "17_bgs13_63_1_13v_63e_p8c2",
+      "n": 13,
+      "e": 63,
+      "canonical_sha256": "6b15f5daa64d90654e158ad9e26f7cebc21ed7f367bdb573db819b7d2e3a6c6c"
+    },
+    {
+      "name": "17_bgs13_63_2_13v_63e_p8c4",
+      "n": 13,
+      "e": 63,
+      "canonical_sha256": "b6b9d4d56f6803b3bbfc4215a484edee0f2f39821d9536422450f30ca1fb4e9d"
+    },
+    {
+      "name": "17_bgs13_63_3_13v_63e_p8c1",
+      "n": 13,
+      "e": 63,
+      "canonical_sha256": "79c1043102694606785ea3ec068dc4fa76109cc8192b8b91beea714b7d063e4f"
+    },
+    {
+      "name": "17_bgs13_64_1_13v_64e_p8c3",
+      "n": 13,
+      "e": 64,
+      "canonical_sha256": "fd9c681b170c3269388eca63ad8beefae26d52caf1ff151737a963f062edd7e5"
+    },
+    {
+      "name": "17_bgs13_64_2_13v_64e_p8c5",
+      "n": 13,
+      "e": 64,
+      "canonical_sha256": "a6f42866dbb8558a7245ab02dc857e4854a1283c342edb6752519d8784bb4bfe"
+    },
+    {
+      "name": "17_bgs13_64_3_13v_64e_p9c0",
+      "n": 13,
+      "e": 64,
+      "canonical_sha256": "f45720ec5fc78481fd3dff76f97061d4661985848c836bdeef9e387cdc2355ac"
+    },
+    {
+      "name": "17_bgs13_64_4_13v_64e_p9c2",
+      "n": 13,
+      "e": 64,
+      "canonical_sha256": "4660a29f696d221e91400577441370fdc897cf388dbc93aa415c7d7c0b6cfc46"
+    },
+    {
+      "name": "17_bgs14_65_1_14v_65e_p9c4",
+      "n": 14,
+      "e": 65,
+      "canonical_sha256": "fa467c5f0632e6506c4e81754b0c92ef08470dfc411c022f2cf9719fc53ed5f5"
+    },
+    {
+      "name": "17_bgs14_66_1_14v_66e_p9c1",
+      "n": 14,
+      "e": 66,
+      "canonical_sha256": "ef500d440bdb475e43cd783467517c9c3d5963784d3f8d404bf94cc8b6664f4c"
+    },
+    {
+      "name": "17_bgs14_67_1_14v_67e_p9c3",
+      "n": 14,
+      "e": 67,
+      "canonical_sha256": "2a48fb5d8a13a7c1741ec142697954f6e12049be1ac89232498998ec3a9c70f4"
+    },
+    {
+      "name": "17_bgs14_68_1_14v_68e_p10c0",
+      "n": 14,
+      "e": 68,
+      "canonical_sha256": "b8f49a147f2db57b5a9c988434086baa39d68ff0c45d1b48200378efb1ff4e63"
+    },
+    {
+      "name": "17_bgs14_68_1_14v_68e_p9c5",
+      "n": 14,
+      "e": 68,
+      "canonical_sha256": "bece140043c1da09cdcc3d9cdcfeab6da49e9c0636fc58104a51b7e3a3a16899"
+    },
+    {
+      "name": "17_bgs14_69_1_14v_69e_p10c4",
+      "n": 14,
+      "e": 69,
+      "canonical_sha256": "abdf03a08ec9ff53e595a9b949f34ba170d213acec93a21a518871d1cb6d8d45"
+    },
+    {
+      "name": "17_bgs14_69_2_14v_69e_p10c2",
+      "n": 14,
+      "e": 69,
+      "canonical_sha256": "9f316c783a20e9bcd3b7d6924c583261b5f69cccb85f5b69a968c2e844e2606b"
+    },
+    {
+      "name": "17_bgs14_70_1_14v_70e_p10c1",
+      "n": 14,
+      "e": 70,
+      "canonical_sha256": "4355b3b693f41b7c31fadf034ef85c4a7c6dd94f5f40151c36c4837b578b9098"
+    },
+    {
+      "name": "17_bgs14_70_2_14v_70e_p10c3",
+      "n": 14,
+      "e": 70,
+      "canonical_sha256": "9c199a1fb87bfd9dd2ed8bad4d12d2130da0618f9ec4dc5d71e29e0c2bd8ae3a"
+    },
+    {
+      "name": "17_bgs14_70_3_14v_70e_p10c5",
+      "n": 14,
+      "e": 70,
+      "canonical_sha256": "1d1996b4bf81b86ba840978a6bb3f15cfd6ad4b9520a936053045d01d4b9cd41"
+    },
+    {
+      "name": "17_bgs14_71_1_14v_71e_p11c0",
+      "n": 14,
+      "e": 71,
+      "canonical_sha256": "dff2a9046c3b153216ddb71c1074eeffc6561805f517d7eff2c7e13a4ec351da"
+    },
+    {
+      "name": "17_bgs14_71_2_14v_71e_p11c2",
+      "n": 14,
+      "e": 71,
+      "canonical_sha256": "9efb0d168e4098d2f328aa9d83d0d2b19ee40f8be9d2e745364df12c013dd7fa"
+    },
+    {
+      "name": "17_bgs14_71_3_14v_71e_reconstructed",
+      "n": 14,
+      "e": 71,
+      "canonical_sha256": "62970a11eb1b1439279fdf1916f894606ea388af422d73deb5f5e1e5e74e1ccb"
+    },
+    {
+      "name": "17_bgs14_71_4_14v_71e_p11c1",
+      "n": 14,
+      "e": 71,
+      "canonical_sha256": "0a7f14479a948ed47956718d8cce09182c1bf88f1c2562510173b776c08c6cf4"
+    },
+    {
+      "name": "17_bgs14_71_5_14v_71e_p11c3",
+      "n": 14,
+      "e": 71,
+      "canonical_sha256": "9bc7d281050902497bf47da766f1c430dca21245305ece75e51c917d28bea2d1"
+    },
+    {
+      "name": "17_bgs14_72_1_14v_72e_p11c5",
+      "n": 14,
+      "e": 72,
+      "canonical_sha256": "342321228bf0405ef33f6c9e11f1680536b7f35bf9010a7a8f5a785b6e84261f"
+    },
+    {
+      "name": "17_bgs14_72_2_14v_72e_p12c0",
+      "n": 14,
+      "e": 72,
+      "canonical_sha256": "0c17f177dd493c31b3b676e4cdad045074c704aa5c33efe8726620488826606e"
+    },
+    {
+      "name": "17_bgs15_77_1_15v_77e_p12c2",
+      "n": 15,
+      "e": 77,
+      "canonical_sha256": "620d00b42138e69847c91835241f2d3906be42e4c9de8009a80e0e89272bb05b"
+    },
+    {
+      "name": "17_bgs15_77_2_15v_77e_p12c4",
+      "n": 15,
+      "e": 77,
+      "canonical_sha256": "134caae1cfbd295d1bc5a223018ccf6ae1b420d616e65a204f024ee20fd3111b"
+    },
+    {
+      "name": "17_bgs15_78_1_15v_78e_p12c1",
+      "n": 15,
+      "e": 78,
+      "canonical_sha256": "12ca84bd929be24ddd336c92c315772b0cac37bda65433fac05b0ada01426661"
+    },
+    {
+      "name": "17_bgs15_78_2_15v_78e_p12c3",
+      "n": 15,
+      "e": 78,
+      "canonical_sha256": "a7c7ed7b6afab2b48e74951edd345e22ba6d6e616aeb9134a66893428285e50c"
+    },
+    {
+      "name": "17_bgs16_83_1_16v_83e_p12c5",
+      "n": 16,
+      "e": 83,
+      "canonical_sha256": "b1a92777e3c67c21c5df92feba155e8fceaf076a50390a9547f087edd5ade964"
+    },
+    {
+      "name": "17_bgs16_84_1_16v_84e_p13c0",
+      "n": 16,
+      "e": 84,
+      "canonical_sha256": "0997d9c31607bd72c5c35a335499fd4a86fc09d09a3c2eae34f0b94cd29d900f"
+    },
+    {
+      "name": "17_bgs16_84_2_16v_84e_p13c2",
+      "n": 16,
+      "e": 84,
+      "canonical_sha256": "7fd9f403b4f0cec3089a5c50120af0a62067ee108313f58fc77834b23a64f847"
+    },
+    {
+      "name": "17_bgs16_84_3_16v_84e_p13c4",
+      "n": 16,
+      "e": 84,
+      "canonical_sha256": "f8f0e86e50209bc711132461146344f383cf42940b50109d7221284cacf25715"
+    },
+    {
+      "name": "17_bgs16_84_4_16v_84e_p13c1",
+      "n": 16,
+      "e": 84,
+      "canonical_sha256": "3d5b3497e0bc7929c8b6a8aa9fb8b83f741486e6f5465b8b9fbe7cb5bfdf1460"
+    },
+    {
+      "name": "17_bgs16_84_5_16v_84e_p13c3",
+      "n": 16,
+      "e": 84,
+      "canonical_sha256": "566c8b1abcf5bf8f6c8cd6bc82c20de083916efb330ad11b2838188b944bf532"
+    },
+    {
+      "name": "17_bgs16_84_6_16v_84e_p13c5",
+      "n": 16,
+      "e": 84,
+      "canonical_sha256": "742d9b32361d125eb1598e19c2b51e9b495cba1c123675758cb3e8603af86063"
+    },
+    {
+      "name": "27_Hajos_bgs13611_sulanke_23v",
+      "n": 23,
+      "e": 110,
+      "canonical_sha256": "ee7cd1639f236dc63d8ec2f03824a3e813bfb41fc10f93effd7b4a029b813dcd"
+    },
+    {
+      "name": "5_11v_50e_sulanke_tri_union",
+      "n": 11,
+      "e": 50,
+      "canonical_sha256": "9eb7d7dda56855253f0363983d35cbf21babe4639e7b5edd921d7b395ca9a7d5"
+    }
+  ]
+}
