@@ -1,0 +1,21 @@
+# The Record We Beat (Metadata Only)
+
+No third-party web pages are copied into this package. Every row below records a single polite HTTP GET (`User-Agent: V3R1T4S-scout/1.0`, zero retries) executed during live scouting and immediately before packaging.
+
+| Source | URL | UTC fetch time | HTTP status | Selected headers | SHA-256 of fetched bytes | Extracted status / value |
+|---|---|---|---|---|---|---|
+| OEIS `A049507` HTML (initial scout) | https://oeis.org/A049507 | `2026-11-18T07:09:01Z` | `200` | `Last-Modified: Sun, 23 Nov 2025 18:35:23 GMT` | `75647a02e01f30a25c5fbacd0814bf9e7665ab997d3e80fdb3a05b41554f0a0f` | Revision `12`; lists `n = 0..5` only (`1, 6728, 53786626921, 57248060375968384, 123115692449982216049513, 216388579168758145017797108072`); keyword `nonn,more`; `a(7)` unlisted |
+| OEIS `A049507` JSON (initial scout) | https://oeis.org/search?q=id:A049507&fmt=json | `2026-11-18T07:09:01Z` | `200` | `Content-Type: application/json` | `3133d67655ba11512c967f929719ddefe0b056dc109fcfd5f577b35029e091eb` | `"data": "1,6728,53786626921,57248060375968384,123115692449982216049513,216388579168758145017797108072"`; `a(7)` absent |
+| OEIS `A028446` HTML (status source) | https://oeis.org/A028446 | `2026-11-18T07:09:01Z` | `200` | `Last-Modified: Mon, 30 Mar 2026 04:02:19 GMT` | `cf7515c675e7213b0d24916fad475b28737cc4766b9e12cc4f0f4d91d9f0eefe` | Revision `15`; lists `a(0..3) = 1, 9, 5051532105, 417898687046465734392674187695263185` (`a(3) = A049507(6)` by S. Kotlarz, 29 Mar 2026); `a(4)` and `A049507(7)` open |
+| OEIS `A028446` walkthrough | https://oeis.org/A028446/a028446.md.txt | `2026-11-18T07:09:01Z` | `200` | `Last-Modified: Mon, 30 Mar 2026 00:02:57 GMT` | `ea5a3dbdd27f223bd52fd29e54744d535e2fed33cd0948436896ab8410f38801` | Documents Kotlarz's 3-prime broken-profile DP for `6 x 6 x 6`; does not compute `6 x 6 x 7` |
+| OEIS `A028454` JSON | https://oeis.org/search?q=id:A028454&fmt=json | `2026-11-18T07:09:02Z` | `200` | `Content-Type: application/json` | `230f3863c385f534703bb049a9cd4531b5076b000747d1d95af6f25f08f5ccef` | Reference calibration terms `P_4 x P_4 x P_n` (`n = 0..12`) |
+| OEIS `A049507` HTML (pre-claim re-fetch) | https://oeis.org/A049507 | `2026-11-18T08:15:03Z` | `200` | `Last-Modified: Sun, 23 Nov 2025 18:35:23 GMT` | `02872f1bdd14ba0cc8a7f8529821765c2596ce4167f4ff66c73dc97362a71888` | Unchanged (`n = 0..5` only; `A049507(7)` still unlisted) |
+| OEIS `A049507` JSON (pre-claim re-fetch) | https://oeis.org/search?q=id:A049507&fmt=json | `2026-11-18T08:15:04Z` | `200` | `Content-Type: application/json` | `3133d67655ba11512c967f929719ddefe0b056dc109fcfd5f577b35029e091eb` | Identical JSON SHA-256; `A049507(7)` still unlisted |
+| OEIS `A028446` HTML (pre-claim re-fetch) | https://oeis.org/A028446 | `2026-11-18T08:15:04Z` | `200` | `Last-Modified: Mon, 30 Mar 2026 04:02:19 GMT` | `d397afd838e70b668e65942273252dc1c79bfcbe866fb9a281339d018c2923a7` | Unchanged (`a(0..3)` only) |
+| V3R1T4S GitHub issues/PRs search | https://api.github.com/search/issues?q=repo:elder-plinius/V3R1T4S+cube-domino+OR+A049507+OR+A028446 | `2026-11-18T07:09:02Z` | `200` | `Content-Type: application/json; charset=utf-8` | `c9938edecb99d754b2d039ac9eec320a94c769b6a6417921e2dcbef9e2fe01a0` | `total_count: 0` (zero open, closed, or merged PRs/issues) |
+| GitHub repository search | https://api.github.com/search/repositories?q=A049507+OR+A028446 | `2026-11-18T07:10:18Z` | `200` | `Content-Type: application/json; charset=utf-8` | `4af480b8ee5b87b369a76c49bd22c9a783908272ebffbe97898f8ab0f0772a5f` | `total_count: 0` |
+| arXiv API search | https://export.arxiv.org/api/query?search_query=all:%22A049507%22+OR+all:%22A028446%22&max_results=20 | `2026-11-18T07:10:19Z` | `200` | `Content-Type: application/atom+xml; charset=utf-8` | `67187fc9db98ea4284d3036cf88cab6b03b70eaa9e4974395606a65a1fcdf603` | `totalResults: 0` |
+
+- **Compared cell:** `A049507(7)` (partial win `p1` of `cube-domino-tilings-a028446-8x8x8`: exact number of perfect matchings of `P_6 x P_6 x P_7`).
+- **Existing table value:** `unlisted` (`A049507` ends at `a(5) = 216388579168758145017797108072`, with `a(6) = A028446(3) = 417898687046465734392674187695263185`).
+- **Our certified value:** `A049507(7) = 781760467628825425251897322894619609502208`.
