@@ -1,0 +1,7 @@
+positions 3418
+R1                           2.7874 bits/coda   chosen [0.3, 0.3, 0.1, 0.3, 0.3]
+twin (order-1 Dirichlet)     2.7719 bits/coda   chosen [30, 30, 10, 30, 30]
+model (order-3 Dirichlet)    2.5213 bits/coda   chosen [30, 30, 30, 30, 30]
+condition (1): R1 minus model: point +0.2661 bits/coda, 95% paired bootstrap over 188 RECs [+0.2228, +0.3194]
+condition (2): twin minus model: point +0.2507 bits/coda, 95% paired bootstrap over 188 RECs [+0.2084, +0.3106]
+thresholds: (1) >= 0.10 below R1; (2) >= 0.05 below the twin with the interval excluding 0

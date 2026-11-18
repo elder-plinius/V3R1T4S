@@ -1,0 +1,24 @@
+# NOVELTY
+
+context: fresh subagent
+
+## Independent status receipt
+
+One ordinary request to the exact [target status feed](https://export.arxiv.org/api/query?search_query=abs:%22sperm%20whale%22&sortBy=submittedDate&sortOrder=descending&max_results=25) returned HTTP 200 at 2026-11-18T07:50:46Z. The raw Atom response is [novelty-status.xml](novelty-status.xml), SHA-256 `81da05d615f85842bd45a4e308bad4a07f7ea7d4e4cfb5abd25a89de7c4bd9ef`. XML parsing found 16 entries. It disclosed November 17 revisions to all three Sinha and Chavan studies. I read those revisions in full-text HTML and used their estimates below.
+
+## Result compared
+
+The frozen claim uses the public `sperm-whale-dialogues.csv` at commit `7228c8eed2cc27ddd23b74c51aeccec9d762389e`. Its 50-way token combines capped click count with five training-only duration bins. The split sorts REC labels lexically and assigns them modulo five. Evaluation uses 3,418 positions with at least two earlier codas. The nested training-fold selector chose the three-previous-token categorical backoff model for all folds. It scores 2.564371 bits/coda against 2.794781 for the specified additive bigram with inner-selected smoothing and 2.850952 for the retrained one-coda counterpart. The gains are 0.230410 and 0.286581 bits/coda, respectively, with a whole-REC paired bootstrap interval of [0.241392, 0.346058] for the twin gain. I read these values from the frozen materials for the novelty comparison.
+
+## Prior work
+
+- WhaleLM already trained longer-history and immediate-predecessor models on tagged coda exchanges and evaluated on held-out recording days. It reports up to 22.7% higher perplexity after order removal and up to 20.6% worse prediction with shorter contexts. It also evaluated n-grams. Its tokens represent rhythm, tempo, rubato, ornamentation and turn-taking, with a training-vocabulary unknown token, and its ten day-held-out splits differ from the five lexical REC folds. I found no score for the bank's token, R1 and retrained twin on the bank's scored positions. [WhaleLM, methods and appendix A](https://openreview.net/pdf/936e6d2df1dc29a10db7c7a387c0f1f19a809034.pdf)
+- *Rhythm of the Deep* v5 uses 1,952 crops from the public Gubnitsky–Diamant collection and tokens learned from audio encoders. It finds 0.1812 bits/coda from the second predecessor on 1,478 common targets and 0.1362 under recording holdout with fixed acoustic forms. The strict segment-local first-order comparison gives −0.00609 bits, p = 0.5908. The cohort, segmentation, learned forms and references differ from the bank protocol. [Sinha and Chavan, section IV](https://arxiv.org/html/2606.16084v5)
+- *Structure Across Voices* v3 uses the same 1,952-crop whale collection, sampled into blocks and grouped by source, with pretrained audio-encoder states. Its standalone whale gain is 0.0279 bits/event, 95% source interval [−0.0069, 0.0805]. [Sinha and Chavan, section IV](https://arxiv.org/html/2609.16612v3)
+- *Music of the Deep* v2 uses the same collection and four conservative source pools. Its primary 32-state held-out gain is 0.090 bits/target, with a conditional interval of [0.020, 0.143] and exact source-pool p = 0.0625. The neighboring-state-count-preserving comparison gives 0.0156 bits of excess and adjusted p = 0.080. This is close prior art for the control concept on a different task. [Sinha and Chavan, section IV.4](https://arxiv.org/html/2610.33974v2)
+- Assayag et al. report history-based coda type and inter-click-interval vector prediction in selected Dominica whale-pair exchanges, with predictive information from up to ten preceding calls. This precedes a general claim about forecasting from longer history. The unit of analysis and prediction targets differ from the fixed REC benchmark. WhAM addresses acoustic generation and DCCE assesses current-coda type and identity. [Assayag et al.](https://doi.org/10.1080/09524622.2026.2684665) · [WhAM](https://proceedings.neurips.cc/paper_files/paper/2025/hash/24d13f93b7715e4768d792ba7b4ffd3e-Abstract-Conference.html) · [DCCE](https://arxiv.org/html/2610.29101v1)
+- GitHub's connected search returned zero entries for `repo:elder-plinius/V3R1T4S "whale"` and `repo:elder-plinius/V3R1T4S is:pr "coda"`. I found no whale entry in the public trophy case or indexed match for the exact target ID or score pair. These searches cover visible filings. [Issues](https://github.com/elder-plinius/V3R1T4S/issues) · [Pull requests](https://github.com/elder-plinius/V3R1T4S/pulls) · [Trophy case](https://github.com/elder-plinius/V3R1T4S/blob/main/TROPHY_CASE.md)
+
+The exact result on the bank's fixed dataset, tokens, recording folds, additive bigram and one-coda twin is distinct from the reviewed prior results. The novelty verdict applies to that benchmark result. Longer-history predictability in sperm-whale codas and the methods of history truncation, n-gram prediction and transition-preserving controls all have precedent.
+
+pass: true

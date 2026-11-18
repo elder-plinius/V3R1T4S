@@ -1,0 +1,9 @@
+per-fold gains of the order-3 model (bits/coda), positions per fold:
+  fold 0:  514 positions  gain over R1 +0.236   gain over twin +0.243
+  fold 1: 1305 positions  gain over R1 +0.246   gain over twin +0.217
+  fold 2:  508 positions  gain over R1 +0.302   gain over twin +0.250
+  fold 3:  692 positions  gain over R1 +0.321   gain over twin +0.335
+  fold 4:  399 positions  gain over R1 +0.229   gain over twin +0.225
+recordings with a positive total gain over R1: 143 of 188
+share of the total gain from the 5 most helped recordings: 30.5% | the single largest: 19.0%
+gain over R1 after dropping those 5 recordings: +0.255 bits/coda over 183 recordings
