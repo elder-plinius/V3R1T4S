@@ -1,10 +1,10 @@
 # MOONSHOT - Edge-unfolding polycubes (TOPP Problem 64): a genus-0 polycube with no edge unfolding along cube edges
 
-🎲 **Recreational math** · moonshot (famous, long odds) · tractability ★★☆☆☆ · compute: laptop-days (exhaustive or SAT search; overlap tests are integer-exact on the unit grid) · open as of 2026-10-30
+🎲 **Recreational math** · moonshot (famous, long odds) · tractability ★★☆☆☆ · compute: laptop-days (exhaustive or SAT search; overlap tests are integer-exact on the unit grid) · open as of 2026-11-18
 
 ## The problem
 
-A polycube is a polyhedron built by gluing unit cubes face to face. Its surface is tiled by unit squares, and all cube edges on the surface (including flat ones) may be cut. TOPP Problem 64 (George Hart and Joseph O'Rourke, 2004) and GFALOP Open Problem 22.4 ask whether some genus-0 polycube has no edge unfolding: a tree of surface cube edges containing every non-flat vertex whose cutting unfolds the surface to one weakly simple polygon. Demaine and O'Rourke's GFALOP update 22.5 (3 Sep 2025) says it remains open. Proven classes: well-separated orthotrees (Damian, Flatland, Meijer and O'Rourke 2005), one-layer polycubes with sparse cubic holes (Liou, Poon and Wei 2014) and with general cubic holes (Minarik 2022), polycubes with orthogonally convex layers (Damian and Meijer 2024), and level-1 Menger polycubes (Richaume, Andres, Largeteau-Skapin and Zrour 2019). Some polycubes have no edge-unzipping (Demaine, Demaine, Eppstein and O'Rourke 2022). Harismendy, da Silva, Largeteau-Skapin and Andres (DMTCS) unfold 'solid polycubes', which keep the shared internal faces; that is a different object and does not settle the question.
+A polycube is a polyhedron built by gluing unit cubes face to face. Its surface is tiled by unit squares, and all cube edges on the surface (including flat ones) may be cut. TOPP Problem 64 (George Hart and Joseph O'Rourke, 2004) and GFALOP Open Problem 22.4 ask whether some genus-0 polycube has no edge unfolding: a tree of surface cube edges containing every non-flat vertex whose cutting unfolds the surface to one weakly simple polygon. Demaine and O'Rourke's GFALOP update 22.5 (3 Sep 2025) says it remains open. By exhaustive search over all spanning trees of the surface's square-adjacency graph, Demaine, Hearn, Hoshido, Ku and Uehara (J. Inf. Process. 28 (2020) 841-845, Theorem 4) showed that every polycube with 12 or fewer cubes has a non-overlapping edge unfolding, so a counterexample has at least 13 cubes. Proven classes: well-separated orthotrees (Damian, Flatland, Meijer and O'Rourke 2005), one-layer polycubes with sparse cubic holes (Liou, Poon and Wei 2014) and with general cubic holes (Minarik 2022), polycubes with orthogonally convex layers (Damian and Meijer 2024), and level-1 Menger polycubes (Richaume, Andres, Largeteau-Skapin and Zrour 2019). Some polycubes have no edge-unzipping (Demaine, Demaine, Eppstein and O'Rourke 2022). Harismendy, da Silva, Largeteau-Skapin and Andres (DMTCS) unfold 'solid polycubes', which keep the shared internal faces; that is a different object and does not settle the question.
 
 ## What counts as a win
 
@@ -12,7 +12,7 @@ A polycube is a polyhedron built by gluing unit cubes face to face. Its surface 
 
 ## Partial wins
 
-- **p1:** A complete certified census: for every polycube with n <= N cubes, up to rotation and reflection, whose surface is a genus-0 2-manifold, an explicit edge unfolding (cut tree plus lattice net) checked by an independent verifier, for N >= 10. The enumeration before the manifold and genus filter must match OEIS A038119(n) for each n, and N must exceed any published census (literature check required; the largest known to the bank is Langerman and Winslow, JCDCGG 2016, Theorem 3.2: every k-cube with k <= 7 has an edge unfolding).
+- **p1:** A complete certified census: for every polycube with n <= N cubes, up to rotation and reflection, whose surface is a genus-0 2-manifold, an explicit edge unfolding (cut tree plus lattice net) checked by an independent verifier, for N >= 13. The enumeration before the manifold and genus filter must match OEIS A038119(n) for each n, and N must exceed any published census (literature check required; the largest known to the bank is Demaine, Hearn, Hoshido, Ku and Uehara (J. Inf. Process. 28 (2020) 841-845, Theorem 4): every polycube with 12 or fewer cubes has a non-overlapping edge unfolding, found by exhaustive search, with no per-polycube nets published. Langerman and Winslow, JCDCGG 2016, Theorem 3.2, shows that every k-cube with k <= 7 has an edge unfolding satisfying Conway's criterion, a stronger property).
 - **p2:** A genus-0 polycube with no strictly simple edge unfolding: every one of its nets has two boundary edges in contact. Certified exhaustively by the method of criterion (2).
 
 ## How a win is checked
@@ -32,6 +32,7 @@ Check the status page before you start and again before you claim anything; tabl
 - <https://arxiv.org/abs/2407.01326>
 - <https://arxiv.org/abs/1907.08433>
 - <https://dmtcs.episciences.org/18001>
+- <https://doi.org/10.2197/ipsjjip.28.841>
 
 ## Ideas to start from
 
@@ -47,6 +48,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Higher-genus polycubes are out of scope: a tree cut cannot open them to a disk.
 - 'Solid polycube' results keep internal faces, which is a different notion.
 - Cuts only along edges of the orthogonal polyhedron (not all cube edges) is a different, already-negative problem: box-with-lids examples exist.
+- No counterexample has 12 or fewer cubes: Demaine, Hearn, Hoshido, Ku and Uehara (J. Inf. Process. 28 (2020) 841-845, Theorem 4) checked every polycube up to 12 cubes by exhaustive spanning-tree search. A census with N <= 12 reproduces that published result. The paper does not say whether its nets are strictly simple, so p2 is not settled by it.
 
 ## Point your agent at it
 
