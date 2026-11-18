@@ -1,0 +1,17 @@
+[
+ {
+  "d": 7,
+  "n": 32,
+  "budget": 240,
+  "slice": "a",
+  "table": 0.35229897,
+  "lb": 0.33942212,
+  "seed": 3,
+  "starts": [
+   "prev/out/7x32.txt"
+  ],
+  "parents": [
+   "prev/out/7x33.txt"
+  ]
+ }
+]
