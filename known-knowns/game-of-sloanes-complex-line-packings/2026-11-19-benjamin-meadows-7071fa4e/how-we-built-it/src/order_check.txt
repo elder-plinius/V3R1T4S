@@ -1,0 +1,7 @@
+same-cell seed  pr18:7x24_owhs.txt         score 4.830e-01  close 0/24
+same-cell seed  ours                       score 5.142e-01  close 0/24
+same-cell seed  current:7x24_hlc.txt       score 4.692e-01  close 0/24
+add: child      ours                       score 4.812e-01  close 0/23  (first n-1 vectors)
+add: child      current:7x23_hlc.txt       score 4.678e-01  close 0/23  (first n-1 vectors)
+delete: parent  ours                       score 4.770e-01  close 0/24  (best with column 12 removed)
+delete: parent  pr18:7x25_owhs.txt         score 4.830e-01  close 0/24  (best with column 20 removed)
