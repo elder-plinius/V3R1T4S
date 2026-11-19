@@ -1,0 +1,31 @@
+{
+ "claim": "CLASS_LOK pr_auc 0.634333770922 on polaris/pkis2-lok-slk-c-1 (official 132-row test split), vs the best listed leaderboard value 0.2553191489361702",
+ "benchmark": "polaris/pkis2-lok-slk-c-1",
+ "targets": ["CLASS_LOK", "CLASS_SLK"],
+ "mainMetric": "pr_auc",
+ "metric_convention": "the live leaderboard lists the FIRST target's metric (CLASS_LOK pr_auc); evidence in the-record-we-beat/snapshot.md",
+ "recipe": {
+  "name": "E2",
+  "per_target": [
+   {"component": "ExtraTreesRegressor", "n_estimators": 800, "max_features": 0.1, "min_samples_leaf": 1, "random_state": 0, "trained_on": "the continuous percent-inhibition label of the target over the 508 official train rows"},
+   {"component": "LGBMClassifier", "n_estimators": 400, "learning_rate": 0.05, "num_leaves": 15, "min_child_samples": 10, "random_state": 0, "trained_on": "the CLASS label of the target over the 508 official train rows"},
+   {"blend": "rank-normalise each component's 132 test predictions to [0,1] and average"},
+   {"probability": "Platt scaling fitted on the 10-partition out-of-fold blend scores of the 508 train rows vs the CLASS label (monotone, so PR-AUC/ROC are invariant)"}
+  ],
+  "features": "RDKit Morgan ECFP4 counts (2048) + 18 RDKit physchem descriptors from SMILES",
+  "platt_coefficients": {"CLASS_LOK": [9.000716, -7.882329], "CLASS_SLK": [5.744524, -5.822587]},
+  "train_only": "the 508 official train indices; auxiliary = the continuous LOK/SLK columns of those same rows (declared); no test-row value and no external PKIS/ChEMBL record used"
+ },
+ "claimed_values": {
+  "CLASS_LOK_pr_auc": 0.634333770922,
+  "CLASS_LOK_roc_auc": 0.880208333333,
+  "CLASS_SLK_pr_auc": 0.377856659137,
+  "CLASS_SLK_roc_auc": 0.838073691015,
+  "mean_pr_auc": 0.506095215029,
+  "bootstrap_10000_frac_above_bar": 1.000000,
+  "bootstrap_10000_frac_above_bar_mean_interpretation": 0.999600
+ },
+ "bar": 0.2553191489361702,
+ "margin_rule": "+0.020 absolute on pr_auc",
+ "files": {"preds.csv": "the object: one probability per target per official test row, in official order"}
+}
