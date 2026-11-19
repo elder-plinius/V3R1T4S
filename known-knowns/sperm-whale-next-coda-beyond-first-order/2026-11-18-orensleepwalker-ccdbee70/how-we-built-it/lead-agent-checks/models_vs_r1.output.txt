@@ -1,0 +1,5 @@
+positions scored: 3418 (the author reports 3418)
+R1 bigram                        2.7874 bits/coda   vs R1: +0.0000   chosen hyperparameters per fold: [0.3, 0.3, 0.1, 0.3, 0.3]
+order-2 Dirichlet                2.5453 bits/coda   vs R1: +0.2421   chosen hyperparameters per fold: [30, 30, 30, 30, 30]
+order-3 Dirichlet                2.5213 bits/coda   vs R1: +0.2661   chosen hyperparameters per fold: [30, 30, 30, 30, 30]
+repetition-aware first order     2.7334 bits/coda   vs R1: +0.0540   chosen hyperparameters per fold: [30, 30, 30, 30, 30]

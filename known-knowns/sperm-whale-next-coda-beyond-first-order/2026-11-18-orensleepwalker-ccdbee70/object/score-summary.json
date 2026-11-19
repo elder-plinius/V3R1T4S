@@ -1,0 +1,84 @@
+{
+  "full": {
+    "baseline_margin": 0.1,
+    "twin_margin": 0.05,
+    "point_and_interval_clear": true,
+    "threshold_and_controls_clear": true
+  },
+  "p1": {
+    "gain": 0.230409563589848,
+    "ci95": [
+      0.18310721784252781,
+      0.2906316877200888
+    ],
+    "threshold": 0.05,
+    "point_and_interval_clear": true,
+    "controls": {
+      "payload": {
+        "n": 400,
+        "complete": true,
+        "max": 0.20066428546230636,
+        "max_across_families": 0.20066428546230636,
+        "reaches_real": 0,
+        "families_reach_real": 0,
+        "real_beats_all": true
+      },
+      "first_order": {
+        "n": 400,
+        "complete": true,
+        "max": 0.09529845577813957,
+        "max_across_families": 0.09529845577813957,
+        "reaches_real": 0,
+        "families_reach_real": 0,
+        "real_beats_all": true
+      }
+    },
+    "threshold_and_controls_clear": true
+  },
+  "p2": {
+    "gain": 0.2865808090083267,
+    "ci95": [
+      0.2413915613931585,
+      0.34605846184028166
+    ],
+    "threshold": 0.03,
+    "point_and_interval_clear": true,
+    "controls": {
+      "payload": {
+        "n": 400,
+        "complete": true,
+        "max": 0.2560134800909579,
+        "max_across_families": 0.3183231425618834,
+        "reaches_real": 0,
+        "families_reach_real": 5,
+        "real_beats_all": true
+      },
+      "first_order": {
+        "n": 400,
+        "complete": true,
+        "max": 0.16003797818656415,
+        "max_across_families": 0.1993299111468629,
+        "reaches_real": 0,
+        "families_reach_real": 0,
+        "real_beats_all": true
+      }
+    },
+    "threshold_and_controls_clear": true
+  },
+  "score": {
+    "baseline_score": 2.79478055297942,
+    "model_score": 2.564370989389572,
+    "twin_score": 2.8509517983978987,
+    "n": 3418,
+    "baseline_gain": 0.230409563589848,
+    "twin_gain": 0.2865808090083267,
+    "baseline_interval": [
+      0.18310721784252781,
+      0.2906316877200888
+    ],
+    "twin_interval": [
+      0.2413915613931585,
+      0.34605846184028166
+    ]
+  }
+}
