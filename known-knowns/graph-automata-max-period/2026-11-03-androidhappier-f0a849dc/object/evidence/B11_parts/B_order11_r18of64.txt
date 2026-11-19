@@ -1,0 +1,121 @@
+high J?befHu]uN_ 46
+high J?qafH{la~? 40
+high J?qafH{ldt_ 48
+high J?qbTvwnN~_ 40
+high J?qetpt~B^? 47
+high J?qduvt~Av_ 41
+high J?rfFi]}r|_ 42
+high J?qjazil~u_ 46
+high J?qjayr|Tv_ 45
+high J?qjax^{t~? 50
+high JCQbfNUnFn? 46
+high JCQbfNUnF~? 46
+high JCQVeXkL~f_ 42
+high JCQVeX[{^f_ 46
+high JCQVeX[s~b_ 46
+high JCQVeZM\U^_ 46
+high JCQVeZM\V^_ 46
+high JCQVeZuxtu_ 41
+high JCRVFVunfv? 41
+high JCpdfbbvfv_ 44
+high JCpdfbm|fv? 45
+high JCpbeyuuz~_ 40
+high JCZJvJ{|T~_ 46
+order=11 connected_graphs=14282023 max_cycle=50
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 44 45 46 47 48 50
+witness 1 J??CFrw}Bk? 0
+witness 2 J??CFrw}EN? 1027
+witness 3 J??CFrw{a]_ 195
+witness 4 J??CFrw]bk? 399
+witness 5 J??CFrw\bM_ 327
+witness 6 J??CFrwx~r_ 7
+witness 7 J??CFre{e{_ 458
+witness 8 J??CFrsyc\_ 406
+witness 9 J??CFrw{z^_ 89
+witness 10 J??CFretej? 395
+witness 11 J??CFre~v|_ 7
+witness 12 J??CFre|vl_ 7
+witness 13 J?ABvfwZ~Z? 22
+witness 14 J?ABvfsxzz_ 78
+witness 15 J?BDA_q|T}? 357
+witness 16 J?ABvfk|e}_ 166
+witness 17 J?ABvfwx~~? 14
+witness 18 J?ABvfkznz? 7
+witness 19 J?ABvd{zj~_ 14
+witness 20 J?BDAau\^v_ 99
+witness 21 J?B@eYkwnU? 389
+witness 22 J?BDdba]bZ? 231
+witness 23 J?BDd`iF]x? 219
+witness 24 J?B@eZolln? 163
+witness 25 J?BDd`wjr\? 187
+witness 26 J?BDdbE^b^? 99
+witness 27 J?BDjZwfrV_ 31
+witness 28 J?BDjW}mVj? 201
+witness 29 J?BDd`mvP^? 175
+witness 30 J?BDjZWynY_ 179
+witness 31 J?bDvrkxun? 46
+witness 32 J?BDjZi^vl_ 27
+witness 33 J?`cvJUJ~~? 35
+witness 34 J?BDjZM|t}_ 23
+witness 35 J?bFLzsZu~_ 35
+witness 36 J?`bmZw|Z~_ 44
+witness 37 J?qafJqfb]_ 99
+witness 38 J?befH]zfn? 214
+witness 39 J?qetrZ}Rx_ 19
+witness 40 J?qafH{la~? 31
+witness 41 J?qduvt~Av_ 75
+witness 42 J?rfFi]}r|_ 15
+witness 44 JCpdfbbvfv_ 92
+witness 45 J?qjayr|Tv_ 47
+witness 46 J?befHu]uN_ 47
+witness 47 J?qetpt~B^? 111
+witness 48 J?qafH{ldt_ 51
+witness 50 J?qjax^{t~? 63
+hist 1 2997195
+hist 2 7200468
+hist 3 1215783
+hist 4 1201758
+hist 5 386647
+hist 6 521270
+hist 7 238786
+hist 8 176182
+hist 9 113352
+hist 10 75390
+hist 11 44296
+hist 12 31873
+hist 13 20746
+hist 14 17624
+hist 15 10662
+hist 16 8450
+hist 17 5481
+hist 18 4424
+hist 19 3171
+hist 20 2352
+hist 21 1513
+hist 22 1344
+hist 23 791
+hist 24 658
+hist 25 479
+hist 26 338
+hist 27 265
+hist 28 193
+hist 29 139
+hist 30 111
+hist 31 72
+hist 32 60
+hist 33 37
+hist 34 29
+hist 35 14
+hist 36 20
+hist 37 13
+hist 38 10
+hist 39 4
+hist 40 3
+hist 41 3
+hist 42 2
+hist 44 1
+hist 45 2
+hist 46 9
+hist 47 1
+hist 48 1
+hist 50 1

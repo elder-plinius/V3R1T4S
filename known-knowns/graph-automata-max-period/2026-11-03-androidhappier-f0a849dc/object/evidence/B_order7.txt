@@ -1,0 +1,16 @@
+order=7 connected_graphs=853 max_cycle=8
+periods: 1 2 3 4 5 6 8
+witness 1 F??Fw 0
+witness 2 F?rFw 67
+witness 3 F?znw 7
+witness 4 FCvVo 43
+witness 5 FQzvg 23
+witness 6 FEznw 15
+witness 8 FE~vw 7
+hist 1 666
+hist 2 143
+hist 3 23
+hist 4 16
+hist 5 1
+hist 6 3
+hist 8 1

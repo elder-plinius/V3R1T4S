@@ -1,0 +1,140 @@
+high J?BeejektN_ 46 0
+high J?Beejekt^_ 46 1
+high J?Beejemt^_ 46 1
+high J?Beeirzd^_ 46 1
+high J?BeeizzdN_ 46 1
+high J?`eTnqtrZ_ 45 1
+high J?bNFDstr|? 41 1
+high J?rDvZ\|fv? 40 1
+high J?qbuy{ltv_ 52 1
+high J?qbux{fl~_ 42 1
+high J?ovC\unR}_ 42 1
+high J?ovTqtxa~_ 40 1
+high J?ovTptzf^_ 40 1
+high J?qvF_y~b}_ 40 1
+high J?qvFa{Nem_ 40 1
+high J?qvFaz^n~_ 44 1
+high J?qtbbdZvj_ 49 1
+high J?qnEvqzP|_ 41 1
+high J?qnEuu~F^_ 54 1
+high J?o~FbVmvx? 40 1
+high JCQf@lwuVB_ 40 1
+high JCQbfH{mfV_ 40 1
+high JCQeQlw|ff? 43 1
+high JCQeQn[|vt_ 51 1
+high JCQeQmuZ\v? 45 1
+high JCQeQlzxtn_ 42 1
+high JCRb`zkk}n_ 41 1
+high JCRb`xmk~~_ 42 1
+high JCRb`zLmj^_ 43 1
+high JCQvES{T~^? 45 1
+high JCQvET]nbu_ 41 1
+high JCQvES}vVz? 40 1
+high JCQvET\\n|_ 40 1
+high JCQvEU|]vL_ 41 1
+high JCQvEVfve}? 48 1
+high JCpeiyxMz|_ 41 1
+high JCZTmr\xvV? 42 1
+n=11 graphs=14968958 connected=14756259 maxperiod=54 witness_graph6=J?qnEuu~F^_ witness_state=1680
+hist_all 1 2786457
+hist_all 2 7568262
+hist_all 3 1174675
+hist_all 4 1433623
+hist_all 5 467207
+hist_all 6 616138
+hist_all 7 292155
+hist_all 8 213715
+hist_all 9 131529
+hist_all 10 90356
+hist_all 11 54069
+hist_all 12 40986
+hist_all 13 25764
+hist_all 14 21853
+hist_all 15 13805
+hist_all 16 10780
+hist_all 17 7375
+hist_all 18 5473
+hist_all 19 3593
+hist_all 20 3110
+hist_all 21 1980
+hist_all 22 1688
+hist_all 23 1023
+hist_all 24 942
+hist_all 25 619
+hist_all 26 442
+hist_all 27 340
+hist_all 28 291
+hist_all 29 157
+hist_all 30 146
+hist_all 31 99
+hist_all 32 80
+hist_all 33 59
+hist_all 34 43
+hist_all 35 29
+hist_all 36 19
+hist_all 37 18
+hist_all 38 15
+hist_all 39 6
+hist_all 40 10
+hist_all 41 6
+hist_all 42 5
+hist_all 43 2
+hist_all 44 1
+hist_all 45 3
+hist_all 46 5
+hist_all 48 1
+hist_all 49 1
+hist_all 51 1
+hist_all 52 1
+hist_all 54 1
+hist_conn 1 2732796
+hist_conn 2 7467167
+hist_conn 3 1156383
+hist_conn 4 1415491
+hist_conn 5 462753
+hist_conn 6 608081
+hist_conn 7 289004
+hist_conn 8 211198
+hist_conn 9 130278
+hist_conn 10 89498
+hist_conn 11 53723
+hist_conn 12 40718
+hist_conn 13 25626
+hist_conn 14 21637
+hist_conn 15 13737
+hist_conn 16 10706
+hist_conn 17 7333
+hist_conn 18 5448
+hist_conn 19 3576
+hist_conn 20 3086
+hist_conn 21 1977
+hist_conn 22 1684
+hist_conn 23 1023
+hist_conn 24 941
+hist_conn 25 618
+hist_conn 26 440
+hist_conn 27 340
+hist_conn 28 291
+hist_conn 29 157
+hist_conn 30 145
+hist_conn 31 99
+hist_conn 32 80
+hist_conn 33 59
+hist_conn 34 43
+hist_conn 35 29
+hist_conn 36 19
+hist_conn 37 18
+hist_conn 38 15
+hist_conn 39 6
+hist_conn 40 10
+hist_conn 41 6
+hist_conn 42 5
+hist_conn 43 2
+hist_conn 44 1
+hist_conn 45 3
+hist_conn 46 4
+hist_conn 48 1
+hist_conn 49 1
+hist_conn 51 1
+hist_conn 52 1
+hist_conn 54 1

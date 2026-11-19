@@ -1,0 +1,5 @@
+files 64
+graphs 1018997864 connected 1006700565 maxperiod (71, 'J?qrdjivb}_', '752')
+top values all: [(53, 11), (54, 7), (55, 4), (56, 5), (59, 2), (60, 1), (61, 2), (71, 2)]
+high (>=40) count 1721
+top 12: [(71, 'JCpbdo}ttv_', '1'), (71, 'J?qrdjivb}_', '1'), (61, 'JCpbbqkVt^_', '1'), (61, 'JCRbd\\]ms~_', '1'), (60, 'JCxvEyz\\~\\_', '1'), (59, 'JCQbUemnm}_', '1'), (59, 'J?befRVmvZ_', '1'), (56, 'JCpddhY^\\v_', '1'), (56, 'JCpVTqu^m~?', '1'), (56, 'JCQeeouZ]n?', '1'), (56, 'J?qazhy}TZ?', '1'), (56, 'J?`eHvg^\\}_', '1')]

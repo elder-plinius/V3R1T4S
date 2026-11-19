@@ -1,0 +1,123 @@
+high J?bFSxyT~R_ 40
+high J?`bejkl\}_ 42
+high J?`elji]Z^_ 40
+high J?`e^RT|\~? 43
+high J?qrdp{jnV? 40
+high J?qrdo}}f^_ 40
+high J?qrdprzRv_ 44
+high J?qvUrUr\n_ 41
+high JCOedOmxvt_ 40
+high JCQfCwyU~^_ 43
+high JCQfCzknv|? 40
+high JCQfCzM\rz_ 44
+high JCQfCxvvdf_ 40
+high JCQeVHV|dz? 42
+high JCQeVHVnf^_ 43
+high JCQbTh[tfN_ 41
+high JCRcvFw|v|_ 43
+high JCRcvE{yvZ_ 44
+high JCRcvDx|Dx_ 40
+high JCQvFP{vV^_ 40
+high JCQvFRdp}z_ 44
+high JCQr^Zq}^~? 42
+high JCpbvQs^J}_ 40
+high JCpbvPlunx? 41
+high JCpdlvfvn|? 41
+high JCZJlu|v^}? 45
+high JCY^F`yr~}_ 45
+high JCY^FbMxZu_ 42
+high JCY^F`mu\|_ 44
+high JCY^F`\xl}_ 41
+high JCdefamLy~_ 41
+order=11 connected_graphs=19937877 max_cycle=45
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45
+witness 1 J??EFrw}Fw? 0
+witness 2 J??EFrw}DN? 448
+witness 3 J??EFrw}X~_ 92
+witness 4 J??EFrw}@~_ 28
+witness 5 J??EFrw|^V_ 71
+witness 6 J??EFrwx~v_ 7
+witness 7 J??EFrw|X~_ 83
+witness 8 J??EFrszEf? 396
+witness 9 J??EFrwx~u_ 452
+witness 10 J??EFrszd^? 195
+witness 11 J?AAFq{xv|? 417
+witness 12 J??EFrwx|v_ 7
+witness 13 J?AAFrsrfT? 500
+witness 14 J?ABFFStft? 195
+witness 15 J?ABFFSuS}? 867
+witness 16 J?ABFFoxQz_ 422
+witness 17 J?ABFFcvNq? 327
+witness 18 J?ABFFcfvN? 353
+witness 19 J?ABFFEmLj_ 199
+witness 20 J?AELM]]~t_ 159
+witness 21 J?AFFpurrz? 103
+witness 22 J?ABFFSxf]_ 7
+witness 23 J?ABFFSkh~_ 103
+witness 24 J?BDEjgljn? 163
+witness 25 J?BDEikNv\_ 165
+witness 26 J?BDEik\bt? 355
+witness 27 J?ABFFEXtv? 551
+witness 28 J?BDEikyj^? 39
+witness 29 J?BDdYy|T|? 101
+witness 30 J?BDEje\bv? 199
+witness 31 J?BDEhf|`~_ 163
+witness 32 J?`FEY{N}}? 118
+witness 33 J?`FEYk]k^_ 83
+witness 34 J?bBEU[{^l? 163
+witness 35 J?`FEYkrtn? 118
+witness 36 J?bBEU[l~y? 186
+witness 37 J?bFSx{tln_ 121
+witness 38 J?bBETtZfX_ 179
+witness 39 J?BDdYy|]|_ 13
+witness 40 J?bFSxyT~R_ 59
+witness 41 J?qvUrUr\n_ 154
+witness 42 J?`bejkl\}_ 110
+witness 43 J?`e^RT|\~? 15
+witness 44 J?qrdprzRv_ 15
+witness 45 JCZJlu|v^}? 13
+hist 1 2842340
+hist 2 10531250
+hist 3 1805818
+hist 4 1935521
+hist 5 638914
+hist 6 876056
+hist 7 421059
+hist 8 302628
+hist 9 194195
+hist 10 129561
+hist 11 80925
+hist 12 51909
+hist 13 33865
+hist 14 28178
+hist 15 17835
+hist 16 13912
+hist 17 9326
+hist 18 6823
+hist 19 4596
+hist 20 3705
+hist 21 2302
+hist 22 2026
+hist 23 1309
+hist 24 1055
+hist 25 688
+hist 26 491
+hist 27 462
+hist 28 279
+hist 29 201
+hist 30 195
+hist 31 133
+hist 32 78
+hist 33 57
+hist 34 40
+hist 35 44
+hist 36 24
+hist 37 19
+hist 38 15
+hist 39 12
+hist 40 10
+hist 41 6
+hist 42 4
+hist 43 4
+hist 44 5
+hist 45 2

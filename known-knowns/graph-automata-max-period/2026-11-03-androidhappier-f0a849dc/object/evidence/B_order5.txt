@@ -1,0 +1,6 @@
+order=5 connected_graphs=21 max_cycle=2
+periods: 1 2
+witness 1 D?{ 0
+witness 2 D]{ 19
+hist 1 20
+hist 2 1

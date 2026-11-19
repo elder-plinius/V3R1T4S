@@ -1,0 +1,7 @@
+A total graphs 1018997864 == A000088(11) 1018997864: True
+A connected 1006700565 B connected 1006700565 == A001349(11) 1006700565: True
+A max (all graphs) 71 | B connected max 71 | B combine a(11) 71
+hist_conn(A) == hist(B): True sum 1006700565
+high connected (>=40) A 1718 B 1718 identical: True
+hist_all(A) sum 1018997864 max 71
+VERDICT AGREE

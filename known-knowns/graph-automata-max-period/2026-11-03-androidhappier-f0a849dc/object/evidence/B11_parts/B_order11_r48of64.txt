@@ -1,0 +1,115 @@
+high J?BefA{vl}_ 41
+high J?`eavSwvw_ 42
+high J?`eauuU~|? 50
+high J?bLbrpyd^_ 45
+high J?bLbqzxun_ 45
+high J?qeZnsz^|? 40
+high J?ovDf[}VN? 40
+high J?ovDdmjjv_ 40
+high J?ovDe]vU}? 40
+high J?qmff[|j~? 48
+high J?zUvYuj~^_ 50
+high JCQeLvi|Lu_ 42
+high JCQbvJ[j^|_ 40
+high JCQbvIv^Vf_ 40
+high JCQdmrd~fr_ 40
+high JCQTbNK]~}? 41
+high JCQvDX{[rt_ 41
+high JCQvDZi\fn? 40
+high JCpdPz\yr|_ 40
+high JCpejo{un\_ 41
+high JCpejqxx}~_ 42
+high JCrbRt]}Mn_ 40
+high JCZJfRslnv_ 50
+order=11 connected_graphs=14126528 max_cycle=50
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 45 48 50
+witness 1 J??FFB_FF_? 0
+witness 2 J??FFB_FEo? 7
+witness 3 J??FFB_ud{? 1551
+witness 4 J??FFB_{f]_ 263
+witness 5 J??FFB_ufM? 775
+witness 6 J??FFB_fay? 1740
+witness 7 J??FFAWdq|? 843
+witness 8 J??FFAWT`q_ 907
+witness 9 J??FFAWTpt_ 459
+witness 10 J??FFAWtHt_ 461
+witness 11 J??FFBWfnj? 451
+witness 12 J??FFAWUhn_ 399
+witness 13 J??FFBq{u~? 7
+witness 14 J?ABEze}c}_ 227
+witness 15 J?AEAJaxf}_ 291
+witness 16 J?ABEzsyr^? 163
+witness 17 J?AFBnq}Jv_ 14
+witness 18 J?AFBl{v^n_ 42
+witness 19 J?AFBl{zM^? 166
+witness 20 J?AFBnq]~y_ 14
+witness 21 J?AFBnivRx_ 167
+witness 22 J?ABEze}fL_ 7
+witness 23 J?AFBl{vNT_ 39
+witness 24 J?AFBne]m}_ 46
+witness 25 J?BDAnQivn? 355
+witness 26 J?AFBl{}N]_ 71
+witness 27 J?BDAncLu^? 356
+witness 28 J?AFBnU^Vp_ 71
+witness 29 J?BDAli]m}_ 359
+witness 30 J?AFBl]~EV? 163
+witness 31 J?BDAlfm~}? 162
+witness 32 J?`DVbWVp|_ 157
+witness 33 J?`FBVKjc~_ 147
+witness 34 J?`aeZqyem? 369
+witness 35 J?`FBVerU{_ 181
+witness 36 J?Belyz^fn? 23
+witness 37 J?`eas}yVb_ 27
+witness 38 J?BDAliVrt_ 182
+witness 39 J?bDNj\zb}_ 35
+witness 40 J?qeZnsz^|? 7
+witness 41 J?BefA{vl}_ 97
+witness 42 J?`eavSwvw_ 283
+witness 45 J?bLbrpyd^_ 55
+witness 48 J?qmff[|j~? 11
+witness 50 J?`eauuU~|? 63
+hist 1 2199747
+hist 2 7542496
+hist 3 1074618
+hist 4 1288785
+hist 5 462309
+hist 6 609499
+hist 7 310338
+hist 8 218198
+hist 9 140132
+hist 10 90289
+hist 11 52351
+hist 12 39616
+hist 13 26083
+hist 14 21878
+hist 15 13934
+hist 16 10028
+hist 17 6684
+hist 18 5297
+hist 19 3638
+hist 20 2926
+hist 21 1839
+hist 22 1704
+hist 23 1006
+hist 24 897
+hist 25 553
+hist 26 428
+hist 27 345
+hist 28 260
+hist 29 168
+hist 30 142
+hist 31 97
+hist 32 55
+hist 33 53
+hist 34 39
+hist 35 36
+hist 36 12
+hist 37 7
+hist 38 16
+hist 39 2
+hist 40 10
+hist 41 4
+hist 42 3
+hist 45 2
+hist 48 1
+hist 50 3

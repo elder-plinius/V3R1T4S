@@ -1,0 +1,106 @@
+high J?bFEZymr{_ 41
+high J?bBa^k|r|_ 51
+high J?bDthltrv_ 43
+high J?bDthzyrZ_ 41
+high J?`eNFp^Dy_ 40
+high J?bebRXZTu? 40
+high J?qdUjYytn_ 44
+high J?qfeZu^V\_ 52
+high JCQVfRY^Am_ 44
+high JCQVfPuu^s_ 52
+high JCQVfPmzUN_ 43
+high JCQVfRL}b~? 45
+order=11 connected_graphs=10840218 max_cycle=52
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 43 44 45 51 52
+witness 1 J??CFB_[EW? 0
+witness 2 J??CFB_[FW? 7
+witness 3 J??CFB_Wc}? 967
+witness 4 J??CFB_We}? 1477
+witness 5 J??CFB_Wq~_ 709
+witness 6 J??CFB_wa}? 1347
+witness 7 J??CFB_Wu|_ 327
+witness 8 J??CFB_St[_ 835
+witness 9 J??CFB_sp^_ 453
+witness 10 J??CFBoS|~? 387
+witness 11 J?AFE`oJHj? 623
+witness 12 J?AEFnm~Vz_ 38
+witness 13 J?AFE`oTez? 489
+witness 14 J?AFE`ckdz_ 327
+witness 15 J?AFE`ohrz? 423
+witness 16 J?AFEbcv@n_ 103
+witness 17 J?AFEboZdn? 295
+witness 18 J?AFEasZni? 238
+witness 19 J?AFE`qptZ_ 135
+witness 20 J?AFE`Ux[v_ 107
+witness 21 J?AFE`cdl}? 239
+witness 22 J?AFE_kYkz? 183
+witness 23 J?AFEauUrN_ 331
+witness 24 J?AFEawR~x_ 99
+witness 25 J?BDLjoy^m_ 103
+witness 26 J?AFEbUZrj? 195
+witness 27 J?AFEasXbr_ 207
+witness 28 J?AFE`qhZ}_ 107
+witness 29 J?BDLjb|Jr_ 79
+witness 30 J?AFEauXr~? 39
+witness 31 J?BDLhwlj|? 173
+witness 32 J?BDLhwqzr? 110
+witness 33 J?BDjrsrrV? 233
+witness 34 J?BDLhYyQt_ 187
+witness 35 J?bDthup~{_ 60
+witness 36 J?BEDzq~r~_ 28
+witness 37 J?bBa]up~t_ 47
+witness 38 J?qvET{fmt_ 81
+witness 39 JCQfLXy^v|_ 22
+witness 40 J?`eNFp^Dy_ 39
+witness 41 J?bFEZymr{_ 115
+witness 43 J?bDthltrv_ 51
+witness 44 J?qdUjYytn_ 78
+witness 45 JCQVfRL}b~? 45
+witness 51 J?bBa^k|r|_ 35
+witness 52 J?qfeZu^V\_ 100
+hist 1 1905227
+hist 2 5615880
+hist 3 918031
+hist 4 922006
+hist 5 342119
+hist 6 470850
+hist 7 214616
+hist 8 156154
+hist 9 93794
+hist 10 63745
+hist 11 39009
+hist 12 28793
+hist 13 17890
+hist 14 16663
+hist 15 9734
+hist 16 7471
+hist 17 4914
+hist 18 3601
+hist 19 2508
+hist 20 1948
+hist 21 1290
+hist 22 1103
+hist 23 694
+hist 24 612
+hist 25 364
+hist 26 333
+hist 27 210
+hist 28 184
+hist 29 127
+hist 30 119
+hist 31 54
+hist 32 54
+hist 33 32
+hist 34 21
+hist 35 20
+hist 36 16
+hist 37 12
+hist 38 4
+hist 39 4
+hist 40 2
+hist 41 2
+hist 43 2
+hist 44 2
+hist 45 1
+hist 51 1
+hist 52 2

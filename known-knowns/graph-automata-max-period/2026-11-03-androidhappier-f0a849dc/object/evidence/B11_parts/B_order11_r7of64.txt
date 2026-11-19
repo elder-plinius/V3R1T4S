@@ -1,0 +1,106 @@
+high J?bDva{ZVK_ 40
+high J?bDvbpZbu_ 41
+high J?bevbwnfl_ 44
+high J?qff`[jjt_ 41
+high J?qffb]xv~_ 41
+high J?qjf@]m|~_ 41
+high JCOefLuzVv_ 41
+high JCQfDvszfj_ 42
+high JCQbdLwya}? 40
+high JCQbdL[dzr? 52
+high JCQbdNpVj^_ 40
+high JCRcuni~N^_ 47
+high JCpbayy|Ul? 52
+high JCpbaxx^jn_ 44
+order=11 connected_graphs=13498801 max_cycle=52
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 44 47 52
+witness 1 J???F~}~f{? 0
+witness 2 J???F~}~v|? 647
+witness 3 J??Ffrwzv}? 600
+witness 4 J??Ffrw}fM_ 263
+witness 5 J??Ffrwxv]? 263
+witness 6 J??Ffrwxv]_ 263
+witness 7 J??Ffr{zuz_ 7
+witness 8 J??Ffrm~EN_ 39
+witness 9 J??Ffrmzu~_ 60
+witness 10 J??Ffrsr~]_ 488
+witness 11 J??Ffrmvt~_ 54
+witness 12 J??Ffrmvff? 11
+witness 13 J?AEFfs}j^_ 39
+witness 14 J?AEFfk|en_ 11
+witness 15 J?AEFfsz^N? 99
+witness 16 J??Ffrmx}}_ 15
+witness 17 J?AEFfsln]_ 78
+witness 18 J?AEFfkvI~? 291
+witness 19 J?AEFfk^e|_ 99
+witness 20 J?BEFJQlr|? 579
+witness 21 J?ABbVcunY? 496
+witness 22 J?AEFfMZj^? 39
+witness 23 J?BEFIqMyn? 163
+witness 24 J?B@eJoll~? 163
+witness 25 J?BD`|m{n^_ 47
+witness 26 J?BDNa{|R^_ 37
+witness 27 J?BDNb[N\z_ 23
+witness 28 J?BDNa{vVd_ 107
+witness 29 J?BFnY{^fw_ 35
+witness 30 J?BD`~e{i~_ 47
+witness 31 J?`DFDMrfr? 195
+witness 32 J?bFBp[utn_ 115
+witness 33 J?BD`|mmnn? 45
+witness 34 J?BFfZ]nf^? 30
+witness 35 J?`ed`MMtY_ 191
+witness 36 J?bBeLkM}v? 118
+witness 37 J?bDvbknvy_ 49
+witness 38 J?bev`{nnv_ 28
+witness 39 J?bev`mvVN_ 139
+witness 40 J?bDva{ZVK_ 206
+witness 41 J?bDvbpZbu_ 77
+witness 42 JCQfDvszfj_ 87
+witness 44 J?bevbwnfl_ 15
+witness 47 JCRcuni~N^_ 101
+witness 52 JCQbdL[dzr? 55
+hist 1 2085117
+hist 2 6988629
+hist 3 1200101
+hist 4 1352314
+hist 5 436991
+hist 6 596813
+hist 7 274444
+hist 8 201105
+hist 9 120708
+hist 10 82936
+hist 11 45994
+hist 12 33065
+hist 13 20896
+hist 14 19166
+hist 15 11014
+hist 16 8680
+hist 17 5688
+hist 18 4146
+hist 19 3025
+hist 20 2242
+hist 21 1370
+hist 22 1412
+hist 23 712
+hist 24 617
+hist 25 431
+hist 26 303
+hist 27 277
+hist 28 164
+hist 29 89
+hist 30 111
+hist 31 68
+hist 32 41
+hist 33 36
+hist 34 25
+hist 35 16
+hist 36 18
+hist 37 8
+hist 38 11
+hist 39 4
+hist 40 3
+hist 41 5
+hist 42 1
+hist 44 2
+hist 47 1
+hist 52 2
