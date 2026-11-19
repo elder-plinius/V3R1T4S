@@ -1,0 +1,22 @@
+{
+ "tag": "M1",
+ "target": "moleculeace-chembl244-ki (partial win p2)",
+ "members": [
+  "B_SVR_ECFP4",
+  "SVR_ECFP6CNT_C30_g0.003",
+  "SVR_FCFP4_C100_g0.01",
+  "SVR_ECFP6_C30_g0.01",
+  "SVR_FCFP4_C30_g0.003",
+  "SVR_FCFP4_C30_g0.01"
+ ],
+ "weights": {
+  "B_SVR_ECFP4": 0.20531793485966982,
+  "SVR_ECFP6CNT_C30_g0.003": 0.4699939563873311,
+  "SVR_FCFP4_C100_g0.01": 0.051997851064048396,
+  "SVR_ECFP6_C30_g0.01": 0.11304615636767569,
+  "SVR_FCFP4_C30_g0.003": 0.0,
+  "SVR_FCFP4_C30_g0.01": 0.17068273587442256
+ },
+ "combiner": "non-negative ridge alpha=1.0 fit on OOF member predictions (train labels only)",
+ "csv_sha256": "b296c5956c9b3659fa039f057ebcb617919acd759c9255ed72bee917d99b4ef2"
+}
