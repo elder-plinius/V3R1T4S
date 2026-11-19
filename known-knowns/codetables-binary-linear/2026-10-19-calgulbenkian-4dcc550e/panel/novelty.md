@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: lpub-q4-n148-k7-d106
 
+[Edited 2026-11-19 at the maintainer's request on the pull request: the heading about open questions was renamed and a reference to a triage step was replaced by a shipped file. The checks, numbers and verdict are unchanged.]
+
 Role: novelty. Cell: upper bound d at most 106 for [148,7] over GF(4) (the claim: no [148,7,107]_4 code), a Delsarte linear-programming certificate.
 
 ## Primary table (fetched once, honestly) and the four propagation neighbours
@@ -11,7 +13,7 @@ Role: novelty. Cell: upper bound d at most 106 for [148,7] over GF(4) (the claim
 - http://www.codetables.de/BKLC/BKLC.php?q=4&n=148&k=6 | fetched 2026-10-19T05:15:39Z | HTTP 200 | sha256 b5f0e08a333e0e88ca7c1e38499a4438cef448d8be6a6de979e25ad90790cdd2
 - http://www.codetables.de/BKLC/BKLC.php?q=4&n=149&k=7 | fetched 2026-10-19T05:15:43Z | HTTP 200 | sha256 fb9cff310e783499d8df38edffd5795c255847d2feedb4dbf0102182039548f6
 (4, 148, 7) live L/U 103 107 claim Ub 106 one-step neighbour bounds {'shorten U(n-1,k-1)': 108, 'puncture U(n-1,k)+1': 107, 'subcode U(n,k-1)': 108, 'pad U(n+1,k)': 107} closure bound 107 STRICTLY BELOW | claim >= lower: True
-Page values: see the closure line (live lower and upper bound of the cell, and the four one-step neighbour bounds). Page hashes equal those recorded by the triage for the same URLs. Live reason for the 107: Ub(148,7) = 107 is found by considering truncation to Ub(144,7) = 103 (source DM3, Daskalov and Metodieva 1994); Ub(149,7) = 107 is DM3 directly. The Daskalov linear-programming paper cited on other quaternary cells of this table is not cited for this cell.
+Page values: see the closure line (live lower and upper bound of the cell, and the four one-step neighbour bounds). Page hashes equal those recorded in the-record-we-beat/README.md for the same URLs. Live reason for the 107: Ub(148,7) = 107 is found by considering truncation to Ub(144,7) = 103 (source DM3, Daskalov and Metodieva 1994); Ub(149,7) = 107 is DM3 directly. The Daskalov linear-programming paper cited on other quaternary cells of this table is not cited for this cell.
 
 ## Shared sources (fetched once for the whole group, kept as notes)
 - https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | fetched 2026-10-19T05:15:21Z | HTTP 200 | sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1
@@ -34,7 +36,7 @@ One step of each rule (shortening U(n-1,k-1), puncturing U(n-1,k)+1, subcode U(n
 ## Literature
 Maruta's page of Griesmer-bound results (fetched once, see http://mars39.lomo.jp/opu/griesmer.htm) gives full tables only for q = 3 (k up to 6), q = 4 (k = 4, 5), q = 5 (k = 4, 5), q = 7 and 8 (k = 4), q = 9 (k = 4) and all q for k = 3. This cell (q = 4, k = 7) is outside those tables, so it is neither confirmed nor refuted by that source. unresolved: papers on optimal codes of dimension 7 over GF(4) (and the Daskalov and Daskalov-Metodieva papers the table itself cites) could contain a stronger bound that the table did not pick up; I could not search them within the four-query arXiv allowance, and the four generic arXiv queries found none.
 
-## Answers to the open questions that concern novelty
+## Further answers on novelty
 1. A plain Delsarte LP with distance only is a valid certificate; the live reason for the old bound (see the note) is a Griesmer or truncation argument, which is consistent with 'nobody ran the LP' for this cell, but I cannot prove that nobody did.
 2. Other propagation rules: I applied the four standard ones to the live neighbours; I know of no table family that would give a smaller bound; the table page lists only the derivation chain shown above.
 3. A second independent implementation of the Krawtchouk evaluation is the one I wrote (different construction from the checker in the folder: polynomial convolution, not the explicit sum); it agrees.
