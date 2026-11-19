@@ -1,0 +1,7 @@
+# A204371(37): maximum eventual period of elementary CA Rule 110
+# on a cyclic universe of 37 cells.
+# Bit order: Wolfram rule-number convention, cell 0 = LSB.
+n=37
+rule=110
+max_period=4403
+witness=0x1c7dbbb23e

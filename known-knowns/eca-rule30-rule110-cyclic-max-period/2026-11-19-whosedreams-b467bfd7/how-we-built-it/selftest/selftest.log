@@ -1,0 +1,243 @@
+=== A334497 Rule30 reproduce 1..24 + report 25..30 ===
+impl1 rule30 n=1 ... rule=30 n=1 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule30 n=1 ... rule=30 n=1 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule30 n=2 ... rule=30 n=2 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule30 n=2 ... rule=30 n=2 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule30 n=3 ... rule=30 n=3 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule30 n=3 ... rule=30 n=3 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule30 n=4 ... rule=30 n=4 max_period=8 witness=0x1 time_sec=0.0000 impl=1
+OK got=8 oeis=8
+impl2 rule30 n=4 ... rule=30 n=4 max_period=8 witness=0x1 time_sec=0.0000 impl=2
+OK got=8 oeis=8
+impl1 rule30 n=5 ... rule=30 n=5 max_period=5 witness=0x13 time_sec=0.0000 impl=1
+OK got=5 oeis=5
+impl2 rule30 n=5 ... rule=30 n=5 max_period=5 witness=0x13 time_sec=0.0000 impl=2
+OK got=5 oeis=5
+impl1 rule30 n=6 ... rule=30 n=6 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule30 n=6 ... rule=30 n=6 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule30 n=7 ... rule=30 n=7 max_period=63 witness=0x6c time_sec=0.0000 impl=1
+OK got=63 oeis=63
+impl2 rule30 n=7 ... rule=30 n=7 max_period=63 witness=0x6c time_sec=0.0000 impl=2
+OK got=63 oeis=63
+impl1 rule30 n=8 ... rule=30 n=8 max_period=40 witness=0x83 time_sec=0.0000 impl=1
+OK got=40 oeis=40
+impl2 rule30 n=8 ... rule=30 n=8 max_period=40 witness=0x83 time_sec=0.0000 impl=2
+OK got=40 oeis=40
+impl1 rule30 n=9 ... rule=30 n=9 max_period=171 witness=0x18c time_sec=0.0000 impl=1
+OK got=171 oeis=171
+impl2 rule30 n=9 ... rule=30 n=9 max_period=171 witness=0x18c time_sec=0.0000 impl=2
+OK got=171 oeis=171
+impl1 rule30 n=10 ... rule=30 n=10 max_period=15 witness=0x37c time_sec=0.0000 impl=1
+OK got=15 oeis=15
+impl2 rule30 n=10 ... rule=30 n=10 max_period=15 witness=0x37c time_sec=0.0001 impl=2
+OK got=15 oeis=15
+impl1 rule30 n=11 ... rule=30 n=11 max_period=154 witness=0x70e time_sec=0.0000 impl=1
+OK got=154 oeis=154
+impl2 rule30 n=11 ... rule=30 n=11 max_period=154 witness=0x70e time_sec=0.0001 impl=2
+OK got=154 oeis=154
+impl1 rule30 n=12 ... rule=30 n=12 max_period=102 witness=0xfc0 time_sec=0.0000 impl=1
+OK got=102 oeis=102
+impl2 rule30 n=12 ... rule=30 n=12 max_period=102 witness=0xfc0 time_sec=0.0001 impl=2
+OK got=102 oeis=102
+impl1 rule30 n=13 ... rule=30 n=13 max_period=832 witness=0x18c time_sec=0.0000 impl=1
+OK got=832 oeis=832
+impl2 rule30 n=13 ... rule=30 n=13 max_period=832 witness=0x18c time_sec=0.0003 impl=2
+OK got=832 oeis=832
+impl1 rule30 n=14 ... rule=30 n=14 max_period=1428 witness=0x1 time_sec=0.0001 impl=1
+OK got=1428 oeis=1428
+impl2 rule30 n=14 ... rule=30 n=14 max_period=1428 witness=0x1 time_sec=0.0006 impl=2
+OK got=1428 oeis=1428
+impl1 rule30 n=15 ... rule=30 n=15 max_period=1455 witness=0x3b6 time_sec=0.0001 impl=1
+OK got=1455 oeis=1455
+impl2 rule30 n=15 ... rule=30 n=15 max_period=1455 witness=0x3b6 time_sec=0.0013 impl=2
+OK got=1455 oeis=1455
+impl1 rule30 n=16 ... rule=30 n=16 max_period=6016 witness=0xb30d time_sec=0.0003 impl=1
+OK got=6016 oeis=6016
+impl2 rule30 n=16 ... rule=30 n=16 max_period=6016 witness=0xb30d time_sec=0.0026 impl=2
+OK got=6016 oeis=6016
+impl1 rule30 n=17 ... rule=30 n=17 max_period=10846 witness=0x60c0 time_sec=0.0006 impl=1
+OK got=10846 oeis=10846
+impl2 rule30 n=17 ... rule=30 n=17 max_period=10846 witness=0x60c0 time_sec=0.0055 impl=2
+OK got=10846 oeis=10846
+impl1 rule30 n=18 ... rule=30 n=18 max_period=2844 witness=0x2cce3 time_sec=0.0011 impl=1
+OK got=2844 oeis=2844
+impl2 rule30 n=18 ... rule=30 n=18 max_period=2844 witness=0x2cce3 time_sec=0.0115 impl=2
+OK got=2844 oeis=2844
+impl1 rule30 n=19 ... rule=30 n=19 max_period=3705 witness=0x39cfc time_sec=0.0023 impl=1
+OK got=3705 oeis=3705
+impl2 rule30 n=19 ... rule=30 n=19 max_period=3705 witness=0x39cfc time_sec=0.0242 impl=2
+OK got=3705 oeis=3705
+impl1 rule30 n=20 ... rule=30 n=20 max_period=6150 witness=0xee000 time_sec=0.0047 impl=1
+OK got=6150 oeis=6150
+impl2 rule30 n=20 ... rule=30 n=20 max_period=6150 witness=0xee000 time_sec=0.0506 impl=2
+OK got=6150 oeis=6150
+impl1 rule30 n=21 ... rule=30 n=21 max_period=2793 witness=0x1dc33e time_sec=0.0092 impl=1
+OK got=2793 oeis=2793
+impl2 rule30 n=21 ... rule=30 n=21 max_period=2793 witness=0x1dc33e time_sec=0.1058 impl=2
+OK got=2793 oeis=2793
+impl1 rule30 n=22 ... rule=30 n=22 max_period=3553 witness=0x39f6df time_sec=0.0183 impl=1
+OK got=3553 oeis=3553
+impl2 rule30 n=22 ... rule=30 n=22 max_period=3553 witness=0x39f6df time_sec=0.2217 impl=2
+OK got=3553 oeis=3553
+impl1 rule30 n=23 ... rule=30 n=23 max_period=38249 witness=0x4f8efd time_sec=0.0373 impl=1
+OK got=38249 oeis=38249
+impl2 rule30 n=23 ... rule=30 n=23 max_period=38249 witness=0x4f8efd time_sec=0.4630 impl=2
+OK got=38249 oeis=38249
+impl1 rule30 n=24 ... rule=30 n=24 max_period=185040 witness=0x8733e3 time_sec=0.0756 impl=1
+OK got=185040 oeis=185040
+impl2 rule30 n=24 ... rule=30 n=24 max_period=185040 witness=0x8733e3 time_sec=0.9863 impl=2
+OK got=185040 oeis=185040
+impl1 rule30 n=25 ... rule=30 n=25 max_period=588425 witness=0xdb9b83 time_sec=0.1577 impl=1
+OK got=588425 oeis=588425
+impl2 rule30 n=25 ... rule=30 n=25 max_period=588425 witness=0xdb9b83 time_sec=2.1781 impl=2
+OK got=588425 oeis=588425
+impl1 rule30 n=26 ... rule=30 n=26 max_period=312156 witness=0x3c666e1 time_sec=0.3071 impl=1
+OK got=312156 oeis=312156
+impl2 rule30 n=26 ... rule=30 n=26 max_period=312156 witness=0x3c666e1 time_sec=4.4267 impl=2
+OK got=312156 oeis=312156
+impl1 rule30 n=27 ... rule=30 n=27 max_period=240300 witness=0x7e07038 time_sec=0.6791 impl=1
+OK got=240300 oeis=240300
+impl2 rule30 n=27 ... rule=30 n=27 max_period=240300 witness=0x7e07038 time_sec=12.6624 impl=2
+OK got=240300 oeis=240300
+impl1 rule30 n=28 ... rule=30 n=28 max_period=249165 witness=0x31df360 time_sec=2.4519 impl=1
+OK got=249165 oeis=249165
+impl2 rule30 n=28 ... rule=30 n=28 max_period=249165 witness=0x31df360 time_sec=32.9150 impl=2
+OK got=249165 oeis=249165
+impl1 rule30 n=29 ... rule=30 n=29 max_period=1466066 witness=0x10c77fbb time_sec=6.1079 impl=1
+OK got=1466066 oeis=1466066
+impl2 rule30 n=29 ... rule=30 n=29 max_period=1466066 witness=0x10c77fbb time_sec=74.7708 impl=2
+OK got=1466066 oeis=1466066
+impl1 rule30 n=30 ... rule=30 n=30 max_period=374265 witness=0x398db98e time_sec=13.1057 impl=1
+OK got=374265 oeis=374265
+impl2 rule30 n=30 ... rule=30 n=30 max_period=374265 witness=0x398db98e time_sec=161.4291 impl=2
+OK got=374265 oeis=374265
+=== A204371 Rule110 reproduce 1..30 ===
+impl1 rule110 n=1 ... rule=110 n=1 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule110 n=1 ... rule=110 n=1 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule110 n=2 ... rule=110 n=2 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule110 n=2 ... rule=110 n=2 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule110 n=3 ... rule=110 n=3 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule110 n=3 ... rule=110 n=3 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule110 n=4 ... rule=110 n=4 max_period=2 witness=0xd time_sec=0.0000 impl=1
+OK got=2 oeis=2
+impl2 rule110 n=4 ... rule=110 n=4 max_period=2 witness=0xd time_sec=0.0000 impl=2
+OK got=2 oeis=2
+impl1 rule110 n=5 ... rule=110 n=5 max_period=1 witness=0x0 time_sec=0.0000 impl=1
+OK got=1 oeis=1
+impl2 rule110 n=5 ... rule=110 n=5 max_period=1 witness=0x0 time_sec=0.0000 impl=2
+OK got=1 oeis=1
+impl1 rule110 n=6 ... rule=110 n=6 max_period=9 witness=0x31 time_sec=0.0000 impl=1
+OK got=9 oeis=9
+impl2 rule110 n=6 ... rule=110 n=6 max_period=9 witness=0x31 time_sec=0.0000 impl=2
+OK got=9 oeis=9
+impl1 rule110 n=7 ... rule=110 n=7 max_period=14 witness=0x79 time_sec=0.0000 impl=1
+OK got=14 oeis=14
+impl2 rule110 n=7 ... rule=110 n=7 max_period=14 witness=0x79 time_sec=0.0000 impl=2
+OK got=14 oeis=14
+impl1 rule110 n=8 ... rule=110 n=8 max_period=16 witness=0xf1 time_sec=0.0000 impl=1
+OK got=16 oeis=16
+impl2 rule110 n=8 ... rule=110 n=8 max_period=16 witness=0xf1 time_sec=0.0000 impl=2
+OK got=16 oeis=16
+impl1 rule110 n=9 ... rule=110 n=9 max_period=7 witness=0x181 time_sec=0.0000 impl=1
+OK got=7 oeis=7
+impl2 rule110 n=9 ... rule=110 n=9 max_period=7 witness=0x181 time_sec=0.0000 impl=2
+OK got=7 oeis=7
+impl1 rule110 n=10 ... rule=110 n=10 max_period=25 witness=0x3c1 time_sec=0.0000 impl=1
+OK got=25 oeis=25
+impl2 rule110 n=10 ... rule=110 n=10 max_period=25 witness=0x3c1 time_sec=0.0000 impl=2
+OK got=25 oeis=25
+impl1 rule110 n=11 ... rule=110 n=11 max_period=110 witness=0x4ef time_sec=0.0000 impl=1
+OK got=110 oeis=110
+impl2 rule110 n=11 ... rule=110 n=11 max_period=110 witness=0x4ef time_sec=0.0001 impl=2
+OK got=110 oeis=110
+impl1 rule110 n=12 ... rule=110 n=12 max_period=18 witness=0x7dc time_sec=0.0000 impl=1
+OK got=18 oeis=18
+impl2 rule110 n=12 ... rule=110 n=12 max_period=18 witness=0x7dc time_sec=0.0002 impl=2
+OK got=18 oeis=18
+impl1 rule110 n=13 ... rule=110 n=13 max_period=351 witness=0x18dd time_sec=0.0000 impl=1
+OK got=351 oeis=351
+impl2 rule110 n=13 ... rule=110 n=13 max_period=351 witness=0x18dd time_sec=0.0003 impl=2
+OK got=351 oeis=351
+impl1 rule110 n=14 ... rule=110 n=14 max_period=91 witness=0x3fec time_sec=0.0001 impl=1
+OK got=91 oeis=91
+impl2 rule110 n=14 ... rule=110 n=14 max_period=91 witness=0x3fec time_sec=0.0006 impl=2
+OK got=91 oeis=91
+impl1 rule110 n=15 ... rule=110 n=15 max_period=295 witness=0xcf9 time_sec=0.0001 impl=1
+OK got=295 oeis=295
+impl2 rule110 n=15 ... rule=110 n=15 max_period=295 witness=0xcf9 time_sec=0.0012 impl=2
+OK got=295 oeis=295
+impl1 rule110 n=16 ... rule=110 n=16 max_period=32 witness=0x323e time_sec=0.0003 impl=1
+OK got=32 oeis=32
+impl2 rule110 n=16 ... rule=110 n=16 max_period=32 witness=0x323e time_sec=0.0026 impl=2
+OK got=32 oeis=32
+impl1 rule110 n=17 ... rule=110 n=17 max_period=578 witness=0x1338f time_sec=0.0006 impl=1
+OK got=578 oeis=578
+impl2 rule110 n=17 ... rule=110 n=17 max_period=578 witness=0x1338f time_sec=0.0055 impl=2
+OK got=578 oeis=578
+impl1 rule110 n=18 ... rule=110 n=18 max_period=81 witness=0x3c03f time_sec=0.0011 impl=1
+OK got=81 oeis=81
+impl2 rule110 n=18 ... rule=110 n=18 max_period=81 witness=0x3c03f time_sec=0.0117 impl=2
+OK got=81 oeis=81
+impl1 rule110 n=19 ... rule=110 n=19 max_period=285 witness=0x7cb23 time_sec=0.0029 impl=1
+OK got=285 oeis=285
+impl2 rule110 n=19 ... rule=110 n=19 max_period=285 witness=0x7cb23 time_sec=0.0245 impl=2
+OK got=285 oeis=285
+impl1 rule110 n=20 ... rule=110 n=20 max_period=240 witness=0xe770f time_sec=0.0044 impl=1
+OK got=240 oeis=240
+impl2 rule110 n=20 ... rule=110 n=20 max_period=240 witness=0xe770f time_sec=0.0505 impl=2
+OK got=240 oeis=240
+impl1 rule110 n=21 ... rule=110 n=21 max_period=630 witness=0x46e3b time_sec=0.0087 impl=1
+OK got=630 oeis=630
+impl2 rule110 n=21 ... rule=110 n=21 max_period=630 witness=0x46e3b time_sec=0.1053 impl=2
+OK got=630 oeis=630
+impl1 rule110 n=22 ... rule=110 n=22 max_period=462 witness=0x1cd7ec time_sec=0.0176 impl=1
+OK got=462 oeis=462
+impl2 rule110 n=22 ... rule=110 n=22 max_period=462 witness=0x1cd7ec time_sec=0.2195 impl=2
+OK got=462 oeis=462
+impl1 rule110 n=23 ... rule=110 n=23 max_period=1058 witness=0x5f185f time_sec=0.0351 impl=1
+OK got=1058 oeis=1058
+impl2 rule110 n=23 ... rule=110 n=23 max_period=1058 witness=0x5f185f time_sec=0.4592 impl=2
+OK got=1058 oeis=1058
+impl1 rule110 n=24 ... rule=110 n=24 max_period=552 witness=0xb0e07c time_sec=0.0708 impl=1
+OK got=552 oeis=552
+impl2 rule110 n=24 ... rule=110 n=24 max_period=552 witness=0xb0e07c time_sec=0.9585 impl=2
+OK got=552 oeis=552
+impl1 rule110 n=25 ... rule=110 n=25 max_period=300 witness=0x1f7c0e1 time_sec=0.1414 impl=1
+OK got=300 oeis=300
+impl2 rule110 n=25 ... rule=110 n=25 max_period=300 witness=0x1f7c0e1 time_sec=1.9884 impl=2
+OK got=300 oeis=300
+impl1 rule110 n=26 ... rule=110 n=26 max_period=351 witness=0x2c3f61f time_sec=0.2851 impl=1
+OK got=351 oeis=351
+impl2 rule110 n=26 ... rule=110 n=26 max_period=351 witness=0x2c3f61f time_sec=4.1471 impl=2
+OK got=351 oeis=351
+impl1 rule110 n=27 ... rule=110 n=27 max_period=567 witness=0x2f8dc3e time_sec=0.5986 impl=1
+OK got=567 oeis=567
+impl2 rule110 n=27 ... rule=110 n=27 max_period=567 witness=0x2f8dc3e time_sec=8.6124 impl=2
+OK got=567 oeis=567
+impl1 rule110 n=28 ... rule=110 n=28 max_period=2156 witness=0xf00fb41 time_sec=1.5016 impl=1
+OK got=2156 oeis=2156
+impl2 rule110 n=28 ... rule=110 n=28 max_period=2156 witness=0xf00fb41 time_sec=17.8929 impl=2
+OK got=2156 oeis=2156
+impl1 rule110 n=29 ... rule=110 n=29 max_period=1044 witness=0x1d97d91f time_sec=3.8152 impl=1
+OK got=1044 oeis=1044
+impl2 rule110 n=29 ... rule=110 n=29 max_period=1044 witness=0x1d97d91f time_sec=37.0780 impl=2
+OK got=1044 oeis=1044
+impl1 rule110 n=30 ... rule=110 n=30 max_period=1770 witness=0x32371f7c time_sec=8.2529 impl=1
+OK got=1770 oeis=1770
+impl2 rule110 n=30 ... rule=110 n=30 max_period=1770 witness=0x32371f7c time_sec=76.7216 impl=2
+OK got=1770 oeis=1770
+DONE
