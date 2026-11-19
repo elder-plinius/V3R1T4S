@@ -1,0 +1,13 @@
+order=8 connected_graphs=11117 max_cycle=14
+periods: 1 2 3 4 5 6 7 8 9 10 14
+witness 1 G???F{ 0
+witness 2 G?BEF{ 131
+witness 3 G?BfN{ 7
+witness 4 G?bMVw 83
+witness 5 GCRUvs 43
+witness 6 G?rfN{ 23
+witness 7 GCrl~k 29
+witness 8 G?rnV{ 7
+witness 9 G?z^dw 91
+witness 10 GCz^d[ 43
+witness 14 GEnvZ{ 51

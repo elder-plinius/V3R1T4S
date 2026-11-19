@@ -1,0 +1,5 @@
+graph6=I?zUvYujw n=10 edges=27 start=62 preperiod=0 cycle_length=46
+graph6=I?zUvYujw n=10 edges=27 start=31 preperiod=0 cycle_length=46
+graph6=IEhffT{^w n=10 edges=28 start=842 preperiod=0 cycle_length=46
+graph6=IEhffT{^w n=10 edges=28 start=47 preperiod=0 cycle_length=46
+graph6=ICrfdv}zw n=10 edges=30 start=15 preperiod=0 cycle_length=44

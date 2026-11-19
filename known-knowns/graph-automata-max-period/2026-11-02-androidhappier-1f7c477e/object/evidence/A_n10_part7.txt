@@ -1,0 +1,34 @@
+n=10 graphs=1404001 maxperiod=32 witness_graph6=ICrfRi}|w witness_state=118
+hist 1 373974
+hist 2 698963
+hist 3 99441
+hist 4 102972
+hist 5 27749
+hist 6 49870
+hist 7 18363
+hist 8 14177
+hist 9 7364
+hist 10 4944
+hist 11 1905
+hist 12 1425
+hist 13 777
+hist 14 861
+hist 15 364
+hist 16 309
+hist 17 148
+hist 18 105
+hist 19 87
+hist 20 78
+hist 21 23
+hist 22 39
+hist 23 13
+hist 24 21
+hist 25 4
+hist 26 7
+hist 27 7
+hist 28 5
+hist 29 2
+hist 30 1
+hist 31 2
+hist 32 1
+exit 0

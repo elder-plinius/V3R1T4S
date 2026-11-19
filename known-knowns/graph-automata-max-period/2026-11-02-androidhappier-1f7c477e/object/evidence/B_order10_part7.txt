@@ -1,0 +1,35 @@
+order=10 connected_graphs=1373046 max_cycle=32
+periods: 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
+witness 1 I?AA@?O}? 0
+witness 2 I?AADB_mW 517
+witness 3 I?AADAc~O 420
+witness 4 I?AACJE}o 355
+witness 5 I?AAEJE~g 163
+witness 6 I?ABvbgsw 326
+witness 7 I?ABvbkz_ 199
+witness 8 I?ABvbcr_ 199
+witness 9 I?ABvbhuW 214
+witness 10 I?ABvfkvo 227
+witness 11 I?BFFa\lg 238
+witness 12 I?BFEiy\w 163
+witness 13 I?BFDo}to 175
+witness 14 I?BFFM}^w 101
+witness 15 I?BFMr{~w 7
+witness 16 I?Befq}}W 39
+witness 17 I?BefY}}g 71
+witness 18 I?Becx}]w 43
+witness 19 I?bBeZing 51
+witness 20 I?`fex}^W 38
+witness 21 I?bfAx]ko 283
+witness 22 I?Bed\y]o 99
+witness 23 I?bc~p|vw 23
+witness 24 I?ovTnknG 86
+witness 25 ICRc~fwNW 111
+witness 26 I?`vEzwnO 122
+witness 27 I?refYyLw 62
+witness 28 ICQfVf[Jw 87
+witness 29 ICZLrzU^o 15
+witness 30 ICRc|rn}w 25
+witness 31 ICR`rjJ{g 62
+witness 32 ICrfRi}|w 118
+exit 0
