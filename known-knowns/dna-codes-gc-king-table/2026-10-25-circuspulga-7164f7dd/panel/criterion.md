@@ -46,7 +46,7 @@ Clauses and finding:
 ## 3. Null test
 - how-we-built-it/null_test.md: controls 400, best_control 26, real 42, real_beats_all_controls yes.
 - Recounted from null_15_11_*.out (not included): 400 lines, 400 distinct seeds (1..400), maximum size 26 (reached by 18
-  seeds; null_test.md names seed 81, but the first seed with 26 is seed 10: cosmetic, the maximum is correct).
+  seeds; null_test.md originally named seed 81, where seed 10 is the first to reach the control maximum 26 (corrected in null_test.md on 2026-11-05): cosmetic, the maximum is correct).
   >= 400 controls: PASS. Caveat: random-order greedy is a weak null; for an explicit object the null is
   context, not the evidence (PREREG.md itself allows "not needed" for deterministic checker claims).
 
