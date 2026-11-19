@@ -1,0 +1,8 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=4&n=163&k=11 (fetched 2026-10-19T04:35:36Z, HTTP 200, page sha256 447e2d5ee68ef47d162dc8d39301b3739a324a85331159217b79dc95a0db2187)
+Bounds on linear codes [163,11] over GF(4): lower bound 103, upper bound 113
+Table lines about this cell (copied from the page):
+Lb(163,11) = 103 is found by shortening of:
+Lb(164,12) = 103 is found by truncation of:
+Lb(165,12) = 104 BZ 
+Ub(163,11) = 113 is found by considering truncation to:
+Ub(161,11) = 111 Da1
