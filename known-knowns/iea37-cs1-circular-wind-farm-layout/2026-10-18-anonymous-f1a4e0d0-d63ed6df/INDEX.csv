@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+iea37-cs1-circular-wind-farm-layout,IEA37 case study 1 64 turbines (radius 3000 m) AEP MWh,1539447.11737,1526474.80248,2026-10-18T03:20:29Z,object/iea37-v3r1t4s-opt64.yaml,d63ed6df76fcbf03297cdb171acda406f597bfc959b1610711dc0d68dd93c851
