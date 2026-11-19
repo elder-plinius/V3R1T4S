@@ -1,5 +1,7 @@
 # Fewer additions for <3,5,5> at rank 58: 211 against 221
 
+> **Note (2026-11-06):** the same count, 211, was also published upstream by Perminov on 2026-10-19 (commit 048b6498, `schemes/results/addition_reduced_ZT/3x5x5_m58_cr211_cn357_ZT_reduced.json`), after this package was filed. A lower count followed on 2026-10-22 (commit 7badae2d: 207 for 3x5x5). This package stays here as a dated record.
+
 ## What
 
 The program claim/object/3x5x5_m58_cr211_ZT_reduced.json (sha256 9407c156647ed8a24fbd9e29d7f644e1fd6281aabc4eaa317bb5cb3a3a9b5b23) is, on my checks, a ternary straight-line program for the rank-58 scheme for <3,5,5> (the same 58 products as Perminov's cr221 file) that exactly computes A*B over Z and uses 211 reduced additions (U 48, V 69, W 94), below 221, the only addition_reduced_ZT count for this format and rank in his live tree on 2026-10-15, and below the +413 naive adds in matmulcatalog COVERAGE.md; the Lille 3x5x5 page cites no operation count.
@@ -27,7 +29,7 @@ sh verify-it-yourself/run_checks.sh
 | fmm_sota.json (Sedoglavic), best known rank | 3x5x5 | rank 58 | rank 58 (same scheme rank; eligibility) | https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json | 2026-10-15T22:25:31Z |
 | Lille per-format page | 3x5x5 | rank 58; no complexity variant or operation count cited | 211 | https://fmm.univ-lille.fr/3x5x5.html | 2026-10-15T22:25:31Z |
 | matmulcatalog COVERAGE.md, adds column | 3x5x5 | naive count nz(U)+nz(V)+nz(W)-2r-np, not comparable | 211 | https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md | 2026-10-15T22:25:31Z |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 3x5x5 rank 58 | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 355-58       369         238        222      0.26, 0.27, 0.08       300 / 355-58         689       331         326      363    52.7        0, 0.174, 0.07 / 355-58      608           266       255      353     58.1    0.005, 0.145, 0.075 / 355-58          413      232       220     193   46.7   0.21, 0.23, 0.06 | 211 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 3x5x5 rank 58 | lowest count listed for 355-58: 222 over Z (Table 3.3); 220 over Z2 (Table 3.6, not comparable; below the reference 221, above our 211); author's reading of a hand-downloaded PDF, not verified by the maintainer (corrected 2026-10-18) | 211 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
 | V3R1T4S TROPHY_CASE.md and open pull requests | this target | none | 211 | https://github.com/elder-plinius/V3R1T4S | 2026-10-15T22:25:31Z |
 
 Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.md`.
