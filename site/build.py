@@ -15,7 +15,8 @@ Everything shown on the page is derived from the checkout at build time:
   - leaderboard: merged result packages per credit name, the name in the folder;
   - open problems (known unknowns): every target in bank/targets.json;
   - V3R1T4S Weekly: news/YYYY-MM-DD.md, in a strict plain-text grammar (see parse_news);
-  - plain-English blurbs: site/src/plain.json, one line per result family and per category (see load_plain).
+  - plain-English blurbs: site/src/plain.json, one line per result family and per category (see load_plain);
+  - hand-made thumbnails: site/src/thumbs/<target id>.webp|png|jpg, checked and copied to thumbs/ (see load_thumbs).
 
 There is no GitHub API call, no credential and no vote or star count: the only network access is one optional
 'git fetch --unshallow' over the clone's own remote when the build checkout is shallow.
@@ -75,6 +76,9 @@ NEWS_PATH_CHARS = 200
 FEED_DISCOVERIES = 30        # newest discoveries in feed.xml
 MAX_PLAIN = 64 * 1024        # site/src/plain.json
 PLAIN_CHARS = 110            # one blurb, under this
+MAX_THUMB = 200 * 1024       # one hand-made thumbnail in site/src/thumbs/
+THUMB_DIR = "site/src/thumbs"
+THUMB_EXTS = ("webp", "png", "jpg")  # preference order when one id has several
 
 # ------------------------------------------------------------------ name patterns (anything else is skipped)
 # \Z, not $: '$' also matches before a trailing newline
@@ -557,6 +561,160 @@ def load_plain():
                      % (key, k, PLAIN_CHARS))
                 continue
             out[short][k] = t
+    return out
+
+
+RE_THUMB = re.compile(r"^([a-z0-9][a-z0-9-]{0,99})\.(webp|png|jpg)\Z")
+THUMB_MAGIC = {"webp": lambda b: b[:4] == b"RIFF" and b[8:12] == b"WEBP",
+               "png": lambda b: b[:8] == b"\x89PNG\r\n\x1a\n",
+               "jpg": lambda b: b[:3] == b"\xff\xd8\xff"}
+THUMB_SIDE = (16, 1280)      # each side of a hand-made thumbnail, in pixels
+THUMB_ENTRIES = 5000         # entries read from site/src/thumbs/
+THUMB_NAME_WARNINGS = 50     # name warnings printed one by one; the rest are counted
+
+
+def thumb_whole(ext, b):
+    """True when the file ends where its format says it ends, so a cut-off picture (which a browser may show as a
+    blank box without an error event) is skipped instead of shown."""
+    if ext == "png":
+        return b[-12:] == b"\x00\x00\x00\x00IEND\xaeB`\x82"
+    if ext == "jpg":
+        return b[-2:] == b"\xff\xd9"
+    if ext == "webp":
+        return int.from_bytes(b[4:8], "little") == len(b) - 8
+    return False
+
+
+def thumb_animated(ext, b):
+    """True for an animated PNG (an acTL chunk before the first IDAT) or an animated WebP (VP8X ANIM flag): a
+    thumbnail must be a still picture, since a moving one would ignore prefers-reduced-motion."""
+    if ext == "png":
+        i = 8
+        while i + 8 <= len(b):
+            kind = b[i + 4:i + 8]
+            if kind == b"acTL":
+                return True
+            if kind == b"IDAT":
+                return False
+            i += 12 + _be(b, i, 4)
+        return False
+    if ext == "webp":
+        return b[12:16] == b"VP8X" and len(b) > 20 and bool(b[20] & 0x02)
+    return False
+
+
+def _be(b, i, n):
+    return int.from_bytes(b[i:i + n], "big")
+
+
+def thumb_size(ext, b):
+    """(width, height) read from the picture's header, or None when the header is not where the format puts it.
+    Keeps a small file that decodes to a huge bitmap (a 12000 x 12000 PNG compresses to ~140 KB) off the page."""
+    if ext == "png":
+        if b[12:16] != b"IHDR" or len(b) < 24:
+            return None
+        return _be(b, 16, 4), _be(b, 20, 4)
+    if ext == "webp":
+        kind = b[12:16]
+        if kind == b"VP8X" and len(b) >= 30:
+            return int.from_bytes(b[24:27], "little") + 1, int.from_bytes(b[27:30], "little") + 1
+        if kind == b"VP8 " and len(b) >= 30 and b[23:26] == b"\x9d\x01\x2a":
+            return int.from_bytes(b[26:28], "little") & 0x3FFF, int.from_bytes(b[28:30], "little") & 0x3FFF
+        if kind == b"VP8L" and len(b) >= 25 and b[20] == 0x2F:
+            v = int.from_bytes(b[21:25], "little")
+            return (v & 0x3FFF) + 1, ((v >> 14) & 0x3FFF) + 1
+        return None
+    if ext == "jpg":
+        i = 2
+        while i + 4 <= len(b):
+            if b[i] != 0xFF:
+                return None
+            m = b[i + 1]
+            if m == 0xFF:                       # fill byte
+                i += 1
+                continue
+            if m in (0x01, 0xD8) or 0xD0 <= m <= 0xD7:
+                i += 2
+                continue
+            if m in (0xD9, 0xDA):               # end of image, or the scan began before any frame header
+                return None
+            if 0xC0 <= m <= 0xCF and m not in (0xC4, 0xC8, 0xCC):
+                if i + 9 > len(b):
+                    return None
+                return _be(b, i + 7, 2), _be(b, i + 5, 2)
+            i += 2 + _be(b, i + 2, 2)
+        return None
+    return None
+
+
+def load_thumbs(ids):
+    """{target id: (extension, bytes)} for the hand-made thumbnails in site/src/thumbs/. A file is used only when
+    its name is exactly <target id>.webp, .png or .jpg for an open problem in bank/targets.json, it is a regular
+    file (no symlink) of at most MAX_THUMB bytes, its first bytes match its extension and its header gives a size
+    within THUMB_SIDE on each side. Anything else in the folder is skipped with a warning (README.md and dotfiles
+    are skipped silently). Without a picture, the page draws the thumbnail itself (thumbs.js)."""
+    out, found = {}, {}
+    try:
+        path, st = _lstat_chain(THUMB_DIR)
+    except FileNotFoundError:
+        return out
+    except (OSError, Unsafe) as e:
+        warn("thumbs skipped: %s" % clean(e, 160))
+        return out
+    if not stat.S_ISDIR(st.st_mode):
+        warn("thumbs skipped: %s is not a folder" % THUMB_DIR)
+        return out
+    try:
+        with os.scandir(path) as it:
+            names = sorted(e.name for e in it)
+    except OSError as e:
+        warn("thumbs skipped: %s" % clean(e, 160))
+        return out
+    if len(names) > THUMB_ENTRIES:
+        warn("thumbs: %d entries in %s, only the first %d (by name) are read" % (len(names), THUMB_DIR, THUMB_ENTRIES))
+    bad_names = 0
+    for n in names[:THUMB_ENTRIES]:
+        if n == "README.md" or n.startswith("."):
+            continue
+        m = RE_THUMB.match(n)
+        if not m:
+            bad_names += 1
+            if bad_names <= THUMB_NAME_WARNINGS:
+                warn("thumb skipped (name must be <target id>.webp, .png or .jpg): %r" % clean(n, 80))
+            continue
+        tid, ext = m.groups()
+        if tid not in ids:
+            warn("thumb skipped (no open problem with id %s): %s" % (tid, n))
+            continue
+        try:
+            data = read_bytes(THUMB_DIR + "/" + n, MAX_THUMB)
+        except (OSError, Unsafe) as e:
+            warn("thumb skipped (%s)" % clean(e, 160))
+            continue
+        if not THUMB_MAGIC[ext](data):
+            warn("thumb skipped (%s: not a %s file)" % (n, ext))
+            continue
+        size = thumb_size(ext, data)
+        if not size:
+            warn("thumb skipped (%s: no %s size header)" % (n, ext))
+            continue
+        if not all(THUMB_SIDE[0] <= s <= THUMB_SIDE[1] for s in size):
+            warn("thumb skipped (%s: %d x %d px, each side must be %d to %d)" % ((n,) + size + THUMB_SIDE))
+            continue
+        if not thumb_whole(ext, data):
+            warn("thumb skipped (%s: cut off or trailing data, the file must end where the %s format ends)" % (n, ext))
+            continue
+        if thumb_animated(ext, data):
+            warn("thumb skipped (%s: animated, a thumbnail must be a still picture)" % n)
+            continue
+        found.setdefault(tid, []).append((ext, data))
+    if bad_names > THUMB_NAME_WARNINGS:
+        warn("thumbs: %d more entries skipped for their names" % (bad_names - THUMB_NAME_WARNINGS))
+    for tid, lst in sorted(found.items()):
+        lst.sort(key=lambda x: THUMB_EXTS.index(x[0]))
+        for ext, _ in lst[1:]:
+            warn("thumb skipped (%s.%s: %s.%s is used instead)" % (tid, ext, tid, lst[0][0]))
+        out[tid] = lst[0]
     return out
 
 
@@ -1076,6 +1234,10 @@ def main():
 
     site_url = valid_site_url(os.environ.get("SITE_URL"))
     data = collect(offline)
+    thumbs = load_thumbs({k["id"] for k in data["ku"]})
+    for k in data["ku"]:
+        if k["id"] in thumbs:
+            k["th"] = thumbs[k["id"]][0]  # app.js shows thumbs/<id>.<th> in place of the drawn thumbnail
     pages = {n: render_template(n, data, site_url) for n in TEMPLATES if os.path.isfile(os.path.join(SRC, n))}
     if "index.html" not in pages:
         sys.exit("site/src/index.html is missing")
@@ -1084,9 +1246,11 @@ def main():
         shutil.rmtree(out)
     os.makedirs(out)
     # static files from site/src (ours, not contributor content; fonts/ included), copied without following
-    # symlinks. Templates are rendered instead of copied, and dotfiles are skipped.
+    # symlinks. Templates are rendered instead of copied, and dotfiles are skipped. site/src/thumbs/ is not copied
+    # as is: only the checked pictures from load_thumbs() are written to public/thumbs/.
     for root, dirs, files in os.walk(SRC):
-        dirs[:] = [d for d in dirs if not os.path.islink(os.path.join(root, d)) and not d.startswith(".")]
+        dirs[:] = [d for d in dirs if not os.path.islink(os.path.join(root, d)) and not d.startswith(".")
+                   and not (root == SRC and d == "thumbs")]
         for f in files:
             sp = os.path.join(root, f)
             if os.path.islink(sp) or (f in TEMPLATES + DATA_FILES and root == SRC) or f.startswith("."):
@@ -1094,6 +1258,11 @@ def main():
             dp = os.path.join(out, os.path.relpath(sp, SRC))
             os.makedirs(os.path.dirname(dp), exist_ok=True)
             shutil.copyfile(sp, dp)
+    if thumbs:
+        os.makedirs(os.path.join(out, "thumbs"), exist_ok=True)
+        for tid, (ext, blob) in thumbs.items():
+            with open(os.path.join(out, "thumbs", "%s.%s" % (tid, ext)), "wb") as f:
+                f.write(blob)
     for n, text in pages.items():
         write(out, n, text)
     with open(os.path.join(out, "data.json"), "w", encoding="utf-8") as f:
@@ -1107,8 +1276,9 @@ def main():
 
     c = data["counts"]
     print("site/public: %d discoveries, %d on the leaderboard, %d open problems in %d categories, %d weekly editions, "
-          "%d+%d blurbs" % (len(data["feed"]), len(data["board"]), len(data["ku"]), len(data["cats"]), len(data["news"]),
-                            len(data["plain"]["f"]), len(data["plain"]["c"])))
+          "%d+%d blurbs, %d hand-made thumbnail%s"
+          % (len(data["feed"]), len(data["board"]), len(data["ku"]), len(data["cats"]), len(data["news"]),
+             len(data["plain"]["f"]), len(data["plain"]["c"]), len(thumbs), "" if len(thumbs) == 1 else "s"))
     print("counts: %s" % json.dumps(c))
     print("history: %s, site_url: %s, pages: %s, warnings: %d"
           % (data["history"], site_url, ", ".join(sorted(pages)), len(warnings)))

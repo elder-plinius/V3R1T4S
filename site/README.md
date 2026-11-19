@@ -5,9 +5,10 @@ No server code, no database, no cookies, no analytics, no third-party requests, 
 
 ```
 site/build.py     reads the checkout, writes site/public/ (standard-library Python 3.8+, no pip, no npm)
-site/src/         page templates (index.html, 404.html), app.js (the page), eggs.js and term.js (easter eggs),
-                  404.js, theme.js, style.css, fonts/ (with their OFL licences), _headers (CSP), favicon, og.png,
-                  plain.json (the plain-English blurbs, read into data.json, not published as a file)
+site/src/         page templates (index.html, 404.html), app.js (the page), thumbs.js (the problem thumbnails),
+                  eggs.js and term.js (easter eggs), 404.js, theme.js, style.css, fonts/ (with their OFL licences),
+                  _headers (CSP), favicon, og.png, plain.json (the plain-English blurbs, read into data.json, not
+                  published as a file), thumbs/ (optional hand-made thumbnails, empty apart from its README)
 site/serve.py     local preview that applies _headers and serves 404.html, so it behaves as on Cloudflare
 site/public/      build output (git-ignored)
 wrangler.jsonc    (repository root) tells Cloudflare to serve site/public/ as static assets
@@ -73,7 +74,8 @@ project's Custom domains tab. Pages honours `_headers` and `404.html` the same w
 | This week | the V3R1T4S Weekly: `news/YYYY-MM-DD.md`, newest first, up to 52 editions (see below) |
 | Latest discoveries | every result package `known-knowns/<family>/<YYYY-MM-DD>-<credit>-<hash8>/`, newest merge first, grouped by merge day (UTC). Title: the package README's first heading. Margin badge: `new <value> · was <table_value>` from `INDEX.csv` when both are numbers (plain words, so a visitor sees which is new without a tooltip). ✅ "officially listed: the table's owner added it" when a maintainer note in the package README says the table owner adopted it, otherwise 🧪 "checked by us: re-checked here, not yet on the official table" (the legend says this in words, since phones show no tooltips). Under the first result of each run of one family, the family's plain-English blurb from `site/src/plain.json`. Each links to its package folder, never to a pull request, and the footer shows the build commit as plain text, not a link. GitHub's own folder pages show the latest commit's author, so an `anonymous-…` credit is only as anonymous as the contributor's GitHub account and git identity. |
 | Leaderboard | top 10 credit names by merged result packages, read from folder names. |
-| Open problems (known unknowns) | all of `bank/targets.json`, with category chips (`bank/categories.json`, emoji from the README table) and a search box. Each links to its `known-unknowns/<category>/<id>.md` page. A selected category shows its blurb from `plain.json` under the chips (also the chip's and the row's tooltip). Difficulty and Time filters show plain labels ("within reach", "hours on a laptop"); the URL keeps the raw values. |
+| Open problems (known unknowns) | all of `bank/targets.json`, with category chips (`bank/categories.json`, emoji from the README table) and a search box. Each links to its `known-unknowns/<category>/<id>.md` page. A selected category shows its blurb from `plain.json` under the chips (also the chip's and the row's tooltip). Difficulty and Time filters show plain labels ("within reach", "hours on a laptop"); the URL keeps the raw values. Two views, switched by **Gallery / List** above the results (Gallery is the default; the choice is kept in `localStorage`): the list, and a card grid (1 column on phones, up to 4 on wide screens) with the same title link, chips, `#` and **Hunt** under a thumbnail. |
+| Problem thumbnails | drawn in the browser by `thumbs.js` from the problem's id and category: one line-art motif family per category (a graph, a record table, a prime spiral, invented glyphs, a contour map, a molecule skeleton, ...), laid out by a generator seeded with the id, so each problem has its own picture and it is the same on every load. Colours follow the theme (CSS classes on the theme tokens), one accent per category family, green for the open part. The only text is a short token pulled from the title by strict patterns (an OEIS number, a parameter tuple such as `C(85,24,3)`, `n = 37`, a contest year such as `ISIC 2018`). A card is drawn only when it nears the viewport. `thumbs.js` loads after `app.js`, so it never delays `data.json`; cards laid out before it runs are drawn when it announces itself. If it does not load at all, the cards show the category emoji in place of the picture. With an `index.html` cached from before the gallery (no switch on the page), `app.js` keeps the list view. A hand-made picture in `site/src/thumbs/` replaces the drawing (below). |
 | Questions | five fixed FAQ entries in `index.html`, collapsed `<details>` (no JS) |
 
 Machine-readable: `/data.json` (everything above), `/feed.xml` (Atom: the newest 30 discoveries and every weekly
@@ -92,7 +94,7 @@ their blurbs), the leaderboard and the first 24 open problems into `index.html` 
 - **Hunt** on an open problem copies `set up V3R1T4S: https://github.com/elder-plinius/V3R1T4S and hunt
   known-unknowns/<category>/<id>.md` (AGENTS.md makes a named problem the first quarry). **🎲 Surprise me** jumps
   to a random open problem from the current filters.
-- **Keys:** `/` search, `↓ ↑` move through the list, `Esc` clear, `g` then `w d b u` jump to a section, `c` copy the
+- **Keys:** `/` search, `↓ ↑` move through the list (in the gallery by a row, `← →` by a card), `Esc` clear, `g` then `w d b u` jump to a section, `c` copy the
   setup line, `Shift+R` a random problem, `` ` `` terminal, `?` the shortcut list. Its "Single-key shortcuts" switch
   (WCAG 2.1.4) turns off every printable-key shortcut, `/` and `?` included, and the typed eggs; `Esc`, the arrow
   keys and the footer **? shortcuts** button keep working.
@@ -140,6 +142,24 @@ no quotes or tables. Inline **bold**, `code` and [text](link) are reduced to the
   ` → <path>` (strictly under 240; the whole line may be longer), and the paragraph length is each paragraph's
   lines joined by one space, summed over the paragraphs (strictly under 900). The linter is stricter elsewhere (a
   blank line before the bullets, no leading or trailing spaces). If you change these limits, change all three.
+
+### Hand-made thumbnails (`site/src/thumbs/`)
+
+Ships empty apart from its README; without a file there, every card shows the drawn thumbnail. To give a problem
+its own picture, add `site/src/thumbs/<target id>.webp` (or `.png`, `.jpg`), 16:10, where `<target id>` is exactly an
+`id` in `bank/targets.json`.
+
+- `build.py` uses a file only when its name matches `<slug>.(webp|png|jpg)` for an existing target, it is a regular
+  file (no symlink) of at most 200 KB, its first bytes match the extension, the size in its header is 16 to
+  1280 px on each side (so a small file cannot unpack into a huge bitmap), it ends where its format ends (PNG `IEND`,
+  JPEG `FF D9`, WebP RIFF size; a cut-off file is skipped) and it is not animated (APNG, animated WebP). It writes the file to
+  `site/public/thumbs/` and adds `"th": "<ext>"` to that target in `data.json`; the folder itself is never copied as is.
+- Anything else in the folder (other names, unknown ids, oversized or mislabelled files, a second picture for the same
+  id) is skipped with a warning in the build log (name warnings: the first 50, then a count; only the first 5,000
+  entries are read, with a warning when there are more). `README.md` and dotfiles are ignored.
+- `app.js` re-checks the id and the extension and shows `<img src="thumbs/<id>.<ext>" width="320" height="200"
+  loading="lazy" decoding="async" alt="">` in place of the drawing (`img-src 'self'` in the CSP already allows it).
+  If the picture still fails to decode, the card falls back to the drawing.
 
 ### Plain-English blurbs (`site/src/plain.json`)
 
@@ -193,7 +213,10 @@ followed.
 - Folder and target names that do not match strict patterns, and package folders whose date is not a real day or
   is in the future, are skipped with a warning in the build log. Malformed bank JSON is skipped the same way;
   the build still produces a page.
-- `localStorage` holds only the viewer's theme choice (`v3r1t4s-theme`) and the single-key shortcut switch
-  (`v3r1t4s-keys`), read and written inside `try`. The page sets no cookies and makes no third-party requests.
+- `localStorage` holds only the viewer's theme choice (`v3r1t4s-theme`), the single-key shortcut switch
+  (`v3r1t4s-keys`) and the open problems view (`v3r1t4s-view`: `gallery` or `list`), read and written inside `try`.
+- Thumbnails are SVG built with `createElementNS` and fixed class names; the signature token is set with
+  `textContent` after a strict pattern and alphabet check. Nothing from the repository is turned into markup.
+- The page sets no cookies and makes no third-party requests.
 - No inline script or style (the CSP forbids both): leaderboard bar widths are pre-baked classes, and the terminal
   is a same-origin script loaded on first use. Its commands only call the page's own validated functions.

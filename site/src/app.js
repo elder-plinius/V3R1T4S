@@ -1,7 +1,8 @@
 /* V3R1T4S site. Renders data.json (built from the repo by site/build.py) over the server-rendered snapshot.
    Every string in data.json comes from contributor-controlled files, so: text goes in with textContent only (never
    innerHTML), every string is length-capped, and every link is built here from a fixed GitHub prefix plus ids that
-   must match strict patterns. data.json carries no URLs. Storage: localStorage v3r1t4s-theme and v3r1t4s-keys only. */
+   must match strict patterns. data.json carries no URLs. Storage: localStorage v3r1t4s-theme, v3r1t4s-keys and
+   v3r1t4s-view (gallery or list) only. Problem thumbnails come from thumbs.js (V3Thumb), drawn in the browser. */
 (function () {
   'use strict';
   var GH = 'https://github.com/elder-plinius/V3R1T4S';
@@ -27,6 +28,8 @@
   var FEED_STEP = 12;
   var KU_STEP = window.matchMedia && matchMedia('(min-width: 960px)').matches ? 24 : 12;
   var SUGGEST = GH + '/issues/new?template=suggest-known-unknown.yml';
+  /* hand-made thumbnails: build.py copies site/src/thumbs/<id>.<ext> and marks the target with th: <ext> */
+  var THUMB_EXT = Object.assign(Object.create(null), { webp: 1, png: 1, jpg: 1 });
   var RM = window.matchMedia ? matchMedia('(prefers-reduced-motion: reduce)') : { matches: false };
   var MAC = /Mac|iP(hone|ad|od)/.test(navigator.platform || navigator.userAgent || '');
 
@@ -76,6 +79,12 @@
   }
   function say(region, msg) { var r = $(region); if (r) { r.textContent = ''; setTimeout(function () { r.textContent = msg; }, 30); } }
   function keysOn() { try { return localStorage.getItem('v3r1t4s-keys') !== 'off'; } catch (e) { return true; } }
+  /* the open problems view, remembered like the theme: one localStorage key, read and written inside try */
+  function readView() {
+    /* an index.html cached from before the gallery (no switch, no thumbs.js) keeps the list */
+    if (!document.getElementById('kv')) return 'list';
+    try { return localStorage.getItem('v3r1t4s-view') === 'list' ? 'list' : 'gallery'; } catch (e) { return 'gallery'; }
+  }
 
   /* ---------------- M1: one copy helper */
   var JOIN = '';
@@ -111,6 +120,7 @@
   var ku = [], kuById = dict(), cats = dict(), catList = [], kinds = [], kuHits = [], kuShown = KU_STEP;
   var kuCat = null, kuKind = null, kuCp = null, words = [], lastRoll = null, loaded = false;
   var famPlain = dict(), catPlain = dict();
+  var kuView = readView(), thumbCache = dict(), thumbIO = null;
 
   function qv() { return str($('#q').value.trim(), 100); }
 
@@ -347,10 +357,67 @@
     return li;
   }
 
+  /* gallery: the same row as the list (title link, chips, # and Hunt) with a thumbnail on top. A thumbnail is drawn
+     when its card nears the viewport and kept per id, so paging and filtering never redraw it. A hand-made picture
+     (data.json th) replaces the drawing; its path is a fixed folder plus the re-checked id. */
+  function drawThumb(k) {
+    if (!window.V3Thumb) return null;
+    try { return window.V3Thumb.make(k); } catch (e) { return null; }
+  }
+  function fillThumb(box) {
+    var k = box._k;
+    if (!k || box.firstChild) { box._k = null; return; }
+    var node = thumbCache[k.id];
+    if (!node) {
+      if (k.th && THUMB_EXT[k.th] && SLUG.test(k.id)) {
+        node = el('img');
+        /* a picture that will not decode falls back to the drawing */
+        node.addEventListener('error', function () {
+          var s = drawThumb(k);
+          if (s && node.parentNode) node.parentNode.replaceChild(s, node);
+          if (s) thumbCache[k.id] = s;
+        });
+        node.setAttribute('src', 'thumbs/' + k.id + '.' + k.th);
+        node.setAttribute('width', '320'); node.setAttribute('height', '200');
+        node.setAttribute('loading', 'lazy'); node.setAttribute('decoding', 'async'); node.setAttribute('alt', '');
+      } else node = drawThumb(k);
+      if (!node) return;                     /* thumbs.js not run yet: box keeps _k, and onThumbsReady retries */
+      thumbCache[k.id] = node;
+    }
+    box._k = null;
+    box.appendChild(node);
+    if (node.tagName !== 'IMG' && window.V3Thumb && window.V3Thumb.fit && !node._fit) {
+      node._fit = true;
+      try { window.V3Thumb.fit(node); } catch (e) {}
+    }
+  }
+  /* thumbs.js loads after app.js (so it never delays data.json) and announces itself with a v3thumb event */
+  function onThumbsReady() {
+    $$('#kul .tb').forEach(function (b) {
+      if (!b._k || b.firstChild) return;
+      if (thumbIO) { thumbIO.unobserve(b); thumbIO.observe(b); } else fillThumb(b);
+    });
+  }
+  function kuCard(k, idx) {
+    var li = kuItem(k, idx), box = el('div', 'tb');
+    li.classList.add('card');
+    /* titles are clamped to four lines in the gallery: the full title as a tooltip (screen readers have the text) */
+    var kt = li.querySelector('.kt'); if (kt) kt.title = k.t;
+    box.setAttribute('aria-hidden', 'true');
+    box._k = k;
+    li.insertBefore(box, li.firstChild);
+    if (thumbIO && !thumbCache[k.id]) thumbIO.observe(box); else fillThumb(box);
+    return li;
+  }
+
   function renderKu() {
-    var ul = $('#kul'); ul.textContent = '';
-    kuHits.slice(0, kuShown).forEach(function (k, i) { ul.appendChild(kuItem(k, i)); });
+    var ul = $('#kul'), gal = kuView === 'gallery';
+    ul.textContent = '';
+    ul.classList.toggle('gal', gal);
+    if (thumbIO) thumbIO.disconnect();
+    kuHits.slice(0, kuShown).forEach(function (k, i) { ul.appendChild(gal ? kuCard(k, i) : kuItem(k, i)); });
     if (!kuHits.length) ul.appendChild(emptyKu());
+    var hint = $('#kv-row .kv-hint'); if (hint) hint.hidden = !kuHits.length;
     var more = $('#ku-more'), left = kuHits.length - kuShown;
     more.hidden = left <= 0;
     more.textContent = 'Show more (' + fmt(Math.max(left, 0)) + ')';
@@ -381,6 +448,18 @@
     row.appendChild(link(SUGGEST + (q ? '&title=' + enc(q.slice(0, 80)) : ''), 'mini sug', q ? 'Suggest it as a new problem →' : 'Suggest a problem →'));
     li.appendChild(row);
     return li;
+  }
+
+  function syncView() {
+    $$('#kv .kv-b').forEach(function (b) { b.setAttribute('aria-pressed', String(b.getAttribute('data-view') === kuView)); });
+  }
+  function setView(v) {
+    v = v === 'list' ? 'list' : 'gallery';
+    if (v === kuView) return;
+    kuView = v;
+    try { localStorage.setItem('v3r1t4s-view', v); } catch (e) {}
+    syncView(); renderKu();
+    say('#ku-live', v === 'list' ? 'List view' : 'Gallery view');
   }
 
   function updateKu(announce) {
@@ -549,7 +628,8 @@
       return k && SLUG.test(k.id) && SLUG.test(k.cat) && cats[k.cat] && !kuById[k.id] && (kuById[k.id] = true);
     }).slice(0, 20000).map(function (k) {
       var o = { id: k.id, cat: k.cat, t: str(k.t, 180), k: typeof k.k === 'string' && KIND.test(k.k) ? k.k : null,
-                cp: k.cp ? str(k.cp, 24) : null, cb: CB_LABEL[k.cb] ? k.cb : null };
+                cp: k.cp ? str(k.cp, 24) : null, cb: CB_LABEL[k.cb] ? k.cb : null,
+                th: typeof k.th === 'string' && THUMB_EXT[k.th] ? k.th : null };
       o._hay = [o.t, o.id, cats[k.cat].name, o.k || '', o.k ? kindLabel(o.k) : '', o.cp || '', o.cb ? CB_LABEL[o.cb] : ''].join(' ').toLowerCase();
       kuById[o.id] = o;
       return o;
@@ -579,13 +659,29 @@
     kuFilter();
     if (ok) kuShown = Math.min(Math.max(int(st.ks) || KU_STEP, KU_STEP), 2000);
     renderKu();
+    syncView();
+    var kr = $('#kv-row'); if (kr) kr.hidden = false;
     if (typeof D.built === 'string' && ISO.test(D.built)) {
       var b = $('#built'), a = ago(D.built);
       if (b && a) { b.textContent = a; b.title = D.built.replace('T', ' ').replace('Z', ' UTC'); }
     }
     loaded = true;
     $('#roll').hidden = false;
-    if (!focusItem(location.hash) && ok) window.scrollTo(0, Math.max(0, int(st.y) || 0));
+    var fr = location.hash;
+    if (focusItem(fr)) {
+      /* before the load event, the browser's own jump to the fragment can move focus back to the page: restore it */
+      if (document.readyState !== 'complete') window.addEventListener('load', function () {
+        var row = document.activeElement === document.body && fr === location.hash && document.getElementById(fr.slice(1));
+        if (row && row.hasAttribute('tabindex')) row.focus({ preventScroll: true });
+      });
+    } else {
+      if (ok) window.scrollTo(0, Math.max(0, int(st.y) || 0));
+      /* a plain section link (#faq-h): the rendered lists above it are taller than the snapshot, so land on it again */
+      else if (/^#[a-z][a-z0-9-]{0,40}$/.test(location.hash)) {
+        var tg = document.getElementById(location.hash.slice(1));
+        if (tg) tg.scrollIntoView();
+      }
+    }
   }
 
   /* S1: keep the server-rendered snapshot when data.json cannot be loaded */
@@ -640,6 +736,19 @@
     });
     $('#roll').addEventListener('click', roll);
 
+    /* Gallery / List: two toggle buttons in a labelled group, each its own Tab stop like the filter chips */
+    if ('IntersectionObserver' in window) {
+      thumbIO = new IntersectionObserver(function (es) {
+        es.forEach(function (e) { if (e.isIntersecting) { thumbIO.unobserve(e.target); fillThumb(e.target); } });
+      }, { rootMargin: '400px 0px' });
+    }
+    document.addEventListener('v3thumb', onThumbsReady);
+    /* deferred scripts have all run by the load event: if thumbs.js never arrived, show no empty picture panels */
+    window.addEventListener('load', function () { if (!window.V3Thumb) $('#kul').classList.add('nothumb'); });
+    $$('#kv .kv-b').forEach(function (b) {
+      b.addEventListener('click', function () { setView(b.getAttribute('data-view')); });
+    });
+
     /* copy buttons */
     $('#copy').addEventListener('click', function () { copyJoin(this); });
     $('#copy2').addEventListener('click', function () { copyJoin(this); });
@@ -691,13 +800,32 @@
         if (q.value) { q.value = ''; updateKu(true); writeState(false); } else q.blur();
       }
     });
+    /* in the gallery, Down and Up move by a row of cards and Left and Right by one card */
+    function kuCols() {
+      if (kuView !== 'gallery') return 1;
+      var c = getComputedStyle($('#kul')).gridTemplateColumns;
+      return Math.max(1, c && c !== 'none' ? c.split(' ').length : 1);
+    }
+    function kuFocus(a) {
+      a.focus();
+      /* a gallery card is taller than a list row: bring its # and Hunt bar into view too */
+      var li = a.closest && a.closest('li');
+      if (li && li.scrollIntoView) li.scrollIntoView({ block: 'nearest', behavior: RM.matches ? 'auto' : 'smooth' });
+    }
     $('#kul').addEventListener('keydown', function (ev) {
-      if (ev.key !== 'ArrowDown' && ev.key !== 'ArrowUp') return;
+      var gal = kuView === 'gallery', key = ev.key, step;
+      if (key === 'ArrowDown' || key === 'ArrowUp') step = kuCols();
+      else if (gal && (key === 'ArrowRight' || key === 'ArrowLeft')) step = 1;
+      else return;
       var a = kuLinks(), i = a.indexOf(document.activeElement);
       if (i < 0) return;
       ev.preventDefault();
-      if (ev.key === 'ArrowDown' && i < a.length - 1) a[i + 1].focus();
-      else if (ev.key === 'ArrowUp') (i ? a[i - 1] : q).focus();
+      if (key === 'ArrowDown' || key === 'ArrowRight') {
+        var j = i + step;
+        /* from a row above the last one, Down lands on the last card when the row below is short */
+        if (j >= a.length && Math.floor(i / step) < Math.floor((a.length - 1) / step)) j = a.length - 1;
+        if (j < a.length) kuFocus(a[j]);
+      } else if (i - step >= 0) kuFocus(a[i - step]); else q.focus();
     });
 
     /* S4: the shortcut sheet */

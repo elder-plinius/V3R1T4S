@@ -214,6 +214,9 @@ svg{display:block}
 .nums b{font:700 clamp(30px,1.4rem + 2.2vw,46px)/1 var(--mono);color:var(--text-bright);font-variant-numeric:tabular-nums;letter-spacing:-.02em}
 .nums li:first-child b{color:var(--green);text-shadow:var(--glow-sm)}
 .nums span{font:400 14px/18px var(--sans);color:var(--text-dim)}
+/* the open problems count is the way in to the gallery from the first screen (phones have no section pills) */
+.nums-a{display:flex;flex-direction:column;gap:6px;margin:-14px -16px;padding:14px 16px;color:inherit;text-decoration:none;border-radius:var(--r)}
+.nums-a:hover span{color:var(--green);text-decoration:underline;text-underline-offset:4px}
 .nums li::before{content:"";position:absolute;left:0;top:14px;bottom:14px;width:2px;background:var(--line-2)}
 .nums li:first-child::before{background:var(--green);box-shadow:var(--glow-sm)}
 @media (min-width:768px){
@@ -510,6 +513,82 @@ mark{background:var(--green-dim);color:inherit;border-radius:2px;text-decoration
   .suggest{flex:1 1 100%}
 }
 
+/* ---------- open problems: Gallery / List switch and the gallery cards */
+.kv-row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 16px;padding:10px 12px 10px 16px;border-bottom:1px solid var(--line)}
+.kv-hint{flex:1 1 280px;min-width:0;font:400 14px/20px var(--sans);color:var(--text-dim);text-wrap:pretty}
+.kv-hint b{font:700 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--green)}
+.kv{flex:none;margin-left:auto;display:inline-flex;gap:2px;padding:3px;border:1px solid var(--line-ctl);border-radius:var(--r-pill);background:var(--bg2)}
+.kv-b{display:inline-flex;align-items:center;gap:7px;min-height:32px;padding:0 13px;border:0;border-radius:var(--r-pill);background:transparent;
+  font:700 12px/1 var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--text-dim);transition:color .14s,background-color .14s,box-shadow .14s}
+.kv-b svg{width:14px;height:14px;flex:none}
+.kv-b:hover{color:var(--text-bright)}
+/* pressed is a solid fill (not a ring), so it cannot be mistaken for the focus outline */
+.kv-b[aria-pressed="true"]{background:var(--green);color:var(--on-green);text-shadow:none}
+.kv-b[aria-pressed="true"]:hover{color:var(--on-green)}
+.kv-b:focus-visible{border-radius:var(--r-pill);outline-offset:4px}
+@media (pointer:coarse),(max-width:767px){.kv-b{min-height:44px;padding:0 16px}}
+
+/* each card is a column: thumbnail, title, chips, then the # and Hunt bar pushed to the bottom. Cards in a row share
+   its height, so the thumbnails, title tops and Hunt bars line up. (Not subgrid: with subgrid every thumbnail drawn
+   relaid the whole gallery, which made scrolling stutter after deep paging.) */
+.kul.gal{grid-template-columns:repeat(auto-fill,minmax(236px,1fr));grid-auto-rows:auto;gap:14px;padding:16px}
+.kul.gal>li{display:flex;flex-direction:column;gap:0;padding:0;
+  background:var(--bg1);background-image:none;border:1px solid var(--line-2);border-radius:var(--r-lg);transition:border-color .14s,box-shadow .14s}
+.kul.gal>li:hover,.kul.gal>li:focus-within{background:var(--bg1);border-color:var(--green-line);box-shadow:var(--glow-sm)}
+.kul.gal>li::before{display:none}
+.kul.gal .e{display:none}
+.tb{flex:none;width:100%;position:relative;aspect-ratio:8/5;overflow:hidden;background:var(--bg0);border-bottom:1px solid var(--line);
+  border-radius:calc(var(--r-lg) - 1px) calc(var(--r-lg) - 1px) 0 0}
+.tb>svg,.tb>img{display:block;width:100%;height:100%;object-fit:cover}
+.kul.gal .kt{padding:12px 14px 0;max-width:none;font-size:15px;line-height:22px}
+/* clamp long titles only where cards sit side by side; a full-width card (phones, 200% zoom) shows the whole title */
+@media (min-width:600px){.kul.gal .kt{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;line-clamp:4;overflow:hidden}}
+.kul.gal .kt:focus-visible::after{outline-offset:-2px;border-radius:var(--r-lg)}
+.kul.gal .meta{align-self:stretch;margin:10px 0 12px;padding:0 14px}
+/* the plain category label gets the badge's line height, so a first line with or without a badge sits the same */
+.kul.gal .cat{display:inline-flex;align-items:center;min-height:24px}
+.kul.gal .acts{align-self:stretch;justify-content:space-between;margin-top:auto;padding:8px 10px 10px 8px;border-top:1px solid var(--line)}
+.kul.gal .hunt{min-width:96px;min-height:36px}
+@media (pointer:coarse){.kul.gal .hunt{min-height:44px}}
+.kul.gal>li.empty,.kul.gal>li.note{grid-column:1/-1;display:block;padding:20px 12px;background:none;border-color:transparent;box-shadow:none}
+.kul.gal>li.note{border-color:var(--amber);background:var(--amber-dim)}
+/* thumbs.js did not load (blocked, offline): no empty picture panels, the category emoji instead */
+.kul.gal.nothumb .tb{display:none}
+.kul.gal.nothumb .e{display:grid;margin:14px 14px 0}
+@media (max-width:599px){
+  .kv-row{padding:10px 12px}
+  .kv-hint{flex-basis:100%}
+  .kv{flex:1 1 100%}
+  .kv-b{flex:1;justify-content:center}
+  /* a full-width switch: the pressed half in the quieter chip style, not a solid neon block */
+  .kv-b[aria-pressed="true"],.kv-b[aria-pressed="true"]:hover{background:var(--green-dim);color:var(--green);box-shadow:inset 0 0 0 1px var(--green)}
+  .kul.gal{padding:12px;gap:12px}
+  .kul.gal>li{padding:0}
+}
+/* very short and narrow viewports (400% zoom): a lower picture, so a card is not all thumbnail */
+@media (max-width:599px) and (max-height:420px){.kul.gal .tb{aspect-ratio:16/5}}
+
+/* thumbnails (thumbs.js): line art coloured from the theme tokens; --ac is the category family's accent.
+   .thumb, not .th: .th is the terminal's help grid (term.js) */
+.thumb{fill:none;stroke-linecap:round;stroke-linejoin:round;--ac:var(--cyan)}
+.thumb.f-comp{--ac:var(--purple)}
+.thumb.f-phys{--ac:var(--blue)}
+.thumb.f-life{--ac:var(--red)}
+.thumb.f-text{--ac:var(--amber)}
+.thumb.f-misc{--ac:var(--text-dim)}
+.thumb .t-ln{stroke:var(--ac)}
+.thumb .t-lf{fill:var(--ac)}
+.thumb .t-dm{stroke:var(--text-faint)}
+.thumb .t-df{fill:var(--text-faint)}
+.thumb .t-gn{stroke:var(--green)}
+.thumb .t-gf{fill:var(--green)}
+.thumb .t-gh{fill:var(--green-dim);stroke:var(--green)}
+.thumb .t-gr{stroke:var(--line)}
+.thumb .t-ho{fill:var(--bg0);stroke:var(--ac)}
+.thumb .t-bg{fill:var(--bg0)}
+.thumb .t-tx{fill:var(--text-dim);font:400 15px var(--mono);letter-spacing:.02em}
+.thumb .bt{stroke-linecap:butt}
+
 /* ---------- honesty callout */
 .honest{display:flex;gap:12px;align-items:flex-start;margin-top:56px;padding:16px 18px;max-width:none;background:var(--amber-dim);
   border:1px solid var(--line-2);border-left:3px solid var(--amber);border-radius:var(--r);font-size:15px;line-height:22px;color:var(--text)}
@@ -644,5 +723,9 @@ dialog{color:var(--text)}
 @media (forced-colors:active){
   .btn,.btn-primary,.chip,.tog,.gh,.copy2,.hunt,.mini,.roll,.search{border:1px solid ButtonText}
   .chip[aria-pressed="true"],.board button.n[aria-pressed="true"]{outline:2px solid Highlight}
+  .kv{border:1px solid ButtonText}
+  /* pressed: a system-colour fill; the focus ring stays the only outline */
+  .kv-b[aria-pressed="true"],.kv-b[aria-pressed="true"]:hover{forced-color-adjust:none;background:Highlight;color:HighlightText;outline:none}
+  .kv-b[aria-pressed="true"]:focus-visible{outline:2px solid CanvasText}
   mark{forced-color-adjust:none;background:Mark;color:MarkText}
 }

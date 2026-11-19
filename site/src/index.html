@@ -29,6 +29,7 @@
 <script src="theme.js"></script>
 <script src="app.js" defer></script>
 <script src="eggs.js" defer></script>
+<script src="thumbs.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#feed-h">Skip to discoveries</a>
@@ -71,7 +72,7 @@
         <li><b>{{N_RESULTS}}</b><span>founding results</span></li>
         <li><b>{{N_CONTRIBUTED}}</b><span>community results</span></li>
         <li><b>{{N_CONTRIBUTORS}}</b><span>contributors</span></li>
-        <li><b>{{N_KNOWN_UNKNOWNS}}</b><span>open problems</span></li>
+        <li><a class="nums-a" href="#ku-h"><b>{{N_KNOWN_UNKNOWNS}}</b><span>open problems <span aria-hidden="true">→</span></span></a></li>
       </ul>
     </div>
   </section>
@@ -128,6 +129,13 @@
         <div class="eff-g" role="group" aria-labelledby="eff-kind-l"><span class="eff-l" id="eff-kind-l">Difficulty</span><span class="eff-c" id="eff-kind"></span></div>
         <div class="eff-g" role="group" aria-labelledby="eff-cp-l"><span class="eff-l" id="eff-cp-l">Time</span><span class="eff-c" id="eff-cp"></span></div>
       </div>
+      <div class="kv-row" id="kv-row" hidden>
+        <p class="kv-hint"><b>Hunt</b> copies a ready prompt. Paste it into your agent and it goes after that problem.</p>
+        <div class="kv" id="kv" role="group" aria-label="View">
+          <button class="kv-b" type="button" data-view="gallery" aria-pressed="true" aria-controls="kul"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true" focusable="false"><rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/></svg>Gallery</button>
+          <button class="kv-b" type="button" data-view="list" aria-pressed="false" aria-controls="kul"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M2 4h12M2 8h12M2 12h12"/></svg>List</button>
+        </div>
+      </div>
       <p class="sr-only" id="ku-live" aria-live="polite"></p>
       <ul class="kul" id="kul">{{KU_HTML}}</ul>
       <button class="btn more" id="ku-more" type="button" hidden>Show more</button>
@@ -170,7 +178,7 @@
   <h2 id="keys-h">Keyboard shortcuts</h2>
   <dl class="keys">
     <div><dt><kbd>/</kbd></dt><dd>search open problems</dd></div>
-    <div><dt><kbd>↓</kbd> <kbd>↑</kbd></dt><dd>move through the list</dd></div>
+    <div><dt><kbd>↓</kbd> <kbd>↑</kbd></dt><dd>move through the list (in the gallery, by a row; <kbd>←</kbd> <kbd>→</kbd> by a card)</dd></div>
     <div><dt><kbd>Esc</kbd></dt><dd>clear search, then filters</dd></div>
     <div><dt><kbd>g</kbd> then <kbd>w</kbd> <kbd>d</kbd> <kbd>b</kbd> <kbd>u</kbd></dt><dd>jump to This week, Discoveries, Leaderboard, Open problems</dd></div>
     <div><dt><kbd>c</kbd></dt><dd>copy the setup line</dd></div>
