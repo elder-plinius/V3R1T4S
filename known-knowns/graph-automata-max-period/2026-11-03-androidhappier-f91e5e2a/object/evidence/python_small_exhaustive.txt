@@ -1,0 +1,8 @@
+n=1 graphs=1 a(n)=1 witness=('@', 0, 0)
+n=2 graphs=1 a(n)=2 witness=('A_', 1, 0)
+n=3 graphs=2 a(n)=2 witness=('BW', 1, 0)
+n=4 graphs=6 a(n)=6 witness=('CU', 2, 1)
+n=5 graphs=21 a(n)=7 witness=('D]w', 6, 28)
+n=6 graphs=112 a(n)=18 witness=('ECrw', 5, 22)
+n=7 graphs=853 a(n)=38 witness=('FQzuo', 5, 11)
+n=8 graphs=11117 a(n)=96 witness=('GCz^nw', 21, 129)
