@@ -12,7 +12,7 @@ From this package folder (requires only Python 3 standard library and a C99 comp
 sh verify-it-yourself/run_checks.sh
 ```
 
-Expected last output line: `PASS` (verifies `15` nonzero columns, exact rational squared Euclidean column norms at most `1`, and exact exhaustive discrepancy `205956508661 / 100000000000 = 2.05956508661 > 2.006` across all `2^15 = 32,768` sign vectors via three independent implementations: Python `Fraction` branch-and-bound, Python exhaustive Gray-code scan, and C99 `__int128` Gray-code enumeration).
+Expected last output line: `PASS` (verifies `15` nonzero columns, exact rational squared Euclidean column norms at most `1`, and exact exhaustive discrepancy `205956508661 / 100000000000 = 2.05956508661 > 2.006` across all `2^15 = 32,768` sign vectors via two independently written programs: one Python file whose two exact methods (`Fraction` branch-and-bound and an exhaustive Gray-code scan) share one parser, and a separate C99 `__int128` Gray-code checker).
 
 ## Compared to
 
