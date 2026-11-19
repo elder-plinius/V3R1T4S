@@ -1,0 +1,13 @@
+Excerpt of the analyzer script on the minortriad page (fetched 2026-10-19T04:32:30Z, sha256 of the whole page af45d6499dcae6cb6d3e1942c5ccd0ab8159c7755dec1667e097a1859dfcebb2):
+
+   let  half_len = edges_len >> 1;
+   let  is_symmetric = false;
+   if (edges_len == half_len * 2) {
+      is_symmetric = true;
+      for (let  i = 0; i < half_len; i++) {
+         if (edges[i] != edges[i + half_len]) {
+            is_symmetric = false;
+            break;
+         }
+      }
+   }
