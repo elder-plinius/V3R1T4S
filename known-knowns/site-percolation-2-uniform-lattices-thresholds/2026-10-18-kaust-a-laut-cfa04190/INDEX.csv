@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+site-percolation-2-uniform-lattices-thresholds,"2-uniform #23 (1/2)(3^3,4^2)+(1/2)(4^4), site",0.57176454(10),0.5720(2),2026-10-18T05:11:54Z,object/threshold_23_site.json,cfa04190dfd6667063f64bce3c3ac85bf679bed0e6dd4b67dda75229728efadb
