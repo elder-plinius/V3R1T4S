@@ -1,0 +1,7 @@
+graph6 H?o|]|~ n 9 connected True degrees [3, 3, 3, 3, 6, 6, 6, 7, 7]
+start 1 rule [1, 3, 5] cycle_length 200
+graph6 H?o|]|~ n 9 connected True degrees [3, 3, 3, 3, 6, 6, 6, 7, 7]
+max_over_all_rules_and_starts 200 rule {1,3,5} state_on_cycle 1
+graph H?o|]|~ max 200 rules reaching max: ['{1,3,5}', '{1,3,5,9}']
+rule {1,3,5}, start 1: first return to start at step 200 | distinct states on cycle 200
+rule {1,3,5}: starts whose orbit ends in a 200-cycle: 480 of 512

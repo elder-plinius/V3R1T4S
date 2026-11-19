@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+graph-automata-max-period,"A357952(9), maximum period of a self-counting totalistic cellular automaton (node counts itself) over connected graphs with 9 nodes",200,"absent (DATA ends at a(8) = 112)",2026-11-02T21:50:44Z,object/VALUE.txt,cdcbd62283fd8901256f0c29257a5c5e97280c04dab1947d2254cf9804d8e8f6
