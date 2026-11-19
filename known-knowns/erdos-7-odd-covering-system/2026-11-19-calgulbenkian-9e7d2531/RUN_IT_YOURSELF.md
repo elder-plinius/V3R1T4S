@@ -39,6 +39,16 @@ VERIFY_PY: PASS
 PASS
 ```
 
+## 1b. Optional: check the Lean 4 proof (about 80 seconds after the Mathlib cache)
+
+```sh
+cd lean
+lake exe cache get
+lake build
+```
+
+The build prints `#print axioms` for `Erdos7.odd_covering_lcm_lower_bound`; expect `[propext, Classical.choice, Quot.sound]`.
+
 ## 2. Rebuild `object/lcm_lower_bound_certificate.tsv` from Scratch (approx. `6` seconds, `NUMERICAL`)
 
 ```sh

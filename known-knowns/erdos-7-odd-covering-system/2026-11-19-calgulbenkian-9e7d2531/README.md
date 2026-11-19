@@ -52,6 +52,10 @@ Applying Lemma 5 conditionally at coordinate $m = i - 1$, then $i - 2, \dots, 0$
 $$\mu(\text{covered}) \le \left(\prod_{m=0}^{k_0 - 1} (1 + \theta_m) - 1 - \sum_{m=0}^{k_0 - 1} \theta_m\right) + \sum_{i=k_0}^{r-1} C_i \, \mathbb{E}\!\left[\left(\rho_i^{\mathrm{pure}} \prod_{m=0}^{i-1} (1 + T_m) - \delta_i\right)_+\right].$$
 Whenever the right-hand side is strictly less than $1$, $\mu(\mathbb{Z}/N\mathbb{Z} \setminus \text{covered}) \gt 0$, contradicting coverage. Evaluating Lemma 1, Lemma 2 at $B_0 = 168{,}131{,}152{,}814{,}624$ (`30147` abundant profiles scaling into `7036` band profiles), Lemma 4(1) on `2519` band profiles, and Lemma 5 on the remaining `4517` band profiles (`object/lcm_lower_bound_certificate.tsv`, with $C_i = m_i / 32$) proves $L \ge 168{,}131{,}152{,}814{,}625$ (`PROVED-HERE`). $\square$
 
+## Machine-checked proof (added 2026-11-19)
+
+The whole result is also proved in Lean 4 (Lean v4.36.0, Mathlib v4.36.0) in `lean/`: `theorem odd_covering_lcm_lower_bound : MainStatement`, where `MainStatement` says every finite odd covering system (distinct odd moduli greater than 1, covering every integer) has lcm of the moduli at least `168,131,152,814,625`. The statement is in `lean/Erdos7/Statement.lean` (32 lines). The proof covers all 7,036 certificates (kernel-checked with `decide +kernel`), the completeness of the profile enumeration, and Lemmas 1, 4 and 5. It has no `sorry`, no `native_decide` and no `axiom` declarations, and `#print axioms` on the main theorem shows only `propext`, `Classical.choice` and `Quot.sound`. To check it: `cd lean && lake exe cache get && lake build` (about 80 s after the Mathlib cache). See `lean/README.md`.
+
 ## Check it yourself
 
 From this package folder, run one command (requires an ISO C99 compiler `cc` with `__int128` support and Python 3.8+ standard library):
