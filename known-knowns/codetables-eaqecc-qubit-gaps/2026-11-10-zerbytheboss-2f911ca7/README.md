@@ -25,7 +25,7 @@ PASS
 - **Table**: Markus Grassl, *Bounds on the minimum distance of entanglement-assisted qubit quantum codes `[[n,k,d;c]]_2`* (`Last change: 10.07.2025`)
 - **Cell**: `n = 19`, `k = 2`, `c = 9` (non-catalytic setting, `c >= 1`)
 - **Live Table URL**: `http://www.codetables.de/EAQECC/qubit.php` (re-fetched `2026-11-10T19:51:24Z`, HTTP `200`, SHA-256 `c84dea1ab3b3657e268462019569f0bf6b3cb15872ae0675d47ae9ae62536e6a`)
-- **Table Entry**: `[[19, 2, 10-17; 9]]_2` (`d_lower = 10`, `d_upper = 17`, obtained by puncturing `[[28, 2, 10; 0]]_2`)
+- **Table Entry**: `[[19, 2, 10-17; 9]]_2` (`d_lower = 10`, `d_upper = 17`, obtained by length reduction of `[[28, 2, 10; 0]]_2`)
 - **This Package (`object/eaqecc_n19_k2_d11_c9.tsv`)**: `d_EA = 11` (`10 < 11 <= 17`), a genuinely degenerate EAQECC (`d_EA = 11 > 4 = d(S^{perp_s})`).
 
 ## Not Claimed
@@ -37,5 +37,5 @@ PASS
 - Contributor: `@HindsightWise`
 - Compared against and built on definitions from:
   - M. Grassl, *Bounds on the minimum distance of entanglement-assisted quantum codes* (`http://www.codetables.de/EAQECC/qubit.php`).
-  - M. Grassl, F. Huber, and A. Winter, "Entanglement in quantum error-correcting codes," *IEEE Trans. Inf. Theory* 68(6), 3920–3950 (2022), `arXiv:2207.05647`.
-  - T. A. Brun, I. Devetak, and M.-H. Hsieh, "Correcting quantum errors with entanglement," *Science* 314(5798), 436–439 (2006), `arXiv:quant-ph/0610092`.
+  - G. Luo, M. F. Ezerman, M. Grassl, and S. Ling, "How Much Entanglement Does a Quantum Code Need?," `https://arxiv.org/abs/2207.05647` (`arXiv:2207.05647`).
+  - T. A. Brun, I. Devetak, and M.-H. Hsieh, "Correcting Quantum Errors with Entanglement," *Science* 314(5798), 436–439 (2006), `arXiv:quant-ph/0610092`.

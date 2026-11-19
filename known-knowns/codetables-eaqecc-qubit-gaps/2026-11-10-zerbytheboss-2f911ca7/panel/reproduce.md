@@ -24,7 +24,7 @@ Before trusting any stored `DUAL` rows or package checker logic, an independent 
 4. **Independent Symplectic Dual `S^{perp_s}` (`PROVED-HERE`)**:
    - Computing `nullspace_GF2([Z | X])` directly from `S` alone produces a `12`-dimensional basis of `S^{perp_s}` (`2n - rank_GF2(S) = 38 - 26 = 12`, spanning `2^12 = 4,096` vectors).
    - Cross-check against stored `DUAL` rows (`12 x 38`): `rank_GF2(DUAL) = 12`, every stored `DUAL` row is symplectically orthogonal to all `26` rows of `S`, and `rank_GF2(indep_dual union DUAL) = 12` (`DUAL` matches the RREF nullspace basis row-for-row).
-5. **Exhaustive `4,096`-Vector Enumeration of `S^{perp_s}` (`PROVED-HERE`)**:
+5. **Full `4,096`-Vector Enumeration of `S^{perp_s}` (`PROVED-HERE`)**:
    - Testing membership in `rowspace(S)` via reduction against `RREF(S)` across all `2^12 = 4,096` vectors of `S^{perp_s}` yields:
      - **Isotropic radical `S cap S^{perp_s}` (`2^8 = 256` vectors)** symplectic weight enumerator:
        `[(0, 1), (4, 6), (8, 21), (10, 12), (12, 48), (14, 84), (16, 60), (18, 24)]` (sum `= 256`, minimum nonzero weight `= 4`, attained on two disjoint 4-qubit supports `(4, 14, 17, 18)` and `(9, 10, 12, 13)`).

@@ -19,7 +19,7 @@ Exact non-catalytic d_EA = 11 > 10 = d_lower(19, 2, 9) (degenerate EAQECC: d_EA 
 PASS
 ```
 
-## 2. Rebuild the Code From Scratch (`< 2` seconds)
+## 2. Construct an Independent Code With These Parameters (`< 2` seconds)
 
 Compile and run the deterministic C99 solver (`how-we-built-it/search_gf4_hull.c`, fixed Xorshift64 seed `0x243f6a8885a308d3ULL`):
 
@@ -28,4 +28,4 @@ cc -O3 -std=c99 -Wall -Wextra how-we-built-it/search_gf4_hull.c -o search_gf4_hu
 ./search_gf4_hull
 ```
 
-It prints `HIT! [[19, 2, 11; c=9]]_2` and writes `hit_n19_k2_d11_c9.tsv` after passing internal binary RREF, symplectic Gram rank, and full `4,096`-vector dual enumeration checks.
+It prints `HIT! [[19, 2, 11; c=9]]_2` and writes `hit_n19_k2_d11_c9.tsv` after passing internal binary RREF, symplectic Gram rank, and full `4,096`-vector dual enumeration checks. Note that this fixed-seed solver run finds a different valid `[[19, 2, 11; 9]]_2` code with these parameters, not the exact stabilizer matrix shipped in `object/eaqecc_n19_k2_d11_c9.tsv` (which is verified directly from its rows by `sh verify-it-yourself/run_checks.sh` above).
