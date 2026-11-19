@@ -4,6 +4,8 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 [Edited 2026-11-17 at the maintainer's request on the pull request: removed the notes on the n = 57, 58 and 60 objects, the "whole review group" wording and the review-ruling note, and replaced mentions of an internal triage step with plain wording. The checks, numbers and verdict are unchanged.]
 
+[Edited 2026-11-19 at the maintainer's request on the pull request: the propagation-test heading now describes the test plainly as wire deletion from listed networks, a mention of other pull requests was removed, and the closing section was retitled. The checks, numbers and verdict are unchanged.]
+
 Claim: a sorting network on 53 channels with 413 comparators and greedy depth 20. Target sorting-network-size-records, partial win p1 (a Pareto size/depth improvement for some n in 33..64 on the extended table) and success criterion (c).
 
 Read from the package: README.md, INDEX.csv, the-record-we-beat/listed.json. I recomputed size and depth of the object file (header "53 413", 413 comparators, all i less than j less than 53, greedy ASAP depth 20), which match the claim.
@@ -23,7 +25,7 @@ Read from the package: README.md, INDEX.csv, the-record-we-beat/listed.json. I r
 - Literature (arXiv export API, https, query 2 of 4, 2026-10-19T05:32:38Z, HTTP 200, sha256 329126b78bb7950c25f08bfe0d0a6bdd0b31da83979742ff4d913e961dafe736): sorting networks with size or depth, newest first. The only recent sorting-network record paper is 2511.04107 "Depth-13 Sorting Networks for 28 Channels" (2025-11-06); nothing in 2026 gives size or depth networks for 38 to 60 channels. EinsteinArena home page (https://einsteinarena.com/, 2026-10-19T05:40:57Z, HTTP 200, sha256 f5c8fff10812b9c529aec39e0f9922c564c7bb3a1cbfb872ec5ef72a87258094) lists only a 16-input sorting problem.
 - Pull requests in this repository on sorting networks: none (title and body search of the pull-request snapshot). The target has no merged known-knowns directory.
 
-## My own propagation test (PR #350 rule: not implied by a listed network by removing wires)
+## My own propagation test (wire deletion from listed networks)
 
 Scripts: my own (parser, wire removal with untangling, depth, search, pruning and an exact check; not shipped in this package). Method: for every listed network with m channels (m = n+1 .. n+8 without pruning, m = n+1 .. n+4 with pruning), repeatedly fix any one input wire to 0 or to 1 (not only the top or bottom wire), delete the comparators on its path and untangle to standard min-to-low form, m minus n times, keeping a beam of the smallest results (beam 6 and beam 30). Wire removal was validated by exhaustive 0-1 checks of the results of removing every wire (both constants) from the listed 10, 12 and 14 channel networks, and by random tests for 16 channels. For results within 4 comparators of the claim I then tried to delete comparators: candidates were comparators whose removal survived 262,144 random 0-1 inputs, and every subset of up to 8 candidates was tested with my own exact sorting check (exact 0-1 reachable-set propagation over connected wire groups). This is a heuristic search, not a proof that no reduction exists; it complements the package's own top-and-bottom wire test (top and bottom wires only, 708 reductions).
 
@@ -36,9 +38,9 @@ Result: not dominated by any listed pair. It weakly dominates (414,20): same dep
 
 Propagation (wire removal and pruning): best (size, depth) I could reach for n=53 from listed networks of other widths: 415 at depth 20 (from the 54-channel size-421 depth-20 network); two comparators survived the random screen but the exact check showed none can be removed, so 415 stays. Gap to the claimed size: 2 comparator(s). No reduction I found dominates or equals the claimed pair.
 
-Open pull requests and merged work: no other pull request names sorting networks or this n. The author has no earlier filing for this cell (the closed pull requests #65-#105 cover other targets).
+Open pull requests and merged work: no other pull request names sorting networks or this n. The author has no earlier filing for this cell (closed pull requests cover other targets).
 
-## Open questions for the panel, as far as they concern novelty
+## Questions that concern novelty
 
 1. Does a pair that is not dominated, and that matches one listed coordinate while improving the other, count as a Pareto improvement under p1? Yes for novelty. Here the claimed pair weakly dominates a listed pair of the live table and is strictly better in one coordinate (see the cell table), so it removes that pair from the Pareto list; it is not only an incomparable point. It also satisfies success criterion (c) (no listed pair has size at most and depth at most the claimed pair).
 2. Is the package's own propagation test sufficient? It is a reasonable test; I ran an independent and broader one (any wire, both constants, beam search, plus exact comparator pruning). The best implied pair I reached is shown in the cell table; in no case does it reach the claimed size at the claimed depth. Residual risk: both tests are searches, not exhaustive over all reductions.
