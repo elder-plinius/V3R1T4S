@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+erdos-7-odd-covering-system,"lower bound on L = lcm(n_i) of any distinct odd covering system (partial win p2)",168131152814625,11486475 (Egeozturk Aug 2026 forum; Schroeder Sep 2026 Zenodo claims 9704539845),2026-11-19T00:55:26Z,object/lcm_lower_bound_certificate.tsv,9e7d2531a58c0a8bd865aca01cc3b511e4d26941708a1e0a4f4db717298d67be
