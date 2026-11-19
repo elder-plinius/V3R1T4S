@@ -1,0 +1,22 @@
+{
+ "model": "LW1",
+ "phis": [
+  "one",
+  "solid",
+  "solid_dz"
+ ],
+ "coef": [
+  0.08075556306273535,
+  0.02986353396715234,
+  -0.03973234239283245
+ ],
+ "n_fitted_params": 3,
+ "season": "Bw (n_months 7)",
+ "train_rmse_Bw": 0.6696241731722541,
+ "code_sha256": {
+  "cv_linear.py": "65c669810d15fa3067f1b01661d623485685d045f4521134f35ec778e102a68a",
+  "freeze_and_score.py": "36fa20d100e8bddebebcd36aa5e6ef43d0b5786d577bf238d6312d027a8220b1",
+  "mbdata.py": "3dec69f54fe124cae192ccf57d8bc8b963d51f55ac89f3c1525317f311ed96db",
+  "score.py": "5c4a3a616b2870199c4e22714ce938aaee8217b1fc1e7468c521a757e21d228a"
+ }
+}

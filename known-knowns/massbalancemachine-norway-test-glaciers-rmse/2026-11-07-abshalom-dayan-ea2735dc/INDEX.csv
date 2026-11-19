@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+massbalancemachine-norway-test-glaciers-rmse,p2 test RMSE Bw (m w.e.); 999 winter points; model of at most 20 fitted parameters,Bw 0.5239 (3 fitted parameters),Bw 0.59 (MBM; p2 bar 0.59),2026-11-08T15:13:39Z,object/frozen_LW1.json,ea2735dcad5f8bdd1151c263f6db45865e5756314c4a9c37b8fcc2301f9cdff3
