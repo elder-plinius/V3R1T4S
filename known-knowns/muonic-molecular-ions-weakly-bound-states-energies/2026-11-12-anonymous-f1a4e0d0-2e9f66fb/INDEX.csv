@@ -1,0 +1,4 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+muonic-molecular-ions-weakly-bound-states-energies,frontier-open p1: ttmu (2 0) state variational upper bound (muon-atomic units; eq. 14 masses of arXiv:2503.17389),-0.512568647969898220243439490627127512105327902
+    bar -0.5125686450010 margin 1e-13 bar - upper end = [2.9688982202434394906e-9 +/- 2.72e-29]
+upper end < bar - margin,-0.5125686450010,2026-11-11T19:16:03Z,object/basis.txt,2e9f66fb6bcf8bc2f25dbec1de05659ac3f9b8c404fbaa6d984928d811cebe87
