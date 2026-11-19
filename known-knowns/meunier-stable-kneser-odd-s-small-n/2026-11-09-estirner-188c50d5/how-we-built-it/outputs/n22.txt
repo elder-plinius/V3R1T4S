@@ -1,0 +1,6 @@
+n = 22, C = 11 (run 2026-11-09-1305, sat-drat-v2 encoding):
+gen_cnf.py 22 3 5 11: vertices=264 edges=22814 clauses=251225, sha256 b5caefbad0996e1d8836998e01b134b50edb1a66c14dc3b589d91c87cd544adb
+cadical -q --no-binary n22_k3_s5_c11.cnf n22_k3_s5_c11.drat: exit 20 (s UNSATISFIABLE) after 312 s
+proof: 752,653,807 bytes, sha256 d24a47fc195dbc48aa70d8fad7c970c18780a40ab878c08d8ce0a8e088af0c7b; a second run gave the identical file
+drat-trim n22_k3_s5_c11.cnf n22_k3_s5_c11.drat: s VERIFIED (3,226,808 of 4,971,152 lemmas in core, 126,983,372 resolution steps, 0 RAT lemmas), 277 s
+gen_cnf.py 22 3 5 12 + cadical: exit 10 (SAT); the 12-colouring in object/colouring_n22_12colours.txt
