@@ -4,7 +4,7 @@
 
 Exact integer Farkas certificate (quantum weight-enumerator LP with shadow constraints, no purity assumption) that no qubit stabilizer code [[113,2,d]] with d at least 38 exists, so the upper bound for [[113,2]] is at most 37 against the live value 38 fetched 2026-10-19; the value is below the propagation closure of the live table plus the 56 listed pull-request values plus the other claimed cells.
 
-Path note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/cert_113_2_38_sh.json` (sha256 83afea997434ece56ba22256d04b0e287a409fb64663c318af8a3917454e2943); its programs are in `how-we-built-it/`.
+Note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/cert_113_2_38_sh.json` (sha256 83afea997434ece56ba22256d04b0e287a409fb64663c318af8a3917454e2943); its programs are in `how-we-built-it/`.
 
 ## Check it yourself
 
@@ -24,7 +24,7 @@ The quick check verifies the object's hash against INDEX.csv, rebuilds every row
 
 | Source | Cell | Listed value | URL | UTC fetch time |
 |---|---|---|---|---|
-| QECC qubit table, n 1..256 | QECC qubit table, n 1..256 | [[113,2]]: lower 25, upper 38; neighbours in neighbours.csv | https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 | 2026-10-19T04:34:26Z (triage); 2026-10-19T05:16:36Z (novelty skeptic) |
+| QECC qubit table, n 1..256 | QECC qubit table, n 1..256 | [[113,2]]: lower 25, upper 38; neighbours in neighbours.csv | https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 | 2026-10-19T04:34:26Z (first fetch); 2026-10-19T05:16:36Z (novelty skeptic) |
 | GitHub pull-request list of elder-plinius/V3R1T4S (merged and open pull requests for this target) | upper-bound values already claimed | 56 values in `the-record-we-beat/pr_claims.csv` | https://api.github.com/repos/elder-plinius/V3R1T4S/pulls | 2026-10-19T04:30:31Z |
 | V3R1T4S TROPHY_CASE.md and known-knowns folders | this cell | no competing value (see `panel/novelty.md`) | https://github.com/elder-plinius/V3R1T4S | 2026-10-19T05:15:21Z (novelty skeptic) |
 | arXiv, four generic queries plus the named work 2609.37056 | this cell | no newer claim found (queries were generic, not exhaustive; see `panel/novelty.md`) | https://arxiv.org/abs/2609.37056 | 2026-10-19 (novelty skeptic) |

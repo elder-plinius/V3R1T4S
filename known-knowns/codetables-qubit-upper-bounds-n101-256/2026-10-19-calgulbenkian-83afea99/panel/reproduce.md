@@ -1,7 +1,8 @@
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
+[Edited 2026-11-19 at the maintainer's request on the pull request: the hash-list count now says which list each figure refers to (13 for the list the panel checked, 27 for the package's current SHA256SUMS), and the open-question labels were replaced by plain statements. The checks, numbers and verdict are unchanged.]
 cell: qubit-ub-n113-k2-d37   role: reproduce
 
-The contributor's hash list: 13 files listed, 0 not OK (checked from inside the package folder).
+The hash list I checked listed 13 files, 0 not OK (checked from inside the package folder). The package's current `SHA256SUMS` lists 27 files, which is every file in the package except `SHA256SUMS` itself.
 
 ## Definition (quoted)
 Criterion (verbatim, the part that can be checked mechanically): "a proof that no [[n,k,d]] stabilizer code exists for d equal to the live table upper bound ..., thereby lowering it by at least 1 ..., where the proof is an exact rational infeasibility certificate (Farkas dual) of the quantum weight-enumerator LP (stabilizer and normalizer enumerators linked by the quaternary MacWilliams identity, A_i <= B_i, A_i = B_i for 0 < i < d, nonnegativity, plus shadow-enumerator nonnegativity where used), checked in exact integer arithmetic by an independent script; and the new bound is NOT already implied by applying the standard propagation rules (d(n,k) <= d(n,k-1) for k >= 2, d(n,k) <= d(n+1,k), d(n,k) <= d(n-1,k+1)+1 ...) to other live cells."
@@ -35,7 +36,7 @@ ALL CHECKS PASS
 Agreement: PASS, same verdict, all 114 columns at most 0, right-hand side positive. No mismatch.
 
 ## Notes
-Open question 1 (does the checker's constraint set equal the criterion's LP, and does it exclude impure codes): the rows are exactly the ones the criterion lists (MacWilliams link, A_i <= B_i, equality below d, nonnegativity, shadow); B_j = A_j below D and B_j >= A_j above are the correct conditions for impure codes too (the test is on N(S) minus S, so low-weight stabilizer elements are allowed). Open question 4: a second Krawtchouk implementation is supplied by this report. Open question 2: the closure includes open PR values as above; deeper cells beyond the extracted table were not available. Whether open unmerged PR values should count as known is a ruling, not judged here.
+The checker's constraint set equals the criterion's LP and excludes impure codes too: the rows are exactly the ones the criterion lists (MacWilliams link, A_i <= B_i, equality below d, nonnegativity, shadow); B_j = A_j below D and B_j >= A_j above are the correct conditions for impure codes too (the test is on N(S) minus S, so low-weight stabilizer elements are allowed). This report's checker is a second, independent Krawtchouk implementation. The closure includes the open pull-request values as above; deeper cells beyond the extracted table were not available. Whether open unmerged pull-request values should count as known is not judged here.
 Scope: this role confirms the certificate is exact and valid for the LP as defined; the shadow inequalities are the standard Rains shadow inequalities for stabilizer codes (not re-proved here).
 
 pass: true
