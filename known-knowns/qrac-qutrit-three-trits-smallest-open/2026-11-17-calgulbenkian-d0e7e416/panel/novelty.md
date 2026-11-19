@@ -1,5 +1,7 @@
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
+[Edited 2026-11-19 when answering the maintainer's review: a reference to a working file not shipped in this package was removed. The checks, numbers and verdict are unchanged.]
+
 Novelty check for partial win p1 (rigorous POVM-valid upper bound <= 0.6990 on the 3-trits-into-1-qutrit QRAC; claimed 4368312591/6250000000 = 0.69893001456).
 
 Status source (read once, no retries): 2026-11-17T03:54:05Z, https://arxiv.org/abs/2312.14142 (HTTP 200) and the paper PDF https://arxiv.org/pdf/2312.14142 (HTTP 200, same time). Abstract page: submitted 21 Dec 2023; the paper was accepted in Quantum 2025-02-11. What the paper gives for n = d = D = 3:
@@ -9,7 +11,7 @@ Status source (read once, no retries): 2026-11-17T03:54:05Z, https://arxiv.org/a
 - The POVM-valid almost-qudit SDP (Pauwels et al., arXiv:2208.07887) is only plotted in Fig. 2, not tabulated; the claim folder reads it as about 0.699. It is floating-point with no exact certificate. The paper text gives no rigorous POVM-valid bound at or below 0.6990.
 So the table's best number is 0.69853 (projective-only, floating-point) and 0.71823 is the best rigorous bound. The claim's 0.69893 does not beat 0.69853, and it does not claim to. It is a p1 partial win (rigorous and POVM-valid), not a main-criterion win.
 
-Literature search (arXiv API, plain GET, 2026-11-17T03:54-03:55Z, all HTTP 200, hashes in the fetches file):
+Literature search (arXiv API, plain GET, 2026-11-17T03:54-03:55Z, all HTTP 200):
 - all:"random access code" AND all:qutrit (sorted by newest): hits were Prepare-and-Magic, Bell vs prepare-measure incompatibility, Quantum Advantage in Information Retrieval; none gives a 3-trit qutrit QRAC bound.
 - all:"random access" AND all:"upper bound" AND all:POVM: (n,n-1) QRAC analytic construction; quantum one-time memories; neither is this case.
 - all:"random access codes" AND all:NPA: one hit, chain-shaped prepare-and-measure networks; not this case.

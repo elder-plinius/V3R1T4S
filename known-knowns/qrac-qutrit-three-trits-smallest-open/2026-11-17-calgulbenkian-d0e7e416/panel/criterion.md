@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # Criterion skeptic report (partial win p1)
 
+[Edited 2026-11-19 when answering the maintainer's review: a reference to a working file not shipped in this package was removed. The checks, numbers and verdict are unchanged.]
+
 ## What I did
 - Read the claim record, README.md, HOW_WE_FOUND_IT.md, how-we-built-it/PREREG.md, verify-it-yourself/verify_qrac333.py, and object/qrac_333_naimark_dual_p1.json. SHA256SUMS all OK.
 - Ran sh verify-it-yourself/run_checks.sh: calibration passes and the dual passes with U = 4368312591/6250000000 = 0.69893001456 <= 699/1000, all in fractions.Fraction.
@@ -21,7 +23,7 @@ Not met, and the package says so. 0.69893 > 0.69853, so (b) fails. It also fails
 - Hidden-quantifier hunt: "at most 0.6990" is a threshold, and the package's threshold_rational is 699/1000 with strict_less false, consistent with p1 wording. I found no stretched definition. The README's phrase "first rigorous POVM-valid bound at the level of the floating-point Pauwels value" comes from the criterion text itself, not the package.
 - The checker has a stdlib fallback for calibration when mpmath is absent; the dual check does not depend on mpmath.
 - Null model: not applicable (exact object). I checked the identity on random operator instances as a substitute sanity test.
-- Subsumption and later-record rules (repository review rule) I cannot settle from the folder: I did not check other merged packages or unmerged PRs. A live arXiv abs fetch (recorded in my fetches file) shows versions v1 to v3 of 2312.14142 and no newer paper in that page; I did not search for newer upstream tables beyond that. A later upstream exact POVM-valid bound at or below 0.69893 would count against it. The bound is also weaker than the (unproven-exact) float 0.699 level only by being slightly below it, so it is a modest but genuine first exact certificate at that level.
+- Subsumption and later-record rules (repository review rule) I cannot settle from the folder: I did not check other merged packages or unmerged PRs. A live arXiv abs fetch shows versions v1 to v3 of 2312.14142 and no newer paper in that page; I did not search for newer upstream tables beyond that. A later upstream exact POVM-valid bound at or below 0.69893 would count against it. The bound is also weaker than the (unproven-exact) float 0.699 level only by being slightly below it, so it is a modest but genuine first exact certificate at that level.
 
 confirmed_scope: The shipped rational dual certificate, verified exactly in Fraction arithmetic and independently confirmed numerically on random operators, proves ASP(3,3,3) <= 4368312591/6250000000 = 0.69893001456 <= 0.6990 for all states and all 3-outcome POVMs on C^3 via a Naimark-dilation relaxation that assumes no projectivity of the physical measurements, which meets enumerated partial win p1 only and does not meet criterion (b) (< 0.69853) or (a).
 

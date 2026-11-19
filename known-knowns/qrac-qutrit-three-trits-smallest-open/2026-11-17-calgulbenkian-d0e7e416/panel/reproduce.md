@@ -1,9 +1,10 @@
 context: Claude Code subagent, fresh context [Sonnet 5.5]
 
 # REPRODUCE skeptic report: ASP(3,3,3) <= 4368312591/6250000000
+[Edited 2026-11-19 at the maintainer's request on the pull request: the p1 margin is corrected to 437409/6250000000 = 6.998544e-5 (it was given as 6.999e-6). The checks and verdict are unchanged; the bound is unchanged.]
 
 ## Verdict in one paragraph
-I re-derived the relaxation from the QRAC definition, wrote my own exact-rational checker before running the author's, and confirmed every property from the saved certificate file. The exact bound is U = 4368312591/6250000000 = 0.69893001456. That is <= 0.6990 (the p1 threshold, margin 6.999e-6 below it) and is NOT below 0.69853 (it is 0.00040001456 above it), so the full criterion (b) is correctly not claimed. The certificate file hash matches the claim: d0e7e416ae05f09145419e9f54da3bf13d17408fdc3245a94c87ecdd40ab8b85.
+I re-derived the relaxation from the QRAC definition, wrote my own exact-rational checker before running the author's, and confirmed every property from the saved certificate file. The exact bound is U = 4368312591/6250000000 = 0.69893001456. That is <= 0.6990 (the p1 threshold, margin 437409/6250000000 = 6.998544e-5 below it) and is NOT below 0.69853 (it is 0.00040001456 above it), so the full criterion (b) is correctly not claimed. The certificate file hash matches the claim: d0e7e416ae05f09145419e9f54da3bf13d17408fdc3245a94c87ecdd40ab8b85.
 
 ## 1. Validity for general POVMs (my own derivation, definition quoted)
 Definition (claim record): ASP = (1/(n d^n)) sum_x sum_i Tr(rho_x M^i_{x_i}), M^i_a PSD with sum_a M^i_a = I, rho_x density matrices on C^3, n=d=D=3.
@@ -25,7 +26,7 @@ Exact outputs:
 - Moment identity: 2418 non-constant canonical trace keys, 0 with a nonzero coefficient. Coefficient of Tr(I_H) = 0 exactly.
 - c_V = 1136182159/20000000000; sum_x c_x = 52850269071/100000000000.
 - U = 3 c_V + sum_x c_x = 4368312591/6250000000 = 0.69893001456, equal to the claimed value exactly (True).
-- U <= 699/1000: True (margin 0.00000699...). U < 69853/100000: False (U exceeds it by 0.00040001456).
+- U <= 699/1000: True (margin 437409/6250000000 = 6.998544e-5). U < 69853/100000: False (U exceeds it by 0.00040001456).
 Cross-check (run after my own verdict): the author's verify-it-yourself/verify_qrac333.py on the same file printed PASS with the same U_exact = 4368312591 / 6250000000.
 Run was deterministic (the author's rerun gave identical output; my checker is pure exact arithmetic with no randomness). The runtime was a few minutes at nice 19, one core.
 

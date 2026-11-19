@@ -29,4 +29,4 @@ Expected last output line: `PASS` (runs in ~1.5 seconds on a single laptop core 
 
 - **Mate Farkas, Nikolai Miklin, and Armin Tavakoli** (*Quantum* 9, 1643, 2025, https://arxiv.org/abs/2312.14142, https://github.com/nikolai-miklin/qrac_bounds).
 - **Jef Pauwels, Stefano Pironio, Erik Woodhead, and Armin Tavakoli** (*Phys. Rev. Lett.* 129, 250504, 2022, https://arxiv.org/abs/2208.07887).
-- **Miguel Navascues, Adrien Feix, Mateus Araujo, and Tamas Vertesi** (*Phys. Rev. X* 5, 041010, 2015) and **Denis Rosset** (`QDimSum`).
+- **Miguel Navascues, Adrien Feix, Mateus Araujo, and Tamas Vertesi** (*Phys. Rev. A* 92, 042117, 2015) and `QDimSum` by **Tavakoli, Rosset and Renou** (*PRL* 122, 070501, 2019).
