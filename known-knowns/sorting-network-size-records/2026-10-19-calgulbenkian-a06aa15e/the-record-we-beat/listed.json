@@ -1,0 +1,19 @@
+{
+ "url": "https://bertdobbelaere.github.io/sorting_networks_extended.html",
+ "fetched_utc": "2026-10-19T04:32:30Z",
+ "http": "200",
+ "page_sha256": "5515e5d7862caaf31058225ff215850c1987704f6bcd9b5920590e2478d41a53",
+ "page_says": "updated on Tue Oct 13 20:10:24 2026",
+ "n": 54,
+ "row_text": "54 (421, 20) (435, 19) 291\u2026421 11\u202619 Size ubound: SorterHunter , depth ubound: Batcher odd-even merge .",
+ "listed_pairs": [
+  [
+   421,
+   20
+  ],
+  [
+   435,
+   19
+  ]
+ ]
+}
