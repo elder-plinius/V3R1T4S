@@ -23,8 +23,8 @@ This executes `verify-it-yourself/check_dissections.py` (Python 3 standard libra
 ## Compared To
 
 - **Published Record (OEIS A182275, A116694, A333476)**:
-  - `A182275` (`https://oeis.org/A182275/b182275.txt`) ends at $n = 12$ (`a(12) = 59647666241586874002530830848160043213559146735474`, computed by Steve Butler via $F(2n+1)$ transfer matrix).
-  - `A116694` (`https://oeis.org/A116694/b116694.txt`) lists 210 antidiagonal entries for $d = 1 \dots 20$ ($m + n \le 19$ in 0-based indexing, so `A116694(13, 12)` at $m + n = 25$ was uncomputed).
+  - `A182275` (`https://oeis.org/A182275/b182275.txt`) ends at $n = 12$ (`a(12) = 59647666241586874002530830848160043213559146735474`, extended by Steve Butler for `a(11)-a(12)` in March 2014).
+  - `A116694` (`https://oeis.org/A116694/b116694.txt`) lists 210 antidiagonal entries in 1-based indexing (antidiagonals $1 \dots 20$, so $m + n \le 21$ with $m, n \ge 1$; `A116694(13, 12)` at $m + n = 25$ was uncomputed).
   - `A333476` (`https://oeis.org/A333476/b333476.txt`) lists rows $0 \le k \le n \le 12$ (91 entries).
 - **This Submission**: Extends `A182275` by three new consecutive terms (`a(13)`, `a(14)`, `a(15)`), computes the full $15 \times 15$ array `A116694(0..14, 0..14)` including `A116694(13, 12)`, and extends `A333476` by rows 13 and 14.
 
@@ -38,7 +38,7 @@ This executes `verify-it-yourself/check_dissections.py` (Python 3 standard libra
 - Prior work:
   - David A. Klarner and Spyros S. Magliveras, "The number of tilings of a block with blocks," *European Journal of Combinatorics* 9 (1988), 317-330 (`https://doi.org/10.1016/S0195-6698(88)80062-3`).
   - Helena Verrill and Joshua Smith (`https://oeis.org/A116694`, 2006).
-  - Matthew C. Russell and Steve Butler (`https://oeis.org/A182275`, 2010).
+  - Matthew C. Russell (`https://oeis.org/A182275` entry author, April 2012) and Steve Butler (`a(11)-a(12)` extension, March 2014).
   - Alois P. Heinz (`https://oeis.org/A116694/b116694.txt` and `https://oeis.org/A333476/b333476.txt`, 2012-2020).
   - Peter Kagey (`https://oeis.org/A333476`, 2020).
-  - Pablo Blanco, Robert Dougherty-Bliss, Natalya Ter-Saakov, and Doron Zeilberger, "The Amazing World of Framing," `https://arxiv.org/abs/2606.05439` (2026).
+  - Pablo Blanco, Robert Dougherty-Bliss, Natalya Ter-Saakov, and Doron Zeilberger, "In How Many Ways can a Rectangle be Rectangled?," `https://arxiv.org/abs/2606.05439` (2026).

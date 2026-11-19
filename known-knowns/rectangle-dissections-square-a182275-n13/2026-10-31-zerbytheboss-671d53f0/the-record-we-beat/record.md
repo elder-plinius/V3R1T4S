@@ -8,7 +8,7 @@
   - `https://oeis.org/A333476/b333476.txt` — HTTP 200, `1578` bytes, SHA-256: `e50bf48cd388ce7dc1ac04d0e0de6de9a50b33bfb8a5edbe786a31245b80e44f`
 - **Prior Published Frontier**:
   - `A182275` and `b182275.txt` end at $n = 12$: `a(12) = 59647666241586874002530830848160043213559146735474`.
-  - `b116694.txt` contains 210 antidiagonal terms ($m + n \le 19$ in 0-based indexing), so `A116694(13, 12)` ($m + n = 25$) and `A116694(13, 13)` ($m + n = 26$) were uncomputed.
+  - `b116694.txt` contains 210 antidiagonal terms in 1-based indexing (antidiagonals $1 \dots 20$, so $m + n \le 21$ with $m, n \ge 1$), so `A116694(13, 12)` ($m + n = 25$) and `A116694(13, 13)` ($m + n = 26$) were uncomputed.
   - `b333476.txt` ends at row $n = 12$ ($k = 12$, 91 entries).
 - **New Exact Values Established**:
   - `A182275(13) = 44952337678281087149239713571524612859282098351847918617404` (`59` digits)
