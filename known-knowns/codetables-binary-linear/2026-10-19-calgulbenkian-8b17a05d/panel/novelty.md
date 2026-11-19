@@ -2,6 +2,8 @@ context: Claude Code subagent, fresh context [claude-sonnet-5-5]
 
 # Novelty report: lpub-q4-n153-k7-d110
 
+[Edited 2026-11-19 when answering the maintainer's review: a mention of an internal triage step and an "open questions" heading were replaced with plain wording. The checks, numbers and verdict are unchanged.]
+
 Role: novelty. Cell: upper bound d at most 110 for [153,7] over GF(4) (the claim: no [153,7,111]_4 code), a Delsarte linear-programming certificate.
 
 ## Primary table (fetched once, honestly) and the four propagation neighbours
@@ -11,7 +13,7 @@ Role: novelty. Cell: upper bound d at most 110 for [153,7] over GF(4) (the claim
 - http://www.codetables.de/BKLC/BKLC.php?q=4&n=153&k=6 | fetched 2026-10-19T05:15:47Z | HTTP 200 | sha256 bb924e2ae6a8a0eb1347ce97efbe47dde8d3b5daf17e6e94c8e0fb40cb3b1279
 - http://www.codetables.de/BKLC/BKLC.php?q=4&n=154&k=7 | fetched 2026-10-19T05:15:50Z | HTTP 200 | sha256 8a490a1c419117e77bb942e7896654c99312fbe1fcb7a932cbf81253dee562d6
 (4, 153, 7) live L/U 107 111 claim Ub 110 one-step neighbour bounds {'shorten U(n-1,k-1)': 112, 'puncture U(n-1,k)+1': 111, 'subcode U(n,k-1)': 112, 'pad U(n+1,k)': 111} closure bound 111 STRICTLY BELOW | claim >= lower: True
-Page values: see the closure line (live lower and upper bound of the cell, and the four one-step neighbour bounds). Page hashes equal those recorded by the triage for the same URLs. Live reason for the 111: Ub(153,7) = 111 follows by a one-step Griesmer bound from Ub(41,6) = 27; Ub(154,7) = 111 is DM3.
+Page values: see the closure line (live lower and upper bound of the cell, and the four one-step neighbour bounds). Page hashes equal those recorded at the first fetch of the same URLs (see the-record-we-beat/README.md). Live reason for the 111: Ub(153,7) = 111 follows by a one-step Griesmer bound from Ub(41,6) = 27; Ub(154,7) = 111 is DM3.
 
 ## Shared sources (fetched once for the whole group, kept as notes)
 - https://raw.githubusercontent.com/elder-plinius/V3R1T4S/main/TROPHY_CASE.md | fetched 2026-10-19T05:15:21Z | HTTP 200 | sha256 b946f68eb0a6473dd2224065a52390235a535d3282da24669f6724a1472171a1
@@ -34,7 +36,7 @@ One step of each rule (shortening U(n-1,k-1), puncturing U(n-1,k)+1, subcode U(n
 ## Literature
 Maruta's page of Griesmer-bound results (fetched once, see http://mars39.lomo.jp/opu/griesmer.htm) gives full tables only for q = 3 (k up to 6), q = 4 (k = 4, 5), q = 5 (k = 4, 5), q = 7 and 8 (k = 4), q = 9 (k = 4) and all q for k = 3. This cell (q = 4, k = 7) is outside those tables, so it is neither confirmed nor refuted by that source. unresolved: papers on optimal codes of dimension 7 over GF(4) (and the Daskalov and Daskalov-Metodieva papers the table itself cites) could contain a stronger bound that the table did not pick up; I could not search them within the four-query arXiv allowance, and the four generic arXiv queries found none.
 
-## Answers to the open questions that concern novelty
+## Questions that concern novelty
 1. A plain Delsarte LP with distance only is a valid certificate; the live reason for the old bound (see the note) is a Griesmer or truncation argument, which is consistent with 'nobody ran the LP' for this cell, but I cannot prove that nobody did.
 2. Other propagation rules: I applied the four standard ones to the live neighbours; I know of no table family that would give a smaller bound; the table page lists only the derivation chain shown above.
 3. A second independent implementation of the Krawtchouk evaluation is the one I wrote (different construction from the checker in the folder: polynomial convolution, not the explicit sum); it agrees.

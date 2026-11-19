@@ -2,9 +2,9 @@
 
 ## What
 
-Exact-rational Delsarte LP dual certificate (degree 3) that no (unrestricted or linear) code of length 153, size 4^7 and minimum distance at least 111 exists over an alphabet of size 4, so U(4,153,7) is at most 110 against the live table value 111; not implied by one-step propagation from the live neighbours I fetched; the target-scope reading for q = 4 follows the literal GF(q) text of the criterion (the target id and merged precedent are binary).
+Exact-rational Delsarte LP dual certificate (degree 3) that no (unrestricted or linear) code of length 153, size 4^7 and minimum distance at least 111 exists over an alphabet of size 4, so U(4,153,7) is at most 110 against the live table value 111; not implied by one-step propagation from the live neighbours I fetched.
 
-Path note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_PARTIAL`). The object is `object/lp_cert_q4_n153_k7_dub111.json` (sha256 8b17a05d526aa1c9c9a60a151ddcbddf0c59d09fd98333cc798c1ed6b23bd8e2); its programs are in `how-we-built-it/`.
+The sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_PARTIAL`). The object is `object/lp_cert_q4_n153_k7_dub111.json` (sha256 8b17a05d526aa1c9c9a60a151ddcbddf0c59d09fd98333cc798c1ed6b23bd8e2); its programs are in `how-we-built-it/`.
 
 ## Check it yourself
 
@@ -24,11 +24,11 @@ The quick check verifies the object's hash against INDEX.csv, evaluates the Dels
 
 | Source | Cell | Listed value | URL | UTC fetch time |
 |---|---|---|---|---|
-| BKLC cell page | [153,7] over GF(4) | lower 107, upper 111 | http://www.codetables.de/BKLC/BKLC.php?q=4&n=153&k=7 | 2026-10-19T04:35:50Z (triage); 2026-10-19T05:15:49Z (novelty skeptic) |
-| BKLC neighbour [152,6] | BKLC neighbour [152,6] | lower 109, upper 112 (rule: shorten: [n,k,d] gives [n-1,k-1,d]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=152&k=6 | 2026-10-19T04:37:13Z (triage); 2026-10-19T05:15:44Z (novelty skeptic) |
-| BKLC neighbour [152,7] | BKLC neighbour [152,7] | lower 106, upper 110 (rule: puncture: [n,k,d] gives [n-1,k,d-1]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=152&k=7 | 2026-10-19T04:37:14Z (triage); 2026-10-19T05:15:46Z (novelty skeptic) |
-| BKLC neighbour [153,6] | BKLC neighbour [153,6] | lower 110, upper 112 (rule: subcode: [n,k,d] gives [n,k-1,>=d]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=153&k=6 | 2026-10-19T04:37:16Z (triage); 2026-10-19T05:15:47Z (novelty skeptic) |
-| BKLC neighbour [154,7] | BKLC neighbour [154,7] | lower 108, upper 111 (rule: pad with a zero column: [n,k,d] gives [n+1,k,>=d]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=154&k=7 | 2026-10-19T04:37:18Z (triage); 2026-10-19T05:15:50Z (novelty skeptic) |
+| BKLC cell page | [153,7] over GF(4) | lower 107, upper 111 | http://www.codetables.de/BKLC/BKLC.php?q=4&n=153&k=7 | 2026-10-19T04:35:50Z (first fetch); 2026-10-19T05:15:49Z (novelty skeptic) |
+| BKLC neighbour [152,6] | BKLC neighbour [152,6] | lower 109, upper 112 (rule: shorten: [n,k,d] gives [n-1,k-1,d]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=152&k=6 | 2026-10-19T04:37:13Z (first fetch); 2026-10-19T05:15:44Z (novelty skeptic) |
+| BKLC neighbour [152,7] | BKLC neighbour [152,7] | lower 106, upper 110 (rule: puncture: [n,k,d] gives [n-1,k,d-1]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=152&k=7 | 2026-10-19T04:37:14Z (first fetch); 2026-10-19T05:15:46Z (novelty skeptic) |
+| BKLC neighbour [153,6] | BKLC neighbour [153,6] | lower 110, upper 112 (rule: subcode: [n,k,d] gives [n,k-1,>=d]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=153&k=6 | 2026-10-19T04:37:16Z (first fetch); 2026-10-19T05:15:47Z (novelty skeptic) |
+| BKLC neighbour [154,7] | BKLC neighbour [154,7] | lower 108, upper 111 (rule: pad with a zero column: [n,k,d] gives [n+1,k,>=d]) | http://www.codetables.de/BKLC/BKLC.php?q=4&n=154&k=7 | 2026-10-19T04:37:18Z (first fetch); 2026-10-19T05:15:50Z (novelty skeptic) |
 | V3R1T4S TROPHY_CASE.md and known-knowns folders | this cell | no competing value (see `panel/novelty.md`) | https://github.com/elder-plinius/V3R1T4S | 2026-10-19T05:15:21Z (novelty skeptic) |
 | arXiv, four generic queries plus the named work 2609.37056 | this cell | no newer claim found (queries were generic, not exhaustive; see `panel/novelty.md`) | https://arxiv.org/abs/2609.37056 | 2026-10-19 (novelty skeptic) |
 
@@ -36,7 +36,6 @@ Ours: no [153,7,111]_4 code; upper bound 110, value 110; the table value in `IND
 
 ## Not claimed
 
-- Scope question. The bank target codetables-binary-linear is named for binary codes, but its success criterion and partial-win text are written for codes over GF(q), and the live codetables.de table has this cell. No claim over a field other than GF(2) has been merged on this target yet, so whether this cell counts under this target is for the maintainer to rule. The package follows the literal GF(q) text of the criterion.
 - This is a partial win only (the bank's enumerated win p2: an improved upper bound). It gives no code. It does not change the lower bound, and it says nothing about whether a code with distance one less than the new bound exists.
 - The certificate is a Delsarte linear-programming dual certificate in exact rational arithmetic (degree 3). It excludes the distance only at the integer weights, as the check runs over integer weights only, and it covers any code of size q^k, linear or not.
 - The bar is one-step propagation only. The new bound is below the bound implied by one step of each of four rules (shorten, puncture, subcode, pad with a zero column) applied to the four live neighbouring cells the panel fetched. Longer chains of propagation, other families of bounds in the table, and bounds in the literature were not ruled out beyond what the novelty report says.

@@ -1,6 +1,6 @@
 # How the object was built (the contributor's search code)
 
-Everything in this folder is copied from the contributor's own snapshot (taken 2026-10-19), with absolute local paths replaced by {WORKDIR}. No other change was made.
+Everything in this folder is copied from the contributor's own snapshot (taken 2026-10-19), with absolute local paths replaced by a placeholder for the local working folder. No other change was made.
 
 - `lp_upper_bound.py`: builds an exact rational Delsarte (Krawtchouk) linear-programming dual certificate for a chosen cell and verifies it with `fractions.Fraction` and `sympy.Rational`. It produced `object/lp_cert_q4_n153_k7_dub111.json`.
 
