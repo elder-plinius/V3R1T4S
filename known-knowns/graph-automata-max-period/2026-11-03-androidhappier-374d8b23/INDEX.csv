@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+graph-automata-max-period,"A357951(8), maximum period of an outer-totalistic cellular automaton (birth set B, survival set S, neighbours counted) over connected graphs with 8 nodes",150,"absent (DATA ends at a(7) = 66)",2026-11-03T04:15:37Z,object/VALUE.txt,374d8b230aee9f8089d4cb72ee49a554910d364f50811c49cf46ff23264007fa
