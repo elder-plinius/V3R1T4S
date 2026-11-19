@@ -1,11 +1,13 @@
 # Run It Yourself — `coin-basket-random-expected-values`
 
 ## Quick Verification
-To verify the computed terms, reproduction of OEIS baselines, and Jehn's conjecture audit from within this package directory:
+To run the bundled quick check from within this package directory:
 
 ```bash
 sh verify-it-yourself/run_checks.sh
 ```
+
+Note that `verify-it-yourself/check_coin_basket.py` compares the `object/` files with values stored in the script and recomputes from the game definition only `n = 1..6` (`k = 2`) and `n = 1..4` (`k = 3`), so it does not validate the new terms (`A391791(23..25)` and `A391792(19..21)`). Recomputing all terms through `n = 25` (`k = 2`) and `n = 21` (`k = 3`) from the definition requires compiling the solvers in the next section.
 
 Expected terminal output:
 ```text

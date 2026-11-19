@@ -1,13 +1,17 @@
 #!/usr/bin/env python3
 """
-Standalone Verifier for Jehn's Random-Basket Coin Game
+Standalone Quick Check for Jehn's Random-Basket Coin Game
 Target: coin-basket-random-expected-values
 
-Verifies:
-1. Exact integer values for A391791 (k=2) n=1..25 against definition and published terms.
-2. Exact integer values for A391792 (k=3) n=1..21 against definition and published terms.
-3. Verification of Jehn's conjecture audit for n=10..25.
-4. Independent from-scratch recursive Bellman computation for small n confirming definition parity.
+Scope of this bundled check:
+Compares the object/ files (A391791.txt, A391792.txt, and
+A391791_optimal_first_moves.txt) against values stored in this script, checks
+floor((n+3)/2) consistency on the stored first-move table for n = 10..25, and
+recomputes from the game definition only n = 1..6 (k = 2) and n = 1..4 (k = 3).
+Because from-scratch Bellman recursion in pure Python is restricted to those
+small n, this bundled script does not validate the new terms A391791(23..25)
+and A391792(19..21) from the definition (see how-we-built-it/ and
+RUN_IT_YOURSELF.md to recompute all terms from scratch).
 """
 
 import sys

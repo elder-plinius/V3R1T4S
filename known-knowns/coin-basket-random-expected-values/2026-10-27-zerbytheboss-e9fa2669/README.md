@@ -8,7 +8,7 @@ Run from this package directory:
 ```sh
 sh verify-it-yourself/run_checks.sh
 ```
-Expected output line: `PASS` (verifies in < 1 second using pure Python standard library: validates format and exact agreement of all published terms n=1..22 for k=2 and n=1..18 for k=3, validates all new terms, audits Jehn's conjecture for n=10..25, and dynamically evaluates exact backward-induction states from first principles).
+Expected output line: `PASS` (runs in < 1 second using pure Python standard library). Note on scope: the bundled check (`verify-it-yourself/check_coin_basket.py`) compares the `object/` files with values stored in the script (`n = 1..25` for `k = 2`, `n = 1..21` for `k = 3`, and the `n = 10..25` first-move table) and recomputes from the game definition only `n = 1..6` (`k = 2`) and `n = 1..4` (`k = 3`), so it does not validate the new terms (`A391791(23..25)` and `A391792(19..21)`); to recompute the new terms from scratch, compile and run the two independent solvers in `how-we-built-it/` as shown in `RUN_IT_YOURSELF.md`.
 
 ## Compared To
 - Published Sources:
