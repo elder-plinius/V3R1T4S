@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "target": "xs27_0ca1ugmicz651346",
+  "errors": [],
+  "structurally_valid": true,
+  "n_gliders": 32,
+  "rewind_ok": true,
+  "final_apgcode": "xs27_0ca1ugmicz651346",
+  "period": 1,
+  "live_csynth": 66,
+  "live_pseudo": false,
+  "csynth_snippet": "#CSYNTH xs27_0ca1ugmicz651346 costs 66 gliders",
+  "improvement": 34,
+  "rle": "#CLL state-numbering golly\nx = 1855, y = 2001, rule = B3/S23\n171bo$169bobo$170b2o264$1739bo$1738bo$1738b3o127$1609bo$1608bo$\n1608b3o100$1501bo$1501bobo$1501b2o2$1504bo$1503bo$1503b3o13$1490bo\n$1489bo$1489b3o12$689bobo$690b2o$690bo105$1359bo$1357b2o$1358b2o\n127$946bobo$942bo4b2o$940bobo4bo$941b2o128$1069bobo$1070b2o$1070bo\n18$1076b2o19bo$1077b2o17b2o$1076bo19bobo3$1074bo$1074b2o21b2o$\n1073bobo20b2o$1098bo111$1223b2o$1222b2o$1224bo6$938bo$938b2o288b2o\n$937bobo288bobo$1228bo122$1357bo$1356b2o$1356bobo4$1356b3o$1356bo$\n1357bo136$1478b2o5b2o$1477b2o6bobo$1479bo5bo3$1505b3o$1505bo$1506b\no13$684bo$684b2o$683bobo102$565bo$565b2o$564bobo127$442bo$442b2o$\n441bobo119$299b2o$300b2o$299bo3$299b3o$301bo$300bo2$1853b2o$1852b\n2o$1854bo113$173bo$173b2o$172bobo2$169b2o$168bobo$170bo181$3o$2bo$\nbo!\n"
+}
