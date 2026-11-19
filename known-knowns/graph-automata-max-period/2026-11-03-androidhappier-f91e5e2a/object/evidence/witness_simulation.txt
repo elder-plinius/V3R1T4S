@@ -1,0 +1,1 @@
+graph6=I?AAD@oIg n=10 edges=11 rule=[0, 2] start=2 preperiod=0 cycle_length=624
