@@ -1,0 +1,7 @@
+#CLL state-numbering golly
+x = 903, y = 721, rule = B3/S23
+180bo$181b2o$180b2o115$310bobo$311b2o$311bo5$311bobo$312b2o$312bo
+116$472bo$471bo$428bobo40b3o$429b2o$429bo3$432bobo$433b2o$433bo28b
+obo$462b2o$463bo18$462b3o$462bo$463bo127$312b2o$313b2o$312bo130$
+181bo$181b2o532b2o$180bobo531b2o$716bo174$892b3o$892bo$893bo4$900b
+2o$900bobo$900bo$3o$2bo$bo!
