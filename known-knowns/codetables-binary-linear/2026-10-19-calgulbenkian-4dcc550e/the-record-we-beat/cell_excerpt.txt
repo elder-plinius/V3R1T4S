@@ -1,0 +1,7 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=4&n=148&k=7 (fetched 2026-10-19T04:35:49Z, HTTP 200, page sha256 fe717030bf07d85ba648d9cdaee69d419745f2d3b65c4f24c93413be36c95254)
+Bounds on linear codes [148,7] over GF(4): lower bound 103, upper bound 107
+Table lines about this cell (copied from the page):
+Lb(148,7) = 102 is found by truncation of:
+Lb(151,7) = 105 Koh
+Ub(148,7) = 107 is found by considering truncation to:
+Ub(144,7) = 103 DM3
