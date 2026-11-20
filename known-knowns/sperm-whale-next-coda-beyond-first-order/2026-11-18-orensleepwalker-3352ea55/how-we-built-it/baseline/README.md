@@ -1,0 +1,1 @@
+Target-prescribed binary first-order R1 was reconstructed with nested smoothing at 0.8503173539892255 bits per coda. Fresh reproduction independently checked it. No published absolute score was supplied by the target. See panel/reproduce.md.

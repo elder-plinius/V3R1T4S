@@ -1,0 +1,2 @@
+status: CONFIRMED_PARTIAL
+confirmed_scope: On the specified five REC-held-out folds of the pinned sperm-whale-dialogues.csv, the training-only-selected categorical pipeline predicts adjacent speaker-label equality at 3,418 eligible positions with 0.780267728 bits per position versus 0.850317354 for the smoothed first-order same-or-switch reference, improving by 0.070049626 bits with a positive REC-bootstrap interval and exceeding all 400 payload and 400 first-order-preserving selected-pipeline control gains.
