@@ -1,6 +1,8 @@
 """Standard-library checker for one qubit stabilizer code [[n,k,5]] in the claim's object file.
 
-Usage: python3 check_stabilizer.py OBJECT.json N K TABLE_EXCERPT.txt
+Usage: python3 check_stabilizer.py OBJECT.json N K LOWER UPPER
+
+LOWER and UPPER are the lower and upper bounds of the live codetables.de cell for [[N,K]] (the package records the page URL, fetch time and hash in the-record-we-beat/README.md).
 
 The object file lists ten codes; this run selects the one with the given n and k.
 Checks, from the definition (exact integer bit arithmetic, no sampling):
@@ -18,7 +20,7 @@ Checks, from the definition (exact integer bit arithmetic, no sampling):
     (a nontrivial logical operator of weight 5) is found and verified by direct commutation.
     This witness search is a meet in the middle on syndromes (weight 2 plus weight 3,
     disjoint supports). d = 6 is therefore excluded;
- 7. the live codetables.de cell excerpt: lower bound < 5 <= upper bound.
+ 7. the live codetables.de bounds given as arguments: lower bound < 5 <= upper bound.
 Prints a final line beginning RESULT."""
 import sys, json, re, itertools
 
@@ -35,7 +37,7 @@ def rank_basis(rows):
             basis.append(v)
     return len(basis), basis
 
-def main(path, n, k, table_path):
+def main(path, n, k, lower, upper):
     d = json.load(open(path))
     cs = [c for c in d['new_d5_codes'] if c['n'] == n and c['k'] == k]
     assert len(cs) == 1, 'code not found exactly once'
@@ -152,11 +154,8 @@ def main(path, n, k, table_path):
         wx = sum(1 << q for q, ch in enumerate(wit_str) if ch in 'XY')
         wz = sum(1 << q for q, ch in enumerate(wit_str) if ch in 'ZY')
         wit_ok = (wt == 5 and synd(wit) == 0 and syndB(wx, wz) == 0 and reduce_with(basis, wit) != 0)
-    # ---- live cell excerpt
-    txt = open(table_path).read()
-    m = re.search(r'Bounds on \[\[(\d+),(\d+)\]\].*?lower bound:\s*(\d+)\s*upper bound:\s*(\d+)', txt)
-    assert m and int(m.group(1)) == n and int(m.group(2)) == k, 'table excerpt does not match n,k'
-    lo, up = int(m.group(3)), int(m.group(4))
+    # ---- live cell bounds, given as arguments
+    lo, up = lower, upper
     pure_ok = (collA == 0 and collB == 0)
     d_found = 5 if (pure_ok and wit_ok) else None
     table_ok = d_found is not None and lo < d_found <= up
@@ -172,4 +171,4 @@ def main(path, n, k, table_path):
     print(f'RESULT {"PASS" if ok else "FAIL"} [[{n},{k},{d_found}]] live [{lo},{up}]')
     sys.exit(0 if ok else 1)
 
-main(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), sys.argv[4])
+main(sys.argv[1], int(sys.argv[2]), int(sys.argv[3]), int(sys.argv[4]), int(sys.argv[5]))

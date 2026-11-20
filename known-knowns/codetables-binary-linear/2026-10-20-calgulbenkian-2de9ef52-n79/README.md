@@ -16,7 +16,7 @@ sh verify-it-yourself/run_checks.sh
 
 ## Submission id and the shared object file
 
-The object file object/new_stabilizer_codes_d5.json (sha256 2de9ef5264ea4bbbe334bf590f12f5ce89cb8f8ce30a464b4112e55f66a2927f) is one file shipped unchanged in ten packages (cells [[39,23]], [[75,57]], [[77,59]], [[79,61]], [[81,63]], [[83,65]], [[85,67]], [[87,69]], [[89,71]], [[91,73]]); this package claims only the entry n = 79, k = 61. The usual submission id ends in the first 8 hex digits of the object's sha256 (2de9ef52), which would be identical for all ten packages. So each id here is 2026-10-20-calgulbenkian-2de9ef52-n79, the usual id with the code length appended. (The earlier distance-4 packages sharing one six-code file used a different device: the first 8 hex digits of the sha256 of the text OBJECTSHA:n:k. We follow the instruction for this batch instead.)
+The object file object/new_stabilizer_codes_d5.json (sha256 2de9ef5264ea4bbbe334bf590f12f5ce89cb8f8ce30a464b4112e55f66a2927f) is one file shipped unchanged in ten packages (cells [[39,23]], [[75,57]], [[77,59]], [[79,61]], [[81,63]], [[83,65]], [[85,67]], [[87,69]], [[89,71]], [[91,73]]); this package claims only the entry n = 79, k = 61. The usual submission id ends in the first 8 hex digits of the object's sha256 (2de9ef52), which would be identical for all ten packages. So each id here is 2026-10-20-calgulbenkian-2de9ef52-n79, the usual id with the code length appended.
 
 ## Compared to
 
