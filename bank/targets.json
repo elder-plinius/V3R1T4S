@@ -33134,7 +33134,7 @@
     },
     {
      "id": "p2",
-     "statement": "Exceed the listed three-vs-rest Spearman (0.8791) under the same split by less than the full 0.02 margin: a three-seed mean strictly above 0.8791 whose bootstrap 95% interval over test sequences excludes 0.8791, with the full prediction file published."
+     "statement": "Exceed the listed three-vs-rest Spearman (0.8791) under the same split without meeting the full success criterion: a three-seed mean strictly above 0.8791 whose own bootstrap 95% interval over test sequences - the interval of the mean, not of each seed separately - excludes 0.8791, with the full prediction file published. The size of the margin over 0.8791 does not matter here; what distinguishes this from the full criterion is that the full criterion additionally requires being strictly higher than any published value for the same split."
     },
     {
      "id": "p3",
