@@ -1,0 +1,51 @@
+{
+ "cell": "7x31",
+ "d": 7,
+ "n": 31,
+ "k": 0,
+ "bar": "0.349359418702982094374030660208",
+ "budget": 20070.0,
+ "wave": 0,
+ "seeds": [
+  {
+   "src": "pr18:7x31_owhs.txt",
+   "what": "pull request 18 file 7x31_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x31_owhs.txt",
+   "sha256": "9722fdc2350d324e47abd9e6e24cc6e17d1cb4625f3dc3c704275b548e54b1f5"
+  },
+  {
+   "src": "current:7x31_jrr.txt",
+   "what": "leaderboard posted file 7x31_jrr.txt",
+   "url": "https://raw.githubusercontent.com/gnikylime/GameofSloanes/e43ad02ab7830cb7d0352d9e415c99f7f2014077/CurrentBestPackings/7x31_jrr.txt",
+   "sha256": "7d0e57f131750209b9f9d41994093a37c9783f182b9e1eeda2d9c811272b8d84"
+  }
+ ],
+ "parents": [
+  {
+   "src": "ours",
+   "what": "packing-records 7x32.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x32.txt",
+   "sha256": "11bda03625dc3308f02b8a4a971e7d0c8431df695828a37e3e4002b11c755042"
+  },
+  {
+   "src": "pr18:7x32_owhs.txt",
+   "what": "pull request 18 file 7x32_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x32_owhs.txt",
+   "sha256": "ba658cab9585e8c78e29937130e6bf941d2a68967a6014978e01bbd8ea008589"
+  }
+ ],
+ "children": [
+  {
+   "src": "ours",
+   "what": "packing-records 7x30.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x30.txt",
+   "sha256": "c3a325a490a3c4a7ae4c26f80bfbe524b4f909dba875780b44f0591085da686e"
+  },
+  {
+   "src": "pr18:7x30_owhs.txt",
+   "what": "pull request 18 file 7x30_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x30_owhs.txt",
+   "sha256": "4b8c8757f343c33e82830f97cf9756a5fde392a18bc5814d573bfc929dc0c40f"
+  }
+ ]
+}
