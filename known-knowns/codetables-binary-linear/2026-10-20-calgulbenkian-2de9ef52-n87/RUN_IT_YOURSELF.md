@@ -9,7 +9,7 @@ sh verify-it-yourself/run_checks.sh
 The last line should be `ALL CHECKS PASS`. The checker alone:
 
 ```sh
-python3 verify-it-yourself/check_stabilizer.py object/new_stabilizer_codes_d5.json 87 69 table-record/cell_87_69_excerpt.txt
+python3 verify-it-yourself/check_stabilizer.py object/new_stabilizer_codes_d5.json 87 69 the-record-we-beat/cell_87_69_excerpt.txt
 ```
 
 Expected last line: `RESULT PASS [[87,69,5]] live [4,6]`. The object file holds ten codes (one per cell of the ten claim folders built from the same file); the checker selects the code with n = 87 and k = 69. It takes under a few seconds.
