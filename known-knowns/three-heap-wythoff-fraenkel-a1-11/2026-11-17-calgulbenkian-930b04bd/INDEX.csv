@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+three-heap-wythoff-fraenkel-a1-11,N=3 A_1=11 (and Table 1 p1),Proved: alpha^11=-61 N1=N2=1214 N3=1381 (n2=1216 n1=3249),Proved only for A_1<=10,2026-11-16T19:42:23Z,object/wythoff_a1_11_certificate.json,930b04bd94e8ab8f9624c92df6de6bd51224d79798f54c985560d2831d86755e
