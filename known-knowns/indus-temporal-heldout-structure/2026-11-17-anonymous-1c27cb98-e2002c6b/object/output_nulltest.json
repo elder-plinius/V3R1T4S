@@ -1,0 +1,35 @@
+{
+  "seed": 20261117,
+  "B": 10000,
+  "ts": "2026-11-17T03:03:27.687369+00:00",
+  "pooled": {
+    "n": 1613,
+    "real": 0.5846,
+    "real_kn": 0.2808,
+    "real_synth": 0.1872,
+    "best_control": 0.3255,
+    "real_beats_all_controls": true,
+    "p": 0.0,
+    "real_minus_best_control": 0.2591
+  },
+  "Mohenjo-daro": {
+    "n": 665,
+    "real": 0.7098,
+    "real_kn": 0.3293,
+    "real_synth": 0.1173,
+    "best_control": 0.397,
+    "real_beats_all_controls": true,
+    "p": 0.0,
+    "real_minus_best_control": 0.3128
+  },
+  "Harappa": {
+    "n": 590,
+    "real": 0.4017,
+    "real_kn": 0.2153,
+    "real_synth": 0.2441,
+    "best_control": 0.3136,
+    "real_beats_all_controls": true,
+    "p": 0.0,
+    "real_minus_best_control": 0.0881
+  }
+}

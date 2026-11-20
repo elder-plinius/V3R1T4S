@@ -1,0 +1,20 @@
+{
+  "ts": "2026-11-17T02:58:10.508509+00:00",
+  "H5_prefix_truncation": {
+    "first_1": 0.5877,
+    "first_2": 0.5592,
+    "first_3": 0.5629,
+    "first_4": 0.5784,
+    "full": 0.5846
+  },
+  "H7_gap_code": {
+    "acc_wildcard_excluded_pooled": 0.6162,
+    "mean_OOV_fraction_heldout": 0.2861
+  },
+  "H8_reidentification": {
+    "pool_n": 1613,
+    "exact_M77_seq_match": 0,
+    "one_edit_M77_seq_match": 870,
+    "note": "exact matches should be 0 (dropped at pool build); 1-edit neighbors are recorded, not excluded"
+  }
+}

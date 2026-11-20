@@ -1,0 +1,111 @@
+{
+  "seed": 20261117,
+  "ts": "2026-11-17T03:01:20.608380+00:00",
+  "poolinfo": {
+    "identity_keys_len2": 294,
+    "m77_attested_keys": 130,
+    "pool_kept": 2363,
+    "pool_reps": 1613
+  },
+  "two_class": {
+    "pooled": {
+      "n": 1436,
+      "acc_claim": 0.6532,
+      "acc_kn3": 0.2834,
+      "acc_synth": 0.1936,
+      "p_boot": 0.0
+    },
+    "Mohenjo-daro": {
+      "n": 627,
+      "acc_claim": 0.7528,
+      "acc_kn3": 0.3333,
+      "acc_synth": 0.1148,
+      "p_boot": 0.0
+    },
+    "Harappa": {
+      "n": 517,
+      "acc_claim": 0.4487,
+      "acc_kn3": 0.207,
+      "acc_synth": 0.2592,
+      "p_boot": 0.0
+    }
+  },
+  "confusion_claim": {
+    "Pottery": {
+      "Seal": 108,
+      "Tablet": 34,
+      "Pottery": 5
+    },
+    "Seal": {
+      "Seal": 798,
+      "Tablet": 116,
+      "Pottery": 36
+    },
+    "Other": {
+      "Seal": 24,
+      "Tablet": 6
+    },
+    "Tablet": {
+      "Seal": 327,
+      "Tablet": 140,
+      "Pottery": 19
+    }
+  },
+  "otype_dist_pooled": {
+    "Seal": 950,
+    "Tablet": 486,
+    "Pottery": 147,
+    "Other": 30
+  },
+  "robust_position_unaware_4c": {
+    "acc_pooled": 0.6057,
+    "acc_MD": 0.791,
+    "acc_Harappa": 0.3119
+  },
+  "p2_fieldsymbol": {
+    "n": 663,
+    "acc_claim": 0.7511,
+    "acc_majority_per_site": 0.7602,
+    "acc_knfeat": 0.7587,
+    "p_claim_vs_majority": 0.9864,
+    "p_claim_vs_knfeat": 0.9589,
+    "site_majority": {
+      "Mohenjo-daro": "Unicorn",
+      "Harappa": "Unicorn",
+      "Dholavira": "Unicorn",
+      "Lothal": "Unicorn"
+    },
+    "by_site_n": {
+      "Mohenjo-daro": 392,
+      "Harappa": 103,
+      "Dholavira": 45,
+      "Lothal": 44,
+      "Kalibangan": 33,
+      "Chanhu-daro": 23,
+      "Nausharo": 9,
+      "Banawali": 6,
+      "Allahdino": 4,
+      "Bala-kot": 3,
+      "Rakhigarhi": 1
+    },
+    "symfam_dist": {
+      "Unicorn": 504,
+      "Other": 43,
+      "Gaur": 34,
+      "Elephant": 25,
+      "Zebu": 24,
+      "Bull": 16,
+      "Rhino": 11,
+      "Tiger": 6
+    }
+  },
+  "p3_ligature": {
+    "event": "stroke numeral (1-8) immediately before a counted good (575/585/520/390/405/407/900/845/923/550)",
+    "m77_substitution_rate": {
+      "407": 0.0
+    },
+    "heldout_rate": 0.0,
+    "heldout_events": "0/31",
+    "permutation_p_200": 1.0
+  }
+}

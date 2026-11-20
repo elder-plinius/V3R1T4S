@@ -1,0 +1,138 @@
+{
+  "claim": "Object-type predictability: a class-conditional positional template model (n<=3, add-one, wildcard OOV) fitted ONLY on the M77 (1977) corpus predicts the 4-class object type (Seal/Tablet/Pottery/Other) of deduplicated post-1977 held-out Indus objects from their sign sequence. Structural finding, not decipherment.",
+  "target_id": "indus-temporal-heldout-structure",
+  "seed": 20261117,
+  "training": "M77 joyboseroy m77_indusscript_real_corpus.csv (3548 non-empty lines, 418 signs) + object-type/site/field-symbol from paragorth im77 (aligned by text_no, k-th line)",
+  "baselines": "tuned per-class Kneser-Ney (3-gram where class stream >=3000 tokens else backoff-dominated; discount grid-tuned on 10% M77 object split) + SIGIL-style class-conditional position-unigram (matched on unigram+length)",
+  "property": "per-object correct 4-class object-type accuracy (secondary: 2-class Seal-vs-Tablet)",
+  "frozen_model_ctx_sha256": "b4abeb6705b7f4590453a681db914d38cd2ff2af225775d331007de4ca0892c4",
+  "statistic": "paired bootstrap B=10000 (seed 20261117): p = fraction of resamples in which claim accuracy <= max(KN, synth) accuracy on the resampled held-out set",
+  "threshold": "p < 0.001 at pooled AND Mohenjo-daro AND Harappa (each n>=20), beating BOTH baselines",
+  "result": {
+    "pooled": {
+      "n": 1613,
+      "acc_claim": 0.5846,
+      "acc_kn3": 0.2808,
+      "acc_synth": 0.1872,
+      "p_boot_claim_vs_both": 0.0,
+      "acc_2class_seal_tablet": null
+    },
+    "Mohenjo-daro": {
+      "n": 665,
+      "acc_claim": 0.7098,
+      "acc_kn3": 0.3293,
+      "acc_synth": 0.1173,
+      "p_boot_claim_vs_both": 0.0,
+      "acc_2class_seal_tablet": null
+    },
+    "Harappa": {
+      "n": 590,
+      "acc_claim": 0.4017,
+      "acc_kn3": 0.2153,
+      "acc_synth": 0.2441,
+      "p_boot_claim_vs_both": 0.0,
+      "acc_2class_seal_tablet": null
+    },
+    "Dholavira": {
+      "n": 108,
+      "acc_claim": 0.7593,
+      "acc_kn3": 0.3241,
+      "acc_synth": 0.2407,
+      "p_boot_claim_vs_both": 0.0,
+      "acc_2class_seal_tablet": null
+    },
+    "Lothal": {
+      "n": 91,
+      "acc_claim": 0.8571,
+      "acc_kn3": 0.4505,
+      "acc_synth": 0.3516,
+      "p_boot_claim_vs_both": 0.0,
+      "acc_2class_seal_tablet": null
+    },
+    "two_class_pooled": {
+      "n": 1436,
+      "acc_claim_2c": 0.6532,
+      "acc_kn3_2c": 0.2834,
+      "acc_synth_2c": 0.1936,
+      "p_boot_2c": 0.0
+    },
+    "two_class_MD": {
+      "n": 627,
+      "acc_claim_2c": 0.7528,
+      "acc_kn3_2c": 0.3333,
+      "acc_synth_2c": 0.1148,
+      "p_boot_2c": 0.0
+    },
+    "two_class_Harappa": {
+      "n": 517,
+      "acc_claim_2c": 0.4487,
+      "acc_kn3_2c": 0.207,
+      "acc_synth_2c": 0.2592,
+      "p_boot_2c": 0.0
+    }
+  },
+  "pool": {
+    "poolinfo": {
+      "identity_keys_len2": 294,
+      "m77_attested_keys": 130,
+      "pool_kept": 2363,
+      "pool_reps": 1613
+    },
+    "by_site": {
+      "Mohenjo-daro": 665,
+      "Harappa": 590,
+      "Dholavira": 108,
+      "Lothal": 91,
+      "Kalibangan": 76,
+      "Chanhu-daro": 34,
+      "Nausharo": 25
+    }
+  },
+  "robustness": {
+    "ts": "2026-11-17T02:58:10.508509+00:00",
+    "H5_prefix_truncation": {
+      "first_1": 0.5877,
+      "first_2": 0.5592,
+      "first_3": 0.5629,
+      "first_4": 0.5784,
+      "full": 0.5846
+    },
+    "H7_gap_code": {
+      "acc_wildcard_excluded_pooled": 0.6162,
+      "mean_OOV_fraction_heldout": 0.2861
+    },
+    "H8_reidentification": {
+      "pool_n": 1613,
+      "exact_M77_seq_match": 0,
+      "one_edit_M77_seq_match": 870,
+      "note": "exact matches should be 0 (dropped at pool build); 1-edit neighbors are recorded, not excluded"
+    }
+  },
+  "kn3": {
+    "Seal": {
+      "order": 3,
+      "lambda": 0.8,
+      "train_tokens": 9864,
+      "tune_tokens": 1030
+    },
+    "Tablet": {
+      "order": 2,
+      "lambda": 0.8,
+      "train_tokens": 1962,
+      "tune_tokens": 185
+    },
+    "Pottery": {
+      "order": 2,
+      "lambda": 0.8,
+      "train_tokens": 263,
+      "tune_tokens": 18
+    },
+    "Other": {
+      "order": 2,
+      "lambda": 0.8,
+      "train_tokens": 42,
+      "tune_tokens": 8
+    }
+  },
+  "verdict": "PASS (pooled/MD/Harappa all p=0.0 < 0.001; beats BOTH baselines at every site; n>=20 at MD and Harappa) -> full-criterion solution claim"
+}

@@ -1,0 +1,19 @@
+{
+  "frozen_at": "2026-11-17T02:58:37.583676+00:00",
+  "seed": 20261117,
+  "model": "class-conditional template, n<=3, add-one, wildcard OOV",
+  "class_priors": {
+    "Seal": 0.7587274774774775,
+    "Tablet": 0.19932432432432431,
+    "Pottery": 0.036036036036036036,
+    "Other": 0.0059121621621621625
+  },
+  "kn3": {
+    "Seal": 0.8,
+    "Tablet": 0.8,
+    "Pottery": 0.8,
+    "Other": 0.8
+  },
+  "ctx_counts_sha": null,
+  "ctx_counts_sha256": "b4abeb6705b7f4590453a681db914d38cd2ff2af225775d331007de4ca0892c4"
+}
