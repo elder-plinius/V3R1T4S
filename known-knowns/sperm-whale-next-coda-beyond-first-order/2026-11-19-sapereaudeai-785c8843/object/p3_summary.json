@@ -1,0 +1,172 @@
+{
+ "folds": {
+  "0": {
+   "n": 1327,
+   "ref_alpha": 0.3,
+   "lam": {
+    "one": 0.01,
+    "rep": 0.01,
+    "local": 0.01,
+    "full": 0.01
+   },
+   "bits": {
+    "bigram": 1.5076728991683102,
+    "one": 1.4950920486799575,
+    "rep": 1.475949050282678,
+    "local": 1.3831406287613401,
+    "full": 1.3644132446381125
+   }
+  },
+  "1": {
+   "n": 1914,
+   "ref_alpha": 0.3,
+   "lam": {
+    "one": 0.001,
+    "rep": 0.01,
+    "local": 0.01,
+    "full": 0.01
+   },
+   "bits": {
+    "bigram": 1.7059448503082546,
+    "one": 1.687392557392035,
+    "rep": 1.686021411545826,
+    "local": 1.614153808252661,
+    "full": 1.593230309749782
+   }
+  },
+  "2": {
+   "n": 2003,
+   "ref_alpha": 0.3,
+   "lam": {
+    "one": 0.01,
+    "rep": 0.01,
+    "local": 0.01,
+    "full": 0.01
+   },
+   "bits": {
+    "bigram": 1.8709033775374908,
+    "one": 1.8726450399680616,
+    "rep": 1.8646147747304709,
+    "local": 1.7537592151078243,
+    "full": 1.7213395987276943
+   }
+  },
+  "3": {
+   "n": 1568,
+   "ref_alpha": 0.3,
+   "lam": {
+    "one": 0.01,
+    "rep": 0.01,
+    "local": 0.01,
+    "full": 0.01
+   },
+   "bits": {
+    "bigram": 1.848437756811054,
+    "one": 1.8488853929867999,
+    "rep": 1.8290314624769128,
+    "local": 1.7379268360210212,
+    "full": 1.6977884796549743
+   }
+  },
+  "4": {
+   "n": 1689,
+   "ref_alpha": 0.3,
+   "lam": {
+    "one": 0.001,
+    "rep": 0.01,
+    "local": 0.01,
+    "full": 0.01
+   },
+   "bits": {
+    "bigram": 1.5940547568399608,
+    "one": 1.592983166374495,
+    "rep": 1.5791799601894536,
+    "local": 1.5192304922615347,
+    "full": 1.505193740527712
+   }
+  }
+ },
+ "pooled_bits": {
+  "bigram": 1.7179142139602834,
+  "one": 1.712053332868193,
+  "rep": 1.7004598342704087,
+  "local": 1.6149567452692102,
+  "full": 1.589491467897628
+ },
+ "n_scored": 8501,
+ "comparisons": {
+  "full_vs_bigram": [
+   0.1284227460626554,
+   0.08793142691897537,
+   0.16299376323756598
+  ],
+  "one_vs_bigram": [
+   0.005860881092090056,
+   8.186776341898152e-05,
+   0.012151370490151798
+  ],
+  "full_vs_rep": [
+   0.11096836637278079,
+   0.07382465146597576,
+   0.14304776717772738
+  ],
+  "full_vs_local": [
+   0.025465277371582468,
+   0.014740732534335398,
+   0.03562690872021246
+  ],
+  "full_vs_bigram_pristine_folds_124_diag": [
+   0.11869392367754682,
+   0.06996318067854394,
+   0.15639365917657438,
+   5606
+  ]
+ },
+ "gate_p3": {
+  "gain_ge_0.05": true,
+  "ci_excludes_0": true,
+  "met": true
+ },
+ "leakage": {
+  "0": {
+   "checked": 6635,
+   "changed": 0,
+   "max_abs_diff": 0.0,
+   "positive_control_flagged": 1327,
+   "positions": 1327,
+   "single_vs_batch_max_abs": 0.0
+  },
+  "1": {
+   "checked": 9570,
+   "changed": 0,
+   "max_abs_diff": 0.0,
+   "positive_control_flagged": 1914,
+   "positions": 1914,
+   "single_vs_batch_max_abs": 0.0
+  },
+  "2": {
+   "checked": 10015,
+   "changed": 0,
+   "max_abs_diff": 0.0,
+   "positive_control_flagged": 2003,
+   "positions": 2003,
+   "single_vs_batch_max_abs": 0.0
+  },
+  "3": {
+   "checked": 7840,
+   "changed": 0,
+   "max_abs_diff": 0.0,
+   "positive_control_flagged": 1568,
+   "positions": 1568,
+   "single_vs_batch_max_abs": 0.0
+  },
+  "4": {
+   "checked": 8445,
+   "changed": 0,
+   "max_abs_diff": 0.0,
+   "positive_control_flagged": 1689,
+   "positions": 1689,
+   "single_vs_batch_max_abs": 0.0
+  }
+ }
+}
