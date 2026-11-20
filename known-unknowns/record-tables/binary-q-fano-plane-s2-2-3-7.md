@@ -1,6 +1,6 @@
 # MOONSHOT - The binary q-analog of the Fano plane S_2[2,3,7] (fallback: a (7,4;3)_2 subspace code with more than 333 planes)
 
-📊 **Record tables** · moonshot (famous, long odds) · tractability ★★☆☆☆ · compute: needs cluster (exhaustive or symmetry-reduced ILP/SAT); partial wins laptop-days · open as of 2026-10-30
+📊 **Record tables** · moonshot (famous, long odds) · tractability ★★☆☆☆ · compute: needs cluster (exhaustive or symmetry-reduced ILP/SAT); partial wins laptop-days · open as of 2026-11-18
 
 ## The problem
 
@@ -14,7 +14,7 @@ Full win (either direction): (a) an explicit list of 381 planes of F_2^7 (each a
 
 - **p1:** A set of at least 334 planes of F_2^7, pairwise intersecting in at most a 1-dimensional subspace (i.e. every line in at most one plane), strictly beating A_2(7,4;3) >= 333.
 - **p2:** Settle the research problem in arXiv 2112.11766 Section 6 in either direction: 240 planes in PG(6,2) admitting an automorphism pi of order 5, all disjoint from the plane F of pi-fixed points (an order-5 element of GL(7,2) fixes exactly a 3-dim subspace, 7 points), no two meeting in a line, and covering each of the 120 points outside F exactly 14 times (explicit planes plus the matrix of pi), or an exhaustive certificate that none exist. The survey text says '15 times', which is arithmetically impossible (240*7 = 1680 = 120*14); 14 is the count forced in a q-Fano plane by the stated complementary set (F plus 140 planes meeting F in a point).
-- **p3:** For the relaxation in arXiv 2112.11766 Section 6 (45 planes of F_2^6 with every 5-space containing exactly five, every point in exactly five, each line and each solid in at most one), an explicit set with strictly more alpha'-points in total than the stated lower bound 19, or in one fixed 5-space strictly more than 15.
+- **p3:** For the relaxation in arXiv 2112.11766 Section 6 (45 planes of F_2^6 with every 5-space containing exactly five, every point in exactly five, each line and each solid in at most one), an explicit set with strictly more alpha'-points in total than the stated lower bound 19, or in one fixed 5-space strictly more than 15. Not reachable as stated: two independent SAT certificates (see pitfalls) show that no such set has more than 15 alpha'-points, in total or in one 5-space, so the maximum is 15 for both counts.
 
 ## How a win is checked
 
@@ -49,6 +49,7 @@ False wins others have fallen for. A claim that walks into one of these will not
 - Do not confuse with the ternary case or with partial q-Fano planes; the win is about q=2, n=7, k=3.
 - arXiv 1709.05145 (Bamberg, Ihringer, Lansdown, Royle) claimed a trivial automorphism group but was withdrawn after a computational mistake; the proven bound is order <= 2.
 - The Bayreuth table site was unreachable on 2026-10-30; use the survey and arXiv for status.
+- p3's bounds (total between 19 and 44, one 5-space between 15 and 22, by ILP; the same sentence in v1, v2 and v3) do not match the stated definition. Under that definition (every point and every 5-space in exactly five planes, so #C = 45) the maximum is 15 for both counts, shown by two independent certificates: (1) a written structure theorem (the alpha'-points carry an alternating form; five cases) with five CaDiCaL refutations, 135 DRAT proofs checked by drat-trim; (2) a direct encoding of the definition with three proved covering lemmas and GL(6,2) orbit splitting, 545 + 496 leaves for the total and 15 + 93 for one 5-space, every leaf refuted by CaDiCaL 2.1.3 with a DRAT proof checked by drat-trim. 15 is attained, with all 15 points in one 5-space. Reading 'exactly five' as 'at least five' gives a 53-plane set with 19 alpha'-points, 15 of them in one 5-space, which matches the survey's two lower bounds, so its ILP probably used at-least-five constraints.
 
 ## Point your agent at it
 
