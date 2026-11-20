@@ -1,0 +1,14 @@
+# How We Found It (`contributor text, unverified`)
+
+*Note: contributor text, unverified.*
+
+## 1. Brief & Bottleneck
+
+Three-dimensional grid graphs lack Kasteleyn orientations because of non-planar `K_{3,3}` minors, so enumerating domino tilings of `P_6 x P_6 x P_7` (`252` vertices: `126` even + `126` odd, `636` edges) requires exact exponential-width transfer/frontier methods. In March 2026, Steven Kotlarz computed `A028446(3) = A049507(6)` (`P_6^3`, `216` vertices) by storing `(u32_state, u64_count)` pairs and sorting/deduplicating up to `C(30, 14) = 145,422,675` pairs at each step. On `P_6 x P_6 x P_7`, the frontier width reaches `W = 32` (`C(32, 15) = 565,722,720` states), where sort-dedup over `(state, count)` pairs would require `> 13 GiB` RAM and heavy comparison overhead.
+
+## 2. What Worked
+
+1. **Fermionic particle-hole combinadic indexing (zero hash/sort overhead):** Because every internal matching edge pairs one odd and one even vertex, flipping bits on even frontier vertices (`1 = matched`) while keeping `1 = unmatched` on odd frontier vertices gives every valid frontier configuration at step `t` the exact constant popcount `K_t = (#odd_processed - #even_processed) + W_{t,even}`. Enumerating bitmasks in Gosper's order makes unranking `O(1)` unit-stride, while splitting masks into cache-resident slices makes combinadic ranking `O(1)` with zero state keys stored.
+2. **Engine 1 — 3-Piece Meet-in-the-Middle across `s = x + y + z = 8` (`Order A`):** Sweeping `s = 0..7` (`111` vertices) from `(0,0,0)` and `s = 16..9` (`111` vertices) from `(5,5,6)` stops on `29`-vertex planes (`C(29, 15) = 77,558,760` states = `296 MiB`). Because `V_{s=8}` (`30` even vertices) is an independent separator and `15 + 15 = 30`, pinning just `2` vertices of `V_{s=8}` in a 4-case outer loop caps `W <= 30` (`<= 1.9 GiB` total RAM) and reduces contraction to a reversed-index dot product `out_L[i] * out_R[sz - 1 - i]`. Ten 31-bit primes (`Prime Set A`) gave `A049507(7) = 781760467628825425251897322894619609502208`.
+3. **Engine 2 — Full End-to-End Push-DP under Tilted Hyperplane `Order B` (`4x + 5y + 5z`):** What failed initially in our first prototype of Engine 2 was allocating `uint16_t` vectors via `calloc`/`free` on macOS, where `libmalloc`'s large-magazine cache retained freed `1.05 GiB` regions and pushed RSS to `4.49 GiB`. Replacing `calloc`/`free` with two preallocated anonymous `mmap` ping-pong buffers fixed peak RSS at `2.11 GiB`. Combined with zero-state skipping and deferred `uint16_t` atomic reduction across 15 disjoint primes (`Prime Set B`, `~41s` per prime), Engine 2 reproduced the exact same 42-digit integer.
+4. **Algebraic & group-action checks:** Exact `GF(2)` elimination (`rank = 120`, `det = 0`), a closed-form `z`-reflection fixed-point identity `|Fix(zeta)| = A049507(1) * A049507(3)`, and exact `D_4` subgroup-lattice Mobius inversion (`mod 8`) all agreed with `A049507(7)` independently of full-grid DP.
