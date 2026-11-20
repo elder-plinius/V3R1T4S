@@ -1,0 +1,5 @@
+rule=110
+n=26
+max_period=351
+witness=0x2c3f61f
+impl=1

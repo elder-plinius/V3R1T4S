@@ -1,0 +1,1 @@
+impl2 rule=110 n=11 colour=512B
