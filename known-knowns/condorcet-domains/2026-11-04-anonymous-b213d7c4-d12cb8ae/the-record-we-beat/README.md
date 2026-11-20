@@ -1,0 +1,3 @@
+The fixed v1 [Table 4](https://arxiv.org/html/2601.07336v1) n=25 f(n)&h(n) construction lower bound is 160316046. TABLE_SNAPSHOT.json records the URL, exact UTC fetch, HTTP 200, body SHA256 and selected response headers, plus the independent fresh latest-version metadata. No third-party page, PDF or dataset is included.
+
+The published-preprint table comparison is distinct from open, unmerged public PR762 (180870896) and PR389 (178950728). PR388 is an open, unmerged n=24 source dependency, rather than a same-n table entry or published theorem. See the unchanged panel reports for dated literature and search limits.
