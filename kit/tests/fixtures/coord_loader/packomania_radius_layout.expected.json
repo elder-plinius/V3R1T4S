@@ -1,0 +1,55 @@
+{
+ "fixture": "packomania_radius_layout.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  1,
+  7,
+  8,
+  9,
+  10
+ ],
+ "found_columns": [
+  1,
+  5
+ ],
+ "expected_columns": [
+  3,
+  4
+ ],
+ "with_trailing_radius": {
+  "status": "ok",
+  "N": 4,
+  "columns": 3,
+  "coords": [
+   [
+    "0.250000000000",
+    "0.250000000000",
+    "-0.250000000000"
+   ],
+   [
+    "-0.250000000000",
+    "-0.250000000000",
+    "-0.250000000000"
+   ],
+   [
+    "-0.250000000000",
+    "0.250000000000",
+    "0.250000000000"
+   ],
+   [
+    "0.250000000000",
+    "-0.250000000000",
+    "0.250000000000"
+   ]
+  ]
+ },
+ "must_not": [
+  "read the radius column as a coordinate",
+  "return any coords"
+ ],
+ "note": "synthetic Packomania layout: radius line 1 + 'index x y z radius' rows. Raises by default (strict); clean N=4 only with trailing_radius=True"
+}

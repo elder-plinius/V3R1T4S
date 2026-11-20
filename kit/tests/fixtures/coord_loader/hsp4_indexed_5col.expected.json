@@ -1,0 +1,43 @@
+{
+ "fixture": "hsp4_indexed_5col.txt",
+ "synthetic": true,
+ "dim": 4,
+ "allow_index": true,
+ "status": "ok",
+ "anomaly": null,
+ "N": 3,
+ "columns": 4,
+ "index_stripped": true,
+ "index_base": 0,
+ "coords": [
+  [
+   "0.500000000000",
+   "-0.500000000000",
+   "0.500000000000",
+   "-0.500000000000"
+  ],
+  [
+   "0.000000000000",
+   "0.000000000000",
+   "1.000000000000",
+   "0.000000000000"
+  ],
+  [
+   "0.600000000000",
+   "0.000000000000",
+   "-0.800000000000",
+   "0.000000000000"
+  ]
+ ],
+ "compare": "exact decimal string",
+ "disambiguation": "5 numeric columns with dim=4: col0 is 0,1,2 (sequential integers) so it is an index and is stripped",
+ "with_allow_index_false": {
+  "status": "anomaly",
+  "anomaly": "dimension_mismatch",
+  "rows": [
+   1,
+   2,
+   3
+  ]
+ }
+}

@@ -1,0 +1,27 @@
+{
+ "fixture": "ccd_lj13_truncated_row.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "anomaly",
+ "anomaly": "dimension_mismatch",
+ "rows": [
+  13
+ ],
+ "found_columns": [
+  3,
+  4
+ ],
+ "expected_columns": [
+  3,
+  4
+ ],
+ "natoms_expected": 13,
+ "must_not": [
+  "return 12 atoms",
+  "read line 13 as x y z (index as x)",
+  "return any coords",
+  "report an energy"
+ ],
+ "note": "mixed row widths (4 vs 3 numeric tokens): natoms mismatch, the file is truncated and must be rejected"
+}
