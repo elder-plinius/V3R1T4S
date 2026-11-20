@@ -1,0 +1,319 @@
+[
+  {
+    "id": 3208,
+    "file": "Jall642_3.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 96,
+    "ub": 142,
+    "best_mk": 142,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 9,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 6,
+      "UNKNOWN": 3
+    },
+    "secs": 28.56
+  },
+  {
+    "id": 2935,
+    "file": "Jall587_5.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 128,
+    "ub": 178,
+    "best_mk": 178,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 35,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 32,
+      "UNKNOWN": 3
+    },
+    "secs": 30.01
+  },
+  {
+    "id": 3207,
+    "file": "Jall642_2.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 100,
+    "ub": 144,
+    "best_mk": 144,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 17,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 15,
+      "UNKNOWN": 2
+    },
+    "secs": 28.32
+  },
+  {
+    "id": 2799,
+    "file": "Jall560_4.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 154,
+    "ub": 194,
+    "best_mk": 194,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 24,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 22,
+      "UNKNOWN": 2
+    },
+    "secs": 28.99
+  },
+  {
+    "id": 2949,
+    "file": "Jall590_4.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 115,
+    "ub": 129,
+    "best_mk": 129,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 1623,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 1623
+    },
+    "secs": 28.02
+  },
+  {
+    "id": 3098,
+    "file": "Jall620_3.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 110,
+    "ub": 124,
+    "best_mk": 124,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 1268,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 1268
+    },
+    "secs": 28.01
+  },
+  {
+    "id": 3187,
+    "file": "Jall638_2.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 65,
+    "ub": 79,
+    "best_mk": 79,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 1250,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 1249,
+      "UNKNOWN": 1
+    },
+    "secs": 28.02
+  },
+  {
+    "id": 2818,
+    "file": "Jall564_3.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 78,
+    "ub": 91,
+    "best_mk": 91,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 1330,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 1330
+    },
+    "secs": 28.0
+  },
+  {
+    "id": 3062,
+    "file": "Jall613_2.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 195,
+    "ub": 275,
+    "best_mk": 275,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 11,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 8,
+      "UNKNOWN": 3
+    },
+    "secs": 30.01
+  },
+  {
+    "id": 3199,
+    "file": "Jall640_4.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 207,
+    "ub": 287,
+    "best_mk": 287,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 11,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 8,
+      "UNKNOWN": 3
+    },
+    "secs": 28.61
+  },
+  {
+    "id": 3203,
+    "file": "Jall641_3.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 152,
+    "ub": 232,
+    "best_mk": 232,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 6,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 3,
+      "INFEASIBLE": 3
+    },
+    "secs": 28.09
+  },
+  {
+    "id": 3197,
+    "file": "Jall640_2.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 230,
+    "ub": 308,
+    "best_mk": 308,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 6,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 3,
+      "UNKNOWN": 3
+    },
+    "secs": 30.01
+  },
+  {
+    "id": 1756,
+    "file": "Jall352_1.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 51,
+    "ub": 56,
+    "best_mk": 56,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 4,
+      "INFEASIBLE": 1
+    },
+    "secs": 30.01
+  },
+  {
+    "id": 1758,
+    "file": "Jall352_3.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 42,
+    "ub": 47,
+    "best_mk": 47,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 6,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 4,
+      "INFEASIBLE": 2
+    },
+    "secs": 30.02
+  },
+  {
+    "id": 1623,
+    "file": "Jall325_3.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 47,
+    "ub": 51,
+    "best_mk": 51,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 4,
+      "INFEASIBLE": 1
+    },
+    "secs": 30.02
+  },
+  {
+    "id": 1625,
+    "file": "Jall325_5.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 35,
+    "ub": 39,
+    "best_mk": 39,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 6,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 3,
+      "UNKNOWN": 3
+    },
+    "secs": 30.03
+  }
+]

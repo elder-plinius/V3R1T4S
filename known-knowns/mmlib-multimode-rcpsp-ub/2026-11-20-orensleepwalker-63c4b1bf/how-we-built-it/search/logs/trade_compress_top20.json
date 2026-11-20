@@ -1,0 +1,390 @@
+[
+  {
+    "id": 1758,
+    "file": "Jall352_3.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 42,
+    "ub": 47,
+    "best_mk": 47,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 27.6
+  },
+  {
+    "id": 1625,
+    "file": "Jall325_5.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 35,
+    "ub": 39,
+    "best_mk": 39,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 27.6
+  },
+  {
+    "id": 1818,
+    "file": "Jall364_3.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 39,
+    "ub": 43,
+    "best_mk": 43,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 8,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 4,
+      "INFEASIBLE": 4
+    },
+    "secs": 23.57
+  },
+  {
+    "id": 1768,
+    "file": "Jall354_3.mm",
+    "ub_ref": "1",
+    "act": 100,
+    "modes": 3,
+    "lb": 29,
+    "ub": 32,
+    "best_mk": 32,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 498,
+    "file": "Jall100_3.mm",
+    "ub_ref": "1",
+    "act": 50,
+    "modes": 3,
+    "lb": 194,
+    "ub": 243,
+    "best_mk": 243,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 38,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 34,
+      "UNKNOWN": 4
+    },
+    "secs": 23.51
+  },
+  {
+    "id": 766,
+    "file": "Jall154_1.mm",
+    "ub_ref": "1",
+    "act": 50,
+    "modes": 6,
+    "lb": 108,
+    "ub": 137,
+    "best_mk": 137,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 9,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 4,
+      "UNKNOWN": 5
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 3208,
+    "file": "Jall642_3.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 96,
+    "ub": 142,
+    "best_mk": 142,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 3207,
+    "file": "Jall642_2.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 100,
+    "ub": 144,
+    "best_mk": 144,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.02
+  },
+  {
+    "id": 2524,
+    "file": "Jall505_4.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 6,
+    "lb": 215,
+    "ub": 300,
+    "best_mk": 300,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 6,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5,
+      "INFEASIBLE": 1
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 2935,
+    "file": "Jall587_5.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 128,
+    "ub": 178,
+    "best_mk": 178,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 6,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 2,
+      "UNKNOWN": 4
+    },
+    "secs": 25.02
+  },
+  {
+    "id": 3073,
+    "file": "Jall615_3.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 9,
+    "lb": 95,
+    "ub": 128,
+    "best_mk": 128,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 4,
+      "INFEASIBLE": 1
+    },
+    "secs": 23.83
+  },
+  {
+    "id": 2668,
+    "file": "Jall534_3.mm",
+    "ub_ref": "5",
+    "act": 100,
+    "modes": 6,
+    "lb": 134,
+    "ub": 180,
+    "best_mk": 180,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 1446,
+    "file": "Jall290_1.mm",
+    "ub_ref": "5",
+    "act": 50,
+    "modes": 9,
+    "lb": 93,
+    "ub": 134,
+    "best_mk": 134,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 8,
+    "wins": 0,
+    "statuses": {
+      "INFEASIBLE": 2,
+      "UNKNOWN": 6
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 1451,
+    "file": "Jall291_1.mm",
+    "ub_ref": "5",
+    "act": 50,
+    "modes": 9,
+    "lb": 69,
+    "ub": 98,
+    "best_mk": 98,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 10,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 6,
+      "INFEASIBLE": 4
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 3201,
+    "file": "Jall641_1.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 142,
+    "ub": 218,
+    "best_mk": 218,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.02
+  },
+  {
+    "id": 3068,
+    "file": "Jall614_3.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 122,
+    "ub": 187,
+    "best_mk": 187,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 27.25
+  },
+  {
+    "id": 3203,
+    "file": "Jall641_3.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 152,
+    "ub": 232,
+    "best_mk": 232,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 3205,
+    "file": "Jall641_5.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 150,
+    "ub": 221,
+    "best_mk": 221,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.01
+  },
+  {
+    "id": 2932,
+    "file": "Jall587_2.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 126,
+    "ub": 184,
+    "best_mk": 184,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 4,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 4
+    },
+    "secs": 24.67
+  },
+  {
+    "id": 3066,
+    "file": "Jall614_1.mm",
+    "ub_ref": "7",
+    "act": 100,
+    "modes": 9,
+    "lb": 135,
+    "ub": 197,
+    "best_mk": 197,
+    "gain": 0,
+    "win": false,
+    "win_msg": "",
+    "tries": 5,
+    "wins": 0,
+    "statuses": {
+      "UNKNOWN": 5
+    },
+    "secs": 25.03
+  }
+]
