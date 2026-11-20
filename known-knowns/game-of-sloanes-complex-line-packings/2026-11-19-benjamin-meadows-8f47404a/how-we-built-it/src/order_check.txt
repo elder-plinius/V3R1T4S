@@ -1,0 +1,8 @@
+same-cell seed  pr17:5x36_grai.txt         score 3.799e-01  close 0/36
+same-cell seed  pr15:5x36_djma.txt         score 3.799e-01  close 0/36
+same-cell seed  pr14:5x36_sol.txt          score 3.986e-01  close 0/36
+same-cell seed  current:5x36_AUTO.txt      score 4.175e-01  close 0/36
+add: child      pr19:5x35_ARC.txt          score 4.038e-01  close 0/35  (first n-1 vectors)
+add: child      pr18:5x35_owhs.txt         score 1.638e-01  close 1/35  (first n-1 vectors)
+delete: parent  pr17:5x37_grai.txt         score 1.043e-02  close 20/36  (best with column 22 removed)
+delete: parent  pr15:5x37_djma.txt         score 1.043e-02  close 20/36  (best with column 22 removed)
