@@ -1,0 +1,8 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=5&n=66&k=11 (fetched 2026-10-19T04:35:47Z, HTTP 200, page sha256 1e895e2039327b4e5f7f937354d6b46af141ba8499f01bdb196837148077ca97)
+Bounds on linear codes [66,11] over GF(5): lower bound 38, upper bound 45
+Table lines about this cell (copied from the page):
+Lb(66,11) = 38 ARS
+Ub(66,11) = 45 follows by a one-step Griesmer bound from:
+Ub(20,10) = 9 is found by considering shortening to:
+Ub(13,3) = 9 is found by considering truncation to:
+Ub(12,3) = 8 Hi4
