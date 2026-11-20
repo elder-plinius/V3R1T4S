@@ -1,0 +1,2 @@
+# How we found it (contributor text, unverified)
+A weekend sweep (how-we-built-it/sweep2.py) recomputed the feasible radius of every posted Packomania ssp coordinate file and compared it with ssp.html and txt/radius.txt. A first framing as a coordinate-file problem was wrong: coordinates and ssp.html agree, and only radius.txt is higher, for 90 rows with N >= 1055. Exact-rational (A), mpmath (B) and Decimal-grid (C) cross-checks agree. A separate N <= 1000 defect (blank last sphere) is excluded here.
