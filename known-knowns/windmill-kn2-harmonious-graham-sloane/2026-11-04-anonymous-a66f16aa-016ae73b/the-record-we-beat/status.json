@@ -1,0 +1,15 @@
+{
+  "url": "https://www.combinatorics.org/ojs/index.php/eljc/article/view/DS6",
+  "fetched_utc": "2026-11-04T18:12:23.972111Z",
+  "http_status": 200,
+  "sha256": "657dcc530c17b46c5a5fec9bf0a1b4a05c37c20f3158e7e4b56aee065ae28655",
+  "edition": "twenty-eighth edition, October 30, 2025",
+  "selected_headers": {},
+  "cell": "Table 2, windmills, m=2: conjecture H iff n=4; no n=10 decision stated",
+  "pdf_url": "https://www.combinatorics.org/ojs/index.php/eljc/article/download/DS6/pdf/",
+  "pdf_sha256": "b1b5d8ba828b3fcd7eb4d73402b63252bd06b59bdcfb4f32f558f8af5898842e",
+  "interpretation": "The inspected official survey does not decide n=10; a bounded literature/code comparison is in panel/novelty.md.",
+  "adjacent_prior": "https://github.com/elder-plinius/V3R1T4S/pull/894",
+  "adjacent_prior_head": "ed0b44979755ef0bcf2d65bd6dce62183c65a535",
+  "adjacent_coverage": "PR894 certifies n=8 and explicitly leaves p1; its generic algorithms already accept n=10."
+}
