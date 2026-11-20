@@ -1,0 +1,218 @@
+A3-15-10	agl14+1/aff	g0	63	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=63 orbits=228249 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g1	63	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=63 orbits=228249 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g2	54	1.2.6.6	bar=31	ub=39	tl=900	secs=2	-	G=54 orbits=266823 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g3	54	1.2.6.6	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=267570 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g4	54	1.2.2.2.2.2.2.2	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=265842 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g5	54	1.2.6.6	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=265842 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g6	54	1.2.2.2.2.2.2.2	bar=31	ub=39	tl=900	secs=2	-	G=54 orbits=266085 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g7	42	1.14	bar=31	ub=39	tl=900	secs=2	-	G=42 orbits=341802 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g8	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342498 selfcompat=19 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g9	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=341802 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g10	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342558 selfcompat=36 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g11	36	1.2.4.4.4	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399492 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/aff	g12	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=514654 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g0	56	1.14	bar=31	ub=39	tl=900	secs=1	-	G=56 orbits=260036 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g1	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=345735 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g2	42	1.7.7	bar=31	ub=39	tl=900	secs=2	-	G=42 orbits=342374 selfcompat=23 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g3	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=343494 selfcompat=36 alive=36 nodes=1 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g4	42	1.14	bar=31	ub=39	tl=900	secs=2	-	G=42 orbits=342558 selfcompat=36 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g5	42	1.14	bar=31	ub=39	tl=900	secs=2	-	G=42 orbits=342747 selfcompat=18 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g6	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342435 selfcompat=30 alive=30 nodes=12 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g7	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=514654 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g8	28	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=517570 selfcompat=55 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g9	28	1.14	bar=31	ub=39	tl=900	secs=2	-	G=28 orbits=518013 selfcompat=12 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g10	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=512782 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g11	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=519264 selfcompat=18 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/fix	g12	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=513432 selfcompat=7 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g0	63	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=63 orbits=228249 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g1	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342558 selfcompat=36 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g2	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=341802 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g3	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342374 selfcompat=23 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g4	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=343494 selfcompat=36 alive=36 nodes=1 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g5	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=341645 selfcompat=1 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g6	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342498 selfcompat=19 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g7	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=345735 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g8	42	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=344925 selfcompat=63 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g9	42	1.14	bar=31	ub=39	tl=900	secs=1	-	G=42 orbits=342738 selfcompat=9 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g10	36	1.1.1.6.6	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399325 selfcompat=1 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g11	36	1.2.12	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399636 selfcompat=9 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g12	36	1.2.12	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399636 selfcompat=9 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g13	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=513432 selfcompat=7 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g14	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=518013 selfcompat=12 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g15	28	1.14	bar=31	ub=39	tl=900	secs=1	-	G=28 orbits=512782 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/glob	g16	21	1.7.7	bar=31	ub=39	tl=900	secs=1	-	G=21 orbits=683289 selfcompat=297 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g0	28	1.14	bar=31	ub=39	tl=300	secs=0	-	G=28 orbits=512468 selfcompat=1 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g1	21	1.7.7	bar=31	ub=39	tl=300	secs=0	-	G=21 orbits=684747 selfcompat=135 alive=135 nodes=66 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g2	18	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=0	-	G=18 orbits=797166 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g3	12	1.1.1.6.6	bar=31	ub=39	tl=300	secs=0	-	G=12 orbits=1197793 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g4	12	1.2.6.6	bar=31	ub=39	tl=300	secs=0	-	G=12 orbits=1197423 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g5	8	1.2.2.2.2.2.2.2	bar=31	ub=39	tl=300	secs=1	-	G=8 orbits=2214945 selfcompat=11907 alive=243 nodes=1 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g6	6	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=0	-	G=6 orbits=2394765 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl14+1/mono	g7	6	1.1.1.6.6	bar=31	ub=39	tl=300	secs=2	-	G=6 orbits=2393334 selfcompat=6507 alive=6507 nodes=447011 COMPLETE best=-1
+A3-15-10	agl15/aff	g0	72	3.12	bar=31	ub=39	tl=900	secs=1	-	G=72 orbits=199642 selfcompat=4 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g1	72	3.12	bar=31	ub=39	tl=900	secs=1	-	G=72 orbits=202362 selfcompat=18 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g2	60	15	bar=31	ub=39	tl=900	secs=2	-	G=60 orbits=240925 selfcompat=22 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g3	54	1.2.2.2.2.2.2.2	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=266085 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g4	54	3.6.6	bar=31	ub=39	tl=900	secs=2	-	G=54 orbits=266085 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g5	54	1.1.1.2.2.2.2.2.2	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=266814 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g6	45	15	bar=31	ub=39	tl=900	secs=2	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g7	36	3.12	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399178 selfcompat=12 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g8	36	3.12	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399178 selfcompat=12 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g9	36	3.12	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399216 selfcompat=45 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g10	36	1.2.4.4.4	bar=31	ub=39	tl=900	secs=1	-	G=36 orbits=399141 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g11	30	15	bar=31	ub=39	tl=900	secs=2	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	agl15/aff	g12	30	5.10	bar=31	ub=39	tl=900	secs=1	-	G=30 orbits=480270 selfcompat=66 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/aff	g13	27	3.3.3.3.3	bar=31	ub=39	tl=900	secs=2	-	G=27 orbits=531441 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g0	60	15	bar=31	ub=39	tl=900	secs=1	-	G=60 orbits=241363 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g1	60	15	bar=31	ub=39	tl=900	secs=1	-	G=60 orbits=240925 selfcompat=22 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g2	60	15	bar=31	ub=39	tl=900	secs=2	-	G=60 orbits=245398 selfcompat=40 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g3	60	15	bar=31	ub=39	tl=900	secs=2	-	G=60 orbits=242126 selfcompat=4 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g4	60	15	bar=31	ub=39	tl=900	secs=2	BAR	G=60 orbits=240809 selfcompat=10 alive=5 nodes=2 COMPLETE best=31
+A3-15-10	agl15/fix	g5	40	5.10	bar=31	ub=39	tl=900	secs=1	-	G=40 orbits=363510 selfcompat=35 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g6	40	5.10	bar=31	ub=39	tl=900	secs=2	-	G=40 orbits=361358 selfcompat=29 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g7	40	5.10	bar=31	ub=39	tl=900	secs=1	-	G=40 orbits=363726 selfcompat=18 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g8	40	5.5.5	bar=31	ub=39	tl=900	secs=1	-	G=40 orbits=361466 selfcompat=11 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g9	30	15	bar=31	ub=39	tl=900	secs=2	-	G=30 orbits=478343 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g10	30	15	bar=31	ub=39	tl=900	secs=1	-	G=30 orbits=481598 selfcompat=40 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g11	30	15	bar=31	ub=39	tl=900	secs=1	-	G=30 orbits=479411 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/fix	g12	24	3.12	bar=31	ub=39	tl=900	secs=2	-	G=24 orbits=599081 selfcompat=57 alive=39 nodes=1 COMPLETE best=-1
+A3-15-10	agl15/glob	g0	72	3.12	bar=31	ub=39	tl=900	secs=1	-	G=72 orbits=199913 selfcompat=2 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g1	72	3.12	bar=31	ub=39	tl=900	secs=1	-	G=72 orbits=202343 selfcompat=6 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g2	60	15	bar=31	ub=39	tl=900	secs=1	BAR	G=60 orbits=240809 selfcompat=10 alive=5 nodes=2 COMPLETE best=31
+A3-15-10	agl15/glob	g3	60	5.5.5	bar=31	ub=39	tl=900	secs=2	-	G=60 orbits=240912 selfcompat=9 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g4	60	5.10	bar=31	ub=39	tl=900	secs=2	-	G=60 orbits=240831 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g5	60	15	bar=31	ub=39	tl=900	secs=2	-	G=60 orbits=240925 selfcompat=22 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g6	60	15	bar=31	ub=39	tl=900	secs=1	-	G=60 orbits=240928 selfcompat=11 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g7	60	5.5.5	bar=31	ub=39	tl=900	secs=1	-	G=60 orbits=240973 selfcompat=2 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g8	40	5.5.5	bar=31	ub=39	tl=900	secs=1	-	G=40 orbits=361466 selfcompat=11 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g9	36	3.12	bar=31	ub=39	tl=900	secs=2	-	G=36 orbits=399216 selfcompat=45 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g10	36	3.6.6	bar=31	ub=39	tl=900	secs=2	-	G=36 orbits=404640 selfcompat=162 alive=18 nodes=1 COMPLETE best=-1
+A3-15-10	agl15/glob	g11	30	15	bar=31	ub=39	tl=900	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	agl15/glob	g12	30	15	bar=31	ub=39	tl=900	secs=1	-	G=30 orbits=478343 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/glob	g13	30	5.10	bar=31	ub=39	tl=900	secs=2	-	G=30 orbits=479394 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/mono	g0	30	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=481581 selfcompat=657 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/mono	g1	18	3.6.6	bar=31	ub=39	tl=300	secs=1	-	G=18 orbits=798255 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/mono	g2	15	5.5.5	bar=31	ub=39	tl=300	secs=5	-	G=15 orbits=956601 selfcompat=21609 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/mono	g3	12	1.1.1.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=12 orbits=1197423 selfcompat=81 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/mono	g4	8	1.2.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=8 orbits=1793952 selfcompat=9 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	agl15/mono	g5	6	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=2	-	G=6 orbits=2657205 selfcompat=531441 TOO_MANY_VERTICES
+A3-15-10	agl15/mono	g6	6	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391571 selfcompat=82971 TOO_MANY_VERTICES
+A3-15-10	agl15/mono	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	cyc15/aff	g0	54	3.3.3.3.3	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=265802 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g1	54	3.3.3.3.3	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=265802 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g2	54	3.3.3.3.3	bar=31	ub=39	tl=900	secs=1	-	G=54 orbits=265802 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g3	45	15	bar=31	ub=39	tl=900	secs=3	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g4	45	15	bar=31	ub=39	tl=900	secs=2	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g5	45	5.5.5	bar=31	ub=39	tl=900	secs=2	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g6	45	15	bar=31	ub=39	tl=900	secs=2	-	G=45 orbits=318901 selfcompat=5 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g7	45	15	bar=31	ub=39	tl=900	secs=1	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g8	45	15	bar=31	ub=39	tl=900	secs=1	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g9	45	15	bar=31	ub=39	tl=900	secs=1	-	G=45 orbits=318867 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g10	30	15	bar=31	ub=39	tl=900	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	cyc15/aff	g11	30	5.5.5	bar=31	ub=39	tl=900	secs=2	-	G=30 orbits=478301 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/aff	g12	30	15	bar=31	ub=39	tl=900	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	cyc15/aff	g13	30	15	bar=31	ub=39	tl=900	secs=2	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	cyc15/glob	g0	30	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=478301 selfcompat=2 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/glob	g1	30	15	bar=31	ub=39	tl=300	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	cyc15/glob	g2	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	cyc15/glob	g3	15	5.5.5	bar=31	ub=39	tl=300	secs=5	-	G=15 orbits=956601 selfcompat=21609 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/glob	g4	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	cyc15/glob	g5	10	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=10 orbits=1434902 selfcompat=98711 TOO_MANY_VERTICES
+A3-15-10	cyc15/glob	g6	6	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391566 selfcompat=529689 TOO_MANY_VERTICES
+A3-15-10	cyc15/glob	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	cyc15/mono	g0	30	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=478301 selfcompat=2 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/mono	g1	30	15	bar=31	ub=39	tl=300	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	cyc15/mono	g2	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	cyc15/mono	g3	15	5.5.5	bar=31	ub=39	tl=300	secs=5	-	G=15 orbits=956601 selfcompat=21609 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/mono	g4	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	cyc15/mono	g5	9	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	cyc15/mono	g6	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	cyc15/mono	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	grid3x5/aff	g0	30	5.10	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=480270 selfcompat=63 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/aff	g1	18	2.2.2.3.6	bar=31	ub=39	tl=300	secs=1	-	G=18 orbits=797202 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/aff	g2	15	5.5.5	bar=31	ub=39	tl=300	secs=4	-	G=15 orbits=956601 selfcompat=21609 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/aff	g3	12	1.1.1.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=12 orbits=1197504 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/aff	g4	9	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/aff	g5	6	1.1.1.2.2.2.2.2.2	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391606 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/aff	g6	6	1.2.2.2.2.2.2.2	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2392578 selfcompat=737019 TOO_MANY_VERTICES
+A3-15-10	grid3x5/aff	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	grid3x5/glob	g0	30	5.10	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=478326 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/glob	g1	24	1.2.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=24 orbits=599265 selfcompat=13 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/glob	g2	18	6.9	bar=31	ub=39	tl=300	secs=2	-	G=18 orbits=826794 selfcompat=13104 alive=720 nodes=121 COMPLETE best=-1
+A3-15-10	grid3x5/glob	g3	12	1.2.2.2.4.4	bar=31	ub=39	tl=300	secs=3	-	G=12 orbits=1202850 selfcompat=10935 alive=10935 nodes=8749 COMPLETE best=-1
+A3-15-10	grid3x5/glob	g4	12	2.3.4.6	bar=31	ub=39	tl=300	secs=3	-	G=12 orbits=1246590 selfcompat=11232 alive=11232 nodes=325 COMPLETE best=-1
+A3-15-10	grid3x5/glob	g5	8	1.2.4.8	bar=31	ub=39	tl=300	secs=12	-	G=8 orbits=1801197 selfcompat=9711 alive=9711 nodes=1600897 COMPLETE best=-1
+A3-15-10	grid3x5/glob	g6	6	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391566 selfcompat=529689 TOO_MANY_VERTICES
+A3-15-10	grid3x5/glob	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	grid3x5/mono	g0	30	15	bar=31	ub=39	tl=300	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	grid3x5/mono	g1	18	1.1.1.1.1.2.2.2.2.2	bar=31	ub=39	tl=300	secs=1	-	G=18 orbits=797526 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/mono	g2	15	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=15 orbits=956601 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/mono	g3	12	2.2.2.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=12 orbits=1361853 selfcompat=243 alive=243 nodes=1 COMPLETE best=-1
+A3-15-10	grid3x5/mono	g4	9	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/mono	g5	6	1.1.1.1.1.1.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2402055 selfcompat=2187 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	grid3x5/mono	g6	6	3.3.3.6	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391571 selfcompat=506799 TOO_MANY_VERTICES
+A3-15-10	grid3x5/mono	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pairs6/aff	g0	27	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=27 orbits=531441 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/aff	g1	18	1.1.1.2.2.2.2.2.2	bar=31	ub=39	tl=300	secs=1	-	G=18 orbits=797283 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/aff	g2	12	1.2.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=12 orbits=1197423 selfcompat=47709 TOO_MANY_VERTICES
+A3-15-10	pairs6/aff	g3	10	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=10 orbits=1434902 selfcompat=98711 TOO_MANY_VERTICES
+A3-15-10	pairs6/aff	g4	9	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/aff	g5	9	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/aff	g6	6	3.6.6	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391690 selfcompat=506667 TOO_MANY_VERTICES
+A3-15-10	pairs6/aff	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pairs6/glob	g0	30	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=478301 selfcompat=2 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/glob	g1	24	3.12	bar=31	ub=39	tl=300	secs=1	-	G=24 orbits=600615 selfcompat=176 alive=98 nodes=87 COMPLETE best=-1
+A3-15-10	pairs6/glob	g2	18	3.3.9	bar=31	ub=39	tl=300	secs=1	BAR	G=18 orbits=797702 selfcompat=393 alive=389 nodes=4 COMPLETE best=31
+A3-15-10	pairs6/glob	g3	12	3.6.6	bar=31	ub=39	tl=300	secs=3	BAR	G=12 orbits=1197490 selfcompat=15921 alive=2357 nodes=1299 COMPLETE best=31
+A3-15-10	pairs6/glob	g4	10	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=10 orbits=1434902 selfcompat=98711 TOO_MANY_VERTICES
+A3-15-10	pairs6/glob	g5	8	1.2.4.4.4	bar=31	ub=39	tl=300	secs=14	-	G=8 orbits=1801035 selfcompat=13839 alive=13839 nodes=1358065 COMPLETE best=-1
+A3-15-10	pairs6/glob	g6	6	3.6.6	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391690 selfcompat=506667 TOO_MANY_VERTICES
+A3-15-10	pairs6/glob	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pairs6/mono	g0	30	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=480270 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g1	18	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=18 orbits=797163 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g2	15	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=15 orbits=956601 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g3	12	1.1.1.1.1.1.1.2.2.2.2	bar=31	ub=39	tl=300	secs=1	-	G=12 orbits=1328724 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g4	9	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g5	8	1.2.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=8 orbits=1815822 selfcompat=9 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g6	6	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=3	-	G=6 orbits=2401326 selfcompat=19683 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pairs6/mono	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pg32/aff	g0	30	15	bar=31	ub=39	tl=300	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	pg32/aff	g1	21	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=21 orbits=683289 selfcompat=1647 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/aff	g2	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	pg32/aff	g3	12	1.2.4.4.4	bar=31	ub=39	tl=300	secs=1	-	G=12 orbits=1197423 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/aff	g4	9	3.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=157464 TOO_MANY_VERTICES
+A3-15-10	pg32/aff	g5	9	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/aff	g6	6	1.2.3.3.6	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2421009 selfcompat=46008 TOO_MANY_VERTICES
+A3-15-10	pg32/aff	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pg32/glob	g0	30	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=30 orbits=478301 selfcompat=2 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/glob	g1	21	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=21 orbits=683289 selfcompat=1647 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/glob	g2	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	pg32/glob	g3	10	5.5.5	bar=31	ub=39	tl=300	secs=1	-	G=10 orbits=1434902 selfcompat=98711 TOO_MANY_VERTICES
+A3-15-10	pg32/glob	g4	9	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594809 selfcompat=105705 TOO_MANY_VERTICES
+A3-15-10	pg32/glob	g5	6	1.2.3.3.6	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2421009 selfcompat=46008 TOO_MANY_VERTICES
+A3-15-10	pg32/glob	g6	6	3.6.6	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2391690 selfcompat=506667 TOO_MANY_VERTICES
+A3-15-10	pg32/glob	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pg32/mono	g0	30	15	bar=31	ub=39	tl=300	secs=1	BAR	G=30 orbits=478318 selfcompat=24 alive=21 nodes=2 COMPLETE best=31
+A3-15-10	pg32/mono	g1	21	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=21 orbits=683289 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/mono	g2	15	15	bar=31	ub=39	tl=300	secs=2	BAR	G=15 orbits=956635 selfcompat=9341 alive=281 nodes=337 COMPLETE best=31
+A3-15-10	pg32/mono	g3	14	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=14 orbits=1024934 selfcompat=4487 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/mono	g4	9	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pg32/mono	g5	7	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=7 orbits=2049867 selfcompat=141399 TOO_MANY_VERTICES
+A3-15-10	pg32/mono	g6	6	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=6 orbits=2392214 selfcompat=155289 TOO_MANY_VERTICES
+A3-15-10	pg32/mono	g7	5	5.5.5	bar=31	ub=39	tl=300	secs=2	-	G=5 orbits=2869803 selfcompat=1090827 TOO_MANY_VERTICES
+A3-15-10	pgl13+1/aff	g0	27	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=0	-	G=27 orbits=531441 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/aff	g1	21	1.7.7	bar=31	ub=39	tl=300	secs=0	-	G=21 orbits=683289 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/aff	g2	14	1.14	bar=31	ub=39	tl=300	secs=0	-	G=14 orbits=1025406 selfcompat=144 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/aff	g3	12	1.1.1.2.2.2.2.2.2	bar=31	ub=39	tl=300	secs=0	-	G=12 orbits=1197565 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/aff	g4	9	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=0	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/aff	g5	7	1.7.7	bar=31	ub=39	tl=300	secs=0	-	G=7 orbits=2049867 selfcompat=141399 TOO_MANY_VERTICES
+A3-15-10	pgl13+1/aff	g6	6	1.1.1.2.2.2.2.2.2	bar=31	ub=39	tl=300	secs=0	-	G=6 orbits=2391606 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/aff	g7	6	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=0	-	G=6 orbits=2391485 selfcompat=403789 TOO_MANY_VERTICES
+A3-15-10	pgl13+1/mono	g0	26	1.1.13	bar=31	ub=39	tl=300	secs=1	-	G=26 orbits=561735 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/mono	g1	18	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=1	-	G=18 orbits=797166 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/mono	g2	14	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=14 orbits=1025091 selfcompat=3 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/mono	g3	13	1.1.13	bar=31	ub=39	tl=300	secs=1	-	G=13 orbits=1103787 selfcompat=27 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/mono	g4	9	1.1.1.3.3.3.3	bar=31	ub=39	tl=300	secs=1	-	G=9 orbits=1594323 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/mono	g5	7	1.7.7	bar=31	ub=39	tl=300	secs=1	-	G=7 orbits=2049867 selfcompat=141399 TOO_MANY_VERTICES
+A3-15-10	pgl13+1/mono	g6	6	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=2	-	G=6 orbits=2421009 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
+A3-15-10	pgl13+1/mono	g7	6	1.1.1.1.1.1.1.1.1.1.1.1.1.1.1	bar=31	ub=39	tl=300	secs=2	-	G=6 orbits=2657205 selfcompat=0 alive=0 nodes=0 COMPLETE best=-1
