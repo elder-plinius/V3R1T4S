@@ -1,0 +1,409 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<html>
+  
+  <head>
+  
+  <link rel="stylesheet" href="/styles.css?v=20260927">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="OEIS,integer sequences,Sloane" />
+  
+  
+  
+  <title>A399138 - OEIS</title>
+  <link rel="search" type="application/opensearchdescription+xml" title="OEIS" href="/oeis.xml">
+  
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=20260826">
+  <link rel="icon" sizes="16x16 32x32 48x48" href="/favicon.ico?v=20260826">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=20260826">
+  <script>
+  var myURL = "\/A399138"
+  function redir() {
+      var host = document.location.hostname;
+      if(host != "oeis.org" && host != "edit.oeis.org" && host != "127.0.0.1" && !/^([0-9.]+)$/.test(host) && host != "localhost" && host != "edit.localhost" && host != "localhost.localdomain") {
+          document.location = "https"+":"+"//"+"oeis"+".org/" + myURL;
+      }
+  }
+  function sf() {
+      if(document.location.pathname == "/" && document.f) document.f.q.focus();
+  }
+  </script>
+  </head>
+  <body bgcolor=#ffffff onload="redir();sf()"><a href="https://oeis.org/cdn-cgi/content?id=IMfklCEGUwIq2fC1ZDj9wZN72WlQ.yCqfFgynmXTin8-1795184889.7581635-1.2.1.1-KWcjgMpTrNQFPkC2ucLZapCip8qcG0sQQaLR1KtGDzSNeTsh0XvEbqO23jOx0cIh" aria-hidden="true" rel="nofollow noopener" style="display: none !important; visibility: hidden !important"></a>
+    <div class=loginbar>
+      <div class=login>
+      
+        <a href="/login?redirect=%2FA399138" rel="nofollow">login</a>
+      
+      </div>
+    </div>
+
+    <div class=center><div class=top>
+    <center>
+    <div class=donors>
+    The OEIS is supported by <a href="http://oeisf.org/#DONATE">the many generous donors to the OEIS Foundation</a>.
+    </div>
+
+    <div class=banner>
+    <a href="/"><picture>
+
+    <source media="(min-width: 830px)" srcset="/oeis-400k-banner.png 1x" width="918" height="129">
+    <img class=banner border="0" width="540" height="129" src="/oeis-400k-banner.png" srcset="/oeis-400k-banner.png 1x" alt="A399138 - OEIS">
+    </picture></a>
+    </div>
+
+    
+    
+    
+    <div class="motdbox" style="justify-content: center;">
+        <div class="motd">
+            <p><a href="https://oeis.org/wiki/A400K_Winners">Winners in the A400K Celebration</a></p>
+        </div>
+        
+    </div>
+    
+    </center>
+    </div></div>
+
+    <div class=center><div class=pagebody>
+      
+    
+    <div class=searchbarcenter>
+        <form name=f action="/search" method="GET">
+            <div class=searchbargreet>
+                <div class=searchbar>
+                    <div class=searchq>
+                        <input class=searchbox maxLength=1024 name=q value="" title="Search Query">
+                        
+                        
+                        
+                        
+                    </div>
+                    <div class=searchsubmit>
+                        <input type=submit value="Search" name=go>
+                    </div>
+                    <div class=hints>
+                        <span class=hints><a href="/hints.html">Hints</a></span>
+                    </div>
+                </div>
+                <div class=searchgreet>
+                    (Greetings from <a href="/welcome">The On-Line Encyclopedia of Integer Sequences</a>!)
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class=sequence>
+        <div class=space1></div>
+        <div class=line></div>
+        
+        <div class=seqhead>
+            <div class=seqnumname>
+                <div class=seqnum>
+                    
+                        A399138
+                    
+                </div>
+                <div class=seqname>
+                    a(n) = maximum number of points in an n X n X n grid with no three collinear.
+                    
+                </div>
+            </div>
+            <div class=scorerefs>
+                        
+                        2
+            </div>
+        </div>
+        
+            
+    
+    
+    <div>
+        <div class=seqdatabox>
+            <div class=seqdata>1, 8, 16, 28, 40, 64</div>
+            
+                <div class=seqdatalinks>
+                (<a href="/A399138/list">list</a>;
+                
+                
+                
+                    <a href="/A399138/graph">graph</a>;
+                
+                <a rel=nofollow href="/search?q=A399138+-id:A399138">refs</a>;
+                <a href="/A399138/listen">listen</a>;
+                <a rel=nofollow href="/history?seq=A399138">history</a>;
+                
+                <a href="/search?q=id:A399138&fmt=text">text</a>;
+                <a href="/A399138/internal">internal format</a>)
+                </div>
+            
+        </div>
+    </div>
+    <div class=entry>
+        
+            
+        
+            
+        
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>OFFSET</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>1,2</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>COMMENTS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>Collinear means collinear as points of R^3 (not modulo n); cf. <a href="/A280537" title="Maximum number of points that can be selected from an n X n X n grid so that no four of them are in a plane.">A280537</a> for the &quot;no four coplanar&quot; analog.</div>
+                             
+                                 <div class=sectline>Lower bounds for the next terms are a(7) &gt;= 73 (attached witness file) and a(8) &gt;= 94 (Kudriashov's linked 94-point configuration). [Updated by <a href="/wiki/User:Eric_W._Weisstein">Eric W. Weisstein</a>, Oct 27 2026]</div>
+                             
+                                 <div class=sectline>a(p) &gt;= p^2 for every prime p, via the graph of an anisotropic binary quadratic form: {(x, y, Q(x,y) mod p) : 0 &lt;= x,y &lt; p} with Q = x^2 - d*y^2, d a quadratic non-residue, contains no three collinear points. For Q = x^2 + y^2 (which requires p == 3 (mod 4)) this is the construction of Por and Wood.</div>
+                             
+                                 <div class=sectline>The maximum size of a connected set of points (with each point connected to its six nearest neighbors), no three collinear, is 26. See <a href="/A393939" title="Number of free polycubes with n cells such that pairs of cell centers determine the largest possible number (A394394(n)) of ...">A393939</a>. - <a href="/wiki/User:Pontus_von_Brömssen">Pontus von Brömssen</a>, Oct 03 2026</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+            
+        
+            
+                 
+                 
+                 
+                     
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>LINKS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline><a href="/A399138/b399138.txt">Table of n, a(n) for n=1..6.</a></div>
+                             
+                                 <div class=sectline>Aleksei Kudriashov, <a href="https://doi.org/10.5281/zenodo.22019279">Certified exact values for the no-three-in-line problem in the three-dimensional grid</a>, Zenodo, 2026.</div>
+                             
+                                 <div class=sectline>Aleksei Kudriashov, <a href="https://github.com/iwasborninbali/oeis-A399138">Witnesses, proof logs and checks</a>, GitHub, 2026.</div>
+                             
+                                 <div class=sectline>Aleksei Kudriashov, <a href="/A399138/a399138_1.txt">Witness configurations for a(1)-a(6) (with a second, nonuniform optimum for n = 5) and for the bounds a(7) &gt;= 73, a(8) &gt;= 94, a(9) &gt;= 116, a(10) &gt;= 138, a(11) &gt;= 164</a></div>
+                             
+                                 <div class=sectline>OEIS Wiki, <a href="https://oeis.org/wiki/A400K_Winners">A400K Winners</a>, 2026.</div>
+                             
+                                 <div class=sectline>Ed Pegg, <a href="https://community.wolfram.com/t/the-min-and-max-of-the-no-3-in-line-problem/27121">The Min and Max of the No-3-in-line problem</a>, Wolfram Community, 2026.</div>
+                             
+                                 <div class=sectline>A. Por and D. R. Wood, <a href="https://doi.org/10.1007/s00453-006-0158-9">No-Three-in-Line-in-3D</a>, Algorithmica 47 (2007), 481-488.</div>
+                             
+                                 <div class=sectline>Eric Weisstein's World of Mathematics, <a href="https://mathworld.wolfram.com/No-Three-in-a-LineProblem.html">No-Three-in-a-Line Problem</a>.</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>FORMULA</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>a(n) = Theta(n^2): the upper bound a(n) &lt;= 2*n^2 is elementary (each of the n^2 axis-parallel lines carries at most two points; attained at n = 2), the lower bound Omega(n^2) is due to Por and Wood.</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>EXAMPLE</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>a(2) = 8: all eight points of the 2 X 2 X 2 cube may be taken, since no line contains three points of that grid.</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+            
+        
+            
+                 
+                 
+                     
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>CROSSREFS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>Cf. <a href="/A000769" title="No-3-in-line problem: number of inequivalent ways of placing 2n points on an n X n grid so that no 3 are in a line.">A000769</a> (the two-dimensional problem), <a href="/A280537" title="Maximum number of points that can be selected from an n X n X n grid so that no four of them are in a plane.">A280537</a> (no four coplanar in the same grid), <a href="/A157882" title="Number of collinear point-triples in the n X n X n cube.">A157882</a>, <a href="/A393939" title="Number of free polycubes with n cells such that pairs of cell centers determine the largest possible number (A394394(n)) of ...">A393939</a>.</div>
+                             
+                                 <div class=sectline>Sequence in context: <a href="/A331490" title="Matula-Goebel numbers of series-reduced rooted trees with more than two branches (of the root).">A331490</a> <a href="/A039288" title="Numbers whose base-5 representation has the same nonzero number of 1's and 3's.">A039288</a> <a href="/A045237" title="Numbers whose base-5 representation contains exactly one 1 and one 3.">A045237</a> * <a href="/A255993" title="Number of length n+2 0..1 arrays with at most one downstep in every n consecutive neighbor pairs.">A255993</a> <a href="/A299644" title="a(n) = prime(prime(n+1)) + prime(prime(n)).">A299644</a> <a href="/A204644" title="Number of (n+1) X 2 0..1 arrays with column and row pair sums b(i,j)=a(i,j)+a(i,j-1) and c(i,j)=a(i,j)+a(i-1,j) nondecreasin...">A204644</a></div>
+                             
+                                 <div class=sectline>Adjacent sequences:  <a href="/A399135" title="Numbers for which repeatedly subtracting the greatest prime factor (A006530) to reach 0 takes fewer steps than repeatedly su...">A399135</a> <a href="/A399136" title="a(n) is the smallest number of cells in a polycube that has a cavity consisting of exactly n cells.">A399136</a> <a href="/A399137" title="Number of 4-element subsets of {(x,y,z) in Z^3: |x|+|y|+|z| &lt;= n} that are the vertices of a regular tetrahedron.">A399137</a> * <a href="/A399139" title="Maximum size of a subset of {1,...,n} in which no prime divides more than 3 elements.">A399139</a> <a href="/A399140" title="Integers that are both pseudoperfect and pseudo-antiperfect.">A399140</a> <a href="/A399141" title="Smallest prime factor of F(n) = 10^(10^n)+1.">A399141</a></div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>KEYWORD</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline><span title="a sequence of nonnegative numbers">nonn</span>,<span title="more terms are needed! please extend this sequence">more</span>,<span title="next term not known, may be hard to find.  please extend this sequence">hard</span>,<span title="an exceptionally nice sequence">nice</span>,<span title="edited within the last two weeks">changed</span></div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>AUTHOR</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline><a href="/wiki/User:Aleksei_Kudriashov">Aleksei Kudriashov</a>, Aug 19 2026</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+            
+        
+            
+                 
+                 
+                 
+                 
+                     <div class=section>
+                         <div class=sectname>STATUS</div>
+                         <div class=sectbody>
+                             
+                                 <div class=sectline>approved</div>
+                             
+                         </div>
+                     </div>
+                 
+            
+        
+
+        
+    </div>
+
+        
+        <div class=space10></div>
+    </div>
+
+    </div></div>
+
+    <p>
+
+    <div class=footerpad></div>
+    <div class=footer>
+    <center>
+    <div class=bottom>
+    <div class=linksbar>
+      <a href="/">Lookup</a>
+      <a href="/wiki/Welcome"><font color="red">Welcome</font></a>
+      <a href="/wiki/Main_Page"><font color="red">Wiki</font></a>
+      <a href="/account">Register</a>
+      
+      <a href="/play.html">Music</a>
+      <a href="/plot2.html">Plot 2</a>
+      <a href="/demo1.html">Demos</a>
+      <a href="/wiki/Index_to_OEIS">Index</a>
+      <a href="/webcam">WebCam</a>
+      <a href="/Submit.html">Contribute</a>
+      <a href="/eishelp2.html">Format</a>
+      <a href="/wiki/Style_Sheet">Style Sheet</a>
+      <a href="/transforms.html">Transforms</a>
+      <a href="/ol.html">Superseeker</a>
+      <a href="/recent">Recents</a>
+    </div>
+    <div class=linksbar>
+      <a href="/community.html">The OEIS Community</a>
+    </div>
+    <div class=linksbar>
+      Maintained by <a href="http://oeisf.org">The OEIS Foundation Inc.</a>
+    </div>
+
+    <div class=dbinfo>Last modified November 20 09:11 EST 2026.  Contains 401716 sequences.</div>
+    <div class=legal>
+    <a href="/wiki/Legal_Documents">License Agreements, Terms of Use, Privacy Policy</a>
+    </div>
+
+    </div>
+    </center>
+    </div>
+  <script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5d823b8fc7e3d8e',t:'MTc5NTE4NDg4OQ=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5d823b8fc7e3d8e',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
