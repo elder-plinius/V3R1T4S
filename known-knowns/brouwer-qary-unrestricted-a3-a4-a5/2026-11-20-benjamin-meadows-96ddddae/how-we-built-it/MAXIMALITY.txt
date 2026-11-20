@@ -1,0 +1,6 @@
+$ cc -O2 -o maximal how-we-built-it/maximal.c && ./maximal object/A4-11-7-145words.txt 4 11 7
+q=4 n=11 d=7 codewords=145 words scanned=4194304 addable words=0
+
+Mutation check: the same code with its first word (00000000000) removed:
+addable word: 00000000000
+q=4 n=11 d=7 codewords=144 words scanned=4194304 addable words=1
