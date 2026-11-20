@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "target": "xs25_69ar1mkiczx643",
+  "errors": [],
+  "structurally_valid": true,
+  "n_gliders": 21,
+  "rewind_ok": true,
+  "final_apgcode": "xs25_69ar1mkiczx643",
+  "period": 1,
+  "live_csynth": 49,
+  "live_pseudo": false,
+  "csynth_snippet": "#CSYNTH xs25_69ar1mkiczx643 costs 49 gliders",
+  "improvement": 28,
+  "rle": "#CLL state-numbering golly\nx = 1742, y = 1754, rule = B3/S23\n1732bo$1730b2o7bo$176bo1554b2o6bobo$174bobo1562b2o$175b2o126$1615b\no$315bo1299bobo$313bobo1299b2o$314b2o124$440bo$438bobo$439b2o124$\n569bo$570bo$568b3o$1360bo$1359bo$1359b3o$562bobo$563b2o$563bo378$\n981bo$931bo47b2o$932bo47b2o$930b3o$936bobo$937b2o$937bo3$973bobo$\n973b2o$974bo18$957b3o$959bo$958bo7$952b3o$954bo$953bo126$828bo$\n828b2o$827bobo106$692b2o$693b2o$692bo132$562b2o$561bobo$563bo6$\n557b2o$556bobo$558bo114$438b2o$437bobo$439bo448$b2o$obo$2bo!\n"
+}
