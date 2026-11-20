@@ -1,0 +1,10 @@
+target_id: peg-solitaire-9x9-central-game
+cell: 9x9 central game e5->e5 (81-hole square board, orthogonal jumps only)
+file: object/sol31.txt
+sha256: a49cfc85ce7d20bd828fd9f168fd3beea6d4bfb0fbe90df350944a85bd60093a
+format: one move per line, holes joined by '-' (a peg's consecutive jumps); columns a..i, rows 1..9
+start: all 81 holes filled except e5
+finish: exactly one peg, at e5
+jumps: 79
+moves: 31
+table value: 34 (Alain Maye, 2004; listed as best on Bell's page, fetched 2026-11-03T14:09:43Z)
