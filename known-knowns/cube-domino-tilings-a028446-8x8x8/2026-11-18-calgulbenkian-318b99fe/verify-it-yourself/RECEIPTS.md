@@ -37,3 +37,18 @@ sh verify-it-yourself/run_checks.sh
 [OK] Order C fresh prime check M(P_6xP_6xP_7) mod 21683 == 16489 (matches claimed value)
 PASS
 ```
+
+## Discovery engine runs (captured standard output)
+
+Both discovery engines were built from `how-we-built-it/` and run to the full `A049507(7)` result; their complete standard output is saved unedited:
+
+| Engine | Command | Log | SHA-256 of log |
+|---|---|---|---|
+| Engine 1 (`domino_mitm_a.c`, Order A, Prime Set A) | `cc -O3 -Wall -Wextra -pthread how-we-built-it/domino_mitm_a.c -o ./mitm_a && ./mitm_a --solve-667 > engine1_mitm_a.stdout.log` | `verify-it-yourself/engine1_mitm_a.stdout.log` | `0e9287eb08796b9bce5e5e2ac8582737f372e2399889a534932d9f5bb6366b84` |
+| Engine 2 (`domino_tilted_b.c`, Order B, Prime Set B) | `cc -O3 -Wall -Wextra -pthread how-we-built-it/domino_tilted_b.c -o ./tilted_b && ./tilted_b --solve-667 > engine2_tilted_b.stdout.log` | `verify-it-yourself/engine2_tilted_b.stdout.log` | `ee4c1fdb1165b4619eaa96c8c2c577d621b6945b4271cc5f9b50c673524745ac` |
+
+- **Machine:** Mac Studio, Apple M3 Ultra (28 cores), macOS 26.6.2.
+- **Date:** 2026-11-18. The two runs finished at 19:25:51Z (Engine 1) and 19:40:51Z (Engine 2), in that order.
+- **Source used:** copies of `domino_mitm_a.c` (sha256 `a65522ab99c3dd38ca59fff76d29fcb41331e8f528e99869d60d71ab977f56ef`) and `domino_tilted_b.c` (sha256 `b4b2ac3641e71333b13d204e6719d7f91a0784aa73bd2af1a4b0bef0b92a5268`), byte-identical to the files in this package. Both files are unchanged since, except for the one comment fixed at `domino_mitm_a.c` line 808 (see `how-we-built-it/README.md`, "Deviations from PREREG"), which changes no executed code.
+- **Each log contains:** the 16 calibration checks, including `A049507(0..6)` (with `A049507(6) = A028446(3)`) and `A028446(1..2)`; the per-prime residues of `A049507(7)`; the CRT reconstructions; and the final `RESULT`. Engine 1 reconstructs from 6 and from all 10 primes, Engine 2 from 10, 12 and all 15, and every reconstruction gives `781760467628825425251897322894619609502208`.
+- **The run command was not recorded at the time**; the commands above are the ones in `how-we-built-it/README.md`. A rebuild of the shipped source with that compile line gave executables of the same size as the ones that produced these logs.

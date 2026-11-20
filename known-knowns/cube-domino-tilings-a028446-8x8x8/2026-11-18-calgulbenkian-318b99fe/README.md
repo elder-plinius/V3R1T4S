@@ -2,7 +2,7 @@
 
 ## What
 
-The package's value A049507(7) = 781760467628825425251897322894619609502208 (perfect matchings of P_6 x P_6 x P_7), checked in this panel by the package's own checks (parity, D_4 symmetry, 25-prime CRT bounds, the third-order calibration run reproducing A049507(0..6) and A028446(1..3), and two fresh-prime residues, which I also recomputed from the claimed integer), is not in the OEIS A049507 DATA as fetched on 2026-11-18T17:31Z, and meets p1's three literal clauses, with the two discovery engines using different vertex orders but being the same family of method and not rerun here.
+This package gives A049507(7) = 781760467628825425251897322894619609502208, the number of perfect matchings of P_6 x P_6 x P_7. Both discovery engines, which use different vertex orders, were rerun from this package: each reproduces A049507(0..6) and A028446(1..3) and gives this same value (logs in `verify-it-yourself/`). The package's own checks also pass (parity, D_4 symmetry, 25-prime CRT bounds, and two fresh-prime residues, which were also recomputed from the claimed integer). The value is not in the OEIS A049507 DATA as fetched on 2026-11-18T17:31Z, and it meets the three literal clauses of p1.
 
 ## Check It Yourself
 
@@ -21,8 +21,8 @@ Expected last output line: `PASS` (runs in about `3` minutes on `4` CPU threads 
 ## Compared To
 
 - **Primary status sources:**
-  - OEIS `A049507` (https://oeis.org/A049507, fetched `2026-11-18T07:09:01Z` and re-fetched `2026-11-18T08:15:03Z`, HTTP `200`, SHA-256 `02872f1bdd14ba0cc8a7f8529821765c2596ce4167f4ff66c73dc97362a71888`; JSON API https://oeis.org/search?q=id:A049507&fmt=json, HTTP `200`, SHA-256 `3133d67655ba11512c967f929719ddefe0b056dc109fcfd5f577b35029e091eb`).
-  - OEIS `A028446` (https://oeis.org/A028446, fetched `2026-11-18T07:09:01Z` and re-fetched `2026-11-18T08:15:04Z`, HTTP `200`, SHA-256 `d397afd838e70b668e65942273252dc1c79bfcbe866fb9a281339d018c2923a7`).
+  - OEIS `A049507` (https://oeis.org/A049507, HTTP `200` each time): fetched `2026-11-18T07:09:01Z`, SHA-256 `75647a02e01f30a25c5fbacd0814bf9e7665ab997d3e80fdb3a05b41554f0a0f`; re-fetched `2026-11-18T08:15:03Z`, SHA-256 `02872f1bdd14ba0cc8a7f8529821765c2596ce4167f4ff66c73dc97362a71888`. JSON API https://oeis.org/search?q=id:A049507&fmt=json, HTTP `200`, SHA-256 `3133d67655ba11512c967f929719ddefe0b056dc109fcfd5f577b35029e091eb` at both fetches.
+  - OEIS `A028446` (https://oeis.org/A028446, HTTP `200` each time): fetched `2026-11-18T07:09:01Z`, SHA-256 `cf7515c675e7213b0d24916fad475b28737cc4766b9e12cc4f0f4d91d9f0eefe`; re-fetched `2026-11-18T08:15:04Z`, SHA-256 `d397afd838e70b668e65942273252dc1c79bfcbe866fb9a281339d018c2923a7`.
 - **Cell:** `A049507(7)` (number of perfect matchings of `P_6 x P_6 x P_7`, enumerated partial win `p1` of `cube-domino-tilings-a028446-8x8x8`).
 - **Existing table value:** `unlisted` (`A049507` lists `n = 0..5` ending at `a(5) = 216388579168758145017797108072`, and `A028446(3)` gives `a(6) = 417898687046465734392674187695263185`).
 - **Our certified value:** `A049507(7) = 781760467628825425251897322894619609502208` (`42` decimal digits).

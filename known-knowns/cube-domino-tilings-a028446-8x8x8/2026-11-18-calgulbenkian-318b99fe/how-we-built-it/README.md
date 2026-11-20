@@ -33,3 +33,16 @@ rm -f ./domino_tilted_b
 ```sh
 python3 how-we-built-it/gf2_and_burnside_audit.py
 ```
+
+## Deviations from PREREG
+
+`PREREG.md` stays frozen as written, and the code stays as it ran (the only code edit is one comment, in (b)). The shipped code differs from it, or the pre-registration misstates a figure, in these places:
+
+(a) Orders and primes. `PREREG.md` lines 59, 61 and 62 give Order A as `(x+y+z, z, x, y)`, Order B as `(x+(5-y)+z, x, y, z)` and Prime Set B as ten 31-bit primes. The code is different:
+- `domino_mitm_a.c` sorts by `(x+y+z, z-x, z, x, y)`.
+- `domino_tilted_b.c` sorts by `(4x+5y+5z, x-y, z, x, y)`.
+- `domino_tilted_b.c` uses 15 primes from 10909 to 21841 (all below 2^15), not ten 31-bit primes.
+
+(b) The Bregman bound. `PREREG.md` lines 56-57 give `< 2.13e50 < 2^168`. The bound `(3!)^(4/3) * (4!)^(26/4) * (5!)^(56/5) * (6!)^(40/6)` is about 2.21e52 = 2^173.89, as `README.md` line 16 says. The comment at `domino_mitm_a.c` line 808 said "2^168" and now reads "2^173.89". The conclusions are unchanged: the 6 primes that Engine 1 reconstructs from exceed 2^173.89, and so do Engine 2's 15.
+
+(c) The first 12 primes of Prime Set B. The statement in `domino_tilted_b.c` line 12 (and in its "OVERDETERMINED 5-PRIME CHECK" message, line 549) that the first 12 primes exceed the Bregman bound is wrong: their product is about 2^172.94, below 2^173.89. The first 13 primes, about 2^187.35, are the fewest that exceed it. The 12-prime reconstruction in that run is therefore a consistency check, not an unconditional one; the full 15-prime reconstruction (about 2^215.17) is unconditional, and it gives the same integer.

@@ -805,7 +805,7 @@ int main(int argc, char **argv) {
             printf("  Prime A[%d] = %u -> residue = %u (%.3fs)\n", i, PRIMES_A[i], rems[i], te - ts);
             fflush(stdout);
         }
-        /* Reconstruct from first 6 primes (already > Bregman bound 2^168), then verify primes 6..9 AND full 10-prime CRT! */
+        /* Reconstruct from first 6 primes (already > Bregman bound 2^173.89), then verify primes 6..9 AND full 10-prime CRT! */
         BigUInt ans6, ans10;
         char s6[256], s10[256];
         crt_reconstruct(6, PRIMES_A, rems, &ans6);
