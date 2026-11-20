@@ -1,0 +1,37 @@
+fold 0: n=514 ref 0.8664 model 0.7937 pattern 0.8102 C=0.1 alpha=1.0 leak={'model_and_ref': (514, 0, 0.0), 'positive_control_leaky': (514, 514, 26.0)} single-vs-batch=2.22e-16 (3s)
+fold 1: n=1305 ref 0.8494 model 0.7801 pattern 0.8015 C=0.1 alpha=0.01 leak={'model_and_ref': (1305, 0, 0.0), 'positive_control_leaky': (1305, 1305, 25.0)} single-vs-batch=3.33e-16 (7s)
+fold 2: n=508 ref 0.8835 model 0.7325 pattern 0.7796 C=0.1 alpha=1.0 leak={'model_and_ref': (508, 0, 0.0), 'positive_control_leaky': (508, 508, 26.0)} single-vs-batch=2.22e-16 (8s)
+fold 3: n=692 ref 0.7903 model 0.7168 pattern 0.7470 C=0.1 alpha=0.01 leak={'model_and_ref': (692, 0, 0.0), 'positive_control_leaky': (692, 692, 25.0)} single-vs-batch=2.22e-16 (10s)
+fold 4: n=399 ref 0.8945 model 0.7875 pattern 0.8215 C=0.1 alpha=1.0 leak={'model_and_ref': (399, 0, 0.0), 'positive_control_leaky': (399, 399, 25.0)} single-vs-batch=2.22e-16 (12s)
+{
+ "n": 3418,
+ "same_rate": 0.3639555295494441,
+ "ref_bits": 0.8503173539892255,
+ "model_bits": 0.7631118132162007,
+ "pattern_bits": 0.7908640718479825,
+ "gain_model": [
+  0.08720554077302466,
+  0.0648638786136118,
+  0.11662173812015673
+ ],
+ "gain_pattern_diag": [
+  0.05945328214124298,
+  0.04372263437635009,
+  0.07925772305236105
+ ],
+ "gain_model_multi_label_recs_diag": [
+  0.05895719884019897,
+  0.03471642678928273,
+  0.08093200797886249,
+  3181
+ ],
+ "gain_model_single_label_recs_diag_mean": 0.46635311751698466,
+ "n_single_label_positions": 237,
+ "gain_model_pristine_folds_013_diag": [
+  0.07113966029292822,
+  0.04405753918914039,
+  0.10355400050405701,
+  2511
+ ]
+}
+GATE p4: {'gain_ge_0.05': True, 'ci_excludes_0': True, 'met': True}
