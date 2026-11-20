@@ -1,0 +1,2 @@
+Source: http://www.codetables.de/BKLC/BKLC.php?q=7&n=55&k=10 (fetched 2026-10-19T04:35:46Z, HTTP 200, page sha256 b805d923e10bc518778186de0c10abd652734aafc3347baf1422eb19883fbc1b)
+Bounds on linear codes [55,10] over GF(7): lower bound 34, upper bound 40
