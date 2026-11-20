@@ -20,7 +20,7 @@ Expected last output line: `PASS` (runs two genuinely independent implementation
 - **Cell:** `D(10) mod 27` (`p^k = 3^3 = 27`, partial win `p1`: `D(10)` modulo a prime or prime power not determined by published congruences).
 - **Existing published congruences:**
   - Koichi Yamamoto (1953): `D(2m) == 0 (mod 2)` (`D(10) == 0 (mod 2)`).
-  - Bartlomiej Pawelski and Andrzej Szepietowski (`arXiv:2302.04615`, *J. Integer Seq.* 26, 2023): `D(9) == 6 (mod 210)` only; no new congruences for `D(10)`.
+  - Bartlomiej Pawelski and Andrzej Szepietowski (`arXiv:2302.04615`, *J. Integer Seq.* 26, 2023): the paper proves `d9 = 6 (mod 210)` and general identities modulo any `m > 1`, but states no residue of `D(10)`.
   - Bartlomiej Pawelski, Andrzej Szepietowski, and Blazej Szepietowski (`arXiv:2611.13887v1`, posted November 10, 2026, https://arxiv.org/abs/2611.13887, SHA-256 `c25cdade671f06642d12543a2b4cd7d15988a9a1ba51e2db3cbb9523c477ae23`): proves only squarefree prime congruences `D(10) == 106 (mod 210)` (`0 mod 2`, `1 mod 3`, `1 mod 5`, `1 mod 7`) via `|X| == |Fix(G, X)| (mod p)`, leaving `D(10) mod 9` (`3` open values) and `D(10) mod 27` (`9` open values: `1, 4, 7, 10, 13, 16, 19, 22, 25`) completely undetermined.
 - **Our certified value:** `D(10) == 16 (mod 27)` (which immediately implies `D(10) == 7 (mod 9)` and matches `D(10) == 1 (mod 3)`), backed by the exact `P_81` Burnside sum `77588088181555989940 == 16 (mod 27)` in `object/d10_mod27_certificate.json` (SHA-256 `e0c8c761bd684d577f82d22d078f9f6269571d1756b2dfe797c723b037774ce8`).
 

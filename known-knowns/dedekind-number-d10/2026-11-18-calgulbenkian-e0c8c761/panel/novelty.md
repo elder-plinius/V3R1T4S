@@ -18,6 +18,7 @@ context: Claude Code subagent, fresh context [Sonnet 5.5]
 - arXiv:2302.04615 gives congruences for D(9) only: 0 mod 2, 0 mod 3, 1 mod 5, 6 mod 7. Nothing on D(10) or prime powers.
 - A grep of both papers for "mod 9", "mod 27" and "prime power" found nothing relevant. No published statement of D(10) mod 9 or mod 27 exists in what I found.
 - A p-group action gives |X| == |Fix| mod p only. Mod p^2 and p^3 need fixed-point data over the whole subgroup poset (Burnside or Mobius), which neither paper does. The authors say their method covers primes p <= n. I found no argument implying D(10) mod 9 or 27 from published results.
+- Correction note (2026-11-20): lines 18 and 20 above misdescribe arXiv:2302.04615, which proves d9 = 6 (mod 210) and general identities modulo any m > 1 (Theorems 7, 10, 14; Examples 12 and 15 work mod 4 and mod 12) but states no residue of D(10); only arXiv:2611.13887 uses the p-group lemma, for prime moduli. The verdict below is unchanged.
 - Consistency: 16 mod 3 = 1, matching the published D(10) == 1 (mod 3). 16 mod 27 gives 7 mod 9. Parity, mod 5 and mod 7 are untouched, so no conflict with 106 mod 210.
 - Calibration: from the published D(9) I computed D(9) mod 27 = 24, mod 9 = 6, mod 3 = 0, as the package states and consistent with the published D(9) == 0 mod 3.
 - the-record-we-beat/README.md states the same about the cell and the PR check.
