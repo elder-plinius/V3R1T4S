@@ -1,0 +1,66 @@
+# Exact build commands (from the fresh-trunc-4345 and deep-polish-4345 lenses)
+
+Run from how-we-built-it/ (numpy/scipy needed). The packaged code has
+machine-specific paths replaced with relative ones; the search itself
+is unchanged.
+
+# 1. Hexagonal truncation search (96,525 evaluations of the raw-truncation
+#    objective F = min(s/2, 1 - max radius of the innermost N points))
+mkdir -p fresh-trunc-4345-output
+python3 wide_search.py
+# grid (63,525 evals: theta 0-30 deg, 21 spacings, 5x5 offsets) best
+#   raw -1.427e-05 at theta 11.50 deg, s=0.02851791, offset (0.011407, 0.011407);
+#   refine (3,000 evals) best raw -1.347e-05 at theta 10.63 deg, s=0.02851952,
+#   offset (0.013084, 0.011347); full-cell random (30,000 evals, rng seed
+#   43451711) best raw -1.437e-05 at theta 18.65 deg. Top-20 ties at
+#   -1.427e-05 span theta 11.5-18.5 deg: orientation carries LITTLE signal
+#   in the raw evaluator at this row, like N=4339.
+
+# 2. Regenerate the two rotated basins
+python3 make_basins.py
+# -> fresh-trunc-4345-output/basin15.txt (theta 15, raw -3.382e-04)
+# -> fresh-trunc-4345-output/basin25.txt (theta 25, raw -5.662e-04)
+# NOTE: make_basins.py as copied from the 2026-11-18 run still carried the
+# 4315-era grid-best spacing/offsets; it was fixed before running to this
+# night's own grid best (s=0.02851791, ox=oy=0.011407). The packaged copy
+# carries the fixed values.
+
+# 3. Smooth-max bottleneck polish with ratcheting (polish.py: L-BFGS-B on
+#    logsumexp(alpha * overlaps) / alpha; after each round set r := feasible_r)
+mkdir -p deep-polish-4345-output
+python3 deep_polish.py fresh-trunc-4345-output/refine_best.txt fresh-trunc-4345-output/random_best.txt fresh-trunc-4345-output/basin15.txt fresh-trunc-4345-output/basin25.txt
+# Recomputed margins from the saved files (50-digit certification):
+#   polished03 +3.78404615968e-06 (best; theta 25 basin, raw -5.662e-04)
+#   polished00 +1.71342783757e-06 (refine best, theta 10.63)
+#   polished01 -9.841e-07 (random best, theta 18.65; gained +1.339e-05)
+#   polished02 -3.382e-04 (theta 15; gained 0 under the ratchet)
+# Two of four basins clear the 1e-11 bar. The claim carrier is polished03
+# alone (object/candidate_n4345.txt); polished00 is cited, not bundled.
+
+# 4. Non-isometry vs the posted seed
+python3 noniso.py ../object/candidate_n4345.txt seed-cci4345.txt
+# -> NON-ISOMETRIC (max sorted-distance diff 2.664e-03). Fetch the
+#    posted seed at https://packomania.com/cci/txt/cci4345.txt
+#    (sha256 69ad4fb26db93650da3deb76382d1f01a7e99acb884b65a51cf951dd93b20285).
+
+# 5. 50-digit certification (decimal module, standard library only)
+python3 ../verify-it-yourself/verify.py ../object/candidate_n4345.txt
+# -> margin r*-r_table = 3.78404615968e-06 (need >= 1e-11 to beat). PASS.
+
+Known blemish, not fatal: the run's mpmath checker prints r* and the table
+value with mp.nstr(..., 31) — 31 significant digits, not 50 — so the run
+folder's *_check50.log prints are 31-digit truncations of the true 50-digit
+values. The print truncation is ~1e-33 absolute, 19 orders below the bar
+and 24 orders below the margin; the three panelists computed the true
+50-digit values independently from the exact coordinate strings and agree
+to every printed digit. The package verifier (verify.py) parses decimals
+exactly and prints the true values. All verdicts in this package use
+recomputed values only.
+
+Dead lines killed along the way (see the run's lens reports):
+- wide-band jitter walk at N=4303 (0/51 improving hops; both walk bands
+  now spent at that basin — narrow 1/59 on 2026-11-16, wide 0/51 on 2026-11-17)
+- deletion grafts from neighbouring rows (inherit the source radius)
+- bottleneck patches and jitter walks at N=4000 (saturated; and N=4000
+  is queue-blocked by the Karl Desfontaines cci 126-4141 pending line,
+  which is why this run rotated to N=4345)
