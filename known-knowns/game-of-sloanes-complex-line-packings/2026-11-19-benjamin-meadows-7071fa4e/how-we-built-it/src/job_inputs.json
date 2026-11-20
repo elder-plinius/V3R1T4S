@@ -1,0 +1,57 @@
+{
+ "cell": "7x24",
+ "d": 7,
+ "n": 24,
+ "k": 0,
+ "bar": "0.329342957521560572064680340461",
+ "budget": 20070.0,
+ "wave": 0,
+ "seeds": [
+  {
+   "src": "pr18:7x24_owhs.txt",
+   "what": "pull request 18 file 7x24_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x24_owhs.txt",
+   "sha256": "670bf43df5fcc15b1f305e3ad7c38836a8abab14dbbdb0af02d51b78a8d4d955"
+  },
+  {
+   "src": "ours",
+   "what": "packing-records 7x24.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x24.txt",
+   "sha256": "374cb5d9b06fbd19b4360884c8d66a8641be4d0e7e0785d9b783961f36c97a70"
+  },
+  {
+   "src": "current:7x24_hlc.txt",
+   "what": "leaderboard posted file 7x24_hlc.txt",
+   "url": "https://raw.githubusercontent.com/gnikylime/GameofSloanes/e43ad02ab7830cb7d0352d9e415c99f7f2014077/CurrentBestPackings/7x24_hlc.txt",
+   "sha256": "2ca766817699f823c791df48578140ad5477f9a9c34dfd4a567be0d0620ffc02"
+  }
+ ],
+ "parents": [
+  {
+   "src": "ours",
+   "what": "packing-records 7x25.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x25.txt",
+   "sha256": "5afa4d7ffef566ee89999ca24b1c10dcb1450cbc032c34c8b3b316e8255ddbf9"
+  },
+  {
+   "src": "pr18:7x25_owhs.txt",
+   "what": "pull request 18 file 7x25_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x25_owhs.txt",
+   "sha256": "aa1cf06bcd5484f96ceba542a4c907b4ea727eea7cf3bf7c6f701c45cd344dff"
+  }
+ ],
+ "children": [
+  {
+   "src": "ours",
+   "what": "packing-records 7x23.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x23.txt",
+   "sha256": "d5a09fe3e86bd33f50a94280aa07b4da5c260a9c2591b61ca0427d630289b268"
+  },
+  {
+   "src": "current:7x23_hlc.txt",
+   "what": "leaderboard posted file 7x23_hlc.txt",
+   "url": "https://raw.githubusercontent.com/gnikylime/GameofSloanes/e43ad02ab7830cb7d0352d9e415c99f7f2014077/CurrentBestPackings/7x23_hlc.txt",
+   "sha256": "92226f57c4c9cfd716deea43c22aa1e727f7533da9e2a2625a5060c44e846152"
+  }
+ ]
+}
