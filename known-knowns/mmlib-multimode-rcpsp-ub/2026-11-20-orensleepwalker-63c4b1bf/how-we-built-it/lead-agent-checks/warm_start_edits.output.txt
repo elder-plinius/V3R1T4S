@@ -1,0 +1,8 @@
+1767 Jall354_2.mm   UB 32 ours 31 | modes changed 18 of 100 | posted modes re-timed: best 32, bound 26 (FEASIBLE) -> undecided
+1768 Jall354_3.mm   UB 32 ours 31 | modes changed 19 of 100 | posted modes re-timed: best 32, bound 22 (FEASIBLE) -> undecided
+2450 Jall490_5.mm   UB 76 ours 75 | modes changed 38 of 100 | posted modes re-timed: best 76, bound 76 (OPTIMAL) -> not a polish (re-timing posted modes cannot reach 75)
+2717 Jall544_2.mm   UB 75 ours 74 | modes changed 46 of 100 | posted modes re-timed: best 75, bound 75 (OPTIMAL) -> not a polish (re-timing posted modes cannot reach 74)
+2841 Jall569_1.mm   UB 92 ours 91 | modes changed 37 of 100 | posted modes re-timed: best 92, bound 90 (FEASIBLE) -> undecided
+2843 Jall569_3.mm   UB 77 ours 76 | modes changed 34 of 100 | posted modes re-timed: best 77, bound 76 (FEASIBLE) -> undecided
+2854 Jall571_4.mm   UB 79 ours 78 | modes changed 41 of 100 | posted modes re-timed: best 79, bound 79 (OPTIMAL) -> not a polish (re-timing posted modes cannot reach 78)
+3117 Jall624_2.mm   UB 53 ours 52 | modes changed 29 of 100 | posted modes re-timed: best 53, bound 53 (OPTIMAL) -> not a polish (re-timing posted modes cannot reach 52)

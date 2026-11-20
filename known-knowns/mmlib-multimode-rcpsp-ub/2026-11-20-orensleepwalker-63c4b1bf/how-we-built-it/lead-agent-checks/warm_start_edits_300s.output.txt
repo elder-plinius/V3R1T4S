@@ -1,0 +1,4 @@
+1767 Jall354_2.mm   UB 32 ours 31 | modes changed 18 of 100 | posted modes re-timed: best 32, bound 26 (FEASIBLE) -> undecided
+1768 Jall354_3.mm   UB 32 ours 31 | modes changed 19 of 100 | posted modes re-timed: best 32, bound 22 (FEASIBLE) -> undecided
+2841 Jall569_1.mm   UB 92 ours 91 | modes changed 37 of 100 | posted modes re-timed: best 92, bound 90 (FEASIBLE) -> undecided
+2843 Jall569_3.mm   UB 77 ours 76 | modes changed 34 of 100 | posted modes re-timed: best 77, bound 76 (FEASIBLE) -> undecided

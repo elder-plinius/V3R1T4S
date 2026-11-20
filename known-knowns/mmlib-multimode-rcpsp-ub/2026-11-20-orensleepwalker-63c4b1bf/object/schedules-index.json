@@ -1,0 +1,212 @@
+[
+ {
+  "file": "Jall248_3.mm",
+  "instance_id": 1238,
+  "makespan": 50,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "613dfa45558cb4a2189d5bb7d62af0c3970014f3d31149f347eac39eb007c759"
+ },
+ {
+  "file": "Jall354_2.mm",
+  "instance_id": 1767,
+  "makespan": 31,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "299f6ca927201b5a1bb6e320b744993b67af9cada2a28c4f2f7023c60df1308c"
+ },
+ {
+  "file": "Jall354_3.mm",
+  "instance_id": 1768,
+  "makespan": 31,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "faf21ce3e800df68481ba648269c83f4ea9c76e3a08875af8406abe34acef99d"
+ },
+ {
+  "file": "Jall433_1.mm",
+  "instance_id": 2161,
+  "makespan": 72,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "373dd314c3ba110e293c2f8737545b88e0b8674f71ccf8c0a5611bfd60ece64d"
+ },
+ {
+  "file": "Jall434_5.mm",
+  "instance_id": 2170,
+  "makespan": 53,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "dc0119861b44af76295a09b4a6ff7abd94e6b94ce16db0c7552077551983649d"
+ },
+ {
+  "file": "Jall436_2.mm",
+  "instance_id": 2177,
+  "makespan": 50,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "e1cad3a1e1b826a949fafee88429a7e0195dcf5dde73a084334e3248c14f5ec5"
+ },
+ {
+  "file": "Jall436_3.mm",
+  "instance_id": 2178,
+  "makespan": 56,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "226f67f6392b2b4570d96eb7d496d3b73ede04eea4d9fdbe739c845a60c058e4"
+ },
+ {
+  "file": "Jall436_5.mm",
+  "instance_id": 2180,
+  "makespan": 53,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "0de5298d9422af167f0322aa90ffe28ecd204febe198d70aa90e1b0009bdae9d"
+ },
+ {
+  "file": "Jall445_3.mm",
+  "instance_id": 2223,
+  "makespan": 75,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "4eb3a90dbb382a921fb04fe1967c0f4ea3ba4964f5822938fa9ef265c253901d"
+ },
+ {
+  "file": "Jall460_4.mm",
+  "instance_id": 2299,
+  "makespan": 67,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "bea8f87232ce45cd025218146f0c7278326c4ac7529613db783bcd181d131938"
+ },
+ {
+  "file": "Jall490_1.mm",
+  "instance_id": 2446,
+  "makespan": 76,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "c7194c6a0a68f3708880cdf4b0a607ca65054a6143624b29aec37fed9ec01791"
+ },
+ {
+  "file": "Jall490_5.mm",
+  "instance_id": 2450,
+  "makespan": 75,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "6e65fe8c986616f939aed755e52118f3885613e872f5500298a0b008f65af4f5"
+ },
+ {
+  "file": "Jall491_2.mm",
+  "instance_id": 2452,
+  "makespan": 51,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "abc7027a86a536031af8be16099bee592cd1a2da4f47e68dd5cb37426f55fb55"
+ },
+ {
+  "file": "Jall504_4.mm",
+  "instance_id": 2519,
+  "makespan": 52,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "65acb08fa029b1195f224ec3a078a0d3d62474ecb0792a6abaddc396cc237759"
+ },
+ {
+  "file": "Jall543_4.mm",
+  "instance_id": 2714,
+  "makespan": 46,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "c6b216d304019003ee356a76bdf905c8473d2e59b1de43eac376b50e2b0d7dac"
+ },
+ {
+  "file": "Jall544_2.mm",
+  "instance_id": 2717,
+  "makespan": 74,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "66a7c9ce5100121c3604f402c79286e2f465a74f38cee583d67dbcd3274d4184"
+ },
+ {
+  "file": "Jall555_4.mm",
+  "instance_id": 2774,
+  "makespan": 50,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "1ba4786d7989f117d90a2fe4a3d95cde4e627e32d65c9a2dbd4c0dbca56f8082"
+ },
+ {
+  "file": "Jall569_1.mm",
+  "instance_id": 2841,
+  "makespan": 91,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "6c62dd8c7c51b234fc0640d145af751d1b31a18c22a5951f0bf9628f534466ff"
+ },
+ {
+  "file": "Jall569_2.mm",
+  "instance_id": 2842,
+  "makespan": 69,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "fa26af39b5cd025e53008f2744ae2aaa83ba2fd1d5da1725e91b24015be599bc"
+ },
+ {
+  "file": "Jall569_3.mm",
+  "instance_id": 2843,
+  "makespan": 76,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "67f788d975febe8c33b1fa638356b90beb186908e6c5cf878b424e9636cb3f04"
+ },
+ {
+  "file": "Jall570_1.mm",
+  "instance_id": 2846,
+  "makespan": 57,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "e1b61ad03e4d7ac20dfa263091920269255ef43b9950aa9ebbf8296a13933507"
+ },
+ {
+  "file": "Jall570_5.mm",
+  "instance_id": 2850,
+  "makespan": 55,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "3d738caedb69f68cf2a60a9059ae751e5091793927bb0b63ab403046682d2cc8"
+ },
+ {
+  "file": "Jall571_4.mm",
+  "instance_id": 2854,
+  "makespan": 78,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "f880402ad9b37338b1ad47e326ec1774fc811d471d0e5268caf20061ec9f7270"
+ },
+ {
+  "file": "Jall572_2.mm",
+  "instance_id": 2857,
+  "makespan": 59,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "2999b4b3fa062c99b122969df18b3f3e1e498cc57e6d4fd378322ad3df7d03c4"
+ },
+ {
+  "file": "Jall597_3.mm",
+  "instance_id": 2983,
+  "makespan": 60,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "7ee5fdfcce3c28d5d4f38a06a0b2230049acd7bcb7aae3eff8fc280c4274a7d1"
+ },
+ {
+  "file": "Jall598_2.mm",
+  "instance_id": 2987,
+  "makespan": 78,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "3154b823259f0e80e61d2e63dc75354e9758385e273f1324ff0079d1c8ba1792"
+ },
+ {
+  "file": "Jall599_3.mm",
+  "instance_id": 2993,
+  "makespan": 51,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "68d6c78048669d4f6d077fba54a1bde022eb879e55b8c9e9a8104204ab5bbc59"
+ },
+ {
+  "file": "Jall609_2.mm",
+  "instance_id": 3042,
+  "makespan": 50,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "6ef8e747cccd11fdb8db6b5dd1bd92c63e1c2b97d0bfcf1c71692b03f513edf8"
+ },
+ {
+  "file": "Jall624_2.mm",
+  "instance_id": 3117,
+  "makespan": 52,
+  "warm_start_from_posted_schedule": true,
+  "schedule_sha256": "7af55f323bab042692521d968d569ba70bd597735e4856a9adcdb2e1cbc88a7c"
+ },
+ {
+  "file": "Jall625_2.mm",
+  "instance_id": 3122,
+  "makespan": 83,
+  "warm_start_from_posted_schedule": false,
+  "schedule_sha256": "28b054458abd31f78fc0c63ed978624454ee2540c316fce9216a4c74fbd9ebfa"
+ }
+]

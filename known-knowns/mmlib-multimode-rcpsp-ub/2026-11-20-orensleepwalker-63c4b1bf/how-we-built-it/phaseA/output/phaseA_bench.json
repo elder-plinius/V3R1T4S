@@ -1,0 +1,798 @@
+{
+ "test1": [
+  {
+   "id": 2461,
+   "ub": 65,
+   "rebuilt": 65,
+   "check": "VALID makespan 65"
+  },
+  {
+   "id": 2638,
+   "ub": 59,
+   "rebuilt": 59,
+   "check": "VALID makespan 59"
+  },
+  {
+   "id": 3147,
+   "ub": 30,
+   "rebuilt": 30,
+   "check": "VALID makespan 30"
+  },
+  {
+   "id": 1091,
+   "ub": 26,
+   "rebuilt": 26,
+   "check": "VALID makespan 26"
+  },
+  {
+   "id": 88,
+   "ub": 27,
+   "rebuilt": 27,
+   "check": "VALID makespan 27"
+  },
+  {
+   "id": 1298,
+   "ub": 59,
+   "rebuilt": 59,
+   "check": "VALID makespan 59"
+  },
+  {
+   "id": 2903,
+   "ub": 91,
+   "rebuilt": 91,
+   "check": "VALID makespan 91"
+  },
+  {
+   "id": 2270,
+   "ub": 127,
+   "rebuilt": 127,
+   "check": "VALID makespan 127"
+  },
+  {
+   "id": 1882,
+   "ub": 66,
+   "rebuilt": 66,
+   "check": "VALID makespan 66"
+  },
+  {
+   "id": 240,
+   "ub": 59,
+   "rebuilt": 59,
+   "check": "VALID makespan 59"
+  },
+  {
+   "id": 1427,
+   "ub": 82,
+   "rebuilt": 82,
+   "check": "VALID makespan 82"
+  },
+  {
+   "id": 3138,
+   "ub": 67,
+   "rebuilt": 67,
+   "check": "VALID makespan 67"
+  },
+  {
+   "id": 217,
+   "ub": 30,
+   "rebuilt": 30,
+   "check": "VALID makespan 30"
+  },
+  {
+   "id": 898,
+   "ub": 36,
+   "rebuilt": 36,
+   "check": "VALID makespan 36"
+  },
+  {
+   "id": 1483,
+   "ub": 64,
+   "rebuilt": 64,
+   "check": "VALID makespan 64"
+  },
+  {
+   "id": 119,
+   "ub": 48,
+   "rebuilt": 48,
+   "check": "VALID makespan 48"
+  },
+  {
+   "id": 3118,
+   "ub": 77,
+   "rebuilt": 77,
+   "check": "VALID makespan 77"
+  },
+  {
+   "id": 2486,
+   "ub": 112,
+   "rebuilt": 112,
+   "check": "VALID makespan 112"
+  },
+  {
+   "id": 2587,
+   "ub": 56,
+   "rebuilt": 56,
+   "check": "VALID makespan 56"
+  },
+  {
+   "id": 1733,
+   "ub": 57,
+   "rebuilt": 57,
+   "check": "VALID makespan 57"
+  },
+  {
+   "id": 1574,
+   "ub": 44,
+   "rebuilt": 44,
+   "check": "VALID makespan 44"
+  },
+  {
+   "id": 2883,
+   "ub": 204,
+   "rebuilt": 204,
+   "check": "VALID makespan 204"
+  },
+  {
+   "id": 2822,
+   "ub": 173,
+   "rebuilt": 173,
+   "check": "VALID makespan 173"
+  },
+  {
+   "id": 254,
+   "ub": 39,
+   "rebuilt": 39,
+   "check": "VALID makespan 39"
+  },
+  {
+   "id": 28,
+   "ub": 17,
+   "rebuilt": 17,
+   "check": "VALID makespan 17"
+  },
+  {
+   "id": 1173,
+   "ub": 212,
+   "rebuilt": 212,
+   "check": "VALID makespan 212"
+  },
+  {
+   "id": 1139,
+   "ub": 61,
+   "rebuilt": 61,
+   "check": "VALID makespan 61"
+  },
+  {
+   "id": 2440,
+   "ub": 96,
+   "rebuilt": 96,
+   "check": "VALID makespan 96"
+  },
+  {
+   "id": 266,
+   "ub": 43,
+   "rebuilt": 43,
+   "check": "VALID makespan 43"
+  },
+  {
+   "id": 821,
+   "ub": 34,
+   "rebuilt": 34,
+   "check": "VALID makespan 34"
+  },
+  {
+   "id": 1665,
+   "ub": 21,
+   "rebuilt": 21,
+   "check": "VALID makespan 21"
+  },
+  {
+   "id": 1992,
+   "ub": 212,
+   "rebuilt": 212,
+   "check": "VALID makespan 212"
+  },
+  {
+   "id": 14,
+   "ub": 32,
+   "rebuilt": 32,
+   "check": "VALID makespan 32"
+  },
+  {
+   "id": 244,
+   "ub": 64,
+   "rebuilt": 64,
+   "check": "VALID makespan 64"
+  },
+  {
+   "id": 679,
+   "ub": 58,
+   "rebuilt": 58,
+   "check": "VALID makespan 58"
+  },
+  {
+   "id": 2740,
+   "ub": 43,
+   "rebuilt": 43,
+   "check": "VALID makespan 43"
+  },
+  {
+   "id": 1657,
+   "ub": 22,
+   "rebuilt": 22,
+   "check": "VALID makespan 22"
+  },
+  {
+   "id": 1069,
+   "ub": 164,
+   "rebuilt": 164,
+   "check": "VALID makespan 164"
+  },
+  {
+   "id": 1029,
+   "ub": 72,
+   "rebuilt": 72,
+   "check": "VALID makespan 72"
+  },
+  {
+   "id": 2956,
+   "ub": 175,
+   "rebuilt": 175,
+   "check": "VALID makespan 175"
+  },
+  {
+   "id": 1367,
+   "ub": 69,
+   "rebuilt": 69,
+   "check": "VALID makespan 69"
+  },
+  {
+   "id": 414,
+   "ub": 88,
+   "rebuilt": 88,
+   "check": "VALID makespan 88"
+  },
+  {
+   "id": 2181,
+   "ub": 33,
+   "rebuilt": 33,
+   "check": "VALID makespan 33"
+  },
+  {
+   "id": 2250,
+   "ub": 36,
+   "rebuilt": 36,
+   "check": "VALID makespan 36"
+  },
+  {
+   "id": 3145,
+   "ub": 41,
+   "rebuilt": 41,
+   "check": "VALID makespan 41"
+  },
+  {
+   "id": 1128,
+   "ub": 127,
+   "rebuilt": 127,
+   "check": "VALID makespan 127"
+  },
+  {
+   "id": 2683,
+   "ub": 134,
+   "rebuilt": 134,
+   "check": "VALID makespan 134"
+  },
+  {
+   "id": 1594,
+   "ub": 178,
+   "rebuilt": 178,
+   "check": "VALID makespan 178"
+  },
+  {
+   "id": 186,
+   "ub": 48,
+   "rebuilt": 48,
+   "check": "VALID makespan 48"
+  },
+  {
+   "id": 3148,
+   "ub": 30,
+   "rebuilt": 30,
+   "check": "VALID makespan 30"
+  },
+  {
+   "id": 1122,
+   "ub": 27,
+   "rebuilt": 27,
+   "check": "VALID makespan 27"
+  },
+  {
+   "id": 1834,
+   "ub": 42,
+   "rebuilt": 42,
+   "check": "VALID makespan 42"
+  },
+  {
+   "id": 103,
+   "ub": 60,
+   "rebuilt": 60,
+   "check": "VALID makespan 60"
+  },
+  {
+   "id": 403,
+   "ub": 122,
+   "rebuilt": 122,
+   "check": "VALID makespan 122"
+  },
+  {
+   "id": 454,
+   "ub": 182,
+   "rebuilt": 182,
+   "check": "VALID makespan 182"
+  },
+  {
+   "id": 2397,
+   "ub": 101,
+   "rebuilt": 101,
+   "check": "VALID makespan 101"
+  },
+  {
+   "id": 869,
+   "ub": 79,
+   "rebuilt": 79,
+   "check": "VALID makespan 79"
+  },
+  {
+   "id": 2105,
+   "ub": 111,
+   "rebuilt": 111,
+   "check": "VALID makespan 111"
+  },
+  {
+   "id": 2062,
+   "ub": 69,
+   "rebuilt": 69,
+   "check": "VALID makespan 69"
+  },
+  {
+   "id": 224,
+   "ub": 29,
+   "rebuilt": 29,
+   "check": "VALID makespan 29"
+  }
+ ],
+ "test2": [
+  {
+   "id": 356,
+   "file": "Jall72_1.mm",
+   "open": false,
+   "lb": 74,
+   "ub": 74,
+   "ours": 74,
+   "proxy": 74,
+   "gap_to_ub": 0.0,
+   "secs": 0.2,
+   "check": "VALID makespan 74"
+  },
+  {
+   "id": 431,
+   "file": "Jall87_1.mm",
+   "open": false,
+   "lb": 50,
+   "ub": 50,
+   "ours": 50,
+   "proxy": 50,
+   "gap_to_ub": 0.0,
+   "secs": 0.2,
+   "check": "VALID makespan 50"
+  },
+  {
+   "id": 306,
+   "file": "Jall62_1.mm",
+   "open": false,
+   "lb": 60,
+   "ub": 60,
+   "ours": 60,
+   "proxy": 60,
+   "gap_to_ub": 0.0,
+   "secs": 0.3,
+   "check": "VALID makespan 60"
+  },
+  {
+   "id": 51,
+   "file": "Jall11_1.mm",
+   "open": true,
+   "lb": 45,
+   "ub": 51,
+   "ours": 56,
+   "proxy": 48,
+   "gap_to_ub": 0.09803921568627451,
+   "secs": 0.2,
+   "check": "VALID makespan 56"
+  },
+  {
+   "id": 113,
+   "file": "Jall23_3.mm",
+   "open": false,
+   "lb": 57,
+   "ub": 57,
+   "ours": 62,
+   "proxy": 52,
+   "gap_to_ub": 0.08771929824561403,
+   "secs": 0.2,
+   "check": "VALID makespan 62"
+  },
+  {
+   "id": 192,
+   "file": "Jall39_2.mm",
+   "open": true,
+   "lb": 41,
+   "ub": 43,
+   "ours": 45,
+   "proxy": 41,
+   "gap_to_ub": 0.046511627906976744,
+   "secs": 0.3,
+   "check": "VALID makespan 45"
+  },
+  {
+   "id": 352,
+   "file": "Jall71_2.mm",
+   "open": false,
+   "lb": 90,
+   "ub": 90,
+   "ours": 98,
+   "proxy": 87,
+   "gap_to_ub": 0.08888888888888889,
+   "secs": 0.4,
+   "check": "VALID makespan 98"
+  },
+  {
+   "id": 460,
+   "file": "Jall92_5.mm",
+   "open": true,
+   "lb": 91,
+   "ub": 112,
+   "ours": 118,
+   "proxy": 98,
+   "gap_to_ub": 0.05357142857142857,
+   "secs": 1.7,
+   "check": "VALID makespan 118"
+  },
+  {
+   "id": 524,
+   "file": "Jall105_4.mm",
+   "open": false,
+   "lb": 107,
+   "ub": 107,
+   "ours": 126,
+   "proxy": 104,
+   "gap_to_ub": 0.17757009345794392,
+   "secs": 0.3,
+   "check": "VALID makespan 126"
+  },
+  {
+   "id": 851,
+   "file": "Jall171_1.mm",
+   "open": false,
+   "lb": 30,
+   "ub": 30,
+   "ours": 30,
+   "proxy": 30,
+   "gap_to_ub": 0.0,
+   "secs": 0.4,
+   "check": "VALID makespan 30"
+  },
+  {
+   "id": 971,
+   "file": "Jall195_1.mm",
+   "open": false,
+   "lb": 30,
+   "ub": 30,
+   "ours": 30,
+   "proxy": 30,
+   "gap_to_ub": 0.0,
+   "secs": 0.4,
+   "check": "VALID makespan 30"
+  },
+  {
+   "id": 657,
+   "file": "Jall132_2.mm",
+   "open": true,
+   "lb": 58,
+   "ub": 60,
+   "ours": 63,
+   "proxy": 55,
+   "gap_to_ub": 0.05,
+   "secs": 0.5,
+   "check": "VALID makespan 63"
+  },
+  {
+   "id": 579,
+   "file": "Jall116_4.mm",
+   "open": false,
+   "lb": 29,
+   "ub": 29,
+   "ours": 29,
+   "proxy": 29,
+   "gap_to_ub": 0.0,
+   "secs": 1.1,
+   "check": "VALID makespan 29"
+  },
+  {
+   "id": 1011,
+   "file": "Jall203_1.mm",
+   "open": false,
+   "lb": 60,
+   "ub": 60,
+   "ours": 60,
+   "proxy": 60,
+   "gap_to_ub": 0.0,
+   "secs": 6.5,
+   "check": "VALID makespan 60"
+  },
+  {
+   "id": 679,
+   "file": "Jall136_4.mm",
+   "open": true,
+   "lb": 52,
+   "ub": 58,
+   "ours": 60,
+   "proxy": 55,
+   "gap_to_ub": 0.034482758620689655,
+   "secs": 1.4,
+   "check": "VALID makespan 60"
+  },
+  {
+   "id": 760,
+   "file": "Jall152_5.mm",
+   "open": false,
+   "lb": 39,
+   "ub": 39,
+   "ours": 41,
+   "proxy": 38,
+   "gap_to_ub": 0.05128205128205128,
+   "secs": 12.1,
+   "check": "VALID makespan 41"
+  },
+  {
+   "id": 954,
+   "file": "Jall191_4.mm",
+   "open": true,
+   "lb": 75,
+   "ub": 82,
+   "ours": 88,
+   "proxy": 79,
+   "gap_to_ub": 0.07317073170731707,
+   "secs": 0.9,
+   "check": "VALID makespan 88"
+  },
+  {
+   "id": 1066,
+   "file": "Jall214_1.mm",
+   "open": false,
+   "lb": 151,
+   "ub": 151,
+   "ours": 152,
+   "proxy": 152,
+   "gap_to_ub": 0.006622516556291391,
+   "secs": 15.2,
+   "check": "VALID makespan 152"
+  },
+  {
+   "id": 1501,
+   "file": "Jall301_1.mm",
+   "open": false,
+   "lb": 56,
+   "ub": 56,
+   "ours": 56,
+   "proxy": 56,
+   "gap_to_ub": 0.0,
+   "secs": 15.1,
+   "check": "VALID makespan 56"
+  },
+  {
+   "id": 1189,
+   "file": "Jall238_4.mm",
+   "open": true,
+   "lb": 157,
+   "ub": 164,
+   "ours": 182,
+   "proxy": 159,
+   "gap_to_ub": 0.10975609756097561,
+   "secs": 15.2,
+   "check": "VALID makespan 182"
+  },
+  {
+   "id": 1158,
+   "file": "Jall232_3.mm",
+   "open": false,
+   "lb": 84,
+   "ub": 84,
+   "ours": 85,
+   "proxy": 85,
+   "gap_to_ub": 0.011904761904761904,
+   "secs": 15.4,
+   "check": "VALID makespan 85"
+  },
+  {
+   "id": 1236,
+   "file": "Jall248_1.mm",
+   "open": false,
+   "lb": 40,
+   "ub": 40,
+   "ours": 40,
+   "proxy": 40,
+   "gap_to_ub": 0.0,
+   "secs": 14.6,
+   "check": "VALID makespan 40"
+  },
+  {
+   "id": 1327,
+   "file": "Jall266_2.mm",
+   "open": true,
+   "lb": 92,
+   "ub": 100,
+   "ours": 110,
+   "proxy": 99,
+   "gap_to_ub": 0.1,
+   "secs": 15.2,
+   "check": "VALID makespan 110"
+  },
+  {
+   "id": 1481,
+   "file": "Jall297_1.mm",
+   "open": false,
+   "lb": 66,
+   "ub": 66,
+   "ours": 74,
+   "proxy": 66,
+   "gap_to_ub": 0.12121212121212122,
+   "secs": 5.7,
+   "check": "VALID makespan 74"
+  },
+  {
+   "id": 1493,
+   "file": "Jall299_3.mm",
+   "open": true,
+   "lb": 71,
+   "ub": 76,
+   "ours": 79,
+   "proxy": 72,
+   "gap_to_ub": 0.039473684210526314,
+   "secs": 1.6,
+   "check": "VALID makespan 79"
+  },
+  {
+   "id": 1618,
+   "file": "Jall324_3.mm",
+   "open": false,
+   "lb": 67,
+   "ub": 67,
+   "ours": 74,
+   "proxy": 63,
+   "gap_to_ub": 0.1044776119402985,
+   "secs": 2.5,
+   "check": "VALID makespan 74"
+  },
+  {
+   "id": 2016,
+   "file": "Jall404_1.mm",
+   "open": false,
+   "lb": 154,
+   "ub": 154,
+   "ours": 154,
+   "proxy": 154,
+   "gap_to_ub": 0.0,
+   "secs": 0.8,
+   "check": "VALID makespan 154"
+  },
+  {
+   "id": 2066,
+   "file": "Jall414_1.mm",
+   "open": false,
+   "lb": 47,
+   "ub": 47,
+   "ours": 47,
+   "proxy": 47,
+   "gap_to_ub": 0.0,
+   "secs": 0.6,
+   "check": "VALID makespan 47"
+  },
+  {
+   "id": 1736,
+   "file": "Jall348_1.mm",
+   "open": true,
+   "lb": 56,
+   "ub": 57,
+   "ours": 60,
+   "proxy": 56,
+   "gap_to_ub": 0.05263157894736842,
+   "secs": 0.6,
+   "check": "VALID makespan 60"
+  },
+  {
+   "id": 1748,
+   "file": "Jall350_3.mm",
+   "open": false,
+   "lb": 55,
+   "ub": 55,
+   "ours": 58,
+   "proxy": 55,
+   "gap_to_ub": 0.05454545454545454,
+   "secs": 6.1,
+   "check": "VALID makespan 58"
+  },
+  {
+   "id": 2041,
+   "file": "Jall409_1.mm",
+   "open": false,
+   "lb": 63,
+   "ub": 63,
+   "ours": 63,
+   "proxy": 63,
+   "gap_to_ub": 0.0,
+   "secs": 12.4,
+   "check": "VALID makespan 63"
+  },
+  {
+   "id": 1892,
+   "file": "Jall379_2.mm",
+   "open": true,
+   "lb": 126,
+   "ub": 131,
+   "ours": 134,
+   "proxy": 126,
+   "gap_to_ub": 0.022900763358778626,
+   "secs": 0.9,
+   "check": "VALID makespan 134"
+  },
+  {
+   "id": 1880,
+   "file": "Jall376_5.mm",
+   "open": false,
+   "lb": 68,
+   "ub": 68,
+   "ours": 68,
+   "proxy": 68,
+   "gap_to_ub": 0.0,
+   "secs": 14.8,
+   "check": "VALID makespan 68"
+  },
+  {
+   "id": 2096,
+   "file": "Jall420_1.mm",
+   "open": false,
+   "lb": 105,
+   "ub": 105,
+   "ours": 105,
+   "proxy": 105,
+   "gap_to_ub": 0.0,
+   "secs": 0.5,
+   "check": "VALID makespan 105"
+  },
+  {
+   "id": 2133,
+   "file": "Jall427_3.mm",
+   "open": true,
+   "lb": 204,
+   "ub": 230,
+   "ours": 249,
+   "proxy": 213,
+   "gap_to_ub": 0.08260869565217391,
+   "secs": 15.5,
+   "check": "VALID makespan 249"
+  },
+  {
+   "id": 2080,
+   "file": "Jall416_5.mm",
+   "open": false,
+   "lb": 85,
+   "ub": 85,
+   "ours": 85,
+   "proxy": 85,
+   "gap_to_ub": 0.0,
+   "secs": 5.3,
+   "check": "VALID makespan 85"
+  }
+ ]
+}
