@@ -1,8 +1,8 @@
 # How it was built
 
-The construction code is not included. Argon's snapshot of the contributor's laptop (folder qubit_lp) holds a results note, a campaign script and a verifier script for a different target (upper bounds for large qubit codes), but no program that builds these ten distance-5 codes, and no PREREG.md, command log or exact commands for them. We say so plainly rather than reconstruct them. The snapshot's campaign and verifier scripts are not shipped because they do not produce this object.
+The construction code is not included. Argon's snapshot of the contributor's laptop (folder qubit_lp) holds a results note, a campaign script and a verifier script for a different target (upper bounds for large qubit codes), but no program that builds these ten distance-5 codes, and no preregistration file, command log or exact commands for them. We say so plainly rather than reconstruct them. The snapshot's campaign and verifier scripts are not shipped because they do not produce this object.
 
-What the snapshot does contain about this object is the contributor's own results note (RESULTS.md, item 5), reproduced below from the snapshot with local paths replaced by the placeholder {WORKDIR} (the excerpt has none). It is the contributor's claim about method, unverified, and the panel did not check it.
+What the snapshot does contain about this object is the contributor's own results note (item 5), reproduced below from the snapshot with local paths replaced by a placeholder (the excerpt has none). It is the contributor's claim about method, unverified, and the panel did not check it.
 
 The object file's own construction field for this entry reads: Hermitian-Plucker k=4 odd-parity defect quad in PG(7,F4) \ V_85 + 35-cap in V_85 (L_41) (the 16-generator code), and the analogous text with the 18-generator parameters for the other nine.
 
