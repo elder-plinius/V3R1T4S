@@ -1,0 +1,10 @@
+--: line 2: bc: command not found
+life h=1 w=6 exit=20 time= clauses=3148 drat=32KB 
+--: line 2: bc: command not found
+life h=2 w=6 exit=20 time= clauses=24856 drat=736KB 
+--: line 2: bc: command not found
+life h=3 w=5 exit=20 time= clauses=164904 drat=4936KB 
+--: line 2: bc: command not found
+life h=4 w=3 exit=20 time= clauses=790576 drat=15856KB 
+--: line 2: bc: command not found
+life h=4 w=4 exit=20 time= clauses=1052736 drat=16304KB 

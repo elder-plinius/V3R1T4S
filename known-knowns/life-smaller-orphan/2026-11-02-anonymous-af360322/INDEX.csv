@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+life-smaller-orphan,p1: no orphan in a 5 x w box for w <= 8 (new size 5 x 8),no orphan (UNSAT 32/32 cubes in each of two encodings; LRAT checked),literature: no orphan with both sides <= 7 (Beer 2023 7x7) and none of height <= 4 (Wade 2023); 5 x 8 not ruled out,2026-11-02T02:17:00Z,object/certificate.tsv,af360322241a00749a461c254fd94f908206965e7b4c41114990400c9fc7744e

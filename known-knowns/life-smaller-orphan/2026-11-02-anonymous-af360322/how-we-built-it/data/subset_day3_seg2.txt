@@ -1,0 +1,3 @@
+5x8 c4 v0: SUBSET_OK matched=15262498 units=5
+5x8 c4 v13: SUBSET_OK matched=14720939 units=5
+5x8 c4 v31: SUBSET_OK matched=14710226 units=5

@@ -1,0 +1,13 @@
+h=3	w=3	m=1	result=20	solve_ms=51	check=c_VERIFIED	check_ms=62	clauses=99352
+h=3	w=5	m=2	result=20	solve_ms=156	check=c_VERIFIED	check_ms=63	clauses=164904
+h=3	w=8	m=4	result=20	solve_ms=948	check=c_VERIFIED	check_ms=119	clauses=263232
+h=4	w=4	m=2	result=20	solve_ms=762	check=c_VERIFIED	check_ms=261	clauses=1052736
+h=4	w=5	m=2	result=20	solve_ms=2031	check=c_VERIFIED	check_ms=338	clauses=1314896
+h=4	w=6	m=3	result=20	solve_ms=9718	check=c_VERIFIED	check_ms=485	clauses=1577056
+h=4	w=7	m=3	result=20	solve_ms=22834	check=c_VERIFIED	check_ms=844	clauses=1839216
+h=4	w=8	m=4	result=20	solve_ms=87965	check=c_VERIFIED	check_ms=1617	clauses=2101376
+h=5	w=2	m=1	result=20	solve_ms=1440	check=c_VERIFIED	check_ms=869	clauses=4210752
+h=5	w=3	m=1	result=20	solve_ms=4982	check=c_VERIFIED	check_ms=1514	clauses=6307936
+h=5	w=4	m=2	result=20	solve_ms=19240	check=c_VERIFIED	check_ms=2025	clauses=8405120
+h=5	w=5	m=2	result=20	solve_ms=85618	check=c_VERIFIED	check_ms=3316	clauses=10502304
+h=5	w=6	m=3	result=20	solve_ms=947247	check=c_VERIFIED	check_ms=5411	clauses=12599488

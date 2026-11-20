@@ -1,0 +1,1 @@
+h=5 w=4 rule=8/12 exit=20 solve_ms=31989 vars=65684 clauses=8405120 drat_kb=148872 TIMEOUT drat_s=600486ms
