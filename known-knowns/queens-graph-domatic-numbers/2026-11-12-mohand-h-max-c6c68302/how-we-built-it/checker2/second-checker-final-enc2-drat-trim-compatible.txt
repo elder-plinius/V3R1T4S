@@ -1,0 +1,6 @@
+c formula loaded: 160910 clauses, vars 32768, top-level conflict False
+c proof format binary
+c TIMEOUT after 6285312 steps (cpu limit 5200 s)
+c clauses 160910 additions 3191464 deletions 3093847 rat_checks 1269140 rat_resolvents 1270698 del_not_found 0 del_top_reason_rebuilds 0 del_ignored 18436 tautologies 0
+c time_wall 5227,79 cpu 5201,72 peak_ws_mb 295 peak_private_mb 334
+s TIMEOUT

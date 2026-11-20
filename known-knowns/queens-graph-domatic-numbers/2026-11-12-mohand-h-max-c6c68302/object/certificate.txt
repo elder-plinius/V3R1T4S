@@ -1,0 +1,15 @@
+# Certificate for dom(Q_11) <= 19: what was checked, by hash
+# One line per item: encoding, item, sha256, size in bytes. The 2 x 680 checks of the chain are listed,
+# one per line, in chain-manifest-enc1.txt and chain-manifest-enc2.txt (same folder).
+enc1 Fbase.cnf e08e926ce30272fa64f0524d5d0325ae1c0d1f5390b6cd16bd54e6a6c87dda3f 2764696
+enc1 Fbase-lemmas.cnf a69970d7a3f06c6db9d0cd684b65ed999588d2dd098465246ffebef48a86e4e5 2817475
+enc1 proofB2.bin 502f34a7892dd18460fbcef35873fdca8847897e5d5ce4139ab984316d5067de 153739919
+enc1 chain-manifest-enc1.txt ecd9d6c34625315c64f3970a7b5840415520e452c14c0a975a07d9767515fd95 141987
+enc1 chain 680 checks, all s_VERIFIED, proof bytes 36516972697
+enc1 final-step drat-trim verdict: s VERIFIED (checked in 5694.6 s)
+enc2 Fbase.cnf 30a7518ba31872fb8a1dbd962f4eaa855b19428fd9a0e87ee53e03d1876e37ce 3051604
+enc2 Fbase-lemmas.cnf d805e114080cf0f988e9da612f1d64f27c264b3ad47a00f3e9fcddcde8f81cda 3104386
+enc2 proofB2.bin dde2185725888dda48621abe850434c482621df2a0d17f531ebe1c12819b1679 156821960
+enc2 chain-manifest-enc2.txt b7cccf35c9776f8d7124306b96e88f2a03c64817c456d6f9a4dd2c549d298da3 142256
+enc2 chain 680 checks, all s_VERIFIED, proof bytes 42976888065
+enc2 final-step drat-trim verdict: s VERIFIED (checked in 6990.3 s)
