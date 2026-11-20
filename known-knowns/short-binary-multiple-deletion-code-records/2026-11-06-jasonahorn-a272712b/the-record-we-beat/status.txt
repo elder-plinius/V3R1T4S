@@ -1,0 +1,11 @@
+URL: https://arxiv.org/html/2504.00613v2
+abs_url: https://arxiv.org/abs/2504.00613
+fetch_utc: 2026-11-06T08:42:34Z
+http_status: 200
+sha256: 4542bd58bc16be9bf47f6fc12f14fe86464c078c5a9c747058ee5698fbc7499a
+selected_header: date: Fri, 06 Nov 2026 08:42:35 GMT
+cell: binary 3-deletion correction, n=16, MIS solver OnlineMIS
+page_value: 42, bold, best known in Table 2
+lp_upper: 99
+redumis: t/o
+version: v2, last revised 5 Jun 2026
