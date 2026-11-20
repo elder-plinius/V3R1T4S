@@ -1,0 +1,2 @@
+# Tested independent-checker dependency; install manually in an isolated environment.
+numpy==2.5.4
