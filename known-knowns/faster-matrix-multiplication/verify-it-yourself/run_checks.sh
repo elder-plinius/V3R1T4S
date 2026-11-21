@@ -4,6 +4,8 @@
 set -u
 HERE=$(cd "$(dirname "$0")/.." && pwd)
 SECTION=known-knowns/faster-matrix-multiplication
+CONTRACT="$HERE/../check_harness_contract.py"
+[ -f "$CONTRACT" ] || { echo "missing known-knowns/check_harness_contract.py (keep the shared helper with this family)"; exit 2; }
 require() {  # input files must be present
   for o in "$@"; do
     [ -f "$HERE/$o" ] || { echo "missing $SECTION/$o"; exit 2; }
@@ -26,11 +28,20 @@ for f in "$HERE"/schemes/*.json; do
   echo "$out" | tail -1 | grep -q "rank_nonzero_terms=$rank " && echo "rank $rank as claimed" || { echo "RANK MISMATCH (claimed $rank)"; fail=1; }
 done
 echo "== negative controls on the smallest scheme (each must FAIL)"
-python3 "$HERE/verify-it-yourself/mutate.py" "$HERE/schemes/13x14x15_r1677_Q.json" "$TMP" >/dev/null
-for m in drop_term bump_coeff swap_vw; do
-  if python3 "$HERE/verify-it-yourself/fmmcheck.py" "$TMP/$m.json" > "$TMP/$m.out" 2>&1; then echo "control $m: PASSED (BAD)"; fail=1;
-  else echo "control $m: $(tail -1 "$TMP/$m.out" | cut -c1-40)... (expected)"; fi
-done
+if python3 "$HERE/verify-it-yourself/mutate.py" "$HERE/schemes/13x14x15_r1677_Q.json" "$TMP" >/dev/null; then
+  for m in drop_term bump_coeff swap_vw; do
+    if [ ! -s "$TMP/$m.json" ]; then echo "control $m: missing or empty mutant"; fail=1; continue; fi
+    rc=0
+    python3 "$HERE/verify-it-yourself/fmmcheck.py" "$TMP/$m.json" > "$TMP/$m.out" 2> "$TMP/$m.err" || rc=$?
+    if python3 "$CONTRACT" fmm --file "$TMP/$m.json" --stdout "$TMP/$m.out" --stderr "$TMP/$m.err" --exit-code "$rc"; then
+      echo "control $m: expected semantic rejection"
+    else
+      echo "control $m: unexpected result (exit $rc)"; fail=1
+    fi
+  done
+else
+  echo "negative-control mutation failed"; fail=1
+fi
 rm -rf "$TMP"
 [ $fail = 0 ] && echo "ALL CHECKS PASSED" || echo "SOME CHECK FAILED"
 exit $fail

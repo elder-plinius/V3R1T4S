@@ -1,3 +1,118 @@
+# Current wrapper receipt (2026-10-17)
+
+Real end-to-end run on macOS arm64 (Darwin 27.0.0), Apple clang 21.0.0, Python 3.11.17, NumPy 2.4.6.
+`THREADS=4`; exit code **0**; 5.19 s wall clock (started 2026-10-17T23:54:04Z).
+The graph files, `ddcheck.c`, `ddcheck.py` and the (13,4) near-miss parent are byte-identical to upstream commit
+`04fdfba48c6e277fe083b6811f1a5deb3c52b74e`. These are actual scientific checker outputs, not synthetic fixture output.
+
+All five small graphs ran with both checkers, and all six negative controls ran (each graph at D-1, and the (13,4)
+near-miss parent with exactly 4 far ordered pairs); `known-knowns/check_harness_contract.py` accepted each control
+(`HARNESS CONTROL PASS`). The two D=6 graphs (`BIG=1`) were not rerun: that part of the wrapper did not change, and
+its 2026-10-10 output is kept in the historical receipts below.
+
+Command (from this family directory):
+
+```sh
+THREADS=4 sh verify-it-yourself/run_checks.sh
+```
+
+Exact source and output SHA-256:
+
+- `run_checks.sh`: `3aa04765c5c600dbeb9d1c74735a5db51304ec2142d0bf057e30213ac40e0a25`
+- `ddcheck.c`: `bb01dacafd49c6a037610adf9d93e300c014dded298b85da5f3caf1d25527477`
+- `ddcheck.py`: `ca62ae8e08617bb63543ce878a3804b9f6459c0f34e570f53aa0a720e4b56e28`
+- `known-knowns/check_harness_contract.py`: `f0f43ba4ab6970001f228affb5a95f9ec5d37b115f8487c7ce4cc11ce9e5a070`
+- Combined stdout/stderr below: `dbae79411307aa8342b013b38ef043463956da0404d8f9cd9887a14d12ba618d`
+
+Paths in the output are relative to `known-knowns/biggest-graphs/`: the absolute checkout prefix was removed, and
+nothing else was changed.
+
+## Complete current output
+
+```text
+== compile
+== G_9_4_n1700.edges (Delta=9, D=4)
+sha256 ok
+file=graphs/G_9_4_n1700.edges
+N=1700 edges=7650 loops=0 duplicates=0 unused_labels=0 mindeg=9 maxdeg=9 (DELTA=9, D=4)
+degree_histogram: 9:1700
+ordered_pairs_within_distance: r=0:1700 r=1:17000 r=2:132400 r=3:939800 r=4:2890000
+ordered_pairs_at_distance_gt_4=0 (of 2890000)
+VALID
+{"file": "graphs/G_9_4_n1700.edges", "N": 1700, "edges": 7650, "loops": 0, "duplicates": 0, "unparsable_lines": 0, "unused_labels": 0, "mindeg": 9, "maxdeg": 9, "DELTA": 9, "D": 4, "degree_histogram": {"9": 1700}, "ordered_pairs_within_distance": {"0": 1700, "1": 17000, "2": 132400, "3": 939800, "4": 2890000}, "far_pairs": 0, "valid": true}
+-- control at D-1 (must be INVALID):
+ordered_pairs_at_distance_gt_3=1950200 (of 2890000)
+INVALID
+HARNESS CONTROL PASS graph: expected semantic rejection
+== G_15_3_n1620.edges.txt (Delta=15, D=3)
+sha256 ok
+file=graphs/G_15_3_n1620.edges.txt
+N=1620 edges=12150 loops=0 duplicates=0 unused_labels=0 mindeg=15 maxdeg=15 (DELTA=15, D=3)
+degree_histogram: 15:1620
+ordered_pairs_within_distance: r=0:1620 r=1:25920 r=2:330480 r=3:2624400
+ordered_pairs_at_distance_gt_3=0 (of 2624400)
+VALID
+{"file": "graphs/G_15_3_n1620.edges.txt", "N": 1620, "edges": 12150, "loops": 0, "duplicates": 0, "unparsable_lines": 0, "unused_labels": 0, "mindeg": 15, "maxdeg": 15, "DELTA": 15, "D": 3, "degree_histogram": {"15": 1620}, "ordered_pairs_within_distance": {"0": 1620, "1": 25920, "2": 330480, "3": 2624400}, "far_pairs": 0, "valid": true}
+-- control at D-1 (must be INVALID):
+ordered_pairs_at_distance_gt_2=2293920 (of 2624400)
+INVALID
+HARNESS CONTROL PASS graph: expected semantic rejection
+== G_14_4_n8424.edges.txt (Delta=14, D=4)
+sha256 ok
+file=graphs/G_14_4_n8424.edges.txt
+N=8424 edges=58968 loops=0 duplicates=0 unused_labels=0 mindeg=14 maxdeg=14 (DELTA=14, D=4)
+degree_histogram: 14:8424
+ordered_pairs_within_distance: r=0:8424 r=1:126360 r=2:1507896 r=3:15875352 r=4:70963776
+ordered_pairs_at_distance_gt_4=0 (of 70963776)
+VALID
+{"file": "graphs/G_14_4_n8424.edges.txt", "N": 8424, "edges": 58968, "loops": 0, "duplicates": 0, "unparsable_lines": 0, "unused_labels": 0, "mindeg": 14, "maxdeg": 14, "DELTA": 14, "D": 4, "degree_histogram": {"14": 8424}, "ordered_pairs_within_distance": {"0": 8424, "1": 126360, "2": 1507896, "3": 15875352, "4": 70963776}, "far_pairs": 0, "valid": true}
+-- control at D-1 (must be INVALID):
+ordered_pairs_at_distance_gt_3=55088424 (of 70963776)
+INVALID
+HARNESS CONTROL PASS graph: expected semantic rejection
+== G_15_4_n13365.edges (Delta=15, D=4)
+sha256 ok
+file=graphs/G_15_4_n13365.edges
+N=13365 edges=100035 loops=0 duplicates=0 unused_labels=0 mindeg=14 maxdeg=15 (DELTA=15, D=4)
+degree_histogram: 14:405 15:12960
+ordered_pairs_within_distance: r=0:13365 r=1:213435 r=2:2735775 r=3:31533705 r=4:178623225
+ordered_pairs_at_distance_gt_4=0 (of 178623225)
+VALID
+{"file": "graphs/G_15_4_n13365.edges", "N": 13365, "edges": 100035, "loops": 0, "duplicates": 0, "unparsable_lines": 0, "unused_labels": 0, "mindeg": 14, "maxdeg": 15, "DELTA": 15, "D": 4, "degree_histogram": {"14": 405, "15": 12960}, "ordered_pairs_within_distance": {"0": 13365, "1": 213435, "2": 2735775, "3": 31533705, "4": 178623225}, "far_pairs": 0, "valid": true}
+-- control at D-1 (must be INVALID):
+ordered_pairs_at_distance_gt_3=147089520 (of 178623225)
+INVALID
+HARNESS CONTROL PASS graph: expected semantic rejection
+== G_13_4_n6630.edges (Delta=13, D=4)
+sha256 ok
+file=graphs/G_13_4_n6630.edges
+N=6630 edges=43086 loops=0 duplicates=0 unused_labels=0 mindeg=11 maxdeg=13 (DELTA=13, D=4)
+degree_histogram: 11:4 12:10 13:6616
+ordered_pairs_within_distance: r=0:6630 r=1:92802 r=2:1118358 r=3:11694838 r=4:43956900
+ordered_pairs_at_distance_gt_4=0 (of 43956900)
+VALID
+{"file": "graphs/G_13_4_n6630.edges", "N": 6630, "edges": 43086, "loops": 0, "duplicates": 0, "unparsable_lines": 0, "unused_labels": 0, "mindeg": 11, "maxdeg": 13, "DELTA": 13, "D": 4, "degree_histogram": {"11": 4, "12": 10, "13": 6616}, "ordered_pairs_within_distance": {"0": 6630, "1": 92802, "2": 1118358, "3": 11694838, "4": 43956900}, "far_pairs": 0, "valid": true}
+-- control at D-1 (must be INVALID):
+ordered_pairs_at_distance_gt_3=32262062 (of 43956900)
+INVALID
+HARNESS CONTROL PASS graph: expected semantic rejection
+-- control: the (13,4) near-miss parent (how-we-built-it/13_4) must be INVALID with exactly 4 far ordered pairs:
+ordered_pairs_at_distance_gt_4=4 (of 43956900)
+INVALID
+HARNESS CONTROL PASS graph: expected semantic rejection
+== large graphs skipped (set BIG=1)
+ALL CHECKS PASSED
+```
+
+---
+
+## Historical receipts
+
+The records below are preserved from earlier runs of the former wrapper. Their
+wrapper messages do not describe the current run; use the complete current
+output above for the current wrapper contract. Historical comparison dates and
+optional-runtime coverage remain those stated in the original records.
+
 # Check results (degree-diameter graphs)
 
 All seven graphs were checked with the release checkers on the shipped files on 2026-10-10 on the build machine
