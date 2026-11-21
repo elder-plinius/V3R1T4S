@@ -1,0 +1,6 @@
+start from mf4_x_64_6371_gap0.npy gap 0.0
+{"round": 0, "target_gap": 32.0, "target_flips": 11, "realised_frac": 0.091, "collateral": 1, "round_best": -20.0, "global_best": 0.0, "iters": 24417, "t": 27.5}
+{"round": 1, "target_gap": 32.0, "target_flips": 11, "realised_frac": 0.273, "collateral": 0, "round_best": 0.0, "global_best": 0.0, "iters": 24684, "t": 55.0}
+{"round": 2, "target_gap": 20.0, "target_flips": 12, "realised_frac": 0.583, "collateral": 0, "round_best": 8.0, "global_best": 8.0, "iters": 10, "t": 66.0}
+*** CROSSING (exact model) 8.0
+{"tag": "64_6371_e1_r9_rho1_g20_l0_s2_from", "best_maxrival": 8.0, "found": true}

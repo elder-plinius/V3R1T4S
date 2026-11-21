@@ -1,0 +1,2 @@
+instance 64 6371 float32_exact True strict_inside True min_dist_to_bound 0.001953125 softmax_margin 0.9993293141305912 logit_gap 8.0 argmax 9 true 17 min|BN out| per BN layer [0.0006465315818786621, 8.285045623779297e-05, 0.0016204118728637695] ort 1.26.0
+saved candidate_model_64_idx_6371_eps_1_3.npy
