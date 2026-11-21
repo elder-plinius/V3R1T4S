@@ -60,8 +60,9 @@ Nine days of daily agent waves on real targets produced these. Each line cost so
 21. `kit/check_run.py` ends every run. In smoke tests it would have caught every self-awarded `CONFIRMED`, missing
     null test, leftover `<WORKDIR>` and secret outside `private/`. Fix the run, never the check.
 26. Check novelty when you attack, not only when you package. A preprint's older version can call a case open
-    that its newer version closes, and formal-verification artifacts (Zenodo, DataCite) publish certified proofs
-    that never appear as papers. Before attacking a case-family, and again before any multi-day certification
-    push, re-fetch the status sources at their current versions and search artifact repositories for the exact
-    claim. One hunt skipped this and spent days re-proving a published exclusion, caught only at the final
-    packaging gate.
+    that its newer version closes, formal-verification artifacts (Zenodo, DataCite) publish certified proofs
+    that never appear as papers, and this repository's own open pull-request queue can gain a competing claim
+    mid-run — minutes after your freeze, before any of your numbers exist. Before attacking a case-family, and
+    again before any multi-day certification push or packaging gate, re-fetch the status sources at their
+    current versions, search artifact repositories for the exact claim, and re-read the open PR queue. One
+    hunt skipped this and spent days re-proving a published exclusion, caught only at the final packaging gate.
