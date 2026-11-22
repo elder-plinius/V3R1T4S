@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+saw-connective-constant-rigorous-bounds-2d,4.8^2 upper bound p1 (loop length 34 with finite-pocket pruning),169287/92732 = 1.825551050339,1.829254 (Alm 2005; Jensen 2004 Table 3 rounds it to 1.82926),2026-10-19T06:32:57Z,object/SHA256_PARTS.txt (whole vector.xz),13118758b86bc0f0daef592d3e85d353851556e54dcd07ad93b6a1c52fc26e54
