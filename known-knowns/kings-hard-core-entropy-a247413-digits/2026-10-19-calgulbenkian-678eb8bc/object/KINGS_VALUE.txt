@@ -1,0 +1,23 @@
+A247413 constant (Lambda = e^kappa, independent sets of the king graph, unit activity), value claimed to D = 33 decimals
+
+VALUE_33 = 1.342643951124601297851730161875740
+
+The next digits are 39 in both methods, so truncation and rounding give the same 33 decimals.
+
+Method A (site corner transfer matrix, ctmgen2.py site), bond dimension chi = 100, last iteration of object/sitef_100.log:
+  1.34264395112460129785173016187574039571943773385025452179048
+  Table A of object/final_tables.txt, chi = 100 (52 decimals):
+  1.3426439511246012978517301618757403957194377338502545
+
+Method B (open strips, widths 2..40, Wynn epsilon, recipe of programs/PREREG_B.md), E(mmax = 40), 44 decimals as printed in
+object/prereg_b_output.txt:
+  1.34264395112460129785173016187574039631105271
+
+D count and the rule used
+  Rule: for a method, take four successive truncation values; D is the number of leading decimals (after "1.") that all four
+  estimates share.
+  Method A, chi = 70, 80, 90, 100: 36 common decimals (chi = 80, 90, 100: 38).
+  Method B, mmax = 37, 38, 39, 40: 33 common decimals (window mmax = 34..37: 30; the window ends at the largest width computed).
+  A (chi = 100) against B (E(40)): 35 common decimals.
+  D = 33 is the smaller of the two stable counts, and the first 33 decimals of A (chi = 100) and of B (E(40)) are identical.
+  Published A247413 DATA: 18 terms, that is the integer part 1 and 17 decimals (1.34264395112460129); both methods begin with them.
