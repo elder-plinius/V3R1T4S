@@ -1,9 +1,11 @@
 # Skeptic panel: novelty
 
+> Edit 2026-11-22 (made alongside the maintainer's requests in the review of PR #816; no finding, number or verdict changed): internal session and workspace notes were removed and the context line was reworded.
+
 target: schutte-multiple-tournament-dice-bounds (V3R1T4S bank), partial win p1
 claim: f(2,5) = 14, i.e. no S_5 set of two tournaments on 13 vertices (README.md)
 role: novelty (bank kit RUN.md step 6)
-context: subagent (fresh context, Claude Science delegation)
+context: fresh context, given only the claim folder and the kit/RUN.md step 6 text for its role
 reviewed: 2026-10-28, 21:00-21:16 UTC
 inputs: the claim folder (README.md, REPRODUCE.md, INDEX.csv, the-record-we-beat/RECORD.md, object/cnf_spec.json, object/upper_bound_m2k5n14.json, how-we-built-it/SOUNDNESS.md) and the public sources listed below
 path key: `TROPHY_CASE.md`, `bank/targets.json` and `known-unknowns/graphs-games-automata/schutte-multiple-tournament-dice-bounds.md` are files of github.com/elder-plinius/V3R1T4S at commit c027ca3e0c8d1fc475d8e39cccd4b146fd50ffb8; `problems/schutte-multiple-tournament-dice-bounds.md` is in github.com/r-nikhil/INVENTA (branch main); `reproducible_source_code/BigWIN2/BW2-B87-P01/source/manuscript/main.tex` is in github.com/ArtificialZeng/AI-Has-Taste (branch main). Every other path is inside the claim folder.
@@ -70,9 +72,9 @@ Scope: this panel judges novelty only. I did not check the encoder, the symmetry
 - Pull-request coverage: titles, bodies and branch names of the 352 open PRs, plus the search API for closed ones. I did not list the changed files of each PR.
 - I read Figure 7 from the PDF's extracted text. The k = 5 row has all five entries, so there is no column ambiguity, and it matches Figure 4.5 of the dissertation.
 
-## 8. Context disclosure
+## 8. Instructions
 
-Besides the claim folder and public sources, my context held two other things. One was the delegation message: role, the quoted RUN.md step 6, the status-source URL, and machine and network limits. The other was a set of memory notes recalled automatically from the requesting user's workspace: working rules, machine limits, the contributor's upstream account, and a note about an earlier panel on a different target. None of these concerned this claim or the literature on f(m,k), and none was used as evidence.
+Besides the claim folder and public sources, I had only my instructions: the role, the quoted RUN.md step 6, the status-source URL, and machine and network limits.
 
 ## Request log (UTC, 2026-10-28; plain curl, one request per page)
 

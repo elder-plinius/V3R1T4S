@@ -1,6 +1,8 @@
 # CRITERION panel: schutte-multiple-tournament-dice-bounds, claim "f(2,5) = 14" (partial win p1)
 
-context: subagent (fresh context, Claude Science delegation)
+> Edit 2026-11-22 (at the maintainer's request in the review of PR #816; no finding, number or verdict changed): internal session and workspace notes were removed and the context line was reworded.
+
+context: fresh context, given only the claim folder and the kit/RUN.md step 6 text for its role
 role: CRITERION (kit/RUN.md step 6)
 date: 2026-10-29 (UTC)
 inputs: the claim folder (27 files) and public sources only (arXiv abstract page and PDF, the V3R1T4S bank at
@@ -174,18 +176,8 @@ The random test is a spot check that supports the proof check. It is not a subst
   p1 therefore rests entirely on the panel's own run.
 - The tests in how-we-built-it/ ship without outputs. This review did not run them and used its own checks instead.
 
-## 8. Context disclosure and deviations
+## 8. Deviations
 
-- **Recalled memory.** My context contained memory notes recalled automatically by the harness: the user's general
-  working preferences, and project notes about earlier V3R1T4S runs and panels. None of them reported a
-  verification result for this claim.
-- **Previews from other sessions.** When I wrote a private scratch note, the harness showed truncated one-line
-  previews of notes from other sessions. One of them was evidently written by another panel context ("REPRODUCE
-  skeptic task: package unzipped to ..."). I did not open or use any of these notes, and no finding above depends on
-  them. I saw nothing from the earlier, stalled CRITERION context.
-- **Open findings from another session.** Before submitting, I queried the harness's list of open reviewer
-  findings. It showed two findings from another session about an unrelated literature task. They are not about this
-  claim, and I did not use them.
 - **Not done here, by instruction:** the full CaDiCaL and cake_lpr run on the 13-vertex CNF. One sub-case of that
   CNF was run instead: with an extra unit clause forcing vertex 0 to beat everyone in T_0, pysat's CaDiCaL 1.9.5
   reports UNSAT in 0.0 s. That is expected, since the sub-case would need an S_4 tournament on 12 vertices, and

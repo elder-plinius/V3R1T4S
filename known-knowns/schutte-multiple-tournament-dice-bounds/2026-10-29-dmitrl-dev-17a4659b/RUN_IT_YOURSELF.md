@@ -26,4 +26,13 @@ cake_lpr: https://github.com/tanyongkiam/cake_lpr at a36874a8b750b43fe4b385b8ddb
 (`cc -O2 -o cake_lpr basis_ffi.c cake_lpr.S` on x86-64, `cake_lpr_arm8.S` on ARMv8). CaDiCaL:
 https://github.com/arminbiere/cadical at c60730422e758ef1cebe7aeddf2dda31c996bf04 (`./configure && make`). Any proof
 that cake_lpr accepts for this CNF is a certificate; a different CaDiCaL build may produce a different proof.
+Check the shipped CNF directly (about 1.5 GB of memory for cake_lpr):
+
+```
+gunzip -c object/m2k5n13_global3.cnf.gz > m2k5n13_global3.cnf                    # sha256 247ca74489c8144e2eca1fa1b7bfdd6c2f7f826e7deac2c46e4b3748c7069626
+cadical --lrat --no-binary -t 3600 m2k5n13_global3.cnf m2k5n13_global3.lrat      # s UNSATISFIABLE
+shasum -a 256 m2k5n13_global3.lrat     # d87598122cfb5f17397537deb15b893d7aaae49598a81ce41a1c92191d0de99a on Apple Silicon (another build may differ)
+cake_lpr --CML_HEAP_SIZE=1500 --CML_STACK_SIZE=512 m2k5n13_global3.cnf m2k5n13_global3.lrat   # s VERIFIED UNSAT
+```
+
 To rebuild the 14-vertex object: how-we-built-it/make_tests.py (function compose applied to two Paley QR7 tournaments).

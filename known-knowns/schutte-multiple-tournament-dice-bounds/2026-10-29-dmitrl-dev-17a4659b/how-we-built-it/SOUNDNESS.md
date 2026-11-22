@@ -39,6 +39,47 @@ which such a set of m tournaments exists.
     segment of {1..D} and an initial segment of {D+2..n-1}.
 (s) only for m >= 3 (absent here, m = 2): (lit(1,0,1), -lit(2,0,1), lit(0,0,n-1)).
 
+## 2a. Where each family sits in the CNF (clause indices)
+Clause i is the i-th clause after the `p cnf 42644 148931` line of the CNF (sha256
+247ca74489c8144e2eca1fa1b7bfdd6c2f7f826e7deac2c46e4b3748c7069626), counting from 1; these are also the LRAT ids of the
+input clauses. The families follow each other in this order and cover clauses 1..148931 without gaps; "new
+variables" are the auxiliary variables a family introduces (counter registers). Each counter is the Sinz sequential
+counter of verify-it-yourself/encode_schutte.py (function at_most) over its literals in increasing order of u; only
+its overflow clauses carry the extra literals, and its other clauses only push register bits upward. The ranges come
+from replaying the encoder's construction order, which reproduces the encoder's clause list exactly. The first and
+last clause of every non-counter family, the overflow clauses of every counter group and the layout of the base
+clauses were also checked against the CNF file itself.
+
+| family | clauses | count | new variables | clauses in the range |
+|---|---|---|---|---|
+| base F(2,5,13) | 1..104247 | 104247 | 1..20748 | for each of the 1287 5-subsets U in lexicographic order, 81 consecutive clauses: for each of the 16 candidates (t = 0, 1; v not in U, ascending) its 5 defining clauses (-d(t,v,U), lit(t,v,u)), u in U ascending; then the domination clause, the OR of the 16 d(t,v,U). Edge variables 1..78 (T_0) and 79..156 (T_1); d variables 157..20748 |
+| (a) | 104248..104258 | 11 | - | (-lit(0,0,u+1), lit(0,0,u)) for u = 1..11 |
+| (c) | 104259..104263 | 5 | - | units lit(0,0,u) for u = 1..5 |
+| (b) D = 5 | 104264..107279 | 3016 | 20749..22178 | 26 counters "at most 5 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 116 clauses each; the 11 overflow clauses of each carry -lit(0,0,5) and lit(0,0,6) |
+| (b) D = 6 | 107280..110841 | 3562 | 22179..23894 | 26 counters "at most 6 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 137 clauses each; the 11 overflow clauses of each carry -lit(0,0,6) and lit(0,0,7) |
+| (b) D = 7 | 110842..114949 | 4108 | 23895..25896 | 26 counters "at most 7 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 158 clauses each; the 11 overflow clauses of each carry -lit(0,0,7) and lit(0,0,8) |
+| (b) D = 8 | 114950..119603 | 4654 | 25897..28184 | 26 counters "at most 8 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 179 clauses each; the 11 overflow clauses of each carry -lit(0,0,8) and lit(0,0,9) |
+| (b) D = 9 | 119604..124803 | 5200 | 28185..30758 | 26 counters "at most 9 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 200 clauses each; the 11 overflow clauses of each carry -lit(0,0,9) and lit(0,0,10) |
+| (b) D = 10 | 124804..130549 | 5746 | 30759..33618 | 26 counters "at most 10 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 221 clauses each; the 11 overflow clauses of each carry -lit(0,0,10) and lit(0,0,11) |
+| (b) D = 11 | 130550..136841 | 6292 | 33619..36764 | 26 counters "at most 11 of lit(t,v,u), u != v", for (t, v) = (0,0), (0,1), .., (1,12) in that order, 242 clauses each; the 11 overflow clauses of each carry -lit(0,0,11) and lit(0,0,12) |
+| (n) initial segment | 136842..136851 | 10 | - | (-lit(1,1,u+1), lit(1,1,u), -lit(0,0,12)) for u = 2..11 |
+| (n) units | 136852..136855 | 4 | - | (lit(1,1,u), -lit(0,0,12)) for u = 2..5 |
+| (n) counters D' = 4 | 136856..137887 | 1032 | 36765..37244 | 12 counters "at most 4 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 86 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,5) and lit(1,1,6) |
+| (n) counters D' = 5 | 137888..139147 | 1260 | 37245..37844 | 12 counters "at most 5 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 105 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,6) and lit(1,1,7) |
+| (n) counters D' = 6 | 139148..140635 | 1488 | 37845..38564 | 12 counters "at most 6 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 124 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,7) and lit(1,1,8) |
+| (n) counters D' = 7 | 140636..142351 | 1716 | 38565..39404 | 12 counters "at most 7 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 143 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,8) and lit(1,1,9) |
+| (n) counters D' = 8 | 142352..144295 | 1944 | 39405..40364 | 12 counters "at most 8 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 162 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,9) and lit(1,1,10) |
+| (n) counters D' = 9 | 144296..146467 | 2172 | 40365..41444 | 12 counters "at most 9 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 181 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,10) and lit(1,1,11) |
+| (n) counters D' = 10 | 146468..148867 | 2400 | 41445..42644 | 12 counters "at most 10 of lit(1,v,u), u in {1..12} - {v}", for v = 1..12 in that order, 200 clauses each; the 10 overflow clauses of each carry -lit(0,0,12), -lit(1,1,11) and lit(1,1,12) |
+| (l) D = 5 | 148868..148876 | 9 | - | (-lit(0,6,u+1), lit(0,6,u), -lit(0,0,5), lit(0,0,6)) for u = 1..4 (block {1..5}) and u = 7..11 (block {7..12}) |
+| (l) D = 6 | 148877..148885 | 9 | - | (-lit(0,7,u+1), lit(0,7,u), -lit(0,0,6), lit(0,0,7)) for u = 1..5 (block {1..6}) and u = 8..11 (block {8..12}) |
+| (l) D = 7 | 148886..148894 | 9 | - | (-lit(0,8,u+1), lit(0,8,u), -lit(0,0,7), lit(0,0,8)) for u = 1..6 (block {1..7}) and u = 9..11 (block {9..12}) |
+| (l) D = 8 | 148895..148903 | 9 | - | (-lit(0,9,u+1), lit(0,9,u), -lit(0,0,8), lit(0,0,9)) for u = 1..7 (block {1..8}) and u = 10..11 (block {10..12}) |
+| (l) D = 9 | 148904..148912 | 9 | - | (-lit(0,10,u+1), lit(0,10,u), -lit(0,0,9), lit(0,0,10)) for u = 1..8 (block {1..9}) and u = 11..11 (block {11..12}) |
+| (l) D = 10 | 148913..148921 | 9 | - | (-lit(0,11,u+1), lit(0,11,u), -lit(0,0,10), lit(0,0,11)) for u = 1..9 (block {1..10}; the block {12} has no pair) |
+| (l) D = 11 | 148922..148931 | 10 | - | (-lit(0,12,u+1), lit(0,12,u), -lit(0,0,11), lit(0,0,12)) for u = 1..10 (block {1..11}; the second block is empty) |
+| (s) | - | 0 | - | absent (m = 2) |
+
 ## 3. Why the added clauses are sound
 Take any S_k set of m tournaments on n vertices (n >= k+1). Relabelling vertices and reordering tournaments keep
 property S_k and all out-degrees.

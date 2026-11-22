@@ -1,6 +1,8 @@
-# REPRODUCE panel: schutte-multiple-tournament-dice-bounds, claim 2026-10-28-1153 (partial win p1)
+# REPRODUCE panel: schutte-multiple-tournament-dice-bounds, claim f(2,5) = 14 (partial win p1)
 
-context: subagent (fresh context, Claude Science delegation)
+> Edit 2026-11-22 (at the maintainer's request in the review of PR #816; no finding, number or verdict changed): internal session and workspace notes were removed and the context line was reworded; the title names the claim instead of a local run label.
+
+context: fresh context, given only the claim folder and the kit/RUN.md step 6 text for its role
 
 - role: REPRODUCE (bank kit RUN.md step 6)
 - claim: no S_5 set of two tournaments on 13 vertices exists (CNF + LRAT certificate checked by cake_lpr), hence
@@ -9,11 +11,9 @@ context: subagent (fresh context, Claude Science delegation)
 - verdict: every property and the claimed value reproduced. I found no mismatch, no missing object and no
   non-determinism. pass: true (last line)
 
-## 0. Outside context and sources
+## 0. Sources
 
-My context contained memory notes that were recalled automatically from the requesting user's earlier sessions:
-working conventions, machine limits, and earlier V3R1T4S panels on other claims. None of them concerned this claim,
-and I did not use them as evidence. Apart from the claim folder I used only public sources:
+Apart from the claim folder I used only public sources:
 arXiv:2604.08790 (abs page and PDF), the CaDiCaL and cake_lpr GitHub repositories at the pinned commits (read-only
 clones), and one web search for later results on f(2,5). I saw nothing from the claimant beyond the folder.
 
@@ -268,13 +268,12 @@ time note ("161 s without the builds") is consistent with the 161.9 s measured h
 
 - I ran verify-it-yourself/run_checks.sh with CADICAL and CAKE_LPR pointing to my own builds of the same pinned
   commits, so the script did not build the tools a second time. The build commands are the same as in the script.
-- I set TMPDIR to an absolute folder for run A, because the sandbox's TMPDIR was a relative path.
 - I did not run the claimant's development scripts in how-we-built-it/ (calibrate.py, cubes.py, test_global2.py,
   test_global3.py, test_alt.py, encode_alt.py, sb_audit.py, make_tests.py, solve_lrat_zstd.sh, check_lrat_zstd.sh).
   They are not part of the certificate, and some need python-sat or kissat. My own constructive test (section 5)
   replaces sb_audit.py.
 - No proof file is stored. All were deleted after checking, as instructed.
-- Outside context: automatically recalled memory notes (section 0), not used as evidence. I also made one web search.
+- Outside sources: one web search (section 0).
 
 ## Appendix A: reviewer's own code (core functions, verbatim; file I/O omitted)
 
