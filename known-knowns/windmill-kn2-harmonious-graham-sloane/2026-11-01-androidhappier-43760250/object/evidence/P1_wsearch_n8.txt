@@ -1,0 +1,6 @@
+n=8 q=56 sum_distinct_sets_containing_0=449472 solutions_ordered_pairs=0 nodesB=270416160
+VERDICT n=8: NOT HARMONIOUS
+
+real	0m40.479s
+user	0m40.473s
+sys	0m0.004s

@@ -1,0 +1,6 @@
+target: windmill-kn2-harmonious-graham-sloane
+cell: n = 8 (K_8^(2), 15 vertices, q = 56 edges)
+decision: NOT HARMONIOUS (criterion branch (b): exhaustive search by two independent programs)
+reduction used: translation f -> f - f(c) only (justified in REPRODUCE.md; validated by brute force at n = 4)
+P1 (C, nested backtracking): sum_distinct_sets_containing_0=449472 solutions_ordered_pairs=0
+P2 (Python, sum-mask join):   sum_distinct_sets_containing_0=449472 solutions_ordered_pairs=0

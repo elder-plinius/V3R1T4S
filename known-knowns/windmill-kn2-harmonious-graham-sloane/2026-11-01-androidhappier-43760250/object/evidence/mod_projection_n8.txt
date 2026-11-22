@@ -1,0 +1,6 @@
+d=2 sets=449472 distinct_vectors=4 sets_with_compatible_partner_vector=289536
+d=4 sets=449472 distinct_vectors=40 sets_with_compatible_partner_vector=96768
+d=7 sets=449472 distinct_vectors=645 sets_with_compatible_partner_vector=159600
+d=8 sets=449472 distinct_vectors=616 sets_with_compatible_partner_vector=5760
+d=14 sets=449472 distinct_vectors=8608 sets_with_compatible_partner_vector=0
+d=28 sets=449472 distinct_vectors=85083 sets_with_compatible_partner_vector=0

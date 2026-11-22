@@ -1,0 +1,4 @@
+d=7: multisets with 0 = 1716, compatible ordered pairs (no Sidon condition) = 307
+d=8: multisets with 0 = 3431, compatible ordered pairs (no Sidon condition) = 32
+d=14: multisets with 0 = 75595, compatible ordered pairs (no Sidon condition) = 520
+d=28: multisets with 0 = 4349475, compatible ordered pairs (no Sidon condition) = 0
