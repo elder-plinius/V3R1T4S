@@ -1,0 +1,24 @@
+Quantity: h2 = lim ln Z(n,n) / n^2, Z = number of matchings (monomer-dimer configurations, unit weights) of the n x n grid; natural log, per site.
+e^h2 = 1.940215351483...
+
+H2_36 = 0.662798972833745915155196234397725566
+
+Number of decimals claimed: 36.
+
+Longer estimates (numerical, no error bound):
+  method A (corner transfer matrix, chi = 48, ctm_ladder_ext.json, 52 decimals shown):
+      0.6627989728337459151551962343977255660932931361805
+    chi = 36, 40, 44, 48 share 43 decimals: 0.6627989728337459151551962343977255660932931
+  method B3 (open-boundary strips, Wynn recipe of PREREG_B3.md, E3(29), 48 decimals as printed in B3_result.txt):
+      0.662798972833745915155196234397725566093293124668
+    E3(26), E3(27), E3(28), E3(29) share 36 decimals: 0.662798972833745915155196234397725566
+
+Counts:
+  A, pre-registered ladder chi = 16, 20, 24, 28 (the ladder stopped by its own rule at chi = 28): last four rungs share 30 decimals.
+  A, extended ladder chi = 36, 40, 44, 48 (run after the pre-registered stop, context in PREREG.md terms): last four rungs share 43 decimals.
+  B3, mmax = 26, 27, 28, 29: last four estimates share 36 decimals (B3_result.txt).
+  A (chi = 48) versus E3(26), E3(27), E3(28), E3(29): 36, 40, 40, 43 shared decimals (B3_vs_A.txt).
+
+Rule for the number of decimals claimed: the minimum of (decimals shared by the last four rungs of A's extended ladder = 43),
+(decimals shared by B3's last four truncations = 36) and (decimals shared by A at chi = 48 and B3 at mmax = 29 = 43).
+The minimum is 36. With A's pre-registered ladder in place of the extended one the first of the three would be 30.
