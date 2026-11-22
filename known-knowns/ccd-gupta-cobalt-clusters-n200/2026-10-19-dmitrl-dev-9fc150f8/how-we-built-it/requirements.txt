@@ -1,0 +1,4 @@
+numpy==2.4.6
+scipy==1.17.1
+mpmath==1.4.1
+# Python 3.11.17

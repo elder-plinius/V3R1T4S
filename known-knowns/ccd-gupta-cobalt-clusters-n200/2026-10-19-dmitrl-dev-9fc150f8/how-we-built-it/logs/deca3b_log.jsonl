@@ -1,0 +1,28 @@
+{"event": "start", "chains": [[196, [197]], [121, [122]], [95, [96, 97, 98, 99, 100]], [101, [102, 103, 104, 105, 106, 107]], [113, [114, 115, 116, 117, 118, 119]], [122, [123, 124, 125, 126, 127, 128]], [198, [199]]], "t": 1.7}
+{"event": "size", "seed": 196, "N": 197, "n_cands": 232, "E_best_ref": -774.3476489, "E_family": -774.3476489, "gain": 0.0, "sec": 32.9, "t": 34.7}
+{"event": "size", "seed": 121, "N": 122, "n_cands": 168, "E_best_ref": -468.8045459, "E_family": -468.8045459, "gain": 0.0, "sec": 9.9, "t": 44.6}
+{"event": "size", "seed": 95, "N": 96, "n_cands": 122, "E_best_ref": -363.7165452, "E_family": -363.6318319, "gain": -0.0847133, "sec": 4.7, "t": 49.3}
+{"event": "size", "seed": 95, "N": 97, "n_cands": 123, "E_best_ref": -367.7878938, "E_family": -367.6815499, "gain": -0.1063439, "sec": 5.2, "t": 54.5}
+{"event": "size", "seed": 95, "N": 98, "n_cands": 127, "E_best_ref": -371.9770018, "E_family": -371.6894283, "gain": -0.2875735, "sec": 5.4, "t": 59.9}
+{"event": "size", "seed": 95, "N": 99, "n_cands": 124, "E_best_ref": -376.1518497, "E_family": -375.4536237, "gain": -0.6982261, "sec": 6.4, "t": 66.4}
+{"event": "size", "seed": 95, "N": 100, "n_cands": 127, "E_best_ref": -380.1500888, "E_family": -379.5018175, "gain": -0.6482712, "sec": 6.3, "t": 72.7}
+{"event": "size", "seed": 101, "N": 102, "n_cands": 123, "E_best_ref": -388.0998566, "E_family": -388.0998566, "gain": 0.0, "sec": 4.9, "t": 77.5}
+{"event": "size", "seed": 101, "N": 103, "n_cands": 124, "E_best_ref": -392.1510857, "E_family": -392.1510857, "gain": 0.0, "sec": 5.2, "t": 82.7}
+{"event": "size", "seed": 101, "N": 104, "n_cands": 124, "E_best_ref": -396.159614, "E_family": -396.159614, "gain": 0.0, "sec": 5.4, "t": 88.1}
+{"event": "size", "seed": 101, "N": 105, "n_cands": 125, "E_best_ref": -399.9681259, "E_family": -399.9272522, "gain": -0.0408737, "sec": 5.4, "t": 93.6}
+{"event": "size", "seed": 101, "N": 106, "n_cands": 126, "E_best_ref": -403.9771201, "E_family": -403.9771201, "gain": 0.0, "sec": 5.8, "t": 99.4}
+{"event": "size", "seed": 101, "N": 107, "n_cands": 128, "E_best_ref": -408.1348622, "E_family": -407.9858334, "gain": -0.1490288, "sec": 6.1, "t": 105.5}
+{"event": "size", "seed": 113, "N": 114, "n_cands": 145, "E_best_ref": -436.6473857, "E_family": -436.2559787, "gain": -0.391407, "sec": 7.6, "t": 113.2}
+{"event": "size", "seed": 113, "N": 115, "n_cands": 143, "E_best_ref": -440.8130358, "E_family": -440.306273, "gain": -0.5067627, "sec": 7.9, "t": 121.1}
+{"event": "size", "seed": 113, "N": 116, "n_cands": 145, "E_best_ref": -444.982335, "E_family": -444.314055, "gain": -0.66828, "sec": 7.9, "t": 129.0}
+{"event": "size", "seed": 113, "N": 117, "n_cands": 144, "E_best_ref": -448.6415848, "E_family": -448.077772, "gain": -0.5638128, "sec": 8.2, "t": 137.2}
+{"event": "size", "seed": 113, "N": 118, "n_cands": 149, "E_best_ref": -452.6837657, "E_family": -452.1266881, "gain": -0.5570776, "sec": 8.8, "t": 146.0}
+{"event": "size", "seed": 113, "N": 119, "n_cands": 148, "E_best_ref": -456.7668376, "E_family": -456.1352787, "gain": -0.6315589, "sec": 8.8, "t": 154.8}
+{"event": "size", "seed": 122, "N": 123, "n_cands": 123, "E_best_ref": -472.9077116, "E_family": -472.5722138, "gain": -0.3354978, "sec": 7.0, "t": 161.8}
+{"event": "size", "seed": 122, "N": 124, "n_cands": 125, "E_best_ref": -477.1200398, "E_family": -476.622828, "gain": -0.4972118, "sec": 7.5, "t": 169.3}
+{"event": "size", "seed": 122, "N": 125, "n_cands": 125, "E_best_ref": -481.1192842, "E_family": -480.6301188, "gain": -0.4891654, "sec": 7.9, "t": 177.3}
+{"event": "size", "seed": 122, "N": 126, "n_cands": 124, "E_best_ref": -484.8936404, "E_family": -484.3943138, "gain": -0.4993266, "sec": 7.8, "t": 185.1}
+{"event": "size", "seed": 122, "N": 127, "n_cands": 132, "E_best_ref": -489.1059691, "E_family": -488.4433274, "gain": -0.6626417, "sec": 9.4, "t": 194.5}
+{"event": "size", "seed": 122, "N": 128, "n_cands": 127, "E_best_ref": -493.2284031, "E_family": -492.4505517, "gain": -0.7778514, "sec": 8.5, "t": 203.1}
+{"event": "size", "seed": 198, "N": 199, "n_cands": 226, "E_best_ref": -782.4498541, "E_family": -782.4498541, "gain": 0.0, "sec": 32.4, "t": 235.5}
+{"event": "stop", "reason": "chains done", "t": 235.5}
