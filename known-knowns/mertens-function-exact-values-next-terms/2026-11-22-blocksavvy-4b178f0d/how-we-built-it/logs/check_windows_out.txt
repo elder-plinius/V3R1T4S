@@ -1,0 +1,11 @@
+block 1 [1001,2000] sieve ['3', '11', '-18'] independent [3, 11, -18] AGREE
+block 2 [2001,3000] sieve ['-11', '8', '-30'] independent [-11, 8, -30] AGREE
+block 3 [3001,4000] sieve ['-3', '29', '-10'] independent [-3, 29, -10] AGREE
+block 328233282 [328233282001,328233283000] sieve ['-32', '4', '-36'] independent [-32, 4, -36] AGREE
+block 323884963 [323884963001,323884964000] sieve ['-26', '5', '-28'] independent [-26, 5, -28] AGREE
+block 305968956 [305968956001,305968957000] sieve ['6', '29', '-12'] independent [6, 29, -12] AGREE
+block 332040388 [332040388001,332040389000] sieve ['2', '22', '-9'] independent [2, 22, -9] AGREE
+block 315811287 [315811287001,315811288000] sieve ['5', '18', '-5'] independent [5, 18, -5] AGREE
+block 334846974 [334846974001,334846975000] sieve ['-14', '2', '-26'] independent [-14, 2, -26] AGREE
+M(30) sieve -3 known -3 AGREE
+ALL_AGREE
