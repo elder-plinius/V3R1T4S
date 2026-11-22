@@ -1,5 +1,7 @@
 # Fewer additions for <2,4,8> at rank 51: 181 against 188
 
+> **Note (2026-11-06):** the same count, 181, was also published upstream by Perminov on 2026-10-19 (commit 048b6498, `schemes/results/addition_reduced_ZT/2x4x8_m51_cr181_cn354_ZT_reduced.json`), after this package was filed. A lower count followed on 2026-10-22 (commit 7badae2d: 180 for 2x4x8). This package stays here as a dated record.
+
 ## What
 
 > **Maintainer note (2026-10-28):** (1) Credit: the rank-51 line in Credits named only "the Lille catalogue entry". The Lille page (https://fmm.univ-lille.fr/2x4x8.html, re-fetched 2026-10-28) takes the rank-51 scheme from Novikov et al., AlphaEvolve (Google DeepMind, May 2025); Credits now names them. (2) Status: Perminov's `addition_reduced_ZT` directory has since added `2x4x8_m51_cr181_cn354_ZT_reduced.json` (181, a different program on the same 51 products; commit 048b6498, 2026-10-19) and `2x4x8_m51_cr180_cn436_ZT_reduced.json` (180; commit 7badae2d, 2026-10-22). The maintainer's own counter and exact check confirm both. The first is a later tie, which does not affect this filing of 2026-10-16 (kit/POLICY.md, fast matrix multiplication, rule 2); the second is lower, so 181 is no longer the lowest known count for this format and rank. The object, checker and panel files are unchanged; the program stays here as a time-stamped bound. Reported in issue #606; see READ_BEFORE_CITING.md, Corrections.
@@ -29,7 +31,7 @@ sh verify-it-yourself/run_checks.sh
 | fmm_sota.json (Sedoglavic), best known rank | 2x4x8 | rank 51 | rank 51 (same scheme rank; eligibility) | https://raw.githubusercontent.com/sedoglavic/fmm_digest/master/fmm_sota.json | 2026-10-15T22:25:32Z |
 | Lille per-format page | 2x4x8 | rank 51; no complexity variant or operation count cited | 181 | https://fmm.univ-lille.fr/2x4x8.html | 2026-10-15T22:25:32Z |
 | matmulcatalog COVERAGE.md, adds column | 2x4x8 | naive count nz(U)+nz(V)+nz(W)-2r-np, not comparable | 181 | https://raw.githubusercontent.com/solven-eu/matmulcatalog/master/generated/COVERAGE.md | 2026-10-15T22:25:32Z |
-| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 2x4x8 rank 51 | rows for this scheme code appear in the paper's tables (over Z and/or Z2); every listed count is above the reference, see panel/novelty.md: 248-51       354         197        190      0.38, 0.01, 0.15         - / 248-51         354       190       183     171   48.3    0.34, 0.1, 0.15 | 181 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
+| Martensson and Stankovski Wagner, IACR ePrint 2026/849 | 2x4x8 rank 51 | lowest count listed for 248-51: 190 over Z (Table 3.3); 183 over Z2 (Table 3.6, not comparable; below the reference 188, above our 181); author's reading of a hand-downloaded PDF, not verified by the maintainer (corrected 2026-10-18) | 181 | https://eprint.iacr.org/2026/849 | 2026-10-15 (hand download) |
 | V3R1T4S TROPHY_CASE.md and open pull requests | this target | none | 181 | https://github.com/elder-plinius/V3R1T4S | 2026-10-15T22:25:32Z |
 
 Snapshot metadata, with HTTP status and page sha256: `the-record-we-beat/README.md`.
