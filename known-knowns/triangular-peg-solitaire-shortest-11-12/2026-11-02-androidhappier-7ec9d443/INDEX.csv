@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+triangular-peg-solitaire-shortest-11-12,"A127500(12), upper bound: fewest moves for a single-vacancy to single-peg solution on Triangle(12)",25,"<= 29 (21 <= a(12) <= 29; OEIS A127500 comment and Bell's Large Triangular Boards page)",2026-11-02T17:31:50Z,object/T12_25moves.txt,7ec9d443efe7b234fb31c6d427820f067f3815e99dea8750a547bc1b53a6c78b
