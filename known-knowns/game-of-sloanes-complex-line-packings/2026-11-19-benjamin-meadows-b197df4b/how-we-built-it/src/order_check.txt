@@ -1,0 +1,9 @@
+same-cell seed  pr17:6x45_grai.txt         score 6.249e-01  close 0/45
+same-cell seed  pr15:6x45_djma.txt         score 6.249e-01  close 0/45
+same-cell seed  pr14:6x45_sol.txt          score 3.451e-01  close 0/45
+same-cell seed  ours                       score 6.083e-01  close 0/45
+same-cell seed  current:6x45_hlc.txt       score 6.298e-01  close 0/45
+add: child      pr17:6x44_grai.txt         score 6.492e-02  close 0/44  (first n-1 vectors)
+add: child      pr15:6x44_djma.txt         score 6.492e-02  close 0/44  (first n-1 vectors)
+delete: parent  ours                       score 5.868e-01  close 0/45  (best with column 45 removed)
+delete: parent  current:6x46_jrr.txt       score 5.697e-01  close 0/45  (best with column 28 removed)
