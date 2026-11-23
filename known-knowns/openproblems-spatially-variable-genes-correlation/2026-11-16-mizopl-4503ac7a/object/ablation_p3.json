@@ -1,0 +1,375 @@
+{
+  "schema_version": "1.0.0",
+  "evaluated_utc": "2026-11-16T19:30:54Z",
+  "runtime_sec": 66.55,
+  "n_panel_datasets": 9,
+  "mechanistic_summary": {
+    "confounder_1_largest_effect_dataset": "42_slide_tag_human_skin_melanoma",
+    "mean_drop_injecting_1_over_Ls_into_ams_svg": -0.1549,
+    "mean_gain_multiscale_adaptive_over_delaunay": 0.108889,
+    "mean_gain_vst_over_raw_counts": 0.014201,
+    "mean_high_snr_gain_unbounded_z_over_float64_pval_clip": 0.344976
+  },
+  "datasets": [
+    {
+      "dataset_id": "42_slide_tag_human_skin_melanoma",
+      "technology": "slide-tags",
+      "zenodo_h5ad_sha256": "372fa3fae02a5a5dd3367cd031eb4008152996ee9f011e978e3d46ca2b738898",
+      "n_spots": 4804,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.9565,
+        "local_density_p95_over_p05": 5.8177,
+        "spot_library_size_moran_i": 0.293064,
+        "alpha0_null_mean_moran_i_normalized": 0.007362,
+        "alpha0_null_mean_moran_i_unnormalized": 0.004588
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.196,
+        "delaunay_moran_unnormalized_log1p_tau": 0.450857,
+        "gain_removing_1_over_Ls_on_delaunay": 0.254857,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.372952,
+        "ams_svg_unnormalized_full_tau": 0.797905,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.424952
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.467429,
+        "fixed_global_euclidean_vst_z_tau": 0.72381,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.636952,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.792,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.797905,
+        "gain_multiscale_adaptive_over_delaunay": 0.330476,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.005905
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.000952,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.797905,
+        "ams_svg_unbounded_perm_z_tau": 0.797905,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.0,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.721455,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.721455,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.0
+      }
+    },
+    {
+      "dataset_id": "41_slide_tag_human_cortex",
+      "technology": "slide-tags",
+      "zenodo_h5ad_sha256": "07974ad7bdcbb7e5f45cf6db637935852d3cd757158ab51daca806cfef4f8014",
+      "n_spots": 4065,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.7727,
+        "local_density_p95_over_p05": 3.6894,
+        "spot_library_size_moran_i": 0.300338,
+        "alpha0_null_mean_moran_i_normalized": 0.00685,
+        "alpha0_null_mean_moran_i_unnormalized": -0.000251
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.585143,
+        "delaunay_moran_unnormalized_log1p_tau": 0.751048,
+        "gain_removing_1_over_Ls_on_delaunay": 0.165905,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.688762,
+        "ams_svg_unnormalized_full_tau": 0.912571,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.22381
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.75981,
+        "fixed_global_euclidean_vst_z_tau": 0.887048,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.854476,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.9,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.912571,
+        "gain_multiscale_adaptive_over_delaunay": 0.152762,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.012571
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.18381,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.898257,
+        "ams_svg_unbounded_perm_z_tau": 0.912571,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.014314,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.792418,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.862545,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.070128
+      }
+    },
+    {
+      "dataset_id": "44_stereo_seq_Drosophila_embryo_E7",
+      "technology": "Stereo-seq",
+      "zenodo_h5ad_sha256": "42927294d7fd79f90d57075e99636c05fbf21c8523ea82822ecf9ef39af3d3d7",
+      "n_spots": 1039,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.6733,
+        "local_density_p95_over_p05": 1.8,
+        "spot_library_size_moran_i": 0.374727,
+        "alpha0_null_mean_moran_i_normalized": -0.002128,
+        "alpha0_null_mean_moran_i_unnormalized": -0.005718
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.710667,
+        "delaunay_moran_unnormalized_log1p_tau": 0.737333,
+        "gain_removing_1_over_Ls_on_delaunay": 0.026667,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.790095,
+        "ams_svg_unnormalized_full_tau": 0.807619,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.017524
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.736762,
+        "fixed_global_euclidean_vst_z_tau": 0.813905,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.794286,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.811238,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.807619,
+        "gain_multiscale_adaptive_over_delaunay": 0.070857,
+        "gain_vst_over_raw_counts_on_ams_svg": -0.003619
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.037143,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.805474,
+        "ams_svg_unbounded_perm_z_tau": 0.807619,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.002145,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.735516,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.744727,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.009211
+      }
+    },
+    {
+      "dataset_id": "47_stereo_seq_Drosophila_embryo_E10.5",
+      "technology": "Stereo-seq",
+      "zenodo_h5ad_sha256": "70e7550f2b05aa8332ab1b75c267fe68123ff0167c903e8db211d55a1361ed8f",
+      "n_spots": 1110,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.1623,
+        "local_density_p95_over_p05": 1.8,
+        "spot_library_size_moran_i": 0.43664,
+        "alpha0_null_mean_moran_i_normalized": -0.000635,
+        "alpha0_null_mean_moran_i_unnormalized": -0.004202
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.693905,
+        "delaunay_moran_unnormalized_log1p_tau": 0.732571,
+        "gain_removing_1_over_Ls_on_delaunay": 0.038667,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.78419,
+        "ams_svg_unnormalized_full_tau": 0.829333,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.045143
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.73219,
+        "fixed_global_euclidean_vst_z_tau": 0.835238,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.80381,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.828571,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.829333,
+        "gain_multiscale_adaptive_over_delaunay": 0.097143,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.000762
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.033333,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.82983,
+        "ams_svg_unbounded_perm_z_tau": 0.829333,
+        "full_range_gain_unbounded_z_over_pval_clip": -0.000496,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.727176,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.725818,
+        "high_snr_gain_unbounded_z_over_pval_clip": -0.001358
+      }
+    },
+    {
+      "dataset_id": "34_MERFISH_Human_cortex",
+      "technology": "MERFISH",
+      "zenodo_h5ad_sha256": "bfcc2e0f25f16b72cbb0a9bee6467295ea5cfdb4bb57b07f545dcb23f8d48819",
+      "n_spots": 9259,
+      "n_genes": 525,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.6841,
+        "local_density_p95_over_p05": 4.1482,
+        "spot_library_size_moran_i": 0.189145,
+        "alpha0_null_mean_moran_i_normalized": -0.001076,
+        "alpha0_null_mean_moran_i_unnormalized": -0.003283
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.567238,
+        "delaunay_moran_unnormalized_log1p_tau": 0.635429,
+        "gain_removing_1_over_Ls_on_delaunay": 0.06819,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.753143,
+        "ams_svg_unnormalized_full_tau": 0.869333,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.11619
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.657143,
+        "fixed_global_euclidean_vst_z_tau": 0.82781,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.785524,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.878857,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.869333,
+        "gain_multiscale_adaptive_over_delaunay": 0.21219,
+        "gain_vst_over_raw_counts_on_ams_svg": -0.009524
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.165714,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.848773,
+        "ams_svg_unbounded_perm_z_tau": 0.869333,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.02056,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.741042,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.838545,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.097503
+      }
+    },
+    {
+      "dataset_id": "21_slide_seqv2_Mouse_Olfactory_Bulb",
+      "technology": "Slide-seqV2",
+      "zenodo_h5ad_sha256": "b78868d3947ecdb40692a8cd7c5c0a8f9b3e856be85205d9308d379e5fdcbb7b",
+      "n_spots": 21624,
+      "n_genes": 210,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.6823,
+        "local_density_p95_over_p05": 3.7226,
+        "spot_library_size_moran_i": 0.384929,
+        "alpha0_null_mean_moran_i_normalized": 0.004882,
+        "alpha0_null_mean_moran_i_unnormalized": -4.1e-05
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.908571,
+        "delaunay_moran_unnormalized_log1p_tau": 0.955238,
+        "gain_removing_1_over_Ls_on_delaunay": 0.046667,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.92381,
+        "ams_svg_unnormalized_full_tau": 0.985714,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.061905
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.95619,
+        "fixed_global_euclidean_vst_z_tau": 0.980952,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.975238,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.950476,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.985714,
+        "gain_multiscale_adaptive_over_delaunay": 0.029524,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.035238
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.619048,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.769629,
+        "ams_svg_unbounded_perm_z_tau": 0.985714,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.216086,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.12365,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.970909,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.847259
+      }
+    },
+    {
+      "dataset_id": "32_10x_Xenium_Human_Colon_Cancer",
+      "technology": "10x Xenium",
+      "zenodo_h5ad_sha256": "cc0402bc17342379a09e59535a12f83c2bdcab232099ec9ef871b440761186d4",
+      "n_spots": 5561,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 4.578,
+        "local_density_p95_over_p05": 1.7517,
+        "spot_library_size_moran_i": 0.430468,
+        "alpha0_null_mean_moran_i_normalized": 0.053297,
+        "alpha0_null_mean_moran_i_unnormalized": 0.00439
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.94381,
+        "delaunay_moran_unnormalized_log1p_tau": 0.999429,
+        "gain_removing_1_over_Ls_on_delaunay": 0.055619,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.873143,
+        "ams_svg_unnormalized_full_tau": 0.999238,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.126095
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.999048,
+        "fixed_global_euclidean_vst_z_tau": 0.999619,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.999619,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.977714,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.999238,
+        "gain_multiscale_adaptive_over_delaunay": 0.00019,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.021524
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.81619,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.580262,
+        "ams_svg_unbounded_perm_z_tau": 0.999238,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.418976,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.0,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.997818,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.997818
+      }
+    },
+    {
+      "dataset_id": "04_10x_Visium_Human_Heart",
+      "technology": "10x Visium",
+      "zenodo_h5ad_sha256": "e0a56fc3eb53286cbdd20c964233ab615c33ec099e98b1d694bf8052382b74f5",
+      "n_spots": 4224,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 2.6504,
+        "local_density_p95_over_p05": 1.7502,
+        "spot_library_size_moran_i": 0.414547,
+        "alpha0_null_mean_moran_i_normalized": 0.037722,
+        "alpha0_null_mean_moran_i_unnormalized": 0.000392
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.503619,
+        "delaunay_moran_unnormalized_log1p_tau": 0.82781,
+        "gain_removing_1_over_Ls_on_delaunay": 0.32419,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.537714,
+        "ams_svg_unnormalized_full_tau": 0.900762,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.363048
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.826857,
+        "fixed_global_euclidean_vst_z_tau": 0.907429,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.883429,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.88,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.900762,
+        "gain_multiscale_adaptive_over_delaunay": 0.073905,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.020762
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.27619,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.845439,
+        "ams_svg_unbounded_perm_z_tau": 0.900762,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.055323,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.602459,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.874909,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.27245
+      }
+    },
+    {
+      "dataset_id": "01_10x_Visium_mouse_brain",
+      "technology": "10x Visium",
+      "zenodo_h5ad_sha256": "b990e62b78371c4fe6bab9211789d0ff8cbfd7e7edf315d180ccd46080a31906",
+      "n_spots": 2688,
+      "n_genes": 1050,
+      "geometry_diagnostics": {
+        "delaunay_p99_over_median_edge": 3.4551,
+        "local_density_p95_over_p05": 1.7492,
+        "spot_library_size_moran_i": 0.46364,
+        "alpha0_null_mean_moran_i_normalized": 0.010823,
+        "alpha0_null_mean_moran_i_unnormalized": -0.001148
+      },
+      "confounder_1_library_size_endogeneity": {
+        "delaunay_moran_normalized_tau": 0.946857,
+        "delaunay_moran_unnormalized_log1p_tau": 0.958095,
+        "gain_removing_1_over_Ls_on_delaunay": 0.011238,
+        "ams_svg_with_1_over_Ls_injected_tau": 0.954095,
+        "ams_svg_unnormalized_full_tau": 0.969524,
+        "drop_from_injecting_1_over_Ls_into_ams_svg": -0.015429
+      },
+      "confounder_2_geometry_and_heavy_tails": {
+        "unpruned_delaunay_vst_z_tau": 0.956571,
+        "fixed_global_euclidean_vst_z_tau": 0.970476,
+        "single_scale_adaptive_knn50_vst_z_tau": 0.967619,
+        "multiscale_adaptive_raw_counts_no_vst_tau": 0.925333,
+        "ams_svg_multiscale_adaptive_vst_full_tau": 0.969524,
+        "gain_multiscale_adaptive_over_delaunay": 0.012952,
+        "gain_vst_over_raw_counts_on_ams_svg": 0.04419
+      },
+      "confounder_3_float64_pvalue_underflow": {
+        "fraction_genes_exceeding_float64_1e300_cliff_Z37p17": 0.622857,
+        "ams_svg_float64_neglog10p_clipped_tau": 0.753963,
+        "ams_svg_unbounded_perm_z_tau": 0.969524,
+        "full_range_gain_unbounded_z_over_pval_clip": 0.21556,
+        "high_snr_alpha_ge_0p5_neglog10p_clipped_tau": 0.120594,
+        "high_snr_alpha_ge_0p5_unbounded_z_tau": 0.932364,
+        "high_snr_gain_unbounded_z_over_pval_clip": 0.81177
+      }
+    }
+  ]
+}
