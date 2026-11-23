@@ -1,0 +1,5 @@
+real draws checked: 100; problems: none
+means recomputed: habit 0.492243, rf 0.269542, pa 0.490183
+rf null: n 1000 mean 0.210668 p99.9 0.242565 max 0.244851; real rf mean above max: True
+different forest implementation on saved folds of draws 0-19: mean 0.2581 (sd 0.0087)
+different forest, 50 within-caller shuffles on saved folds: mean 0.2036, max 0.2288
