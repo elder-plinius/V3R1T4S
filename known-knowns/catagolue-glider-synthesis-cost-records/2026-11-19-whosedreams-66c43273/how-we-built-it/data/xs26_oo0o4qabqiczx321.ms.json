@@ -1,0 +1,15 @@
+{
+  "ok": true,
+  "target": "xs26_oo0o4qabqiczx321",
+  "errors": [],
+  "structurally_valid": true,
+  "n_gliders": 11,
+  "rewind_ok": true,
+  "final_apgcode": "xs26_oo0o4qabqiczx321",
+  "period": 1,
+  "live_csynth": 35,
+  "live_pseudo": false,
+  "csynth_snippet": "#CSYNTH xs26_oo0o4qabqiczx321 costs 35 gliders",
+  "improvement": 24,
+  "rle": "#CLL state-numbering golly\nx = 704, y = 702, rule = B3/S23\no$b2o513bobo$2o514b2o$517bo123$392bobo$392b2o$393bo3$389bobo$389b\n2o$390bo136$262bo$262bobo$262b2o$251bo6b3o$252bo7bo$250b3o6bo10b2o\n$270bobo$270bo3$263b2o$262b2o$264bo109$392b2o$392bobo$392bo307$\n701b2o$701bobo$701bo!\n"
+}
