@@ -1,0 +1,7 @@
+start n=16 m=101 cost=1096
+it=200000 cost=40 best=36 t=26
+it=400000 cost=40 best=36 t=48
+it=600000 cost=6 best=1 t=70
+it=800000 cost=5 best=1 t=92
+it=1000000 cost=10 best=1 t=115
+end it=1040117 cost=0 best=0 t=119 FOUND
