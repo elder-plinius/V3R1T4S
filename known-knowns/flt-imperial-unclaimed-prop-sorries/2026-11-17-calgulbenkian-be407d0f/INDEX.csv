@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+flt-imperial-unclaimed-prop-sorries,Group.subsingleton_of_pow_prime_eq_one,Lean 4 kernel proof (0 sorry),sorry,2026-11-16T16:55:45Z,object/CompactHausdorffRings.lean,be407d0f4d9d2b6bac5c1b7b64f7ac9361ad711a3c8c4bcf05d8713729bc8bbd
