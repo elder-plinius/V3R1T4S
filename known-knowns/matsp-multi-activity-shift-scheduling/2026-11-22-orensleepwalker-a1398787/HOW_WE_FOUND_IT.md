@@ -1,0 +1,3 @@
+# How we found it (contributor text, unverified)
+
+A scout of the 225 instances showed every best known value comes from one 2026 method. A simple counting argument (each employee must work a minimum number of minutes, and each worked interval covers exactly one task) shows over-staffing is forced on all but three instances; on instance 80 it is not, so a roster with no over-staffing at all may exist. An exact CP-SAT model of the full definition found one: an exact CP-SAT model of the whole definition (how-we-built-it/code/cpsat_matsp.py), run for 300 s with 4 workers and seed 1, which proved penalty 0 optimal after 81 s. The same counting argument shows that 99 other best known values are already optimal.
