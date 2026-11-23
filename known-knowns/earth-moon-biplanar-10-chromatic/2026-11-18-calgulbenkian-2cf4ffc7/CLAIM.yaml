@@ -1,0 +1,10 @@
+target_id: earth-moon-biplanar-10-chromatic
+win_type: partial_win
+partial_win_id: p2
+status: PROMISING
+scope: "An explicit 5-connected, non-join, 19-vertex, 92-edge 9-critical biplanar graph (partial win p2 for earth-moon-biplanar-10-chromatic) certified biplanar by both combinatorial genus-0 rotation systems and integer straight-line Fary drawings, certified 9-chromatic and edge-critical by DRAT proof and all 92 edge-deletion 8-colorings, and certified non-isomorphic to all published Boutin-Gethner-Sulanke 9-critical biplanar graphs by canonical labelling."
+main_object: object/biplanar_9crit_n19_e92.json
+main_object_sha256: 2cf4ffc7aaf448d3135de8dc5352cf39b78eb275119af38056bf28678f8a1a2c
+drat_proof: object/uncolorable_8.drat
+drat_proof_sha256: 3365e056bc2641128c3d73d5f47c36705334ec2da8c682467fa63fe6d6a7ebd6
+canonical_graph_sha256: efe251d54fa0a5403e0357617332980e1da1a8afcc4a533c86e0ceac5c8f391e
