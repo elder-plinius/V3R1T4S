@@ -1,0 +1,47 @@
+# A357951(8) = 150
+cell: A357951(8)
+value: 150
+sequence: OEIS A357951, maximum period of an outer-totalistic cellular automaton on a connected graph with n nodes
+witness_graph6: GCQfBg
+witness_rule: B={0,2} S={1,3,4}
+witness_rule_meaning: an OFF node turns ON iff its number of ON neighbours is in B; an ON node stays ON iff it is in S
+witness_start: 1
+witness_start_meaning: node 0 ON, all others OFF (graph6 vertex order); this state lies on the 150-cycle
+graph_class: connected simple graphs on 8 nodes (nauty geng -cq 8)
+graph_count: 11117
+graph_count_oeis: A001349(8)=11117
+rules: all 2^(2*8) = 65536 outer-totalistic pairs (B,S), B and S subsets of {0..7}
+starts: all 2^8 = 256 states
+programs: otA.c (C, all 65536 rules, no pruning), otB.go (Go, written separately, counts restricted to 0..maxdeg with a completeness argument); both reproduce a(1..7)=2,2,4,6,16,26,66
+direct_simulation: transient=0 cycle_length=150 (ostepper.py)
+unique_optimum: yes (next best 124 on G?rfUw)
+not_this_sequence: A357952 (totalistic, node counts itself), A357953 (totalistic, neighbours only), A384209 (Game of Life on all simple graphs)
+
+# sha256 pins of saved artifacts (relative to package object/)
+code/diff_AB.py  c291f803dee008c80b2e1ac308df7cbe867dda88825cfc7e2d3468a9e000a1a5
+code/ospot.py  8e28a12592347ce8ea52c75b5f763d48ae0c6f2d56916ebe5a60aba8a5f9a33d
+code/ostepper.py  279b34b80e79bee3009414169483d9c2211b203d08822b8dfc4b85a1df6755b8
+code/otA.c  ea9addf279d4e28fc8e073335dd7b7c05d7dc9c17dfdcd61b23c7d7ac1d7f1bf
+code/otB.go  54b4bdaf6d60e412865b5316c0b08f399b7387b73720f8d95f1b46dce6fd5292
+evidence/A357951_8.txt  e1bed7ea0714aae3f6d1789e5852fc83e9d8ca3630a8d5de7ff097cb672f0cad
+evidence/A8_part0.txt  78be6aa1c2a7d4a0e2c0f847069ba360a51599f9df263e02e2e49383727dde05
+evidence/A8_part1.txt  ed98f45ab5e1437fcbfb77724fce96e02144f64c000b5f4ff15c1f735607b002
+evidence/A8_part2.txt  533b9097a54f100f9abc7bc22f70e44fa58beae878a98ba4147809f51c602329
+evidence/A8_part3.txt  af8b7ef570ff6cbf93e6d99825bf9bdfc7a092042e16d32d678c7bda3a4f32fd
+evidence/A8_part4.txt  f0a8d0290061951cf680385f5a1312d792e4decb84de03e8d1bba281c6480f19
+evidence/A8_part5.txt  3e22aef000f909e744bc098cbaad47ae42864f1e8c4ca372bb0be37a0a37d4c1
+evidence/A8_part6.txt  692bbf7328700e59b0bca1767012803b4180b834602333ea997045661a3ddd53
+evidence/A8_part7.txt  18675acf6b97d0af681c958798981c58c13379bf3bb32394455a22812a2d53e4
+evidence/A_n1_7.txt  5c66f04a4d566135ea48d1e02b7c6fd5a3414b92962c6df151d0869545c91156
+evidence/B8_part0.txt  ff6a30656414cb7cf5150ad06c00c9acae4f9eabd38420f92b615eb8b094d794
+evidence/B8_part1.txt  af11ccc075bdd80e09e4fad4638fb00baf62a1d49c0f633f14bff708bf9db349
+evidence/B8_part2.txt  25b9a3839facf528b5e25386a88a417f7a0fffe0986ff8d2ffd86b79ab4d5302
+evidence/B8_part3.txt  03269c4727cb1c78e34ff3202f2268897461d7b16708387174a370a572c3090a
+evidence/B8_part4.txt  85b5ccec3929cc864abdda60bd5a1444ff216abda53cb69d2a87d3cdd5d3df77
+evidence/B8_part5.txt  a7a30a044b3264122236fbdc95d2520bfc2f1a8a031727344512736cef13584e
+evidence/B8_part6.txt  5bc11cd166eec81da1de06f9a19a4b447612ee3daf2660e0b6f3f1083cd8d4b2
+evidence/B8_part7.txt  3cd324d3a66132ec0980e13adba930c76432dfc575cb10cb9581bc43b400e46d
+evidence/B_n1_7.txt  76eb4d30c9abb968c864c5dff4f0d2d0b6c748b1f1fb594b601571859b052e34
+evidence/completeness.txt  7f18814b7ecbbc8b2dc07cb7ef60da735b1ff4d5fa7bec1a58a9b528f24983ae
+evidence/witness_simulation.txt  03af23da64dcc055a68c0ebcc5156251c1025b0b3cfedc3f4f43be1d3c7f04c1
+tools/geng  75d1bf016a93b090ca471254605b735865162a864e4682c544df90a81e91f450

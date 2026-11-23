@@ -1,0 +1,7 @@
+A357951(8) = 150
+witness_graph6: GCQfBg
+witness_rule: B={0,2} S={1,3,4}   (OFF node turns ON iff #ON neighbours in B; ON node stays ON iff #ON neighbours in S)
+witness_start: 1   (vertex 0 ON, others OFF, graph6 vertex order; this state lies on the 150-cycle)
+Program A raw witness rule mask 6789 = B={0,2,7} S={1,3,4}; count 7 cannot occur (max degree 4), same dynamics.
+graphs enumerated: 11117 (geng -cq 8, residue classes 0..7 of 8), all 65536 rules, all 256 starts
+next best per-graph maxima: 124 (G?rfUw), 115, 114, 112, 109
