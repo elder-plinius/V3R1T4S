@@ -1,0 +1,13 @@
+{
+ "real": 612,
+ "K": 1000000,
+ "N": 40,
+ "control_max": 46,
+ "control_p999": 30,
+ "n_ge": 0,
+ "p_raw": 9.99999000001e-07,
+ "p_bonf": 3.999996000004e-05,
+ "beats_all_controls": true,
+ "c_pass": true,
+ "note": "FROZEN CLAIMANT DECISION: K=1,000,000 controls (PREREG reachability: |S|=40>39 -> K_claim=1,000,000). Seed grid 20261117+k, np.random.default_rng(seed).permutation(11461) line-order shuffle of the 11,461-line corpus pool; token content unchanged. p_raw=(1+n_ge)/(K+1); p_bonf=min(1, p_raw*N), N=40=|S| (fragments actually null-searched). p_bonf=3.999996e-05 < 1e-4 (strict); real 612 > control_max 46 (beats every control). Source: output/null_1000000_null_claimant.json.json + .npz."
+}

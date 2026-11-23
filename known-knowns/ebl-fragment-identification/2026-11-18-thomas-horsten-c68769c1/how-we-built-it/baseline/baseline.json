@@ -1,0 +1,319 @@
+{
+ "statistics": {
+  "url": "https://www.ebl.lmu.de/api/statistics",
+  "http": 200,
+  "live": {
+   "transliteratedFragments": 39105,
+   "lines": 636187.0,
+   "totalFragments": 328942
+  },
+  "bank_2026-10-20": {
+   "transliteratedFragments": 38586,
+   "lines": 627690,
+   "totalFragments": 328409
+  },
+  "coordinator_preflight_2026-11-17T21:40Z": {
+   "transliteratedFragments": 39105,
+   "lines": 636187,
+   "totalFragments": 328942
+  },
+  "match_preflight": true
+ },
+ "aligner_calibration_on_known": [
+  {
+   "fid": "BM.75974",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 175,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/3/12/Standard Babylonian/-",
+     1384.1715
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     1304.5922
+    ],
+    [
+     "/L/1/3/Standard Babylonian/-",
+     1217.7803
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.76319",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 65,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/3/12/Standard Babylonian/-",
+     192.1772
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     167.1701
+    ],
+    [
+     "/Mag/1/1/Standard Babylonian/II",
+     159.9645
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.68611",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 168,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/Mag/2/13/Standard Babylonian/2",
+     754.6937
+    ],
+    [
+     "/L/3/12/Standard Babylonian/-",
+     698.3807
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     670.6328
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.36333",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 143,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/Mag/1/1/Standard Babylonian/II",
+     348.9488
+    ],
+    [
+     "/L/1/6/Standard Babylonian/-",
+     336.965
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     332.6783
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.37616",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 177,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/Mag/2/13/Standard Babylonian/2",
+     437.0834
+    ],
+    [
+     "/L/3/12/Standard Babylonian/-",
+     404.1386
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     403.4897
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.44062",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 115,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/3/12/Standard Babylonian/-",
+     372.9673
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     338.0547
+    ],
+    [
+     "/L/1/3/Standard Babylonian/-",
+     316.6703
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.40298",
+   "known_chapters": [
+    "/L/3/12/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/3/12/Standard Babylonian/-",
+   "aligner_top_score": 335,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/3/12/Standard Babylonian/-",
+     694.8682
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     366.7592
+    ],
+    [
+     "/L/3/4/Standard Babylonian/-",
+     339.7961
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.34487",
+   "known_chapters": [
+    "/L/0/0/Neo-Babylonian/-",
+    "/L/2/1/Standard Babylonian/-"
+   ],
+   "aligner_top_chapter": "/L/2/1/Standard Babylonian/-",
+   "aligner_top_score": 39,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/0/0/Neo-Babylonian/-",
+     80.2763
+    ],
+    [
+     "/L/3/10/Standard Babylonian/-",
+     56.0319
+    ],
+    [
+     "/L/1/3/Standard Babylonian/-",
+     53.2131
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.77118",
+   "known_chapters": [
+    "/L/1/2/Standard Babylonian/I"
+   ],
+   "aligner_top_chapter": "/L/1/2/Standard Babylonian/I",
+   "aligner_top_score": 219,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/1/2/Standard Babylonian/I",
+     694.0175
+    ],
+    [
+     "/L/3/4/Standard Babylonian/-",
+     374.8826
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     369.3381
+    ]
+   ],
+   "tfidf_known_in_top10": true
+  },
+  {
+   "fid": "BM.36726",
+   "known_chapters": [
+    "/L/1/2/Standard Babylonian/I"
+   ],
+   "aligner_top_chapter": "/L/1/2/Standard Babylonian/I",
+   "aligner_top_score": 25,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/1/6/Standard Babylonian/-",
+     489.4224
+    ],
+    [
+     "/Mag/1/1/Standard Babylonian/II",
+     484.5663
+    ],
+    [
+     "/L/3/11/Standard Babylonian/-",
+     448.1597
+    ]
+   ],
+   "tfidf_known_in_top10": false
+  },
+  {
+   "fid": "BM.36688",
+   "known_chapters": [
+    "/L/1/2/Standard Babylonian/I"
+   ],
+   "aligner_top_chapter": "/L/1/2/Standard Babylonian/I",
+   "aligner_top_score": 36,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/Mag/1/1/Standard Babylonian/I",
+     338.8141
+    ],
+    [
+     "/Mag/1/1/Standard Babylonian/II",
+     328.8541
+    ],
+    [
+     "/L/1/4/Standard Babylonian/VI",
+     314.8472
+    ]
+   ],
+   "tfidf_known_in_top10": false
+  },
+  {
+   "fid": "BM.55244",
+   "known_chapters": [
+    "/L/1/2/Standard Babylonian/I"
+   ],
+   "aligner_top_chapter": "/L/1/2/Standard Babylonian/I",
+   "aligner_top_score": 41,
+   "aligner_recovers_known": true,
+   "tfidf_top3": [
+    [
+     "/L/3/9/Standard Babylonian/-",
+     108.2846
+    ],
+    [
+     "/L/1/10/Standard Babylonian/II",
+     95.1486
+    ],
+    [
+     "/L/3/5/Standard Babylonian/-",
+     93.703
+    ]
+   ],
+   "tfidf_known_in_top10": false
+  }
+ ],
+ "summary": {
+  "n_known_checked": 12,
+  "aligner_recovers_known_chapter": "12/12",
+  "tfidf_known_in_top10": "9/12",
+  "note": "Known-identified fragments (museum number in a chapter's manuscript list) used as calibration positives: the independent aligner must recover the known chapter, and eBL's TF-IDF matcher must rank a known chapter in top-10. If either fails, the pipeline is mis-calibrated."
+ }
+}

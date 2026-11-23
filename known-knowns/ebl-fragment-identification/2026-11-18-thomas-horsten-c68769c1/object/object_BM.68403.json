@@ -1,0 +1,142 @@
+{
+ "fragment_id": "BM.68403",
+ "chapter": "/L/3/10/Standard Babylonian/-",
+ "alignment": {
+  "score": 612,
+  "aligned": 270,
+  "mismatch_frac": 0.0926,
+  "consec_lines_a": 24,
+  "a_line_span": [
+   3,
+   26
+  ],
+  "b_line_span": [
+   56,
+   66
+  ],
+  "attested": {
+   "fid": "BM.68403",
+   "span_a": [
+    3,
+    26
+   ],
+   "attested_lines": 11,
+   "restored_lines": 13,
+   "n_lines": 24,
+   "attested_signs": 128,
+   "restored_signs": 153,
+   "n_signs": 281,
+   "attested_frac_signs": 0.4555160142348754,
+   "attested_frac_lines": 0.4583333333333333
+  }
+ },
+ "condition_d": {
+  "tfidf_top10": [
+   "/L/3/10/Standard Babylonian/-",
+   "/L/3/11/Standard Babylonian/-",
+   "/Mag/2/13/Standard Babylonian/2",
+   "/Mag/1/1/Standard Babylonian/II",
+   "/L/1/3/Standard Babylonian/-",
+   "/L/3/4/Standard Babylonian/-",
+   "/L/3/8/Standard Babylonian/-",
+   "/Mag/1/1/Standard Babylonian/I",
+   "/L/1/11/Standard Babylonian/-",
+   "/L/1/10/Standard Babylonian/I"
+  ],
+  "rank": 0,
+  "in_top10": true,
+  "note": "offline TF-IDF re-implementation of eBL public ngram-matcher (commit e8918de); /match route 403-public"
+ },
+ "condition_e": {
+  "fid": "BM.68403",
+  "chapter": "/L/3/10/Standard Babylonian/-",
+  "block_lines": 24,
+  "block_signs": 297,
+  "e_thr": 118,
+  "attested_frac_lines": 0.46,
+  "e_n_unrelated": 1,
+  "e_pass": true,
+  "e_hits_top6": [
+   {
+    "cid": "/L/1/1/Old Babylonian/I",
+    "textid": [
+     "L",
+     1,
+     1
+    ],
+    "aligned": 284,
+    "misfrac": 0.028
+   }
+  ],
+  "e_textids": [
+   [
+    "L",
+    1,
+    1
+   ]
+  ]
+ },
+ "condition_a": {
+  "fid": "BM.68403",
+  "chapter": "/L/3/10/Standard Babylonian/-",
+  "pass_a": true,
+  "fails": [],
+  "partials": [
+   "series name 'lexical' present (genre-level), number '-' not -> partial"
+  ]
+ },
+ "s_best": {
+  "fid": "BM.68403",
+  "ntok": 322,
+  "n_prefilter": 12,
+  "best": {
+   "score": 612,
+   "aligned": 270,
+   "mismatches": 25,
+   "wildcards": 16,
+   "mismatch_frac": 0.09259259259259259,
+   "consec_lines_a": 24,
+   "consec_lines_b": 11,
+   "a_line_span": [
+    3,
+    26
+   ],
+   "b_line_span": [
+    56,
+    66
+   ],
+   "chapter": 73,
+   "chapter_cid": "/L/3/10/Standard Babylonian/-",
+   "hitcount": 116
+  },
+  "b_pass": true,
+  "p1_pass": false,
+  "tfidf_top10": [
+   "/L/3/10/Standard Babylonian/-",
+   "/L/3/11/Standard Babylonian/-",
+   "/Mag/2/13/Standard Babylonian/2",
+   "/Mag/1/1/Standard Babylonian/II",
+   "/L/1/3/Standard Babylonian/-",
+   "/L/3/4/Standard Babylonian/-",
+   "/L/3/8/Standard Babylonian/-",
+   "/Mag/1/1/Standard Babylonian/I",
+   "/L/1/11/Standard Babylonian/-",
+   "/L/1/10/Standard Babylonian/I"
+  ],
+  "claimed_in_top10": true
+ },
+ "condition_c": {
+  "K": 1000000,
+  "N": 40,
+  "real": 612,
+  "control_max": 46,
+  "control_p999": 30,
+  "n_ge": 0,
+  "p_raw": 9.99999000001e-07,
+  "p_bonf": 3.999996000004e-05,
+  "beats_all_controls": true,
+  "pass": true,
+  "rule": "p_raw=(1+#ge)/(K+1); p_bonf=min(1,p_raw*N); N=40=|S| (frozen PREREG); |S|=40>39 -> K_claim=1,000,000 per PREREG reachability clause",
+  "note": "4e-05 < 1e-4 (strict); 0 of 1,000,000 controls >= 612; real beats every control"
+ }
+}
