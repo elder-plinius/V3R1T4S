@@ -1,0 +1,10 @@
+{
+ "m": 2,
+ "k": 5,
+ "n": 13,
+ "sb": "global3",
+ "encoder": "verify-it-yourself/encode_schutte.py",
+ "cnf_sha256": "247ca74489c8144e2eca1fa1b7bfdd6c2f7f826e7deac2c46e4b3748c7069626",
+ "cnf_vars": 42644,
+ "cnf_clauses": 148931
+}
