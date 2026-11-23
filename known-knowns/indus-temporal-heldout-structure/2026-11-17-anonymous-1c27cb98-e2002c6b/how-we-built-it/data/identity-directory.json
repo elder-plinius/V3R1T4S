@@ -1,0 +1,5759 @@
+{
+ "17+410": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Alamgirpur": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "17+410": 2
+  }
+ },
+ "17+405": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Alamgirpur": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "17+405": 2
+  }
+ },
+ "235": {
+  "n": 11,
+  "seals": 5,
+  "tablets": 3,
+  "sealings": 2,
+  "sites": {
+   "Allahdino": 1,
+   "Harappa": 2,
+   "Lothal": 1,
+   "Mohenjo-daro": 5,
+   "Dholavira": 2
+  },
+  "sealing_sites": {
+   "Allahdino": 1,
+   "Lothal": 1
+  },
+  "full_texts": {
+   "235+740": 2,
+   "235+520": 4,
+   "235+740+151": 1,
+   "861+2+235": 2,
+   "861+2+235+520": 1,
+   "2+235": 1
+  }
+ },
+ "590+390": {
+  "n": 16,
+  "seals": 10,
+  "tablets": 4,
+  "sealings": 1,
+  "sites": {
+   "Allahdino": 1,
+   "Chanhu-daro": 1,
+   "Harappa": 9,
+   "Dholavira": 1,
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {
+   "Mohenjo-daro": 1
+  },
+  "full_texts": {
+   "590+390+740": 7,
+   "861+2+590+390+740": 1,
+   "590+390+740+400": 2,
+   "817+2+590+390+740": 1,
+   "820+2+590+390+740": 1,
+   "817+2+590+390+740+621": 1,
+   "590+390+151": 1,
+   "2+590+390+740": 1,
+   "590+390": 1
+  }
+ },
+ "510+460": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Allahdino": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "510+460+156": 1,
+   "510+460+740": 1
+  }
+ },
+ "34+390": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Amri": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "34+390": 2
+  }
+ },
+ "233+388": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Bala-kot": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+388": 1,
+   "233+388+527": 1
+  }
+ },
+ "798": {
+  "n": 8,
+  "seals": 5,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Bala-kot": 1,
+   "Harappa": 2,
+   "Mohenjo-daro": 2,
+   "Dholavira": 2,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "798+740": 7,
+   "820+798+740": 1
+  }
+ },
+ "14+220": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Banawali": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "14+220": 1,
+   "820+2+14+220+740+90": 1
+  }
+ },
+ "61": {
+  "n": 12,
+  "seals": 12,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Banawali": 1,
+   "Harappa": 2,
+   "Mohenjo-daro": 7,
+   "Lakhanjo-daro": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "61+740": 5,
+   "61+151": 3,
+   "817+2+61+740": 2,
+   "820+60+61+740": 1,
+   "861+2+61+151": 1
+  }
+ },
+ "4+390": {
+  "n": 12,
+  "seals": 10,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Banawali": 1,
+   "Harappa": 2,
+   "Dholavira": 1,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 7
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+390": 3,
+   "817+2+4+390": 4,
+   "817+4+390": 1,
+   "861+2+4+390": 1,
+   "820+2+4+390": 1,
+   "817+2+4+390+621": 1,
+   "4+390+400": 1
+  }
+ },
+ "803": {
+  "n": 7,
+  "seals": 6,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Banawali": 1,
+   "Harappa": 2,
+   "Lothal": 1,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "803+740": 3,
+   "803+156": 1,
+   "820+2+803": 1,
+   "861+803": 1,
+   "803+740+400": 1
+  }
+ },
+ "220": {
+  "n": 23,
+  "seals": 10,
+  "tablets": 6,
+  "sealings": 5,
+  "sites": {
+   "Banawali": 1,
+   "Harappa": 10,
+   "Lothal": 1,
+   "Mohenjo-daro": 9,
+   "Dholavira": 2
+  },
+  "sealing_sites": {
+   "Banawali": 1,
+   "Lothal": 1,
+   "Mohenjo-daro": 1,
+   "Dholavira": 2
+  },
+  "full_texts": {
+   "2+220+520": 1,
+   "220+520": 7,
+   "220+740+90": 4,
+   "2+220": 3,
+   "220+740+400": 2,
+   "817+2+220+520+621": 1,
+   "220+400": 1,
+   "220+740": 2,
+   "220+151": 1,
+   "861+2+220+520": 1
+  }
+ },
+ "700+31": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Banawali": 1,
+   "Mohenjo-daro": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "700+31": 3
+  }
+ },
+ "236": {
+  "n": 7,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 3,
+  "sites": {
+   "Bhirrana": 1,
+   "Harappa": 3,
+   "Lothal": 3
+  },
+  "sealing_sites": {
+   "Lothal": 3
+  },
+  "full_texts": {
+   "820+2+236": 1,
+   "236+400": 3,
+   "861+2+236": 3
+  }
+ },
+ "167+705+31": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "167+705+31": 2
+  }
+ },
+ "405": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 2
+  },
+  "sealing_sites": {
+   "Chanhu-daro": 1
+  },
+  "full_texts": {
+   "405+740": 2,
+   "2+405": 1
+  }
+ },
+ "700+892": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "700+892": 2
+  }
+ },
+ "3+390": {
+  "n": 19,
+  "seals": 14,
+  "tablets": 2,
+  "sealings": 2,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 5,
+   "Kalibangan": 2,
+   "Mohenjo-daro": 9,
+   "Nausharo": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Kalibangan": 1,
+   "Mohenjo-daro": 1
+  },
+  "full_texts": {
+   "817+2+3+390": 3,
+   "3+390": 9,
+   "820+2+3+390": 4,
+   "861+2+3+390": 3
+  }
+ },
+ "235+482": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+482+740": 3
+  }
+ },
+ "692+60+531": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "692+60+531+740": 1,
+   "692+60+531+740+90": 1
+  }
+ },
+ "125": {
+  "n": 4,
+  "seals": 4,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Mohenjo-daro": 2,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+125": 1,
+   "125+90": 1,
+   "861+2+125+90": 1,
+   "125+400": 1
+  }
+ },
+ "240+100": {
+  "n": 6,
+  "seals": 3,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 3,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+100+740+151": 1,
+   "240+100+740+400": 2,
+   "240+100+740": 2,
+   "240+100": 1
+  }
+ },
+ "240+636": {
+  "n": 8,
+  "seals": 3,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 5,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+240+636+740": 1,
+   "240+636+740": 3,
+   "240+636+740+400": 3,
+   "240+636": 1
+  }
+ },
+ "803+233": {
+  "n": 4,
+  "seals": 4,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+803+233+520": 2,
+   "803+233+520+400": 1,
+   "820+60+803+233+520": 1
+  }
+ },
+ "803+235": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+803+235+520": 1,
+   "2+803+235": 1
+  }
+ },
+ "100": {
+  "n": 9,
+  "seals": 7,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 3,
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "100+740": 7,
+   "100+740+400": 1,
+   "820+2+100+740": 1
+  }
+ },
+ "31": {
+  "n": 19,
+  "seals": 11,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Chanhu-daro": 1,
+   "Harappa": 7,
+   "Mohenjo-daro": 8,
+   "Rahman-deri": 1,
+   "Kalibangan": 1,
+   "Kanmer": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+31": 1,
+   "31+740": 1,
+   "31+156": 7,
+   "2+31+520": 1,
+   "861+2+31": 1,
+   "31+520": 4,
+   "31+151": 2,
+   "820+31+740": 1,
+   "817+31": 1
+  }
+ },
+ "19": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "19+156": 1,
+   "2+19+740": 1
+  }
+ },
+ "495+460": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "495+460+520": 2
+  }
+ },
+ "416": {
+  "n": 8,
+  "seals": 7,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 2,
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+416+740": 1,
+   "416+740": 4,
+   "817+2+416": 1,
+   "416+151": 2
+  }
+ },
+ "460": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Dholavira": 1,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {
+   "Kalibangan": 1
+  },
+  "full_texts": {
+   "460+520": 2,
+   "861+2+460+740": 1
+  }
+ },
+ "16+390": {
+  "n": 7,
+  "seals": 7,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 1,
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+16+390": 1,
+   "16+390": 6
+  }
+ },
+ "142+617": {
+  "n": 9,
+  "seals": 5,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 2,
+   "Mohenjo-daro": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "142+617": 8,
+   "817+2+142+617": 1
+  }
+ },
+ "33": {
+  "n": 8,
+  "seals": 2,
+  "tablets": 3,
+  "sealings": 2,
+  "sites": {
+   "Dholavira": 2,
+   "Harappa": 2,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {
+   "Dholavira": 1,
+   "Kalibangan": 1
+  },
+  "full_texts": {
+   "33+520": 1,
+   "820+33": 1,
+   "33+400": 2,
+   "861+2+33+520": 1,
+   "33+151": 2,
+   "33+740": 1
+  }
+ },
+ "31+350": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+31+350+400": 1,
+   "31+350+400+520": 1
+  }
+ },
+ "220+240": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Farmana": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+240": 1,
+   "220+240+740+90": 1
+  }
+ },
+ "32+220": {
+  "n": 11,
+  "seals": 8,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Farmana": 1,
+   "Harappa": 6,
+   "Mohenjo-daro": 3,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+220": 4,
+   "820+2+32+220": 1,
+   "32+220+740+90": 1,
+   "817+2+32+220": 2,
+   "32+220+740": 1,
+   "861+2+32+220+520": 1,
+   "32+220+520": 1
+  }
+ },
+ "390+390": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Farmana": 1,
+   "Rodji": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "390+390": 2
+  }
+ },
+ "900": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Ganweriwala": 1,
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "900+740+400": 1,
+   "900+740": 2,
+   "817+2+900": 1
+  }
+ },
+ "255+33": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "255+33": 2
+  }
+ },
+ "90+1": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Ur": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "90+1+520": 1,
+   "90+1": 1
+  }
+ },
+ "705+35": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "705+35": 2
+  }
+ },
+ "16+220": {
+  "n": 7,
+  "seals": 3,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6,
+   "Nausharo": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "16+220": 2,
+   "16+220+520+400": 2,
+   "820+2+16+220+151": 1,
+   "16+220+520": 1,
+   "820+2+16+220+740+90": 1
+  }
+ },
+ "142": {
+  "n": 8,
+  "seals": 4,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Lothal": 1,
+   "Mohenjo-daro": 1,
+   "Dholavira": 1,
+   "Unknown": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "142+740": 1,
+   "142+400": 1,
+   "142+400+740": 1,
+   "142+151+400": 1,
+   "820+60+142+156": 1,
+   "142+156": 1,
+   "142+151": 1,
+   "142+400+151": 1
+  }
+ },
+ "240+630+690": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+630+690+740": 2
+  }
+ },
+ "510+697": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "510+697": 2
+  }
+ },
+ "692+60+240+603": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "692+60+240+603+740": 3
+  }
+ },
+ "34+700": {
+  "n": 108,
+  "seals": 1,
+  "tablets": 107,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 108
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "34+700": 108
+  }
+ },
+ "892": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "892+740": 3,
+   "892+400": 2
+  }
+ },
+ "550": {
+  "n": 8,
+  "seals": 7,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Lothal": 2,
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "550+527": 6,
+   "550+740": 1,
+   "550+520+400": 1
+  }
+ },
+ "33+700": {
+  "n": 124,
+  "seals": 3,
+  "tablets": 118,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 123,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+700": 124
+  }
+ },
+ "176+100": {
+  "n": 5,
+  "seals": 1,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "176+100+740+400": 2,
+   "176+100+740": 3
+  }
+ },
+ "519": {
+  "n": 4,
+  "seals": 3,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "519+740": 3,
+   "861+2+519+740": 1
+  }
+ },
+ "220+440+154": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+440+154+400": 2
+  }
+ },
+ "415+220": {
+  "n": 27,
+  "seals": 4,
+  "tablets": 20,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 21,
+   "Mohenjo-daro": 6
+  },
+  "sealing_sites": {
+   "Harappa": 1
+  },
+  "full_texts": {
+   "415+220+520": 17,
+   "415+220": 6,
+   "820+60+415+220+520": 1,
+   "817+415+220+520": 1,
+   "415+220+400": 2
+  }
+ },
+ "415+578+32+824": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "415+578+32+824": 4
+  }
+ },
+ "32": {
+  "n": 16,
+  "seals": 2,
+  "tablets": 12,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 14,
+   "Dholavira": 1,
+   "Tigrana": 1
+  },
+  "sealing_sites": {
+   "Tigrana": 1
+  },
+  "full_texts": {
+   "32+400": 1,
+   "32+226+400": 1,
+   "820+2+32": 2,
+   "32+740": 5,
+   "32+740+400": 5,
+   "32+226": 1,
+   "820+32": 1
+  }
+ },
+ "158": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "158+400": 2
+  }
+ },
+ "32+1+904+31": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+1+904+31+740": 2
+  }
+ },
+ "32+700": {
+  "n": 94,
+  "seals": 0,
+  "tablets": 93,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 91,
+   "Kalibangan": 1,
+   "Unknown": 1,
+   "Lothal": 1
+  },
+  "sealing_sites": {
+   "Lothal": 1
+  },
+  "full_texts": {
+   "32+700": 94
+  }
+ },
+ "590+705+868": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "590+705+868": 5
+  }
+ },
+ "255+435": {
+  "n": 15,
+  "seals": 1,
+  "tablets": 14,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 14,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "255+435+156+400": 10,
+   "255+435": 1,
+   "255+435+156": 4
+  }
+ },
+ "495+776": {
+  "n": 5,
+  "seals": 1,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "495+776": 3,
+   "495+776+740+400": 2
+  }
+ },
+ "550+60": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "550+60": 2
+  }
+ },
+ "3+220": {
+  "n": 8,
+  "seals": 6,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+220+740+90+400": 1,
+   "3+220": 1,
+   "3+220+520": 1,
+   "3+220+740": 5
+  }
+ },
+ "231": {
+  "n": 8,
+  "seals": 6,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Kalibangan": 2,
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "231+151": 1,
+   "820+60+231": 1,
+   "231+520": 1,
+   "861+2+231": 1,
+   "231+740+151": 1,
+   "817+2+231+520": 1,
+   "820+2+231+520": 1,
+   "2+231": 1
+  }
+ },
+ "575": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Lothal": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "575+400": 1,
+   "575+740": 1
+  }
+ },
+ "5+900": {
+  "n": 6,
+  "seals": 6,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+2+5+900+740": 1,
+   "5+900+740": 4,
+   "5+900+740+90": 1
+  }
+ },
+ "554": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "554+740": 2,
+   "554+527": 1
+  }
+ },
+ "831+892": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "831+892+400": 2,
+   "831+892": 2
+  }
+ },
+ "705+167": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "705+167": 5
+  }
+ },
+ "678": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "678+400": 2
+  }
+ },
+ "711+33+700": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+711+33+700": 1,
+   "711+33+700": 1
+  }
+ },
+ "176": {
+  "n": 68,
+  "seals": 13,
+  "tablets": 51,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 53,
+   "Mohenjo-daro": 14,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "176+740+400": 38,
+   "176+740": 17,
+   "176+740+90": 2,
+   "176+156": 5,
+   "861+2+176+740": 2,
+   "861+2+176+151": 1,
+   "817+2+176+740": 1,
+   "861+2+176+740+90": 1,
+   "176+151": 1
+  }
+ },
+ "32+140": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Lothal": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+140+156+400": 1,
+   "32+140": 1
+  }
+ },
+ "605+760": {
+  "n": 8,
+  "seals": 2,
+  "tablets": 6,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "605+760+740+400": 6,
+   "861+2+605+760+740": 1,
+   "605+760+740": 1
+  }
+ },
+ "380+705+200": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "380+705+200": 3
+  }
+ },
+ "382": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "382+740+400": 1,
+   "2+382+740": 1
+  }
+ },
+ "413+892": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "413+892": 3
+  }
+ },
+ "240+904": {
+  "n": 7,
+  "seals": 0,
+  "tablets": 7,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 7
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+240+904+740": 3,
+   "240+904+740": 3,
+   "240+904+740+400": 1
+  }
+ },
+ "98": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "98+400": 5
+  }
+ },
+ "700+33": {
+  "n": 33,
+  "seals": 0,
+  "tablets": 32,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 33
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "700+33": 33
+  }
+ },
+ "840": {
+  "n": 7,
+  "seals": 0,
+  "tablets": 7,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 7
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "840+740": 4,
+   "2+840+740": 1,
+   "840+740+400": 2
+  }
+ },
+ "255": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "255+520": 1,
+   "255+740": 3
+  }
+ },
+ "3+140+100": {
+  "n": 4,
+  "seals": 4,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+140+100+740": 3,
+   "3+140+100+740+400": 1
+  }
+ },
+ "413+892+824": {
+  "n": 11,
+  "seals": 0,
+  "tablets": 11,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 11
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "413+892+824": 11
+  }
+ },
+ "240+233": {
+  "n": 5,
+  "seals": 1,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 1,
+   "Unknown": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+233+520": 1,
+   "240+233+740": 2,
+   "240+233": 2
+  }
+ },
+ "851+741+48": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "851+741+48+740": 3
+  }
+ },
+ "31+700": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "31+700": 3
+  }
+ },
+ "700+220": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "700+220": 3
+  }
+ },
+ "33+590+416": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+590+416": 3
+  }
+ },
+ "33+255": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+255": 2
+  }
+ },
+ "382+760": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "382+760": 1,
+   "382+760+740+400": 1,
+   "382+760+740": 1
+  }
+ },
+ "5+405": {
+  "n": 5,
+  "seals": 3,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "2+5+405": 1,
+   "5+405": 4
+  }
+ },
+ "32+999+31": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Nausharo": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+999+31": 2
+  }
+ },
+ "3+3": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+3": 3
+  }
+ },
+ "630": {
+  "n": 15,
+  "seals": 0,
+  "tablets": 14,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 4,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 10
+  },
+  "sealing_sites": {
+   "Kalibangan": 1
+  },
+  "full_texts": {
+   "630+740": 13,
+   "630+740+400": 1,
+   "630+400": 1
+  }
+ },
+ "140+1+31": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "140+1+31+740": 3
+  }
+ },
+ "36+700": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "36+700": 3
+  }
+ },
+ "390": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1,
+   "Nausharo": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "390+740+400": 1,
+   "390+740": 2,
+   "2+390+151": 1
+  }
+ },
+ "636": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "636+740": 1,
+   "636+740+400": 1
+  }
+ },
+ "692+60": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "692+60": 4
+  }
+ },
+ "140+61": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "140+61+740+400": 2
+  }
+ },
+ "590+706+868": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "590+706+868": 5
+  }
+ },
+ "137": {
+  "n": 8,
+  "seals": 0,
+  "tablets": 8,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 8
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "137+400": 7,
+   "820+2+137": 1
+  }
+ },
+ "700+34": {
+  "n": 14,
+  "seals": 0,
+  "tablets": 14,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 14
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "700+34": 14
+  }
+ },
+ "516+775": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "516+775+400": 2
+  }
+ },
+ "231+176+740+565": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "231+176+740+565": 2
+  }
+ },
+ "235+705+33": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+705+33": 2
+  }
+ },
+ "368+690": {
+  "n": 6,
+  "seals": 0,
+  "tablets": 6,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+368+690": 6
+  }
+ },
+ "799+840+760": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "799+840+760+740": 3
+  }
+ },
+ "700+32": {
+  "n": 19,
+  "seals": 0,
+  "tablets": 18,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 18,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "700+32": 19
+  }
+ },
+ "61+702": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Unknown": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "2+61+702+740": 1,
+   "817+2+61+702+740": 1
+  }
+ },
+ "832": {
+  "n": 6,
+  "seals": 3,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Lothal": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+832": 2,
+   "832+740+400": 1,
+   "832+740": 2,
+   "861+2+832": 1
+  }
+ },
+ "233+220": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+220": 1,
+   "233+220+740": 1
+  }
+ },
+ "463+798": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "463+798+740+400": 1,
+   "463+798+740": 2
+  }
+ },
+ "31+384": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "31+384+740": 1,
+   "31+384+156+400": 2
+  }
+ },
+ "235+176": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+176+740+400": 1,
+   "235+176+740": 1
+  }
+ },
+ "692+60+240+642": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "692+60+240+642+740": 2
+  }
+ },
+ "717": {
+  "n": 7,
+  "seals": 4,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "717+740+400": 3,
+   "717+740": 3,
+   "717+151": 1
+  }
+ },
+ "790+176": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "790+176": 4
+  }
+ },
+ "413+575+335+711": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "413+575+335+711": 5
+  }
+ },
+ "849+742+519": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "849+742+519": 3
+  }
+ },
+ "843": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "843+740": 1,
+   "843+156": 1
+  }
+ },
+ "240": {
+  "n": 13,
+  "seals": 8,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6,
+   "Kalibangan": 1,
+   "Lothal": 1,
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+520": 8,
+   "820+2+240": 1,
+   "820+60+240+740+90": 1,
+   "861+2+240": 1,
+   "2+240+226": 1,
+   "240+740": 1
+  }
+ },
+ "415+100": {
+  "n": 14,
+  "seals": 8,
+  "tablets": 6,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5,
+   "Mohenjo-daro": 9
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "415+100": 2,
+   "415+100+740": 5,
+   "415+100+740+90+400": 2,
+   "415+100+740+400": 1,
+   "820+2+415+100+740": 1,
+   "817+2+415+100+740": 1,
+   "861+2+415+100+740": 2
+  }
+ },
+ "690": {
+  "n": 8,
+  "seals": 2,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "690+740": 7,
+   "690+740+400": 1
+  }
+ },
+ "491+817": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "491+817+740": 2,
+   "491+817+740+400": 3
+  }
+ },
+ "240+760": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+760+740": 3
+  }
+ },
+ "760": {
+  "n": 18,
+  "seals": 8,
+  "tablets": 6,
+  "sealings": 2,
+  "sites": {
+   "Harappa": 7,
+   "Lothal": 2,
+   "Mohenjo-daro": 7,
+   "Dholavira": 2
+  },
+  "sealing_sites": {
+   "Lothal": 1,
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "760+740": 14,
+   "760+740+400": 3,
+   "817+2+760+740": 1
+  }
+ },
+ "3+861": {
+  "n": 29,
+  "seals": 0,
+  "tablets": 29,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 29
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+861": 29
+  }
+ },
+ "220+176": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+176+740": 3
+  }
+ },
+ "235+555+526": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+555+526": 2,
+   "861+2+235+555+526": 1
+  }
+ },
+ "416+861+2": {
+  "n": 6,
+  "seals": 0,
+  "tablets": 6,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "416+861+2": 6
+  }
+ },
+ "220+142+590+455": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+142+590+455": 2
+  }
+ },
+ "175+176+100": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "175+176+100+740+400": 2,
+   "175+176+100": 1
+  }
+ },
+ "792": {
+  "n": 7,
+  "seals": 2,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "792+740+400": 1,
+   "792+740+90": 2,
+   "792+740": 3,
+   "817+2+792+740+90": 1
+  }
+ },
+ "33+700+125": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+700+125": 2
+  }
+ },
+ "3+405": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kalibangan": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+405": 2,
+   "820+60+3+405": 1
+  }
+ },
+ "806+235+590+405": {
+  "n": 9,
+  "seals": 0,
+  "tablets": 9,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 8,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "806+235+590+405+740+400": 9
+  }
+ },
+ "222": {
+  "n": 5,
+  "seals": 3,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 2,
+   "Nausharo": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "222+740+151": 2,
+   "820+2+222+740": 1,
+   "222+740": 1,
+   "817+2+222+740": 1
+  }
+ },
+ "4+700": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+700": 2
+  }
+ },
+ "832+255+70": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Lothal": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "832+255+70+520": 1,
+   "817+2+832+255+70+520": 1
+  }
+ },
+ "255+435+690": {
+  "n": 8,
+  "seals": 4,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "255+435+690+740": 6,
+   "817+2+255+435+690+740": 1,
+   "861+2+255+435+690+740": 1
+  }
+ },
+ "233": {
+  "n": 9,
+  "seals": 5,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5,
+   "Lothal": 1,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+520+400": 3,
+   "233+520": 4,
+   "817+2+233": 1,
+   "817+2+233+740+90": 1
+  }
+ },
+ "140": {
+  "n": 5,
+  "seals": 4,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "140+156": 1,
+   "140+527": 1,
+   "820+140": 1,
+   "140+400": 1,
+   "2+140+226": 1
+  }
+ },
+ "637": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "637+740+400": 2
+  }
+ },
+ "840+32": {
+  "n": 15,
+  "seals": 4,
+  "tablets": 10,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 10,
+   "Lothal": 1,
+   "Mohenjo-daro": 2,
+   "Dholavira": 2
+  },
+  "sealing_sites": {
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "840+32+740": 8,
+   "840+32+740+400": 1,
+   "820+840+32+740": 1,
+   "840+32": 2,
+   "2+840+32+740": 1,
+   "840+32+740+90+400": 1,
+   "2+840+32": 1
+  }
+ },
+ "28+32": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "28+32+740+400": 3,
+   "28+32+740": 1
+  }
+ },
+ "27+32": {
+  "n": 6,
+  "seals": 0,
+  "tablets": 6,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "27+32+740+400": 5,
+   "27+32+740": 1
+  }
+ },
+ "519+176": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "519+176+740+400": 1,
+   "519+176": 1
+  }
+ },
+ "3+550+617": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+550+617": 3
+  }
+ },
+ "31+388": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "31+388+740": 2
+  }
+ },
+ "55+255+435+690": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {
+   "Harappa": 1
+  },
+  "full_texts": {
+   "55+255+435+690+740": 1,
+   "55+255+435+690": 1
+  }
+ },
+ "235+240": {
+  "n": 6,
+  "seals": 1,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+240+740+90": 4,
+   "235+240+740": 1,
+   "235+240+520": 1
+  }
+ },
+ "175+752": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "175+752+740": 1,
+   "861+2+175+752+740": 1,
+   "861+175+752+740": 1
+  }
+ },
+ "220+32+590": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+32+590": 2
+  }
+ },
+ "235+242": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+242+740": 2
+  }
+ },
+ "255+436+690": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Rajanpur": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "255+436+690+740": 1,
+   "255+436+690+740+400": 2
+  }
+ },
+ "97": {
+  "n": 8,
+  "seals": 6,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "97+151+400": 1,
+   "97+400": 2,
+   "97+151": 5
+  }
+ },
+ "700+32+32": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "700+32+32": 2
+  }
+ },
+ "33+33": {
+  "n": 7,
+  "seals": 2,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Mohenjo-daro": 1,
+   "Dholavira": 1,
+   "Lakhanjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+33+520": 4,
+   "33+33": 3
+  }
+ },
+ "605+33": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "605+33": 2
+  }
+ },
+ "25+32": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "25+32+740+400": 1,
+   "25+32+740": 1
+  }
+ },
+ "681+690": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "681+690": 3
+  }
+ },
+ "388": {
+  "n": 6,
+  "seals": 4,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "388+740+400": 1,
+   "388+740": 2,
+   "388+156": 1,
+   "388+527": 1,
+   "820+2+388+740": 1
+  }
+ },
+ "91+368": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "91+368": 2
+  }
+ },
+ "125+700": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "125+700": 3
+  }
+ },
+ "347+741+176": {
+  "n": 9,
+  "seals": 0,
+  "tablets": 9,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 9
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "347+741+176+740+90": 8,
+   "347+741+176": 1
+  }
+ },
+ "617+892": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "617+892+740+400": 5
+  }
+ },
+ "554+526": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+2+554+526": 2
+  }
+ },
+ "3": {
+  "n": 35,
+  "seals": 9,
+  "tablets": 22,
+  "sealings": 3,
+  "sites": {
+   "Harappa": 24,
+   "Kalibangan": 1,
+   "Lothal": 2,
+   "Mohenjo-daro": 7,
+   "Nausharo": 1
+  },
+  "sealing_sites": {
+   "Mohenjo-daro": 3
+  },
+  "full_texts": {
+   "3+156": 31,
+   "820+2+3": 1,
+   "861+2+3": 1,
+   "817+3": 1,
+   "3+226": 1
+  }
+ },
+ "235+220+176": {
+  "n": 7,
+  "seals": 0,
+  "tablets": 7,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 7
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+220+176+740": 7
+  }
+ },
+ "240+482": {
+  "n": 9,
+  "seals": 0,
+  "tablets": 9,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 9
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+240+482+740": 7,
+   "240+482": 2
+  }
+ },
+ "503+17": {
+  "n": 6,
+  "seals": 2,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "503+17+740+400": 2,
+   "60+503+17+740": 1,
+   "503+17+740": 3
+  }
+ },
+ "900+368": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "900+368": 5
+  }
+ },
+ "503+16": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "503+16+740+400": 3
+  }
+ },
+ "240+176": {
+  "n": 4,
+  "seals": 2,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+176+740+400": 2,
+   "817+2+240+176+740": 1,
+   "240+176+740": 1
+  }
+ },
+ "220+236": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+236+400": 3
+  }
+ },
+ "687+690": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "687+690": 3
+  }
+ },
+ "4+407": {
+  "n": 4,
+  "seals": 3,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+4+407": 2,
+   "4+407": 1,
+   "820+2+4+407": 1
+  }
+ },
+ "3+154": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+154": 2
+  }
+ },
+ "32+904": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+904": 1,
+   "32+904+740": 1,
+   "2+32+904+740": 1
+  }
+ },
+ "590+892": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "590+892": 2
+  }
+ },
+ "61+255": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "61+255+740": 3
+  }
+ },
+ "3+645+32+590": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+645+32+590": 2
+  }
+ },
+ "220+32+590+690": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+32+590+690": 2
+  }
+ },
+ "352": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "352+400+520+400": 2
+  }
+ },
+ "61+142": {
+  "n": 6,
+  "seals": 5,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "61+142+400+740": 4,
+   "817+2+61+142+740": 1,
+   "861+2+61+142+740": 1
+  }
+ },
+ "32+790": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+790+740": 1,
+   "32+790": 1
+  }
+ },
+ "540": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+540+740": 1,
+   "820+2+540+740": 1
+  }
+ },
+ "233+550+526": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+550+526": 2
+  }
+ },
+ "923": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "923+740": 3
+  }
+ },
+ "706+167": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "706+167": 4
+  }
+ },
+ "540+540": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "540+540": 2
+  }
+ },
+ "33+220": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+220": 2
+  }
+ },
+ "482": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 2,
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {
+   "Lothal": 1
+  },
+  "full_texts": {
+   "482+740": 3,
+   "820+2+482+740": 1
+  }
+ },
+ "220+235": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+235": 1,
+   "220+235+740": 1
+  }
+ },
+ "806+158": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "806+158+400": 1,
+   "806+158": 2
+  }
+ },
+ "240+482+752": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+482+752+740": 5
+  }
+ },
+ "745+700": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "745+700": 4
+  }
+ },
+ "467+806+158": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "467+806+158+740": 1,
+   "467+806+158+400": 1
+  }
+ },
+ "240+590+390": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+590+390+740": 3
+  }
+ },
+ "240+636+690": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+636+690+740": 3
+  }
+ },
+ "233+550": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+550+527": 1,
+   "233+550": 1
+  }
+ },
+ "531": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "531+740": 2
+  }
+ },
+ "240+643": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kish": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+240+643+740": 1,
+   "240+643": 1,
+   "240+643+740": 1
+  }
+ },
+ "706+33": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "706+33+520": 2,
+   "861+2+706+33+520": 1
+  }
+ },
+ "910": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "910+740": 3
+  }
+ },
+ "717+100": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "717+100+740": 1,
+   "2+717+100+740": 1
+  }
+ },
+ "31+592": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "31+592": 2
+  }
+ },
+ "219": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+219+520": 1,
+   "219+151": 1
+  }
+ },
+ "703+615": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "703+615+740": 2
+  }
+ },
+ "440+760": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "440+760+740": 1,
+   "817+2+440+760+740": 1
+  }
+ },
+ "3+220+590+405": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+3+220+590+405+740": 1,
+   "3+220+590+405+740": 1
+  }
+ },
+ "13+840": {
+  "n": 10,
+  "seals": 4,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 6,
+   "Lothal": 1,
+   "Mohenjo-daro": 2,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "13+840+740": 8,
+   "13+840+740+400": 1,
+   "13+840": 1
+  }
+ },
+ "468+806+154": {
+  "n": 5,
+  "seals": 5,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "468+806+154": 4,
+   "468+806+154+400": 1
+  }
+ },
+ "49": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1,
+   "Kanmer": 1
+  },
+  "sealing_sites": {
+   "Kanmer": 1
+  },
+  "full_texts": {
+   "49+740": 2,
+   "820+2+49": 1
+  }
+ },
+ "97+161": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+97+161": 1,
+   "97+161": 1
+  }
+ },
+ "231+798+176": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "231+798+176+740": 3
+  }
+ },
+ "821": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "821+740": 3
+  }
+ },
+ "920+220+892+202": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "920+220+892+202+400": 2
+  }
+ },
+ "465+806+158": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "465+806+158": 5
+  }
+ },
+ "354+463+798": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "354+463+798+740": 2
+  }
+ },
+ "33+142": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+142": 2
+  }
+ },
+ "798+415+220": {
+  "n": 6,
+  "seals": 1,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "798+415+220+740+400": 5,
+   "798+415+220+520": 1
+  }
+ },
+ "590+405": {
+  "n": 4,
+  "seals": 2,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "590+405+740+400": 2,
+   "590+405+740": 1,
+   "590+405": 1
+  }
+ },
+ "472+806+158": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "472+806+158+400": 2
+  }
+ },
+ "484+337": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "484+337+740": 3
+  }
+ },
+ "176+336": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "176+336+740": 1,
+   "176+336+740+400": 2
+  }
+ },
+ "171+35+415": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "171+35+415": 2
+  }
+ },
+ "736+904+158": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "736+904+158+400": 4
+  }
+ },
+ "219+72": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "219+72+520": 2
+  }
+ },
+ "240+220": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 2,
+  "sites": {
+   "Harappa": 1,
+   "Lothal": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Lothal": 1,
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "820+2+240+220+520": 1,
+   "2+240+220": 1,
+   "240+220": 1
+  }
+ },
+ "679+840+32": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "679+840+32+740": 3
+  }
+ },
+ "104": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+2+104": 1,
+   "104+740": 1
+  }
+ },
+ "335": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "335+740+400": 1,
+   "335+740": 2
+  }
+ },
+ "501+405+2+240": {
+  "n": 29,
+  "seals": 0,
+  "tablets": 29,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 29
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "501+405+2+240+520": 29
+  }
+ },
+ "4+783": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+783+740": 2
+  }
+ },
+ "4+700+220": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+700+220": 3
+  }
+ },
+ "59+32": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "59+32+740": 1,
+   "59+32+740+400": 1
+  }
+ },
+ "178": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "178+740+400": 2
+  }
+ },
+ "829+892": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "829+892+400": 2
+  }
+ },
+ "220+550+526": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+550+526": 2
+  }
+ },
+ "90+700": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 1,
+  "sites": {
+   "Harappa": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "90+700": 2
+  }
+ },
+ "692+60+240+636": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "692+60+240+636+740": 2
+  }
+ },
+ "920+632+930": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "920+632+930": 2
+  }
+ },
+ "243": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "243+151": 2
+  }
+ },
+ "175": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "175+520": 3
+  }
+ },
+ "61+171+35": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "61+171+35+740+90": 2,
+   "61+171+35+740+90+400": 1
+  }
+ },
+ "742": {
+  "n": 5,
+  "seals": 4,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Dholavira": 2,
+   "Nausharo": 1,
+   "Miri Qalat": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "60+742": 1,
+   "742+740+740": 1,
+   "861+742+520": 1,
+   "861+742": 1,
+   "742+740": 1
+  }
+ },
+ "220+585": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+585": 2
+  }
+ },
+ "139": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "139+400": 1,
+   "820+2+139": 1
+  }
+ },
+ "32+877": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+877+740": 1,
+   "32+877": 1
+  }
+ },
+ "1+904+832": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "1+904+832": 1,
+   "820+1+904+832": 1
+  }
+ },
+ "717+388+154": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "717+388+154": 2
+  }
+ },
+ "215": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "215+740": 2
+  }
+ },
+ "17+590": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Dholavira": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "17+590+740": 1,
+   "17+590+740+400": 1
+  }
+ },
+ "4+405": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Ra's al-Junayz": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+4+405": 1,
+   "4+405": 1
+  }
+ },
+ "482+760": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "482+760": 1,
+   "482+760+740": 1
+  }
+ },
+ "440+100": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "440+100+740": 2
+  }
+ },
+ "790+717": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "790+717+740": 3
+  }
+ },
+ "235+233+705+33": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+233+705+33+740+400": 1,
+   "820+60+235+233+705+33+520": 1
+  }
+ },
+ "416+840": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "416+840+151": 1,
+   "416+840+740": 1
+  }
+ },
+ "896+154": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "896+154+400": 2
+  }
+ },
+ "337": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "337+740+400": 2
+  }
+ },
+ "18+336": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "18+336+740+400": 1,
+   "18+336+740": 1
+  }
+ },
+ "692+1+240+642": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "692+1+240+642+740": 2
+  }
+ },
+ "368": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+368": 3,
+   "368+90": 1
+  }
+ },
+ "495+615": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+495+615+740": 1,
+   "495+615+740": 1
+  }
+ },
+ "790": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "790+740+400": 2
+  }
+ },
+ "235+590+390": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+590+390+740": 2,
+   "861+2+235+590+390+740": 1
+  }
+ },
+ "705": {
+  "n": 6,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 2,
+  "sites": {
+   "Harappa": 3,
+   "Mohenjo-daro": 1,
+   "Dholavira": 1,
+   "Lakhanjo-daro": 1
+  },
+  "sealing_sites": {
+   "Dholavira": 1,
+   "Lakhanjo-daro": 1
+  },
+  "full_texts": {
+   "705+400": 2,
+   "705+740": 3,
+   "861+2+705": 1
+  }
+ },
+ "234": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "234+400": 3
+  }
+ },
+ "229": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "229+151": 2,
+   "229+151+400": 1
+  }
+ },
+ "416+220+760": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "416+220+760+740+400": 2
+  }
+ },
+ "4+900": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+900+740": 2,
+   "4+900": 1
+  }
+ },
+ "592+158": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "592+158+400": 2
+  }
+ },
+ "564": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "564+740": 2,
+   "820+60+564+740": 1
+  }
+ },
+ "171+35": {
+  "n": 5,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 2,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 3,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Mohenjo-daro": 1,
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "171+35": 4,
+   "817+2+171+35+740+90": 1
+  }
+ },
+ "240+637": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+637+740+400": 1,
+   "861+2+240+637+740": 1
+  }
+ },
+ "33+820": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Bala-kot": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "33+820": 2
+  }
+ },
+ "480+1": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Hissam-dheri": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "480+1": 2
+  }
+ },
+ "590+407": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 1,
+  "sites": {
+   "Hulas": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {
+   "Hulas": 1
+  },
+  "full_texts": {
+   "590+407+740": 3
+  }
+ },
+ "233+803": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Jhukar": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+233+803+740": 1,
+   "233+803+740": 1
+  }
+ },
+ "17+585": {
+  "n": 5,
+  "seals": 4,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Kalibangan": 1,
+   "Mohenjo-daro": 3,
+   "Rupar": 1
+  },
+  "sealing_sites": {
+   "Rupar": 1
+  },
+  "full_texts": {
+   "2+17+585+740": 1,
+   "817+2+17+585+740": 1,
+   "17+585+740": 2,
+   "820+2+17+585+740": 1
+  }
+ },
+ "350": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Kalibangan": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "350+740": 1,
+   "817+2+350+400+520": 1
+  }
+ },
+ "390+590": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Kalibangan": 1,
+   "Lothal": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "390+590": 1,
+   "390+590+151": 1
+  }
+ },
+ "176+337": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Kalibangan": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "2+176+337+740": 1,
+   "176+337+740": 2
+  }
+ },
+ "4": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Kalibangan": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+740+90": 1,
+   "4+156": 1,
+   "817+2+4": 1
+  }
+ },
+ "705+33": {
+  "n": 5,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 2,
+  "sites": {
+   "Kalibangan": 1,
+   "Lothal": 1,
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {
+   "Kalibangan": 1,
+   "Lothal": 1
+  },
+  "full_texts": {
+   "2+705+33": 1,
+   "705+33+520": 3,
+   "820+60+705+33+520": 1
+  }
+ },
+ "354": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Kalibangan": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "354+740": 1,
+   "817+2+354+740": 1,
+   "817+2+354+400+520": 1
+  }
+ },
+ "17+575": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Khirsara": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "17+575+740": 1,
+   "820+2+17+575+740": 1
+  }
+ },
+ "16": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "2+16+740": 1,
+   "861+2+16": 1
+  }
+ },
+ "233+176": {
+  "n": 4,
+  "seals": 3,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 2,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+176+740": 3,
+   "233+176+740+90": 1
+  }
+ },
+ "220+100": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "220+100+151": 1,
+   "220+100+740": 1
+  }
+ },
+ "912": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "912+740": 2,
+   "2+912+740": 1
+  }
+ },
+ "32+220+904": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+220+904": 1,
+   "2+32+220+904": 1
+  }
+ },
+ "48": {
+  "n": 12,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 10,
+  "sites": {
+   "Lothal": 11,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {
+   "Lothal": 10
+  },
+  "full_texts": {
+   "817+2+48": 1,
+   "817+2+48+740": 11
+  }
+ },
+ "235+555": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+235+555+527": 1,
+   "235+555+527": 1
+  }
+ },
+ "519+415+220": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "519+415+220+520": 1,
+   "817+2+519+415+220+520": 1
+  }
+ },
+ "140+100": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {
+   "Lothal": 1
+  },
+  "full_texts": {
+   "140+100+740": 2,
+   "2+140+100": 1
+  }
+ },
+ "415": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 1,
+  "sites": {
+   "Lothal": 1,
+   "Rupar": 1,
+   "Karanpura": 1
+  },
+  "sealing_sites": {
+   "Lothal": 1
+  },
+  "full_texts": {
+   "415+226": 1,
+   "415+226+400": 1,
+   "820+415": 1
+  }
+ },
+ "32+590+390": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 2,
+  "sites": {
+   "Lothal": 2
+  },
+  "sealing_sites": {
+   "Lothal": 2
+  },
+  "full_texts": {
+   "2+32+590+390": 1,
+   "2+32+590+390+740": 1
+  }
+ },
+ "904": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Lothal": 1,
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {
+   "Lothal": 1
+  },
+  "full_texts": {
+   "904+740": 2,
+   "820+2+904+740": 1
+  }
+ },
+ "5": {
+  "n": 4,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "5+740": 1,
+   "817+2+5": 1,
+   "5+156": 2
+  }
+ },
+ "511+130+920": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "2+511+130+920": 1,
+   "511+130+920": 2
+  }
+ },
+ "235+550": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+550+527": 1,
+   "817+2+235+550+527": 1
+  }
+ },
+ "877+61": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "877+61+740": 2
+  }
+ },
+ "235+798": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+798+740": 2
+  }
+ },
+ "96+861+2": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "96+861+2": 2
+  }
+ },
+ "705+140": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "705+140": 2
+  }
+ },
+ "806+706+33": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "806+706+33": 1,
+   "806+706+33+520": 1
+  }
+ },
+ "844+390": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+2+844+390+621": 1,
+   "844+390": 1,
+   "844+390+400": 1
+  }
+ },
+ "555": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+555+527": 1,
+   "555+527": 1
+  }
+ },
+ "503+615+752": {
+  "n": 26,
+  "seals": 0,
+  "tablets": 26,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 26
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "503+615+752+740": 26
+  }
+ },
+ "240+415+100": {
+  "n": 4,
+  "seals": 3,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+240+415+100+740+90": 1,
+   "817+2+240+415+100+740": 1,
+   "861+2+240+415+100+740+90": 1,
+   "240+415+100+740": 1
+  }
+ },
+ "3+158": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+158+400": 1,
+   "3+158": 1
+  }
+ },
+ "235+240+455": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+60+235+240+455+740": 1,
+   "235+240+455+740": 1
+  }
+ },
+ "235+233+555": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+233+555+527+400": 1,
+   "235+233+555+527": 1
+  }
+ },
+ "503+615": {
+  "n": 5,
+  "seals": 2,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "503+615+740": 4,
+   "503+615": 1
+  }
+ },
+ "550+60+690": {
+  "n": 5,
+  "seals": 1,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "550+60+690+740": 5
+  }
+ },
+ "920+60+741+592": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "920+60+741+592": 2
+  }
+ },
+ "231+798": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+60+231+798+740": 1,
+   "231+798+740": 1
+  }
+ },
+ "31+3": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "31+3+156": 1,
+   "31+3": 1
+  }
+ },
+ "240+838+585": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+838+585+740+400": 2
+  }
+ },
+ "5+390": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+5+390": 2,
+   "5+390": 1
+  }
+ },
+ "503+463": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Chanhu-daro": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "503+463+740": 2
+  }
+ },
+ "705+33+590+390": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 5,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "705+33+590+390+740": 5
+  }
+ },
+ "220+840+32": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 1,
+  "sites": {
+   "Mohenjo-daro": 2,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "220+840+32+740": 2,
+   "861+2+220+840+32+740": 1
+  }
+ },
+ "803+335+760": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "803+335+760+740": 2
+  }
+ },
+ "231+255+435+690": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "231+255+435+690+740": 2
+  }
+ },
+ "479+749": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "479+749": 2
+  }
+ },
+ "240+13+840": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+13+840+740+400": 2
+  }
+ },
+ "235+803": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+803+740": 2
+  }
+ },
+ "752": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "752+740": 2
+  }
+ },
+ "503+460": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+503+460+740": 1,
+   "503+460+740": 1
+  }
+ },
+ "705+255": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+705+255+740+90": 1,
+   "705+255+740": 1,
+   "861+2+705+255+740": 1
+  }
+ },
+ "32+220+923": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+220+923+740": 1,
+   "820+2+32+220+923+740": 1,
+   "817+2+32+220+923+740": 1
+  }
+ },
+ "772": {
+  "n": 3,
+  "seals": 3,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+772+740": 1,
+   "817+2+772+740": 1,
+   "817+2+772": 1
+  }
+ },
+ "140+840": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Unknown": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "140+840": 1,
+   "817+2+140+840": 1
+  }
+ },
+ "233+590": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+590": 2
+  }
+ },
+ "698+861+2": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "698+861+2": 2
+  }
+ },
+ "503+7": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "817+2+503+7+740": 1,
+   "503+7+740": 1
+  }
+ },
+ "706": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 1,
+  "sealings": 1,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Lakhanjo-daro": 1
+  },
+  "sealing_sites": {
+   "Lakhanjo-daro": 1
+  },
+  "full_texts": {
+   "706+400": 1,
+   "706+740": 1
+  }
+ },
+ "4+700+97": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "4+700+97+400": 4
+  }
+ },
+ "90+942+66+455": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "90+942+66+455": 3
+  }
+ },
+ "240+803+585": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+803+585+740+90": 1,
+   "240+803+585+740": 1
+  }
+ },
+ "323+690": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "323+690": 3
+  }
+ },
+ "806+233+176": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "806+233+176+740": 2
+  }
+ },
+ "806+233+384": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "806+233+384+740": 3
+  }
+ },
+ "415+220+845+407": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "415+220+845+407": 4
+  }
+ },
+ "900+165": {
+  "n": 5,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 5
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "900+165": 5
+  }
+ },
+ "3+700+900+165": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+700+900+165": 2
+  }
+ },
+ "32+220+176": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+220+176+740": 2
+  }
+ },
+ "5+706": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "5+706": 3
+  }
+ },
+ "233+585+407": {
+  "n": 3,
+  "seals": 0,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "233+585+407": 3
+  }
+ },
+ "32+71+407": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "32+71+407": 2
+  }
+ },
+ "235+233+222": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "235+233+222+740": 4
+  }
+ },
+ "17+585+388": {
+  "n": 4,
+  "seals": 0,
+  "tablets": 4,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "17+585+388+740": 4
+  }
+ },
+ "773": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "820+60+773+740": 1,
+   "773+740": 1
+  }
+ },
+ "415+220+320+920": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "415+220+320+920+520": 2
+  }
+ },
+ "55": {
+  "n": 5,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 2,
+  "sites": {
+   "Mohenjo-daro": 2,
+   "Dholavira": 2,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {
+   "Dholavira": 2
+  },
+  "full_texts": {
+   "55+740": 2,
+   "55+151": 1,
+   "55+740+90": 1,
+   "55+740+400": 1
+  }
+ },
+ "920+60+741": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "920+60+741": 2
+  }
+ },
+ "240+705+33": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "240+705+33+520": 2
+  }
+ },
+ "877+159": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "877+159+400": 2
+  }
+ },
+ "320+920": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "320+920+740": 2
+  }
+ },
+ "13": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Miri Qalat": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "13+740": 1,
+   "13+520": 1
+  }
+ },
+ "590+390+820": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "590+390+820": 1,
+   "861+2+590+390+820": 1
+  }
+ },
+ "435+690": {
+  "n": 3,
+  "seals": 2,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 3
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "435+690+740": 3
+  }
+ },
+ "235+840+32": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Harappa": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+235+840+32+740": 1,
+   "817+2+235+840+32+740": 1
+  }
+ },
+ "31+136": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Kanmer": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+31+136": 1,
+   "31+136": 1
+  }
+ },
+ "927": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 1,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "927+740": 2
+  }
+ },
+ "17+390": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "17+390": 2
+  }
+ },
+ "585": {
+  "n": 2,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 1,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {
+   "Dholavira": 1
+  },
+  "full_texts": {
+   "585+740": 2
+  }
+ },
+ "370+2+550": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "370+2+550+527": 2
+  }
+ },
+ "32+760": {
+  "n": 3,
+  "seals": 1,
+  "tablets": 0,
+  "sealings": 2,
+  "sites": {
+   "Mohenjo-daro": 2,
+   "Nausharo": 1
+  },
+  "sealing_sites": {
+   "Mohenjo-daro": 2
+  },
+  "full_texts": {
+   "817+2+32+760+740": 2,
+   "32+760+740": 1
+  }
+ },
+ "384": {
+  "n": 4,
+  "seals": 1,
+  "tablets": 3,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 4
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "384+740": 4
+  }
+ },
+ "706+33+923": {
+  "n": 7,
+  "seals": 0,
+  "tablets": 7,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 7
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "706+33+923+740": 7
+  }
+ },
+ "3+422+176+100": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 2,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "3+422+176+100+740": 2
+  }
+ },
+ "631+405": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "631+405": 2
+  }
+ },
+ "233+1+760": {
+  "n": 2,
+  "seals": 2,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 1,
+   "Dholavira": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "861+2+233+1+760+740": 1,
+   "233+1+760+740": 1
+  }
+ },
+ "34+999+34": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "34+999+34": 2
+  }
+ },
+ "838+482": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Mohenjo-daro": 2
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "838+482+740": 2
+  }
+ },
+ "406": {
+  "n": 2,
+  "seals": 0,
+  "tablets": 0,
+  "sealings": 0,
+  "sites": {
+   "Harappa": 1,
+   "Kalibangan": 1
+  },
+  "sealing_sites": {},
+  "full_texts": {
+   "406+740": 1,
+   "820+2+406": 1
+  }
+ }
+}

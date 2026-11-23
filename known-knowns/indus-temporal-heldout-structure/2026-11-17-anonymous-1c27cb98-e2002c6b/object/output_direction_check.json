@@ -1,0 +1,28 @@
+{
+  "fetched": "2026-11-17T02:58:45.635411+00:00",
+  "M77": {
+    "as_stored_first": 6.598,
+    "as_stored_last": 4.7442,
+    "reversed_first": 4.7442,
+    "reversed_last": 6.598,
+    "as_stored_final_minus_initial": -1.8538,
+    "fingerprint": "final position more constrained (lower entropy) than initial (Rao/Yadav M77 fingerprint)",
+    "as_stored_matches": true
+  },
+  "merged": {
+    "as_stored_first": 7.0105,
+    "as_stored_last": 5.1724,
+    "reversed_first": 5.1724,
+    "reversed_last": 7.0105,
+    "as_stored_matches": true
+  },
+  "im77_direction_code_counts": {
+    "right-to-left": 2974,
+    "single sign": 190,
+    "no text": 155,
+    "doubtful": 12,
+    "left-to-right": 235,
+    "unrecorded": 343,
+    "symmetrical": 7
+  }
+}
