@@ -32,7 +32,7 @@ sh verify-it-yourself/run_checks.sh
 
 ## Credits
 
-- **Hassan A. Noon** (2002) and **Hassan A. Noon and Glen Van Brummelen** (2006), *The Non-Attacking Queens Game*, College Mathematics Journal 37(3), 223–227, for the early game analysis and planar terms 1–10.
+- **H. Noon**, *Surreal Numbers and the N-Queens Game* (Bennington College, 2002), and **H. Noon and G. Van Brummelen**, *The Non-Attacking Queens Game* (College Mathematics Journal 37(3), 2006, pp. 223–227), for the early game analysis and planar terms 1–10.
 - **Max Fan and Matthew K. Bardoe** for [OEIS A344227](https://oeis.org/A344227/internal), which credits Fan with planar terms 0 and 11–13 and links to [Bardoe’s wrapped-board calculator](https://github.com/mbardoe/NonAttackingQueens).
 - **Thomas Jenrich** (2013/2014) for planar strategies and computed win/loss outcomes through size 16. [arXiv:1312.5135](https://arxiv.org/abs/1312.5135)
 - **Tavis Rudd** (2026, [rudd-work/queens-nimbers](https://github.com/rudd-work/queens-nimbers) and [rudd-work/othello-solved](https://github.com/rudd-work/othello-solved)) for computing $a(14) \dots a(17)$, $G(TQ_1 \dots TQ_{10})$, the central-strike refutation margins on $R_8, R_{10}, R_{12}, R_{18}$, and formulating Toroidal Conjecture T1.

@@ -20,5 +20,5 @@ confirmed_scope: Full confirmation of target success_criterion clause (3) and pa
 2. **Pre-registration (`PREREG.md`) & Null Test**:
    - `PREREG.md` was frozen prior to the attack (`null_test: not needed because this target is in graphs-games-automata (deterministic finite impartial combinatorial game theory on the n-queens and toroidal n-queens graphs)`).
 3. **Table Access & No Leaks**:
-   - All status snapshots in `data/` were fetched politely once per URL with HTTP 200 and recorded with exact UTC timestamps and SHA-256 hashes in `scout.md`.
+   - All status snapshots were fetched politely once per URL with HTTP 200; the URLs, exact UTC fetch times and page SHA-256 hashes are recorded in `the-record-we-beat/table_snapshot.md`.
    - No personal paths, usernames, emails, or tokens appear in `panel/*.md`.
