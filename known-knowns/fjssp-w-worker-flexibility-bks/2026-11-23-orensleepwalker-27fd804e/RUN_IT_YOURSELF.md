@@ -1,0 +1,3 @@
+# Verify
+From this folder: `sh verify-it-yourself/run_checks.sh` (last line PASS). Needs python3 (standard library), curl and sha256sum. verify-it-yourself/RECEIPTS.md holds a real run. A single row by hand: download the instance named in expected.txt from the pinned-commit URL in run_checks.sh, then `python3 verify-it-yourself/check_schedule.py <instance.fjs> object/<file>.json` prints `VALID makespan=` followed by the makespan.
+The search code is in how-we-built-it/code/ as provenance (paths replaced by WORKSPACE/HOME; it needs NumPy, Numba and OR-Tools and is not deterministic); how-we-built-it/rows.csv gives each row's engine, script, seed and wall time.

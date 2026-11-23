@@ -1,0 +1,5 @@
+Cells excluded from this claim because other pull requests of elder-plinius/V3R1T4S already claim them:
+- open PR #868 (author userblaname), head 9476a0042c6c97f9b15cc74e1ec0fce6f5c72257, 91 cells: https://github.com/elder-plinius/V3R1T4S/pull/868
+- our draft PR #1081, head 0eb8d707b31668a3267eecf007ff27743f39d349, 65 cells: https://github.com/elder-plinius/V3R1T4S/pull/1081
+- 32 further cells of ours prepared on 2026-11-16 but not filed (they undercut PR #868's values; they wait for PR #868 to be merged or closed).
+No cell of this claim is among them.
