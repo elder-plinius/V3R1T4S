@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+akkadian-lacuna-restoration-heldout,SLAB_NLP_Akk_SEED20261031_composition_disjoint_38151_preregistered_full_win,HitAt5_0.91421_MRR_0.84897_all_0.90506_mask_only_0.91411_excl_D8_ge_05,Paper_HitAt5_0.89_0.895_MRR_0.83_and_MBERT_Akk_0.88158_MRR_0.83160,2026-10-21T17:44:40Z,object/akkadian_audit_manifest.json,7e5e592d5c9f056ae11bc04eebe65e1bf1139024642c709f4da6b7a25c3b8097
