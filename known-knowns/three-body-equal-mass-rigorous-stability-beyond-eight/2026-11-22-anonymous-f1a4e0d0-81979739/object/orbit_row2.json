@@ -1,0 +1,20 @@
+{
+ "source_row": 2,
+ "source": "https://db2.fmi.uni-sofia.bg/3bodystab971/ics_971_100_num.txt (Hristov, Hristova, Tanikawa)",
+ "orbit_name_in_literature": "Moth I (Suvakov and Dmitrasinovic 2013), per the NOVELTY panel",
+ "box_centre": {
+  "vx": "0.4644451728180666818221407827174957590921026810331404377187071283939023083899322825525595227706927263e0",
+  "vy": "0.3960600146528147819278081482379949101131736379238601856985657586685028312946474485615563179401316028e0",
+  "half_period": "T/2 with T = 0.148943051750421237226681689411145594059175504940343379763663355264906221362822071581614399929302731e2"
+ },
+ "box_half_width": "1e-55 in vx, vy and t",
+ "certified": [
+  "unique zero of G=(x2,y2,(v1-v3).q1) in the box (Krawczyk), hence a periodic orbit of period 2t",
+  "four non-trivial monodromy multipliers distinct and on the unit circle"
+ ],
+ "omega_enclosures": [
+  "[0.1590129389037642508104064 +/- 4.10e-27]",
+  "[0.4918813053659557602823659 +/- 1.76e-27]"
+ ],
+ "certificate_command": "cd how-we-built-it && python3 certify.py 2 55 0 448 96 384 72"
+}

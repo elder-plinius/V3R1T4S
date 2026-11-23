@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+three-body-equal-mass-rigorous-stability-beyond-eight,p1 row 2 (Moth I),existence + certified ellipticity (omega 0.15901293890376425081 / 0.49188130536595576028),floating-point only (no rigorous proof),2026-11-22T22:30:59Z,object/A_row2_r55.json,819797399c602372f3935abd3c63dd08968c5b3e77dbf01982cac06f18841f48
