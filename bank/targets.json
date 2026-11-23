@@ -24812,7 +24812,7 @@
     },
     {
      "id": "p3",
-     "statement": "For the relaxation in arXiv 2112.11766 Section 6 (45 planes of F_2^6 with every 5-space containing exactly five, every point in exactly five, each line and each solid in at most one), an explicit set with strictly more alpha'-points in total than the stated lower bound 19, or in one fixed 5-space strictly more than 15."
+     "statement": "For the relaxation in arXiv 2112.11766 Section 6 (45 planes of F_2^6 with every 5-space containing exactly five, every point in exactly five, each line and each solid in at most one), an explicit set with strictly more alpha'-points in total than the stated lower bound 19, or in one fixed 5-space strictly more than 15. Not reachable as stated: two independent SAT certificates (see pitfalls) show that no such set has more than 15 alpha'-points, in total or in one 5-space, so the maximum is 15 for both counts."
     }
    ],
    "verification_method": "Represent each plane by its reduced row echelon form; enumerate its 7 lines; count how often each of the 2667 lines of F_2^7 is covered (exactly once for a full win, at most once for p1, with all planes distinct and of rank 3). For p2/p3 check every stated incidence condition by brute force over all subspaces of PG(6,2)/PG(5,2). For a nonexistence claim, re-run the certificate checker and independently audit the encoding and symmetry breaking. Re-fetch arXiv 2112.11766 and its citing literature before claiming.",
@@ -24823,7 +24823,7 @@
     "https://arxiv.org/abs/2105.00365"
    ],
    "status_source": "https://arxiv.org/abs/2112.11766",
-   "status_checked": "2026-10-30",
+   "status_checked": "2026-11-18",
    "disclosure": "open",
    "angles": [
     "Prescribe automorphism groups allowed by the 333-paper classification (order <= 12 for >= 334 planes; the group G_{12,1} = Z3 x| Z4 named in the survey) and solve the Kramer-Mesner style ILP with a modern solver.",
@@ -24834,7 +24834,8 @@
     "A 380-plane code would already extend to 381, and codes of size 379 or 380 are ruled out unless 381 exists, so heuristic searches stalling near 333 are normal.",
     "Do not confuse with the ternary case or with partial q-Fano planes; the win is about q=2, n=7, k=3.",
     "arXiv 1709.05145 (Bamberg, Ihringer, Lansdown, Royle) claimed a trivial automorphism group but was withdrawn after a computational mistake; the proven bound is order <= 2.",
-    "The Bayreuth table site was unreachable on 2026-10-30; use the survey and arXiv for status."
+    "The Bayreuth table site was unreachable on 2026-10-30; use the survey and arXiv for status.",
+    "p3's bounds (total between 19 and 44, one 5-space between 15 and 22, by ILP; the same sentence in v1, v2 and v3) do not match the stated definition. Under that definition (every point and every 5-space in exactly five planes, so #C = 45) the maximum is 15 for both counts, shown by two independent certificates: (1) a written structure theorem (the alpha'-points carry an alternating form; five cases) with five CaDiCaL refutations, 135 DRAT proofs checked by drat-trim; (2) a direct encoding of the definition with three proved covering lemmas and GL(6,2) orbit splitting, 545 + 496 leaves for the total and 15 + 93 for one 5-space, every leaf refuted by CaDiCaL 2.1.3 with a DRAT proof checked by drat-trim. 15 is attained, with all 15 points in one 5-space. Reading 'exactly five' as 'at least five' gives a 53-plane set with 19 alpha'-points, 15 of them in one 5-space, which matches the survey's two lower bounds, so its ILP probably used at-least-five constraints."
    ]
   },
   {
