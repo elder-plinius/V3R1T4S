@@ -1,0 +1,16 @@
+{
+  "checker": "verify-it-yourself/life_check.py",
+  "target": "xs31_g8e1ugmmzd553w643",
+  "ok": true,
+  "n_gliders": 14,
+  "rewind_T": [
+    3612,
+    4624
+  ],
+  "periodic_from": 1819,
+  "period": 1,
+  "final_population": 31,
+  "table_cost": 60,
+  "checked_et": "2026-11-18 19:30:54 ET",
+  "rle_sha256": "454e64c5bf7e7b17ab5db6edb0ca6e4b35dd77f88f5233ec179b36c99169748a"
+}
