@@ -1,0 +1,70 @@
+{
+ "cell": "6x44",
+ "d": 6,
+ "n": 44,
+ "k": 1,
+ "bar": "0.445897110672901067634880294321",
+ "budget": 20070.0,
+ "seed": 136,
+ "wave": 1,
+ "seeds": [
+  {
+   "src": "pr17:6x44_grai.txt",
+   "what": "pull request 17 file 6x44_grai.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/134bb4bd8ef2d433f5a24a0bf8227fc98855607d/CurrentBestPackings%2F6x44_grai.txt",
+   "sha256": "0103a5ef3ffac23f2db64bbd1f177c93f05acf1092b8e2a9d87237656b35a5e1"
+  },
+  {
+   "src": "pr15:6x44_djma.txt",
+   "what": "pull request 15 file 6x44_djma.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/6f4a1bd2b3c14f0dee6d4cb52eafca77eb794b9c/SubmittedPackings%2F6x44_djma.txt",
+   "sha256": "a2d38947eda84c648a2e1179fb3106425fc2b42f920b397ab9dae4b1333ff7d7"
+  },
+  {
+   "src": "ours",
+   "what": "packing-records 6x44.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/6x44.txt",
+   "sha256": "4ff71168a96bc88d2fc00ee0f990b4640f48f22b6ffc109eb34ca80f20d15d83"
+  },
+  {
+   "src": "pr14:6x44_sol.txt",
+   "what": "pull request 14 file 6x44_sol.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/04831504e5e74f42ca6742315a2eb2366503a10a/SubmittedPackings%2F6x44_sol.txt",
+   "sha256": "2d13d727a672199d9bb5ee78bf9a67a4cc2eebba928464664cd52090fad73df2"
+  },
+  {
+   "src": "current:6x44_oai.txt",
+   "what": "leaderboard posted file 6x44_oai.txt",
+   "url": "https://raw.githubusercontent.com/gnikylime/GameofSloanes/e43ad02ab7830cb7d0352d9e415c99f7f2014077/CurrentBestPackings/6x44_oai.txt",
+   "sha256": "51cb29423b8ae4cdcb6f2884702974e874eb29b30f1254a609f3cadc4d41de10"
+  }
+ ],
+ "parents": [
+  {
+   "src": "pr17:6x45_grai.txt",
+   "what": "pull request 17 file 6x45_grai.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/134bb4bd8ef2d433f5a24a0bf8227fc98855607d/CurrentBestPackings%2F6x45_grai.txt",
+   "sha256": "294df6346c65e704e460e85dd3daf1f8752ff94138e416b0de5d1579bdb5fcb8"
+  },
+  {
+   "src": "pr15:6x45_djma.txt",
+   "what": "pull request 15 file 6x45_djma.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/6f4a1bd2b3c14f0dee6d4cb52eafca77eb794b9c/SubmittedPackings%2F6x45_djma.txt",
+   "sha256": "a16b94e07940b5d0dd486f057d92686d822c7ff4bb9cf4f0684fecf96da77762"
+  }
+ ],
+ "children": [
+  {
+   "src": "pr17:6x43_grai.txt",
+   "what": "pull request 17 file 6x43_grai.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/134bb4bd8ef2d433f5a24a0bf8227fc98855607d/CurrentBestPackings%2F6x43_grai.txt",
+   "sha256": "43b8daff3d026e40f042e7e1796962c6cbc98f06206ce65126a8adb26aaf722e"
+  },
+  {
+   "src": "pr15:6x43_djma.txt",
+   "what": "pull request 15 file 6x43_djma.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/6f4a1bd2b3c14f0dee6d4cb52eafca77eb794b9c/SubmittedPackings%2F6x43_djma.txt",
+   "sha256": "3506a7d9d686140dff7de2c3da03afea71cb56a312544d621de0253a07b0373e"
+  }
+ ]
+}
