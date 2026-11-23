@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+polaris-moleculeace-activity-cliff-mse,moleculeace-chembl244-ki cliff-subset (p2),0.5501943375378687,0.634573831368627,2026-11-18T03:41:00Z,object/M1_predictions.json,B49A724F1694728B19A310C5CFA18AE16980B9B16F7A50DC7BDAEA060B6424ED
