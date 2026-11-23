@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+polaris-moleculeace-activity-cliff-mse,CHEMBL287_Ki,0.40802135,0.50318131,2026-10-19T15:07:54Z,object/CHEMBL287_Ki_test_predictions.csv,37ced5b182f800041f6fcbff6bf9d5c5436fab3fc19f11155545067dff3d7d38
