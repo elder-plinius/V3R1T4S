@@ -4,7 +4,7 @@
 
 Exact integer Farkas certificate (quantum weight-enumerator LP with shadow constraints, no purity assumption) that no qubit stabilizer code [[119,5,d]] with d at least 39 exists, so the upper bound for [[119,5]] is at most 38 against the live value 39 fetched 2026-10-19; the value is below the propagation closure of the live table plus the 56 listed pull-request values plus the other claimed cells.
 
-Path note: the sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/cert_119_5_39_sh.json` (sha256 67b6a68a5b0b71bf4b18453b38e0119dd4be72c9e789897bbc14d7da5095c071); its programs are in `how-we-built-it/`.
+The sentence above is quoted word for word from `panel/gate.md` (status `CONFIRMED_SOLUTION`). The object is `object/cert_119_5_39_sh.json` (sha256 67b6a68a5b0b71bf4b18453b38e0119dd4be72c9e789897bbc14d7da5095c071); its programs are in `how-we-built-it/`.
 
 ## Check it yourself
 
@@ -24,7 +24,7 @@ The quick check verifies the object's hash against INDEX.csv, rebuilds every row
 
 | Source | Cell | Listed value | URL | UTC fetch time |
 |---|---|---|---|---|
-| QECC qubit table, n 1..256 | QECC qubit table, n 1..256 | [[119,5]]: lower 23, upper 39; neighbours in neighbours.csv | https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 | 2026-10-19T04:34:26Z (triage); 2026-10-19T05:16:36Z (novelty skeptic) |
+| QECC qubit table, n 1..256 | QECC qubit table, n 1..256 | [[119,5]]: lower 23, upper 39; neighbours in neighbours.csv | https://www.codetables.de/QECC/Tables_color.php?q=4&n0=1&n1=256&k0=0&k1=256 | 2026-10-19T04:34:26Z; 2026-10-19T05:16:36Z (novelty skeptic) |
 | GitHub pull-request list of elder-plinius/V3R1T4S (merged and open pull requests for this target) | upper-bound values already claimed | 56 values in `the-record-we-beat/pr_claims.csv` | https://api.github.com/repos/elder-plinius/V3R1T4S/pulls | 2026-10-19T04:30:31Z |
 | V3R1T4S TROPHY_CASE.md and known-knowns folders | this cell | no competing value (see `panel/novelty.md`) | https://github.com/elder-plinius/V3R1T4S | 2026-10-19T05:15:21Z (novelty skeptic) |
 | arXiv, four generic queries plus the named work 2609.37056 | this cell | no newer claim found (queries were generic, not exhaustive; see `panel/novelty.md`) | https://arxiv.org/abs/2609.37056 | 2026-10-19 (novelty skeptic) |
@@ -48,7 +48,7 @@ New submission. The gate notes name no earlier pull request for this cell.
 
 - **codetables.de** (http://www.codetables.de/), the table compared against, maintained by Markus Grassl as the bank statement for this target names it.
 - **Calderbank, Rains, Shor and Sloane**, arXiv quant-ph/9608006 (https://arxiv.org/abs/quant-ph/9608006), the quaternary MacWilliams identity for quantum codes, named in the bank statement.
-- **Eric Rains**, whose MAGMA linear-programming program gave the table's upper bounds for n up to 100 (as the bank statement for this target says), and the shadow-enumerator method cited there as Rains 1999 and Ashikhmin-Litsyn.
+- **Eric Rains**, whose MAGMA linear-programming program gave most of the table's upper bounds for n <= 100 (as the bank statement for this target says), and the shadow-enumerator method cited there as Rains 1999 and Ashikhmin-Litsyn.
 - The authors of the 56 merged and open pull requests whose values the propagation closure counts (`the-record-we-beat/pr_claims.csv` lists cell, value, state and pull-request number).
 - **python-flint**, used by the contributor's LP solver (`how-we-built-it/qlp.py`).
 - The object and the search code are by Gemini ("Argon"), an AI search agent working for the contributor. Contributor credit: `calgulbenkian`.
