@@ -1,0 +1,24 @@
+{
+  "benchmark": {
+    "category": "2026_challenging_certified_training_2026",
+    "network_field": "onnx/tinyimagenet_eps1_wide_cnn7.onnx",
+    "property_field": "vnnlib/tinyimagenet_eps1_wide_cnn7/tinyimagenet_eps1_wide_cnn7_idx7687_sample8.vnnlib",
+    "version": "1.0"
+  },
+  "checker_version": "vnncomp2026-cex-1",
+  "classification": "correct",
+  "dependency_versions": {
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.0",
+    "python": "3.13.5"
+  },
+  "establishes_sat": true,
+  "provider": "CPUExecutionProvider",
+  "rationale": "Solver-provided output values ignored; ONNX CPU replay output satisfies the property with strict input bounds.\nChecking if spec was actually violated (input_tol=0.0, output_tol=0.0)\nCE input X was inside box #0; max input violation=0.0\nprop #178 violated:\n[-0.04230213]",
+  "result": "correct",
+  "results_row_identity": "367dfa46f02ce78078b238e94a796fc298bf5bd1f784294a58a026083d52e727",
+  "schema_version": 1,
+  "score_credit": true,
+  "witness_path": "tinyimagenet_eps1_wide_cnn7_idx7687_sample8.counterexample",
+  "witness_sha256": "57af300bffe53135b65e7c2f2704e91079814ed2a68aad03d486e964f6c9a9da"
+}

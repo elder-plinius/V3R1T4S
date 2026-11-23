@@ -1,0 +1,1007 @@
+Category 2026_challenging_certified_training_2026 has 60 (from agate)
+8 participating tools: ['agate', 'alpha_beta_crown', 'n2v', 'neuralsat', 'nnv', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx9890_sample0', '-', '2.5 (h)', 'timeout', '5.8 (h)', 'timeout', '21.8 (h)', '-', '1.4 (h)']
+True Result: unsat
+0: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+0: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+0: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+0: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+0: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+0: pyrat score: 10, is_ver: True, is_fals: False, is_fastest: False
+0: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+0: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 1. Violated: 8 (['agate', 'alpha_beta_crown', 'n2v', 'neuralsat', 'nnv', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for agate
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for n2v
+
+checking counterexample for neuralsat
+
+checking counterexample for nnv
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'agate': 'malformed_ce', 'alpha_beta_crown': 'correct', 'n2v': 'correct', 'neuralsat': 'correct', 'nnv': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx3433_sample1', '16.4 (v)', '6.6 (v)', '1.5 (v)', '2.4 (v)', '7.6 (v)', '3.8 (v)', '0.7 (v)', '2.1 (v)']
+True Result: sat
+1: agate score: -150, is_ver: False, is_fals: False, is_fastest: False
+1: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+1: n2v score: 10, is_ver: False, is_fals: True, is_fastest: False
+1: neuralsat score: 10, is_ver: False, is_fals: True, is_fastest: False
+1: nnv score: 10, is_ver: False, is_fals: True, is_fastest: False
+1: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+1: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+1: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx448_sample2', '-', '8.9 (h)', 'timeout', 'timeout', 'timeout', '89.3 (h)', '-', '39.9 (h)']
+True Result: unsat
+2: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+2: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+2: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+2: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+2: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+2: pyrat score: 10, is_ver: True, is_fals: False, is_fastest: False
+2: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+2: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx3619_sample3', '-', '8.4 (h)', 'timeout', '62.2 (h)', 'timeout', '69.2 (h)', '-', '26.9 (h)']
+True Result: unsat
+3: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+3: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+3: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+3: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+3: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+3: pyrat score: 10, is_ver: True, is_fals: False, is_fastest: False
+3: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+3: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx1440_sample4', '-', '490.0 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', '115.9 (h)']
+True Result: unsat
+4: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+4: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+4: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+4: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+4: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+4: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+4: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+4: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx5510_sample5', '-', '89.0 (h)', 'timeout', '421.8 (h)', 'timeout', 'timeout', '-', '74.7 (h)']
+True Result: unsat
+5: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+5: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+5: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+5: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+5: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+5: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+5: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+5: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx0_sample6', '-', '518.0 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: unsat
+6: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+6: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+6: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+6: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+6: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+6: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+6: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+6: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx3602_sample7', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+7: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+7: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx9435_sample8', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+8: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+8: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx8660_sample9', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+9: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+9: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx758_sample0', '-', '6.7 (h)', 'timeout', '6.7 (h)', 'timeout', 'timeout', '-', '3.2 (h)']
+True Result: unsat
+10: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+10: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+10: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+10: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+10: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+10: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+10: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+10: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 11. Violated: 8 (['agate', 'alpha_beta_crown', 'n2v', 'neuralsat', 'nnv', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for agate
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for n2v
+
+checking counterexample for neuralsat
+
+checking counterexample for nnv
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'agate': 'malformed_ce', 'alpha_beta_crown': 'correct', 'n2v': 'correct', 'neuralsat': 'correct', 'nnv': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx1862_sample1', '24.8 (v)', '20.0 (v)', '3.1 (v)', '4.1 (v)', '10.5 (v)', '6.8 (v)', '1.4 (v)', '4.5 (v)']
+True Result: sat
+11: agate score: -150, is_ver: False, is_fals: False, is_fastest: False
+11: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+11: n2v score: 10, is_ver: False, is_fals: True, is_fastest: False
+11: neuralsat score: 10, is_ver: False, is_fals: True, is_fastest: False
+11: nnv score: 10, is_ver: False, is_fals: True, is_fastest: False
+11: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+11: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+11: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx381_sample2', '-', '15.2 (h)', 'timeout', '77.9 (h)', 'timeout', 'timeout', '-', '70.0 (h)']
+True Result: unsat
+12: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+12: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+12: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+12: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+12: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+12: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+12: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+12: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx5660_sample3', '-', '28.3 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', '67.7 (h)']
+True Result: unsat
+13: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+13: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+13: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+13: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+13: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+13: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+13: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+13: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx5118_sample4', '-', '481.3 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: unsat
+14: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+14: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+14: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+14: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+14: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+14: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+14: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+14: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx402_sample5', '-', '298.0 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: unsat
+15: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+15: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+15: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+15: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+15: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+15: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+15: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+15: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx9352_sample6', '-', '180.7 (h)', 'timeout', '531.1 (h)', 'timeout', 'timeout', '-', '75.3 (h)']
+True Result: unsat
+16: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+16: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+16: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+16: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+16: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+16: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+16: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+16: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx4519_sample7', '-', 'timeout', 'timeout', '-', 'timeout', 'error', '-', 'timeout']
+True Result: -
+17: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+17: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx448_sample8', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'error', '-', 'timeout']
+True Result: -
+18: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+18: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx7942_sample9', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+19: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+19: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx5323_sample0', '-', '3.7 (h)', 'timeout', '12.1 (h)', 'timeout', '19.1 (h)', '-', '1.0 (h)']
+True Result: unsat
+20: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+20: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+20: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+20: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+20: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+20: pyrat score: 10, is_ver: True, is_fals: False, is_fastest: False
+20: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+20: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx5683_sample1', '-', '1.9 (h)', 'timeout', '5.5 (h)', 'timeout', '11.7 (h)', '-', '1.0 (h)']
+True Result: unsat
+21: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+21: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+21: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+21: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+21: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+21: pyrat score: 10, is_ver: True, is_fals: False, is_fastest: False
+21: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+21: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1031_sample2', '-', '13.0 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', '34.6 (h)']
+True Result: unsat
+22: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+22: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+22: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+22: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+22: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+22: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+22: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+22: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx9352_sample3', '-', '11.6 (h)', 'timeout', 'timeout', 'timeout', '39.8 (h)', '-', '31.4 (h)']
+True Result: unsat
+23: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+23: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+23: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+23: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+23: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+23: pyrat score: 10, is_ver: True, is_fals: False, is_fastest: False
+23: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+23: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1742_sample4', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+24: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+24: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1742_sample5', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+25: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+25: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1742_sample6', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+26: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+26: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 27. Violated: 3 (['alpha_beta_crown', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx8090_sample7', '-', '11.8 (v)', 'timeout', '-', 'timeout', 'timeout', '31.1 (v)', '2.3 (v)']
+True Result: sat
+27: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+27: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+27: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+27: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+27: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+27: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+27: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+27: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx4688_sample8', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+28: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+28: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx8072_sample9', '-', 'timeout', 'timeout', '-', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+29: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+29: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 30. Violated: 6 (['agate', 'alpha_beta_crown', 'neuralsat', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for agate
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for neuralsat
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'agate': 'malformed_ce', 'alpha_beta_crown': 'correct', 'neuralsat': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx637_sample0', '24.2 (v)', '28.8 (v)', 'timeout', '5.0 (v)', 'timeout', '6.8 (v)', '10.7 (v)', '4.0 (v)']
+True Result: sat
+30: agate score: -150, is_ver: False, is_fals: False, is_fastest: False
+30: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+30: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+30: neuralsat score: 10, is_ver: False, is_fals: True, is_fastest: False
+30: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+30: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+30: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+30: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx3144_sample1', '-', '15.1 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', '1.1 (h)']
+True Result: unsat
+31: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+31: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+31: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+31: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+31: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+31: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+31: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+31: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx9125_sample2', '-', '47.2 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', '40.6 (h)']
+True Result: unsat
+32: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+32: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+32: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+32: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+32: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+32: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+32: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+32: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx1682_sample3', '-', '33.1 (h)', 'timeout', 'timeout', 'timeout', 'timeout', '-', '30.2 (h)']
+True Result: unsat
+33: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+33: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+33: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+33: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+33: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+33: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+33: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+33: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx741_sample4', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+34: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+34: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx6515_sample5', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+35: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+35: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx6515_sample6', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+36: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+36: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx6249_sample7', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+37: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+37: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx7490_sample8', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', 'timeout']
+True Result: -
+38: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+38: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 39. Violated: 1 (['vibecheck']), Holds: 0 ([])
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'vibecheck': 'correct'}
+Row: ['cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx8397_sample9', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'timeout', '-', '4.2 (v)']
+True Result: sat
+39: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+39: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Checking counterexamplesfor index 40. Violated: 4 (['alpha_beta_crown', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx613_sample0', 'timeout', '4.8 (v)', 'timeout', 'timeout', 'timeout', '4.6 (v)', '7.9 (v)', '2.5 (v)']
+True Result: sat
+40: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+40: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+40: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+40: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+40: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+40: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+40: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+40: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Checking counterexamplesfor index 41. Violated: 7 (['alpha_beta_crown', 'n2v', 'neuralsat', 'nnv', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for n2v
+
+checking counterexample for neuralsat
+
+checking counterexample for nnv
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'n2v': 'correct', 'neuralsat': 'correct', 'nnv': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx2844_sample1', 'timeout', '1.9 (v)', '2.4 (v)', '28.7 (v)', '23.2 (v)', '4.5 (v)', '0.9 (v)', '2.5 (v)']
+True Result: sat
+41: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+41: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+41: n2v score: 10, is_ver: False, is_fals: True, is_fastest: False
+41: neuralsat score: 10, is_ver: False, is_fals: True, is_fastest: False
+41: nnv score: 10, is_ver: False, is_fals: True, is_fastest: False
+41: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+41: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+41: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx8893_sample2', 'timeout', '25.4 (h)', 'timeout', '17.7 (h)', 'timeout', 'error', '-', '90.5 (h)']
+True Result: unsat
+42: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+42: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+42: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+42: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+42: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+42: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+42: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+42: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx2904_sample3', '-', '27.6 (h)', 'timeout', '17.8 (h)', 'timeout', 'error', '-', '93.0 (h)']
+True Result: unsat
+43: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+43: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+43: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+43: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+43: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+43: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+43: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+43: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx274_sample4', '-', '56.4 (h)', 'timeout', '82.3 (h)', 'timeout', 'error', '-', 'timeout']
+True Result: unsat
+44: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+44: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+44: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+44: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+44: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+44: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+44: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+44: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx7018_sample5', '-', '59.7 (h)', 'timeout', '86.2 (h)', 'timeout', 'error', '-', '362.9 (h)']
+True Result: unsat
+45: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+45: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+45: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+45: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+45: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+45: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+45: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+45: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx7481_sample6', '-', '285.7 (h)', 'timeout', '373.0 (h)', 'timeout', 'error', '-', 'timeout']
+True Result: unsat
+46: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+46: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+46: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+46: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+46: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+46: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+46: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+46: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx8561_sample7', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'error', '-', 'timeout']
+True Result: -
+47: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+47: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx1730_sample8', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'error', '-', 'timeout']
+True Result: -
+48: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+48: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx8582_sample9', '-', 'timeout', 'timeout', 'timeout', 'timeout', 'error', '-', 'timeout']
+True Result: -
+49: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+49: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 50. Violated: 5 (['alpha_beta_crown', 'n2v', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for n2v
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'n2v': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx6379_sample0', 'timeout', '3.7 (v)', '4.7 (v)', 'timeout', 'timeout', '7.8 (v)', '8.6 (v)', '4.2 (v)']
+True Result: sat
+50: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+50: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+50: n2v score: 10, is_ver: False, is_fals: True, is_fastest: False
+50: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+50: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+50: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+50: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+50: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Checking counterexamplesfor index 51. Violated: 3 (['alpha_beta_crown', 'pyrat', 'super_simple_vnn_comp']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct'}
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx8939_sample1', 'timeout', '17.0 (v)', 'timeout', 'timeout', 'timeout', '8.2 (v)', '2.7 (v)', 'timeout']
+True Result: sat
+51: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+51: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+51: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+51: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+51: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+51: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+51: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+51: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 52. Violated: 4 (['alpha_beta_crown', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx5396_sample2', 'timeout', '38.6 (v)', 'timeout', 'timeout', 'timeout', '8.3 (v)', '1.6 (v)', '8.2 (v)']
+True Result: sat
+52: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+52: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+52: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+52: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+52: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+52: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+52: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+52: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Checking counterexamplesfor index 53. Violated: 4 (['alpha_beta_crown', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx5214_sample3', '-', '55.7 (v)', 'timeout', 'timeout', 'timeout', '8.1 (v)', '1.8 (v)', '8.2 (v)']
+True Result: sat
+53: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+53: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+53: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+53: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+53: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+53: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+53: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+53: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx5926_sample4', '-', '69.4 (h)', 'timeout', '14.0 (h)', 'error', 'error', '-', '246.4 (h)']
+True Result: unsat
+54: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+54: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+54: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+54: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+54: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+54: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+54: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+54: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx1766_sample5', '-', '63.5 (h)', 'timeout', '14.2 (h)', 'error', 'error', '-', '235.2 (h)']
+True Result: unsat
+55: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+55: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+55: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+55: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+55: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+55: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+55: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+55: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx8932_sample6', '-', '68.7 (h)', 'timeout', '14.1 (h)', 'error', 'error', '-', '245.3 (h)']
+True Result: unsat
+56: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+56: alpha_beta_crown score: 10, is_ver: True, is_fals: False, is_fastest: False
+56: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+56: neuralsat score: 10, is_ver: True, is_fals: False, is_fastest: False
+56: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+56: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+56: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+56: vibecheck score: 10, is_ver: True, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx1964_sample7', '-', 'timeout', 'timeout', 'timeout', 'error', 'error', '-', '-']
+True Result: -
+57: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+57: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx7687_sample8', '-', '-', 'timeout', 'timeout', 'error', 'error', '-', '-']
+True Result: -
+58: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: alpha_beta_crown score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: pyrat score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: super_simple_vnn_comp score: 0, is_ver: False, is_fals: False, is_fastest: False
+58: vibecheck score: 0, is_ver: False, is_fals: False, is_fastest: False
+
+Checking counterexamplesfor index 59. Violated: 4 (['alpha_beta_crown', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
+
+checking counterexample for alpha_beta_crown
+
+checking counterexample for pyrat
+
+checking counterexample for super_simple_vnn_comp
+
+checking counterexample for vibecheck
+were violated counterexamples valid?: {'alpha_beta_crown': 'correct', 'pyrat': 'correct', 'super_simple_vnn_comp': 'correct', 'vibecheck': 'correct'}
+Row: ['tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx6207_sample9', '-', '28.7 (v)', 'timeout', 'timeout', 'error', '8.8 (v)', '10.4 (v)', '8.3 (v)']
+True Result: sat
+59: agate score: 0, is_ver: False, is_fals: False, is_fastest: False
+59: alpha_beta_crown score: 10, is_ver: False, is_fals: True, is_fastest: False
+59: n2v score: 0, is_ver: False, is_fals: False, is_fastest: False
+59: neuralsat score: 0, is_ver: False, is_fals: False, is_fastest: False
+59: nnv score: 0, is_ver: False, is_fals: False, is_fastest: False
+59: pyrat score: 10, is_ver: False, is_fals: True, is_fastest: False
+59: super_simple_vnn_comp score: 10, is_ver: False, is_fals: True, is_fastest: False
+59: vibecheck score: 10, is_ver: False, is_fals: True, is_fastest: False
+--------------------
+!! 0: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=2.4803658340000005
+!! 0: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=5.778228630999999
+!! 0: tool=pyrat, cat=2026_challenging_certified_training_2026: time=21.829342172
+!! 0: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=1.444153308
+!! 1: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=6.557913074
+!! 1: tool=n2v, cat=2026_challenging_certified_training_2026: time=1.474408757
+!! 1: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=2.362196119
+!! 1: tool=nnv, cat=2026_challenging_certified_training_2026: time=7.5930781540000005
+!! 1: tool=pyrat, cat=2026_challenging_certified_training_2026: time=3.8414734269999995
+!! 1: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=0.6728537750000005
+!! 1: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=2.0728197980000003
+!! 2: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=8.940457424
+!! 2: tool=pyrat, cat=2026_challenging_certified_training_2026: time=89.339509147
+!! 2: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=39.936118768
+!! 3: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=8.370801814
+!! 3: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=62.213885862000005
+!! 3: tool=pyrat, cat=2026_challenging_certified_training_2026: time=69.243444232
+!! 3: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=26.943538943
+!! 4: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=489.980057021
+!! 4: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=115.85814198599999
+!! 5: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=88.956204071
+!! 5: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=421.799930965
+!! 5: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=74.70505973099999
+!! 6: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=518.0292178860001
+!! 10: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=6.672288755
+!! 10: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=6.745818141000001
+!! 10: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=3.22397198
+!! 11: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=20.024402068
+!! 11: tool=n2v, cat=2026_challenging_certified_training_2026: time=3.0738685609999994
+!! 11: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=4.058176056
+!! 11: tool=nnv, cat=2026_challenging_certified_training_2026: time=10.467729976000001
+!! 11: tool=pyrat, cat=2026_challenging_certified_training_2026: time=6.848809353999999
+!! 11: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=1.4349192160000004
+!! 11: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=4.5054091089999995
+!! 12: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=15.158332369
+!! 12: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=77.937522648
+!! 12: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=69.96631144899999
+!! 13: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=28.342962855
+!! 13: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=67.663845561
+!! 14: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=481.29107474299997
+!! 15: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=297.98402860799996
+!! 16: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=180.653045929
+!! 16: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=531.0546517859999
+!! 16: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=75.30981918399999
+!! 20: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=3.65221017
+!! 20: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=12.075351554
+!! 20: tool=pyrat, cat=2026_challenging_certified_training_2026: time=19.082415253
+!! 20: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=0.9680932120000001
+!! 21: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=1.8886583309999994
+!! 21: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=5.456811281
+!! 21: tool=pyrat, cat=2026_challenging_certified_training_2026: time=11.686555468000002
+!! 21: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=1.021717348
+!! 22: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=12.961309066999998
+!! 22: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=34.624305144000004
+!! 23: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=11.646870516
+!! 23: tool=pyrat, cat=2026_challenging_certified_training_2026: time=39.753334867999996
+!! 23: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=31.447442733999996
+!! 27: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=11.811781821
+!! 27: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=31.092124818000002
+!! 27: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=2.3495072599999993
+!! 30: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=28.819482091999998
+!! 30: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=4.995807763
+!! 30: tool=pyrat, cat=2026_challenging_certified_training_2026: time=6.7884991779999995
+!! 30: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=10.748742562
+!! 30: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=3.9827990689999995
+!! 31: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=15.124357649
+!! 31: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=1.0868294419999998
+!! 32: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=47.199235774
+!! 32: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=40.597321699000005
+!! 33: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=33.13197074199999
+!! 33: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=30.211055149
+!! 39: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=4.1956541519999995
+!! 40: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=4.828771846
+!! 40: tool=pyrat, cat=2026_challenging_certified_training_2026: time=4.617724664
+!! 40: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=7.870065069000001
+!! 40: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=2.5000916469999996
+!! 41: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=1.934375169
+!! 41: tool=n2v, cat=2026_challenging_certified_training_2026: time=2.3705027309999993
+!! 41: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=28.737155897
+!! 41: tool=nnv, cat=2026_challenging_certified_training_2026: time=23.248009445
+!! 41: tool=pyrat, cat=2026_challenging_certified_training_2026: time=4.520748049999999
+!! 41: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=0.8552807440000003
+!! 41: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=2.489961256
+!! 42: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=25.444680037
+!! 42: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=17.709753658
+!! 42: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=90.506584741
+!! 43: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=27.576759454
+!! 43: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=17.821759554
+!! 43: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=93.02031579
+!! 44: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=56.38046863699999
+!! 44: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=82.34374720299999
+!! 45: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=59.748058505
+!! 45: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=86.196934081
+!! 45: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=362.86953977900004
+!! 46: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=285.70888220899997
+!! 46: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=372.98158871
+!! 50: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=3.6518393919999994
+!! 50: tool=n2v, cat=2026_challenging_certified_training_2026: time=4.663575083
+!! 50: tool=pyrat, cat=2026_challenging_certified_training_2026: time=7.796705618
+!! 50: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=8.586848742
+!! 50: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=4.163819075999999
+!! 51: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=16.970801132
+!! 51: tool=pyrat, cat=2026_challenging_certified_training_2026: time=8.209168549000001
+!! 51: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=2.737628705
+!! 52: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=38.637993302
+!! 52: tool=pyrat, cat=2026_challenging_certified_training_2026: time=8.266539067
+!! 52: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=1.608656083
+!! 52: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=8.197384308
+!! 53: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=55.652693858999996
+!! 53: tool=pyrat, cat=2026_challenging_certified_training_2026: time=8.071451145000001
+!! 53: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=1.8318138359999998
+!! 53: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=8.182616812000001
+!! 54: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=69.386011913
+!! 54: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=14.018707911
+!! 54: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=246.394793451
+!! 55: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=63.547698615
+!! 55: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=14.169324403000001
+!! 55: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=235.22278366900002
+!! 56: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=68.651212982
+!! 56: tool=neuralsat, cat=2026_challenging_certified_training_2026: time=14.086745762
+!! 56: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=245.320736594
+!! 59: tool=alpha_beta_crown, cat=2026_challenging_certified_training_2026: time=28.676324511
+!! 59: tool=pyrat, cat=2026_challenging_certified_training_2026: time=8.772282114
+!! 59: tool=super_simple_vnn_comp, cat=2026_challenging_certified_training_2026: time=10.420331690000001
+!! 59: tool=vibecheck, cat=2026_challenging_certified_training_2026: time=8.315301436
+Total Violated: 12
+Total Holds: 27
+Total Unknown: 21
+--------------------
+agate, alpha_beta_crown, n2v, neuralsat, nnv, pyrat, super_simple_vnn_comp, vibecheck
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx9890_sample0, -, 2.5 (h), timeout, 5.8 (h), timeout, 21.8 (h), -, 1.4 (h)
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx3433_sample1, 16.4 (v), 6.6 (v), 1.5 (v), 2.4 (v), 7.6 (v), 3.8 (v), 0.7 (v), 2.1 (v)
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx448_sample2, -, 8.9 (h), timeout, timeout, timeout, 89.3 (h), -, 39.9 (h)
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx3619_sample3, -, 8.4 (h), timeout, 62.2 (h), timeout, 69.2 (h), -, 26.9 (h)
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx1440_sample4, -, 490.0 (h), timeout, timeout, timeout, timeout, -, 115.9 (h)
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx5510_sample5, -, 89.0 (h), timeout, 421.8 (h), timeout, timeout, -, 74.7 (h)
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx0_sample6, -, 518.0 (h), timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx3602_sample7, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx9435_sample8, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps2_cnn7-cifar10_eps2_cnn7_idx8660_sample9, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx758_sample0, -, 6.7 (h), timeout, 6.7 (h), timeout, timeout, -, 3.2 (h)
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx1862_sample1, 24.8 (v), 20.0 (v), 3.1 (v), 4.1 (v), 10.5 (v), 6.8 (v), 1.4 (v), 4.5 (v)
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx381_sample2, -, 15.2 (h), timeout, 77.9 (h), timeout, timeout, -, 70.0 (h)
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx5660_sample3, -, 28.3 (h), timeout, timeout, timeout, timeout, -, 67.7 (h)
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx5118_sample4, -, 481.3 (h), timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx402_sample5, -, 298.0 (h), timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx9352_sample6, -, 180.7 (h), timeout, 531.1 (h), timeout, timeout, -, 75.3 (h)
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx4519_sample7, -, timeout, timeout, -, timeout, error, -, timeout
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx448_sample8, -, timeout, timeout, timeout, timeout, error, -, timeout
+cifar10_eps2_wide_cnn7-cifar10_eps2_wide_cnn7_idx7942_sample9, -, timeout, timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx5323_sample0, -, 3.7 (h), timeout, 12.1 (h), timeout, 19.1 (h), -, 1.0 (h)
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx5683_sample1, -, 1.9 (h), timeout, 5.5 (h), timeout, 11.7 (h), -, 1.0 (h)
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1031_sample2, -, 13.0 (h), timeout, timeout, timeout, timeout, -, 34.6 (h)
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx9352_sample3, -, 11.6 (h), timeout, timeout, timeout, 39.8 (h), -, 31.4 (h)
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1742_sample4, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1742_sample5, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx1742_sample6, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx8090_sample7, -, 11.8 (v), timeout, -, timeout, timeout, 31.1 (v), 2.3 (v)
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx4688_sample8, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps8_cnn7-cifar10_eps8_cnn7_idx8072_sample9, -, timeout, timeout, -, timeout, timeout, -, timeout
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx637_sample0, 24.2 (v), 28.8 (v), timeout, 5.0 (v), timeout, 6.8 (v), 10.7 (v), 4.0 (v)
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx3144_sample1, -, 15.1 (h), timeout, timeout, timeout, timeout, -, 1.1 (h)
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx9125_sample2, -, 47.2 (h), timeout, timeout, timeout, timeout, -, 40.6 (h)
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx1682_sample3, -, 33.1 (h), timeout, timeout, timeout, timeout, -, 30.2 (h)
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx741_sample4, -, timeout, timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx6515_sample5, -, timeout, timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx6515_sample6, -, timeout, timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx6249_sample7, -, timeout, timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx7490_sample8, -, timeout, timeout, timeout, timeout, timeout, -, timeout
+cifar10_eps8_wide_cnn7-cifar10_eps8_wide_cnn7_idx8397_sample9, -, timeout, timeout, timeout, timeout, timeout, -, 4.2 (v)
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx613_sample0, timeout, 4.8 (v), timeout, timeout, timeout, 4.6 (v), 7.9 (v), 2.5 (v)
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx2844_sample1, timeout, 1.9 (v), 2.4 (v), 28.7 (v), 23.2 (v), 4.5 (v), 0.9 (v), 2.5 (v)
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx8893_sample2, timeout, 25.4 (h), timeout, 17.7 (h), timeout, error, -, 90.5 (h)
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx2904_sample3, -, 27.6 (h), timeout, 17.8 (h), timeout, error, -, 93.0 (h)
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx274_sample4, -, 56.4 (h), timeout, 82.3 (h), timeout, error, -, timeout
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx7018_sample5, -, 59.7 (h), timeout, 86.2 (h), timeout, error, -, 362.9 (h)
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx7481_sample6, -, 285.7 (h), timeout, 373.0 (h), timeout, error, -, timeout
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx8561_sample7, -, timeout, timeout, timeout, timeout, error, -, timeout
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx1730_sample8, -, timeout, timeout, timeout, timeout, error, -, timeout
+tinyimagenet_eps1_cnn7-tinyimagenet_eps1_cnn7_idx8582_sample9, -, timeout, timeout, timeout, timeout, error, -, timeout
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx6379_sample0, timeout, 3.7 (v), 4.7 (v), timeout, timeout, 7.8 (v), 8.6 (v), 4.2 (v)
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx8939_sample1, timeout, 17.0 (v), timeout, timeout, timeout, 8.2 (v), 2.7 (v), timeout
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx5396_sample2, timeout, 38.6 (v), timeout, timeout, timeout, 8.3 (v), 1.6 (v), 8.2 (v)
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx5214_sample3, -, 55.7 (v), timeout, timeout, timeout, 8.1 (v), 1.8 (v), 8.2 (v)
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx5926_sample4, -, 69.4 (h), timeout, 14.0 (h), error, error, -, 246.4 (h)
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx1766_sample5, -, 63.5 (h), timeout, 14.2 (h), error, error, -, 235.2 (h)
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx8932_sample6, -, 68.7 (h), timeout, 14.1 (h), error, error, -, 245.3 (h)
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx1964_sample7, -, timeout, timeout, timeout, error, error, -, -
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx7687_sample8, -, -, timeout, timeout, error, error, -, -
+tinyimagenet_eps1_wide_cnn7-tinyimagenet_eps1_wide_cnn7_idx6207_sample9, -, 28.7 (v), timeout, timeout, error, 8.8 (v), 10.4 (v), 8.3 (v)
+---------
+Category 2026_challenging_certified_training_2026:
+agate: -450 (0%)
+alpha_beta_crown: 380 (100.0%)
+n2v: 40 (10.53%)
+neuralsat: 200 (52.63%)
+nnv: 30 (7.89%)
+pyrat: 160 (42.11%)
+super_simple_vnn_comp: 110 (28.95%)
+vibecheck: 330 (86.84%)
+
+Category 2026_cifar100_2024:
+Category 2026_cifar100_2024 has 200 (from act)
+9 participating tools: ['act', 'alpha_beta_crown', 'bright', 'n2v', 'neuralsat', 'nnv', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']
+
+Checking counterexamplesfor index 0. Violated: 9 (['act', 'alpha_beta_crown', 'bright', 'n2v', 'neuralsat', 'nnv', 'pyrat', 'super_simple_vnn_comp', 'vibecheck']), Holds: 0 ([])
