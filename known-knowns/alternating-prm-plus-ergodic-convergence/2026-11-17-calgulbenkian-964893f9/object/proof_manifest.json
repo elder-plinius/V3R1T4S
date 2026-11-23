@@ -1,0 +1,657 @@
+{
+  "target_id": "alternating-prm-plus-ergodic-convergence",
+  "claimed_partial_win": "p2",
+  "algorithm": "Simultaneous Predictive Regret Matching+ (Algorithm 2 of arXiv:2311.00676v2)",
+  "game_matrix": [
+    [
+      3,
+      0,
+      -3
+    ],
+    [
+      0,
+      3,
+      -4
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "B_nat_str": "72535549176877750482370560",
+  "T0": 13203,
+  "k_slabs": 256,
+  "duality_gap_lower_bound": "1/20",
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "leanapap_repo": "https://github.com/YaelDillies/LeanAPAP",
+  "leanapap_commit": "fb5cb9c4f594cbeeb160c715618d13640984c521",
+  "mathlib_rev": "2d833a68a3d6bad4dfdb7cbbcacaa978580247d2",
+  "addcombi_rev": "8c647dc91adab8a3c46061c5227b32816f872ff4",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ],
+  "main_theorems": [
+    {
+      "full_name": "PRMPlus.alg2_caiGame_eventual_dualityGap_ge",
+      "expected_check": "PRMPlus.alg2_caiGame_eventual_dualityGap_ge : \u2200 (t : \u2115),\n  LE.le.{0} 13203 t \u2192\n    LE.le.{0} (1 / 20)\n      (PRMPlus.DualGap PRMPlus.caiGameA (PRMPlus.alg2Iter PRMPlus.caiGameA t).x (PRMPlus.alg2Iter PRMPlus.caiGameA t).y)"
+    },
+    {
+      "full_name": "PRMPlus.alg2_caiGame_liminf_dualityGap_pos",
+      "expected_check": "PRMPlus.alg2_caiGame_liminf_dualityGap_pos : LT.lt.{0} 0\n  (Filter.liminf.{0, 0}\n    (fun t =>\n      PRMPlus.DualGap PRMPlus.caiGameA (PRMPlus.alg2Iter PRMPlus.caiGameA t).x (PRMPlus.alg2Iter PRMPlus.caiGameA t).y)\n    Filter.atTop.{0})"
+    },
+    {
+      "full_name": "PRMPlus.alg2_caiGame_not_tendsto_zero",
+      "expected_check": "PRMPlus.alg2_caiGame_not_tendsto_zero : \u00acFilter.Tendsto.{0, 0}\n    (fun t =>\n      PRMPlus.DualGap PRMPlus.caiGameA (PRMPlus.alg2Iter PRMPlus.caiGameA t).x (PRMPlus.alg2Iter PRMPlus.caiGameA t).y)\n    Filter.atTop.{0} (nhds.{0} 0)"
+    },
+    {
+      "full_name": "PRMPlus.alg2_caiGame_iter1000_bounds",
+      "expected_check_prefix": "PRMPlus.alg2_caiGame_iter1000_bounds : (LE.le.{0} (HDiv.hDiv.{0, 0, 0} 6952364039090924642008615 \u2191PRMPlus.B_nat)"
+    }
+  ],
+  "file_count": 119,
+  "total_lean_bytes": 1398472,
+  "bundle_sha256": "28e82bc4279d1b8ce51304f2dc792fe23a91ec7bf2f8208181a141aa1b4ea443",
+  "defs_sha256": "3553155b4ae122a60582bbc0312fdff8f1cebf8e78b67b35b1de90ef7dc111a3",
+  "tubesound_sha256": "e991fc6111ebfaa87bdd7bc5dab142103a6cf5c340d2d8ff1a5b032f445f56a3",
+  "main_sha256": "964893f95e6fee87437002a8274f74b21ace1cd899e366e16fd40f9cb3dc598c",
+  "files": [
+    {
+      "path": "PRMPlus/Aff12Sound.lean",
+      "bytes": 36961,
+      "sha256": "4630a37e0383abba613aa52773851573045648627b6e6a5682ba7737c17d49c3"
+    },
+    {
+      "path": "PRMPlus/Aff15Arith.lean",
+      "bytes": 55024,
+      "sha256": "040e4a83d688f79836f89e7eeba5f1cc049b788c94641e640f4f04dfd05461b0"
+    },
+    {
+      "path": "PRMPlus/Defs.lean",
+      "bytes": 14309,
+      "sha256": "3553155b4ae122a60582bbc0312fdff8f1cebf8e78b67b35b1de90ef7dc111a3"
+    },
+    {
+      "path": "PRMPlus/Main.lean",
+      "bytes": 16144,
+      "sha256": "964893f95e6fee87437002a8274f74b21ace1cd899e366e16fd40f9cb3dc598c"
+    },
+    {
+      "path": "PRMPlus/Params.lean",
+      "bytes": 113457,
+      "sha256": "48742ed4c89b11906dea0d5daeac1e654da758ea2b06f96817489e2929383966"
+    },
+    {
+      "path": "PRMPlus/Reach01.lean",
+      "bytes": 18631,
+      "sha256": "ba418d0c9415b9b0287c814a936b7fb189f9c3b7163246a6a35a425ff6ac9e57"
+    },
+    {
+      "path": "PRMPlus/Reach02.lean",
+      "bytes": 19479,
+      "sha256": "b39a8510464527d3cbd3ee2b44ee815ac81fc186d823703e03de6a6ad8eb6672"
+    },
+    {
+      "path": "PRMPlus/Reach03.lean",
+      "bytes": 19620,
+      "sha256": "6e251179d7fa33e2b0f7a75ddea5a777c571b0de49dc187377cfc5f3e04a3458"
+    },
+    {
+      "path": "PRMPlus/Reach04.lean",
+      "bytes": 19651,
+      "sha256": "b43fcc195db00d4da3bdb7abeb4576fadffbc59ba0edd958278a06f541cb7ea3"
+    },
+    {
+      "path": "PRMPlus/Reach05.lean",
+      "bytes": 21089,
+      "sha256": "15f038608896bbef94eba8d368aa74572a1e7145e2557ba7ceac03e0e426d831"
+    },
+    {
+      "path": "PRMPlus/Reach06.lean",
+      "bytes": 21084,
+      "sha256": "74af37ce2952b766a721cb77127ef36075780878da725551ce2854fed129cfa5"
+    },
+    {
+      "path": "PRMPlus/Reach07.lean",
+      "bytes": 21092,
+      "sha256": "39c72180c2459bc2d2cd894d3668eb2ce00b3ceced730436ecc7e439e8018776"
+    },
+    {
+      "path": "PRMPlus/Reach08.lean",
+      "bytes": 21045,
+      "sha256": "adb6ec246ef65b40b286929a83de673fb5097dc5a74e78ed8fe4db7bd55b3ece"
+    },
+    {
+      "path": "PRMPlus/Reach09.lean",
+      "bytes": 21099,
+      "sha256": "6628dbb279bd3bcd4b87144341d632e2af93d1dceb9151aaf699f135fded927f"
+    },
+    {
+      "path": "PRMPlus/Reach10.lean",
+      "bytes": 21061,
+      "sha256": "de4822b8cc43f87b21b2663487d6c27501bb6dc8d8ac549bbe0e48b6a802516d"
+    },
+    {
+      "path": "PRMPlus/Reach11.lean",
+      "bytes": 21111,
+      "sha256": "067b5024a2af89917f0aa4264fbb4a29f0f1460fcf09ad6bc9adc0496d1e3a12"
+    },
+    {
+      "path": "PRMPlus/Reach12.lean",
+      "bytes": 21123,
+      "sha256": "9baef33fe695b93aa448538d38923ca607abc32236413c8e64b44e9c033f0ae5"
+    },
+    {
+      "path": "PRMPlus/Reach13.lean",
+      "bytes": 21126,
+      "sha256": "c3894339797f94ebe93b4d9963dc650760181d47e780d958887d8b507411c88e"
+    },
+    {
+      "path": "PRMPlus/Reach14.lean",
+      "bytes": 21163,
+      "sha256": "7fd00de3c717f7fa66609cf6aa0347f13af3b0e16a46f9c2f0fd68e8313abbb2"
+    },
+    {
+      "path": "PRMPlus/Reach15.lean",
+      "bytes": 21119,
+      "sha256": "bab137b46d3c4a38d20fb9e62707339f17f105eeaa942ac2481cedec3cccd0f2"
+    },
+    {
+      "path": "PRMPlus/Reach16.lean",
+      "bytes": 21113,
+      "sha256": "355173553666cc56f225d65a4c220269b4c2495eaecb00133e570d6d887ba882"
+    },
+    {
+      "path": "PRMPlus/Reach17.lean",
+      "bytes": 21215,
+      "sha256": "4c8ad0da5567b8c4aeb60796604399356dc11d2b2ad6faafae3af2b9613ba7a6"
+    },
+    {
+      "path": "PRMPlus/Reach18.lean",
+      "bytes": 21162,
+      "sha256": "25af8d45f8b90499ff1ab1e25ea1d247fb7aa2d5e176fdad33f090acb876cd9b"
+    },
+    {
+      "path": "PRMPlus/Reach19.lean",
+      "bytes": 21098,
+      "sha256": "7bdb538b05129d6069760a21bff862d3ab7638e2eee45e8537e19b1486b83a15"
+    },
+    {
+      "path": "PRMPlus/Reach20.lean",
+      "bytes": 21121,
+      "sha256": "87c2f3e1601e1ce3f8a33521baf350a1f328b138d27aeb6d415cb33690a67e7b"
+    },
+    {
+      "path": "PRMPlus/Reach21.lean",
+      "bytes": 21105,
+      "sha256": "187626c545cb14675b84cfaac335ab9a892c598783edc17f22430e65e6174eaf"
+    },
+    {
+      "path": "PRMPlus/Reach22.lean",
+      "bytes": 21089,
+      "sha256": "080cf0cdd5c4be1ff0b9a6d66168d84ca4f5ecf6343408457d62f7d6f195f11b"
+    },
+    {
+      "path": "PRMPlus/Reach23.lean",
+      "bytes": 21088,
+      "sha256": "05ea967e23271c5d62f89ca106f9ad6561eefad0a5d4c755c52043258f5297e9"
+    },
+    {
+      "path": "PRMPlus/Reach24.lean",
+      "bytes": 21053,
+      "sha256": "997d02f745bf1e9c1bb746f29998023ad6bde08c527b18bfb72eee2bbae488a7"
+    },
+    {
+      "path": "PRMPlus/Reach25.lean",
+      "bytes": 21051,
+      "sha256": "291727dcb4b0ad6d5c74fad7d29cd5bcf5f4df23e2d2c9fc53a07557b3d939bf"
+    },
+    {
+      "path": "PRMPlus/Reach26.lean",
+      "bytes": 21079,
+      "sha256": "4d8b8b3badc32a82dccddcdf2f4a25b152994ca5547ea5d95abc5c94d23234b8"
+    },
+    {
+      "path": "PRMPlus/Reach27.lean",
+      "bytes": 21057,
+      "sha256": "bcfbae3ca23d9ecb0a8e19e748df64383e65b07a0e15c4013cdce75b0ef092d6"
+    },
+    {
+      "path": "PRMPlus/Reach28.lean",
+      "bytes": 21075,
+      "sha256": "d99287564c5647d6e39da99f0140907a649a5eecc2a05c1c4c796d79404e6192"
+    },
+    {
+      "path": "PRMPlus/Reach29.lean",
+      "bytes": 21047,
+      "sha256": "fe1a2955f985e941c2e9b163c0e61ddfc036ba8b7069ef94927d6597fc76dcd6"
+    },
+    {
+      "path": "PRMPlus/Reach30.lean",
+      "bytes": 21056,
+      "sha256": "6d77a0e2d7745f9084227801dd8b62e7db9b4e547c21ad8dc28b8adb0a688ba1"
+    },
+    {
+      "path": "PRMPlus/Reach31.lean",
+      "bytes": 20829,
+      "sha256": "98b70eeb1001728a71ac0b2bc76200d3520a3afee6f98b87e9378870712a7c0d"
+    },
+    {
+      "path": "PRMPlus/Reach32.lean",
+      "bytes": 20785,
+      "sha256": "24c688fad1e3a367ad0b098774b720c03c14783aab15ab428c0e06bf53dd93b7"
+    },
+    {
+      "path": "PRMPlus/Reach33.lean",
+      "bytes": 20826,
+      "sha256": "fd38430f2018e79b7710a41531ff609d58bbfe39c3f4687dd667725c0b6dad22"
+    },
+    {
+      "path": "PRMPlus/Reach34.lean",
+      "bytes": 20782,
+      "sha256": "237b4c774d7707279425131983237d24730cfb0a816b5e313087d6815ff891de"
+    },
+    {
+      "path": "PRMPlus/Reach35.lean",
+      "bytes": 20777,
+      "sha256": "8cdbcf613a2f5f21da8e1cbd751b4b57fff31fb55b87c7b4567ba2116b5f7cb2"
+    },
+    {
+      "path": "PRMPlus/Reach36.lean",
+      "bytes": 20802,
+      "sha256": "4da06e758c6f12d0ac9bedf9d22baacbd24cd0db33ec535365e09be9a795aecd"
+    },
+    {
+      "path": "PRMPlus/Reach37.lean",
+      "bytes": 20789,
+      "sha256": "969f4f61b16632928b773cf0d579acc0bd985923b03eb1680230b242dbb6fcd8"
+    },
+    {
+      "path": "PRMPlus/Reach38.lean",
+      "bytes": 20769,
+      "sha256": "2f9ebf6787c50325b22f1d49f10a81e3cf038f6c9775b919942218ee1ea6a285"
+    },
+    {
+      "path": "PRMPlus/Reach39.lean",
+      "bytes": 20786,
+      "sha256": "df579c3d32996f43262d7f569d575727416b38b680f4b663a8869f31e70472bd"
+    },
+    {
+      "path": "PRMPlus/Reach40.lean",
+      "bytes": 20758,
+      "sha256": "f6189726ace1a26b8a10d20ed08675094e227fcd03ab8d97e326e53fa7b7f1a8"
+    },
+    {
+      "path": "PRMPlus/Reach41.lean",
+      "bytes": 20791,
+      "sha256": "2e853a12c97ca036a76fb699776468358eb5df5120f56be7c4d9748657c9756f"
+    },
+    {
+      "path": "PRMPlus/Reach42.lean",
+      "bytes": 20791,
+      "sha256": "e89d1d4ae05bca2eb00d6ac4f092c8cda509e7536815806862aa1664b069a966"
+    },
+    {
+      "path": "PRMPlus/Reach43.lean",
+      "bytes": 20800,
+      "sha256": "a9af9b04882db61e847202b48eee6e7a0e74351d0b3604d63f8b9b6f399e5731"
+    },
+    {
+      "path": "PRMPlus/Reach44.lean",
+      "bytes": 21578,
+      "sha256": "9fa11ab18c0e6e28b0f7ef2c000ea11ec54cce4203c46b552b89df5f9291d8e4"
+    },
+    {
+      "path": "PRMPlus/Reach45.lean",
+      "bytes": 21578,
+      "sha256": "a5b4f3b1368e008a099f3769be6031c8d44db0fb0f14bd63ff447477977d0da9"
+    },
+    {
+      "path": "PRMPlus/Reach46.lean",
+      "bytes": 21568,
+      "sha256": "f60971f9d64c15d6ee7adec289b024240b7709d5b61b1bd1076dec18b1556462"
+    },
+    {
+      "path": "PRMPlus/Reach47.lean",
+      "bytes": 21556,
+      "sha256": "979c8d236f38f3d0b0be3ab643959997277569217b7683ab74bde99420f24c6d"
+    },
+    {
+      "path": "PRMPlus/Reach48.lean",
+      "bytes": 21410,
+      "sha256": "50629f0ebfcc7621340f4b1be6612a8a4baf6cdaf42899a5c933fa1ac211bf3a"
+    },
+    {
+      "path": "PRMPlus/ReachSound.lean",
+      "bytes": 48118,
+      "sha256": "d942c870d4d6e94b722d9cca542ab17161962dab20b7b8b195caf35b80e1be6a"
+    },
+    {
+      "path": "PRMPlus/Tube01.lean",
+      "bytes": 262,
+      "sha256": "045c5abec4b4ca4107f27f9a3fd62e181e771c0058e9378015251600c6fab326"
+    },
+    {
+      "path": "PRMPlus/Tube02.lean",
+      "bytes": 262,
+      "sha256": "cf966401f0cdb819ccd86fdd0fbacc64ac6d61cfae5e81637e9be2429e417e28"
+    },
+    {
+      "path": "PRMPlus/Tube03.lean",
+      "bytes": 263,
+      "sha256": "2dea301b12825d2190b17849b941b8969898b896a0c36ee26aae5ce6a45ef307"
+    },
+    {
+      "path": "PRMPlus/Tube04.lean",
+      "bytes": 266,
+      "sha256": "a052b33f22aebeb5e0915404874f22d02b4011dd47fb154769186c51450bb877"
+    },
+    {
+      "path": "PRMPlus/Tube05.lean",
+      "bytes": 266,
+      "sha256": "5e16eb228f16f47fa278b631d168309443e62a9591538055c9e7cb84feb58feb"
+    },
+    {
+      "path": "PRMPlus/Tube06.lean",
+      "bytes": 266,
+      "sha256": "a33bee0662a9a3a74c41fdb321a38f4df442bf11e5159833e4beb9da549b1e05"
+    },
+    {
+      "path": "PRMPlus/Tube07.lean",
+      "bytes": 266,
+      "sha256": "96ad87d92c2a26f87e8268c8ab65831845e2bd4bead8f4c9a6e3d68c6319cdb3"
+    },
+    {
+      "path": "PRMPlus/Tube08.lean",
+      "bytes": 266,
+      "sha256": "8bc5e136539bee7ecd802381b3483a1bd5e59208472026cb062947481f81643b"
+    },
+    {
+      "path": "PRMPlus/Tube09.lean",
+      "bytes": 266,
+      "sha256": "2c9272208b6996136f31802405f37330e0870b693c1561fb69c677fc73db94df"
+    },
+    {
+      "path": "PRMPlus/Tube10.lean",
+      "bytes": 266,
+      "sha256": "68949ab44a3086f1b8b8265e3fab3ac799e9baa736b060a122505bd201c97ef8"
+    },
+    {
+      "path": "PRMPlus/Tube11.lean",
+      "bytes": 266,
+      "sha256": "9419965df37c1c3f4f759e15d0a9d98f65ac87e67931d4aa41b3381d65f78148"
+    },
+    {
+      "path": "PRMPlus/Tube12.lean",
+      "bytes": 266,
+      "sha256": "6a921be12807d4e46645be243a9913b6d4d0091cdfef9740327d4ef1c09d5203"
+    },
+    {
+      "path": "PRMPlus/Tube13.lean",
+      "bytes": 266,
+      "sha256": "85c9491dc2c416c619c8a0e354f9be99d47e54519ee4f30a20193adc6ba88e04"
+    },
+    {
+      "path": "PRMPlus/Tube14.lean",
+      "bytes": 266,
+      "sha256": "0a20c5b66fb5f183b9070cba92c93dd8e78198d3bbe799c2e2e6d27a1fee0524"
+    },
+    {
+      "path": "PRMPlus/Tube15.lean",
+      "bytes": 266,
+      "sha256": "6e29b28e1b88e3eedfaf2a00686773895829aafbe10257edcf2d2ba83975ed56"
+    },
+    {
+      "path": "PRMPlus/Tube16.lean",
+      "bytes": 266,
+      "sha256": "b1f557ef6174fe57f040dc4b57b409f6ddb0ae0103a01eab462a15eece49af32"
+    },
+    {
+      "path": "PRMPlus/Tube17.lean",
+      "bytes": 266,
+      "sha256": "0d632e421dfe534b575eb733dedad3bd9d4e2b336cbdf999243d12028b2c1079"
+    },
+    {
+      "path": "PRMPlus/Tube18.lean",
+      "bytes": 266,
+      "sha256": "21e78555681021fb3ad16cf24f16be862edbd69d37303a66fb85464ee8f2308a"
+    },
+    {
+      "path": "PRMPlus/Tube19.lean",
+      "bytes": 266,
+      "sha256": "9dd46907c7fbdac76e2d22335b393cd1deeacc69b001e2c898359a1bdeb0bd24"
+    },
+    {
+      "path": "PRMPlus/Tube20.lean",
+      "bytes": 266,
+      "sha256": "35e551e182da73de461f770f57ebac265ee8a4e261b2c840950247a27c5cf487"
+    },
+    {
+      "path": "PRMPlus/Tube21.lean",
+      "bytes": 266,
+      "sha256": "4957111162c3f47730da34527b74d711f92caf13c47bc729564f32b19a598955"
+    },
+    {
+      "path": "PRMPlus/Tube22.lean",
+      "bytes": 266,
+      "sha256": "1c3ffaab4ea44987e310e38d132c5980028bc4dcdd917095a092867dfedb2c89"
+    },
+    {
+      "path": "PRMPlus/Tube23.lean",
+      "bytes": 266,
+      "sha256": "d40574d8b69b747383fafac6e2b4e5b414025dee2f6eff498056f21badbbbc31"
+    },
+    {
+      "path": "PRMPlus/Tube24.lean",
+      "bytes": 266,
+      "sha256": "7af1825624f6af607c44b82a32f0b9065a95cfced06446cace1b262cf4cf11e0"
+    },
+    {
+      "path": "PRMPlus/Tube25.lean",
+      "bytes": 267,
+      "sha256": "4b1b57eecccd867e4023184221ff152227b579c23e0533d9260d92206d801214"
+    },
+    {
+      "path": "PRMPlus/Tube26.lean",
+      "bytes": 270,
+      "sha256": "0560a808d2e7c058c9127200ef5048c02454080b07548b5ffbfe320bb0b777c9"
+    },
+    {
+      "path": "PRMPlus/Tube27.lean",
+      "bytes": 270,
+      "sha256": "3796556676c69215105d5a1e48d873b30763d09c4d2ed62f7d02ba70c40bd9e1"
+    },
+    {
+      "path": "PRMPlus/Tube28.lean",
+      "bytes": 270,
+      "sha256": "3e9816822751425d94970be9e7c11e83b41a8077dcbc0ba236cc57af310bf48e"
+    },
+    {
+      "path": "PRMPlus/Tube29.lean",
+      "bytes": 270,
+      "sha256": "d017e7208fead7ba7cc4893fe9f19862d14d09c0e5d9f7989e788ec3106a2138"
+    },
+    {
+      "path": "PRMPlus/Tube30.lean",
+      "bytes": 270,
+      "sha256": "60f6991aeb89f2ba1c92529794e9d679f25744dc27d7e01fed0bda4b2313f3da"
+    },
+    {
+      "path": "PRMPlus/Tube31.lean",
+      "bytes": 270,
+      "sha256": "975108c87fe9afcddf5ba12aa99f15d9b6881db806017ee4cf54e8900bc755af"
+    },
+    {
+      "path": "PRMPlus/Tube32.lean",
+      "bytes": 270,
+      "sha256": "3b412ffd1943e6455aef48dce5f22a9207029275955450b86e26713eb26ef82c"
+    },
+    {
+      "path": "PRMPlus/Tube33.lean",
+      "bytes": 270,
+      "sha256": "821e5d9f640b685fb6458b3e8ed0035b8f1d88897bb694b39a587a7185a171b7"
+    },
+    {
+      "path": "PRMPlus/Tube34.lean",
+      "bytes": 270,
+      "sha256": "979ee9652376a6c66a1f0d3052513422eb01c6613f964c4aee4643a74b27a4a7"
+    },
+    {
+      "path": "PRMPlus/Tube35.lean",
+      "bytes": 270,
+      "sha256": "5f840b66699639f90d3650d11f5eb54cad715c196657437758d5c36960d3a5d7"
+    },
+    {
+      "path": "PRMPlus/Tube36.lean",
+      "bytes": 270,
+      "sha256": "1566525e02bf4418c066e5ccfa51db6d6661d6f362e79a08b7198168181d4a67"
+    },
+    {
+      "path": "PRMPlus/Tube37.lean",
+      "bytes": 270,
+      "sha256": "adf9d467bc1a87b68b40b10b3434a8cba9ff8c3bf738c9860fd038fd7a06e2ab"
+    },
+    {
+      "path": "PRMPlus/Tube38.lean",
+      "bytes": 270,
+      "sha256": "009e0e531b79ba9c065b2ffd1262a0459f3c564693023826b1cf4d38879945dc"
+    },
+    {
+      "path": "PRMPlus/Tube39.lean",
+      "bytes": 270,
+      "sha256": "bc71c63bd96de2e5d032e82090f09df2cf81c5c6856da180dc62d47df564c63f"
+    },
+    {
+      "path": "PRMPlus/Tube40.lean",
+      "bytes": 270,
+      "sha256": "4d1c996281cd9a44dd5de06ca613c6fabba35e340651dc1bdb9dd0b7f2a7c9f1"
+    },
+    {
+      "path": "PRMPlus/Tube41.lean",
+      "bytes": 270,
+      "sha256": "c3ee92fdb34a697912db0732bcdd514f7cfb84b3c138d3612e87828b3f76321b"
+    },
+    {
+      "path": "PRMPlus/Tube42.lean",
+      "bytes": 270,
+      "sha256": "9e22868fe0df667901919656f7de288b394e396e8315336668053bde84a0b277"
+    },
+    {
+      "path": "PRMPlus/Tube43.lean",
+      "bytes": 270,
+      "sha256": "acd69ae24147bdf6c8069c3259fee8fe59479356d26a3eec4d8870f6568d17c1"
+    },
+    {
+      "path": "PRMPlus/Tube44.lean",
+      "bytes": 270,
+      "sha256": "b475b2fcbf795cb526bd6d32c0ee8a1c5200218a47e499e468376f3eead81aca"
+    },
+    {
+      "path": "PRMPlus/Tube45.lean",
+      "bytes": 270,
+      "sha256": "6e017100c5cd3f7a3004e5f8e1700465ade6697ddc9598e8d0740849bc317120"
+    },
+    {
+      "path": "PRMPlus/Tube46.lean",
+      "bytes": 270,
+      "sha256": "a57dfee6293584d917093c6ef05f784c9c57a38635851df27fe7c5381879e39c"
+    },
+    {
+      "path": "PRMPlus/Tube47.lean",
+      "bytes": 270,
+      "sha256": "ad02fc868d7426e45f89a52fe6658fe95683f190b23296b8b5d781481efd5488"
+    },
+    {
+      "path": "PRMPlus/Tube48.lean",
+      "bytes": 270,
+      "sha256": "7a0ff824d721549a77082cf17408a56a96afbd6e7d67c5a88b96ce27dd315077"
+    },
+    {
+      "path": "PRMPlus/Tube49.lean",
+      "bytes": 270,
+      "sha256": "e8530ea567b72da04ef89d5324d5efc78007acc92c8db9caa79874102a11c3c6"
+    },
+    {
+      "path": "PRMPlus/Tube50.lean",
+      "bytes": 270,
+      "sha256": "e0010f3bbe73eb4a2c3bd9b7a9db245a229cdba533e7fb2bb812c89a62ed30e2"
+    },
+    {
+      "path": "PRMPlus/Tube51.lean",
+      "bytes": 270,
+      "sha256": "8e20efca75d4eb77ea53e2510ed657c1702416da7c86a6d9d8a4252d81be588b"
+    },
+    {
+      "path": "PRMPlus/Tube52.lean",
+      "bytes": 270,
+      "sha256": "e73b0ef1db4d9d2822141e2f08d7da349024400c167f16557dae33587ad97d68"
+    },
+    {
+      "path": "PRMPlus/Tube53.lean",
+      "bytes": 270,
+      "sha256": "2b76d91e8f325a77df032e39549b889e42c35d6d6342f5efcf08567f255bd619"
+    },
+    {
+      "path": "PRMPlus/Tube54.lean",
+      "bytes": 270,
+      "sha256": "99c2bd90c1640ed52d4defe44f09ab27299ced1c7cc547c6d2b80def7fd276d6"
+    },
+    {
+      "path": "PRMPlus/Tube55.lean",
+      "bytes": 270,
+      "sha256": "b22d84875eee35eb5ff683e30e8bf1278f1f5ea238b431f1ee7b802793fb0131"
+    },
+    {
+      "path": "PRMPlus/Tube56.lean",
+      "bytes": 270,
+      "sha256": "31ab080f7f4fb61ba671172f2e8291070d86a923ae3307cf8fd13e30ba2881bb"
+    },
+    {
+      "path": "PRMPlus/Tube57.lean",
+      "bytes": 270,
+      "sha256": "9d6755375782b440786d45d37b99c4bdfc9eb3eedae68de8098c4aadea5809a0"
+    },
+    {
+      "path": "PRMPlus/Tube58.lean",
+      "bytes": 270,
+      "sha256": "fcb8a07d6a798d66b704f70f5639ec72feb64a6a4a3ae40e839cff6fa94615d2"
+    },
+    {
+      "path": "PRMPlus/Tube59.lean",
+      "bytes": 270,
+      "sha256": "0f4e3d8a394f08965520cdb3d35552a5de80cfdb2332244868f4dbcb4f596d6d"
+    },
+    {
+      "path": "PRMPlus/Tube60.lean",
+      "bytes": 270,
+      "sha256": "1b0c83c9f74af6e5ac00ae8ff2ac03bd02154d638ba558127f921aa12bce5c6e"
+    },
+    {
+      "path": "PRMPlus/Tube61.lean",
+      "bytes": 270,
+      "sha256": "f806436640256b295646a377206b52f7fe9f6bc43f4fe1ead3c4122c9dca5c3f"
+    },
+    {
+      "path": "PRMPlus/Tube62.lean",
+      "bytes": 270,
+      "sha256": "95baf2681785c6eeb2096e0a5f4f68792a27cb60553358c5651bb94a8682b116"
+    },
+    {
+      "path": "PRMPlus/Tube63.lean",
+      "bytes": 270,
+      "sha256": "8c438748e22d39cc093f82fd66f8dcdcd6f5dedbbef1f54a0f7aca8bfcfcee78"
+    },
+    {
+      "path": "PRMPlus/Tube64.lean",
+      "bytes": 270,
+      "sha256": "6fc61809a7d4c610c3085ad8d0026dada8bf5750d50ab51ad65b767ead3799b9"
+    },
+    {
+      "path": "PRMPlus/TubeSound.lean",
+      "bytes": 93412,
+      "sha256": "e991fc6111ebfaa87bdd7bc5dab142103a6cf5c340d2d8ff1a5b032f445f56a3"
+    }
+  ]
+}
