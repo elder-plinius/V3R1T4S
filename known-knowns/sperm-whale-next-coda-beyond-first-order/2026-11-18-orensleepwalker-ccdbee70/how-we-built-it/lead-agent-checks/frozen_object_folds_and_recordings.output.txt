@@ -1,0 +1,9 @@
+fold  positions  model   R1     twin   gain over R1  gain over twin
+   0        514  2.6967 2.8708 2.8782   +0.1741       +0.1815
+   1       1305  2.8721 3.0634 3.1424   +0.1913       +0.2703
+   2        508  2.6439 2.9688 3.0587   +0.3249       +0.4149
+   3        692  2.0920 2.3700 2.4194   +0.2781       +0.3274
+   4        399  2.1054 2.3335 2.3466   +0.2280       +0.2411
+pooled  3418 positions: model 2.564370989  R1 2.794780553  twin 2.850951798  (claim: 2.564370989 / 2.794780553 / 2.850951798)
+gain over R1: recordings with a positive total gain 137 of 188; top 5 recordings supply 32.3% of the summed gain (largest 16.6%); without those 5: +0.2214 bits/coda over 183 recordings
+gain over twin: recordings with a positive total gain 146 of 188; top 5 recordings supply 33.0% of the summed gain (largest 18.4%); without those 5: +0.2652 bits/coda over 183 recordings

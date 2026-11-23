@@ -1,0 +1,2 @@
+Independent status query: https://export.arxiv.org/api/query?search_query=abs:%22sperm%20whale%22&sortBy=submittedDate&sortOrder=descending&max_results=25
+UTC 2026-11-18T07:50:46Z, HTTP 200, SHA-256 81da05d615f85842bd45a4e308bad4a07f7ea7d4e4cfb5abd25a89de7c4bd9ef. See panel/novelty.md for the final public check. This is a literature feed rather than a scoreboard. The baseline is the problem-specified R1 reconstructed on the exact data and folds.
