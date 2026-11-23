@@ -1,0 +1,30 @@
+# NOVELTY review of frozen p4
+
+context: fresh subagent
+
+Reviewer context: assigned only this frozen claim and public sources. I read CLAIM.md, target.md and the two preregistrations in claim/, and public literature/status/filing sources. I did not read another review, modify the frozen claim, or publish. Review date: 2026-11-18 UTC. This is a novelty assessment, not an independent numerical reproduction.
+
+Decision: pass for the literal bank p4 benchmark only. The exact claim is a held-out binary forecast of whether the next coda's recording-local speaker label equals the preceding coda's label, on the specified REC modulo-five folds and scored positions. The reported comparison is 0.780267728 versus 0.850317354 bits per eligible coda for a smoothed first-order model of the same-or-switch sequence, gain 0.070049626 with recording-bootstrap interval [0.053469756, 0.091533370]. These numbers are the frozen claim's assertion; their correctness belongs to reproduction review. I found no public predecessor establishing this exact binary-target benchmark comparison, its margin and recording-level uncertainty.
+
+WhaleLM is substantive prior art, not merely background. Its public abstract already reports predictable turn-taking and dependencies reaching eight codas. Indexed text from its authors' workshop paper describes joint tokens combining rhythm, tempo, rubato, ornamentation and three turn categories (self-response, another-whale response, overlap), with held-out-day evaluation. That is closely related evidence and precludes any claim to first discovering predictable whale turn-taking or sequence dependence. It is not the bank's binary recording-local speaker-equality target and REC folds, and its joint-token results do not establish the stipulated improvement over the binary first-order baseline. In particular, better joint-token prediction does not imply a specified gain for the speaker-equality marginal. This p4 contribution is therefore a new exact benchmark result, not a new biological phenomenon or algorithm.
+
+Assayag, Gero, Paradise and Diamant (Bioacoustics 35(4), 472–500, 2026; DOI below) also predates this work. Primary publisher search excerpts describe prediction of a response whale's coda type, duration and ICI features from up to ten preceding codas of the other whale, using HMM, LSTM and Transformer models. Their protocol randomizes examples into 70/15/15 train/validation/test partitions. They establish relevant sequence-predictability precedent, but that response-feature task conditions on the responding whale and does not supply this binary next-speaker forecast or its exact baseline/folds. I found no exact subsumption.
+
+The required live arXiv feed was fetched once with plain curl, HTTP 200, and stored as panel/status-feed.xml. panel/status-receipt.json records URL, UTC receipt time, HTTP code and SHA-256. Its 16 entries include newly revised Sinha and Chavan versions dated 2026-11-17: 2606.16084v5, 2609.16612v3 and 2610.33974v2. The target's older version summaries are stale. In particular 2610.33974v2 now explicitly reports improvement from the second preceding whole-coda representation; 2606.16084v5 reports gains over two broad first-order references with stricter-control limitations; 2609.16612v3 calls the whale's standalone improvement uncertain. These concern acoustic-form sequence predictions, not binary speaker equality. They further rule out a broad first claim of useful longer context, but do not close exact p4. The feed also lists DCCE and WhAM, whose abstracts concern classification/representation and acoustic generation, respectively, rather than this turn-taking comparison.
+
+Public Veritas search: GitHub connector PR search for `whale` in elder-plinius/V3R1T4S returned #1159; issue search returned no whale issues. I fetched #1159's current metadata/body directly. It is an open draft full next-coda claim for count/duration tokens, and explicitly says p4 has no separate review and is not claimed. This p4 uses the same data and original campaign, so it must not be presented as independent replication, a new dataset, or a fresh prospective experiment. Nonetheless its response variable and benchmark baseline are distinct: count/duration-token success does not imply a gain on binary speaker equality, even when speaker history is among predictors. #1159's incidental disclosure that p4 exists does not establish or claim p4's reviewed benchmark result. A second filing should cross-link #1159 and disclose this shared campaign; this novelty pass does not imply the maintainers must accept separate filing credit.
+
+Limits: This is a bounded current-source check, not proof that no unindexed work exists. OpenReview's direct full text presented a browser challenge, so I stopped there and used indexed primary-paper excerpts; arXiv experimental HTML returned cache misses. Publisher primary search excerpts were available. I did not bypass access controls. The p4 numerical result had already been examined before this review; the novelty pass does not convert it into untouched confirmatory evidence. Generality across populations, causation, meanings, and biological higher-order mechanisms are outside the exact result.
+
+Sources checked:
+- https://export.arxiv.org/api/query?search_query=abs:%22sperm%20whale%22&sortBy=submittedDate&sortOrder=descending&max_results=25
+- https://openreview.net/pdf/7cbab71ad89c2b07fb347976941ef892cdc42e43.pdf (indexed authors' workshop text; direct read challenged)
+- https://www.biorxiv.org/content/10.1101/2024.10.31.621071v1.full (WhaleLM source identified in target; predictable-turn-taking abstract also indexed at https://sciencecast.org/casts/47hrsuq6mopj)
+- https://www.tandfonline.com/doi/full/10.1080/09524622.2026.2684665 (primary publisher indexed methods)
+- https://arxiv.org/abs/2606.16084v5
+- https://arxiv.org/abs/2609.16612v3
+- https://arxiv.org/abs/2610.33974v2
+- https://github.com/elder-plinius/V3R1T4S/pull/1159
+- https://api.github.com/search/issues?q=repo%3Aelder-plinius%2FV3R1T4S+is%3Apr+whale (equivalent connector PR search)
+
+pass: true
