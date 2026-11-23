@@ -1,0 +1,1 @@
+{"lo": 4848800000000, "hi": 4848820000000, "n_primes": 685334, "first_p": 4848800000003, "last_p": 4848819999973, "sha256_q": "4e5e53c2afea13ee9a139090b8ceceefbad4555741bddb260552c8a3c1080fdf", "cands": [[5481, 4848813530161]], "hits": [[5481, 4848813530161]], "fermat_fail": [], "secs": 47.849, "pid": 46916, "peak_mem_mb": 293.8, "screen": "mitm"}

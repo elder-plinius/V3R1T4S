@@ -1,0 +1,9 @@
+table limit 4.8e+12; B=70: |R|=19 |T|=2360; listed smooth pairs in (1e12, limit): 107
+  (8170, 1010499405017): primes=28965 hits=[(8170, 1010499405017)] cands=1 fermat_fail=0 secs=0.712
+  (1850, 1308226705987): primes=28560 hits=[(1850, 1308226705987)] cands=1 fermat_fail=0 secs=0.68
+  (4433, 1657424671979): primes=28427 hits=[(4433, 1657424671979)] cands=1 fermat_fail=0 secs=0.659
+  (2508, 2041425022177): primes=28156 hits=[(2508, 2041425022177)] cands=1 fermat_fail=0 secs=0.658
+  (7750, 2881409738419): primes=28066 hits=[(7750, 2881409738419)] cands=1 fermat_fail=0 secs=0.67
+  (8448, 3603892185683): primes=27734 hits=[(8448, 3603892185683)] cands=1 fermat_fail=0 secs=0.668
+found 6/6, unlisted hits [], 23.82 us/prime, 99.1 bases/us, peak_mem_mb 72.0
+SELFTEST PASS
