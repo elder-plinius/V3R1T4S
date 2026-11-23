@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+flip-gb1-plmfit-scoreboard-spearman,"partial win p2: three-seed mean Spearman correlation on the three_vs_rest split column of the released plmfit file gb1_data_full.csv, all 5,743 test rows",0.902852,0.8791,2026-11-20T05:42:28Z,object/predictions_A.csv,fa6abf5e12a77f085bfdc2cfda99d1716d741e23aa03245e28a1a58b605ba48a
