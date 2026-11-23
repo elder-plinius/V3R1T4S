@@ -1,0 +1,7 @@
+CLASS_LOK: constant-1 pr_auc 0.18181818181818182  positives 24/132
+   matches a listed value: True
+CLASS_SLK: constant-1 pr_auc 0.09848484848484848  positives 13/132
+   matches a listed value: True
+CLASS_LOK: constant-1 accuracy 0.18181818181818182 vs listed 0.18181818181818182 match True
+
+BASELINE CALIBRATION: PASS

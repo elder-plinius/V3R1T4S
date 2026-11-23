@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+polaris-pkis2-kinase-small-leaderboards,polaris/pkis2-lok-slk-c-1 CLASS_LOK pr_auc,0.634333770922,0.2553191489361702,2026-11-18T16:04:25Z,object/preds.csv,92f4c4a573e78382c582addb68b10b2c9ce1e92c7ca34b6f95dd909681b9dfb6
