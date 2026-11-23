@@ -1,0 +1,11 @@
+M(10^8) = 1928 expected 1928 OK
+M(10^9) = -222 expected -222 OK
+M(10^10) = -33722 expected -33722 OK
+M(10^11) = -87856 expected -87856 OK
+blocks 3400, covered 1..340000000000, M(340000000000) = -213689
+2^14: first block 25 (M before block = 5) scan: msieve scan 2500000001 2600000000 5 16384
+2^15: first block 76 (M before block = 28418) scan: msieve scan 7600000001 7700000000 28418 32768
+2^16: first block 377 (M before block = -60137) scan: msieve scan 37700000001 37800000000 -60137 65536
+2^17: first block 1085 (M before block = 130851) scan: msieve scan 108500000001 108600000000 130851 131072
+2^18: first block 3300 (M before block = -257128) scan: msieve scan 330000000001 330100000000 -257128 262144
+2^19: first block None (M before block = None) scan: msieve scan    524288

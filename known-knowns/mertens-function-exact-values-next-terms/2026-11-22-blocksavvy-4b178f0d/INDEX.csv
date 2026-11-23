@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+mertens-function-exact-values-next-terms,OEIS A084235 a(18) (partial win p1),330055906058,absent (b-file ends at a(17)=108500046711),2026-11-22T17:17:09Z,object/a18.txt,4b178f0da5890b5934263129d888a262f2776c49ed8dcaf311ebca46f74c498c
