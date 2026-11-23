@@ -1,0 +1,57 @@
+{
+ "cell": "7x29",
+ "d": 7,
+ "n": 29,
+ "k": 0,
+ "bar": "0.340542893118480366600616648067",
+ "budget": 20070.0,
+ "wave": 0,
+ "seeds": [
+  {
+   "src": "pr18:7x29_owhs.txt",
+   "what": "pull request 18 file 7x29_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x29_owhs.txt",
+   "sha256": "c35fcc03936819602ca338f6e3a3157302ba43e6ef27284681200500f8808f6d"
+  },
+  {
+   "src": "ours",
+   "what": "packing-records 7x29.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x29.txt",
+   "sha256": "b474f36c6fd22ecf8e3040c794e9aa18c80636b1b434412b2d28e92c89adbd8b"
+  },
+  {
+   "src": "pr14:7x29_sol.txt",
+   "what": "pull request 14 file 7x29_sol.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/04831504e5e74f42ca6742315a2eb2366503a10a/SubmittedPackings%2F7x29_sol.txt",
+   "sha256": "6f8a0c227bd745035c4e95ec5fba9a19a77ab9e5f5abfb3e66be7dc59eb0e332"
+  },
+  {
+   "src": "current:7x29_oai.txt",
+   "what": "leaderboard posted file 7x29_oai.txt",
+   "url": "https://raw.githubusercontent.com/gnikylime/GameofSloanes/e43ad02ab7830cb7d0352d9e415c99f7f2014077/CurrentBestPackings/7x29_oai.txt",
+   "sha256": "6b9163c2dc1a94ba2ae561aec135a730d7bf26d8ea575aa00a9319d9a1b24a7f"
+  }
+ ],
+ "parents": [
+  {
+   "src": "ours",
+   "what": "packing-records 7x30.txt (Benjamin Meadows)",
+   "url": "https://raw.githubusercontent.com/TheBenMeadows/packing-records/238da190d509a96da7f11190e5fbed533bb8af7d/game-of-sloanes/7x30.txt",
+   "sha256": "c3a325a490a3c4a7ae4c26f80bfbe524b4f909dba875780b44f0591085da686e"
+  },
+  {
+   "src": "pr18:7x30_owhs.txt",
+   "what": "pull request 18 file 7x30_owhs.txt",
+   "url": "https://github.com/gnikylime/GameofSloanes/raw/b0f64bccff9751542f9cb0803131542e37cb75e5/SubmittedPackings%2F7x30_owhs.txt",
+   "sha256": "4b8c8757f343c33e82830f97cf9756a5fde392a18bc5814d573bfc929dc0c40f"
+  }
+ ],
+ "children": [
+  {
+   "src": "current:7x28_etf.txt",
+   "what": "leaderboard posted file 7x28_etf.txt",
+   "url": "https://raw.githubusercontent.com/gnikylime/GameofSloanes/e43ad02ab7830cb7d0352d9e415c99f7f2014077/CurrentBestPackings/7x28_etf.txt",
+   "sha256": "f21a4b7bd775ffd9243b6a7824f6cc0a80674fb254a99a6de4426eb56b1d07b7"
+  }
+ ]
+}
