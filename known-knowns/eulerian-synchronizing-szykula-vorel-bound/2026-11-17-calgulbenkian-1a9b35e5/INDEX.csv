@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+eulerian-synchronizing-szykula-vorel-bound,n=7 k=5 Eulerian synchronizing complete DFA reset threshold,rt(A) = 24 > floor((7^2 - 3)/2) = 23 (refutes Szykula-Vorel Conjecture 19),rt(A) <= floor((n^2 - 3)/2) = 23 at n=7 (conjectured tight),2026-11-17T05:53:59Z,object/eulerian_n7_k5_rt24.json,1a9b35e5b03b6b665ba08d9ec9305772bdf78e8ff094537163c4ef85d68e084b
