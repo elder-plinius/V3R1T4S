@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+voynich-generator-heldout-fingerprints,"(B) pooled Naibbe H1, 4 cells (A/B x ZL3b/IT2a) + 16000-control null",0.7981(A)/0.7917(B),"99.9% Voynich quire-bootstrap lower bound: 1.0690(A/ZL3b) 1.0271(A/IT2a) 0.9053(B/ZL3b) 0.9012(B/IT2a); min of 16000 controls 0.8990","2026-11-16T11:42:08Z",object/naibbe_batch.json,86c4e5dd83f5a2b7

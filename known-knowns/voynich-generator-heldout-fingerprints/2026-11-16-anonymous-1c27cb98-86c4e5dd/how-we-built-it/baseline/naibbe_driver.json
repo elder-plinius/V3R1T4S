@@ -1,0 +1,1204 @@
+{
+  "cipher": {
+    "tables": "runs/2026-11-16-1141//data/voynich-units/data/controls/naibbe/naibbe_tables.json",
+    "deck": "52",
+    "ambiguity_rule": "v1",
+    "unigram_probability": 0.4722222222222222,
+    "cipher_seed": 20260816,
+    "plaintext": "caesar_la.txt (De bello Gallico I-IV), validate_synthetics.caesar_lines() preparation + k->c, w->uu",
+    "plaintext_words": 20547,
+    "plaintext_letters": 123354,
+    "unigram_tokens": 38400,
+    "bigram_tokens": 42477,
+    "ambiguity_redraws": 3495,
+    "table_use": {
+      "gamma2": 10027,
+      "gamma1": 10027,
+      "alpha": 50132,
+      "beta3": 20052,
+      "beta2": 20053,
+      "beta1": 20053
+    },
+    "deviations": [
+      "Plaintext is the package's Caesar (De bello Gallico I-IV) prepared exactly as validate_synthetics.caesar_lines(): lower-cased, de-accented, v->u and j->i (Greshko's clean_line keeps v distinct); Greshko's k->c and w->uu are applied afterwards (no such letters remain in Caesar after v->u/j->i).",
+      "The whole plaintext is treated as one continuous letter stream: respacing is not restarted at source line breaks (Greshko respaces each source line separately, forcing a unigram at every line end); the deck persists across the whole text as in Greshko's code.",
+      "Ciphertext tokens are wrapped into the Voynich line-length template (the paper's control convention) instead of keeping source-line structure.",
+      "The 52-card deck, respacing probability 17/36 and the naibbe.py (v1) ambiguity rule (redraw only when prefix+suffix equals a unigram string) are used; these are the settings that reproduce the table-usage frequencies of the shipped Pliny ciphertext.  Greshko's optional 3% space-removal post-processing is not applied."
+    ]
+  },
+  "targets": {
+    "entropy_tokens": 34175,
+    "template_tokens": 32747,
+    "bpe_glyphs": 173076,
+    "crossing_glyphs": 166280
+  },
+  "settings": {
+    "seeds": [
+      1,
+      2,
+      3
+    ],
+    "shuffles": 100,
+    "languages": [
+      "latin_holdout",
+      "german"
+    ],
+    "restarts": 8,
+    "attack_glyphs": 120000
+  },
+  "reference": {
+    "voynich_entropy": {
+      "decomposed": {
+        "tokens": 34175,
+        "symbols": 173572,
+        "types": 38,
+        "H1": 3.886889368569751,
+        "H2": 2.315911750000288,
+        "perplexity": 4.97919235382918
+      },
+      "collapsed": {
+        "tokens": 34175,
+        "symbols": 141310,
+        "types": 47,
+        "H1": 3.976250389002254,
+        "H2": 2.6896920626539456,
+        "perplexity": 6.451756825735324
+      }
+    },
+    "voynich_bpe": {
+      "curve": {
+        "0": {
+          "types": 25,
+          "units": 173076,
+          "glyphs": 173076,
+          "mean_len": 1.0,
+          "H1": 3.86499508731866,
+          "H2": 2.26963845373202,
+          "bits_per_glyph": 2.26963845373202,
+          "gap": 1.5953566335866398
+        },
+        "4": {
+          "types": 29,
+          "units": 144762,
+          "glyphs": 173076,
+          "mean_len": 1.1955900029013138,
+          "H1": 4.176026585073025,
+          "H2": 2.6152790216607755,
+          "bits_per_glyph": 2.187438014130539,
+          "gap": 1.5607475634122494
+        },
+        "8": {
+          "types": 33,
+          "units": 126644,
+          "glyphs": 173076,
+          "mean_len": 1.366634029247339,
+          "H1": 4.410295336016543,
+          "H2": 2.962820573992926,
+          "bits_per_glyph": 2.1679692665231465,
+          "gap": 1.4474747620236172
+        },
+        "16": {
+          "types": 41,
+          "units": 103105,
+          "glyphs": 173076,
+          "mean_len": 1.6786382813636584,
+          "H1": 4.818682696160313,
+          "H2": 3.5814159050510215,
+          "bits_per_glyph": 2.133524503052333,
+          "gap": 1.2372667911092918
+        },
+        "32": {
+          "types": 56,
+          "units": 86235,
+          "glyphs": 173076,
+          "mean_len": 2.0070273090972344,
+          "H1": 5.284820628289876,
+          "H2": 4.185796934128508,
+          "bits_per_glyph": 2.08557049281571,
+          "gap": 1.0990236941613682
+        },
+        "64": {
+          "types": 88,
+          "units": 72512,
+          "glyphs": 173076,
+          "mean_len": 2.386860105913504,
+          "H1": 5.932670715598256,
+          "H2": 4.8878523174977895,
+          "bits_per_glyph": 2.0478168391134512,
+          "gap": 1.0448183981004666
+        },
+        "128": {
+          "types": 151,
+          "units": 62687,
+          "glyphs": 173076,
+          "mean_len": 2.7609552219758484,
+          "H1": 6.597727449727079,
+          "H2": 5.479132267465087,
+          "bits_per_glyph": 1.9845060230799414,
+          "gap": 1.1185951822619913
+        },
+        "256": {
+          "types": 278,
+          "units": 54699,
+          "glyphs": 173076,
+          "mean_len": 3.16415290955959,
+          "H1": 7.353194881424657,
+          "H2": 5.878157628909255,
+          "bits_per_glyph": 1.8577350074170154,
+          "gap": 1.4750372525154019
+        },
+        "512": {
+          "types": 534,
+          "units": 48475,
+          "glyphs": 173076,
+          "mean_len": 3.5704177411036615,
+          "H1": 8.089875381112273,
+          "H2": 5.941829398404147,
+          "bits_per_glyph": 1.6641832494837012,
+          "gap": 2.148045982708126
+        },
+        "1024": {
+          "types": 1046,
+          "units": 44011,
+          "glyphs": 173076,
+          "mean_len": 3.932562313966963,
+          "H1": 8.748764072759663,
+          "H2": 5.704576187179693,
+          "bits_per_glyph": 1.4506003291846672,
+          "gap": 3.0441878855799693
+        }
+      },
+      "minimum_checkpoint": 64,
+      "frequent_compound_units_k64": [
+        [
+          "ol",
+          3038
+        ],
+        [
+          "ok",
+          2468
+        ],
+        [
+          "ar",
+          2141
+        ],
+        [
+          "ot",
+          2112
+        ],
+        [
+          "aiin",
+          2065
+        ],
+        [
+          "ch",
+          2049
+        ],
+        [
+          "al",
+          1988
+        ],
+        [
+          "or",
+          1981
+        ],
+        [
+          "che",
+          1677
+        ],
+        [
+          "sh",
+          1655
+        ],
+        [
+          "qok",
+          1648
+        ],
+        [
+          "daiin",
+          1341
+        ],
+        [
+          "ee",
+          1293
+        ],
+        [
+          "chedy",
+          1222
+        ],
+        [
+          "qot",
+          1098
+        ],
+        [
+          "ody",
+          999
+        ],
+        [
+          "eey",
+          991
+        ],
+        [
+          "ain",
+          956
+        ],
+        [
+          "chy",
+          929
+        ],
+        [
+          "she",
+          901
+        ]
+      ]
+    },
+    "voynich_order": {
+      "vocabulary": {
+        "tokens": 32747,
+        "types": 7022,
+        "type_token_ratio": 0.21443185635325374,
+        "hapax_types": 4893,
+        "hapax_share_of_types": 0.6968100256337226,
+        "top_50_token_coverage": 0.3320609521482884
+      },
+      "order_by_cap": {
+        "250": {
+          "cap": 250,
+          "entropy": 5.277856496439704,
+          "observed_mi": 0.855485869545122,
+          "shuffle_mean_mi": 0.731257201598942,
+          "excess_bits": 0.12422866794617993,
+          "share": 0.023537712332645108,
+          "shuffle_quantiles_2.5_50_97.5": [
+            0.7255749494032643,
+            0.7306066961576514,
+            0.7389915799002293
+          ]
+        },
+        "500": {
+          "cap": 500,
+          "entropy": 6.373422097009572,
+          "observed_mi": 1.46452531740365,
+          "shuffle_mean_mi": 1.3443415272471126,
+          "excess_bits": 0.12018379015653746,
+          "share": 0.018857026621997633,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.335264118954259,
+            1.3442238873548176,
+            1.3526183957594144
+          ]
+        },
+        "1000": {
+          "cap": 1000,
+          "entropy": 7.390637925492253,
+          "observed_mi": 2.258753293824892,
+          "shuffle_mean_mi": 2.1514074391701374,
+          "excess_bits": 0.10734585465475455,
+          "share": 0.014524572267908088,
+          "shuffle_quantiles_2.5_50_97.5": [
+            2.137386824061199,
+            2.1513773453496015,
+            2.1647340566234146
+          ]
+        },
+        "2000": {
+          "cap": 2000,
+          "entropy": 8.330467442544624,
+          "observed_mi": 3.2018723722306586,
+          "shuffle_mean_mi": 3.13575111110425,
+          "excess_bits": 0.06612126112640837,
+          "share": 0.007937281020836807,
+          "shuffle_quantiles_2.5_50_97.5": [
+            3.1224337925979704,
+            3.1356365029495974,
+            3.151849339025475
+          ]
+        },
+        "4000": {
+          "cap": 4000,
+          "entropy": 9.195245837935394,
+          "observed_mi": 4.280233017006992,
+          "shuffle_mean_mi": 4.287766678133824,
+          "excess_bits": -0.007533661126831959,
+          "share": -0.0008192995880274899,
+          "shuffle_quantiles_2.5_50_97.5": [
+            4.272636579930305,
+            4.288025668785191,
+            4.304053139061594
+          ]
+        }
+      }
+    },
+    "latin_order": {
+      "vocabulary": {
+        "tokens": 32747,
+        "types": 8084,
+        "type_token_ratio": 0.24686230799767916,
+        "hapax_types": 4790,
+        "hapax_share_of_types": 0.5925284512617516,
+        "top_50_token_coverage": 0.2669252145234678
+      },
+      "order_by_cap": {
+        "250": {
+          "cap": 250,
+          "entropy": 4.322892903590924,
+          "observed_mi": 0.7449772104816059,
+          "shuffle_mean_mi": 0.5367120664468404,
+          "excess_bits": 0.20826514403476548,
+          "share": 0.04817726200474793,
+          "shuffle_quantiles_2.5_50_97.5": [
+            0.5305723349851409,
+            0.5369336206792799,
+            0.5450020258607507
+          ]
+        },
+        "500": {
+          "cap": 500,
+          "entropy": 5.479751792659352,
+          "observed_mi": 1.333619434230302,
+          "shuffle_mean_mi": 1.0695872134753595,
+          "excess_bits": 0.2640322207549426,
+          "share": 0.04818324456020779,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.0601669891854253,
+            1.0694648733226035,
+            1.082636184000291
+          ]
+        },
+        "1000": {
+          "cap": 1000,
+          "entropy": 6.758900726681574,
+          "observed_mi": 2.2328236723569272,
+          "shuffle_mean_mi": 1.9374881225919232,
+          "excess_bits": 0.2953355497650041,
+          "share": 0.04369579635918182,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.9231747218724082,
+            1.9373284981132617,
+            1.9521087051565993
+          ]
+        },
+        "2000": {
+          "cap": 2000,
+          "entropy": 8.148044967021859,
+          "observed_mi": 3.569536956655133,
+          "shuffle_mean_mi": 3.243920282524911,
+          "excess_bits": 0.325616674130222,
+          "share": 0.03996255242185245,
+          "shuffle_quantiles_2.5_50_97.5": [
+            3.2284658071155636,
+            3.243001901136563,
+            3.2613573868479273
+          ]
+        },
+        "4000": {
+          "cap": 4000,
+          "entropy": 9.47001452881312,
+          "observed_mi": 5.175939795423204,
+          "shuffle_mean_mi": 4.876329416075851,
+          "excess_bits": 0.299610379347353,
+          "share": 0.031637795109581875,
+          "shuffle_quantiles_2.5_50_97.5": [
+            4.858330628329478,
+            4.876284079101207,
+            4.893574520384007
+          ]
+        }
+      }
+    },
+    "latin_entropy": {
+      "tokens": 34175,
+      "symbols": 207300,
+      "H1": 3.9407535890265577,
+      "H2": 3.4363649109667045
+    },
+    "archived_attack": {
+      "synthetic_configurations": [
+        {
+          "configuration": "H2",
+          "nmi": 0.8374087578218324,
+          "mapping_agreement": 0.836650922177238,
+          "wrong_language_agreement": 0.09397960713750188
+        },
+        {
+          "configuration": "H3",
+          "nmi": 0.8320764031902166,
+          "mapping_agreement": 0.8808021119250337,
+          "wrong_language_agreement": 0.23414745013024704
+        },
+        {
+          "configuration": "H5",
+          "nmi": 0.7205684433938009,
+          "mapping_agreement": 0.736505376344086,
+          "wrong_language_agreement": 0.17851254480286738
+        },
+        {
+          "configuration": "H3mix",
+          "nmi": 0.7971941068453194,
+          "mapping_agreement": 0.8056588299617278,
+          "wrong_language_agreement": 0.0548523783488245
+        },
+        {
+          "configuration": "H3rot",
+          "nmi": 0.8977672625997801,
+          "mapping_agreement": 0.9262435677530018,
+          "wrong_language_agreement": 0.0
+        }
+      ],
+      "voynich_vs_local_null": [
+        {
+          "currier": "A",
+          "language": "latin",
+          "voynich_index": 0.41562390235915936,
+          "local_null_index": 0.429,
+          "difference": -0.013376097640840634
+        },
+        {
+          "currier": "A",
+          "language": "latin_novowels",
+          "voynich_index": 0.5019471343263481,
+          "local_null_index": 0.656,
+          "difference": -0.15405286567365195
+        },
+        {
+          "currier": "A",
+          "language": "italian",
+          "voynich_index": 0.12434560695767742,
+          "local_null_index": 0.171,
+          "difference": -0.04665439304232259
+        },
+        {
+          "currier": "A",
+          "language": "german",
+          "voynich_index": 0.19059730816564296,
+          "local_null_index": 0.154,
+          "difference": 0.03659730816564297
+        },
+        {
+          "currier": "A",
+          "language": "french",
+          "voynich_index": 0.20192347356203788,
+          "local_null_index": 0.157,
+          "difference": 0.04492347356203788
+        },
+        {
+          "currier": "A",
+          "language": "english",
+          "voynich_index": 0.23610849792777866,
+          "local_null_index": 0.188,
+          "difference": 0.04810849792777866
+        },
+        {
+          "currier": "A",
+          "language": "hebrew",
+          "voynich_index": 0.9117119382378758,
+          "local_null_index": 0.935,
+          "difference": -0.02328806176212428
+        },
+        {
+          "currier": "B",
+          "language": "latin",
+          "voynich_index": 0.5083001304377062,
+          "local_null_index": 0.48,
+          "difference": 0.028300130437706184
+        },
+        {
+          "currier": "B",
+          "language": "latin_novowels",
+          "voynich_index": 0.4636851386332676,
+          "local_null_index": 0.557,
+          "difference": -0.09331486136673245
+        },
+        {
+          "currier": "B",
+          "language": "italian",
+          "voynich_index": 0.17191751543897058,
+          "local_null_index": 0.15,
+          "difference": 0.02191751543897058
+        },
+        {
+          "currier": "B",
+          "language": "german",
+          "voynich_index": 0.18369768165964656,
+          "local_null_index": 0.23,
+          "difference": -0.04630231834035345
+        },
+        {
+          "currier": "B",
+          "language": "french",
+          "voynich_index": 0.17252627527193004,
+          "local_null_index": 0.171,
+          "difference": 0.0015262752719300277
+        },
+        {
+          "currier": "B",
+          "language": "english",
+          "voynich_index": 0.2400859862410162,
+          "local_null_index": 0.239,
+          "difference": 0.001085986241016218
+        },
+        {
+          "currier": "B",
+          "language": "hebrew",
+          "voynich_index": 0.8352574839513892,
+          "local_null_index": 0.76,
+          "difference": 0.0752574839513892
+        }
+      ],
+      "synthetic_h3_differential": 0.393,
+      "multi_seed_differentials": {
+        "configurations": {
+          "H3": {
+            "n_seeds": 5,
+            "right_language_mean": 0.3314779448678486,
+            "right_language_min": 0.11201784640031409,
+            "right_language_max": 0.43698298544691294,
+            "wrong_language_mean": 0.08721244695290653,
+            "wrong_language_min": 0.046661532575606124,
+            "wrong_language_max": 0.11876909633164756
+          },
+          "H2": {
+            "n_seeds": 5,
+            "right_language_mean": 0.20801258820333884,
+            "right_language_min": 0.08832814886698992,
+            "right_language_max": 0.2512036218517296,
+            "wrong_language_mean": 0.0868636774723297,
+            "wrong_language_min": 0.051471651769884,
+            "wrong_language_max": 0.13392254423724037
+          },
+          "H5": {
+            "n_seeds": 5,
+            "right_language_mean": 0.29798865428373933,
+            "right_language_min": 0.2268903603513709,
+            "right_language_max": 0.3396084433800405,
+            "wrong_language_mean": 0.10452648101015516,
+            "wrong_language_min": 0.08874562222881119,
+            "wrong_language_max": 0.11227102252106826
+          },
+          "H3mix": {
+            "n_seeds": 5,
+            "right_language_mean": 0.13342910506009953,
+            "right_language_min": 0.08757326145257424,
+            "right_language_max": 0.21968585589441764,
+            "wrong_language_mean": 0.06417689822442144,
+            "wrong_language_min": 0.04507063918365521,
+            "wrong_language_max": 0.1019559955877612
+          },
+          "H3rot": {
+            "n_seeds": 5,
+            "right_language_mean": 0.5186420295493084,
+            "right_language_min": 0.4473880918686306,
+            "right_language_max": 0.6047680876200091,
+            "wrong_language_mean": 0.1032234741023526,
+            "wrong_language_min": 0.0619866770517232,
+            "wrong_language_max": 0.12779564254045633
+          }
+        },
+        "right_language_range": [
+          0.08757326145257424,
+          0.6047680876200091
+        ],
+        "wrong_language_range": [
+          0.04507063918365521,
+          0.13392254423724037
+        ]
+      }
+    }
+  },
+  "naibbe_caesar": {
+    "name": "naibbe_caesar",
+    "tokens": 80877,
+    "glyphs": 423658,
+    "token_types": 7046,
+    "mean_token_length": 5.2383001347725555,
+    "entropy": {
+      "decomposed": {
+        "tokens": 34175,
+        "symbols": 178593,
+        "types": 20,
+        "H1": 3.864038548441638,
+        "H2": 2.339285162242715,
+        "perplexity": 5.060518329606652
+      },
+      "collapsed": {
+        "tokens": 34175,
+        "symbols": 146966,
+        "types": 26,
+        "H1": 3.9786665102559,
+        "H2": 2.7067892815737635,
+        "perplexity": 6.528670729210682
+      }
+    },
+    "bpe": {
+      "curve": {
+        "0": {
+          "types": 20,
+          "units": 173080,
+          "glyphs": 173080,
+          "mean_len": 1.0,
+          "H1": 3.8635817637769776,
+          "H2": 2.308770983262986,
+          "bits_per_glyph": 2.308770983262986,
+          "gap": 1.5548107805139915
+        },
+        "4": {
+          "types": 24,
+          "units": 144900,
+          "glyphs": 173080,
+          "mean_len": 1.1944789510006901,
+          "H1": 4.192768429726828,
+          "H2": 2.6808866492181274,
+          "bits_per_glyph": 2.244398402309375,
+          "gap": 1.511881780508701
+        },
+        "8": {
+          "types": 28,
+          "units": 126475,
+          "glyphs": 173080,
+          "mean_len": 1.368491796797786,
+          "H1": 4.388020951136629,
+          "H2": 3.000514391646986,
+          "bits_per_glyph": 2.1925702431450924,
+          "gap": 1.3875065594896432
+        },
+        "16": {
+          "types": 36,
+          "units": 103590,
+          "glyphs": 173080,
+          "mean_len": 1.670817646490974,
+          "H1": 4.751583750790467,
+          "H2": 3.594039921791878,
+          "bits_per_glyph": 2.1510665328080694,
+          "gap": 1.1575438289985893
+        },
+        "32": {
+          "types": 52,
+          "units": 85723,
+          "glyphs": 173080,
+          "mean_len": 2.0190613954247985,
+          "H1": 5.31058180125816,
+          "H2": 4.231003972847405,
+          "bits_per_glyph": 2.0955301222810148,
+          "gap": 1.0795778284107556
+        },
+        "64": {
+          "types": 82,
+          "units": 71287,
+          "glyphs": 173080,
+          "mean_len": 2.4279321615441805,
+          "H1": 5.922113264948849,
+          "H2": 4.894509823796615,
+          "bits_per_glyph": 2.01591704303784,
+          "gap": 1.027603441152234
+        },
+        "128": {
+          "types": 143,
+          "units": 59850,
+          "glyphs": 173080,
+          "mean_len": 2.8918964076858815,
+          "H1": 6.69896838038079,
+          "H2": 5.539033200060545,
+          "bits_per_glyph": 1.9153636296719645,
+          "gap": 1.159935180320245
+        },
+        "256": {
+          "types": 269,
+          "units": 51806,
+          "glyphs": 173080,
+          "mean_len": 3.3409257614948076,
+          "H1": 7.4163469081216755,
+          "H2": 5.952233468524714,
+          "bits_per_glyph": 1.7816120121931553,
+          "gap": 1.4641134395969617
+        },
+        "512": {
+          "types": 523,
+          "units": 46824,
+          "glyphs": 173080,
+          "mean_len": 3.696395011105416,
+          "H1": 8.036364203983211,
+          "H2": 5.938941266632385,
+          "bits_per_glyph": 1.6066846884030206,
+          "gap": 2.097422937350826
+        },
+        "1024": {
+          "types": 1035,
+          "units": 42432,
+          "glyphs": 173080,
+          "mean_len": 4.078996983408748,
+          "H1": 8.675488230477479,
+          "H2": 5.659006851166547,
+          "bits_per_glyph": 1.38735254627166,
+          "gap": 3.0164813793109317
+        }
+      },
+      "minimum_checkpoint": 64,
+      "frequent_compound_units_k64": [
+        [
+          "ol",
+          3510
+        ],
+        [
+          "ch",
+          2469
+        ],
+        [
+          "ar",
+          1972
+        ],
+        [
+          "al",
+          1936
+        ],
+        [
+          "sh",
+          1928
+        ],
+        [
+          "ee",
+          1887
+        ],
+        [
+          "ot",
+          1819
+        ],
+        [
+          "ok",
+          1805
+        ],
+        [
+          "or",
+          1793
+        ],
+        [
+          "aiin",
+          1769
+        ],
+        [
+          "ain",
+          1506
+        ],
+        [
+          "dar",
+          1229
+        ],
+        [
+          "eey",
+          1221
+        ],
+        [
+          "ody",
+          1207
+        ],
+        [
+          "chedy",
+          1180
+        ],
+        [
+          "qok",
+          1173
+        ],
+        [
+          "eedy",
+          1156
+        ],
+        [
+          "che",
+          1105
+        ],
+        [
+          "qot",
+          1031
+        ],
+        [
+          "olk",
+          949
+        ]
+      ],
+      "glyphs": 173080
+    },
+    "order": {
+      "vocabulary": {
+        "tokens": 32747,
+        "types": 5234,
+        "type_token_ratio": 0.15983143494060525,
+        "hapax_types": 2121,
+        "hapax_share_of_types": 0.40523500191058465,
+        "top_50_token_coverage": 0.3769200232082328
+      },
+      "order_by_cap": {
+        "250": {
+          "cap": 250,
+          "entropy": 4.923989067421093,
+          "observed_mi": 0.6240034545312412,
+          "shuffle_mean_mi": 0.547245706185314,
+          "excess_bits": 0.07675774834592719,
+          "share": 0.015588529400640719,
+          "shuffle_quantiles_2.5_50_97.5": [
+            0.5399459494166083,
+            0.5472165739645947,
+            0.5556182015647235
+          ]
+        },
+        "500": {
+          "cap": 500,
+          "entropy": 5.887022256008223,
+          "observed_mi": 1.1285026791817554,
+          "shuffle_mean_mi": 1.041471736211767,
+          "excess_bits": 0.08703094296998848,
+          "share": 0.014783525386058422,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.0316097823769126,
+            1.0411077077908715,
+            1.0512510783473887
+          ]
+        },
+        "1000": {
+          "cap": 1000,
+          "entropy": 7.1008165211837495,
+          "observed_mi": 2.0176367501065062,
+          "shuffle_mean_mi": 1.9210913370817042,
+          "excess_bits": 0.09654541302480202,
+          "share": 0.013596381871969184,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.9080355536586888,
+            1.92068249322653,
+            1.9365683745765936
+          ]
+        },
+        "2000": {
+          "cap": 2000,
+          "entropy": 8.490429022065008,
+          "observed_mi": 3.427012594642287,
+          "shuffle_mean_mi": 3.321164430777795,
+          "excess_bits": 0.1058481638644917,
+          "share": 0.012466762702969716,
+          "shuffle_quantiles_2.5_50_97.5": [
+            3.305891541274636,
+            3.3202980355553917,
+            3.3368901993946025
+          ]
+        },
+        "4000": {
+          "cap": 4000,
+          "entropy": 9.685310233556558,
+          "observed_mi": 5.041436264357248,
+          "shuffle_mean_mi": 4.942348611405148,
+          "excess_bits": 0.09908765295210031,
+          "share": 0.010230715440460824,
+          "shuffle_quantiles_2.5_50_97.5": [
+            4.928424449849485,
+            4.9421818859867015,
+            4.958783463923433
+          ]
+        }
+      }
+    }
+  },
+  "greshko_pliny": {
+    "name": "greshko_pliny",
+    "tokens": 34764,
+    "glyphs": 181966,
+    "token_types": 5600,
+    "mean_token_length": 5.234322862731561,
+    "entropy": {
+      "decomposed": {
+        "tokens": 34175,
+        "symbols": 178860,
+        "types": 20,
+        "H1": 3.868165740420935,
+        "H2": 2.339565852339593,
+        "perplexity": 5.061502997557063
+      },
+      "collapsed": {
+        "tokens": 34175,
+        "symbols": 146756,
+        "types": 26,
+        "H1": 3.9854364443736,
+        "H2": 2.712058078873521,
+        "perplexity": 6.552557365230071
+      }
+    },
+    "bpe": {
+      "curve": {
+        "0": {
+          "types": 20,
+          "units": 173101,
+          "glyphs": 173101,
+          "mean_len": 1.0,
+          "H1": 3.8682240164223325,
+          "H2": 2.3129981765649372,
+          "bits_per_glyph": 2.3129981765649372,
+          "gap": 1.5552258398573953
+        },
+        "4": {
+          "types": 24,
+          "units": 145114,
+          "glyphs": 173101,
+          "mean_len": 1.1928621635403889,
+          "H1": 4.199775362396559,
+          "H2": 2.6847883727836415,
+          "bits_per_glyph": 2.250711318410208,
+          "gap": 1.5149869896129173
+        },
+        "8": {
+          "types": 28,
+          "units": 126436,
+          "glyphs": 173101,
+          "mean_len": 1.3690800088582367,
+          "H1": 4.393892344808563,
+          "H2": 3.0090408155927726,
+          "bits_per_glyph": 2.1978560757031316,
+          "gap": 1.3848515292157906
+        },
+        "16": {
+          "types": 36,
+          "units": 104047,
+          "glyphs": 173101,
+          "mean_len": 1.6636808365450229,
+          "H1": 4.740252760802947,
+          "H2": 3.5901938369234134,
+          "bits_per_glyph": 2.157982323327828,
+          "gap": 1.1500589238795333
+        },
+        "32": {
+          "types": 51,
+          "units": 86215,
+          "glyphs": 173101,
+          "mean_len": 2.0077828684103696,
+          "H1": 5.283562149725687,
+          "H2": 4.198790213012952,
+          "bits_per_glyph": 2.0912571170294316,
+          "gap": 1.0847719367127349
+        },
+        "64": {
+          "types": 82,
+          "units": 71570,
+          "glyphs": 173101,
+          "mean_len": 2.418625122257929,
+          "H1": 5.930394871185483,
+          "H2": 4.890418394177712,
+          "bits_per_glyph": 2.021982798893703,
+          "gap": 1.0399764770077704
+        },
+        "128": {
+          "types": 146,
+          "units": 60360,
+          "glyphs": 173101,
+          "mean_len": 2.8678098078197483,
+          "H1": 6.706267472016927,
+          "H2": 5.521982423802144,
+          "bits_per_glyph": 1.9255051045383758,
+          "gap": 1.1842850482147833
+        },
+        "256": {
+          "types": 270,
+          "units": 51914,
+          "glyphs": 173101,
+          "mean_len": 3.3343799360480797,
+          "H1": 7.45067627335096,
+          "H2": 5.953746459493678,
+          "bits_per_glyph": 1.7855633052273228,
+          "gap": 1.4969298138572817
+        },
+        "512": {
+          "types": 524,
+          "units": 46913,
+          "glyphs": 173101,
+          "mean_len": 3.689830111056637,
+          "H1": 8.072225445237002,
+          "H2": 5.935878997778209,
+          "bits_per_glyph": 1.608713360539622,
+          "gap": 2.136346447458793
+        },
+        "1024": {
+          "types": 1034,
+          "units": 42671,
+          "glyphs": 173101,
+          "mean_len": 4.056642684727333,
+          "H1": 8.672642126917502,
+          "H2": 5.676698188437701,
+          "bits_per_glyph": 1.3993586888511629,
+          "gap": 2.995943938479801
+        }
+      },
+      "minimum_checkpoint": 64,
+      "frequent_compound_units_k64": [
+        [
+          "ol",
+          3467
+        ],
+        [
+          "ch",
+          2342
+        ],
+        [
+          "sh",
+          1978
+        ],
+        [
+          "al",
+          1975
+        ],
+        [
+          "aiin",
+          1927
+        ],
+        [
+          "or",
+          1882
+        ],
+        [
+          "ee",
+          1847
+        ],
+        [
+          "ar",
+          1803
+        ],
+        [
+          "ot",
+          1801
+        ],
+        [
+          "ok",
+          1723
+        ],
+        [
+          "qok",
+          1582
+        ],
+        [
+          "eey",
+          1381
+        ],
+        [
+          "ain",
+          1362
+        ],
+        [
+          "edy",
+          1170
+        ],
+        [
+          "dar",
+          1151
+        ],
+        [
+          "eedy",
+          1143
+        ],
+        [
+          "chedy",
+          1116
+        ],
+        [
+          "che",
+          1110
+        ],
+        [
+          "ody",
+          1063
+        ],
+        [
+          "qot",
+          1005
+        ]
+      ],
+      "glyphs": 173101
+    },
+    "order": {
+      "vocabulary": {
+        "tokens": 32747,
+        "types": 5463,
+        "type_token_ratio": 0.16682444193361223,
+        "hapax_types": 2277,
+        "hapax_share_of_types": 0.41680395387149916,
+        "top_50_token_coverage": 0.37572907441903075
+      },
+      "order_by_cap": {
+        "250": {
+          "cap": 250,
+          "entropy": 4.94454088045013,
+          "observed_mi": 0.6312328885450871,
+          "shuffle_mean_mi": 0.5509631624719321,
+          "excess_bits": 0.08026972607315497,
+          "share": 0.01623400999484659,
+          "shuffle_quantiles_2.5_50_97.5": [
+            0.5444892105204951,
+            0.5504407938306954,
+            0.5580541005711004
+          ]
+        },
+        "500": {
+          "cap": 500,
+          "entropy": 5.873107076265634,
+          "observed_mi": 1.126000589384203,
+          "shuffle_mean_mi": 1.0330798777789407,
+          "excess_bits": 0.09292071160526238,
+          "share": 0.01582138898518861,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.021624801020608,
+            1.0333743769643782,
+            1.0428171523426906
+          ]
+        },
+        "1000": {
+          "cap": 1000,
+          "entropy": 7.034725412439951,
+          "observed_mi": 1.9688371208272102,
+          "shuffle_mean_mi": 1.8692547369013972,
+          "excess_bits": 0.09958238392581298,
+          "share": 0.014155830979517002,
+          "shuffle_quantiles_2.5_50_97.5": [
+            1.8563480530208991,
+            1.8693016356763543,
+            1.8832110122296388
+          ]
+        },
+        "2000": {
+          "cap": 2000,
+          "entropy": 8.402285936115987,
+          "observed_mi": 3.320209275238506,
+          "shuffle_mean_mi": 3.2309639658417955,
+          "excess_bits": 0.08924530939671049,
+          "share": 0.010621551096363275,
+          "shuffle_quantiles_2.5_50_97.5": [
+            3.217383999282723,
+            3.2294889457084723,
+            3.2459401637297276
+          ]
+        },
+        "4000": {
+          "cap": 4000,
+          "entropy": 9.63487516552182,
+          "observed_mi": 4.959171200000776,
+          "shuffle_mean_mi": 4.877632829853993,
+          "excess_bits": 0.08153837014678356,
+          "share": 0.008462836180645781,
+          "shuffle_quantiles_2.5_50_97.5": [
+            4.86244225708864,
+            4.8762344654613825,
+            4.895000996361021
+          ]
+        }
+      }
+    },
+    "source": "runs/2026-11-16-1141//data/voynich-units/data/controls/naibbe/greshko_nathist_output_ciphertext.txt",
+    "table_check": {
+      "tokens": 34764,
+      "aligned_chunks": 34764,
+      "unigram_tokens_reproduced": 16887,
+      "bigram_tokens_reproduced": 17877,
+      "unreproducible_tokens": 0,
+      "unigram_table_shares": {
+        "alpha": 0.38443773316752533,
+        "beta1": 0.15621483981761117,
+        "beta2": 0.1708414756913602,
+        "beta3": 0.13554805471664594,
+        "gamma1": 0.07496891099662462,
+        "gamma2": 0.07798898561023272
+      }
+    }
+  }
+}
