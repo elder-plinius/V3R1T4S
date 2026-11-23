@@ -1,0 +1,38 @@
+# Criterion review: claim-so4 (Sofia, capacity 4, X = branched)
+
+context: subagent (Claude Code Agent tool, fresh context, saw only the claim folder and the bank entry)
+
+Inputs: the claim folder (CLAIM.md, REPRODUCE.md, criterion.txt, status/zenodo-latest.json, references/optiwindnet-routesets-r26.10-v4.sqlite.xz, object/segments.json, object/routeset-packed.json, object/G.pickle) and bank entry `optiwindnet-routesets-cable-routing-records`. The claim folder ships no checker; all checks below use my own scripts in panel-so4/work-criterion/ (q1.py, q2.py, check_official.py, check_indep.py, overlaps.py, nullmodel.py), run with the optiwindnet 0.3.2 venv, `python -I`, PYTHONDONTWRITEBYTECODE=1, OMP_NUM_THREADS=1. The SQLite file was decompressed into the work folder; the claim folder was not written to (no __pycache__, no new files).
+
+## Release identity and latest-ness
+- references/optiwindnet-routesets-r26.10-v4.sqlite.xz: sha256 c78c8f3c...05e3a (matches the bank), md5 85faffb2e13600b017f1b583b259edd7 and size 28,464,808 (match the file entry in status/zenodo-latest.json). Uncompressed md5 5ad6bf0449dcbd9939f1ae03bee19016 matches the 26.10-v4 row of the release table in the record description.
+- status/zenodo-latest.json: record 23537067, doi 10.5281/zenodo.23537067, relations.version is_last = true, updated 2026-10-21. The snapshot has no fetch timestamp, and I made no outward calls, so "still latest on 2026-11-09" depends on when the claimant fetched it. Release identity is confirmed. Latest-ness is not part of the success criterion (it is a pitfall).
+
+## Clause-by-clause (full success criterion, X = branched)
+1. Nodeset name without '!': there is exactly one nodeset named `Sofia` (T=100, R=1, B=6, constraint_groups [6] = border only, no obstacles). PASS.
+2. Every stored set of topology X or more restrictive: the DB has 4 route sets for (Sofia, capacity 4): 46020 baselines.lkh radial 378587.2597 [25]; 25155 MILP.pyomo.cplex branched 378897.5658 [25] (relgap 0.50%, bound 373560.51); 35902 MILP.pyomo.cplex radial 379237.6114 [25]; 25008 baselines.hgs radial 379237.7079 [25]. All have the topology recorded in misc. G_from_routeset recomputes each stored length exactly, and each passes validate_routeset with [].
+3. Topology of the object = branched: after contracting the 13 detour clones (all degree 2), the network has 100 turbine edges on 101 nodes, is connected and acyclic, max turbine degree 3 (3 turbines have degree 3). It is genuinely branched, not radial. PASS.
+4. Strictly shorter by > 1e-6 relative than every stored set: 377027.9309567514 m vs the shortest stored 378587.2597106476 m, a margin of 1559.3288 m (4.12e-3 relative). Against the shortest stored branched set (25155) the margin is 1869.6348 m (4.93e-3). PASS.
+5. Feeders <= the shortest stored set's feeders_per_root: object has 25 feeders at root -1; 46020 has [25]. 25 = ceil(100/4) is also the minimum possible. PASS.
+6. Same nodeset: VertexC in G.pickle is identical to the DB blob (107x2). Border indices are 100..105, no obstacles. T/R in the packed object match. Rebuilding G from routeset-packed.json on the DB NodeSet gives the same 113-edge set as G.pickle, with no length_mismatch_on_db_read. PASS.
+7. validate_routeset: [] for G rebuilt from routeset-packed.json, and [] for object/G.pickle. PASS.
+8. Inside the border, outside obstacles (own shapely check): all 113 segments are covered by the border polygon exactly (no tolerance needed). The minimum segment distance to the boundary is 88.2 m. There are no obstacles, so that half of the clause is vacuous. All turbines and the substation lie inside. PASS.
+9. Length = Euclidean segment sum: recomputed from DB VertexC through clone2prime as 377027.93095675105 (differs from the packed and segments.json value by 3.5e-10 m). The segments.json coordinates equal the VertexC coordinates exactly, and the segments.json edge set equals the packed edges array. The capacity check from my own code: 25 feeder subtrees, all exactly 4 turbines. PASS.
+- Own crossing check: 0 proper crossings and no segment passing through a vertex in its interior. There are 13 collinear overlaps, where segmented feeders share a corridor and bend at detour clones placed on turbine positions. All 4 stored sets have the same convention (7-10 such overlaps each), and the official validator accepts it. This is not a deviation from the release's convention.
+
+## Null models
+- Re-detour null: I re-ran optiwindnet 0.3.2 PathFinder on all 4 stored topologies, with both default and enlarged limits, under the stored topology and also under BRANCHED for the radial ones (feeder re-hooking anywhere in the subtree). Every result reproduced its stored length exactly, and the best was 378587.2597. So the win is not obtainable by re-detouring stored sets with the current package.
+- Caveat on where the gain comes from: the object's straight-line (model objective) length is 375860.98 m. That is 423.61 m LONGER than the stored CPLEX branched set 25155 (375437.37 m). The object wins on the criterion's quantity (detour-inclusive length) because its detours total 1166.95 m against 3460.19 m for 25155. The criterion compares detour-inclusive length, so this counts, but the improvement is in routing and detours, not in the straight-line topology objective.
+
+## Wording (CLAIM.md)
+All quoted numbers check out: 377027.9310, 378587.2597 (id 46020, radial, LKH, [25]), margin 1559.3288 m / 0.412%, 378897.5658 (id 25155, CPLEX, [25]), max degree 3, 100 turbines / 1 substation / 0 obstacles. CLAIM.md explicitly disclaims optimality. I found no overstated sentence.
+
+## Misleading metadata in the packed object (flag; not a criterion clause)
+routeset-packed.json misc and G.pickle graph carry `termination: OPTIMAL`, `relgap: 8.05e-12`, `bound: 375860.98471420695`, `solver_details.strategy: OPTIMAL` and `runtime: 12.8 s`, under `creator: MILP.ortools.cp_sat`. These come from the last 30 s LNS sub-solve, in which most links were pinned. They are not an instance-level certificate. In the release's schema, relgap/bound mean a certified gap. Read that way, the object claims proven optimality with a lower bound of 375860.98, and the stored feasible branched 25-feeder set 25155 contradicts that bound with a straight-line objective of 375437.37. The release's own bound for this instance is 373560.51. The runtime also understates the total search effort. Minor: handle is 'Sofia' (stored 'sofia'), and method_options.funfile leaks a local venv path. If the object were ingested as a dataset record, these fields should be stripped or relabelled (for example relgap/bound = null, termination = "LNS subproblem optimal"). They do not affect any clause of the success criterion.
+
+## Verdict
+Every clause of the full success criterion holds literally for X = branched. The win is not subsumed: it is strictly shorter than all 4 stored sets, including the radial ones, with the same feeder count and the same nodeset, and it is not reproducible by re-detouring stored sets. The packed misc metadata is misleading about optimality and should not be read as a certificate.
+
+confirmed_scope: For release r26.10-v4 instance (Sofia, capacity 4), the submitted branched route set (25 feeders, validate_routeset [], all segments inside the border, no obstacles present) has a recomputed Euclidean length of 377027.9310 m, which is 1559.33 m (0.412%) shorter than the shortest of the 4 stored route sets (46020, radial LKH, 378587.2597 m, 25 feeders) and 1869.63 m shorter than the stored branched CPLEX set (25155); no optimality is established, and its straight-line objective (375860.98 m) is above that of set 25155.
+
+pass: true
