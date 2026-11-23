@@ -1,0 +1,159 @@
+{
+  "protocol": "PROOFER-DREVAL Stage 2 -> Stage 3 Air-Gap Pre-Registration Lock (CLSS-E8 / Anti-Trap #1)",
+  "locked_at_utc": "2026-10-29T16:54:12.009517+00:00",
+  "model_name": "SchurBilinearExVivoDRP",
+  "air_gap_certification": {
+    "external_response_files_touched_during_stage2": false,
+    "verified_modeling_scripts": [
+      "src/stage2_inner_ablation.py",
+      "src/models.py"
+    ],
+    "tuning_datasets_used": [
+      "CTRPv2 (LCO, LTO, LDO inner validation only)"
+    ]
+  },
+  "frozen_hyperparameters": {
+    "cell_views": [
+      "within_sample_vdw (van der Waerden rank-normal)",
+      "within_sample_log_zscore (auto-log2 z-score)",
+      "LINCS_L1000_landmark_genes",
+      "drug_target_genes",
+      "PROGENy_11_pathway_vdw",
+      "BIONIC_PPI_top256"
+    ],
+    "drug_views": [
+      "ECFP4_2048_Tanimoto_and_Cosine",
+      "ChemBERTa_Cosine_and_RBF",
+      "MolGNet_Cosine_and_RBF"
+    ],
+    "shrinkage_priors": {
+      "s0_tissue": 10.0,
+      "s0_cell": 5.0,
+      "s0_drug": 5.0
+    },
+    "lineage_compass": {
+      "top_k": 20,
+      "temperature_tau": 0.06,
+      "kernel_weights": {
+        "K_vdw": 0.35,
+        "K_pw": 0.35,
+        "K_bio": 0.3
+      }
+    },
+    "exact_per_drug_krr_lambdas": {
+      "vdw": 12.0,
+      "logz": 12.0,
+      "lm": 10.0,
+      "dt": 10.0,
+      "pw": 8.0,
+      "bio": 12.0,
+      "comb": 14.0,
+      "rbf": 12.0
+    },
+    "svd_dual_krr": {
+      "rank_r": 48,
+      "em_iters": 3,
+      "lam_c": 14.0,
+      "lam_d": 8.0
+    },
+    "bilinear_nn": {
+      "hidden_dim": 256,
+      "emb_dim": 128,
+      "dropout": 0.25,
+      "epochs": 22,
+      "lr": 0.0025,
+      "weight_decay": 0.0001,
+      "seed": 42
+    },
+    "seen_drug_ensemble_weights": {
+      "Pred_exact_tis": 0.55,
+      "Pred_svd_tis": 0.2,
+      "Pred_nn_tis": 0.25
+    },
+    "unseen_drug_tkrr": {
+      "lam_c": 18.0,
+      "lam_d": 3.5
+    }
+  },
+  "stage2_ctrpv2_inner_summary": {
+    "LCO_validation": {
+      "R2_norm_mean": 0.15957737631180113,
+      "R2_norm_std": 0.02195870233103429,
+      "Pearson_norm_mean": 0.40569409288432634,
+      "Pearson_norm_std": 0.02225285270227723,
+      "Spearman_norm_mean": 0.3884105301960966,
+      "Spearman_norm_std": 0.023250335868577894,
+      "MSE_mean": 1.5903963810452078,
+      "MSE_std": 0.04469588961045798
+    },
+    "LCO_test": {
+      "R2_norm_mean": 0.17119998396417335,
+      "R2_norm_std": 0.03591340553212329,
+      "Pearson_norm_mean": 0.4143422965901301,
+      "Pearson_norm_std": 0.04246684349754297,
+      "Spearman_norm_mean": 0.39180542984686534,
+      "Spearman_norm_std": 0.02633332169588813,
+      "MSE_mean": 1.5758086297117928,
+      "MSE_std": 0.13332169762245305
+    },
+    "LTO_validation": {
+      "R2_norm_mean": 0.09886218149249586,
+      "R2_norm_std": 0.046445667393499826,
+      "Pearson_norm_mean": 0.3227118359258435,
+      "Pearson_norm_std": 0.06015985630771569,
+      "Spearman_norm_mean": 0.3226750558870656,
+      "Spearman_norm_std": 0.07097228998279896,
+      "MSE_mean": 1.5988159829698456,
+      "MSE_std": 0.1453491120967764
+    },
+    "LTO_test": {
+      "R2_norm_mean": 0.13452658887927524,
+      "R2_norm_std": 0.05061855950673235,
+      "Pearson_norm_mean": 0.36998316677369103,
+      "Pearson_norm_std": 0.06816172167206044,
+      "Spearman_norm_mean": 0.36409255572103494,
+      "Spearman_norm_std": 0.08017350299980824,
+      "MSE_mean": 1.6826135752950102,
+      "MSE_std": 0.15727632425523638
+    },
+    "LDO_validation": {
+      "R2_norm_mean": 0.06694716372033485,
+      "R2_norm_std": 0.07684290637959391,
+      "Pearson_norm_mean": 0.3690879399079178,
+      "Pearson_norm_std": 0.09753320785375279,
+      "Spearman_norm_mean": 0.31493339100646434,
+      "Spearman_norm_std": 0.11145976207542904,
+      "MSE_mean": 5.888323110552131,
+      "MSE_std": 0.9673257627047052
+    },
+    "LDO_test": {
+      "R2_norm_mean": 0.059829280295571094,
+      "R2_norm_std": 0.06907780508243816,
+      "Pearson_norm_mean": 0.34584488111424144,
+      "Pearson_norm_std": 0.11437002118390992,
+      "Spearman_norm_mean": 0.31851674307335953,
+      "Spearman_norm_std": 0.1095548472061516,
+      "MSE_mean": 5.59195995520345,
+      "MSE_std": 1.3792655336805724
+    },
+    "LDO_test_seed1337": {
+      "R2_norm_mean": 0.06856042042802417,
+      "R2_norm_std": 0.06299545383225981,
+      "Pearson_norm_mean": 0.3520985225227304,
+      "Pearson_norm_std": 0.08565141067795227,
+      "Spearman_norm_mean": 0.31777609668363965,
+      "Spearman_norm_std": 0.07928013791906964,
+      "MSE_mean": 5.549354176370224,
+      "MSE_std": 1.3489908733626297
+    }
+  },
+  "frozen_file_sha256": {
+    "certificates/stage2_ctrpv2_inner_results.json": "280d82f7ba77125c4e101c59b69abf6f5191cb2988209304a2829b549fb564f5",
+    "manifest_sha256.json": "4ef3a4cad2537013b692fde090a99ee741ed2d51e286daf6b68543bbf2298d0b",
+    "src/models.py": "970811c610482efe5185f20ffa927675b58385d9687c8016ffd6244d0f1060c7",
+    "src/stage0_download_and_manifest.py": "4a3f438867eeab0cc688fac76c51b72c11266d60a20febf66928bb6124f6161d",
+    "src/stage1_inspect_and_verify_metrics.py": "4562fa2ffe2fe7afcf7cc17d5b06545b5c6079231a4a5bbf41970809fb826649",
+    "src/stage2_inner_ablation.py": "d8718acc641b96745a7d6019b240175fb276250a8ca61dfa3a0ccf424987f868"
+  },
+  "preregistration_lock_sha256": "5c9295e157e58376a63e0ef358edbfc950bcff6f30499c494ffc01a47cd6c33a"
+}
