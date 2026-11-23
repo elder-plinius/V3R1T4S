@@ -1,0 +1,436 @@
+{
+  "benchmark_suite": "NIST JARVIS-Leaderboard Small-Data Materials Property Prediction",
+  "target_id": "jarvis-small-data-exfoliation-tc-mae",
+  "tasks": {
+    "dft_3d_exfoliation_energy": {
+      "benchmark_name": "AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae",
+      "units": "meV/atom",
+      "n_train_val": 731,
+      "n_test": 81,
+      "live_leaderboard_best_model": "matminer_xgboost",
+      "live_leaderboard_best_mae": 40.887,
+      "published_baseline_csv_mae_verified": 40.88704609876543,
+      "claimed_test_mae": 28.19592375763577,
+      "relative_mae_reduction_pct": 31.03939208639477,
+      "absolute_mae_reduction": 12.691076242364229,
+      "bootstrap_1000_ci90_low": 18.51081163752277,
+      "bootstrap_1000_ci90_high": 40.77596877484783,
+      "bootstrap_1000_ci90_half_width": 11.132578568662531,
+      "bootstrap_ci90_upper_bound_mae_plus_hw90": 39.328502326298306,
+      "hw90_across_seeds_0_to_9_max": 11.449430407204414,
+      "passes_5pct_relative_margin": true,
+      "passes_bootstrap_ci90_half_width": true,
+      "passes_full_criterion": true,
+      "paired_test_vs_live_leader_csv": {
+        "mean_mae_gain": 12.691122341129661,
+        "ci90_gain_low": 5.523545177767586,
+        "ci90_gain_high": 20.31169627687348,
+        "win_rate_10k": 0.9992,
+        "p_value_10k": 0.0008999100089991,
+        "wilcoxon_statistic": 2144.0,
+        "wilcoxon_p_value_one_sided": 0.011409428157872084
+      },
+      "p2_5fold_cv_study_on_train_val": {
+        "reproduced_matminer_xgboost_test_mae": 52.9858186378008,
+        "reproduced_matminer_xgboost_oof_mae": 45.00462685147323,
+        "clss_5fold_oof_mae": 32.67274480160315,
+        "clss_analytical_loo_mae": 31.80526998987217,
+        "relative_5fold_oof_reduction_pct": 27.401364954248912,
+        "relative_loo_reduction_pct": 29.32888857219573,
+        "wilcoxon_5fold_p_value_one_sided": 1.6160272623330964e-18,
+        "wilcoxon_loo_p_value_one_sided": 1.2691181168549548e-20,
+        "paired_ttest_5fold_p_value_one_sided": 1.864697885471646e-14,
+        "paired_ttest_loo_p_value_one_sided": 8.04765264031678e-16,
+        "paired_bootstrap_5fold": {
+          "mean_mae_gain": 12.331882049870075,
+          "ci90_gain_low": 9.756906910386894,
+          "ci90_gain_high": 14.975327854403826,
+          "win_rate_10k": 1.0,
+          "p_value_10k": 9.999000099990002e-05
+        },
+        "paired_bootstrap_loo": {
+          "mean_mae_gain": 13.199356861601059,
+          "ci90_gain_low": 10.60704140376643,
+          "ci90_gain_high": 15.857391692738789,
+          "win_rate_10k": 1.0,
+          "p_value_10k": 9.999000099990002e-05
+        }
+      },
+      "null_permutation_control_400": {
+        "n_permutations": 400,
+        "null_mae_mean": 62.35989583295942,
+        "null_mae_std": 4.09286854898105,
+        "null_mae_min": 53.34277798269979,
+        "claimed_mae": 28.19592375763577,
+        "z_score": -8.347195045838697,
+        "n_null_better_or_equal": 0,
+        "empirical_p_value": 0.0024937655860349127
+      },
+      "prediction_csv": "AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae.csv",
+      "prediction_csv_sha256": "10169820be31c96ecdb8f2a08877dcdb1296ba62afabb43afaec59e259a44f82",
+      "cv5_oof_csv": "cv5_oof_dft_3d_exfoliation_energy.csv",
+      "cv5_oof_csv_sha256": "d3a94e8543c3c3443424dd75d2b2dca17aa43b4bd15320695925ecbb833e2f64",
+      "runtime_seconds": 50.13828206062317,
+      "onnx_model_file": "object/model_dft_3d_exfoliation_energy.onnx",
+      "onnx_model_bytes": 14286,
+      "onnx_model_sha256": "bc24f70e097f87e392982c46a2621ada98312a9798a41cd30b83a3e30cb6f67f",
+      "feature_csv_shards": [
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part1.csv",
+          "rows": 30,
+          "bytes": 860753,
+          "sha256": "2369d161cd445521d769d9faf49afbbbcd04212ad426a2d42304fed4b112ff4d"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part2.csv",
+          "rows": 30,
+          "bytes": 872927,
+          "sha256": "694916c10aa4e313e7aa49e179cfe1712144c2936730b5260c8a5e99ce267378"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part3.csv",
+          "rows": 30,
+          "bytes": 861015,
+          "sha256": "910d0cef20f1627dbaef1ff8a2336d863dec0bfe9f91592782c332de577122bb"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part4.csv",
+          "rows": 30,
+          "bytes": 870278,
+          "sha256": "e3f7f343d1fb2e2f619f9ec9f5d2e1f0b9f39a812fcc4d27cabec200d28e6bcf"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part5.csv",
+          "rows": 30,
+          "bytes": 870402,
+          "sha256": "0b1c724cae65d911e6063fecfb69c010d60a98727a1ae275fc8068654007d1f7"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part6.csv",
+          "rows": 30,
+          "bytes": 861495,
+          "sha256": "3d8b4e64c23e1d85dfd9e117f417f62b2882a7dc3c27149478af137daabc7cd9"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part7.csv",
+          "rows": 30,
+          "bytes": 827768,
+          "sha256": "17ee9155b5e3c0d9dd62bbad28b45910037aa9b7364cba280c22e569f7f51bb1"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part8.csv",
+          "rows": 30,
+          "bytes": 862309,
+          "sha256": "b00c2dc34392efae01eff185a0addaed0d568b4f35e648a6b57304de772044ac"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part9.csv",
+          "rows": 30,
+          "bytes": 871861,
+          "sha256": "1dc6372756d7dbdfcc6bcc87a5f579c21a811f66c07d28084dcc3342ba311700"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part10.csv",
+          "rows": 30,
+          "bytes": 874020,
+          "sha256": "243dfcd799d8f8b9db76f617ce3b49a3176d00db878a2ab6cf4f3987a51cd7f6"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part11.csv",
+          "rows": 30,
+          "bytes": 876378,
+          "sha256": "90448d600ac73dd2cc3a96f6b4c8ab7199426971e5640aa1a356107e548fd7a2"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part12.csv",
+          "rows": 30,
+          "bytes": 873838,
+          "sha256": "b56c4912eefbf430184ebdc8dd46f54e85fa3f4cf1dc15dfcff1f40791cfde70"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part13.csv",
+          "rows": 30,
+          "bytes": 873494,
+          "sha256": "933019e744e141bc725ca99bee122a0cbbdb713ae0c248e5789a8650d57c2257"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part14.csv",
+          "rows": 30,
+          "bytes": 873571,
+          "sha256": "ab11781417e8dd8b60e3fbf9384e262f23fd6a25dc386ef9d3d29db43c98f535"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part15.csv",
+          "rows": 30,
+          "bytes": 869598,
+          "sha256": "52a71b2c4b6939762f24afcf4c820e83a7a308ca24be6555924ae6b40415431d"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part16.csv",
+          "rows": 30,
+          "bytes": 860036,
+          "sha256": "f80aa03c073a0c8e3740da34719d40d4eac3bca19b225807e22b064a58040c76"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part17.csv",
+          "rows": 30,
+          "bytes": 873235,
+          "sha256": "1557bcee6f9d0901eed15ca51182590eea67469173b19300459d4ad1ad516080"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part18.csv",
+          "rows": 30,
+          "bytes": 870594,
+          "sha256": "6609340087dd6abff8bbfb5d78cf878c349e0d5aa74fbd32f12efb9840b556fe"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part19.csv",
+          "rows": 30,
+          "bytes": 872957,
+          "sha256": "8d068d3ed8608b26e3fbb4b3385ec142376b06a15653d76a8fbc25ae5274acac"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part20.csv",
+          "rows": 30,
+          "bytes": 878100,
+          "sha256": "5082d18933e0cc35649bac903263d3a9127511e35293d635b85914a4124db761"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part21.csv",
+          "rows": 30,
+          "bytes": 857294,
+          "sha256": "d770d003d21d75e9843c888f5782b69bb4e846f570fe49b0ba410f1b58368f83"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part22.csv",
+          "rows": 30,
+          "bytes": 861037,
+          "sha256": "f1f16a7e67aa686a9d83c7d6187085999306aa43cde7bce9a10ecbf7ec9e4897"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part23.csv",
+          "rows": 30,
+          "bytes": 871421,
+          "sha256": "1f76dd232247ab26b9c6a20ecd038e061047d5fb6ff41b327f48234e4b83aab3"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part24.csv",
+          "rows": 30,
+          "bytes": 872094,
+          "sha256": "51a28f4bf6622477946bcf850571bd1409a0c44e607bb19a787d2a325c6f8d1e"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part25.csv",
+          "rows": 30,
+          "bytes": 874026,
+          "sha256": "7c50eddb48e7dcf4ac4e9fb3cf5f01b58aa636fb7562e1f1e9224bdee42b8e01"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part26.csv",
+          "rows": 30,
+          "bytes": 862854,
+          "sha256": "fc30ded3eef3aef123c8958a1a8dca24bef915d191148057a1bb05dc981a1cba"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part27.csv",
+          "rows": 30,
+          "bytes": 859482,
+          "sha256": "3e91595d9b816ec259ff60d6ba6e12b951bda32ebe0166573696a69bf9dda0a8"
+        },
+        {
+          "file": "object/features_dft_3d_exfoliation_energy_part28.csv",
+          "rows": 2,
+          "bytes": 70013,
+          "sha256": "cac1b33011c7da04b4e0ff55c8782ae51abdf0925167910e68cd6a858eb3fc0d"
+        }
+      ],
+      "upstream_benchmark_json_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/benchmarks/AI/SinglePropertyPrediction/dft_3d_exfoliation_energy.json.zip",
+      "upstream_benchmark_json_zip_sha256": "d7a3127002098c3da40292bee8d78de0e45ca42bef81adc73a07bc47e900a9a4",
+      "upstream_leader_csv_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/contributions/matminer_xgboost/AI-SinglePropertyPrediction-exfoliation_energy-dft_3d-test-mae.csv.zip",
+      "upstream_leader_csv_zip_sha256": "e89262451215f98da0eddf327a082787461edfa5f73426baf6c4fd745acacb78",
+      "claim_status": "claimed_primary_and_p2_5fold_cv",
+      "prediction_csv_columns": [
+        "id",
+        "prediction"
+      ],
+      "onnx_graph_inputs": {
+        "X_eval": [
+          81,
+          1807
+        ],
+        "X_support": [
+          731,
+          1807
+        ]
+      },
+      "onnx_graph_output": "prediction",
+      "base_only_ablation_w_r_0": {
+        "test_mae": 30.402495679012343,
+        "bootstrap_1000_ci90_half_width": 13.220251518518518,
+        "analytical_loo_mae": 32.72477351275018
+      }
+    },
+    "tinnet_N_ead": {
+      "benchmark_name": "AI-SinglePropertyPrediction-ead-tinnet_N-test-mae",
+      "units": "eV",
+      "n_train_val": 295,
+      "n_test": 32,
+      "live_leaderboard_best_model": "alignn",
+      "live_leaderboard_best_mae": 0.0871,
+      "published_baseline_csv_mae_verified": 0.0870551562500004,
+      "claimed_test_mae": 0.06890781954628322,
+      "relative_mae_reduction_pct": 20.886544722981373,
+      "absolute_mae_reduction": 0.018192180453716775,
+      "bootstrap_1000_ci90_low": 0.05245403010515697,
+      "bootstrap_1000_ci90_high": 0.08694833928152322,
+      "bootstrap_1000_ci90_half_width": 0.017247154588183124,
+      "bootstrap_ci90_upper_bound_mae_plus_hw90": 0.08615497413446635,
+      "hw90_across_seeds_0_to_9_max": 0.017247154588183124,
+      "passes_5pct_relative_margin": true,
+      "passes_bootstrap_ci90_half_width": true,
+      "passes_full_criterion": true,
+      "paired_test_vs_live_leader_csv": {
+        "mean_mae_gain": 0.018147336703717182,
+        "ci90_gain_low": -0.0032288050445613376,
+        "ci90_gain_high": 0.039814280050117626,
+        "win_rate_10k": 0.9156,
+        "p_value_10k": 0.08449155084491551,
+        "wilcoxon_statistic": 321.0,
+        "wilcoxon_p_value_one_sided": 0.14753513247705996
+      },
+      "p2_5fold_cv_study_on_train_val": {
+        "reproduced_matminer_xgboost_test_mae": 0.12737305117559572,
+        "reproduced_matminer_xgboost_oof_mae": 0.1655613720456403,
+        "clss_5fold_oof_mae": 0.09562878417975039,
+        "clss_analytical_loo_mae": 0.0857021258445998,
+        "relative_5fold_oof_reduction_pct": 42.239676442528875,
+        "relative_loo_reduction_pct": 48.23543391451583,
+        "wilcoxon_5fold_p_value_one_sided": 5.860631363890847e-15,
+        "wilcoxon_loo_p_value_one_sided": 2.0661594702138444e-20,
+        "paired_ttest_5fold_p_value_one_sided": 2.9224799555891053e-15,
+        "paired_ttest_loo_p_value_one_sided": 6.195986307223952e-20,
+        "paired_bootstrap_5fold": {
+          "mean_mae_gain": 0.06993258786588992,
+          "ci90_gain_low": 0.056239078140437104,
+          "ci90_gain_high": 0.08388430869510251,
+          "win_rate_10k": 1.0,
+          "p_value_10k": 9.999000099990002e-05
+        },
+        "paired_bootstrap_loo": {
+          "mean_mae_gain": 0.07985924620104051,
+          "ci90_gain_low": 0.06661165764490172,
+          "ci90_gain_high": 0.09305926338736754,
+          "win_rate_10k": 1.0,
+          "p_value_10k": 9.999000099990002e-05
+        }
+      },
+      "null_permutation_control_400": {
+        "n_permutations": 400,
+        "null_mae_mean": 0.6759691356036605,
+        "null_mae_std": 0.08104324473182256,
+        "null_mae_min": 0.454085101507391,
+        "claimed_mae": 0.06890781954628322,
+        "z_score": -7.4905850335359,
+        "n_null_better_or_equal": 0,
+        "empirical_p_value": 0.0024937655860349127
+      },
+      "prediction_csv": "AI-SinglePropertyPrediction-ead-tinnet_N-test-mae.csv",
+      "prediction_csv_sha256": "707e335f234b093a52fbebda8c649bea30adb40d569753f340a0254a6dd75b6b",
+      "cv5_oof_csv": "cv5_oof_tinnet_N_ead.csv",
+      "cv5_oof_csv_sha256": "104b07f6c20bf883001ba4567df85bc232de8d30c17077f7bac26a362d8c8b63",
+      "runtime_seconds": 12.822763919830322,
+      "onnx_model_file": "object/model_tinnet_N_ead.onnx",
+      "onnx_model_bytes": 3612,
+      "onnx_model_sha256": "ef9e306148bc05e9ca6b992ba2ebe31752fb6193a7d4f09847c0b3a1b6f5d8ef",
+      "feature_csv_shards": [
+        {
+          "file": "object/features_tinnet_N_ead_part1.csv",
+          "rows": 30,
+          "bytes": 905402,
+          "sha256": "441f6fa3eef2bcd7dd8a002ce1be2b762655b9ea429a06761d67c7228c42f827"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part2.csv",
+          "rows": 30,
+          "bytes": 907197,
+          "sha256": "c72a262d5651f2da0be776e28560189034e39ed38315e50aea1d1cf6105c97e1"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part3.csv",
+          "rows": 30,
+          "bytes": 903517,
+          "sha256": "c7dd257d694841223c8e5eb4a9a4a5b143b4a5102ceea1ef380eb07f7a0e003d"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part4.csv",
+          "rows": 30,
+          "bytes": 914999,
+          "sha256": "781f89f7820eb3b1f771c8172c08efe7d9a6806841cf43f876d8eb4a3bd0d06a"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part5.csv",
+          "rows": 30,
+          "bytes": 920717,
+          "sha256": "0e822d0242b85c7cae747f2a65ed903ca11404cc3b071c2c37df7b6c40a904a3"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part6.csv",
+          "rows": 30,
+          "bytes": 919765,
+          "sha256": "7a22189ce0264aecea6e1a410e869a99194ebb0bd68aa966e83c33e2f016542a"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part7.csv",
+          "rows": 30,
+          "bytes": 919347,
+          "sha256": "873d2d1aecb5cbc1c61658d064a677c7580d000b1230199e01eae501a87c8b8d"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part8.csv",
+          "rows": 30,
+          "bytes": 910421,
+          "sha256": "2995da385fbb2abaa200bd6ba840caca8e74f611becf6f4bc962b9d7bca79802"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part9.csv",
+          "rows": 30,
+          "bytes": 905588,
+          "sha256": "c7bf81e7f4ed319f14693e71be5e04b2646aba1f65258784a227633ba3fa6cf4"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part10.csv",
+          "rows": 30,
+          "bytes": 914906,
+          "sha256": "fcff245dc569716883b39be8791846d33385f0a32c379e752e0bf1d0178eb43e"
+        },
+        {
+          "file": "object/features_tinnet_N_ead_part11.csv",
+          "rows": 27,
+          "bytes": 824350,
+          "sha256": "b9c7f5d2278d5ec927ce950183499296ee4bff7bed8cba2cc378b60c4c8918c1"
+        }
+      ],
+      "upstream_benchmark_json_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/benchmarks/AI/SinglePropertyPrediction/tinnet_N_ead.json.zip",
+      "upstream_benchmark_json_zip_sha256": "14da9466b46ccd69aea116c6d6ef456da2c2cfe955b45b89105bb9f21acdfc49",
+      "upstream_leader_csv_zip_url": "https://raw.githubusercontent.com/usnistgov/jarvis_leaderboard/main/jarvis_leaderboard/contributions/alignn_model/AI-SinglePropertyPrediction-ead-tinnet_N-test-mae.csv.zip",
+      "upstream_leader_csv_zip_sha256": "5bc9f63e3016343afc3a5719611ec9335442305a5d752fd5c44fb66ff857ac59",
+      "claim_status": "uncredited_supplementary_p1_dropped_no_pre_run_dated_file",
+      "prediction_csv_columns": [
+        "id",
+        "prediction"
+      ],
+      "onnx_graph_inputs": {
+        "X_eval": [
+          32,
+          2186
+        ],
+        "X_support": [
+          295,
+          2186
+        ]
+      },
+      "onnx_graph_output": "prediction"
+    }
+  },
+  "total_runtime_seconds": 96.34149885177612
+}
