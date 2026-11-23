@@ -1,0 +1,130 @@
+%NCFF-0.1-2026 (NIST Circuit File Format)
+
+## Index of circuits (circuitName numOutputs numInputs)
+  % aes-invsbox-a33-ad4-g111-gd14-xx78-39 8 8
+
+## Circuit
+begin circuit aes-invsbox-a33-ad4-g111-gd14-xx78-39
+  % Description: AES Sbox Inverse, compatible with NIST-FIPS 197
+  % Tally of gates (111): 33 AND; 39 XOR; 39 XNOR
+  % Gate depth 14; AND depth 4
+
+Inputs: x0:x7
+Outputs: y0:y7
+Internal: a1:a33 t1:t70
+GateSyntax: GateName Output Inputs
+
+begin SLP
+XNOR t1 x2 x3
+XOR t2 x3 x4
+AND a1 t1 t2
+XNOR t3 x6 a1
+XOR t4 x2 x7
+XNOR t5 x6 t4
+XNOR t6 x0 x1
+XNOR t7 x2 t6
+AND a2 t5 t7
+XNOR t8 t3 a2
+XOR t9 x5 t4
+AND a3 t6 t9
+XNOR t10 x1 x7
+XNOR t11 x3 t10
+AND a4 x6 t11
+XOR t12 a3 a4
+XNOR t13 t8 t12
+XOR t14 t2 t6
+XNOR t15 x3 x7
+XOR t16 x5 t15
+AND a5 t14 t16
+XOR t17 x0 x3
+AND a6 t4 t17
+XOR t18 t7 a6
+XNOR t19 a5 t18
+XNOR t20 t12 t19
+XOR t21 t13 t20
+XOR t22 x0 x4
+XOR t23 x6 x7
+XOR t24 t22 t23
+XNOR t25 x5 x6
+XOR t26 t15 t25
+AND a7 t24 t26
+XNOR t27 a6 t22
+XOR t28 a7 t27
+AND a8 t23 t25
+XNOR t29 t10 a8
+XNOR t30 a4 t29
+XOR t31 t28 t30
+AND a9 t20 t31
+AND a10 t15 t22
+XNOR t32 t9 a10
+XOR t33 a2 t32
+XOR t34 t30 t33
+AND a11 t13 t34
+XNOR t35 a9 a11
+AND a12 t21 t35
+XNOR t36 t20 a11
+XNOR t37 a12 t36
+AND a13 t15 t37
+XNOR t38 t31 a9
+AND a14 t13 t38
+XOR t39 a12 a14
+AND a15 t25 t39
+XOR t40 a13 a15
+XNOR t41 t20 a9
+XOR t42 t31 t34
+AND a16 t41 t42
+XOR t43 a11 a16
+AND a17 t1 t43
+AND a18 t36 t42
+XOR t44 t34 a18
+AND a19 t16 t44
+XNOR t45 a17 a19
+XNOR y0 t40 t45
+XNOR t46 x6 t11
+XOR t47 t43 t44
+XOR t48 t37 t47
+AND a20 t46 t48
+XOR t49 t39 t44
+AND a21 t4 t49
+XOR t50 t45 a21
+XOR t51 a20 t50
+AND a22 t2 t43
+AND a23 t14 t44
+XNOR t52 a22 a23
+AND a24 t24 t37
+XNOR t53 t36 a14
+AND a25 t23 t53
+XOR t54 a24 a25
+XOR t55 t52 t54
+AND a26 t11 t48
+XNOR t56 t55 a26
+XNOR y1 t51 t56
+XNOR t57 t50 a26
+AND a27 t17 t49
+XNOR t58 t52 a27
+XOR y2 t57 t58
+XNOR t59 y0 a26
+AND a28 t26 t53
+XOR t60 a13 a28
+XOR t61 t43 t53
+AND a29 t5 t61
+XOR t62 t60 a29
+XOR t63 t58 t62
+XNOR y3 t59 t63
+AND a30 t22 t39
+XOR t64 a25 a30
+AND a31 t7 t61
+XNOR t65 t64 a31
+AND a32 t9 t47
+XOR t66 a19 a32
+XOR t67 t65 t66
+XNOR y4 t56 t67
+AND a33 t6 t47
+XOR t68 a23 a33
+XNOR t69 t60 a31
+XNOR t70 t68 t69
+XNOR y5 t51 t70
+XNOR y6 t63 t67
+XOR y7 t64 t68
+end SLP
+end circuit

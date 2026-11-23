@@ -1,0 +1,1394 @@
+{
+  "target_id": "nist-aes-circuit-records",
+  "milestone_scope": "partial_win p3 (InvMixColumns pure-{XOR} 92@10, 2 non-isomorphic witnesses improving 93@10 to 92@10 and dominating 92@11) + partial_win p4 Route 1 (InvS-box strict zero-NOT GD = 10: 152@10 & 155@10) + 8 strict zero-NOT [Inv]S-box 4D Pareto cells (9 witnesses: 33/4/111/14 [+ 34/4/111/14 companion], 109@15, 129@13, 119@14, 116@16, 114@19, 143@16, 134@19)",
+  "validation_tier": "Tier B (local exact-oracle verified candidate package awaiting independent review)",
+  "limitations_first": [
+    "Construction upper bounds only (0 / 6 live 2026-11-17 NIST CSRC wish-list targets solved): InvS-box 33/4/111/14 is +1 gate above Wish-List (c) (G <= 110 at GD <= 14 across both zero-NOT and official NIST %NCFF NOT-permitted models), MixColumns GD = 3 held at 97@3 (Root LP = 92.00) vs Wish-List (e) (<= 93@3), and InvMixColumns GD = 5 held at 118@5 vs Wish-List (f) (G <= 105 at GD <= 5). Wish-List items (a) A <= 27, (b) G <= 100, and (d) MixColumns <= 86 also remain open.",
+    "Unbeaten sibling milestones: p1 (InvS-box G <= 104 / S-box G <= 102), p2 (S-box G <= 123 / InvS-box G <= 125 at A = 28), and p4 Route 2 (AD = 3 with A <= 34) remain unbeaten.",
+    "Gate-model boundary on NOT-containing files: Milestone p3 (InvMixColumns 92@10) uses pure 2-input {XOR} gates and has zero NOT-gate ambiguity. On [Inv]S-box, usnistgov/Circuits lists aes-invsbox-a55-ad4-g148-gd10-xxn93-26-2.circ.txt (2 NOTs) and aes-sbox-a59-ad4-g159-gd10-xxn100-30-3.circ.txt (3 NOTs), and Joe-b-20 lists aes-invsbox-a47-ad4-g141-gd11-xxn94-44-2.circ.txt (2 NOTs), aes-invsbox-a33-ad4-g121-gd14-xxn88-31-1.circ.txt (1 NOT), and aes-invsbox-a34-ad4-g130-gd13-xxn96-44-1.circ.txt (1 NOT). Note that 33/4/111/14 and 35/4/129/13 achieve strictly fewer total gates than both zero-NOT and NOT-containing baselines at GD <= 14 and GD <= 13 (and T11 proves zero-net-cost unary NOT rewrites on 33/4/111/14 push FWHT depth to 15 > 14), whereas at GD = 10 NIST's 2-NOT 148@10 uses 4 fewer total gates than zero-NOT 152@10.",
+    "Solver status distinction (TIMEOUT_UNKNOWN / ITERATION_LIMIT != UNSAT): Full-Zone_Bot 18..21-helper CDCL queries on 105/126/124 (90..120s caps), unconstrained Depth-12 internal cancellations outside 2-sum pools on 33/4/111/14, 3/11 unconstrained 5-layer Zone_Bot K=28 slot-CNF classes on 34/4/111/14, and 29,180-var MixColumns GD=3 CP-SAT G<=93 slices hit TIMEOUT_UNKNOWN / ITERATION_LIMIT and are never claimed as global UNSAT."
+  ],
+  "constructed_circuits": [
+    {
+      "filename": "aes-invmixcols-xor92-depth10.circ.txt",
+      "role": "milestone_p3_primary_invmixcols_92_at_gd10",
+      "format": "NCFF-0.1-2026",
+      "function": "invmixcols",
+      "bit_convention": "x0:x31 (x_{8b+r} = bit r [LSB=0..MSB=7] of input byte b) -> y0:y31 FIPS 197 InvMixColumns() over {XOR}",
+      "sha256": "4e19fc9a8d5760e80e94a6c33b1576e00d18eac15ef1f2865cd982e019138e44",
+      "prior_baseline": "93@10 (usnistgov/Circuits aes-invmixcols-xor93-depth10.circ.txt & Joe-b-20 aes-invmixcolumns-xor93-depth10.circ.txt; 92 XOR previously required GD = 11)",
+      "delta_summary": "-1 XOR at GD <= 10 (93 -> 92) and -1 depth level at G = 92 (11 -> 10), rendering 92@11 Pareto-dominated",
+      "A": 0,
+      "AD": 0,
+      "G": 92,
+      "GD": 10,
+      "XOR": 92,
+      "XNOR": 0,
+      "XX": 92,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 32,
+      "num_outputs": 32,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        0,
+        0,
+        92,
+        10,
+        92,
+        0
+      ],
+      "gates_per_gd_level": [
+        14,
+        10,
+        7,
+        6,
+        9,
+        10,
+        10,
+        9,
+        8,
+        9
+      ],
+      "ands_per_ad_level": [],
+      "output_gd_hist": {
+        "6": 3,
+        "7": 6,
+        "8": 7,
+        "9": 7,
+        "10": 9
+      }
+    },
+    {
+      "filename": "aes-invmixcols-xor92-depth10-alt.circ.txt",
+      "role": "milestone_p3_companion_non_isomorphic_invmixcols_92_at_gd10",
+      "format": "NCFF-0.1-2026",
+      "function": "invmixcols",
+      "bit_convention": "x0:x31 (x_{8b+r} = bit r [LSB=0..MSB=7] of input byte b) -> y0:y31 FIPS 197 InvMixColumns() over {XOR}",
+      "sha256": "b3bc80eef37100bd092e9b3e01df7f53ddaadb8a476944bd4f4d5bd638ce8ae0",
+      "prior_baseline": "93@10 (usnistgov/Circuits & Joe-b-20); non-isomorphic to primary 92@10 (value-set overlap 72/92, symmetric difference 40)",
+      "delta_summary": "Independent 92@10 {XOR} DAG (symmetric difference 40 vs primary 92@10)",
+      "A": 0,
+      "AD": 0,
+      "G": 92,
+      "GD": 10,
+      "XOR": 92,
+      "XNOR": 0,
+      "XX": 92,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 32,
+      "num_outputs": 32,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        0,
+        0,
+        92,
+        10,
+        92,
+        0
+      ],
+      "gates_per_gd_level": [
+        14,
+        11,
+        6,
+        6,
+        8,
+        9,
+        11,
+        9,
+        8,
+        10
+      ],
+      "ands_per_ad_level": [],
+      "output_gd_hist": {
+        "6": 3,
+        "7": 7,
+        "8": 7,
+        "9": 5,
+        "10": 10
+      }
+    },
+    {
+      "filename": "aes-invsbox-a57-ad4-g152-gd10-xx95-25.circ.txt",
+      "role": "milestone_p4_route1_min_G_at_gd10_zeronot",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "3cea2983de3590acc3d5755055f28e8f74306d1101ab9b18a598c451aad0fed6",
+      "prior_baseline": "GD = 11 (usnistgov/Circuits PR #1 ZKNoxHQ 143@11; master 141@12; 148@10 and Joe-b-20 141@11 use 2 unary NOT gates)",
+      "delta_summary": "-1 gate-depth level on strict zero-NOT InvS-box (GD = 11 -> GD = 10 at G = 152, A = 57)",
+      "A": 57,
+      "AD": 4,
+      "G": 152,
+      "GD": 10,
+      "XOR": 70,
+      "XNOR": 25,
+      "XX": 95,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        57,
+        4,
+        152,
+        10,
+        70,
+        25
+      ],
+      "gates_per_gd_level": [
+        24,
+        27,
+        12,
+        10,
+        9,
+        9,
+        5,
+        32,
+        16,
+        8
+      ],
+      "ands_per_ad_level": [
+        17,
+        4,
+        4,
+        32
+      ],
+      "output_gd_hist": {
+        "10": 8
+      }
+    },
+    {
+      "filename": "aes-invsbox-a56-ad4-g155-gd10-xx99-26.circ.txt",
+      "role": "milestone_p4_route1_min_A_at_gd10_zeronot",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "c83ba275b29dddeb4b435b3a3c6a1e41fd51d93ab3023a62fe70e699de0629b6",
+      "prior_baseline": "GD = 11 (usnistgov/Circuits PR #1 ZKNoxHQ 143@11; master 141@12; 148@10 uses 2 NOT gates)",
+      "delta_summary": "4D Pareto companion at GD = 10 with A = 56 (-1 AND vs 152@10)",
+      "A": 56,
+      "AD": 4,
+      "G": 155,
+      "GD": 10,
+      "XOR": 73,
+      "XNOR": 26,
+      "XX": 99,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        56,
+        4,
+        155,
+        10,
+        73,
+        26
+      ],
+      "gates_per_gd_level": [
+        24,
+        22,
+        12,
+        10,
+        11,
+        14,
+        6,
+        32,
+        16,
+        8
+      ],
+      "ands_per_ad_level": [
+        16,
+        4,
+        4,
+        32
+      ],
+      "output_gd_hist": {
+        "10": 8
+      }
+    },
+    {
+      "filename": "aes-invsbox-a33-ad4-g111-gd14-xx78-39.circ.txt",
+      "role": "pareto_4d_invsbox_min_G_and_a33_at_gd14",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "aa18325ecb4675691d77c177623191086acf36ba935d78541ce14afff788633e",
+      "prior_baseline": "123@14 at A = 33 (usnistgov/Circuits aes-invsbox-a33-ad4-g123-gd14-xx90-16.circ.txt; Joe-b-20 121@14 uses 1 NOT gate; supersedes 33/4/112/14 & dominates 34/4/111/14)",
+      "delta_summary": "-12 gates below 33/4/123/14 at the same A = 33 (-10 vs 1-NOT 121@14, -1 AND vs 34/4/111/14; +1 gate above CSRC Wish-List (c) <=110@14)",
+      "A": 33,
+      "AD": 4,
+      "G": 111,
+      "GD": 14,
+      "XOR": 39,
+      "XNOR": 39,
+      "XX": 78,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        33,
+        4,
+        111,
+        14,
+        39,
+        39
+      ],
+      "gates_per_gd_level": [
+        10,
+        12,
+        11,
+        6,
+        4,
+        4,
+        4,
+        4,
+        5,
+        13,
+        13,
+        11,
+        8,
+        6
+      ],
+      "ands_per_ad_level": [
+        9,
+        2,
+        4,
+        18
+      ],
+      "output_gd_hist": {
+        "12": 1,
+        "13": 1,
+        "14": 6
+      }
+    },
+    {
+      "filename": "aes-invsbox-a34-ad4-g111-gd14-xx77-41.circ.txt",
+      "role": "companion_7and_mid_invsbox_a34_g111_gd14_t5_t8_ref",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "7dad433aafaf21e6e97ebd345ba71efefd1ec45c3943dc863a6ba7e5bf9749ab",
+      "prior_baseline": "123@14 (usnistgov/Circuits; 7-AND middle inverter companion to 33/4/111/14 used as exact reference in T5a..T8)",
+      "delta_summary": "7-AND-middle companion at 111@14 (A = 34; dominated on A by 33/4/111/14, retained for T5a..T8 sub-block verification)",
+      "A": 34,
+      "AD": 4,
+      "G": 111,
+      "GD": 14,
+      "XOR": 36,
+      "XNOR": 41,
+      "XX": 77,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        34,
+        4,
+        111,
+        14,
+        36,
+        41
+      ],
+      "gates_per_gd_level": [
+        10,
+        12,
+        10,
+        6,
+        6,
+        3,
+        8,
+        4,
+        12,
+        11,
+        10,
+        8,
+        6,
+        5
+      ],
+      "ands_per_ad_level": [
+        9,
+        3,
+        4,
+        18
+      ],
+      "output_gd_hist": {
+        "12": 2,
+        "13": 1,
+        "14": 5
+      }
+    },
+    {
+      "filename": "aes-invsbox-a33-ad4-g109-gd15-xx76-36.circ.txt",
+      "role": "pareto_4d_invsbox_min_G_at_gd15",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "71c604e3f0f3b4c4bfb2c0d11dcc18ba14f1cececb193febb29c1cbf1e1217ab",
+      "prior_baseline": "113@15 (Joe-b-20 aes-invsbox-a33-ad4-g113-gd15-xx80-34.circ.txt; usnistgov/Circuits 118@15)",
+      "delta_summary": "-4 gates at GD <= 15 (113 -> 109; -9 vs NIST 118@15), -2 depth levels at G = 109 (vs 109@17), and dominates 110@16",
+      "A": 33,
+      "AD": 4,
+      "G": 109,
+      "GD": 15,
+      "XOR": 40,
+      "XNOR": 36,
+      "XX": 76,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        33,
+        4,
+        109,
+        15,
+        40,
+        36
+      ],
+      "gates_per_gd_level": [
+        10,
+        12,
+        10,
+        6,
+        6,
+        2,
+        3,
+        4,
+        4,
+        12,
+        11,
+        9,
+        9,
+        6,
+        5
+      ],
+      "ands_per_ad_level": [
+        9,
+        2,
+        4,
+        18
+      ],
+      "output_gd_hist": {
+        "13": 1,
+        "14": 2,
+        "15": 5
+      }
+    },
+    {
+      "filename": "aes-invsbox-a35-ad4-g129-gd13-xx94-42.circ.txt",
+      "role": "pareto_4d_invsbox_min_G_at_gd13",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "0a0d9bcc0073d04c4a6369e44db22360a5583502cf02f364b94b3046621107a1",
+      "prior_baseline": "131@13 (usnistgov/Circuits aes-invsbox-a35-ad4-g131-gd13-xx96-14.circ.txt; Joe-b-20 130@13 uses 1 NOT gate)",
+      "delta_summary": "-2 gates at GD <= 13 (131 -> 129; -1 vs 1-NOT 130@13)",
+      "A": 35,
+      "AD": 4,
+      "G": 129,
+      "GD": 13,
+      "XOR": 52,
+      "XNOR": 42,
+      "XX": 94,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        35,
+        4,
+        129,
+        13,
+        52,
+        42
+      ],
+      "gates_per_gd_level": [
+        6,
+        16,
+        15,
+        9,
+        6,
+        7,
+        8,
+        6,
+        11,
+        15,
+        11,
+        11,
+        8
+      ],
+      "ands_per_ad_level": [
+        9,
+        4,
+        4,
+        18
+      ],
+      "output_gd_hist": {
+        "13": 8
+      }
+    },
+    {
+      "filename": "aes-sbox-a37-ad4-g119-gd14-xx82-33.circ.txt",
+      "role": "pareto_4d_sbox_min_G_at_gd14",
+      "format": "NCFF-0.1-2026",
+      "function": "sbox",
+      "bit_convention": "U0:U7 MSB-first input byte -> S0:S7 MSB-first FIPS 197 SBox() output byte",
+      "sha256": "3380e6da4f6a7dc3886d6cdecd51b996d0552b28911e8d718e91a32875d61df3",
+      "prior_baseline": "121@14 (Joe-b-20 aes-sbox-a37-ad4-g121-gd14-xx84-36.circ.txt; usnistgov/Circuits 125@14)",
+      "delta_summary": "-2 gates on forward S-box at GD <= 14 (121 -> 119; -6 vs NIST 125@14)",
+      "A": 37,
+      "AD": 4,
+      "G": 119,
+      "GD": 14,
+      "XOR": 49,
+      "XNOR": 33,
+      "XX": 82,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        37,
+        4,
+        119,
+        14,
+        49,
+        33
+      ],
+      "gates_per_gd_level": [
+        9,
+        6,
+        11,
+        9,
+        6,
+        6,
+        4,
+        8,
+        4,
+        15,
+        13,
+        10,
+        10,
+        8
+      ],
+      "ands_per_ad_level": [
+        9,
+        4,
+        4,
+        20
+      ],
+      "output_gd_hist": {
+        "14": 8
+      }
+    },
+    {
+      "filename": "aes-invsbox-a32-ad5-g116-gd16-xx84-46.circ.txt",
+      "role": "pareto_4d_invsbox_a32_ad5_gd16",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "92b64b24cef66820514f05f5fab3c12f9938ae1451adda0b0675946cccb7cb8f",
+      "prior_baseline": "122@16 at A <= 32 (Joe-b-20 32/4/122/16; usnistgov/Circuits 32/5/125/15 aes-invsbox-a32-ad5-g125-gd15-xx93-21.circ.txt; Joe-b-20 112@16 uses 1 NOT gate)",
+      "delta_summary": "-6 gates at A <= 32, GD <= 16 (122 -> 116; -9 vs NIST 32/5/125/15)",
+      "A": 32,
+      "AD": 5,
+      "G": 116,
+      "GD": 16,
+      "XOR": 38,
+      "XNOR": 46,
+      "XX": 84,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        32,
+        5,
+        116,
+        16,
+        38,
+        46
+      ],
+      "gates_per_gd_level": [
+        11,
+        13,
+        11,
+        6,
+        6,
+        3,
+        2,
+        3,
+        4,
+        7,
+        7,
+        10,
+        9,
+        10,
+        9,
+        5
+      ],
+      "ands_per_ad_level": [
+        9,
+        1,
+        2,
+        8,
+        12
+      ],
+      "output_gd_hist": {
+        "15": 3,
+        "16": 5
+      }
+    },
+    {
+      "filename": "aes-invsbox-a32-ad5-g114-gd19-xx82-17.circ.txt",
+      "role": "pareto_4d_invsbox_a32_ad5_gd19",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "7cb05a3d51323bf9f24152aec35d6141e7334534af91803706eecc3db040b885",
+      "prior_baseline": "118@19 at A <= 32, GD <= 19 (Joe-b-20 31/5/118/19 & 32/4/118/19; NIST 32/5/110/20 requires GD = 20)",
+      "delta_summary": "-4 gates at A <= 32, GD <= 19 (118 -> 114)",
+      "A": 32,
+      "AD": 5,
+      "G": 114,
+      "GD": 19,
+      "XOR": 65,
+      "XNOR": 17,
+      "XX": 82,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        32,
+        5,
+        114,
+        19,
+        65,
+        17
+      ],
+      "gates_per_gd_level": [
+        7,
+        8,
+        10,
+        8,
+        4,
+        4,
+        4,
+        3,
+        3,
+        3,
+        3,
+        7,
+        5,
+        8,
+        8,
+        10,
+        8,
+        6,
+        5
+      ],
+      "ands_per_ad_level": [
+        9,
+        1,
+        2,
+        8,
+        12
+      ],
+      "output_gd_hist": {
+        "17": 1,
+        "18": 2,
+        "19": 5
+      }
+    },
+    {
+      "filename": "aes-invsbox-a28-ad4-g143-gd16-xx115-59.circ.txt",
+      "role": "pareto_4d_invsbox_a28_ad4_gd16",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "44eb1bf275f5c385ca51c7125d446510824fd689295dc83cbf6337e0d6f0bfad",
+      "prior_baseline": "150@16 at A = 28, AD = 4 (usnistgov/Circuits 28/4/150/16; 28/5/147/16; Joe-b-20 143@16 uses 1 NOT gate)",
+      "delta_summary": "-7 gates at A = 28, AD = 4, GD <= 16 (150 -> 143; eliminates 1 NOT gate vs Joe-b-20 xxn115-59-1)",
+      "A": 28,
+      "AD": 4,
+      "G": 143,
+      "GD": 16,
+      "XOR": 56,
+      "XNOR": 59,
+      "XX": 115,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        28,
+        4,
+        143,
+        16,
+        56,
+        59
+      ],
+      "gates_per_gd_level": [
+        6,
+        10,
+        11,
+        10,
+        8,
+        5,
+        6,
+        4,
+        5,
+        7,
+        14,
+        14,
+        15,
+        10,
+        11,
+        7
+      ],
+      "ands_per_ad_level": [
+        9,
+        2,
+        4,
+        13
+      ],
+      "output_gd_hist": {
+        "15": 1,
+        "16": 7
+      }
+    },
+    {
+      "filename": "aes-invsbox-a28-ad4-g134-gd19-xx106-46.circ.txt",
+      "role": "pareto_4d_invsbox_a28_ad4_gd19",
+      "format": "NCFF-0.1-2026",
+      "function": "invsbox",
+      "bit_convention": "x0:x7 MSB-first input byte -> y0:y7 MSB-first FIPS 197 InvSBox() output byte",
+      "sha256": "e9faba1333a24b23bce7137d111b26f9987fd402382fb49cf95e9cd15a932e54",
+      "prior_baseline": "135@18 at A = 28, AD = 4, GD <= 19 (Joe-b-20 28/4/135/18; NIST 28/4/140/19 & 28/4/135/20; Joe-b-20 134@19 uses 1 NOT gate)",
+      "delta_summary": "-1 gate at A = 28, AD = 4, GD <= 19 (-6 vs NIST 140@19; eliminates 1 NOT gate vs Joe-b-20 xxn106-46-1)",
+      "A": 28,
+      "AD": 4,
+      "G": 134,
+      "GD": 19,
+      "XOR": 60,
+      "XNOR": 46,
+      "XX": 106,
+      "NOT": 0,
+      "constants_used": 0,
+      "self_input_gates": 0,
+      "dead_gates": 0,
+      "num_inputs": 8,
+      "num_outputs": 8,
+      "metrics_tuple_a_ad_g_gd_xor_xnor": [
+        28,
+        4,
+        134,
+        19,
+        60,
+        46
+      ],
+      "gates_per_gd_level": [
+        5,
+        7,
+        7,
+        9,
+        6,
+        6,
+        5,
+        3,
+        5,
+        4,
+        4,
+        12,
+        12,
+        12,
+        11,
+        8,
+        7,
+        6,
+        5
+      ],
+      "ands_per_ad_level": [
+        9,
+        2,
+        4,
+        13
+      ],
+      "output_gd_hist": {
+        "17": 2,
+        "18": 1,
+        "19": 5
+      }
+    }
+  ],
+  "frontier_baseline_2026_11_17": {
+    "recon_date_utc": "2026-11-17T17:04:00Z",
+    "individual_files_audited": 457,
+    "valid_strict_gate_model_files": 428,
+    "rejected_not_or_constant_files": 29,
+    "kste_forward_88xor_verified": 18938,
+    "kste_inverse_88xor_verified": 14324,
+    "sources": [
+      {
+        "name": "NIST CSRC Circuit Complexity List of Circuits",
+        "url": "https://csrc.nist.gov/Projects/circuit-complexity/list-of-circuits",
+        "fetched_utc": "2026-11-17T17:04:00Z",
+        "sha256": "3efad0aa98adf5ef77ebdf4af7741f491465f0cd52c27651cbfb520a26481437",
+        "live_wishlist_6_targets": [
+          "(a) [Inv]S-Box: A <= 27",
+          "(b) [Inv]S-Box: G <= 100",
+          "(c) [Inv]S-Box: G <= 110 at GD <= 14",
+          "(d) MixColumns: G <= 86",
+          "(e) MixColumns: G <= 93 at GD = 3",
+          "(f) Inverse MixColumns: G <= 105 at GD <= 5"
+        ]
+      },
+      {
+        "name": "usnistgov/Circuits (master)",
+        "url": "https://github.com/usnistgov/Circuits",
+        "commit": "3d807741f937d29d3bef4f32f142ccda0cda9070",
+        "commit_date": "2026-11-14",
+        "aes_readme_sha256": "6e488184148ab8427891fea681a459bcf883e9fd2a645d8f9b8af1aae2b8a98e",
+        "sbox_readme_sha256": "bd572c07c6da6e4d0cfb5050cf20903041cc3efb8079ca7666f94e9031e5cd91",
+        "invsbox_readme_sha256": "0bd3285eb2bdca763099cc69447065f160b014422350eec7b24249da46c7d9d5",
+        "invmixcols_readme_sha256": "a88c5d8427d8889d66f669d2ed02f4396fdad5da554148e643001fa3eb0a0716",
+        "invmixcols_gd10_file": "aes-invmixcols-xor93-depth10.circ.txt",
+        "invmixcols_gd10_sha256": "0c23786c60b19be579a4c8d1410754a9e38c6278b232547fee8a59cc788f28ee",
+        "invmixcols_gd11_file": "aes-invmixcols-xor92-depth11.circ.txt",
+        "invmixcols_gd11_sha256": "11b2d653a05b3014d6af756704c8e9c69a580ecc12ffeeaf8dd51373b7130aea",
+        "invsbox_gd14_file": "aes-invsbox-a33-ad4-g123-gd14-xx90-16.circ.txt",
+        "invsbox_gd14_sha256": "17f29951d16182718b0c4b7af57b6750de7672f9852d440c860c44c0b7ba26fb",
+        "invsbox_gd13_file": "aes-invsbox-a35-ad4-g131-gd13-xx96-14.circ.txt",
+        "invsbox_gd13_sha256": "3b10120d077c3befa882b2d0c485e71ff1fb6121c7935e6e577e8d6be962baed",
+        "invsbox_min_gd_zero_not": 12,
+        "invsbox_min_gd_zero_not_file": "aes-invsbox-a45-ad4-g141-gd12-xx96-25.circ.txt",
+        "invsbox_min_gd_zero_not_sha256": "65a98db180babff46b17df674fa5cda16123d41445a961fa58b4e98b6a7742d6",
+        "invsbox_gd10_with_not_file": "aes-invsbox-a55-ad4-g148-gd10-xxn93-26-2.circ.txt (2 NOT gates, rejected under strict {AND,XOR,XNOR})",
+        "invsbox_gd10_with_not_sha256": "4dd4327002a8432b63fb6585994e9fca9ead72cc00ee1123eb567d77350ad2a2",
+        "sbox_gd10_with_not_file": "aes-sbox-a59-ad4-g159-gd10-xxn100-30-3.circ.txt (3 NOT gates, rejected under strict {AND,XOR,XNOR})",
+        "sbox_gd10_with_not_sha256": "4ef94ead5151f4267ecf61c3e77b8b3113bdfdd323d1f95948757f46c4d52a08"
+      },
+      {
+        "name": "usnistgov/Circuits Pull Request #1 (Renaud Dubois / ZKNoxHQ)",
+        "url": "https://github.com/usnistgov/Circuits/pull/1",
+        "head_commit": "b8d499ed9d0eaa1e1f572cd442280c5a60f60ac5",
+        "opened_utc": "2026-11-15T02:33:25Z",
+        "invsbox_gd11_zero_not_file": "aes-invsbox-a55-ad4-g143-gd11-xx88-23.circ.txt",
+        "invsbox_gd11_zero_not_sha256": "f1c72a9df2507cdd4900a00f17226a3667705e57b07bc7446e8c211a0ea41967",
+        "sbox_gd11_zero_not_file": "aes-sbox-a57-ad4-g143-gd11-xx86-25.circ.txt",
+        "sbox_gd11_zero_not_sha256": "fe35b80fa79d0352c0a033accae8517f0fdc38ce6db93a2091d8f426fc2c20cc",
+        "sbox_ad3_gd11_zero_not_file": "aes-sbox-a71-ad3-g191-gd11-xx120-21.circ.txt"
+      },
+      {
+        "name": "Joe-b-20/xor-circuit-research",
+        "url": "https://github.com/Joe-b-20/xor-circuit-research",
+        "commit": "0101cae66886135672a6cf5c59104f8784e39a9b",
+        "commit_date": "2026-11-17",
+        "invmixcols_gd10_file": "aes-invmixcolumns-xor93-depth10.circ.txt",
+        "invmixcols_gd10_sha256": "95990001eda6f9584fb3529918b840d6c2ef2d09270f7a864e93c37cdf4e7cb9",
+        "invmixcols_gd11_file": "aes-invmixcolumns-xor92-depth11.circ.txt",
+        "invmixcols_gd11_sha256": "492a57a81be28dae9e767000fecff2ec67e2c3ad4540fa5ceeff027b7109be78",
+        "sbox_gd14_zero_not_file": "aes-sbox-a37-ad4-g121-gd14-xx84-36.circ.txt",
+        "sbox_gd14_zero_not_sha256": "719a490b37af669f8bb62980502ec237138a4f3ffe2123fe6dcd760f90bb76e0",
+        "invsbox_gd15_zero_not_file": "aes-invsbox-a33-ad4-g113-gd15-xx80-34.circ.txt",
+        "invsbox_gd15_zero_not_sha256": "c78a6784badb5b7ba1c5926f33dd59de1982bd9f6e0cb90ed97aa1184c067a25",
+        "invsbox_gd12_zero_not_file": "aes-invsbox-a40-ad4-g134-gd12-xx94-41.circ.txt",
+        "invsbox_gd12_zero_not_sha256": "45b73f42e3710c0c8f6682c9061d3ed4eb133ad91c7a46a8101b51ef737851d2",
+        "invsbox_gd14_with_not_file": "aes-invsbox-a33-ad4-g121-gd14-xxn88-31-1.circ.txt (1 NOT gate)",
+        "invsbox_gd14_with_not_sha256": "1ba094bab449f177a9982f914d6c50abc3102a6380cfccadc19829afa790c018",
+        "invsbox_gd11_with_not_file": "aes-invsbox-a47-ad4-g141-gd11-xxn94-44-2.circ.txt (A=47, AD=4, G=141, GD=11, XOR=48, XNOR=44, NOT=2, rejected under strict {AND,XOR,XNOR})",
+        "invsbox_gd11_with_not_sha256": "4403ba833237415ea74c95b7cd328c82c6513fe10d8d1e98ab5e35db53acc19f"
+      },
+      {
+        "name": "Swapnil-jain/gf2m-circuits",
+        "url": "https://github.com/Swapnil-jain/gf2m-circuits",
+        "commit": "9daf883e529ab4b9c80c66632683b403f0c69e89",
+        "commit_date": "2026-10-12",
+        "summary": "S-box 106@24 (A=32), InvS-box 109@30 (A=32)"
+      },
+      {
+        "name": "kste/mixcolumns_xor",
+        "url": "https://github.com/kste/mixcolumns_xor",
+        "commit": "3ecc5029d314aaf6f8b6909ff2caf3222132a8",
+        "commit_date": "2026-10-27",
+        "summary": "18,938 MixColumns 88-XOR circuits (min GD=5) and 14,324 InvMixColumns 88-XOR circuits (min GD=16)"
+      },
+      {
+        "name": "chengxuandi/aes-sbox-circuit-optimizations",
+        "url": "https://github.com/chengxuandi/aes-sbox-circuit-optimizations",
+        "commit": "54a74911002e0bda7984efaa49900447ac5fa1ae",
+        "commit_date": "2026-09-22",
+        "summary": "13 A=29 forward S-box circuits (140@31 to 183@16)"
+      },
+      {
+        "name": "umizame/S-box_29-AND & NicolasMasselot/ai-guided-aes29-affine-resynthesis",
+        "url": "https://github.com/umizame/S-box_29-AND",
+        "commit": "84bc08d6eddb530b1343090550bb9a4c3e3913cc",
+        "companion_url": "https://github.com/NicolasMasselot/ai-guided-aes29-affine-resynthesis",
+        "companion_commit": "800f9859412e52ff1211435e324fd2fabeaacbab",
+        "summary": "A=29 forward S-box circuits (228g and 194g, each containing 4 NOT gates)"
+      }
+    ]
+  },
+  "invmixcols_92_at_10_milestone_p3": {
+    "previous_2026_11_17_bar_at_gd_le_10": 93,
+    "previous_2026_11_17_bar_at_gd_le_11": 92,
+    "constructed_gates_at_gd10": 92,
+    "non_isomorphic_witness_count": 2,
+    "value_set_overlap_out_of_92": 72,
+    "value_set_symmetric_difference": 40,
+    "highs_top2_layer_milp_optimal_over_gd_le_8": [
+      {
+        "witness": "aes-invmixcols-xor92-depth10.circ.txt",
+        "goal_gd": 10,
+        "P_gates": 75,
+        "B_cands": 1487,
+        "vars": 2512,
+        "opt_gates": 92,
+        "status": "OPTIMAL (0)",
+        "sec": 0.0595
+      },
+      {
+        "witness": "aes-invmixcols-xor92-depth10-alt.circ.txt",
+        "goal_gd": 10,
+        "P_gates": 74,
+        "B_cands": 1292,
+        "vars": 2109,
+        "opt_gates": 92,
+        "status": "OPTIMAL (0)",
+        "sec": 0.044
+      }
+    ],
+    "unimproved_invmixcols_depths": {
+      "GD_5": "118@5 (CSRC Wish-List (f) <=105@5 open)",
+      "GD_6": "104@6",
+      "GD_7": "99@7",
+      "GD_8": "96@8",
+      "GD_9": "94@9",
+      "GD_12_to_14": "90@12",
+      "GD_15": "89@15",
+      "min_gates_any_GD": "88@16 (kste)"
+    }
+  },
+  "forward_vs_inverse_gd10_tower_norm_asymmetry": {
+    "field_polynomial": "x^8 + x^4 + x^3 + x + 1 (0x11B)",
+    "subfield_norm": "N(z) = z^17 in GF(2^4) (degree-2 quadratic map in R(2,8), dim = 37)",
+    "gf16_basis_hex": [
+      "0x01",
+      "0xbc",
+      "0xe1",
+      "0xb1"
+    ],
+    "depth1_zero_not_parity_obstruction": "With 2-input {AND, XOR, XNOR} on distinct inputs and zero constants, Depth-1 affine wires have linear weight 2 (x_i ^ x_j or 1 ^ x_i ^ x_j) and never weight 1 with constant 1 (1 ^ x_i requires Depth 2 via XNOR(XOR(x_i,x_j), x_j)), forbidding (1 ^ x_i) & (...) at Depth 2.",
+    "d0_d1_d2_unique_signals_ad_le_1": [
+      8,
+      92,
+      4358
+    ],
+    "d3_mitm_signals_degree_le_2": 3604462,
+    "d3_unrestricted_zero_not_boolean_functions": 16208265,
+    "sbox_forward_z_eq_x": {
+      "reachable_nonzero_norm_masks_at_gd_le_4": [
+        10,
+        13
+      ],
+      "reachable_count_out_of_15": 2,
+      "gf2_span_rank_out_of_4": 2,
+      "tower_gd10_zero_not_feasible": false
+    },
+    "invsbox_z_eq_inv_aff_x_xor_0x63": {
+      "reachable_nonzero_norm_masks_at_gd_le_4": [
+        1,
+        4,
+        7,
+        9,
+        10,
+        12,
+        13,
+        15
+      ],
+      "reachable_count_out_of_15": 8,
+      "gf2_span_rank_out_of_4": 4,
+      "galois_normal_basis_orbits": [
+        [
+          7,
+          12,
+          4,
+          9
+        ],
+        [
+          15,
+          9,
+          7,
+          10
+        ]
+      ],
+      "tower_gd10_zero_not_feasible": true
+    }
+  },
+  "wave3_nonlinear_exact_sat_and_milp_barriers": {
+    "solver_status_note": "TIMEOUT_UNKNOWN != UNSAT: On full-Zone_Bot CDCL queries with 18..21 simultaneous unknown internal helpers (13,547..18,591 CNF vars, 275k..542k clauses), kissat 4.0.4 returned TIMEOUT_UNKNOWN (exit_code=0, 0.90M..1.18M conflicts at 90..120s caps) and is never reported as UNSAT.",
+    "T1_zone_top_invsbox_105_exact_18": {
+      "circuit": "aes-invsbox-a32-ad7-g105-gd27-xx73-14.circ.txt",
+      "num_targets": 17,
+      "targets": [
+        74,
+        12,
+        248,
+        164,
+        109,
+        96,
+        39,
+        232,
+        230,
+        186,
+        246,
+        136,
+        193,
+        215,
+        97,
+        168,
+        22
+      ],
+      "K17_0_helpers_status": "EXACT_UNSAT",
+      "K17_kissat": {
+        "nvars": 340,
+        "nclauses": 1247,
+        "exit_code": 20,
+        "sec": 0.0132
+      },
+      "K18_1_helper_status": "SAT",
+      "K18_valid_helper_masks_out_of_230": 1,
+      "K18_unique_helper_mask": 66,
+      "global_depth_free_min_gates": 18
+    },
+    "T2_zone_top_invsbox_126_exact_18": {
+      "circuit": "aes-invsbox-a28-ad5-g126-gd27-xx98-26.circ.txt",
+      "num_targets": 16,
+      "targets": [
+        200,
+        214,
+        194,
+        28,
+        100,
+        146,
+        60,
+        29,
+        136,
+        228,
+        254,
+        155,
+        232,
+        121,
+        142,
+        134
+      ],
+      "K16_0_helpers_status": "EXACT_UNSAT",
+      "K17_1_helper_status": "EXACT_UNSAT",
+      "K17_subsets_checked": 231,
+      "K17_kissat": {
+        "nvars": 1173,
+        "nclauses": 16815,
+        "exit_code": 20,
+        "sec": 0.0635
+      },
+      "K18_2_helpers_status": "SAT",
+      "global_depth_free_min_gates": 18
+    },
+    "T3_zone_top_sbox_124_exact_19": {
+      "circuit": "aes-sbox-a28-ad5-g124-gd27-xx96-26.circ.txt",
+      "num_targets": 17,
+      "targets": [
+        165,
+        35,
+        12,
+        133,
+        56,
+        127,
+        13,
+        229,
+        45,
+        111,
+        162,
+        90,
+        95,
+        232,
+        86,
+        39,
+        31
+      ],
+      "K17_0_helpers_status": "EXACT_UNSAT",
+      "K18_1_helper_status": "EXACT_UNSAT",
+      "K18_subsets_checked": 230,
+      "K18_kissat": {
+        "nvars": 1299,
+        "nclauses": 19446,
+        "exit_code": 20,
+        "sec": 0.0726
+      },
+      "K19_2_helpers_status": "SAT",
+      "global_depth_free_min_gates": 19,
+      "positive_separator_sbox_103": {
+        "circuit": "aes-sbox-a32-ad7-g103-gd29-xx71-25.circ.txt",
+        "targets": [
+          6,
+          25,
+          134,
+          27,
+          89,
+          102,
+          100,
+          217,
+          116,
+          209,
+          24,
+          173,
+          171,
+          172,
+          68,
+          202,
+          56
+        ],
+        "K17_0_helpers_status": "SAT"
+      }
+    },
+    "T4_152_gd10_feeder_global_pigeonhole_27": {
+      "circuit": "aes-invsbox-a57-ad4-g152-gd10-xx95-25.circ.txt",
+      "feeder_counts_vector": [
+        69,
+        27,
+        56,
+        37,
+        32,
+        5,
+        27
+      ],
+      "bilinear_37_basis_gf2_rank": 37,
+      "bilinear_37_basis_nullity": 0,
+      "distinct_mux_affine_forms_needed": 32,
+      "already_in_prefix_exact_polarity": 5,
+      "missing_distinct_affine_forms": 27,
+      "highs_milp_top2_opt_gates": 27,
+      "highs_milp_status": 0
+    },
+    "highs_top2_layer_gd27_zone_bot_optimal": [
+      {
+        "instance": "invsbox_105_used18",
+        "orig_bot_gates": 27,
+        "opt_gates": 27,
+        "P_size": 42,
+        "milp_vars": 227,
+        "sec": 0.0021,
+        "status": "OPTIMAL (0)"
+      },
+      {
+        "instance": "invsbox_126_used20",
+        "orig_bot_gates": 30,
+        "opt_gates": 30,
+        "P_size": 41,
+        "milp_vars": 369,
+        "sec": 0.0048,
+        "status": "OPTIMAL (0)"
+      },
+      {
+        "instance": "invsbox_126_avail21",
+        "orig_bot_gates": 30,
+        "opt_gates": 30,
+        "P_size": 42,
+        "milp_vars": 383,
+        "sec": 0.0037,
+        "status": "OPTIMAL (0)"
+      },
+      {
+        "instance": "sbox_124_used20",
+        "orig_bot_gates": 27,
+        "opt_gates": 27,
+        "P_size": 38,
+        "milp_vars": 367,
+        "sec": 0.0032,
+        "status": "OPTIMAL (0)"
+      },
+      {
+        "instance": "sbox_124_avail21",
+        "orig_bot_gates": 27,
+        "opt_gates": 27,
+        "P_size": 39,
+        "milp_vars": 381,
+        "sec": 0.0031,
+        "status": "OPTIMAL (0)"
+      }
+    ]
+  },
+  "wave5_111_gd14_exact_tightness_barriers": {
+    "solver_status_note": "TIMEOUT_UNKNOWN / ITERATION_LIMIT != UNSAT: Unconstrained 5-layer Zone_Bot (GD=10..14, 29->28g) slot-CNF (kissat, 60s) and unpruned 366-vector Top-3-Layer MILP (HiGHS, 73,410 vars, 90s) hit TIMEOUT_UNKNOWN / ITERATION_LIMIT (status=1) and are NOT claimed as global 5-layer Zone_Bot UNSAT. Exact Zone_Bot = 29 optimality is proved strictly on unpruned Top-2-Layer (GD=13..14 above P_{<=12}) and the w2_aug35_cut28 droppable 5-layer subclass.",
+    "T5a_middle_gd5_to_gd10_global_optimality_20g": {
+      "circuit": "aes-invsbox-a34-ad4-g111-gd14-xx77-41.circ.txt",
+      "gd5_input_wires": [
+        "t13",
+        "t25",
+        "t28",
+        "t33",
+        "t36",
+        "t41"
+      ],
+      "middle_output_wires": [
+        "t35",
+        "t38",
+        "t43",
+        "t45",
+        "t39",
+        "t46",
+        "t51",
+        "t53",
+        "t58"
+      ],
+      "P_states_gd5": 16,
+      "nonconstant_layer_sizes": [
+        6,
+        45,
+        643,
+        33602
+      ],
+      "targets_in_S7": 0,
+      "t51_t53_t58_in_S8": false,
+      "min_gates_at_depth_ge_8_pigeonhole": 9,
+      "K20_positive_control": {
+        "vars": 1739,
+        "clauses": 3135,
+        "rc": 10,
+        "status": "SAT",
+        "sec": 0.06
+      },
+      "K19_exhaustive_4_cases_kissat_rc20": true,
+      "all_16_polarities_unsat": 16,
+      "karatsuba_gl4_stabilizer_size": 72,
+      "karatsuba_gl4_orbits_unsat": 24
+    },
+    "T5b_middle_gd4_to_gd10_global_optimality_26g": {
+      "gd4_input_wires": [
+        "t6",
+        "t12",
+        "t22",
+        "t24",
+        "t27",
+        "t32"
+      ],
+      "P_states_gd4": 61,
+      "nonconstant_layer_sizes_S4_to_U7": [
+        6,
+        51,
+        1562,
+        982724
+      ],
+      "targets_in_U7": 0,
+      "K26_positive_control": {
+        "vars": 16036,
+        "clauses": 31596,
+        "rc": 10,
+        "status": "SAT",
+        "sec": 5.733
+      },
+      "K25_target_unsat": {
+        "vars": 15687,
+        "clauses": 30899,
+        "rc": 20,
+        "status": "EXACT_UNSAT",
+        "sec": 7.18
+      }
+    },
+    "T5c_coupled_t58_gd9_slack_obstruction": {
+      "from_gd5_K20": {
+        "vars": 2226,
+        "clauses": 4047,
+        "rc": 20,
+        "status": "EXACT_UNSAT",
+        "sec": 0.057
+      },
+      "from_gd4_K26": {
+        "vars": 17861,
+        "clauses": 35248,
+        "rc": 20,
+        "status": "EXACT_UNSAT",
+        "sec": 9.964
+      }
+    },
+    "T6_conjugate_2040_zone_top_and_1x6_obstruction": {
+      "conjugates_tested": 2040,
+      "c111_external_top_forms_count": 19,
+      "c109_external_top_forms_count": 19,
+      "conjugate_hits_vector_111_top17_top18_109_top17_top18": [
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "T7_zone_bot_top2_and_w2_aug35_optimality": {
+      "output_depth_floors_fwht_19bit": [
+        12,
+        13,
+        13,
+        14,
+        13,
+        14,
+        14,
+        12
+      ],
+      "top2_unpruned_above_P12": {
+        "kissat_rc": 20,
+        "kissat_sec": 0.022,
+        "highs_status": 0,
+        "opt_gates": 29,
+        "vars": 477,
+        "sec": 0.011
+      },
+      "w2_aug35_ctrl29": {
+        "highs_status": 0,
+        "status": "OPTIMAL",
+        "opt_gates": 29,
+        "vars": 3423,
+        "sec": 0.282
+      },
+      "w2_aug35_cut28": {
+        "highs_status": 2,
+        "status": "INFEASIBLE",
+        "vars": 3423,
+        "sec": 0.165
+      },
+      "unconstrained_5layer_slot_cnf_and_top3_73410v": "TIMEOUT_UNKNOWN / ITERATION_LIMIT (not UNSAT)"
+    },
+    "T8_gl4_72_stabilizer_early_bottleneck_obstruction": {
+      "gl4_matrices_screened": 20160,
+      "karatsuba_stabilizer_order": 72,
+      "distinct_basis_bottleneck_orbits": 9,
+      "sat_orbits_at_K21_plus1g": 0,
+      "sat_orbits_at_K22_plus2g": 0,
+      "positive_control_K24_status": "SAT",
+      "gd4_P61_K27_status": "UNSAT (21.47s; K=28 TIMEOUT_UNKNOWN)"
+    },
+    "T9_33_4_112_14_top2_optimality_and_ghost_vacuum": {
+      "c109_nx6_base_leaves_le9": 0,
+      "single_ghost_d9_max_n10_gates": 0,
+      "kraft_valid_g110_splices_highs_infeasible": "6 / 6 NO_RECIPE_INFEASIBLE (0.028s)",
+      "top2_exact_112_optima_count": 3,
+      "kauers_moosbauer_gf2_flips": {
+        "flips": 1304862,
+        "ad4_decompositions": 29763,
+        "karatsuba_C_weight": 52,
+        "non_karatsuba_min_C_weight": 61
+      }
+    },
+    "T10_33_4_111_14_zone_top19_and_canonical_zone_bot_optimality": {
+      "witnesses_checked": 64,
+      "archived_representatives_sha256": {
+        "aes-invsbox-a33-ad4-g111-gd14-xx78-39.circ.txt": "aa18325ecb4675691d77c177623191086acf36ba935d78541ce14afff788633e",
+        "aes-invsbox-a33-ad4-g111-gd14-xx78-39-alt1.circ.txt": "86eb2ecca96687c15bc54717f739d0c4dba7c0467e04c96d54eec791dfbe9f75",
+        "aes-invsbox-a33-ad4-g111-gd14-xx78-39-alt2.circ.txt": "ad1c86112c4eddb8f612d5b9cb39b735c6eb569b531a5582b1fe5c2c4f7d3fe3",
+        "aes-invsbox-a33-ad4-g111-gd14-xx78-27.circ.txt": "29f7032cbdb48ceb09869fc9d8e428b6d4a405e74096b1c64f4cad62a57122e3",
+        "aes-invsbox-a33-ad4-g111-gd14-xx78-31.circ.txt": "0001315c1933b2df38fda38ff1bcb5bae31d3305d0fbad86661c852d8bebc4b6"
+      },
+      "zone_top_global_depth_free_pigeonhole_min": 19,
+      "canonical_zone_bot_classes": 2,
+      "top2_exact_111_optima_classes": "2 / 2 (Zone_Bot = 29.0, K <= 28 INFEASIBLE)",
+      "gd12_2sum_augmented_highs_cut28": "2 / 2 INFEASIBLE (K = 29 OPTIMAL = 29.0)"
+    },
+    "T11_nist_ncff_unary_not_gd14_kraft_obstruction_and_mc_d3_lp92": {
+      "gd10_positive_separator": "NIST 55/4/148/10 (2 NOTs) saves -4g vs zero-NOT 57/4/152/10",
+      "gd14_zero_net_cost_not_rewrite_classes": "2 / 2 induce a20 -> a20 ^ a26, pushing y5 FWHT_min_depth = 15 > 14 (Kraft infeasible)",
+      "overcomplete_gd14_sweep_best": {
+        "A35_not0": 111,
+        "A35_not1": 111,
+        "A36_not0": 112,
+        "A36_not1": 112,
+        "A37_not0": 113,
+        "A38_not0": 113
+      },
+      "mixcolumns_gd3_exact_29180v_root_lp": 92.0,
+      "mixcolumns_gd3_z2_rot16_mip": 115
+    }
+  },
+  "wave2_linear_mixcolumns_barriers": {
+    "B1_z4_rotational_symmetry_penalty": {
+      "invmixcols_gd5_symmetric_min": 143,
+      "invmixcols_gd5_asymmetric_bar": 118,
+      "invmixcols_gd5_penalty_gates": 25,
+      "mixcols_gd3_symmetric_min": 106,
+      "mixcols_gd3_asymmetric_bar": 97,
+      "mixcols_gd3_penalty_gates": 9
+    },
+    "B2_even_odd_coupled_double_output_wall": {
+      "identity": "M(X) ^ M^{-1}(X) = (1 + X^2)(0x0C + 0x08*X) over GF(2^8)[X]/(X^4+1) (GF(2) rank 16 on E0=B0^B2, E1=B1^B3)",
+      "delta_row_weights_over_E0_E1": [
+        3,
+        4,
+        4,
+        8,
+        7,
+        6,
+        5,
+        3
+      ],
+      "peeled_evenodd_gd5_gates": 156,
+      "double_output_penalty_gates": 32
+    },
+    "B3_highs_top2_and_augmented_cutoff_milp": {
+      "top2_globally_optimal_status0_count": 10,
+      "augmented_multilayer_infeasible_status2": [
+        {
+          "query": "InvMixColumns 118@5 -> <=117@5 (+35 D3 candidates, all D1..D4 droppable)",
+          "status": "INFEASIBLE (HiGHS status=2)",
+          "vars": 6582,
+          "sec": 9.62
+        },
+        {
+          "query": "InvMixColumns 90@12 -> <=89@12 (+35 D10 candidates, all D1..D11 droppable)",
+          "status": "INFEASIBLE (HiGHS status=2)",
+          "vars": 27718,
+          "sec": 5.17
+        },
+        {
+          "query": "InvMixColumns 89@15 -> <=89@14 (+35 D12 candidates, all D1..D13 droppable)",
+          "status": "INFEASIBLE (HiGHS status=2)",
+          "vars": 25485,
+          "sec": 3.21
+        }
+      ]
+    },
+    "B4_kste_88xor_daisy_chain_depth_floor": {
+      "circuits_inspected": 14324,
+      "min_earliest_depth": 16,
+      "count_at_gd16": 105
+    },
+    "B5_bounded_depth_ils_and_lns_summary": {
+      "mixcols_gd3_exact_pair_cover_ils_steps": 186750000,
+      "mixcols_gd3_best": "97@3 (matching baseline)"
+    }
+  }
+}
