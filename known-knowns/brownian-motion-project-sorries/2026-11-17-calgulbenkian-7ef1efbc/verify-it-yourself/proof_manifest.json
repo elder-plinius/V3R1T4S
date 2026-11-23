@@ -1,0 +1,23 @@
+{
+  "target_id": "brownian-motion-project-sorries",
+  "solution_file": "IteratedLogarithm.lean",
+  "solution_sha256": "7ef1efbcd7a5d841a015f7503d6bcf17f46a96cf7c2dfd8838765bf0bd4de25f",
+  "solution_bytes": 49468,
+  "theorem_full_name": "ProbabilityTheory.IsBrownianReal.reflection",
+  "theorem_short_name": "IsBrownianReal.reflection",
+  "namespace": "ProbabilityTheory",
+  "upstream_repo": "https://github.com/RemyDegenne/brownian-motion",
+  "upstream_commit": "8fd8dc52830cdd07cf9cc8eadd533e284425fa6f",
+  "upstream_relpath": "BrownianMotion/Gaussian/IteratedLogarithm.lean",
+  "upstream_sha256": "c5a08861fdcc0f8c122c62efd8c0293c859d5f655f9a9635ebfbcdcde3aa5b44",
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "mathlib_rev": "6135ffb78e8bcd3fcc8ec02f3f82ea0b0737358b",
+  "checkdecls_rev": "3d425859e73fcfbef85b9638c2a91708ef4a22d4",
+  "subverso_rev": "52b9dfbd2658408e37ae6e8b72601ddeaaa25a0c",
+  "expected_check_prefix": "@ProbabilityTheory.IsBrownianReal.reflection.{u_1} :",
+  "allowed_axioms": [
+    "propext",
+    "Classical.choice",
+    "Quot.sound"
+  ]
+}

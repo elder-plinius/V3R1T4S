@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+brownian-motion-project-sorries,ProbabilityTheory.IsBrownianReal.reflection,Lean 4 kernel proof (0 sorry),sorry,2026-11-16T16:53:22Z,object/IteratedLogarithm.lean,7ef1efbcd7a5d841a015f7503d6bcf17f46a96cf7c2dfd8838765bf0bd4de25f
