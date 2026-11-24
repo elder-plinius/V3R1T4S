@@ -1,0 +1,2 @@
+ "B_upper": "2.1257394310040893870",
+work/cert.json vs verify/cert_rho_p128.json: CERT-BYTE-IDENTICAL (cmp)
