@@ -1,0 +1,31 @@
+{
+  "id": "largest-prime-factor-101-new-term",
+  "name": "A181568 / Stormer 101-smooth pairs: find a term > 941747621709311 or prove completeness",
+  "category": "number-hunts",
+  "kind": "standard",
+  "tractability": 3,
+  "compute_profile": "laptop-days to workstation-hours (Stormer Pell-equation search over all 2^26 - 1 = 67,108,863 squarefree 101-smooth D > 1 via continued fractions and Lehmer/Luca-Najman bounds)",
+  "statement": "OEIS A181568 lists positive integers k such that the largest prime factor of k^2 - 1 is 101 (equivalently, k - 1 and k + 1 are both 101-smooth and 101 divides k^2 - 1). Because A181568 carries keyword 'fini', Stormer's theorem (1897) guarantees finitely many terms. Florian Luca and Filip Najman (arXiv:1005.1533; Math. Comp. 80, 2011) determined all x such that P(x^2 - 1) < 100 (stopping strictly below 101; companion OEIS A175607 stops at n = 25, p = 97, where p = 79 reaches 19182937474703818751 > 10^19). David A. Corneth (2019) computed all 3,340 terms of A181568 below 10^17, with largest listed term a(3340) = 941747621709311, and asked on A181568 whether any term exceeds 941747621709311. Writing k^2 - 1 = D y^2 with D > 1 squarefree and 101-smooth (and y 101-smooth) maps every term to a solution (k, y) of the Pell equation x^2 - D y^2 = 1 across all 2^26 - 1 = 67,108,863 squarefree 101-smooth integers D > 1. Note that restricting to 101 | D or even k^2 - 1 misses both even terms (like a(1) = 100, where k^2 - 1 is odd) and terms with positive even v_101(k^2 - 1) (where 101 | y instead of 101 | D, analogous to k = 97 for p = 7 where 97^2 - 1 = 2^6 * 3 * 7^2 has D = 3).",
+  "success_criterion": "CONFIRMED: EITHER (a) an explicit integer k > 941747621709311 together with the complete factorization of k - 1 and k + 1 over the 26 primes <= 101 (certifying every prime factor <= 101 and 101 | k^2 - 1); OR (b) a complete, dual-verified Stormer-Pell exhaustive proof over all 2^26 - 1 = 67,108,863 squarefree 101-smooth integers D > 1 — paired with an explicit, independently audited (or Lean 4 kernel-checked) proof of the Lehmer/Luca-Najman solution-index bound m <= max(3, (p+1)/2) (accounting for the published Math. Comp. errata) — proving that 941747621709311 is the exact maximum term of A181568. Calibration: reproduce all 3,340 published terms in OEIS b181568.txt and Luca-Najman's A175607(1..25) maxima for p <= 97. Before claiming, recheck OEIS A181568 and A175607 to confirm no larger term or completeness proof has appeared.",
+  "partial_wins": [],
+  "verification_method": "For a witness k > 941747621709311: verify k > 941747621709311 in exact arbitrary-precision integer arithmetic, factor k - 1 and k + 1 completely by trial division over the 26 primes <= 101, verify the prime-power products reconstruct k - 1 and k + 1 exactly, and verify 101 | (k^2 - 1). For a completeness proof: independently verify the Stormer/Lehmer/Luca-Najman index bound (including cases 101 not dividing D and even k) and run two independent C++/GMP Pell continued-fraction solvers across all 2^26 - 1 = 67,108,863 squarefree 101-smooth D > 1 (checking fundamental solutions and all indices m up to the proven bound), confirming both reproduce A175607(1..25) and output the exact same 3,340 terms of A181568 <= 941747621709311. Certificates exceeding 1 MB follow kit/SUBMIT.md section 1.",
+  "primary_sources": [
+    "https://oeis.org/A181568",
+    "https://oeis.org/A181568/b181568.txt",
+    "https://oeis.org/A175607",
+    "https://arxiv.org/abs/1005.1533"
+  ],
+  "status_source": "https://oeis.org/A181568",
+  "status_checked": "2026-11-24",
+  "disclosure": "open",
+  "angles": [
+    "Iterate over all 2^26 - 1 squarefree 101-smooth integers D > 1, solve x^2 - D y^2 = 1 via continued fraction of sqrt(D) (using Luca-Najman's modular early-abort filters), and check 101-smoothness of y_m and divisibility 101 | (x_m^2 - 1) up to the Lehmer index bound.",
+    "Remember that the 2^25 values of D with 101 | D miss terms where 101^2 divides k^2 - 1 and 101 divides y_m rather than D; prioritize both odd/even D with 101 | D for witness hunting and require all 2^26 - 1 squarefree D > 1 for completeness.",
+    "Benchmark throughput on the 2^4 - 1 = 15 squarefree 7-smooth D > 1 and the p <= 73 subset first."
+  ],
+  "pitfalls": [
+    "Do NOT claim a term <= 10^17: Corneth's b181568.txt already exhaustively lists all 3,340 terms < 10^17.",
+    "Do NOT restrict to x^2 - 2 d y^2 = 1 or 101 | D: that misses even k (e.g. a(1) = 100 where k^2 - 1 = 9999 is odd) and misses terms where v_101(k^2 - 1) is positive and even (so 101 | y rather than 101 | D, as in 97^2 - 1 = 2^6 * 3 * 7^2 for p = 7).",
+    "Luca and Najman's Math. Comp. 80 (2011) paper has published errata on the AMS website; verify the exact Lehmer/Stormer index bound rather than copying unverified constants."
+  ]
+}
