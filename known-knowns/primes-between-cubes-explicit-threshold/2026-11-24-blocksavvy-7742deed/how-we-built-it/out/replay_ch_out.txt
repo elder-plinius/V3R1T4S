@@ -1,0 +1,4 @@
+paper JNT2023 (Ford c=57.54, K=3.4747): loglog x0 = 33.990479  loglog n0 = 32.891867
+paper c=57.54, K=2.4798: loglog x0 = 33.990479  loglog n0 = 32.891867
+thesis guess c=51.82, K=2.4798: loglog x0 = 33.634666  loglog n0 = 32.536053
+MTY c=55.241, K=3.4747: loglog x0 = 33.851973  loglog n0 = 32.753361

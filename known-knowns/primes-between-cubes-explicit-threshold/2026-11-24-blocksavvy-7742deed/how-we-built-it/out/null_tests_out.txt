@@ -1,0 +1,7 @@
+ok  N2 ablation kln c=57.54 at Y=32.799 must FAIL
+ok  N2 info: kln c=57.54 certifies 32.892 (= Cully-Hugill JNT 2023)
+ok  N3a main at Y=29.725 (Y_cert-0.01) must FAIL
+ok  N3b main with C1*5.1847e21 (~e^50) at 29.735 must FAIL
+ok  N3c main at 29.735 PASS (prec 256)
+ok  N4 float Phi=0.934253344488114 vs arb mid=0.934253344488114 rel diff 1.34e-41 < 1e-9
+ALL_CONTROLS_BEHAVE
