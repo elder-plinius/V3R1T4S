@@ -1,0 +1,7 @@
+rho intervals: 22 ; tampered interval index: 11
+rho term lowered by 1e-6 relative                  exit=1  FAIL reason: interval 11: recomputed 0.0025312235963600461785 exceeds stated 2.53122106513644978473e-03  -> rejected (ok)
+rho term raised by 1e-4 relative                   exit=1  FAIL reason: interval 11: stated 2.53147671871968224511e-03 exceeds recomputed 0.0025312235963600461785 by more than 1e-5 relative (corrupted certific  -> rejected (ok)
+'rho' flag removed (Lambda^2 used)                 exit=1  FAIL reason: interval 11: recomputed 0.0025974565391733550166 exceeds stated 0.0025312235963600462881  -> rejected (ok)
+z_i of a rho interval scaled by 0.9                exit=1  FAIL reason: interval 11: recomputed 0.0025338864543669005141 exceeds stated 0.0025312235963600462881  -> rejected (ok)
+'rho' flag added to an interval with z > 20000     exit=1  FAIL reason: rho flag on interval 22 with z > 20000  -> rejected (ok)
+tamper tests: PASS
