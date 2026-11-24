@@ -1,0 +1,7 @@
+L=1e+06: min slack 7.594e-02 (needs >= 0), at z=1.010e+06; slack with c3=0: -5.986e-05
+L=1e+07: min slack 2.396e-02 (needs >= 0), at z=1.001e+07; slack with c3=0: -1.332e-05
+L=1e+08: min slack 7.575e-03 (needs >= 0), at z=1.000e+08; slack with c3=0: -1.187e-06
+L=1e+09: min slack 2.395e-03 (needs >= 0), at z=1.000e+09; slack with c3=0: -1.524e-07
+z in [1e+04,1e+06]: E range [0.961759118, 0.962736430]; max sqrt(z)|E-E(1e10)| = 0.100
+z in [1e+06,1e+08]: E range [0.962112472, 0.962196489]; max sqrt(z)|E-E(1e10)| = 0.053
+z in [1e+08,1e+10]: E range [0.962158937, 0.962161377]; max sqrt(z)|E-E(1e10)| = 0.015

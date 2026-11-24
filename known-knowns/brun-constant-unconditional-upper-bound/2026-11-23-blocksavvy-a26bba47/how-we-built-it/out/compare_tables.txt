@@ -1,0 +1,6 @@
+chunks: 1000000 dense: 100000001
+chunk vs dense at multiples of 1e4 <= 1e8: max |diff| = 1.7763568394002505e-15
+ours - Dunn over 1e6 checkpoints: min 1.745e-12 max 7.048e-06 ; Dunn <= ours everywhere: True
+ours - Dunn at 1e8, 1e9, 1e10: 3.5964493605433745e-08 5.689252127183408e-07 7.048322359537451e-06
+dense vs old double table max |diff|: 2.248512487312837e-11
+V_lo(1e10) = np.float64(18.401710861595213)  count = 4052847232  monotone: True
