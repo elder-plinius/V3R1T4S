@@ -1,0 +1,11 @@
+URL: https://raw.githubusercontent.com/dmgordo/circulant-weighing-matrices/main/cwm.json
+status_page: https://github.com/dmgordo/circulant-weighing-matrices/blob/main/cwm.json
+project_page: https://dmgordon.org/circulant-weighing-matrices/
+fetch_utc: 2026-11-13T07:36:30Z
+http_status: 200
+sha256: d86aab619852a6e77a1aa3304dcb7e18f6f192b25caa80cdb470dc081815602d
+bytes: 1394831
+key: CW(208,9)
+status: Open
+comment: empty
+cell: CW(208,81)
