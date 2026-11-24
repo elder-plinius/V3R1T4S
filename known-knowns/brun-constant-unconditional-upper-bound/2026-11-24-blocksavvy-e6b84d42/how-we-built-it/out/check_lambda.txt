@@ -1,0 +1,6 @@
+C2: checked 126 values of z in [3,20000]: identity Lambda=W/V exact and |lambda|<=1: PASS
+  z=100  Lambda=17.137504  M=41  Lambda/M=0.41799
+  z=1000  Lambda=121.866404  M=404  Lambda/M=0.30165
+  z=10000  Lambda=954.805458  M=4056  Lambda/M=0.23541
+  z=20000  Lambda=1790.112484  M=8104  Lambda/M=0.22089
+C3: halved Lambda at z=1000 flagged by checker: YES (PASS)
