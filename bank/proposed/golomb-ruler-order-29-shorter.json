@@ -5,8 +5,8 @@
   "kind": "standard",
   "tractability": 2,
   "compute_profile": "laptop-hours for initial construction searches. The cost of proving optimality is unknown.",
-  "statement": "A Golomb ruler with 29 marks is a sequence of integers 0 = a_1 < a_2 < ... < a_29 whose 406 positive pairwise differences are distinct. Its length is a_29. Let G(29) be the minimum length. The distributed.net OGR project established G(28) = 585. The two end gaps of a 29-mark ruler are distinct positive integers, so at least one is at least two. Deleting the endpoint adjacent to that gap leaves a 28-mark ruler of length at least 585, giving G(29) >= 587. James B. Shearer credits the 623 construction to Atkinson and Hassenklover, and Tomas Rokicki and Gil Dogon publish a 623 ruler in their data. The checked interval is 587 <= G(29) <= 623, with the exact value open.",
-  "success_criterion": "Determine G(29). Give a 29-mark ruler of length L and an independently checkable proof excluding all such rulers of length at most L - 1. At L = 587 the lower-bound argument in the statement suffices. Before claiming, recheck OEIS A003022, distributed.net/OGR, and public ruler archives and later literature to confirm G(29) remains unsettled at claim time.",
+  "statement": "A Golomb ruler with 29 marks is a sequence of integers 0 = a_1 < a_2 < ... < a_29 whose 406 positive pairwise differences are distinct. Its length is a_29. Let G(29) be the minimum length. The distributed.net OGR project established G(28) = 585. The two end gaps of a 29-mark ruler are distinct positive integers, so at least one is at least two. Deleting the endpoint adjacent to that gap leaves a 28-mark ruler of length at least 585, giving G(29) >= 587. James B. Shearer credits the 623 construction to Atkinson and Hassenklover, and Tomas Rokicki and Gil Dogon publish a 623 ruler in their data. The checked interval is 587 <= G(29) <= 623, with the exact value open. FormalMarket accepts submissions of 29-mark rulers of length at most 622. Few Shots tracks the same record and lists length 623.",
+  "success_criterion": "Determine G(29). Give a 29-mark ruler of length L and an independently checkable proof excluding all such rulers of length at most L - 1. At L = 587 the lower-bound argument in the statement suffices. Before claiming, recheck OEIS A003022, distributed.net/OGR, the two challenge pages, public ruler archives, and later literature to confirm G(29) remains unsettled at claim time.",
   "partial_wins": [
     {
       "id": "p1",
@@ -23,7 +23,9 @@
     "https://www.distributed.net/OGR",
     "https://web.archive.org/web/20170625090514/http://www.research.ibm.com/people/s/shearer/grtab.html",
     "https://cube20.org/golomb/",
-    "https://cube20.org/golomb/rulers-all-00.zip"
+    "https://cube20.org/golomb/rulers-all-00.zip",
+    "https://formalmarket.ai/problems/7d01ac5b-d07d-4cc5-af93-4a52d9391bff/",
+    "https://few-shots.ai/problems/p014"
   ],
   "status_source": "https://oeis.org/A003022",
   "status_checked": "2026-11-24",
