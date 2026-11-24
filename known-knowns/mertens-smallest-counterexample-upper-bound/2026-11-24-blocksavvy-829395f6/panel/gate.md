@@ -1,0 +1,28 @@
+# Honesty gate (kit/RUN.md step 7): run 2026-11-24-0728, Mertens target, bank partial win p1, claim v3 (claim_v3/)
+
+gated: Tue Nov 24 13:41:51 UTC 2026 by the run's executor, after reading all three panel_v3 files in full (not edited).
+panel files read (sha256): reproduce.md 3e4a8d9a356c24462c9db475d4b8fe0c989d8818c433860555182262f2f32af2, novelty.md be57e0640a3e67deeed00a4be373e7237772955d83760729c6aff75c29a38f7d, criterion.md bfc93959bf004610d708ac49534b4dfccb8409c04fc7d62ef09eb7082a77a6f3
+panel: REPRODUCE pass: true, NOVELTY pass: true, CRITERION pass: true (with confirmed_scope). Three new fresh-context skeptics (not the v1 or v2 panelists); REPRODUCE was fresh skeptic 08ee2c49. Each saw only a copy of claim_v3/, kit/RULES.md and its brief. Panel files kept exactly as written.
+prereg: sha256sum -c PREREG.sha256: PREREG.md OK (unchanged).
+
+## Why v3 is confirmed (from the panel files, judged literally)
+- REPRODUCE recomputed the zeros independently (FLINT/Arb acb.zeta_zeros, n = 1..99,200, plain enclosures, ~26 min) and wrote its own evaluator. Completeness: N(14000) = 14950, N(74000) = 98625. All 19 shipped balls contain its 320-bit balls; counts, classifications and the y+sqrt(y) mix match CLAIM.md exactly. Determinism and spot_check_zeros.py: ALL_OK. Caveat, already stated in the claim: the same Arb library was used, so this is an independent computation, not an independent method.
+- NOVELTY found no published independent certified re-evaluation of the 18 non-record rows, and no published correction of Table 2 rows 1, 4, 12 or 14. The record cell (Table 2 row 3) was already re-evaluated by Gallego (Zenodo 10.5281/zenodo.23700211) and by Zhenyu Bi and Enze Hou (HAL hal-05838582; github.com/bzyzz/mertens_bound); the claim credits both, names the authors, and correctly distinguishes their uncertified "Peak1" (a different point near Table 2 row 2, about -0.99590) from a re-evaluation of that row. The HAL copy of Kim-Nguyen (hal-05016898) prints identical digits. Journal tables remain paywalled (stated gap, not a fail).
+- NOVELTY's one open gap was the GitHub PR listing (REST API 403, not retried). The parent session checked through the GitHub connector at 6:19 AM CST (12:19 UTC): a "mertens" search of elder-plinius/V3R1T4S pull requests finds only #1218 (mertens-function-exact-values, A084235 a(18), a different target). There is no PR on this target. Gap closed.
+- CRITERION: p1 is met as an independent certified re-evaluation of all 19 rows, delivering 19 well-defined certified values at 3 decimals plus the full balls. The four corrections (Table 2 rows 1, 4, 12 and 14) are at printed precision, not to 3 decimals: at 3 decimals there is no convention-free correction. Convention-dependent at printed precision: Table 2 rows 2, 7, 9 and 10 (mismatch under rounding, match under truncation). Table 2 row 4 is convention-dependent at 3 decimals (disagrees only under truncation). The other way around, Table 1 row 4 and Table 2 row 6 mismatch only under truncation and are not called corrections. Table 2 row 5 matches at its printed 2 decimals under both conventions.
+
+## Downgrade checks (kit/RUN.md step 7), each judged literally
+- hedging panelist: none; all three verdicts are unconditional passes. Residual stated gaps (journal typeset tables paywalled; same-Arb method; values originally from v1 more=True zeros plus a spot check) are already in the claim and were accepted by the panel, not hedges on the verdict.
+- reproduction mismatch: none on the numbers or on the v3 classifications.
+- value not strictly better than the live table: p1 is a re-evaluation, not a tighter bound. The status source (https://en.wikipedia.org/wiki/Mertens_conjecture) still cites Kim-Nguyen's exp(1.96e19). NOVELTY fetched it at 2026-11-24T12:13:59Z, HTTP 200, sha256 6f5b7e5234e1e9f6283599b0d800c6ed393e98851e7538b6b5c2122b15f54b26 (same as the scout's 07:39:50Z page). Under 2 hours old at gating; no refetch.
+- stretched criterion / hidden quantifier: none remaining. The 19-row scope, both functions, "to 3 decimals" as a deliverable, and "independent" in the bank's Arb sense were judged literally. The four corrections are stated at printed precision, which is finer than p1 asks for and is not a 3-decimal correction claim.
+- scope wider than reproduced: no; confirmed_scope below is the CRITERION sentence verbatim.
+- sample presented as complete / capped search: no (all 19 published rows compared).
+- table value by evasion: none (all fetches single and plain, per the panel logs).
+- several objects bundled: no; one re-evaluation of Tables 1-2 (the 19 certified balls).
+- same-cell overlap: no prior trophy or PR on this target (GitHub check above). The record cell itself is not claimed as new.
+
+status: CONFIRMED_PARTIAL
+partial_win: p1 (independent certified re-evaluation of Kim-Nguyen Tables 1-2; 19 certified values to 3 decimals plus full balls; four corrections at printed precision)
+confirmed_scope: For all 19 rows of Kim-Nguyen's arXiv:2502.21021v1 Tables 1-2 (5 for h_P, 14 for h_StR), the claim gives certified 320-bit ball values of h at the exact published y, computed from separately computed Arb zeros and well defined at 3 decimals under both rounding and truncation; at 3 decimals they agree with the print for 15 rows under both conventions, for Table 2 row 5 only at its printed 2 decimals, and convention-dependently for Table 2 rows 4, 7 and 9; and at printed precision Table 2 rows 1, 4, 12 and 14 are wrong under either convention.
+stands_only_if: python3 repo/kit/check_run.py prints CHECK_RUN: PASS for the run and for the package; otherwise the status is PROMISING.
