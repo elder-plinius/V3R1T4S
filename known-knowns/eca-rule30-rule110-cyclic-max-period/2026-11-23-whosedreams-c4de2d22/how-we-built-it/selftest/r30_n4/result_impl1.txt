@@ -1,0 +1,1 @@
+rule=30 n=4 max_period=8 witness=0x1 time_sec=0.0000 impl=1

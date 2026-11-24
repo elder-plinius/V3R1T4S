@@ -1,0 +1,9 @@
+rule=30 n=37 witness=0x7fbfe703e claimed_period=49276415
+bit_order: cell0=LSB, idx=(L<<2)|(C<<1)|R, L=i-1, R=i+1 cyclic
+proper divisors checked: 185(=P/266359) 1331795(=P/37) 9855283(=P/5)
+after 185 steps: equals_start=no
+after 1331795 steps: equals_start=no
+after 9855283 steps: equals_start=no
+after 49276415 steps: equals_start=yes
+elapsed_sec=21.3
+PASS

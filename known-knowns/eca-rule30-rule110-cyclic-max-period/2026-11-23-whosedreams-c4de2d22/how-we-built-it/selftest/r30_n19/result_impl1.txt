@@ -1,0 +1,1 @@
+rule=30 n=19 max_period=3705 witness=0x39cfc time_sec=0.0026 impl=1

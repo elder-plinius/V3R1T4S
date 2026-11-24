@@ -1,0 +1,147 @@
+[2026-11-22 13:06:21 ET (2026-11-22T18:06:21Z)] === run_r30.sh start (SMOKE=0 P1=0) in ~/eca37-r30-pc ===
+built impl1 and impl2
+[2026-11-22 13:06:22 ET (2026-11-22T18:06:22Z)] built programs
+OK impl1 rule30 n=1 got=1 oeis=1
+OK impl1 rule30 n=2 got=1 oeis=1
+OK impl1 rule30 n=3 got=1 oeis=1
+OK impl1 rule30 n=4 got=8 oeis=8
+OK impl1 rule30 n=5 got=5 oeis=5
+OK impl1 rule30 n=6 got=1 oeis=1
+OK impl1 rule30 n=7 got=63 oeis=63
+OK impl1 rule30 n=8 got=40 oeis=40
+OK impl1 rule30 n=9 got=171 oeis=171
+OK impl1 rule30 n=10 got=15 oeis=15
+OK impl1 rule30 n=11 got=154 oeis=154
+OK impl1 rule30 n=12 got=102 oeis=102
+OK impl1 rule30 n=13 got=832 oeis=832
+OK impl1 rule30 n=14 got=1428 oeis=1428
+OK impl1 rule30 n=15 got=1455 oeis=1455
+OK impl1 rule30 n=16 got=6016 oeis=6016
+OK impl1 rule30 n=17 got=10846 oeis=10846
+OK impl1 rule30 n=18 got=2844 oeis=2844
+OK impl1 rule30 n=19 got=3705 oeis=3705
+OK impl1 rule30 n=20 got=6150 oeis=6150
+OK impl1 rule30 n=21 got=2793 oeis=2793
+OK impl1 rule30 n=22 got=3553 oeis=3553
+OK impl1 rule30 n=23 got=38249 oeis=38249
+OK impl1 rule30 n=24 got=185040 oeis=185040
+OK impl1 rule110 n=1 got=1 oeis=1
+OK impl1 rule110 n=2 got=1 oeis=1
+OK impl1 rule110 n=3 got=1 oeis=1
+OK impl1 rule110 n=4 got=2 oeis=2
+OK impl1 rule110 n=5 got=1 oeis=1
+OK impl1 rule110 n=6 got=9 oeis=9
+OK impl1 rule110 n=7 got=14 oeis=14
+OK impl1 rule110 n=8 got=16 oeis=16
+OK impl1 rule110 n=9 got=7 oeis=7
+OK impl1 rule110 n=10 got=25 oeis=25
+OK impl1 rule110 n=11 got=110 oeis=110
+OK impl1 rule110 n=12 got=18 oeis=18
+OK impl1 rule110 n=13 got=351 oeis=351
+OK impl1 rule110 n=14 got=91 oeis=91
+OK impl1 rule110 n=15 got=295 oeis=295
+OK impl1 rule110 n=16 got=32 oeis=32
+OK impl1 rule110 n=17 got=578 oeis=578
+OK impl1 rule110 n=18 got=81 oeis=81
+OK impl1 rule110 n=19 got=285 oeis=285
+OK impl1 rule110 n=20 got=240 oeis=240
+OK impl1 rule110 n=21 got=630 oeis=630
+OK impl1 rule110 n=22 got=462 oeis=462
+OK impl1 rule110 n=23 got=1058 oeis=1058
+OK impl1 rule110 n=24 got=552 oeis=552
+OK impl1 rule110 n=25 got=300 oeis=300
+OK impl1 rule110 n=26 got=351 oeis=351
+OK impl1 rule110 n=27 got=567 oeis=567
+OK impl1 rule110 n=28 got=2156 oeis=2156
+OK impl1 rule110 n=29 got=1044 oeis=1044
+OK impl1 rule110 n=30 got=1770 oeis=1770
+REPORT_MATCHES_LISTED impl1 rule30 n=25 got=588425 oeis=588425
+REPORT_MATCHES_LISTED impl1 rule30 n=26 got=312156 oeis=312156
+REPORT_MATCHES_LISTED impl1 rule30 n=27 got=240300 oeis=240300
+REPORT_MATCHES_LISTED impl1 rule30 n=28 got=249165 oeis=249165
+REPORT_MATCHES_LISTED impl1 rule30 n=29 got=1466066 oeis=1466066
+REPORT_MATCHES_LISTED impl1 rule30 n=30 got=374265 oeis=374265
+OK impl2 rule30 n=1 got=1 oeis=1
+OK impl2 rule30 n=2 got=1 oeis=1
+OK impl2 rule30 n=3 got=1 oeis=1
+OK impl2 rule30 n=4 got=8 oeis=8
+OK impl2 rule30 n=5 got=5 oeis=5
+OK impl2 rule30 n=6 got=1 oeis=1
+OK impl2 rule30 n=7 got=63 oeis=63
+OK impl2 rule30 n=8 got=40 oeis=40
+OK impl2 rule30 n=9 got=171 oeis=171
+OK impl2 rule30 n=10 got=15 oeis=15
+OK impl2 rule30 n=11 got=154 oeis=154
+OK impl2 rule30 n=12 got=102 oeis=102
+OK impl2 rule30 n=13 got=832 oeis=832
+OK impl2 rule30 n=14 got=1428 oeis=1428
+OK impl2 rule30 n=15 got=1455 oeis=1455
+OK impl2 rule30 n=16 got=6016 oeis=6016
+OK impl2 rule30 n=17 got=10846 oeis=10846
+OK impl2 rule30 n=18 got=2844 oeis=2844
+OK impl2 rule30 n=19 got=3705 oeis=3705
+OK impl2 rule30 n=20 got=6150 oeis=6150
+OK impl2 rule30 n=21 got=2793 oeis=2793
+OK impl2 rule30 n=22 got=3553 oeis=3553
+OK impl2 rule30 n=23 got=38249 oeis=38249
+OK impl2 rule30 n=24 got=185040 oeis=185040
+OK impl2 rule110 n=1 got=1 oeis=1
+OK impl2 rule110 n=2 got=1 oeis=1
+OK impl2 rule110 n=3 got=1 oeis=1
+OK impl2 rule110 n=4 got=2 oeis=2
+OK impl2 rule110 n=5 got=1 oeis=1
+OK impl2 rule110 n=6 got=9 oeis=9
+OK impl2 rule110 n=7 got=14 oeis=14
+OK impl2 rule110 n=8 got=16 oeis=16
+OK impl2 rule110 n=9 got=7 oeis=7
+OK impl2 rule110 n=10 got=25 oeis=25
+OK impl2 rule110 n=11 got=110 oeis=110
+OK impl2 rule110 n=12 got=18 oeis=18
+OK impl2 rule110 n=13 got=351 oeis=351
+OK impl2 rule110 n=14 got=91 oeis=91
+OK impl2 rule110 n=15 got=295 oeis=295
+OK impl2 rule110 n=16 got=32 oeis=32
+OK impl2 rule110 n=17 got=578 oeis=578
+OK impl2 rule110 n=18 got=81 oeis=81
+OK impl2 rule110 n=19 got=285 oeis=285
+OK impl2 rule110 n=20 got=240 oeis=240
+OK impl2 rule110 n=21 got=630 oeis=630
+OK impl2 rule110 n=22 got=462 oeis=462
+OK impl2 rule110 n=23 got=1058 oeis=1058
+OK impl2 rule110 n=24 got=552 oeis=552
+OK impl2 rule110 n=25 got=300 oeis=300
+OK impl2 rule110 n=26 got=351 oeis=351
+OK impl2 rule110 n=27 got=567 oeis=567
+OK impl2 rule110 n=28 got=2156 oeis=2156
+OK impl2 rule110 n=29 got=1044 oeis=1044
+OK impl2 rule110 n=30 got=1770 oeis=1770
+REPORT_MATCHES_LISTED impl2 rule30 n=25 got=588425 oeis=588425
+REPORT_MATCHES_LISTED impl2 rule30 n=26 got=312156 oeis=312156
+REPORT_MATCHES_LISTED impl2 rule30 n=27 got=240300 oeis=240300
+REPORT_MATCHES_LISTED impl2 rule30 n=28 got=249165 oeis=249165
+REPORT_MATCHES_LISTED impl2 rule30 n=29 got=1466066 oeis=1466066
+REPORT_MATCHES_LISTED impl2 rule30 n=30 got=374265 oeis=374265
+[2026-11-22 13:15:01 ET (2026-11-22T18:15:01Z)] SELFTEST: PASS (108 OK lines)
+[2026-11-22 13:15:01 ET (2026-11-22T18:15:01Z)] stage selftest done
+OK impl1 rule110 n=31 got=2759 oeis=2759
+REPORT_MATCHES_LISTED impl1 rule30 n=31 got=2841150 oeis=2841150
+OK impl2 rule110 n=31 got=2759 oeis=2759
+REPORT_MATCHES_LISTED impl2 rule30 n=31 got=2841150 oeis=2841150
+[2026-11-22 13:24:13 ET (2026-11-22T18:24:13Z)] stage heldout done
+[2026-11-22 13:24:13 ET (2026-11-22T18:24:13Z)] main run impl1 rule 30 n=37 starting
+[2026-11-22 14:26:39 ET (2026-11-22T19:26:39Z)] main run impl1 result: rule=30 n=37 max_period=49276415 witness=0x7fbfe703e time_sec=3739.3822 impl=1
+[2026-11-22 14:26:39 ET (2026-11-22T19:26:39Z)] stage main_impl1 done
+[2026-11-22 14:26:39 ET (2026-11-22T19:26:39Z)] safety copy updated: ~/send_back_r30_progress.tar.gz
+[2026-11-22 14:26:39 ET (2026-11-22T19:26:39Z)] main run impl2 rule 30 n=37 starting
+[2026-11-23 01:51:05 ET (2026-11-23T06:51:05Z)] main run impl2 result: rule=30 n=37 max_period=49276415 witness=0x7fbfe703e time_sec=41058.0073 impl=2
+[2026-11-23 01:51:05 ET (2026-11-23T06:51:05Z)] stage main_impl2 done
+[2026-11-23 01:51:05 ET (2026-11-23T06:51:05Z)] safety copy updated: ~/send_back_r30_progress.tar.gz
+impl1: rule=30 n=37 max_period=49276415 witness=0x7fbfe703e time_sec=3739.3822 impl=1
+impl2: rule=30 n=37 max_period=49276415 witness=0x7fbfe703e time_sec=41058.0073 impl=2
+AGREE max_period=49276415
+FLOOR_OK A334496(37)=49276415
+[2026-11-23 01:51:27 ET (2026-11-23T06:51:27Z)] witness check impl1: PASS
+[2026-11-23 01:51:48 ET (2026-11-23T06:51:48Z)] witness check impl2: PASS
+[2026-11-23 01:51:48 ET (2026-11-23T06:51:48Z)] MAIN RESULT: rule 30 n=37 max_period=49276415 (both programs agree, witnesses verified)
+[2026-11-23 01:51:48 ET (2026-11-23T06:51:48Z)] stage check done
+[2026-11-23 01:51:48 ET (2026-11-23T06:51:48Z)] === all stages done ===
