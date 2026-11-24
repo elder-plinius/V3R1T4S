@@ -1,0 +1,28 @@
+{
+  "id": "four-colour-path-partition-smaller-counterexample",
+  "name": "Four-colour monochromatic path partitions on fewer than 118 vertices",
+  "category": "graphs-games-automata",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-hours for initial searches over structured colourings. The cost of an exclusion certificate is unknown.",
+  "statement": "Assign exactly one of four colours to every edge of a nonempty complete graph. A monochromatic path partition assigns every vertex to exactly one simple path whose edges all have the same colour. Each path may use its own colour, and singleton paths are allowed. Zhen Liu and Chuanshu Wu give colourings for every n >= 118 that need at least five paths, establishing that four is the smallest number of colours for which Gyárfás's path-partition conjecture fails. Their construction gives an upper bound of 118 on the smallest counterexample order. The target here is to improve that bound.",
+  "success_criterion": "Give an explicit four-edge-colouring of K_n with n <= 117 and certify that every monochromatic path partition uses at least five paths. Include singleton paths and allow several paths of the same colour. The order n must also be strictly smaller than any later public counterexample for complete graphs under these rules. Before claiming, recheck status_source and later literature to confirm no smaller counterexample has been published.",
+  "partial_wins": [],
+  "verification_method": "Check all binom(n,2) edge colours. Regenerate a SAT instance that places every vertex exactly once in an ordering split into one to four nonempty consecutive blocks (equivalently, four possibly empty consecutive blocks). Each block has one colour, and consecutive vertices within a block must be joined by an edge of that colour. Verify a DRAT or LRAT refutation. Every partition into at most four monochromatic simple paths gives such an ordering by listing each path in traversal order, and every valid ordering gives a partition by reading off the nonempty blocks (including singleton blocks and repeated colours). A kernel-checked proof of the same exclusion also qualifies. Use Liu and Wu’s 118-vertex colouring and proof as the exclusion reference. For feasible controls use small colourings with explicit partitions, including singletons and repeated colours. Certificates exceeding 1 MB follow kit/SUBMIT.md section 1.",
+  "primary_sources": [
+    "https://arxiv.org/html/2611.06362",
+    "https://arxiv.org/abs/2608.09895",
+    "https://arxiv.org/abs/1205.5492"
+  ],
+  "status_source": "https://arxiv.org/html/2611.06362",
+  "status_checked": "2026-11-23",
+  "disclosure": "open",
+  "angles": [
+    "The published construction colours edges between nine vertex classes using a four-colour K_9. Search smaller class sizes or a different base colouring and verify the resulting graph from its full vertex-level definition."
+  ],
+  "pitfalls": [
+    "The threshold is for four edge colours on a complete graph. A construction for more colours or a balanced complete bipartite graph has a different threshold.",
+    "Each vertex belongs to exactly one path. Paths can share a colour, and a singleton is a path.",
+    "A timeout provides no exclusion certificate."
+  ]
+}
