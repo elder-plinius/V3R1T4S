@@ -1,0 +1,28 @@
+[1] building all 63 cover lemmas (structure asserts on every child)
+[1] PASS: all cover CNFs built; 3066 child relations checked (= leaves + refined nodes - 2 roots: 3066 )
+[2] m3k6n12/COVER2/10_0_0: children 1; without child clauses SAT=True; one child clause removed (indices [0]) SAT=[True]
+[2] m3k6n12/COVER2/8_1_2: children 24; without child clauses SAT=True; one child clause removed (indices [0, 4, 23]) SAT=[True, True, True]
+[2] m3k6n12/COVER3/10_0_0_0-0-0-0: children 110; without child clauses SAT=True; one child clause removed (indices [0, 17, 109]) SAT=[True, True, True]
+[2] m3k6n12/COVER3/10_0_0_0-0-0-0: children 110; without child clauses SAT=True; one child clause removed (indices [0, 17, 109]) SAT=[True, True, True]
+[2] m3k6n12/COVER1: children 147; without child clauses SAT=True; one child clause removed (indices [0, 34, 146]) SAT=[True, True, True]
+[2] m2k5n13/COVER1: children 196; without child clauses SAT=True; one child clause removed (indices [28, 195]) SAT=[True, True]
+[3] PASS: 300 random normalised triples (3,6,12) and 300 pairs (2,5,13): every NF clause holds and exactly the clause of their own cube (d,a,b) is falsified
+[4] pos0: m3k6n12/COVER1: verdict VERIFIED solve 49.78 s, convert 42.3 s, check 6.0 s, proof 137190379 B, lrat 163873753 B, peak RSS 4352 MB, cnf 024616bfe5244056 
+[4] pos1: m3k6n12/COVER2/10_0_0: verdict VERIFIED solve 0.0 s, convert 2.0 s, check 2.0 s, proof 86 B, lrat 242 B, peak RSS 0 MB, cnf c501d262e3948b2b 
+[4] pos2: m3k6n12/COVER3/10_0_0_0-0-0-0: verdict VERIFIED solve 0.03 s, convert 2.0 s, check 2.0 s, proof 107408 B, lrat 522933 B, peak RSS 64 MB, cnf 937ba72482029e95 
+[4] pos3: m3k6n12/11_4_0: verdict VERIFIED solve 0.95 s, convert 2.0 s, check 2.0 s, proof 2140968 B, lrat 5936698 B, peak RSS 0 MB, cnf 2c8a85341044b2b6 
+[4] pos4: m3k6n12/9_1_2_1-0-1-0: verdict VERIFIED solve 4.48 s, convert 4.0 s, check 2.0 s, proof 6387819 B, lrat 21295632 B, peak RSS 74 MB, cnf b51236f2180cc026 
+[4] pos5: m3k6n12/8_0_1_0-0-0-1_L3_4_2_1: verdict VERIFIED solve 2.88 s, convert 2.0 s, check 2.0 s, proof 4688768 B, lrat 12839545 B, peak RSS 95 MB, cnf 0960abde5e76ccbc 
+[4] pos6: m2k5n13/6_1_4: verdict VERIFIED solve 1.71 s, convert 2.0 s, check 2.0 s, proof 2483844 B, lrat 5614169 B, peak RSS 0 MB, cnf c85371cb06748cd5 
+[4] PASS: all 7 positive jobs VERIFIED by cake_lpr
+[5] control: original proof: ('s VERIFIED UNSAT', '')
+[5] truncated LRAT (first 90% of lines): ('', 'c empty clause not derived at end of proof')
+[5] tampered LRAT (line 32167: first literal sign flipped): ('', 'c Checking failed at line: 32167. Reason: clause not empty or singleton after reduction')
+[5] original LRAT against the cube with unit "-84 0" replaced by a copy of clause 1: ('', 'c Checking failed at line: 401. Reason: clause not empty or singleton after reduction')
+[4] drop_resolve: FILE:~/v3r1t4s/logs/certify-work/validate/pos5/drop.cnf: verdict VERIFIED solve 4.83 s, convert 4.0 s, check 2.0 s, proof 7373740 B, lrat 20528057 B, peak RSS 103 MB, cnf c632919ec1565e85 
+[5] (info) weakened cube re-solved from scratch: VERIFIED (a weaker cube may still be UNSAT; this is not the control)
+[4] sat_3_6_13: FILE:~/v3r1t4s/logs/certify-work/validate/sat_3_6_13.cnf: verdict SAT solve 0.02 s, convert - s, check - s, proof 0 B, lrat 0 B, peak RSS 0 MB, cnf c1ff80d1706d00ef solver found a model
+[5] satisfiable (3,6,13) cube 11_7_0 against the L3 proof: ('', 'c Checking failed at line: 1. Reason: clause not empty or singleton after reduction')
+[5] DRAT truncated to its first half: drat-trim ['s NOT VERIFIED'] ; cake_lpr on its output: ('', 'c empty clause not derived at end of proof')
+[5] PASS: every negative control rejected by cake_lpr
+validation complete
