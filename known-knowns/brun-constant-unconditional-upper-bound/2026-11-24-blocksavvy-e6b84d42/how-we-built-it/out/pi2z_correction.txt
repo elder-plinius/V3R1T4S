@@ -1,0 +1,1 @@
+pi2z_correction_sup 3.509248783e-15 (arb, 128 bits, 2*sum_i z_i/m_i over the 9906 z_i of verify/cert_selberg_p128.json)
