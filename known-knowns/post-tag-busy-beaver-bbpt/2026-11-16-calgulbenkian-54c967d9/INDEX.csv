@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+post-tag-busy-beaver-bbpt,BB_PT(8) exact value (all 19693 raw size-8 2-tag systems),19,>= 19 (7 holdouts),2026-11-15T16:38:32Z,object/bbpt8_certificates.json,54c967d97feea6e5559cd65788e0e777a0193163fa40f7ec62e060348672b1cd
