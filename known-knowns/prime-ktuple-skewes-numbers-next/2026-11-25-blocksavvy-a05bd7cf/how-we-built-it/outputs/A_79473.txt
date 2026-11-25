@@ -1,0 +1,17 @@
+ck 10 block 0 inblock 2
+ck 100 block 0 inblock 16
+ck 1000 block 0 inblock 74
+ck 10000 block 0 inblock 411
+ck 100000 block 0 inblock 2447
+ck 1000000 block 0 inblock 16386
+ck 10000000 block 0 inblock 117207
+ck 100000000 block 7 inblock 93350
+ck 1000000000 block 79 inblock 36731
+ck 10000000000 block 794 inblock 45707
+ck 100000000000 block 7947 inblock 14689
+ck 1000000000000 block 79472 inblock 37530
+blocks=79473 B=12582912 total_pairs=3741223507 np=78491
+
+real	2m31.577s
+user	8m18.656s
+sys	0m0.574s

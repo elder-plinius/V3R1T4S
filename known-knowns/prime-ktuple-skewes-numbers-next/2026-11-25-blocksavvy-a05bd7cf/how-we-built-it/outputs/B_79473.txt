@@ -1,0 +1,5 @@
+nend=1000001765376 subblocks=15258816 total_pairs=3741223507 nprimes=78498
+
+real	8m48.757s
+user	23m9.063s
+sys	0m1.688s
