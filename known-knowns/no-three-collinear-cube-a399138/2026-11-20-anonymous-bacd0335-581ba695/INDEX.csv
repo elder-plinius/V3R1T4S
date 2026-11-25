@@ -1,0 +1,3 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+no-three-collinear-cube-a399138,a(7) upper bound,97,98,2026-11-20T14:28:00Z,object/ceiling98.cnf,581ba695e92683ac8e574c2e84dca42935eb280d090abc0d279a998f9654de7f
+no-three-collinear-cube-a399138,proof file,,,,2026-11-20T14:28:00Z,object/ceiling98.drat,66ed9e562aa230290a668aefa7f47d59c1bda4c786243373f93b734c1de5d3ee
