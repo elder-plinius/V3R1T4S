@@ -1,6 +1,6 @@
 context: subagent (fresh context, spawned as the criterion judge)
 
-# CRITERION verdict — N=4315, carrier polished00.txt
+# CRITERION verdict — N=4315, carrier object/candidate_n4315.txt
 
 Claim carrier (single object): `attempts/deep-polish-4315/output/polished00.txt`
 — 4315 centers, sha256 `1906e4fbe7ef3aa8a9c86ebe76ba832b911353290310739b8be799a235fef3a8`

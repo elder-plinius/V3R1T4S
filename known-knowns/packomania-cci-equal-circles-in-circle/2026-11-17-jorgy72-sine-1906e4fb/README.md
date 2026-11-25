@@ -1,7 +1,7 @@
 # Improved circle packing: 4315 equal circles in a circle
 
 ## What
-polished00.txt's 50-digit feasible radius exceeds the live Packomania value for N=4315 by 1.006294675e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4315 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
+object/candidate_n4315.txt's 50-digit feasible radius exceeds the live Packomania value for N=4315 by 1.006294675e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4315 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
 
 In numbers: r* = 0.01432454777069287128759443799585792968662 (50 digits, no tolerance) vs the live Packomania
 cci table value 0.014323541476018172725671907488 — a strict improvement of +1.006294675e-06,
