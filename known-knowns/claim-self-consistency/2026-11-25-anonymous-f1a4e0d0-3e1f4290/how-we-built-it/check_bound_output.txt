@@ -1,0 +1,29 @@
+u* = 0.0299002893428026  gamma(u*)-1 = 1.0e-7
+check gamma formula equals closed form at u=0.5: 0.0
+gamma monotone increasing on [0,0.999]: True
+f(R) identity 1/(1+tanh^2 sR) at sR=0.7: 9.8608e-32
+f(0) = 1 at sR=0.3: 1.0
+known negative: E(beta=0) = 0.0
+thin-wall test sR=50: E/asymptote = 1.000128987
+
+u* (source gamma formula)  beta = 0.02990028934
+  closed-form bound E <= -1.127084914e+37 J  = -1.25405e+20 kg
+  sR=0.01  E = -1.977682859e+39 J  E/bound = 175.46884
+  sR=0.1   E = -1.987966377e+38 J  E/bound = 17.638124
+  sR=0.5   E = -4.483736596e+37 J  E/bound = 3.9781711
+  sR=1     E = -3.086366929e+37 J  E/bound = 2.7383624
+  sR=2     E = -3.482368957e+37 J  E/bound = 3.089713
+  sR=5     E = -7.612200583e+37 J  E/bound = 6.7538838
+  sR=20    E = -3.007982757e+38 J  E/bound = 26.688164
+  sR=100   E = -1.502828346e+39 J  E/bound = 133.33763
+
+0.0004c (slide SR reading)  beta = 0.0004
+  closed-form bound E <= -2.017092607e+33 J  = -2.24432e+16 kg
+  sR=0.01  E = -3.539369059e+35 J  E/bound = 175.46884
+  sR=0.1   E = -3.557773005e+34 J  E/bound = 17.638124
+  sR=0.5   E = -8.024339448e+33 J  E/bound = 3.9781711
+  sR=1     E = -5.523530514e+33 J  E/bound = 2.7383624
+  sR=2     E = -6.232237331e+33 J  E/bound = 3.089713
+  sR=5     E = -1.362320915e+34 J  E/bound = 6.7538838
+  sR=20    E = -5.383249925e+34 J  E/bound = 26.688164
+  sR=100   E = -2.689543536e+35 J  E/bound = 133.33763

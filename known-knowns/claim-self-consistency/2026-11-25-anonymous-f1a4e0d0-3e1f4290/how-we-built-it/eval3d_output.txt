@@ -1,0 +1,12 @@
+u* (scipy brentq) = 0.029900289348511896  vs formalist 0.0299002893428026, diff 5.709297618006204e-12
+Method B (3D midpoint, octant x8) vs Method A' (1D quad):
+  sR=0.5  A=-4.4837365977e+37  n=100 B/A-1=+7.41e-11  n=200 B/A-1=-2.22e-16  n=400 B/A-1=-8.88e-16
+  sR=1.0  A=-3.0863669305e+37  n=100 B/A-1=-2.95e-11  n=200 B/A-1=-1.11e-16  n=400 B/A-1=-3.33e-16
+  sR=2.0  A=-3.4823689583e+37  n=100 B/A-1=-3.43e-11  n=200 B/A-1=+8.88e-16  n=400 B/A-1=+2.22e-16
+  sR=5.0  A=-7.6122005862e+37  n=100 B/A-1=-1.57e-10  n=200 B/A-1=-2.22e-16  n=400 B/A-1=-1.11e-15
+log grid 601 pts sR in [1e-3,1e3]: smallest |E| at sR=1.230269 E=-3.0092145390e+37 (edges: -1.978e+40, -1.503e+40)
+golden: sR*=1.22904955  E_min=-3.0092127195e+37 J  (-3.348201e+20 kg)
+closed-form bound=-1.1270849149e+37 J; E_min/bound=2.66990772; E_min <= bound: True; bound <= -1e30: True
+slide 0.0004c: E_min=-5.3854511315e+33 J (-5.992123e+16 kg), bound=-2.0170926072e+33 J, bound <= -1e30: True
+E_min per metre of R at u*: -6.018425e+39 J/m  (so any R >= 1 mm gives <= -6.0184e+36 J)
+known negative beta=0: -0.0  3D: 0.0
