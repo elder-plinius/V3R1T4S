@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+langton-ant-highway,partial win p1: 6x6 box (x y in -2..3; ant at 0 0 facing north),all 2^36 patterns captured by the period-104 highway (max T_cap 375545); independent recheck of a 1.000057% sample and 4096 hard cases with 0 failures,open: no exhaustive certified 6x6-or-larger box verification known,2026-10-20T23:09:38Z,object/RESULT.txt,93e70890411097653a26d11b03a5d844d220713312c554d81ee008b5a1ed99d9
