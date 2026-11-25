@@ -1,0 +1,2 @@
+A blocks 79473 B subblocks 15258816 per-block mismatches 0 totalA 3741223507 totalB 3741223507
+B pairs < 27737*B_A (=349012230144): 1415985401  A prefix: 1415985401
