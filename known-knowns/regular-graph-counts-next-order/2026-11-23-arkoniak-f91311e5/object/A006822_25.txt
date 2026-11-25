@@ -1,0 +1,2 @@
+# A006822(25): connected unlabeled 6-regular (sextic) graphs on 25 vertices
+25 1058090189356372623457538781723
