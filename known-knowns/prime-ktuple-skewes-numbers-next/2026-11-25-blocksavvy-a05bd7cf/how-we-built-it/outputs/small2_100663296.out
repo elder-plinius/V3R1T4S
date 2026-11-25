@@ -1,0 +1,3 @@
+pattern [0,2] N=100663296 instances=442913 first_inclusive=(1369391, 10744, '[10743.487075268716877 +/- 4.28e-16]') known=1369391 first_exclusive=(1369427, 10744, '[10743.725145638582507 +/- 2.52e-16]') min_inclusive_margin_before_first=(0.12996805289258911, 1369337) undecided=0
+pattern [0,4] N=100663296 instances=442785 first_inclusive=(5206837, 33480, '[33479.171953572305440 +/- 1.84e-16]') known=5206837 first_exclusive=(5206963, 33480, '[33479.867495443025480 +/- 1.90e-17]') min_inclusive_margin_before_first=(0.07259027023326022, 5206819) undecided=0
+pattern [0,6] N=100663296 instances=885041 first_inclusive=None known=None first_exclusive=None min_inclusive_margin_before_first=(5.253422248961742, 5) undecided=0
