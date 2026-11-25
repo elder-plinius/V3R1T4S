@@ -1,7 +1,7 @@
 # Improved circle packing: 4357 equal circles in a circle
 
 ## What
-polished01.txt's 50-digit feasible radius exceeds the live Packomania value for N=4357 by 4.93845300182e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4357 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
+object/candidate_n4357.txt's 50-digit feasible radius exceeds the live Packomania value for N=4357 by 4.93845300182e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4357 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
 
 In numbers: r* = 0.01426010900644796452099252854564 (50 digits, no tolerance) vs the live Packomania
 cci table value 0.014255170553446144330034824715 — a strict improvement of +4.93845300182e-06,
@@ -30,7 +30,7 @@ object is rejected.
 
 ## Not claimed
 - No claim about any other N, any other Packomania table, or optimality of this
-  configuration (it is a better packing, not a proven optimum; only N ≤ 15–20 are proven).
+  configuration (it is a better packing, not a proven optimum; only N ≤ 13 and N = 19 are proven, with computer-assisted proofs for N = 15 announced on 11-Oct-2026).
 - No submission has been made to Packomania; the claim is for the verified
   construction only.
 - No claim about N=4000: that row is queue-blocked by the Karl Desfontaines

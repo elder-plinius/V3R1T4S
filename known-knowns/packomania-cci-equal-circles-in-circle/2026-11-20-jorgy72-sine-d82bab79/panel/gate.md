@@ -1,7 +1,7 @@
 # Honesty gate — 2026-11-20
 
 status: CONFIRMED_PARTIAL
-confirmed_scope: polished01.txt's 50-digit feasible radius exceeds the live Packomania value for N=4357 by 4.93845300182e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4357 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
+confirmed_scope: object/candidate_n4357.txt's 50-digit feasible radius exceeds the live Packomania value for N=4357 by 4.93845300182e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4357 outside the live queued cci ranges and absent from history updates newer than 11-Oct-2026.
 
 ## Panel tally
 - panel/reproduce.md: pass: true (own mpmath 50-digit script from the
