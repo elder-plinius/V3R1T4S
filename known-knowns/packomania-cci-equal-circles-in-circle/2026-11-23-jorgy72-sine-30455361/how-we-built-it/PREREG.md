@@ -5,12 +5,9 @@ partial win p2 class: gap value N > 2600 with a lattice-like seed by Eckard
 Specht). First-night rotation row: the 2026-11-22 report names N=4405 as the
 next rotation row. N=4381's walk bands are BOTH spent — no walk at 4381
 tonight (a different attack family only, per the 2026-11-22 lead). N=4357 is
-CLAIMED (confirmed-partial, packaged outbox/2026-11-20-jorgy72-sine-
-d82bab79/) — do not re-attack. N=4345 is CLAIMED (packaged
-outbox/2026-11-19-jorgy72-sine-e8859dd3/) — do not re-attack. N=4339 is
-CLAIMED (packaged outbox/2026-11-18-jorgy72-sine-ea04e0b5/) — do not
-re-attack. N=4315 is CLAIMED (packaged outbox/2026-11-17-jorgy72-sine-
-1906e4fb/) — do not re-attack. N=4153 is claimed and merged (PR #957,
+CLAIMED (confirmed-partial, packaged) — do not re-attack. N=4345 is CLAIMED (packaged)
+— do not re-attack. N=4339 is CLAIMED (packaged) — do not
+re-attack. N=4315 is CLAIMED (packaged) — do not re-attack. N=4153 is claimed and merged (PR #957,
 merge commit 5e93e75, 2026-11-06T17:47:49Z — do not re-attack). N=4303,
 N=4267, N=4243, N=4255 walk bands are BOTH spent — no walk at any of them
 tonight. N=4000 and N=3985 remain queue-blocked (Karl Desfontaines cci

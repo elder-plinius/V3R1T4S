@@ -1,11 +1,11 @@
 # Improved circle packing: 4405 equal circles in a circle
 
 ## What
-polished01.txt's 50-digit feasible radius exceeds the live Packomania value for N=4405 by 3.607323049e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4405 outside the live queued cci ranges and absent from history updates newer than 22-Nov-2026.
+object/candidate_n4405.txt's 50-digit feasible radius exceeds the live Packomania value for N=4405 by 3.607125049e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4405 outside the live queued cci ranges and absent from history updates newer than 22-Nov-2026.
 
 In numbers: r* = 0.014193819376049377319011472067507150119907818321175 (50 digits, no tolerance) vs the live Packomania
-cci table value 0.014190212053 — a strict improvement of +3.607323049e-06,
-360,732x the 1e-11 bar. Bank partial win p2 class (gap value N > 2600 with a
+cci table value 0.014190212251 — a strict improvement of +3.607125049e-06,
+360,713x the 1e-11 bar. Bank partial win p2 class (gap value N > 2600 with a
 lattice-like Specht seed). Gate status: CONFIRMED_PARTIAL (three-skeptic panel, all pass).
 
 ## Check it yourself
@@ -18,14 +18,15 @@ object is rejected.
 ## Compared to
 - Table: E. Specht's Packomania, "circles in a circle" (cci),
   https://packomania.com/cci/txt/radius.txt
-- Cell: N = 4405, value 0.014190212053 (live, 12-decimal), author Eckard Specht.
-  The live HTML table (https://packomania.com/cci/cci.html) ends at N=3877 and
-  carries no row for 4405; the archived 30-decimal value is
-  0.014190212052536014904153227050, 4.64e-13 lower, so the live 12-decimal bar
+- Cell: N = 4405, value 0.014190212251 (live, 12-decimal), author Eckard Specht.
+  The live HTML table (https://packomania.com/cci/cci.html) now carries an
+  N=4405 row showing 0.014190212251 (verified 2026-11-25), matching radius.txt;
+  the archived 30-decimal value is
+  0.014190212052536014904153227050, 1.98e-10 lower, so the live 12-decimal bar
   is the stricter one and is the operative bar.
-- Table fetched live: 2026-11-23T08:58:00Z and re-verified 2026-11-23T09:18:05Z
-  (HTTP 200 both times); value unchanged
-- Queue: https://packomania.com/pending-requests.html — cci candidates queued only in
+- Table fetched live: 2026-11-25T20:43:31Z
+  (HTTP 200); value 0.014190212251
+- Queue (as observed 2026-11-25): https://packomania.com/pending-requests.html — cci candidates queued only in
   652–3943 (Vidit Patankar, 15-Oct-2026) and 126–4141 (Karl Desfontaines,
   03-Nov-2026); N=4405 is outside both. No other cci line exists on the live page.
 - Posted seed compared against: https://packomania.com/cci/txt/cci4405.txt
@@ -34,7 +35,7 @@ object is rejected.
 
 ## Not claimed
 - No claim about any other N, any other Packomania table, or optimality of this
-  configuration (it is a better packing, not a proven optimum; only N ≤ 15–20 are proven).
+  configuration (it is a better packing, not a proven optimum; only N ≤ 13 and N = 19 are proven, with computer-assisted proofs for N = 15 announced on 11-Oct-2026).
 - No submission has been made to Packomania; the claim is for the verified
   construction only.
 - No claim about N=4000: that row is queue-blocked by the Karl Desfontaines

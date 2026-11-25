@@ -13,7 +13,7 @@ the feasible value each round).
 
 Two of the four basins polished above the table — the win is the random-phase basin,
 not the grid best. The random best (theta 13.09 deg, raw −1.554e-05) polished to a
-certified +3.607323049e-06 surplus over the table, a +1.915e-05 recovery — the
+certified +3.607125049e-06 surplus over the table, a +1.915e-05 recovery — the
 largest single gain of any rotation night. The refine best (theta 0.00 deg, raw
 −1.419e-05) polished to −2.221e-06, below the bar. Unlike the N=4357 win, the
 binding constraint here is a close PAIR (centers 4130 and 4394), not the container

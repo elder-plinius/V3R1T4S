@@ -11,9 +11,12 @@ Values file: https://packomania.com/cci/txt/radius.txt
   fetched: 2026-11-23T08:58:06Z, HTTP 200, 53613 bytes, 2735 rows,
   sha256 bbbf290022342473e79e5e465f939f020f6fe97d0c69ea904599e2463293d4a7
   re-fetched: 2026-11-23T09:18:05Z, HTTP 200, identical sha256 (table unchanged)
-Extracted cell: N=4405 → 0.014190212053 (line 2730 of radius.txt)
+  re-fetched: 2026-11-25T20:43:31Z, HTTP 200, 53613 bytes, 2738 rows,
+  sha256 b517f267ee465d60cf002ecab21ca8c730608175d175cd6a12c3bb292cc591cd
+  (N=4405 now 0.014190212251)
+Extracted cell: N=4405 → 0.014190212251 (line 2730 of radius.txt)
   (archived 30-decimal value from the 2026-11-22 HTML table:
-  0.014190212052536014904153227050 — 4.64e-13 lower, so the live
+  0.014190212052536014904153227050 — 1.98e-10 lower, so the live
   12-decimal bar is the stricter one and is the operative bar)
 Author of the row: https://packomania.com/cci/txt/author.txt → N=4405: Eckard Specht
 Posted configuration compared against: https://packomania.com/cci/txt/cci4405.txt
@@ -30,6 +33,8 @@ Queue page: https://packomania.com/pending-requests.html
   candidates in the range 126–4141" → N=4405 is outside every listed cci range
   ("4405" occurs 0 times in the live page; the Moki & Julio "4666" bundle
   occurs 0 times in cci — that caveat does not bite)
+  re-checked 2026-11-25: the same two cci lines still listed; N=4405
+  still outside both.
 History of updates on live cci.html: newest line 22-Nov-2026 (Eckard Specht
   wave, N=259..998); the 21-Nov-2026 Patankar and Desfontaines bundles are
   the entries before it; nothing touches N=4405. The live cci.html at

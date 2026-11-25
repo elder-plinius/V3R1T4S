@@ -1,7 +1,7 @@
 # Honesty gate — 2026-11-23
 
 status: CONFIRMED_PARTIAL
-confirmed_scope: polished01.txt's 50-digit feasible radius exceeds the live Packomania value for N=4405 by 3.607323049e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4405 outside the live queued cci ranges and absent from history updates newer than 22-Nov-2026.
+confirmed_scope: object/candidate_n4405.txt's 50-digit feasible radius exceeds the live Packomania value for N=4405 by 3.607125049e-06 and its sorted pairwise-distance multiset differs from the posted seed's, with N=4405 outside the live queued cci ranges and absent from history updates newer than 22-Nov-2026.
 
 ## Panel tally
 - panel/reproduce.md: pass: true (own mpmath 50-digit script from the
@@ -40,11 +40,15 @@ confirmed_scope: polished01.txt's 50-digit feasible radius exceeds the live Pack
   pair term 0.01419381937604937731901147206750715011991;
   wall term 0.0141960620906344455531287505440639736866 for circle 4394,
   pair-wall gap 2.2427e-06).
-- Margin = +3.607323049e-06 vs the live 12-decimal table value
-  0.014190212053, i.e. 360,732x the 1e-11 bar. Margin vs the archived
+- Margin = +3.607125049e-06 vs the live 12-decimal table value
+  0.014190212251, i.e. 360,713x the 1e-11 bar. Margin vs the archived
   30-decimal value 0.014190212052536014904153227050 would be
   +3.607323513e-06 — also far above the bar. The claim clears the
   stricter live bar.
+  (Note, 2026-11-25: the live table value moved from 0.014190212053 to
+  0.014190212251 after the panel ran; the panel-tally margins quoted
+  below were computed against the 2026-11-23 value and were correct
+  at verification time. The object is unchanged.)
 - The run's check50 logs print r*/table via the checker's mp.nstr(...,
   31) prints — 31 significant digits, not 50 (the 2026-11-18 lesson was
   applied: mp.nstr, never float(); the novelty skeptic notes the

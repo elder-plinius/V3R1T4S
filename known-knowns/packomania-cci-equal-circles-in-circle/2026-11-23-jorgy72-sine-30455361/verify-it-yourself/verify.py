@@ -14,7 +14,7 @@ from decimal import Decimal, getcontext
 
 getcontext().prec = 50
 
-TABLE = Decimal('0.014190212053')  # live cci N=4405 value
+TABLE = Decimal('0.014190212251')  # live cci N=4405 value
 NEED = Decimal('1e-11')                              # strict-improvement bar
 
 
