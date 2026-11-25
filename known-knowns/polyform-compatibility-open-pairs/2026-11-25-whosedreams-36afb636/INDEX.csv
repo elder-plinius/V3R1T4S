@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+polyform-compatibility-open-pairs,heptiamond unrestricted M-X (p3),"bounded UNSAT for k=2..20 inside the stated boards (DRAT-checked)",?,2026-11-25T00:46:46Z,object/mx_k2_20_bounded_unsat.json,36afb636a1ae826f567d95063e9977e4a25da43146a7646c86a96e210892df7d

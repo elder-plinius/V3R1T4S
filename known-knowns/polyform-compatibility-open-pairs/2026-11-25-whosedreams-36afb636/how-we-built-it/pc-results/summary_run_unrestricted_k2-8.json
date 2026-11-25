@@ -1,0 +1,94 @@
+{
+  "pair": "M-X",
+  "table": "unrestricted",
+  "k_min": 2,
+  "k_max": 8,
+  "found": false,
+  "solution": null,
+  "per_k": [
+    {
+      "k": 2,
+      "status": "unsat",
+      "board_rows": 10,
+      "board_cols": 12,
+      "n_placements_p": 216,
+      "n_placements_q": 144,
+      "seconds": 2.217,
+      "proof": "work/run_unrestricted/M-X/k2/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=2 tiles (area 14) inside a 10x12 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    },
+    {
+      "k": 3,
+      "status": "unsat",
+      "board_rows": 12,
+      "board_cols": 14,
+      "n_placements_p": 330,
+      "n_placements_q": 220,
+      "seconds": 5.375,
+      "proof": "work/run_unrestricted/M-X/k3/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=3 tiles (area 21) inside a 12x14 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    },
+    {
+      "k": 4,
+      "status": "unsat",
+      "board_rows": 13,
+      "board_cols": 15,
+      "n_placements_p": 396,
+      "n_placements_q": 264,
+      "seconds": 6.531,
+      "proof": "work/run_unrestricted/M-X/k4/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=4 tiles (area 28) inside a 13x15 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    },
+    {
+      "k": 5,
+      "status": "unsat",
+      "board_rows": 14,
+      "board_cols": 16,
+      "n_placements_p": 468,
+      "n_placements_q": 312,
+      "seconds": 12.16,
+      "proof": "work/run_unrestricted/M-X/k5/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=5 tiles (area 35) inside a 14x16 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    },
+    {
+      "k": 6,
+      "status": "unsat",
+      "board_rows": 15,
+      "board_cols": 17,
+      "n_placements_p": 546,
+      "n_placements_q": 364,
+      "seconds": 13.648,
+      "proof": "work/run_unrestricted/M-X/k6/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=6 tiles (area 42) inside a 15x17 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    },
+    {
+      "k": 7,
+      "status": "unsat",
+      "board_rows": 16,
+      "board_cols": 18,
+      "n_placements_p": 630,
+      "n_placements_q": 420,
+      "seconds": 23.591,
+      "proof": "work/run_unrestricted/M-X/k7/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=7 tiles (area 49) inside a 16x18 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    },
+    {
+      "k": 8,
+      "status": "unsat",
+      "board_rows": 17,
+      "board_cols": 19,
+      "n_placements_p": 720,
+      "n_placements_q": 480,
+      "seconds": 28.732,
+      "proof": "work/run_unrestricted/M-X/k8/prove/proof.drat",
+      "proof_verified": true,
+      "p3_label": "bounded UNSAT: no figure with k=8 tiles (area 56) inside a 17x19 board (disconnected figures also forbidden by model coverage); table=unrestricted"
+    }
+  ]
+}
