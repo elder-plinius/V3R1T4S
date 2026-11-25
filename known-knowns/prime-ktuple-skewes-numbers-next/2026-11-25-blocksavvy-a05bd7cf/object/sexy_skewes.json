@@ -1,0 +1,27 @@
+{
+ "target": "prime-ktuple-skewes-numbers-next",
+ "pattern": "(p, p+6), not necessarily consecutive primes",
+ "skewes_number_inclusive": 349018493647,
+ "p_plus_6": 349018493653,
+ "pi6_at_p_inclusive": 1416008996,
+ "C": "4*C2 = 2.64064726338747829571124844005822311373",
+ "C_times_Li2_at_p": "1416008995.520836266359 +/- 1e-14",
+ "difference": "-0.479163733641",
+ "counting": "pi6(x) = #{prime q <= x : q+6 prime}; Li2(x)=int_2^x dt/log(t)^2",
+ "pairs_below_crossing_block_start_349012230144": 1415985401,
+ "crossing_block": 27737,
+ "block_length": 12582912,
+ "min_margin_before_p": {
+  "value": "0.175754335087",
+  "at_q": 349018490077,
+  "pi6": 1416008982
+ },
+ "exclusive_convention_first_violation": 349018493981,
+ "power_of_ten_counts": {
+  "1e8": 879908,
+  "1e9": 6849047,
+  "1e10": 54818296,
+  "1e11": 448725003,
+  "1e12": 3741217498
+ }
+}

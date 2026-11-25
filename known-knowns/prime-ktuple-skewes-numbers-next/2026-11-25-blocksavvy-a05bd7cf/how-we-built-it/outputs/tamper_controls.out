@@ -1,0 +1,5 @@
+real_claim_pass: True
+controls: 400 by kind: {'other_pair_start': 100, 'pi6_shift': 100, 'table_entry': 100, 'prefix_shift': 100}
+controls_rejected: 400
+controls_accepted: 0
+RESULT: PASS
