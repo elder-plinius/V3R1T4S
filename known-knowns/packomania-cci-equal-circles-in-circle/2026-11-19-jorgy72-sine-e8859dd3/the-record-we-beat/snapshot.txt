@@ -8,7 +8,7 @@ Values file: https://packomania.com/cci/txt/radius.txt
   fetched: 2026-11-19T08:58:05Z, HTTP 200, 96415 bytes, 2735 rows,
   sha256 6c60da0a2feb2ad01f2bed8dd99646021bcfd4cbfecb5ea2a7b332ecfa0beead
   re-fetched: 2026-11-19T09:18:00Z, HTTP 200, identical sha256 (table unchanged)
-Extracted cell: N=4345 → 0.014273228279866076598567467525 (line 4345 of radius.txt)
+Extracted cell: N=4345 → 0.014273228279866076598567467525 (row N=4345 of radius.txt)
 Author of the row: https://packomania.com/cci/txt/author.txt → N=4345: Eckard Specht
 Posted configuration compared against: https://packomania.com/cci/txt/cci4345.txt
   sha256 69ad4fb26db93650da3deb76382d1f01a7e99acb884b65a51cf951dd93b20285

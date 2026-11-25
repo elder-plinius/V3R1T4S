@@ -111,6 +111,5 @@ Every attack failed. The claim survives all six lenses:
   and its history are unchanged since 11-Oct-2026; files are clean; the checker has no
   flattering artifact and my independent 50-digit recomputation agrees digit-for-digit.
 
-No "Needs you" items. Nothing in this review blocks the claim; submission remains Michael's call.
 
 pass: true
