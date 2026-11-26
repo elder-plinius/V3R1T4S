@@ -4,7 +4,7 @@ The construction code is not included. Argon's snapshot of the contributor's lap
 
 What the snapshot does contain about this object is the contributor's own results note (item 5), reproduced below from the snapshot with local paths replaced by a placeholder (the excerpt has none). It is the contributor's claim about method, unverified, and the panel did not check it.
 
-The object file's own construction field for this entry reads: Hermitian-Plucker k=4 odd-parity defect quad in PG(7,F4) \ V_85 + 35-cap in V_85 (L_41) (the 16-generator code), and the analogous text with the 18-generator parameters for the other nine.
+The object file's own construction field for this entry reads: Hermitian-Plucker k=4 odd-parity defect quad in PG(8,F4) \ V_171 + 77-cap in V_171 (L_55). Eight of the other nine entries read the same with their own cap size; the [[39,23]] entry uses PG(7,F4) and V_85 (L_41).
 
 Nothing here is needed to check the claim: the object is explicit, and verify-it-yourself/ checks it from the definition.
 
