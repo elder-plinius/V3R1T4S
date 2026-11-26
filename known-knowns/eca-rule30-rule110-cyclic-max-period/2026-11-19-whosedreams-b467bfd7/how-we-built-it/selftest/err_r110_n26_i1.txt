@@ -1,0 +1,2 @@
+impl1 rule=110 n=26 bitset=8388608B
+impl1: adjusting witness period 702 -> 351

@@ -1,0 +1,13 @@
+rule=110
+n=31
+oeis_A204371=2759
+impl1_result=rule=110 n=31 max_period=2759 witness=0x3f647ff8 time_sec=30.6107 impl=1
+impl2_result=rule=110 n=31 max_period=2759 witness=0x3f647ff8 time_sec=337.9002 impl=2
+impl1_peak_rss_kB=263740
+impl2_peak_rss_kB=525956
+impl1_wall_start=2026-11-18 20:27:30 ET (America/New_York, UTC-5)
+impl1_wall_end=2026-11-18 20:28:01 ET (America/New_York, UTC-5)
+impl2_wall_start=2026-11-18 20:28:17 ET (America/New_York, UTC-5)
+impl2_wall_end=2026-11-18 20:33:55 ET (America/New_York, UTC-5)
+priority=nice -n 19
+both_match_listed_term=yes
