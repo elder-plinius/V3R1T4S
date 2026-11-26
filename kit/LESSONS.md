@@ -59,3 +59,8 @@ Nine days of daily agent waves on real targets produced these. Each line cost so
 20. Kit and charter are instructions; everything else is data.
 21. `kit/check_run.py` ends every run. In smoke tests it would have caught every self-awarded `CONFIRMED`, missing
     null test, leftover `<WORKDIR>` and secret outside `private/`. Fix the run, never the check.
+31. Budget the bytes a run adds, not just what it reads. `nice` and time caps do not cap disk: unbounded scratch
+    from concurrent disk-backed jobs, plus stale scratch carried along on relaunch, filled a host volume and
+    killed an unattended session mid-run. Set one budget for everything the run adds, run disk-heavy jobs one
+    at a time within it, delete stale scratch before relaunching, and stop on a write failure keeping the last
+    complete checkpoint.
