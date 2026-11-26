@@ -1,0 +1,11 @@
+# How We Found It (`contributor text, unverified`)
+
+> Note: contributor text, unverified. For machine-verified evidence, run `sh verify-it-yourself/run_checks.sh`.
+
+## Brief and Strategy
+In *Series expansion of the percolation threshold on hypercubic lattices* (`arXiv:1805.02701`), Mertens and Moore proved closed formulas for the `binom(d, e)`, `binom(d, e-1)`, and `binom(d, e-2)` coefficients of the bond perimeter polynomial `D_e(q)` (Theorems 4–6), noting in Section 8 that extending to `binom(d, e-k)` for `k >= 3` by hand becomes error-prone because of the proliferation of subgraph shapes and shared perimeter edges, and suggesting that the finite casework be automated by computer.
+
+## What Worked
+1. **Perimeter-chord identity and cyclomatic bound:** Writing `t + 2(d-k)v = 2dv - 2e - s(A)` identifies the exponent shifts directly with the cyclomatic number `e + 1 - v` and the number `s(A)` of non-animal grid chords. Because `Z^r` is bipartite and `K_{2,3}`-free, any subgraph with `>= 2` cycles requires `>= 7` edges, whereas excess `m = 3` allows at most `e_R = r + 3 <= 6` repeated-axis edges, proving `v in {e, e+1}` for all `e`.
+2. **Singleton-bridge separation and Prufer-forest inclusion-exclusion:** Separating repeated axes `R` (`mult >= 2`) from singleton axes `S` (`mult = 1`) shows that self-intersections and repeated-axis chords occur only inside connected components of `E_R`, while singleton-axis chords occur only across direct length-1 singleton bridges between components of `E_R`. Expressing each bridge's chord polynomial as `|V(K_i)||V(K_j)| + W_tilde(z)` reduces the completion count over all `e` to Prufer's weighted forest formula summed over all `16,314` canonical excess-3 core multisets (`r in {1, 2, 3}`).
+3. **Zero-parameter verification:** Without using any data from `D_4..D_12`, our symbolic prover first reproduced Mertens and Moore's Theorems 5 and 6 (`m = 1, 2`) in `0.004` seconds, and then output the six closed-form expressions for `m = 3`, matching `48 / 48` published coefficients in `D_4..D_11`, matching independent brute-force enumeration on `Z^k`, and summing at `e = 12, q = 1` to `6,199,599,459,637,248 == [binom(d, 9)] D_12(1)` while providing the full `q`-polynomials for Table 9 tasks `(9, 12)` and `(11, 14)`.
