@@ -1,0 +1,2 @@
+Source: https://codetables.de/QECC.php?q=4&n=23&k=9 (fetched 2026-10-19T04:35:06Z, HTTP 200, page sha256 5ba0fab508fc0ef72a89d75af4cedf5279e60758efa55e99ac1414f15875a6a7)
+Bounds on [[23,9]] (qubit stabilizer codes): lower bound 4, upper bound 6
