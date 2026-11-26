@@ -1,0 +1,2 @@
+# A006821(15): connected unlabeled 5-regular (quintic) graphs on 30 vertices (OEIS index n = vertices/2)
+15 1690586697346784893842479211750187
