@@ -1,0 +1,19 @@
+padlib size 1 minpen 6 base 44
+status best 6 cur 8 restarts 0 steps 198503 time 5.00003
+progress bestpen 4 iter 769252 restarts 0 time 7.03915
+status best 4 cur 8 restarts 0 steps 1646187 time 10
+progress bestpen 2 iter 2089995 restarts 0 time 11.314
+status best 2 cur 6 restarts 0 steps 3157133 time 15
+status best 2 cur 8 restarts 0 steps 4500743 time 20
+status best 2 cur 6 restarts 0 steps 5910823 time 25.0001
+status best 2 cur 2 restarts 0 steps 7014783 time 30
+status best 2 cur 8 restarts 0 steps 8421855 time 35
+status best 2 cur 4 restarts 0 steps 10106497 time 40
+status best 2 cur 6 restarts 0 steps 11656678 time 45
+status best 2 cur 4 restarts 0 steps 13331833 time 50
+status best 2 cur 8 restarts 0 steps 14777902 time 55.0001
+status best 2 cur 4 restarts 0 steps 15926769 time 60
+status best 2 cur 6 restarts 0 steps 17102853 time 65
+status best 2 cur 4 restarts 0 steps 18262558 time 70
+progress bestpen 0 iter 19272004 restarts 0 time 73.8204
+SOLVED iter 19272004 restarts 0 steps 19272004 time 73.8205
