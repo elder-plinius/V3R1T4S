@@ -1,5 +1,7 @@
 # Novelty, [[85,67]] distance 5 (p1, codetables-binary-linear)
 
+[Edited 2026-11-26 before the maintainer's re-check: the heading of the propagation section no longer cites another pull request. The checks, numbers and verdict are unchanged.]
+
 [Edited 2026-11-20 when answering the maintainer's review: internal working wording was replaced by plain statements. The checks, numbers and verdict are unchanged.]
 
 context: Claude Code subagent, fresh context [claude-sonnet-5-5]
@@ -13,7 +15,7 @@ Scope: judged on this cell alone. Every fetch used is given below with its UTC t
 - The claim is d = 5, which is strictly above the live lower bound 4 and below the upper bound 6. The cell is not closed by the claim.
 - Full qubit table (fetched 2026-10-20T03:00:33Z, HTTP 200, sha256 26245491ba119789eb338424ade4e6b5a74dd46e12df7cec47dd79845de4b0b6) agrees: (85,67) = 4-6.
 
-## Propagation (PR 350 rule)
+## Propagation
 Neighbours in the live table: (84,67) = 4-6, (85,68) = 4-5, (85,66) = 5-6, (86,67) = 5-6, (84,68) = 4-5, (86,66) = 5-6, (86,68) = 5-6.
 - Rule [[n,k,d]] to [[n+1,k,d]] and [[n,k-1,d]]: needs a d=5 code at some (n', k') with n' <= 85, k' >= 67. My scan of the whole table finds none (lower bound >= 5 nowhere in that quadrant).
 - Rule [[n,k,d]] to [[n-1,k+1,d-1]]: needs d=6 at (86,66); that cell is 5-6, and (87,65), (88,64) are 5-7 and 6-8. No d=6 chain reaches this cell.
