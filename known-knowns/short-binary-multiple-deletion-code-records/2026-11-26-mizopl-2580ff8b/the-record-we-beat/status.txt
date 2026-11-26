@@ -1,0 +1,11 @@
+url: https://arxiv.org/html/2504.00613v2
+fetched_utc: 2026-11-26T07:13:18Z
+http_status: 200
+sha256: 4542bd58bc16be9bf47f6fc12f14fe86464c078c5a9c747058ee5698fbc7499a
+source: Franziska Weindel and Reinhard Heckel, LLM-Guided Search for Deletion-Correcting Codes (TMLR 2026, arXiv:2504.00613v2, 5 June 2026), Table 2
+cells_beaten:
+  (15, 2): OnlineMIS=136 (bold), ReduMIS=135, CPro1=132, LP_UB=277 -> ours=137 (+1)
+  (15, 3): OnlineMIS=30 (bold), ReduMIS=t/o, CPro1=29, LP_UB=61 -> ours=31 (+1)
+  (16, 3): OnlineMIS=42 (bold), ReduMIS=t/o, CPro1=42, LP_UB=99 -> ours=44 (+2; also beats unmerged V3R1T4S PR #997=43)
+cell_not_claimed_as_record:
+  (16, 2): Table 2=215, live EinsteinArena #34=226 -> ours=219 (companion only)
