@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+three-heap-wythoff-fraenkel-a1-11,"N=3, A1=12 (with recomputed m=0..11 chain and N3^i, B^i_{N3^i})","m=12: n2=601, n1=1762, N=600, T={0,8,9,18,22,24}, |S|=43, alpha=-67, N1=64, N2=352, N3=988, B_N3=1030, B_n1=1804","0 <= A1 <= 10 proved in GONC6 A4(53) and Sun-Zeilberger (2004) Table 1; A1=11 claimed in open PR #1117",2026-11-25T07:12:29Z,object/wythoff_a1_12_certificate.json,1104609158ffe4f753070d369f788ee0ae891427af6c8407cb961a5bd9843e1f
