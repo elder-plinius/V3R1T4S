@@ -30,6 +30,7 @@ PLACEHOLDER_RE = re.compile(r"<(WORKDIR|[A-Za-z]+(?:[-_][A-Za-z]+)+|YYYY[^>]{0,2
 # Source code legitimately contains <word_word> tokens (e.g. C++ #include <unordered_map>), so it is exempt from the
 # placeholder check; documents, data and receipts are not.
 SOURCE_EXTS = (".py", ".sh", ".c", ".cc", ".cpp", ".cxx", ".h", ".hh", ".hpp", ".hxx", ".rs", ".go", ".jl", ".java")
+# Documents may also quote a path template inside an inline code span; see unfilled_placeholder() below.
 LEAK_RES = [
     (re.compile(r"/" r"Users/[^/\s'\"`)]+"), "absolute macOS user path"),
     (re.compile(r"/" r"home/[^/\s'\"`)]+"), "absolute Linux home path"),
@@ -247,6 +248,25 @@ def check_null(c, path, label):
     return good and beats in ("yes", "true")
 
 
+CODE_SPAN_RE = re.compile(r"`[^`\n]+`")
+
+
+def unfilled_placeholder(t):
+    """The first placeholder in t that is not a path template quoted in an inline code span.
+
+    A document legitimately describes where a run saved its files, e.g. `panel_work/novelty/<name>/body` in a panel
+    file; #61 reported these as false positives. A <token> inside an inline code span that also contains "/" is
+    documentation, not a field left unfilled. WORKDIR stays reportable wherever it appears: an unfilled workspace
+    path is exactly what this check exists to catch.
+    """
+    spans = [m.span() for m in CODE_SPAN_RE.finditer(t) if "/" in m.group(0)]
+    for m in PLACEHOLDER_RE.finditer(t):
+        if m.group(1) != "WORKDIR" and any(a < m.start() and m.end() < b for a, b in spans):
+            continue
+        return m
+    return None
+
+
 def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
     user = os.environ.get("USER") or os.environ.get("USERNAME") or ""
     for p in walk(root):
@@ -264,8 +284,10 @@ def leak_scan(c, root, label, never_publish=(), workdir=None, skip_prompt=True):
                 break
         if workdir and workdir in t:
             c.fail("%s: the workspace's absolute path appears in %s" % (label, r))
-        if not (skip_prompt and r.split(os.sep)[0] == "prompt") and PLACEHOLDER_RE.search(t) and not r.endswith(SOURCE_EXTS):
-            c.fail("%s: unfilled placeholder %s in %s" % (label, PLACEHOLDER_RE.search(t).group(0), r))
+        if not (skip_prompt and r.split(os.sep)[0] == "prompt") and not r.endswith(SOURCE_EXTS):
+            ph = unfilled_placeholder(t)
+            if ph:
+                c.fail("%s: unfilled placeholder %s in %s" % (label, ph.group(0), r))
         low = t.lower()
         for e in never_publish:
             if e.lower() in low:
