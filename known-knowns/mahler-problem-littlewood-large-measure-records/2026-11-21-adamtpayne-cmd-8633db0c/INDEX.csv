@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+mahler-problem-littlewood-large-measure-records,"largest known Mahler measure of a Littlewood polynomial, degree 40",6.15435589127620035908539751099,6.153645888590,2026-11-21T19:28Z,object/littlewood_d40.txt,8633db0c2893a85451ab55be7f67fc8a838105daf4cb3ccdf4c8f4ccd150222c
