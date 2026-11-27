@@ -1,0 +1,42 @@
+# The record we beat (table snapshot — the page itself is NOT included)
+
+Primary table page: https://packomania.com/cci/cci.html
+  fetched: 2026-11-23T08:58:04Z, HTTP 200, 1020094 bytes,
+  sha256 8a984a6111c2f142edc1b43b58697c77e75a90a268dcc952dc175dc94962d904
+  (MOVED vs the 2026-11-22 verification fetch — rebuilt 22 Nov 20:32 GMT;
+  full page again, 12-decimal table, 2691 rows ending at N=3877; the 44
+  sparse high-N rows including 4405 are absent from the HTML table)
+  re-fetched: 2026-11-23T09:18:04Z, HTTP 200, identical sha256 (table unchanged)
+Values file: https://packomania.com/cci/txt/radius.txt
+  fetched: 2026-11-23T08:58:06Z, HTTP 200, 53613 bytes, 2735 rows,
+  sha256 bbbf290022342473e79e5e465f939f020f6fe97d0c69ea904599e2463293d4a7
+  re-fetched: 2026-11-23T09:18:05Z, HTTP 200, identical sha256 (table unchanged)
+  re-fetched: 2026-11-25T20:43:31Z, HTTP 200, 53613 bytes, 2738 rows,
+  sha256 b517f267ee465d60cf002ecab21ca8c730608175d175cd6a12c3bb292cc591cd
+  (N=4405 now 0.014190212251)
+Extracted cell: N=4405 → 0.014190212251 (line 2730 of radius.txt)
+  (archived 30-decimal value from the 2026-11-22 HTML table:
+  0.014190212052536014904153227050 — 1.98e-10 lower, so the live
+  12-decimal bar is the stricter one and is the operative bar)
+Author of the row: https://packomania.com/cci/txt/author.txt → N=4405: Eckard Specht
+Posted configuration compared against: https://packomania.com/cci/txt/cci4405.txt
+  sha256 98f2b10dfc1f0dda4e4bdf4ff9f892de95d5e95d3bd13ea6b8af62f5739df1a1
+  (reproduces its table row to ~1e-12 at 50 digits — the posted coordinates'
+  12-decimal rounding)
+Queue page: https://packomania.com/pending-requests.html
+  fetched: 2026-11-23T08:58:11Z and re-fetched 2026-11-23T09:18:05Z, HTTP 200,
+  scout sha256 43140abeddb1a0cd14ba6f19fb6a25198624d01da6dc5bc93074520b75b5cfca,
+  verify sha256 identical (pending page byte-identical to the 2026-11-22
+  verification fetch — no movement at all this run)
+  only cci entries: "15-Oct-2026 12:44, Vidit Patankar, cci, 193 candidates in
+  the range 652–3943" and "03-Nov-2026 20:33, Karl Desfontaines, cci, 487
+  candidates in the range 126–4141" → N=4405 is outside every listed cci range
+  ("4405" occurs 0 times in the live page; the Moki & Julio "4666" bundle
+  occurs 0 times in cci — that caveat does not bite)
+  re-checked 2026-11-25: the same two cci lines still listed; N=4405
+  still outside both.
+History of updates on live cci.html: newest line 22-Nov-2026 (Eckard Specht
+  wave, N=259..998); the 21-Nov-2026 Patankar and Desfontaines bundles are
+  the entries before it; nothing touches N=4405. The live cci.html at
+  verification time is byte-identical to the scout fetch (sha256 8a984a61...).
+Credit: E. Specht (Packomania, https://packomania.com/cci/).
