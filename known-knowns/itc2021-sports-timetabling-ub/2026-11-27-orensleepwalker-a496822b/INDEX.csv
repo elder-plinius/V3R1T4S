@@ -1,0 +1,7 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+itc2021-sports-timetabling-ub,Early 9,51,56,2026-11-27T14:42:43Z,object/ITC2021_Early_9_51.xml,281eb50f283dc5f37e78b308dd643c9d023a9f64115c87f598ddca102d2191a6
+itc2021-sports-timetabling-ub,Early 12,300,315,2026-11-27T14:42:43Z,object/ITC2021_Early_12_300.xml,257c2c361072b0a91c42131e2ca01e7e91a285d7f137826d66180366fa7e81ac
+itc2021-sports-timetabling-ub,Middle 5,278,279,2026-11-27T14:42:43Z,object/ITC2021_Middle_5_278.xml,9a0bb03d1b50259a7b97e547e39eaa763f1089a932a164b3680737f2cb9b7d95
+itc2021-sports-timetabling-ub,Middle 12,338,358,2026-11-27T14:42:43Z,object/ITC2021_Middle_12_338.xml,f4f50789ba6fe122138c9be7c17f8786173933e1e7fdac3101c058df8f019e17
+itc2021-sports-timetabling-ub,Middle 15,459,462,2026-11-27T14:42:43Z,object/ITC2021_Middle_15_459.xml,1876c7896c3c16af82d457ee906e4c6cbe290be976b3b4375c0098811522ec1a
+itc2021-sports-timetabling-ub,Late 11,191,196,2026-11-27T14:42:43Z,object/ITC2021_Late_11_191.xml,db7b8206d52db0ab648bd94ad214b1a21dea8cfe5475bf723df548569addd52f
