@@ -1,0 +1,30 @@
+# The record we beat (table snapshot — the page itself is NOT included)
+
+Primary table page: https://packomania.com/cci/cci.html
+  fetched: 2026-11-19T08:58:03Z, HTTP 200, 1310659 bytes,
+  sha256 de37305f030c7380a1f92f2039c0a5a8a937a9b81a1efa2b16c0a3652dcae5e0
+  (byte-identical to the 2026-11-06/07/08/09/10/11/12/13/14/15/16/17/18 scouts)
+Values file: https://packomania.com/cci/txt/radius.txt
+  fetched: 2026-11-19T08:58:05Z, HTTP 200, 96415 bytes, 2735 rows,
+  sha256 6c60da0a2feb2ad01f2bed8dd99646021bcfd4cbfecb5ea2a7b332ecfa0beead
+  re-fetched: 2026-11-19T09:18:00Z, HTTP 200, identical sha256 (table unchanged)
+Extracted cell: N=4345 → 0.014273228279866076598567467525 (row N=4345 of radius.txt)
+Author of the row: https://packomania.com/cci/txt/author.txt → N=4345: Eckard Specht
+Posted configuration compared against: https://packomania.com/cci/txt/cci4345.txt
+  sha256 69ad4fb26db93650da3deb76382d1f01a7e99acb884b65a51cf951dd93b20285
+  (reproduces its table row to ~1e-30 at 50 digits — the posted coordinates'
+  30-decimal rounding)
+Queue page: https://packomania.com/pending-requests.html
+  fetched: 2026-11-19T08:58:10Z and re-fetched 2026-11-19T09:18:00Z, HTTP 200,
+  scout sha256 5d2539316e409ed4359db5b1b040bc9bc51d4a120dd1ce37ee0abd34ce8523bd,
+  verify sha256 identical (pending page byte-identical to the 2026-11-18
+  scout — no movement at all this run)
+  only cci entries: "15-Oct-2026 12:44, Vidit Patankar, cci, 193 candidates in
+  the range 652–3943" and "03-Nov-2026 20:33, Karl Desfontaines, cci, 487
+  candidates in the range 126–4141" → N=4345 is outside every listed cci range
+  ("4345" occurs 0 times in the live page; the Moki & Julio "4666" bundle
+  occurs 0 times — that caveat does not bite)
+History of updates on live cci.html: newest line 11-Oct-2026 (Zii Fave N=15
+  computer-assisted proofs); nothing touches N=4345. The live cci.html at
+  verification time is byte-identical to the scout fetch (sha256 de37305f...).
+Credit: E. Specht (Packomania, https://packomania.com/cci/).
