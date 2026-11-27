@@ -1,0 +1,1 @@
+cd code && python3 -I -B xgb_json_walk.py ../data/src_Training_cluster_2024-10-24_10-30-28_custom_loss_best_model.json ../baseline/mbm_test_monthly_pred.npy

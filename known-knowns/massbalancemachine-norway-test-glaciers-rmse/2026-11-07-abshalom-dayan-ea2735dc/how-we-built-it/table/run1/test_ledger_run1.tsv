@@ -1,0 +1,7 @@
+time	model	sha256	Ba	Bw	Bs	note
+2026-11-07T14:39:12Z	MBM-shipped-json	a7ddf96b2f11a51dd8415fbe6190f95671c23123526e200533fb09aae74e1d0d	0.9962	0.5881	0.7001	baseline reproduction (baseline/output.txt)
+2026-11-07T14:42:47Z	LW1	dac44650eaad6d0ce916b1a783b71534faf6214dead734dc1cd5792e4b75bed6	NA	0.5239	NA	linear-ti winter-only, 3 params
+2026-11-07T14:43:55Z	LIN1	77d73d520acee222fa6b9f8f2d673b38521acc47d1f79c4a6c1cb98865254097	1.0286	0.5239	0.7294	linear-ti combined, route direct, 15 params
+2026-11-07T15:09:51Z	GBM1	e40bf4d0bcd2cefde204dcae2047b8c80775820d05558beebed6c196d8ad7f84	0.9305	0.5931	0.6749	gbm {"lr": 0.05, "colsample": 1, "n_max": 500, "seed": 0, "fs": "F2", "depth": 3, "lam": 20, "min_child": 0, "subsample": 1}
+2026-11-07T15:12:32Z	BL1	ce7929addae58b3238d6f3679ddd9e1a940781156a89934c655cf70a29214e12	0.9416	0.5146	0.6984	blend {"lr": 0.05, "colsample": 1, "n_max": 500, "seed": 0, "fs": "F2", "depth": 3, "lam": 20, "min_child": 0, "subsample": 1}
+2026-11-07T15:12:39Z	HY1	26fcad42051f0df07c654ba8d02bedae2808ff1f29569176bd5e1ae308e8e895	1.1368	0.6292	0.6975	hybrid {"lr": 0.05, "colsample": 1, "n_max": 500, "seed": 0, "fs": "F2", "depth": 3, "lam": 20, "min_child": 0, "subsample": 1}

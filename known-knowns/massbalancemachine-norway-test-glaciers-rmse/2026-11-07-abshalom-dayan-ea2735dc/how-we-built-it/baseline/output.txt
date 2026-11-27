@@ -1,0 +1,2 @@
+MBM shipped model on test: {'Ba': 0.9962, 'n_Ba': 1065, 'Bw': 0.5881, 'n_Bw': 999, 'Bs': 0.7001, 'n_Bs': 1028}
+2-decimal: Ba 1.00 Bw 0.59 Bs 0.70
