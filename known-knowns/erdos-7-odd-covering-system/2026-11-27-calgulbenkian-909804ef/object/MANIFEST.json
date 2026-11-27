@@ -1,0 +1,130 @@
+{
+  "format": "erdos7_package_manifest_v1",
+  "L_target": 6557114959770375,
+  "total_files": 9,
+  "total_bytes": 5604948,
+  "files": [
+    {
+      "path": "certs/thmA_8p.part01.tsv",
+      "format": "anchored_cert_v1",
+      "role": "theorem_A",
+      "bytes": 939957,
+      "sha256": "34f3ca1253603a90ddeca8395741d194bb19d9c215ad2a0e15d56968748632f1",
+      "meaning": "Theorem A (omega(L) >= 9): anchored exclusion of (3,5,7,11,13,17,19,23) with unrestricted exponents, part 1 of 6."
+    },
+    {
+      "path": "certs/thmA_8p.part02.tsv",
+      "format": "anchored_cert_v1",
+      "role": "theorem_A",
+      "bytes": 939884,
+      "sha256": "4f93c475a1f7cdfbe7ed26d031ee7f8f2539ae0cf296b022ab977f1089a1b001",
+      "meaning": "Theorem A (omega(L) >= 9): anchored exclusion of (3,5,7,11,13,17,19,23) with unrestricted exponents, part 2 of 6."
+    },
+    {
+      "path": "certs/thmA_8p.part03.tsv",
+      "format": "anchored_cert_v1",
+      "role": "theorem_A",
+      "bytes": 939982,
+      "sha256": "2b0b196cbc19e3f82b0d74ce4231e681cc47674f96c928577b57a440f6b9f171",
+      "meaning": "Theorem A (omega(L) >= 9): anchored exclusion of (3,5,7,11,13,17,19,23) with unrestricted exponents, part 3 of 6."
+    },
+    {
+      "path": "certs/thmA_8p.part04.tsv",
+      "format": "anchored_cert_v1",
+      "role": "theorem_A",
+      "bytes": 939970,
+      "sha256": "102364b995c059d6f8d6c177b1c199d556ab7e1b68fd63d5f304ce460394fb11",
+      "meaning": "Theorem A (omega(L) >= 9): anchored exclusion of (3,5,7,11,13,17,19,23) with unrestricted exponents, part 4 of 6."
+    },
+    {
+      "path": "certs/thmA_8p.part05.tsv",
+      "format": "anchored_cert_v1",
+      "role": "theorem_A",
+      "bytes": 939933,
+      "sha256": "8295134bb0c239d38834da9bd441c9c5fa877f6d35b0a3fb796b9050931f034d",
+      "meaning": "Theorem A (omega(L) >= 9): anchored exclusion of (3,5,7,11,13,17,19,23) with unrestricted exponents, part 5 of 6."
+    },
+    {
+      "path": "certs/thmA_8p.part06.tsv",
+      "format": "anchored_cert_v1",
+      "role": "theorem_A",
+      "bytes": 660713,
+      "sha256": "733bb0d3f1e9d712f9a4a7e38e32d91cc836a2cd9810390219f4c6a611e14015",
+      "meaning": "Theorem A (omega(L) >= 9): anchored exclusion of (3,5,7,11,13,17,19,23) with unrestricted exponents, part 6 of 6."
+    },
+    {
+      "path": "certs/nine_finite.tsv",
+      "format": "anchored_cert_v1",
+      "role": "omega_9_cover",
+      "bytes": 71959,
+      "sha256": "152cddf4a84cae30001fdaeb80a086105c2ece1d0b711a505049a5c229035a87",
+      "meaning": "Nine-prime finite cover: 23 Phase-1 (basic) anchored exclusions (736 rows) on (3..29) dominating all 5,028 nine-prime exponent vectors below L_target."
+    },
+    {
+      "path": "certs/scalar_lemma_u.tsv",
+      "format": "lemma_u_v1",
+      "role": "scalar_r10_13",
+      "bytes": 127463,
+      "sha256": "b649640f1ec372d13c2746aef44d9e602345a77cf3b764c185ed4838c1eed64e",
+      "meaning": "Scalar distortion (Lemma U) exclusions: 738 exact rational certificates covering 1,736 of 1,754 exponent vectors for omega(L) in 10..13 below L_target."
+    },
+    {
+      "path": "certs/global_anchored.tsv",
+      "format": "anchored_cert_v1",
+      "role": "anchored_r10_11",
+      "bytes": 45087,
+      "sha256": "6215adb8a99ead71a1788971ab8d61f97c411fe9c858a66f10f7fd5b6f5f1457",
+      "meaning": "Anchored exclusions for omega(L) in 10..11: 13 models (692 basic/mixed rows) dominating the 18 remaining exponent vectors below L_target."
+    }
+  ],
+  "certificates": [
+    {
+      "id": "U1_U738",
+      "kind": "lemma_u",
+      "role": "scalar_r10_13",
+      "count": 738,
+      "parts": [
+        "certs/scalar_lemma_u.tsv"
+      ],
+      "meaning": "738 Lemma U scalar exclusions for omega(L) in 10..13."
+    },
+    {
+      "id": "G01_G13",
+      "kind": "anchored",
+      "role": "anchored_r10_11",
+      "model_count": 13,
+      "total_rows": 692,
+      "parts": [
+        "certs/global_anchored.tsv"
+      ],
+      "meaning": "13 basic/mixed anchored exclusions for omega(L) in 10..11 covering the 18 vectors not dominated by U1_U738."
+    },
+    {
+      "id": "F9",
+      "kind": "anchored",
+      "role": "omega_9_cover",
+      "model_count": 23,
+      "total_rows": 736,
+      "parts": [
+        "certs/nine_finite.tsv"
+      ],
+      "meaning": "23 basic-only anchored exclusions dominating all 5,028 exponent vectors on the first 9 odd primes below L_target."
+    },
+    {
+      "id": "A8",
+      "kind": "anchored",
+      "role": "theorem_A",
+      "model_count": 1,
+      "total_rows": 28057,
+      "parts": [
+        "certs/thmA_8p.part01.tsv",
+        "certs/thmA_8p.part02.tsv",
+        "certs/thmA_8p.part03.tsv",
+        "certs/thmA_8p.part04.tsv",
+        "certs/thmA_8p.part05.tsv",
+        "certs/thmA_8p.part06.tsv"
+      ],
+      "meaning": "Excludes all odd coverings supported on the first 8 odd primes (omega(L) >= 9)."
+    }
+  ]
+}
