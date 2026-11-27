@@ -1,0 +1,1 @@
+rule=30 n=5 max_period=5 witness=0x13 time_sec=0.0000 impl=2

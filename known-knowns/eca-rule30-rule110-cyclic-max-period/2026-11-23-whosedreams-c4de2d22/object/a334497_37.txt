@@ -1,0 +1,7 @@
+# A334497(37): maximum eventual period of elementary CA Rule 30
+# on a cyclic universe of 37 cells.
+# Bit order: Wolfram rule-number convention, cell 0 = LSB.
+n=37
+rule=30
+max_period=49276415
+witness=0x7fbfe703e

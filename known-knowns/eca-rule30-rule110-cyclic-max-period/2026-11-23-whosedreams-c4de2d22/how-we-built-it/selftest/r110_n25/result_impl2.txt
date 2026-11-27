@@ -1,0 +1,1 @@
+rule=110 n=25 max_period=300 witness=0x1f7c0e1 time_sec=1.9960 impl=2

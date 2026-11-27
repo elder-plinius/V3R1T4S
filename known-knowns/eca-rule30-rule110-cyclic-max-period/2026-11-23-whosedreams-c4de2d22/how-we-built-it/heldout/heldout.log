@@ -1,0 +1,4 @@
+OK impl1 rule110 n=31 got=2759 oeis=2759
+REPORT_MATCHES_LISTED impl1 rule30 n=31 got=2841150 oeis=2841150
+OK impl2 rule110 n=31 got=2759 oeis=2759
+REPORT_MATCHES_LISTED impl2 rule30 n=31 got=2841150 oeis=2841150

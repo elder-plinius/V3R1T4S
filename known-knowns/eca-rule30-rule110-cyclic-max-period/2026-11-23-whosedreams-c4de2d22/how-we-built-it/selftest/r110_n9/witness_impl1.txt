@@ -1,0 +1,5 @@
+rule=110
+n=9
+max_period=7
+witness=0x181
+impl=1

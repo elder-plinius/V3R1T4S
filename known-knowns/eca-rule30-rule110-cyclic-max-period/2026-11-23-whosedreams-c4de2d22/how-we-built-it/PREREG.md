@@ -1,0 +1,40 @@
+# PREREG — run 2026-11-22-eca37-r30, eca-rule30-rule110-cyclic-max-period, A334497(37) (Rule 30, cyclic width 37), main success criterion; partial p1 optional and separate (frozen 2026-11-22T16:51:29Z, date -u)
+
+null_test: not needed because the claim would be one exact sequence term plus a witness state, checked by deterministic iteration and by agreement of two exhaustive implementations against a live table; there is no score or statistic to beat chance.
+
+## Honesty note: what was known when this was frozen
+This file was written and frozen before any Rule 30 width-37 computation by anyone on this project. No value of A334497(37) is known to us. Known at freeze time: the two programs (written 2026-11-03, unchanged since, and reviewed by the maintainer on PR #1173 for Rule 110); their earlier box self-test, which reproduced A334497(1..30) and A204371(1..30); the live OEIS entry A334497, fetched 2026-11-22 (see fetch/), which lists n = 1..36 with a(36) = 2237472 and nothing at n = 37; and the single-cell eventual period A334496(37) = 49276415 (OEIS A334496, Rule 30), which is a lower bound for A334497(37). The run itself happens on the user's PC (Ryzen 9900X, about 53 GB under WSL2), not on the packaging machine, which has too little memory.
+
+## Criterion
+Main success criterion, verbatim in TARGET_CRITERION.md (bank at repo commit 5db3547):
+The exact value of A334497(37) or A204371(37) (or any later term), from an exhaustive search over all 2^n states, or over all rotation orbits with the rotation factor accounted for. It must be run by two independent implementations that agree. Both must reproduce A334497(1..24) and A204371(1..30) exactly, and both must report their values for A334497(25..30). Where these differ from the listed terms, the claim must also meet partial p1's correction rule. A value below a listed term means a bug, because every listed term comes from an observed cycle. A witness state on the maximal cycle must be given, so a skeptic can confirm the cycle length by direct iteration. Bit order must follow the Wolfram rule-number convention, which the small-n reproduction checks. The term must not already be in the live OEIS entry at claim time.
+
+## Programs (fixed before the run)
+- impl1: pc-kit/impl1/maxcycle.c, sha256 9e24406731671802a57bdc13dd3f2a3b47c1f0ddbba4876ad2ff133a61a330cc. Walks every trajectory and marks whole rotation orbits; converts an orbit return f^k(s) = rot_r(s) into a state period k*n/gcd(r,n); re-checks the winning witness by direct iteration.
+- impl2: pc-kit/impl2/maxcycle.c, sha256 bf2321ce02bef42ef6fe45219c39b85832af35694d054704f664051c2a7333bc. Classic 3-colour walk over all 2^n states with no rotation folding; the grey-segment length is the period.
+- Both are byte-identical to how-we-built-it/impl1 and impl2 of the PR #1173 package. They are not edited for this run. Reflection is not used (Rule 30's mirror image is Rule 86).
+- Known caveat, disclosed in any package: impl1's k*n/gcd(r,n) conversion can overcount the period of a state that is fixed by a non-trivial rotation (seen at Rule 110, n = 26: 702 corrected to 351 by direct iteration). At the prime width 37 only the all-0 and all-1 states are fixed by a non-trivial rotation, and under Rule 30 all-1 maps to all-0, a fixed point of period 1, so the width-37 maximum cannot be affected. impl2 does not use the formula.
+
+## Checkers and thresholds (all must pass for the main criterion)
+1. Self-test on the run machine (pc-kit/run_r30.sh, stage selftest): both programs reproduce A334497(1..24) and A204371(1..30) exactly against the OEIS b-files shipped in pc-kit/data/, and both report A334497(25..30). Any value below a listed term is a bug and stops the run. A value above a listed term at n = 25..30 would trigger p1's correction rule (a witness cycle verified by iteration) before any claim.
+2. Main run: impl1 and then impl2, sequentially (16 GiB and 32 GiB arrays; never at the same time), Rule 30, n = 37, under nice -n 19. Both result files must report the same max_period. Each program's witness must be confirmed by checker 3. If the witnesses differ, both are checked, and the claim names impl1's witness.
+3. Independent checker pc-kit/check_period.py (standard-library Python, written for this run from the definition, not from the programs): iterate the witness under Wolfram rule-number order (cell 0 = LSB; neighbourhood (L,C,R) = cells (i-1,i,i+1) cyclic; idx = (L<<2)|(C<<1)|R; next bit = (rule>>idx)&1), require a return at exactly the claimed period and no return at any proper divisor of it (checked as period/q for every prime q dividing the period). It is tested before the run on a known positive (Rule 110, n = 37, witness 0x1c7dbbb23e, period 4403) and on known negatives (a wrong period and a divisor).
+4. Floor: the result must be at least A334496(37) = 49276415. A smaller value is a bug. Equality with that floor is allowed and would be disclosed; the exhaustive search is what shows nothing longer exists. Wolfram (1986) was not re-opened for this plan; if a skeptic finds a published width-37 sampled value, the result must be at least that value or the discrepancy must be explained.
+5. Held-out width (the bank's verification method): both programs re-run at Rule 110, n = 31, and must give the listed A204371(31) = 2759. Both also report Rule 30, n = 31 (listed A334497(31) = 2841150), for the record; a lower value there is a bug, a higher value is a p1 matter only.
+6. Live table: A334497(37) must be absent from the live OEIS entry and b-file at claim time. A fresh fetch is required immediately before any packaging step and again before any submission.
+
+## Optional, separate: partial win p1
+p1 is not part of the main claim and runs only if the user opts in (P1=1, after the main run). It recomputes A334497(31..36) with both programs; together with A334497(25..30) from checker 1 this covers the p1 range 25..36. p1 passes only if both programs agree at every n = 25..36 and every value either equals the listed term or exceeds it with a witness cycle verified by checker 3; a value below a listed term is a bug. A p1 result would be its own claim and package, never bundled with the main term. Expected extra cost: about the same wall time again as the n = 37 run (the geometric sum of widths 31..36), with at most 8 GiB (impl1) and 16 GiB (impl2) of array memory. If p1 is not run, any package says it contains no result for A334497(31..36).
+
+## Scope wording fixed in advance
+A main-criterion package claims only A334497(37) and states that it contains no result for A334497(38) or beyond, for A204371 beyond the self-test and held-out values, for partial win p2, and (unless p1 was run and passed) for A334497(31..36).
+
+## Status path after the send-back
+The send-back archive is checked on the packaging machine (checksums, result lines, checker 3, floors, a fresh OEIS fetch). The claim then goes to a three-skeptic panel: three fresh executor subagents (REPRODUCE, NOVELTY, CRITERION), each given only claim/, each writing only its own panel file with a "context: subagent" line and a last line "pass: true" or "pass: false". The parent session then writes panel/gate.md, copying the criterion panelist's confirmed_scope exactly, and never upgrades a skeptic's vote.
+Status allowed: CONFIRMED_SOLUTION only if checks 1 to 6 pass, all three skeptics end pass: true, the gate copies confirmed_scope exactly, and kit/check_run.py prints CHECK_RUN: PASS. Otherwise at most PROMISING (for example: the programs disagree, a check fails, a skeptic fails, or the table already lists n = 37). Nothing is submitted without the user's explicit yes.
+
+## Stopping rules
+- If a program is killed (out of memory, reboot, WSL shutdown), its stage is re-run from the start; partial outputs are discarded, never combined.
+- If the two programs disagree at n = 37, there is no claim; the disagreement is investigated and reported.
+- If OEIS lists n = 37 before the claim, the main claim is dropped.
+- Any change to this plan is a new timestamped PREREG.v2.md; this file is not edited.

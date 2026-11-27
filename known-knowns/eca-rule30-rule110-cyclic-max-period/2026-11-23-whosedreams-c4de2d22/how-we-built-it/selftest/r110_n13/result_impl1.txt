@@ -1,0 +1,1 @@
+rule=110 n=13 max_period=351 witness=0x18dd time_sec=0.0000 impl=1

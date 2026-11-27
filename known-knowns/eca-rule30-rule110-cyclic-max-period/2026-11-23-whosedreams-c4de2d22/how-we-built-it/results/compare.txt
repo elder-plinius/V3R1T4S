@@ -1,0 +1,4 @@
+impl1: rule=30 n=37 max_period=49276415 witness=0x7fbfe703e time_sec=3739.3822 impl=1
+impl2: rule=30 n=37 max_period=49276415 witness=0x7fbfe703e time_sec=41058.0073 impl=2
+AGREE max_period=49276415
+FLOOR_OK A334496(37)=49276415

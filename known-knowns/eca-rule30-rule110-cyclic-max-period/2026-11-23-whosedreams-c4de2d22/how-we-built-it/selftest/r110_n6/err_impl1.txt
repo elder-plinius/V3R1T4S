@@ -1,0 +1,1 @@
+impl1 rule=110 n=6 bitset=8B

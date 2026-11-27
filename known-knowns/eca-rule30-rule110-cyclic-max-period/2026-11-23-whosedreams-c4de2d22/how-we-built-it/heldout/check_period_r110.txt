@@ -1,0 +1,8 @@
+rule=110 n=31 witness=0x3f647ff8 claimed_period=2759
+bit_order: cell0=LSB, idx=(L<<2)|(C<<1)|R, L=i-1, R=i+1 cyclic
+proper divisors checked: 31(=P/89) 89(=P/31)
+after 31 steps: equals_start=no
+after 89 steps: equals_start=no
+after 2759 steps: equals_start=yes
+elapsed_sec=0.0
+PASS

@@ -1,0 +1,1 @@
+impl1 rule=30 n=20 bitset=131072B
