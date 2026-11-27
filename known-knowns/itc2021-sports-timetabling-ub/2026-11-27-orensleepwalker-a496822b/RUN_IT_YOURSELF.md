@@ -1,0 +1,4 @@
+# Run it yourself
+1. `sh verify-it-yourself/run_checks.sh` (expect PASS).
+2. RobinX: clone https://github.com/Robin-X/RobinX at commit 878bf2db7b25b43cc3022bc08c00be938b997b6a; add the header path of the official Boost 1.86 release (https://archives.boost.io/release/1.86.0/source/boost_1_86_0.tar.bz2, sha256 1bed88e40401b2cb7a1f76d4bab499e352fa4d0c5f31c0dbae64e24d34d7513b; only the header folder boost/ is needed) to CFLAGS in the Makefile; `make`; download the instance file (URL pattern in run_checks.sh) and run `./RobinX -i <instance.xml> -s object/<file>`: it prints `Objective: 0 <penalty>`. The build reads the original instance files directly. RobinX also re-scores the-record-we-beat/records/ to the posted values.
+3. The search code is in how-we-built-it/code/ (OR-Tools CP-SAT; not deterministic with several workers).

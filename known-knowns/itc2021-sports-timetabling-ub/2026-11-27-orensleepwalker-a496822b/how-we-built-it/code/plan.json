@@ -1,0 +1,14 @@
+{
+ "note": "Boss, 2026-11-26: group D (9 instances) with fix-and-optimise; rounds of 10, 20, 40 minutes per instance; survivors only into the next round; first with the record's home/away pattern fixed, then with it open; then group E the same way if time remains. Hard stop 07:15 UTC (09:15 local). No Telegram. Exploration only: nothing is claimed.",
+ "deadline_utc": "2026-11-26T07:15:00Z",
+ "groups": {
+  "D": ["Middle 9", "Late 9", "Early 2", "Early 13", "Middle 8", "Late 11", "Middle 13", "Early 1", "Early 4"],
+  "E": ["Late 6", "Early 3", "Late 8", "Middle 6", "Middle 7", "Late 13", "Late 3", "Early 6"]
+ },
+ "modes": ["fixed", "open"],
+ "rounds_seconds": [600, 1200, 2400],
+ "seed": 1,
+ "survivor_rule": "not a win, and (share of window solves not proven optimal >= 0.20, or equal-score moves to a different timetable >= 5)",
+ "win_rule": "best total < board Best UB, confirmed by split.evaluate (hard 0) and RobinX built from source (../2026-11-26-robinx-build/src/RobinX) on the original instance file",
+ "memory_cap_gb": 6
+}

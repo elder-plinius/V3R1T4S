@@ -1,0 +1,2 @@
+# Provenance (not evidence)
+Exploratory searches by the lead agent, 2026-11-25/26: an exact CP-SAT opponent re-solve with the record's home/away pattern fixed (Early 9, Early 12, Middle 5, Middle 12, Middle 15; warm start from the record) and fix-and-optimise with venues free (Late 11). rows.csv names each row's method. The code and logs are in the claim run's attempts/search/. Rows dropped at build time: [].
