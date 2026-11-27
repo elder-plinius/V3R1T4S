@@ -1,0 +1,5 @@
+seed sha256 b342cddfbbf96828dff9f5763b2d63138af014c7d0f94e8a41197dd88cd01868
+seed words: 777
+step 1: size 778, random seed 1005: RESULT FOUND pen 0 steps 7029649 restarts 7 cpu 78.8
+search output equals the object (without its first line), byte for byte
+PASS
