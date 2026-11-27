@@ -1,0 +1,1 @@
+{"N": 121, "E_mp": "-198.47902916627225379", "grad_norm_mp": "4.1242e-14", "grad_ok": true, "zero_modes": 6, "negative_modes": 0, "lowest_nonzero": 0.1489795794127791, "E_table": -198.211397, "margin_vs_table": -0.26763216627225006, "E_posted_polished": -198.21139657587744, "margin_vs_posted": -0.26763259039481113, "certified": true}
