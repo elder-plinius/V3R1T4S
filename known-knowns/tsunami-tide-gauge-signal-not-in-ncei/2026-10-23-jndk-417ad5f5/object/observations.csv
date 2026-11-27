@@ -1,0 +1,7 @@
+# NCEI event 5942 (2024-12-17 01:47:26 UTC, M7.3, -17.686 168.034, depth 57 km, validity 4). Values copied from jobs 2287 (sweep), 2370 (inspect), 2359 (null), 2371 (per-gauge null).
+# peak = max |band-passed (high-pass 120 min, 1-min) level| in [onset, onset+180 min]; p2t = max peak-to-trough between consecutive extrema there.
+# onset_utc and peak_utc label the 1-min bin start (bins begin at the origin second, :26); the raw IOC samples in those bins are at :00 of the next minute (02:30:00, 02:22:00, 02:57:00, 03:06:00 UTC). Noted by the REPRODUCE skeptic after the panel.
+gauge,ioc_code,lat,lon,dist_km,sensor,eta_model_min,onset_utc,onset_min_after_origin,dt_arr_min,peak_m,peak_utc,p2t_m,rms24_m,R,control_days_detect,null_controls_R_ge_real
+Luganville (Espiritu Santo VU),luga,-15.516,167.189,257.6,prs,49.63,2024-12-17T02:29:26Z,42.0,-7.6,0.078,2024-12-17T02:56:26Z,0.136,0.0092,8.44,0 of 11 available,0/400
+Lifou (Loyalty Is. NC),lifo,-20.918,167.279,368.1,prs,35.17,2024-12-17T02:21:26Z,34.0,-1.2,0.060,2024-12-17T03:05:26Z,0.101,0.0116,5.24,0 of 12,2/400
+Lifou second sensor (same site),lifo2,-20.918,167.279,368.1,rad,35.17,2024-12-17T02:21:26Z,34.0,-1.2,0.058,2024-12-17T03:05:26Z,0.100,0.0112,5.23,0 of 12,0/400
