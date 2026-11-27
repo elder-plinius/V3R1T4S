@@ -1,0 +1,6 @@
+name = "deletion_code_certs"
+version = "0.1.0"
+defaultTargets = ["DeletionCode"]
+
+[[lean_lib]]
+name = "DeletionCode"
