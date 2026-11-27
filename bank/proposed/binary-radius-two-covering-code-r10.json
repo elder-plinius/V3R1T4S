@@ -1,0 +1,36 @@
+{
+  "id": "binary-radius-two-covering-code-r10",
+  "name": "Minimum length of a binary radius-two covering code at codimension 10",
+  "category": "record-tables",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-hours for an initial construction search. The cost of an optimality proof is unknown.",
+  "statement": "Let ell_2(10,2) be the minimum length of a binary linear code of codimension 10 and covering radius 2. Equivalently, find the smallest set of distinct nonzero vectors in F_2^10 whose elements and pairwise sums cover every nonzero vector. The sphere-covering inequality 1 + n + binom(n,2) >= 1024 gives n >= 45. Stephen Wu's 50-column construction improved Kaikkonen and Rosendahl's 51 and appears in Theorem 5.2 and Table 5.1 of Davydov, Marcugini, Pambianco and Wu. Wu reports a heuristic search for a 49-column code that left seven syndromes uncovered. The checked sources leave 45 <= ell_2(10,2) <= 50.",
+  "success_criterion": "Give the first certified exact value of ell_2(10,2). Supply a parity-check matrix with m columns and a certificate excluding all shorter codes. The sphere-covering bound suffices at m = 45. For m > 45, it suffices to exclude all sets of m - 1 distinct nonzero columns. Zero and repeated columns contribute no additional syndromes, and a smaller covering set can be padded to m - 1 with unused columns. Before claiming, recheck status_source and later literature to confirm ell_2(10,2) remains open at claim time.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Give a radius-two code of length at most 49 and strictly shorter than the best comparable published construction at claim time."
+    },
+    {
+      "id": "p2",
+      "statement": "Prove a lower bound of at least 46 that strictly improves the strongest comparable public lower bound at claim time."
+    }
+  ],
+  "verification_method": "Check that the columns are distinct nonzero 10-bit vectors. Mark zero, each column and each XOR of two distinct columns. Require all 1024 syndromes and at least one syndrome absent from the set consisting of zero and the single columns. Full coverage implies rank 10, and for m <= 50 < 1023 the inequality 1 + m < 1024 also guarantees radius is not 1; retaining the explicit weight-<=1 absence check ensures radius exactly two. Calibrate on Wu’s matrix in equation (5.4) and a version with a column removed. For computational exclusion, regenerate an exact SAT encoding and check its DRAT or LRAT proof. Prove that any symmetry restrictions preserve a representative of every feasible set. A mathematical exclusion can use a kernel-checked proof. Certificates exceeding 1 MB follow kit/SUBMIT.md section 1.",
+  "primary_sources": [
+    "https://arxiv.org/html/2609.16078v2",
+    "https://arxiv.org/abs/2608.27494",
+    "https://maths.wustep.me/"
+  ],
+  "status_source": "https://arxiv.org/html/2609.16078v2",
+  "status_checked": "2026-11-23",
+  "disclosure": "open",
+  "angles": [
+    "Use changes of basis to put ten independent columns in systematic form. For construction searches, score a set by the syndromes it misses."
+  ],
+  "pitfalls": [
+    "The existing K_q(n,R) target fixes word length and minimizes the number of codewords, allowing nonlinear codes. This target fixes binary linear codimension and minimizes word length.",
+    "A failed heuristic search at 49 columns or a single-column deletion from one 50-column matrix establishes no global lower bound."
+  ]
+}
