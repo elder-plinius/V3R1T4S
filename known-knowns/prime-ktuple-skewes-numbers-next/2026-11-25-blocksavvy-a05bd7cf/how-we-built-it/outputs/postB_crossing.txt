@@ -1,0 +1,3 @@
+subblocks=15258816 range=[0,1000001765376) pairs=3741223507 monotone-safe=5456438 flagged=9800842 (start>=100663296) flagged_before_stop=1573
+exactly compared pairs: 134939  min exact margin before first violation: ('0.175754335087', 349018490077, 1416008982)
+FIRST VIOLATION q=349018493647 pi6(q)=1416008996 C*Li2(q)=1416008995.52083626635901 diff=-0.47916373364099 subblock=5325599

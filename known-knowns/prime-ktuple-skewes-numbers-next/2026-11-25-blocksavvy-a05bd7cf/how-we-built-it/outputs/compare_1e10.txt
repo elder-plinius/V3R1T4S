@@ -1,0 +1,1 @@
+blocks compared 795 mismatches 0 totalA 54835354 totalB 54835354

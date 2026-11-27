@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+prime-ktuple-skewes-numbers-next,"the (p, p+6) Skewes number (inclusive counting, C=4*C2, Li2 from 2)",349018493647,unknown (Wikipedia; no OEIS entry),2026-11-25T00:47:59Z,object/sexy_skewes.json,a05bd7cfaf93b4f4dc53cc370a9157e1ffa55e80d843120bde972940c56357c5
