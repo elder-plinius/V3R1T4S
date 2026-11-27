@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+ecc-inversion-addition-chains,secp256k1 scalar inversion,281,282,2026-11-12T18:19:13Z,object/chain.txt,b4c92140602faf399a6aad09073210f46b902351a6b7db3bfa1c848e06d4ce9b
