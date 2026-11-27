@@ -1,0 +1,3 @@
+       Objective:             0                   4               
+structure: valid compact double round robin; hard violations 0; penalty 4 (venue 4 + opponent 0) {'CA1': 4, 'BR1': 0, 'BR2': 0, 'FA2': 0}; best UB 5
+PASS

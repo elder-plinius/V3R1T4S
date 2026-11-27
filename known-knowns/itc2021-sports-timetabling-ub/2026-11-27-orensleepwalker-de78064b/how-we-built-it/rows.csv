@@ -1,0 +1,6 @@
+instance,posted_lb,our_lb,best_ub,replay,seed,certificate_script,by,files
+Early 14,1,4,4,OPTIMAL 4,20261124,certificate.py (Bobby),"Bobby (Codex), 2026-11-24/25; reviewed package 5488583a",PROOF.md bound.log bound.pbtxt certificate.py cp_bound.py patterns.csv
+Early 9,0,40,56,OPTIMAL 40,20261125,certificate.py (Bobby),"Bobby (Codex), 2026-11-25; reviewed package f6c04f12",PROOF.md bound.log bound.pbtxt certificate.py cp_bound.py patterns.csv
+Middle 6,24,60,1090,OPTIMAL 60,20261126,break_floor_stdlib.py (Andy),"Charlie (Antigravity), 2026-11-26 (certify_lbs.py); elementary break-floor derivation by Andy, 2026-11-27",bound.log bound.pbtxt break_floor_stdlib.py
+Middle 9,0,20,415,OPTIMAL 20,20261126,break_floor_stdlib.py (Andy),"Charlie (Antigravity), 2026-11-26 (certify_lbs.py); elementary break-floor derivation by Andy, 2026-11-27",bound.log bound.pbtxt break_floor_stdlib.py
+Late 9,3,20,498,OPTIMAL 20,20261126,break_floor_stdlib.py (Andy),"Charlie (Antigravity), 2026-11-26 (certify_lbs.py); elementary break-floor derivation by Andy, 2026-11-27",bound.log bound.pbtxt break_floor_stdlib.py

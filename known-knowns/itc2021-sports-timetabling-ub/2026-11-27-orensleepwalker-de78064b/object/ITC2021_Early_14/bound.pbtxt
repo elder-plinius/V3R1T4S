@@ -1,0 +1,1471 @@
+variables { name: "home_0_0" domain: [0, 1] }
+variables { name: "home_0_1" domain: [0, 1] }
+variables { name: "home_0_2" domain: [0, 1] }
+variables { name: "home_0_3" domain: [0, 1] }
+variables { name: "home_0_4" domain: [0, 1] }
+variables { name: "home_0_5" domain: [0, 1] }
+variables { name: "home_0_6" domain: [0, 1] }
+variables { name: "home_0_7" domain: [0, 1] }
+variables { name: "home_0_8" domain: [0, 1] }
+variables { name: "home_0_9" domain: [0, 1] }
+variables { name: "home_0_10" domain: [0, 1] }
+variables { name: "home_0_11" domain: [0, 1] }
+variables { name: "home_0_12" domain: [0, 1] }
+variables { name: "home_0_13" domain: [0, 1] }
+variables { name: "home_0_14" domain: [0, 1] }
+variables { name: "home_0_15" domain: [0, 1] }
+variables { name: "home_0_16" domain: [0, 1] }
+variables { name: "home_0_17" domain: [0, 1] }
+variables { name: "home_0_18" domain: [0, 1] }
+variables { name: "home_0_19" domain: [0, 1] }
+variables { name: "home_0_20" domain: [0, 1] }
+variables { name: "home_0_21" domain: [0, 1] }
+variables { name: "home_0_22" domain: [0, 1] }
+variables { name: "home_0_23" domain: [0, 1] }
+variables { name: "home_0_24" domain: [0, 1] }
+variables { name: "home_0_25" domain: [0, 1] }
+variables { name: "home_0_26" domain: [0, 1] }
+variables { name: "home_0_27" domain: [0, 1] }
+variables { name: "home_0_28" domain: [0, 1] }
+variables { name: "home_0_29" domain: [0, 1] }
+variables { name: "home_0_30" domain: [0, 1] }
+variables { name: "home_0_31" domain: [0, 1] }
+variables { name: "home_0_32" domain: [0, 1] }
+variables { name: "home_0_33" domain: [0, 1] }
+variables { name: "home_0_34" domain: [0, 1] }
+variables { name: "home_0_35" domain: [0, 1] }
+variables { name: "home_0_36" domain: [0, 1] }
+variables { name: "home_0_37" domain: [0, 1] }
+variables { name: "repeat_0_1" domain: [0, 1] }
+variables { name: "repeat_0_2" domain: [0, 1] }
+variables { name: "repeat_0_3" domain: [0, 1] }
+variables { name: "repeat_0_4" domain: [0, 1] }
+variables { name: "repeat_0_5" domain: [0, 1] }
+variables { name: "repeat_0_6" domain: [0, 1] }
+variables { name: "repeat_0_7" domain: [0, 1] }
+variables { name: "repeat_0_8" domain: [0, 1] }
+variables { name: "repeat_0_9" domain: [0, 1] }
+variables { name: "repeat_0_10" domain: [0, 1] }
+variables { name: "repeat_0_11" domain: [0, 1] }
+variables { name: "repeat_0_12" domain: [0, 1] }
+variables { name: "repeat_0_13" domain: [0, 1] }
+variables { name: "repeat_0_14" domain: [0, 1] }
+variables { name: "repeat_0_15" domain: [0, 1] }
+variables { name: "repeat_0_16" domain: [0, 1] }
+variables { name: "repeat_0_17" domain: [0, 1] }
+variables { name: "repeat_0_18" domain: [0, 1] }
+variables { name: "repeat_0_19" domain: [0, 1] }
+variables { name: "repeat_0_20" domain: [0, 1] }
+variables { name: "repeat_0_21" domain: [0, 1] }
+variables { name: "repeat_0_22" domain: [0, 1] }
+variables { name: "repeat_0_23" domain: [0, 1] }
+variables { name: "repeat_0_24" domain: [0, 1] }
+variables { name: "repeat_0_25" domain: [0, 1] }
+variables { name: "repeat_0_26" domain: [0, 1] }
+variables { name: "repeat_0_27" domain: [0, 1] }
+variables { name: "repeat_0_28" domain: [0, 1] }
+variables { name: "repeat_0_29" domain: [0, 1] }
+variables { name: "repeat_0_30" domain: [0, 1] }
+variables { name: "repeat_0_31" domain: [0, 1] }
+variables { name: "repeat_0_32" domain: [0, 1] }
+variables { name: "repeat_0_33" domain: [0, 1] }
+variables { name: "repeat_0_34" domain: [0, 1] }
+variables { name: "repeat_0_35" domain: [0, 1] }
+variables { name: "repeat_0_36" domain: [0, 1] }
+variables { name: "repeat_0_37" domain: [0, 1] }
+variables { name: "excess_0_0" domain: [0, 1] }
+variables { name: "excess_0_1" domain: [0, 3] }
+variables { name: "excess_0_2" domain: [0, 6] }
+variables { name: "excess_0_3" domain: [0, 1] }
+variables { name: "excess_0_4" domain: [0, 1] }
+variables { name: "excess_0_5" domain: [0, 1] }
+variables { name: "home_15_0" domain: [0, 1] }
+variables { name: "home_15_1" domain: [0, 1] }
+variables { name: "home_15_2" domain: [0, 1] }
+variables { name: "home_15_3" domain: [0, 1] }
+variables { name: "home_15_4" domain: [0, 1] }
+variables { name: "home_15_5" domain: [0, 1] }
+variables { name: "home_15_6" domain: [0, 1] }
+variables { name: "home_15_7" domain: [0, 1] }
+variables { name: "home_15_8" domain: [0, 1] }
+variables { name: "home_15_9" domain: [0, 1] }
+variables { name: "home_15_10" domain: [0, 1] }
+variables { name: "home_15_11" domain: [0, 1] }
+variables { name: "home_15_12" domain: [0, 1] }
+variables { name: "home_15_13" domain: [0, 1] }
+variables { name: "home_15_14" domain: [0, 1] }
+variables { name: "home_15_15" domain: [0, 1] }
+variables { name: "home_15_16" domain: [0, 1] }
+variables { name: "home_15_17" domain: [0, 1] }
+variables { name: "home_15_18" domain: [0, 1] }
+variables { name: "home_15_19" domain: [0, 1] }
+variables { name: "home_15_20" domain: [0, 1] }
+variables { name: "home_15_21" domain: [0, 1] }
+variables { name: "home_15_22" domain: [0, 1] }
+variables { name: "home_15_23" domain: [0, 1] }
+variables { name: "home_15_24" domain: [0, 1] }
+variables { name: "home_15_25" domain: [0, 1] }
+variables { name: "home_15_26" domain: [0, 1] }
+variables { name: "home_15_27" domain: [0, 1] }
+variables { name: "home_15_28" domain: [0, 1] }
+variables { name: "home_15_29" domain: [0, 1] }
+variables { name: "home_15_30" domain: [0, 1] }
+variables { name: "home_15_31" domain: [0, 1] }
+variables { name: "home_15_32" domain: [0, 1] }
+variables { name: "home_15_33" domain: [0, 1] }
+variables { name: "home_15_34" domain: [0, 1] }
+variables { name: "home_15_35" domain: [0, 1] }
+variables { name: "home_15_36" domain: [0, 1] }
+variables { name: "home_15_37" domain: [0, 1] }
+variables { name: "repeat_15_1" domain: [0, 1] }
+variables { name: "repeat_15_2" domain: [0, 1] }
+variables { name: "repeat_15_3" domain: [0, 1] }
+variables { name: "repeat_15_4" domain: [0, 1] }
+variables { name: "repeat_15_5" domain: [0, 1] }
+variables { name: "repeat_15_6" domain: [0, 1] }
+variables { name: "repeat_15_7" domain: [0, 1] }
+variables { name: "repeat_15_8" domain: [0, 1] }
+variables { name: "repeat_15_9" domain: [0, 1] }
+variables { name: "repeat_15_10" domain: [0, 1] }
+variables { name: "repeat_15_11" domain: [0, 1] }
+variables { name: "repeat_15_12" domain: [0, 1] }
+variables { name: "repeat_15_13" domain: [0, 1] }
+variables { name: "repeat_15_14" domain: [0, 1] }
+variables { name: "repeat_15_15" domain: [0, 1] }
+variables { name: "repeat_15_16" domain: [0, 1] }
+variables { name: "repeat_15_17" domain: [0, 1] }
+variables { name: "repeat_15_18" domain: [0, 1] }
+variables { name: "repeat_15_19" domain: [0, 1] }
+variables { name: "repeat_15_20" domain: [0, 1] }
+variables { name: "repeat_15_21" domain: [0, 1] }
+variables { name: "repeat_15_22" domain: [0, 1] }
+variables { name: "repeat_15_23" domain: [0, 1] }
+variables { name: "repeat_15_24" domain: [0, 1] }
+variables { name: "repeat_15_25" domain: [0, 1] }
+variables { name: "repeat_15_26" domain: [0, 1] }
+variables { name: "repeat_15_27" domain: [0, 1] }
+variables { name: "repeat_15_28" domain: [0, 1] }
+variables { name: "repeat_15_29" domain: [0, 1] }
+variables { name: "repeat_15_30" domain: [0, 1] }
+variables { name: "repeat_15_31" domain: [0, 1] }
+variables { name: "repeat_15_32" domain: [0, 1] }
+variables { name: "repeat_15_33" domain: [0, 1] }
+variables { name: "repeat_15_34" domain: [0, 1] }
+variables { name: "repeat_15_35" domain: [0, 1] }
+variables { name: "repeat_15_36" domain: [0, 1] }
+variables { name: "repeat_15_37" domain: [0, 1] }
+variables { name: "excess_15_0" domain: [0, 6] }
+variables { name: "excess_15_1" domain: [0, 2] }
+variables { name: "excess_15_2" domain: [0, 3] }
+variables { name: "excess_15_3" domain: [0, 4] }
+constraints {
+  linear {
+    vars: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37]
+    coeffs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    domain: [19, 19]
+  }
+}
+constraints {
+  linear {
+    vars: [7]
+    coeffs: [1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [38]
+  linear {
+    vars: [0, 1]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-39]
+  linear {
+    vars: [0, 1]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [39]
+  linear {
+    vars: [1, 2]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-40]
+  linear {
+    vars: [1, 2]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [40]
+  linear {
+    vars: [2, 3]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-41]
+  linear {
+    vars: [2, 3]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [41]
+  linear {
+    vars: [3, 4]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-42]
+  linear {
+    vars: [3, 4]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [42]
+  linear {
+    vars: [4, 5]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-43]
+  linear {
+    vars: [4, 5]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [43]
+  linear {
+    vars: [5, 6]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-44]
+  linear {
+    vars: [5, 6]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [44]
+  linear {
+    vars: [6, 7]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-45]
+  linear {
+    vars: [6, 7]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [45]
+  linear {
+    vars: [7, 8]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-46]
+  linear {
+    vars: [7, 8]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [46]
+  linear {
+    vars: [8, 9]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-47]
+  linear {
+    vars: [8, 9]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [47]
+  linear {
+    vars: [9, 10]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-48]
+  linear {
+    vars: [9, 10]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [48]
+  linear {
+    vars: [10, 11]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-49]
+  linear {
+    vars: [10, 11]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [49]
+  linear {
+    vars: [11, 12]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-50]
+  linear {
+    vars: [11, 12]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [50]
+  linear {
+    vars: [12, 13]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-51]
+  linear {
+    vars: [12, 13]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [51]
+  linear {
+    vars: [13, 14]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-52]
+  linear {
+    vars: [13, 14]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [52]
+  linear {
+    vars: [14, 15]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-53]
+  linear {
+    vars: [14, 15]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [53]
+  linear {
+    vars: [15, 16]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-54]
+  linear {
+    vars: [15, 16]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [54]
+  linear {
+    vars: [16, 17]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-55]
+  linear {
+    vars: [16, 17]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [55]
+  linear {
+    vars: [17, 18]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-56]
+  linear {
+    vars: [17, 18]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [56]
+  linear {
+    vars: [18, 19]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-57]
+  linear {
+    vars: [18, 19]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [57]
+  linear {
+    vars: [19, 20]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-58]
+  linear {
+    vars: [19, 20]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [58]
+  linear {
+    vars: [20, 21]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-59]
+  linear {
+    vars: [20, 21]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [59]
+  linear {
+    vars: [21, 22]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-60]
+  linear {
+    vars: [21, 22]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [60]
+  linear {
+    vars: [22, 23]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-61]
+  linear {
+    vars: [22, 23]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [61]
+  linear {
+    vars: [23, 24]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-62]
+  linear {
+    vars: [23, 24]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [62]
+  linear {
+    vars: [24, 25]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-63]
+  linear {
+    vars: [24, 25]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [63]
+  linear {
+    vars: [25, 26]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-64]
+  linear {
+    vars: [25, 26]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [64]
+  linear {
+    vars: [26, 27]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-65]
+  linear {
+    vars: [26, 27]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [65]
+  linear {
+    vars: [27, 28]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-66]
+  linear {
+    vars: [27, 28]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [66]
+  linear {
+    vars: [28, 29]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-67]
+  linear {
+    vars: [28, 29]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [67]
+  linear {
+    vars: [29, 30]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-68]
+  linear {
+    vars: [29, 30]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [68]
+  linear {
+    vars: [30, 31]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-69]
+  linear {
+    vars: [30, 31]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [69]
+  linear {
+    vars: [31, 32]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-70]
+  linear {
+    vars: [31, 32]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [70]
+  linear {
+    vars: [32, 33]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-71]
+  linear {
+    vars: [32, 33]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [71]
+  linear {
+    vars: [33, 34]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-72]
+  linear {
+    vars: [33, 34]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [72]
+  linear {
+    vars: [34, 35]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-73]
+  linear {
+    vars: [34, 35]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [73]
+  linear {
+    vars: [35, 36]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-74]
+  linear {
+    vars: [35, 36]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [74]
+  linear {
+    vars: [36, 37]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-75]
+  linear {
+    vars: [36, 37]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  linear {
+    vars: [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74]
+    coeffs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    domain: [-9223372036854775808, 1]
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [75] coeffs: [1] }
+    exprs { }
+    exprs { vars: [4] coeffs: [1] offset: -1 }
+    exprs { vars: [4] coeffs: [-1] offset: 1 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [76] coeffs: [1] }
+    exprs { }
+    exprs { vars: [4, 14, 35] coeffs: [-1, -1, -1] }
+    exprs { vars: [4, 14, 35] coeffs: [1, 1, 1] offset: -1 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [77] coeffs: [1] }
+    exprs { }
+    exprs { vars: [1, 10, 11, 20, 22, 31] coeffs: [1, 1, 1, 1, 1, 1] offset: -6 }
+    exprs { vars: [1, 10, 11, 20, 22, 31] coeffs: [-1, -1, -1, -1, -1, -1] offset: 4 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [78] coeffs: [1] }
+    exprs { }
+    exprs { vars: [12] coeffs: [-1] }
+    exprs { vars: [12] coeffs: [1] }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [79] coeffs: [1] }
+    exprs { }
+    exprs { vars: [5] coeffs: [1] offset: -1 }
+    exprs { vars: [5] coeffs: [-1] offset: 1 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [80] coeffs: [1] }
+    exprs { }
+    exprs { vars: [28] coeffs: [-1] }
+    exprs { vars: [28] coeffs: [1] }
+  }
+}
+constraints {
+  linear {
+    vars: [81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118]
+    coeffs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    domain: [19, 19]
+  }
+}
+constraints {
+  linear {
+    vars: [85]
+    coeffs: [1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [119]
+  linear {
+    vars: [81, 82]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-120]
+  linear {
+    vars: [81, 82]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [120]
+  linear {
+    vars: [82, 83]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-121]
+  linear {
+    vars: [82, 83]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [121]
+  linear {
+    vars: [83, 84]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-122]
+  linear {
+    vars: [83, 84]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [122]
+  linear {
+    vars: [84, 85]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-123]
+  linear {
+    vars: [84, 85]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [123]
+  linear {
+    vars: [85, 86]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-124]
+  linear {
+    vars: [85, 86]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [124]
+  linear {
+    vars: [86, 87]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-125]
+  linear {
+    vars: [86, 87]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [125]
+  linear {
+    vars: [87, 88]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-126]
+  linear {
+    vars: [87, 88]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [126]
+  linear {
+    vars: [88, 89]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-127]
+  linear {
+    vars: [88, 89]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [127]
+  linear {
+    vars: [89, 90]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-128]
+  linear {
+    vars: [89, 90]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [128]
+  linear {
+    vars: [90, 91]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-129]
+  linear {
+    vars: [90, 91]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [129]
+  linear {
+    vars: [91, 92]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-130]
+  linear {
+    vars: [91, 92]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [130]
+  linear {
+    vars: [92, 93]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-131]
+  linear {
+    vars: [92, 93]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [131]
+  linear {
+    vars: [93, 94]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-132]
+  linear {
+    vars: [93, 94]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [132]
+  linear {
+    vars: [94, 95]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-133]
+  linear {
+    vars: [94, 95]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [133]
+  linear {
+    vars: [95, 96]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-134]
+  linear {
+    vars: [95, 96]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [134]
+  linear {
+    vars: [96, 97]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-135]
+  linear {
+    vars: [96, 97]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [135]
+  linear {
+    vars: [97, 98]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-136]
+  linear {
+    vars: [97, 98]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [136]
+  linear {
+    vars: [98, 99]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-137]
+  linear {
+    vars: [98, 99]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [137]
+  linear {
+    vars: [99, 100]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-138]
+  linear {
+    vars: [99, 100]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [138]
+  linear {
+    vars: [100, 101]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-139]
+  linear {
+    vars: [100, 101]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [139]
+  linear {
+    vars: [101, 102]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-140]
+  linear {
+    vars: [101, 102]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [140]
+  linear {
+    vars: [102, 103]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-141]
+  linear {
+    vars: [102, 103]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [141]
+  linear {
+    vars: [103, 104]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-142]
+  linear {
+    vars: [103, 104]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [142]
+  linear {
+    vars: [104, 105]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-143]
+  linear {
+    vars: [104, 105]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [143]
+  linear {
+    vars: [105, 106]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-144]
+  linear {
+    vars: [105, 106]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [144]
+  linear {
+    vars: [106, 107]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-145]
+  linear {
+    vars: [106, 107]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [145]
+  linear {
+    vars: [107, 108]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-146]
+  linear {
+    vars: [107, 108]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [146]
+  linear {
+    vars: [108, 109]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-147]
+  linear {
+    vars: [108, 109]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [147]
+  linear {
+    vars: [109, 110]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-148]
+  linear {
+    vars: [109, 110]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [148]
+  linear {
+    vars: [110, 111]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-149]
+  linear {
+    vars: [110, 111]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [149]
+  linear {
+    vars: [111, 112]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-150]
+  linear {
+    vars: [111, 112]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [150]
+  linear {
+    vars: [112, 113]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-151]
+  linear {
+    vars: [112, 113]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [151]
+  linear {
+    vars: [113, 114]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-152]
+  linear {
+    vars: [113, 114]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [152]
+  linear {
+    vars: [114, 115]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-153]
+  linear {
+    vars: [114, 115]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [153]
+  linear {
+    vars: [115, 116]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-154]
+  linear {
+    vars: [115, 116]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [154]
+  linear {
+    vars: [116, 117]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-155]
+  linear {
+    vars: [116, 117]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [155]
+  linear {
+    vars: [117, 118]
+    coeffs: [1, -1]
+    domain: [0, 0]
+  }
+}
+constraints {
+  enforcement_literal: [-156]
+  linear {
+    vars: [117, 118]
+    coeffs: [1, -1]
+    domain: [-9223372036854775808, -1, 1, 9223372036854775807]
+  }
+}
+constraints {
+  linear {
+    vars: [119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155]
+    coeffs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+    domain: [-9223372036854775808, 1]
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [156] coeffs: [1] }
+    exprs { }
+    exprs { vars: [84, 91, 99, 113, 114, 116] coeffs: [-1, -1, -1, -1, -1, -1] }
+    exprs { vars: [84, 91, 99, 113, 114, 116] coeffs: [1, 1, 1, 1, 1, 1] offset: -2 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [157] coeffs: [1] }
+    exprs { }
+    exprs { vars: [98, 100] coeffs: [1, 1] offset: -2 }
+    exprs { vars: [98, 100] coeffs: [-1, -1] offset: 1 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [158] coeffs: [1] }
+    exprs { }
+    exprs { vars: [94, 110, 118] coeffs: [-1, -1, -1] }
+    exprs { vars: [94, 110, 118] coeffs: [1, 1, 1] offset: -1 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [159] coeffs: [1] }
+    exprs { }
+    exprs { vars: [83, 102, 108, 118] coeffs: [1, 1, 1, 1] offset: -4 }
+    exprs { vars: [83, 102, 108, 118] coeffs: [-1, -1, -1, -1] offset: 3 }
+  }
+}
+objective {
+  vars: [75, 76, 77, 78, 79, 80, 156, 157, 158, 159]
+  scaling_factor: 1
+  coeffs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+}

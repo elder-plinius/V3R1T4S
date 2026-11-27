@@ -1,0 +1,3 @@
+# What these bounds are compared against
+
+Board https://robinxval.ugent.be/ITC2021/instances.php fetched 2026-11-27T14:48:34Z, HTTP 200, sha256 e008069e04f701038edce32190c5ecb5a978067c251bedd26f00c08740832f75 (board.html), and each instance's history page (bounds table), fetched at the same time: highest posted bounds Early 14 1, Early 9 0, Middle 6 24, Middle 9 0, Late 9 3. Not posted on the board but published as bound files in the RobinX repository (Team MODAL): Middle 6 39, Late 9 5. early14-optimal-timetable/ holds Team Gionar's posted Early 14 timetable and its scores (0, 4) under RobinX built from source and verify-it-yourself/verify_timetable.py.

@@ -1,0 +1,45 @@
+variables { name: "team_2_projected_repeats" domain: [3, 4] }
+variables { name: "team_2_uses_odd_repeat_when_at_three" domain: [0, 1] }
+variables { name: "league_repeats" domain: [0, 594] }
+variables { name: "break_penalty" domain: [0, 5940] }
+constraints {
+  table {
+    values: [3, 1, 4, 0]
+    exprs { vars: [0] coeffs: [1] }
+    exprs { vars: [1] coeffs: [1] }
+  }
+}
+constraints {
+  linear {
+    vars: [0, 2]
+    coeffs: [-1, 1]
+    domain: [15, 9223372036854775807]
+  }
+}
+constraints {
+  enforcement_literal: [1]
+  linear {
+    vars: [2]
+    coeffs: [1]
+    domain: [19, 9223372036854775807]
+  }
+}
+constraints {
+  int_mod {
+    target { }
+    exprs { vars: [2] coeffs: [1] }
+    exprs { offset: 2 }
+  }
+}
+constraints {
+  lin_max {
+    target { vars: [3] coeffs: [1] }
+    exprs { }
+    exprs { vars: [2] coeffs: [10] offset: -160 }
+  }
+}
+objective {
+  vars: [3]
+  scaling_factor: 1
+  coeffs: [1]
+}

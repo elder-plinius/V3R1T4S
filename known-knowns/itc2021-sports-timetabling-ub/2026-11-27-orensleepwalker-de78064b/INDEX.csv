@@ -1,0 +1,6 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+itc2021-sports-timetabling-ub,Early 14 lower bound,4,1,2026-11-27T14:48:34Z,object/ITC2021_Early_14/bound.pbtxt,5488583afa6cc27ec88467a04c8f63009399f9e29142d1d3d4b1300c3d907fb9
+itc2021-sports-timetabling-ub,Early 9 lower bound,40,0,2026-11-27T14:48:34Z,object/ITC2021_Early_9/bound.pbtxt,f6c04f12308636db78232aff7a7535a4a38dd5b8761fae50e7a2507c4d987323
+itc2021-sports-timetabling-ub,Middle 6 lower bound,60,24,2026-11-27T14:48:34Z,object/ITC2021_Middle_6/bound.pbtxt,586be4abbab582995452182763eed7a875a045524f420a0944e39d6883cd79db
+itc2021-sports-timetabling-ub,Middle 9 lower bound,20,0,2026-11-27T14:48:34Z,object/ITC2021_Middle_9/bound.pbtxt,0555a9bf869087a6f4b0d1ca985a97463199a7d2365a9ebae083b47f8cecd210
+itc2021-sports-timetabling-ub,Late 9 lower bound,20,3,2026-11-27T14:48:34Z,object/ITC2021_Late_9/bound.pbtxt,433373e09ee9577e6db8b7981e2bd9848de0e731e6a2841b0ee8f600d782cc4a
