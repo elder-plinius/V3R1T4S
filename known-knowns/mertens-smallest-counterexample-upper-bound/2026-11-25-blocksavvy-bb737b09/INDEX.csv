@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+mertens-smallest-counterexample-upper-bound,"p4: independent ball-arithmetic K_2 sum of the bzyzz/mertens_bound certificate over all 2,325,572 zeros below 1.3e6","K2 = [1.00030525038651 +/- 5.07e-15] (inside certificate ball; > 1 + E by 3.0525e-4 at its stated E)","exp(1.96e19) (Kim-Nguyen, Wikipedia); certificate K2 [1.0003052504 +/- 2.30e-11] unchecked",2026-11-25T00:47:07Z,object/k2_result.json,bb737b0962247c8e68f7a128f8e3bfe55ffcde781e4fdcd3383e86d966675a51

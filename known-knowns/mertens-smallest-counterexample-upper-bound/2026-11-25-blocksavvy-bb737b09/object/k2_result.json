@@ -1,0 +1,35 @@
+{
+ "target_id": "mertens-smallest-counterexample-upper-bound",
+ "partial_win": "p4",
+ "point": {
+  "v": "3484971332733132396.5383341489440461",
+  "k": "1.5e-10",
+  "T0": "1300000"
+ },
+ "definition": "K2(v) = 2 * sum_{0<gamma<T0} exp(-k gamma^2) * Re(exp(i gamma v)/(rho zeta'(rho))), rho = 1/2 + i gamma",
+ "zeros": {
+  "N_T0": 2325572,
+  "gamma_2325572": "[1299999.536327494617836 +/- 4.03e-16]",
+  "gamma_2325573": "[1300000.182865248898197 +/- 1.77e-16]",
+  "source": "FLINT/Arb acb_dirichlet_zeta_zeros via python-flint 0.9.0 (same routine as the certificate)"
+ },
+ "excluded_term_n2325573_half": "[3.336089544e-118 +/- 4.18e-128]",
+ "K2_arb": "[1.00030525038651 +/- 5.07e-15]",
+ "K2_head_arb": "[1.00030525038650 +/- 4.03e-15]",
+ "K2_tail_arb": "[1.3e-14 +/- 9.56e-16]",
+ "K2_decimal_mid": "1.0003052503865115405311974470559426022214353512848524168841375094265233310182165457074706239809007936024333351733066413327820912",
+ "K2_decimal_rad": "3.5204171242178912780101151496091712431089477440304755537113809133375589911761208499363398681017263993711972000000836E-15",
+ "certificate": {
+  "K2": "[1.0003052504 +/- 2.30e-11]",
+  "K2_main_n<=600000": "[1.000305250386499012059 +/- 3.21e-22]",
+  "K2_tail_ball": "[+/- 9.43e-12]",
+  "E": "2.391e-11 (certificate's own bound; not checked here)",
+  "source": "https://github.com/bzyzz/mertens_bound/blob/a0b267c2c7ff32a917732cf16ee860d705ca4a08/certification/k2_certificate.json"
+ },
+ "chunk_files_sha256": {
+  "chunks_head128.jsonl": "c2492bdc58327afafd50e464a89a32dba0abbb8f1a2a9bc5a3ac867a813d4fa6",
+  "chunks_tail_1.jsonl": "d72e30612dc27a7f52f9a68efb996c595df4618087a57ef12fff1e03ac061236",
+  "chunks_tail_2.jsonl": "e2829c58a4349a3c0f76ca03c02cb40f90f34ab450d8d524d25ece6cd9bfc646"
+ },
+ "label": "NUMERICAL"
+}
