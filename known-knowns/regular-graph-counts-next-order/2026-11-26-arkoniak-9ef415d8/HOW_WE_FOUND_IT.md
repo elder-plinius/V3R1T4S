@@ -1,0 +1,5 @@
+# How we found it (contributor text, unverified)
+
+The target was the next order of the regular-graph sequences (A002851, A006821, A006822, A014377, quartic orders 51+). Method A (a C port of a histogram recurrence, CRT over word-size primes) reached the quartic counts to order 55, but the criterion needs a second method. Method D computes the number of labeled graphs fixed by each cycle type separately (short cycles by weight-bucketed extraction and a vertex DP, long cycles by a count-vector DP, exact modulo 2^521-1) and sums them by Burnside. Over several nights on a 2-core worker it covered every cycle type of every order to 50 (204226 types at N=50, about 8 h). Its totals agree with method A at every order and, after the inverse Euler transform, with Cheng and Xu's Tables 4 and 5. Speed came from bucketing the short-part monomials by weight and working in residues (x1.7 to x2.4).
+
+Order 51 (run 2026-11-26): method D over all 239943 cycle types of 51 ran about 10 h on 2 cores (night job of 2026-11-25, same code as for 29..50), and its total equals method A's U_4(51); the connected count follows by the inverse Euler transform.

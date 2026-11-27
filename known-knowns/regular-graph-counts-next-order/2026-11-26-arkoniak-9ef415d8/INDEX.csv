@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+regular-graph-counts-next-order,connected quartic count at order 51 (C_4(51); Cheng-Xu Tables 4-5 end at 50),C_4(51)=152556958807091391617335751728584931970607218791861386,none (table ends at order 50),2026-11-26T02:07:40Z,object/U4_C4.txt,9ef415d833a9c49a41506b342a1a2b5bb87fd3a0819c17818f275d22172eb0fd
