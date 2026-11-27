@@ -1,0 +1,8 @@
+../../exact-eval-first/code/progA_8.out rows 1..5 == DATA: True
+../../search-engineer/code/progB_8.out rows 1..5 == DATA: True
+%e UDUUDD 2
+%e UUDDUD 2
+%e UUUDDD 1
+%e UUDUDD 1
+%e UDUDUD 1
+negative (deletion sequences) rows 1..5: [1, 1, 1, 1, 1, 2, 0, 0, 1, 1, 1, 2, 2, 0, 2, 0, 2, 0, 0, 0, 3, 0, 0, 0, 0] differs
