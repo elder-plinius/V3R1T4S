@@ -1,0 +1,4 @@
+start gap 0.0
+  step 1 t 6 cur 4 score 3.669 best 4
+*** CROSSING (exact model) step 1 gap 4.0
+{"size": 64, "idx": 6371, "rival": 9, "steps": 1, "best": 4.0, "found": true}
