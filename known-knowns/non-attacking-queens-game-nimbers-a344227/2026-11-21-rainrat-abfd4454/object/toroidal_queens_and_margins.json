@@ -1,0 +1,3035 @@
+{
+  "target_id": "non-attacking-queens-game-nimbers-a344227",
+  "toroidal_queens_nimbers": [
+    {
+      "n": 1,
+      "N_squares": 1,
+      "closed_neighborhood_size": 1,
+      "Hn_live_squares": 0,
+      "Hn_d4_orbits": 0,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": -1,
+      "conjecture_T1_holds_for_n_ge_4": -1
+    },
+    {
+      "n": 2,
+      "N_squares": 4,
+      "closed_neighborhood_size": 4,
+      "Hn_live_squares": 0,
+      "Hn_d4_orbits": 0,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": -1,
+      "conjecture_T1_holds_for_n_ge_4": -1
+    },
+    {
+      "n": 3,
+      "N_squares": 9,
+      "closed_neighborhood_size": 9,
+      "Hn_live_squares": 0,
+      "Hn_d4_orbits": 0,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": -1,
+      "conjecture_T1_holds_for_n_ge_4": -1
+    },
+    {
+      "n": 4,
+      "N_squares": 16,
+      "closed_neighborhood_size": 12,
+      "Hn_live_squares": 4,
+      "Hn_d4_orbits": 1,
+      "G_TQn": 0,
+      "Hn_winning_replies": 4,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 5,
+      "N_squares": 25,
+      "closed_neighborhood_size": 17,
+      "Hn_live_squares": 8,
+      "Hn_d4_orbits": 1,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 8,
+      "conjecture_T1_prediction_for_n_ge_4": 1,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 6,
+      "N_squares": 36,
+      "closed_neighborhood_size": 20,
+      "Hn_live_squares": 16,
+      "Hn_d4_orbits": 3,
+      "G_TQn": 0,
+      "Hn_winning_replies": 16,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 7,
+      "N_squares": 49,
+      "closed_neighborhood_size": 25,
+      "Hn_live_squares": 24,
+      "Hn_d4_orbits": 3,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 24,
+      "conjecture_T1_prediction_for_n_ge_4": 1,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 8,
+      "N_squares": 64,
+      "closed_neighborhood_size": 28,
+      "Hn_live_squares": 36,
+      "Hn_d4_orbits": 6,
+      "G_TQn": 0,
+      "Hn_winning_replies": 36,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 9,
+      "N_squares": 81,
+      "closed_neighborhood_size": 33,
+      "Hn_live_squares": 48,
+      "Hn_d4_orbits": 6,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 48,
+      "conjecture_T1_prediction_for_n_ge_4": 1,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 10,
+      "N_squares": 100,
+      "closed_neighborhood_size": 36,
+      "Hn_live_squares": 64,
+      "Hn_d4_orbits": 10,
+      "G_TQn": 0,
+      "Hn_winning_replies": 8,
+      "Hn_losing_replies": 56,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 11,
+      "N_squares": 121,
+      "closed_neighborhood_size": 41,
+      "Hn_live_squares": 80,
+      "Hn_d4_orbits": 10,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 80,
+      "conjecture_T1_prediction_for_n_ge_4": 1,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 12,
+      "N_squares": 144,
+      "closed_neighborhood_size": 44,
+      "Hn_live_squares": 100,
+      "Hn_d4_orbits": 15,
+      "G_TQn": 0,
+      "Hn_winning_replies": 20,
+      "Hn_losing_replies": 80,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 13,
+      "N_squares": 169,
+      "closed_neighborhood_size": 49,
+      "Hn_live_squares": 120,
+      "Hn_d4_orbits": 15,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 120,
+      "conjecture_T1_prediction_for_n_ge_4": 1,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 14,
+      "N_squares": 196,
+      "closed_neighborhood_size": 52,
+      "Hn_live_squares": 144,
+      "Hn_d4_orbits": 21,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 144,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 0
+    },
+    {
+      "n": 15,
+      "N_squares": 225,
+      "closed_neighborhood_size": 57,
+      "Hn_live_squares": 168,
+      "Hn_d4_orbits": 21,
+      "G_TQn": 1,
+      "Hn_winning_replies": 0,
+      "Hn_losing_replies": 168,
+      "conjecture_T1_prediction_for_n_ge_4": 1,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    },
+    {
+      "n": 16,
+      "N_squares": 256,
+      "closed_neighborhood_size": 60,
+      "Hn_live_squares": 196,
+      "Hn_d4_orbits": 28,
+      "G_TQn": 0,
+      "Hn_winning_replies": 196,
+      "Hn_losing_replies": 0,
+      "conjecture_T1_prediction_for_n_ge_4": 0,
+      "conjecture_T1_holds_for_n_ge_4": 1
+    }
+  ],
+  "tq14_counterexample_certificate": {
+    "n": 14,
+    "G_TQ14": 1,
+    "conjecture_T1_prediction": 0,
+    "Hn_live_squares": 144,
+    "Hn_d4_orbits": 21,
+    "Hn_winning_replies": 0,
+    "Hn_losing_replies": 144,
+    "d4_orbit_certificates": [
+      {
+        "orbit_id": 1,
+        "u2_idx": 16,
+        "u2_rc": [
+          1,
+          2
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          16,
+          26,
+          29,
+          41,
+          169,
+          181,
+          184,
+          194
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 189,
+        "player1_winning_reply_w3_rc": [
+          13,
+          7
+        ],
+        "P1_residual_live_squares": 71
+      },
+      {
+        "orbit_id": 2,
+        "u2_idx": 17,
+        "u2_rc": [
+          1,
+          3
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          17,
+          25,
+          43,
+          55,
+          155,
+          167,
+          185,
+          193
+        ],
+        "M1_live_squares": 106,
+        "player1_winning_reply_w3_idx": 134,
+        "player1_winning_reply_w3_rc": [
+          9,
+          8
+        ],
+        "P1_residual_live_squares": 70
+      },
+      {
+        "orbit_id": 3,
+        "u2_idx": 18,
+        "u2_rc": [
+          1,
+          4
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          18,
+          24,
+          57,
+          69,
+          141,
+          153,
+          186,
+          192
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 119,
+        "player1_winning_reply_w3_rc": [
+          8,
+          7
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 4,
+        "u2_idx": 19,
+        "u2_rc": [
+          1,
+          5
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          19,
+          23,
+          71,
+          83,
+          127,
+          139,
+          187,
+          191
+        ],
+        "M1_live_squares": 106,
+        "player1_winning_reply_w3_idx": 44,
+        "player1_winning_reply_w3_rc": [
+          3,
+          2
+        ],
+        "P1_residual_live_squares": 70
+      },
+      {
+        "orbit_id": 5,
+        "u2_idx": 20,
+        "u2_rc": [
+          1,
+          6
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          20,
+          22,
+          85,
+          97,
+          113,
+          125,
+          188,
+          190
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 117,
+        "player1_winning_reply_w3_rc": [
+          8,
+          5
+        ],
+        "P1_residual_live_squares": 70
+      },
+      {
+        "orbit_id": 6,
+        "u2_idx": 21,
+        "u2_rc": [
+          1,
+          7
+        ],
+        "orbit_size": 4,
+        "orbit_members_idx": [
+          21,
+          99,
+          111,
+          189
+        ],
+        "M1_live_squares": 104,
+        "player1_winning_reply_w3_idx": 110,
+        "player1_winning_reply_w3_rc": [
+          7,
+          12
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 7,
+        "u2_idx": 31,
+        "u2_rc": [
+          2,
+          3
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          31,
+          39,
+          44,
+          54,
+          156,
+          166,
+          171,
+          179
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 133,
+        "player1_winning_reply_w3_rc": [
+          9,
+          7
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 8,
+        "u2_idx": 32,
+        "u2_rc": [
+          2,
+          4
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          32,
+          38,
+          58,
+          68,
+          142,
+          152,
+          172,
+          178
+        ],
+        "M1_live_squares": 106,
+        "player1_winning_reply_w3_idx": 138,
+        "player1_winning_reply_w3_rc": [
+          9,
+          12
+        ],
+        "P1_residual_live_squares": 71
+      },
+      {
+        "orbit_id": 9,
+        "u2_idx": 33,
+        "u2_rc": [
+          2,
+          5
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          33,
+          37,
+          72,
+          82,
+          128,
+          138,
+          173,
+          177
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 166,
+        "player1_winning_reply_w3_rc": [
+          11,
+          12
+        ],
+        "P1_residual_live_squares": 70
+      },
+      {
+        "orbit_id": 10,
+        "u2_idx": 34,
+        "u2_rc": [
+          2,
+          6
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          34,
+          36,
+          86,
+          96,
+          114,
+          124,
+          174,
+          176
+        ],
+        "M1_live_squares": 106,
+        "player1_winning_reply_w3_idx": 63,
+        "player1_winning_reply_w3_rc": [
+          4,
+          7
+        ],
+        "P1_residual_live_squares": 71
+      },
+      {
+        "orbit_id": 11,
+        "u2_idx": 35,
+        "u2_rc": [
+          2,
+          7
+        ],
+        "orbit_size": 4,
+        "orbit_members_idx": [
+          35,
+          100,
+          110,
+          175
+        ],
+        "M1_live_squares": 100,
+        "player1_winning_reply_w3_idx": 134,
+        "player1_winning_reply_w3_rc": [
+          9,
+          8
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 12,
+        "u2_idx": 46,
+        "u2_rc": [
+          3,
+          4
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          46,
+          52,
+          59,
+          67,
+          143,
+          151,
+          158,
+          164
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 141,
+        "player1_winning_reply_w3_rc": [
+          10,
+          1
+        ],
+        "P1_residual_live_squares": 70
+      },
+      {
+        "orbit_id": 13,
+        "u2_idx": 47,
+        "u2_rc": [
+          3,
+          5
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          47,
+          51,
+          73,
+          81,
+          129,
+          137,
+          159,
+          163
+        ],
+        "M1_live_squares": 106,
+        "player1_winning_reply_w3_idx": 186,
+        "player1_winning_reply_w3_rc": [
+          13,
+          4
+        ],
+        "P1_residual_live_squares": 70
+      },
+      {
+        "orbit_id": 14,
+        "u2_idx": 48,
+        "u2_rc": [
+          3,
+          6
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          48,
+          50,
+          87,
+          95,
+          115,
+          123,
+          160,
+          162
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 119,
+        "player1_winning_reply_w3_rc": [
+          8,
+          7
+        ],
+        "P1_residual_live_squares": 71
+      },
+      {
+        "orbit_id": 15,
+        "u2_idx": 49,
+        "u2_rc": [
+          3,
+          7
+        ],
+        "orbit_size": 4,
+        "orbit_members_idx": [
+          49,
+          101,
+          109,
+          161
+        ],
+        "M1_live_squares": 104,
+        "player1_winning_reply_w3_idx": 104,
+        "player1_winning_reply_w3_rc": [
+          7,
+          6
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 16,
+        "u2_idx": 61,
+        "u2_rc": [
+          4,
+          5
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          61,
+          65,
+          74,
+          80,
+          130,
+          136,
+          145,
+          149
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 152,
+        "player1_winning_reply_w3_rc": [
+          10,
+          12
+        ],
+        "P1_residual_live_squares": 71
+      },
+      {
+        "orbit_id": 17,
+        "u2_idx": 62,
+        "u2_rc": [
+          4,
+          6
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          62,
+          64,
+          88,
+          94,
+          116,
+          122,
+          146,
+          148
+        ],
+        "M1_live_squares": 106,
+        "player1_winning_reply_w3_idx": 102,
+        "player1_winning_reply_w3_rc": [
+          7,
+          4
+        ],
+        "P1_residual_live_squares": 71
+      },
+      {
+        "orbit_id": 18,
+        "u2_idx": 63,
+        "u2_rc": [
+          4,
+          7
+        ],
+        "orbit_size": 4,
+        "orbit_members_idx": [
+          63,
+          102,
+          108,
+          147
+        ],
+        "M1_live_squares": 100,
+        "player1_winning_reply_w3_idx": 103,
+        "player1_winning_reply_w3_rc": [
+          7,
+          5
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 19,
+        "u2_idx": 76,
+        "u2_rc": [
+          5,
+          6
+        ],
+        "orbit_size": 8,
+        "orbit_members_idx": [
+          76,
+          78,
+          89,
+          93,
+          117,
+          121,
+          132,
+          134
+        ],
+        "M1_live_squares": 102,
+        "player1_winning_reply_w3_idx": 175,
+        "player1_winning_reply_w3_rc": [
+          12,
+          7
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 20,
+        "u2_idx": 77,
+        "u2_rc": [
+          5,
+          7
+        ],
+        "orbit_size": 4,
+        "orbit_members_idx": [
+          77,
+          103,
+          107,
+          133
+        ],
+        "M1_live_squares": 104,
+        "player1_winning_reply_w3_idx": 179,
+        "player1_winning_reply_w3_rc": [
+          12,
+          11
+        ],
+        "P1_residual_live_squares": 69
+      },
+      {
+        "orbit_id": 21,
+        "u2_idx": 91,
+        "u2_rc": [
+          6,
+          7
+        ],
+        "orbit_size": 4,
+        "orbit_members_idx": [
+          91,
+          104,
+          106,
+          119
+        ],
+        "M1_live_squares": 100,
+        "player1_winning_reply_w3_idx": 192,
+        "player1_winning_reply_w3_rc": [
+          13,
+          10
+        ],
+        "P1_residual_live_squares": 69
+      }
+    ]
+  },
+  "central_strike_refutation_margins": [
+    {
+      "n": 8,
+      "c_star_rc": [
+        3,
+        3
+      ],
+      "c_star_idx": 27,
+      "Rn_live_squares": 36,
+      "refuting_replies_count": 0,
+      "non_refuting_replies_count": 36,
+      "refuting_squares_rc": [],
+      "non_refuting_squares_rc": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ]
+      ]
+    },
+    {
+      "n": 10,
+      "c_star_rc": [
+        4,
+        4
+      ],
+      "c_star_idx": 44,
+      "Rn_live_squares": 64,
+      "refuting_replies_count": 8,
+      "non_refuting_replies_count": 56,
+      "refuting_squares_rc": [
+        [
+          1,
+          9
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          9,
+          3
+        ]
+      ],
+      "non_refuting_squares_rc": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          7
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          5
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ]
+      ]
+    },
+    {
+      "n": 12,
+      "c_star_rc": [
+        5,
+        5
+      ],
+      "c_star_idx": 65,
+      "Rn_live_squares": 100,
+      "refuting_replies_count": 100,
+      "non_refuting_replies_count": 0,
+      "refuting_squares_rc": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          7
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          6,
+          8
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          6
+        ],
+        [
+          8,
+          7
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          10
+        ]
+      ],
+      "non_refuting_squares_rc": []
+    },
+    {
+      "n": 14,
+      "c_star_rc": [
+        6,
+        6
+      ],
+      "c_star_idx": 90,
+      "Rn_live_squares": 144,
+      "refuting_replies_count": 140,
+      "non_refuting_replies_count": 4,
+      "refuting_squares_rc": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          7
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          7
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          13
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          12
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          7
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          3,
+          11
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          10
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          5,
+          9
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          1
+        ],
+        [
+          7,
+          2
+        ],
+        [
+          7,
+          3
+        ],
+        [
+          7,
+          9
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          7,
+          11
+        ],
+        [
+          7,
+          12
+        ],
+        [
+          7,
+          13
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          5
+        ],
+        [
+          9,
+          7
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          4
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          7
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          3
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          7
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          2
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          12,
+          7
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          13,
+          1
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          7
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          13,
+          12
+        ]
+      ],
+      "non_refuting_squares_rc": [
+        [
+          4,
+          7
+        ],
+        [
+          7,
+          4
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          8,
+          7
+        ]
+      ]
+    },
+    {
+      "n": 16,
+      "c_star_rc": [
+        7,
+        7
+      ],
+      "c_star_idx": 119,
+      "Rn_live_squares": 196,
+      "refuting_replies_count": 146,
+      "non_refuting_replies_count": 50,
+      "refuting_squares_rc": [
+        [
+          0,
+          3
+        ],
+        [
+          0,
+          4
+        ],
+        [
+          0,
+          5
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          0,
+          9
+        ],
+        [
+          0,
+          10
+        ],
+        [
+          0,
+          11
+        ],
+        [
+          0,
+          12
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          1,
+          3
+        ],
+        [
+          1,
+          4
+        ],
+        [
+          1,
+          5
+        ],
+        [
+          1,
+          6
+        ],
+        [
+          1,
+          8
+        ],
+        [
+          1,
+          9
+        ],
+        [
+          1,
+          11
+        ],
+        [
+          1,
+          12
+        ],
+        [
+          1,
+          14
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          2,
+          5
+        ],
+        [
+          2,
+          6
+        ],
+        [
+          2,
+          8
+        ],
+        [
+          2,
+          9
+        ],
+        [
+          2,
+          10
+        ],
+        [
+          2,
+          11
+        ],
+        [
+          2,
+          13
+        ],
+        [
+          2,
+          14
+        ],
+        [
+          2,
+          15
+        ],
+        [
+          3,
+          0
+        ],
+        [
+          3,
+          1
+        ],
+        [
+          3,
+          2
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          3,
+          5
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          3,
+          8
+        ],
+        [
+          3,
+          9
+        ],
+        [
+          3,
+          10
+        ],
+        [
+          3,
+          12
+        ],
+        [
+          3,
+          13
+        ],
+        [
+          3,
+          14
+        ],
+        [
+          3,
+          15
+        ],
+        [
+          4,
+          0
+        ],
+        [
+          4,
+          1
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          4,
+          3
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          4,
+          11
+        ],
+        [
+          4,
+          12
+        ],
+        [
+          4,
+          14
+        ],
+        [
+          4,
+          15
+        ],
+        [
+          5,
+          0
+        ],
+        [
+          5,
+          1
+        ],
+        [
+          5,
+          2
+        ],
+        [
+          5,
+          3
+        ],
+        [
+          5,
+          4
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          5,
+          11
+        ],
+        [
+          5,
+          12
+        ],
+        [
+          5,
+          13
+        ],
+        [
+          5,
+          14
+        ],
+        [
+          5,
+          15
+        ],
+        [
+          6,
+          0
+        ],
+        [
+          6,
+          1
+        ],
+        [
+          6,
+          2
+        ],
+        [
+          6,
+          3
+        ],
+        [
+          6,
+          12
+        ],
+        [
+          6,
+          13
+        ],
+        [
+          6,
+          14
+        ],
+        [
+          8,
+          1
+        ],
+        [
+          8,
+          2
+        ],
+        [
+          8,
+          3
+        ],
+        [
+          8,
+          12
+        ],
+        [
+          8,
+          13
+        ],
+        [
+          8,
+          14
+        ],
+        [
+          8,
+          15
+        ],
+        [
+          9,
+          0
+        ],
+        [
+          9,
+          1
+        ],
+        [
+          9,
+          2
+        ],
+        [
+          9,
+          3
+        ],
+        [
+          9,
+          12
+        ],
+        [
+          9,
+          13
+        ],
+        [
+          9,
+          14
+        ],
+        [
+          9,
+          15
+        ],
+        [
+          10,
+          0
+        ],
+        [
+          10,
+          2
+        ],
+        [
+          10,
+          3
+        ],
+        [
+          10,
+          5
+        ],
+        [
+          10,
+          11
+        ],
+        [
+          10,
+          12
+        ],
+        [
+          10,
+          14
+        ],
+        [
+          10,
+          15
+        ],
+        [
+          11,
+          0
+        ],
+        [
+          11,
+          1
+        ],
+        [
+          11,
+          2
+        ],
+        [
+          11,
+          4
+        ],
+        [
+          11,
+          5
+        ],
+        [
+          11,
+          10
+        ],
+        [
+          11,
+          12
+        ],
+        [
+          11,
+          13
+        ],
+        [
+          11,
+          14
+        ],
+        [
+          11,
+          15
+        ],
+        [
+          12,
+          0
+        ],
+        [
+          12,
+          1
+        ],
+        [
+          12,
+          3
+        ],
+        [
+          12,
+          4
+        ],
+        [
+          12,
+          5
+        ],
+        [
+          12,
+          6
+        ],
+        [
+          12,
+          8
+        ],
+        [
+          12,
+          9
+        ],
+        [
+          12,
+          10
+        ],
+        [
+          12,
+          11
+        ],
+        [
+          12,
+          13
+        ],
+        [
+          12,
+          14
+        ],
+        [
+          12,
+          15
+        ],
+        [
+          13,
+          2
+        ],
+        [
+          13,
+          3
+        ],
+        [
+          13,
+          5
+        ],
+        [
+          13,
+          6
+        ],
+        [
+          13,
+          8
+        ],
+        [
+          13,
+          9
+        ],
+        [
+          13,
+          11
+        ],
+        [
+          13,
+          12
+        ],
+        [
+          13,
+          14
+        ],
+        [
+          14,
+          1
+        ],
+        [
+          14,
+          2
+        ],
+        [
+          14,
+          3
+        ],
+        [
+          14,
+          4
+        ],
+        [
+          14,
+          5
+        ],
+        [
+          14,
+          6
+        ],
+        [
+          14,
+          8
+        ],
+        [
+          14,
+          9
+        ],
+        [
+          14,
+          10
+        ],
+        [
+          14,
+          11
+        ],
+        [
+          14,
+          12
+        ],
+        [
+          14,
+          13
+        ],
+        [
+          15,
+          2
+        ],
+        [
+          15,
+          3
+        ],
+        [
+          15,
+          4
+        ],
+        [
+          15,
+          5
+        ],
+        [
+          15,
+          8
+        ],
+        [
+          15,
+          9
+        ],
+        [
+          15,
+          10
+        ],
+        [
+          15,
+          11
+        ],
+        [
+          15,
+          12
+        ]
+      ],
+      "non_refuting_squares_rc": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          0,
+          8
+        ],
+        [
+          0,
+          13
+        ],
+        [
+          0,
+          15
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          10
+        ],
+        [
+          1,
+          15
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          4,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          4,
+          9
+        ],
+        [
+          4,
+          13
+        ],
+        [
+          5,
+          6
+        ],
+        [
+          5,
+          8
+        ],
+        [
+          6,
+          4
+        ],
+        [
+          6,
+          5
+        ],
+        [
+          6,
+          9
+        ],
+        [
+          6,
+          10
+        ],
+        [
+          6,
+          11
+        ],
+        [
+          6,
+          15
+        ],
+        [
+          8,
+          0
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          8,
+          5
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          8,
+          10
+        ],
+        [
+          8,
+          11
+        ],
+        [
+          9,
+          4
+        ],
+        [
+          9,
+          6
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          9,
+          10
+        ],
+        [
+          9,
+          11
+        ],
+        [
+          10,
+          1
+        ],
+        [
+          10,
+          6
+        ],
+        [
+          10,
+          8
+        ],
+        [
+          10,
+          9
+        ],
+        [
+          10,
+          13
+        ],
+        [
+          11,
+          6
+        ],
+        [
+          11,
+          8
+        ],
+        [
+          11,
+          9
+        ],
+        [
+          13,
+          0
+        ],
+        [
+          13,
+          4
+        ],
+        [
+          13,
+          10
+        ],
+        [
+          13,
+          15
+        ],
+        [
+          14,
+          15
+        ],
+        [
+          15,
+          0
+        ],
+        [
+          15,
+          1
+        ],
+        [
+          15,
+          6
+        ],
+        [
+          15,
+          13
+        ],
+        [
+          15,
+          14
+        ]
+      ]
+    }
+  ],
+  "planar_a344227_calibration": [
+    {
+      "n": 0,
+      "G_Qn": 0
+    },
+    {
+      "n": 1,
+      "G_Qn": 1
+    },
+    {
+      "n": 2,
+      "G_Qn": 1
+    },
+    {
+      "n": 3,
+      "G_Qn": 2
+    },
+    {
+      "n": 4,
+      "G_Qn": 1
+    },
+    {
+      "n": 5,
+      "G_Qn": 3
+    },
+    {
+      "n": 6,
+      "G_Qn": 1
+    },
+    {
+      "n": 7,
+      "G_Qn": 2
+    },
+    {
+      "n": 8,
+      "G_Qn": 3
+    },
+    {
+      "n": 9,
+      "G_Qn": 1
+    },
+    {
+      "n": 10,
+      "G_Qn": 0
+    },
+    {
+      "n": 11,
+      "G_Qn": 1
+    },
+    {
+      "n": 12,
+      "G_Qn": 0
+    },
+    {
+      "n": 13,
+      "G_Qn": 1
+    },
+    {
+      "n": 14,
+      "G_Qn": 0
+    },
+    {
+      "n": 15,
+      "G_Qn": 1
+    },
+    {
+      "n": 16,
+      "G_Qn": 0
+    }
+  ]
+}
