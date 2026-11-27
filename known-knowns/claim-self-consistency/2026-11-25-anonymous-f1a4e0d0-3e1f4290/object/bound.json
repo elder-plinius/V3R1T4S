@@ -1,0 +1,16 @@
+{
+  "source": "H. White, Warp Field Mechanics 101, NASA NTRS 20110015936 (2011)",
+  "source_url": "https://ntrs.nasa.gov/api/citations/20110015936/downloads/20110015936.pdf",
+  "source_sha256": "dd152cede691d4357e8f12acce620763855e57a7beabda182151349262d34a4d",
+  "operating_point": {"R_m": 0.005, "gamma_minus_1": 1e-7},
+  "constants": {"c_m_per_s": 299792458, "G_SI": 6.6743e-11},
+  "u_star": 0.0299002893428026,
+  "bound_formula": "E <= -(c^4/(48 G)) u_star^2 R, for every sigma > 0",
+  "bound_J": -1.127084914e37,
+  "bound_kg_equivalent": -1.25405e20,
+  "least_abs_E_over_sigma_J": -3.00921272e37,
+  "sigma_R_at_least_abs_E": 1.22905,
+  "I_over_R_minimum": 0.667477,
+  "proof": "object/PROOF.md",
+  "proof_sha256": "56378b7165d91636d423aff58b8ca4a55b455bb0465fe32c9e2470660ac740c7"
+}
