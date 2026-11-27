@@ -1,0 +1,1 @@
+# heptiamond compatibility package
