@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+brun-constant-unconditional-upper-bound,"Tao optimizationproblems constant 81a (Brun's constant B), upper bound under GRH (partial win p1)",2.1257395,2.1594,2026-11-24T08:46:42Z,object/a_bound_certificate.json,ece6008a7d8615fe294374f58927b8b45aedbf478c39e5a88f346a90d4f8261c

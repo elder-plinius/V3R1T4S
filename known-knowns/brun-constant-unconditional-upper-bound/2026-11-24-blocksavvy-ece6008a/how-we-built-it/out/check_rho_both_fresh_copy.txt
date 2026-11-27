@@ -1,0 +1,18 @@
+precision bits: 128
+check 0: wvcount matches the definition at 2859 points <= 20000
+check rho: 22 intervals use Sigma(n) at 20 levels n <= 20000 (weights certified, exact sums, identity sum_q P_q = (sum L)^2 OK)
+check 1-2: 9906 intervals admissible; recomputed sups <= stated (max relative slack 5.1e-06)
+check 3: A(1e10) <= 0.01070009059 <= 0.0107001
+B <= 2.1257393973040676877 (sup of the ball, recomputed)
+check 4: B < 2.1257395
+PASS
+precision bits: 256
+check 0: wvcount matches the definition at 2859 points <= 20000
+check rho: 22 intervals use Sigma(n) at 20 levels n <= 20000 (weights certified, exact sums, identity sum_q P_q = (sum L)^2 OK)
+check 1-2: 9906 intervals admissible; recomputed sups <= stated (max relative slack 5.1e-06)
+check 3: A(1e10) <= 0.01070009059 <= 0.0107001
+B <= 2.1257393973040676877 (sup of the ball, recomputed)
+check 4: B < 2.1257395
+PASS
+both precisions: PASS
+PASS

@@ -1,0 +1,22 @@
+n=3363 lambda_1==1:True Lambda==W/V:True Lambda=359.351478910486 table W/V=359.351478910578 rel=2.6e-13 ok
+n=3957 lambda_1==1:True Lambda==W/V:True Lambda=416.364121420245 table W/V=416.36412142035 rel=2.5e-13 ok
+n=4415 lambda_1==1:True Lambda==W/V:True Lambda=458.219339015635 table W/V=458.219339015751 rel=2.5e-13 ok
+n=4899 lambda_1==1:True Lambda==W/V:True Lambda=503.09158008147 table W/V=503.091580081596 rel=2.5e-13 ok
+n=5403 lambda_1==1:True Lambda==W/V:True Lambda=549.295643276102 table W/V=549.29564327624 rel=2.5e-13 ok
+n=6015 lambda_1==1:True Lambda==W/V:True Lambda=603.984905300644 table W/V=603.984905300796 rel=2.5e-13 ok
+n=6699 lambda_1==1:True Lambda==W/V:True Lambda=665.296094032407 table W/V=665.296094032574 rel=2.5e-13 ok
+n=7457 lambda_1==1:True Lambda==W/V:True Lambda=733.054445004039 table W/V=733.054445004223 rel=2.5e-13 ok
+n=8267 lambda_1==1:True Lambda==W/V:True Lambda=804.473595698088 table W/V=804.47359569829 rel=2.5e-13 ok
+n=9187 lambda_1==1:True Lambda==W/V:True Lambda=885.038593595133 table W/V=885.038593595355 rel=2.5e-13 ok
+n=10209 lambda_1==1:True Lambda==W/V:True Lambda=974.015996462897 table W/V=974.01599646314 rel=2.5e-13 ok
+n=11315 lambda_1==1:True Lambda==W/V:True Lambda=1067.46342107847 table W/V=1067.46342107873 rel=2.5e-13 ok
+n=12605 lambda_1==1:True Lambda==W/V:True Lambda=1177.28320244336 table W/V=1177.28320244365 rel=2.5e-13 ok
+n=14009 lambda_1==1:True Lambda==W/V:True Lambda=1295.76375570592 table W/V=1295.76375570625 rel=2.5e-13 ok
+n=15595 lambda_1==1:True Lambda==W/V:True Lambda=1428.4379188705 table W/V=1428.43791887086 rel=2.5e-13 ok
+n=17356 lambda_1==1:True Lambda==W/V:True Lambda=1574.87001970619 table W/V=1574.87001970658 rel=2.5e-13 ok
+n=19263 lambda_1==1:True Lambda==W/V:True Lambda=1730.72405639547 table W/V=1730.7240563959 rel=2.5e-13 ok
+n=19993 lambda_1==1:True Lambda==W/V:True Lambda=1789.25103413682 table W/V=1789.25103413726 rel=2.5e-13 ok
+n=19997 lambda_1==1:True Lambda==W/V:True Lambda=1789.96175350816 table W/V=1789.96175350861 rel=2.5e-13 ok
+n=19999 lambda_1==1:True Lambda==W/V:True Lambda=1790.11248432143 table W/V=1790.11248432188 rel=2.5e-13 ok
+note: table W/V is an upper bound (W ceil, V floor), so table >= exact is expected
+PASS
