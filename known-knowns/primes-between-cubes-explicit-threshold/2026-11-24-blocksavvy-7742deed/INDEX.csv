@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+primes-between-cubes-explicit-threshold,"OEIS A060199 / literature: Y with a prime in (n^3,(n+1)^3) for all n >= exp(exp(Y)); conditional on Yang thesis Thm 1.3 and Bellotti arXiv:2311.05136v1 Thm 1.1",29.735,32.537 (Cully-Hugill thesis Thm 4.3; OEIS A060199 lists 32.76),2026-11-24T08:03:19Z,object/certificate.json,7742deedb119de5a4323eec298cea3047d290b5c71621cd35ee81a09c0b3a0aa

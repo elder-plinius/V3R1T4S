@@ -1,0 +1,29 @@
+{
+  "claim": "For every integer n >= exp(exp(Y)) there is a prime p with n^3 + 1/2 < p <= n^3 + 3n^2 + 1/2, hence between n^3 and (n+1)^3",
+  "Y": "29.735",
+  "X0": "3*exp(Y)  (lower bound for X = log x, x = n^3 + 1/2)",
+  "alpha": "1/3 + 1e-9",
+  "delta": "1e-9",
+  "u2": "1e-6",
+  "I1_K": "2.4798",
+  "I1_h_lower_factor": "2.99",
+  "I3_zero_free_c": "51.34",
+  "I5_KLN_C1": "17.418",
+  "I5_KLN_C2": "5.272",
+  "I5_exponent_bound_on_logT": "3.8",
+  "I4_Bellotti_Thm1_1_rows": [
+    {"C": "9.77e21", "B": "57.8875", "e": "19703/1800"},
+    {"C": "7.65e10", "B": "33.08", "e": "503/45"},
+    {"C": "0.27", "B": "0", "e": "14/10"}
+  ],
+  "I4_min_logT": "481958",
+  "Phi_upper_stated": "0.93425334448812",
+  "Y_minus_0.001_Phi_lower_stated": "1.0444",
+  "sources": {
+    "I1": "Cully-Hugill, J. Number Theory 247 (2023), arXiv:2107.14468, Theorem 2 and Table 2 (K = 2.4798 for log x >= 1e6)",
+    "I3": "D. Yang, PhD thesis, UNSW 2025, Theorem 1.3 (zeta(sigma+it) != 0 for t >= 3, sigma > 1 - 1/(51.34 (log t)^(2/3) (log log t)^(1/3)))",
+    "I4": "C. Bellotti, arXiv:2311.05136v1 (unrefereed), Theorem 1.1, sigma in [0.98,1], C1 = 9.77e21 for T > e^481958",
+    "I5": "Kadiri-Lumley-Ng bound as stated in Cully-Hugill JNT 2023 eq. (4), C1 = 17.418, C2 = 5.272",
+    "I6": "theta(t) < t log 4 (Erdos)"
+  }
+}

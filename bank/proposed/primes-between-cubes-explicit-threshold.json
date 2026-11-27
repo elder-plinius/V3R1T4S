@@ -1,0 +1,45 @@
+{
+  "id": "primes-between-cubes-explicit-threshold",
+  "name": "Primes between consecutive cubes: a smaller explicit threshold than exp(exp(32.537))",
+  "category": "number-hunts",
+  "kind": "harvest",
+  "tractability": 3,
+  "compute_profile": "pure thought (explicit zero-density and zero-free inputs into Ingham's argument), plus laptop-minutes of certified interval arithmetic",
+  "statement": "Ingham (1937) proved that for all sufficiently large n there is a prime between n^3 and (n+1)^3. Explicit thresholds have fallen from Dudek's exp(exp(33.217)) to Cully-Hugill's exp(exp(32.892)) (J. Number Theory 247 (2023)) and Mossinghoff-Trudgian-Yang's exp(exp(32.76)) (Res. Number Theory 10 (2024)). The best rigorous value in the literature is exp(exp(32.537)), Cully-Hugill's PhD thesis (UNSW 2021) Theorem 4.3, quoted as best by Johnston-Sorenson-Thomas-Webster (arXiv:2601.15564v2, 2026). OEIS A060199 still lists 32.76 in its comments (re-check the sequence and the literature before claiming). This is the explicit analytic threshold Y in the statement 'for every integer n >= exp(exp(Y)) there is a prime in (n^3, (n+1)^3)'. It is not the computational verification of a finite range, which is the separate bank target primes-between-consecutive-powers-legendre-cubes-frontier (currently n^3 <= 1.649 x 10^40). The claim that a prime lies between every pair of consecutive cubes (all n >= 1) stays open.",
+  "success_criterion": "Main win: a complete written proof, with a supplied interval-arithmetic checker that shares no essential code with the search, that for every integer n >= exp(exp(Y)) there is a prime between n^3 and (n+1)^3, with Y STRICTLY LESS (direction: min) than the smallest previously published rigorous explicit threshold (currently 32.537, Cully-Hugill thesis Theorem 4.3; OEIS A060199 comments currently list 32.76). Re-check the thesis, the journal literature, arXiv, and A060199 immediately before claiming; if a smaller rigorous Y has appeared, beat that value. Every explicit input must be cited by its exact published, thesis, or preprint statement, and any non-journal input must be named in the claim. The checker must recompute the certificate at two precisions, require the stated upper bound to be at least the recomputed one and strictly less than the criterion that implies a prime, and show that a slightly smaller Y fails. Closing the statement for all n >= 1, or extending the finite computational range, is not required for this target.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Journal-only inputs (no thesis): a certified Y strictly below the best refereed-journal threshold (currently 32.76, Mossinghoff-Trudgian-Yang 2024), still naming any unrefereed preprint that is used."
+    },
+    {
+      "id": "p2",
+      "statement": "Fully refereed inputs only (no thesis and no unrefereed preprint): a certified Y strictly below the best refereed-journal threshold (currently 32.76)."
+    }
+  ],
+  "verification_method": "Skeptic: check each cited explicit inequality or density bound against its source (statement, range of validity, constants). Rerun the interval-arithmetic program at two precisions and confirm that Y fails at the next smaller grid point. Expected: hours to read the proof, seconds to minutes to rerun the checker.",
+  "primary_sources": [
+    "https://oeis.org/A060199",
+    "https://doi.org/10.1017/S0004972723000588",
+    "https://arxiv.org/abs/2107.14468",
+    "https://doi.org/10.1007/s40993-023-00498-y",
+    "https://arxiv.org/abs/2601.15564",
+    "https://doi.org/10.26190/unsworks/31825",
+    "https://arxiv.org/abs/2311.05136"
+  ],
+  "status_source": "https://oeis.org/A060199",
+  "status_checked": "2026-11-24",
+  "disclosure": "open",
+  "angles": [
+    "Cully-Hugill's explicit Ingham argument (J. Number Theory 247 (2023)) combined with a zero-density estimate that is stronger near sigma = 1 than the Kadiri-Lumley-Ng bound used for the 32.76 / 32.537 records, such as Bellotti arXiv:2311.05136v1 Theorem 1.1.",
+    "Newer Bellotti density results (J. Number Theory 269 (2025); arXiv:2508.02041) were not required for a first improvement and may lower Y further.",
+    "A fully explicit zero-free constant smaller than Yang's thesis value c = 51.34 at the heights that actually appear (log T around exp(Y))."
+  ],
+  "pitfalls": [
+    "This target is not primes-between-consecutive-powers-legendre-cubes-frontier. Extending the verified computational range (currently n^3 <= 1.649 x 10^40) does not count here, and a smaller Y does not count there.",
+    "OEIS A060199 comments may lag the literature: the comments list 32.76, but the best rigorous value as of 2026-11-24 is 32.537 (Cully-Hugill thesis Theorem 4.3). Re-check both the sequence and the papers before claiming.",
+    "rStation paper 130 (u/span_of_dilates, November 2026) gives a non-rigorous model estimate of about 30.07 by a similar idea and calls it a model, not a theorem. It is not a record to beat, but it must be cited as prior anticipation.",
+    "A journal-only or fully-refereed claim must not silently use a thesis zero-free region or an unrefereed preprint.",
+    "This is a threshold result. A proof for all n >= 1 is a different, much harder claim and is not required for a win here."
+  ]
+}

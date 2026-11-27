@@ -1,0 +1,2 @@
+python-flint==0.9.0
+mpmath==1.3.0

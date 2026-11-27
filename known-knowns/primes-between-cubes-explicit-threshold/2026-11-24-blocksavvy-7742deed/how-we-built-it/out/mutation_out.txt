@@ -1,0 +1,7 @@
+ok  K x 1e100: verdict PASS (expected PASS)
+ok  KLN C1 x 1e100, C2 x 1e100: verdict PASS (expected PASS)
+ok  theta const log4 -> 1e100: verdict PASS (expected PASS)
+ok  h lower bound 2.99 -> 1e-50 (RE, RT): verdict PASS (expected PASS)
+ok  Bellotti C1 x 1.2: verdict FAIL (expected FAIL)
+ok  Bellotti C2 x 1e6: verdict PASS (expected PASS)
+MUTATIONS_AS_EXPECTED

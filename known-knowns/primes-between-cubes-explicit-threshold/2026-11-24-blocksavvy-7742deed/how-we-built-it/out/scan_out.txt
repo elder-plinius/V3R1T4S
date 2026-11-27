@@ -1,0 +1,16 @@
+c=51.34   dens=thm11  Y_cert(prec128)=29.735 Y_cert(prec256)=29.735 agree=True
+c=51.34   dens=thm12  Y_cert(prec128)=29.836 Y_cert(prec256)=29.836 agree=True
+c=51.34   dens=thm13  Y_cert(prec128)=29.671 Y_cert(prec256)=29.671 agree=True
+c=51.34   dens=kln    Y_cert(prec128)=32.505 Y_cert(prec256)=32.505 agree=True
+c=54.004  dens=thm11  Y_cert(prec128)=29.907 Y_cert(prec256)=29.907 agree=True
+c=54.004  dens=thm12  Y_cert(prec128)=30.009 Y_cert(prec256)=30.009 agree=True
+c=54.004  dens=thm13  Y_cert(prec128)=29.845 Y_cert(prec256)=29.845 agree=True
+c=54.004  dens=kln    Y_cert(prec128)=32.677 Y_cert(prec256)=32.677 agree=True
+c=53.989  dens=thm11  Y_cert(prec128)=29.906 Y_cert(prec256)=29.906 agree=True
+c=53.989  dens=thm12  Y_cert(prec128)=30.008 Y_cert(prec256)=30.008 agree=True
+c=53.989  dens=thm13  Y_cert(prec128)=29.844 Y_cert(prec256)=29.844 agree=True
+c=53.989  dens=kln    Y_cert(prec128)=32.676 Y_cert(prec256)=32.676 agree=True
+c=57.54   dens=thm11  Y_cert(prec128)=30.123 Y_cert(prec256)=30.123 agree=True
+c=57.54   dens=thm12  Y_cert(prec128)=30.225 Y_cert(prec256)=30.225 agree=True
+c=57.54   dens=thm13  Y_cert(prec128)=30.062 Y_cert(prec256)=30.062 agree=True
+c=57.54   dens=kln    Y_cert(prec128)=32.892 Y_cert(prec256)=32.892 agree=True
