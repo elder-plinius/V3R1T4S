@@ -1,0 +1,2 @@
+target_id,submission_id,status,partial_win,claimed_primary_track,test_pcc_evaluate_many,test_pcc_5seed_exact,prev_rank2_pcc,margin_vs_rank2,bootstrap_win_rate_vs_rank2,object_files
+tdc-dti-dg-bindingdb-patent-pcc,2026-10-29-mizopl-d0d5d2a2,CONFIRMED_PARTIAL,p1,trackA_strict_train,0.580 ± 0.003,0.57942 ± 0.00299,0.538 ± 0.008,+0.04142,100.00%,"object/certificate.json;object/certificate_phase1_cpu_p1_p2.json;object/manifest_sha256.json;object/seed_1_trackA_strict_train_part1.csv;object/seed_1_trackA_strict_train_part2.csv"
