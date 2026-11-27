@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+mertens-smallest-counterexample-upper-bound,"Kim-Nguyen arXiv:2502.21021v1 Tables 1-2, certified re-evaluation (partial win p1)","19 certified 3-decimal values; 4 corrections at printed precision (Table 2 rows 1, 4, 12, 14)",Kim-Nguyen printed Tables 1-2 (status page: exp(1.96e19)),2026-11-24T12:13:59Z,object/p1_certified_values.json,829395f6acf5550a8f2b8c37053a1335baf5f378dd224dd0bc7ad0d12fd3e1f2
