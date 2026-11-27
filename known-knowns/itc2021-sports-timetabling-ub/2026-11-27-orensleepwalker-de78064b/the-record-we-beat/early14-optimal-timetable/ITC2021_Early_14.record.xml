@@ -1,0 +1,1168 @@
+<?xml version="1.0" ?>
+<Solution>
+	
+	
+	<MetaData>
+		
+		
+		<InstanceName>ITC2021_Early_14.xml</InstanceName>
+		
+		
+		<SolutionName>ITC2021_Early_14.xml_GIO_BJO_4.xml</SolutionName>
+		
+		<Contributor>Team Gionar</Contributor>
+		    <Date day="24" month="6" year="2021"/>
+		
+		<ObjectiveValue infeasibility="0" objective="4"/>
+		
+	
+	</MetaData>
+	
+	
+	<Games>
+		
+		
+		<ScheduledMatch home="1" away="15" slot="0"/>
+		
+		
+		<ScheduledMatch home="2" away="0" slot="0"/>
+		
+		
+		<ScheduledMatch home="3" away="4" slot="0"/>
+		
+		
+		<ScheduledMatch home="10" away="11" slot="0"/>
+		
+		
+		<ScheduledMatch home="12" away="5" slot="0"/>
+		
+		
+		<ScheduledMatch home="13" away="9" slot="0"/>
+		
+		
+		<ScheduledMatch home="16" away="14" slot="0"/>
+		
+		
+		<ScheduledMatch home="17" away="6" slot="0"/>
+		
+		
+		<ScheduledMatch home="18" away="7" slot="0"/>
+		
+		
+		<ScheduledMatch home="19" away="8" slot="0"/>
+		
+		
+		<ScheduledMatch home="0" away="2" slot="1"/>
+		
+		
+		<ScheduledMatch home="4" away="13" slot="1"/>
+		
+		
+		<ScheduledMatch home="5" away="16" slot="1"/>
+		
+		
+		<ScheduledMatch home="6" away="19" slot="1"/>
+		
+		
+		<ScheduledMatch home="7" away="10" slot="1"/>
+		
+		
+		<ScheduledMatch home="8" away="1" slot="1"/>
+		
+		
+		<ScheduledMatch home="9" away="3" slot="1"/>
+		
+		
+		<ScheduledMatch home="11" away="18" slot="1"/>
+		
+		
+		<ScheduledMatch home="14" away="12" slot="1"/>
+		
+		
+		<ScheduledMatch home="15" away="17" slot="1"/>
+		
+		
+		<ScheduledMatch home="1" away="14" slot="2"/>
+		
+		
+		<ScheduledMatch home="2" away="9" slot="2"/>
+		
+		
+		<ScheduledMatch home="3" away="0" slot="2"/>
+		
+		
+		<ScheduledMatch home="10" away="7" slot="2"/>
+		
+		
+		<ScheduledMatch home="12" away="4" slot="2"/>
+		
+		
+		<ScheduledMatch home="13" away="8" slot="2"/>
+		
+		
+		<ScheduledMatch home="16" away="5" slot="2"/>
+		
+		
+		<ScheduledMatch home="17" away="11" slot="2"/>
+		
+		
+		<ScheduledMatch home="18" away="6" slot="2"/>
+		
+		
+		<ScheduledMatch home="19" away="15" slot="2"/>
+		
+		
+		<ScheduledMatch home="0" away="16" slot="3"/>
+		
+		
+		<ScheduledMatch home="4" away="12" slot="3"/>
+		
+		
+		<ScheduledMatch home="5" away="3" slot="3"/>
+		
+		
+		<ScheduledMatch home="6" away="17" slot="3"/>
+		
+		
+		<ScheduledMatch home="7" away="18" slot="3"/>
+		
+		
+		<ScheduledMatch home="8" away="19" slot="3"/>
+		
+		
+		<ScheduledMatch home="9" away="2" slot="3"/>
+		
+		
+		<ScheduledMatch home="11" away="10" slot="3"/>
+		
+		
+		<ScheduledMatch home="14" away="13" slot="3"/>
+		
+		
+		<ScheduledMatch home="15" away="1" slot="3"/>
+		
+		
+		<ScheduledMatch home="1" away="8" slot="4"/>
+		
+		
+		<ScheduledMatch home="2" away="5" slot="4"/>
+		
+		
+		<ScheduledMatch home="3" away="9" slot="4"/>
+		
+		
+		<ScheduledMatch home="10" away="15" slot="4"/>
+		
+		
+		<ScheduledMatch home="12" away="14" slot="4"/>
+		
+		
+		<ScheduledMatch home="13" away="4" slot="4"/>
+		
+		
+		<ScheduledMatch home="16" away="0" slot="4"/>
+		
+		
+		<ScheduledMatch home="17" away="7" slot="4"/>
+		
+		
+		<ScheduledMatch home="18" away="11" slot="4"/>
+		
+		
+		<ScheduledMatch home="19" away="6" slot="4"/>
+		
+		
+		<ScheduledMatch home="0" away="3" slot="5"/>
+		
+		
+		<ScheduledMatch home="4" away="16" slot="5"/>
+		
+		
+		<ScheduledMatch home="5" away="1" slot="5"/>
+		
+		
+		<ScheduledMatch home="6" away="10" slot="5"/>
+		
+		
+		<ScheduledMatch home="7" away="17" slot="5"/>
+		
+		
+		<ScheduledMatch home="8" away="12" slot="5"/>
+		
+		
+		<ScheduledMatch home="9" away="13" slot="5"/>
+		
+		
+		<ScheduledMatch home="11" away="19" slot="5"/>
+		
+		
+		<ScheduledMatch home="14" away="2" slot="5"/>
+		
+		
+		<ScheduledMatch home="15" away="18" slot="5"/>
+		
+		
+		<ScheduledMatch home="0" away="9" slot="6"/>
+		
+		
+		<ScheduledMatch home="1" away="7" slot="6"/>
+		
+		
+		<ScheduledMatch home="2" away="14" slot="6"/>
+		
+		
+		<ScheduledMatch home="3" away="5" slot="6"/>
+		
+		
+		<ScheduledMatch home="12" away="15" slot="6"/>
+		
+		
+		<ScheduledMatch home="13" away="6" slot="6"/>
+		
+		
+		<ScheduledMatch home="16" away="4" slot="6"/>
+		
+		
+		<ScheduledMatch home="17" away="8" slot="6"/>
+		
+		
+		<ScheduledMatch home="18" away="10" slot="6"/>
+		
+		
+		<ScheduledMatch home="19" away="11" slot="6"/>
+		
+		
+		<ScheduledMatch home="4" away="3" slot="7"/>
+		
+		
+		<ScheduledMatch home="5" away="2" slot="7"/>
+		
+		
+		<ScheduledMatch home="6" away="12" slot="7"/>
+		
+		
+		<ScheduledMatch home="7" away="1" slot="7"/>
+		
+		
+		<ScheduledMatch home="8" away="16" slot="7"/>
+		
+		
+		<ScheduledMatch home="9" away="0" slot="7"/>
+		
+		
+		<ScheduledMatch home="10" away="18" slot="7"/>
+		
+		
+		<ScheduledMatch home="11" away="17" slot="7"/>
+		
+		
+		<ScheduledMatch home="14" away="19" slot="7"/>
+		
+		
+		<ScheduledMatch home="15" away="13" slot="7"/>
+		
+		
+		<ScheduledMatch home="0" away="5" slot="8"/>
+		
+		
+		<ScheduledMatch home="1" away="11" slot="8"/>
+		
+		
+		<ScheduledMatch home="2" away="4" slot="8"/>
+		
+		
+		<ScheduledMatch home="3" away="8" slot="8"/>
+		
+		
+		<ScheduledMatch home="9" away="14" slot="8"/>
+		
+		
+		<ScheduledMatch home="12" away="6" slot="8"/>
+		
+		
+		<ScheduledMatch home="13" away="7" slot="8"/>
+		
+		
+		<ScheduledMatch home="16" away="15" slot="8"/>
+		
+		
+		<ScheduledMatch home="17" away="18" slot="8"/>
+		
+		
+		<ScheduledMatch home="19" away="10" slot="8"/>
+		
+		
+		<ScheduledMatch home="4" away="0" slot="9"/>
+		
+		
+		<ScheduledMatch home="5" away="9" slot="9"/>
+		
+		
+		<ScheduledMatch home="6" away="1" slot="9"/>
+		
+		
+		<ScheduledMatch home="7" away="13" slot="9"/>
+		
+		
+		<ScheduledMatch home="8" away="2" slot="9"/>
+		
+		
+		<ScheduledMatch home="10" away="17" slot="9"/>
+		
+		
+		<ScheduledMatch home="11" away="12" slot="9"/>
+		
+		
+		<ScheduledMatch home="14" away="16" slot="9"/>
+		
+		
+		<ScheduledMatch home="15" away="3" slot="9"/>
+		
+		
+		<ScheduledMatch home="18" away="19" slot="9"/>
+		
+		
+		<ScheduledMatch home="0" away="4" slot="10"/>
+		
+		
+		<ScheduledMatch home="1" away="18" slot="10"/>
+		
+		
+		<ScheduledMatch home="2" away="6" slot="10"/>
+		
+		
+		<ScheduledMatch home="3" away="14" slot="10"/>
+		
+		
+		<ScheduledMatch home="9" away="5" slot="10"/>
+		
+		
+		<ScheduledMatch home="12" away="11" slot="10"/>
+		
+		
+		<ScheduledMatch home="13" away="15" slot="10"/>
+		
+		
+		<ScheduledMatch home="16" away="8" slot="10"/>
+		
+		
+		<ScheduledMatch home="17" away="10" slot="10"/>
+		
+		
+		<ScheduledMatch home="19" away="7" slot="10"/>
+		
+		
+		<ScheduledMatch home="4" away="2" slot="11"/>
+		
+		
+		<ScheduledMatch home="5" away="0" slot="11"/>
+		
+		
+		<ScheduledMatch home="6" away="16" slot="11"/>
+		
+		
+		<ScheduledMatch home="7" away="19" slot="11"/>
+		
+		
+		<ScheduledMatch home="8" away="13" slot="11"/>
+		
+		
+		<ScheduledMatch home="10" away="9" slot="11"/>
+		
+		
+		<ScheduledMatch home="11" away="1" slot="11"/>
+		
+		
+		<ScheduledMatch home="14" away="3" slot="11"/>
+		
+		
+		<ScheduledMatch home="15" away="12" slot="11"/>
+		
+		
+		<ScheduledMatch home="18" away="17" slot="11"/>
+		
+		
+		<ScheduledMatch home="0" away="6" slot="12"/>
+		
+		
+		<ScheduledMatch home="1" away="10" slot="12"/>
+		
+		
+		<ScheduledMatch home="2" away="15" slot="12"/>
+		
+		
+		<ScheduledMatch home="3" away="7" slot="12"/>
+		
+		
+		<ScheduledMatch home="5" away="8" slot="12"/>
+		
+		
+		<ScheduledMatch home="9" away="4" slot="12"/>
+		
+		
+		<ScheduledMatch home="12" away="18" slot="12"/>
+		
+		
+		<ScheduledMatch home="13" away="14" slot="12"/>
+		
+		
+		<ScheduledMatch home="16" away="11" slot="12"/>
+		
+		
+		<ScheduledMatch home="19" away="17" slot="12"/>
+		
+		
+		<ScheduledMatch home="4" away="5" slot="13"/>
+		
+		
+		<ScheduledMatch home="6" away="2" slot="13"/>
+		
+		
+		<ScheduledMatch home="7" away="12" slot="13"/>
+		
+		
+		<ScheduledMatch home="8" away="3" slot="13"/>
+		
+		
+		<ScheduledMatch home="10" away="1" slot="13"/>
+		
+		
+		<ScheduledMatch home="11" away="13" slot="13"/>
+		
+		
+		<ScheduledMatch home="14" away="0" slot="13"/>
+		
+		
+		<ScheduledMatch home="15" away="16" slot="13"/>
+		
+		
+		<ScheduledMatch home="17" away="19" slot="13"/>
+		
+		
+		<ScheduledMatch home="18" away="9" slot="13"/>
+		
+		
+		<ScheduledMatch home="0" away="14" slot="14"/>
+		
+		
+		<ScheduledMatch home="1" away="17" slot="14"/>
+		
+		
+		<ScheduledMatch home="2" away="8" slot="14"/>
+		
+		
+		<ScheduledMatch home="3" away="11" slot="14"/>
+		
+		
+		<ScheduledMatch home="5" away="4" slot="14"/>
+		
+		
+		<ScheduledMatch home="9" away="15" slot="14"/>
+		
+		
+		<ScheduledMatch home="12" away="7" slot="14"/>
+		
+		
+		<ScheduledMatch home="13" away="10" slot="14"/>
+		
+		
+		<ScheduledMatch home="16" away="6" slot="14"/>
+		
+		
+		<ScheduledMatch home="19" away="18" slot="14"/>
+		
+		
+		<ScheduledMatch home="4" away="9" slot="15"/>
+		
+		
+		<ScheduledMatch home="6" away="13" slot="15"/>
+		
+		
+		<ScheduledMatch home="7" away="16" slot="15"/>
+		
+		
+		<ScheduledMatch home="8" away="0" slot="15"/>
+		
+		
+		<ScheduledMatch home="10" away="19" slot="15"/>
+		
+		
+		<ScheduledMatch home="11" away="3" slot="15"/>
+		
+		
+		<ScheduledMatch home="14" away="5" slot="15"/>
+		
+		
+		<ScheduledMatch home="15" away="2" slot="15"/>
+		
+		
+		<ScheduledMatch home="17" away="1" slot="15"/>
+		
+		
+		<ScheduledMatch home="18" away="12" slot="15"/>
+		
+		
+		<ScheduledMatch home="0" away="8" slot="16"/>
+		
+		
+		<ScheduledMatch home="1" away="6" slot="16"/>
+		
+		
+		<ScheduledMatch home="2" away="17" slot="16"/>
+		
+		
+		<ScheduledMatch home="3" away="18" slot="16"/>
+		
+		
+		<ScheduledMatch home="4" away="14" slot="16"/>
+		
+		
+		<ScheduledMatch home="5" away="15" slot="16"/>
+		
+		
+		<ScheduledMatch home="9" away="7" slot="16"/>
+		
+		
+		<ScheduledMatch home="12" away="10" slot="16"/>
+		
+		
+		<ScheduledMatch home="13" away="11" slot="16"/>
+		
+		
+		<ScheduledMatch home="16" away="19" slot="16"/>
+		
+		
+		<ScheduledMatch home="6" away="3" slot="17"/>
+		
+		
+		<ScheduledMatch home="7" away="2" slot="17"/>
+		
+		
+		<ScheduledMatch home="8" away="9" slot="17"/>
+		
+		
+		<ScheduledMatch home="10" away="12" slot="17"/>
+		
+		
+		<ScheduledMatch home="11" away="16" slot="17"/>
+		
+		
+		<ScheduledMatch home="14" away="4" slot="17"/>
+		
+		
+		<ScheduledMatch home="15" away="0" slot="17"/>
+		
+		
+		<ScheduledMatch home="17" away="13" slot="17"/>
+		
+		
+		<ScheduledMatch home="18" away="1" slot="17"/>
+		
+		
+		<ScheduledMatch home="19" away="5" slot="17"/>
+		
+		
+		<ScheduledMatch home="0" away="15" slot="18"/>
+		
+		
+		<ScheduledMatch home="1" away="19" slot="18"/>
+		
+		
+		<ScheduledMatch home="2" away="11" slot="18"/>
+		
+		
+		<ScheduledMatch home="3" away="10" slot="18"/>
+		
+		
+		<ScheduledMatch home="4" away="8" slot="18"/>
+		
+		
+		<ScheduledMatch home="5" away="14" slot="18"/>
+		
+		
+		<ScheduledMatch home="9" away="6" slot="18"/>
+		
+		
+		<ScheduledMatch home="12" away="17" slot="18"/>
+		
+		
+		<ScheduledMatch home="13" away="18" slot="18"/>
+		
+		
+		<ScheduledMatch home="16" away="7" slot="18"/>
+		
+		
+		<ScheduledMatch home="6" away="0" slot="19"/>
+		
+		
+		<ScheduledMatch home="7" away="3" slot="19"/>
+		
+		
+		<ScheduledMatch home="8" away="5" slot="19"/>
+		
+		
+		<ScheduledMatch home="10" away="16" slot="19"/>
+		
+		
+		<ScheduledMatch home="11" away="2" slot="19"/>
+		
+		
+		<ScheduledMatch home="14" away="9" slot="19"/>
+		
+		
+		<ScheduledMatch home="15" away="4" slot="19"/>
+		
+		
+		<ScheduledMatch home="17" away="12" slot="19"/>
+		
+		
+		<ScheduledMatch home="18" away="13" slot="19"/>
+		
+		
+		<ScheduledMatch home="19" away="1" slot="19"/>
+		
+		
+		<ScheduledMatch home="0" away="7" slot="20"/>
+		
+		
+		<ScheduledMatch home="2" away="18" slot="20"/>
+		
+		
+		<ScheduledMatch home="3" away="6" slot="20"/>
+		
+		
+		<ScheduledMatch home="4" away="10" slot="20"/>
+		
+		
+		<ScheduledMatch home="5" away="11" slot="20"/>
+		
+		
+		<ScheduledMatch home="9" away="8" slot="20"/>
+		
+		
+		<ScheduledMatch home="12" away="1" slot="20"/>
+		
+		
+		<ScheduledMatch home="13" away="19" slot="20"/>
+		
+		
+		<ScheduledMatch home="14" away="15" slot="20"/>
+		
+		
+		<ScheduledMatch home="16" away="17" slot="20"/>
+		
+		
+		<ScheduledMatch home="1" away="16" slot="21"/>
+		
+		
+		<ScheduledMatch home="6" away="4" slot="21"/>
+		
+		
+		<ScheduledMatch home="7" away="0" slot="21"/>
+		
+		
+		<ScheduledMatch home="8" away="14" slot="21"/>
+		
+		
+		<ScheduledMatch home="10" away="13" slot="21"/>
+		
+		
+		<ScheduledMatch home="11" away="5" slot="21"/>
+		
+		
+		<ScheduledMatch home="15" away="9" slot="21"/>
+		
+		
+		<ScheduledMatch home="17" away="3" slot="21"/>
+		
+		
+		<ScheduledMatch home="18" away="2" slot="21"/>
+		
+		
+		<ScheduledMatch home="19" away="12" slot="21"/>
+		
+		
+		<ScheduledMatch home="0" away="11" slot="22"/>
+		
+		
+		<ScheduledMatch home="2" away="7" slot="22"/>
+		
+		
+		<ScheduledMatch home="3" away="15" slot="22"/>
+		
+		
+		<ScheduledMatch home="4" away="1" slot="22"/>
+		
+		
+		<ScheduledMatch home="5" away="6" slot="22"/>
+		
+		
+		<ScheduledMatch home="9" away="10" slot="22"/>
+		
+		
+		<ScheduledMatch home="12" away="19" slot="22"/>
+		
+		
+		<ScheduledMatch home="13" away="17" slot="22"/>
+		
+		
+		<ScheduledMatch home="14" away="8" slot="22"/>
+		
+		
+		<ScheduledMatch home="16" away="18" slot="22"/>
+		
+		
+		<ScheduledMatch home="1" away="12" slot="23"/>
+		
+		
+		<ScheduledMatch home="6" away="5" slot="23"/>
+		
+		
+		<ScheduledMatch home="7" away="9" slot="23"/>
+		
+		
+		<ScheduledMatch home="8" away="4" slot="23"/>
+		
+		
+		<ScheduledMatch home="10" away="2" slot="23"/>
+		
+		
+		<ScheduledMatch home="11" away="0" slot="23"/>
+		
+		
+		<ScheduledMatch home="15" away="14" slot="23"/>
+		
+		
+		<ScheduledMatch home="17" away="16" slot="23"/>
+		
+		
+		<ScheduledMatch home="18" away="3" slot="23"/>
+		
+		
+		<ScheduledMatch home="19" away="13" slot="23"/>
+		
+		
+		<ScheduledMatch home="0" away="18" slot="24"/>
+		
+		
+		<ScheduledMatch home="2" away="10" slot="24"/>
+		
+		
+		<ScheduledMatch home="3" away="19" slot="24"/>
+		
+		
+		<ScheduledMatch home="4" away="15" slot="24"/>
+		
+		
+		<ScheduledMatch home="5" away="17" slot="24"/>
+		
+		
+		<ScheduledMatch home="8" away="7" slot="24"/>
+		
+		
+		<ScheduledMatch home="9" away="11" slot="24"/>
+		
+		
+		<ScheduledMatch home="13" away="1" slot="24"/>
+		
+		
+		<ScheduledMatch home="14" away="6" slot="24"/>
+		
+		
+		<ScheduledMatch home="16" away="12" slot="24"/>
+		
+		
+		<ScheduledMatch home="1" away="2" slot="25"/>
+		
+		
+		<ScheduledMatch home="6" away="14" slot="25"/>
+		
+		
+		<ScheduledMatch home="7" away="5" slot="25"/>
+		
+		
+		<ScheduledMatch home="10" away="3" slot="25"/>
+		
+		
+		<ScheduledMatch home="11" away="4" slot="25"/>
+		
+		
+		<ScheduledMatch home="12" away="13" slot="25"/>
+		
+		
+		<ScheduledMatch home="15" away="8" slot="25"/>
+		
+		
+		<ScheduledMatch home="17" away="9" slot="25"/>
+		
+		
+		<ScheduledMatch home="18" away="0" slot="25"/>
+		
+		
+		<ScheduledMatch home="19" away="16" slot="25"/>
+		
+		
+		<ScheduledMatch home="0" away="10" slot="26"/>
+		
+		
+		<ScheduledMatch home="2" away="19" slot="26"/>
+		
+		
+		<ScheduledMatch home="3" away="17" slot="26"/>
+		
+		
+		<ScheduledMatch home="4" away="6" slot="26"/>
+		
+		
+		<ScheduledMatch home="5" away="7" slot="26"/>
+		
+		
+		<ScheduledMatch home="8" away="15" slot="26"/>
+		
+		
+		<ScheduledMatch home="9" away="18" slot="26"/>
+		
+		
+		<ScheduledMatch home="13" away="12" slot="26"/>
+		
+		
+		<ScheduledMatch home="14" away="11" slot="26"/>
+		
+		
+		<ScheduledMatch home="16" away="1" slot="26"/>
+		
+		
+		<ScheduledMatch home="1" away="13" slot="27"/>
+		
+		
+		<ScheduledMatch home="6" away="9" slot="27"/>
+		
+		
+		<ScheduledMatch home="7" away="4" slot="27"/>
+		
+		
+		<ScheduledMatch home="10" away="0" slot="27"/>
+		
+		
+		<ScheduledMatch home="11" away="14" slot="27"/>
+		
+		
+		<ScheduledMatch home="12" away="8" slot="27"/>
+		
+		
+		<ScheduledMatch home="15" away="5" slot="27"/>
+		
+		
+		<ScheduledMatch home="17" away="2" slot="27"/>
+		
+		
+		<ScheduledMatch home="18" away="16" slot="27"/>
+		
+		
+		<ScheduledMatch home="19" away="3" slot="27"/>
+		
+		
+		<ScheduledMatch home="0" away="17" slot="28"/>
+		
+		
+		<ScheduledMatch home="2" away="1" slot="28"/>
+		
+		
+		<ScheduledMatch home="3" away="12" slot="28"/>
+		
+		
+		<ScheduledMatch home="4" away="7" slot="28"/>
+		
+		
+		<ScheduledMatch home="5" away="18" slot="28"/>
+		
+		
+		<ScheduledMatch home="8" away="11" slot="28"/>
+		
+		
+		<ScheduledMatch home="9" away="19" slot="28"/>
+		
+		
+		<ScheduledMatch home="14" away="10" slot="28"/>
+		
+		
+		<ScheduledMatch home="15" away="6" slot="28"/>
+		
+		
+		<ScheduledMatch home="16" away="13" slot="28"/>
+		
+		
+		<ScheduledMatch home="1" away="3" slot="29"/>
+		
+		
+		<ScheduledMatch home="6" away="15" slot="29"/>
+		
+		
+		<ScheduledMatch home="7" away="8" slot="29"/>
+		
+		
+		<ScheduledMatch home="10" away="14" slot="29"/>
+		
+		
+		<ScheduledMatch home="11" away="9" slot="29"/>
+		
+		
+		<ScheduledMatch home="12" away="16" slot="29"/>
+		
+		
+		<ScheduledMatch home="13" away="2" slot="29"/>
+		
+		
+		<ScheduledMatch home="17" away="5" slot="29"/>
+		
+		
+		<ScheduledMatch home="18" away="4" slot="29"/>
+		
+		
+		<ScheduledMatch home="19" away="0" slot="29"/>
+		
+		
+		<ScheduledMatch home="0" away="19" slot="30"/>
+		
+		
+		<ScheduledMatch home="2" away="12" slot="30"/>
+		
+		
+		<ScheduledMatch home="3" away="1" slot="30"/>
+		
+		
+		<ScheduledMatch home="4" away="18" slot="30"/>
+		
+		
+		<ScheduledMatch home="5" away="13" slot="30"/>
+		
+		
+		<ScheduledMatch home="8" away="6" slot="30"/>
+		
+		
+		<ScheduledMatch home="9" away="17" slot="30"/>
+		
+		
+		<ScheduledMatch home="14" away="7" slot="30"/>
+		
+		
+		<ScheduledMatch home="15" away="11" slot="30"/>
+		
+		
+		<ScheduledMatch home="16" away="10" slot="30"/>
+		
+		
+		<ScheduledMatch home="1" away="9" slot="31"/>
+		
+		
+		<ScheduledMatch home="6" away="8" slot="31"/>
+		
+		
+		<ScheduledMatch home="7" away="14" slot="31"/>
+		
+		
+		<ScheduledMatch home="10" away="4" slot="31"/>
+		
+		
+		<ScheduledMatch home="11" away="15" slot="31"/>
+		
+		
+		<ScheduledMatch home="12" away="3" slot="31"/>
+		
+		
+		<ScheduledMatch home="13" away="16" slot="31"/>
+		
+		
+		<ScheduledMatch home="17" away="0" slot="31"/>
+		
+		
+		<ScheduledMatch home="18" away="5" slot="31"/>
+		
+		
+		<ScheduledMatch home="19" away="2" slot="31"/>
+		
+		
+		<ScheduledMatch home="0" away="1" slot="32"/>
+		
+		
+		<ScheduledMatch home="2" away="16" slot="32"/>
+		
+		
+		<ScheduledMatch home="3" away="13" slot="32"/>
+		
+		
+		<ScheduledMatch home="4" away="17" slot="32"/>
+		
+		
+		<ScheduledMatch home="5" away="19" slot="32"/>
+		
+		
+		<ScheduledMatch home="6" away="11" slot="32"/>
+		
+		
+		<ScheduledMatch home="8" away="10" slot="32"/>
+		
+		
+		<ScheduledMatch home="9" away="12" slot="32"/>
+		
+		
+		<ScheduledMatch home="14" away="18" slot="32"/>
+		
+		
+		<ScheduledMatch home="15" away="7" slot="32"/>
+		
+		
+		<ScheduledMatch home="1" away="5" slot="33"/>
+		
+		
+		<ScheduledMatch home="7" away="15" slot="33"/>
+		
+		
+		<ScheduledMatch home="10" away="8" slot="33"/>
+		
+		
+		<ScheduledMatch home="11" away="6" slot="33"/>
+		
+		
+		<ScheduledMatch home="12" away="2" slot="33"/>
+		
+		
+		<ScheduledMatch home="13" away="0" slot="33"/>
+		
+		
+		<ScheduledMatch home="16" away="3" slot="33"/>
+		
+		
+		<ScheduledMatch home="17" away="4" slot="33"/>
+		
+		
+		<ScheduledMatch home="18" away="14" slot="33"/>
+		
+		
+		<ScheduledMatch home="19" away="9" slot="33"/>
+		
+		
+		<ScheduledMatch home="0" away="12" slot="34"/>
+		
+		
+		<ScheduledMatch home="2" away="13" slot="34"/>
+		
+		
+		<ScheduledMatch home="3" away="16" slot="34"/>
+		
+		
+		<ScheduledMatch home="4" away="11" slot="34"/>
+		
+		
+		<ScheduledMatch home="5" away="10" slot="34"/>
+		
+		
+		<ScheduledMatch home="6" away="7" slot="34"/>
+		
+		
+		<ScheduledMatch home="8" away="18" slot="34"/>
+		
+		
+		<ScheduledMatch home="9" away="1" slot="34"/>
+		
+		
+		<ScheduledMatch home="14" away="17" slot="34"/>
+		
+		
+		<ScheduledMatch home="15" away="19" slot="34"/>
+		
+		
+		<ScheduledMatch home="1" away="0" slot="35"/>
+		
+		
+		<ScheduledMatch home="7" away="6" slot="35"/>
+		
+		
+		<ScheduledMatch home="10" away="5" slot="35"/>
+		
+		
+		<ScheduledMatch home="11" away="8" slot="35"/>
+		
+		
+		<ScheduledMatch home="12" away="9" slot="35"/>
+		
+		
+		<ScheduledMatch home="13" away="3" slot="35"/>
+		
+		
+		<ScheduledMatch home="16" away="2" slot="35"/>
+		
+		
+		<ScheduledMatch home="17" away="14" slot="35"/>
+		
+		
+		<ScheduledMatch home="18" away="15" slot="35"/>
+		
+		
+		<ScheduledMatch home="19" away="4" slot="35"/>
+		
+		
+		<ScheduledMatch home="0" away="13" slot="36"/>
+		
+		
+		<ScheduledMatch home="2" away="3" slot="36"/>
+		
+		
+		<ScheduledMatch home="4" away="19" slot="36"/>
+		
+		
+		<ScheduledMatch home="5" away="12" slot="36"/>
+		
+		
+		<ScheduledMatch home="6" away="18" slot="36"/>
+		
+		
+		<ScheduledMatch home="8" away="17" slot="36"/>
+		
+		
+		<ScheduledMatch home="9" away="16" slot="36"/>
+		
+		
+		<ScheduledMatch home="11" away="7" slot="36"/>
+		
+		
+		<ScheduledMatch home="14" away="1" slot="36"/>
+		
+		
+		<ScheduledMatch home="15" away="10" slot="36"/>
+		
+		
+		<ScheduledMatch home="1" away="4" slot="37"/>
+		
+		
+		<ScheduledMatch home="3" away="2" slot="37"/>
+		
+		
+		<ScheduledMatch home="7" away="11" slot="37"/>
+		
+		
+		<ScheduledMatch home="10" away="6" slot="37"/>
+		
+		
+		<ScheduledMatch home="12" away="0" slot="37"/>
+		
+		
+		<ScheduledMatch home="13" away="5" slot="37"/>
+		
+		
+		<ScheduledMatch home="16" away="9" slot="37"/>
+		
+		
+		<ScheduledMatch home="17" away="15" slot="37"/>
+		
+		
+		<ScheduledMatch home="18" away="8" slot="37"/>
+		
+		
+		<ScheduledMatch home="19" away="14" slot="37"/>
+		
+	
+	</Games>
+	
+
+</Solution>

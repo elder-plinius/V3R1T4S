@@ -1,0 +1,182 @@
+
+Starting CP-SAT solver v9.15.6755
+Parameters: random_seed: 20261125 max_time_in_seconds: 15 log_search_progress: true num_workers: 1
+
+Initial optimization model '': (model_fingerprint: 0xa5f4fb81a20d1e26)
+#Variables: 4 (#ints: 1 in objective) (3 primary variables)
+  - 1 Booleans in [0,1]
+  - 1 in [0,594]
+  - 1 in [0,5940]
+  - 1 in [3,4]
+#kIntMod: 1
+#kLinMax: 1 (#expressions: 2)
+#kLinear1: 1 (#enforced: 1)
+#kLinear2: 1
+#kTable: 1
+
+Starting presolve at 0.00s
+  1.40e-05s  0.00e+00d  [DetectDominanceRelations] 
+  2.12e-04s  0.00e+00d  [PresolveToFixPoint] #num_loops=3 #num_dual_strengthening=1 
+  3.58e-06s  0.00e+00d  [ExtractEncodingFromLinear] 
+  3.12e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  4.13e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+[Symmetry] Graph for symmetry has 15 nodes and 12 arcs.
+[Symmetry] Symmetry computation done. time: 2.1817e-05 dtime: 2.6e-06
+[Symmetry] #generators: 1, average support size: 2
+[Symmetry] 1 orbits on 2 variables with sizes: 2
+[SAT presolve] num removable Booleans: 0 / 3
+[SAT presolve] num trivial clauses: 0
+[SAT presolve] [0s] clauses:2 literals:4 vars:3 one_side_vars:3 simple_definition:0 singleton_clauses:0
+[SAT presolve] [8.433e-06s] clauses:2 literals:4 vars:3 one_side_vars:3 simple_definition:0 singleton_clauses:0
+[SAT presolve] [1.0908e-05s] clauses:2 literals:4 vars:3 one_side_vars:3 simple_definition:0 singleton_clauses:0
+  4.77e-06s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  1.42e-04s  1.07e-06d  [Probe] #probed=8 
+  1.02e-05s  1.79e-07d  [MaxClique] 
+  5.22e-06s  0.00e+00d  [DetectDominanceRelations] 
+  2.32e-05s  0.00e+00d  [PresolveToFixPoint] #num_loops=1 #num_dual_strengthening=1 
+  8.25e-07s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  1.65e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+  7.33e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  5.50e-07s  0.00e+00d  [DetectDominatedLinearConstraints] 
+  3.67e-07s  0.00e+00d  [DetectDifferentVariables] 
+  6.14e-06s  0.00e+00d  [ProcessSetPPC] #relevant_constraints=1 
+  9.99e-06s  0.00e+00d  [TransformClausesToExactlyOne] 
+  1.19e-06s  0.00e+00d  [DetectEncodedComplexDomains] 
+  5.50e-07s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  6.42e-07s  0.00e+00d  [FindBigAtMostOneAndLinearOverlap] 
+  5.50e-07s  0.00e+00d  [FindBigVerticalLinearOverlap] 
+  5.50e-07s  0.00e+00d  [FindBigHorizontalLinearOverlap] 
+  8.25e-07s  0.00e+00d  [MergeClauses] 
+  6.42e-07s  0.00e+00d  [PresolveToFixPoint] 
+  4.58e-07s  0.00e+00d  [PresolveToFixPoint] 
+  1.10e-06s  0.00e+00d  [DetectDuplicateColumns] 
+  1.10e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+[Symmetry] Graph for symmetry has 8 nodes and 0 arcs.
+[Symmetry] Symmetry computation done. time: 6.233e-06 dtime: 4.8e-07
+  2.11e-06s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  4.37e-05s  5.60e-07d  [Probe] #probed=6 
+  8.25e-07s  0.00e+00d  [MaxClique] 
+  9.17e-07s  0.00e+00d  [PresolveToFixPoint] 
+  2.75e-07s  0.00e+00d  [ProcessAtMostOneAndLinear] 
+  1.01e-06s  0.00e+00d  [DetectDuplicateConstraints] 
+  6.41e-07s  0.00e+00d  [DetectDuplicateConstraintsWithDifferentEnforcements] 
+  3.30e-06s  0.00e+00d  [DetectDominatedLinearConstraints] 
+  5.50e-07s  0.00e+00d  [DetectDifferentVariables] 
+  5.50e-07s  0.00e+00d  [ProcessSetPPC] 
+  2.00e-05s  0.00e+00d  [TransformClausesToExactlyOne] 
+  8.25e-07s  0.00e+00d  [DetectEncodedComplexDomains] 
+  3.66e-07s  0.00e+00d  [FindAlmostIdenticalLinearConstraints] 
+  2.75e-07s  0.00e+00d  [FindBigAtMostOneAndLinearOverlap] 
+  6.41e-07s  0.00e+00d  [FindBigVerticalLinearOverlap] 
+  3.67e-07s  0.00e+00d  [FindBigHorizontalLinearOverlap] 
+  2.27e-05s  0.00e+00d  [MergeClauses] 
+  1.74e-06s  0.00e+00d  [PresolveToFixPoint] 
+  7.33e-07s  0.00e+00d  [MergeNoOverlap] 
+  3.67e-07s  0.00e+00d  [MergeNoOverlap2D] 
+  3.21e-06s  0.00e+00d  [ExpandObjective] 
+
+Presolve summary:
+  - 4 affine relations were detected.
+  - rule 'TODO dual: only one blocking constraint?' was applied 2 times.
+  - rule 'TODO dual: only one unspecified blocking constraint?' was applied 1 time.
+  - rule 'affine: new relation' was applied 4 times.
+  - rule 'at_most_one: duplicate literals' was applied 1 time.
+  - rule 'at_most_one: empty or all false' was applied 1 time.
+  - rule 'at_most_one: removed literals' was applied 1 time.
+  - rule 'at_most_one: resolved two constraints with opposite literal' was applied 1 time.
+  - rule 'at_most_one: size one' was applied 1 time.
+  - rule 'deductions: 2 stored' was applied 1 time.
+  - rule 'exactly_one: removed literals' was applied 1 time.
+  - rule 'exactly_one: singleton' was applied 1 time.
+  - rule 'int_mod: fixed mod and target' was applied 1 time.
+  - rule 'lin_max: affine_max target domain reduced' was applied 1 time.
+  - rule 'lin_max: converted to equality' was applied 1 time.
+  - rule 'linear2: contains a boolean' was applied 1 time.
+  - rule 'linear: divide by GCD' was applied 1 time.
+  - rule 'linear: reduced variable domains' was applied 1 time.
+  - rule 'linear: remapped using affine relations' was applied 4 times.
+  - rule 'new_bool: integer encoding' was applied 2 times.
+  - rule 'new_bool: var with 2 values' was applied 1 time.
+  - rule 'objective: variable not used elsewhere' was applied 1 time.
+  - rule 'presolve: 1 unused variables removed.' was applied 1 time.
+  - rule 'presolve: iteration' was applied 2 times.
+  - rule 'table: expanded positive constraint with two variables' was applied 1 time.
+  - rule 'variables with 2 values: create encoding literal' was applied 1 time.
+  - rule 'variables with 2 values: new affine relation' was applied 1 time.
+  - rule 'variables: add encoding constraint' was applied 2 times.
+  - rule 'variables: canonicalize affine domain' was applied 1 time.
+  - rule 'variables: detect half reified value encoding' was applied 2 times.
+  - rule 'variables: only used in objective and in encodings' was applied 1 time.
+  - rule 'variables: reduce domain to encoded values' was applied 1 time.
+
+Presolved optimization model '': (model_fingerprint: 0x19dc44910bac894c)
+#Variables: 0 ( in objective) (0 primary variables)
+
+[Symmetry] Graph for symmetry has 0 nodes and 0 arcs.
+
+Preloading model.
+#Bound   0.00s best:inf   next:[40,40]    initial_domain
+The solution hint is complete and is feasible. Its objective value is 40.
+
+Starting search at 0.00s with 1 workers.
+1 full problem subsolver: [main]
+
+[Precedences] num_relations=0 num_clauses=0
+[Probing] deterministic_time: 0 (limit: 1) wall_time: 6.41e-07 (0/0)
+Initial num_bool: 0
+
+Starting subsolver 'main' hint search at 0.00s
+Starting subsolver 'main' search at 0.00s
+#1       0.00s best:40    next:[]         main
+#Done    0.00s main
+
+Task timing           n [     min,      max]      avg      dev     time         n [     min,      max]      avg      dev    dtime
+      'main':         1 [178.02us, 178.02us] 178.02us   0.00ns 178.02us         1 [ 10.00ns,  10.00ns]  10.00ns   0.00ns  10.00ns
+
+Search stats    Bools  Conflicts  Branches  Restarts  BacktrackToRoot  Backtrack  BoolPropag  IntegerPropag
+       'main':      0          0         0         0                0          0           0              1
+
+SAT formula    Fixed  Equiv  Total  VarLeft  BinaryClauses  PermanentClauses  TemporaryClauses
+      'main':      0      0      0        0              0                 0                 0
+
+SAT stats    ClassicMinim  LitRemoved  LitRemovedBinary  LitLearned  LitForgotten  Subsumed
+    'main':             0           0                 0           0             0         0
+
+Vivification    Clauses  Decisions  LitTrue  Subsumed  LitRemoved  DecisionReused  Conflicts
+       'main':        0          0        0         0           0               0          0
+
+Clause deletion    at_true  l_and_not(l)  to_binary  sub_conflict  sub_extra  sub_decisions  sub_eager  sub_vivify  sub_probing  sub_inpro  blocked  eliminated  forgotten  promoted  conflicts
+          'main':        0             0          0             0          0              0          0           0            0          0        0           0          0         0          0
+
+Solutions (1)    Num   Rank
+        'main':    2  [0,1]
+
+Objective bounds     Num
+  'initial_domain':    1
+
+Solution repositories    Added  Queried  Synchro
+    'alternative_path':      0        0        0
+      'best_solutions':      1        0        1
+   'fj solution hints':      0        0        0
+
+LRAT_status: NA
+CpSolverResponse summary:
+status: OPTIMAL
+objective: 40
+best_bound: 40
+integers: 1
+booleans: 0
+conflicts: 0
+branches: 0
+propagations: 0
+integer_propagations: 1
+restarts: 0
+lp_iterations: 0
+walltime: 0.00248866
+usertime: 0.00248866
+deterministic_time: 1.819e-06
+gap_integral: 0
+solution_fingerprint: 0x73bf462b9597d34f
+
+Status: OPTIMAL
+Best bound: 40.0

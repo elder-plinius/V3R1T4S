@@ -1,0 +1,827 @@
+<link rel="stylesheet" type="text/css" href="https://docs.handsontable.com/2.0.0/bower_components/handsontable/dist/handsontable.full.css"><script type="text/javascript" src="https://docs.handsontable.com/2.0.0/bower_components/handsontable/dist/handsontable.full.js"></script>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="icon" type="image/png" href="images/ITC_favicon.png"/>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-145003992-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'UA-145003992-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <title> Instances | Sport Scheduling Research Group </title>
+    <meta name="description" content="Round robin sports scheduling. New insights in algorithmic performance. Download instances and more."/>
+    <meta name="keywords" content="sport,sports,sport scheduling, sports scheduling, round robin, tournaments, ITC2021"/>
+    
+    <link href="../ssp.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href=../phpBibLib/bibtex.css />
+
+    <link href= '../include/font-awesome-4.7.0/css/font-awesome.min.css' rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- replace by local file
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    -->
+    <script src="bootstrap.min.js"></script>
+    <script src="../include/run_prettify.js"></script>
+
+    <!-- Mathjax formula rendering -->
+   <script type="text/javascript" async
+     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/latest.js?config=TeX-MML-AM_CHTML">
+   </script>
+
+
+	
+    <!-- Copy to clipboard functionality -->
+    <script src="https://cdn.jsdelivr.net/clipboard.js/1.6.1/clipboard.min.js"></script>
+
+<!--
+    <script src="../include/bootstrap.min.js"></script>
+-->
+</head>
+
+
+<body style="font-size:14pt;">
+<div class="navbar navbar-default navbar-fixed-top col-sm-8 col-sm-offset-2">
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle btn_itc" data-toggle="collapse" data-target="#mainNavbar">
+				<!-- If screen too small: make hamburger icon menu (icon = three vertical bars) -->	
+				<!-- Items obtained from bar with id "MainNavbar" -->
+				<!--
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+				<span class="icon-bar"></span>                        
+				-->
+				Menu
+			</button>
+			<!-- <a class="navbar-brand" href="index.php" id="index.php"><span><img src="./images/ITCLogo.svg" alt="ITC logo" class="logoITC"></span></a> -->
+			<div>
+				<!-- <use xlink=href="path/#id" look up id in inkscape scg by opening the file with a text editor -->
+				<a class="navbar-brand" href="index.php" id="index.php"><span><svg class="logoITC"><use xlink:href="images/ITCLogo.svg#svg1411"/></svg></span></a>
+			</div>
+		</div>
+		<div class="collapse navbar-collapse navbar_itc" id="mainNavbar">
+			<ul class="nav navbar-nav navbar_itc">
+				<li><a href='/ITC2021/format.php'>Format</a></li>
+<li><a href='/ITC2021/rules.php'>Rules</a></li>
+<li><a href='/ITC2021/questions.php'>Q&A</a></li>
+<li class='active'><a href='/ITC2021/instances.php'>Instances</a></li>
+<li><a href='/ITC2021/validator.php'>Validation</a></li>
+<li><a href='/ITC2021/downloads.php'>Downloads</a></li>
+<li><a href='/ITC2021/organization.php'>Organization</a></li>
+			</ul>
+		</div>
+	</div>
+
+</div>
+
+
+
+<div class="container-fluid text-center full">    
+  <div class="row content full">
+    <div class="col-sm-8 col-sm-offset-2 text-justify main"> 
+<!-- The following script changes the colors of buttons. It thereby checks whether a color is stil allowed -->
+
+<script>
+var colorlist = [
+	"#555555",    /* Grey: tag can be present. */
+	"#4CAF50",    /* Green: tag must be present.  */
+	"#f44336",    /* Red: tag cannot be present. */
+    ];
+
+/* Use dictionary to keep track of current color distribution and max allowed occurances per colors */   
+var counterColor = {};
+var maxColor = {};
+
+
+function changeColor(index,  counterId, buttonId) {
+	/* Decrease old color */
+        counterColor[counterId][index]--;
+      
+	/* Choose next available color */ 
+    	var i;
+        for (i = 0; i < colorlist.length; i++) {
+        	index=Number(index)+1;
+          	if (index == colorlist.length) index = Number(0);
+      		if (counterColor[counterId][index] < maxColor[counterId][index]) break;
+        }
+	
+	/* Change the color and update counters */	
+	counterColor[counterId][index]++;   
+	document.getElementById(buttonId).style.background=colorlist[index];
+	document.getElementById(buttonId).value=index;
+
+	// Store current value in session storage so that we can retrieve the state after submitting to the server
+	sessionStorage.setItem(buttonId, index);
+    }
+</script>
+
+
+<script>
+function submitQuerry(){
+	// Loop over all buttons to check whether they are enforced or forbidden
+	var inputElements = document.getElementsByClassName('queryButton');
+	document.getElementById('requiredTags').value = "";
+	document.getElementById('forbiddenTags').value = "";
+	
+	for(var i=0; inputElements[i]; ++i){
+		if(inputElements[i].value==1){
+			document.getElementById('requiredTags').value += (inputElements[i].id + ";");
+		}
+		if(inputElements[i].value==2){
+			document.getElementById('forbiddenTags').value += (inputElements[i].id) + ";";
+		}
+	}
+	
+	// Save color counter
+	//sessionStorage.setItem("counterColor", JSON.stringify(counterColor));	
+}
+</script>
+
+<script>
+	// Execute this script every time that the page is loaded/reloaded
+	function loadData(){
+		var inputElements = document.getElementsByClassName('queryButton');
+		for(var i=0; inputElements[i]; ++i){
+			var idVal = sessionStorage.getItem(inputElements[i].id);
+			if(idVal !== null){
+				document.getElementById(inputElements[i].id).value=idVal;
+				document.getElementById(inputElements[i].id).style.background=colorlist[idVal];
+				// Correct color counters
+				if(idVal != 0){
+					counterColor[inputElements[i].name][idVal]++;
+					counterColor[inputElements[i].name][0]--;
+				}
+			} 
+		}
+	}
+</script>
+
+<script>
+	function retrieveTab(){
+		$(document).ready(function(){
+		// Active tab
+		$('a[data-toggle="tab"]').on('show.bs.tab', function(e) {
+			sessionStorage.setItem('activeTab', $(e.target).attr('href'));
+		});
+		var activeTab = sessionStorage.getItem('activeTab');
+		if(activeTab){
+			$('#myTab a[href="' + activeTab + '"]').tab('show');
+		}
+		});	
+	}
+</script>
+
+
+
+<!-- Generate tab structure of page -->
+
+
+<div class="page-header">
+	<h1>
+		<span>Overview of problem instances</span>
+	</h1>
+</div>
+
+
+<div class="row" style="margin-top:40px;">  
+	<div class="col-sm-12">
+		<div class="alert alert-info">
+<!--
+<p>
+		  <strong>Info! Submissions are again open.</strong>
+</p>
+-->
+<p>
+Submit any new best found solution or lower bound to <a href="mailto:itc2021@ugent.be">itc2021@ugent.be</a>.
+</p>
+		</div>	
+	</div>
+</div>
+
+<div class="col-sm-12">
+Click on the name of the problem instance to view the raw XML file (firefox users: additionally right-click > View Page Source).
+Note that a converter to the MPS file format is available under <a href="downloads.php">Downloads</a>.
+</div>
+
+<div class="col-sm-12", style="padding-top:30px;"> <!-- Start body -->
+		<div class="col col-md-4 col-lg-3" style="">
+		    <a href="../RobinX/Repository/ITC2021/Instances/TestInstances_V3.zip" class="btn btn-default" role="button">
+			<span class="fa fa-download fa-2x iconBox"></span>
+			<span>Download Test Instances</span>
+		    </a>   
+		</div> 
+		<div class="col col-md-4 col-lg-3" style="">
+		    <a href="../RobinX/Repository/ITC2021/Instances/EarlyInstances_V3.zip" class="btn btn-default" role="button">
+			<span class="fa fa-download fa-2x iconBox"></span>
+			<span>Download Early Instances</span>
+		    </a>    
+		</div>
+		<div class="col col-md-4 col-lg-3" style="">
+		    <a href="../RobinX/Repository/ITC2021/Instances/MiddleInstances.zip" class="btn btn-default" role="button">
+			<span class="fa fa-download fa-2x iconBox"></span>
+			<span>Download Middle Instances</span>
+		    </a>    
+		</div>
+		<div class="col col-md-4 col-lg-3" style="">
+		    <a href="../RobinX/Repository/ITC2021/Instances/LateInstances.zip" class="btn btn-default" role="button">
+			<span class="fa fa-download fa-2x iconBox"></span>
+			<span>Download Late Instances</span>
+		    </a>    
+		</div>
+
+<div class="container col-sm-12"> <!-- Start container -->
+	<div class="well" style="margin-top:10px;"> <!-- Start well -->
+	<div class="table-responsive-archives"> <!-- Start table responsive -->
+	<table class="table table-hover">
+	<thead>
+		<tr>
+			<th scope="col">Instance name</th>
+			<!-- <th scope="col">Contributor</th> -->
+			<th scope="col">Teams</th>
+			<th scope="col">Slots</th>
+			<th scope="col">Classification</th>
+			<th scope="col">Best LB</th>
+			<th scope="col">Best UB</th>
+						<th scope="col">Winner</th>
+			<th scope="col">History</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/TestInstanceDemo.xml'>Test Instance Demo </a></th>
+		<td>4</td>
+		<td>6</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/TestInstanceDemo_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/TestInstanceDemo_Sol.xml>(0, 0)</a></td>
+		<td>ITC2021</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/TestInstanceDemo.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test1.xml'>Test Instance 1 </a></th>
+		<td>6</td>
+		<td>10</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR2,&nbsp;CA1,&nbsp;CA3,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test1_Bound.xml>(0, 1066)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Test1_SolIP.xml>(0, 1066)</a></td>
+		<td>ITC2021</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test1.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test2.xml'>Test Instance 2 </a></th>
+		<td>6</td>
+		<td>10</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;FA2&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test2_Bound.xml>(0, 176	)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Test2_SolIP.xml>(0, 176)</a></td>
+		<td>ITC2021</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test2.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test3.xml'>Test Instance 3 </a></th>
+		<td>6</td>
+		<td>10</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test3_Bound.xml>(0, 1253)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Test3_SolIP.xml>(0, 1253)</a></td>
+		<td>ITC2021</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test3.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test4.xml'>Test Instance 4 </a></th>
+		<td>6</td>
+		<td>10</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test4_Bound.xml>(0, 4535)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Test4_SolIP.xml>(0, 4535)</a></td>
+		<td>ITC2021</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test4.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test5.xml'>Test Instance 5 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test5_Bound.xml>(0, 2)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Test5_SolGenMethodA.xml>(0, 2)</a></td>
+		<td>ITC2021</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test5.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test6.xml'>Test Instance 6 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test_6_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Test_6_comp_best.xml>(0, 3144)</a></td>
+		<td>DITUoI@Arta - Angelos Dimitsas, Christos Valouxis and Christos Gogos</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test6.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test7.xml'>Test Instance 7 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test_7_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Test_7_comp_best.xml>(0, 4421)</a></td>
+		<td>Team TU/e</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test7.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Test8.xml'>Test Instance 8 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Test_8_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Test_8_comp_best.xml>(0, 3165)</a></td>
+		<td>DITUoI@Arta - Angelos Dimitsas, Christos Valouxis and Christos Gogos</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Test8.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_1.xml'>Early 1 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_1_Bound_1.xml>(0, 1)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Early_1_350.xml>(0, 350)</a></td>
+		<td>I Gusti Agung Premananda and Ahmad Muklason</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_1.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_2.xml'>Early 2 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_2_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_2_144.xml>(0, 144)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_2.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_3.xml'>Early 3 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_3_Bound_49.xml>(0, 49)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_3_934.xml>(0, 934)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_3.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_4.xml'>Early 4 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_4_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_4_430.xml>(0, 430)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_4.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_5.xml'>Early 5 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_5_Bound_270.xml>(0, 270)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_5_comp_best.xml>(0, 3127)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_5.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_6.xml'>Early 6 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_6_Bound_607.xml>(0, 607)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_6_3287.xml>(0, 3287)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_6.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_7.xml'>Early 7 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_7_Bound_1296.xml>(0, 1296)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_7_4744.xml>(0, 4744)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_7.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_8.xml'>Early 8 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_8_Bound_213.xml>(0, 213)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_8_1051.xml>(0, 1051)</a></td>
+		<td> Team Udine</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_8.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_9.xml'>Early 9 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_9_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early9_0_56_FBHS.xml>(0, 56)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_9.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_10.xml'>Early 10 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_10_Bound_331.xml>(0, 331)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_10_comp_best.xml>(0, 3400)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_10.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_11.xml'>Early 11 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_11_Bound_348.xml>(0, 348)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_11_4381.xml>(0, 4381)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_11.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_12.xml'>Early 12 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_12_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early12_0_315_FBHS.xml>(0, 315)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_12.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_13.xml'>Early 13 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_13_Bound_2.xml>(0, 2)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_13_comp_best.xml>(0, 121)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_13.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_14.xml'>Early 14 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_14_Bound_1.xml>(0, 1)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early_14_comp_best.xml>(0, 4)</a></td>
+		<td>Team Gionar</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_14.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Early_15.xml'>Early 15 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Early_15_Bound_485.xml>(0, 485)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Early15_0_2955_FBHS.xml>(0, 2955)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Early_15.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_1.xml'>Middle 1 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA4,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_1_Bound_2955.xml>(0, 2955)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_1_comp_best.xml>(0, 5177)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_1.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_2.xml'>Middle 2 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_2_Bound_2984.xml>(0, 2984)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Middle2_0_7115.xml>(0, 7115)</a></td>
+		<td>I Gusti Agung Premananda and Ahmad Muklason</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_2.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_3.xml'>Middle 3 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_3_Bound_3378.xml>(0, 3378)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Middle_3_0_8648.xml>(0, 8648)</a></td>
+		<td>I Gusti Agung Premananda and Ahmad Muklason</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_3.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_4.xml'>Middle 4 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_4_Bound_TeamModal.xml>(0, 7)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_4_comp_best.xml>(0, 7)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_4.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_5.xml'>Middle 5 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_5_Bound_47.xml>(0, 47)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle5_0_279_FBHS.xml>(0, 279)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_5.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_6.xml'>Middle 6 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_6_Bound_24.xml>(0, 24)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_6_1090.xml>(0, 1090)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_6.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_7.xml'>Middle 7 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_7_Bound_27.xml>(0, 27)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_7_1780.xml>(0, 1780)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_7.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_8.xml'>Middle 8 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_8_Bound_2.xml>(0, 2)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_8_comp_best.xml>(0, 129)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_8.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_9.xml'>Middle 9 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_9_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle9_0_415_FBHS.xml>(0, 415)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_9.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_10.xml'>Middle 10 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_10_Bound_4.xml>(0, 4)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle10_Andreas_Krystallidis.xml>(0, 1228)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_10.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_11.xml'>Middle 11 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_11_Bound_345.xml>(0, 345)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_11_2177.xml>(0, 2177)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_11.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_12.xml'>Middle 12 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_12_1.xml>(0, 1)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle12_358.xml>(0, 358)</a></td>
+		<td>Clémence Van den Ostende</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_12.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_13.xml'>Middle 13 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_13_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_13_211.xml>(0, 211)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_13.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_14.xml'>Middle 14 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_14_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle14_1140.xml>(0, 1140)</a></td>
+		<td>David Van Bulck</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_14.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Middle_15.xml'>Middle 15 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Middle_15_Bound_1.xml>(0, 1)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Middle_15_462.xml>(0, 462)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Middle_15.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_1.xml'>Late 1 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_1_Bound_1103.xml>(0, 1103)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_1_1919.xml>(0, 1919)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_1.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_2.xml'>Late 2 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_2_Bound_2818.xml>(0, 2818)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_2_5379.xml>(0, 5379)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_2.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_3.xml'>Late 3 </a></th>
+		<td>16</td>
+		<td>30</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_3_Bound_416.xml>(0, 416)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_3_comp_best.xml>(0, 2369)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_3.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_4.xml'>Late 4 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_4_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_4_comp_best.xml>(0, 0)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_4.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_5.xml'>Late 5 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_5_Bound_398.xml>(0, 398)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_5_1849.xml>(0, 1849)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_5.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_6.xml'>Late 6 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_6_Bound_6.xml>(0, 6)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_6_872.xml>(0, 872)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_6.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_7.xml'>Late 7 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_7_Bound_5.xml>(0, 5)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_7_comp_best.xml>(0, 1558)</a></td>
+		<td>Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_7.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_8.xml'>Late 8 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_8_Bound_78.xml>(0, 78)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_8_comp_best.xml>(0, 934)</a></td>
+		<td>Team UoS</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_8.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_9.xml'>Late 9 </a></th>
+		<td>18</td>
+		<td>34</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_9_Bound_3.xml>(0, 3)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late9_0_498_FBHS.xml>(0, 498)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_9.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_10.xml'>Late 10 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_10_Bound_1.xml>(0, 1)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_10_1786.xml>(0, 1786)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_10.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_11.xml'>Late 11 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;P&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_11_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/ITC2021_Late_11_196.xml>(0, 196)</a></td>
+		<td>I Gusti Agung Premananda and Ahmad Muklason</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_11.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_12.xml'>Late 12 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_12_Bound_203.xml>(0, 203)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_12_3226.xml>(0, 3226)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Saturn</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_12.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_13.xml'>Late 13 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR2,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1,&nbsp;SE1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_13_Bound_7.xml>(0, 7)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_13_1813.xml>(0, 1813)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Fonseca, Toffolo</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_13.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-danger'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_14.xml'>Late 14 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;CA1,&nbsp;CA2,&nbsp;CA3,&nbsp;CA4,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_14_Bound_7.xml>(0, 7)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late_14_1140.xml>(0, 1140)</a></td>
+		<td>Andreas Krystallidis, Nysret Musliu, Van Bulck, Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_14.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	<tr class='bg-success'>
+		<th scope='row'><a href='../validator/Repository/ITC2021/Instances/ITC2021_Late_15.xml'>Late 15 </a></th>
+		<td>20</td>
+		<td>38</td>
+		<td>2RR,&nbsp;C,&nbsp;NULL&nbsp;|&nbsp;BR1,&nbsp;BR2,&nbsp;CA1,&nbsp;CA3,&nbsp;FA2,&nbsp;GA1&nbsp;|&nbsp;SC</td>
+		<td><a href=../validator/Repository/ITC2021/Bounds/ITC2021_Late_15_Bound.xml>(0, 0)</a></td>
+		<td><a href=../validator/Repository/ITC2021/Solutions/Late15_0_0_FBHS.xml>(0, 0)</a></td>
+		<td>David Van Bulck, Dries Goossens</td>
+		<td><a href='../RobinX/history.php?instanceFileName=ITC2021/Instances/ITC2021_Late_15.xml&repositoryName=ITC2021'>history</a></td>
+	</tr>
+	</tbody>
+</table>
+
+</div> <!-- End table responsive -->
+</div> <!-- End well -->
+
+</div> <!-- End container -->
+	
+</div> <!-- End body -->
+</div>
+</div>
+</div>
+
+
+<!-- Footer -->
+<div class="container-fluid text-center full">    
+  <div class="row content full">
+    <div class="col-sm-8 col-sm-offset-2 text-left main"  style="background-color:#E8E8E8!important;"> 
+      <footer class="pull-right" >
+	<h4>
+	Please send any question or suggestion to <a href="mailto:itc2021@ugent.be">itc2021 at ugent dot be</a>.
+        <img src="./images/ITCLogo.svg" alt="Logo ITC" style="height:70px; padding-left:50px;"/> 
+	</h4>
+      </footer>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
