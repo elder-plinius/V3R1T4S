@@ -1,0 +1,19 @@
+recheck primes: 95181  sieve-first primes: 95181
+identical sets: True  identical n values: True
+only in recheck: []  only in sieve-first: []
+recheck n=30 least=196265095009 bfile=196265095009 MATCH
+recheck n=31 least=196265095009 bfile=196265095009 MATCH
+recheck n=32 least=2871842842801 bfile=2871842842801 MATCH
+recheck n=33 least=2871842842801 bfile=2871842842801 MATCH
+recheck n=34 least=2871842842801 bfile=2871842842801 MATCH
+recheck n=35 least=26437680473689 bfile=26437680473689 MATCH
+recheck n=36 least=89436364375801 bfile=89436364375801 MATCH
+recheck n=37 least=112434732901969 bfile=112434732901969 MATCH
+recheck n=38 least=112434732901969 bfile=112434732901969 MATCH
+recheck n=39 least=112434732901969 bfile=112434732901969 MATCH
+recheck n=40 least=178936222537081 bfile=178936222537081 MATCH
+recheck n=41 least=178936222537081 bfile=178936222537081 MATCH
+recheck n=42 least=6072205049848081 
+recheck n=43 least=6072205049848081 
+recheck n=44 least=6072205049848081 
+recheck n=45 least=None 

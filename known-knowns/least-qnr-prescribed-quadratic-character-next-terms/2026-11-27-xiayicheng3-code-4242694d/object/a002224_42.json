@@ -1,0 +1,13 @@
+{
+ "sequence": "A002224",
+ "definition": "Smallest prime p of form p = 8k+1 such that first n primes (p_1=2, ..., p_n) are quadratic residues mod p.",
+ "n": 42,
+ "value": "6072205049848081",
+ "least_quadratic_nonresidue": 197,
+ "primality_certificate": {
+  "type": "Lucas (n-1 fully factored); witness a satisfies a^(q-1) = 1 and a^((q-1)/f) != 1 mod q for every prime f | q-1",
+  "witness": 223,
+  "q_minus_1_factorization": [["2", 4], ["3", 2], ["5", 1], ["11", 1], ["13", 1], ["58976350523", 1]]
+ },
+ "minimality": "no prime q = 1 (mod 8) with q < 6072205049848081 has the first 42 primes as quadratic residues (exhaustive search from 1)"
+}
