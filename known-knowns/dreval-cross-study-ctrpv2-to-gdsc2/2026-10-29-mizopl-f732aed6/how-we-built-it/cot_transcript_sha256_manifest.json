@@ -1,0 +1,13 @@
+{
+  "files_sha256": {
+    "COT_CHAIN_OF_THOUGHT_AND_AIRGAP_AUDIT.md": "0a5e6489460aa0bd1294df67b686b5f8c9bf72556ae57515fff0955385fca9f5",
+    "artifact.md": "1800717770dbc6b4f2c7c7800569c933ac422006a56edfe810d9d934c63d0793",
+    "models.py": "d88c2a2e422f7498df0b9175284a17b97640c6943250debaf057b578487588ea",
+    "stage0_download_and_manifest.py": "53791e5f8e3e5c8904f1b96ffb025dbfdaaf0b3d3b32e8aa3a1ab4870ef3b07a",
+    "stage1_inspect_and_verify_metrics.py": "844206bf23ad50dd31875c7374dd0fa19a524b91c3115de1f209685cca60dc8d",
+    "stage2_inner_ablation.py": "0bce564467ee5f8b0195a63973493b138de7d087a971dfcdd3dcdcdf2d616e0f",
+    "stage3_exvivo_and_cross_study_eval.py": "264aff2e059b6ffb957764ae854a923dbd14aac2ab318fcd6856771ec19926ad",
+    "stage4_formalities_and_nulls.py": "349a617b189840ba661504e585b9539cd377c7895d3be912dc4a8ff274465a05"
+  },
+  "target_id": "dreval-cross-study-ctrpv2-to-gdsc2"
+}

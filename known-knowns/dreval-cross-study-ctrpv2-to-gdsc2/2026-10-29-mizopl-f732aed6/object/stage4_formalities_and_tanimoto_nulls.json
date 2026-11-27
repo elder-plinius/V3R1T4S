@@ -1,0 +1,109 @@
+{
+  "generated_at_utc": "2026-10-29T17:46:27Z",
+  "permutation_null_controls_500": {
+    "GDSC2": {
+      "best_control_Pearson_norm": 0.014738986808882809,
+      "best_control_within_drug_Pearson": 0.015155923175060568,
+      "controls": 500,
+      "empirical_p": 0.001996007984031936,
+      "null_Pearson_norm_mean": -0.00019036994749685245,
+      "null_Pearson_norm_std": 0.005093569738873626,
+      "real_Pearson_norm": 0.1403290647036617,
+      "real_beats_all_controls": true,
+      "real_within_drug_Pearson": 0.35893348614587767,
+      "z_score_Pearson_norm": 27.58761376696739
+    }
+  },
+  "preregistration_lock_sha256": "5c9295e157e58376a63e0ef358edbfc950bcff6f30499c494ffc01a47cd6c33a",
+  "sequential_p3_rescoring": {
+    "GDSC2": {
+      "step0_raw_platform_unadjusted": {
+        "MAE_mean": 1.6149566367885293,
+        "MAE_std": 0.01072054681847963,
+        "MSE_mean": 5.274111885459874,
+        "MSE_std": 0.06755362197702608,
+        "Pearson_norm_mean": 0.1989032808683258,
+        "Pearson_norm_std": 0.011548192638175962,
+        "R2_norm_mean": -0.17741791743151308,
+        "R2_norm_std": 0.013227552219059248,
+        "RMSE_mean": 2.2965010287271364,
+        "RMSE_std": 0.014716223665527819,
+        "Spearman_norm_mean": 0.18409973364312035,
+        "Spearman_norm_std": 0.007497318953559651
+      },
+      "step1_plus_rank_normal_platform_alignment": {
+        "MAE_mean": 1.7764467019948753,
+        "MAE_std": 0.020690824996867214,
+        "MSE_mean": 6.38104190365386,
+        "MSE_std": 0.11786207903061349,
+        "Pearson_norm_mean": 0.13293882892091932,
+        "Pearson_norm_std": 0.012531543224007282,
+        "R2_norm_mean": -0.42457227162940053,
+        "R2_norm_std": 0.027108614878007975,
+        "RMSE_mean": 2.5259757505737337,
+        "RMSE_std": 0.02329547326848334,
+        "Spearman_norm_mean": 0.1741896236862664,
+        "Spearman_norm_std": 0.007731711996773308
+      },
+      "step2_plus_assay_offset_and_slope_alignment": {
+        "MAE_mean": 1.5601424879846106,
+        "MAE_std": 0.007703453184276909,
+        "MSE_mean": 4.484881920122524,
+        "MSE_std": 0.036408078404597644,
+        "Pearson_norm_mean": 0.1329388289209193,
+        "Pearson_norm_std": 0.012531543224007279,
+        "R2_norm_mean": -0.0012398810644320356,
+        "R2_norm_std": 0.007581215112754418,
+        "RMSE_mean": 2.117738250842854,
+        "RMSE_std": 0.008603683937774838,
+        "Spearman_norm_mean": 0.17418962398204432,
+        "Spearman_norm_std": 0.007731711859230315
+      },
+      "step3_plus_shared_drug_restriction": {
+        "MAE_mean": 1.5601592512073776,
+        "MAE_std": 0.0077140901639893966,
+        "MSE_mean": 4.484937257448455,
+        "MSE_std": 0.0364645933002336,
+        "Pearson_norm_mean": 0.13293803881560498,
+        "Pearson_norm_std": 0.012532374443639811,
+        "R2_norm_mean": -0.0012400759595216138,
+        "R2_norm_std": 0.007581370836451809,
+        "RMSE_mean": 2.1177512673910392,
+        "RMSE_std": 0.008616967248286107,
+        "Spearman_norm_mean": 0.17418542927570588,
+        "Spearman_norm_std": 0.007733673615539278
+      },
+      "step4_plus_bounded_curvecurator_window": {
+        "MAE_mean": 1.5601592512073776,
+        "MAE_std": 0.0077140901639893966,
+        "MSE_mean": 4.484937257448455,
+        "MSE_std": 0.0364645933002336,
+        "Pearson_norm_mean": 0.13293803881560498,
+        "Pearson_norm_std": 0.012532374443639811,
+        "R2_norm_mean": -0.0012400759595216138,
+        "R2_norm_std": 0.007581370836451809,
+        "RMSE_mean": 2.1177512673910392,
+        "RMSE_std": 0.008616967248286107,
+        "Spearman_norm_mean": 0.17418542927570588,
+        "Spearman_norm_std": 0.007733673615539278
+      }
+    }
+  },
+  "target_id": "dreval-cross-study-ctrpv2-to-gdsc2",
+  "upstream_snapshots": {
+    "drevalpy_github_readme": {
+      "bytes": 10539,
+      "fetched_utc": "2026-10-29T17:46:27Z",
+      "http_status": 200,
+      "sha256": "3f0e6e99c209b67685c312a4d36fa964dfbb3497463561684fe19fc00c120ac2",
+      "url": "https://raw.githubusercontent.com/daisybio/drevalpy/main/README.md"
+    },
+    "zenodo_dreval_record_23159774": {
+      "fetched_utc": "2026-10-29T16:10:00Z",
+      "http_status": 200,
+      "note": "HTTP Error 403: Forbidden",
+      "sha256": "4ef3a4cad2537013b692fde090a99ee741ed2d51e286daf6b68543bbf2298d0b",
+      "url": "https://zenodo.org/api/records/18770924"
+    }
+  }
+}

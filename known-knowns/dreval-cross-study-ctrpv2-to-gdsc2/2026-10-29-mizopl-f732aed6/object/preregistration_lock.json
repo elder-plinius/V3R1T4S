@@ -1,0 +1,104 @@
+{
+  "air_gap_certification": {
+    "ctrpv2_inner_tuning_completed_before_gdsc2_evaluation": true,
+    "external_response_files_touched_during_stage2": false,
+    "gdsc2_response_file_sha256": "87c284eaf50c41e4ffd870220f67230b826068c3d08085a9a83caec62024bcbd",
+    "gdsc2_response_file_url": "https://zenodo.org/api/records/23159774/files/GDSC2.zip/content",
+    "single_row_inductive_prediction": true,
+    "test_set_quantile_or_batch_normalization_used": false,
+    "test_set_response_values_used_in_unadjusted_prediction": false,
+    "tuning_datasets_used": [
+      "CTRPv2"
+    ]
+  },
+  "frozen_hyperparameters": {
+    "bilinear_nn": {
+      "dropout": 0.25,
+      "emb_dim": 128,
+      "epochs": 22,
+      "hidden_dim": 256,
+      "lr": 0.0025,
+      "seed": 42,
+      "weight_decay": 0.0001
+    },
+    "cell_views": [
+      "within_sample_vdw (van der Waerden rank-normal)",
+      "within_sample_log_zscore (auto-log2 z-score)",
+      "LINCS_L1000_landmark_genes",
+      "drug_target_genes",
+      "PROGENy_11_pathway_vdw",
+      "BIONIC_PPI_top256"
+    ],
+    "drug_views": [
+      "ECFP4_2048_Tanimoto_and_Cosine",
+      "ChemBERTa_Cosine_and_RBF",
+      "MolGNet_Cosine_and_RBF"
+    ],
+    "exact_per_drug_krr_lambdas": {
+      "bio": 12.0,
+      "comb": 14.0,
+      "dt": 10.0,
+      "lm": 10.0,
+      "logz": 12.0,
+      "pw": 8.0,
+      "rbf": 12.0,
+      "vdw": 12.0
+    },
+    "lineage_compass": {
+      "kernel_weights": {
+        "K_bio": 0.3,
+        "K_pw": 0.35,
+        "K_vdw": 0.35
+      },
+      "temperature_tau": 0.06,
+      "top_k": 20
+    },
+    "seen_drug_ensemble_weights": {
+      "Pred_exact_tis": 0.55,
+      "Pred_nn_tis": 0.25,
+      "Pred_svd_tis": 0.2
+    },
+    "shrinkage_priors": {
+      "s0_cell": 5.0,
+      "s0_drug": 5.0,
+      "s0_tissue": 10.0
+    },
+    "svd_dual_krr": {
+      "em_iters": 3,
+      "lam_c": 14.0,
+      "lam_d": 8.0,
+      "rank_r": 48
+    },
+    "unseen_drug_tkrr": {
+      "lam_c": 18.0,
+      "lam_d": 3.5
+    }
+  },
+  "locked_at_utc": "2026-10-29T16:54:12.009517+00:00",
+  "model_name": "SchurBilinearExVivoDRP",
+  "preregistration_lock_sha256": "5c9295e157e58376a63e0ef358edbfc950bcff6f30499c494ffc01a47cd6c33a",
+  "protocol": "PROOFER-DREVAL Stage 2 -> Stage 3 Air-Gap Pre-Registration Lock (CLSS-E8 / Anti-Trap #1)",
+  "stage2_ctrpv2_inner_summary": {
+    "LCO_test": {
+      "MSE_mean": 1.5758086297117928,
+      "MSE_std": 0.13332169762245305,
+      "Pearson_norm_mean": 0.4143422965901301,
+      "Pearson_norm_std": 0.04246684349754297,
+      "R2_norm_mean": 0.17119998396417335,
+      "R2_norm_std": 0.03591340553212329,
+      "Spearman_norm_mean": 0.39180542984686534,
+      "Spearman_norm_std": 0.02633332169588813
+    },
+    "LCO_validation": {
+      "MSE_mean": 1.5903963810452078,
+      "MSE_std": 0.04469588961045798,
+      "Pearson_norm_mean": 0.40569409288432634,
+      "Pearson_norm_std": 0.02225285270227723,
+      "R2_norm_mean": 0.15957737631180113,
+      "R2_norm_std": 0.02195870233103429,
+      "Spearman_norm_mean": 0.3884105301960966,
+      "Spearman_norm_std": 0.023250335868577894
+    }
+  },
+  "target_id": "dreval-cross-study-ctrpv2-to-gdsc2"
+}
