@@ -1,0 +1,3 @@
+step	size	random_seed	tabu_min	tabu_max	restart_after	steps_original
+1	97	1011	5	15	1000000	27332716
+2	98	1001	5	15	1000000	36240211
