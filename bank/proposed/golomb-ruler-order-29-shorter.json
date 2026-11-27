@@ -1,0 +1,43 @@
+{
+  "id": "golomb-ruler-order-29-shorter",
+  "name": "Shortest integer Golomb ruler with 29 marks",
+  "category": "record-tables",
+  "kind": "standard",
+  "tractability": 2,
+  "compute_profile": "laptop-hours for initial construction searches. The cost of proving optimality is unknown.",
+  "statement": "A Golomb ruler with 29 marks is a sequence of integers 0 = a_1 < a_2 < ... < a_29 whose 406 positive pairwise differences are distinct. Its length is a_29. Let G(29) be the minimum length. The distributed.net OGR project established G(28) = 585. The two end gaps of a 29-mark ruler are distinct positive integers, so at least one is at least two. Deleting the endpoint adjacent to that gap leaves a 28-mark ruler of length at least 585, giving G(29) >= 587. James B. Shearer credits the 623 construction to Atkinson and Hassenklover, and Tomas Rokicki and Gil Dogon publish a 623 ruler in their data. The checked interval is 587 <= G(29) <= 623, with the exact value open. FormalMarket accepts submissions of 29-mark rulers of length at most 622. Few Shots tracks the same record and lists length 623.",
+  "success_criterion": "Determine G(29). Give a 29-mark ruler of length L and an independently checkable proof excluding all such rulers of length at most L - 1. At L = 587 the lower-bound argument in the statement suffices. Before claiming, recheck OEIS A003022, distributed.net/OGR, the two challenge pages, public ruler archives, and later literature to confirm G(29) remains unsettled at claim time.",
+  "partial_wins": [
+    {
+      "id": "p1",
+      "statement": "Give a 29-mark ruler of length at most 622 that is strictly shorter than the best public 29-mark ruler at claim time."
+    },
+    {
+      "id": "p2",
+      "statement": "Certify a lower bound on G(29) of at least 588 that strictly improves the strongest comparable public lower bound at claim time."
+    }
+  ],
+  "verification_method": "Check that the witness has 29 distinct integer marks. Sort them, subtract the smallest mark, and verify the length and all 406 positive pairwise differences. Calibrate on the 28-mark length-585 and 29-mark length-623 records in Rokicki and Dogon's ruler archive, and reject a control with a repeated difference. To certify a lower bound B, independently regenerate a SAT encoding of normalized increasing marks 0 = a_1 < a_2 < ... < a_29 <= B - 1 with all 406 positive pairwise differences distinct, then check a DRAT or LRAT refutation. Reflection symmetry breaking (a_2 - a_1 < a_29 - a_28) preserves a representative of every valid ruler because end gaps are distinct. Prove that any additional symmetry restrictions preserve a representative of every feasible ruler. A kernel-checked mathematical exclusion also qualifies. Certificates exceeding 1 MB follow kit/SUBMIT.md section 1.",
+  "primary_sources": [
+    "https://oeis.org/A003022",
+    "https://www.distributed.net/OGR",
+    "https://web.archive.org/web/20170625090514/http://www.research.ibm.com/people/s/shearer/grtab.html",
+    "https://cube20.org/golomb/",
+    "https://cube20.org/golomb/rulers-all-00.zip",
+    "https://formalmarket.ai/problems/7d01ac5b-d07d-4cc5-af93-4a52d9391bff/",
+    "https://few-shots.ai/problems/p014"
+  ],
+  "status_source": "https://oeis.org/A003022",
+  "status_checked": "2026-11-24",
+  "disclosure": "open",
+  "angles": [
+    "Use the earlier optimal lengths to bound the spans of consecutive groups of marks. For construction searches, keep counts of pairwise differences and update the counts when moving a mark."
+  ],
+  "pitfalls": [
+    "OEIS A003022 gives proved minima and stops at 28 marks. Shearer's table and the Rokicki-Dogon archive give the construction bound 623 at 29 marks.",
+    "Weaker upper bounds reported in recent preprints (such as 757) do not supersede the 1984 Atkinson-Hassenklover length-623 construction.",
+    "OEIS A036501 (number of inequivalent optimal rulers) stops at 19 marks, so uniqueness of length 585 at 28 marks is not established in OEIS; proving G(29) >= 588 is therefore nontrivial.",
+    "A lower-bound certificate must cover every ruler within its length limit, including rulers that do not come from modular constructions.",
+    "The search is for integer marks on a line. Check ordinary positive differences between marks."
+  ]
+}
