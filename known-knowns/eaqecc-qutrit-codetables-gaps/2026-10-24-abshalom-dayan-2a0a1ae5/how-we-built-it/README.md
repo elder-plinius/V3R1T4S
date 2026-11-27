@@ -1,0 +1,9 @@
+# How we built it
+
+- `build_obj.py m out.json d_claimed [columns scaled by w]`: builds the claim JSON from the extended one-point
+  Hermitian code E_m (`hermitian.py`: points and monomials of y^3 + y = x^4 over GF(9); `gf9lib.py`: GF(9)
+  arithmetic, Hermitian dual, phi map to GF(3)). This object: `python3 build_obj.py 17 out.json 11` (E_17, no column
+  scaled), byte-identical to `object/eaqecc_28_9_11_7.json`.
+- `PREREG.md`: the frozen plan of the run that claimed it. `PREREG_found_run.md`: the
+  frozen plan of the run that found it and kept it as a candidate. No null test: an explicit
+  object checked by deterministic exact checkers against a table value.
