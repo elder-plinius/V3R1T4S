@@ -1,0 +1,6 @@
+== d=36 table max 5.823385551581
+degree 36
+arb ball   : [5.86686085131976269716667397204 +/- 1.31e-31]
+mpmath 60d : 5.86686085131976269716667397204
+agree to 20 digits: True
+table value: 5.823385551581  certified M - table > 1e-9: True  (margin 4.348e-02)
