@@ -1,0 +1,2 @@
+status: CONFIRMED_SOLUTION
+confirmed_scope: Exact determination of A000229(39) = 317398900373231 (least prime with least quadratic non-residue prime(39) = 167, full win) and A000229(41) = 1463971373078639 (least prime with least quadratic non-residue prime(41) = 179, full win), unblocking A000229(40) = 112434732901969, A000229(42) = 178936222537081, and A000229(43) = 501108392233679, together with independent exhaustive verification of A000229(30..38), A002223(30..38), and A002224(30..41) from 1 (partial wins p1 and p2).
