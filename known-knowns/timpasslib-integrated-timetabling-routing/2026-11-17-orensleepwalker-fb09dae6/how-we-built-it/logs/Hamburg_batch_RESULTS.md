@@ -17,4 +17,4 @@ Jobs finished: 8 of 8. Every total below is from the independent evaluator. reco
 
 | instance | best total | record | label | file |
 |---|---:|---:|---|---|
-| Hamburg | 140833625 | 140850920 | BEATS_RECORD | batch_hamburg/H01/best.csv |
+| Hamburg | 140833625 | 140850920 | BEATS_RECORD | batch_best_files/H01.csv |
