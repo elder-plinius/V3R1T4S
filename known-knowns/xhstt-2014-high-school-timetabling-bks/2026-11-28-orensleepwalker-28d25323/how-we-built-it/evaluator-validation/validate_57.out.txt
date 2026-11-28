@@ -1,0 +1,9 @@
+AU-BG-98  page lists 8, reproduced 8 | page values [(0, 128), (0, 334), (1, 363), (1, 386), (2, 340), (3, 311), (3, 400), (7, 433)] | ours not on page [] | best ours (0, 128)
+DK-FG-12  page lists 8, reproduced 8 | page values [(0, 1020), (0, 1263), (0, 1513), (0, 1514), (0, 1522), (0, 1775), (0, 3310), (0, 9938)] | ours not on page [] | best ours (0, 1020)
+DK-HG-12  page lists 6, reproduced 6 | page values [(12, 2330), (12, 2611), (12, 2628), (12, 3056), (12, 3124), (25, 33844)] | ours not on page [] | best ours (12, 2330)
+DK-VG-09  page lists 6, reproduced 6 | page values [(2, 2323), (2, 2718), (2, 2731), (2, 2881), (2, 4097), (2, 18862)] | ours not on page [] | best ours (2, 2323)
+NL-KP-03  page lists 10, reproduced 10 | page values [(0, 102), (0, 199), (0, 420), (0, 466), (0, 527), (0, 617), (0, 700), (0, 866), (0, 1032), (0, 1410)] | ours not on page [(0, 527)] | best ours (0, 102)
+NL-KP-05  page lists 6, reproduced 6 | page values [(0, 399), (0, 425), (0, 784), (0, 811), (0, 1017), (0, 1078)] | ours not on page [] | best ours (0, 399)
+NL-KP-09  page lists 7, reproduced 7 | page values [(0, 665), (0, 670), (0, 1620), (0, 5095), (0, 6265), (0, 9180), (0, 9250)] | ours not on page [] | best ours (0, 665)
+UK-SP-06  page lists 6, reproduced 6 | page values [(2, 802), (2, 1410), (4, 1708), (5, 4014), (15, 1892), (16, 2258)] | ours not on page [(386000, 136)] | best ours (2, 802)
+total listed 57 not reproduced 0
