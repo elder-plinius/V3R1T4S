@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+queens-graph-domatic-numbers,tdom(Q_10) lower bound,16,15,2026-11-11T18:20:59Z,object/tdom-Q10-16-partition.txt,211f9188400687ad9e5fbe69cb47cf465acd1de52e9476992e0c7497efd034ec
