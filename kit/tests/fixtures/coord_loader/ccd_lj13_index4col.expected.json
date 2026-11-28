@@ -1,0 +1,94 @@
+{
+ "fixture": "ccd_lj13_index4col.txt",
+ "synthetic": true,
+ "dim": 3,
+ "allow_index": true,
+ "status": "ok",
+ "anomaly": null,
+ "N": 13,
+ "columns": 3,
+ "index_stripped": true,
+ "index_base": 1,
+ "coords": [
+  [
+   "0.0000000000",
+   "0.0000000000",
+   "0.0000000000"
+  ],
+  [
+   "0.0000000000",
+   "-0.5687560434",
+   "-0.9202666096"
+  ],
+  [
+   "-0.5687560434",
+   "-0.9202666096",
+   "0.0000000000"
+  ],
+  [
+   "-0.9202666096",
+   "0.0000000000",
+   "-0.5687560434"
+  ],
+  [
+   "0.0000000000",
+   "-0.5687560434",
+   "0.9202666096"
+  ],
+  [
+   "-0.5687560434",
+   "0.9202666096",
+   "0.0000000000"
+  ],
+  [
+   "0.9202666096",
+   "0.0000000000",
+   "-0.5687560434"
+  ],
+  [
+   "0.0000000000",
+   "0.5687560434",
+   "-0.9202666096"
+  ],
+  [
+   "0.5687560434",
+   "-0.9202666096",
+   "0.0000000000"
+  ],
+  [
+   "-0.9202666096",
+   "0.0000000000",
+   "0.5687560434"
+  ],
+  [
+   "0.0000000000",
+   "0.5687560434",
+   "0.9202666096"
+  ],
+  [
+   "0.5687560434",
+   "0.9202666096",
+   "0.0000000000"
+  ],
+  [
+   "0.9202666096",
+   "0.0000000000",
+   "0.5687560434"
+  ]
+ ],
+ "compare": "exact decimal string",
+ "energy": {
+  "potential": "LJ",
+  "epsilon": 1,
+  "sigma": 1,
+  "formula": "E = sum_{i<j} 4 (r^-12 - r^-6)",
+  "E": "-44.326801419534",
+  "E_float64_repr": "-44.326801419533986",
+  "E_decimal50": "-44.32680141953397385708",
+  "abs_tol": 1e-09,
+  "computed_from": "the exact decimal strings in coords (float64), cross-checked with 50-digit Decimal",
+  "note": "synthetic ideal icosahedron, uniformly scaled to the 1-D minimum of E(R) (golden-section), coords rounded to 10 decimals"
+ },
+ "natoms_expected": 13,
+ "note": "Cambridge Cluster Database layout 'index x y z'. Must yield 13 atoms, not 0, and the energy above"
+}

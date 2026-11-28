@@ -1,0 +1,37 @@
+{
+ "fixture": "hsp4_true4d.txt",
+ "synthetic": true,
+ "dim": 4,
+ "allow_index": true,
+ "status": "ok",
+ "anomaly": null,
+ "N": 3,
+ "columns": 4,
+ "index_stripped": false,
+ "coords": [
+  [
+   "0.500000000000",
+   "0.500000000000",
+   "0.500000000000",
+   "0.500000000000"
+  ],
+  [
+   "-0.500000000000",
+   "0.500000000000",
+   "-0.500000000000",
+   "0.500000000000"
+  ],
+  [
+   "0.000000000000",
+   "0.600000000000",
+   "0.000000000000",
+   "-0.800000000000"
+  ]
+ ],
+ "compare": "exact decimal string",
+ "naive_last3_loader": "FAILS: returns 3 columns and silently drops x1. Loader MUST return 4 columns",
+ "must_not": [
+  "return fewer than 4 columns",
+  "treat column 0 as an index (0.5, -0.5, 0.0 is not a sequential integer run)"
+ ]
+}
