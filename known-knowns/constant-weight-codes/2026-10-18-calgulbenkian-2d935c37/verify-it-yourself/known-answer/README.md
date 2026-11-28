@@ -1,0 +1,1 @@
+cert_A31_12_10.json is the already merged V3R1T4S certificate known-knowns/bigger-codes/certificates/cert_A31_12_10.json (origin/main 04fdfba48c6e277fe083b6811f1a5deb3c52b74e), a public file used here only to test the checker: it must give the bound 197 (exact LP optimum 8091/41).
