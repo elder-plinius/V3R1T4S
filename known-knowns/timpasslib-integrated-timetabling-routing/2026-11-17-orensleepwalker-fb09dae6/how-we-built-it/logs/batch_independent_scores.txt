@@ -1,0 +1,9 @@
+H01 feasible True total 140833625  sha256 ee98c69c9e108b4d
+H02 feasible True total 140833625  sha256 19b197103e8ff810
+H03 feasible True total 140850920  sha256 0a2e38ec367ead14
+H04 feasible True total 140833625  sha256 fb09dae618a0397f
+H05 feasible True total 140833625  sha256 fb09dae618a0397f
+H06 feasible True total 140833625  sha256 fb09dae618a0397f
+H07 feasible True total 140850920  sha256 aee78b5fc0d1015d
+H08 feasible True total 140850920  sha256 aee78b5fc0d1015d
+Note (2026-11-28, at the maintainer's request): the H07 and H08 output files were removed because they are byte-identical to Hamburg-140850920-Timetable.csv in TimPassLib's 140850920_Timetable.zip (zip sha256 2d8a43e908f9135940a09d02602e8008f4d3d404488941ae93eeae18e49897a3, file sha256 aee78b5fc0d1015de2ca2ea31d8f03f699c843740d0e842eeeceee5f5cbd770a), B. Ramos's published Hamburg timetable; the H03 output file was removed because it is that timetable with every time shifted by +3 mod 10 (sha256 0a2e38ec367ead14452b28c9af4a80b07a609713c3d636b4e3647d67fabb4e14).

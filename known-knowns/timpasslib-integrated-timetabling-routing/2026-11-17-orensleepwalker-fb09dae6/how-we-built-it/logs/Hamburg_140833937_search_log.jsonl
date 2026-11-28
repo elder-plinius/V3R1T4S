@@ -1,0 +1,43 @@
+{"it": 1, "kind": "bfs", "free": 121, "status": "OPTIMAL", "affected": 949, "model_gain": 9567, "sec": 0.4, "t": 0.4, "total": 141619738}
+{"it": 2, "kind": "stop", "free": 138, "status": "OPTIMAL", "affected": 1335, "model_gain": 0, "sec": 0.4, "t": 0.8}
+{"it": 3, "kind": "stop", "free": 145, "status": "OPTIMAL", "affected": 1267, "model_gain": 0, "sec": 0.3, "t": 1.1}
+{"it": 4, "kind": "stop", "free": 168, "status": "OPTIMAL", "affected": 1582, "model_gain": 0, "sec": 0.5, "t": 1.7}
+{"it": 5, "kind": "bfs", "free": 205, "status": "OPTIMAL", "affected": 1715, "model_gain": 0, "sec": 0.6, "t": 2.2}
+{"it": 6, "kind": "bfs", "free": 213, "status": "OPTIMAL", "affected": 1699, "model_gain": 0, "sec": 0.5, "t": 2.7}
+{"it": 7, "kind": "line", "free": 249, "status": "OPTIMAL", "affected": 1669, "model_gain": 0, "sec": 0.7, "t": 3.4}
+{"it": 8, "kind": "line", "free": 293, "status": "OPTIMAL", "affected": 1806, "model_gain": 0, "sec": 0.6, "t": 4.0}
+{"it": 9, "kind": "bfs", "free": 330, "status": "OPTIMAL", "affected": 1823, "model_gain": 0, "sec": 0.8, "t": 4.8}
+{"it": 10, "kind": "random", "free": 380, "status": "OPTIMAL", "affected": 1942, "model_gain": 0, "sec": 0.6, "t": 5.4}
+{"it": 11, "kind": "random", "free": 432, "status": "OPTIMAL", "affected": 2003, "model_gain": 0, "sec": 1.1, "t": 6.5}
+{"it": 12, "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 10.4, "t": 16.9}
+{"it": 13, "kind": "stop", "free": 482, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 12.6, "t": 29.5}
+{"it": 14, "kind": "line", "free": 408, "status": "OPTIMAL", "affected": 1975, "model_gain": 0, "sec": 1.9, "t": 31.4}
+{"it": 15, "kind": "stop", "free": 464, "status": "OPTIMAL", "affected": 2013, "model_gain": 0, "sec": 5.5, "t": 37.0}
+{"it": 16, "kind": "stop", "free": 472, "status": "OPTIMAL", "affected": 2024, "model_gain": 0, "sec": 3.4, "t": 40.4}
+{"it": 17, "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 8.5, "t": 48.9}
+{"it": 18, "kind": "bfs", "free": 482, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 15.6, "t": 64.6}
+{"it": 19, "kind": "random", "free": 508, "status": "FEASIBLE", "affected": 2030, "model_gain": 645247, "sec": 17.6, "t": 99.8, "total": 140959862}
+{"it": 20, "kind": "bfs", "free": 467, "status": "OPTIMAL", "affected": 2018, "model_gain": 5550, "sec": 5.1, "t": 104.9, "total": 140859788}
+{"it": 21, "kind": "stop", "free": 482, "status": "OPTIMAL", "affected": 2018, "model_gain": 0, "sec": 4.6, "t": 109.5}
+{"it": 22, "kind": "line", "free": 492, "status": "OPTIMAL", "affected": 2030, "model_gain": 0, "sec": 14.9, "t": 124.4}
+{"it": 23, "kind": "bfs", "free": 492, "status": "FEASIBLE", "affected": 2030, "model_gain": 25851, "sec": 15.4, "t": 139.8, "total": 140833937}
+{"it": 24, "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 2018, "model_gain": 0, "sec": 6.4, "t": 146.2}
+{"it": 25, "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 3.5, "t": 149.8}
+{"it": 26, "kind": "line", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 6.0, "t": 155.8}
+{"it": 27, "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 6.5, "t": 162.3}
+{"it": 28, "kind": "line", "free": 492, "status": "FEASIBLE", "affected": 2025, "model_gain": 0, "sec": 15.3, "t": 177.6}
+{"it": 29, "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 8.7, "t": 186.3}
+{"it": 30, "kind": "line", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 4.1, "t": 190.4}
+{"it": 31, "kind": "line", "free": 500, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 15.0, "t": 205.3}
+{"it": 32, "kind": "stop", "free": 417, "status": "OPTIMAL", "affected": 1990, "model_gain": 0, "sec": 4.6, "t": 210.0}
+{"it": 33, "kind": "bfs", "free": 474, "status": "OPTIMAL", "affected": 2010, "model_gain": 0, "sec": 4.8, "t": 214.8}
+{"it": 34, "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 8.5, "t": 223.3}
+{"it": 35, "kind": "bfs", "free": 482, "status": "OPTIMAL", "affected": 2018, "model_gain": 0, "sec": 4.2, "t": 227.4}
+{"it": 36, "kind": "line", "free": 482, "status": "OPTIMAL", "affected": 2018, "model_gain": 0, "sec": 5.2, "t": 232.6}
+{"it": 37, "kind": "bfs", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 9.5, "t": 242.1}
+{"it": 38, "kind": "bfs", "free": 500, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 15.4, "t": 257.5}
+{"it": 39, "kind": "bfs", "free": 490, "status": "OPTIMAL", "affected": 2021, "model_gain": 0, "sec": 9.9, "t": 267.4}
+{"it": 40, "kind": "bfs", "free": 490, "status": "OPTIMAL", "affected": 2029, "model_gain": 0, "sec": 10.6, "t": 278.1}
+{"it": 41, "kind": "line", "free": 500, "status": "FEASIBLE", "affected": 2030, "model_gain": 0, "sec": 15.3, "t": 293.4}
+{"it": 42, "kind": "stop", "free": 492, "status": "OPTIMAL", "affected": 2022, "model_gain": 0, "sec": 6.1, "t": 299.5}
+{"it": 43, "kind": "bfs", "free": 490, "status": "FEASIBLE", "affected": 2021, "model_gain": 0, "sec": 2.3, "t": 301.9}
