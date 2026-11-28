@@ -1,0 +1,11 @@
+{
+  "n": 10,
+  "q": 90,
+  "parity": true,
+  "found": false,
+  "range_complete": true,
+  "full_domain": true,
+  "timed_out": false,
+  "witness_a": null,
+  "witness_b": null
+}
