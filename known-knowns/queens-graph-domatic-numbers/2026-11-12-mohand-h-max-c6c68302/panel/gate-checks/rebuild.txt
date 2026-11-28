@@ -1,0 +1,34 @@
+gate check 2: rebuild of drat-trim-bin.exe from claim/checker/src with the documented command
+time 2026-11-12T03:09:59Z
+command: python -m ziglang cc -O2 -Dgetc_unlocked=getc -o bin/drat-trim-bin.exe <claim>/checker/src/drat-trim.c <claim>/checker/src/binmode.c
+../../../claim/checker/src/drat-trim.c:810:88: warning: format specifies type 'long' but the argument has type '__ptrdiff_t' (aka 'long long') [-Wformat]
+  810 |             if (S->verb) { printf ("\rc WARNING: ignoring deletion instruction %li: ", (lemmas - S->DB)); printClause (lemmas); } }
+      |                                                                                ~~~     ^~~~~~~~~~~~~~~~
+      |                                                                                %ti
+../../../claim/checker/src/drat-trim.c:812:75: warning: format specifies type 'long' but the argument has type '__ptrdiff_t' (aka 'long long') [-Wformat]
+  812 |           if (S->verb) { printf ("c ignoring deletion instruction %li: ", (lemmas - S->DB)); printClause (lemmas); }
+      |                                                                   ~~~     ^~~~~~~~~~~~~~~~
+      |                                                                   %ti
+2 warnings generated.
+compiler exit code 0
+sha256 rebuilt:  2490c46352123994a9dd7170684e103f1e7f2abd09ae1b188b839d0fe90daf54 (261632 bytes)
+sha256 in claim: a4f39b7d6eee6eee17e84f62cfe169ba16381dd17e26a45ebc17dc788bedb1e9 (261632 bytes)
+DIFFERENT bytes; number of differing bytes:
+20
+offsets of the differing bytes: [128, 129, 130, 131, 252932, 252933, 252934, 252935, 252960, 252961, 252962, 252963, 252988, 252989, 252990, 252991, 252992, 252993, 252994, 252995]
+PE header at 120; TimeDateStamp field at 128..131; CheckSum field at 208..211
+section .text    file offset 1024 size 199168
+section .rdata   file offset 200192 size 52736
+section .buildid file offset 252928 size 512
+section .data    file offset 253440 size 512
+section .pdata   file offset 253952 size 6656
+section .tls     file offset 260608 size 512
+section .reloc   file offset 261120 size 512
+debug directory at file offset 252928, size 56
+  debug entry 0: type 2, timestamp field at 252932..252935, data at file offset 252984 size 42, first bytes b'RSDS'
+    CodeView record: signature RSDS at 252984, GUID at 252988..253003, age at 253004..253007, then the pdb file name: b'drat-trim-bin.pdb'
+    pdb name in the claim binary: b'drat-trim-bin.pdb'
+  debug entry 1: type 16, timestamp field at 252960..252963, data at file offset 0 size 0, first bytes b'MZx\x00'
+differing bytes inside section .buildid: 16
+differing bytes before the first section (headers): 4
+conclusion: the 20 differing bytes are the PE TimeDateStamp (4 bytes), the two timestamp fields of the debug directory (8 bytes) and 8 bytes of the CodeView GUID, all in the header or in the section .buildid; the sections .text, .rdata, .data, .pdata, .tls and .reloc are byte-identical. The claim's drat-trim-bin.exe has the same code and data as a rebuild from claim/checker/src with the documented command.
