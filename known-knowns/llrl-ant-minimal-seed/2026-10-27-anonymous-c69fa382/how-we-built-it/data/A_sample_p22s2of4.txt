@@ -1,0 +1,3 @@
+# new best 139
+SOL onset=139 k=6 found_t=144 phase=234 cells: (0,1,3) (2,1,3) (0,2,2) (1,2,3) (1,4,3) (3,0,1)
+RESULT split=22/40@8 subtrees=41479 rule=LLRL K=6 best_onset=139 minimisers=1 nodes=127987294 tests=509162844 maxR=14 Dmin=238 flagged=0 sub=2/4

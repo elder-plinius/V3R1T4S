@@ -1,0 +1,2 @@
+cert t=139 P=384 D=(-4,-4) heading 3->3 checked=508 : OK
+cert t=138 P=384 D=(-4,-4) heading 2->0 checked=0 : FAIL

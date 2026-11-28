@@ -1,0 +1,1 @@
+{'onset': 256241, 'period': 384, 'drift': (4, -4), 'cert_at_onset': True, 'cert_at_onset_minus_1': False, 'heading_at_onset': 3, 'n_nonzero_seed': 0}

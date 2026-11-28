@@ -1,0 +1,5 @@
+# PREREG — run 2026-10-27-2252, llrl-ant-minimal-seed p2 (frozen 2026-10-27T22:52:45Z, before scoring this run's artifacts)
+null_test: not needed because the quantities are exact deterministic minima found by exhaustive search and re-checked by exact simulation with a translation certificate; there is no statistic or score to beat a null.
+Criterion: verbatim in target.md (partial win p2). Conventions identical to runs/2026-10-24-1605/PREREG.md and runs/2026-10-25-1303/PREREG.md, applied to k=6.
+This run records and panels the home-PC completion of the k=6 exhaustive search packaged from run 2026-10-25-1303 (package /workspace/llrl-k6-package). The home send_back.txt is the primary measurement; this run's own work is: (1) exhaustiveness audit of the combined box+home coverage, (2) independent re-simulation of the claimed minimiser with a simulator that shares no code with ant.c/ccheck.py, (3) a fresh three-skeptic panel.
+Status allowed: CONFIRMED_PARTIAL (p2) only with A and B exhaustive for k=6, C confirming, a fresh three-skeptic panel all pass:true, gate and check_run PASS; otherwise at most PROMISING.
