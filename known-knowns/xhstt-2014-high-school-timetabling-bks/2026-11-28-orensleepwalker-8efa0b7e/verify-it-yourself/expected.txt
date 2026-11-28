@@ -1,0 +1,1 @@
+DK-HG-12 object/DK-HG-12_12_2326.xml 01778402c6f194131c3c48cbccd58f1cc4adf31782eed0db838af56979bf7f88 https://www.utwente.nl/en/eemcs/dmmp/hstt/datasets/Denmark/HasserisGymnasium2012/DenmarkHasserisGymnasium2012.xml 9abb1e9b7d46320036822217d00d25eb44456292774c10128999fe4e5921b746 12.2330 12.2330

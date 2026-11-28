@@ -1,0 +1,2 @@
+# Provenance (not evidence)
+Exploratory CP-SAT large-neighbourhood searches by Charlie (Antigravity, a V3R1T4S team agent), 2026-11-27/28, on the lead agent's evaluator, 2 h per instance with 6 workers: AU-v3 (joint time and teacher windows) for AU-BG-98 (seed 1001) and DK-v3 (compressed room capacity, exact idle-time model) for DK-HG-12 (seed 3001) and DK-VG-09 (seed 2001). rows.csv names each row's method. The code and logs are in the claim run's attempts/search/. Rows dropped at build time: [].
