@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+bitcoin-selfish-mining-revenue-bounds,"alpha=0.45, gamma=0, max REV",<169/250,0.70109,2026-11-28T10:34:04Z,object/exact_dual_rho169_250.json,7b05114fad9412fc6d92394e4ab5c125e3eda3370c3ba561be51e2a36261d0d6
