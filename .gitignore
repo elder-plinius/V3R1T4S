@@ -8,6 +8,7 @@
 /known-knowns/robustbench-cifar100-stronger-attack/models/
 /known-knowns/robustbench-cifar100-stronger-attack/x_adv.npy
 __pycache__/
+kit/private/
 # downloads, binaries and outputs made by the how-we-built-it/ regeneration commands
 /known-knowns/bigger-codes/how-we-built-it/seeds/
 /known-knowns/bigger-codes/how-we-built-it/delsarte/out/
