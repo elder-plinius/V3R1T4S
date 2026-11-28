@@ -1,0 +1,18 @@
+# Optimal First Moves for OEIS A391791 (k=2) and Jehn Conjecture Audit
+# Format: n | optimal_first_coins | floor((n+3)/2) | strictly_unique_match
+10 | 6 | 6 | true
+11 | 7 | 7 | true
+12 | 7 | 7 | true
+13 | 8 | 8 | true
+14 | 8 | 8 | true
+15 | 9 | 9 | true
+16 | 9 | 9 | true
+17 | 10 | 10 | true
+18 | 10 | 10 | true
+19 | 11 | 11 | true
+20 | 11 | 11 | true
+21 | 12 | 12 | true
+22 | 12 | 12 | true
+23 | 13 | 13 | true
+24 | 13 | 13 | true
+25 | 14 | 14 | true
