@@ -1,0 +1,3 @@
+sanity alpha=.45 T=95 rho=.66 mode=printed optimal gain=1.000611546e-02 (Z=-7.8e-15)
+sanity alpha=.45 T=95 rho=.66 mode=corrected optimal gain=1.336925514e-02 (Z=3.9e-15)
+sanity alpha=.45 T=95 rho=.66 mode=max optimal gain=1.336925515e-02 (Z=4.2e-15)

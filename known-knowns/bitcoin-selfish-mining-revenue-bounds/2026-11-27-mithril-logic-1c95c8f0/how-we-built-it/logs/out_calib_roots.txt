@@ -1,0 +1,8 @@
+alpha=0.425 T=95 mode=under root in [0.5680878, 0.5680885]  (7s)
+alpha=0.45 T=95 mode=under root in [0.6689129, 0.6689135]  (11s)
+sanity alpha=.45 T=95 rho=.66 mode=printed optimal gain=1.000611546e-02 (Z=-7.8e-15)
+sanity alpha=.45 T=95 rho=.66 mode=corrected optimal gain=1.006099698e-02 (Z=-6.4e-15)
+sanity alpha=.45 T=95 rho=.66 mode=max optimal gain=1.006099704e-02 (Z=-5.3e-15)
+alpha=0.45 T=250 mode=printed root in [0.6704446, 0.6704447]  (5s)
+alpha=0.45 T=250 mode=corrected root in [0.6704446, 0.6704447]  (5s)
+alpha=0.45 T=250 mode=max root in [0.6704446, 0.6704447]  (5s)

@@ -1,0 +1,20 @@
+alpha 9/20 T 2000 rho 67005787/100000000 mode max: g* = -5.416723361112e-09, using g = -5.308388893890e-09, Z(g) = -8.620e-10, sweeps 11, delta 2.8e-14
+wrote certs/upper_a45_T2000_rho67005787.txt.gz
+alpha 9/20 T 1000 rho 33503/50000 mode max: g* = -1.257161479847e-06, using g = -1.232018250250e-06, Z(g) = -2.001e-07, sweeps 15, delta 8.5e-14
+wrote certs/upper_a45_T1000_rho67006.txt.gz
+alpha 9/20 T 250 rho 33539/50000 mode max: g* = -3.837891293598e-06, using g = -3.761133467726e-06, Z(g) = -6.083e-07, sweeps 15, delta 9.9e-14
+wrote certs/upper_a45_T250_rho67078.txt.gz
+alpha 9/20 T 2000 rho 13401157/20000000 mode max: g* = 6.686812641243e-09, using g = 6.820548894068e-09, Z(g) = -1.064e-09, sweeps 10, delta 8.5e-14
+wrote certs/NEG_dual_a45_T2000_rho67005785.txt.gz
+alpha 9/20 T 2000 rho 13401157/20000000 mode corrected: g* = 6.686812641243e-09, using g = 6.553076388418e-09, Z(g) = 1.064e-09, sweeps 11, delta 7.1e-14
+wrote certs/NEG_pol_a45_T2000_rho67005785.txt.gz
+wrote policy certs/NEG_pol_a45_T2000_rho67005785.pol.gz
+alpha 9/20 T 250 rho 13409/20000 mode corrected: g* = 1.970744438139e-04, using g = 1.931329549376e-04, Z(g) = 3.124e-05, sweeps 18, delta 7.1e-14
+wrote certs/NEG_pol_a45_T250_rho67045.txt.gz
+wrote policy certs/NEG_pol_a45_T250_rho67045.pol.gz
+alpha 9/20 T 95 rho 33/50 mode max: g* = 1.336925514543e-02, using g = 1.363664024834e-02, Z(g) = -2.059e-03, sweeps 19, delta 7.8e-14
+wrote certs/NEG_dual_a45_T95_rho66.txt.gz
+alpha 9/20 T 1500 rho 33502893/50000000 mode under: g* = 6.227735148058e-10, using g = 6.103180445097e-10, Z(g) = 9.911e-11, sweeps 84, delta 0.0e+00
+wrote certs/lower_a45_T1500_rho67005786.txt.gz
+wrote policy certs/lower_a45_T1500_rho67005786.pol.gz
+ALL_BUILT

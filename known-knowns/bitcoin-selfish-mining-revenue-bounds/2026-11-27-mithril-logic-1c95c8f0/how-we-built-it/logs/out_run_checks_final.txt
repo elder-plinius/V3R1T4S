@@ -1,0 +1,38 @@
+== main upper certificate (alpha 9/20, T 2000, rho 67005787/10^8)
+cert certs/upper_a45_T2000_rho67005787.txt.gz alpha 9/20 rho 67005787/100000000 T 2000 scale 2^40
+variant printed   pairs 32010003  max residual g = -29177/5497558138880  (~-5.307265383e-09) at (1648, 1661, 0, 'wait')  CERT_OK
+variant corrected pairs 32010003  max residual g = -29177/5497558138880  (~-5.307265383e-09) at (1648, 1661, 0, 'wait')  CERT_OK
+CERT_OK
+== supporting upper certificates
+cert certs/upper_a45_T1000_rho67006.txt.gz alpha 9/20 rho 33503/50000 T 1000 scale 2^40
+variant printed   pairs 8005003  max residual g = -13546173/10995116277760  (~-1.232017257e-06) at (309, 2, 0, 'wait')  CERT_OK
+variant corrected pairs 8005003  max residual g = -13546173/10995116277760  (~-1.232017257e-06) at (309, 2, 0, 'wait')  CERT_OK
+CERT_OK
+cert certs/upper_a45_T250_rho67078.txt.gz alpha 9/20 rho 33539/50000 T 250 scale 2^40
+variant printed   pairs 501253  max residual g = -82708181/21990232555520  (~-3.761132621e-06) at (56, 27, 0, 'wait')  CERT_OK
+variant corrected pairs 501253  max residual g = -82708181/21990232555520  (~-3.761132621e-06) at (56, 27, 0, 'wait')  CERT_OK
+CERT_OK
+== lower certificate (under-paying, T 1500, rho 67005786/10^8): REV(policy) > rho
+policy cert certs/lower_a45_T1500_rho67005786.txt.gz variant under alpha 9/20 rho 33502893/50000000 T 1500 states 6759003
+exact min residual g_lo = 837/1374389534720 (~6.089976523e-10) at (1165, 12, 'w')
+POLICY_GAIN_POSITIVE
+== negative controls (each must FAIL / show positive gain)
+cert certs/NEG_dual_a45_T2000_rho67005785.txt.gz alpha 9/20 rho 13401157/20000000 T 2000 scale 2^40
+variant printed   pairs 32010003  max residual g = 15001/2199023255552  (~6.821665011e-09) at (1767, 1783, 0, 'wait')  CERT_FAIL
+variant corrected pairs 32010003  max residual g = 15001/2199023255552  (~6.821665011e-09) at (1767, 1783, 0, 'wait')  CERT_FAIL
+CERT_FAIL
+policy cert certs/NEG_pol_a45_T2000_rho67005785.txt.gz variant corrected alpha 9/20 rho 13401157/20000000 T 2000 states 12012003
+exact min residual g_lo = 36019/5497558138880 (~6.551817933e-09) at (759, 70, 'w')
+POLICY_GAIN_POSITIVE
+policy cert certs/NEG_pol_a45_T250_rho67045.txt.gz variant corrected alpha 9/20 rho 13409/20000 T 250 states 189003
+exact min residual g_lo = 4247038573/21990232555520 (~1.931329540e-04) at (193, 73, 'w')
+POLICY_GAIN_POSITIVE
+cert certs/NEG_dual_a45_T95_rho66.txt.gz alpha 9/20 rho 33/50 T 95 scale 2^40
+variant printed   pairs 72678  max residual g = 74968222589/5497558138880  (~1.363664025e-02) at (5, 1, 0, 'wait')  CERT_FAIL
+variant corrected pairs 72678  max residual g = 74968222589/5497558138880  (~1.363664025e-02) at (5, 1, 0, 'wait')  CERT_FAIL
+CERT_FAIL
+cert certs/NEG_tampered_a45_T250_rho67078.txt.gz alpha 9/20 rho 33539/50000 T 250 scale 2^40
+variant printed   pairs 501253  max residual g = 21392128277/21990232555520  (~9.728013664e-04) at (10, 10, 0, 'wait')  CERT_FAIL
+variant corrected pairs 501253  max residual g = 21392128277/21990232555520  (~9.728013664e-04) at (10, 10, 0, 'wait')  CERT_FAIL
+CERT_FAIL
+EXIT 0

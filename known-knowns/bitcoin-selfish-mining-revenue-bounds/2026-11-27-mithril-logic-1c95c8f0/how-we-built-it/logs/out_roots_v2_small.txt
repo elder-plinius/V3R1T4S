@@ -1,0 +1,6 @@
+alpha=0.45 T=95 mode=corrected root in [0.6808711848, 0.6808711857]  (2s)
+alpha=0.45 T=95 mode=max root in [0.6808711848, 0.6808711857]  (2s)
+alpha=0.45 T=250 mode=corrected root in [0.6707736960, 0.6707736969]  (6s)
+alpha=0.45 T=250 mode=max root in [0.6707736960, 0.6707736969]  (6s)
+alpha=0.45 T=500 mode=corrected root in [0.6700818497, 0.6700818506]  (15s)
+alpha=0.45 T=500 mode=max root in [0.6700818497, 0.6700818506]  (15s)
