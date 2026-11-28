@@ -1,0 +1,15 @@
+{
+  "kind": "supplementary_recert_max_ht_compensation",
+  "T": 95,
+  "alpha": "9/20",
+  "rho": "169/250",
+  "gain_float": -9.825972251520376e-05,
+  "gain_negative": true,
+  "pi_iters": 15,
+  "ev": 2178,
+  "seconds_solve": 13.14177942276001,
+  "ht_comp": "max(printed display, corrected E[a0|return])",
+  "corrected_E_a0": "a + (h-a)*(1-alpha)/(1-2*alpha)",
+  "printed_E_a0": "(h-a)/(1-2*alpha)  # hitting time, not block count",
+  "match_includes_h0": true
+}

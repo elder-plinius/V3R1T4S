@@ -1,0 +1,61 @@
+{
+  "T": 95,
+  "alpha": {
+    "num": "9",
+    "den": "20",
+    "float": 0.45
+  },
+  "rho": {
+    "num": "169",
+    "den": "250",
+    "float": 0.676
+  },
+  "gamma": {
+    "num": "0",
+    "den": "1",
+    "float": 0.0
+  },
+  "paying": "over",
+  "eq7_grouping": "rebracketed",
+  "ht_comp": "printed",
+  "match_includes_h0": true,
+  "published_table2_upper_alpha_0_45": "0.70109",
+  "bank_bar_alpha_0_45": "0.70099",
+  "n_states": 27648,
+  "n_inequalities": 72678,
+  "offboard": 0,
+  "identity_eq7_eq24": true,
+  "min_residual": {
+    "num": "-1976263659963926589",
+    "den": "11258999068426240",
+    "float": -175.5274734417546
+  },
+  "max_residual_g_bar": {
+    "num": "-51696398727",
+    "den": "351843720888320",
+    "float": -0.00014693000232171016
+  },
+  "min_where": {
+    "s": 27072,
+    "a": 94,
+    "h": 0,
+    "fork": 0,
+    "action": 0
+  },
+  "max_where": {
+    "s": 7488,
+    "a": 26,
+    "h": 0,
+    "fork": 0,
+    "action": 3
+  },
+  "g_bar_strictly_negative": true,
+  "certified_REV_lt_rho": true,
+  "bank_bar": {
+    "num": "70099",
+    "den": "100000"
+  },
+  "rho_leq_bank_bar": true,
+  "meets_bank_format_if_g_bar_neg": true,
+  "seconds": 0.58443284034729
+}
