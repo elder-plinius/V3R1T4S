@@ -1,0 +1,11 @@
+C rule=LLRL onset=256241 P=384 D=(4, -4) cert_onset=True cert_onset-1=False
+seed 1,0,1
+C rule=LLRL onset=555 P=384 D=(-4, 4) cert_onset=True cert_onset-1=False
+seed 1,-1,1;1,0,2
+C rule=LLRL onset=318 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed 0,2,3;1,-1,1;1,0,2
+C rule=LLRL onset=245 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed -1,0,2;0,-1,2;0,2,1;1,-2,1
+C rule=LLRL onset=195 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed 0,1,3;2,1,3;0,2,2;1,2,3;3,0,1  (k=5 best found by A, upper bound only)
+C rule=LLRL onset=174 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False

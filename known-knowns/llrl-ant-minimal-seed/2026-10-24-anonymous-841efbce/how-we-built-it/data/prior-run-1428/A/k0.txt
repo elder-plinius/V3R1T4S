@@ -1,0 +1,3 @@
+# new best 256241
+SOL onset=256241 k=0 found_t=256248 phase=7 cells:
+RESULT rule=LLRL K=0 best_onset=256241 minimisers=1 nodes=1 tests=32032 maxR=69 Dmin=238 flagged=0

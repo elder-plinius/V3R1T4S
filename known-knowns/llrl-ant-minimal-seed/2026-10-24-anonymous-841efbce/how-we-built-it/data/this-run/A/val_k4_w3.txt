@@ -1,0 +1,4 @@
+phases built P=384: forced non-zero first reads min 12 (phase 65) max 27; Dmin(after 60 periods)=238; late non-zero first reads=0
+# new best 195
+SOL onset=195 k=4 found_t=200 phase=266 cells: (-1,0,2) (0,-1,2) (0,2,1) (1,-2,1)
+RESULT split=3/4@6 subtrees=1909 rule=LLRL K=4 best_onset=195 minimisers=1 nodes=1348471 tests=10872227 maxR=12 Dmin=238 flagged=0

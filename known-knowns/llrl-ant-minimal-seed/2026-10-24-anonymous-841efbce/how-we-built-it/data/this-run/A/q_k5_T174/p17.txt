@@ -1,0 +1,1 @@
+RESULT split=17/40@8 subtrees=21067 rule=LLRL K=5 NONE onset<=174 nodes=2081176 tests=14068507 maxR=14 Dmin=238

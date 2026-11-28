@@ -1,0 +1,2 @@
+SOL onset=175 k=5 found_t=176 phase=229 cells: (0,0,2) (0,2,3) (-1,0,2) (-1,1,3) (1,3,1)
+RESULT split=21/40@8 subtrees=21067 rule=LLRL K=5 NONE onset<=174 nodes=10337977 tests=57295660 maxR=14 Dmin=238

@@ -1,0 +1,30 @@
+seed 1,0,1
+C rule=LLRL onset=555 P=384 D=(-4, 4) cert_onset=True cert_onset-1=False
+seed 1,-1,1;1,0,2
+C rule=LLRL onset=318 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed 0,2,3;1,-1,1;1,0,2
+C rule=LLRL onset=245 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed -1,0,2;0,-1,2;0,2,1;1,-2,1
+C rule=LLRL onset=195 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed 0,1,3;2,1,3;0,2,2;1,2,3;3,0,1
+C rule=LLRL onset=174 P=384 D=(-4, -4) cert_onset=True cert_onset-1=False
+seed -5,0,1;-4,0,1;-4,1,1;-4,2,3;-3,2,1;-3,3,3;-2,3,2;-1,0,2;-1,1,3;0,0,2;0,2,3;1,3,1
+C rule=LLRL onset=0 P=384 D=(4, -4) cert_onset=True cert_onset-1=None
+seed -4,1,2;-3,0,2;-3,1,1;-2,-1,2;-2,0,1;-1,-2,2;-1,-1,1;-1,0,2;-1,1,2;0,-3,1;0,0,1;0,1,3
+C rule=LLRL onset=0 P=384 D=(-4, -4) cert_onset=True cert_onset-1=None
+seed -3,-1,2;-3,0,1;-3,2,2;-3,3,3;-2,0,2;-2,1,2;-2,3,2;-1,0,2;-1,1,3;0,0,2;0,2,3;1,3,1
+C rule=LLRL onset=0 P=384 D=(4, -4) cert_onset=True cert_onset-1=None
+seed -3,2,2;-2,1,2;-2,2,1;-1,0,2;-1,1,1;0,-1,2;0,0,1;0,1,3;0,2,2;1,-2,1;1,1,2;1,2,3
+C rule=LLRL onset=0 P=384 D=(-4, -4) cert_onset=True cert_onset-1=None
+seed -2,-2,2;-2,-1,1;-2,1,2;-2,2,3;-1,-1,2;-1,0,1;-1,1,3;-1,2,2;0,0,2;0,1,2;1,1,2;2,2,1
+C rule=LLRL onset=0 P=384 D=(4, -4) cert_onset=True cert_onset-1=None
+seed -2,3,2;-1,2,2;-1,3,1;0,1,3;0,2,1;1,0,2;1,1,2;1,2,3;1,3,2;2,-1,1;2,2,2;2,3,3
+C rule=LLRL onset=0 P=384 D=(-4, -4) cert_onset=True cert_onset-1=None
+seed -1,-3,2;-1,-2,1;-1,0,2;-1,1,3;0,-2,2;0,-1,1;0,0,2;0,1,2;1,-1,2;1,0,1;2,0,2;3,1,1
+C rule=LLRL onset=0 P=384 D=(4, -4) cert_onset=True cert_onset-1=None
+seed -1,4,2;0,1,3;0,2,2;0,3,2;0,4,1;1,2,3;1,3,2;2,1,3;2,4,2;3,0,1;3,3,2;3,4,3
+C rule=LLRL onset=0 P=384 D=(-4, -4) cert_onset=True cert_onset-1=None
+seed 0,-4,2;0,-3,1;0,-1,2;0,0,2;1,-3,2;1,-2,1;1,-1,2;1,0,1;2,-2,2;2,-1,1;3,-1,2;4,0,1
+C rule=LLRL onset=0 P=384 D=(4, -4) cert_onset=True cert_onset-1=None
+seed 0,1,3;0,2,2;0,5,1;0,6,1;1,2,3;1,5,1;2,1,3;2,4,1;2,5,3;3,0,1;3,3,2;3,4,3
+C rule=LLRL onset=0 P=384 D=(-4, -4) cert_onset=True cert_onset-1=None

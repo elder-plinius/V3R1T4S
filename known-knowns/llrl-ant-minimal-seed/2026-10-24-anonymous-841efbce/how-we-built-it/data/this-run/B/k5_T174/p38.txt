@@ -1,0 +1,1 @@
+DONE rule=LLRL K=5 T=174 wid=38/40 leaves=5881007 viol=0 mins=0 flags=0

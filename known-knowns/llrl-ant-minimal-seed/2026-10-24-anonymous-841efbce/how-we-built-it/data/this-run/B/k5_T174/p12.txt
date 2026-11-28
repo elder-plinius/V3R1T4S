@@ -1,0 +1,2 @@
+MIN t=174 p=228 k=5 cells: (0,1,3) (2,1,3) (0,2,2) (1,2,3) (3,0,1)
+DONE rule=LLRL K=5 T=174 wid=12/40 leaves=11730989 viol=0 mins=1 flags=0
