@@ -1,0 +1,1 @@
+AU-BG-98 object/AU-BG-98_0_91.xml cc975cdcf41b756cfc2de82a2f916c174cc69f221792fe7deccffddf739ff49a https://www.utwente.nl/en/eemcs/dmmp/hstt/datasets/Australia/BGHS98/AustraliaBGHS98.xml b172c3dbcbede7ec280e520d6e7cd0fc29f067f6755daa395dfa93703ccbb722 0.126 0.128
