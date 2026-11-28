@@ -1,0 +1,1 @@
+DK-VG-09 object/DK-VG-09_2_2322.xml 45b06b53c97d8c01db9a0d0cb901988276a304351bbb1b1c5ed5590fc82f3c1c https://www.utwente.nl/en/eemcs/dmmp/hstt/datasets/Denmark/VejenGymnasium2009/DenmarkVejenGymnasium2009.xml 6970f763b3777541c44a61d2c3524e2452f5ca29542c9df6391801faf0143133 2.2323 2.2323
