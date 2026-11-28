@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+bitcoin-selfish-mining-revenue-bounds,alpha=0.45 gamma=0 upper bound U on max REV (T=2000),0.67005787,0.70109,2026-11-27T02:39:24Z,object/parts/upper_a45_T2000_rho67005787.txt.gz.part00-part31 (joined: upper_a45_T2000_rho67005787.txt.gz),1c95c8f035bc8fb8f68e5a86fb8bf9fc3db6b6eed8383881ca63db959aec2f0f

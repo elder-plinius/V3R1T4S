@@ -1,0 +1,12 @@
+alpha 9/20 exact identity E[U;return] = q^d*alpha*d/(1-2alpha) for d=1..60: True
+alpha 19/40 exact identity E[U;return] = q^d*alpha*d/(1-2alpha) for d=1..60: True
+alpha .45 (a,h)=(249,250): P(return) mc 0.81970 exact 0.81818 | E[N|ret] mc 10.105 (printed formula (h-a)/(1-2a) = 10.000) | E[a0|ret] mc 254.553 corrected h+a(h-a)/(1-2a) = 254.500
+alpha .45 (a,h)=(245,250): P(return) mc 0.36410 exact 0.36665 | E[N|ret] mc 50.060 (printed formula (h-a)/(1-2a) = 50.000) | E[a0|ret] mc 272.530 corrected h+a(h-a)/(1-2a) = 272.500
+alpha .45 (a,h)=(240,250): P(return) mc 0.13635 exact 0.13443 | E[N|ret] mc 98.092 (printed formula (h-a)/(1-2a) = 100.000) | E[a0|ret] mc 294.046 corrected h+a(h-a)/(1-2a) = 295.000
+alpha .45 E[last(0,0)] mc 49.352  printed eq.(22) 24.750  corrected 49.500
+alpha .45 E[last(3,1)] mc 61.462  printed eq.(22) 36.750  corrected 61.500
+alpha .45 E[last(10,10)] mc 59.501  printed eq.(22) 34.750  corrected 59.500
+alpha .45 series (a,h)=(0,0): E[psi]=99.000000 E[last]=49.500000  printed eq.(22) 24.750000  corrected 49.500000
+alpha .45 series (a,h)=(3,1): E[psi]=119.000000 E[last]=61.500000  printed eq.(22) 36.750000  corrected 61.500000
+alpha .45 series (a,h)=(10,10): E[psi]=99.000000 E[last]=59.500000  printed eq.(22) 34.750000  corrected 59.500000
+alpha .45 series (a,h)=(5,0): E[psi]=149.000000 E[last]=77.000000  printed eq.(22) 52.250000  corrected 77.000000
