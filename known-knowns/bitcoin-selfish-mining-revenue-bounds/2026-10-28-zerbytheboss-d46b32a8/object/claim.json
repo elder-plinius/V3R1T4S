@@ -1,0 +1,80 @@
+{
+  "target_id": "bitcoin-selfish-mining-revenue-bounds",
+  "status": "CONFIRMED_SOLUTION",
+  "paper_reference": "arXiv:1507.06183 (Financial Cryptography 2016)",
+  "gamma": 0,
+  "confirmed_bounds": {
+    "solution_claim": [
+      {
+        "alpha": "9/20",
+        "alpha_float": 0.45,
+        "certified_upper_bound_U": "70099/100000",
+        "certified_upper_bound_U_float": 0.70099,
+        "ssz_table2_upper_bound": 0.70109,
+        "improvement_below_ssz": 0.00010,
+        "certificate_file": "certificate_alpha_0.45.json",
+        "certificate_gain_g": "-3170481/200000000",
+        "certificate_gain_g_float": -0.01585240,
+        "truncation_T": 95,
+        "states_checked": 27648,
+        "violations": 0
+      },
+      {
+        "alpha": "19/40",
+        "alpha_float": 0.475,
+        "certified_upper_bound_U": "45233/50000",
+        "certified_upper_bound_U_float": 0.90466,
+        "ssz_table2_upper_bound": 0.90476,
+        "improvement_below_ssz": 0.00010,
+        "certificate_file": "certificate_alpha_0.475.json",
+        "certificate_gain_g": "-21434039/400000000",
+        "certificate_gain_g_float": -0.05358510,
+        "truncation_T": 95,
+        "states_checked": 27648,
+        "violations": 0
+      }
+    ],
+    "partial_win_p2": [
+      {
+        "alpha": "17/40",
+        "alpha_float": 0.425,
+        "certified_upper_bound_U": "1788/3125",
+        "certified_upper_bound_U_float": 0.57216,
+        "certificate_file": "certificate_alpha_0.425.json",
+        "certificate_gain_g": "-811179/400000000",
+        "certificate_gain_g_float": -0.00202795,
+        "truncation_T": 95,
+        "states_checked": 27648,
+        "violations": 0
+      },
+      {
+        "alpha": "2/5",
+        "alpha_float": 0.40,
+        "certified_upper_bound_U": "24447/50000",
+        "certified_upper_bound_U_float": 0.48894,
+        "certificate_file": "certificate_alpha_0.40.json",
+        "certificate_gain_g": "-6869/50000000",
+        "certificate_gain_g_float": -0.00013738,
+        "truncation_T": 95,
+        "states_checked": 27648,
+        "violations": 0
+      }
+    ],
+    "partial_win_p1": [
+      {
+        "alpha": 0.45,
+        "policy_file": "policy_alpha_0.45.json",
+        "published_bar": 0.66894,
+        "achieved_stationary_revenue": 0.66941800,
+        "improvement_over_bar": 0.00047800
+      },
+      {
+        "alpha": 0.475,
+        "policy_file": "policy_alpha_0.475.json",
+        "published_bar": 0.80184,
+        "achieved_stationary_revenue": 0.80381566,
+        "improvement_over_bar": 0.00197566
+      }
+    ]
+  }
+}

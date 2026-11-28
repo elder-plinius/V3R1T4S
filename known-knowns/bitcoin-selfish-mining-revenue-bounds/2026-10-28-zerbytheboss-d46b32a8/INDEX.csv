@@ -1,0 +1,2 @@
+target_id,cell,value,table_value,table_fetched_utc,file,sha256
+bitcoin-selfish-mining-revenue-bounds,alpha_0.45_upper_bound,0.70099,0.70109,2026-10-28T22:13:51Z,object/certificate_alpha_0.45.json,d46b32a8ae34a1b2a9919ca5442fbb33584cc383e1ccd1e845c4df83f2e70009
